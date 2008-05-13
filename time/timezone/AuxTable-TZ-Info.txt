@@ -1,0 +1,72 @@
+
+
+http://datetime.perl.org/?FAQ
+
+
+Country Codes
+  http://www.statoids.com/wab.html
+  http://en.wikipedia.org/wiki/List_of_Internet_TLDs
+  http://en.wikipedia.org/wiki/List_of_country_calling_codes
+  http://www.usa.att.com/traveler/assets/downloads/countryCityCodes.txt
+  
+Postal Codes:
+  http://www.upu.int/post_code/en/list_of_sites_by_country.html
+  http://www.populardata.com/
+  
+  http://en.wikipedia.org/wiki/ZIP_code#External_links
+  http://en.wikipedia.org/wiki/FIPS_place_code
+  http://geonames.usgs.gov/domestic/download_data.htm
+  http://www.census.gov/geo/www/gazetteer/gazette.html
+
+IP Zone Blocks:
+  http://www.ipdeny.com/ipblocks/
+  http://www.maxmind.com/app/geolitecity
+
+Language Codes
+  from http://www.loc.gov/standards/iso639-2/langhome.html
+    http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt
+  from http://www.sil.org/iso639-3/download.asp
+    http://www.sil.org/iso639-3/iso-639-3_20071018.tab
+  CREATE TABLE ISO_639-3 (
+   Id      char(3) NOT NULL,  -- The three-letter 639-3 identifier
+   Part2B  char(3) NULL,      -- Equivalent 639-2 identifier of the bibliographic applications code set, if there is one
+   Part2T  char(3) NULL,      -- Equivalent 639-2 identifier of the terminology applications code set, if there is one
+   Part1   char(2) NULL,      -- Equivalent 639-1 identifier, if there is one    
+   Scope   char(1) NOT NULL,  -- I(ndividual), M(acrolanguage), S(pecial)
+   Type    char(1) NOT NULL,  -- A(ncient), C(onstructed),  
+                              -- E(xtinct), H(istorical), L(iving), S(pecial)
+   Ref_Name   varchar(150) NOT NULL,   -- Reference language name 
+   Comment    varchar(150) NULL)       -- Comment relating to one or more of the columns
+
+  CREATE TABLE ISO_639-3_Names (
+   Id             char(3)     NOT NULL,  -- The three-letter 639-3 identifier
+   Print_Name     varchar(75) NOT NULL,  -- One of the names associated with this identifier 
+   Inverted_Name  varchar(75) NOT NULL)  -- The inverted form of this Print_Name form   
+  http://www.sil.org/iso639-3/iso-639-3_Name_Index_20070814.tab
+
+  CREATE TABLE ISO_639-3_Macrolanguages (
+   M_Id  char(3) NOT NULL,  -- The identifier for a macrolanguage
+   I_Id  char(3) NOT NULL)  -- The identifier for an individual language
+                            -- that is a member of the macrolanguage
+  http://www.sil.org/iso639-3/iso-639-3-macrolanguages_20070801.tab
+
+  CREATE TABLE ISO_639-3_Retirements (
+   Id          char(3)      NOT NULL,   -- The three-letter 639-3 identifier
+   Ret_Reason  char(1)      NOT NULL,   -- code for retirement: C (change), D (duplicate),
+                                        -- N (non-existent), S (split), M (merge)
+   Change_To   char(3)      NULL,       -- in the cases of C, D, and M, the identifier 
+                                        -- to which all instances of this Id should be changed
+   Ret_Remedy  varchar(200) NOT NULL,   -- The instructions for updating an instance
+                                        -- of the retired (split) identifier
+   Effective   date         NOT NULL)   -- The date the retirement became effective
+  http://www.sil.org/iso639-3/iso-639-3_Retirements_20070814.tab
+
+Financial
+  http://en.wikipedia.org/wiki/Tables_of_historical_exchange_rates
+
+Time Zones
+  http://upload.wikimedia.org/wikipedia/commons/3/3d/Timezones_optimized.png
+  
+
+Not free:
+  http://www.ipligence.com/en/products/community.php

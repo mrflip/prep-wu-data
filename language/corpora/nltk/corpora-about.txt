@@ -1,0 +1,59 @@
+[edit]
+Parsed Corpora
+
+The following corpora contain parsed text, and have a corpus reader that supports the following methods: raw(), words(), sents(), tagged_words, tagged_sents(), and parsed_sents.
+
+   1. alpino: Alpino Treebank (Dutch)
+   2. cess_cat: CESS-CAT Treebank (Catalan)
+   3. cess_esp: CESS-ESP Treebank (Spanish)
+   4. floresta: Floresta Treebank (Portuguese)
+   5. treebank: Penn Treebank Corpus Sample (English)
+   6. sinica: Sinica Treebank Corpus Sample (Chinese) 
+
+[edit]
+Tagged Corpora
+
+The following corpora contain tagged text, and have a corpus reader that supports the following methods: raw(), words(), sents(), tagged_words, and tagged_sents().
+
+   1. brown: Brown Corpus
+   2. indian: Indian Language POS-Tagged Corpus (Bangla, Hindi, Marathi, Telugu)
+   3. mac_morpho: MacMorpho POS-Tagged Corpus (Brazilian Portuguese) 
+
+[edit]
+Text Corpora
+
+The following corpora contain plain text, and have a corpus reader that supports the following methods: raw() and words().
+
+   1. abc: Australian Broadcasting Commission 2006: Science News, Rural News
+   2. genesis: Genesis Corpus
+   3. gutenberg: Project Gutenberg Selections
+   4. inaugural: US Presidential Inaugural Address Corpus
+   5. udhr: Universal Declaration of Human Rights Corpus
+   6. state_union: US Presidential State of the Union Address Corpus 
+
+[edit]
+Lexicons
+
+The following corpora contain lexical data, and have a corpus reader that supports the following methods: raw() and words().
+
+   1. cmudict: Carnegie Mellon Pronouncing Dictionary
+   2. names: Names Corpus
+   3. stopwords: Stopwords Corpus (Danish, Dutch, English, French, German, Italian< Norwegian, Portuguese, Russian, Spanish, Swedish)
+   4. toolbox: Toolbox Data Samples
+   5. words: Wordlist (English) 
+
+NLTK also has an interface to WordNet together with the WordNet Similarity measures (nltk.wordnet).
+[edit]
+Miscellaneous
+
+   1. chat80: Chat-80 Database
+   2. conll2000: CoNLL 2000 Chunking Corpus
+   3. conll2002: CoNLL 2002 Named Entity Corpus (Dutch, Spanish)
+   4. ieer: NIST 1999 Information Extraction: Entity Recognition Corpus
+   5. paradigms: Paradigm Corpus
+   6. ppattach: PP Attachment Corpus
+   7. rte: RTE Corpus (Challenges 1, 2 and 3)
+   8. senseval: SENSEVAL 2 Corpus
+   9. shakespeare: Shakespeare XML Corpus Sample
+  10. timit: TIMIT Corpus Sample
+  11. wordnet: WordNet 

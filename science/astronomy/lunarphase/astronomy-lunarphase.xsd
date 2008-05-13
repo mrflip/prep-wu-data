@@ -1,0 +1,68 @@
+<infochimp>
+
+<title></title>
+<subject     > tags go here</subject>
+<description >free-text account of the content.</description>
+<format  dc:format="text/xml" dc:type="dataset" vic:format="infochimp" vic:version="1.0" />
+
+<-- There can be lots of these -->
+<attribution class="source"                  ondate="" attributionURL="" attributionName=""><attributionstatement>I'm the original source of this data</attributionstatement><rights id="" href="">copyright info goes here.</rights></attribution>
+<attribution class="publisher"               ondate="" attributionURL="" attributionName="">I distributed the data vizsage.com/infochimp</attribution>
+<attribution class="creator"                 ondate="" attributionURL="" attributionName=""></attribution>     
+<attribution class="contributor preparer"    ondate="" attributionURL="" attributionName="">I prepared    the data </attribution>
+<attribution class="contributor transformer" ondate="" attributionURL="" attributionName="">I transformed the data </attribution>
+<attribution class="contributor translator"  ondate="" attributionURL="" attributionName="">I translated (between languages) the data </attribution>
+
+<!-- 
+   Coverage:
+     What range of time and place does the data describe?
+     Multiple permitted. 
+     Use tags that make sense. Make up your own coverage class if you need.
+     Use whatever coding makes sense, but try to key it UNAMBIGUOUSLY to something universal.
+     Avoid mixing them. -->
+  <coverage-union></coverage-union>
+  <coverage-intersection></coverage-intersection>
+  <coverage class="temporal"  
+            timebeg="19700621000000Z" timeend="20010101115900Z" >
+         OR timeat="654643254654687" 
+         OR timelabel="Cenozoic"
+       with formatdesc=""    formats: ISO8601, tai, strptime, ... 
+            formaturl="     this should be a URL.
+  </coverage>
+
+  <coverage class="spatial"  
+            latbeg="" latend="" lngbeg="" lngend="">
+            a="lat lng mean exactly the same thing as d1 d2"
+            OR d1beg="" d2beg="" ... dnbeg="" d1end="" d2end="" ... dnend="" 
+         OR latat=""  lngat=""                       OR d1at 
+         OR placelabel="Chicago"
+       with formatdesc=""        formats: latlngdec, latlngDMS, FIPS, iso3166 country code, http://www.getty.edu/research/tools/vocabulary/tgn/index.html
+            formaturl=""      this should be a URL.
+  </coverage>
+
+<language langcode="" lang="" langsubtag=""> 
+    only include this if there would be different versions for different languages
+    as in Belgian holidays in dutch vs. french
+    language code http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html
+    http://www.loc.gov/standards/iso639-2/langhome.html
+    strive for one data file with multiple localizations.
+</language>
+
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:vic="http://vizsage.com/infochimp/vic"
+         >
+  <cc:license           rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+    <cc:permits         rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits         rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires        rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires        rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits         rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires        rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+    <cc:morePermissions rdf:resource="http://vizsage.com/license" />
+    <cc:attributionName rdf:resource="http://vizsage.com/infochimp" />
+  </cc:license>
+</rdf:RDF>
+
+</infochimp>

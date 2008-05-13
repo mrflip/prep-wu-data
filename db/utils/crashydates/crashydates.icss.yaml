@@ -1,0 +1,29 @@
+contributors:
+  - desc: ~
+    uniqid: 'Shared and converted by Philip (flip) Kromer for the [http://infochimp.org|infochimp] project.'
+    url: http://infochimp.org/user/flip
+desc: 'A list of dates which, due to historical convention, human error, or hardware flaws can pose pitfalls to computer programs.  These dates can be used to test computers that handle time data, such as banking, payroll or Mars rovers.'
+fields:
+  - uniqid: ~
+name: Computer Crash Dates
+notes:
+  coverage: '[ { time: 0-0 } ]'
+  rights: ''
+  see_also: "- ~\n"
+  story_usage: 2 This is a reasonable start but probably not complete.  It is also
+ratings:
+  - initial:
+      accurate:
+        rating: 3
+      authoritative:
+        desc: The source listed above gives a well-tested list prepared by an expert. This recreated list is neither.
+        rating: 2
+      comprehensive:
+        desc: "This dataset is unannotated for copyright reasons.  Maybe you'd like to investigate and describe why each of these dates is pivotal?  If so, please respect the original author's intellectual property and follow our [help:Guidelines for annotated data]. See the website referenced above for a comprehensive and annotated listing"
+        rating: 1
+      interesting:
+        desc: 'Interest to programmers, otherwise not.'
+        rating: 1
+tags: 'crash, dangerous, date, time, computer, landmark, testing, boundary, borderline, pitfall, snafu'
+uniqid: computer_crashydates
+uniqid2: computer_crash_dates

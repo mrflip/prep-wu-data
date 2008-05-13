@@ -1,0 +1,1443 @@
+===========================================================================
+FHWA Route Log and Finder List: Table 1
+Table 1: Main Routes of the Dwight D. Eisenhower National System Of Interstate and Defense Highways as of October 31, 2002
+
+InterstateRoute	State	Total Miles	Net Miles	Howard-CramerMiles	Sections103(c)(4)(A)& ISTEAMiles	OverlapMiles& Route	MajorCities Served(Pop. larger than 5,000)
+A-1	Alaska	408.23	408.23	-	408.23	-	Anchorage
+A-2	Alaska	202.18	202.18	-	202.18	-	Fairbanks
+A-3	Alaska	148.12	148.12	-	148.12	-	Anchorage
+A-4	Alaska	323.69	323.69	-	323.69	-	Anchorage, Fairbanks
+	TOTAL	1,082.22	1,082.22		1,082.22		
+H-1	Hawaii	27.16	27.16	-	-	-	Honolulu
+H-2	Hawaii	8.33	8.33	-	-	-	Honolulu
+H-3	Hawaii	15.32	15.32	-	-	-	Honolulu
+	TOTAL	50.81	50.81				
+PRI-1	Puerto Rico	71.08	71.08	-	71.08	-	Ponce, Caguas, San Juan
+PRI-2	Puerto Rico	138.13	138.13	-	138.13	-	Mayaquez, Arecibo, San Juan
+PRI-3	Puerto Rico	40.56	40.56	-	40.56	-	San Juan
+	TOTAL	249.77	249.77		249.77		
+I-4	Florida	132.30	132.30	-	-	-	Tampa, Lakeland, Orlando, Daytona Beach
+I-5	California	796.53	796.53	-	-	-	San Diego, Los Angeles, Stockton, Sacramento, Red Bluff, Anderson, Redding, Yreka
+Oregon	308.14	308.14	-	-	-	Ashland, Medford, Grants Pass, Roseburg, Eugene, Salem, Portland	
+Washington	276.62	276.62	-	-	-	Vancouver, Kelso, Chehalis, Centrailia, Olympia, Tacoma, Seattle, Everett, Mount Vernon, Bellingham	
+TOTAL	1,381.29	1,381.29					
+I-8	California	169.92	169.92	-	-	-	San Diego, El Centro
+Arizona	178.33	178.33	-	-	-	Yuma, Casa Grande	
+TOTAL	348.25	348.25					
+I-10	California	242.54	240.94	-	-	1.6 Mi on I-5	Santa Monica, Los Angeles, Pomona, Ontario, San Bernardino, Beaumont, Banning Indio, Blythe
+Arizona	392.33	392.33	-	-	-	Phoenix, Casa Grande, Tucson	
+New Mexico	164.27	164.27	-	-	-	Lordsburg, Deming, Las Cruces	
+Texas	881	878.61	-	-	2.39 Mi on I-35	El Paso, Ft.Stockton, Kerrville, San Antonio, Houston, Beaumont, Orange	
+Louisiana	274.42	274.42	-	-	-	Lake Charles, LaFayette, Baton Rouge, Kennery, New Orleans	
+Mississippi	77.19	77.19	-	-	-	Gulfport, Biloxi, Pascagoula	
+Alabama	66.31	66.31	-	-	-	Mobile	
+Florida	362.28	362.28	-	-	-	Pensacola, Tallahassee, Jacksonville	
+TOTAL	2,460.34	2,456.35	-	-	3.99		
+I-12	Louisiana	85.59	85.59	-	-	-	Baton Rouge, Slidell
+1-15	California	287.26	287.26	-	-	-	San Diego, Escondido, Corona, Riverside, San Bernardino, Victorville, Barstow
+Nevada	123.77	123.77	-	-	-	Las Vegas	
+Arizona	29.39	29.39	-	-	-	None	
+Utah	401.07	401.07	-	-	-	Saint George, Cedar City, Spanish Fork, Provo, Orem, American Fork, Salt Lake City, Ogden, Brigham City	
+Idaho	196.00	196.00	-	-	-	Pocatello, Blackfoot, Idaho Falls	
+Montana	396.03	396.03	-	-	-	Butte, Helena, Great Falls	
+TOTAL	1,433.52	1,433.52					
+I-16	Georgia	166.81	166.81	-	-	-	Macon, Savannah
+I-17	Arizona	145.76	145.76	-	-	-	Phoenix, Flagstaff
+I-19	Arizona	63.35	63.35	-	-	-	Nogales, Tucson
+I-20	Texas	636.08	636.08	-	2.00	-	Pecos, Monohans, Odessa, Midland, Big Spring, Colorado City, Sweetwater, Abilene, Fort Worth, Dallas, Longview Marshall
+Louisiana	189.87	189.87	-	-	-	Shreveport, Bossier City, Minden, Ruston, Monroe, Tallulah	
+Mississippi	154.61	129.41	-	-	1.60 Mi on I-55, 23.60 Mi on I-59	Vicksburg, Jackson, Meridian	
+Alabama	214.7	84.6	-	-	130.1 Mi on I-59	Tuscaloosa, Bessemer, Birmingham, Anniston	
+Georgia	202.61	202.61	-	-	-	Atlanta, Covington, Thomson, Augusta	
+S. Carolina	141.51	141.51	-	-	-	N.Augusta, Columbia, Camden, Florence	
+TOTAL	1,539.38	1,384.08	-	2.00	155.30		
+I-24	Illinois	38.73	38.73	-	-	-	Metropolis
+Kentucky	93.37	93.37	-	-	-	Paducah, Hopkinsville	
+Tennessee	180.16	174.86	-	-	5.30 Mi on I-40, I-65	Clarksville, Nashville, Murfreesboro, Manchester, Chattanooga	
+Georgia	4.10	4.10	-	-	-	None	
+TOTAL	316.36	311.06	-	-	5.30		
+I-25	New Mexico	462.12	462.12	-	-	-	Las Cruces, Socorro, Belen, Albuquerque
+Colorado	299.70	299.70	-	-	-	Trinidad, Pueblo, Colorado Springs, Denver, Longmont, Loveland, Fort Collins	
+Wyoming	300.95	300.95	-	-	-	Cheyenne, Casper, Buffalo	
+TOTAL	1,062.77	1,062.77					
+I-26	N. Carolina	39.92	39.92	-	-	-	Hendersonville, Ashville
+S. Carolina	220.95	220.95	-	-	-	Spartanburg, Clinton, Newberry, Columbia, Orangeburg, Goose Creek, Charleston	
+TOTAL	260.87	260.87					
+I-27	Texas	124.13	124.13	-	12.90	-	Amarillo, Canyon, Tulia
+I-29	Missouri	130.72	125.22	-	-	5.50 Mi on I-35, I-40	Kansas City, Saint Joseph
+Iowa	154.75	151.75	-	-	3.00 Mi on I-80	Council Bluffs, Sioux City	
+South Dakota	252.50	252.50	-	-	-	Vermillion, Sioux Falls, Brookings, Waterton	
+North Dakota	217.54	217.54	-	-	-	Wahpeton, Fargo, Grand Forks	
+TOTAL	755.51	747.01	-	-	8.50		
+I-30	Texas	223.74	223.74	-	29.93	-	Fort Worth, Dallas, Greenville, Sulpher Springs, Mount Pleasant, Texarkana
+Arkansas	143.02	143.02	-	-	-	Texarkana, Hope, Arkadelphia, Malvern, Benton, Little Rock	
+TOTAL	366.76	366.76	-	29.93	-		
+I-35	Texas	504.15	407.20	-	-	96.95 Mi on I-35E	Laredo, Pearsall, San Antonio, Austin, Georgetown, Temple, Waco, Hillsboro, Wasahachie, Dallas, Denton, Gainsville
+Oklahoma	235.96	235.96	-	-	-	Ardmore, Pauls Valley, Norman, Oklahoma City, Gutherie, Perry	
+Kansas	235.51	235.51	-	-	-	Wichita, Emporia, Ottawa, Olathe, Kansas City	
+Missouri	114.74	113.74	-	-	1.00 Mi on I-70	Kansas City	
+Iowa	218.33	218.33	-	-	-	Des Moines, Ames	
+Minnesota	259.69	220.46	-	-	39.23 Mi on I-35E	Albert Lea, Owatonna, Faribault, Saint Paul, Duluth	
+TOTAL	1,568.38	1,431.20	-	-	137.18		
+I-35E	Texas	96.76	96.76	-	-	-	Hillsboro, Waxahachie, Dallas, Denton
+Minnesota	39.34	39.34	-	-	-	Saint Paul	
+TOTAL	136.10	136.10					
+I-35W	Texas	85.20	85.20	-	-	-	Fort Worth, Denton
+Minnesota	41.78	41.78	-	-	-	Bloomington, Minneapolis, Blaine	
+TOTAL	126.98	126.98					
+I-37	Texas	143.00	143.00	-	-	-	Corpus Christi, Mathis
+I-39	Illinois	123.42	123.42	-	123.42	-	La Salle, Mendota, Rockford
+Wisconsin	182.72	182.72	-	104.00		Portage, Wausau	
+TOTAL	306.14	306.14	-	227.42			
+I-40	California	154.61	154.61	-	-	-	Barstow, Needles
+Arizona	359.48	359.48	-	-	-	Kingman, Flagstaff, Winslow, Holbrook	
+New Mexico	373.51	373.51	-	-	-	Gallup, Grants, Albuquerque, Tucumcari	
+Texas	177.10	177.10	-	-	-	Amarillo	
+Oklahoma	331.03	329.50	-	-	1.53 Mi on I-35	Elk City, Clinton, Weatherford, El Reno, Oklahoma City, Henryetta	
+Arkansas	284.69	284.69	-	-	-	Fort Smith, Russellville, Morriton, Conway, Little Rock, Forrest City, West Memphis	
+Tennessee	455.28	455.28	-	-	-	Memphis, Jackson, Nashville, Lebanon, Cookeville, Crossville, Knoxville, Newport	
+N. Carolina	419.40	419.40	-	91.40	-	Asheville, Morganton, Hickory, Statesville, Winston-Salem, Greensboro, Burlington, Durham, Raleigh, Smithfield, Wilmington	
+TOTAL	2,555.10	2,553.57	-	91.40	1.53		
+I-43	Wisconsin	191.55	191.55	-	63.00	-	Beloit, Delavan, Milwaukee, Sheboygan, Manitowoc, Green Bay
+I-44	Texas	14.77	14.77	-	14.77	-	Wichita Falls
+Oklahoma	328.53	324.16	-	114.76	4.37 Mi on I-35	Lawton, Chickasha, Oklahoma City, Tulsa, Vinita, Miami	
+Missouri	290.49	290.49	-	-	-	Joplin, Springfield, Lebanon, Rolla, Sullivan, Saint Louis	
+TOTAL	633.79	629.42	-	129.53	4.37		
+I-45	Texas	284.91	284.91	-	-	-	Galveston, Texas City, Houston, Huntsville, Corsicana, Ennis, Dallas
+I-49	Louisiana	208.25	208.25	153.18	19.55	-	LaFayette, Opelousas, Alexandria, Natchitoches, Shreveport
+I-55	Louisiana	65.81	65.81	-	-	-	Hammond
+Mississippi	290.41	290.41	-	-	-	McComb, Brookhaven, Jackson, Canton, Winona, Southaven	
+Tennessee	12.28	12.28	-	-	-	Memphis	
+Arkansas	72.22	70.00	-	-	2.22 Mi on I-40	West Memphis, Blytheville	
+Missouri	210.45	209.45	-	-	1.00 Mi on I-44	Sikeston, Cape Girardeau, Perryville, St.Louis	
+Illinois	313.08	294.38	-	-	18.70 Mi on I-70	East Saint Louis, Edwardsville, Litchfield, Springfield, Lincoln, Bloomington, Pontiac, Joliet, Chicago	
+TOTAL	964.25	942.33	-		21.92		
+I-57	Missouri	21.96	21.96	-	-	-	Sikeston, Charleston
+Illinois	364.16	358.57	-	-	5.59 Mi on I-70	Cairo, Marion, Mt.Vernon, Salem, Effingham, Matton, Champaign-Urbana, Rantoul, Kankakee, Chicago	
+TOTAL	386.12	380.53	-	-	5.59		
+I-59	Louisiana	11.48	11.48	-	-	-	Slidell
+Mississippi	171.72	171.72	-	-	-	Picayune, Hattiesburg, Laurel, Meridian	
+Alabama	241.36	241.36	-	-	-	Tuscaloosa, Bessemer, Birmingham, Gadsden, Fort Payne	
+Georgia	20.67	20.67	-	-	-	-	
+TOTAL	445.23	445.23					
+I-64	Missouri	14.69	14.69	-	14.69	-	Saint Louis
+Illinois	128.12	123.98	-	-	4.14 Mi on I-57	East Saint Louis, Mount Vernon	
+Indiana	123.33	123.33	-	-	-	Evansville, New Albany	
+Kentucky	185.20	185.20	-	-	-	Louisville, Frankfort, Lexington, Winchester, Mount Sterling, Moreland	
+West Virginia	188.75	124.87	-	-	63.88 Mi on I-77	Huntington, Charleston, Beckley, White Sulpher Springs	
+Virginia	297.62	267.22	-	-	30.40 Mi on I-81	Covington, Clifton Forge, Lexington, Staunton, Waynesboro, Charlottesville, Richmond, Williamsburg, Newport News, Hampton, Norfolk	
+TOTAL	937.71	839.29	-	14.69	98.42		
+I-65	Alabama	367.00	367.00	-	-	-	Mobile, Greenville, Montgomery, Clanton, Birmingham, Cullman, Decatur, Athens
+Tennessee	121.71	120.71	-	-	1.00 Mi on I-40	Nashville	
+Kentucky	137.32	137.32	-	-	-	Bowling Green, Elizabethtown, Louisville	
+Indiana	261.27	261.27	-	-	-	New Albany, Seymour, Columbus, Franklin, Indianapolis, Lebanon, LaFayette, Gary	
+TOTAL	887.30	886.30	-	-	1.00		
+I-66	Virginia	74.80	74.80	-	-	-	Front Royal, Manassas, Fairfax, Vienna, Falls Church, Arlington
+District of Columbia	1.48	1.48	-	-	-	Washington, D.C.	
+TOTAL	76.28	76.28					
+I-68	West Virginia	32.06	32.06	-	32.06	-	Morgantown
+Maryland	81.09	81.09	-	81.09	-	Cumberland	
+TOTAL	113.15	113.15	-	113.15	-		
+I-69	Indiana	157.3	157.3	-	-	-	Indianapolis, Anderson, Muncie, Fort Wayne
+Michigan	198.51	193.31	-	66.8	5.20 Mi on I-96	Coldwater, Battle Creek, Lansing, Flint	
+TOTAL	355.81	350.61	-	66.8	5.20		
+I-70	Utah	232.15	232.15	-	-	-	Cove Fort, Richfield, Green River
+Colorado	451.04	451.04	-	-	-	Grand Junction, Denver	
+Kansas	424.15	424.15	-	-		Goodland, Hays, Russell, Salina, Abilene, Junction City, Topeka, Lawrence, Kansas City	
+Missouri	251.66	251.66	-	-	-	Kansas City, Boonville, Columbia, Saint Louis	
+Illinois	135.94	135.94	-	-	-	East Saint Louis, Vandalia, Effingham	
+Indiana	156.6	154.47	-	-	2.13 Mi on I-65	Terre Haute, Indianapolis, Richmond	
+Ohio	225.6	225.6	-	-	-	Springfield, Columbus, Zanesville, Cambridge	
+West Virginia	14.45	14.45	-	-	-	Wheeling	
+Pennsylvania	167.92	80.7	-	-	87.22 Mi on I-76	Washington, Monessen-Charleroi, Breezewood	
+Maryland	93.62	93.62	-	-	-	Hancock, Hagerstown, Frederick, Baltimore	
+TOTAL	2,153.13	2,063.78	-	-	89.35		
+I-71	Kentucky	97.42	77.72	-	-	19.70 Mi on I-75	Louisville, Covington
+Ohio	248.15	246.19	-	-	0.22 Mi on I-75 & 1.74 Mi on I-70	Cincinnati, Columbus, Mansfield, Cleveland	
+TOTAL	345.57	323.91	-	-	21.66		
+I-72	Illinois	177.25	177.25	-	99.10	-	Springfield, Decatur,
+Missouri	2.04	2.04	-	2.04	-		
+TOTAL	179.29	179.29	-	101.14	-		
+I-73*	N. Carolina	12.27	12.27	-	12.27		Greensboro
+I-74	Iowa	5.36	5.36	-	-	-	Davenport
+Illinois	220.34	214.45	-	-	5.89 Mi on I-55	Moline, Galesburg, Peoria, Bloomington, Champaign-Urbana, Danville	
+N. Carolina	12.10	12.10	-	12.10		Greensboro	
+Indiana	171.54	150.94	-	-	20.60 Mi on I-465	Crawfordsville, Indianapolis, Shelbyville, Greensburg	
+Ohio	19.47	19.47	-	-	-	Cincinnati	
+TOTAL	428.81	402.32	-	12.10	26.49		
+I-75	Florida	470.88	470.88	46.31	-	-	Miami, Naples, Fort Myers, Port Charlotte, Venice, Sarasota, Bradenton, Tampa, Ocala, Gainesville, Lake City
+Georgia	355.11	355.11	-	-	-	Valdosta, Tifton, Cordele, Macon, Atlanta, Marietta, Cartersville, Dalton	
+Tennessee	161.86	142.26	-	-	19.60 Mi on I-40	Chattanooga, Cleveland, Athens, Lenoir City, Knoxville	
+Kentucky	191.78	191.78	-	-	-	Corbin, Richmond, Lexington, Covington	
+Ohio	211.3	211.3	-	-	-	Cincinnati, Middletown, Dayton, Piqua, Sidney, Lima, Findlay, Bowling Green, Toledo	
+Michigan	395.54	395.54	-	-	-	Monroe, Detroit, Pontiac, Flint, Saginaw, Bay City, Mackinaw City, Sault Sainte Marie	
+TOTAL	1,786.47	1,766.87	46.31	-	26.50		
+I-76	Colorado	184.86	184.86	-	-	-	Denver, Fort Morgan, Sterling
+Nebraska	2.48	2.48	-	-	-	None	
+Ohio	81.65	81.65	-	-	-	Akron, Youngstown	
+Pennsylvania	349.67	349.67	-	-	-	Pittsburgh, Monroeville, Somerset, Breezewood, Carlisle, Harrisburg, Philadelphia	
+New Jersey	3.04	3.04	-	-	-	Camden	
+TOTAL	621.7	621.7					
+I-77	S.Carolina	91.05	91.05	-	9.5	-	Columbia, Rock Hill
+N. Carolina	102.31	102.31	-	5.8	-	Charlotte, Mooresville, Statesville	
+Virginia	69.4	60.6	-	-	8.80 Mi on I-81	Wytheville, Bluefield	
+West Virginia	187.21	187.21	-	-	-	Bluefield, Princeton, Beckley, Charleston, Parkersburg	
+Ohio	160.13	160.13	-	-	-	Marietta, Dover, Canton, Akron, Cleveland	
+TOTAL	610.10	601.30	-	15.30	8.80		
+I-78	Pennsylvania	75.23	75.23	-	-	-	Allentown, Bethlehem, Easton
+New Jersey	67.83	67.83	-	-	-	Plainfield, Irvington, Newark, Jersey City	
+New York	0.5	0.5	-	-	-	New York City	
+TOTAL	143.56	143.56					
+I-79	West Virginia	160.52	160.52	-	-	-	Charleston, Weston, Clarksburg, Fairmont, Morgantown
+Pennsylvania	182.72	179.17	-	-	3.55 Mi on I-70	Washington, Pittsburgh, Meadville, Erie	
+TOTAL	343.24	339.69	-	-	3.55		
+I-80	California	199.24	199.24	-	-	-	San Francisco, Oakland, El Cerrito, Pinole, Vallejo, Fairfield, Vacaville, Davis, Sacramento, Auburn
+Nevada	410.67	410.67	-	-	-	Reno, Sparks, Winnemucca, Elko	
+Utah	196.34	193.03	-	-	3.31 Mi on I-15	Salt Lake City	
+Wyoming	402.76	402.76	-	-	-	Evanston, Rock Springs, Rawlings, Laramie, Cheyenne	
+Nebraska	455.32	455.32	-	-	-	Sidney, Ogallala, N. Platte, Lexington, Kearney, Grand Island, York, Lincoln, Omaha	
+Iowa	303.23	288.94	-	-	14.29 Mi on I-35	Council Bluffs, Des Moines, Newton, Iowa City, Davenport	
+Illinois	163.52	163.52	-	-	-	Moline, Genesco, Princeton, La Salle, Ottawa, Morris, Joliet, Chicago	
+Indiana	151.56	151.56	-	-	-	Hammond, Gary, South Bend, Elkhart	
+Ohio	237.48	237.48	-	35	-	Toledo, Elyria, Cleveland, Youngstown	
+Pennsylvania	311.07	311.07	-	-	-	Sharon, Clarion, Dubois, Milton, Bloomsburg, Stroudsburg	
+New Jersey	68.35	68.35	-	-	-	Paterson, Hackensack, Teaneck	
+TOTAL	2,899.54	2,881.94	-	35.00	17.60		
+I-81	Tennessee	75.66	75.66	-	-	-	Morristown, Kingsport, Johnson City, Bristol
+Virginia	324.92	324.92	-	-	-	Bristol, Marion, Wytheville, Christiansburg, Roanoke, Lexington, Staunton, Harrisonburg, Winchester	
+West Virginia	26	26	-	-	-	Martinsburg	
+Maryland	12.08	12.08	-	-	-	Hagerstown	
+Pennsylvania	232.63	232.63	-	-	-	Chambersburg, Shippensburg, Carlisle, Harrisburg, Frackville, Mahanoy City, Hazelton, Wilkes-Barre, Scranton	
+New York	183.6	183.6	-	-	-	Binghampton, Cortland, Syracuse, Watertown	
+TOTAL	854.89	854.89					
+I-82	Washington	132.57	132.57	-	-	-	Ellensburg, Yakima, Toppenish, Sunnyside, Grandview, Richland, Kennewick
+Oregon	11.01	11.01	-	-	-	Hermiston	
+TOTAL	143.58	143.58					
+I-83	Maryland	34.5	34.5	-	-	-	Baltimore
+Pennsylvania	50.8	50.8	-	-	-	York, Harrisburg	
+TOTAL	85.3	85.3					
+I-84	Oregon	375.17	375.17	-	6.89	-	Portland, Hood River, The Dalles, Pendleton, La Grande, Baker, Ontario
+Idaho	275.74	275.74	-	-	-	Caldwell, Napa, Boise, Mountain Home, Jerome, Twin Falls, Burley	
+Utah	118.71	82.73	-	-	35.98 Mi on I-15	Brigham City, Ogden	
+Pennsylvania	54.55	54.55	-	-	-	Scranton	
+New York	71.79	71.79	-	-	-	Port Jervis, Middletown, Newburgh, Bacon	
+Connecticut	97.9	97.9	-	-	-	Danbury, Waterbury, Bristol, New Britain, Hartford, Manchester, Vernon	
+Massachusetts	8.15	8.15	-	-	-	None	
+TOTAL	1002.01	966.03	-	6.89	35.98		
+I-85	Alabama	80	80	-	-	-	Montgomery, Auburn, Opelika, Lanett
+Georgia	179.9	171.9	-	-	8.00 Mi on I-75	LaGrange, Newnan, Atlanta	
+S. Carolina	106.28	106.28	-	-	-	Anderson, Greenville, Spartanburg, Gaffney	
+N. Carolina	233.93	195.42	-	-	38.51 on I-40	Gastonia, Charlotte, Kannapolis, Salisbury, Lexington, High Point, Greensboro, Burlington, Durham, Henderson	
+Virginia	68.64	68.64	-	-	-	Petersburg	
+TOTAL	668.75	622.24	-	-	46.51		
+I-86	Idaho	62.85	62.85	-	-	-	American Falls, Pocatello
+New York	176.57	176.57	-	176.57	-		
+Pennsylvania	6.99	6.99	-	6.99	-		
+TOTAL	246.41	246.41	-	183.56	-		
+I-87	New York	333.49	333.49	-	29.8		New York City, Newburgh, Kingston, Albany, Saratoga Springs, Glenn Falls, Plattsburg
+I-88	Illinois	140.6	140.6	-	140.6	-	Sterling, Rock Falls, Rochelle, DeKalb, Aurora, Naperville, Downers Grove, Elmhurst, Villa Park, Lombard, Chicago
+New York	117.75	117.75	-	-	-	Binghampton, Oneonta, Schenectady	
+TOTAL	258.35	258.35	-	140.6	-		
+I-89	N. Hampshire	60.87	60.87	-	-	-	Concord, Lebanon
+Vermont	130.25	130.25	-	-	-	Montpelier, Waterbury, Burlington, Saint Albans, Swanton	
+TOTAL	191.12	191.12					
+I-90	Washington	296.92	296.92	-	-	-	Seattle, Bellevue, Ellensburg, Moses Lake, Spokane
+Idaho	73.55	73.55	-	-	-	Couer D'Alene, Kellogg, Wallace	
+Montana	551.68	544.03	-	-	7.65 Mi on I-15	Missoula, Deer Lodge, Butte, Bozeman, Livingston, Laurel, Billings, Hardin	
+Wyoming	208.8	208.8	-	-	-	Sheridan, Buffalo, Gillette	
+South Dakota	412.76	412.76	-	-	-	Spearfish, Sturgis, Rapid City, Chamberlain, Mitchell, Sioux Falls	
+Minnesota	275.7	275.7	-	-	-	Worthington, Fairmont, Albert Lea, Austin, Rochester	
+Wisconsin	108.61	108.61	-	-	-	La Crosse, Onalaska, Tomah, Madison, Janesville, Beloit	
+Illinois	123.89	108.5	-	16.71	15.39 Mi on I-94	Rockford, Elgin, Chicago	
+Indiana	156.28	20.68	-	-	135.6 Mi on I-80	Hammond, Gary, South Bend, Elkhart	
+Ohio	244.75	101.95	-	-	142.80 Mi. on I-80	Toledo, Elyria, Cleveland, Ashtabula, Conneaut	
+Pennsylvania	46.4	46.4	-	-	-	Erie	
+New York	385.48	385.48	-	-	-	Dunkirk, Buffalo, Batavia, Rochester, Syracuse, Oneida, Utica, Amsterdam, Schenectady, Albany	
+Massachusetts	135.72	135.72	-	2.90	-	Springfield, Holyoke, Worcester, Framingham, Boston	
+TOTAL	3,020.54	2,719.10	-	19.61	301.44		
+I-91	Connecticut	58.00	58.00	-	-	-	New Haven, Meriden, Hartford
+Massachusetts	54.99	54.99	-	-	-	Springfield, Holyoke, Northampton, Greenfield	
+Vermont	177.38	177.38	-	-	-	Brattleboro, Saint Johnsbury, Newport	
+TOTAL	290.37	290.37					
+I-93	Massachusetts	47.07	47.07	-	14.10	-	Boston, Lawrence
+New Hampshire	131.78	131.78	-	-	-	Manchester, Concord, Franklin, Plymouth, Littleton	
+Vermont	11.10	11.10	-	-	-	Saint Johnsbury	
+TOTAL	189.95	189.95	-	14.1	-		
+I-94	Montana	249.15	249.15	-	-	-	Billings, Miles City, Glendive
+North Dakota	352.39	352.39	-	-	-	Dickinson, Mandan, Bismarck, Jamestown, Valley City, Fargo	
+Minnesota	259.49	259.22	-	-	0.27 Mi on I-35E	Moorhead, Fergus Falls, Alexandria, Saint Cloud, Minneapolis, Saint Paul	
+Wisconsin	341.02	249.26	-	-	91.76 Mi on I-90	Eau Claire, Tomah, Madison, Waukesha, Milwaukee, Racine, Kenosha	
+Illinois	61.53	59.05	-	-	2.48 Mi on I-80	Waukegan, Highland Park, Skokie, Chicago, Calumet City	
+Indiana	46.13	30.08	-	-	16.05 Mi on I-80	Hammond, Gary, Portage, Michigan City	
+Michigan	275.49	275.49	-	-	-	Benton Harbor, Kalamazoo, Battle Creek, Marshall, Jackson, Ann Arbor, Ypsilanti, Dearborn, Detroit, Port Huron	
+TOTAL	1,585.20	1,474.64	-	-	110.56		
+I-95	Florida	382.15	382.15	-	-	-	Miami, Hollywood, Fort Lauderdale, Boca Raton, West Palm Beach, Fort Pierce, Melbourne, Titusville, Daytona Beach, Jacksonville
+Georgia	112.00	112.00	-	-	-	Brunswick, Savannah	
+S. Carolina	198.76	198.76	-	-	-	Walterboro, Florence, Dillon	
+N. Carolina	181.71	181.71	-	-	-	Lumberton, Fayetteville, Roanoke Rapids	
+Virginia	178.73	178.73	-	24.08	-	Emporia, Petersburg, Richmond, Fredericksburg, Alexandria	
+District of Columbia	0.11	0.11	-	-	-	Washington	
+Maryland	110.01	110.01	-	-	-	Suitland, New Carollton, Greenbelt, Laurel, Baltimore, Aberdeen, Havre de Grace	
+Delaware	23.43	23.43	-	-	-	Wilmington	
+Pennsylvania	51.08	51.08	-	-	-	Chester, Philadelphia(NOTE: Pennsylvania mileage measured to Pa-NJ state line at Trenton. Completion of new interchange with I-276 north of Philadelphia will make the ending terminus near Florence, New Jersey.)	
+New Jersey	97.76	97.76	-	-	-	New Brunswick, Elizabeth, Newark, North Bergen(NOTE: New Jersey mileage measured from the Pa-NJ line near the future terminus at Florence, N.J. via the N.J. Turnpike to New York.)	
+New York	23.50	23.50	-	-	-	New York City, New Rochelle	
+Connecticut	111.57	111.57	-	-	-	Greenwich, Stamford, Norwalk, Bridgeport, New Haven, New London	
+Rhode Island	42.36	42.36	-	-	-	Warwick, Cranston, Providence, Pawtucket	
+Massachusetts	91.95	91.95	-	37.54	-	Attleboro, Boston, Needham, Lexington, Woburn, Danvers	
+New Hampshire	16.11	16.11	-	-	-	Portsmouth	
+Maine	298.51	298.51	-	-	-	Kittery, Portland, Brunswick, Augusta, Waterville, Bangor Houlton	
+TOTAL	1,919.74	1,919.74	-	61.62	-		
+I-96	Michigan	192.06	192.06	-	-	-	Muskegon, Grand Rapids, Lansing, Livonia, Detroit
+I-97	Maryland	17.62	17.62	14.90	-	-	Annapolis, Baltimore
+I-99*	Pennsylvania	53	53		53*		Bedford
+
+Note:
+
+    * Total Miles - this column includes the original 42,500 miles under former 23 USC 103(e)(1) & (3) plus the Howard-Cramer additions under former 23 USC 103(e)(2) and additions under 23 USC 103(c)(4)(A) and high priority routes per 1991 ISTEA. It also includes mileage sections which overlap other Interstate routes.
+    * Net Miles - this column does not include overlapping mileage.
+    * Howard-Cramer Miles - this column shows mileage added to the system under former 23 USC 103(e)(2).
+    * Sections 103(c)(4)(A) & 332 Miles - this column shows mileage added to the system under 23 USC 103(c)(4)(A) which supersedes 23 USC 139(a) & 139(c). This column also shows high priority route additions per 1991 ISTEA marked with *.
+    * Population figures are from the 1990 Census.Major Urban Areas Served means that the route either enters the Urban Area or approaches close enough to provide useful service.
+    * Routes shown are those routes designated as of October 31, 2002.
+    * In North Carolina, only 12.27 miles of I-73 have been signed as an Interstate highway as of October 31, 2002.
+
+===========================================================================
+FHWA Route Log and Finder List
+Table 2: Auxiliary Routes of the Dwight D. Eisenhower National System Of Interstate and Defense Highways as of October 31, 2002
+
+InterstateRoute	State	Total Miles	Net Miles	Howard-CramerMiles	Sections103(c)(4)(A)& ISTEAMiles	OverlapMiles& Route	Urban Areas Served(* = Major Suburbs)
+H-201	Hawaii	4.10	4.10	-	4.10	-	Honolulu
+I-105	California	17.32	17.32	7.00	-	-	Los Angeles* Inglewood* South Gate* Downey
+Oregon	3.49	3.49	-	-	-	Eugene	
+I-110	California	20.43	20.43	-	-	-	Los Angeles* Pasadena* Hawthorne* Gardena* Carson
+Texas	0.92	0.92	-	-	-	El Paso	
+Louisiana	8.89	8.89	-	-	-	Baton Rouge	
+Mississippi	4.10	4.10	-	-	-	Biloxi-Gulfport	
+Florida	6.94	6.94	-	-	-	Pensacola	
+I-115	Montana	1.19	1.19	-	-	-	Butte
+I-124	Tennessee	1.97	1.97	-	-	-	Chattanooga
+I-126	S. Carolina	3.68	3.68	-	-	-	Columbia
+I-129	Iowa	0.27	0.27	-	-	-	Sioux City
+Nebraska	3.21	3.21	-	-	-	Sioux City	
+I-135	Kansas	95.74	95.74	-	-	-	Wichita* Salina
+I-140	Tennessee	11.17	11.17	-	11.17	-	Knoxville, Alcoa
+I-155	Illinois	32.13	32.13	-	32.13	-	Lincoln, Peoria
+Missouri	10.84	10.84	-	-	-	Caruthersville	
+Tennessee	15.93	15.93	-	-	-	Dyersburg	
+I-164	Indiana	21.24	21.24	-	-	-	Evansville
+I-165	Alabama	4.90	4.90	-	-	-	Mobile* Prichard
+I-170	Missouri	11.17	11.17	-	4.29	-	St. Louis* Hazelwood* Berkeley* Clayton* University City* Richmond Heights
+I-172	Illinois	19.69	19.69	-	19.69	-	Quincy
+I-175	Florida	1.44	1.44	-	1.44	-	St. Petersburg
+I-176	Pennsylvania	11.33	11.33	-	-	-	Reading
+I-180	Wyoming	1.09	1.09	-	-	-	Cheyenne
+Nebraska	3.18	3.18	-	-	-	Lincoln	
+Illinois	13.19	13.19	-	-	-	None	
+Pennsylvania	28.85	28.85	-	28.85	-	Williamsport* Montoursville	
+I-181	Tennessee	23.85	23.85	-	23.85	-	Kingsport, Johnson City
+I-182	Washington	15.19	15.19	-	-	-	Richland, Pasco, Kennewick
+I-184	Idaho	3.62	3.62	-	-	-	Boise
+I-185	Georgia	49.30	49.30	-	5.50	-	Columbus
+S. Carolina	17.70	17.70	-	14.50	-	Greenville	
+I-189	Vermont	1.49	1.49	-	-	-	Burlington
+I-190	South Dakota	1.72	1.72	-	-	-	Rapid City
+Illinois	3.07	3.07	-	3.07	-	Chicago* Park Ridge* Schiller Park* Harwood Heights	
+New York	28.34	28.34	-	-	-	Buffalo, Niagara Falls	
+Massachusetts	19.26	19.26	-	-	-	Worcester, Leominster	
+I-194	North Dakota	1.20	1.20	-	-	-	Bismarck-Mandan
+Michigan	3.38	3.38	-	-	-	Battle Creek	
+I-195	Florida	4.42	4.42	-	-	-	Miami* Miami Beach
+Virginia	3.24	3.24	-	-	-	Richmond	
+Maryland	4.71	4.71	2.20	1.40	-	Baltimore* Halethorpe* Linthicum	
+New Jersey	34.17	34.17	27.30	-	-	Trenton, Asbury Park	
+Rhode Island	3.82	3.82	-	-	-	Providence* East Providence	
+Massachusetts	40.73	40.73	-	14.28	-	Fall River* SomersetNew Bedford* Fairhaven	
+Maine	1.55	1.55	-	-	-	Biddeford-Saco	
+I-196	Michigan	80.65	80.65	-	-	-	Benton Harbor, Holland, Grand Rapids* Grandville* Wyoming
+I-205	California	12.97	12.97	-	-	-	None
+Oregon	26.07	26.07	-	-	-	Portland* Milwaukie* Parkrose	
+Washington	10.57	10.57	-	-	-	Vancouver	
+I-210	California	48.72	48.72	-	-	-	Los Angeles* Glendale* Pasadena* Arcadia
+Louisiana	12.40	12.40	-	-	-	Lake Charles	
+I-215	California	54.50	54.50	-	54.50	-	San Bernardino, Riverside
+Utah	29.02	29.02	-	-	-	Salt Lake City* Millcreek* Holladay* Cottonwood	
+I-220	Louisiana	17.62	17.62	-	-	-	Shreveport* Bossier City
+Mississippi	12.01	12.01	-	-	-	Jackson	
+I-225	Colorado	12.00	12.00	-	-	-	Denver* Aurora
+I-229	Missouri	14.97	14.97	-	-	-	St. Joseph
+South Dakota	11.33	11.33	-	-	-	Sioux Falls	
+I-235	Oklahoma	5.36	5.36	-	1.54	-	Oklahoma City
+Kansas	16.52	16.52	-	-	-	Wichita	
+Iowa	13.78	13.78	-	-	-	Des Moines	
+I-238	California	2.23	2.23	-	2.23	-	Hayward
+I-240	Oklahoma	16.22	16.22	-	4.35	-	Oklahoma City
+Tennessee	19.27	19.27	-	-	-	Memphis	
+N. Carolina	9.14	9.14	-	6.92	-	Asheville	
+I-244	Oklahoma	15.75	15.75	-	-	-	Tulsa
+I-255	Missouri	3.77	3.77	-	-	-	St. Louis* East St. Louis
+Illinois	27.05	27.05	-	-	-	St. Louis* East St. Louis	
+I-264	Kentucky	22.93	22.93	-	-	-	Louisville* Shively* St. Matthews
+Virginia	25.07	25.07	-	12.00	-	Norfolk* Portsmouth	
+I-265	Kentucky	24.48	24.48	-	21.20	-	Louisville* Okolona* Jeffersontown
+Indiana	6.73	6.73	-	-	-	New Albany	
+I-270	Colorado	5.31	5.31	-	-	-	Denver* Commerce City
+Missouri	35.62	35.62	-	-	-	St. Louis* Florissant* Ferguson* Bridgeton* Kirkwood	
+Illinois	14.97	14.97	-	-	-	St. Louis* East St. Louis* Granite City	
+Ohio	54.97	54.97	-	-	-	Columbus* Whitehall* Gahanna* Upper Arlington* Grove City	
+Maryland	34.40	34.40	-	-	-	Rockville, Gaithersburg, Frederick	
+I-271	Ohio	46.06	40.22	-	-	5.84 Mi. on I-480	Cleveland* Maple Heights* Shaker Heights* South Euclid
+I-275	Florida	60.64	60.64	-	-	-	St. Petersburg* Gulfport* Pinellas ParkTampa
+Tennessee	2.98	2.98	-	-	-	Knoxville	
+Kentucky	24.58	24.58	-	-	-	Covington- Newport	
+Ohio	55.97	52.52	-	-	3.45 Mi. on I-74	Cincinnati* Sharonville* Springdale	
+Indiana	3.16	3.16	-	-	-	None	
+Michigan	29.97	29.97	-	-	-	Detroit* Romulus* Westland	
+I-276	Pennsylvania	32.65	32.65	-	-	-	Philadelphia* King of Prussia* Norristown
+I-277	N. Carolina	4.41	4.41	-	1.72	-	Charlotte
+Ohio	4.14	4.14	-	-	-	Akron	
+I-278	New Jersey	2.00	2.00	-	-	-	Elizabeth
+New York	33.62	33.62	-	-	-	New York City*Staten Island*Brooklyn*Queens*Bronx	
+I-279	Pennsylvania	19.52	19.52	-	-	-	Pittsburgh
+I-280	California	57.22	57.22	-	-	-	San Francisco* Daly City* San Bruno* Mountain View* San Jose
+Iowa	9.38	9.38	-	-	-	Davenport	
+Illinois	17.60	8.21	-	-	9.39 Mi. on I-74	Rock Island	
+Ohio	12.41	12.41	-	-	-	Toledo	
+New Jersey	17.85	17.85	-	-	-	Orange, West Orange, East Orange, Newark	
+I-283	Pennsylvania	2.91	2.91	-	-	-	Harrisburg
+I-285	Georgia	63.98	62.77	-	-	1.21 Mi. on I-85	Atlanta
+I-287	New Jersey	67.54	67.54	-	-	-	Northeast New Jersey* Somerville* Morristown* Pompton Plain* Oakland
+New York	31.18	11.98	-	-	19.20 Mi. on I-87	New York City* Suffern* Spring Valley* White Plains* Tarrytown* Port Chester	
+I-290	Illinois	29.84	29.84	-	-	-	Chicago* Schaumburg* Elmhurst* Maywood* Cicero
+New York	9.80	9.80	-	-	-	Buffalo* Town of Tonawanda* Amherst	
+Massachusetts	20.16	20.16	-	-	-	Worcester	
+I-291	Connecticut	6.02	6.02	-	-	-	Hartford
+Massachusetts	5.44	5.44	-	-	-	Springfield	
+I-293	New Hampshire	11.18	11.18	-	5.68	-	Manchester
+I-294	Illinois	53.42	48.10	-	-	5.32 Mi. on I-80	Chicago* Harvey* Westchester* Oak Lawn
+I-295	Florida	35.51	35.51	-	-	-	Jacksonville
+Virginia	52.56	52.56	-	-	-	Richmond, Petersburg-Colonial Heights	
+District of Columbia	7.25	7.25	-	-	-	Washington, D.C.	
+Maryland	0.80	0.80	-	-	-	Washington, D.C.	
+Delaware	5.71	5.71	-	-	-	Wilmington	
+New Jersey	68.06	68.06	-	-	-	Camden, Trenton	
+New York	9.10	9.10	-	-	-	New York City* Queens* Bronx	
+Rhode Island	22.35	22.35	-	-	-	Providence* Cranston	
+Massachusetts	4.23	4.23	-	-	-	Providence (R.I.)	
+Maine	11.02	11.02	-	-	-	Portland	
+I-296	Michigan	3.43	3.43	-	-	-	Grand Rapids
+I-305	California	8.44	8.44	-	-	-	Sacramento
+I-310	Louisiana	11.25	11.25	-	-	-	New Orleans
+I-315	Montana	0.83	0.83	-	-	-	Great Falls
+I-335	Kansas	50.13	50.13	-	50.13	-	Topeka, Emporia
+I-345	Texas	1.40	1.40	-	-	-	Dallas
+I-355	Illinois	20.01	20.01	-	20.01	-	Chicago* Bolingbrook* Downers Grove* Glen Ellyn* Lombard
+I-359	Alabama	2.30	2.30	-	-	-	Tuscaloosa
+I-370	Maryland	3.13	3.13	1.18	-	-	Washington, D.C.* Rockville* Gaithersburg
+I-375	Florida	1.34	1.34	-	1.34	-	St. Petersburg
+Michigan	1.06	1.06	-	-	-	Detroit	
+I-376	Pennsylvania	14.70	14.70	-	-	-	Pittsburgh* Monroeville* Wilkinsburg
+I-380	California	3.30	3.30	-	-	-	San Francisco* San Bruno
+Iowa	73.05	73.05	-	-	-	Waterloo, Cedar Rapids, Iowa City	
+Pennsylvania	24.76	24.76	-	-	-	Scranton	
+I-381	Virginia	1.67	1.67	-	-	-	Bristol
+I-384	Connecticut	8.20	8.20	-	-	-	Hartford* East Hartford* Manchester
+I-385	S. Carolina	42.16	42.16	-	36.00	-	Greenville* Laurens
+I-390	New York	76.06	76.06	60.50	-	-	Rochester
+I-391	Massachusetts	4.46	4.46	-	-	-	Chicopee, Holyoke
+I-393	New Hampshire	4.60	4.60	-	-	-	Concord
+I-394	Minnesota	9.75	9.75	-	-	-	Minneapolis* St. Louis Park* Golden Valley
+I-395	Florida	1.29	1.29	-	-	-	Miami
+Virginia	9.91	9.91	-	-	-	Arlington, Alexandria	
+District of Columbia	3.48	3.48	-	-	-	Washington, D.C.	
+Maryland	1.98	1.98	-	-	-	Baltimore	
+Connecticut	54.69	54.69	-	54.69	-	Norwich	
+Massachusetts	11.91	11.91	-	11.91	-	None	
+Maine	4.99	4.99	-	-	-	Bangor	
+I-405	California	72.15	72.15	-	-	-	Los Angeles* Irvine* Costa Mesa* Huntingdon Beach* Long Beach* Torrance* Inglewood* Santa Monica
+Oregon	3.53	3.53	-	-	-	Portland	
+Washington	30.30	30.30	-	-	-	Seattle* Renton* Bellevue	
+I-410	Texas	49.49	49.49	-	9.93	-	San Antonio
+I-430	Arkansas	12.93	12.93	-	-	-	Little Rock
+I-435	Kansas	28.03	28.03	-	-	-	Kansas City* Leawood* Overland Park* Shawnee
+Missouri	52.78	52.78	-	-	-	Kansas City* Grandview* Raytown* Independence* Gladstone	
+I-440	Arkansas	9.96	9.96	-	9.96	-	Little Rock
+Tennessee	7.64	7.64	-	-	-	Nashville	
+N. Carolina	16.40	16.40	-	16.40	-	Raleigh	
+I-444	Oklahoma	2.51	2.51	-	-	-	Tulsa
+I-459	Alabama	32.80	32.80	-	-	-	Birmingham* Bessemer* Bluff Park* Homewood
+I-464	Virginia	4.71	4.71	-	-	-	Norfolk
+I-465	Indiana	57.51	57.51	-	5.03	-	Indianapolis
+I-469	Indiana	30.83	30.83	-	30.83	-	Ft. Wayne, New Haven
+I-470	Kansas	13.72	13.72	-	-	-	Topeka
+Missouri	16.72	16.72	-	-	-	Kansas City* Lee's Summit* Independence	
+Ohio	6.69	6.69	-	-	-	Wheeling (W.Va.-Ohio)	
+West Virginia	3.94	3.94	-	-	-	Wheeling	
+I-471	Kentucky	5.02	5.02	-	-	-	Newport
+Ohio	0.73	0.73	-	-	-	Cincinnati	
+I-474	Illinois	14.88	14.88	-	-	-	Peoria
+I-475	Georgia	15.83	15.83	-	-	-	Macon
+Ohio	20.37	20.37	-	-	-	Toledo	
+Michigan	16.99	16.99	-	-	-	Flint	
+I-476	Pennsylvania	129.61	129.61	-	110.00	-	Philadelphia* Ridley Park* Marple* Broomall* Conshohocken
+I-478	New York	2.14	2.14	-	2.14	-	New York City* Brooklyn* Manhattan
+I-480	Nebraska	4.15	4.15	-	-	-	Omaha
+Iowa	0.75	0.75	-	-	-	Council Bluffs	
+Ohio	41.77	41.77	-	-	-	Cleveland* Bedford Heights* Maple Heights* Garfield Heights* North Olmstead* Parma	
+I-481	New York	15.04	15.04	-	-	-	Syracuse* DeWitt
+I-485	N. Carolina	16.70	16.70	-	16.70	-	Gastonia
+I-490	Ohio	2.43	2.43	-	-	-	Cleveland
+New York	37.40	37.40	-	-	-	Rochester	
+I-494	Minnesota	42.94	42.94	-	-	-	Minneapolis* Bloomington* Eden Prairie* Maple Grove* Minnetonka
+I-495	Virginia	15.28	15.28	-	-	-	Washington, D.C.* Springfield* Annandale* McLean* Vienna
+Maryland	16.13	16.13	-	-	-	Washington, D.C.* Bethesda* Wheaton* Silver Spring	
+Delaware	11.47	11.47	-	-	-	Wilmington* Claymont	
+New York	66.38	66.38	-	62.70	-	New York City- *Manhattan* Manhattan* Queens* Long Island	
+Massachusetts	121.56	121.56	12.90	18.50	-	Boston, Lowell, Lawrence	
+Maine	50.47	50.47	-	50.47	-	Portland, Lewiston, Gardiner	
+I-496	Michigan	11.78	11.78	-	-	-	Lansing
+I-505	California	32.98	32.98	-	-	-	Vacaville
+I-510	Louisiana	3.04	3.04	-	-	-	New Orleans
+I-515	Nevada	20.54	20.54	-	14.90	-	Las Vegas
+I-516	Georgia	6.49	6.49	-	6.49	-	Savannah
+I-520	Georgia	10.34	10.34	9.11	-	-	Augusta
+I-526	S. Carolina	19.26	19.26	-	11.20	-	Charleston* North Charleston* Mount Pleasant
+I-530	Arkansas	46.65	46.65	-	46.65	-	
+I-535	Minnesota	1.57	1.57	-	-	-	Duluth
+Wisconsin	1.21	1.21	-	-	-	Superior	
+I-540	Arkansas	80.72	80.72	-	72.67	-	Ft. Smith
+N. Carolina	9.52	9.52	-	4.35	-	Raleigh-Durham	
+I-564	Virginia	3.03	3.03	-	-	-	Norfolk
+I-565	Alabama	21.40	21.40	-	-	-	Huntsville
+I-575	Georgia	30.97	30.97	29.16	-	-	Marietta
+I-579	Pennsylvania	1.57	1.57	-	-	-	Pittsburgh
+I-580	California	75.63	75.63	-	7.30	-	Tracy, Livermore, Castro Valley, Hayward, San Leandro, Oakland
+Nevada	4.99	4.99	-	1.21	-	Reno	
+I-581	Virginia	6.64	6.64	-	-	-	Roanoke
+I-585	S. Carolina	2.25	2.25	-	-	-	Spartanburg
+I-587	New York	1.21	1.21	-	-	-	Kingston
+I-590	New York	5.31	5.31	5.31	-	-	Rochester
+I-595	Maryland	19.97	19.97	19.31	-	-	Washington, D.C.* BowieAnnapolis
+Florida	12.86	12.86	-	8.80	-	Ft. Lauderdale	
+I-605	California	27.40	27.40	-	-	-	Los Angeles* Long Beach* Lakewood* Bellflower* Norwalk* Downey* South Whittier* El Monte
+I-610	Texas	37.97	37.97	-	-	-	Houston
+Louisiana	4.52	4.52	-	-	-	New Orleans	
+I-630	Arkansas	7.40	7.40	-	-	-	Little Rock
+I-635	Texas	37.00	37.00	-	-	-	Dallas* Balch Springs* Mesquite
+Kansas	8.90	8.90	-	-	-	Kansas City	
+Missouri	3.77	3.77	-	-	-	Kansas City	
+I-640	Tennessee	7.03	7.03	-	-	-	Knoxville
+I-664	Virginia	20.21	20.21	-	9.20	-	Newport News, Portsmouth
+I-670	Kansas	1.64	1.64	-	-	-	Kansas City
+Missouri	1.17	1.17	-	-	-	Kansas City	
+Ohio	9.37	9.37	-	-	-	Columbus	
+I-675	Georgia	11.04	11.04	7.78	-	-	Atlanta
+Ohio	26.53	26.53	-	-	-	Dayton	
+Michigan	7.72	7.72	-	-	-	Saginaw	
+I-676	Pennsylvania	2.15	2.15	-	-	-	Philadelphia
+New Jersey	4.75	4.75	-	-	-	Camden	
+I-678	New York	14.33	14.33	-	7.80	-	New York City* Queens* Bronx
+I-680	California	70.52	70.52	-	12.50	-	San Jose, Milpitas, Freemont, Walnut Creek, Concord
+Nebraska	13.32	13.32	-	-	-	Omaha	
+Iowa	29.54	19.63	-	-	9.91 Mi. on I-29	Omaha	
+Ohio	16.43	16.43	-	-	-	Youngstown	
+I-684	New York	27.06	27.06	-	-	-	White Plains
+Connecticut	1.41	1.41	-	-	-	None	
+I-690	New York	14.19	14.19	-	-	-	Syracuse
+I-691	Connecticut	8.38	8.38	6.69	-	-	Meriden
+I-694	Minnesota	22.62	21.97	-	-	0.65 Mi on I-35E	St. Paul* Maplewood* Roseville* Fridley
+I-695	District of Columbia	1.39	1.39	-	-	-	Washington, D.C.
+Maryland	30.57	30.57	-	2.20	-	Baltimore* Dundalk* Essex* Rosedale* Towson* Catonsville	
+I-696	Michigan	29.39	29.39	-	-	-	Detroit* Warren* Roseville
+I-705	Washington	1.50	1.50	-	-	-	Tacoma
+I-710	California	19.66	19.66	-	19.66	-	Los Angeles* Long Beach* Downey* Compton* East Los Angeles
+I-759	Alabama	4.50	4.50	-	-	-	Gadsden
+I-780	California	6.50	6.50	-	-	-	Vallejo
+I-787	New York	10.16	10.16	-	-	-	Albany
+I-790	New York	2.41	2.41	-	-	-	Utica
+I-794	Wisconsin	3.75	3.75	-	-	-	Milwaukee
+I-795	Maryland	8.99	8.99	-	5.47	-	Baltimore* Pikesville* Owings Mill
+I-805	California	28.02	28.02	-	-	-	San Diego* Chula Vista* National City
+I-820	Texas	35.17	35.17	-	-	-	Ft. Worth
+I-878	New York	0.70	0.70	-	-	-	New York City
+I-880	California	47.22	47.22	-	47.22	-	San Jose, Oakland
+I-890	New York	9.35	9.35	-	-	-	Schenectady
+I-894	Wisconsin	4.70	4.70	-	-	-	Milwaukee* West Allis* Wauwatosa
+I-895	Maryland	11.44	11.44	-	-	-	Baltimore* Dundalk
+New York	1.12	1.12	-	-	-	New York City* Bronx	
+I-910	Louisiana	9.70	9.70	-	9.70	-	
+I-980	California	2.03	2.03	-	1.00	-	Oakland
+I-985	Georgia	24.04	24.04	-	24.04	-	Gainesville
+I-990	New York	6.35	6.35	-	2.04	-	Buffalo* Amherst
+
+===========================================================================
+FHWA Route Log and Finder List
+Table 3: Interstate Routes in Each of the 50 States, District of Columbia, and Puerto Rico
+
+State	InterstateRoute	Total Miles	Net Miles	Howard-CramerMiles	Sections103(c)(4)(A)Miles	ISTEAMiles	OverlapMiles &	Route
+Alabama	I-10	66.31	66.31	-	-	-	-	-
+I-20	214.70	84.60	-	-	-	130.10	I-59	
+I-59	241.36	241.36	-	-	-	-	-	
+I-65	367.00	367.00	-	-	-	-	-	
+I-85	80.00	80.00	-	-	-	-	-	
+I-165	4.90	4.90	-	-	-	-	-	
+I-359	2.30	2.30	-	-	-	-	-	
+I-459	32.80	32.80	-	-	-	-	-	
+I-565	21.40	21.40	-	-	-	-	-	
+I-759	4.50	4.50	-	-	-	-	-	
+10 Routes	1,035.27	905.17	0.00	0.00	0.00	130.10		
+Alaska	A-1	408.23	408.23	-	408.23	-	-	-
+A-2	202.18	202.18	-	202.18	-	-	-	
+A-3	148.12	148.12	-	148.12	-	-	-	
+A-4	323.69	323.69	-	323.69	-	-	-	
+4 Routes	1,082.22	1,082.22	0.00	1,082.22	0.00	0.00		
+Arizona	I-8	178.33	178.33	-	-	-	-	-
+I-10	392.33	392.33	-	-	-	-	-	
+I-15	29.39	29.39	-	-	-	-	-	
+I-17	145.76	145.76	-	-	-	-	-	
+I-19	63.35	63.35	-	-	-	-	-	
+I-40	359.48	359.48	-	-	-	-	-	
+6 Routes	1,168.64	1,168.64	0.00	0.00	0.00	0.00		
+Arkansas	I-30	143.02	143.02	-	-	-	-	-
+I-40	284.69	284.69	-	-	-	-	-	
+I-55	72.22	70.00	-	-	-	2.22	I-40	
+I-430	12.93	12.93	-	-	-	-	-	
+I-440	9.96	9.96	-	9.96	-	-	-	
+I-530	46.65	46.65	-	46.65	-	-	-	
+I-540	80.72	80.72	-	5.97	66.70	-	-	
+I-630	7.40	7.40	-	-	-	-	-	
+8 Routes	657.59	655.37	0.00	62.58	66.70	2.22		
+California	I-5	796.53	796.53	-	-	-	-	-
+I-8	169.92	169.92	-	-	-	-	-	
+I-10	242.54	240.94	-	-	-	1.60	I-5	
+I-15	287.26	287.26	-	-	-	-	-	
+I-40	154.61	154.61	-	-	-	-	-	
+I-80	199.24	199.24	-	-	-	-	-	
+I-105	17.32	17.32	7.00	-	-	-	-	
+I-110	20.43	20.43	-	-	-	-	-	
+I-205	12.97	12.97	-	-	-	-	-	
+I-210	48.72	48.72	-	-	-	-	-	
+I-215	54.50	54.50	-	54.50	-	-	-	
+I-238	2.23	2.23	-	2.23	-	-	-	
+I-280	57.22	57.22	-	-	-	-	-	
+I-305	8.44	8.44	-	-	-	-	-	
+I-380	3.30	3.30	-	-	-	-	-	
+I-405	72.15	72.15	-	-	-	-	-	
+I-505	32.98	32.98	-	-	-	-	-	
+I-580	75.63	75.63	-	7.30	-	-	-	
+I-605	27.40	27.40	-	-	-	-	-	
+I-680	70.52	70.52	-	12.50	-	-	-	
+I-710	19.66	19.66	-	19.66	-	-	-	
+I-780	6.50	6.50	-	-	-	-	-	
+I-805	28.02	28.02	-	-	-	-	-	
+I-880	47.22	47.22	-	47.22	-	-	-	
+I-980	2.03	2.03	-	1.00	-	-	-	
+25 Routes	2,457.34	2,455.74	7.00	144.41	0.00	1.60		
+Colorado	I-25	299.70	299.70	-	-	-	-	-
+I-70	451.04	451.04	-	-	-	-	-	
+I-76	184.86	184.86	-	-	-	-	-	
+I-225	12.00	12.00	-	-	-	-	-	
+I-270	5.31	5.31	-	-	-	-	-	
+5 Routes	952.91	952.91	0.00	0.00	0.00	0.00		
+Connecticut	I-84	97.90	97.90	-	-	-	-	-
+I-91	58.00	58.00	-	-	-	-	-	
+I-95	111.57	111.57	-	-	-	-	-	
+I-291	6.02	6.02	-	-	-	-	-	
+I-384	8.20	8.20	-	-	-	-	-	
+I-395	54.69	54.69	-	54.69	-	-	-	
+I-684	1.41	1.41	-	-	-	-	-	
+I-691	8.38	8.38	6.69	-	-	-	-	
+8 Routes	346.17	346.17	6.69	54.69	0.00	0.00		
+Delaware	I-95	23.43	23.43	-	-	-	-	-
+I-295	5.71	5.71	-	-	-	-	-	
+I-495	11.47	11.47	-	-	-	-	-	
+3 Routes	40.61	40.61	0.00	0.00	0.00	0.00		
+District of Columbia	I-66	1.48	1.48	-	-	-	-	-
+I-95	0.11	0.11	-	-	-	-	-	
+I-295	7.25	7.25	-	-	-	-	-	
+I-395	3.48	3.48	-	-	-	-	-	
+I-695	1.39	1.39	-	-	-	-	-	
+5 Routes	13.71	13.71	0.00	0.00	0.00	0.00		
+Florida	I-4	132.30	132.30	-	-	-	-	-
+I-10	362.28	362.28	-	-	-	-	-	
+I-75	470.88	470.88	46.31	-	-	-	-	
+I-95	382.15	382.15	-	-	-	-	-	
+I-110	6.94	6.94	-	-	-	-	-	
+I-175	1.44	1.44	-	1.44	-	-	-	
+I-195	4.42	4.42	-	-	-	-	-	
+I-275	60.64	60.64	-	-	-	-	-	
+I-295	35.51	35.51	-	-	-	-	-	
+I-375	1.34	1.34	-	1.34	-	-	-	
+I-395	1.29	1.29	-	-	-	-	-	
+I-595	12.86	12.86	-	8.80	-	-	-	
+12 Routes	1,472.05	1,472.05	46.31	11.58	0.00	0.00		
+Georgia	I-16	166.81	166.81	-	-	-	-	-
+I-20	202.61	202.61	-	-	-	-	-	
+I-24	4.10	4.10	-	-	-	-	-	
+I-59	20.67	20.67	-	-	-	-	-	
+I-75	355.11	355.11	-	-	-	-	-	
+I-85	179.90	171.90	-	-	-	8.00	I-75	
+I-95	112.00	112.00	-	-	-	-	-	
+I-185	49.30	49.30	-	5.50	-	-	-	
+I-285	63.98	62.77	-	-	-	1.21	I-85	
+I-475	15.83	15.83	-	-	-	-	-	
+I-516	6.49	6.49	-	6.49	-	-	-	
+I-520	10.34	10.34	9.11	-	-	-	-	
+I-575	30.97	30.97	29.16	-	-	-	-	
+I-675	11.04	11.04	7.78	-	-	-	-	
+I-985	24.04	24.04	-	24.04	-	-	-	
+15 Routes	1,253.19	1,243.98	46.05	36.03	0.00	9.21		
+Hawaii	H-1	27.16	27.16	-	-	-	-	-
+H-2	8.33	8.33	-	-	-	-	-	
+H-3	15.32	15.32	-	-	-	-	-	
+H-201	4.10	4.10	-	4.10	-	-	-	
+4 Routes	54.91	54.91	0.00	4.10	0.00	0.00		
+Idaho	I-15	196.00	196.00	-	-	-	-	-
+I-84	275.74	275.74	-	-	-	-	-	
+I-86	62.85	62.85	-	-	-	-	-	
+I-90	73.55	73.55	-	-	-	-	-	
+I-184	3.62	3.62	-	-	-	-	-	
+5 Routes	611.76	611.76	0.00	0.00	0.00	0.00		
+Illinois	I-24	38.73	38.73	-	-	-	-	-
+I-39	123.42	123.42	-	123.42	-	-	-	
+I-55	313.08	294.38	-	-	-	18.70	I-70	
+I-57	364.16	358.57	-	-	-	5.59	I-70	
+I-64	128.12	123.98	-	-	-	4.14	I-57	
+I-70	135.94	135.94	-	-	-	-	-	
+I-72	177.25	177.25	-	99.10	-	-	-	
+I-74	220.34	214.45	-	-	-	5.89	I-55	
+I-80	163.52	163.52	-	-	-	-	-	
+I-88	140.60	140.60	-	140.60	-	-	-	
+I-90	123.89	108.50	-	16.71	-	15.39	I-94	
+I-94	61.53	59.05	-	-	-	2.48	I-80	
+I-155	32.13	32.13	-	32.13	-	-	-	
+I-172	19.69	19.69	-	19.69	-	-	-	
+I-180	13.19	13.19	-	-	-	-	-	
+I-190	3.07	3.07	-	3.07	-	-	-	
+I-255	27.05	27.05	-	-	-	-	-	
+I-270	14.97	14.97	-	-	-	-	-	
+I-280	17.60	8.21	-	-	-	9.39	I-74	
+I-290	29.84	29.84	-	-	-	-	-	
+I-294	53.42	48.10	-	-	-	5.32	I-80	
+I-355	20.01	20.01	-	20.01	-	-	-	
+I-474	14.88	14.88	-	-	-	-	-	
+23 Routes	2,236.43	2,169.53	0.00	454.73	0.00	66.90		
+Indiana	I-64	123.33	123.33	-	-	-	-	-
+I-65	261.27	261.27	-	-	-	-	-	
+I-69	157.30	157.30	-	-	-	-	-	
+I-70	156.60	154.47	-	-	-	2.13	I-65	
+I-74	171.54	150.94	-	-	-	20.60	I-465	
+I-80	151.56	151.56	-	-	-	-	-	
+I-90	156.28	20.68	-	-	-	135.60	I-80	
+I-94	46.13	30.08	-	-	-	16.05	I-80	
+I-164	21.24	21.24	-	-	-	-	-	
+I-265	6.73	6.73	-	-	-	-	-	
+I-275	3.16	3.16	-	-	-	-	-	
+I-465	57.51	57.51	-	5.03	-	-	-	
+I-469	30.83	30.83	-	30.83	-	-	-	
+13 Routes	1,343.48	1,169.10	0.00	35.86	0.00	174.38		
+Iowa	I-29	154.75	151.75	-	-	-	3.00	I-80
+I-35	218.33	218.33	-	-	-	-	-	
+I-74	5.36	5.36	-	-	-	-	-	
+I-80	303.23	288.94	-	-	-	14.29	I-35	
+I-129	0.27	0.27	-	-	-	-	-	
+I-235	13.78	13.78	-	-	-	-	-	
+I-280	9.38	9.38	-	-	-	-	-	
+I-380	73.05	73.05	-	-	-	-	-	
+I-480	0.75	0.75	-	-	-	-	-	
+I-680	29.54	19.63	-	-	-	9.91	I-29	
+10 Routes	808.44	781.24	0.00	0.00	0.00	27.20		
+Kansas	I-35	235.51	235.51	-	-	-	-	-
+I-70	424.15	424.15	-	-	-	-	-	
+I-135	95.74	95.74	-	-	-	-	-	
+I-235	16.52	16.52	-	-	-	-	-	
+I-335	50.13	50.13	-	50.13	-	-	-	
+I-435	28.03	28.03	-	-	-	-	-	
+I-470	13.72	13.72	-	-	-	-	-	
+I-635	8.90	8.90	-	-	-	-	-	
+I-670	1.64	1.64	-	-	-	-	-	
+9 Routes	874.34	874.34	0.00	50.13	0.00	0.00		
+Kentucky	I-24	93.37	93.37	-	-	-	-	-
+I-64	185.20	185.20	-	-	-	-	-	
+I-65	137.32	137.32	-	-	-	-	-	
+I-71	97.42	77.72	-	-	-	19.70	I-75	
+I-75	191.78	191.78	-	-	-	-	-	
+I-264	22.93	22.93	-	-	-	-	-	
+I-265	24.48	24.48	-	21.20	-	-	-	
+I-275	24.58	24.58	-	-	-	-	-	
+I-471	5.02	5.02	-	-	-	-	-	
+9 Routes	782.10	762.40	0.00	21.20	0.00	19.70		
+Louisiana	I-10	274.42	274.42	-	-	-	-	-
+I-12	85.59	85.59	-	-	-	-	-	
+I-20	189.87	189.87	-	-	-	-	-	
+I-49	208.25	208.25	153.18	19.55	-	-	-	
+I-55	65.81	65.81	-	-	-	-	-	
+I-59	11.48	11.48	-	-	-	-	-	
+I-110	8.89	8.89	-	-	-	-	-	
+I-210	12.40	12.40	-	-	-	-	-	
+I-220	17.62	17.62	-	-	-	-	-	
+I-310	11.25	11.25	-	-	-	-	-	
+I-510	3.04	3.04	-	-	-	-	-	
+I-610	4.52	4.52	-	-	-	-	-	
+I-910	9.70	9.70	-	-	9.70	-	-	
+13 Routes	902.84	902.84	153.18	19.55	9.70	0.00		
+Maine	I-95	298.51	298.51	-	-	-	-	-
+I-195	1.55	1.55	-	-	-	-	-	
+I-295	11.02	11.02	-	-	-	-	-	
+I-395	4.99	4.99	-	-	-	-	-	
+I-495	50.47	50.47	-	50.47	-	-	-	
+5 Routes	366.54	366.54	0.00	50.47	0.00	0.00		
+Maryland	I-68	81.09	81.09	-	81.09	-	-	-
+I-70	93.62	93.62	-	-	-	-	-	
+I-81	12.08	12.08	-	-	-	-	-	
+I-83	34.50	34.50	-	-	-	-	-	
+I-95	110.01	110.01	-	-	-	-	-	
+I-97	17.62	17.62	14.90	-	-	-	-	
+I-195	4.71	4.71	2.20	1.40	-	-	-	
+I-270	34.40	34.40	-	-	-	-	-	
+I-295	0.80	0.80	-	-	-	-	-	
+I-370	3.13	3.13	1.18	-	-	-	-	
+I-395	1.98	1.98	-	-	-	-	-	
+I-495	16.13	16.13	-	-	-	-	-	
+I-595	19.97	19.97	19.31	-	-	-	-	
+I-695	30.57	30.57	-	2.20	-	-	-	
+I-795	8.99	8.99	-	5.47	-	-	-	
+I-895	11.44	11.44	-	-	-	-	-	
+16 Routes	481.04	481.04	37.59	90.16	0.00	0.00		
+Massachusetts	I-84	8.15	8.15	-	-	-	-	-
+I-90	135.72	135.72	-	2.90	-	-	-	
+I-91	54.99	54.99	-	-	-	-	-	
+I-93	47.07	47.07	-	14.10	-	-	-	
+I-95	91.95	91.95	-	37.54	-	-	-	
+I-190	19.26	19.26	-	-	-	-	-	
+I-195	40.73	40.73	-	14.28	-	-	-	
+I-290	20.16	20.16	-	-	-	-	-	
+I-291	5.44	5.44	-	-	-	-	-	
+I-295	4.23	4.23	-	-	-	-	-	
+I-391	4.46	4.46	-	-	-	-	-	
+I-395	11.91	11.91	-	11.91	-	-	-	
+I-495	121.56	121.56	12.90	18.50	-	-	-	
+13 Routes	565.63	565.63	12.90	99.23	0.00	0.00		
+Michigan	I-69	198.51	193.31	-	66.80	-	5.20	I-96
+I-75	395.54	395.54	-	-	-	-	-	
+I-94	275.49	275.49	-	-	-	-	-	
+I-96	192.06	192.06	-	-	-	-	-	
+I-194	3.38	3.38	-	-	-	-	-	
+I-196	80.65	80.65	-	-	-	-	-	
+I-275	29.97	29.97	-	-	-	-	-	
+I-296	3.43	3.43	-	-	-	-	-	
+I-375	1.06	1.06	-	-	-	-	-	
+I-475	16.99	16.99	-	-	-	-	-	
+I-496	11.78	11.78	-	-	-	-	-	
+I-675	7.72	7.72	-	-	-	-	-	
+I-696	29.39	29.39	-	-	-	-	-	
+13 Routes	1,245.97	1,240.77	0.00	66.80	0.00	5.20		
+Minnesota	I-35	259.69	220.46	-	-	-	39.23	I-35E
+I-35E	39.34	39.34	-	-	-	-	-	
+I-35W	41.78	41.78	-	-	-	-	-	
+I-90	275.70	275.70	-	-	-	-	-	
+I-94	259.49	259.22	-	-	-	0.27	I-35E	
+I-394	9.75	9.75	-	-	-	-	-	
+I-494	42.94	42.94	-	-	-	-	-	
+I-535	1.57	1.57	-	-	-	-	-	
+I-694	22.62	21.97	-	-	-	0.65	I-35E	
+9 Routes	952.88	912.73	0.00	0.00	0.00	40.15		
+Mississippi	I-10	77.19	77.19	-	-	-	-	-
+I-20	154.61	129.41	-	-	-	25.20	I-55/59	
+I-55	290.41	290.41	-	-	-	-	-	
+I-59	171.72	171.72	-	-	-	-	-	
+I-110	4.10	4.10	-	-	-	-	-	
+I-220	12.01	12.01	-	-	-	-	-	
+6 Routes	710.04	684.84	0.00	0.00	0.00	25.20		
+Missouri	I-29	130.72	125.22	-	-	-	5.50	I-35/40
+I-35	114.74	113.74	-	-	-	1.00	I-70	
+I-44	290.49	290.49	-	-	-	-	-	
+I-55	210.45	209.45	-	-	-	1.00	I-44	
+I-57	21.96	21.96	-	-	-	-	-	
+I-64	14.69	14.69	-	14.69	-	-	-	
+I-70	251.66	251.66	-	-	-	-	-	
+I-72	2.04	2.04	-	2.04	-	-	-	
+I-155	10.84	10.84	-	-	-	-	-	
+I-170	11.17	11.17	-	4.29	-	-	-	
+I-229	14.97	14.97	-	-	-	-	-	
+I-255	3.77	3.77	-	-	-	-	-	
+I-270	35.62	35.62	-	-	-	-	-	
+I-435	52.78	52.78	-	-	-	-	-	
+I-470	16.72	16.72	-	-	-	-	-	
+I-635	3.77	3.77	-	-	-	-	-	
+I-670	1.17	1.17	-	-	-	-	-	
+17 Routes	1,187.56	1,180.06	0.00	21.02	0.00	7.50		
+Montana	I-15	396.03	396.03	-	-	-	-	-
+I-90	551.68	544.03	-	-	-	7.65	I-15	
+I-94	249.15	249.15	-	-	-	-	-	
+I-115	1.19	1.19	-	-	-	-	-	
+I-315	0.83	0.83	-	-	-	-	-	
+5 Routes	1,198.88	1,191.23	0.00	0.00	0.00	7.65		
+Nebraska	I-76	2.48	2.48	-	-	-	-	-
+I-80	455.32	455.32	-	-	-	-	-	
+I-129	3.21	3.21	-	-	-	-	-	
+I-180	3.18	3.18	-	-	-	-	-	
+I-480	4.15	4.15	-	-	-	-	-	
+I-680	13.32	13.32	-	-	-	-	-	
+6 Routes	481.66	481.66	0	0	0	0		
+Nevada	I-15	123.77	123.77	-	-	-	-	-
+I-80	410.67	410.67	-	-	-	-	-	
+I-515	20.54	20.54	-	14.90	-	-	-	
+I-580	4.99	4.99	-	1.21	-	-	-	
+4 Routes	559.97	559.97	0	16.11	0	0		
+New Hampshire	I-89	60.87	60.87	-	-	-	-	-
+I-93	131.78	131.78	-	-	-	-	-	
+I-95	16.11	16.11	-	-	-	-	-	
+I-293	11.18	11.18	-	5.68	-	-	-	
+I-393	4.60	4.60	-	-	-	-	-	
+5 Routes	224.54	224.54	0.00	5.68	0.00	0.00		
+New Jersey	I-76	3.04	3.04	-	-	-	-	-
+I-78	67.83	67.83	-	-	-	-	-	
+I-80	68.35	68.35	-	-	-	-	-	
+I-95	97.76	97.76	-	-	-	-	-	
+I-195	34.17	34.17	27.30	-	-	-	-	
+I-278	2.00	2.00	-	-	-	-	-	
+I-280	17.85	17.85	-	-	-	-	-	
+I-287	67.54	67.54	-	-	-	-	-	
+I-295	68.06	68.06	-	-	-	-	-	
+I-676	4.75	4.75	-	-	-	-	-	
+10 Routes	431.36	431.36	27.30	0.00	0.00	0.00		
+New Mexico	I-10	164.27	164.27	-	-	-	-	-
+I-25	462.12	462.12	-	-	-	-	-	
+I-40	373.51	373.51	-	-	-	-	-	
+3 Routes	999.90	999.90	0.00	0.00	0.00	0.00		
+New York	I-78	0.50	0.50	-	-	-	-	-
+I-81	183.60	183.60	-	-	-	-	-	
+I-84	71.79	71.79	-	-	-	-	-	
+I-86	176.57	176.57	-	-	176.57	-	-	
+I-87	333.49	333.49	-	29.80	-	-	-	
+I-88	117.75	117.75	-	-	-	-	-	
+I-90	385.48	385.48	-	-	-	-	-	
+I-95	23.50	23.50	-	-	-	-	-	
+I-190	28.34	28.34	-	-	-	-	-	
+I-278	33.62	33.62	-	-	-	-	-	
+I-287	31.18	11.98	-	-	-	19.20	I-87	
+I-290	9.80	9.80	-	-	-	-	-	
+I-295	9.10	9.10	-	-	-	-	-	
+I-390	76.06	76.06	60.50	-	-	-	-	
+I-478	2.14	2.14	-	2.14	-	-	-	
+I-481	15.04	15.04	-	-	-	-	-	
+I-490	37.40	37.40	-	-	-	-	-	
+I-495	66.38	66.38	-	62.70	-	-	-	
+I-587	1.21	1.21	-	-	-	-	-	
+I-590	5.31	5.31	5.31	-	-	-	-	
+I-678	14.33	14.33	-	7.80	-	-	-	
+I-684	27.06	27.06	-	-	-	-	-	
+I-690	14.19	14.19	-	-	-	-	-	
+I-787	10.16	10.16	-	-	-	-	-	
+I-790	2.41	2.41	-	-	-	-	-	
+I-878	0.70	0.70	-	-	-	-	-	
+I-890	9.35	9.35	-	-	-	-	-	
+I-895	1.12	1.12	-	-	-	-	-	
+I-990	6.35	6.35	-	2.04	-	-	-	
+29 Routes	1,693.93	1,674.73	65.81	104.48	176.57	19.20		
+North Carolina	I-26	39.92	39.92	-	-	-	-	-
+I-40	419.40	419.40	-	91.40	-	-	-	
+I-73	12.27	12.27	-	-	12.27	-	-	
+I-74	12.10	12.10	-	-	12.10	-	-	
+I-77	102.31	102.31	-	5.80	-	-	-	
+I-85	233.93	195.42	-	-	-	38.51	I-40	
+I-95	181.71	181.71	-	-	-	-	-	
+I-240	9.14	9.14	-	6.92	-	-	-	
+I-277	4.41	4.41	-	1.72	-	-	-	
+I-440	16.40	16.40	-	16.40	-	-	-	
+I-485	16.70	16.70	-	16.70	-	-	-	
+I-540	5.00	5.00	-	5.00	-	-	-	
+12 Routes	1,053.29	1,014.78	0.00	143.94	24.37	38.51		
+North Dakota	I-29	217.54	217.54	-	-	-	-	-
+I-94	352.39	352.39	-	-	-	-	-	
+I-194	1.20	1.20	-	-	-	-	-	
+3 Routes	571.13	571.13	0.00	0.00	0.00	0.00		
+Ohio	I-70	225.60	225.60	-	-	-	-	-
+I-71	248.15	246.19	-	-	-	1.96	I-75/70	
+I-74	19.47	19.47	-	-	-	-	-	
+I-75	211.30	211.30	-	-	-	-	-	
+I-76	81.65	81.65	-	-	-	-	-	
+I-77	160.13	160.13	-	-	-	-	-	
+I-80	237.48	237.48	-	35.00	-	-	-	
+I-90	244.75	101.95	-	-	-	142.80	I-80	
+I-270	54.97	54.97	-	-	-	-	-	
+I-271	46.06	40.22	-	-	-	5.84	I-480	
+I-275	55.97	52.52	-	-	-	3.45	I-74	
+I-277	4.14	4.14	-	-	-	-	-	
+I-280	12.41	12.41	-	-	-	-	-	
+I-470	6.69	6.69	-	-	-	-	-	
+I-471	0.73	0.73	-	-	-	-	-	
+I-475	20.37	20.37	-	-	-	-	-	
+I-480	41.77	41.77	-	-	-	-	-	
+I-490	2.43	2.43	-	-	-	-	-	
+I-670	9.37	9.37	-	-	-	-	-	
+I-675	26.53	26.53	-	-	-	-	-	
+I-680	16.43	16.43	-	-	-	-	-	
+21 Routes	1,726.40	1,572.35	0.00	35.00	0.00	154.05		
+Oklahoma	I-35	235.96	235.96	-	-	-	-	-
+I-40	331.03	329.50	-	-	-	1.53	I-35	
+I-44	328.53	324.16	-	114.76	-	4.37	I-35	
+I-235	5.36	5.36	-	1.54	-	-	-	
+I-240	16.22	16.22	-	4.35	-	-	-	
+I-244	15.75	15.75	-	-	-	-	-	
+I-444	2.51	2.51	-	-	-	-	-	
+7 Routes	935.36	929.46	0.00	120.65	0.00	5.90		
+Oregon	I-5	308.14	308.14	-	-	-	-	-
+I-82	11.01	11.01	-	-	-	-	-	
+I-84	375.17	375.17	-	6.89	-	-	-	
+I-105	3.49	3.49	-	-	-	-	-	
+I-205	26.07	26.07	-	-	-	-	-	
+I-405	3.53	3.53	-	-	-	-	-	
+6 Routes	727.41	727.41	0.00	6.89	0.00	0.00		
+Pennsylvania	I-70	167.92	80.70	-	-	-	87.22	I-76
+I-76	349.67	349.67	-	-	-	-	-	
+I-78	75.23	75.23	-	-	-	-	-	
+I-79	182.72	179.17	-	-	-	3.55	I-70	
+I-80	311.07	311.07	-	-	-	-	-	
+I-81	232.63	232.63	-	-	-	-	-	
+I-83	50.80	50.80	-	-	-	-	-	
+I-84	54.55	54.55	-	-	-	-	-	
+I-86	6.99	6.99	-	-	6.99	-	-	
+I-90	46.40	46.40	-	-	-	-	-	
+I-95	51.08	51.08	-	-	-	-	-	
+I-99	53.00	53.00	-	-	53.00	-	-	
+I-176	11.33	11.33	-	-	-	-	-	
+I-180	28.85	28.85	-	28.85	-	-	-	
+I-276	32.65	32.65	-	-	-	-	-	
+I-279	19.52	19.52	-	-	-	-	-	
+I-283	2.91	2.91	-	-	-	-	-	
+I-376	14.70	14.70	-	-	-	-	-	
+I-380	24.76	24.76	-	-	-	-	-	
+I-476	129.61	129.61	-	110.00	-	-	-	
+I-579	1.57	1.57	-	-	-	-	-	
+I-676	2.15	2.15	-	-	-	-	-	
+22 Routes	1,850.11	1,759.34	0.00	138.85	59.99	90.77		
+Puerto Rico	PRI-1	71.08	71.08	-	71.08	-	-	-
+PRI-2	138.13	138.13	-	138.13	-	-	-	
+PRI-3	40.56	40.56	-	40.56	-	-	-	
+3 Routes	249.77	249.77	0.00	249.77	0.00	0.00		
+Rhode Island	I-95	42.36	42.36	-	-	-	-	-
+I-195	3.82	3.82	-	-	-	-	-	
+I-295	22.35	22.35	-	-	-	-	-	
+3 Routes	68.53	68.53	0.00	0.00	0.00	0.00		
+South Carolina	I-20	141.51	141.51	-	-	-	-	-
+I-26	220.95	220.95	-	-	-	-	-	
+I-77	91.05	91.05	-	9.50	-	-	-	
+I-85	106.28	106.28	-	-	-	-	-	
+I-95	198.76	198.76	-	-	-	-	-	
+I-126	3.68	3.68	-	-	-	-	-	
+I-185	17.70	17.70	-	14.50	-	-	-	
+I-385	42.16	42.16	-	36.00	-	-	-	
+I-526	19.26	19.26	-	11.20	-	-	-	
+I-585	2.25	2.25	-	-	-	-	-	
+10 Routes	846.58	846.58	0.00	71.20	0.00	0.00		
+South Dakota	I-29	252.50	252.50	-	-	-	-	-
+I-90	412.76	412.76	-	-	-	-	-	
+I-190	1.72	1.72	-	-	-	-	-	
+I-229	11.33	11.33	-	-	-	-	-	
+4 Routes	678.31	678.31	0.00	0.00	0.00	0.00		
+Tennessee	I-24	180.16	177.96	-	-	-	2.20	I-40/65
+I-40	455.28	455.28	-	-	-	-	-	
+I-55	12.28	12.28	-	-	-	-	-	
+I-65	121.71	120.71	-	-	-	1.00	I-40	
+I-75	161.86	142.26	-	-	-	19.60	I-40	
+I-81	75.66	75.66	-	-	-	-	-	
+I-124	1.97	1.97	-	-	-	-	-	
+I-140	11.17	11.17	-	11.17	-	-	-	
+I-155	15.93	15.93	-	-	-	-	-	
+I-181	23.85	23.85	-	23.85	-	-	-	
+I-240	19.27	19.27	-	-	-	-	-	
+I-275	2.98	2.98	-	-	-	-	-	
+I-440	7.64	7.64	-	-	-	-	-	
+I-640	7.03	7.03	-	-	-	-	-	
+14 Routes	1,096.79	1,073.99	0.00	35.02	0.00	22.80		
+Texas	I-10	881.00	878.61	-	-	-	2.39	I-35
+I-20	636.08	636.08	-	2.00	-	-	-	
+I-27	124.13	124.13	-	12.90	-	-	-	
+I-30	223.74	223.74	-	29.93	-	-	-	
+I-35	504.15	407.20	-	-	-	96.95	I-35E	
+I-35E	96.76	96.76	-	-	-	-	-	
+I-35W	85.20	85.20	-	-	-	-	-	
+I-37	143.00	143.00	-	-	-	-	-	
+I-40	177.10	177.10	-	-	-	-	-	
+I-44	14.77	14.77	-	14.77	-	-	-	
+I-45	284.91	284.91	-	-	-	-	-	
+I-110	0.92	0.92	-	-	-	-	-	
+I-345	1.40	1.40	-	-	-	-	-	
+I-410	49.49	49.49	-	9.93	-	-	-	
+I-610	37.97	37.97	-	-	-	-	-	
+I-635	37.00	37.00	-	-	-	-	-	
+I-820	35.17	35.17	-	-	-	-	-	
+17 Routes	3,332.79	3,233.45	0.00	69.53	0.00	99.34		
+Utah	I-15	401.07	401.07	-	-	-	-	-
+I-70	232.15	232.15	-	-	-	-	-	
+I-80	196.34	193.03	-	-	-	3.31	I-15	
+I-84	118.71	82.73	-	-	-	35.98	I-15	
+I-215	29.02	29.02	-	-	-	-	-	
+5 Routes	977.29	938.00	0.00	0.00	0.00	39.29		
+Vermont	I-89	130.25	130.25	-	-	-	-	-
+I-91	177.38	177.38	-	-	-	-	-	
+I-93	11.10	11.10	-	-	-	-	-	
+I-189	1.49	1.49	-	-	-	-	-	
+4 Routes	320.22	320.22	0.00	0.00	0.00	0.00		
+Virginia	I-64	297.62	267.22	-	-	-	30.40	I-81
+I-66	74.80	74.80	-	-	-	-	-	
+I-77	69.40	60.60	-	-	-	8.80	I-81	
+I-81	324.92	324.92	-	-	-	-	-	
+I-85	68.64	68.64	-	-	-	-	-	
+I-95	178.73	178.73	-	24.08	-	-	-	
+I-195	3.24	3.24	-	-	-	-	-	
+I-264	25.07	25.07	-	12.00	-	-	-	
+I-295	52.56	52.56	-	-	-	-	-	
+I-381	1.67	1.67	-	-	-	-	-	
+I-395	9.91	9.91	-	-	-	-	-	
+I-464	4.71	4.71	-	-	-	-	-	
+I-495	15.28	15.28	-	-	-	-	-	
+I-564	3.03	3.03	-	-	-	-	-	
+I-581	6.64	6.64	-	-	-	-	-	
+I-664	20.21	20.21	-	9.20	-	-	-	
+16 Routes	1,156.43	1,117.23	0.00	45.28	0.00	39.20		
+Washington	I-5	276.62	276.62	-	-	-	-	-
+I-82	132.57	132.57	-	-	-	-	-	
+I-90	296.92	296.92	-	-	-	-	-	
+I-182	15.19	15.19	-	-	-	-	-	
+I-205	10.57	10.57	-	-	-	-	-	
+I-405	30.30	30.30	-	-	-	-	-	
+I-705	1.50	1.50	-	-	-	-	-	
+7 Routes	763.67	763.67	0.00	0.00	0.00	0.00		
+West Virginia	I-64	188.75	124.87	-	-	-	63.88	I-77
+I-68	32.06	32.06	-	32.06	-	-	-	
+I-70	14.45	14.45	-	-	-	-	-	
+I-77	187.21	187.21	-	-	-	-	-	
+I-79	160.52	160.52	-	-	-	-	-	
+I-81	26.00	26.00	-	-	-	-	-	
+I-470	3.94	3.94	-	-	-	-	-	
+7 Routes	612.93	549.05	0.00	32.06	0.00	63.88		
+Wisconsin	I-39	182.72	182.72	-	104.00	-	-	-
+I-43	191.55	191.55	-	63.00	-	-	-	
+I-90	108.61	108.61	-	-	-	-	-	
+I-94	341.02	249.26	-	-	-	91.76	I-90	
+I-535	1.21	1.21	-	-	-	-	-	
+I-794	3.75	3.75	-	-	-	-	-	
+I-894	4.70	4.70	-	-	-	-	-	
+7 Routes	833.56	741.80	0.00	167.00	0.00	91.76		
+Wyoming	I-25	300.95	300.95	-	-	-	-	-
+I-80	402.76	402.76	-	-	-	-	-	
+I-90	208.80	208.80	-	-	-	-	-	
+I-180	1.09	1.09	-	-	-	-	-	
+4 Routes	913.60	913.60	0.00	0.00	0.00	0.00		
+
+
+===========================================================================
+FHWA Route Log and Finder List
+Table 4: Major Cities Served by Interstate Routes (1990 Census Populations greater than 50, 000)
+
+State	Urban Area	Interstate Routes
+Alabama	Anniston	I-20
+Auburn-Opelika	I-85	
+Birmingham	I-20, I-59, I-65, I-459	
+Decatur	I-65	
+Gadsden	I-59, I-759	
+Huntsville	I-65, I-565	
+Mobile	I-10, I-65, I-165	
+Montgomery	I-65, I-85	
+Tuscaloosa	I-20, I-59, I-359	
+Alaska	Anchorage	A-1, A-3, A-4
+Fairbanks	A-2, A-4	
+Arizona	Phoenix	I-10, I-17
+Tucson	I-10, I-19	
+Yuma (AZ.-CA.)	I-8	
+Arkansas	Fort Smith	I-40, I-540
+Little Rock (N. Little Rock)	I-30, I-40, I-430, I-440, I-630	
+Texarkana	I-30	
+West Memphis	See Memphis, TN.	
+California	Fairfield	I-80
+Los Angeles-Long Beach	I-5, I-10, I-105, I-110, I-210, I-405, I-605, I-710	
+Redding	I-5	
+Sacramento	I-5, I-80, I-305	
+San Bernardino-Riverside	I-10, I-15, I-215	
+San Diego	I-5, I-8, I-15, I-805	
+San Francisco-Oakland	I-80, I-238, I-280, I-380, I-580, I-680, I-880, I-980	
+San Jose	I-280, I-680, I-880	
+Stockton	I-5	
+Yuma (CA.-AZ.)	See Yuma, AZ.	
+Colorado	Colorado Springs	I-25
+Denver	I-25, I-70, I-76, I-225, I-270	
+Fort Collins	I-25	
+Grand Junction	I-70	
+Pueblo	I-25	
+Connecticut	Bridgeport	I-95
+Danbury	I-84	
+Hartford	I-84, I-91, I-291, I-384	
+Meriden	I-91, I-691	
+New Britain	I-84	
+New Haven	I-91, I-95	
+New London-Norwich	I-95, I-395	
+Norwalk	I-95	
+Stamford	I-95	
+Waterbury	I-84	
+Delaware	Wilmington	I-95, I-295, I-495
+District of Columbia	Washington, D.C. (VA.-MD.)	I-66, I-95, I-270, I-295, I-395, I-495, I-595, I-695
+Florida	Daytona Beach	I-4, I-95
+Fort Myers	I-75	
+Fort Pierce	I-95	
+Ft.Lauderdale-Hollywood	I-95, I-75, I-595	
+Gainesville	I-75	
+Jacksonville	I-10, I-95, I-295	
+Lakeland	I-4	
+Melbourne-Cocoa Beach	I-95	
+Miami	I-75, I-95, I-195, I-395	
+Naples	I-75	
+Ocala	I-75	
+Orlando	I-4	
+Pensacola	I-10, I-110	
+Sarasota-Bradenton	I-75, I-275	
+St. Petersburg	I-175, I-275, I-375	
+Tallahassee	I-10	
+Tampa	I-4, I-75, I-275	
+W. Palm Beach	I-95	
+Georgia	Atlanta	I-20, I-75, I-85, I-285, I-575, I-675
+Augusta-N. Augusta, S.C.	I-20, I-520	
+Columbus	I-185	
+Macon	I-16, I-75, I-475	
+Savannah	I-16, I-95, I-516	
+Hawaii	Honolulu	H-1, H-2, H-3H-201
+Kailua-Kaneohe	H-3	
+Idaho	Boise	I-84, I-184
+Pocatello	I-15, I-86	
+Illinois	Aurora	I-88
+Bloomington-Normal	I-39, I-55, I-74	
+Champaign-Urbana	I-57, I-72, I-74	
+Chicago (N.W. Indiana) (Elgin, Joliet)	I-55, I-57, I-65, I-80, I-88, I-90, I-94, I-190, I-290, I-294, I-355	
+Danville	I-74	
+Decatur	I-72	
+East St.Louis	See St. Louis, MO.	
+Kankakee	I-57	
+Peoria	I-74, I-155, I-474	
+Rockford	I-39, I-90	
+Rock Island-Moline	See Davenport, IA.	
+Springfield	I-55, I-72	
+Indiana	Anderson	I-69
+Elkhart	I-80, I-90	
+Evansville	I-164	
+Fort Wayne	I-69	
+Indianapolis	I-65, I-69, I-70, I-74, I-465	
+Lafayette-W. Lafayette	I-65	
+Northwestern Indiana	See Chicago, IL.	
+South Bend	I-80, I-90	
+Terre Haute	I-70	
+Iowa	Cedar Rapids	I-380
+Council Bluff	See Omaha, NE.	
+Davenport-Rock Island- Moline	I-74, I-80, I-88, I-280	
+Des Moines	I-35, I-80, I-235	
+Iowa City	I-80, I-380	
+Sioux City (IA.-NE.-SD.)	I-29, I-129	
+Waterloo	I-380	
+Kansas	Kansas City, KS.	See Kansas City, MO.
+Lawrence	I-70	
+Topeka	I-70, I-335, I-470	
+Wichita	I-35, I-135, I-235	
+Kentucky	Covington-Newport	See Cincinnati, OH.
+Lexington	I-64, I-75	
+Louisville (New Albany, IN.)	I-64, I-65, I-71, I-264, I-265	
+Louisiana	Alexandria	I-49
+Baton Rouge	I-10, I-12, I-110	
+Lafayette	I-10, I-49	
+Monroe	I-20	
+New Orleans	I-10, I-310, I-510, I-610	
+Shreveport	I-20, I-49, I-220	
+Lake Charles	I-10, I-210	
+Maine	Bangor	I-95, I-395
+Lewiston-Auburn	I-495	
+Portland	I-95, I-295, I-495	
+Maryland	Annapolis	I-97, I-595
+Baltimore	I-70 , I-83, I-95, I-97, I-195, I-395, I-695, I-795, I-895	
+Hagerstown	I-70, I-81	
+Washington Metro Area	See Washington, D.C.	
+Massachusetts	Boston	I-90, I-93, I-95
+Fall River	I-195	
+Fitchburg-Leominster	I-190	
+Lawrence-Haverhill	I-93, I-495	
+Lowell	I-495	
+New Bedford	I-195	
+Springfield-Chicopee-Holyoke	I-90, I-91, I-291, I-391	
+Worcester	I-90, I-190, I-290, I-395	
+Michigan	Ann Arbor	I-94
+Battle Creek	I-94, I-194	
+Bay City	I-75	
+Benton Harbor	I-94	
+Detroit	I-75, I-94, I-96, I-295, I-375, I-696	
+Flint	I-69, I-75, I-475	
+Grand Rapids	I-96, I-196, I-296	
+Jackson	I-94	
+Kalamazoo	I-94	
+Lansing	I-69, I-96, I-496	
+Muskegon	I-96	
+Port Huron	I-69, I-94	
+Saginaw	I-75, I-675	
+Minnesota	Duluth	I-35, I-535
+Minneapolis-St.Paul	I-35, I-35E, I-35W, I-94, I-394, I-494, I-694	
+Moorhead (Fargo, ND.)	See Fargo, ND.	
+Mississippi	Biloxi-Gulfport	I-10, I-110
+Hattiesburg	I-59	
+Jackson	I-20, I-55, I-220	
+Pascagoula	I-10	
+Southaven (Memphis, TN.)	See Memphis, TN.	
+Missouri	Columbia	I-70
+Joplin	I-44	
+Kansas City (MO.-KS.)	I-29, I-35, I-70, I-435, I-470, I-635, I-670	
+Springfield	I-44	
+St. Joseph	I-29, I-229	
+St. Louis (East St. Louis)	I-44, I-55, I-64, I-70, I-170, I-255, I-270	
+Montana	Billings	I-90, I-94
+Great Falls	I-15, I-315	
+Missoula	I-90	
+Nebraska	Lincoln	I-80, I-180
+Omaha (Council Bluffs, IA)	I-29, I-89, I-480, I-680	
+Sioux City (IA.-NE.-SD.)	See Sioux City, IA.	
+Nevada	Las Vegas	I-15, I-515
+Reno	I-80, I-580	
+New Hampshire	Manchester	I-93, I-293
+Portsmouth	I-95	
+New Jersey	Camden	See Philadelphia, PA.
+Northeastern New Jersey	See New York, N.Y.	
+Trenton	I-95, I-195, I-295	
+New Mexico	Albuquerque	I-25, I-40
+Las Cruces	I-10, I-25	
+Santa Fe	I-25	
+New York	Albany-Schenectady-Troy	I-87, I-88, I-90, I-787, I-890
+Binghamton	I-81, I-88	
+Buffalo	I-90, I-190, I-290, I-990	
+Glens Falls	I-87	
+New York (Northeastern N.J.)	I-78, I-80, I-84, I-87, I-95, I-195, I-278, I-280, I-287, I-295, I-478, I-495, I-678, I-684, I-878, I-895	
+Newburgh	I-84, I-87	
+Rochester	I-90, I-390, I-490, I-590	
+Rome-Utica	I-90, I-790	
+Syracuse	I-81, I-90, I-481, I-690	
+North Carolina	Ashville	I-26, I-40, I-240
+Burlington	I-40, I-85	
+Charlotte	I-77, I-85, I-277	
+Durham	I-40, I-85	
+Fayetteville	I-95	
+Gastonia	I-85	
+Greensboro	I-40, I-85	
+Hickory	I-40	
+High Point	I-85	
+Kannapolis-Concord	I-85	
+Raleigh	I-40, I-440	
+Wilmington	I-40	
+Winston-Salem	I-40	
+North Dakota	Bismarck	I-94, I-194
+Fargo (Moorhead, MN.)	I-29, I-94	
+Grand Forks	I-29	
+Ohio	Akron	I-76, I-77, I-80, I-277
+Canton	I-77	
+Cincinnati (Covington, KY.)	I-71, I-74, I-75, I-275, I-471	
+Cleveland	I-71, I-77, I-80, I-90, I-271, I-480, I-490	
+Columbus	I-70, I-71, I-270, I-670	
+Dayton	I-70, I-75, I-675	
+Lima	I-75	
+Lorain-Elyria	I-80, I-90, I-480	
+Mansfield	I-71	
+Middletown	I-75	
+Springfield	I-70	
+Toledo	I-75, I-80, I-90, I-280, I-475	
+Wheeling (W.V.-OH.)	See Wheeling, W.V.	
+Youngstown-Warren	I-76, I-80, I-680	
+Oklahoma	Lawton	I-44
+Oklahoma City	I-35, I-40, I-44, I-235, I-240	
+Tulsa	I-44, I-244, I-444	
+Oregon	Eugene	I-5, I-105
+Medford	I-5	
+Portland-Vancouver, WA.	I-5, I-84, I-205, I-405	
+Salem	I-5	
+Pennsylvania	Allentown-Bethlehem-Easton	I-78
+Erie	I-79, I-90	
+Harrisburg	I-76, I-81, I-83, I-283	
+Philadelphia (Camden, NJ)	I-76, I-95, I-276, I-295, I-476, I-676	
+Pittsburgh	I-76, I-79, I-279, I-376, I-579	
+Reading	I-176	
+Scranton-Wilkes Barre	I-81, I-84, I-380	
+Sharon	I-80	
+Williamsport	I-180	
+York	I-83	
+Puerto Rico	Arecibo	PRI-2
+Caguas	PRI-1	
+Mayaguez	PRI-2	
+Ponce	PRI-1	
+San Juan	PRI-1, PRI-2, PRI-3	
+Rhode Island	Providence Metro. Area	I-95, I-195, I-295
+South Carolina	Anderson	I-85
+Charleston	I-26, I-526	
+Columbia	I-20, I-26, I-77, I-126, I-326	
+Florence	I-95	
+Greenville	I-85, I-185, I-385	
+N. Augusta	See Augusta, GA.	
+Rock Hill	I-77	
+Spartanburg	I-26, I-85, I-585	
+South Dakota	Rapid City	I-90, I-190
+Sioux City	See Sioux City, IA.	
+Sioux Falls	I-29, I-90, I-229	
+Tennessee	Bristol (TN.-VA.)	I-81, I-381
+Chattanooga	I-24, I-75, I-124	
+Clarksville	I-24	
+Jackson	I-40	
+Johnson City	I-81, I-181	
+Kingsport	I-181	
+Knoxville	I-40, I-75, I-275, I-640	
+Memphis (TN.-AR.-MS.)	I-40, I-55, I-240	
+Nashville-Davidson	I-24, I-40, I-65,	
+Texas	Amarillo	I-27, I-40
+Austin	I-35	
+Beaumont	I-10	
+Corpus Christi	I-37	
+Dallas-Ft.Worth	I-20, I-30, I-35E, I-35W, I-45, I-345, I-635, I-820	
+El Paso	I-10, I-110	
+Galveston	I-45	
+Houston	I-10, I-45, I-610	
+Laredo	I-35	
+Longview	I-20	
+Lubbock	I-27	
+Midland	I-20	
+Odessa	I-20	
+San Antonio	I-10, I-35, I-37, I-410	
+Temple	I-35	
+Texarkana (TX.-AR.)	See Texarkana, AR.	
+Waco	I-35	
+Wichita Falls	I-44	
+Utah	Ogden	I-15, I-84
+Provo-Orem	I-15	
+Salt Lake City	I-15, I-80, I-215	
+Vermont	Burlington	I-89, I-189
+Virginia	Bristol (VA.-TN.)	See Bristol, TN.
+Charlottesville	I-64	
+Newport News-Hampton	I-64, I-664	
+Norfolk-Portsmouth	I-64, I-264, I-464, I-564, I-664	
+Northern Virginia	See Washington, D.C.	
+Petersburg- Colonial Heights	I-95, I-85, I-295	
+Richmond	I-64, I-95, I-195, I-295	
+Roanoke	I-81, I-581	
+Washington	Olympia	I-5
+Richland-Kennewick	I-182	
+Seattle-Everett	I-5, I-90, I-405	
+Tacoma	I-5, I-705	
+Vancouver	See Portland, OR.	
+Yakima	I-82	
+West Virginia	Charleston	I-64, I-77, I-79
+Huntington	I-64	
+Parkersburg	I-77	
+Wheeling (WV.-OH.)	I-70, I-470	
+Wisconsin	Beloit	I-43, I-90
+Eau Claire	I-94	
+Green Bay	I-43	
+Janesville	I-90	
+La Crosse	I-90	
+Madison	I-90, I-94	
+Milwaukee	I-43, I-94, I-794, I-894	
+Racine	I-94	
+Sheboygan	I-43	
+Superior	See Duluth, MN.	
+Wyoming	Casper	I-25
+Cheyenne	I-25, I-80, I-180	
+

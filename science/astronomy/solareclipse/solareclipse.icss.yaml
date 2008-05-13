@@ -1,0 +1,116 @@
+contributors:
+  - desc: |
+      Special thanks to Jean Meeus for providing the Besselian elements used in the solar eclipse predictions.
+      
+      All eclipse calculations are by Fred Espenak, and he assumes full responsibility for their accuracy. Some of the information presented on this web site is based on data originally published in Five Millennium Canon of Solar Eclipses: -1999 to +3000.
+      
+      Permission is freely granted to reproduce this data when accompanied by an acknowledgment: "Eclipse Predictions by Fred Espenak and Jean Meeus (NASA's GSFC)"
+    uniqid: Fred Espenak and Jean Meeus (NASA's GSFC)
+    url: http://sunearth.gsfc.nasa.gov/eclipse/eclipse.html
+  - desc: ~
+    uniqid: 'Shared and converted by Philip (flip) Kromer for the [http://infochimp.org|infochimp] project.'
+    url: http://infochimp.org/user/flip
+desc: |-
+  Tables of solar eclipse local circumstances include the following data. The calendar date and Dynamical Time of the instant of greatest eclipse[1] are found in the first two columns. Delta T (ΔT) gives the arithmetic difference between Dynamical Time and Universal Time. The lunation number (since 2000 Jan 06) and the Saros series are listed along with the eclipse type (P=Partial, A=Annular, T=Total or H=Hybrid[2]) Gamma is the distance of the shadow axis from Earth's center at greatest eclipse while the eclipse magnitude is defined as the fraction of the Sun's diameter obscured at that instant. The geographic latitude and longitude of the umbra are given for greatest eclipse, along with the Sun's altitude and azimuth, the width of the path (kilometers) and the central line duration of totality or annularity. For both partial and non-central umbral/antumbral eclipses, the latitude and longitude correspond to the point closest to the shadow cone axis at greatest eclipse. The Sun's altitude is always 0° at this location.
+  The data presented in the catalog are based on the Five Millennium Canon of Solar Eclipses: -1999 to +3000.
+  
+  # Greatest eclipse is defined as the instant when the axis of the Moon's shadow passes closest to Earth's center. For total eclipses, the instant of greatest eclipse is virtually identical to the instants of greatest magnitude and greatest duration. However, for annular eclipses, the instant of greatest duration may occur at either the time of greatest eclipse or near the sunrise and sunset points of the eclipse path.
+  # Hybrid eclipses are also known as annular/total eclipses. They occur when the vertex of the Moon's umbral shadow pierces Earth's surface along the central path of an annular eclipse. The eclipse's character then changes to total along the section of the path where the umbral vertex extends beneath Earth's surface. The central paths of hybrid eclipses usually (but not always) begin and end as annular eclipses, but become total along some middle portion of the path.
+fields:
+  - desc: 'Sequential number of the eclipse in the catalog links to the map published in the Five Millennium Canon of Solar Eclipses: -1999 to +3000.'
+    name: catalog_number
+    uniqid: catalog_number
+  - desc: Modified Julian Date
+    name: date_mjd
+    uniqid: date_mjd
+  - desc: 'Gregorian Calendar Date, in extended ISO format, at the instant of Greatest Eclipse.'
+    name: date_iso_ext
+    uniqid: date_iso_ext
+  - desc: Calendar Date at instant of Greatest Eclipse. Gregorian Calendar is used for dates after 1582 Oct 15. Julian Calendar is used for dates before 1582 Oct 04.
+    name: date_julgreg
+    uniqid: date_julgreg
+  - desc: Dynamical Time (TD) of Greatest Eclipse
+    name: time_of_day_iso
+    uniqid: time_of_day_iso
+  - desc: Delta T (ΔT) is the arithmetic difference between Dynamical Time and Universal Time. It is a measure of the accumulated clock error due to the variable rotation period of Earth.
+    name: deltaT
+    uniqid: deltat
+  - desc: Lunation Number is the number of synodic months since New Moon of 2000 Jan 06. The Brown Lunation Number can be determined by adding 953.
+    name: lunation_20000106
+    uniqid: lunation_20000106
+  - desc: Saros series number of eclipse. (Each eclipse in a Saros is separated by an interval of 18 years 11.3 days.)
+    name: Saros
+    uniqid: saros
+  - desc: |
+      Eclipse Type:
+      * P  = Partial Eclipse.
+      * A  = Annular Eclipse.
+      * T  = Total Eclipse.
+      * H  = Hybrid or Annular/Total Eclipse.
+    name: eclipse_type
+    uniqid: eclipse_type
+  - desc: |
+      Eclipse Subtype:
+      * "m" = Middle eclipse of Saros series.
+      * "n" = Central eclipse with no northern limit.
+      * "s" = Central eclipse with no southern limit.
+      * "+" = Non-central eclipse with no northern limit.
+      * "-" = Non-central eclipse with no southern limit.
+      * "2" = Hybrid path begins total and ends annular.
+      * "3" = Hybrid path begins annular and ends total.
+      * "b" = Saros series begins (first eclipse in series).
+      * "e" = Saros series ends (last eclipse in series).
+    name: eclipse_sub_type
+    uniqid: eclipse_sub_type
+  - desc: Distance of the shadow cone axis from the center of Earth (units of equatorial radii) at the instant of greatest eclipse.
+    name: gamma
+    uniqid: gamma
+  - desc: "Eclipse magnitude is the fraction of the Sun's diameter obscured by the Moon. For annular, total and hybrid eclipses, this value is actually the diameter ratio of Moon/Sun."
+    name: eclipse_magnitude
+    uniqid: eclipse_magnitude
+  - desc: Latitude where greatest eclipse is seen.
+    name: latitude
+    uniqid: latitude
+  - desc: Longitude where greatest eclipse is seen.
+    name: longitude
+    uniqid: longitude
+  - desc: Sun's altitude at greatest eclipse.
+    name: astro_altitude
+    uniqid: astro_altitude
+  - desc: Sun's azimuth at greatest eclipse.
+    name: azimuth
+    uniqid: azimuth
+  - desc: Width of the path of totality or annularity
+    name: path_width
+    uniqid: path_width
+  - desc: Central Line Duration of total or annular phase at greatest eclipse.
+    name: central_duration
+    uniqid: central_duration
+name: 5000 Years of Solar Eclipses
+notes:
+  coverage: '[ { time: -1999 to 3000 } ]'
+  rights: "Permission is freely granted to reproduce this data when accompanied by an acknowledgment: \"Eclipse Predictions by Fred Espenak and Jean Meeus (NASA's GSFC)\""
+  see_also: |
+    - longtermhistoricalstocks
+    - stocks_hist_div_split
+    - constant_dollars
+  story_usage: |-
+    # Greatest eclipse is defined as the instant when the axis of the Moon's shadow passes closest to Earth's center. For total eclipses, the instant of greatest eclipse is virtually identical to the instants of greatest magnitude and greatest duration. However, for annular eclipses, the instant of greatest duration may occur at either the time of greatest eclipse or near the sunrise and sunset points of the eclipse path.
+    # Hybrid eclipses are also known as annular/total eclipses. They occur when the vertex of the Moon's umbral shadow pierces Earth's surface along the central path of an annular eclipse. The eclipse's character then changes to total along the section of the path where the umbral vertex extends beneath Earth's surface. The central paths of hybrid eclipses usually (but not always) begin and end as annular eclipses, but become total along some middle portion of the path.
+ratings:
+  - initial:
+      accurate:
+        desc: "There is no way to precisely predict the earth's rotational speed for dates thousands of years in the past or future, so eclipse times come with uncertainties of several hours near the boundaries.  Time-travelers should proceed accordingly."
+        rating: 4
+      authoritative:
+        desc: 'Published and distributed by an expert scientist at NASA, with detailed description of his methods and citations of accepted scientific literature'
+        rating: 5
+      comprehensive:
+        desc: '5000 years, covering the full range for reasonable accuracy.'
+        rating: 5
+      interesting:
+        desc: ''
+        rating: 2
+tags: 'astronomy, science, solar, eclipse, lunation, time'
+uniqid: astro_solar_eclipse
+uniqid2: 5000_years_of_solar_eclipses

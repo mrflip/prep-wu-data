@@ -1,0 +1,94 @@
+
+
+---------------------------------------------------------------------------
+Interstate Guides
+
+http://www.aaroads.com/
+http://www.efgh.com/trans/sdexits.htm#i5
+http://www.ajfroggie.com/triskele/
+
+---------------------------------------------------------------------------
+
+http://www.randmcnally.com/rmc/directions/dirGetMileage.jsp?cmty=0
+
+Note: Rather than scraping with Beautiful Soup or w/e, use:
+  https://addons.mozilla.org/en-US/firefox/addon/2637
+  https://addons.mozilla.org/en-US/firefox/addon/1852
+
+---------------------------------------------------------------------------
+
+cities w/ Major Hwy:	http://www.fhwa.dot.gov/reports/routefinder/table4.cfm
+
+---------------------------------------------------------------------------
+
+Washington, DC		http://cityrss.traffic.com/feeds/rss_washingtondc
+
+
+USA, a few    		http://www.hm-usa.com/distance/usa.html
+     			http://www.hm-usa.com/distance/az.html
+			
+
+Alabama			http://www.800alabama.com/about-alabama/alabama-travel/distance.cfm
+California (crappy)	http://gocalifornia.about.com/cs/maps/l/bl_distance.htm
+Colorado		http://www.cotrip.org/atis/web.TraveltimeMarshal
+Kansas			http://www.ksdot.org/offTransInfo/511Info/511traffictravel.asp
+South Dakota		http://www.travelsd.com/travelprofessionals/grouptour/motorcoach/mileage.asp
+Florida			http://www3.dot.state.fl.us/mileage/default.asp?BeenThere=True&FromCity=66&ToCity=1&GetMileageButton0=Get+Mileage
+
+USES GET
+     Kansas		http://www.ksdot.org/burtransplan/dist_chrt_qry.cgi?from=Abilene&to=Arkansas+City&.submit=Submit+Query
+     Tennessee		http://www.tdot.state.tn.us/maps/mileage/entercities.asp?Start=Kingsport&Destin=Athens&searchkey=Determine+Distance
+
+
+Nebraska		http://www.dor.state.ne.us/rca/docs/mileagecolor3.pdf
+	Alliance 404 402 382 59 327 389 470 369 55 274 295 268 257 96 237 366 230 417 327 176 122 397 275 409 53 343 78 394 163 358 317 
+	Beatrice 404 96 113 462 115 28 73 92 415 131 107 153 151 402 187 40 212 71 162 246 296 99 236 94 418 65 366 166 343 163 85 
+	Bellevue 402 96 35 446 94 126 91 48 447 146 158 215 183 434 219 56 286 37 122 278 328 12 197 12 450 74 398 108 309 119 104 
+	Blair 382 113 35 413 69 139 123 24 447 133 159 210 176 435 220 69 282 68 89 279 328 26 164 43 450 87 398 73 276 83 117 
+	Chadron 59 462 446 413 370 446 528 400 104 332 352 325 315 145 296 424 289 474 324 233 181 437 248 454 99 400 137 372 138 342 375 
+	Columbus 327 115 94 69 370 108 181 48 378 64 89 141 106 366 142 75 213 128 47 210 259 85 116 102 381 51 329 120 227 72 51 
+	Fairbury 389 28 126 139 446 108 98 120 403 115 95 137 139 391 176 68 195 99 154 234 284 127 214 121 406 58 354 194 325 155 73 
+	Falls City 470 73 91 123 528 181 98 136 497 197 180 226 224 485 270 104 284 55 209 329 378 99 285 81 500 131 448 195 396 203 154 
+	Fremont 369 92 48 24 400 48 120 136 426 112 137 189 154 414 190 52 261 81 77 258 307 39 152 56 429 67 377 74 263 70 96 
+	Gering 55 415 447 447 104 378 403 497 426 314 322 268 268 42 233 393 227 443 381 171 119 449 330 450 3 378 73 449 223 413 350 
+	Grand Island 274 131 146 133 332 64 115 197 112 314 25 73 42 302 78 93 146 143 110 146 195 149 116 149 317 70 265 183 213 136 44 
+	Hastings 295 107 158 159 352 89 95 180 137 322 25 54 53 304 89 104 127 155 135 148 197 161 136 161 319 89 267 209 233 162 61 
+	Holdrege 268 153 215 210 325 141 137 226 189 268 73 54 30 256 41 155 73 206 183 100 149 212 175 212 271 141 219 256 206 209 112 
+	Kearney 257 151 183 176 315 106 139 224 154 268 42 53 30 256 36 129 103 180 152 100 149 186 149 186 271 115 219 226 196 179 86 
+	Kimball 96 402 434 435 145 366 391 485 414 42 302 304 256 256 221 381 215 431 412 160 108 437 353 437 45 366 37 465 264 438 337 
+	Lexington 237 187 219 220 296 142 176 270 190 233 78 89 41 36 221 166 78 216 188 65 114 222 165 222 236 151 184 261 177 214 122 
+	Lincoln 366 40 56 69 424 75 68 104 52 393 93 104 155 129 381 166 228 50 122 224 274 59 196 57 396 25 344 126 305 122 50 
+	McCook 230 212 286 282 289 213 195 284 261 227 146 127 73 103 215 78 228 279 256 68 108 285 246 285 230 213 178 329 198 281 185 
+	Nebr. City 417 71 37 68 474 128 99 55 81 443 143 155 206 180 431 216 50 279 155 275 324 44 230 27 446 77 394 141 341 148 100 
+	Norfolk 327 162 122 89 324 47 154 209 77 381 110 135 183 152 412 188 122 256 155 233 286 113 76 130 382 97 356 75 187 31 97 
+	North Platte 176 246 278 279 233 210 234 329 258 171 146 148 100 100 160 65 224 68 275 233 53 281 193 281 175 210 123 309 130 268 181 
+	Ogallala 122 296 328 328 181 259 284 378 307 119 195 197 149 149 108 114 274 108 324 286 53 330 247 331 122 259 72 362 183 321 231 
+	Omaha 397 99 12 26 437 85 127 99 39 449 149 161 212 186 437 222 59 285 44 113 281 330 188 19 452 77 400 98 300 107 106 
+	O'Neill 275 236 197 164 248 116 214 285 152 330 116 136 175 149 353 165 196 246 230 76 193 247 188 205 329 171 317 124 111 97 141 
+	Plattsmouth 409 94 12 43 454 102 121 81 56 450 149 161 212 186 437 222 57 285 27 130 281 331 19 205 453 82 401 116 317 124 107 
+	Scottsbluff 53 418 450 450 99 381 406 500 429 3 317 319 271 271 45 236 396 230 446 382 175 122 452 329 453 381 76 447 217 411 353 
+	Seward 343 65 74 87 400 51 58 131 67 378 70 89 141 115 366 151 25 213 77 97 210 259 77 171 82 381 329 141 276 98 28 
+	Sidney 78 366 398 398 137 329 354 448 377 73 265 267 219 219 37 184 344 178 394 356 123 72 400 317 401 76 329 432 253 391 301 
+	So. Sioux City394 166 108 73 372 120 194 195 74 449 183 209 256 226 465 261 126 329 141 75 309 362 98 124 116 447 141 432 235 44 167 
+	Valentine 163 343 309 276 138 227 325 396 263 223 213 233 206 196 264 177 305 198 341 187 130 183 300 111 317 217 276 253 235 208 252 
+	Wayne 358 163 119 83 342 72 155 203 70 413 136 162 209 179 438 214 122 281 148 31 268 321 107 97 124 411 98 391 44 208 123 
+	York 317 85 104 117 375 51 73 154 96 350 44 61 112 86 337 122 50 185 100 97 181 231 106 141 107 353 28 301 167 252 123 
+
+Oklahoma
+	http://www.okladot.state.ok.us/hqdiv/p-r-div/howfar/okmile.htm
+	http://www.okladot.state.ok.us/hqdiv/p-r-div/howfar/okmile.js
+	distances are all 3 digits long, with "xx " for dist < 100mi
+
+	
+
+Texas travel distances
+
+Washington		http://www.wsdot.wa.gov/Publications/HighwayMap/Mileage/
+
+
+Canada	http://www.transcanadahighway.com/general/mileage.htm
+
+7GONZALES              LA
+3FAYETTEVILLE          AR
+5SANTA FE              NM
+

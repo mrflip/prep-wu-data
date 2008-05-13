@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsi:schema elementFormDefault="qualified"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://vizsage.com/infochimp/vic"
+  targetNamespace="http://vizsage.com/infochimp/vic"
+  >
+
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">
+      Conversions among time conventions valid for the distant past and the distant future.
+    </xsi:documentation>
+  </xsi:annotation>
+
+  <!--
+    ======================================================================
+    Header
+  -->
+  
+  <xsi:complexType name="attribution">
+    <xsi:sequence>
+      <xsi:element name="attribStatement" type="xsi:string"/>
+      <xsi:element name="attribRights"    type="xsi:string"/>
+      <xsi:any minOccurs="0"/>
+    </xsi:sequence>
+    <xsi:attribute name="name"   type="xsi:string"/>
+    <xsi:attribute name="class"  type="xsi:string"/>
+    <xsi:attribute name="ondate" type="xsi:string"/>
+    <xsi:attribute name="url"    type="xsi:string"/>
+    <xsi:anyAttribute  />
+  </xsi:complexType>
+
+  <xsi:element name="intro">
+    <xsi:complexType>
+      <xsi:sequence>
+
+      <xsi:element name="title"        type="xsi:string"/>
+      <xsi:element name="description"  type="xsi:string"/>
+      <xsi:element name="keywords"     type="xsi:string"/>
+      <xsi:element name="format"       type="xsi:string"/>
+      <xsi:element name="version"      type="xsi:string"/>
+      
+      <xsi:element name="attribution"  type="attribution" maxOccurs="unbounded"/>
+      <xsi:element name="coverage"     type="xsi:string"   maxOccurs="unbounded"/>
+
+      <xsi:element name="rights"><xsi:complexType mixed="true">
+        <xsi:sequence><xsi:any minOccurs="0"/></xsi:sequence><xsi:anyAttribute/>
+      </xsi:complexType></xsi:element>
+
+      <xsi:any minOccurs="0"/>
+      </xsi:sequence>
+      <xsi:anyAttribute/>
+    </xsi:complexType>
+  </xsi:element>
+ 
+  
+  <!-- 
+    <xsi:element name="intro">
+      <xsi:complexType>
+        <xsi:sequence><xsi:any minOccurs="0"/></xsi:sequence>
+        <xsi:anyAttribute  />
+      </xsi:complexType>
+    </xsi:element>
+   -->
+
+  <!--
+   ! ======================================================================
+   !  Type Definitions
+   !
+  -->
+
+  <xsi:simpleType name="extDate">
+    <xsi:annotation><xsi:documentation xml:lang="en">
+      We can't use the built in date because it no yuo's the year 0000
+       http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/datatypes.html#dateTime
+    </xsi:documentation></xsi:annotation>
+    <xsi:restriction base="xsi:string">
+      <xsi:pattern value="[\+\-]?[0-9]{4,}-[0-9]{2}-[0-9]{2}.*"/>
+    </xsi:restriction>
+  </xsi:simpleType>
+  
+  <xsi:simpleType name="extDateTime">
+    <xsi:annotation><xsi:documentation xml:lang="en">
+      Note that 60 seconds has to be allowed for leap seconds
+    </xsi:documentation></xsi:annotation>
+    <xsi:restriction base="xsi:string">
+      <xsi:pattern value="[\+\-]?[0-9]{4,}-[0-9]{2}-[0-9]{2}T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60).*"/>
+    </xsi:restriction>
+  </xsi:simpleType>
+
+  <xsi:simpleType name="gregDate"><xsi:restriction base="extDate"></xsi:restriction></xsi:simpleType>
+  <xsi:simpleType name="julnDate"><xsi:restriction base="extDate"></xsi:restriction></xsi:simpleType>
+  <xsi:simpleType name="inflDate"><xsi:restriction base="extDate"></xsi:restriction></xsi:simpleType>
+
+  <!--
+    ======================================================================
+    Data fields
+  -->
+
+  <xsi:complexType name="astrotimeDatum">
+    <xsi:sequence><xsi:any minOccurs="0"/></xsi:sequence>
+    <xsi:attribute name="tai"        type="xsi:decimal"/>
+    <xsi:attribute name="gregDate"   type="gregDate"/>
+    <xsi:attribute name="julnDate"   type="julnDate"/>
+    <xsi:attribute name="inflDate"   type="inflDate"/>
+    <xsi:attribute name="mjd"        type="xsi:decimal"/>
+    <xsi:attribute name="jd"         type="xsi:decimal"/>
+    <xsi:attribute name="tt"         type="extDateTime"/>
+    <xsi:attribute name="utc"        type="extDateTime"/>
+    <xsi:attribute name="dut"        type="xsi:decimal"/>
+    <xsi:attribute name="leapsecs"   type="xsi:integer"/>   
+    <xsi:attribute name="deltaT"     type="xsi:decimal"/>
+    <xsi:attribute name="deltaTUncy" type="xsi:decimal"/>
+    <xsi:anyAttribute  />
+  </xsi:complexType>
+
+  <!--
+    ======================================================================
+    Key and Uniqueness definitions
+  -->
+
+  <xsi:element name="astronomicaltime" type="astrotimeDatum">
+    <xsi:key name="taiKey"     ><xsi:selector xpath="./"/><xsi:field xpath="@tai"     /></xsi:key>
+    <xsi:key name="gregDateKey"><xsi:selector xpath="./"/><xsi:field xpath="@gregDate"/></xsi:key>
+    <xsi:key name="julnDateKey"><xsi:selector xpath="./"/><xsi:field xpath="@julnDate"/></xsi:key>
+    <xsi:key name="inflDateKey"><xsi:selector xpath="./"/><xsi:field xpath="@inflDate"/></xsi:key>
+    <xsi:key name="mjdKey"     ><xsi:selector xpath="./"/><xsi:field xpath="@mjd"     /></xsi:key>
+    <xsi:key name="jdKey"      ><xsi:selector xpath="./"/><xsi:field xpath="@jd"      /></xsi:key>
+    <xsi:key name="ttKey"      ><xsi:selector xpath="./"/><xsi:field xpath="@tt"      /></xsi:key>
+    <xsi:key name="utcKey"     ><xsi:selector xpath="./"/>
+      <xsi:field xpath="@utc"/><xsi:field xpath="@leapsecs"/>
+    </xsi:key>
+  </xsi:element>
+ 
+</xsi:schema>

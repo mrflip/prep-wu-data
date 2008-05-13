@@ -1,0 +1,49 @@
+http://www.tennessee-valley.org/tv_region/maps/mileage.html
+Listed by Drive Time            
+City    	  DrivingMileage   Drive Time(hr:min)
+Birmingham, AL           99              1:29
+Nashville, TN           122              1:52
+Chattanooga, TN         106              2:02
+Montgomery, AL          191              2:52
+Knoxville, TN           220              3:47
+Atlanta, GA             221              4:03
+Memphis, TN             219              4:09
+Louisville, KY          298              4:52
+Jackson, MS             338              5:11
+Mobile, AL              361              5:21
+Lexington, KY           336              5:26
+Ashville, NC            335              5:44
+Little Rock, AR         356              6:16
+Augusta, GA             372              6:24
+Tallahassee, FL         405              6:26
+Cincinnati, OH          401              6:39
+Indianapolis, IN        412              6:50
+Columbia, SC            434              7:13
+St. Louis, MO           449              7:24
+New Orleans, LA         509              7:33
+Charlotte, NC           461              7:37
+Baton Rouge, LA         498              8:00
+Savannah, GA            473              8:00
+Roanoke, VA             477              8:08
+Greensboro, NC          505              8:38
+Gainesville, FL         554              8:59
+Charleston, WV          534              9:07
+Charleston, SC          547              9:25
+Jacksonville, FL        591              9:25
+Springfield, MO         500              9:40
+Chicago, IL             597             10:01
+Raleigh, NC             629             10:25
+Tampa, FL               680             10:41
+Orlando, FL             662             10:46
+Cleveland, OH           653             11:00
+Richmond, VA            663             11:14
+Oklahoma City, OK       690             11:20
+Detroit, MI             673             11:21
+Pittsburg, PA           699             11:47
+Dallas, TX              746             11:57
+Washington, DC          713             12:04
+Houston, TX             770             12:30
+Kansas City, KS         674             13:04
+Wichita, KS             806             13:13
+Miami, FL               887             14:07
+Des Moines, IA          836             15:02

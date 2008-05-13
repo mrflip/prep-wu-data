@@ -1,0 +1,129 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      5535,        119]
+NotebookOptionsPosition[       571,         22]
+NotebookOutlinePosition[      5662,        122]
+CellTagsIndexPosition[      5619,        119]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+},
+WindowSize->{640, 750},
+WindowMargins->{{57, Automatic}, {Automatic, 7}},
+FrontEndVersion->"6.0 for Linux x86 (32-bit) (June 19, 2007)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{$RootDirectory, "home", "flip", "now"}, 
+       "MathematicaStyle-Mathlab.nb", CharacterEncoding -> "iso8859-1"]]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "FormatType Styles", "Subsection", FontFamily -> 
+       "Bitstream Vera Sans Mono", FontSize -> 11, FontWeight -> "Plain"], 
+      Cell[
+      "The cells below define styles that are mixed in with the styles of \
+most cells.  If a cell's FormatType matches the name of one of the styles \
+defined below, then that style is applied between the cell's style and its \
+own options. This is particularly true of Input and Output.", "Text", 
+       FontFamily -> "Bitstream Vera Sans Mono", FontSize -> 11], 
+      Cell[
+       StyleData["CellExpression"], PageWidth -> Infinity, 
+       CellMargins -> {{6, Inherited}, {Inherited, Inherited}}, ShowCellLabel -> 
+       False, ShowSpecialCharacters -> False, AllowInlineCells -> False, 
+       Hyphenation -> False, AutoItalicWords -> {}, LanguageCategory -> None, 
+       StyleMenuListing -> None, FontFamily -> "Bitstream Vera Sans Mono", 
+       FontSize -> 11, FontWeight -> "Plain", FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}, 
+       Background -> GrayLevel[1]], 
+      Cell[
+       StyleData["InputForm"], PageWidth -> Infinity, 
+       InputAutoReplacements -> {}, AllowInlineCells -> False, Hyphenation -> 
+       False, AutoSpacing -> False, NumberMarks -> True, AutoNumberFormatting -> 
+       False, StyleMenuListing -> None, FontFamily -> 
+       "Bitstream Vera Sans Mono", FontSize -> 11, FontWeight -> "Plain", 
+       FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+      Cell[
+       StyleData["OutputForm"], PageWidth -> Infinity, TextAlignment -> Left, 
+       LineSpacing -> {0.6, 1}, StyleMenuListing -> None, FontFamily -> 
+       "Bitstream Vera Sans Mono", FontSize -> 11, FontWeight -> "Plain", 
+       FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+      Cell[
+       StyleData["StandardForm"], 
+       InputAutoReplacements -> {
+        "->" -> "\[Rule]", ":>" -> "\[RuleDelayed]", "<=" -> "\[LessEqual]", 
+         ">=" -> "\[GreaterEqual]", "!=" -> "\[NotEqual]", "==" -> "\[Equal]",
+          ParentList}, "TwoByteSyntaxCharacterAutoReplacement" -> True, 
+       LineSpacing -> {1.25, 0, 2}, SingleLetterItalics -> False, 
+       StyleMenuListing -> None, FontFamily -> "Bitstream Vera Sans Mono", 
+       FontSize -> 11, FontWeight -> "Plain", FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+      Cell[
+       StyleData["TraditionalForm"], TextClipboardType -> "PlainText", 
+       InputAutoReplacements -> {
+        "->" -> "\[Rule]", ":>" -> "\[RuleDelayed]", "<=" -> "\[LessEqual]", 
+         ">=" -> "\[GreaterEqual]", "!=" -> "\[NotEqual]", "==" -> "\[Equal]",
+          ParentList}, ShowSyntaxStyles -> False, 
+       "TwoByteSyntaxCharacterAutoReplacement" -> True, 
+       LineSpacing -> {1.25, 0, 2}, SingleLetterItalics -> True, 
+       TraditionalFunctionNotation -> True, DelimiterMatching -> None, 
+       StyleMenuListing -> None, FontFamily -> "Bitstream Vera Sans Mono", 
+       FontSize -> 11, FontWeight -> "Plain", FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+      Cell[
+       StyleData["TextForm"], TextClipboardType -> "PlainText", FontFamily -> 
+       "Bitstream Vera Sans Mono", FontSize -> 11, FontWeight -> "Plain", 
+       FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+      Cell[
+      "The style defined below is mixed in to any cell that is in an inline \
+cell within another.", "Text", FontFamily -> "Bitstream Vera Sans Mono", 
+       FontSize -> 11], 
+      Cell[
+       StyleData["InlineCell"], TextAlignment -> Left, LanguageCategory -> 
+       "Formula", ScriptLevel -> 1, StyleMenuListing -> None, FontFamily -> 
+       "Bitstream Vera Sans Mono", FontSize -> 11, FontWeight -> "Plain", 
+       FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+      Cell[
+       StyleData["InlineCellEditing"], StyleMenuListing -> None, FontFamily -> 
+       "Bitstream Vera Sans Mono", FontSize -> 11, FontWeight -> "Plain", 
+       FontSlant -> "Plain", 
+       FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}, 
+       Background -> RGBColor[0.964706, 0.929412, 0.839216]]}, Open]]}, 
+  Visible -> False, FrontEndVersion -> 
+  "6.0 for Linux x86 (32-bit) (June 19, 2007)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+}
+]
+*)
+
+(* End of internal cache information *)
+

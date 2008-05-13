@@ -1,0 +1,238 @@
+
+1_1_key.txt
+      - name: Word type 
+        uniqid: Word
+        desc:    |
+            Word type (headword followed by any variant forms) - see pp.4-5
+      - name: Part of speech 
+        uniqid: PoS
+        desc:    |
+            Part of speech (grammatical word class - see pp. 12-13)
+      - name: Rounded frequency per million word tokens 
+        uniqid: Freq
+        desc:    |
+            Rounded frequency per million word tokens (down to a minimu
+
+1_1_key.txt
+      - name: Word type 
+        uniqid: Word
+        desc:    |
+            Word type (headword followed by any variant forms) - see pp.4-5
+      - name: Part of speech 
+        uniqid: PoS
+        desc:    |
+            Part of speech (grammatical word class - see pp. 12-13)
+      - name: Rounded frequency per million word tokens 
+        uniqid: Freq
+        desc:    |
+            Rounded frequency per million word tokens (down to a minimum of 10 occurrences of a lemma per million)- see pp. 5
+      - name: Range
+        uniqid: Ra
+        desc:    |
+            Range: number of sectors of the corpus (out of a maximum of 100) in which the word occurs
+      - name: Dispersion value 
+        uniqid: Disp
+        desc:    |
+            Dispersion value (Juilland's D) from a minimum of 0.00 to a maximum of 1.00.
+
+1_2_key.txt
+      - name: Part of speech 
+        uniqid: PoS
+        desc:    |
+            Part of speech (word class)
+      - name: Frequency per million words 
+        uniqid: Freq
+        desc:    |
+            Frequency per million words (in order from the most frequent word to a minimum frequency of 10)
+
+2_1_key.txt
+(Words with a minimum lemma frequency of 160 per million words in either speech or writing)
+
+      - name: Frequency 
+        uniqid: FrSp
+        desc:    |
+            Frequency (per million words) in spoken texts of the BNC
+      - name: Range across spoken texts 
+        uniqid: Ra
+        desc:    |
+            Range across spoken texts (up to a maximum of 10 sectors of the corpus)
+          Range across written texts (up to a maximum of 90 sectors of the corpus)
+      - name: Dispersion in spoken texts
+        uniqid: DiSp
+        desc:    |
+            Dispersion in spoken texts: a value from 0 to 1 (Juilland's D)
+      - name: Log Likelihood score
+        uniqid: LogLi
+        desc:    |
+            Log Likelihood score, indicating distinctiveness, or significance of the difference between the spoken and written language frequencies
+      - name: Frequency 
+        uniqid: FrWr
+        desc:    |
+            Frequency (per million words) in written texts
+      - name: Dispersion in written texts
+        uniqid: DiWr
+        desc:    |
+            Dispersion in written texts, a value from 0 to 1 (Juilland's D)
+
+2_2_key.txt
+This list gives frequencies of word forms in the spoken part of the
+British National Corpus, comparing them with the written part, down to
+a minimum frequency of 10 per million words. 
+
+      - name: Frequency 
+        uniqid: FrSp
+        desc:    |
+            Frequency (per million words) in speech
+      - name: Log likelihood 
+        uniqid: LL
+        desc:    |
+            Log likelihood (a measure of distinctiveness between speech and writing)
+      - name: Frequency 
+        uniqid: FrWr
+        desc:    |
+            Frequency (per million words) in writing
+
+2_3_key.txt
+This list gives frequencies of word forms in the written part of the
+British National Corpus, comparing them with those of the spoken part
+(minimum frequency: 20 per million in the written part). 
+
+      - name: Frequency 
+        uniqid: FrSp
+        desc:    |
+            Frequency (per million words) in spoken English
+      - name: Log likelihood
+        uniqid: LL
+        desc:    |
+            Log likelihood: distinctiveness of scores for written and spoken English
+      - name: Frequency 
+        uniqid: FrWr
+        desc:    |
+            Frequency (per million words) in written English
+
+
+2_4_key.txt
+(ordered by Log Likelihood; not lemmatized; minimum log likelihood of 100)
+
+      - name: Part of speech
+        uniqid: PoS
+        desc:    |
+            Part of speech
+      - name: Frequency 
+        uniqid: FrSp
+        desc:    |
+            Frequency (per million words) in the spoken part of the BNC. 
+      - name: Log likelihood of the different scores for written and spoken English
+        uniqid: LogLike
+        desc:    |
+            Log likelihood of the different scores for written and spoken English
+      - name: Frequency 
+        uniqid: FrWr
+        desc:    |
+            Frequency (per million words) in the written part of the BNC.
+
+
+3_1_key.txt
+Comparing the Demographically sampled and Context-governed Parts of the Spoken BNC
+
+      - name: Frequency 
+        uniqid: FrCo
+        desc:    |
+            Frequency (per million words) in demographically sampled conversational speech 
+      - name: Range across conversational speech 
+        uniqid: Ra
+        desc:    |
+            Range across conversational speech (maximum of 4 sectors)
+          Range across task-oriented speech (maximum of 6 sectors)
+      - name: Dispersion 
+        uniqid: DiCo
+        desc:    |
+            Dispersion (Juilland's D) in demographically sampled conversational speech
+      - name: Distinctiveness
+        uniqid: LL
+        desc:    |
+            Distinctiveness, measured in log likelihood (varying from 0.00 to 1.00)
+      - name: Frequency 
+        uniqid: FrTO
+        desc:    |
+            Frequency (per million words) in context-governed speech (task-oriented)
+      - name: Dispersion 
+        uniqid: DiCG
+        desc:    |
+            Dispersion (Juilland's D) in context-governed speech (task-oriented)
+
+NOTE: The list is restricted to lemmas with a frequency of 120 per
+million or more in one of the two speech subcorpora
+
+3_2_key.txt
+(based on the spoken demographically-sampled and context governed parts of the BNC)     
+Ordered by Log Likelihood (distinctiveness); not lemmatized; minimum log likelihood of 100.
+
+      - name: Part of speech
+        uniqid: PoS
+        desc:    |
+            Part of speech
+      - name: Frequency 
+        uniqid: FrCo
+        desc:    |
+            Frequency (per million words) in demographically sampled speech (conversational)
+      - name: Log likelihood of the different scores for conversational and task
+        uniqid: LogLike
+        desc:    |
+            Log likelihood of the different scores for conversational and task-oriented speech
+      - name: Frequency 
+        uniqid: FrTO
+        desc:    |
+            Frequency (per million words) in context-governed (task-oriented) speech
+
+4_1_key.txt
+      - name: Frequency in imaginative writing
+        uniqid: FrIm
+        desc:    |
+            Frequency in imaginative writing
+      - name: Range 
+        uniqid: Ra
+        desc:    |
+            Range (0-19 for imaginative writing; 0-71 for informative writing)
+      - name: Dispersion 
+        uniqid: DiIm
+        desc:    |
+            Dispersion (Juilland's D) in imaginative writing
+      - name: Log Likelihood 
+        uniqid: LL
+        desc:    |
+            Log Likelihood (measure of distinctiveness)
+      - name: Frequency in informative writing
+        uniqid: FrIn
+        desc:    |
+            Frequency in informative writing
+      - name: Dispersion 
+        uniqid: DiIn
+        desc:    |
+            Dispersion (Juilland's D) in informative writing
+
+
+4_2_key.txt
+      - name: Frequency 
+        uniqid: FrIm
+        desc:    |
+            Frequency (per million words) in imaginative written texts in the BNC
+      - name: Log likelihood
+        uniqid: LL
+        desc:    |
+            Log likelihood. Words are listed in order of distinctiveness down to a minimum
+	    log likelihood of 100.
+      - name: Frequency 
+        uniqid: FrIn
+        desc:    |
+            Frequency (per million words) in informative written texts in the BNC
+
+
+      - name: \2
+        uniqid: \1
+        desc:    |
+            \2\3
+
+^\([a-zA-Z0-9]+\)[ 	]+= +\([a-zA-Z0-9 ]+\)\([^a-zA-Z0-9
+
+^\([a-zA-Z0-9]+\)[ 	]+= +\([a-zA-Z0-9 ]+\)\([^a-zA-Z0-9 \n][^\n]*)\?$

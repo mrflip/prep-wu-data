@@ -1,0 +1,628 @@
+infochimps_schema:
+    name:               ''
+    uniqid:             ''
+    collection:         ''
+    tags:               >-
+    
+    fields: []
+    
+    ratings:
+        accurate:
+            rating: 3
+            story:  These files have not been checked for conversion errors.
+            by:     initial
+        authoritative:
+            rating: 5
+            story:  ''
+            by:     initial
+        comprehensive:
+            rating: 5
+            story:  ''
+            by:     initial
+        interesting:
+            rating: 5
+            story:  ''
+            by:     initial
+            
+    contributors:
+      - name:         'IMDB.com'
+        uniqid:       'com.imdb'
+        url:          'http://imdb.com'
+        role:         'gathered'
+        cite:         ''        
+        desc:         |
+                    
+      - name:         'ftp.funet.fi'
+        uniqid:       'fi.funet.ftp'
+        url:          'http://ftp.funet.fi/pub/mirrors/ftp.imdb.com/'
+        role:         'distributed'
+        cite:         '' 
+        desc:         |
+                    
+      - uniqid: org.infochimp/flip
+        name: Philip (flip) Kromer
+        url: http://infochimp.org/flip
+        role: converted
+        
+    notes:
+      desc: |-
+        a
+          
+        For further details on how to search the IMDb please see:
+
+        * http://www.imdb.com/faq-search
+        
+        * http://www.imdb.com/tour
+        
+        * http://www.imdb.com/introduction
+
+      file_structure: |-
+          
+      rights: |-
+
+
+        The objective of the database is to provide useful and up to date movie 
+        information *freely* available on-line, across as many systems and platforms 
+        as possible. The information is NOT public domain, however, permission is 
+        granted to distribute it freely in an electronic form only, providing certain
+        conditions are met. A copy of the license attached to each database file is
+        included below for reference.
+
+        License
+        -------
+
+            This is a  database  of  movie  related  information  compiled  by
+            Internet  Movie  Database  Ltd (IMDb). While every effort has been
+            made to  ensure  the  accuracy  of  the  database  IMDb  gives  no
+            warranty  as  to  the accuracy of the information contained in the
+            database.  IMDb  reserves  the  right  to   withdraw   or   delete
+            information at any time. 
+
+            This service is provided for the information of users only. It  is
+            not   provided  with  the  intention  that  users  rely  upon  the
+            information for any purposes. Accordingly,  IMDb  shall  under  no
+            circumstances  be liable for any loss or damage, including but not
+            limited to loss of profits, goodwill or indirect or  consequential
+            loss   arising   out   of  any  use  of  or  inaccuracies  in  the
+            information. All warranties express or  implied  are  excluded  to
+            the fullest extent permissible by law. 
+
+            All information in this file  is  Copyright  1998  Internet  Movie
+            Database  Limited.  Reproduction,  distribution or transmission by
+            any means without the prior permission of IMDb is prohibited.  All
+            rights reserved. 
+
+            For further information contact <licensing@imdb.com>
+
+                 -------------------------------------------------------
+
+            All data and software released by Internet Movie Database  Ltd  is
+            freely  available  to  anyone  within certain limitations. You are
+            encouraged to quote subsets of the database  in  USENET  articles,
+            movie  related  FAQs,  magazine  articles etc. We do ask, however,
+            that you make reference to the source of the data  and  provide  a
+            pointer to the database for the benefit of the reader. 
+
+            Permission is granted  by  the  copyright  holder  to  allow  free
+            distribution  of  this  file  and  any  other part of the Internet
+            Movie  Database  in  an  ELECTRONIC  FORM  ONLY,   providing   the
+            following conditions are met: 
+
+                 1. NO FEE OF ANY KIND, however indirect, will be  charged
+                    for  its  distribution.  If  this file is being stored
+                    for  later  distribution  to  anyone   that   can   be
+                    construed   as   a   customer   of  yourself  or  your
+                    organisation YOU MUST contact Internet Movie  Database
+                    Ltd for permission. 
+
+                 2. Each  of  the  database  files  may   be   distributed
+                    individually  but  only  in an unaltered form. All the
+                    header and trailer information, including this  notice
+                    and  the  details  on how to access the database, must
+                    remain intact. 
+
+                 3. Specifically the files may NOT be  used  to  construct
+                    any  kind  of  on-line database (except for individual
+                    personal use). Clearance for  ALL  such  on-line  data
+                    resources   must  be  requested  from  Internet  Movie
+                    Database Ltd 
+
+                 4. In addition, copies of  the  Internet  Movie  Database
+                    frequently  asked  questions  list and additions guide
+                    must be made available in the same area / by the  same
+                    method as the other database files. 
+
+                 5. CD-ROM  distribution  is  prohibited  without  written
+                    permission from the Internet Movie Database Ltd 
+
+            Distribution by e-mail, BBS and  Internet  systems  is  positively
+            encouraged within these limitations. 
+
+            The files and software which make up the  movie  database  may  be
+            uploaded  to  commercial  BBS  systems  providing  that  the above
+            conditions are met and no *additional* fees are applied above  the
+            standard connect time or downloading charges. 
+
+            For further information contact <licensing@imdb.com>
+          
+
+      read_me: >-
+        This directory contains the latest release of The Internet Movie Database (IMDb)
+        tools and data-files. The database software is held in the tools subdirectory
+        and uses the information contained in these files to create and search a 
+        massive movie database. Supported platforms are Unix, Amiga, MS-DOS, Acorn,
+        OS/2, Windows 95/NT (text based interface only).
+
+        See the "description section":#desc above for more information on the IMDb 
+        including how to access it; how to install the software; the history and 
+        organization of the data; and other common questions.
+
+        Contact the IMDb coordinator, Col Needham <col@imdb.com> if you have any 
+        problems with the database.
+
+      editors_for_each_section: |
+        The database is made up of many separate sections each one with its own  expert editor. The following table gives an overview:
+
+         List                 | Maintained by
+         ---------------------|-------------------------------------------|
+         Actors               | Giancarlo Cairella <actors@imdb.com>
+         Actresses            | Giancarlo Cairella <actresses@imdb.com>
+         Alternative Names    | Michel Hafner <aka-names@imdb.com>
+         Alternative Titles   | Michel Hafner <aka-titles@imdb.com>
+         Alternative Versions | Giancarlo Cairella <versions@imdb.com>
+         Awards               | Oliver Heidelbach <awards@imdb.com>
+         Biographies          | Mark Harding <biographies@imdb.com>
+         Business             | Giancarlo Cairella <business@imdb.com>
+         Cast Completion      | Col Needham <cn@imdb.com>
+         Crew Completion      | Giancarlo Cairella <vertigo@imdb.com>
+         Certificates         | Mark Harding <certificates@imdb.com>
+         Cinematographers     | Michel Hafner <cinematographers@imdb.com>
+         Color Information    | Mark Harding <color@imdb.com>
+         Composers            | Michel Hafner <composers@imdb.com>
+         Costume Designers    | Peter Simeon <costumes@imdb.com>
+         Countries            | Mark Harding <countries@imdb.com>
+         Crazy Credits        | Mark Harding <crazy-credits@imdb.com>
+         Directors            | Michel Hafner <directors@imdb.com>
+         Distributors         | Rob Hartill <prod-companies@imdb.com>
+         DVDs                 | Peter Simeon <dvd@imdb.com>
+         Editors              | Peter Simeon <editors@imdb.com>
+         Genres               | Jake Dias <genres@imdb.com>
+         Goofs                | Murray Chapman <goofs@imdb.com>
+         Language             | Mark Harding <release-dates@imdb.com>
+         Laser Discs          | Peter Simeon <laserdiscs@imdb.com>
+         Literature           | Giancarlo Cairella <literature@imdb.com>
+         Locations            | Rob Hartill <locations@imdb.com>
+         Misc. Companies      | Mark Harding <release-dates@imdb.com>
+         Misc. Filmography    | Peter Simeon <misc-crew@imdb.com>
+         Movie Links          | Murray Chapman <movie-links@imdb.com>
+         Movies               | Michel Hafner <original-titles@imdb.com>
+         MPAA Ratings Reasons | Mark Harding <mah@imdb.com>
+         Plot Summaries       | Colin Tinto <plots@imdb.com>
+         Producers            | Andre Bernhardt <producers@imdb.com>
+         Production Companies | Rob Hartill <prod-companies@imdb.com>
+         Production Designers | Peter Simeon <prod-designers@imdb.com>
+         Quotes               | Bob Glickstein <quotes@imdb.com>
+         Ratings              | Col Needham <cn@imdb.com>
+         Release Dates        | Jon Reeves <release-dates@imdb.com>
+         Running Times        | Mark Harding <running-times@imdb.com>
+         SFX Companies        | Rob Hartill <prod-companies@imdb.com>
+         Sound Mix            | Mark Harding <sound-mix@imdb.com>
+         Soundtracks          | Ron Higgins <soundtracks@imdb.com>
+         Tag Lines            | Rob Hartill <tag-lines@imdb.com>
+         Technical Info       | Peter Simeon <simeon@imdb.com>
+         Trivia               | Murray Chapman <trivia@imdb.com>
+         Writers              | Jon Reeves <writers@imdb.com>
+         ---------------------|-------------------------------------------|
+
+        All of the files are available via anonymous FTP from:
+
+          uiarchive.cso.uiuc.edu  in  pub/info/imdb
+
+          gatekeeper.digital.com.au   in  /pub/imdb
+
+          ftp.fu-berlin.de  in  pub/misc/movies/database
+
+          ftp.funet.fi  in  pub/culture/tv+film/database
+
+        The coverage is being expanded continously and the database grows by thousands
+        of entries per week. The latest versions are always on the FTP sites listed 
+        above (updated every Saturday)
+
+        The following subsections describe the database sections (lists) in more detail.
+          
+      what_is_the_internet_movie_database: >-
+        The Internet Movie Database (IMDb) is an international organization whose 
+        objective is to provide useful and up to date movie information *freely* 
+        available on-line, across as many systems and platforms as possible. It 
+        currently covers over 150,000 movies with over 2,100,000 filmography entries
+        and is expanding continuously. The service is financed by advertising and 
+        sponsorship. The Internet Movie Database is a Limited Company registered
+        in the UK.
+
+        The database includes filmographies for actors, directors, writers, composers,
+        cinematographers, editors, production designers, costume designers, producers
+        and a miscellaneous catch all section; plot summaries; character names; movie
+        ratings; year of release; running times; movie trivia; quotes; goofs;
+        soundtracks; personal trivia; alternative names; certificates; color
+        information; country of production; genres; production companies; sound mix;
+        reference literature; filming locations; sequel/remake information; release
+        dates; advertising tag lines; detailed technical data; alternative versions;
+        laserdisc availability; language; special effects; distributors; box office
+        grosses; movie posters; video sales links and Academy Award information. 
+
+        The database aims to capture any and all information associated with movies 
+        from across the world, starting with the earliest cinema, going through to the
+        very latest releases and even movies still in production. Many thousands of 
+        movies are covered completely from the major actors to the minor bit players
+        and crew members. The database is updated weekly and is available over the 
+        World Wide Web, an e-mail interface or for local installation on Unix, Amiga 
+        OS/2, Windows 95/NT (text only), Amiga and MS-DOS machines.
+
+        In its seven year history the IMDb has grown from a small informal project to 
+        a major Internet resource. The WWW interface to the database is one of the most 
+        popular and well-known sites of any class on the web. It is frequently cited 
+        as a model for how to create and organise a major web site and has received 
+        numerous awards and honours over the years.
+
+      history:
+        So where did it all start? Well, it all began back in 1989 when someone
+        started a discussion in the USENET newsgroup rec.arts.movies about who were the
+        most attractive looking actresses around. In response to this thread, a college
+        student in the US began to collect a list of all the actresses, along with the
+        movies they had appeared in. The list was pretty disorganised to say the least
+        and the original maintainer disappeared from the net after a few months. At 
+        this point Andy Krieg picked up the list, sorted it properly and began to post
+        it monthly to rec.arts.movies under the title "THE LIST".
+
+        In May of 1989 Chuck Musciano started the Movie Ratings Report, an on-going
+        poll of movies posted weekly to the group. The two projects remained entirely
+        separate for a couple of years, but it is appropriate to mention the start
+        of the report here.
+
+        I started the actors list in August 1990 and it proved a big
+        success, growing very rapidly over a short space of time. It was limited
+        to living actors (like the actress list) to keep the size down. Being a fan
+        of older movies I was disappointed that I couldn't include some of my
+        favourite actors since they were dead. Later that month I asked for
+        volunteers to run a dead actors/actresses list and when nobody came
+        forward I started the dead list. 
+
+        In September 1990 Dave Knight volunteered to manage a directors list to
+        complement the cast lists. Seeing all the lists in rec.arts.movies, Grant 
+        Mason, a post-graduate student at Edinburgh, posted a request asking for some
+        software to search the lists as a whole. Since I already had some very
+        basic list processing shell scripts, I volunteered to publish them and the 
+        Internet Movie Database was born.
+
+        Within a month, Jeff Sullivan volunteered to manage a writers list and by
+        the end of 1990 Michel Hafner was managing the composers and cinematographers
+        lists. Michel had some ideas on creating master reference lists of names and
+        titles to keep everything consistent across the lists. He also suggested a
+        list structure based on relations that was adopted.
+
+        Throughout '91 and '92 the lists and software grew rapidly. Support was added
+        for the movie ratings report and Michel's titles list which now meant you
+        could access ratings and the year-of-release information in the database. 
+        Michel also launched a master reference list of alternative titles which 
+        enabled lots of redundancy in the database to be eliminated. Some of the 
+        original list managers had to give up their lists so things swapped around a
+        little during this time. We got access to an FTP site at the University of 
+        Colorado which helped significantly since the data was then available all
+        the time.
+
+        Towards the end of '92 Steve Hammond volunteered to manage a character names
+        database and Murray Chapman started the trivia list, agreeing to make it
+        compatible with the software. Early in '93 Colin Tinto volunteered to start
+        a plot summaries list and February '93 saw the launch of the first version of 
+        the software that was mostly in C. Jon Reeves also joined the team, taking 
+        over the writers list.
+
+        Around this time we discussed the idea of making the database available on an
+        e-mail server somewhere. Alan Jay volunteered to create and run it at the PC
+        users group in London. The movie mail-server went public in the summer of '93
+        and still continues to serve hundreds of requests per day despite the increased
+        availability of the web to most Internet users.
+
+        In August '93 the cast lists were reorganised slightly so that all the data 
+        was available to the movie database package (up until then only entries for 
+        people with a certain number of requests were available publicly).
+
+        In September '93 Mark Harding volunteered to manage a biographies list and
+        the crazy credits section which used to be part of the trivia list. Rob 
+        Hartill set up a WWW interface to the database at Cardiff University. Also at
+        this time, Andre Bernhardt expressed an interest in porting the movie database
+        software to the Amiga and a release followed shortly afterwards.
+
+        At the end of '93 I took over the actresses list from Andy Krieg. The six cast
+        lists were merged to two, with the posted versions just being subsets of the 
+        full versions on the anonymous FTP sites. New filmography lists for editors, 
+        production designers and costume designers were also released. Henry Lebovic 
+        approached us about an MS-DOS interface to the database that he had been 
+        working on.
+
+        In March '94 Andre volunteered to manage a producers filmography list, Lars
+        Joergen Aas a quotes list, Ron Higgins a soundtracks list and support for
+        the movie goofs list was added. Rob began to look at setting up mirror sites 
+        for his heavily used WWW interface database and mirrors appeared in Mississippi
+        (run by Frank Peters), Australia (run by Mike Lawley), Iceland (run by Mark 
+        Townley), Germany (run by Wolfgang Klimt) and Japan (run by Jun-ichiro 
+        "itojun" Itoh). Also, Henry released CineBASE, the MS-DOS interface to the 
+        database, making the whole system accessible to even more people.
+
+        In April '94 the movie mail-server additions interface was launched, meaning
+        that updates for the whole database could now be sent to the same address,
+        significantly simplifying things for the database managers and users.
+
+        In May '94 the running times list was added to the database and the cast 
+        lists were reorganised to include the character names.
+
+        During the latter part of '94 the new easier template based additions system,
+        designed and managed by Mark Harding, was launched. This opened the database
+        to many new contributors who'd previously been put-off by the long addition
+        guidelines.
+
+        In October '94 eight new lists were added to the database, significantly 
+        increasing the range of information available. The new lists were: alternative
+        names, certificates, color information, countries, genres, miscellaneous 
+        filmographies, production companies and sound mix. The cast lists were enhanced
+        to include credit ordering information, enabling the stars of each movie 
+        to be identified easily.
+
+        In December '94 seven further lists were added, making virtually every class
+        of movie information available within the database. The new lists were: the
+        cast completion tracking, literature, locations, movie links, release dates,
+        tag lines and technical information.
+
+        During the early part of 1995 further WWW mirrors were added, newer sites
+        being Korea, South Africa and a second site in the USA. A monthly IMDb
+        newsletter was started, although the rate of growth on the database means
+        it doesn't get published as often as it should. A new section describing
+        the reasons behind the MPAA ratings was added to the database.
+
+        In November '95 three new lists were added: the alternate versions list,
+        managed by Giancarlo Cairella and the LaserDisc and ISO alternative titles
+        lists, managed by Peter Simeon. The latter list being part of our long term
+        effort to support international character sets within the database. Coinciding
+        with the new lists, the WWW was completely rewritten from scratch by Rob. The
+        new interface featured many new options and pages, complete with new icons
+        designed by Mike Massee.
+
+        In December '95 in an attempt to improve our WWW service we trimmed the number
+        of mirror sites down to the four which were able to keep up with the growth
+        in data volume and user traffic which the IMDb now receives.
+
+        In March '96 the IMDb moved onto a professional footing and became a 
+        sponsorship and advertising supported service. Almost immediately we were able
+        to make numerous improvements to the database, including a complete rewrite of
+        the web interface to make it run faster. Also, the business information section
+        managed by Giancarlo Cairella was added at the same time. This new section 
+        details box office grosses, budgets, studio locations and various other 
+        business related information.          
+
+      submit_imdb_data:
+
+        h4. Easier Ways to Submit New Data
+          
+        If you find the standard addition formats too complex there is an alternative 
+        easier way to submit additions on a title by title basis. There are no special 
+        formats to learn, you just request a template for a movie, fill in any missing 
+        data and send it back to the mail-server. For information on this interface 
+        send a message with the subject:
+
+          HELP UPDATE
+
+        to <mail-server@imdb.com> or for receive a template for a movie directly use
+        the subject:
+
+          TEMPL TITLE <title>
+
+        For example:
+
+          TEMPL TITLE Vertigo (1958)
+          TEMPL TITLE Lion King, The (1994)
+
+        The "UPDATE" interface now includes support for adding to the filmography and
+        biography sections in a similar manner. The subject to use is:
+
+          TEMPL NAME <surname>, <first name>
+
+        For example:
+
+          TEMPL NAME Grant, Cary
+          TEMPL NAME Davis, Geena
+
+        h4. Taking Part in the Movie Ratings Poll
+
+        Everyone is encouraged to take part in the movie ratings poll (see Q 11). The
+        WWW interface provides a simple way to vote in the report - just look up
+        the details on any title and the voting buttons are located at the bottom
+        of the page. You must remember to mail your votes to the ratings tabulator if
+        you vote via this interface (the voting page has full details of what to do).
+
+        Another way to vote is by replying to the weekly movie ratings ballot article
+        posted to rec.arts.movies.lists+surveys every Friday. The WWW interface also 
+        contains a link to the weekly ballot:
+
+          http://us.imdb.com/Ballot/
+
+        Finally, a selection of movie ratings ballots are now available via the movie
+        mail-server interface. For more information send e-mail with the subject:
+
+          HELP BALOT
+
+        to <mail-server@imdb.com>.
+
+        The poll is one of the largest on-going polls on the Internet. As of October
+        1997 there have been over 2,100,000 votes by 400,000 people for over 40,000
+        movies.
+
+
+        h4. How to get a review included in the WWW interface
+
+        Other than archiving reviews sent to the moderated rec.arts.movies.reviews
+        USENET newsgroup, we don't store movie reviews in the database directly,
+        instead they are linked via URLs from other sources on the Internet. If
+        you do not have access to your own www page(s) to publish your reviews,
+        then read rec.arts.movies.reviews for a week or so before posting your
+        review there - it will then be archived in HTML format by us, usually within
+        two weeks.
+
+        
+      usage:
+
+        9. Key to the titles
+        ====================
+
+        The titles in the database fall into one of five categories:
+
+         (1) movies, unless otherwise indicated the title is a movie
+         (2) made for TV movies, indicated by a (TV) tag
+         (3) made for video movies, indicated by a (V) tag
+         (4) TV-series, indicated by enclosing the title in "'s
+         (5) mini-series, indicated by enclosing the title in "'s and a (mini) tag
+
+
+        10. Key to the symbols appearing in filmographies
+        =================================================
+
+        The filmography databases enable notes on a particular performance/contribution
+        to be recorded. Each database has a different set of symbols, although some 
+        overlap where appropriate. 
+
+
+        Universal Symbols
+        -----------------
+        (uncredited)  = the person was not credited on screen for their contribution
+
+
+        Writers Key
+        -----------
+        (song)        =  The writer is the author (composer?) of a song on
+                         which the screenplay was based.
+        (story)       =  The writer contributed on the story for the
+                         screenplay only or the writer is the author of a
+                         story on which the movie was based.
+        (play)        =  The writer is the author of the play on which the
+                         screenplay was based.
+        (novel)       =  The writer is the author of the novel on which the
+                         screenplay was based.
+        (novel XXX)   =  The writer is the author of the novel on which the
+                         screenplay was based, but the novel is not the same
+                         title as the movie.
+        (book)        =  The writer is the author of the book on which the
+                         screenplay was based.
+        (article)     =  The writer is the author of the article on which the
+                         screenplay was based.
+        (operetta)    =  The writer is the author of the operetta on which the
+                         screenplay was based.
+        (also XXX)    =  The writer was involved in some other aspect than just
+                         writing the screenplay.  They may have authored the novel
+                         the screenplay was based on, or developed the story, etc.
+
+        Composers Key
+        -------------
+        (songs)       = The composer composed songs for the movie
+        (also songs)  = The composer composed also songs for the movie
+
+
+        11. Key to movie ratings
+        ========================
+
+        The movie ratings report is a massive on-going poll of movies rated on a scale
+        from 1 (bad) to 10 (excellent) by users on the Internet. An example entry on
+        the report is:
+
+              0000000115    3314   8.8  Casablanca (1942)
+
+        For each movie, the vote distribution, the total number of votes and the 
+        average rating are shown. The vote distribution uses a single character to 
+        represent the percentage of votes for each ranking.  The following characters
+        codes can appear:
+
+             "." no votes cast        "3" 30-39% of the votes  "7" 70-79% of the votes
+             "0"  1-9%  of the votes  "4" 40-49% of the votes  "8" 80-89% of the votes
+             "1" 10-19% of the votes  "5" 50-59% of the votes  "9" 90-99% of the votes
+             "2" 20-29% of the votes  "6" 60-69% of the votes  "*" 100%   of the votes
+
+        So, in our example above, "Casablanca" has received a total of 3314 votes, the
+        average of the votes being 8.8 with 50-59% 10/10; 10-19% 9/10; 10-19% 8/10; 
+        1-9% 7/10 etc.
+
+
+        12. Appearances in TV-series before an actor was even born!
+        ===========================================================
+
+        There are several TV-series which have been running for many years, for 
+        example "As the World Turns" started in 1956 and "The Doctors" in 1963. 
+        Several actors and actresses began their careers by appearing in series such
+        as these, for example, Meg Ryan played Betsy Montgomery in "As the World 
+        Turns". 
+
+        Lists of movies (filmographies) are usually sorted into chronological order,
+        the year used being the year that the movie was released, or in the case of
+        long running TV-series, the year it was first broadcast. This means that you
+        can sometimes get information indicating a particular performer appeared in a 
+        TV-series before they were even born. In our example, Meg Ryan was born in 
+        1961, but her filmography indicates she appeared in "As the World Turns" in 
+        1956! 
+
+        To reduce confusion, we normally use the character name to indicate the
+        range of years the people appeared in the show. In our example
+        Ryan's appearance was from 1982 to 1984 so her character name becomes 
+        "Betsy Montgomery (1982-1984)",
+
+
+        13. What do the (I), (II) etc. mean in some names?
+        ==================================================
+
+        There are two types of Roman numerals appearing in our names. Here's
+        an example of the first type:
+
+        Ahern II, Lloyd
+
+        Lloyd Ahern II is a cinematographer that has the same name as his
+        father Lloyd Ahern except for the "II" used to distinguish between
+        them. The Roman numeral is directly and officially part of the name
+        and not in any parentheses. It is used in actual credits of movies and
+        in other information sources that have data on this man.
+
+        The reason is simply to make clear that you are talking about the son 
+        and not the father. The two are likely to be mixed up since they are
+        both cinematographers. Although someone familiar with their
+        biographical data might conclude from the context if the father or the
+        son was involved in a particular movie, it's nonetheless convenient to
+        have the Roman numeral to remove ambiguity.                          
+
+        The second type of Roman numeral appearing in names is very similar,
+        although there is a crucial difference. Again the Roman numeral is
+        added to distinguish between two or more different people that share a
+        name but are not identical. But this time the number is not part of
+        the official name of a person as used in credits or other information
+        sources. It's a number added by IMDb and it's always within        
+        parentheses, for example:
+
+           John Smith (I)
+
+        The need for these numbers arose naturally as the database grew over
+        time and more and more name clashes occurred with the consequence that
+        credits belonging to one person were also showing up for all others
+        with the same name. Generally, the more common a name is the more
+        likely there will be mix-ups and the more Roman numerals have to be
+        added. As an example look up John Taylor for which we already store 15
+        (!) variants not counting cases with initials.                      
+
+        There are no strict rules as to which person gets which number        
+        although we try to give more important or famous people lower numbers 
+        (and big stars none at all for the time being) and also people that  
+        came chronologically before other people. Also, if a person has been
+        billed with different names, one of them being more distinctive than
+        the others (due to an added initial, for example), we tend to use the
+        unique name that needs no Roman numeral as the primary name and add   
+        the name with the Roman numeral as an alternative name.            
+
+        The need for Roman numerals follows from the basic database design.
+        The names and titles themselves are the keys into the data and must be
+        unique, hence the need for Roman numerals. Other solutions are
+        possible, but we feel that the current solution is the best for the 
+        time being and hope this view is also shared by our users.          
+          

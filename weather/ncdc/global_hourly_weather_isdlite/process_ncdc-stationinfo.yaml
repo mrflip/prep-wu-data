@@ -1,0 +1,41 @@
+- imw_flat_file:
+        name:           station_info
+        filename:       ncdc-weather-data/metadata/ISH-HISTORY.TXT
+        skip_head:      17
+        picture:        |
+            s6    .s5   .s30                           s2.s2.s2.s4  ..ci5   .ci6    .ci5
+            USAF   WBAN  STATION NAME                  CTRY  ST CALL  LAT    LON     ELEV(.1M)
+            010014 99999 SOERSTOKKEN                   NO NO    ENSO  +59783 +005350 +00500
+            999999 94995 UNIVERSITY OF NEBRASKA        US US NE C52A  +40848 -096565 +03624
+
+        fields:
+            - USAF_weatherstation_code
+            - WBAN_weatherstation_code
+            - station_name
+            - country_code_wmo
+            - country_code_fips
+            - us_state
+            - ICAO_call_sign
+            - lat_sign
+            - lat
+            - lng_sign
+            - lng
+            - elev_sign
+            - elev 
+        
+- imw_flat_file:
+        name:           station_inventory
+        filename:       ncdc-weather-data/metadata/ish-inventory.txt
+        skip_head:      8
+        # max_records:    10000
+        picture:        |
+            s6    .s5   .i4   .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6
+            USAF   WBAN  YEAR  JAN    FEB    MAR    APR    MAY    JUN    JUL    AUG    SEP    OCT    NOV    DEC
+            010000 99999 2001  0      0      0      0      0      0      0      0      1      2      6      2
+            
+        fields:
+            - USAF_weatherstation_code
+            - WBAN_weatherstation_code
+            - data_inventory_year
+            - data_inventory_months:         rest
+

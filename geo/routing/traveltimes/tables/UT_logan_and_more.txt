@@ -1,0 +1,1044 @@
+
+City  							Mileage		
+							                
+Aberdeen, SD						946		
+Aberdeen, WA						839		
+Abilene, TX						1,159		
+Afton, WY						119		
+Akron, OH						1,729		
+Alta, UT						103		
+Amalga, UT						10		
+Alamogordo, NM						888		
+Albany, NY						2,180		
+Albuquerque, NM						681		
+Alamosa, CO (via Durango)				625		
+Alpine, UT						114		
+Altamont, UT						219		
+Amarillo, TX						935		
+American Falls, ID					118		
+American Fork, UT					112		
+Ames, IA						1,082		
+Anaconda, MT						363		
+Anaheim, CA						760		
+Animal Husbandry Farm (USU), UT				6		
+Ann Arbor, MI						1,611		
+Annapolis, MD						2,079		
+Arco, ID						179		
+Arcada, CA						910		
+Aspen, CO						487		
+Athens, GA						1,899		
+Atlanta, GA						1843		
+Atlantic City, NJ					2,184		
+Augusta, GA						1,999		
+Austin, TX						1,375		
+						                
+Bakersfield, CA						778		
+Baltimore, MD						2,056		
+Baton Rouge, LA						1,700		
+Battle Creek, MI					1,543		
+Bear River City, UT					26		
+Bear River High School, UT				26		
+Beaver, UT						280		
+Beaver Mountain, UT					30		
+Bellefontaine, OH					1,629		
+Bend, OR						604		
+Berkeley, CA						829		
+Bethlehem, PA						2,097		
+Billings, MT						481		
+Bingham Canyon						108		
+Birmingham, AL						1,774		
+Bismark, ND						899		
+Blackfoot, ID						117		
+Blanding, UT						394		
+Bloomington, IL						1,336		
+Boise, ID						291		
+Boston, MA						2,343		
+Boulder, CO						501		
+Bountiful, UT						72		
+Bowling Green, KY					1,599		
+Bozeman, MT (via Butte)					450		
+Bozeman, MT (via West Yellowstone)			343		
+Bremerton, WA						794		
+Bridgeport, CT						2,216		
+Brigham City, UT					25		
+Brookings, SD						1,006		
+Bryan, OH						1,563		
+Buhl, ID						194		
+Bullfrog Basin, UT					376		
+Burley, ID						144		
+Burlington, IA						1,206		
+Butte, MT						354		
+
+Cache Juntion, UT					17
+Cairo, IL						1,457
+Caldwell, ID						350
+Calgary, Alberta, Canada				796
+Cambridge, OH						1,748
+Camp Williams						109
+Canyonlands National Park, UT (Dead Horse Point)	329
+Cape Girardeau, MO					1,423
+Cape May, NJ						2,199
+Carlsbad, NM						954
+Carson City, NV						572
+Casper, WY						405
+Castle Dale, UT						232
+Castle Gate, UT						191
+Castle Rock						140
+Cedar City, UT						323
+Cedar Rapids, IA					1,178
+Centerville, UT						70
+Centralia, IL						1,387
+Chanute, KS						1,124
+Charleston, SC						2,137
+Charleston, WV						1,805
+Charlottesville, VA					2,036
+Chattanooga, TN						1,742
+Chester, IL						1,383
+Cheyenne, WY						436
+Chicago, IL						1,392
+Chillicothe, MO						1,093
+Cincinnati, OH						1,615
+Circleville						296
+Clarksburg, WV						1,848
+Clarksdale, MS						1,589
+Clarkston, UT						23
+Clearfield, UT						52
+Clinton, IA						1,152
+Clinton, OK						1,058
+Coalville, UT						94
+Cokeville, WY						93
+Colorado Springs, WY					587
+Colter Bay, WY						236
+Columbia, MO						1,199
+Columbia, SC						2,044
+Columbia, TN						1,655
+Columbus, GA						1,917
+Columbus, IN						1,547
+Columbus, MS						1,695
+Columbus, OH						1,669
+Concord, NH						2,326
+Cornish, UT						27
+Corpus Christi, TX					1,530
+Corrine, UT						34
+Corvalis, OR						732
+Craig, CO						352
+Crystal Springs, UT					35
+Cumberland, MD						1,925
+Custer, SD (via Cody)					705
+Dallas, TX						1,291
+Danbury, CT						2,250
+Danville, Il						1,436
+Davis, CA						708
+Dayton, ID						34
+Daytona Beach, FL					2,304
+Decatur, AL						1,731
+Dacatur, IL						1,387
+Dead Horse Point, UT					329
+Delta, UT						215
+Denver, CO						517
+Denver, CO to Glenwood Springs, CO			158
+Des Moines, IA						1,064
+Detroit, MI						1,647
+Devils Lake, ND						1,048
+Devils Slide, UT					79
+Dillion, MT						282
+Dodge City, KS						868
+Dover, DE						2,140
+Downey, ID						56
+Draper, UT						98
+Driggs, ID						221
+DuBois, ID						199
+Dubuque, IA						1,248
+Duschesne, UT						198
+Dugway Proving Grounds					166
+Duluth, MN						1,312
+Durango, CO						474
+Dutch John						264
+Dutch John to Manila					126
+Dutch John to Roosevelt					81
+Dutch John to Vernal					51
+
+Eau Claire, WI						1,275
+Echo, UT						88
+East Carbon City					223
+El Paso, TX						945
+Elberta, UT						159
+Elko, NV						267
+Elko, NV to Las Vegas, NV				595
+Elkhart, IN						1,481
+Ellenburg, WA						670
+Elsinore, UT						251
+Ely, NV							320
+Emporia, KS						1,048
+Enid, OK						1,068
+Ephraim, UT						196
+Erie, PA						1,813
+Escalante, UT						334
+Eugene, OR						731
+Eurkea, CA						909
+Evanston, WY						102
+Everett, WA						793
+
+Fairview, ID						24
+Fairview, UT						174
+Fargo, ND						1,089
+Farmington, NM						501
+Farmington, UT						66
+Fayetteville, NC					2,129
+Ferron, UT						243
+Fielding, UT						21
+Fillmore, UT						225
+Flagstaff, AZ						583
+Flaming Gorge, UT					241
+Flint, MI						1,644
+Forestry Camp (Logan Canyon), UT			22
+Fort Collins, CO					455
+Fort Collins, CO to Steamboat, CO			166
+Fort Collins, CO to Vernal, UT				358
+Fort Dodge, IA						1,075
+Fort Douglas, UT					85
+Fort Duchesne, UT					238
+Fort Hall, ID						118
+Fort Lewis, WA						843
+Fort Myers, FL						2,401
+Fort Scott, KS						1,157
+Fort Smith, AR						1,297
+Fort Stockton, TX					1,092
+Fort Wayne, IN						1,533
+Fort Worth, TX						1,288
+Franklin, ID						19
+Freedom, WY						167
+Fresno, CA						849
+
+Gainesville, FL						2,175
+Galesburg, IL						1,257
+Gallup, NM						565
+Gallup NM to Kanab, UT					386
+Gallup, NM to Window Rock, AZ				27
+Galveston, TX						1,556
+Garland, UT						24
+Gary, IN						1,411
+Gettysburg, PA						2,009
+Glenwood Springs, CO					423
+Golden, CO						537
+Gooding, ID						228
+Grace, ID						68
+Grand Canyon National Park (North Rim)			465
+Grand Canyon National Park (South Rim)			592
+Grand Coulee, WA					714
+Grand Forks, ND						1,138
+Grand Island, NE					795
+Grand Junction, CO					362
+Grand Rapids, MI					1,553
+Granger, UT						92
+Grants Pass, OR						797
+Grantsville, UT						117
+Great Falls, MT						500
+Greeley, CO						484
+Green Bay, WI						1,435
+Green River, UT						262
+Green River, WY						165
+Greensboro, NC						2,038
+Gunnison, UT						207
+
+Hamilton, OH						1,602
+Hamilton, Ontario, Canada				1,839
+Hancock, MI						1,515
+Hanksville, UT						300
+Hannibal, MO						1,216
+Harrisburg, PA						2,025
+Hartford, CT						2,262
+Havre, MI						613
+Heber City, UT						125
+Helena, MT						411
+Helper, UT						195
+Hill Field, UT						49
+Hill Field Education Building, UT			58
+Hot Springs, SD						606
+Houston, TX						1,507
+Hoytsville						97
+Huntington, UT						223
+Huntington UT to Blanding UT				214
+Huntsville, UT						63
+Huntsville AL						1,719
+Huron, SC						931
+Hyrum, UT						9
+
+Idaho Falls, ID						146
+Independence, KS					1,135
+Indiana, PA						1,870
+Indianapolis, IN					1,505
+Indio, CA						768
+International Falls, MN					1,342
+Iowa City, IA						1,776
+Ithaca, NY						2,039
+
+Jackson, MS						1,674
+Jackson, WY						185
+Jackson Lake Lodge, WY					246
+Jacksonville, FL					2,159
+Jacksonville, IL					1,289
+Jacksonville, NC					2,216
+Jamestown, NY						1,860
+Jamestown, ND						999
+Jefferson City, MO					1,218
+Jerome, ID						202
+Johnstown, PA						1,898
+Joliet, IL						1,368
+Joplin, MO						1,205
+Jordan, UT						96
+Junction						286
+Junction City, KS					973
+
+Kalamazoo, MI						1,519
+Kalispell, MT						566
+Kamas, UT						118
+Kanab, UT						381
+Kansas City, KS						1,075
+Kansas City, MO						1,074
+Kaysville, UT						62
+Kearns, UT						100
+Kenosha, WI						1,416
+Keokuk, IA						1,200
+Ketchum, ID						267
+Key West, FL						2,653
+Kimberly, ID						187
+Klamath Falls, OR					702
+Knoxville, TN						1,797
+
+LaCrosse, WI					1,250
+Lafayette, IN					1,466
+Lafayette, LA					1,669
+Lake Charles, LA				1,598
+Lake City, FL					2,134
+Lake Tahoe (South), CA				616
+Laketown, UT					51
+Laketown UT to Randolph, UT			20
+Lampasas, TX					1,307
+Lancaster, OH					1,699
+Lancaster, PA					2,060
+Lander, WY					296
+Lansing, MI					1,593
+Laramie, WY					388
+Laredo, TX					1,456
+Lark, UT					106
+Las Cruces, NM					901
+Las Vegas, NV					493
+Las Vegas, NM					749
+Lawrence, KS					1,054
+Lawrence, MA					2,345
+Layton, UT					57
+Leavenworth, KS					1,057
+Lebanon, KY					1,649
+Lebanon, MO					1,255
+Lehi, UT					109
+Lemmon, SD					796
+Levan						181
+Lewiston, ID					568
+Lewiston, UT					19
+Lewistown, MT					504
+Lewistown, PA					1,968
+Lexington, KY					1,658
+Lexington, MA					2,344
+Lexington, VA					1,978
+Lima, OH					1,596
+Lincoln, NE					882
+Little Rock AR					1,451
+Livingston, MT					368
+Loa, UT						279
+Locomotive Springs, UT				75
+Logan Airport to Utah State University, Logan, U5		T
+Logan Jr. High School, Logan, UT		1.5
+Logan Sr. High School, Logan, UT		2
+Logansport, IN					1,475
+London, Ontario, Canada				1,766
+Long Beach, CA					871
+Los Alamos, NM					683
+Los Angeles, CA					764
+Louisville, KY					1,585
+Loveland, CO					481
+Lubbock, TX					966
+Lucin, UT					157
+Lufkin, TX					1,458
+Lynchburg, VA					2,023
+
+McAlester, OK					1,236
+McAllen, TX					1,601
+McCall, ID					432
+McComb, MS					1,716
+McCook, NE					704
+Mackinaw City, MI				1,688
+Macon, GA					1,931
+Madison, IN					1,592
+Madison, WI					1,342
+Magna, UT					102
+Maida, ND					1,115
+Malad, ID					47
+Malad, ID to Salt Lake City, UT			109
+Malone, NY					2,209
+Mammoth, OR					789
+Mammoth, Yellowstone National Park		452
+Manchester, NH					2,330
+Manhattan, KS					974
+Manilla, WY					734
+Manitowoc, WI					1,450
+Mankato, MN					1,109
+Mansfield, OH					1,679
+Manti, UT					201
+Manti, UT to Cedar City, UT			158
+Manti, UT to Delta, UT				99
+Manti, UT to Deseret, UT			102
+Manti, UT to Ephraim, UT			7
+Manti, UT to Gunnison, UT			15
+Manti, UT to Heber, UT				111
+Manti, UT to Leamington, UT			75
+Manti, UT to Moroni, UT				19
+Manti, UT to Mt. Pleasant, UT			21
+Manti, UT to Richfield, UT			43
+Manti, UT to Roosevelt, UT			177
+Manti, UT to Salina, UT				28
+Manti, UT to Salt Lake City, UT			127
+Manti, UT to Vernal, UT				207
+Mantua, UT					20
+Many, LA					1,529
+Marinette, WI					1,485
+Marion, IL					1,437
+Marion, IN					1,522
+Marion, OH					1,650
+Marquette, MI					1,552
+Marshall, MN					1,044
+Marshfield, WI					1,341
+Martinsville, VA				2,020
+Mason City, IA					1,145
+Maysville, KY					1,677
+Meadville, PA					1,803
+Memphis, TN					1,523
+Mendon, UT					10
+Merced, CA					794
+Mercer, PA					1,792
+Meridian, MS					1,752
+Mesa, AZ					748
+Miami, FL					2,497
+Michigan City, IN				1,435
+Middlesboro, Ky					1,783
+Middletown, OH					1,602
+Midvale, UT					96
+Midvale, UT to Ogden, UT			45
+Midway, UT					134
+Miles City, MT					627
+Milford, UT					321
+Milford, UT to Delta, UT			78
+Milford, UT to Panguitch, UT			80
+Milford, UT to St. George, UT			110
+Millersburg, PA					2,024
+Millville, NJ					2,155
+Millville, UT					5
+Milwaukee, WI					1,417
+Minersville					308
+Minneapolis, MN					1,187
+Minot, ND					927
+Missoula, MT					449
+Mitchell, SD					904
+Moab, UT					313
+Moab, UT to Castle Dale, UT			141
+Moab, UT to Durango, CO				167
+Moab, UT to Ephraim, UT				228
+Moab, UT to Gallup, NM				267
+Moberly, MO					1,177
+Mobile, AL					1,860
+Mobridge, SD					847
+Modesto, CA					758
+Monroe, LA					1,554
+Monticello, UT					389
+Monterey, CA					874
+Montezuma Creek, UT				435
+Montgomery, AL					1,861
+Montpelier, ID					66
+Montreal, Quebec, Canada			2,214
+Monument Valley, UT				387
+Moore, UT  to Ferron, UT			9
+Morgan, UT					70
+Morgan, UT to Coalville, UT			23
+Morgan, UT to Duchesne, UT			124
+Morgan, UT to Randolph, UT			91
+Morgan, UT to Roy, UT				19
+Morgan, UT to Salt Lake City, UT		51
+Morgantown, WV					1,864
+Moroni, UT					188
+Morristown, TN					1,831
+Moscow, ID					595
+Moses Lake, WA					642
+Moses Lake, WA to Seattle, WA			180
+Mt. Pleasant, UT				184
+Mt. Vernon IL					1,405
+Mt. Vernon, OH					1,692
+Muncie, IN					1,540
+Murray, UT					88
+Murray, UT to Tooele, UT			41
+Muscatine, IA					1,211
+Muskegon, MI					1,561
+Muskogee, OK					1,233
+
+Nampa, ID					345
+Nashua, NH					2,327
+Nashville, TN					1,623
+Nebraska City, NE				932
+Needles, CA					601
+Neola						240
+Nephi, UT to Deseret, UT			59
+Nephi, UT to Ephraim, UT			35
+Nephi, UT to Fillmore, UT			62
+Nephi, UT to Fountain Green, UT			14
+Nephi, UT to Lehi, UT				61
+Nephi, UT to Levan, UT				11
+Nephi, UT to Manti, UT				42
+Nephi, UT to Provo, UT				45
+Nephi, UT to Richfield, UT			70
+Nephi, UT to Roosevelt, UT (via Provo, UT)	172
+Nephi, UT to Wales, UT				23
+Newark, NJ					2,161
+New Bedford, MA					2,362
+New Brunswick, NJ				2,152
+New Haven, CT					2,234
+New London, CT					2,283
+New Orleans, LA					1,780
+Newport, OR					787
+Newport, RI					2,335
+Newport News, VA				2,178
+Newton, UT					18
+Newton, UT to Smithfield, UT			11
+New York, NY					2,182
+Nibley, UT					5
+Norfolk, NE					895
+Norfolk, VA					2,195
+Norristown, PA					2,114
+North Bay, Ontario, Canada			1,980
+North Logan, UT					2
+North Logan, UT to Hyde Park School, UT		4
+North Ogden, UT					41
+North Platte, NE				657
+Norwalk, OH					1,666
+
+Oakland, CA					773
+Oakley, KS					755
+Oak Ridge, TN					1,776
+Ocala, FL					2,211
+Oceanside, CA					799
+Ogden, UT					46
+Ogden, UT to Clearfield, UT			11
+Ogden, UT to Coalville, UT			48
+Ogden, UT to Granite HS, Salt Lake City, UT	40
+Ogden, UT to Layton, UT				11
+Ogden, UT to Murray, UT				43
+Ogden, UT to Randolph, UT			100
+Ogden, UT to Sandy, UT				49
+Oklahoma City, OK				1,118
+Olympia, WA					810
+Omaha, NB					931
+Ontario, OR					342
+Orangeburg, SC					2,069
+Orderville, UT					367
+Orem, UT					119
+Orlando, FL					2,283
+Ortonville, MN					1,051
+Osceola, IA					1,057
+Oshkosh, WI					1,391
+Oswego, NY					2,044
+Ottawa, Ontario, Canada				2,124
+Ottumwa, IA					1,130
+Owenboro, KY					1,528
+
+Paducah, KY					1,490
+Page, AZ					453
+Palestine, TX					1,397
+Palo Alto, CA					888
+Panama City, FL					2,020
+Panguitch, UT to Ephraim, UT			127
+Panguitch, UT to Escalante, UT			66
+Panguitch, UT to Glendale, UT			43
+Panguitch, UT to Hatch, UT			15
+Panguitch, UT to Hurricane, UT			96
+Panguitch, UT to Junction, UT			34
+Panguitch, UT to Kanab, UT			68
+Panguitch, UT to Monticello, UT			330
+Panguitch, UT to Orderville, UT			46
+Panguitch, UT to Parowan, UT			48
+Panguitch, UT to Price, UT			202
+Panguitch, UT to Provo, UT			198
+Panguitch, UT to Richfield, UT			75
+Panguitch, UT to St. George, UT			114
+Paradise, UT					15
+Paris, ID					61
+Park City, UT					119
+Park Valley, UT					98
+Parkersburg, WV					1,778
+Parawon, UT					324
+Pasadena, CA (via Las Vegas)			822
+Pasco, WA					572
+Payson, UT					144
+Pecos, TX					1,038
+Pendleton, OR					507
+Pensacola, FL					1,917
+Peoria, IL					1,299
+Perry, FL					2,116
+Perry, UT					29
+Philadelphia, PA				2,123
+Phoenix, AZ					719
+Pickleville, UT					45
+Pierre, SD					816
+Pine Bluff, AK					1,491
+Pittsburg, KS					1,176
+Pittsburgh, PA					1,831
+Pittsfield, MA					2,216
+Plain City, UT					48
+Plattsburgh, NY					2,264
+Pleasant Grove, UT				115
+Plymouth, NH					2,330
+Plymouth, UT					30
+Pocatello, ID					97
+Ponca City OK					1,094
+Pontiac, MI					1,657
+Poplar Bluff, MO				1,427
+Port Angeles, WA				858
+Port Huron, MI					1,702
+Portland, MN					2,411
+Portland, OR					717
+Portsmouth, NH					2,372
+Portsmouth, OH					1,719
+Pottsville, PA					2,046
+Poughkeepsie, NY				2,183
+Prairie Du Chien, WI				1,263
+Prescott, AZ					671
+Presidio, TX					1,190
+Preston, ID					27
+Price, UT					199
+Price, UT to Blanding, UT			188
+Price, UT to Elmo, UT				21
+Price, UT to Emery, UT				58
+Price, UT to Ephraim, UT			101
+Price, UT to Ferron, UT				42
+Price, UT to Huntington, UT			22
+Price, UT to Palmyra, UT			81
+Price, UT to Vernal, UT				118
+Prince George, British Columbia, Canada		1,288
+Princeton, IN					1,485
+Providence, RI					2,333
+Providence, UT					5
+Providence School, Providence, UT		7
+Provo, UT					119
+Provo, UT to American Fork, UT			14
+Provo, UT to Blanding, UT			266
+Provo, UT to Castle Dale, UT			111
+Provo, UT to Castlegate, UT			71
+Provo, UT to Fillmore, UT			106
+Provo, UT to Fort Duchesne, UT			135
+Provo, UT to Geneva, UT				8
+Provo, UT to Gunnison, UT			85
+Provo, UT to Heber, UT				32
+Provo, UT to Kamas, UT				44
+Provo, UT to Kanab, UT				261
+Provo, UT to Lehi, UT				17
+Provo, UT to Loa, UT				164
+Provo, UT to Magna, UT				60
+Provo, UT to Manti, UT				83
+Provo, UT to Morgan, UT				81
+Provo, UT to Park City, UT			50
+Provo, UT to Pleasant Grove, UT			10
+Provo, UT to Price, UT				79
+Provo, UT to Roosevelt, UT			127
+Provo, UT to Scipio, UT				79
+Provo, UT to Soldier Summit, UT			43
+Pueblo, CO					628
+Pullman, WA					607
+Putnam, CT					2,308
+
+Quebec, Quebec, Canada					2,373
+Quincy, IL 						1,222
+
+Racine, WI					1,420
+Raleigh, NC					2,112
+Randolph, UT					73
+Randolph, UT to Ephraim, UT			231
+Randolph, UT to Heber, UT			111
+Randolph, UT to Provo, UT			123
+Randolph, UT to Salt Lake City, UT		130
+Rapid City, SD					647
+Raton, NM					735
+Ravenna, OH					1,741
+Rawlins, WY					287
+Reading, PA					2,078
+Redding, CA					755
+Red Oak, IA					976
+Red Wing, MN					1,205
+Reedsport, OR					812
+Regina, Saskatchewan, Canada			954
+Reno, NV					555
+Richfield, UT					230
+Richfield, UT to Aurora, UT			14
+Richfield, UT to Axtell, UT			25
+Richfield, UT to Bicknell, UT			53
+Richfield, UT to Cedar City, UT			115
+Richfield, UT to Circleville, UT		58
+Richfield, UT to Cove Fort, UT			60
+Richfield, UT to Delta, UT			86
+Richfield, UT to Fillmore, UT			66
+Richfield, UT to Gunnison, UT			29
+Richfield, UT to Hanksville, UT			120
+Richfield, UT to Junction, UT			48
+Richfield, UT to Kingston, UT			50
+Richfield, UT to Loa, UT			45
+Richfield, UT to Manti, UT			43
+Richfield, UT to Marysvale, UT			32
+Richfield, UT to Mt. Pleasant, UT		67
+Richfield, UT to Minersville, UT		81
+Richfield, UT to Panquitch, UT			80
+Richfield, UT to Salina, UT			18
+Richfield, UT to Scipio, UT			45
+Richfield, UT to Sigurd, UT			8
+Richfield, UT to Vernal, UT			236
+Richmond, IN					1,566
+Richmon, UT					13
+Richmond, VA					2,105
+Riverhead, Long Island, NY			2,245
+Riverside, CA					727
+Riverton School, Logan, UT			2
+Riverton, UT					99
+Riverton, WY					320
+Roanoke, VA					1,982
+Rochester, MN					1,188
+Rochester, NH					2,362
+Rochester, NY					1,969
+Rochester, PA					1,803
+Rockford, IL					1,337
+Rock Springs, WY				179
+Rocky Mt., NC					2,158
+Rolla, MO					1,280
+Rome, GA					1,804
+Roosevelt, UT to Altamount, UT			21
+Roosevelt, UT to Cedar View, UT			38
+Roosevelt, UT to Coyote Basin, UT		29
+Roosevelt, UT to Deep Creek, UT			35
+Roosevelt, UT to Dry Gulch, UT			32
+Roosevelt, UT to Duchesne, UT			29
+Roosevelt, UT to Ferron, UT			135
+Roosevelt, UT to Ft. Duchesne, UT		8
+Roosevelt, UT to Fruitland, UT			54
+Roosevelt, UT to Green Lake, UT			69
+Roosevelt, UT to Heber, UT			99
+Roosevelt, UT to Hill Creek, UT			112
+Roosevelt, UT to Independence, UT		13
+Roosevelt, UT to Manila, UT			103
+Roosevelt, UT to Mountain Home, UT		31
+Roosevelt, UT to Naples, UT			33
+Roosevelt, UT to Neola, UT			10
+Roosevelt, UT to Price, UT			85
+Roosevelt, UT to Provo, UT			129
+Roosevelt, UT to Salt Lake City, UT		143
+Roosevelt, UT to Tooele, UT			170
+Roosevelt, UT to Utahn, UT			94
+Roosevelt, UT to Vernal, UT			30
+Roswell, NM					877
+Roy, UT						48
+Roy, UT to Morgan, UT				19
+Rupert, ID					153
+
+Sacramento, CA					688
+Saginaw, MI					1,664
+St. Anthony, ID					183
+St. Augustine, FL				2,196
+St. Cloud, MN					1,173
+St. George, UT					392
+St. George, UT to Delta, UT			149
+St. George, UT to Ephraim, UT			223
+St. George, UT to Hurricane, UT			18
+St. George, UT to Loa, UT			186
+St. George, UT to Marysvale, UT			162
+St. George, UT to Meadow, UT			158
+St. George, UT to Minersville, UT		86
+St. George, UT to New Castle, UT		47
+St. George, UT to Orderville, UT		77
+St. George, UT to Rockville, UT			42
+St. George, UT to Toquerville, UT		24
+St. Louis, MO					1,326
+St. Paul, MN					1,190
+St. Petersburg, FL				2,310
+Salem, OR					736
+Salida, CO					557
+Salina, KS					933
+Salina, UT to Castle Dale, UT			75
+Salina, UT to Delta, UT				71
+Salina, UT to Fillmore, UT			54
+Salina, UT to Gunnison, UT			14
+Salina, UT to Panquitch, UT			95
+Salina, UT to Richfield, UT			15
+Salinas, CA					864
+Salisbury, MD					2,160
+Salt Lake City, UT				79
+Salt Lake City Airport, UT			83
+Salt Lake City to Beaver, UT			210
+Salt Lake City to Benjamin, UT			61
+Salt Lake City to Bingham, UT			24
+Salt Lake City to Bountiful, UT			10
+Salt Lake City to Brigham City, UT		56
+Salt Lake City to Castle Dale, UT		151
+Salt Lake City to Cedar City, UT		264
+Salt Lake City to Centerville, UT		12
+Salt Lake City to Charleston, UT		54
+Salt Lake City to Clearfield, UT		30
+Salt Lake City to Coalville, UT			44
+Salt Lake City to Copperton, UT			28
+Salt Lake City to Delta, UT			138
+Salt Lake City to Duchesne, UT			117
+Salt Lake City to Farmington, UT		16
+Salt Lake City to Fillmore, UT			150
+Salt Lake City to Ft. Duchesne, UT		154
+Salt Lake City to Granger, UT			9
+Salt Lake City to Grantsville, UT		37
+Salt Lake City to Heber City, UT		48
+Salt Lake City to Junction, UT			208
+Salt Lake City to Kanab, UT			306
+Salt Lake City to Kaysville, UT			21
+Salt Lake City to Kearns, UT			24
+Salt Lake City to Lehi, UT			28
+Salt Lake City to Loa, UT			198
+Salt Lake City to Magna, UT			15
+Salt Lake City to Manti, UT			122
+Salt Lake City to Midvale, UT			12
+Salt Lake City to Moab, UT			235
+Salt Lake City to Monticello, UT		289
+Salt Lake City to Morgan, UT			51
+Salt Lake City to Murray, UT			10
+Salt Lake City to Nephi, UT			88
+Salt Lake City to Ogden, UT			35
+Salt Lake City to Panguitch, UT			242
+Salt Lake City to Price, UT			121
+Salt Lake City to Provo, UT			44
+Salt Lake City to Randolph, UT			112
+Salt Lake City to Richfield, UT			163
+Salt Lake City to Sandy, UT			14
+Salt Lake City to St. George, UT		313
+Salt Lake City to Springville, UT		47
+Salt Lake City to Tooele, UT			33
+Salt Lake City to Tremonton, UT			76
+Salt Lake City to Vernal, UT			180
+Salt Lake City to Woods Cross, UT		9
+San Angelo, TX					1,176
+San Antonio, TX					1,388
+San Bernardino, CA				717
+San Diego, CA					826
+Sandusky, OH					1,661
+Sandy, UT					92
+San Francisco, CA				781
+San Jose, CA					804
+San Luis Obispo, CA				903
+Santa Ana, CA					760
+Santa Barbara, CA				850
+Santa Clara, CA					806
+Santa Fe, NM					687
+Santa Maria, CA					898
+Santaquin, UT					150
+Santa Rosa, CA					788
+Sarasota, FL					2,345
+Saskatoon, SK, Canada				1,051
+Sault Ste Marie, MI				1,715
+Savanna, IL					1,270
+Savannah, GA					2,095
+Schenectady, NY					2,169
+Scottsbluff, NB					534
+Scranton, PA					2,068
+Seaford, DE					2,144
+Seattle, WA					778
+Sedalia, MO					1,158
+Selma, AL					1,825
+Seminole, OK					1,171
+Sheboygan, WI					1,437
+Shelby, MT					579
+Shelley, ID					136
+Sherbrooke, Quebec, Canada			2,304
+Sheridan, WY					537
+Sherman, TX					1,268
+Shreveport, LA					1,466
+Sherwood Hills, UT				12
+Sioux City, IA					963
+Sioux Falls, SD					954
+Smithfield, UT					7
+Snowbird, UT					109
+Snowmass, CO					459
+Snowville, UT					61
+Snowville, UT to Park Valley			213
+Snyder, TX					1,079
+South Davis Jr. High School, Bountiful, UT	72
+Soda Springs, ID				80
+Somerset, KY					1,705
+Somerset, PA					1,896
+Somerville, NJ					2,138
+South Bend, IN					1,466
+Spanish Fork, UT				136
+Spartanburg, SC					1,961
+Spencer, IA					1,039
+Spokane, WA					648
+Springerville, AZ				667
+Springfield, IL					1,320
+Springfield, MA					2,262
+Springfield, MO					1,243
+Springfield, OH					1,626
+Springville, UT					131
+Stamford, CT					2,195
+State College, PA				1,937
+Staunton, VA					2,006
+Sterling, CO					557
+Steubenville, OH				1,802
+Stevens Point, WI				1,359
+Stillwater, OK					1,122
+Stockton, CA					734
+Stockton, KS					819
+Stroudsburg, PA					2,089
+Suffern, NY					2,167
+Sumpter, SC					2,091
+Sun Valley, ID					271
+Swainsboro, GA					2,009
+Sweetwater, UT					54
+Syracuse, NY					2,048
+
+Tacoma, WA					790
+Tahoe, Lake, (south shore) CA			616
+Tallahassee, FL					2,063
+Tampa, FL					2,301
+Tawas City, MI					1,740
+Taylorsville, UT				89
+Teasdale, UT					294
+Teasdale, UT to Richfield, UT			59
+Tempe, AZ					740
+Terre Haute, IN					1,457
+The Dalles, OR					633
+Thiokol, UT					50
+Thistle, UT					146
+Tiffin, OH					1,642
+Toledo, OH					1,613
+Tomah, WI					1,287
+Tom's River, NJ					2,182
+Tonapah, NJ					485
+Tony Grove, UT					22
+Tooele, UT					111
+Tooele, UT to Ephraim, UT			141
+Tooele, UT to Grantsville, UT			12
+Topeka, KS					1,206
+Toronto, Ontario, Canada			1,880
+Torrington, CT					2,237
+Towanda, PA					2,028
+Tracy, CA					754
+Traverse City, MI				1,689
+Tremonton, UT					23
+Tremonton, UT to Salt Lake City, UT		75
+Trenton, NJ					2,147
+Trenton, UT					18
+Tribune, KS					740
+Trinidad, CO					713
+Tropic, UT to Escalante, UT			37
+Troy, NY					2,185
+Truro, Nova Scotia, Canada			2,901
+Tucson, AZ					835
+Tucumcari, NM					853
+Tullahoma, TN					1,693
+Tulsa, Ok					1,181
+Tupelo, MS					1,635
+Tuscaloose, AL					1,756
+Twin Falls, ID					171
+Tyler, TX					1,387
+
+Uniontown, PA					1,862
+University of Utah, Salt Lake City, UT		84
+USU Campus to Adams School			1
+USU Campus to Ellis School			3
+USU Campus to Hillcrest School			1
+USU Campus to North Logan			4
+USU Campus to River Heights			3
+USU Campus to Riverside School			2
+USU Campus to Wilson School			1.5
+USU Campus to Woodruff School			2
+Ute Indian Youth Camp, Logan, UT		253
+Utica, NY					2,095
+
+Vail, CO					495
+Valdosta, GA					2,074
+Valentine, NB					727
+Valley City, ND					1,031
+Valparaiso, IN					1,425
+Vancouver, British Columbia, Canada		910
+Ventura, CA					824
+Vernal, UT					260
+Vernal, UT to Duchesne				59
+Vernal, UT to Dutch John, UT			43
+Vernal, UT to Heber City, UT			129
+Vernal, UT to Manilla, UT			75
+Vernal, UT to Nephi, UT				202
+Vernal, UT to Provo, UT				157
+Vernal, UT to Steamboat, CO			165
+Vicksburg, MS					1,629
+Victoria, British Columbia, Canada		878
+Victoria, TX					1,496
+Vincennis, IN					1,481
+Virginia Beach, VA				2,208
+
+Waco, TX					1,344
+Walla Walla, WA					547
+Warren, OH					1,759
+Washington, DC					2,058
+Washington, PA					1,825
+Waterbury, CT					2,232
+Waterloo, IA					1,170
+Watertown, NY					2,101
+Watertown, SD					998
+Watertown, WI					1,383
+Waukegan, IL					1,403
+Wausau, WI					1,369
+Waycross, GA					2,082
+Weber State University, Ogden, UT		50
+Weed, CA					774
+Wellesley, MA					2,331
+Wells, NV					216
+Wellsboro, PA					1,977
+Wellsville, NY					1,947
+Wellsville, UT					8
+Wenatchee, WA					698
+Wendover					202
+West Palm Beach, FL				2,431
+West Plains, MO					1,352
+West Yellowstone, MT (via Idaho Falls)		257
+Wheeling, WV					1,796
+Whitehorse, Yukon Territory			2,259
+White Plains, NY				2,184
+White River Junction, VT			2,285
+Wichita, KS					1,018
+Wichita Falls, TX				1,155
+Wilkes - Barre, PA				2,052
+Wilkesboro, NC					1,968
+Willard, UT					33
+Williamsburg, VA				2,153
+Williamson, WV					1,824
+Williamsport, PA				1,982
+Willington, UT					207
+Williston, ND					806
+Willmar, MN					1,109
+Willow Run, MI					1,621
+Wilmington, DE					2,110
+Wilmington, NC					2,213
+Winchester, VA					1,987
+Winnemucca, NV					391
+Winston-Salem, NC				2,013
+Winter Haven, FL				2,305
+Wisconsin Dells, WI				1,330
+Woods Cross, UT					72
+Worcester, MA					2,307
+Worthington, MN					1,016
+
+Yakima, WA					637
+Yankton, SD					936
+York, PA					2,038
+Youngstown, OH					1,775
+Yuba City, CA					680
+Yuma, AZ					786
+
+Zanesville, OH					1,723
+Zion National Park, UT				440
+

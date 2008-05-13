@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+   <!-- Export of tamperdata transacions -->
+   <tdRequests>
+<tdRequest uri="http%3A//www.randmcnally.com/rmc/directions/dirGetMileage.jsp%3Fcmty%3D0"><tdStartTime>3:32:13.544</tdStartTime>
+<tdStartTimeMS>1205915533544</tdStartTimeMS>
+<tdElapsedTime>1041</tdElapsedTime>
+<tdTotalElapsedTime>1041</tdTotalElapsedTime>
+<tdStatus>200</tdStatus>
+<tdStatusText>OK</tdStatusText><tdRequestMethod>POST</tdRequestMethod>
+<tdContentSize>-1</tdContentSize>
+<tdMimeType>text/html</tdMimeType>
+<tdRequestHeaders>
+<tdRequestHeader name="Host">
+www.randmcnally.com</tdRequestHeader>
+<tdRequestHeader name="User-Agent">
+Mozilla/5.0%20%28Macintosh%3B%20U%3B%20Intel%20Mac%20OS%20X%2010.4%3B%20en-US%3B%20rv%3A1.9b4%29%20Gecko/2008030317%20Firefox/3.0b4</tdRequestHeader>
+<tdRequestHeader name="Accept">
+text/html%2Capplication/xhtml+xml%2Capplication/xml%3Bq%3D0.9%2C*/*%3Bq%3D0.8</tdRequestHeader>
+<tdRequestHeader name="Accept-Language">
+en-us%2Cen%3Bq%3D0.5</tdRequestHeader>
+<tdRequestHeader name="Accept-Encoding">
+gzip%2Cdeflate</tdRequestHeader>
+<tdRequestHeader name="Accept-Charset">
+ISO-8859-1%2Cutf-8%3Bq%3D0.7%2C*%3Bq%3D0.7</tdRequestHeader>
+<tdRequestHeader name="Keep-Alive">
+300</tdRequestHeader>
+<tdRequestHeader name="Connection">
+keep-alive</tdRequestHeader>
+</tdRequestHeaders><tdPostHeaders><tdPostHeader name="Content-Type">
+application/x-www-form-urlencoded
+</tdPostHeader>
+<tdPostHeader name="Content-Length">
+228
+</tdPostHeader>
+</tdPostHeaders>
+<tdPostElements>
+<tdPostElement name="BV_SessionID">
+%2540%2540%2540%25401587532762.1205914725%2540%2540%2540%2540
+</tdPostElement>
+<tdPostElement name="BV_EngineID">
+ccceadedilediklcefecggfdffhdghh.0
+</tdPostElement>
+<tdPostElement name="txtStartAddress">
+
+</tdPostElement>
+<tdPostElement name="txtStartCity">
+
+</tdPostElement>
+<tdPostElement name="txtStartState">
+
+</tdPostElement>
+<tdPostElement name="txtStartZip">
+78705
+</tdPostElement>
+<tdPostElement name="txtDestAddress">
+
+</tdPostElement>
+<tdPostElement name="txtDestCity">
+
+</tdPostElement>
+<tdPostElement name="txtDestState">
+
+</tdPostElement>
+<tdPostElement name="txtDestZip">
+20815
+</tdPostElement>
+</tdPostElements>
+<tdResponseHeaders><tdResponseHeader name="Server">
+Sun-ONE-Web-Server/6.1
+</tdResponseHeader>
+<tdResponseHeader name="Date">
+Wed%2C%2019%20Mar%202008%2008%3A32%3A40%20GMT
+</tdResponseHeader>
+<tdResponseHeader name="Content-Type">
+text/html
+</tdResponseHeader>
+<tdResponseHeader name="Cache-Control">
+private
+</tdResponseHeader>
+<tdResponseHeader name="Set-Cookie">
+BV_IDS%3Dccceadedilediklcefecggfdffhdghh.0%3A@@@@1587532762.1205914725@@@@%3B%20path%3D/rmc
+</tdResponseHeader>
+<tdResponseHeader name="Content-Encoding">
+gzip
+</tdResponseHeader>
+<tdResponseHeader name="Vary">
+accept-encoding
+</tdResponseHeader>
+<tdResponseHeader name="Transfer-Encoding">
+chunked
+</tdResponseHeader>
+</tdResponseHeaders>
+</tdRequest>
+</tdRequests>

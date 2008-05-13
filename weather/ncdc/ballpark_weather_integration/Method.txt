@@ -1,0 +1,50 @@
+
+
+-- We have a list of all the parks, and a list of stations.  Let's get a shorter list:
+
+-- For each ballpark with lat/lng info and a game this century, 
+-- find all weather stations inside a 1 degree box
+-- CREATE TABLE vizsagedb_foo.ParkStations 
+SELECT P.parkID, P.lat AS latP, P.lng AS lngP, P.beg as begP, P.end AS endP, P.games, P.name as parkName,
+		SQRT((P.lat-SI.lat)*(P.lat-SI.lat) + (P.lng-SI.lng)*(P.lng-SI.lng)) AS fakedist, 
+		SI.*
+  FROM		-- All parks with lat lng info and games this century
+			( SELECT parkID, lat, lng, beg, end, games, name FROM vizsagedb_foo.Parks_parks 
+				WHERE (lat IS NOT NULL) AND (YEAR(end)>1900) ) P
+  LEFT JOIN vizsagedb_weather.StationInfoISH SI
+			-- Choose stations that are within a +/- 1 degree square: 1 degree is an arbitrary figure
+	ON		(ABS(P.lat-SI.lat) < 1) AND (ABS(P.lng-SI.lng) < 1) 
+  ORDER BY	parkID ASC, fakedist ASC
+
+-- I removed the CREATE TABLE line when the query looked right.
+
+-- Look at a particular the station history
+SELECT * FROM StationHistISH SH
+LEFT JOIN vizsagedb_weather.StationInfoISH SI ON 	(SI.ID_USAF = SH.ID_USAF) AND (SI.ID_NCDC = SH.ID_NCDC)
+WHERE CONCAT(SH.ID_USAF,'-',SH.ID_NCDC) IN ('999999-23131')  
+
+-- Get the number of records for each station during the park's time period.
+SELECT  
+	MIN(SH.year) AS begS, MAX(SH.year) AS endS, 
+	1+MAX(SH.year)-MIN(SH.year) AS years, COUNT(*) AS nMonths, 
+	SUM(n_records) as n_records,
+	FLOOR((SUM(n_records) / (1+MAX(SH.year)-MIN(SH.year))) / (365.25*24)*1000) AS mRecPerHr,
+	(COUNT(*) / (1+MAX(SH.year)-MIN(SH.year)))                                 AS yCoverage, SH.*,
+	PS.*
+  FROM 		vizsagedb_foo.ParkStations       PS
+  LEFT JOIN	vizsagedb_weather.StationHistISH SH 
+	ON 		(PS.ID_USAF = SH.ID_USAF) AND (PS.ID_NCDC = SH.ID_NCDC) AND (SH.n_records > 0)
+	AND 	(SH.year BETWEEN YEAR(PS.begP) and YEAR(PS.endP))
+  WHERE		n_records IS NOT NULL -- toss stations with nothing of interest
+	-- AND 	parkID='BAL11'
+  GROUP BY	PS.parkID, PS.ID_USAF, PS.ID_NCDC -- , SH.year, SH.month
+  ORDER BY	PS.parkID, begS, PS.fakedist
+
+
+-- How to select the first/least/max row per group in SQL:
+-- http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/
+-- http://www.xaprb.com/blog/2006/12/02/how-to-number-rows-in-mysql/
+
+-- I should be packing static tables
+
+

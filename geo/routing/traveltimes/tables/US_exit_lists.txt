@@ -1,0 +1,68 @@
+
+Northbound			
+Exit Number	Mile Post	Route Number      Exit Destination	Other Features
+--	1	Delaware Turnpike    Toll Plaza $3.00 ($4.00 on 10-01-07)	High speed EZ Pass Lanes available
+1	2	Newark      Middletown	University of Delaware      Campus and Stadium
+2	--	Does not exist      Was to be US 301 Freeway	
+--	5	Delaware Service Area	
+3A	6.3	EAST      Dover	
+3B	6.6	WEST      Newark	
+4A	7.6	SOUTH      Christiana Mall Road	
+4B	8	NORTH      Churchmn Cr      Stanton	Delaware Park Racetrack
+Christiana Hospital			
+5A	10	SOUTH      New Castle	Basin Road      New Castle County Airport
+5B	11.2	NORTH      Newport	
+(5C)	10.6	NJ - NY      Del Mem Br	New York City 135
+(5D)	12	Port of Wilmington      Philadelphia	Vietnam Veterans Memorial Highway
+6	14.5	Maryland Ave      Martin Luther King Blvd	Riverfront Attractions
+7	15.4	Delaware Ave	
+8	16.7	Concord Pike      Wilmington      West Chester	Brandywine Zoo and Park
+9	19	Marsh Road	Bellevue State Park
+10	21	Harvey Rd	NO RETURN ACCESS TO NORTHBOUND
+11	23	Naamans Rd	Claymont
+North      Chester      Philadelphia	State of Pennsylvania		
+
+
+	Southbound (Read down)	Northbound (Read up)
+Ends		95                                    New York
+Exit 14	TO              40                                Moravia Rd	
+Exit 13		40                                Pulaski Highway        Erdman Ave
+Exit 12	Lombard St	Lombard St
+Exit 11AB		O'Donnell St
+Exit 10		Holabird Ave        Dundalk
+	HARBOR TUNNEL	
+Exit 9		Childs Ave
+	STOP  PAY TOLL	
+Exit 8B	Curtis Bay	
+Exit 8A	Potee Street	
+Exit 7	SOUTH              2                                Ritchie Hwy        Brooklyn	
+Exit 6	SPUR              SOUTH              TO              TO                                                    895                                                    97                                                                      301                                            2                                                              Glen Burnie        Annapolis/Bay Bridge                6A:  SOUTH I-97        6B: EAST I-695, Key Bridge,        Essex        6C: SOUTH MD2, Glen Burnie	
+Exit 4	295                        Balt-Wash Parkway        BWI Airport        Washington	
+Exit 3	NORTH              695                                Towson	
+Exit 1	1                        Balt-Wash Blvd        Elkridge	
+Ends	SOUTH                      95                                            Washington	
+
+
+MILE	EASTBOUND EXITSRead down	WESTBOUND EXITSRead up	Notes
+0			
+			
+	Erie CanalMohawk River		
+			
+	EXIT 1 ARotterdam Jct		
+1	EXIT 1 BAlbanyBuffalo	The Albany-Buffalo designation does not appear on guide signs at this time.	
+2.7	EXIT 2Campbell Rd	EXITS 2 A-BCampbell RdRice Rd	
+3	EXIT 3G E Plant Truck Terminal		
+4	EXIT 4 AG E Plant		
+4.2		EXITS 4 B-CToErie BlvdScotiaG E Plant	
+5.2	EXIT 5Broadway	Proctors Theatre	
+5.8	EXIT 6Michigan Ave		
+			
+7	EXIT 7Troy		
+			
+8	EXIT 8High Bridge Rd		
+8.5	Albany County	Schenectady County	
+			
+9	EXITS 9 A-BToCurry RdLAST EXIT BEFORE TOLL	EXIT 9ToCurry Rd	
+			
+9.3	AlbanyBuffaloTOLL ROAD		The Albany-Buffalo designation does not appear on guide signs at this time.
+MILE	EASTBOUND EXITSRead down	WESTBOUND EXITSRead up	Notes

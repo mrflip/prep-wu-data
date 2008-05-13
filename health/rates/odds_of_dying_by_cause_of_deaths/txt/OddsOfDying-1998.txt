@@ -1,0 +1,152 @@
+
+Odds of Death Due to Injury, United States, 2003
+
+Type Of Accident Or Manner Of  Injury	Deaths, 1998	One Year Odds	Lifetime Odds
+Total  Deaths Due To Injuries, E800-E999b	150,445	1,796	23
+All  Accidental Deaths, E800-E949	97,835	2,762	36
+Transport  Accidents, E800-E848	45,774	5,904	77
+Railway,  E800-E807	515	524,753	6,842
+Motor-vehicle,  E810-E825	43,501	6,212	81
+Other  road vehicle, E826-E829	235	1,149,991	14,993
+Water  transport, E830-E838	692	390,532	5,092
+Drowning  (excluded from drowning below), E830, E832	442	611,421	7,972
+Other  water transport, E831, E833-E838	250	1,080,992	14,094
+Air and  space transport, E840-E845	692	390,532	5,092
+Vehicle  accidents not elsewhere classifiable, E846-E848	139	1,944,230	25,349
+Poisoning  by solids and liquids, E850-E866	10,255	26,353	344
+Drugs,  medicaments and biologicals, E850-E858	9,838	27,470	358
+Analgesics,  antipyretics, and antirheumatics, E850	3,141	86,039	1,122
+Barbiturates,  E851	16	16,890,500	220,215
+Other  sedatives and hypnotics, E852	8	33,781,000	440,430
+Tranquilizers,  E853	107	2,525,682	32,929
+Other  psychotropic agents, E854	334	809,126	10,549
+Other  drugs acting on central and autonomic nervous system, E855	1,540	175,486	2,288
+Antibiotics,  E856	39	6,929,436	90,345
+Anti-infectives,  E857	4	67,562,000	880,860
+Other  drugs, E858	4,649	58,130	758
+Poisoning  by other solids and liquids, E860-E866	417	648,077	8,450
+Alcohol,  E860	300	900,827	11,745
+Cleansing,  polishing agents, disinfectants, paints, varnishes, E861	10	27,024,800	352,344
+Petroleum  products, other solvents and their vapors, E862	37	7,304,000	95,228
+Agricultural,  horticultural chemical, pharmaceutical preparations, E863	8	33,781,000	440,430
+Corrosives  and caustics, E864	5	54,049,600	704,688
+Foodstuffs  and poisonous plants, E865	3	90,082,667	1,174,481
+Other and  unspecified solids and liquids, E866	54	5,004,593	65,249
+Poisoning  by gases and vapors, E867-E869	546	494,960	6,453
+Gas  distributed by pipeline, E867	15	18,016,533	234,896
+Other  utility gas and other carbon monoxide, E868	444	608,667	7,936
+Motor-vehicle  exhaust gas, E868.2	190	1,422,358	18,544
+Others,  not motor-vehicle exhaust gas, E868.0, E868.1, E868.3-E868.9	254	1,063,969	13,872
+Other  gases and vapors, E869	87	3,106,299	40,499
+Complications,  misadventures of surgical, medical care, E870-E879	3,228	83,720	1,092
+Falls,  E880-E888	16,274	16,606	217
+Fall on  or from stairs or steps, E880	1,389	194,563	2,537
+Fall on  or from ladders or scaffolding, E881	352	767,750	10,010
+Fall from  or out of building or other structure, E882	550	491,360	6,406
+Fall into  hole or other opening in surface, E883	95	2,844,716	37,089
+Other  fall from one level to another, E884	1,187	227,673	2,968
+Fall on  same level from slipping, tripping, or stumbling, E885	740	365,200	4,761
+Fall on  same level from collision, pushing, or shoving, E886	6	45,041,333	587,240
+Fracture,  cause unspecified, E887	3,679	73,457	958
+Other and  unspecified fall, E888	8,276	32,654	426
+Fire and  flames, E890-E899	3,255	83,025	1,082
+Conflagration,  E890-E892	2,687	100,576	1,311
+Ignition  of clothing, E893	171	1,580,398	20,605
+Ignition  of highly inflammable material, E894	55	4,913,600	64,063
+Other and  unspecified fire and flames, E895-E899	342	790,199	10,302
+Natural  and environmental factors, E900-E909	1,521	177,678	2,317
+Excessive  heat, E900	375	720,661	9,396
+Excessive  cold, E901	420	643,448	8,389
+Hunger,  thirst, exposure, and neglect, E904	252	1,072,413	13,982
+Poisoning  by and toxic reaction to venomous animals, plants, E905	64	4,222,625	55,054
+Venomous  snakes, lizards, and spiders, E905.0, E905.1	5	54,049,600	704,688
+Hornets,  wasps, and bees, E905.3	46	5,874,957	76,597
+Other and  unspecified animals, plants, E905.2, E905.4-E905.9	13	20,788,308	271,034
+Other  injury caused by animals, E906	93	2,905,892	37,886
+Dog bite,  E906.0	15	18,016,533	234,896
+Other and  unspecified injury by animal, E906.1-E906.9	78	3,464,718	45,172
+Lightning,  E907	63	4,289,651	55,928
+Cataclysmic  storms, and floods resulting from storms, E908	204	1,324,745	17,272
+Cataclysmic  earth surface movements and eruptions, E909	24	11,260,333	146,810
+Other  natural and environmental factors, E902, E903	26	10,394,154	135,517
+Other  accidents, E910-E928	15,801	17,103	223
+Drowning,  submersion (excluding water transport drownings above), E910	3,964	68,176	889
+During  sport or recreation, E910.0-E910.2	685	394,523	5,144
+In  bathtub, E910.4	337	801,923	10,455
+Other,  unspecified drowning, submersion, E910.3, E910.8, E910.9	2,942	91,859	1,198
+Inhalation  and ingestion of food, E911	1,147	235,613	3,072
+Inhalation  and ingestion of other object, E912	2,368	114,125	1,488
+Mechanical  suffocation, E913	1,070	252,568	3,293
+In bed or  cradle, E913.0	247	1,094,121	14,265
+By plastic  bag, E913.1	27	10,009,185	130,498
+Due to  lack of air (in refrigerator, other enclosed space), E913.2	13	20,788,308	271,034
+By  falling earth (noncataclysmic cave-in), E913.3	55	4,913,600	64,063
+Other and  unspecified mechanical suffocation, E913.8, E913.9	728	371,220	4,840
+Struck by  falling object, E916	723	373,787	4,873
+Struck  against or by objects or persons, E917	336	804,310	10,486
+Caught in  or between objects, E918	118	2,290,237	29,860
+Machinery,  E919	1,018	265,470	3,461
+Agricultural  machines, E919.0	567	476,628	6,214
+Lifting  machines and appliances, E919.2	114	2,370,596	30,907
+Earth  moving, scraping, and other excavating machines, E919.7	79	3,420,861	44,601
+Other,  unspecified machinery, E919.1, E919.3-E919.6, E919.8, E919.9	258	1,047,473	13,657
+Cutting  or piercing instruments or objects, E920	121	2,233,455	29,119
+Firearm  missile, E922	866	312,065	4,069
+Handgun,  E922.0	140	1,930,343	25,167
+Shotgun  (automatic), E922.1	87	3,106,299	40,499
+Hunting  rifle, E922.2	50	5,404,960	70,469
+Other and  unspecified firearm missile, E922.3-E922.9	589	458,825	5,982
+Explosive  material, E923	155	1,743,535	22,732
+Fireworks,  E923.0	13	20,788,308	271,034
+Explosive  gases, E923.2	60	4,504,133	58,724
+Other and  unspecified explosive material, E923.1, E923.8, E923.9	82	3,295,707	42,969
+Hot  substance or object, corrosive material and steam, E924	108	2,502,296	32,624
+Electric  current, E925	548	493,153	6,430
+Domestic  wiring and appliances, E925.0	59	4,580,475	59,719
+Generating  plants, distribution stations, transmission lines, E925.1	144	1,876,722	24,468
+Industrial  wiring, appliances, and electrical machinery, E925.2	27	10,009,185	130,498
+Other and  unspecified electric current, E925.8, E925.9	318	849,836	11,080
+Radiation,  E926			-
+Other and  unspecified, E914, E915, E921, E927, E928	3,259	82,924	1,081
+Late  effects (deaths more than one year after accident), E929	905	298,617	3,893
+Adverse  effects of drugs in therapeutic use, E930-E949	276	979,159	12,766
+All  Suicide Deaths, E950-E959	30,575	8,839	115
+Poisoning  by solid and liquid, E950	3,346	80,767	1,053
+Poisoning  by gases and vapors, E951, E952	1,726	156,575	2,041
+Motor-vehicle  exhaust gas, E952.0	1,329	203,347	2,651
+Other and  unspecified gases and vapors, E951, E952.1-E952.9	397	680,725	8,875
+Hanging,  strangulation, and suffocation, E953	5,726	47,197	615
+Drowning,  E954	375	720,661	9,396
+Firearms,  E955.0-E955.4	17,424	15,510	202
+Handgun,  E955.0	3,541	76,320	995
+Shotgun,  E955.1	2,303	117,346	1,530
+Hunting  rifle, E955.2	849	318,313	4,150
+Other and  unspecified firearm, E955.3, E955.4	10,731	25,184	328
+Cutting  and piercing instruments, E956	476	567,748	7,402
+Jumping  from high places, E957	621	435,182	5,674
+Other,  unspecified suicide and late effects, E955.5, E955.9, E958, E959	881	306,751	3,999
+			
+All  Homicide Deaths, E960-E969	17,893	15,104	197
+Assault  by hanging and strangulation, E963	661	408,847	5,330
+Assault  by firearm, E965.0-E965.4	11,798	22,906	299
+Handgun,  E965.0	1,047	258,117	3,365
+Shotgun,  E965.1	747	361,778	4,717
+Hunting  rifle, E965.2	141	1,916,652	24,989
+Other and  unspecified firearm, E965.3, E965.4	9,863	27,400	357
+Assault  by cutting and piercing instrument, E966	2,087	129,491	1,688
+Child  battering and other maltreatment, E967	194	1,393,031	18,162
+Other,  unspecified assault and late effects, E960-E962, E964, E965.5-E965.9, E968,  E969	3,153	85,711	1,117
+Legal  Intervention, E970-E978	379	713,055	9,297
+Undetermined  Whether Accidentally or Purposely Inflicted, E980-E989	3,746	72,143	941
+Poisoning  by solid and liquid, E980	2,351	114,950	1,499
+Poisoning  by gases and vapors, E981, E982	82	3,295,707	42,969
+Motor-vehicle  exhaust gas, E982.0	42	6,434,476	83,891
+Other and  unspecified gases and vapors, E981, E982.1-E982.9	40	6,756,200	88,086
+Drowning,  E984	249	1,085,333	14,150
+Firearms,  E985.0-E985.4	316	855,215	11,150
+Other,  unspecified undetermined deaths and late effects, E983, E985.5-E989	748	361,294	4,710
+Deaths  From Operations of War, E990-E999	17	15,896,941	207,261
+
+#
+# Taken from http://web.archive.org/web/20011109082259/http://www.nsc.org/lrs/statinfo/odds.htm
+#

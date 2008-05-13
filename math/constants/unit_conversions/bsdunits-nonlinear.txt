@@ -1,0 +1,381 @@
+#
+# Some geometric formulas
+#
+
+circlearea(r)	[m;m^2] pi r^2 ; sqrt(circlearea/pi)
+spherevolume(r) [m;m^3] 4|3 pi r^3 ; cuberoot(spherevolume/4|3 pi)
+spherevol(r)	[m;m^3] spherevolume(r) ; ~spherevolume(spherevol)
+square(x)		x^2 ; sqrt(square)
+
+# The pH scale is used to measure the concentration of hydronium (H3O+) ions in
+# a solution.  A neutral solution has a pH of 7 as a result of dissociated
+# water molecules.  
+
+pH(x) [;mol/liter] 10^(-x) mol/liter ; (-log(pH liters/mol))
+
+tempC(x) [;K] x K + stdtemp ; (tempC +(-stdtemp))/K  #!! In 1741 Anders Celsius
+tempcelsius(x) [;K] tempC(x); ~tempC(tempcelsius)    #!! introduced a temperature
+degcelsius		K	  #!! scale with water boiling at 0 degrees and
+degC			K	  #!! freezing at 100 degrees at standard pressure. After his death the fixed points were reversed and the scale was called the centigrade scale.  Due to the difficulty of accurately measuring the temperature of melting ice at standard pressure, the centigrade scale was replaced in 1954 by the Celsius scale which is defined by subtracting 273.15 from the temperature in Kelvins.  This definition differed slightly from the old centigrade definition, but the Kelvin scale depends on the triple point of water rather than a melting point, so it can be measured accurately.
+
+tempF(x) [;K] (x+(-32)) degF + stdtemp ; (tempF+(-stdtemp))/degF + 32
+tempfahrenheit(x) [;K] tempF(x) ; ~tempF(tempfahrenheit)
+degfahrenheit		5|9 degC  #!! Fahrenheit defined his temperature scale
+degF			5|9 degC  #!! by setting 0 to the coldest temperature he could produce in his lab with a salt water solution and by setting 96 degrees to body heat.  In Fahrenheit's words: 
+# Placing the thermometer in a mixture of sal ammoniac or sea salt, ice, and water a point on the scale will be found which is denoted as zero. A second point is obtained if the same mixture is used without salt. Denote this position as 30. A third point, designated as 96, is obtained if the thermometer is placed in the mouth so as to acquire the heat of a healthy man."  (D. G. Fahrenheit, Phil. Trans. (London) 33, 78, 1724)
+
+tempreaumur(x) [;K] x degreaumur+stdtemp ; (tempreaumur+(-stdtemp))/degreaumur 
+
+
+# The bril is used to express "brilliance" of a source of light on a
+# logarithmic scale to correspond to subjective perception.  An increase of 1
+# bril means doubling the luminance.  A luminance of 1 lambert is defined to
+# have a brilliance of 1 bril.	
+
+bril(x) [;lambert]  2^(x+-100) lamberts ;log2(bril/lambert)+100
+# Exposure value to scene luminance with ISO 100 film
+
+# For Minolta or Pentax
+#ev100(x) [;cd/m^2] 2^x k1400 / s100; log2(ev100 s100 / k1400)	
+# For Canon, Nikon or Sekonic
+ev100(x) [;cd/m^2] 2^x k1250 / s100; log2(ev100 s100 / k1250)  
+
+# Exposure value to scene illuminance with ISO 100 film
+
+iv100(x) [1;lx] 2^x c250 / s100; log2(iv100 s100 / c250)
+
+#
+# Shoe measures
+#
+
+shoeiron		1|48 inch    #!! Used to measure leather in soles
+shoeounce		1|64 inch    #!! Used to measure non-sole shoe leather
+shoesize_delta		1|3 inch     #!! USA shoe sizes differ by this amount (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.  It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.  But this may not be standard.  If you know better, please contact me.  )
+shoe_men0		8.25 inch	#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+shoe_women0		(7+11|12) inch	#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+shoe_boys0		(3+11|12) inch	#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+shoe_girls0		(3+7|12) inch	#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+shoesize_men(n) [;inch]	   shoe_men0 + n shoesize_delta	  ; (shoesize_men+(-shoe_men0))/shoesize_delta		#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+shoesize_women(n) [;inch]  shoe_women0 + n shoesize_delta ; (shoesize_women+(-shoe_women0))/shoesize_delta	#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+shoesize_boys(n) [;inch]   shoe_boys0 + n shoesize_delta  ; (shoesize_boys+(-shoe_boys0))/shoesize_delta	#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+shoesize_girls(n) [;inch]  shoe_girls0 + n shoesize_delta ; (shoesize_girls+(-shoe_girls0))/shoesize_delta	#!! (USA shoe sizes  These express the length of the shoe or the length of the "last", the form that the shoe is made on.  But note that this only captures the length.	 It appears that widths change 1/4 inch for each letter within the same size, and if you change the length by half a size then the width changes between 1/8 inch and 1/4 inch.	 But this may not be standard.	If you know better, please contact me.	)
+
+europeshoesize		2|3 cm	       # European shoe size.  According to http://www.shoeline.com/footnotes/shoeterm.shtml#!!paris points sizes in Europe are measured with Paris points which simply measure the length of the shoe.	
+
+#
+# Density measures.  Density has traditionally been measured on a variety of
+# bizarre nonlinear scales.  
+#
+
+# Density of a sugar syrup is frequently measured in candy making procedures.
+# In the USA the boiling point of the syrup is measured.  Some recipes instead
+# specify the density using degrees Baume.  Conversion between degrees Baume
+# and the boiling point measure has proved elusive.  One food science text
+# claimed that the boiling point elevation formula could be used.  This formula
+# gives the elevation  1000 (.512) x / (100-x) 342.3 for sucrose.  However, 
+# it disagrees significantly with a table that appeared in another text
+# which gave the table below.  However, this table cannot be converted reliably
+# to a density measure because the brix table stops at 80% concentration.  
+#
+# temp(C)  conc (%)
+#   100	     30	  
+#   101	     40	  
+#   102	     50	  
+#   103	     60	  
+#   106	     70	  
+#   112	     80	  
+#   123	     90	  
+#   140	     95	  
+#   151	     97	  
+#   160	     98.2 
+#   166	     99.5 
+#   171	     99.6 
+#
+
+# Degrees Baume is used in European recipes to specify the density of a sugar
+# syrup.  An entirely different definition is used for densities below 
+# 1 g/cm^3.  An arbitrary constant appears in the definition.  This value is
+# equal to 145 in the US, but was according to [], the old scale used in
+# Holland had a value of 144, and the new scale or Gerlach scale used 146.78.
+
+baumeconst 144	    #!! US value
+baume(d) [1;g/cm^3] (baumeconst/(baumeconst+-d)) g/cm^3 ; \
+		    (baume+((-g)/cm^3)) baumeconst / baume
+
+twaddell(x) [1;g/cm^3] (1 + 0.005 x) g / cm^3 ; 200 (twaddell / (g/cm^3) +- 1)
+
+# The degree quevenne is a unit for measuring the density of milk.  
+quevenne(x) [1;g/cm^3] (1 + 0.001 x) g / cm^3 ; 1000 (quevenne / (g/cm^3) +- 1)
+
+# Degrees brix measures sugar concentration by weigh as a percentage, so a
+# solution that is 3 degrees brix is 3% sugar by weight.  This unit was named
+# after Adolf Brix who invented a hydrometer that read this percentage
+# directly.  This table converts brix to density at 20 degrees Celsius.	 
+
+brix[g/cm^3]  \
+   0.0 0.9982,	  0.5 1.0002,	 1.0 1.0021 \
+   1.5 1.0040,	  2.0 1.0060,	 2.5 1.0079 \
+   3.0 1.0099,	  3.5 1.0119,	 4.0 1.0139 \
+   5.0 1.0178,	  5.5 1.0198,	 6.0 1.0218 \
+   6.5 1.0238,	  7.0 1.0259,	 7.5 1.0279 \
+   8.0 1.0299,	  8.5 1.0320,	 9.0 1.0340 \
+   9.5 1.0361,	 10.0 1.0381,	11.0 1.0423 \
+  12.0 1.0465,	 13.0 1.0507,	14.0 1.0549 \
+  15.0 1.0592,	 16.0 1.0635,	17.0 1.0678 \
+  18.0 1.0722,	 19.0 1.0766,	20.0 1.0810 \
+  22.0 1.0899,	 24.0 1.0990,	26.0 1.1082 \
+  28.0 1.1175,	 30.0 1.1270,	32.0 1.1366 \
+  34.0 1.1464,	 36.0 1.1562,	38.0 1.1663 \
+  40.0 1.1765,	 42.0 1.1868,	44.0 1.1972 \
+  46.0 1.2079,	 48.0 1.2186,	50.0 1.2295 \
+  52.0 1.2406,	 54.0 1.2518,	56.0 1.2632 \
+  58.0 1.2747,	 60.0 1.2864,	62.0 1.2983 \
+  64.0 1.3103,	 66.0 1.3224,	68.0 1.3348 \
+  70.0 1.3472,	 72.0 1.3599,	74.0 1.3726 \
+  76.0 1.3855,	 78.0 1.3986,	80.0 1.4117 \
+  82.0 1.4250,	 84.0 1.4383	
+
+# Density measure invented by the American Petroleum Institute.	 Lighter
+# petroleum products are more valuable, and they get a higher API degree.
+ 
+apidegree(x) [1;g/cm^3] 141.5 g/cm^3 / (x+131.5) ; \
+			141.5 (g/cm^3) / apidegree + (-131.5)
+
+#?? Frequency Musical
+#??
+musicalcent(x) [1;1]	semitone^(x/100) ; 100 log(musicalcent)/log(semitone)
+
+
+#?? Wire Gauge AWG
+# American Wire Gauge (AWG) or Brown & Sharpe Gauge appears to be the most
+# important gauge. ASTM B-258 specifies that this gauge is based on geometric
+# interpolation between gauge 0000, which is 0.46 inches exactly, and gauge 36
+# which is 0.005 inches exactly.  Therefore, the diameter in inches of a wire
+# is given by the formula 1|200 92^((36-g)/39).	 Note that 92^(1/39) is close
+# to 2^(1/6), so diameter is approximately halved for every 6 gauges.  For the
+# repeated zero values, use negative numbers in the formula.  The same document
+# also specifies rounding rules which seem to be ignored by makers of tables.
+# Gauges up to 44 are to be specified with up to 4 significant figures, but no
+# closer than 0.0001 inch.  Gauges from 44 to 56 are to be rounded to the
+# nearest 0.00001 inch.	 
+#
+# In addition to being used to measure wire thickness, this gauge is used to
+# measure the thickness of sheets of aluminum, copper, and most metals other
+# than steel, iron and zinc.
+#??
+
+wiregauge(g) [;m] 1|200 92^((36+(-g))/39) in;36+(-39)ln(200 wiregauge/in)/ln(92)
+
+#?? Wire Gauge Imperial 
+# Next we have the SWG, the Imperial or British Standard Wire Gauge.  This one
+# is piecewise linear.	It was used for aluminum sheets.
+#??
+
+brwiregauge[in]	 \
+       -6 0.5	 \
+       -5 0.464	 \
+       -3 0.4	 \
+       -2 0.372	 \
+	3 0.252	 \
+	6 0.192	 \
+       10 0.128	 \
+       14 0.08	 \
+       19 0.04	 \
+       23 0.024	 \
+       26 0.018	 \
+       28 0.0148 \
+       30 0.0124 \
+       39 0.0052 \
+       49 0.0012 \
+       50 0.001
+
+#?? SheetMetal Gauge
+# The following is from the Appendix to ASTM B 258
+#
+#    For example, in U.S. gage, the standard for sheet metal is based on the
+#    weight of the metal, not on the thickness. 16-gage is listed as
+#    approximately .0625 inch thick and 40 ounces per square foot (the original
+#    standard was based on wrought iron at .2778 pounds per cubic inch; steel
+#    has almost entirely superseded wrought iron for sheet use, at .2833 pounds
+#    per cubic inch). Smaller numbers refer to greater thickness. There is no
+#    formula for converting gage to thickness or weight.
+# 
+# It's rather unclear from the passage above whether the plate gauge values are
+# therefore wrong if steel is being used.  Reference [15] states that steel is
+# in fact measured using this gauge (under the name Manufacturers' Standard
+# Gauge) with a density of 501.84 lb/ft3 = 0.2904 lb/in3 used for steel.
+# But this doesn't seem to be the correct density of steel (.2833 lb/in3 is
+# closer).  
+#
+# This gauge was established in 1893 for purposes of taxation.
+#??
+
+#?? SheetMetal Gauge Length IronPlate
+# Old plate gauge for iron
+#??
+
+plategauge[(oz/ft^2)/(480*lb/ft^3)] \
+      -5 300   \
+       1 180   \
+      14  50   \
+      16  40   \
+      17  36   \
+      20  24   \
+      26  12   \
+      31   7   \
+      36   4.5 \
+      38   4 
+
+#?? SheetMetal Gauge Length ManufacturersStandard
+# Manufacturers Standard Gage
+#??
+
+stdgauge[(oz/ft^2)/(501.84*lb/ft^3)] \
+      -5 300   \
+       1 180   \
+      14  50   \
+      16  40   \
+      17  36   \
+      20  24   \
+      26  12   \
+      31   7   \
+      36   4.5 \
+      38   4 
+
+#?? SheetMetal Gauge Length Zinc
+# A special gauge is used for zinc sheet metal.	 Notice that larger gauges
+# indicate thicker sheets. 
+#??
+
+zincgauge[in]	 \
+	1 0.002	 \
+       10 0.02	 \
+       15 0.04	 \
+       19 0.06	 \
+       23 0.1	 \
+       24 0.125	 \
+       27 0.5	 \
+       28 1
+
+#??
+# Screw sizes USA
+#
+# In the USA, screw diameters are reported using a gauge number.  
+# Metric screws are reported as Mxx where xx is the diameter in mm.  
+#??
+
+screwgauge(g) [;m] (.06 + .013 g) in ; (screwgauge/in + (-.06)) / .013
+
+#?? RingSize Length
+# Ring size. All ring sizes are given as the circumference of the ring.
+#??
+
+#??  RingSize Length USA
+# USA ring sizes.  Several slightly different definitions seem to be in
+# circulation.	According to [15], the interior diameter of size n ring in
+# inches is 0.32 n + 0.458 for n ranging from 3 to 13.5 by steps of 0.5.  The
+# size 2 ring is inconsistently 0.538in and no 2.5 size is listed.  
+#
+# However, other sources list 0.455 + 0.0326 n and 0.4525 + 0.0324 n as the
+# diameter and list no special case for size 2.	 (Or alternatively they are
+# 1.43 + .102 n and 1.4216+.1018 n for measuring circumference in inches.)  One
+# reference claimed that the original system was that each size was 1|10 inch
+# circumference, but that source doesn't have an explanation for the modern
+# system which is somewhat different.
+#?? 
+
+ringsize(n) [;in] (1.4216+.1018 n) in ; (ringsize/in + (-1.4216))/.1018
+
+#??  RingSize Length UK
+# Old practice in the UK measured rings using the "Wheatsheaf gauge" with sizes
+# specified alphabetically and based on the ring inside diameter in steps of
+# 1|64 inch.  This system was replaced in 1987 by British Standard 6820 which
+# specifies sizes based on circumference.  Each size is 1.25 mm different from
+# the preceding size.  The baseline is size C which is 40 mm circumference.
+# The new sizes are close to the old ones.  Sometimes it's necessary to go
+# beyond size Z to Z+1, Z+2, etc.  
+#??
+
+sizeAring		37.50 mm
+sizeBring		38.75 mm
+sizeCring		40.00 mm
+sizeDring		41.25 mm
+sizeEring		42.50 mm
+sizeFring		43.75 mm
+sizeGring		45.00 mm
+sizeHring		46.25 mm
+sizeIring		47.50 mm
+sizeJring		48.75 mm
+sizeKring		50.00 mm
+sizeLring		51.25 mm
+sizeMring		52.50 mm
+sizeNring		53.75 mm
+sizeOring		55.00 mm
+sizePring		56.25 mm
+sizeQring		57.50 mm
+sizeRring		58.75 mm
+sizeSring		60.00 mm
+sizeTring		61.25 mm
+sizeUring		62.50 mm
+sizeVring		63.75 mm
+sizeWring		65.00 mm
+sizeXring		66.25 mm
+sizeYring		67.50 mm
+sizeZring		68.75 mm
+
+#??  RingSize Length Japanese
+#  Japanese sizes start with size 1 at a 13mm inside diameter and each size is 1|3 mm larger in diameter than the previous one.  They are multiplied by pi to give circumference. 
+#?? 
+jpringsize(n)	  [;mm] (38|3 + n/3) pi mm ; 3 jpringsize/ pi mm + (-38)  #!! Japanese sizes start with size 1 at a 13mm inside diameter and each size is 1|3 mm larger in diameter than the previous one.  They are multiplied by pi to give circumference. 
+
+#??  RingSize Length EU
+# The European ring sizes are the length of the circumference in mm minus 40.
+#?? 
+euringsize(n)	  [;mm] (n+40) mm ; euringsize/mm + (-40)  #!! The European ring sizes are the length of the circumference in mm minus 40.
+
+
+#?? WindChill
+# Units cannot handle wind chill or heat index because they are two variable
+# functions, but they are included here for your edification.  Clearly these
+# equations are the result of a model fitting operation.  
+#
+# wind chill index (WCI) a measurement of the combined cooling effect of low
+#      air temperature and wind on the human body. The index was first defined
+#      by the American Antarctic explorer Paul Siple in 1939. As currently used
+#      by U.S. meteorologists, the wind chill index is computed from the
+#      temperature T (in °F) and wind speed V (in mi/hr) using the formula: 
+#	   WCI = 0.0817(3.71 sqrt(V) + 5.81 - 0.25V)(T - 91.4) + 91.4. 
+#      For very low wind speeds, below 4 mi/hr, the WCI is actually higher than
+#      the air temperature, but for higher wind speeds it is lower than the air
+#      temperature.
+# 
+# heat index (HI or HX) a measure of the combined effect of heat and
+#      humidity on the human body. U.S. meteorologists compute the index
+#      from the temperature T (in °F) and the relative humidity H (as a
+#      value from 0 to 1).
+#	 \{ HI = -42.379 + 2.04901523 T + 1014.333127 H - 22.475541 TH - .00683783 T^2 - 548.1717 H^2 + 0.122874 T^2 H + 8.5282 T H^2 - 0.0199 T^2 H^2 \}
+#??
+
+
+############################################################################
+#
+# The following units were in the unix units database but do not appear in
+# this file:
+#
+#      wey	  used for cheese, salt and other goods.  Measured mass or
+#      waymass	  volume depending on what was measured and where the measuring
+#		  took place.  A wey of cheese ranged from 200 to 324 pounds.
+#
+#      sack	  No precise definition
+#
+#      spindle	  The length depends on the type of yarn
+#
+#      block	  Defined variously on different computer systems
+#
+#      erlang	  A unit of telephone traffic defined variously.  
+#		  Omitted because there are no other units for this
+#		  dimension.  Is this true?  What about CCS = 1/36 erlang?
+#		  Erlang is supposed to be dimensionless.  One erlang means
+#		  a single channel occupied for one hour.
+#
+############################################################################!!

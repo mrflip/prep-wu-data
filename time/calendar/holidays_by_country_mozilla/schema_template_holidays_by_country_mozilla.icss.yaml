@@ -1,0 +1,64 @@
+--- 
+- infochimps_schema:
+    #
+    # Fundamental description
+    #
+    
+    # Name the larger collection this dataset belongs to.
+    # (Name it the same as the dataset if it's a collection of one)
+    collection:     Holidays by country
+
+    coll_uniqid:    holidays_by_country
+
+    coll_tags:      'holidays holiday country calendar christmas "boxing day" chanukah ramadan'
+
+    formats:            { csv:   {}, yaml:  {}, xls:   {} }
+    
+    #
+    # Contributors
+    #
+    #   People/organizations who created or prepared the dataset. Include links
+    #   and citations wherever possible. This gives credit where it's deserved,
+    #   and allows people to trace the provenance of the data.
+    #
+    contributors:
+      - name:           ''
+        uniqid:         
+        url:            
+        role:           
+        cite:           ''
+        desc:           |
+            (...)
+            
+    #
+    # Free-form descriptive notes
+    #
+
+    notes:            
+        coll_desc: |-
+              A list of holidays and their dates of observation by country.
+        usage:          |
+              (...)
+        rights:         |-
+              (...)
+    
+
+    #
+    # Field listing
+    # 
+    fields:
+      -
+        name:              
+        uniqid:            
+        tags:              
+        units:             
+        datatype:
+        desc:             |
+            
+      - name:              
+        tags:              
+        units:             
+        datatype:          
+        uniqid:         
+        desc:             |
+            

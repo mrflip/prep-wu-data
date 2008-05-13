@@ -1,0 +1,49 @@
+
+-rw-r--r-- 1 flip flip  287631927 Jan  3 15:24 enwiki-latest-categorylinks.sql.gz
+-rw-r--r-- 1 flip flip  537101963 Jan  3 15:54 enwiki-latest-externallinks.sql.gz
+-rw-r--r-- 1 flip flip   49268202 Jan  3 15:56 enwiki-latest-langlinks.sql.gz
+-rw-r--r-- 1 flip flip  370628274 Jan  3 16:06 enwiki-latest-logging.sql.gz
+-rw-r--r-- 1 flip flip  375414185 Jan  3 16:07 enwiki-latest-page.sql.gz
+-rw-r--r-- 1 flip flip     172402 Jan  3 16:07 enwiki-latest-page_restrictions.sql.gz
+-rw-r--r-- 1 flip flip 1507211634 Jan  3 15:15 enwiki-latest-pagelinks.sql.gz
+-rw-r--r-- 1 flip flip   14540228 Jan  3 16:08 enwiki-latest-redirect.sql.gz
+-rw-r--r-- 1 flip flip        457 Jan  3 14:05 enwiki-latest-site_stats.sql.gz
+-rw-r--r-- 1 flip flip  378316679 Jan  6 06:21 enwiki-latest-stub-articles.xml.gz
+-rw-r--r-- 1 flip flip  688293309 Jan  6 06:21 enwiki-latest-stub-meta-current.xml.gz
+-rw-r--r-- 1 flip flip  203260677 Jan  3 15:40 enwiki-latest-templatelinks.sql.gz
+
+Esplanade:/work/DataSources/Huge/Wikipedia/dump$ ls -l
+total 22550676
+-rw-r--r-- 1 flip flip 1462953980 Jan  3 15:24 enwiki-latest-categorylinks.sql
+-rw-r--r-- 1 flip flip 4126244407 Jan  3 15:54 enwiki-latest-externallinks.sql
+-rw-r--r-- 1 flip flip  159529892 Jan  3 15:56 enwiki-latest-langlinks.sql
+-rw-r--r-- 1 flip flip 1570406105 Jan  3 16:06 enwiki-latest-logging.sql
+-rw-r--r-- 1 flip flip  998553208 Jan  3 16:07 enwiki-latest-page.sql
+-rw-r--r-- 1 flip flip    1214711 Jan  3 16:07 enwiki-latest-page_restrictions.sql
+-rw-r--r-- 1 flip flip 6642617593 Jan  3 15:15 enwiki-latest-pagelinks.sql
+-rw-r--r-- 1 flip flip   53322607 Jan  3 16:08 enwiki-latest-redirect.sql
+-rw-r--r-- 1 flip flip        979 Jan  3 14:05 enwiki-latest-site_stats.sql
+-rw-r--r-- 1 flip flip 1124482407 Jan  3 15:40 enwiki-latest-templatelinks.sql
+-rw-r--r-- 1 flip flip 2447184390 Jan  6 06:21 enwiki-latest-stub-articles.xml
+-rw-r--r-- 1 flip flip 4505359729 Jan  6 06:21 enwiki-latest-stub-meta-current.xml
+
+Esplanade:/work/DataSources/Huge/Wikipedia/dump$ du -sch *
+
+953M    enwiki-latest-page.sql                id ns title restr views is_redirect is_new xx xx rev# length
+4.0K    enwiki-latest-site_stats.sql          xx total_views total_edits #good_articles #pages #users xx #images
+
+6.2G    enwiki-latest-pagelinks.sql           from_id   to_ns     to_title   
+1.1G    enwiki-latest-templatelinks.sql       from_id   to_ns     to_title
+1.4G    enwiki-latest-categorylinks.sql       from_id             to_title   from_title_sortkey      xx
+3.9G    enwiki-latest-externallinks.sql       from_id             to_url     to_url_revdom_and_stripped
+153M    enwiki-latest-langlinks.sql           from_id   to_lang   to_title   
+        enwiki-latest-imagelinks.sql          from_id             to_title   
+51M     enwiki-latest-redirect.sql            from_id   to_ns     to_title  
+
+1.5G    enwiki-latest-logging.sql             type action ts userid page_ns page_title comment params_lf_separated logid deleted
+1.2M    enwiki-latest-page_restrictions.sql   page_id pr_type pr_level pr_cascade pr_peruser pr_expiry pr_id
+2.3G    enwiki-latest-stub-articles.xml       the same as pages-articles, but with null <text />
+4.2G    enwiki-latest-stub-meta-current.xml   stubs across namespaces? I think
+
+22G     total
+

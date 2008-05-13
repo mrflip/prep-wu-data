@@ -1,0 +1,87 @@
+
+
+- Fetch, Extract:
+   - Bring in the dump and associated pieces
+- Chunker:
+   - Break the wikipedia dump into manageable but still valid XML chunks.
+- Indexer:
+   - Take each page chunk and construct a data structure.
+     
+- 
+   - Generation (and check) colloquial XML from these data structures.
+
+- [Template,Link] extraction and parsing:
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Helpful info
+
+http://www.mediawiki.org/wiki/Manual:Database_layout
+
+#
+
+
+- Build a network graph of topics
+  - |
+    this has, i'm sure, been done a lot more thoroughly than is done here, most
+    particularly by DBPedia.
+
+- Use the interwiki links at the bottom of each page to make a translation dictionary:
+  The page on 'Anarchism' has interwiki links to 
+    - link: '[[tr:Anarşizm]]'
+    - link: '[[uk:Анархізм]]'
+    - link: '[[yi:אנארכיזם]]'
+    - link: '[[diq:Anarşizm]]'
+    - link: '[[zh:无政府主义]]'
+  These links appear at the bottom of the page and follow the [[Category: *]] links
+
+- Use the redirect tags to make a synonyms dictionary.
+
+  - This would be especially powerful if you restrict it to a certain domain.
+    For example: it's a bitch to key among different files that don't all use ISO-whatever
+    country codes: even apart from vernacular and epithetical appellations, a database might
+    conceivably indicate by 'us' the USA, U.S.A, U.S.A., United States, United States of
+    America
+
+- Section heads are left intact and in order
+
+  - Use the contents of == In popular culture == section links to form a pop
+    culture navigator or semantically classify movies, music etc.
+
+  - 
+    
+
+stats:
+ - article: length, links, citations, images, categories
+
+
+- tags at the ends of articles are translated words
+- infoboxen into tables
+- citations
+- incoming links
+- #REDIRECT synonyms
+- Categories
+- sections, as tree 
+

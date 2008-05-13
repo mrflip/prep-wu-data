@@ -1,0 +1,16 @@
+./smadb
+./statab-2007/2006/files
+./statab-2007/2006/ranks
+./statab-2007/2006/tables
+./statab-2007/files
+./statab-2007/ranks
+./statab-2007/tables
+./statab/2006/files
+./statab/2006/ranks
+./statab/2006/tables
+./statab/2007/files
+./statab/2007/ranks
+./statab/2007/tables
+./statab/files
+./statab/ranks
+./statab/tables

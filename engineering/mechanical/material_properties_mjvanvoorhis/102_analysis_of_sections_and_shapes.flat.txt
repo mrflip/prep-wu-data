@@ -1,0 +1,62 @@
+<p><pre>
+Mass Properties of Shapes
+Nomenclature:
+<br>rho = density, weight/unit volume 
+<br>m = mass
+<br>I = mass moment of inertia, 
+<br>g = acceleration of gravity, = length/time^2 when density is given as 
+force/unit volume (ie. weight/unit volume). 
+</pre></p>
+
+<hr  size=1>
+
+<p><pre>
+<img alt="Rod Illustration" src="taba3101.gif">
+Rod relationships:
+------------------
+m = (3.14159 / 4)  *( d^2 * l) * (rho / g) => See Nomenclature Above
+Iy = m * l^2 / 12
+Iz = m * l^2 / 12
+Ix = m * d^2 / 8
+</pre></p>
+
+<p><pre>
+<img alt="Round disk Illustration" src="taba3102.gif">
+Round disk relationships:
+-------------------------
+m = (3.14159 / 4) * (d^2 * t) * (rho / g) => See Nomenclature Above
+Iy = m * d^2 / 16
+Iz = m * d^2 / 16
+Ix = m * d^2 / 8
+</pre></p>
+
+<p><pre>
+<img alt="Rectangular prism Illustration" src="taba3103.gif">
+Rectangular prism relationships:
+--------------------------------
+m = (a * b * c) * (rho / g) => See Nomenclature Above
+Iy = m / 12 * (a^2 + c^2)
+Iz = m / 12 * (b^2 + c^2)
+Ix = m / 12 * (a^2 + b^2)
+</pre>
+</pre></p>
+
+<p><pre>
+<img alt="Cylinder Illustration" src="taba3104.gif">
+Cylinder relationships:
+-----------------------
+m = (3.14159 /4) * (d^2 * l) * (rho / g) => See Nomenclature Above
+Iy = m / 48 * (3 * d^2 + 4 * l^2)
+Iz = m / 48 * (3 * d^2 + 4 * l^2)
+Ix = m * d^2 / 8
+</pre></p>
+
+<p><pre>
+<img alt="Hollow Cylinder Illustration" src="taba3105.gif">
+Hollow Cylinder relationships:
+------------------------------
+m = (3.14159 / 4) * ((d0^2 - di^2)*L) * (rho/g) => See Nomenclature Above
+Iy = m / 48 * (3 * d0^2 + 3 * di^2 + 4 * l^2)
+Iz = m / 48 * (3 * d0^2 + 3 * di^2 + 4 * l^2)
+Ix = m / 8 * (d0^2 + di^2)
+</pre></p>

@@ -1,0 +1,265 @@
+http://bf.memphis.edu/finance/accounting/mileage.php#TN
+
+ALABAMA
+Andalusia 	423 	Eufaula 	420 	Montgomery 	334
+Anniston 	321 	Florence 	147 	Phenix City 	396
+Auburn 	376 	Gadsden 	266 	Selma 	335
+Birmingham 	249 	Huntsville 	215 	Troy 	383
+Decatur 	191 	Jasper 	200 	Tuscaloosa 	271
+Dothan 	442 	Mobile 	363 		
+ARIZONA
+Flagstaff 	1336 	Phoenix 	1465 	Tucson 	1384
+Grand Canyon NP 	1416 	Prescott 	1427 	Yuma 	1644
+ARKANSAS
+Arkadelphia 	205 	Fort Smith 	291 	Osceola 	59
+Ashdown 	287 	Hamburg 	212 	Ozark 	253
+Batesville 	124 	Harrison 	248 	Paragould 	90
+Benton 	162 	Heber Springs 	140 	Paris 	248
+Bentonville 	349 	Helena 	85 	Piggott 	123
+Blytheville 	73 	Henry Horton State Pk 	212 	Pine Bluff 	147
+Booneville 	261 	Hope 	250 	Pocahontas 	111
+Brinkley 	74 	Hot Springs 	191 	Prescott 	234
+Camden 	218 	Jacksonville 	144 	Rogers 	342
+Clarksville 	232 	Jonesboro 	74 	Russellville 	210
+Conway 	163 	Lake Village 	190 	Searcy 	109
+Corning 	120 	Little Rock 	138 	Siloam Springs 	344
+Crossett 	227 	Lonoke 	116 	Springdale 	332
+DeQueen 	280 	Magnolia 	255 	Stuttgart 	111
+Dermott 	178 	Malvern 	183 	Texarkana 	278
+DeWitt 	115 	Marked Tree 	44 	Tiptonville 	104
+Dumas 	150 	Marianna 	59 	Trumann 	58
+Earle 	33 	Mena 	268 	Van Buren 	286
+El Dorado 	237 	McGehee 	169 	Walnut Ridge 	97
+England 	137 	Morrilton 	183 	Warrren 	194
+Eudora 	207 	Monticello 	183 	West Memphis 	11
+Fayetteville 	324 	Mountain Home 	198 	Wynne 	53
+Fordyce 	188 	Nashville 	260 		
+Forrest City 	49 	Newport 	95 		
+CALIFORNIA
+Bakersfield 	1845 	Riverside 	1763 	San Francisco 	2116
+El Centro 	1672 	Sacramento 	2113 	Santa Barbara 	1907
+Fresno 	1951 	San Bernardino 	1761 		
+Los Angeles 	1807 	San Diego 	1805 		
+COLORADO
+Colorado Springs 	1003 	Grand Junction 	1268 	Pueblo 	962
+Denver 	1043 	Greeley 	1059 		
+CONNECTICUT
+Hartford 	1200 	New Haven 	1162 		
+DC
+Washington 	867 				
+DELAWARE
+Wilmington 	980 				
+FLORIDA
+Daytona Beach 	786 	Key West 	1161 	St Augustine 	734
+Destin 	468 	Lakeland 	788 	St Petersburg 	814
+Ft Lauderdale 	983 	Melbourne 	843 	Sarasota 	844
+Ft Myers 	926 	Miami 	997 	Tallahassee 	535
+Ft Pierce 	890 	Orlando 	776 	Tampa 	792
+Gainesville 	666 	Panama City 	508 	West Palm Beach 	944
+Jacksonville 	694 	Pensacola 	421 		
+GEORGIA
+Albany 	565 	Bainbridge 	526 	St Simons Island 	660
+Americus 	459 	Brunswick 	650 	Tifton 	555
+Athens 	522 	Columbus 	396 	Valdosta 	602
+Atlanta 	456 	Macon 	451 	Waycross 	626
+Augusta 	607 	Savannah 	622 		
+IDAHO
+Boise 	1820 	Pocatello 	1619 		
+Lewiston 	2032 	Twin Falls 	1709 		
+ILLINOIS
+Aurora 	521 	Danville 	406 	La Salle 	488
+Bloomington 	426 	Effingham 	325 	Peoria 	442
+Cairo 	162 	Elgin 	542 	Rockford 	565
+Carbondale 	220 	Freeport 	566 	Springfield 	370
+Centralia 	283 	Galesburg 	470 	Waukegan 	573
+Champaign 	398 	Joliet 	513 		
+Chicago 	537 	Kankakee 	481 		
+INDIANA
+Evansville 	274 	Logansport 	533 	South Bend 	602
+Ft Wayne 	592 	Michigan City 	555 	Terre Haute 	372
+Indianapolis 	474 	Muncie 	529 	Vincennes 	321
+IOWA
+Burlington 	480 	Des Moines 	623 	Mason City 	728
+Cedar Rapids 	565 	Dubuque 	584 	Ottumwa 	522
+Clinton 	536 	Ft Dodge 	714 	Sioux City 	769
+Davenport 	511 	Marshalltown 	638 	Waterloo 	627
+KANSAS
+Dodge City 	738 	Independence 	422 	Topeka 	558
+Emporia 	564 	Salina 	666 	Wichita 	582
+KENTUCKY
+Ashland 	539 	Hopkinsville 	220 	Murray 	156
+Bowling Green 	272 	Lexington 	420 	Owensboro 	294
+Danville 	404 	London 	415 	Paducah 	171
+Elizabethtown 	341 	Louisville 	378 	Pikeville 	545
+Frankfort 	441 	Lufkin 	452 	Richmond 	435
+Glasgow 	293 	Mayfield 	147 	Somerset 	391
+Hazard 	475 	Maysville 	484 	Winchester 	438
+Henderson 	265 	Middlesboro 	470 		
+LOUISIANA
+Alexandria 	339 	Lafayette 	441 	New Orleans 	414
+Baton Rogue 	386 	Lake Charles 	462 	Shreveport 	327
+Houma 	467 	Monroe 	251 		
+MAINE
+Acadia NP 	1627 	Bangor 	1594 	Portland 	1462
+Augusta 	1518 	Calais 	1708 		
+MARYLAND
+Baltimore 	911 	Hagerstown 	868 		
+MASSACHUSETTS
+Boston 	1341 	Springfield 	1235 		
+MICHIGAN
+Ann Arbor 	701 	Jackson 	666 	Muskegon 	678
+Detroit 	719 	Kalamazoo 	631 	Port Huron 	775
+Escanabo 	839 	Lansing 	688 	Saginaw 	759
+Flint 	739 	Mackinaw City 	886 	St Joseph 	588
+Grand Rapids 	667 	Marquette 	905 	Traverse City 	805
+MINNESOTA
+Duluth 	1029 	Minneapolis 	912 	St Cloud 	979
+Mankota 	884 	Rochester 	826 	St Paul 	907
+MISSISSIPPI
+Aberdeen 	139 	Gulfport 	360 	New Albany 	80
+Amory 	131 	Hattiesburg 	291 	Ocean Springs 	372
+Batesville 	66 	Hernando 	35 	Olive Branch 	17
+Bay St Louis 	375 	Holly Springs 	45 	Oxford 	75
+Biloxi 	369 	Indianola 	133 	Pascagoula 	380
+Booneville 	109 	Iuka 	120 	Petal 	294
+Brookhaven 	268 	Itta Bena 	141 	Philadelphia 	195
+Canton 	187 	Jackson 	213 	Picayune 	352
+Clarksdale 	74 	Kosciusko 	155 	Southaven 	12
+Cleveland 	110 	Laurel 	272 	Starkville 	165
+Clinton 	218 	Leland 	137 	Senatobia 	40
+Columbia 	294 	Long Beach 	365 	Tupelo 	104
+Columbus 	166 	Louisville 	173 	Vicksburg 	220
+Corinth 	93 	McComb 	293 	West Point 	149
+Greenville 	145 	Meridian 	236 	Winona 	122
+Greenwood 	130 	Moss Point 	377 	Yazoo City 	184
+Grenada 	99 	Natchez 	290 		
+MISSOURI
+Branson 	343 	Joplin 	352 	Poplar Bluff 	145
+Brookfield 	461 	Kansas City 	482 	Springfield 	281
+Cape Giradeau 	172 	Kirksville 	463 	St Joseph 	534
+Columbia 	367 	Moberly 	403 	St Louis 	283
+Hannibal 	389 	Nevada 	373 	West Plains 	171
+Jefferson City 	334 	New Madrid 	122 		
+MONTANA
+Billings 	1467 	Great Falls 	1702 	Kalispell 	1932
+Butte 	1699 	Havre 	1720 	Miles City 	1387
+Glacier NP 	1975 	Helena 	1702 	Missoula 	1814
+NEBRASKA
+Columbus 	735 	Lincoln 	661 	North Platte 	882
+Grand Island 	758 	McCook 	834 	Omaha 	637
+NEVADA
+Las Vegas 	1603 	Reno 	2028 		
+NEW HAMPSHIRE
+Concord 	1332 	Manchester 	1319 	Portsmouth 	1347
+NEW JERSEY
+Atlantic City 	1050 	Newark 	1081 		
+NEW MEXICO
+Albuquerque 	1010 	Gallup 	1150 		
+Carlsbad Caverns, NP 	923 	Santa Fe 	1003 		
+NEW YORK
+Albany 	1231 	Glens Falls 	1251 	Syracuse 	1063
+Binghamton 	1075 	New York 	1102 	Utica 	1112
+Buffalo 	920 	Plattsburgh 	1317 	Watertown 	1117
+Elmira 	1023 	Rochester 	987 		
+NORTH CAROLINA
+Asheville 	527 	Charlotte 	630 	Raleigh 	759
+Boone 	540 	Durham 	738 	Wilmington 	817
+Chapel Hill 	718 	Greensboro 	684 		
+NORTH DAKOTA
+Bismarck 	1295 	Grand Forks 	1202 	Williston 	1500
+Devils Lake 	1288 	Jamestown 	1202 		
+Fargo 	1127 	Minot 	1371 		
+OHIO
+Akron 	716 	Cleveland 	732 	Oxford 	515
+Cambridge 	664 	Columbus 	592 	Portsmouth 	530
+Canton 	715 	Dayton 	533 	Toledo 	670
+Celina 	585 	Lima 	596 	Youngstown 	764
+Cincinnati 	479 	Marion 	620 		
+OKLAHOMA
+McAlester 	382 	Oklahoma City 	476 		
+Muskogee 	362 	Tulsa 	409 		
+OREGON
+Crater Lake NP 	2278 	Pendleton 	2088 		
+Eugene 	2312 	Portland 	2308 		
+PENNSYLVANIA
+Altoona 	853 	Franklin 	799 	Reading 	989
+Bethlehem 	1023 	Harrisburg 	938 	Scranton 	1032
+Chambersburg 	886 	Philadelphia 	1007 	Uniontown 	773
+Erie 	818 	Pittsburgh 	759 	Williamsport 	951
+RHODE ISLAND
+Providence 	1263 				
+SOUTH CAROLINA
+Charleston 	696 	Columbia 	616 	Greenville 	529
+SOUTH DAKOTA
+Aberdeen 	1033 	Pierre 	1043 	Sioux Falls 	830
+Mitchell 	890 	Rapid City 	1154 	Yankton 	809
+TENNESSEE
+Memphis Airport/UOM 	15 	Grand Junction 	55 	Nashville 	210
+Alamo 	77 	Greeneville 	462 	Natchez Trace St Pk 	119
+Athens 	375 	Henderson 	85 	Newbern 	85
+Bolivar 	67 	Hohenwald 	159 	Newport 	446
+Brighton 	31 	Huntingdon 	116 	Oak Ridge 	387
+Bristol 	500 	Jackson 	85 	Paris Landing 	148
+Brownsville 	58 	Jamestown 	347 	Paris 	133
+Buchanan 	152 	Johnson City 	488 	Parsons 	129
+Centerville 	169 	Kenton 	100 	Pickwick Landing 	108
+Chapel Hill 	216 	Kingsport 	479 	Pickwick 	108
+Chattanooga 	343 	Kingston 	364 	Pidgeon Forge 	430
+Chickasaw St Park 	75 	Knoxville 	388 	Pulaski 	191
+Clarksville 	198 	LaFollette 	415 	Pyramid 	11
+Cleveland 	372 	Lakeshore 	200 	Realfoot Lake 	110
+Collierville 	20 	Lawrenceburg 	173 	Ripley 	54
+Columbia 	191 	Lebanon 	250 	Rodgersville 	463
+Cookeville 	302 	Lewisburg 	216 	Savannah 	113
+Covington 	39 	Lexington 	109 	Seiverville 	426
+Crossville 	330 	Madisonville 	383 	Selmer 	90
+Dickson 	179 	Manchester 	274 	Shelby Forrest 	25
+Doyle 	315 	Martin 	138 	Shelbyville 	263
+Dayton 	338 	Maryville 	411 	Somerville 	41
+Dresden 	121 	McKenzie 	120 	Sparta 	302
+Dyersburg 	78 	McMinnville 	281 	Springfield 	230
+Fall Creek Falls 	350 	Milan 	95 	Swanee 	303
+Fayetteville 	221 	Millington 	18 	Trenton 	100
+Fort Pillow 	90 	Monteagle 	299 	Tullahoma 	280
+Franklin 	220 	Montgomery Bell St Pk 	185 	Union City 	114
+Gallatin 	249 	Morristown 	441 	Waverly 	155
+Gatlinburg 	439 	Murfreesboro 	241 	Waynesboro 	144
+TEXAS
+Abilene 	637 	Dallas 	454 	San Antonio 	725
+Amarillo 	728 	El Paso 	1074 	Texarkana 	280
+Austin 	646 	Ft Worth 	485 	Waco 	524
+Big Bend NP 	1000 	Houston 	574 	Wichita Falls 	547
+Big Spring 	745 	Loredo 	878 		
+Childress 	651 	San Angelo 	707 		
+UTAH
+Cedar City 	1589 	Provo 	1509 		
+Ogden 	1546 	Salt Lake City 	1551 		
+VERMONT
+Burlington 	1305 	Montpelier 	1337 	St Johnsbury 	1372
+VIRGINIA
+Lexington 	697 	Roanoke 	652 	Winchester 	824
+Norfolk 	881 	Shenandoah NP 	783 		
+Richmond 	818 	Williamsburg 	869 		
+WASHINGTON
+Olympia 	2357 	Seattle 	2317 		
+Olympia NP 	2382 	Spokane 	2039 		
+WEST VIRGINIA
+Bluefield 	597 	Clarksburg 	732 	Parkersburg 	662
+Charleston 	629 	Huntington 	566 	Wheeling 	728
+WISCONSIN
+Ashland 	926 	Kenosha 	592 	Marinette 	787
+Eau Claire 	795 	La Crosse 	721 	Milwaukee 	622
+Fond du Lac 	683 	Madison 	632 	Stevens Point 	738
+Green Bay 	683 	Manitowoc 	703 		
+WYOMING
+Caper 	1274 	Rock Springs 	1400 	Yellowstone NP 	1946
+Cheyenne 	1142 	Sheridan 	1423 		
+CANADA
+Calgary, Alberta 	2004 	Ottawa, Ontario 	1188 	Thunder Bay, Ontario 	1185
+Dawson Creek, BC 	2557 	Prince Rupert, BC 	3403 	Toronto, Ontario 	956
+Edmonton, Alberta 	2187 	Quebec, Quebec 	1479 	Vancouver, BC 	2461
+Gaspe, Quebec 	1882 	Regina, Saskatchewan 	1582 	Whitehorse, Yukon Territory 	3973
+Halifax, Nova Scotia 	2025 	Saint John, Newfoundland 	1891 	Windsor, Ontario 	729
+Montreal, Quebec 	1315 	Sault Ste. Marie, Ontario 	962 	Winnipeg, Manitoba 	1321
+MEXICO
+Mexico City 	1524

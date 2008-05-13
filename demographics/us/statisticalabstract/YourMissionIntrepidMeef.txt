@@ -1,0 +1,73 @@
+
+			       Census Sensibility
+
+Roughly by importance*difficulty, here's the "Make Mostly Perfect" task list:
+  
+  * tag datasets by content 
+
+  * list the datafields within each dataset
+
+  * tag those fields by what they mean in real life.
+
+  * Identify fields that recur, and what it means to "recur"; things like
+      - State Name          - State Code 
+      - Zip Code            - FIPS code
+      - Income (US Dollars) - Imports/Exports (US Dollars)
+      - Population          - Race
+    Define such fields once, somewhere; enter the name preceded by an "&"
+    ampersand for all following.
+
+  * separate data (tables, headers, etc) from metadata (notes, sources, etc),
+    stuffing the metadata into the appropriate schema slot
+  
+  * regularize the file naming
+
+  * Spot check that the exported CSV files correctly match the originals
+
+  * Pull each table (with column headers only) into its own file.  
+  
+  * unravel headers, so there is exactly one field header per data column and
+    all tables are rectangular.
+
+  * convert to YAML and XML
+
+  * denormalize and combine equivalent tables
+
+The "useful and ready for import" list stops after item 1 (tag the datasets); anything after that is gravy.  
+
+I'm still figuring out what's hard, what's easy, and what's important -- so do whatever your patience and instincts suggest.  Also: invent shorthands, add or omit structure, &c -- as long as it validates and I can still script the imports, let me know what should be added or tossed.
+
+The files seem to be of the following form. I've extracted what was easily scripted, stuffed it in the schema, and renamed the family.  Beyond that I haven't touched the files themselves.
+
+===========================================================================
+    'Table xxx. This Is My Name"
+
+  <header>
+    [explanatory text, with possibly some blank lines mixed in]
+    [some blank lines]
+
+  <one or more tables:>   
+    header,header,header,header,header,header
+    [some blank lines]
+    cell,cell,cell
+   
+  <footer: in some order, some of>
+    Source: <several lines of source info followed by a blank (comma only) line>
+    INTERNET LINK
+    FOOTNOTE
+    SYMBOLS 
+  
+===========================================================================
+
+If you see something scripted easily by me and not by you just ask.
+
+love,
+#1 grateful bro.
+
+../detect_feature.sh 'Table +\d+' > ../result-detect-Table.txt  &
+../detect_feature.sh 'FOOTNOTE' 	> ../result-detect-FOOTNOTE.txt &
+../detect_feature.sh 'SYMBOLS'  	> ../result-detect-SYMBOLS.txt &
+../detect_feature.sh 'INTERNET LINK'	> ../result-detect-INTERNET_LINK.txt &
+grep 'Source: ' * | perl -ne
+'s/^([^:]+\.csv):[,"]*(?:\[tbf\])?[^,]{0,6}"?Source:\s*(.*?)"?,*$// && printf
+"%-15s\t%s\n", $1, $2;'

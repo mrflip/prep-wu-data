@@ -1,0 +1,44 @@
+                                
+                      Yield     Tensile   Elongation  Reduction  Brinell
+UNS                   strength, strength, in 2 in,    in area,   hardness,  
+number  Processing    kpsi      kpsi      %           %          H_b
+------  ------------  --------- --------- ----------  ---------  ---------
+S20100  Annealed        55        155        55                  
+S20100  1/4 hard        75        125        20                  
+S20100  1/2 hard       110        150        10                  
+S20100  3/4 hard       135        175         5                  
+S20100  Full hard      140        185         4                  
+S20200  Annealed        55        110        55                  
+S20200  1/4 hard        75        125        12                  
+S30100  Annealed        40        110        60                    165
+S30100  1/4 hard        75        125        25                  
+S30100  1/2 hard       110        150        15                  
+S30100  3/4 hard       135        175        12                  
+S30100  Full hard      140        185         8                  
+S30200  Annealed        37         90        55          65        155
+S30200  1/4 hard        75        125        12                  
+S30300  Annealed        35         90        50          55        160
+S30400  Annealed        35         85        55          65        150
+S31000  Annealed        40         95        45          65        170
+S31400  Annealed        50        100        45          60        170
+S41400  Annealed        95        120        17          55        235
+S41400  Drawn 400 F    150        200        15          55        415
+S41400  Drawn 600 F    145        190        15          55        400
+S41400  Drawn 800 F    150        200        16          58        415
+S41400  Drawn 1000 F   120        145        20          60        325
+S41400  Drawn 1200 F   105        120        20          65        260
+S41600  Annealed        40         75        30          65        155
+S41600  Drawn 400 F    145        190        15          55        390
+S41600  Drawn 600 F    140        180        15          55        375
+S41600  Drawn 800 F    150        195        17          55        390
+S41600  Drawn 1000 F   115        145        20          65        300
+S41600  Drawn 1200 F    85        110        23          65        225
+S41600  Drawn 1400 F    60         90        30          70        180
+S43100  Annealed        95        125        20          60        260
+S43100  Drawn 400 F    155        205        15          55        415
+S43100  Drawn 600 F    150        195        15          55        400
+S43100  Drawn 800 F    155        205        15          60        415
+S43100  Drawn 1200 F    95        125        20          60        260
+S50100  Annealed        30         70        28          65        160
+S50200  Annealed        30         70        30          75        150
+------  ------------  --------- --------- ----------  ---------  ---------

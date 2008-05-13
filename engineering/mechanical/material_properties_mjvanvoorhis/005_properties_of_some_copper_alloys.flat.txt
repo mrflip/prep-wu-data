@@ -1,0 +1,40 @@
+                                
+                                        Yield     Tensile   Elongation  Brinell
+UNS    Alloy                            strength, strength, in 2 in,    hardness,  
+number name              Form   Temper  MPa       MPa       %           H_b
+------ ----------------- ------ ------  --------- --------- ----------  ---------
+C17000 Beryllium         Rod    Hard      515       790         5          95B
+C17000 Beryllium         Rod    Soft      170       415        50          77B
+C17000 Beryllium         Sheet  Hard     1000      1240         2          
+C21000 Gilding brass     Sheet  Hard      345       385         5          64B
+C21000 Gilding brass     Sheet  Soft       70       235        45          46F
+C22000 Commercial brass  Sheet  Hard      370       420         5          70B
+C22000 Commercial brass  Sheet  Soft       70       255        45          53F
+C22000 Commercial brass  Rod    Hard      380       415        20          60B
+C22000 Commercial brass  Rod    Soft       70       275        50          55F
+C23000 Red brass         Sheet  Hard      395       480         5          77B
+C23000 Red brass         Sheet  Soft       85       275        47          59F
+C23000 Red brass         Rod    Hard      360       395        23          75B
+C23000 Red brass         Rod    Soft       70       275        55          55F
+C26000 Cartridge brass   Sheet  Hard      435       525         8          82B
+C26000 Cartridge brass   Sheet  Soft      105       325        62          64F
+C26000 Cartridge brass   Rod    Hard      360       480        30          80B
+C26000 Cartridge brass   Rod    Soft      110       330        65          65F
+C27000 Yellow brass      Sheet  Hard      415       510         8          80B
+C27000 Yellow brass      Sheet  Soft      105       325        62          64F
+C27000 Yellow brass      Rod    Hard      310       415        25          80B
+C27000 Yellow brass      Rod    Soft      110       330        65          65F
+C28000 Muntz metal       Sheet  Hard      415       550        10          85B
+C28000 Muntz metal       Sheet  Soft      145       370        45          80F
+C28000 Muntz metal       Rod    Hard      380       515        20          80B
+C28000 Muntz metal       Rod    Soft      145       370        50          80F
+C28000 Muntz metal       Tube   Hard      380       510        10          80B
+C28000 Muntz metal       Tube   Soft      160       385        50          82F
+C33000 Low-leaded brass  Tube   Hard      415       515         7          80B
+C33000 Low-leaded brass  Tube   Soft      105       325        60          64F
+C33200 High-leaded brass Sheet  Hard      415       510         7          80B
+C33200 High-leaded brass Sheet  Soft      115       340        52          68F
+C46200 Naval brass       Sheet  Hard      480       620         5          90B
+C46200 Naval brass       Rod    Hard      365       515        20          82B
+C46200 Naval brass       Tube   Hard      455       605        18          95B
+------ ----------------- ------ ------  --------- --------- ----------  ---------

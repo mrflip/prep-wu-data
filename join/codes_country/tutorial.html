@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+
+
+  <head>
+    <title>RefleX</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="local.css" rel="stylesheet" type="text/css"/>
+    <script src="mail.js" type="text/javascript">
+<!--//-->
+    </script>
+  </head>
+  <body>
+    <table><tr><td width="28px"> </td><td valign="top" width="182px">
+        <div id="menu" xml:base="file:///media/USER/projects/eclipse/RefleX/build/doc/menu.xml">
+    <a href="http://reflex.gforge.inria.fr"><img alt="RefleX" src="logo.png"/></a>
+    <img alt=" " height="6px" src="spacer.png"/>
+    <table>
+        <tr><th colspan="2"><a href="index.html">Home</a></th></tr>
+        <tr><td><a href="index.html#overview">Overview</a></td>
+            <td><a href="index.html#features">Features</a></td></tr>
+        <tr><td><a href="index.html#license">License</a></td>
+            <td><a href="index.html#contribution">Contribution</a></td></tr>
+    </table>
+    <img alt=" " height="6px" src="spacer.png"/>
+    <table>
+        <tr><th colspan="2"><a href="running.html">Using RefleX</a></th></tr>
+        <tr><td colspan="2"><a href="running.html#download">Download</a></td></tr>
+        <tr><td colspan="2"><a href="running.html#releaseNotes">Release notes</a></td></tr>
+        <tr><td><a href="running.html#install">Install</a></td>
+            <td><a href="running.html#dependencies">Dependencies</a></td></tr>
+        <tr><td><a href="running.html#running">Running</a></td>
+            <td><a href="running.html#performances">Performances</a></td></tr>
+        <tr><td><a href="changes.html">Changes</a></td><td><a href="todo.html">ToDo</a></td></tr>
+    </table>
+    <img alt=" " height="6px" src="spacer.png"/>
+    <table>
+        <tr><th colspan="2"><div class="title">Documentation</div></th></tr>
+        <tr><td><a href="faq.html">FAQ</a></td>
+            <td><a href="tutorial.html">Tutorials</a></td></tr>
+        <tr><td><a href="tips.html">Tips</a></td>
+            <td><a href="troubleshooting.html">Troubleshooting</a></td></tr>
+        <tr><td colspan="2"><a href="http://ns.inria.org/active-tags/" class="extLink">Active Tags</a></td></tr>
+    </table>
+    <img alt=" " height="6px" src="spacer.png"/>
+    <table>
+        <tr><th colspan="2"><div class="title">Development</div></th></tr>
+        <tr><td><a href="articles.html">Active Blog</a></td>
+            <td><a href="how-to.html">How-to</a></td></tr>
+        <tr><td><a href="tests.html">Active Tests</a></td>
+            <td><a href="javadoc/index.html">Javadoc</a></td></tr>
+        <tr><td colspan="2"><a href="http://gforge.inria.fr/projects/reflex/" class="extLink">RefleX @ gForge</a></td></tr>
+    </table>
+    <a href="http://www.inria.fr"><img alt="INRIA" src="inria.gif"/></a>
+</div>
+
+    </td><td valign="top">
+        <div id="content">
+            <a name="N117B9"><!--#--></a><a name="tutorial"><!--#--></a>
+    <table align="right" id="up"><tr><td>[<a href="index.html">Up</a>]</td></tr></table>
+    <h1>Tutorials</h1>
+
+    <p>All examples are included in the full distribution and the source distribution.
+        Please refer to the <a href="running.html#download">download section</a>.</p>
+    <p>Most of the examples are available for running from the command line as well as
+        in a Web application. Please refer to the <a href="running.html#running">running section</a>.
+        Web applications are supposed to run on a servlet engine such as <a href="http://jakarta.apache.org/tomcat" class="extLink">Tomcat</a>
+        installed on your local machine and listening on the port 8080.
+        If it is located on a remote machine or listening to another port, please
+        replace <tt>http://localhost:8080/</tt> in the examples below by the relevant URL.</p>
+    <p>Check the <a href="#runningTutorial">prerequisites</a> for running the tutorials
+        in batch mode or within your servlet engine.</p>
+    <p>Feel free to change the examples with your own stuff !
+        It's the better way to understand and learn !</p>
+
+    <a name="N117E2"><!--#--></a>
+        <a name="N117E4"><!--#--></a><h3>Understanding the active tags used in the examples</h3>
+            <p>The reference of the active tags and other XML materials specified
+                in <span class="active-tags">Active Tags</span> is available
+                <a href="http://ns.inria.org/active-tags/references/references.html" class="extLink">here</a>.</p>
+        
+    
+
+    <a name="N118A6"><!--#--></a><a name="basicTutorials"><!--#--></a><h2>Basic tutorials</h2><p>"Hello world", simple publication with XSLT, first Web application, and DTD validation.</p><ul><li><a href="tutorial-basics.html#hello">Hello world !</a></li><li><a href="tutorial-basics.html#xslt">Publication with XSLT</a></li><li><a href="tutorial-basics.html#dtdValidation">DTD validation</a></li></ul><p align="right">[<a href="tutorial-basics.html">More...</a>]</p>
+    <a name="N11AF0"><!--#--></a><a name="fromSqlToMvcTutorials"><!--#--></a><h2>From SQL to MVC - tutorials</h2><p>How to map an arbitrary complex SQL query to a made-to-measure XML document,
+        and how to expose this query as a component of a MVC architecture usable
+        both in batch scripts and Web applications.</p><ul><li><a href="tutorial-fromSqlToMvc.html#sql">Mapping SQL to XML</a></li><li><a href="tutorial-fromSqlToMvc.html#component">Component-based architecture (MVC)</a></li></ul><p align="right">[<a href="tutorial-fromSqlToMvc.html">More...</a>]</p>
+    <a name="N11E58"><!--#--></a><a name="schemasTutorials"><!--#--></a><h2>Schemas tutorials</h2><p>How to perform an XML validation regarding a schema, how to express algorithmic
+        rules and co-occurrence constraints in active schemas, how to design a
+        semantic data type. Most things that you can't achieve with your DTDs,
+        Relax NG schemas, W3C XML Schema schemas, and sometimes neither Schematron
+        are showned here : if you want more control on your XML documents, it
+        is the right place...</p><ul><li><a href="tutorial-schemas.html#activeSchema">XML validation with Active Schema (co-occurrence constraint on table columns)</a></li><li><a href="tutorial-schemas.html#classificationLevel">Co-occurrence constraint on classification level</a></li><li><a href="tutorial-schemas.html#activeSchemaAlgo">Expressing algorithmics rules with Active Schema</a></li><li><a href="tutorial-schemas.html#psvi">Playing with semantic datatypes and PSVI</a></li></ul><p align="right">[<a href="tutorial-schemas.html">More...</a>]</p>
+    <a name="N121F1"><!--#--></a><a name="pipelinesAndFiltersTutorials"><!--#--></a><h2>Pipelines and filters - tutorials</h2><p>How to convert a raw text file to XML with XPath or with a regular expression,
+        how to use XPath patterns for filtering a big SAX source, how to design
+        complex pipelines with dynamic redirections, how to redirect SAX events
+        to a DOM subtree.</p><ul><li><a href="tutorial-pipelinesAndFilters.html#textToXML">Text to XML</a></li><li><a href="tutorial-pipelinesAndFilters.html#regexpTokenization">Parsing a multipart SOAP message with a regular expression</a></li><li><a href="tutorial-pipelinesAndFilters.html#splitBigSAXSource">Splitting a big SAX source (15MB) to multiple XML chunks thanks to XPath-based filters</a></li></ul><p align="right">[<a href="tutorial-pipelinesAndFilters.html">More...</a>]</p>
+    <a name="N1244D"><!--#--></a><a name="xqueryTutorial"><!--#--></a><h2>XQuery tutorial</h2><p>How to query a native XML database with XQuery, how to copy files to a
+        native XML database. This tutorial doesn't intend to be an XQuery tutorial,
+        but a tutorial for submitting XQuery queries with <span class="active-tags">RefleX</span>
+        in batch mode and within a Web application.</p><ul><li><a href="tutorial-xquery.html#preparingTheServer">Preparing the server</a></li><li><a href="tutorial-xquery.html#loading">Loading files in the XML database</a></li><li><a href="tutorial-xquery.html#querying">Querying the database with XQuery</a></li><li><a href="tutorial-xquery.html#webAppQuery">Running XQuery within a Web application</a></li></ul><p align="right">[<a href="tutorial-xquery.html">More...</a>]</p>
+    <a name="N11809"><!--#--></a><h2>XUnit tutorial</h2>
+        <p>How to test programs that are dealing with XML datas : active sheets, stylesheets,
+            or even Java programs. How to design a test case and how to build the report of
+            a test suite.</p>
+        <p align="right">[<a href="xunit.html#xunitStepByStep">More...</a>]</p>
+    
+
+    <a name="N11819"><!--#--></a><h2>More tutorials</h2>
+        <p>...this is what I'm working on.</p>
+        <p>Other examples are available in the <a href="tips.html">Tips &amp; tricks</a> section,
+            and in the <a href="tests-xop.html">XML-oriented Programming section</a> (they are
+            runnable examples with <span class="active-tags">XUnit</span>).
+            The <a href="xunit.html">XUnit cookbook</a> may also help your learning.</p>
+        <p>The <a href="tests.html">RefleX test suite</a> also contains runnable examples
+            that you can experiment yourself.</p>
+        <!-- An example with parsing DOM and SAX fragments -->
+    
+
+    <a name="N1183D"><!--#--></a><a name="runningTutorial"><!--#--></a><h2>Checking tutorials prerequisites</h2>
+        <p>Ensure that the libraries are reachable by the JVM as explained below.</p>
+
+        <a name="N11845"><!--#--></a>
+            <h3>Running Web applications</h3>
+            <p>The Web applications in the tutorials are <b>NOT</b> standalone :
+                ensure that the libraries expected are either placed on the shared directory of your servlet
+                engine or copied on each web application.</p>
+            <p>Please <a href="running.html#download">download</a> the full or the minimal distribution and refer to
+                the <a href="running.html#install">install</a>
+                and <a href="running.html#running">running</a> sections.</p>
+
+            <h3>Building Web applications</h3>
+            <p>However, if you have <a href="running.html#download">downloaded</a> the full or the source
+                distribution, you can also rebuild with <a href="http://ant.apache.org/" class="extLink">Ant</a> the
+                <b>standalone</b> Web applications by launching the <tt>warallstandalone</tt> target of the
+                build file : <tt>$REFLEX_HOME/build.xml</tt>.
+                Please refer to the documentation of Ant.</p>
+        
+        <a name="N11877"><!--#--></a>
+            <h3>Running Batch scripts</h3>
+            <p>The Batch scripts in the tutorials are standalone :
+                ensure that the libraries expected are in your CLASSPATH.</p>
+            <p>On Unix/Linux, the shell scripts are using the CLASSPATH set, if any ;
+                if it is not the right one, just unset it : the launcher
+                will build the expected CLASSPATH from the install directory.</p>
+            <p>On Windows, the REFLEX_HOME environment variable <b>must</b> be set.</p>
+            <p>Additional informations on running <span class="active-tags">RefleX</span>
+                from the command line interface are available in the
+                <a href="running.html#cli">running section</a>.</p>
+
+            <h3>Running all Batch scripts at once</h3>
+            <p>This is done in the <a href="tests-tutorial.html">test suite</a> thanks to <span class="active-tags">XUnit</span>.</p>
+        
+    
+
+  
+        </div>
+    </td></tr>
+    <tr><td colspan="2"><img alt=" " height="0" src="spacer.png" width="210px"/></td></tr>
+    </table>
+  </body>
+
+
+</html>

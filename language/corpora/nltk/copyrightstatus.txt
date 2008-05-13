@@ -1,0 +1,39 @@
+conll2000		not granted
+conll2002		not granted
+cess_cat		doesn't seem like it
+cess_esp		doesn't seem like it
+chat80			no
+treebank		non-commercial use only
+indian			---
+paradigms		---
+ieer			---
+ycoe			??
+sinica_treebank		Creative Commons Attribution-NonCommercial-ShareAlike License
+
+alpino			"Distributed with NLTK with permission of Gertjan Van Noord"
+floresta		"Distributed with permission"
+mac_morpho		"Distributed with permission"
+pil			"Distributed with permission"
+senseval		"Distributed with permission"
+ppattach		Distributed with NLTK with the permission of the author.
+
+timit			Creative Commons Attribution, Non-Commercial, ShareAlike license
+switchboard		Open Content License
+biocreative_ppi		Public Domain
+
+abc		Text	?? copyrighted acc to current net.au site ??
+
+brown	      tagged	"Distributed with the permission of the copyright holder, redistribution permitted.
+cmudict		Lex	Use of this dictionary, for any research or commercial purpose, is completely unrestricted.  If you use or redistribute this material, we would appreciate acknowlegement of its origin.
+genesis		Text	assumed public domain
+gutenberg	Text	assumed public domain
+inaugural	Text	assumed public domain
+names		Lex	You may use the lists of names for any purpose, so long as credit is given in any published work. You may also redistribute the list if you provide the recipients with a copy of this README file. The lists are not in the public domain (I retain the copyright on the lists) but are freely redistributable.  If you have any additions to the lists of
+problem_reports	Text?	?? Assumed GPL documentation lic??
+shakespeare	Text?	assumed public domain
+state_union	Text	assumed public domain
+stopwords	Lex	?? from ftp://ftp.cs.cornell.edu/pub/smart/ and from snowball.tartarus.org ; second part is BSD License (see http://www.opensource.org/licenses/bsd-license.html ), with Copyright (c) 2001, Dr Martin Porter, and (for the Java developments) Copyright (c) 2002, Richard Boulton.
+udhr		Text	assumed public domain Universal Declaration of Human Rights Corpus
+webtext			Assuming dpublic domainata classification
+wordnet			WordNet® is unencumbered, and may be used in commercial applications in accordance with the following license agreement.  Permission to use, copy, modify and distribute this software and  database and its documentation for any purpose and without fee or  royalty is hereby granted
+words		Lex	assuming BSD license

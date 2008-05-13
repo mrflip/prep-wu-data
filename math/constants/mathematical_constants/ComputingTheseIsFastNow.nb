@@ -1,0 +1,141 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      4094,        132]
+NotebookOptionsPosition[      3380,        103]
+NotebookOutlinePosition[      3716,        118]
+CellTagsIndexPosition[      3673,        115]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+In 1998 or so, it took 10 days 10 hours (250 hours) to compute 4 million \
+digits of the Catalan Number constant.
+My Mac pro took fewer than 20 minutes\
+\>", "Text",
+ CellChangeTimes->{{3.406520991199246*^9, 3.406521054643963*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"catalans", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "c", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"c", "=", 
+         RowBox[{"Timing", "[", 
+          RowBox[{"N", "[", 
+           RowBox[{"Catalan", ",", 
+            SuperscriptBox["10", "x"]}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Print", " ", "[", 
+         RowBox[{"c", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+        "c"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "1", ",", "7"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.4065133953509283`*^9, 3.4065135217999783`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox["0.000035999999999702936`", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.4065134110566063`*^9, 3.406513458735059*^9}, {
+  3.4065134937488623`*^9, 3.4065135225979967`*^9}}],
+
+Cell[BoxData[
+ FormBox["0.000013999999999292356`", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.4065134110566063`*^9, 3.406513458735059*^9}, {
+  3.4065134937488623`*^9, 3.406513522599826*^9}}],
+
+Cell[BoxData[
+ FormBox["0.000011999999999900979`", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.4065134110566063`*^9, 3.406513458735059*^9}, {
+  3.4065134937488623`*^9, 3.406513522601884*^9}}],
+
+Cell[BoxData[
+ FormBox["0.000012999999999152578`", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.4065134110566063`*^9, 3.406513458735059*^9}, {
+  3.4065134937488623`*^9, 3.40651352260291*^9}}],
+
+Cell[BoxData[
+ FormBox["8.000000000230045`*^-6", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.4065134110566063`*^9, 3.406513458735059*^9}, {
+  3.4065134937488623`*^9, 3.40651352260391*^9}}],
+
+Cell[BoxData[
+ FormBox["62.878932000000006`", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.4065134110566063`*^9, 3.406513458735059*^9}, {
+   3.4065134937488623`*^9, 3.406513512581403*^9}, 3.406513585466043*^9}],
+
+Cell[BoxData[
+ FormBox["1121.0099719999998`", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.4065134110566063`*^9, 3.406513458735059*^9}, {
+   3.4065134937488623`*^9, 3.406513512581403*^9}, 3.4065147062537193`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1121.01", "/", "60"}]], "Input",
+ CellChangeTimes->{{3.4065210441887207`*^9, 3.406521047622076*^9}}],
+
+Cell[BoxData[
+ FormBox["18.6835`", TraditionalForm]], "Output",
+ CellChangeTimes->{3.406521047963835*^9}]
+}, Open  ]]
+},
+WindowSize->{1059, 814},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"6.0 for Mac OS X x86 (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 241, 5, 62, "Text"],
+Cell[CellGroupData[{
+Cell[834, 30, 791, 21, 133, "Input"],
+Cell[CellGroupData[{
+Cell[1650, 55, 199, 3, 30, "Print"],
+Cell[1852, 60, 197, 3, 30, "Print"],
+Cell[2052, 65, 197, 3, 30, "Print"],
+Cell[2252, 70, 196, 3, 30, "Print"],
+Cell[2451, 75, 194, 3, 35, "Print"],
+Cell[2648, 80, 215, 3, 30, "Print"],
+Cell[2866, 85, 217, 3, 30, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3132, 94, 124, 2, 40, "Input"],
+Cell[3259, 98, 105, 2, 40, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

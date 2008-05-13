@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-us"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+
+
+<title>Converting Summary File 1 (SF1) Data into an Oracle Platform - FHWA</title>
+<link rel="stylesheet" type="text/css" href="How-To-Convert-Census-Data-For-Oracle_files/hep.css">
+</head><body>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+<tbody><tr> <td bgcolor="#000066"> <img src="How-To-Convert-Census-Data-For-Oracle_files/dotfhwa.gif" alt="U.S. Department of Transportation, Federal Highway Administration" align="middle" border="0" height="31" width="210"> </td>
+<td align="right" bgcolor="#000066"> <a href="http://www.fhwa.dot.gov/index.html"><img alt="FHWA Home" src="How-To-Convert-Census-Data-For-Oracle_files/fhwahome.gif" align="middle" border="0" height="18" width="79"></a><a href="http://www.fhwa.dot.gov/feedback.html"><img alt="Feedback" src="How-To-Convert-Census-Data-For-Oracle_files/feedback.gif" align="middle" border="0" height="18" width="76"></a> </td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr valign="middle">
+<td class="white" bgcolor="#800080">Planning</td>
+<td align="right" bgcolor="#800080">
+<div class="cgrumb">
+<a href="http://www.fhwa.dot.gov/index.html" class="cgrumb">FHWA</a> &gt; <a href="http://www.fhwa.dot.gov/hep/index.htm" class="cgrumb">HEP</a> &gt; <a href="http://www.fhwa.dot.gov/Planning/index.htm" class="cgrumb">Planning</a> &gt; <a href="http://www.fhwa.dot.gov/Planning/census/index.htm" class="cgrumb">Census</a>
+&gt; <a href="http://www.fhwa.dot.gov/Planning/census/data.htm" class="cgrumb">Data</a> </div>
+</td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+<tbody><tr> <td>
+<h2><strong>Census 2000 Data</strong></h2>
+</td>
+<td align="right">&nbsp;</td>
+</tr>
+</tbody></table>
+<p align="center"><strong>Converting Summary File 1 (SF1) Data into an Oracle platform</strong></p>
+<table border="0" cellpadding="4" width="100%">
+<tbody><tr>
+<td>
+<p>Note: This note was posted as e-mail to the CTPP listserve. These
+notes are posted for guidance and help. If you have questions on SF1 or
+other Census 2000 products, please contact your State Data Center.</p>
+<p>Here is a procedure used by Darryl Scott, South Western Regional Planning Agency to convert SF1 data into an Oracle platform.</p>
+<p>INCOMING E-mail from Darryl Scott, </p>
+<p>Here is my experience with importing the data into Oracle.</p>
+<p>My goal was to load all the data for the State of Connecticut, all
+Counties in Connecticut, all Towns in Connecticut, and all tracts,
+block groups, and blocks in Fairfield County from Census 2000 Summary
+File 1 into Oracle and link it to GIS. Below are the steps I took to
+accomplish that task. I do not describe the failed attempts in detail.</p>
+<ol>
+<li> I downloaded the data in ASCII format for Connecticut from the Census Web Site and extracted all the files.</li>
+<li> I imported the ctgeo file into Oracle.</li>
+<li> Then I created a view that contained all the records that I wanted to<br>
+import into Oracle.</li>
+</ol>
+<p>---<br>
+Create view ctfcgeo as</p>
+<p>SELECT sumlev, geocomp, logrecno, state, county, cousub, cousubcc, place,<br>
+placecc, placedc, tract, blkgrp, block, msacmsa, cmsa, macci,<br>
+pmsa, necma, necmacci, ua, uatype, ur, sldu, sldl, vtd, vtdi, zcta3, zcta5,<br>
+arealand, areawatr, arealand/2590000 as area_sqmi, name,<br>
+funcstat, gcuni, pop100, hu100, sdelm, sdsec, sduni, taz, macc, uacp, stfid<br>
+FROM ctgeo<br>
+WHERE (sumlev = '040' and geocomp='00') or (sumlev='050') or <br>
+(sumlev = '060' and Name Like '% town') or (sumlev = '140' and county =<br>
+'001') or (sumlev = '150' and county = '001') or (sumlev = '101' and county = '001');<br>
+---</p>
+<ol start="4">
+<li> I tried to import one data file and delete the unneeded records
+with a SQL command, but the process proved to be very inefficient. So I
+wrote an Avenue Script that extracts the desirable records from sf1
+data files. I saved the list of good values from the logrecno field to
+a text file. The script created one .dat file for each each .uf1 file.
+In addition, the script removed the first four fields from the uf1
+file. The script caused ArcView and even the computer to hang, but that
+was how I knew the script was working.</li>
+</ol>
+<p>---<br>
+mypath="d:\gis\gisdata_temp\Census2000\sumfile1\"</p>
+<p>file_list={"ct00005","ct00006","ct00007","ct00008","ct00009",<br>
+<br>
+"ct00010","ct00011","ct00012","ct00013","ct00014","ct00015","ct00016","ct000<br>
+17","ct00018","ct00019",<br>
+<br>
+"ct00020","ct00021","ct00022","ct00023","ct00024","ct00025","ct00026","ct000<br>
+27","ct00028","ct00029",<br>
+<br>
+"ct00030","ct00031","ct00032","ct00033","ct00034","ct00035","ct00036","ct000<br>
+37","ct00038","ct00039"}</p>
+<p>rec_file=TextFile.Make((mypath+"ctfcgeo_logrecno.txt").AsFileName,#FILE_PERM<br>
+_READ)<br>
+rec_source=rec_file.Read(rec_file.GetSize)<br>
+rec_file.Close</p>
+<p>rec_list_string = {}<br>
+rec_list_number = {}</p>
+<p>rec_list_string=rec_source.AsTokens(nl)<br>
+for each rec in rec_list_string<br>
+rec_list_number.add(rec.AsNumber)<br>
+end</p>
+<p>for each file_prefix in file_list <br>
+data_file_name=(mypath+file_prefix+".uf1").AsFileName<br>
+newdata_file_name=(mypath+file_prefix+".dat").AsFileName</p>
+<p> data_file=LineFile.Make(data_file_name,#FILE_PERM_READ)<br>
+newdata_file=LineFile.Make(newdata_file_name,#FILE_PERM_WRITE)</p>
+<p> for each i in 0..(data_file.GetSize-1)<br>
+dline=data_file.ReadElt<br>
+if (dline=nil) then continue end<br>
+<br>
+dline=dline.Right(dline.Count-15)<br>
+d_recno=dline.Left(7)<br>
+d_num=d_recno.AsNumber<br>
+<br>
+results=rec_list_number.FindByValue(d_num)<br>
+if (results= -1) then continue end<br>
+<br>
+newdata_file.WriteElt(dline)<br>
+<br>
+end</p>
+<p> newdata_file.Close<br>
+data_file.Close<br>
+end</p>
+<p>msgbox.info("Finished Processing Files","Script")</p>
+<p>---</p>
+<ol start="5">
+<li> The following day, I created the SQL statements to create the tables in<br>
+Oracle and control files to import the information in the dat files.
+(These files were compressed into a zip file and attached to this
+document.) I decided to use the same field names as described in the
+data dictionary. I sought help from Nanda Srinivasan at FHWA who told
+me about the sf1combo.xls file found at <a href="http://wwwcf.fhwa.dot.gov/exit.cfm?link=http://mcdc2.missouri.edu/data/sf12000/Tools/">http://mcdc2.missouri.edu/data/sf12000/Tools/</a>. <p>That
+file saved hours of work because I was able to create most of my SQL
+and control files from it. I still had to explore the data files to see
+which fields had decimal places, but fortunately most of the data did
+not have decimal places. I also added the number of the datafile to the
+logrecno field name to make sure that each table had unique fields
+(e.g. logreno1 for ct00001, logrecno2 for ct00002, and so on.) I also
+used TextPad<br>
+(<a href="http://wwwcf.fhwa.dot.gov/exit.cfm?link=http://www.textpad.com">http://www.textpad.com</a>)
+to create the SQL and control files because of its ability to select
+text as blocks rather than lines. The SQL and control files worked and
+I was able to import the data from SF1 into Oracle.</p>
+</li>
+<li> Then I had to link the data to TIGER 2000 files in shape file format. I already had the shape files from <a href="http://wwwcf.fhwa.dot.gov/exit.cfm?link=http://www.geographynetwork.com/">http://www.geographynetwork.com/</a>.
+I created some views in Oracle where I joined the data files to the
+geography file and used the [logreno] field as the common field. Then,
+I used ArcView's Database Access Extension to add the Oracle views to a
+ArcView project. Except for the town level, I discovered that I needed
+to create a common field to link the Oracle views to the shape files.
+Thus, I created a<br>
+stfid field in the ctgeo table with the SQL statements below.</li>
+</ol>
+<p>---</p>
+<p>alter table ctgeo add<br>
+stfid VARCHAR2(16);</p>
+<p>update ctgeo <br>
+set stfid = state||county||tract<br>
+where sumlev='140';</p>
+<p>update ctgeo <br>
+set stfid = state||county||tract||blkgrp<br>
+where sumlev='150';</p>
+<p>update ctgeo <br>
+set stfid = state||county||tract||block<br>
+where sumlev='101';</p>
+<p>---</p>
+<ol start="7">
+<li> To improve performance, I created indexes on the logrecno* field
+on each sf1 table. I also indexed the sumlev field and stfid field in
+the ctgeo field.</li>
+</ol>
+<p>It took a little bit longer than expected, but I accomplished my
+goals. I imported the sf1 data into Oracle and became able to produce
+thematic maps in ArcView. Because of this approach, the sf1 data can be
+used in ArcView, Microsoft Access, and any other software that can
+connect to the Oracle database through an ODBC connection.</p>
+<p> </p>
+<p>Some of the codes I used are documented in the file <a href="http://www.fhwa.dot.gov/Planning/census/sf1_oracle_sql.zip">sf1_oracle_sql.zip</a>.</p>
+</td>
+</tr>
+</tbody></table>
+<p></p><div class="moddate"><script language="JAVASCRIPT" type="text/javascript" src="How-To-Convert-Census-Data-For-Oracle_files/javadate.js"></script>&nbsp;&nbsp;This page last modified on July 21, 2005</div>
+<hr>
+<div align="center">
+<a href="http://www.fhwa.dot.gov/index.html">FHWA Home</a> | <a href="http://www.fhwa.dot.gov/hep/index.htm">HEP Home</a> | <a href="http://www.fhwa.dot.gov/Planning/census/index.htm">Census Issues</a> | <a href="http://www.fhwa.dot.gov/Planning/census/data.htm">Census Data</a> | <a href="http://www.fhwa.dot.gov/feedback.html">Feedback</a> </div>
+<img alt="FHWA" src="How-To-Convert-Census-Data-For-Oracle_files/fhwatag.gif" border="0" height="18" width="76"> <div class="footer" align="center">
+United States Department of Transportation - <strong>Federal Highway Administration</strong> </div>
+</body></html>

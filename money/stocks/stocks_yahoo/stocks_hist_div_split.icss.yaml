@@ -1,0 +1,56 @@
+contributors:
+  - desc: ~
+    uniqid: Yahoo Finance
+    url: http://ichart.finance.yahoo.com/table.csv?s=AAPL&a=00&b=1&c=1900&d=11&e=31&f=2030&g=v&ignore=.csv
+  - desc: ~
+    uniqid: NASDAQ site
+    url: http://www.nasdaq.com/asp/symbols.asp?exchange=q
+  - story: ~
+    uniqid: 'Shared and converted by Philip (flip) Kromer for the [http://infochimp.org|infochimp] project.'
+    url: http://infochimp.org/user/flip
+desc: Dividends and Split events for each US listed stock since 1970.
+fields:
+  - desc: ''
+    name: stock_symbol
+    uniqid: stock_symbol
+  - desc: ''
+    name: stock_uniqid
+    uniqid: stock_uniqid
+  - desc: ''
+    name: date_iso
+    uniqid: date_iso
+  - desc: ''
+    name: event_type
+    uniqid: event_type
+  - desc: ''
+    name: dividend_amount
+    uniqid: dividend_amount
+  - desc: ''
+    name: split_ratio
+    uniqid: split_ratio
+name: US Stock Market Dividends and Splits
+notes:
+  coverage: '[ { time: 1970 to now } ]'
+  rights: ''
+  see_also: |
+    - longtermhistoricalstocks
+    - stocks_hist_div_split
+    - constant_dollars
+  story_usage: ''
+ratings:
+  - initial:
+      accurate:
+        desc: Should be checked against a secondary source
+        rating: 4
+      authoritative:
+        desc: Published by Yahoo from commercial feeds.
+        rating: 4
+      comprehensive:
+        desc: Only 30 something years.
+        rating: 3
+      interesting:
+        desc: Necessary accompaniment to stock market value data
+        rating: 2
+tags: 'financial, stock, market, NYSE, NASDAQ, Dow, s&p, standard, and, poors, 500, dividend, split'
+uniqid: stocks_hist_div_split
+uniqid2: us_stock_market_dividends_and_splits

@@ -1,0 +1,632 @@
+
+name:                   'Physical Properties of Materials - T001'
+tags:		        alloys aluminum beryllium brass bronze carbon cast constants copper density douglas e elasticity fir g glass grey inconel iron lead magnesium mass metal modulus molybdenum monel mu nickel of phosphor poisson ratio rho rigidity s silver stainless steel unit weight
+notes:
+    table_number:       1        
+    desc:               |
+        This table contains commonly used reference data for engineering materials.
+
+        This table includes Modulus of Elasticity, Modulus of Rigidity,
+        Poisson's Ratio and Unit Weight information.
+
+    contributors:
+        name:           Shigley
+        desc:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        cite:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        
+
+name:                   'Properties of Steel - T002'
+tags:		        area brinnel elongation hardness in properties reduction steel steels strength tensile yield
+notes:
+    table_number:       2        
+    desc: |
+        This table contains mechanical property reference data for steel.
+
+        This table includes Yield strength, Tensile strength, Elongation,
+        Reduction in area and Brinnel hardness information.  Data for plain
+        carbon and alloy steel with various heat treatments is provided.
+
+        (Tabulated in accordance with the Unified Numbering System for Metals
+        and Alloys (UNS), Society of Automotive Engineers, Warrendale, Pa.,
+        1975. This reference contains the cross reference numbers for AISI,
+        ASTM, FED, MIL SPEC, and SAE specifications. The values shown for
+        hot-rolled (HR) and cold drawn (CD) steels are estimated minimum values
+        which can usually be expected in the size range of 3/4 to 1-1/4 in. A
+        minimum value is roughly several standard deviations below the
+        arithmetic mean. The values shown for heat-treated steels are so-called
+        typical values. A typical value is neither the mean nor the minimum. It
+        can be obtained by careful control of the purchase specifications and
+        the heat-treatment, together with continuous inspection and testing. The
+        properties shown in this table are from a variety of sources and are
+        believed to be representative. There are so many variables which affect
+        these properties, however, that their approximate nature must be clearly
+        recognized. Multiply strength in kpsi by 6.89 to get strength in MPa.)
+
+    contributors:
+        name:           Shigley
+        desc:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        cite:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+
+name:                   'Properties of Aluminum - T003'
+tags:			aluminum area brinnel elongation fatigue hardness in modulus of properties reduction rupture shear strength temper tensile yield
+notes:
+    table_number:       3        
+    desc:               |        
+        This table contains mechanical property reference data for aluminum and its alloys.
+
+        This table includes Temper, Yield strength, Tensile strength, Shear Modulus of 
+        Rupture, Elongation, Fatigue Strength and Brinnel hardness information.
+        
+        Data for aluminum and its alloys with various heat treatments is provided.
+
+        (Tabulated in accordance with the Unified Numbering System for Metals
+        and Alloys (UNS), Society of Automotive Engineers, Warrendale, Pa.,
+        1975. This reference contains the cross reference numbers for AISI,
+        ASTM, FED, MIL SPEC, and SAE specifications. These are typical
+        properties for sizes of about 1/2 inch. A typical value may be neither
+        the mean nor the minimum. It is a value which can be obtained when the
+        purchase specifications are carefully written and with continuous
+        inspection and testing. The values given for fatigue strength, S_f,
+        correspond to 50e7 cycles of completely reversed stress. Aluminum alloys
+        do not have an endurance limit. The yield strength is 0.2% offset
+        value. Multiply strength in kpsi by 6.89 to get strength in MPa.)
+
+    contributors:
+        name:           Shigley
+        desc:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        cite:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+
+        
+name:                   'Properties of Grey Cast Iron - T004'
+tags:			brinnel cast compressive elasticity endurance grey hardness iron limit modulus of properties rupture shear strength tensile torsional
+notes:
+    table_number:       004       
+    desc:               |        
+        This table contains mechanical property reference data for various grey cast irons.
+
+        This table includes Tensile strength, Compressive Strength, Shear Modulus of 
+        Rupture, Tensile Modulus of Elasticity, Torsional Modulus of Elasticity, 
+        Endurance Limit and Brinnel hardness information.
+        
+        Data for various cast irons, grouped by strength designation, is provided.
+
+        (The American Society for Testing Materials (ASTM) numbering system for
+        grey cast iron is established such that the numbers corespond to the
+        minimum tensile strength in kpsi. Thus an ASTM no. 20 cast iron has a
+        minimum tensile strength of 20 kpsi. Note particularly that the
+        tabulations are typical values. Multiply strength in kpsi be 6.89 to get
+        strength in MPa.)
+
+    contributors:
+        name:           Shigley
+        desc:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        cite:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+
+        
+name:                   'Properties of Some Copper Alloys - T005'
+tags:			alloys beryllium brass brinnel cartridge commercial copper elongation form gilding hardness metal muntz naval of properties red strength temper tensile yellow yield
+
+notes:
+    table_number:       005        
+    desc:               |
+        This table contains mechanical property reference data for Copper based alloys.
+        
+        This table includes Form, Temper, Yield strength, Tensile strength, Elongation 
+        and Brinnel hardness information.
+        
+        Data for various copper alloys is provided.
+
+        (Tabulated in accordance with the Unified Numbering System for 
+        Metals and Alloys (UNS), Society of Automotive Engineers, Warrendale, 
+        Pa., 1975.  This reference contains the cross reference numbers for 
+        AISI, ASTM, FED, MIL SPEC, and SAE specifications.
+        All yield strengths are by 0.5 percent offset method.
+        Multiply strength in MPa by 0.145 to get strength in kpsi.)
+
+    contributors:
+        name:           Shigley
+        desc:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        cite:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+
+        
+name:                   'Properties of Wrought Stainless Steel - T006'
+tags:			annealed area brinnel elongation hard hardness in of properties reduction stainless steel strength tensile yield
+notes:
+    table_number:       006        
+    desc:               |
+        This table contains mechanical property reference data for Stainless Steel.  
+        
+        This table includes Yield strength, Tensile strength, Elongation, Reduction in Area
+        and Brinnel hardness information.
+        
+        Data for stainless steel of various processing types is provided.
+
+        (Tabulated in accordance with the Unified Numbering System 
+        for Metals and Alloys (UNS), Society of Automotive Engineers, 
+        Warrendale, Pa., 1975. This reference contains the cross 
+        reference numbers for AISI, ASTM, FED, MIL SPEC, and SAE 
+        specifications. All yield strengths are obtained using the 
+        0.2 percent offset method. Provided by permission from the 
+        "Metals Handbook," 8th ed, vol 1, p 414, American Society 
+        for Metals, Metals Park, Ohio, 1961. Multiply strength in 
+        kpsi be 6.89 to get strength in MPa.)
+        
+    contributors:
+        name:           Shigley
+        desc:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        cite:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+
+        
+name:                   'Properties of Magnesium Alloys - T007'
+tags:			alloys brinnel compressive elongation fatigue hardness magnesium of properties shear strength tensile yield
+notes:
+    table_number:       007        
+    desc:               |
+        This table contains mechanical property reference data for Magnesium alloys.
+        
+        This table includes Yield strength, Tensile strength, Elongation, Compressive
+        Yield Strength, Brinnel hardness, Shear Strength and Fatigue Strength information.
+        
+        Data for various Magnesium alloys is provided.
+
+        (Since magnesium does not have an endurance limt, the fatigue strength
+        shown is for 50e7 cycles of reversed stress. Data is courtesy of American
+        Magnesium Corporation.)
+
+    contributors:
+        name:           Shigley
+        desc:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+        cite:           Shigley, Mechanical Engineering Design, 1980, McGraw Hill
+
+name:                   'Analysis of Sections and Shapes - Properties of Areas - T101'
+tags:			area centroidal circle distance full gyration hollow inertia modulus moment of or polar properties radius rectangle section triangle
+notes:
+    table_number:       101
+    desc:               |        
+        This table provides formula for calculating section Area, Moment 
+        of inertia, Polar moment of inertia, Section modulus, Radius of 
+        gyration, and Centroidal distance, for various cross section shapes.
+
+        Formula for rectangular, triangular, hollow circle and full circle
+        sections is provided.
+
+
+name:                   'Analysis of Sections and Shapes - Mass Properties of Geometric Shapes - T102'
+tags:			cylinder disk full geometric hollow inertia mass moment of or prism properties rectangle rod shapes
+notes:
+    table_number:       102
+    desc:               |        
+        This table provides formula for calculating mass and mass moment 
+        of inertia for various geometric shapes.  The constant for the acceleration
+        of gravity, g, is in length/time^2 when the density, rho, is given as a weight 
+        density in units of force/length^3. If the density is given in 
+        units of mass per unit volume, the correction for the acceleration of
+        gravity is not required.
+
+        Formula for Bar, Disk, Rectangular Prism, Full Cylinder and Hollow Cylinder is provided.
+        
+name:                   'Fasteners - Dimensions of Round Headed Screws (ASA B18.6-1947) - T201'
+tags:			dimensions head round screw nut bolt fastener size strength sae metric english standard 
+notes:
+    table_number:       201
+    desc:               |
+        This table contains dimensions of round headed machine screws 
+        ranging in thread size from 0 to 3/4 inch nominal diameter.
+
+        This table includes maximum and minimum screw head diameter and 
+        height, slot width and depth as well as maximum screw shaft diameter 
+        information.
+
+        <img alt="Fastener Illustration" src="taba26.gif">
+
+        NOTES:  All dimensions are in inches.  Head dimensions for sizes 7/16 in 
+        and larger are in agreement with round-head cap screw dimensions except 
+        the minimum values have been decreased to provide tolerances in 
+        proportion to balance of table.  The diameter of the unthreaded portion
+        of machine screws shall not be less than the minimum pitch
+        diameter nor more than the maximum major diameter of the thread. 
+        The radius of the fillet at the base of the head shall not exceed one-
+        half the pitch of the screw thread.  
+
+    contributors:
+        name:           V H Laughner and A D Hargan
+        desc:           "Handbook of Fastening and Joining of Metal Parts," by Laughner and Hargan
+        cite:           Vallory H. Laughner and Augustus D. Hargan, "Handbook of Fastening and Joining of Metal Parts," McGraw-Hill Company, New York, 1956.
+        
+name:                   'Fasteners - Dimensions of Hexagonal Headed Screws (ASA B18.2-1952) - T202'
+tags:			dimensions head hexagonal screw nut bolt fastener size strength sae metric english standard 
+notes:
+    table_number:       202        
+    desc:               |
+        This table contains dimensions of hexagonal headed machine screws 
+        ranging in thread size from 1/4 inch to 1-1/2 inch nominal diameter.  
+
+        This table includes maximum and minimum screw head width and 
+        height, (across flats and conrners) as well as maximum screw shaft diameter 
+        information.
+
+        <img alt="Fastener Illustration" src="taba27.gif">
+
+        (Vallory H. Laughner and Augustus D. Hargan, "Handbook of Fastening 
+        and Joining of Metal Parts," McGraw-Hill Company, New York, 1956.) 
+
+        NOTES: All dimensions are in inches. Taper of head (angle between one side 
+        and axis) shall not exceed 2 degrees, specified width across flats being 
+        the largest dimension. Top of head shall be flat and chamfered. Diameter 
+        of top circle shall be maximum width across flats within a tolerance of 
+        minus 15 percent. Bearing surface shall be flat and chamfered, and either 
+        washer-faced or with chamfered corners. Diameters of bearing surface 
+        shall be 95 percent of maximum width across flats within a tolerance of 
+        plus or minus 5 percent. Bearing surface shall be at right angles to axis 
+        of body within a tolerance of 2 degrees for sizes up to and including 1 in, 
+        and within a tolerance of 1 degree for sizes larger than 1 in. The bearing 
+        surface shall be concentric with axis of body within a tolerance of 3 
+        percent of the maximum width across the flats. Minimum thread length shall 
+        be twice the diameter plus 1/4 in for lengths up to and including 6 in; 
+        twice the diameter plus 1/2 in for lengths over 6 in. The tolerance shall 
+        be plus 3/16 in or 2-1/2 threads, whichever is greater. On products that 
+        are too short for minimum thread lengths the distance from the bearing 
+        surface of the head to the first complete thread shall not exceed the 
+        length of 2-1/2 threads, as measured with a ring thread gauge, for sizes 
+        up to and including 1 in and 3-1/2 threads for sizes larger than 1 in. 
+        Threads shall be coarse, fine, or 8-thread series, class 2A for plain 
+        (unplated) cap screws. For plated cap screws, the diamters may be increased 
+        by the amount of class 2A allowance. Thickness or quality of plating 
+        shall be measured or tested on the side of the head. Point shall be flat 
+        and chamfered, length of point to first full thread not to exceed 1-1/2 
+        threads. Tolerance on length for sizes up to and including 3/4 in shall 
+        be minus 1/32 in for lengths up to and including 1 in; minus 1/16 in for 
+        lengths over 1 in to and including 2 in; and minus 3/32 in for lengths 
+        over 2 in to 6 in, inclusive. The tolerance shall be doubled for sizes 
+        over 3/4 in and lengths longer than 6 in. Total runout (eccentricity and 
+        angularity) of thread in relation to body for sizes up to and including 
+        3/4 in shall not exceed 0.010 in for each inch of length when measured 
+        in a sleeve gauge; the deviation of shank from a surface plate on which 
+        it is rolled shall not exceed 0.0312 in. A suggested gauge is shown in 
+        the Appendix. For sizes over 3/4 in total runout shall be subject to 
+        negotiation. Unless otherwise specified, physical properties of steel 
+        cap screws shall correspond to SAE Grades 2 or 5. Cap screws may also 
+        be made from alloy steel, brass, bronze, corrosion-resisting steel, 
+        aluminum alloy, or such other material as specified.
+
+    contributors:
+        name:           V H Laughner and A D Hargan
+        desc:           "Handbook of Fastening and Joining of Metal Parts," by Laughner and Hargan
+        cite:           Vallory H. Laughner and Augustus D. Hargan, "Handbook of Fastening and Joining of Metal Parts," McGraw-Hill Company, New York, 1956.
+
+name:                   'Fasteners - Dimensions of Finished Hexagonal Headed Bolts (ASA B18.2-1952) - T203'
+tags:			bolt dimensions finished head hex hexagonal nut bolt fastener size strength sae metric english standard 
+notes:
+    table_number:       203        
+    desc:               |
+        This table contains dimensions of finished hexagonal headed bolts 
+        ranging in thread size from 1/4 inch to 3 inch nominal diameter.  
+
+        This table includes maximum and minimum screw head width and height,
+        (across flats and conrners) as well as maximum screw shaft diameter
+        information.
+
+        <img alt="Fastener Illustration" src="taba28.gif">
+
+        (Vallory H. Laughner and Augustus D. Hargan, "Handbook of Fastening 
+        and Joining of Metal Parts," McGraw-Hill Company, New York, 1956.) 
+
+        NOTES: All dimensions are in inches. "Finished" in the title refers to 
+        the quality of manufacture and the closeness of tolerance and does not 
+        indicate that surfaces are completely machined. Taper of head (angle 
+        between one side and axis) shall not exceed 2 degrees, specified width 
+        across flats being the largest dimension. Top of head shall be flat and 
+        chamfered. Diameter of top circle shall be maximum width across flats 
+        within a tolerance of minus 15 percent. Bearing surface shall be flat 
+        and either washer-faced or with chamfered corners. Diameter of bearing 
+        surface shall be 95 percent of maximum width across flats within a 
+        tolerance of plus or minus 5 percent. Bearing surface shall be at right 
+        angles to axis of body within a tolerance of 2 degrees for sizes up to 
+        and including 1 in, and within a tolerance of 1 degree for sizes larger 
+        than 1 in. The bearing surface shall be concentric with axis of body 
+        within a tolerance of 3 percent of the maximum width across the flats. 
+        Minimum thread length shall be twice the diameter plus 1/4 in for lengths 
+        up to and including 6 in; twice the diameter plus 1/2 in for lengths 
+        over 6 in. The tolerance shall be plus 3/16 in or 2-1/2 threads, whichever 
+        is greater. On products that are too short for minimum thread lengths, 
+        the distance from the bearing surface of the head to the first complete 
+        thread shall not exceed the length of 2-1/2 threads, as measured with a 
+        ring thread gauge, for sizes up to and including 1 in and 3-1/2 threads 
+        for sizes larger than 1 in. Threads shall be coarse, fine, or 8-thread 
+        series, class 2A for plain (unplated) bolts. For plated bolts, the diameters 
+        may be increased by the amount of class 2A allowance. Thickness or quality 
+        of plating shall be measured or tested on the side of the head. Point 
+        shall be flat and chamfered, length of point to first full thread not to 
+        exceed 1-1/2 threads. Tolerance on length for sizes up to and including 
+        3/4 in shall be minus 1/32 in for lengths up to and including 1 in; minus 
+        1/16 in for lengths over 1 in to and including 2 in; and minus 3/32 in for 
+        lengths over 2 in to 6 in, inclusive. The tolerance shall be doubled for 
+        sizes over 3/4 in and lengths longer than 6 in. Total runout (eccentricity 
+        and angularity) of thread in relation to body for sizes up to and including 
+        3/4 in shall not exceed 0.010 in for each inch of length when measured in 
+        a sleeve gauge; the deviation of shank from a surface plate on which it is 
+        rolled shall not exceed 0.0312 in. A suggested gauge is shown in the 
+        Appendix. For sizes over 3/4 in total runout shall be subject to 
+        negotiation. Unless otherwise specified, physical properties of steel 
+        bolts shall correspond to SAE Grades 2 or 5. Bolts may also be made from 
+        alloy steel, brass, bronze, corrosion-resisting steel, aluminum alloy, or 
+        such other material as specified.
+
+    contributors:
+        name:           V H Laughner and A D Hargan
+        desc:           "Handbook of Fastening and Joining of Metal Parts," by Laughner and Hargan
+        cite:           Vallory H. Laughner and Augustus D. Hargan, "Handbook of Fastening and Joining of Metal Parts," McGraw-Hill Company, New York, 1956.
+        
+name:                   'Fasteners - Dimensions of Finished Hexagonal Nuts and Jam Nuts (ASA B18.2-1952) - T204'
+tags:			dimensions jam nut  nut bolt fastener size strength sae metric english standard 
+notes:
+    table_number:       204        
+    desc:               |        
+        This table contains dimensions of finished hexagonal nuts and
+        jam nuts ranging in thread size from 1/4 inch to 3 inch nominal diameter.  
+
+        This table includes maximum and minimum nut width and 
+        height, (across flats and corners) information.
+
+        <img alt="Nut Illustration" src="taba29.gif">
+
+        NOTES: All dimensions are in inches. "Finished" in the title refers to
+        the quality of manufacture and the closeness of tolerance and does not
+        indicate that surfaces are completely machined. Taper of the sides of
+        nuts (angle between one side and axis) shall not exceed 2 degrees, the
+        specified width across flats being the largest dimension. Tops of nuts
+        shall be flat and chamfered. Diameter of top circle shall be maximum
+        width across flats within a tolerance of minus 15 percent for
+        washer-faced nuts and within a tolerance of minus 5 percent for
+        double-chamfered nuts.  Bearing surface shall be washer-faced or with
+        chamfered corners. Diameter of circle of bearing surface shall be the
+        maximum width across flats within a tolerance of minus 5 percent. Tapped
+        hole shall be counter-sunk 1/64 in over the major diameter of thread for
+        nuts up to and including 1/2 in and 1/32 in over the major diameter of
+        thread for nuts over 1/2 inch in size. Bearing surface shall be at right
+        angles to axis of the threaded hole within a tolerance of 2 degrees for
+        5/8 in nuts or smaller and 1 degree for nuts larger than 5/8 in;
+        therefore the maximum total runout of bearing face would equal the
+        tangent of specified angle times the distance across the flats. Thread
+        shall be coarse, fine, or 8-thread series, class 2B. Suitable material
+        for steel nuts is covered by ASTM A-307; other materials will be as
+        agreed upon by manufacturer and user.  Tolerance on width across flats
+        may be increased 0.015 in for hot-formed nuts 5/8 in and smaller.
+
+    contributors:
+        name:           V H Laughner and A D Hargan
+        desc:           "Handbook of Fastening and Joining of Metal Parts," by Laughner and Hargan
+        cite:           Vallory H. Laughner and Augustus D. Hargan, "Handbook of Fastening and Joining of Metal Parts," McGraw-Hill Company, New York, 1956.
+        
+name:                   'Fasteners - Torque and Stress for Threads - T205'
+tags:			area bolt fastener proof strength stress thread threads torque nut bolt fastener size strength sae metric english standard 
+notes:
+    table_number:       205        
+    desc:               |
+        
+        Torque and Stress for Threads - Suggested Torque Values (+/- 5%) to
+        Produce Corresponding Bolt Loads
+
+        This table contains stress area, proof load, clamp load and
+        assembly torques (dry and lubricated) for threaded fasteners ranging in 
+        thread size from #4 to 4-1/2 inch nominal  Unified thread size.  
+        Data is provided for grade 2, grade 5, grade 8 and grade 9 fasteners.
+
+        <img alt="Grade Illustration" src="grade.gif">
+
+        NOTES:
+            
+        1.  Clamp load = 75% * Proof * stress area.
+        
+        2.  Torque is R * D * T where R = .200 (dry) or .150 (lubricated), D =
+            Nominal diameter (inch) and T = Desired clamp load (lbs).
+            Lubricated includes lubricants, lubrizing plating and hardened
+            washers.
+
+    contributors:
+        name:           V H Laughner and A D Hargan
+        desc:           "Handbook of Fastening and Joining of Metal Parts," by Laughner and Hargan
+        cite:           Vallory H. Laughner and Augustus D. Hargan, "Handbook of Fastening and Joining of Metal Parts," McGraw-Hill Company, New York, 1956.
+        
+        
+name:                   'Shear, Moment and Deflections of Beams - T300'
+tags:			beams deflection load loading moment shear uniform nut bolt fastener size strength sae metric english standard 
+notes:
+    table_number:       300        
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T301'
+tags:			beam cantilever end load nut bolt fastener size strength sae metric english standard 
+notes:
+    table_number:       301
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T302'
+tags:			beam cantilever intermediate load engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       302
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T303'
+tags:			beam cantilever load uniform engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       303
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T304'
+tags:			beam cantilever load moment engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       304
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T305'
+tags:			beam center load simply supported engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       305
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T306'
+tags:			beam intermediate load simply supported engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       306
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T307'
+tags:			beam load simply supported uniform engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       307
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T308'
+tags:			beam load moment simply supported  engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       308
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T309'
+tags:			beam load simply supported twin engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       309
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+        
+name:                   'Shear, Moment and Deflections of Beams - T310'
+tags:			beam load overhang simply supported engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       310
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T311'
+tags:			beam cantilever center load propped engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       311
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T312'
+tags:			beam cantilever intermediate load propped engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       312
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T313'
+tags:			beam cantilever load propped uniform engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       313
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T314'
+tags:			beam centered fixed load engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       314
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T315'
+tags:			beam fixed intermediate load engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       315
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Shear, Moment and Deflections of Beams - T316'
+tags:			beam fixed load uniform engineering beams simply supported cantilever propped cantilever fixed beams formula calculations
+notes:
+    table_number:       316
+    desc:               |        
+        Shear, Internal Moment and deflections for simply supported, cantilever, propped
+        cantilever and fixed beams is provided. Formula for calculation with illustrations is
+        given.
+        
+name:                   'Properties of Structural Member Shapes - T400'
+tags:			aluminum area centroidal distance gyration inertia members modulus moment of radius section steel structural weight
+notes:
+    table_number:       400        
+    desc:               |        
+        Weight per foot of aluminum and steel sections, area, moment of inertia, radius of
+        gyration, centroidal distance and section modulus for various member sections is provided.
+
+name:                   'Properties of Structural Member Shapes - T401'
+tags:			angle equal leg
+notes:
+    table_number:       401        
+    desc:               |        
+        Weight per foot of aluminum and steel sections, area, moment of inertia, radius of
+        gyration, centroidal distance and section modulus for various member sections is provided.
+
+name:                   'Properties of Structural Member Shapes - T402'
+tags:			angle unequal leg
+notes:
+    table_number:       402        
+    desc:               |        
+        Weight per foot of aluminum and steel sections, area, moment of inertia, radius of
+        gyration, centroidal distance and section modulus for various member sections is provided.
+
+name:                   'Properties of Structural Member Shapes - T403'
+tags:			round tubing
+notes:
+    table_number:       403        
+    desc:               |        
+        Weight per foot of aluminum and steel sections, area, moment of inertia, radius of
+        gyration, centroidal distance and section modulus for various member sections is provided.
+
+name:                   'Properties of Structural Member Shapes - T404'
+tags:			'"c channel"'
+notes:
+    table_number:       404      
+    desc:               |        
+        Weight per foot of aluminum and steel sections, area, moment of inertia, radius of
+        gyration, centroidal distance and section modulus for various member sections is provided.
+
+name:                   'Unit Conversion Factors - T500'
+tags:			conversion converter factor factors unit units
+notes:
+    table_number:       500        
+    desc:               |        
+        This table lists many common and uncommon units with conversion factors.
+        

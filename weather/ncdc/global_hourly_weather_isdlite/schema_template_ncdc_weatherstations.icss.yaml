@@ -1,0 +1,172 @@
+contributors:
+  - name: ncdc.noaa.gov
+    role: source
+    title: National Climactic Data Center
+    url: http://www.ncdc.noaa.gov/oa/climate/surfaceinventories.html
+  - name: infochimp.org/flip
+    role: converted
+    title: Philip (flip) Kromer
+    url: http://infochimp.org/flip
+fields:
+  - name: USAF_weatherstation_code
+    story: Air Force Datsav3 station number
+    tags: entity.id.USAF_weatherstation_code
+    type: int:6
+    uniqid: usaf_weatherstation_code
+    units: ~
+  - name: WBAN_weatherstation_code
+    story: NCDC WBAN number
+    tags: entity.id.WBAN_weatherstation_code
+    type: int:5
+    uniqid: wban_weatherstation_code
+    units: ~
+  - name: station_name
+    story: Weather Station Name
+    tags: entity.name.weatherstation
+    type: string:30
+    uniqid: station_name
+    units: ~
+  - name: country_code_wmo
+    story: WMO historical country ID
+    tags: location.countrycode.wmo.a2
+    type: string:2
+    uniqid: country_code_wmo
+    units: ~
+  - name: country_code_fips
+    story: FIPS country ID
+    tags: location.countrycode.fips.a2
+    type: string:2
+    uniqid: country_code_fips
+    units: ~
+  - name: us_state
+    story: State (for stations in the US)
+    tags: location.regioncode.us_state.a2
+    type: string:2
+    uniqid: us_state
+    units: ~
+  - name: ICAO_call_sign
+    story: Weather Station ICAO call sign
+    tags: entity.id.ICAO_call_sign
+    type: string:4
+    uniqid: icao_call_sign
+    units: ~
+  - name: lat
+    story: Latitude in decimal degrees
+    tags: location.coordinate.latitude
+    type: fixed:2.3
+    uniqid: lat
+    units: degrees_latitude
+  - name: lng
+    story: Longitude in decimal degrees
+    tags: location.coordinate.longitude
+    type: fixed:3.3
+    uniqid: lng
+    units: degrees_longitude
+  - name: elevation
+    story: Elevation in meters
+    tags: location.coordinate.altitude_sea_level
+    type: fixed:4.1
+    uniqid: elevation
+    units: meters
+  - name: data_collection_number_of_hourly_records
+    story: Number of NCDC Global Hourly ISD records collected in the given time period
+    tags: data.records.rate
+    type: int:5
+    uniqid: data_collection_number_of_hourly_records
+    units: number
+  - name: data_collection_year
+    story: Year of record
+    tags: data.timestamp.year
+    type: int:4
+    uniqid: data_collection_year
+    units: year
+  - name: data_collection_month
+    story: Month of record
+    tags: data.timestamp.month
+    type: int:2
+    uniqid: data_collection_month
+    units: month
+name: NCDC Global Hourly Weather Stations
+notes:
+  coverage: global
+  formats: '[yaml]'
+  rights: |-2
+       
+       h2. WMO Resolution 40
+       
+       h3. NOAA Policy
+    
+       The following data and products may have conditions placed on their
+       international commercial use. They can be used within the U.S. or for
+       non-commercial international activities without restriction. The
+       non-U.S. data cannot be redistributed for commercial
+       purposes. Re-distribution of these data by others must provide this same
+       notification. A log of IP addresses accessing these data and products
+       will be maintained and may be made available to data providers.
+    
+       For details, please consult
+       "WMO Resolution 40 on the Exchange of Meterological Data":http://www.wmo.int/pages/about/Resolution40.html.
+  see_also: NCDC Global Hourly Weather (ISD-Lite)
+  story: |-2
+    
+       This file gives the name, location, and data inventory for all the
+       weather stations in the <abbr title="US National Climactic Data Center">NCDC</abbr>
+       Integrated Surface Database (Global Hourly) weather datasets.
+    
+       h2. Important Note on Redistribution:
+    
+           The non-U.S. data (ie, data for other countries) within this
+           database are subject to WMO Resolution 40 restrictions, and cannot
+           be redistributed within or outside of the U.S. for any commercial
+           activities.  See **Rights & Restrictions** below.
+    
+       h2. About the Integrated Surface Database
+    
+       The Integrated Surface Database (ISD) consists of global hourly and
+       synoptic observations compiled from numerous sources, into a single
+       common ASCII format and common data model. ISD was developed as a joint
+       activity within Asheville's Federal Climate Complex. The National
+       Climatic Data Center, with U.S. Air Force and Navy partners, began the
+       effort in 1998 with the assistance of external funding from several
+       sources. ISD integrates data from over 100 original data sources,
+       including numerous data formats which were key-entered from paper forms
+       during the 1950's-1970's timeframe. ISD Version 1 was released in 2001,
+       with Version 2 (additional quality control applied) in 2003. Since 2003,
+       there have been continued incremental improvements in automated quality
+       control software.
+    
+       The database comprises over 20,000 stations worldwide, with some having
+       data as far back as 1901, though the data show a substantial increase in
+       volume in the 1940's and again in the early 1970's. Currently there are
+       over 11,000 stations "active" and updated daily in the database. Total
+       data volume (uncompressed) is over 350 gigabytes. ISD includes numerous
+       parameters such as wind speed and direction, wind gust, temperature, dew
+       point, cloud data, sea level pressure, altimeter setting, station
+       pressure, present weather, visibility, precipitation amounts for various
+       time periods, snow depth, and various other elements as observed by each
+       station.
+    
+       
+  usage: |-
+    Data were obtained from NOAA's "NCDC FTP site":ftp://ftp.ncdc.noaa.gov/pub/data/noaa/
+    h3. Notes:
+    
+    Missing station name, etc indicate the metadata are not currently available.
+    The term "bogus" indicates that the station name, etc are not available.
+ratings:
+  - initial:
+      accurate:
+        rating: 5
+        story: ''
+      authoritative:
+        rating: 5
+        story: ''
+      comprehensive:
+        rating: 5
+        story: ''
+      interesting:
+        rating: 1
+        story: ''
+tags: global hourly weather atmospheric pressure temperature huge meta station location
+uniqid: ncdc_global_hourly_weather_stations
+uniqid2: ncdc_global_hourly_weather_stations

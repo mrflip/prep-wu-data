@@ -1,0 +1,967 @@
+
+Content:
+
+The Census Questionnaires
+Population and housing characteristics available on the 100-percent or short form
+Population and housing characteristics available on the sample data or long form
+Census geographic areas and hierarchy
+Diagram of the Census geographic hierarchy
+Geographic areas
+Sources of census digital geographic features
+TIGER files
+Generalized Cartographic boundaries
+Sources of tabular data
+FTP Application
+American Factfinder
+DVD/CD-ROM 
+Geolytics Census CD’s 
+Census 2000 releases
+Summary File 1 (SF 1)
+Subject content
+Geographic content Available in the American FactFinder
+Summary File 2 (SF 2)
+Subject content
+Geographic content Available in the American FactFinder
+Summary File 3 (SF 3)
+Subject content
+Geographic content Available in the American FactFinder
+Summary File 4 (SF 4)
+4.5 Demographic Profiles: 100% and sample data
+4.6 Congressional Apportionment
+4.7 108th Congressional District Summary Files
+4.8 109th Congressional District Summary Files
+4.9 Resident Population
+4.10 1-Percent Public Use Microdata Sample (PUMS) Files
+4.11 5-Percent Public Use Microdata Sample (PUMS) Files
+Hands-On Exercise: Combining Census 2000 TIGER/Line® Data with American FactFinder detailed tables for display in ArcGIS
+
+1. The Census Questionnaires
+The Census Bureau used two different forms to collect Census 2000 data: the 100-percent or short-form, which consists of seven population and housing questions answered by all the households, and the sample data or long-form, which includes the seven basic questions plus additional inquiries answered by approximately one of six households. 
+Questionnaires: : HYPERLINK "http://www.census.gov/dmd/www/2000quest.html" http://www.census.gov/dmd/www/2000quest.html
+ 
+1.1. Population and housing characteristics available on the 100-percent or short form
+Household relationships.
+Race.
+Sex.
+Tenure (whether the home is owned or rented).	
+Age.
+Vacancy characteristics.
+Hispanic or Latino origin.
+
+1.2. Population and housing characteristics available on the sample data or long form
+Population
+Marital status.
+Place of birth, citizenship, and year of entry.
+School enrollment and educational attainment.
+Ancestry.
+Migration (residence in 1995).
+Language spoken at home and ability to speak English.
+Veteran status.
+Disability.
+Grandparents as caregivers.
+Labor force status.
+Place of work and journey to work.
+Occupation, industry, and class of worker.
+Work status in 1999.
+Income in 1999.
+Housing
+Value of home or monthly rent paid.
+Units in structure.
+Year structure built.
+Number of rooms and number of bedrooms.
+Year moved into residence.
+Plumbing and kitchen facilities.
+Telephone service.
+Vehicles available.
+Heating fuel.
+Farm residence.
+Utilities, mortgage, taxes, insurance, and fuel costs.
+2. Census geographic areas and hierarchy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.1. Diagram of the Census geographic hierarchy
+This diagram presents the information as a series of nesting relationships. For example, a line joining the lower-level entity place and the higher-level entity state means that a place cannot cross a state boundary; a line linking census tract and county means that a census tract cannot cross a county line; and so forth.  They all relate back to the most basic unit, the census block.
+2.2. Geographic areas
+ZIP Code A ZIP (Zone Improvement Plan) Code is a five-, seven-, nine-, or eleven-digit code assigned by the U.S. Postal Service to a section of a street, a collection of streets, an establishment, structure, or group of post office boxes, for the delivery of mail. 
+The Census Bureau uses only 5-digit ZIP codes for the addresses and address ranges in most Census 2000 operations.  ZIP Code Tabulation Area (ZCTA) A ZIP Code Tabulation Area is a geographic area that approximates the delivery area for a five-digit or a three-digit ZIP Code. ZCTAs do not precisely depict the area within which mail deliveries associated with that ZIP Code occur.  A five-digit ZCTA ending in "HH" (e.g., "006HH") represents the water area within a three-digit ZCTA that is not associated with any mail delivery route.  
+A five-digit ZCTA ending in "XX" (e.g., "006XX") represents the land area within a three-digit ZCTA that is not associated with any mail delivery route.
+
+Metropolitan area (MA)
+A collective term, established by the federal Office of Management and Budget, to refer to metropolitan statistical areas, consolidated metropolitan statistical areas, and primary metropolitan statistical areas.
+Metropolitan Areas
+Minor Civil divisions /census counties divisions
+
+Urban Area
+Collective term referring to all areas that are urban. For Census 2000, there are two types of urban areas: urban clusters and urbanized areas.
+
+Region
+Four groupings of states (Northeast, South, Midwest, and West) established by the Census Bureau in 1942 for the presentation of census data.  Northeast Region: Maine, New Hampshire, Vermont, Massachusetts, Connecticut, Rhode Island, New Jersey, New York, Pennsylvania  South Region: Maryland, Delaware, West Virginia, Virginia, Kentucky, Tennessee, North Carolina, South Carolina, Georgia, Florida, Alabama, Mississippi, Arkansas, Louisiana, Oklahoma, Texas  Midwest Region: North Dakota, South Dakota, Nebraska, Kansas, Missouri, Iowa, Minnesota, Wisconsin, Illinois, Michigan, Indiana, Ohio  West Region: Washington, Idaho, Montana, Wyoming, Oregon, California, Nevada, Utah, Colorado, Arizona, New Mexico, Alaska, Hawaii  Puerto Rico and the Island areas are not part of any region.
+
+Division
+A grouping of states within a census geographic region, established by the Census Bureau for the presentation of census data. The current nine divisions are intended to represent relatively homogeneous areas that are subdivisions of the four census geographic regions.  New England Division: Maine, Vermont, New Hampshire, Massachusetts, Connecticut, Rhode Island   Middle Atlantic Division: New Jersey, New York, Pennsylvania  South Atlantic Division: Maryland, Delaware, West Virginia, Virginia, North Carolina, South Carolina, Georgia, Florida  East South Central Division: Kentucky, Tennessee, Alabama, Mississippi  West South Central Division: Oklahoma, Arkansas, Texas, Louisiana  East North Central Division: Wisconsin, Michigan, Ohio, Indiana, Illinois  West North Central Division: North Dakota, South Dakota, Nebraska, Kansas, Missouri, Iowa, Minnesota  Mountain Division: Idaho, Montana, Wyoming, Colorado, Utah, Nevada, Arizona, New Mexico  Pacific Division: Washington, Oregon, California, Alaska, Hawaii  Puerto Rico and the Island Areas do not belong to any division.
+
+State and equivalent entity The primary legal subdivision of the United States. The District of Columbia, Puerto Rico and the Island Areas (the U.S. Virgin Islands, Guam, American Samoa, and the Northern Mariana Islands) are each treated as the statistical equivalent of a state for census purposes.
+
+Economic place A statistical subdivision of a state delineated according to Census Bureau guidelines for the purpose of presenting economic census data. Economic places include incorporated places of 2,500 or more people, county subdivisions of 10,000 or more people in 12 designated states, and census designated places in Hawaii. Any residual area within a state is delineated into Economic places so as not to cross the boundaries of any consolidated city, county subdivision in 12 designated states, metropolitan area in New England, or county.
+
+Congressional district (CD) An area established by law for the election of representatives to the United States Congress. Each CD is to be as equal in population to all other CDs in the state as practicable, based on the decennial census counts. The number of CDs in each state may change after each decennial census, and the boundaries may be changed more than once during a decade.  In the District of Columbia and Puerto Rico, a single CD is created consisting of the entire area. The representative is termed a delegate or resident commissioner, respectively and does not have voting rights in Congress.
+
+School District Geographic entities within which state, county, or local officials provide public educational services for the area’s residents. The boundaries and names are provided by state officials.
+
+Urban Growth Area (UGA) Legally defined entity in Oregon. Defined around incorporated places and used to regulate urban growth. They are delineated cooperatively by state and local officials and then confirmed by state law. New for Census 2000.
+
+State legislative district (SLD)
+An area from which members are elected to state legislatures. The SLDs embody the upper (senate) and lower (house) chambers of the state legislature. (Nebraska has a unicameral legislature that is represented as an upper chamber legislative entity.)  State Senate District not defined- The name assigned to an area of unpopulated coastal water within a state that belongs to no state senate district.  State House District not defined- The name assigned to an area of unpopulated coastal water within a state that belongs to no state house district.
+
+Alaska Native Regional Corporation (ANRC) A corporate entity organized to conduct both business and nonprofit affairs of Alaska Natives pursuant to the Alaska Native Claims Settlement Act.
+
+
+Place A concentration of population either legally bounded as an incorporated place, or identified as a Census Designated Place (CDP) including comunidades and zonas urbanas in Puerto Rico. Incorporated places have legal descriptions of borough (except in Alaska and New York), city, town (except in New England, New York, and Wisconsin), or village.
+
+County and equivalent entity The primary legal subdivision of most states. In Louisiana, these subdivisions are known as parishes. In Alaska, which has no counties, the county equivalents are boroughs, a legal subdivision, and census areas, a statistical subdivision. In four states (Maryland, Missouri, Nevada and Virginia), there are one or more cities that are independent of any county and thus constitute primary subdivisions of their states. The District of Columbia has no primary divisions, and the entire area is considered equivalent to a county for statistical purposes. In Puerto Rico, municipios are treated as county equivalents. 
+Voting District (VTD) Any of a variety of areas, such as election districts, precincts, legislative districts, or wards, established by states and local governments for voting purposes.  Voting Districts not defined- The name assigned to an area within a county for which no voting district information is known by the Census Bureau. This designation is used if the state government chose not to provide the Census Bureau with voting district boundaries (e.g., in California), or if that portion of a county (as reported by the state government) is truly devoid of voting districts (e.g., the coastal waters of Sussex County, DE).
+
+Traffic Analysis Zone (TAZ) An area delineated by state and/or local transportation officials for tabulating traffic-related data – especially journey-to-work and place-of-work statistics. Usually consists of one or more census blocks, block groups, or census tracts.
+
+County subdivision A legal or statistical division of a county recognized by the Census Bureau for data presentation. The two major types of county subdivisions are census county divisions and minor civil divisions. 
+County subdivision not defined- The name assigned to an area of unpopulated coastal water within a county that belongs to no county subdivision.
+
+Subbarrio
+The primary legal subdivision of the barrios-pueblo and some barrios in Puerto Rico. There is no United States equivalent.
+
+Census tract A small, relatively permanent statistical subdivision of a county delineated by a local committee of census data users for the purpose of presenting data. Census tract boundaries normally follow visible features, but may follow governmental unit boundaries and other non-visible features in some instances; they always nest within counties. Designed to be relatively homogeneous units with respect to population characteristics, economic status, and living conditions at the time of establishment, census tracts average about 4,000 inhabitants. They may be split by any sub-county geographic entity.
+
+Block group (BG) A subdivision of a census tract (or, prior to 2000, a block numbering area), a block group is the smallest geographic unit for which the Census Bureau tabulates sample data. A block group consists of all the blocks within a census tract with the same beginning number.  Example: block group 3 consists of all blocks within a 2000 census tract numbering from 3000 to 3999. In 1990, block group 3 consisted of all blocks numbered from 301 to 399Z.
+
+Block A subdivision of a census tract (or, prior to 2000, a block numbering area), a block is the smallest geographic unit for which the Census Bureau tabulates 100-percent data. Many blocks correspond to individual city blocks bounded by streets, but blocks – especially in rural areas – may include many square miles and may have some boundaries that are not streets. The Census Bureau established blocks covering the entire nation for the first time in 1990. Previous censuses back to 1940 had blocks established only for part of the nation. Over 8 million blocks are identified for Census 2000. 
+More geographic area definitions are available at:
+ HYPERLINK "http://factfinder.census.gov/" http://factfinder.census.gov/ Glossary.
+ 2.3. Sources of census digital geographic features
+
+2.3.1. TIGER files
+
+TIGER ® is an acronym for the Topologically Integrated Geographic Encoding and Referencing (System or database). It is a digital (computer-readable) geographic database that automates the mapping and related geographic activities required to support the U.S. Census Bureau’s census and survey programs. The U.S. Census Bureau developed the TIGER System to automate the geographic support processes needed to meet the major geographic needs of the 1990 census: producing the cartographic products to support data collection and map presentations, providing the geographic structure for tabulation and dissemination of the collected statistical data, assigning residential and employer addresses to the correct geographic location and relating those locations to the geographic entities used for data tabulation, and so forth. The content of the TIGER database is undergoing continuous updates and is made available to the public through a variety of TIGER/Line ® files that may be obtained free of charge from the Internet or packaged on CD-ROM or DVD from Customer Services, U.S. Census Bureau, Washington, DC 20233-1900.
+
+TIGER files are available for download free, in ArcView Shapefile (.shp) format, from http://arcdata.esri.com/data/tiger2000/tiger_download.cfm
+
+Coordinate System
+Geographic coordinates NAD83 for the 48 contiguous states, NAD27 for Alaska, and Old Hawaiian Datum for Hawaii 
+Units: Decimal degrees
+
+Technical information
+http://www.census.gov/geo/www/tiger/index.html
+
+File Abbreviations
+Abb
+Geographic Area
+lkA
+Line Features - Roads
+lkB
+Line Features - Rails
+lkC
+Line Features - Misc. Transport
+lkD
+Line Features - Landmarks
+lkE
+Line Features – Physical
+lkF
+Line Features – Non-visible
+lkH
+Line Features – Hydrography
+lkX
+Line Features – Unknown
+cty
+County 1990
+ctycu
+County - Current
+cty00
+County 2000
+trt
+Census Tracts 1990
+trt00
+Census Tracts 2000
+grp
+Block Groups 1990
+grp00
+Block Groups 2000
+blk
+Census Blocks 1990
+blk00
+Census Blocks 2000
+plc
+Designated Places 1990
+plc00
+Designated Places 2000
+plccu
+Designated Places – Current
+ccdcu
+County Census Divisions – Current
+ccd00
+County Census Divisions 2000
+vot
+Voting Districts
+vot00
+Voting Districts 2000
+air00
+Indian/Alaska Native Areas
+aits
+American Indian Tribal Subdivisions
+air
+American Indian/Alaska Native Areas
+aircu
+American Indian/Alaska Native Areas - Current
+arc
+Alaskan Native Regional Corporations
+kgl
+Key Geographic Locations
+lpy
+Landmark Polygons
+lpt
+Landmark Points
+taz
+Traffic Analysis Zones
+urb
+Urban Areas
+city
+Consolidated Cities
+elm
+School Districts – Elementary
+mid
+School Districts – Middle
+sec
+School Districts – Secondary
+uni
+School Districts – Unified
+wat
+Water Polygons
+msa00
+CMSA/MSA Polygons 2000
+pms00
+PMSA Polygons 2000
+cd106
+Congressional Districts – 106th
+cdc
+Congressional Districts – Current
+hse
+State House Districts
+sen
+State Senate Districts
+uga
+Oregon Urban Growth Area
+colblk
+Census 2000 Collection Blocks
+zcta
+ZIP Code Tabulation Areas
+sldl
+State Legislative District Lower Chamber
+sldu
+State Legislative District Upper Chamber
+alt
+Alternate Feature Names
+add2
+Address Matching Info
+zip
+ZIP+4 Left and Right Info
+add
+Key Geographic Location Addresses
+lpy2
+Landmark Polygon Names
+lpy3
+Landmark Polygons – Multi-landmark
+wat2
+Water Polygons – Multi-names
+
+
+Available Statewide files and data
+Census Block Demographics (PL94)
+Census Block Demographics (SF1)
+Census Block Group Demographics (SF1)
+Census County Demographics (PL94)
+Census County Demographics (SF1)
+Census Place Demographics (PL94)
+Census Place Demographics (SF1)
+Census State Demographics (PL94)
+Census State Demographics (SF1)
+Census Tract Demographics (PL94)
+Census Tract Demographics (SF1)
+
+2.3.2. Generalized Cartographic boundaries
+http://www.census.gov/geo/www/cob/index.html
+
+The cartographic boundary files are a generalized extract from the U.S. Census Bureau's TIGER database. Line simplification/smoothing was performed with a tolerance of 0.005 decimal degrees and a coordinate reduction using the Douglas-Peucker method with a tolerance of 0.0003 decimal degrees. Very small polygons were eliminated when the combination of geographic codes existed elsewhere. The geography was clipped back to the shoreline of the United States, in contrast to TIGER/Line® which shows the full extent of geography out to the 3-mile limit.
+
+Formats available for free download
+ARC/INFO EXPORT (.e00) format
+ArcView Shapefile (.shp) format
+ARC/INFO Ungenerate (ASCII) format
+
+Coordinate system
+Projection: Geographic (Lat/Lon) 
+Datum: NAD83
+
+Technical information
+ HYPERLINK "http://www.census.gov/geo/www/cob/tech_info.html" http://www.census.gov/geo/www/cob/tech_info.html
+
+File Abbreviations
+Abb
+Geographic Area
+An
+Alaska Native Regional Corporations
+Na for 2000 files 
+ir for 1990 files
+American Indian Areas/Alaska Native Areas/Hawaiian Home Lands (No Hawaiian Home Lands for 1990)
+ts
+Tribal Subdivisions
+bg
+Census Block Groups
+dv
+Census Divisions
+rg
+Census Regions
+tr
+Census Tracts
+cd
+Congressional Districts
+cc
+Consolidated Cities
+co
+County & County Equivalent Areas
+cs
+County Subdivisions (MCDs/CCDs/Barrios)
+pl
+Incorporated Places/Census Designated Places
+ma
+Metropolitan Statistical Areas
+cm for 1999 files, 
+cmsa for 1998 and 1996 files
+Consolidated Metropolitan Statistical Areas
+pm
+Primary Metropolitan Statistical Areas
+ce
+Central Cities
+cm_sa
+Consolidated Metropolitan Statistical Areas and Metropolitan Statistical Areas
+pm_sa
+Primary Metropolitan Statistical Areas and Metropolitan Statistical Areas
+ne
+New England County Metropolitan Areas
+ou
+Oregon Urban Growth Areas
+p1
+Public Use Microdata Areas 1 Percent
+p5
+Public Use Microdata Areas 5 Percent
+se
+School Districts - Elementary
+ss
+School Districts - Secondary
+sn
+School Districts - Unified
+st
+State & State Equivalent Areas
+sl
+State Legislative Districts - Lower/House
+su
+State Legislative Districts - Upper/Senate
+sb
+Subbarrios (Puerto Rico only)
+tz
+Traffic Analysis Zones
+tb
+Tribal Block Groups
+tt
+Tribal Census Tracts
+ua
+Urbanized Areas
+vt
+Voting Districts
+zt
+5-Digit ZIP Code Tabulation Areas
+z3
+3-Digit ZIP Code Tabulation Areas
+
+
+3. Sources of tabular data
+
+3.1.  FTP Application
+(http://www2.census.gov/).
+
+The application is intended for experienced users of census data, compressed files, and   spreadsheet/database software.  
+
+FTP users should have a fast file transfer capability. 
+
+Users of the FTP application need to unzip the compressed file after downloading, and then import it into the spreadsheet/database software of their choice for data analysis and table presentation.
+
+3.2. American FactFinder
+ HYPERLINK "http://factfinder.census.gov" http://factfinder.census.gov
+
+This system provides Internet access to all tables, plus additional derived tables, called Quick Tables, and Geographic Comparison Tables.
+
+The system can create thematic maps on various data items.
+
+The system can create reference maps defining the geographic area.
+
+Tables are available on American FactFinder on the morning of public release. 
+
+3.3. DVD/CD-ROM 
+CD-ROMs are available for individual states on or shortly after the public release date.  These early CD-ROMs are in flat ASCII format without software.   DVDs are created after all states are released.  These DVD’s and the final CD-ROM package contain software.
+
+They can be purchased online ($50 for CD-ROM; $70 for DVD) from the Census Catalog (http://www.census.gov, select Census Catalog from left sidebar) or ordered by telephone from the Customer Services Center (301-457-INFO).
+
+DVDs and CD-ROMs contain the same software.   Software is proprietary but are in a format that can easily be imported into databases or spreadsheets.
+
+The MIT Libraries provide Census information in print and on CD/DVD as it is released by US Census Bureau and state data center.  The collection can be searched using Barton, the library online catalog:  HYPERLINK "http://libraries.mit.edu/barton" http://libraries.mit.edu/barton
+
+3.4. Geolytics Census CD’s 
+Geolytics is a private company that provides US Census data with software to help one create maps and reports at a variety of geographic levels.  Tables created by the user are limited to 250 records.  Information from the 1970, 1980, 1990 and 2000 censuses are available.  More descriptive information can be found at  HYPERLINK "http://www.geolytics.com" http://www.geolytics.com.  Rotch library houses many of the Geolytics products.  To find out what products are available in the MIT libraries, do an advanced search in the online library catalog, Barton ( HYPERLINK "http://libraries.mit.edu/barton" http://libraries.mit.edu/barton), on Publisher: Geolytics.
+
+4. Census 2000 releases
+
+4.1. Summary File 1 (SF 1) – 100% data
+This file presents 100-percent population and housing figures for the total population, for 63 race categories, and for many other races and Hispanic or Latino categories. 
+
+This information is cross-tabulated, which means the interrelation of two or more data characteristics, where each of the categories of one variable is repeated for each of the categories of the other variables. A cross-tabulation is denoted where "by" is used as the conjunction between variable terms, for example, age by sex or age by sex by race.
+
+Technical documentation about summary file 1 can be found at:
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf1.pdf" http://www.census.gov/prod/cen2000/doc/sf1.pdf
+
+4.1.1. Subject content
+171 Population tables (P) at the block level
+56 Housing tables (H) at the block level
+59 Population tables (PCT) at the census tract level
+
+4.1.2. Geographic content Available in the American FactFinder
+Nation
+Region
+Division
+State
+      County
+            County Subdivision
+                  Subbarrio
+            Census Tract
+                  Block Group
+                        Block
+      Place
+      Consolidated City
+      Alaska Native Regional Corporation
+      Congressional District - 106th
+American Indian Area/Alaska Native Area/Hawaiian Home Land
+      Reservation or Statistical Entity Only
+      Off-Reservation Trust Land Only/Hawaiian Home Land
+      Tribal Census Tract
+            Tribal Block Group
+      Tribal Subdivision/Remainder
+Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area
+      Primary Metropolitan Statistical Area
+New England County Metropolitan Area
+Urban Area
+3-Digit ZIP Code Tabulation Area
+      5-Digit ZIP Code Tabulation Area
+
+4.2. Summary File 2 (SF 2) – 100% data
+This file presents data similar to the information included in Summary File 1 (100 percent characteristics or short form). These data are shown down to the census tract level for 250 race, Hispanic or Latino, and American Indian and Alaska Native tribe categories. For data to be shown in SF2, a population category must meet a population size threshold of 100 or more people of that specific population category in a specific geographic area.
+
+Technical documentation about the summary file 2 can be found at:
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf2.pdf" http://www.census.gov/prod/cen2000/doc/sf2.pdf
+
+4.2.1. Subject content
+36 Population tables (PCT) at the census tract level
+11 Housing tables (HCT) at the census tract level
+
+Repeated or iterated for 250 Population Groups:
+Total population
+32 Race groups
+78 American Indian and Alaska Native tribe categories
+39 Hispanic or Latino groups
+
+4.2.2. Geographic content Available in the American FactFinder
+Nation
+Region
+Division
+State
+      County
+            County Subdivision
+                  Subbarrio
+            Census Tract
+      Place
+      Consolidated City
+      Alaska Native Regional Corporation
+American Indian Area/Alaska Native Area/Hawaiian Home Land
+      Reservation or Statistical Entity Only
+      Off-Reservation Trust Land Only/Hawaiian Home Land
+      Tribal Census Tract
+      Tribal Subdivision/Remainder
+Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area
+      Primary Metropolitan Statistical Area
+New England County Metropolitan Area
+Urban Area
+
+4.3. Summary File 3 (SF 3) – sample data
+This file presents data on population and housing from the long form questionnaire, which is collected from a sample of the US population.  It includes data on topics such as: income, education, ancestry and selected characteristics for a limited number of race and Hispanic or Latino categories.
+
+As in earlier censuses, the responses from the sample of households reporting on long forms must be weighted to reflect the entire population. Specifically, each responding household represents, on average, six or seven other households who reported using short forms.
+
+The differences between the long form estimates in SF 3 and values in SF 1 or SF 2 are particularly noticeable for the smallest places, tracts, and block groups. The long form estimates of total population and total housing units in SF 3 will, however, match the SF 1 and SF 2 counts for larger geographic areas such as counties and states, and will be essentially the same for medium and large cities.
+ HYPERLINK "http://www.census.gov/Press-Release/www/2002/sf3compnote.html" http://www.census.gov/Press-Release/www/2002/sf3compnote.html
+
+Technical documentation about Summary File 3 can be found at:
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf3.pdf" http://www.census.gov/prod/cen2000/doc/sf3.pdf
+
+4.3.1. Subject content
+288 Population (P) tables summarized to Block Group Level
+196 Population tables (PCT) summarized to Census Tract Level
+121 Housing tables (H) summarized to Block Group Level
+208 Housing tables (HCT) summarized to Census Tract Level
+
+4.3.2. Geographic content Available in the American FactFinder
+Nation
+Region
+Division
+State
+      County
+            County Subdivision
+                  Subbarrio
+            Census Tract
+                  Block Group
+      Place
+      Consolidated City
+      Alaska Native Regional Corporation
+      Congressional District - 106th
+American Indian Area/Alaska Native Area/Hawaiian Home Land
+      Reservation or Statistical Entity Only
+      Off-Reservation Trust Land Only/Hawaiian Home Land
+      Tribal Census Tract
+            Tribal Block Group
+      Tribal Subdivision/Remainder
+Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area
+      Primary Metropolitan Statistical Area
+New England County Metropolitan Area
+Urban Area
+3-Digit ZIP Code Tabulation Area
+      5-Digit ZIP Code Tabulation Area
+
+4.4. Summary File 4 (SF 4) – sample data
+This file presents data on population and housing from the long form questionnaire, which is collected from a sample of the US population.  For data to be shown in SF 4, there must be at least 50 unweighted sample cases of a specific population category in a specific geographic area. In addition, the data for the specific population category for the specific geographic area must also have been available in Summary File 2.
+
+Technical documentation about Summary File 4 can be found at:
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf4.pdf" http://www.census.gov/prod/cen2000/doc/sf4.pdf
+
+4.4.1. Subject content
+213 Population tables (PCT) at the census tract level
+110 Housing tables (HCT) at the census tract level
+
+Repeated or iterated for 336 Population Groups:
+Total population
+132 Race groups
+78 American Indian and Alaska Native tribe categories
+39 Hispanic or Latino groups
+86 Ancestry groups
+
+4.4.2. Geographic content Available in the American FactFinder
+Nation
+Region
+Division
+State
+      County
+            County Subdivision
+                  Subbarrio
+            Census Tract
+      Place
+      Consolidated City
+      Alaska Native Regional Corporation
+American Indian Area/Alaska Native Area/Hawaiian Home Land
+      Reservation or Statistical Entity Only
+      Off-Reservation Trust Land Only/Hawaiian Home Land
+      Tribal Census Tract
+      Tribal Subdivision/Remainder
+Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area
+      Primary Metropolitan Statistical Area
+New England County Metropolitan Area
+Urban Area
+
+4.5 Demographic Profiles: 100% and sample data
+A profile includes four tables that provide various demographic, social, economic, and housing characteristics for the United States, states, counties, minor civil divisions in selected states, places, metropolitan areas, American Indian and Alaska Native areas, Hawaiian home lands and congressional districts (106th Congress). It includes 100-percent and sample data from Census 2000.
+
+There are four tables in the Demographic Profile, labeled (DP-1 thru DP-4). For Census 2000 data, the DP-1 table is available as part of the Summary File 1 (SF 1) data set, and the other three tables are available as part of the Summary File 3 (SF 3) data set. 
+
+4.6 Congressional Apportionment
+The fundamental reason for conducting the decennial census of the United States is to apportion the members of the House of Representatives among the 50 states. A state's resident population consists of those persons "usually resident" in that state (where they live and sleep most of the time). A state's apportionment population is the sum of its resident population and a count of overseas U.S. military and federal civilian employees (and their dependents living with them) allocated to the state, as reported by the employing federal agencies.
+
+Based on the Census 2000 apportionment, each member of the U.S. House of Representatives represents an average population of 646,952. 
+
+4.7 108th Congressional District Summary Files
+Population and Housing Characteristics for the Congressional Districts of the 108th Congress. Files provides Census 2000 data summaries for the newly defined boundaries of the 108th Congress. Statistics on 100-percent and sample population and housing subjects are presented for all states, District of Columbia and Puerto Rico. Geographic areas include, but are not limited to the following entities with congressional districts: county; county subdivision; place, state portion of American Indian and Alaska Native area (with trust lands and with no trust lands) and Hawaiian home land.
+
+4.8 109th Congressional District Summary Files
+Same as the 108th Congressional District products, except for the following states: Maine, Pennsylvania, and Texas, which were redrawn for the 109th Congress and represent new plans from what is displayed in the 108th Congressional District products. 
+
+4.9 Resident Population
+The data shown in these tables include the resident population of the 50 States, the District of Columbia, and Puerto Rico for April 1, 2000 (Census 2000) and for April 1, 1990 (1990 Census). Consistent with the January 1999 U.S. Supreme Court ruling (Department of Commerce v. House of Representatives, 525 U.S. 316, 119 S. Ct. 765 (1999)), the resident population counts for April 1, 2000 do not reflect the use of statistical sampling to correct for overcounting or undercounting.
+
+An area's resident population consists of those persons "usually resident" in that particular area (where they live and sleep most of the time). A state's apportionment population, on the other hand, is the sum of its resident population and a count of overseas U.S. military and federal civilian employees (and their dependents living with them) allocated to the state, as reported by the employing federal agencies. 
+
+4.10 1-Percent Public Use Microdata Sample (PUMS) Files
+PUMS files have state-level Census 2000 data containing individual records of the characteristics for a 1 percent sample of people and housing units.
+
+The PUMS files contain geographic units called super-Public Use Microdata Areas (super-PUMAs), a new geographic entity for Census 2000. The state files, which may contain one or more super-PUMAs, include geographic equivalency files that show the relationship between the super-PUMA and standard Census 2000 geographic concepts (e.g., counties, etc.). The super-PUMAs are made up of a Public Use Microdata Area (PUMA) or group of contiguous PUMAs (each PUMA must have a minimum of 100,000 population). PUMAs are only identified on the 5-percent files and not on the 1-percent files. 
+
+4.11 5-Percent Public Use Microdata Sample (PUMS) Files
+PUMS files have state-level Census 2000 data containing individual records of the characteristics for a 5 percent sample of people and housing units.
+
+The PUMS files contain geographic units known as super-Public Use Microdata Areas (super-PUMAs) and Public Use Microdata Areas (PUMAs). Each super-PUMA contains a minimum population of 400,000 and each PUMA contains a minimum population threshold of 100,000. Geographic equivalency files that show the relationship between the PUMA and standard Census 2000 geographic concepts (e.g., counties, etc.) are included. 5. Hands-On Exercise: Combining Census 2000 TIGER/Line® Data with American FactFinder detailed tables for display in ArcGIS
+
+Requirements:
+ArcGIS ArcMap
+A personal folder where you can save your data, referred to in this exercise as “yourfolder”.
+Software to unzip files, such as WinZip
+Internet connection
+
+1. Downloading Census 2000 TIGER/Line® Data
+Navigate to Download Census 2000 TIGER/Line® Data  HYPERLINK "http://www.esri.com" http://www.esri.com 
+Click the Products tab and choose data 
+Click Downloadable Data.
+Click Census 2000 TIGER/Line Data.
+Click Download Data
+(alternatively you could type “tiger census” into the search box)
+In Select a State choose New York and click Submit Selection.
+In Select a County choose New York County and click Submit Selection.
+Check the option Census tracts 2000 and click Proceed to Download.
+Click Download File.
+Save the file in yourfolder.
+
+2. Uncompress the zip containing the trt0048201.zip file in yourfolder.
+Using Winzip
+Click Start: Programs
+Click WinZip.
+Click Open.
+Navigate to the location of your file (yourfolder/ [downloaded file]).
+Select the files to extract (trt0036061.zip)
+Extract
+Navigate to the folder where the files will be extracted (yourfolder)
+Click Extract
+
+Using 7-zip (on WinAthena machines)
+Click Start: Programs.
+Click 7-zip: 7zfmn.exe
+Navigate to the location of your file (yourfolder/ [downloaded file]).
+Right click on the file to be extracted (trt0036061.zip)
+Click 7-zip: extract files…
+In the Extract to dialog box enter the path to yourfolder 
+Click Ok
+
+3.Uncompress the trt0036061.zip in yourfolder file because the files are twice compressed
+
+4. Download American FactFinder Data
+Navigate to American FactFinder Website
+ HYPERLINK "http://www.census.gov" http://www.census.gov 
+Click American FactFinder
+Click data sets
+Click Census 2000 Summary File 3. 
+Click Detailed Tables.
+In Select a Geographic Type choose Census Tract.
+In Select a State choose New York.
+In Select a County choose New York County.
+In Select one or more geographic areas and click ‘Add’ choose All Census Tract.
+Click Add.
+Click Next
+In Choose a table selection method choose the by subject tab
+In Select a Subject And Click Search select Race (Including Detailed Categories of Race
+Click Search.
+In Select one or more tables and click 'Add' select P6.Race.
+Click Add.
+Select P7.Hispanic or Latino by Race.
+Click Add.
+Click Show Result.
+Move the mouse to Print/Download. (Top of the page).
+Click Download.
+Choose the option Comma delimited (.txt). 
+Check the option Include descriptive data element names.
+Click OK and save the file in yourfolder.
+
+3.Uncompress the output.zip file in yourfolder.
+
+5. Add the dt_dec_2000_sf3_u_data1.txt table and the tgr36061trt00.shp layer to a New ArcMap Project:
+Start
+Programs
+ArcGIS
+ArcMap
+Add Data  EMBED PBrush  
+Navigate to yourfolder
+If yourfolder is not in the list connect to it using  EMBED PBrush   
+Select the files to add (dt_dec_2000_sf3_u_data1.txt, tgr36061trt00.shp)
+Click Add.
+
+
+6.  Export the table dt_dec_2000_sf3_u_data1.txt as a .dbf format.
+In the table of contents Right-click the table dt_dec_2000_sf3_u_data1.txt
+Click Data.
+Click Export. 
+Click the Export dropdown arrow and click All records. 
+Click the Browse button and navigate to a location to save the exported data  (yourfolder).
+Type the name for the output data source (data.dbf). 
+Click the Save as type dropdown arrow and choose the output type (DBF). 
+Click Save. 
+Click OK to add the new table to the current map.
+
+5. Delete the first record of the data.dbf table (this contains the descriptive data element names).
+Click the Editor Toolbar button  EMBED PBrush   on the ArcMap Standard toolbar to display the Editor toolbar. 
+Click Editor – Start Editing.
+Select yourfolder and the shapefiles type.
+Click OK.
+In the table of contents, right-click the table data.
+Click Open. 
+Select the first record and delete it.
+Click Editor – Stop Editing.
+Click OK to save your edits.
+
+6. Modify the GEO_ID field in the data table to match with the STFID field in the TIGER file Attribute Table.
+
+This process is not standard for modifying all tables from American Factfinder. Joins of two or more tables are based on the value of a field that can be found in both tables. The name of the field does not have to be the same, but the data type has to be the same; you join numbers with numbers, strings with strings, and so on.  Joins will result in a 1:1 relationship where there are exact matches between two tables in the chosen fields.
+
+In the table of contents, right-click the layer tgr36061trt00
+Click Open Attribute Table. 
+In the table of contents, right-click the table data.
+Click Open. 
+Move the tables to compare the content.
+
+Note that the Value for the field GEO_ID is composed by LLL00USSSCCCTTTTTT and the value for the field STFID is composed by SSCCCTTTTTT where LLL is the Census Summary Level, SS is the State number, CCC is the County number, and TTTTTT is the 6-digits Census Tract Number. We can extract the 11 characters from the right of the value of the field GEO_ID to obtain the same value of the Field STFID.
+
+Click Options in the table data. 
+Click Add Field. 
+Type the name of the field (STFID). 
+Click the Type dropdown arrow and click the field type (Text). 
+Click OK.
+Right-click the field (STFID) of the data table.
+Click Calculate Values.
+Click Yes to continue.
+Use the Fields list and Functions to build the following calculation expression:
+STFID =
+Right([GEO_ID],11)
+Click OK
+
+7. Join the table DATA with the layer tgr36061trt00 Attribute Table.
+In the table of contents, right-click the layer tgr36061trt00, point to Joins and Relates, and click Join. 
+Click the first dropdown arrow and click Join attributes from a table. 
+Click the dropdown arrow and click the field name in the layer that the join will be based on (STFID). 
+Click the dropdown to choose the table to join to the layer (data). 
+Click the dropdown arrow and click the field in the table to base the join on (STFID). 
+Click OK.
+
+8. Export the tgr36061trt00 to make the join permanent. 
+Right-click the tgr36061trt00 layer, point to Data, and click Export Data. 
+Click the Export dropdown arrow and click All Features. 
+Click Use the same coordinate system as this layer’s data source. 
+Click the Browse button and navigate to a location to save the exported data. (yourfolder)
+Type the name for the output data source (NY.shp) 
+Click Save. 
+Click Yes to add the new layer to the current map.
+
+9. Modify the Field type in the NY layer Attribute Table (this is a permanent way to change the field name and the field properties)
+In the table of contents, right-click the NY layer.
+Click Open. 
+Click Options in the table. 
+Click Add Field. 
+Type the name of the Field (TOTPOP). 
+Click the Type dropdown arrow and click the new field type (Long Integer). 
+Click OK.
+Right-click the new field heading and click Calculate Values. 
+Check the Field Name (Census Code) for Total Population: Total. (P006001). To find the field name represented by the code number check the of the original file, dt_dec_2000_sf3_u_data1.txt. In the table of contents, Right-click the table and Click Open.
+Use the Fields list and Functions to build the following calculation expression making the new field equal to the old one:
+					[TOTPOP]=
+												[P006001]
+Click OK.
+Right-click over the field header of the old field. 
+Click Delete Field. 
+Click Yes to confirm the deletion.
+
+10 . Create an alias that is easier to understand for the field name
+(An alias name is stored within the ArcMap project file; it is not a permanent change to the data file.  An alias will not allow you to change the field type.  The original field type is string for all the values.  Only fields with a numeric data type will appear in the Layer Properties: symbology tab options for quantities or charts.  An alias name does not have to follow the strict requirements field names must follow.) 
+In the table of contents, right-click the NY layer.
+Click Properties 
+Click the Fields tab 
+Click the field of interest
+Put the cursor in the Alias text box and type in a new name
+Click Ok
+
+11 . Change the symbology to Graduated Colors.
+In the table of contents, right-click the layer you want to draw showing a quantitative value and click Properties. (NY)
+Click the Symbology tab. 
+Click Quantities and click Graduated colors. 
+Click the Value dropdown arrow and click the field that contains the quantitative value you want to map. (TOTPOP)
+Click the Classes dropdown arrow and click the number of classes you want. 
+Click Classify. 
+Click the Method dropdown arrow and click the classification scheme you want. 
+Click OK on the Classification dialog box. 
+Click OK on the Layer Properties dialog box.
+
+*note: the data from American factfinder could be manipulated in many software programs.  ArcGIS recognizes the following data format: .mdb, .dbf, .txt.
+
+Documentation sources:
+U.S. Census Bureau Census 2000 Gateway
+
+Glossary
+ HYPERLINK "http://www.census.gov" http://www.census.gov/main/www/cen2000.html - Glossary
+
+Public use presentation library
+ HYPERLINK "http://www.census.gov/mso/www/pres_lib/index2.html" http://www.census.gov/mso/www/pres_lib/index2.html
+
+Cartographic boundary files
+ HYPERLINK "http://www.census.gov/geo/www/cob/index.html" http://www.census.gov/geo/www/cob/index.html
+
+TIGER®, TIGER/Line® and TIGER-Related Products
+ HYPERLINK "http://www.census.gov/geo/www/tiger/index.html" http://www.census.gov/geo/www/tiger/index.html
+
+American FactFinder
+ HYPERLINK "http://factfinder.census.gov" http://factfinder.census.gov
+
+Summary File 1 technical documentation
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf1.pdf" http://www.census.gov/prod/cen2000/doc/sf1.pdf
+
+Summary File 2 technical documentation
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf2.pdf" http://www.census.gov/prod/cen2000/doc/sf2.pdf	
+
+Summary File 3 technical documentation
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf3.pdf" http://www.census.gov/prod/cen2000/doc/sf3.pdf
+
+Summary File 4 technical documentation
+ HYPERLINK "http://www.census.gov/prod/cen2000/doc/sf4.pdf" http://www.census.gov/prod/cen2000/doc/sf4.pdf
+
+ESRI ArcGIS Desktop Help
+
+
+
+
+
+
+
+
+For more information:
+MIT Libraries Census guide:
+ HYPERLINK "http://libraries.mit.edu/guides/types/census/" http://libraries.mit.edu/guides/types/census/
+
+Missourri Census Data Center: A Cure for the Common Codes
+ HYPERLINK "http://mcdc2.missouri.edu/webrepts/commoncodes/" http://mcdc2.missouri.edu/webrepts/commoncodes/
+
+For more detailed demographic information you may want to explore ICPSR and the Harvard – MIT Data Center.  Both are accessible through the MIT Libraries Social Science Data Services webpage:
+ HYPERLINK "http://libraries.mit.edu/guides/subjects/data/" http://libraries.mit.edu/guides/subjects/data/
+
+For questions about the Census email:
+ HYPERLINK "mailto:rotch-ref@mit.edu" rotch-ref@mit.edu
+
+For questions about mapping Census data email:
+ HYPERLINK "mailto:gishelp@mit.edu" gishelp@mit.edu
+
+
+
+
+
+
+
+
+
+PAGE  
+
+
+PAGE  1
+
+
+
+Working with 
+US Census Data in a 
+Geographic Information System (GIS) 
+
+* The Decennial Census is taken every 10 years to collect information about the people and housing of the United States.
+* The Economic Census profiles the U.S. economy every 5 years. (http://www.census.gov/econ/census02/)
+* The American Community Survey collects information from U.S. households similar to what was collected on the Census 2000 long form, such as income, commute time to work, home value, veteran status, and other important data. The ACS will collect and produce population and housing information every year instead of every ten years. About three million households will be surveyed each year.  The ACS began in 1996 and has expanded each subsequent year. (http://www.census.gov/acs/www/)
+* The Current Population Survey (CPS) is a monthly survey of about 50,000 households conducted by the Bureau of the Census for the
+     Bureau of Labor Statistics. The survey has been conducted for more than 50 years. (http://www.bls.census.gov/cps/overmain.htm)
+* The Population Estimates Program publishes population numbers between censuses.
+
+This guide’s focus is on the US Decennial Census, in particular, Census 2000.
+
+
+
+Metropolitan Areas
+
+Economic Places
+
+ZIP Codes
+
+Counties
+
+Urban Areas
+
+Places
+
+Blocks
+
+Block Groups
+
+Census Tracts
+
+Subbarrios
+
+County 
+Subdivisions
+
+Voting 
+Districts
+
+School 
+Districts
+
+Congressional Districts
+
+AIANHHs
+
+UGAs
+
+SLDs
+
+ANRCs
+
+TAZs
+
+ZCTAs TM
+
+STATES
+
+DIVISIONS
+
+REGIONS
+
+NATION
+
+
+
+
+

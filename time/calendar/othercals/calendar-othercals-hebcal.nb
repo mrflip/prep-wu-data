@@ -1,0 +1,6 @@
+
+( for ((i=1; $i<=3008; i++)) ; do  hebcal -raD  $i ; done ) > hebcal_0001_3008_us.tab
+( for ((i=1; $i<=3008; i++)) ; do  hebcal -raDi $i ; done ) > hebcal_0001_3008_israel.tab
+( for ((i=1; $i<=3008; i++)) ; do  hebcal -raD8 $i ; done ) | \
+	perl -CO -pe 'BEGIN{binmode STDIN,":encoding(ISO-8859-8)"}' \
+  > hebcal_0001_3008_utf8.tab

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="parkinfo-mlb.xsl"?> -->
+<structure>
+
+<head>
+  <title>Country codes: 2-letter (ISO 3166-1), 3-letter () and other keys</title>
+
+  <credit>
+    <a href="http://www.statoids.com/wab.html" class="site">
+      <author>Gwillim Law</author>
+      <org>Statoids.com</org>
+    </a>
+    <a href="http://www.statoids.com/wab.html" class="description">Data fields</a>
+    <a href="http://en.wikipedia.org/wiki/ISO_3166-1" class="reference">Explanation of country codes</a>
+    <date class="srcupdated">2007-10-13</date>
+    <date class="retrieved" >2007-12-04</date>
+  </credit>
+
+  <credit>
+    <a href="http://vizsage.com/" class="site">
+      <preparer>Philip (flip) Kromer</preparer>
+      <org>vizsage.com</org>
+    </a>
+  </credit>
+
+  <keywords>
+    <keyword>ISO</keyword>	<keyword>3166</keyword>	<keyword>3166-1</keyword>
+    <keyword>two-letter</keyword>	<keyword>three-letter</keyword>	<keyword>alpha</keyword>
+    <keyword>country</keyword>	<keyword>unique identifier</keyword>	<keyword>uid</keyword>
+    <keyword>nation</keyword>	<keyword>state</keyword>	<keyword>names</keyword> 
+    <keyword>codes</keyword>	<keyword>code</keyword>
+  </keywords>
+</head>
+
+<data type="countries">
+  <delimited delimiter="%09">
+    <string 	as="country"   	 	 	width=""/>
+    <string 	as="cc-isoalpha2" 	width=""/>
+    <string 	as="cc-isoalpha3" 	width=""/>
+    <integer 	as="cc-isonum"   	 	width="small"/>
+    <string as="cc-ITU"   	 	width=""/>
+    <string as="cc-FIPS"   	 	width=""/>
+    <string as="cc-IOC"   	 	width=""/>
+    <string as="cc-FIFA"   	 	width=""/>
+    <string as="cc-DS"   	 	  width=""/>
+    <string as="cc-WMO"   	 	width=""/>
+    <string as="cc-MARC"   	 	width=""/>
+    <!-- <string as="cc-Independent"/> -->
+    <string as="cc-comment"/>
+  </delimited>
+</data>
+</structure>
+

@@ -1,0 +1,294 @@
+---
+- infochimps_schema:
+        name:           Alphabetical frequency list of the whole corpus (lemmatized)
+        uniqid:         word_freq_bnc_all_lemma
+        tags:           |
+            frequency word words "word count" "word counts" corpus corpora corpuses lemma alphabetized alphabetical
+        notes:
+            desc: |-
+                From CHAPTER 1: Frequencies in the Whole Corpus (Spoken and Written English)
+                Alphabetical frequency list of the whole corpus (lemmatized)
+            shape:      table[1,1]
+
+- infochimps_schema:
+        name:           Rank frequency list for the whole corpus (not lemmatized)
+        tags:           Rank frequency list for the whole corpus not lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 1: Frequencies in the Whole Corpus (Spoken and Written English)
+                Rank frequency list for the whole corpus (not lemmatized) [table 1.2]
+
+
+- infochimps_schema:
+        name:           Alphabetical frequency list: speech v. writing (lemmatized)
+        tags:           Alphabetical frequency list: speech v. writing lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 2: Spoken and Written English
+                Alphabetical frequency list: speech v. writing (lemmatized) [table 2.1]
+
+- infochimps_schema:
+        name:           Rank frequency order: spoken English (not lemmatized)
+        tags:           Rank frequency order: spoken English not lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 2: Spoken and Written English
+                Rank frequency order: spoken English (not lemmatized) [table 2.2]
+
+- infochimps_schema:
+        name:           Rank frequency order: written English (not lemmatized)
+        tags:           Rank frequency order: written English not lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 2: Spoken and Written English
+                Rank frequency order: written English (not lemmatized) [table 2.3]
+
+- infochimps_schema:
+        name:           Distinctiveness list: contrasting speech and writing (ordered by log likelihood)
+        tags:           Distinctiveness list: contrasting speech and writing ordered by log likelihood
+        notes:
+            desc: |-
+                From CHAPTER 2: Spoken and Written English
+                Distinctiveness list: contrasting speech and writing (ordered by log likelihood) [table 2.4]
+
+
+
+
+- infochimps_schema:
+        name:           Alphabetical frequency list: conversational v. task-oriented speech (lemmatized)
+        tags:           Alphabetical frequency list: conversational v. task-oriented speech lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 3: Two Main Varieties of Spoken English Compared
+                Alphabetical frequency list: conversational v. task-oriented speech (lemmatized) [table 3.1]
+
+- infochimps_schema:
+        name:           Distinctiveness list: contrasting conversational v. task-oriented speech (not lemmatized)
+        tags:           Distinctiveness list: contrasting conversational v. task-oriented speech not lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 3: Two Main Varieties of Spoken English Compared
+                Distinctiveness list: contrasting conversational v. task-oriented speech (not lemmatized) [table 3.2]
+
+
+
+
+- infochimps_schema:
+        name:           Alphabetical frequency list: imaginative v. informative writing (lemmatized)
+        tags:           Alphabetical frequency list: imaginative v. informative writing lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 4: Two Main Varieties of Written English Compared
+                Alphabetical frequency list: imaginative v. informative writing (lemmatized) [table 4.1]
+
+- infochimps_schema:
+        name:           Distinctiveness list: imaginative v. informative writing (not lemmatized)
+        tags:           Distinctiveness list: imaginative v. informative writing not lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 4: Two Main Varieties of Written English Compared
+                Distinctiveness list: imaginative v. informative writing (not lemmatized) [table 4.2]
+
+
+
+
+- infochimps_schema:
+        name:           Frequency list of nouns (by lemma)
+        tags:           Frequency list of nouns by lemma
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of nouns (by lemma) [table 5.1]
+
+- infochimps_schema:
+        name:           Frequency list of verbs (by lemma)
+        tags:           Frequency list of verbs by lemma
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of verbs (by lemma) [table 5.2]
+
+- infochimps_schema:
+        name:           Frequency list of adjectives (by lemma)
+        tags:           Frequency list of adjectives by lemma
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of adjectives (by lemma) [table 5.3]
+
+- infochimps_schema:
+        name:           Frequency list of adverbs (not lemmatized)
+        tags:           Frequency list of adverbs not lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of adverbs (not lemmatized) [table 5.4]
+
+- infochimps_schema:
+        name:           Frequency list of pronouns (not lemmatized)
+        tags:           Frequency list of pronouns not lemmatized
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of pronouns (not lemmatized) [table 5.5]
+
+- infochimps_schema:
+        name:           Frequency list of determiners
+        tags:           Frequency list of determiners 
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of determiners [table 5.6]
+
+- infochimps_schema:
+        name:           Frequency list of determiner/pronouns
+        tags:           Frequency list of determiner/pronouns 
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of determiner/pronouns [table 5.7]
+
+- infochimps_schema:
+        name:           Frequency list of prepositions
+        tags:           Frequency list of prepositions 
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of prepositions [table 5.8]
+
+- infochimps_schema:
+        name:           Frequency list of conjunctions
+        tags:           Frequency list of conjunctions 
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of conjunctions [table 5.9]
+
+- infochimps_schema:
+        name:           Frequency list of interjections and discourse particles
+        tags:           Frequency list of interjections and discourse particles 
+        notes:
+            desc: |-
+                From CHAPTER 5: Rank Frequency Lists of Words within Word Classes (Parts of Speech) in the whole corpus
+                Frequency list of interjections and discourse particles [table 5.10]
+
+
+
+
+- infochimps_schema:
+        name:           Alphabetical list: the whole sampler corpus (spoken and written English)
+        tags:           Alphabetical list: the whole sampler corpus spoken and written English
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Alphabetical list: the whole sampler corpus (spoken and written English) [table 6.1.1]
+
+- infochimps_schema:
+        name:           Rank frequency list: the whole sampler corpus
+        tags:           Rank frequency list: the whole sampler corpus 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Rank frequency list: the whole sampler corpus [table 6.1.2]
+
+- infochimps_schema:
+        name:           Alphabetical list: spoken v. written English
+        tags:           Alphabetical list: spoken v. written English 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Alphabetical list: spoken v. written English [table 6.2.1]
+
+- infochimps_schema:
+        name:           Rank frequency list: spoken English compared with written English
+        tags:           Rank frequency list: spoken English compared with written English 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Rank frequency list: spoken English compared with written English [table 6.2.2]
+
+- infochimps_schema:
+        name:           Rank frequency list: written English compared with spoken English
+        tags:           Rank frequency list: written English compared with spoken English 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Rank frequency list: written English compared with spoken English [table 6.2.3]
+
+- infochimps_schema:
+        name:           Distinctiveness list: spoken v. written English
+        tags:           Distinctiveness list: spoken v. written English 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Distinctiveness list: spoken v. written English [table 6.2.4]
+
+- infochimps_schema:
+        name:           Alphabetical list: conversation v. task-oriented speech
+        tags:           Alphabetical list: conversation v. task-oriented speech 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Alphabetical list: conversation v. task-oriented speech [table 6.3.1]
+
+- infochimps_schema:
+        name:           Distinctiveness list: conversation v. task-oriented speech
+        tags:           Distinctiveness list: conversation v. task-oriented speech 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Distinctiveness list: conversation v. task-oriented speech [table 6.3.2]
+
+- infochimps_schema:
+        name:           Alphabetical list: imaginative v. informative writing
+        tags:           Alphabetical list: imaginative v. informative writing 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Alphabetical list: imaginative v. informative writing [table 6.4.1]
+
+- infochimps_schema:
+        name:           Distinctiveness list: imaginative v. informative writing
+        tags:           Distinctiveness list: imaginative v. informative writing 
+        notes:
+            desc: |-
+                From CHAPTER 6: Frequency Lists of Grammatical Word Classes (based on the Sampler Corpus)
+                Distinctiveness list: imaginative v. informative writing [table 6.4.2]
+
+
+
+# File lists
+# In section 1.3 on page 4 of the introduction chapter we wrote:
+# 
+# "The BNC has now been produced in two versions. The original release (Version
+# 1.0) was distributed from 1995. The new BNC (Version 2.0), at the time of
+# going of press, is expected to be released in the winter of 2000/1. The new
+# release, unlike the old one, is to be available (under licence) worldwide. It
+# has certain advantages over the old version, notably (a) improved accuracy of
+# grammatical tagging (undertaken at Lancaster in 1995-96), and (b) correction
+# of details of text classification, which has resulted in the transfer of about
+# a million words from the 'imaginative' category of written texts to the
+# 'informative' category. However, it has also been necessary to reduce the size
+# of the BNC in the worldwide release by 69 texts, owing to the difficulty or
+# impossibility of obtaining world rights for the distribution of those
+# texts. For the purposes of this book, we are using the complete BNC of Version
+# 1.0, and at the same time are making use of the improvements of Version 2.0 -
+# including improved grammatical tagging and text category corrections. This
+# ensures that we base our frequency lists on the best and fullest information
+# available."
+# 
+# In order to make clear the contents of each section of the BNC, we list here
+# the files in each major subcorpus as used in the book. This reflects the
+# classification of texts at time of going to press. For any more recent changes
+# in classification, you may wish to browse the BNC Indexer produced by David
+# Lee. In the table below, click on the number of files in each case to see the
+# corresponding list of files.
+# 
+# Subcorpus	                                Files	    Words
+# Written - imaginative	                    526	        18,439,114
+# Written - informative	                    2683	    71,230,923
+# Spoken - demographic (conversational)	    153	        4,214,926
+# Spoken - context governed (task-oriented)	762	        6,161,272
+# Spoken	                                915	        10,376,198
+# Written	                                3209	    89,670,037
+# Whole corpus	                            4124	    100,046,235                

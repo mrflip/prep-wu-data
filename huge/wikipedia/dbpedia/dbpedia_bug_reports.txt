@@ -1,0 +1,127 @@
+
+===========================================================================
+
+Subtemplates squashed:
+  | coordinates = {{coord|45|12|18|N|076|57|24|W|type:airport|display=inline}}
+becomes
+  <http://dbpedia.org/resource/Renfrew/Hurds_Lake_Water_Aerodrome/coordinates/coord> <http://dbpedia.org/property/display> "inline"@en .
+  <http://dbpedia.org/resource/Renfrew/Hurds_Lake_Water_Aerodrome/coordinates/coord> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.
+org/resource/Template:coord> .
+  <http://dbpedia.org/resource/Renfrew/Hurds_Lake_Water_Aerodrome> <http://dbpedia.org/property/coordinates> <http://dbpedia.org/resource/Renfrew/Hurds_
+Lake_Water_Aerodrome/coordinates/coord> .
+ 
+
+{{Infobox Airport
+| name = Renfrew/Black Donald Lake Water Aerodrome
+| IATA = 
+| ICAO = 
+| LID = CPK8
+| type = Public
+| owner = 
+| operator = White Pines Resort
+| city-served = 
+| location = [[Renfrew, Ontario]]
+| elevation-f = 815
+| elevation-m = 248
+| coordinates = {{coord|45|12|18|N|076|57|24|W|type:airport|display=inline}}
+| website = 
+| r1-number = N/A
+| r1-length-f = N/A
+| r1-length-m = N/A
+| r1-surface = [[Water]]
+}}
+
+===========================================================================
+
+percent_ encoding for wide characters chopped off at end of field in infobox dump
+
+(see also my previous bug "Many fields are encoded with percent_\x\x instead of
+%\x\x in infobox dump".  If that is unexpected behavior they may fix each other.)
+
+There are some unicode characters that are chopped off (see attached).
+For example, the line for Ablon's area is
+  Ablon	km_percent_C2_percent_B	12	l
+  <http://dbpedia.org/resource/Ablon> <http://dbpedia.org/property/km_percent_C2_percent_B> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
+That should be
+  Ablon	km_percent_C2_percent_B2	12	l
+  <http://dbpedia.org/resource/Ablon> <http://dbpedia.org/property/km_percent_C2_percent_B2> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
+giving the UTF-8 encoding for a squared (superscript 2) symbol.
+  
+I don't know if all of the chopped-off-percents happen at the end of the field,
+but here's how I extracted the ones that were:
+
+  cat ./infobox_en.csv | perl -ne 'next unless m/percent_[0-9A-Fa-f]\t/; m/(percent_[0-9A-Fa-f]+_percent_[0-9A-Fa-f])\t/; print "$1\t$_";' > test_infobox_en_csv_percent_truncated.txt
+
+  wc -l test_infobox_en_csv_percent_truncated.txt
+  4455 test_infobox_en_csv_percent_truncated.txt
+
+The unique fields that were messed up are
+
+cat test_infobox_en_csv_percent_truncated.txt | cut -f1 | sort -u
+  percent_84_percent_A
+  percent_95_percent_B
+  percent_99_percent_A
+  percent_9C_percent_B
+  percent_B9_percent_B
+  percent_C2_percent_A
+  percent_C2_percent_B
+  percent_C3_percent_A
+  percent_C3_percent_B
+  percent_C4_percent_B
+  percent_D0_percent_B
+
+  
+===========================================================================
+
+Many property fields are encoded with percent_\x\x instead of %\x\x in infobox dump
+
+A lot of fields in the infobox dump have faulty URL encodings, with for instance
+  1%2C3-Bisphosphoglycerate       reactionAMinorReverseProduct_percent_28s_percent_29     NADsup  l
+  <http://dbpedia.org/resource/1%2C3-Bisphosphoglycerate> <http://dbpedia.org/property/reactionAMinorReverseProduct_percent_28s_percent_29> "NAD<sup>+</sup> + Pi"@en .
+which I believe should be
+  1%2C3-Bisphosphoglycerate       reactionAMinorReverseProduct%28s%29     NADsup  l
+  <http://dbpedia.org/resource/1%2C3-Bisphosphoglycerate> <http://dbpedia.org/property/reactionAMinorReverseProduct%28s%29> "NAD<sup>+</sup> + Pi"@en .
+This error exists on the debug interface on 14 Mar 2008:
+  http://www4.wiwiss.fu-berlin.de/dbp-debug/index.php?resource=1%252C3-Bisphosphoglycerate&lang=en&sent=Search
+Note that some of the messed up fields lack a terminating " quote mark:
+  17.	Resource: http://dbpedia.org/resource/1%252C3-Bisphosphoglycerate
+	Resource: http://dbpedia.org/property/reactionAMinorReverseSubstrate_percent_28s_percent_29
+	Resource: "NADH + Hsup
+and are identified as Resources and not Literals.
+
+The wikipedia page 
+  http://en.wikipedia.org/w/index.php?title=1%2C3-Bisphosphoglycerate&action=edit
+on 14 Mar 2008 shows:
+  ===In glycolysis===
+  {{Biochemical Reaction
+  |reaction_A_major_substrate=<small>D</small>-[[glyceraldehyde 3-phosphate]]
+  |reaction_A_major_substrate_image=D-glyceraldehyde-3-phosphate_wpmp.png
+  |reaction_A_foward_enzyme=[[glyceraldehyde phosphate dehydrogenase]]
+  |reaction_A_reverse_enzyme=[[glyceraldehyde phosphate dehydrogenase]]
+  |reaction_A_reaction_direction_(foward/reversible/reverse)=reversible
+  |reaction_A_minor_reverse_product(s)=NAD<sup>+</sup> '''+''' P<sub>i</sub>
+  |reaction_A_minor_reverse_substrate(s)=NADH '''+''' H<sup>+</sup>
+  |reaction_A_minor_foward_substrate(s)=NAD<sup>+</sup> '''+''' P<sub>i</sub>
+  |reaction_A_minor_foward_product(s)=NADH '''+''' H<sup>+</sup>
+  |reaction_A_major_product=[[1,3-bisphosphoglycerate|1,3-bisphospho-<small>D</small>-glycerate]]
+  |reaction_A_major_product_image=1,3-bisphospho-D-glycerate_wpmp.png
+  |reaction_B_foward_enzyme=[[3-phosphoglycerate kinase]]
+  |reaction_B_reverse_enzyme=[[3-phosphoglycerate kinase]]
+  |reaction_B_reaction_direction_(foward/reversible/reverse)=reversible
+  |reaction_B_minor_foward_substrate(s)=[[ADP]]
+  |reaction_B_minor_foward_product(s)=[[Adenosine triphosphate|ATP]]
+  |reaction_B_minor_reverse_product(s)=[[ADP]]
+  |reaction_B_minor_reverse_substrate(s)=[[Adenosine triphosphate|ATP]]
+  |reaction_B_major_product=[[3-phosphoglycerate|3-phospho-<small>D</small>-glycerate]]
+  |reaction_B_major_product_image=3-phospho-D-glycerate_wpmp.png
+  }}
+  {{KEGG compound|C00118}} {{KEGG enzyme|1.2.1.12}} {{KEGG compound|C00236}} {{KEGG enzyme|2.7.2.3}} {{KEGG compound|C00197}}
+
+properties aren't % encoded:
+  cat ./infobox_en.nt | perl -ne 'm!property/[^>]*%[^>]*>! && print "$1\t$_";' | more
+all of them look like _percent_\x\x
+  cat ./infobox_en.nt | \
+    perl -ne '
+      my @encodes = m!((?:_percent_[a-f\d][a-f\d]?)+)!i or next;
+      print ((join "\n", @encodes)."\n");' | grep '_percent_B>' | more
+

@@ -1,0 +1,17 @@
+solar eclipse
+lunar eclipse
+
+moon phase
+lunation number
+
+
+delta T, [MJT.]JD, TAI, TT
+unix, macos, JD, dotnet, windows, TAI, UTC
+
+timezone transitions
+ SELECT TR.Offset FROM tzTrans TR WHERE (mydate BETWEEN TR.beg AND TR.end)
+
+sunearth.gsfc.nasa.gov		Eclipse, time, lunar phases, ephemeris, transits
+usno.navy.mil			delta T and UTC / TAI / TDT offsets
+moshier.net				more astronomical data -- but relied on nasa instead
+ftp://maia.usno.navy.mil/ser7/

@@ -1,0 +1,140 @@
+<!--
+
+The simple act of telling time is surprisingly complicated.  Here's the short version:
+* If possible, convert everything to TAI seconds using the [[Date to Epoch]] table.
+* If everything takes place on Earth and you want something less opaque, convert all dates to [[Modified Julian Day]] in the [[UTC]] system.  You may find the [[Date to Epoch]] table (going from whatever your dataset holds now to MJD) and the [[Timezone to UTC]] conversions handy.  This is the best way to find the difference between two dates.
+* If someone specifically names one of these arcane timescales like "TDT" or "Ephemeris Julian Day" you can probably just look up the corresponding column in this dataset and convert to TAI or UTC as you prefer.
+* If you only need to deal with modern dates, don't sweat the small stuff: dates in the western world after 1800 are pretty unambiguous.  Use the Gregorian calendar date, the correct time zone and the leap seconds if you care.
+* Astronomers, Estonians and Historians and anyone else measuring long-span durations or times in the past: keep reading.  
+* Finally, and this is the most important. When it comes down to making out, whenever possible, put on side one of Led Zeppelin IV.
+
+== Choose the calendar == 
+* Gregorian is the calendar we use now.
+* Julian is the one used before 1582.  
+* Some people carry the Gregorian calendar all the way back in time ('proleptic').  This author considers it the best choice if you're going to use dates.
+* Most people writing dates informally use the Julian calendar until 1582 and the Gregorian calendar after. The date 1582-10-04 is the day before 1584-10-15, and there is no 1582-10-06 or any of the other intervening days.
+* If you're reading a historical manuscript, different places switched over at different times (Estonia in 1918, Greece in 1924, Turkey on 1 Jan 1927), and different start-of-year conventions have been used.  Consult the excellent Calendar FAQ at
+  http://www.tondering.dk/claus/cal/node3.html
+
+== Years in the distant past ==
+
+The Julian and Gregorian calendars are indicated in integer years. Year 0 (1 BCE, also 1 BC) immediately precedes year 1: 0000-12-31 is the day before 0001-01-01. Similarly Year -1 (2 BC, or 2 BCE) is the year preceding that: 
+  Years BC == Years BCE == IntegerYears - 1
+
+== Elapsed seconds to time of day ==
+
+For long-term time of terrestrial observations (like [[sunrise]], [[moon phases]] or [[transit of Venus]]) you have to be careful about whether your dataset refers to mean solar (terrestrial) time or atomic / dynamic time.  Mean solar time is based on the time from noon one day until noon the next.  Atomic/dynamic time is based on some long-scale constant, such as the vibration period of an atom or the positions of the stars.
+
+If I tell you that an eclipse happened one day (24*60*60 = 86400 seconds) ago, it means that a cesium atom has undergone so-and-so many vibrations and in the meantime the earth has spun about its axis.
+
+Say you'd like to know about a hypothetical eclipse 3000 years ago. Astronomical calculations would tell you this happened 10^11 atomic seconds ago, using (1 year = 365.25 * 24*60*60 seconds), which is some proportionally larger number of cesium transitions.  The problem is that the time for one full rotation has changed slowly over all that time.
+
+Our cesium atoms will have seen 1095750*(24*60*60) atomic seconds worth of time, but the earth will have undergone rather more like 1095000.3 rotations.  If, at straight up noon and standing in Greenwich Observatory, we phoned up a druid living there 1095750*(24*60*60) seconds prior, he wouldn't consider it noon.  Instead he'd tell us it was actually something in the neighborhood of 7pm, and why were we phoning at dinner time? How rude.
+
+The deltaT table which follows gives the value of this offset.  For some distant time, it lets you translate from "X seconds, based on an atomic clock, from then until now" into "seconds since midnight starting the day that was X atomic seconds ago", which in turn lets us talk about the local time for an eclipse or sunset or other terrestrial observation of an astronomical event.
+
+One other point: you'll hear references to "terrestrial" and "mean solar" time.  As far as we're concerned these are the same things: the averaged-over-a-year noon-to-noon time.  (Civil or Local time is the mean solar time adjusted for time zone and daylight savings).  You'll also hear "absolute", "atomic", "ephemeris" or "ephemerides", and "dynamic" time.  These are also the same for our purposes: we measure absolute (independent of the earth's rotation) time with atoms now, but we used to measure absolute time using the motions and positions of objects in the sky.  These positions are called ephemerides (singular ephemeris), and are measurements of dynamical bodies - thus the synonyms.  Just remember 
+* terrestrial time == mean solar  
+* absolute time == atomic == ephemer.* == dynamical
+
+== Working Definitions of the Time Scales == 
+
+International Atomic Time (TAI) is an atomic time.  One TAI second is the time it takes a cesium atom to make 9,192,631,770 atomic transitions, the definition of a second.  TAI time is independent of the sun, moon and stars, but the time from noon to noon is not necessarily 24*60*60.  TAI is our current definition of time.
+
+Universal Time (UT1) is a mean solar time.  It is measured by looking at the sun, moon and stars; the sun reaches its highest point at noon on every UT1 day (averaged over the year), but the number of atomic seconds from one noon to the next varies as the rotational speed of the earth changes over centuries.  For our purposes, the older GMT and UT are identical to UT1.  
+
+Universal Coordinated Time (UTC) is an atomic time (an integer offset of TAI) with leap seconds inserted so that it stays near UT1 (the solar time).  Each second is exactly the same length, independent of the earth.  To unambiguously label a moment in time or to find the time elapsed between two distant moments, you need both the UTC seconds count *and* the number of total leap seconds to that point.  For times in the future leap seconds will be introduced so that UTC and UT1 will not vary by more than 0.9s.  For times in the past UTC and UT1 diverge; see deltaT. UTC is the most widely used timescale by non-specialists and is sufficient for most purposes.
+
+Terrestrial Time (TT) does not depend on the variable rotation of the earth; one tropical year is taken to be 24*60*60*365.25 atomic seconds.  For our purposes ephemeris time (ET), terrestrial dynamical time (TDT) and terrestrial time (TT) are treated as identical.  Astronomical ephemeris (ephemerides) tables are usually published in TT.
+
+The Julian Day (JD) and its friends MJD, TJD and Rata Die day are mean solar (terrestrial) day offsets from a certain timepoint.  Since they are mean solar times, they need to be corrected by deltaT if you care about what accumulates to minutes of error over millenial timespans.  While these are almost always taken to be mean solar times, they are sometimes carelessly used as atomic/dynamic/ephemeris times.  It's therefore helpful to explicitly clarify that you're using the mean solar versions as 'JD UT' or similar.  People referencing the absolute timescale will often specify this as 'JD TT' or the older 'JDE' or 'JED'.
+
+The following scales are beyond the scope of this dataset but can be computed straightforwardly from the values given here.  
+* UT2, UT0, GCT - slight modifications to mean solar time.
+* Barycentric dynamical time (TDB), Barycentric Coordinate Time (TCB), Geocentric Coordinate Time (TCG) and GPS time - slight modifications to atomic time.
+* Greenwich Mean Sidereal Time (GMST), Greenwich Apparent Sidereal Time (GAST), Local Mean Sidereal Time (LMST), Local Sidereal Time (LST) - yet another timescale corresponding to the earth's revolution about the sun.
+For the hairy details, see the references below.
+
+* TAI:			
+    International Atomic Time; defines the second.
+* TAI64:		
+    Seconds since 1970-01-01TAI + 2^62 
+* TT, TDT, ET:		
+    TT     = TAI + 32.184 s		always
+    TT	   = TDT = ET more or less
+* UTC:  		
+    UTC    = TAI + 32.184 - deltaT 	before 1972
+    UTC    = TAI + 10 + leapsecs	after  1972  (leapsec=0 on 1972-01-01)
+    UTC    = UT1   	      		before 1972
+    UTC    = UT1  - DUT1		after  1972
+* UT1, UT, GMT:		
+    UT1    = TT  - deltaT		always
+    UT1    = TAI + 32.184 - deltaT	always
+    UT1    = UTC + DUT1	       	        always
+    UT1    = TAI + 32.184 - deltaT	always
+    UT1    = GMT = UT more or less
+* DUT1			
+    DUT1 = UT1 - UTC     	        always
+    taken to be zero   		   	before 1972
+    UTC is adjusted so abs(DUT1) < 0.9s after  1972
+* deltaT:
+    deltaT = TT  - UT1			always
+    deltaT = TAI - UTC + 32.184 - DUT1  always
+  			
+* Gregorian Date:	Gregorian calendar date, reckoned back in time as if it
+  	    		were always in use.
+* Julian Date:	 	Julian calendar date, reckoned back in time as if it
+  	 		were always in use.
+* Informal Date:	Gregorian calendar date after 1584-10-15; 
+  	   		Julian date until 1582-10-04. 
+			1584-10-15 is the day after 1582-10-04;
+			Oct 05 through Oct 14 of 1584 don't exist.
+			Not all countries switched to Gregorian in 1584.
+* Julian Day:   	mean solar days from noon     on -4713-11-24 Gregorian.
+* Modified Julian Day:  mean solar days from midnight on  1858-11-17 Gregorian.
+* Truncated Julian Day: mean solar days from midnight on  1968-05-24 Gregorian.
+* Rata Die Day: 	mean solar days from midnight on  0000-12-31 Gregorian.
+* Rata Die Seconds:     RataDieDay * 24*60*60
+* Julian Day Seconds:	JulianDay  * 24*60*60
+* Unix time_t:		UTC seconds since 1970-01-01T00:00:00        no leap sec
+* Active Directory:	UTC seconds since 1601-01-01T00:00:00 * 10^7 no leap sec
+* Dot Net:	 	UTC seconds since 0001-01-01T00:00:00 * 10^6 no leap sec
+* Mac OS Classic:	UTC seconds since 1904-01-01T00:00:00 	     no leap sec
+* MySQL:		1000-01-01 to 9999-12-31: that Gregorian date
+ 			0000-01-01 to 0199-12-31: add 1900 to year
+ 			0200-01-01 to 1000-01-01: inconsistent implementation
+* MySQL Year:		Gregorian year; defined 1800 to 2055 only
+* Excel Integer (Win):	 1 + days since 1900-01-01 for 1900-01-01 to 1900-02-28
+      			60 + days since 1900-03-01 for 1900-03-01 to 9999-12-31
+			Excel  0 and negative are best considered undefined.
+			Excel  1 = 1900-01-01
+			Excel 59 = 1900-02-28 
+			Excel 60 = undefined (wrongly displayed as 1900-02-29).
+			Excel 61 = 1900-03-01
+			Excel 2958465 = 9999-12-31
+* Excel Integer (Mac):	days since 1904-01-01
+  			MacExcel 2957003 = 9999-12-31
+			undefined otherwise
+
+See also: 
+Calendar FAQ
+  http://www.tondering.dk/claus/cal/node3.html
+time systems:
+  http://en.wikipedia.org/wiki/Terrestrial_Dynamic_Time
+  http://scienceworld.wolfram.com/astronomy/Time.html
+  http://cr.yp.to/libtai/tai64.html
+delta T
+  http://osdir.com/ml/lang.haskell.libraries/2005-01/msg00107.html
+  http://sunearth.gsfc.nasa.gov/eclipse/SEhelp/deltat2004.html
+  http://user.online.be/felixverbelen/dt.htm
+  http://tycho.usno.navy.mil/systime.html
+  http://stjarnhimlen.se/comp/time.html
+  http://web.archive.org/web/20050308031114/www.phys.uu.nl/~vgent/astro/deltatime.htm
+epoch conversions, lunar phenomena
+  http://datetime.perl.org/
+  http://en.wikipedia.org/wiki/Full_moon_cycle
+Time zone info
+  http://www.twinsun.com/tz/tz-link.htm
+
+
+-->

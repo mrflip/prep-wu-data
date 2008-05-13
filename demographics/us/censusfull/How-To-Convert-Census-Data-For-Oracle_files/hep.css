@@ -1,0 +1,293 @@
+body  {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size:  13px;
+	margin-bottom : 0px;
+	margin-left : 0px;
+	margin-right : 0px;
+	margin-top : 0px;
+	background-color : #FFFFFF;
+
+	}
+P, UL, OL, LI, CENTER, TD, TH, FORM, B, I, BLOCKQUOTE, EM, STRONG {
+   font-family:  Arial, Helvetica, sans-serif;
+   }
+h1 {
+   color: #000066;
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size:  20px;
+   font-weight:  bold;
+   margin-bottom: 5px;
+   }
+H2 {
+   color: #000066;
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size:  18px;
+   font-weight:  bold;
+   }
+H3 {
+   color: #000066;
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size:  16px;
+   font-weight:  bold;
+   }
+H4 {
+	color: #000066;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	 font-style: normal;
+}
+H5 {
+   color: #000066;
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size:  14px;
+   font-weight:  bold;
+   }
+P.small {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 11px; 
+   }
+.small {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 11px ; 
+   }
+.nonptext {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 13px; 
+   }
+
+.green {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 14px; 
+   font-weight:  bold;
+   color: #006600;
+   }
+.purple {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 14px; 
+   font-weight:  bold;
+   color: #800080;
+   }
+.blue {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 14px; 
+   font-weight:  bold;
+   color: #336699;
+   } 
+.pagehead {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 20px; 
+   font-weight:  bold;
+   color: #000066;
+   }
+.white {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 14px; 
+   font-weight:  bold;
+   color: #FFFFFF;
+   }
+.cgrumb {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #FFFFFF;
+}
+.cgrumb:hover {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #FFFFFF;
+   text-decoration: none;
+}
+.cgrumb:visited {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #FFFFFF;
+}
+.cgrumb2 {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #000000;
+}
+.cgrumb2:hover {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #000000;
+   text-decoration: none;
+}
+.cgrumb2:visited {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #000000;
+}
+.cgrumb3 {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #006600;
+}
+.cgrumb3:hover {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #006600;
+   text-decoration: none;
+}
+.cgrumb3:visited {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 10px; 
+   color: #006600;
+}
+.dkblue {
+   font-family: Arial, Helvetica, sans-serif; font-size: 14px; 
+   font-style: normal; line-height: normal; 
+   font-weight: bold; color: #000066;
+}
+.memo {  
+   font-family: Arial, Helvetica, sans-serif; font-size: 40px; 
+   font-style: normal; 
+   font-weight: bold;
+   color: #000;
+}
+caption  {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size:  12px;
+   font-weight:  bold;
+   }
+.red {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #FF0000
+}
+.tspace {
+	margin-right: 4px;
+	margin-left: 4px;
+	margin-bottom: 5px;
+}
+.content {
+	margin-right: 4px;
+	margin-left: 4px;
+}
+.lispace {
+	margin-top: 2px;
+	margin-bottom: 3px;
+}
+.padding {
+padding-left: 1em;
+}
+
+.padding2 {
+padding-left: 2em;
+}
+
+.hilite {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	background : #FFFF00;
+	border : thin groove;
+	padding : 1px 1px 1px 1px;
+	white-space: nowrap;
+}
+   
+.footer {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.tdbggray {
+	background: #F0F0F0;
+}
+
+.fspubstbl {
+border-top:1px solid black;
+border-bottom:1px solid black;
+	}
+.caption300 {
+	text-align: left;
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#safetealu
+
+{margin-right: auto; margin-top: 10px; margin-left: auto; width: 80%; float: none; padding-right: 16px; padding-left: 16px;}
+
+.dingbat 
+{
+	list-style-image: url(dingbat.gif);
+	list-style-position : outside;
+
+}
+
+.tdbgmain {color: #FFF; background-color: #000066; font-weight: bold; font-size: 1.1em;}
+.tdbgmain p {padding-top: 2px; padding-bottom: 2px; margin-top: 2px; margin-bottom: 2px;}
+
+#searchtext {
+
+	left: -9999px;
+	position: absolute;
+
+}
+
+.hidetext {
+text-indent: -9999px;
+	position: absolute;
+}
+
+.hidelabel {
+display: none;
+}
+
+.pindent {
+	text-indent: 2em;
+	margin: 1px;
+	padding:1px;}
+	
+.pindent2 {
+	text-indent: 4em;
+	margin: 1px;
+	padding:1px;}
+	
+.pindent3 {
+	text-indent: 6em;
+	margin: 1px;
+	padding:1px;}
+	
+.pindent4 {
+	text-indent: 8em;}
+
+/* table  background colors */
+
+.ltblue {background-color: #99CCFF;
+	}
+
+.lilac {
+	background-color: #C0C0C0;
+}
+
+.dkpink {
+	background-color: #FFCC99;
+}
+
+.ltyellow {
+	background-color: #FFFF99;
+}
+
+.hepbar {color: #000080; background-color: #FFFFCC;}
+.fhwabar {color: transparent; background-color: #000066;}
+
+/* ID datespace adds space above the javadate.js if the preceding line does not have a <p> tag */
+
+#datespace {
+	padding-top: 6px; margin-top: 6px;
+}
+
+.nopadding {
+	padding: 0; margin: 0;
+}

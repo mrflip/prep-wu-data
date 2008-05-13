@@ -1,0 +1,141 @@
+
+Odds of Death Due to Injury, United States, 2005
+						
+Type of Accident or Manner of Injury 	Deaths 	One Year Odds 	Lifetime Odds
+All External Causes of Mortality, V01-Y89, *U01 a, *U03 a	176,406 	1,677 	22
+	Deaths Due to Unintentional (Accidental) Injuries, V01-X59, Y85-Y86 	117,809 	2,512 	32
+		Transport Accidents, V01-V99, Y85 	48,441 	6,108 	78
+		Motor-Vehicle Accidents, V02-V04, V09.0, V12-V14, V19.0-V19.2, V19.4-V19.6, V20-V79, V80.3-V80.5, V81.0-V81.1, V82.0-V82.1, V83-V86, V87.0-V87.8, V88.0-V88.8, V89.0, V89.2	43,508 	6,801 	87
+		Pedestrian, V01-V09 	6,074 	48,715 	625
+		Pedalcyclist, V10-V19 	927 	319,197 	4,098
+		Motorcycle rider, V20-V29 	4,387 	67,448 	866
+		Occupant of three-wheeled motor vehicle, V30-V39 	5 	59,179,179 	759,681
+		Car occupant, V40-V49 	14,584 	20,289 	260
+		Occupant of pick-up truck or van, V50-V59 	3,797 	77,929 	1,000
+		Occupant of heavy transport vehicle, V60-V69 	450 	657,546 	8,441
+		Bus occupant, V70-V79 	59 	5,015,185 	64,380
+		Animal rider or occupant of animal-drawn vehicle, V80 	120 	2,465,799 	31,653
+		Occupant of railway train or railway vehicle, V81 	33 	8,966,542 	115,103
+		Occupant of streetcar, V82 	0 	--- 	---
+		Other and unspecified land transport accidents, V83-V89 	16,148 	18,324 	235
+			Occupant of special industrial vehicle, V83 	19 	15,573,468 	199,916
+			Occupant of special agricultural vehicle, V84 	154 	1,921,402 	24,665
+			Occupant of special construction vehicle, V85 	33 	8,966,542 	115,103
+			Occupant of all-terrain or other off-road motor vehicle, V86 	1,040 	284,515 	3,652
+			Other and unspecified person, V87-V89 	14,902 	19,856 	255
+		Water transport accidents, V90-V94 	523 	565,767 	7,263
+			Drowning, V90, V92 	394 	751,005 	9,641
+			Other and unspecified injuries, V91, V93-V94 	129 	2,293,767 	29,445
+		Air and space transport accidents, V95-V97 	590 	501,518 	6,438
+		Other and unspecified transport accidents and sequelae, V98-V99, Y85 	744 	397,710 	5,105
+			Other specified transport accidents, V98 	2 	147,947,949 	1,899,203
+			Unspecified transport accident, V99 	18 	16,438,661 	211,023
+		Nontransport Unintentional (Accidental) Injuries, W00-X59, Y86 	69,368 	4,266 	55
+		Falls, W00-W19 	19,656 	15,054 	193
+			Fall on same level from slipping, tripping, and stumbling, W01 	698 	423,920 	5,442
+			Other fall on same level, W00, W02-W03, W18 	5,224 	56,642 	727
+			Fall involving bed, chair, other furniture, W06-W08 	899 	329,139 	4,225
+			Fall on and from stairs and steps, W10 	1,690 	175,086 	2,248
+			Fall on and from ladder or scaffolding, W11-W12 	477 	620,327 	7,963
+			Fall from out of or through building or structure, W13 	533 	555,152 	7,126
+			Other fall from one level to another, W09, W14-W17 	694 	426,363 	5,473
+			Other and unspecified fall, W04-W05, W19 	9,441 	31,342 	402
+		Exposure to inanimate mechanical forces, W20-W49 	2,845 	104,006 	1,335
+			Struck by or striking against object, W20-W22 	854 	346,482 	4,448
+			Caught between objects, W23 	103 	2,872,776 	36,878
+			Contact with machinery, W24, W30-W31 	755 	391,915 	5,031
+			Contact with sharp objects, W25-W29 	85 	3,481,128 	44,687
+			Firearms discharge, W32-W34 	789 	375,026 	4,814
+			Explosion and rupture of pressurized devices, W35-W38 	26 	11,380,611 	146,093
+			Fireworks discharge, W39 	4 	73,973,974 	949,602
+			Explosion of other materials, W40 	147 	2,012,897 	25,840
+			Foreign body entering through skin or natural orifice, W44-W45 	37 	7,997,186 	102,660
+			Other and unspecified inanimate mechanical forces, W41-W43, W49 	45 	6,575,464 	84,409
+		Exposure to animate mechanical forces, W50-W64 	161 	1,837,863 	23,593
+			Struck by or against another person, W50-W52 	26 	11,380,611 	146,093
+			Bitten or struck by dog, W54 	33 	8,966,542 	115,103
+			Bitten or struck by other mammals, W53, W55 	80 	3,698,699 	47,480
+			Bitten or stung by nonvenomous insect and other arthropods, W57 	9 	32,877,322 	422,045
+			Bitten or crushed by other reptiles, W59 	0 	--- 	---
+			Other and unspecified animate mechanical forces, W56, W58, W60, W64 	13 	22,761,223 	292,185
+		Accidental drowning and submersion, W65-W74 	3,582 	82,606 	1,060
+			Drowning and submersion while in or falling into bath-tub, W65-W66 	344 	860,162 	11,042
+			Drowning and submersion while in or falling into swimming-pool, W67-W68 	607 	487,473 	6,258
+			Drowning and submersion while in or falling into natural water, W69-W70 	1,603 	184,589 	2,370
+			Other and unspecified drowning and submersion, W73-W74 	1,028 	287,836 	3,695
+		Other accidental threats to breathing, W75-W84 	5,900 	50,152 	644
+			Accidental suffocation and strangulation in bed, W75 	573 	516,398 	6,629
+			Other accidental hanging and strangulation, W76 	274 	1,079,912 	13,863
+			Threat to breathing due to cave-in, falling earth and other substances, W77 	50 	5,917,918 	75,968
+			Inhalation of gastric contents, W78 	333 	888,576 	11,407
+			Inhalation and ingestion of food causing obstruction of respiratory tract, W79 	864 	342,472 	4,396
+			Inhalation and ingestion of other objects causing obstruction of respiratory tract, W80 	3,189 	92,786 	1,191
+			Confined to or trapped in a low-oxygen environment, W81 	14 	21,135,421 	271,315
+			Other and unspecified threats to breathing, W83-W84 	603 	490,706 	6,299
+		Exposure to electric current, radiation, temperature, and pressure, W85-W99 	420 	704,514 	9,044
+			Electric transmission lines, W85 	105 	2,818,056 	36,175
+			Other and unspecified electric current, W86-W87 	293 	1,009,884 	12,964
+			Radiation, W88-W91 	0 	--- 	---
+			Excessive heat or cold of man-made origin, W92-W93 	13 	22,761,223 	292,185
+			High and low air pressure and changes in air pressure, W94 	9 	32,877,322 	422,045
+			Other and unspecified man-made environmental factors, W99 	0 	--- 	---
+		Exposure to smoke, fire and flames, X00-X09 	3,197 	92,554 	1,188
+			Uncontrolled fire in building or structure, X00 	2,617 	113,067 	1,451
+			Uncontrolled fire not in building or structure, X01 	52 	5,690,306 	73,046
+			Controlled fire in building or structure, X02 	28 	10,567,711 	135,657
+			Controlled fire not in building or structure, X03 	33 	8,966,542 	115,103
+			Ignition of highly flammable material, X04 	63 	4,696,760 	60,292
+			Ignition or melting of nightwear, X05 	6 	49,315,983 	633,068
+			Ignition or melting of other clothing and apparel, X06 	97 	3,050,473 	39,159
+			Other and unspecified smoke fire and flames, X08-X09 	301 	983,043 	12,619
+		Contact with heat and hot substances, X10-X19 	102 	2,900,940 	37,239
+			Contact with hot tap-water, X11 	43 	6,881,300 	88,335
+			Other and unspecified heat and hot substances, X10, X12-X19 	59 	5,015,185 	64,380
+		Contact with venomous animals and plants, X20-X29 	105 	2,818,056 	36,175
+			Contact with venomous snakes and lizards, X20 	7 	42,270,842 	542,630
+			Contact with venomous spiders, X21 	10 	29,589,590 	379,841
+			Contact with hornets, wasps and bees, X23 	82 	3,608,487 	46,322
+			Contact with other and unspecified venomous animal or plant, X22, X24-X29 	6 	49,315,983 	633,068
+		Exposure to forces of nature, X30-X39 	2,179 	135,794 	1,743
+			Exposure to excessive natural heat, X30 	466 	634,970 	8,151
+			Exposure to excessive natural cold, X31 	700 	422,708 	5,426
+			Lightning, X33 	48 	6,164,498 	79,133
+			Earthquake and other earth movements, X34-X36 	37 	7,997,186 	102,660
+			Cataclysmic storm, X37 	874 	338,554 	4,346
+			Flood, X38 	12 	24,657,991 	316,534
+			Exposure to other and unspecified forces of nature, X32, X39 	42 	7,045,140 	90,438
+		Accidental poisoning by and exposure to noxious substances, X40-X49 	23,618 	12,528 	161
+			Nonopioid analgesics, antipyretics, and antirheumatics, X40 	226 	1,309,274 	16,807
+			Antiepileptic, sedative-hypnotic, antiparkinsonism, and psychotropic drugs n.e.c., X41 	1,496 	197,791 	2,539
+			Narcotics and psychodysleptics [hallucinogens] n.e.c., X42 	11,050 	26,778 	344
+			Other and unspecified drugs, medicaments, and biologicals, X43-X44 	9,676 	30,580 	393
+			Alcohol, X45 	346 	855,190 	10,978
+			Gases and vapours, X46-X47 	703 	420,905 	5,403
+			Other and unspecified chemicals and noxious substances, X48-X49 	121 	2,445,421 	31,392
+		Overexertion, travel and privation, X50-X57 	32 	9,246,747 	118,700
+		Accidental exposure to other and unspecified factors and sequelae, X58-X59, Y86 	7,571 	39,083 	502
+	Intentional self-harm, X60-X84, Y87.0, *U03 a 	32,637 	9,066 	116
+		Intentional self-poisoning, X60-X69 	5,744 	51,514 	661
+		Intentional self-harm by hanging, strangulation, and suffocation, X70 	7,248 	40,824 	524
+		Intentional self-harm by firearm, X72-X74 	17,002 	17,404 	223
+		Other and unspecified means and sequelae, X71, X75-X84, Y87.0, *U03 a 	2,643 	111,955 	1,437
+	Assault, X85-Y09, Y87.1, *U01 a 	18,124 	16,326 	210
+		Assault by firearm, X93-X95 	12,352 	23,955 	308
+		Assault by sharp object, X99 	2,097 	141,104 	1,811
+		Other and unspecified means and sequelae, X85-X92, X96-X98, Y00-Y09, Y87.1, *U01 a 	3,675 	80,516 	1,034
+	Event of undetermined intent, Y10-Y34, Y87.2, Y89.9 	4,742 	62,399 	801
+		Poisoning, Y10-Y19 	3,240 	91,326 	1,172
+		Hanging, strangulation, and suffocation, Y20 	139 	2,128,747 	27,327
+		Drowning and submersion, Y21 	242 	1,222,710 	15,696
+		Firearm discharge, Y22-Y24 	221 	1,338,895 	17,187
+		Exposure to smoke, fire, and flames, Y26 	120 	2,465,799 	31,653
+		Falling, jumping, or pushed from a high place, Y30 	69 	4,288,346 	55,049
+		Other and unspecified means and sequelae, Y25, Y27-Y29, Y31-Y34,Y87.2, Y89.9 	711 	416,169 	5,342
+	Legal intervention, Y35, Y89.0 	414 	714,724 	9,175
+		Legal intervention involving firearm discharge, Y35.0 	330 	896,654 	11,510
+		Legal execution, Y35.5 	54 	5,479,554 	70,341
+		Other and unspecified means and sequelae, Y35.1-Y35.4, Y35.6-Y35.7, Y89.0 	30 	9,863,197 	126,614
+	Operations of war and sequelae, Y36, Y89.1 	27 	10,959,107 	140,682
+	Complications of medical and surgical care and sequelae, Y40-Y84, Y88.0-Y88.3 	2,653 	111,533 	1,432
+						
+a The manner of injury for ICD-10 code *U01 is Assault by Terrorism; for code *U03 it is Intentional Self-Harm by Terrorism.

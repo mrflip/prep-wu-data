@@ -1,0 +1,41 @@
+
+geonames_:
+    title:              US Stock Market Daily Open, Close, Hi, Low and Volume
+    tags:               financial stock daily high hi low lo close open market NYSE NASDAQ Dow s&p standard and poors 500 volume split adjusted
+    initialrating:      5
+    contributors:
+                        - |
+                          http://ichart.finance.yahoo.com/table.csv?s=AAPL&a=00&b=1&c=1900&d=11&e=31&f=2030&g=v&ignore=.csv Yahoo Finance
+                        - |
+                          http://www.nasdaq.com/asp/symbols.asp?exchange=q NASDAQ site
+                        - |
+                          http://infochimp.org/user/flip
+                          Shared and converted by Philip (flip) Kromer for the [http://infochimp.org|infochimp] project.
+    rights:             >
+    fields:
+                        - stock_symbol
+                        - stock_name
+                        - date_iso
+                        - stock_price_open
+                        - stock_price_close
+                        - stock_price_lo
+                        - stock_price_hi
+                        - stock_price_adj_open
+                        - stock_price_adj_close
+                        - stock_price_adj_lo
+                        - stock_price_adj_hi
+                        - stock_volume
+    story:              >
+                        Daily Open, Close, Low, High and Volume.
+                        "Adjusted" price is corrected for [wp:dividend]s and [wp:stock split]s.
+                        Note that the adjusted price propagates //backwards// through those
+                        price modifiers to find the adjusted value.
+    story_usage:        >
+    story_quality:      >
+                        4 This data is thought to be of very high quality but has not been
+                        checked against other historical data sources.
+    see_also:
+                        - longtermhistoricalstocks
+                        - stocks_hist_div_split
+                        - constant_dollars
+    coverage:           { time: 1970 to now }

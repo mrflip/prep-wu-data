@@ -1,0 +1,225 @@
+<units>
+  <unit name="AMU" funamental="" measure="mass" systemtem="" />
+  <unit name="AU" funamental="" measure="length" systemtem="" />
+  <unit name="Abampere" funamental="" measure="electric current in the CGS system" systemtem="" />
+  <unit name="Abcoulomb" funamental="" measure="electric charge in the CGS system" systemtem="" />
+  <unit name="Abfarad" funamental="" measure="electric capacitance in the CGS system" systemtem="" />
+  <unit name="Abmho" funamental="" measure="electric conductance in the CGS system" systemtem="" />
+  <unit name="Abohm" funamental="" measure="electric resistance in the CGS system" systemtem="" />
+  <unit name="Abvolt" funamental="" measure="electric potential difference in the CGS system" systemtem="" />
+  <unit name="Acre" funamental="" measure="area" systemtem="" />
+  <unit name="Angstrom" funamental="" measure="length" systemtem="" />
+  <unit name="Apostilb" funamental="" measure="luminance (photometric brightness)" systemtem="" />
+  <unit name="ArcMinute" funamental="" measure="multiplier" systemtem="" />
+  <unit name="ArcSecond" funamental="" measure="multiplier" systemtem="" />
+  <unit name="Are" funamental="" measure="area" systemtem="" />
+  <unit name="AssayTon" funamental="" measure="mass" systemtem="" />
+  <unit name="AstronomicalUnit" funamental="" measure="length" systemtem="" />
+  <unit name="Atmosphere" funamental="" measure="pressure" systemtem="" />
+  <unit name="AtomicMassUnit" funamental="" measure="mass" systemtem="" />
+  <unit name="AvoirdupoisOunce" funamental="" measure="weight" systemtem="" />
+  <unit name="AvoirdupoisPound" funamental="" measure="weight" systemtem="" />
+  <unit name="BTU" funamental="" measure="energy" systemtem="" />
+  <unit name="Bag" funamental="" measure="volume" systemtem="" />
+  <unit name="BakersDozen" funamental="" measure="multiplier" systemtem="" />
+  <unit name="Bale" funamental="" measure="weight" systemtem="" />
+  <unit name="Bar" funamental="" measure="pressure" systemtem="" />
+  <unit name="Barn" funamental="" measure="area" systemtem="" />
+  <unit name="Barrel" funamental="" measure="volume" systemtem="" />
+  <unit name="Barye" funamental="" measure="pressure" systemtem="" />
+  <unit name="Baud" funamental="" measure="information" systemtem="" />
+  <unit name="Biot" funamental="" measure="electric current" systemtem="" />
+  <unit name="Bit" funamental="fundamental" measure="information" systemtem="" />
+  <unit name="BoardFoot" funamental="" measure="volume" systemtem="" />
+  <unit name="BohrMagneton" funamental="" measure="magnetic moment" systemtem="" />
+  <unit name="Bolt" funamental="" measure="length" systemtem="" />
+  <unit name="BritishThermalUnit" funamental="" measure="energy" systemtem="" />
+  <unit name="Bucket" funamental="" measure="volume" systemtem="" />
+  <unit name="Bushel" funamental="" measure="volume" systemtem="" />
+  <unit name="Butt" funamental="" measure="volume" systemtem="" />
+  <unit name="Cable" funamental="" measure="length" systemtem="" />
+  <unit name="Caliber" funamental="" measure="length" systemtem="" />
+  <unit name="Calorie" funamental="" measure="energy" systemtem="" />
+  <unit name="Candela" funamental="fundamental" measure="luminous intensity" systemtem="SI" />
+  <unit name="Candle" funamental="" measure="luminous intensity" systemtem="" />
+  <unit name="Carat" funamental="" measure="weight" systemtem="" />
+  <unit name="Celsius" funamental="" measure="temperature" systemtem="" />
+  <unit name="Cental" funamental="" measure="weight" systemtem="" />
+  <unit name="Centigrade" funamental="" measure="temperature" systemtem="" />
+  <unit name="Century" funamental="" measure="time" systemtem="" />
+  <unit name="Chain" funamental="" measure="length" systemtem="" />
+  <unit name="ChevalVapeur" funamental="" measure="power" systemtem="" />
+  <unit name="Cicero" funamental="" measure="length" systemtem="" />
+  <unit name="Cord" funamental="" measure="volume" systemtem="" />
+  <unit name="Cubit" funamental="" measure="length" systemtem="" />
+  <unit name="Curie" funamental="" measure="radioactivity" systemtem="" />
+  <unit name="Dalton" funamental="" measure="mass" systemtem="" />
+  <unit name="Day" funamental="" measure="time" systemtem="" />
+  <unit name="Decade" funamental="" measure="time" systemtem="" />
+  <unit name="Denier" funamental="" measure="fineness for yarn or thread" systemtem="" />
+  <unit name="Didot" funamental="" measure="length" systemtem="" />
+  <unit name="DidotPoint" funamental="" measure="length" systemtem="" />
+  <unit name="Diopter" funamental="" measure="inverse length" systemtem="" />
+  <unit name="Dozen" funamental="" measure="multiplier" systemtem="" />
+  <unit name="Drachma" funamental="" measure="weight" systemtem="" />
+  <unit name="Dyne" funamental="derived" measure="force" systemtem="CGS" />
+  <unit name="ElectronVolt" funamental="" measure="energy" systemtem="" />
+  <unit name="Ell" funamental="" measure="length" systemtem="" />
+  <unit name="Ephah" funamental="" measure="volume" systemtem="" />
+  <unit name="Erg" funamental="derived" measure="energy" systemtem="CGS" />
+  <unit name="Fahrenheit" funamental="" measure="temperature" systemtem="" />
+  <unit name="Fathom" funamental="" measure="length" systemtem="" />
+  <unit name="Feet" funamental="" measure="length" systemtem="" />
+  <unit name="Fermi" funamental="" measure="length" systemtem="" />
+  <unit name="Fifth" funamental="" measure="volume" systemtem="" />
+  <unit name="Firkin" funamental="" measure="volume" systemtem="" />
+  <unit name="FluidDram" funamental="" measure="volume" systemtem="" />
+  <unit name="FluidOunce" funamental="" measure="volume" systemtem="" />
+  <unit name="Foot" funamental="" measure="length" systemtem="" />
+  <unit name="Fortnight" funamental="" measure="time" systemtem="" />
+  <unit name="Furlong" funamental="" measure="length" systemtem="" />
+  <unit name="Gal" funamental="derived" measure="acceleration due to gravity" systemtem="CGS" />
+  <unit name="Gallon" funamental="" measure="volume" systemtem="US traditional" />
+  <unit name="Geepound" funamental="" measure="mass" systemtem="" />
+  <unit name="Gilbert" funamental="" measure="magnetomotive force" systemtem="" />
+  <unit name="Gill" funamental="" measure="volume" systemtem="" />
+  <unit name="Grade" funamental="" measure="multiplier" systemtem="" />
+  <unit name="Grain" funamental="" measure="weight" systemtem="" />
+  <unit name="Gram" funamental="fundamental" measure="mass" systemtem="CGS" />
+  <unit name="GramWeight" funamental="" measure="force" systemtem="" />
+  <unit name="GrayDose" funamental="derived" measure="absorbed dose of radiation" systemtem="SI" />
+  <unit name="Gross" funamental="" measure="multiplier" systemtem="" />
+  <unit name="GrossHundredweight" funamental="" measure="weight" systemtem="" />
+  <unit name="Hand" funamental="" measure="length" systemtem="" />
+  <unit name="Hectare" funamental="" measure="area" systemtem="" />
+  <unit name="Hefner" funamental="" measure="luminous intensity" systemtem="" />
+  <unit name="Henry" funamental="derived" measure="inductance" systemtem="SI" />
+  <unit name="Hertz" funamental="derived" measure="frequency" systemtem="SI" />
+  <unit name="Hogshead" funamental="" measure="volume" systemtem="" />
+  <unit name="Horsepower" funamental="" measure="power" systemtem="" />
+  <unit name="Hour" funamental="" measure="time" systemtem="" />
+  <unit name="Hundredweight" funamental="" measure="weight" systemtem="" />
+  <unit name="ImperialGallon" funamental="" measure="volume" systemtem="British traditional" />
+  <unit name="ImperialPint" funamental="" measure="volume" systemtem="British traditional" />
+  <unit name="Inch" funamental="" measure="length" systemtem="" />
+  <unit name="InchMercury" funamental="" measure="pressure" systemtem="" />
+  <unit name="Jeroboam" funamental="" measure="volume" systemtem="" />
+  <unit name="Jigger" funamental="" measure="volume" systemtem="" />
+  <unit name="Joule" funamental="derived" measure="energy" systemtem="SI" />
+  <unit name="Kayser" funamental="" measure="inverse length" systemtem="" />
+  <unit name="Kelvin" funamental="fundamental" measure="thermodynamic temperature" systemtem="SI" />
+  <unit name="Kilogram" funamental="fundamental" measure="mass" systemtem="SI" />
+  <unit name="KilogramForce" funamental="" measure="force" systemtem="" />
+  <unit name="KilogramWeight" funamental="" measure="force" systemtem="" />
+  <unit name="Knot" funamental="" measure="speed" systemtem="" />
+  <unit name="League" funamental="" measure="length" systemtem="" />
+  <unit name="Libra" funamental="" measure="weight" systemtem="" />
+  <unit name="LightYear" funamental="" measure="length" systemtem="" />
+  <unit name="Link" funamental="" measure="length" systemtem="" />
+  <unit name="Liter" funamental="" measure="volume" systemtem="" />
+  <unit name="LongTon" funamental="" measure="weight" systemtem="" />
+  <unit name="Lumen" funamental="derived" measure="luminous flux" systemtem="SI" />
+  <unit name="Lux" funamental="derived" measure="illumination (illuminance)" systemtem="SI" />
+  <unit name="Magnum" funamental="" measure="volume" systemtem="" />
+  <unit name="Meter" funamental="fundamental" measure="length" systemtem="SI" />
+  <unit name="MetricTon" funamental="" measure="mass" systemtem="" />
+  <unit name="Mho" funamental="" measure="electric conductance" systemtem="" />
+  <unit name="Micron" funamental="" measure="length" systemtem="" />
+  <unit name="Mil" funamental="" measure="length" systemtem="" />
+  <unit name="Mile" funamental="" measure="length" systemtem="" />
+  <unit name="Millennium" funamental="" measure="time" systemtem="" />
+  <unit name="MillimeterMercury" funamental="" measure="pressure" systemtem="" />
+  <unit name="Mina" funamental="" measure="weight" systemtem="" />
+  <unit name="Minim" funamental="" measure="volume" systemtem="" />
+  <unit name="Minute" funamental="" measure="time" systemtem="" />
+  <unit name="Month" funamental="" measure="time" systemtem="" />
+  <unit name="NauticalMile" funamental="" measure="length" systemtem="" />
+  <unit name="NetHundredweight" funamental="" measure="weight" systemtem="" />
+  <unit name="Newton" funamental="derived" measure="force" systemtem="SI" />
+  <unit name="Nibble" funamental="" measure="information" systemtem="" />
+  <unit name="Noggin" funamental="" measure="volume" systemtem="" />
+  <unit name="NuclearMagneton" funamental="" measure="magnetic moment" systemtem="" />
+  <unit name="Obolos" funamental="" measure="weight" systemtem="" />
+  <unit name="Omer" funamental="" measure="volume" systemtem="" />
+  <unit name="Ounce" funamental="" measure="weight" systemtem="" />
+  <unit name="PSI" funamental="" measure="pressure" systemtem="" />
+  <unit name="Parsec" funamental="" measure="length" systemtem="" />
+  <unit name="Pascal" funamental="derived" measure="pressure" systemtem="SI" />
+  <unit name="Peck" funamental="" measure="volume" systemtem="" />
+  <unit name="Pennyweight" funamental="" measure="weight" systemtem="" />
+  <unit name="Percent" funamental="" measure="multiplier" systemtem="" />
+  <unit name="Perch" funamental="" measure="length" systemtem="" />
+  <unit name="Pica" funamental="" measure="length" systemtem="" />
+  <unit name="Pint" funamental="" measure="volume" systemtem="" />
+  <unit name="Pole" funamental="" measure="length" systemtem="" />
+  <unit name="Pondus" funamental="" measure="weight" systemtem="" />
+  <unit name="Pony" funamental="" measure="volume" systemtem="" />
+  <unit name="Pound" funamental="" measure="weight" systemtem="" />
+  <unit name="PoundForce" funamental="" measure="force" systemtem="" />
+  <unit name="PoundWeight" funamental="" measure="force" systemtem="" />
+  <unit name="Poundal" funamental="" measure="force" systemtem="" />
+  <unit name="PoundsPerSquareInch" funamental="" measure="pressure" systemtem="" />
+  <unit name="PrintersPoint" funamental="" measure="length" systemtem="" />
+  <unit name="Puncheon" funamental="" measure="volume" systemtem="" />
+  <unit name="Quadrant" funamental="" measure="multiplier" systemtem="" />
+  <unit name="Quart" funamental="" measure="volume" systemtem="" />
+  <unit name="Quintal" funamental="" measure="mass" systemtem="" />
+  <unit name="Rad" funamental="" measure="absorbed dose of radiation" systemtem="" />
+  <unit name="Rankine" funamental="" measure="temperature" systemtem="" />
+  <unit name="RegisterTon" funamental="" measure="volume" systemtem="" />
+  <unit name="Reyn" funamental="" measure="absolute viscosity" systemtem="" />
+  <unit name="Rhes" funamental="" measure="viscosity" systemtem="" />
+  <unit name="RightAngle" funamental="" measure="multiplier" systemtem="" />
+  <unit name="Rod" funamental="" measure="length" systemtem="" />
+  <unit name="Rood" funamental="" measure="area" systemtem="" />
+  <unit name="Rope" funamental="" measure="length" systemtem="" />
+  <unit name="Rutherford" funamental="" measure="radioactivity" systemtem="" />
+  <unit name="Rydberg" funamental="" measure="energy" systemtem="" />
+  <unit name="Seam" funamental="" measure="volume" systemtem="" />
+  <unit name="Second" funamental="fundamental" measure="time" systemtem="SI" />
+  <unit name="Section" funamental="" measure="area" systemtem="" />
+  <unit name="Shekel" funamental="" measure="weight" systemtem="" />
+  <unit name="ShortHundredweight" funamental="" measure="weight" systemtem="" />
+  <unit name="ShortTon" funamental="" measure="weight" systemtem="" />
+  <unit name="Shot" funamental="" measure="volume" systemtem="" />
+  <unit name="SiderealSecond" funamental="" measure="time" systemtem="" />
+  <unit name="SiderealYear" funamental="" measure="time" systemtem="" />
+  <unit name="Skein" funamental="" measure="length" systemtem="" />
+  <unit name="Slug" funamental="" measure="mass" systemtem="" />
+  <unit name="SolarMass" funamental="" measure="mass" systemtem="" />
+  <unit name="Stadion" funamental="" measure="length" systemtem="" />
+  <unit name="Stadium" funamental="" measure="length" systemtem="" />
+  <unit name="Statampere" funamental="" measure="electric current" systemtem="" />
+  <unit name="Statcoulomb" funamental="" measure="electric charge" systemtem="" />
+  <unit name="Statfarad" funamental="" measure="electric capacitance" systemtem="" />
+  <unit name="Stathenry" funamental="" measure="inductance" systemtem="" />
+  <unit name="Statohm" funamental="" measure="electric resistance" systemtem="" />
+  <unit name="StatuteMile" funamental="" measure="length" systemtem="" />
+  <unit name="Stere" funamental="" measure="volume" systemtem="" />
+  <unit name="Stilb" funamental="derived" measure="luminance (photometric brightness)" systemtem="CGS" />
+  <unit name="Stone" funamental="" measure="weight" systemtem="" />
+  <unit name="SurveyMile" funamental="" measure="length" systemtem="" />
+  <unit name="Tablespoon" funamental="" measure="volume" systemtem="" />
+  <unit name="Talent" funamental="" measure="weight" systemtem="" />
+  <unit name="Teaspoon" funamental="" measure="volume" systemtem="" />
+  <unit name="Therm" funamental="" measure="energy" systemtem="" />
+  <unit name="Ton" funamental="" measure="weight" systemtem="" />
+  <unit name="TonForce" funamental="" measure="force" systemtem="" />
+  <unit name="Tonne" funamental="" measure="mass" systemtem="" />
+  <unit name="Torr" funamental="" measure="pressure" systemtem="" />
+  <unit name="Township" funamental="" measure="area" systemtem="" />
+  <unit name="TropicalYear" funamental="" measure="time" systemtem="" />
+  <unit name="TroyOunce" funamental="" measure="weight" systemtem="" />
+  <unit name="Tun" funamental="" measure="volume" systemtem="" />
+  <unit name="UKGallon" funamental="" measure="volume" systemtem="British traditional" />
+  <unit name="UKPint" funamental="" measure="volume" systemtem="British traditional" />
+  <unit name="Volt" funamental="derived" measure="electric potential difference" systemtem="SI" />
+  <unit name="Watt" funamental="derived" measure="power" systemtem="SI" />
+  <unit name="Weber" funamental="derived" measure="magnetic flux" systemtem="SI" />
+  <unit name="Week" funamental="" measure="time" systemtem="" />
+  <unit name="Wey" funamental="" measure="weight" systemtem="" />
+  <unit name="WineBottle" funamental="" measure="volume" systemtem="" />
+  <unit name="XUnit" funamental="" measure="length" systemtem="" />
+  <unit name="Yard" funamental="" measure="length" systemtem="" />
+  <unit name="Year" funamental="" measure="time" systemtem="" />
+</units>

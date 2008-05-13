@@ -1,0 +1,15 @@
+                                
+                Tensile                         Compres-
+                Yield     Tensile   Elonga-     sive yield Brinell   Shear     Fatigue
+                strength, strength, tion in     strength,  hardness  strength, strength,
+Magnesium Alloy kpsi      kpsi      2 in, %     kpsi       H_b       kpsi      kpsi
+--------------- --------- --------- ----------  ---------  --------- --------- ---------
+Cast AM 265C      11        27          6          11         48                  11
+Cast AM 240-T4    12        35          9          12         52        20        11
+Cast AM 260-T6    20        38          3          20         78        22        11.5
+Die-cast AM 263   22        34          3                                         14
+Wrought AM 3S     30        40          7          11         40-52     16.7      11
+Wrought AM C52S   30        40         17          20         50-71     19        15
+Wrought AM C57S   32        44         14          20         55-74     20.5      17
+Wrought AM 59S    38        51          9          27         70        22        18
+--------------- --------- --------- ----------  ---------  --------- --------- ---------

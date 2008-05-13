@@ -1,0 +1,23 @@
+diff -Nurw ../DateTime-Calendar-Hebrew-0.04/Hebrew.pm ../DateTime-Calendar-Hebrew-0.04-fix/Hebrew.pm
+--- ../DateTime-Calendar-Hebrew-0.04/Hebrew.pm	2003-10-02 11:13:18.000000000 -0500
++++ ../DateTime-Calendar-Hebrew-0.04-fix/Hebrew.pm	2007-12-01 11:54:44.985197901 -0600
+@@ -218,6 +218,8 @@
+     my @a = $a->utc_rd_values;
+     my @b = $b->utc_rd_values;
+ 
++	# forgive undefined nanoseconds
++	$a[2]||=0; $b[2]||=0;
+     foreach my $i (0..2) {
+ 		return ($a[$i] <=> $b[$i]) if($a[$i] != $b[$i]);
+     }
+diff -Nurw ../DateTime-Calendar-Hebrew-0.04/t/clone.t ../DateTime-Calendar-Hebrew-0.04-fix/t/clone.t
+--- ../DateTime-Calendar-Hebrew-0.04/t/clone.t	2007-12-01 12:43:44.226620277 -0600
++++ ../DateTime-Calendar-Hebrew-0.04-fix/t/clone.t	2007-12-01 12:25:30.393863394 -0600
+@@ -1,5 +1,7 @@
++use DateTime;
+ use DateTime::Calendar::Hebrew;
+ use DateTime::Event::Sunrise;
++use Data::Dumper;
+ print "1..1\n";
+ 
+ my $sunset = DateTime::Event::Sunrise->sunset (

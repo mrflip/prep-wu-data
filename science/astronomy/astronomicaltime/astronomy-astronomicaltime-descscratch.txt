@@ -1,0 +1,138 @@
+
+{
+-0020.00 - 0000.000*u  + 32.000000*u^2, 
+10583.60 - 1014.410*u  + 33.783110*u^2 - 5.95205300*u^3 - 0.1798452000*u^4 + 0.0221741920*u^5 + 0.0090316521*u^6, 
+01574.20 - 556.0100*u  + 71.234720*u^2 + 0.31978100*u^3 - 0.8503463000*u^4 - 0.0050509980*u^5 + 0.0083572073*u^6 , 
+00120.00 - 0.980800*t  - 0.0153200*t^2 + 1/712900.0*t^3, 
+00008.83 + 0.160300*t  - 0.0059285*t^2 + 0.00013336*t^3 - 1/11740000.0*t^3, 
+00013.72 - 0.332447*t  + 0.0068612*t^2 + 0.00411160*t^3 - 0.0003743600*t^4 + 0.0000121272*t^5 - 0.0000001699*t^6 + 0.000000000875*t^7, 
+00007.62 + 0.573700*t  - 0.2517540*t^2 + 0.01680668*t^3 - 0.0004473624*t^4 + 1/2331740000*t^5, 
+-0002.79 + 1.494119*t  - 0.0598939*t^2 + 0.00619660*t^3 - 0.0001970000*t^4, 
+00021.20 + 0.844930*t  - 0.0761000*t^2 + 0.00209360*t^3, 
+00029.07 + 0.407000*t  - 1/233.000*t^2 + 1/2547.000*t^3, 
+00045.45 + 1.067000*t  - 1/260.000*t^2 - 1/718.0000*t^3, 
+00063.86 + 0.334500*t  - 0.0603740*t^2 + 0.00172750*t^3 + 0.0006518140*t^4+0.000023735990*t^5, 
+00062.92 + 0.322170*t  + 0.0055890*t^2, 
+-0020.00 - 0000.000*u  + 32.000000*u^2 - 0.5628*(2150 - yr), 
+-0020.00 - 0000.000*u  + 32.000000*u^2
+}
+
+
+{
+u-> ((yr-1820)/100), 
+u-> (yr/100), 
+u-> ((yr - 1000)/100), 
+t-> (yr - 1600), 
+t-> (yr - 1700), 
+t-> (yr - 1800), 
+t-> (yr - 1860), 
+t-> (yr - 1900), 
+t-> (yr - 1920), 
+t-> (yr - 1950), 
+t-> (yr - 1975), 
+t-> (yr - 2000), 
+t-> (yr - 2000), 
+u-> ((yr - 1820)/100), 
+u-> ((yr - 1820)/100)
+}
+
+We define the decimal year "y" as follows:
+y = year + (month - 0.5)/12
+
+
+whichEqn[yr_]:= Which[
+        yr < -500,  1,
+-500 <= yr < +500,  2,
+ 500 <= yr < 1600,  3,
+1600 <= yr < 1700,  4,
+1700 <= yr < 1800,  5,
+1800 <= yr < 1860,  6,
+1860 <= yr < 1900,  7,
+1900 <= yr < 1920,  8,
+1920 <= yr < 1941,  9,
+1941 <= yr < 1961, 10,
+1961 <= yr < 1986, 11,
+1986 <= yr < 2005, 12,
+2005 <= yr < 2050, 13,
+2050 <= yr < 2150, 14
+2150 <= yr       , 15
+]
+
+These timescales are atomic times: there are always the same number of cesium
+vibrations in each second, but there are not necessarily exactly 24*60*60 atomic
+seconds between noon one day and noon the next.
+  TAI, UTC, TT, TDB, TDT, ET, 
+
+These timescales are mean solar (terrestrial) times.  
+  JD, MJD, TJD, UT1, 
+
+* TCG:  		TCG = TT +Lg*(JD -2443144.5)*86400; Lg=6.969290134e-10
+* TCB:  		TCB = TDB+Lb*(JD -2443144.5)*86400; Lb=1.55051976772e-08
+* UT0:  		UT0 is UT1 without correcting for the (~1 millisecond) effect of polar motion at the local longitude.
+
+Barycentric Dynamic Time (TDB) is the same as as Terrestrial Dynamic Time (TT)
+except for relativistic corrections to move the origin to the solar system
+barycenter. These corrections amount to as much as about 1.6 millisends and are
+periodic with an average of zero. The dominant terms in this correction are have
+annual and semi-annual periods.
+
+(Extensive quotes below from http://tycho.usno.navy.mil/systime.html)
+
+"Atomic Time , with the unit of duration the Systeme International (SI) second defined as the duration of 9,192,631,770 cycles of radiation corresponding to the transition between two hyperfine levels of the ground state of cesium 133. TAI is the International Atomic Time scale, a statistical timescale based on a large number of atomic clocks." [navy]  This time is independent of the rotation of the earth.
+
+Universal Time (UT) is counted from 0 hours at midnight, with unit of duration the mean solar day (a long-term average of the rotation period).
+
+UTC = TAI + some integer number of 'leap seconds', periodically introduced to keep the error within 0.9s.
+
+To tell absolute time using one of the traditional epochs (julian
+date, rata Die, etc) requires a pair (epochtime, leapsecond count)
+
+TDT is independent of the variable rotation of the Earth, and the lengths of the tropical year and synodic month are generally defined in days of 86,400 seconds of international atomic time. TDT is used as the time scale of ephemerides for observations from Earth's surface, and differs from international atomic time (TAI) by an offset
+  TDT = TAI + 32.184 s
+
+TDB = TT + periodic contribution and is outside the scope of this dataset.
+
+Geocentric Coordinate Time (TCG) is a coordinate time having its spatial origin
+at the center of mass of the Earth. TCG differs from TT as: TCG - TT = Lg x (JD
+-2443144.5) x 86400 seconds, with Lg = 6.969291e-10.
+
+Barycentric Coordinate Time (TCB) is a coordinate time having its spatial origin
+at the solar system barycenter. TCB differs from TDB in rate. The two are
+related by: TCB - TDB = iLb x (JD -2443144.5) x 86400 seconds, with Lb =
+1.550505e-08. 
+
+
+TAI is chosen as our absolute reference.  It measures Terrestrial Time.
+
+
+Delta T is the difference between Earth rotational time (UT1) and dynamical time (TDT).
+
+Julian Day Number is a count of days elapsed since Greenwich mean noon on 1 January 4713 B.C., Julian proleptic calendar. 
+
+
+JD counts days within one Julian Period of exactly 7980 Julian years of 365.25 days.  Start of the JD count is from 
+  JD=0 at -4712-01-01 (4713BC Jan 1),  Julian proleptic calendar,
+          -4713-11-24 (4714BC Nov 24), Gregorian proleptic calendar (Proleptic means "Just count days back or forward in time using that calendar, and don't worry if they hadn't heard of Gregory the Monk or Atomic Clocks.").
+
+We frequently make use of the  Modified Julian Date (MJD), which is
+defined as MJD = JD - 2400000.5. An MJD day thus begins at midnight,
+civil date. Julian dates can be expressed in UT , TAI, TDT, etc. and
+so for precise applications the timescale should be specified, e.g.
+MJD 49135.3824 TAI.
+
+
+Julian days were formerly (if nothing else was specified) counted according to Mean Solar Time, today in UT. Alternatively, specifications were given in Ephemeris Time which was indicated by appending the letters JED or JDE. Also today it is sometimes appropriate to specify Julian Days in another timescale than UT. The employed timescale should then be appended to the time specification, for instance JD 2 451 545.0 TDT for Januar 1, 2000, 12 o'clock noon as measured in TDT.
+
+
+
+
+
+
+
+
+* Mean solar time measures the period between one solar noon and the next, with the annual variations smoothed out.  It's not exactly 24*60*60 seconds because of changes in the Earth's orbit
+
+. A solar day is approximately 24 hours of mean time. Because Earth's orbit around the sun is elliptical, and because of the earth axis tilt, the true solar day varies a few dozen seconds above or below the mean value of 24 hour. As this variations accumulates over a few weeks, there are differences as large as 15 minutes between the true solar time and the mean solar time. However, these variation cancel out completely over a year. There are also other perturbations such as Earth's wobble, but these are less than a second per year.
+
+
+See also: 

@@ -1,0 +1,176 @@
+There seems to be a major problem with the calculations run on my machine.  Between lunation 22250 (Dec 1799) and 22251 (Jan 1800) it calculates a month of 3 days and then is wildly divergent from values reported elsewhere.  It returns to reasonable after 24575 (Dec 1987), at 24576 (Jan 1988).  
+
+I'm comparing the output of this module against official NASA calculations:
+  http://sunearth.gsfc.nasa.gov/eclipse/phase/phasecat.html
+and the Munich Astro Archive:
+  http://www.maa.mhn.de/StarDate/
+They agree with each other but not with the output I'm seeing. 
+
+perl -e '
+use DateTime::Event::Lunar; 
+use DateTime::Util::Astro::Moon qw(nth_new_moon); 
+print $DateTime::Event::Lunar::VERSION, " -- ", $DateTime::Util::Astro::Moon::VERSION, "\n"; 
+
+@lunations = (0,22248..22254, 24573..24579); 
+my $fmt= "%-8s %-20s %-20s %-20s %-10s\n"; 
+printf $fmt, "lunation","Estimated","From Phase","From new_moon","RD for new_moon"; 
+
+map { 
+    my $moonest = nth_new_moon($_); 
+    my $newmoon = DateTime::Event::Lunar->new_moon_after(datetime=>$moonest,on_or_after=>1); 
+    my $newmoonph = DateTime::Event::Lunar->lunar_phase_after(datetime=>$moonest, $phase=>NEW_MOON); 
+    printf $fmt, $_, $moonest, $newmoonph, $newmoon, join ",",$newmoon->utc_rd_values;  
+} @lunations;'
+
+lun#	From new_moon          RataDie sec     -- NASA values ---
+22248   1799-10-28T17:20:02    56765467202   1799 Oct 28  17:20  OK 
+22249   1799-11-27T03:38:11    56768009891   1799 Nov 27  03:38  OK 
+22250   1799-12-26T14:55:38    56770556138   1799 Dec 26  14:56  OK 
+22251   1800-01-01T04:14:44    56771036084   1800 Jan 25  03:21  BAD 
+22252   1800-01-30T18:02:08    56773591328   1800 Feb 23  17:08  BAD 
+22253   1800-03-01T09:15:03    56776151703   1800 Mar 25  08:21  BAD 
+22254   1800-03-31T01:24:47    56778715487   1800 Apr 24  00:31  BAD 
+lun#	From new_moon          RataDie sec     -- NASA values ---
+24573   1987-10-21T10:26:08    62697493568   1987 Oct 22  17:28  BAD
+24574   1987-11-19T23:31:06    62700046266   1987 Nov 21  06:33  BAD
+24575   1987-12-19T11:23:28    62702594608   1987 Dec 20  18:25  BAD
+24576   1988-01-19T05:25:30    62705251530   1988 Jan 19  05:26  OK
+24577   1988-02-17T15:54:08    62707794848   1988 Feb 17  15:54  OK
+24578   1988-03-18T02:02:13    62710336933   1988 Mar 18  02:02  OK
+24579   1988-04-16T11:59:53    62712878393   1988 Apr 16  12:00  OK
+lun#	From new_moon          RataDie sec     -- NASA values ---
+
+If I plot this against the first order estimate
+  rds = ( (11.4563) + 29.5305888531*n  )* 60*60*24
+(that's the date of the first new moon plus n months times seconds in a
+day), the error spikes upward at 1800 and relaxes back to zero, with scattered large negative spikes; then the error is small for lunations ~23000 to ~24000 before a small spike, behaving again after 24576.
+
+I've tried this on two different machines (debian Linux and OSX), and appended perl -V from the debian machine below.  I seem to have all of Pari, GMP, and BigFloat installed (I think no GMP on the OSX box).
+
+
+Summary of my perl5 (revision 5 version 8 subversion 8) configuration:
+  Platform:
+    osname=linux, osvers=2.6.15.7, archname=i486-linux-gnu-thread-multi
+    uname='linux rothera 2.6.15.7 #1 smp sat sep 30 10:21:42 utc 2006 i686 gnulinux '
+    config_args='-Dusethreads -Duselargefiles -Dccflags=-DDEBIAN -Dcccdlflags=-fPIC -Darchname=i486-linux-gnu -Dprefix=/usr -Dprivlib=/usr/share/perl/5.8 -Darchlib=/usr/lib/perl/5.8 -Dvendorprefix=/usr -Dvendorlib=/usr/share/perl5 -Dvendorarch=/usr/lib/perl5 -Dsiteprefix=/usr/local -Dsitelib=/usr/local/share/perl/5.8.8 -Dsitearch=/usr/local/lib/perl/5.8.8 -Dman1dir=/usr/share/man/man1 -Dman3dir=/usr/share/man/man3 -Dsiteman1dir=/usr/local/man/man1 -Dsiteman3dir=/usr/local/man/man3 -Dman1ext=1 -Dman3ext=3perl -Dpager=/usr/bin/sensible-pager -Uafs -Ud_csh -Uusesfio -Uusenm -Duseshrplib -Dlibperl=libperl.so.5.8.8 -Dd_dosuid -des'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=define use5005threads=undef useithreads=define usemultiplicity=define
+    useperlio=define d_sfio=undef uselargefiles=define usesocks=undef
+    use64bitint=undef use64bitall=undef uselongdouble=undef
+    usemymalloc=n, bincompat5005=undef
+  Compiler:
+    cc='cc', ccflags ='-D_REENTRANT -D_GNU_SOURCE -DTHREADS_HAVE_PIDS -DDEBIAN -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    optimize='-O2',
+    cppflags='-D_REENTRANT -D_GNU_SOURCE -DTHREADS_HAVE_PIDS -DDEBIAN -fno-strict-aliasing -pipe -I/usr/local/include'
+    ccversion='', gccversion='4.1.2 (Ubuntu 4.1.2-0ubuntu4)', gccosandvers=''
+    intsize=4, longsize=4, ptrsize=4, doublesize=8, byteorder=1234
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    ivtype='long', ivsize=4, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8
+    alignbytes=4, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/public/share/perl/lib /usr/local/lib /lib /usr/lib
+    libs=-lgdbm -lgdbm_compat -ldb -ldl -lm -lpthread -lc -lcrypt
+    perllibs=-ldl -lm -lpthread -lc -lcrypt
+    libc=/lib/libc-2.5.so, so=so, useshrplib=true, libperl=libperl.so.5.8.8
+    gnulibc_version='2.5'
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-Wl,-E'
+    cccdlflags='-fPIC', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl):
+  Compile-time options: MULTIPLICITY PERL_IMPLICIT_CONTEXT
+                        PERL_MALLOC_WRAP THREADS_HAVE_PIDS USE_ITHREADS
+                        USE_LARGE_FILES USE_PERLIO USE_REENTRANT_API
+  Built under linux
+  Compiled at Mar  6 2007 01:40:14
+
+
+est:1798-11-08T01:35:44 phase:1798-11-08T01:36:29, nma: 1798-11-08T01:35:44, 56734824944	1798   Nov  8  01:36 
+est:1798-12-07T13:56:32 phase:1798-12-07T13:57:17, nma: 1798-12-07T13:56:32, 56737374992	1798   Dec  7  13:57 
+est:1799-01-06T04:21:10 phase:1799-01-06T04:21:45, nma: 1799-01-06T04:21:10, 56739932470	1799   Jan  6  04:21 
+est:1799-02-04T20:28:35 phase:1799-02-04T20:28:59, nma: 1799-02-04T20:28:35, 56742496115	1799   Feb  4  20:29 
+est:1799-03-06T13:46:26 phase:1799-03-06T13:46:48, nma: 1799-03-06T13:46:26, 56745063986	1799   Mar  6  13:46 
+est:1799-04-05T07:24:00 phase:1799-04-05T07:24:16, nma: 1799-04-05T07:24:00, 56747633040	1799   Apr  5  07:24 
+est:1799-05-05T00:11:25 phase:1799-05-05T00:11:41, nma: 1799-05-05T00:11:25, 56750199085	1799   May  5  00:11 
+est:1799-06-03T15:03:22 phase:1799-06-03T15:03:44, nma: 1799-06-03T15:03:22, 56752758202	1799   Jun  3  15:03 
+est:1799-07-03T03:30:52 phase:1799-07-03T03:31:20, nma: 1799-07-03T03:30:52, 56755308652	1799   Jul  3  03:31 
+est:1799-08-01T13:52:37 phase:1799-08-01T13:53:10, nma: 1799-08-01T13:52:37, 56757851557	1799   Aug  1  13:53 
+est:1799-08-30T23:00:31 phase:1799-08-30T23:01:20, nma: 1799-08-30T23:00:31, 56760390031	1799   Aug 30  23:01 
+est:1799-09-29T07:54:34 phase:1799-09-29T07:55:38, nma: 1799-09-29T07:54:34, 56762927674	1799   Sep 29  07:55 
+est:1799-10-28T17:20:02 phase:1799-10-28T17:21:06, nma: 1799-10-28T17:20:02, 56765467202	1799   Oct 28  17:20 
+est:1799-11-27T03:38:11 phase:1799-11-27T03:39:08, nma: 1799-11-27T03:38:11, 56768009891	1799   Nov 27  03:38 
+est:1799-12-26T14:55:38 phase:1799-12-26T14:56:23, nma: 1799-12-26T14:55:38, 56770556138	1799   Dec 26  14:56 
+est:1800-01-01T04:14:44 phase:1800-01-01T04:15:17, nma: 1800-01-01T04:14:44, 56771036084	1800   Jan 25  03:21 
+est:1800-01-30T18:02:08 phase:1800-01-30T18:02:41, nma: 1800-01-30T18:02:08, 56773591328	1800   Feb 23  17:08 
+
+est:1987-10-21T10:26:08 phase:1987-10-21T10:26:47, nma: 1987-10-21T10:26:08, 62697493568	1987    Oct 22  17:28
+est:1987-11-19T23:31:06 phase:1987-11-19T23:31:41, nma: 1987-11-19T23:31:06, 62700046266	1987    Nov 21  06:33
+est:1987-12-19T11:23:28 phase:1987-12-19T11:24:13, nma: 1987-12-19T11:23:28, 62702594608	1987    Dec 20  18:25
+est:1988-01-19T05:25:30 phase:1988-01-19T05:26:15, nma: 1988-01-19T05:25:30, 62705251530	1988    Jan 19  05:26
+est:1988-02-17T15:54:08 phase:1988-02-17T15:54:47, nma: 1988-02-17T15:54:08, 62707794848	1988    Feb 17  15:54
+est:1988-03-18T02:02:13 phase:1988-03-18T02:02:54, nma: 1988-03-18T02:02:13, 62710336933	1988    Mar 18  02:02
+est:1988-04-16T11:59:53 phase:1988-04-16T12:00:38, nma: 1988-04-16T11:59:53, 62712878393	1988    Apr 16  12:00
+
+
+
+ 1798   Nov  8  01:36 
+ 1798   Dec  7  13:57 
+ 1799   Jan  6  04:21   
+ 1799   Feb  4  20:29  
+ 1799   Mar  6  13:46  
+ 1799   Apr  5  07:24  
+ 1799   May  5  00:11 
+ 1799   Jun  3  15:03  
+ 1799   Jul  3  03:31  
+ 1799   Aug  1  13:53  
+ 1799   Aug 30  23:01  
+ 1799   Sep 29  07:55
+ 1799   Oct 28  17:20
+ 1799   Nov 27  03:38
+ 1799   Dec 26  14:56 
+ 1800   Jan 25  03:21 
+ 1800   Feb 23  17:08 
+ 1800   Mar 25  08:21 
+ 1800   Apr 24  00:31 
+ 1800   May 23  16:41 
+        Jun 22  07:55 
+        Jul 21  21:47 
+        Aug 20  10:21 
+        Sep 18  21:57 
+        Oct 18  08:58 
+        Nov 16  19:35 
+        Dec 16  06:01 
+
+ Year      New Moon   
+1986    Jan 10  12:22 
+1986    Feb  9  00:55 
+1986    Mar 10  14:52 
+1986    Apr  9  06:08 
+1986    May  8  22:10 
+1986    Jun  7  14:00 
+1986    Jul  7  04:55 
+1986    Aug  5  18:36 
+1986    Sep  4  07:10 
+1986    Oct  3  18:55 
+1986    Nov  2  06:02 
+1986    Dec  1  16:43 
+1986    Dec 31  03:10
+1987    Jan 29  13:44 
+1987    Feb 28  00:51 
+1987    Mar 29  12:45 
+1987    Apr 28  01:34 
+1987    May 27  15:13
+1987    Jun 26  05:37
+1987    Jul 25  20:37
+1987    Aug 24  11:59
+1987    Sep 23  03:08
+1987    Oct 22  17:28
+1987    Nov 21  06:33
+1987    Dec 20  18:25
+1988    Jan 19  05:26
+1988    Feb 17  15:54
+1988    Mar 18  02:02
+1988    Apr 16  12:00
+1988    May 15  22:10
