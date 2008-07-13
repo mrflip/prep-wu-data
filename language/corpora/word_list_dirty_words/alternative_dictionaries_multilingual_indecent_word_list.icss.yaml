@@ -1,0 +1,22 @@
+---
+infochimps_dataset:
+  infochimps_stupid_schema:
+    version:      1.0
+    name:         "The Alternative Dictionaries: Multilingual indecent word lists"
+    url:          http://www.alternative-dictionaries.net/
+    
+    credits:
+      - url:              
+        name:             
+        uniqname: 
+        desc:             >
+          h2. The Alternative Dictionaries
+          
+          ** Slang, profanities, insults and vulgarisms from all the world**
+  
+    notes:
+      desc:         >-
+        
+      usage_note:   >-
+  
+          File is in utf-8 format.

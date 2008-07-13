@@ -1,0 +1,44 @@
+---
+infochimps_dataset:
+  infochimps_stupid_schema:
+    version: 		1.0
+    pool:
+  
+      tags:         >
+        dirty obscene filthy profane censored censorship sex smut drugs cult
+        racist racism "stop words" spam filter indecent vulgar pornography  
+      notes:
+        desc: >-
+          h3. Why is this list necessary and/or useful?
+          
+          Since this is sure to be one of the most-investigated and least-downloaded
+          collections, I shall explain why you'd want this.
+    
+          I originally assembled these lists while making a widget to generate
+          "memorable invite tokens" -- a short sequence of small (3-5 letter) words
+          that would be unguessable but easy to retype.  Well it's clear that you
+          don't want to send out an email to a client with the word "cock", "boob"
+          or "tits" no matter their worthy an innocuous alternate meanings, let
+          alone "poop" or any of the more flagrant letter sequences below.
+    
+          Note that the list below *excludes* words such as "cock", "boob" and
+          "tits" -- words that have alternate non-taboo-laden meanings. refer to
+          the other 'dirty word lists' at http://infochimps.org, including a unified
+          consensus list if you just want something workable and ready.
+    
+          * Blocking spam
+          * Flagging outgoing correspondence
+          * Avoiding cross-cultural taboo violation
+    
+          If it's not clear, this site neither endorses nor condemns censorship and
+          certainly does not endorse the intemperate use of the words below.
+          Moderation, like obscenity and profanity, taboo and dissidence, is
+          appropriate when applied sensibly and destructive when applied
+          tyrannically. We hope that you use these lists for good and not evil.
+    
+          More info:
+          * "Anti-defamation League":http://www.adl.org/
+          * "American Civil Liberties Union":http://www.aclu.org/freespeech/censorship/index.html
+          * "Electronic Frontier Foundation":http://www.eff.org/
+          * "Judith Martin (Miss Manners) on Vulgarity":http://www.washingtonpost.com/ac2/wp-dyn/A30084-2004Mar27?language=printer
+  
