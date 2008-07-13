@@ -102,3 +102,72 @@
         authoritative:  {by: initial, rating: 5, desc: ''}
         comprehensive:  {by: initial, rating: 5, desc: ''}
         interesting:    {by: initial, rating: 5, desc: ''}
+
+
+#       main|@  PoS     lemma   ppm     Range   disp
+# ----------------------------------------------------
+#       best    Adv     :       81      100     0.96
+#       bet     Verb    %       23      96      0.81
+#       @       @       bet     21      93      0.79
+#       @       @       bets    0       25      0.80
+#       @       @       betting 2       72      0.88
+#       better  Adv     :       143     100     0.95
+#       Betty   NoP     %       14      90      0.62
+#       @       @       Betty   13      90      0.62
+
+# fields:
+#   - uniqname: head_word
+#     name:     Head word - the root word
+#     desc:     Word type (headword followed by any variant forms) - see pp.4-5
+
+#   - uniqname: PoS
+#     name:     Part of speech
+#     desc:     Part of speech (grammatical word class - see pp. 12-13)
+
+
+  # - uniqname: lemmas
+  #   name:     word variants:
+  #   - lemma
+  #   - ppm
+  #   - range
+  #   - disp
+  # 
+  # - uniqname: freq
+  #   name:     Rounded frequency per million word tokens
+  #   desc:     Rounded frequency per million word tokens (down to a minimum of 10 occurrences of a lemma per million)- see pp. 5
+  # - name:     Range
+  #   uniqname: Ra
+  #   desc:     Range: number of sectors of the corpus (out of a maximum of 100) in which the word occurs
+  # - name:     Dispersion value
+  #   uniqname: Disp
+  #   desc:     |
+  # 
+  #       Dispersion value (Juilland's D) from a minimum of 0.00 to a maximum of 1.00.
+  # 
+  #       Dispersion measures how _typical_, as opposed to _common_ a word is.
+  #       For example, the words "enthalpy" (a term from chemistry) and "wrestle"
+  #       both occur in the BNC at roughly 3 parts per million.  However, it seems
+  #       likely that only a few documents would mention 'enthalpy' (and that
+  #       those few were so excited about it they used it over and over again).
+  #       The dispersion of 'enthalpy' comes in at 0.15 -- values near zero
+  #       indicate concentration in a very few texts.  The dispersion for
+  #       'wrestle', on the other hand, comes in at a near-ubiquitous 0.92 --
+  #       values near one show uniform usage frequency throughout the corpus.
+  #       
+  #       To find Juilland's D,
+  #       
+  #         For each equal chunk [c1, c2, ... cN] within the corpus, take the
+  #         corpus component frequencies freqs = [f1, f2, ... fn].  Next get the
+  #         coefficient of variation V as
+  #         
+  #           V = std_dev(freqs) / mean(freqs)
+  #         
+  #         The dispersion coerces the values within the range 0 (all occurrences
+  #         came from a single chunk) to 1 (every chunk had exactly the same
+  #         number of occurrences):
+  # 
+  #            D = 1 - ( V / sqrt(n-1) )
+  #            
+  #         (a little bit of thought and the back of a napkin will show this
+  #         indeed ranges from 0 to 1)
+

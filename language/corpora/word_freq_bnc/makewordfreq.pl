@@ -5,23 +5,21 @@
 use strict; 
 use warnings;
 use Data::Dumper;
-use Mail::Box::Manager;
 
 my $lemmafile = shift @ARGV or die "Usage: $0 < lemmma.txt";
 open(LEMMAFILE, "<$lemmafile") or die("Can't open lemma file $lemmafile: $!");
 
 
-#       main|@	PoS	lemma	ppm	Range	disp
-# ----------------------------------------------------
-# 	best	Adv	:	81	100	0.96
-# 	bet	Verb	%	23	96	0.81
-# 	@	@	bet	21	93	0.79
-# 	@	@	bets	0	25	0.80
-# 	@	@	betting	2	72	0.88
-# 	better	Adv	:	143	100	0.95
-# 	Betty	NoP	%	14	90	0.62
-# 	@	@	Betty	13	90	0.62
-
+#       main|@		PoS	lemma	ppm	Range	disp
+# ----------------------------------------------------------
+# 	best		Adv	:	81	100	0.96
+# 	bet		Verb	%	23	96	0.81
+# 	@		@	bet	21	93	0.79
+# 	@		@	bets	0	25	0.80
+# 	@		@	betting	2	72	0.88
+# 	better		Adv	:	143	100	0.95
+# 	Betty		NoP	%	14	90	0.62
+# 	@		@	Betty	13	90	0.62
 
 my %mainwordfreq;
 my %word_equiv_map;
