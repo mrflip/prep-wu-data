@@ -1,12 +1,10 @@
-If you don't mind, the easiest thing for me is going to be to use github to share scripts, etc back and forth.  Only thing is we have to be a bit careful with diskspace, just to make sure to not import data files (only scripts).
-
-I don't know how comfortable you are sharing your scripts to process the MLB gameday info. Anything that goes into a free github account is visible to the world, so if you want to keep that separate we can talk about the options for doing that.
+If you don't mind, the easiest thing for me is going to be to use github to share scripts, etc back and forth.  Only thing is we have to be a bit careful with diskspace, just to make sure to not import data files (only scripts).  I don't know how comfortable you are sharing your scripts to process the MLB gameday info. Anything that goes into a free github account is visible to the world, so if you want to keep that separate we can talk about the options for doing that.
 
 I'd also like, if you don't mind, to impose my somewhat fussy directory tree on you: we might as well have somewhat compatible dir structures and workflow for passing scripts back & forth.  If you have improvements or alterations to make life easier for you please say.
 
 The following structure has evolved so that I can keep datasets 'sustainable' -- that is, to be able to re-scrape or pull an update, re-run the scripts, and keep my sanity when doing so across thousands of datasets.  I keep ripped originals in one place organized by URL, then symlink into there from the working directory, but by the power of symlinks you can set the physical structure however you like.  So, whether by symlink or subdir, I have:
 
-|
+| 
 + weather/ncdc/hourly
   |
   +- (...)                scripts, output, graphics, writeup, etc.
@@ -42,7 +40,7 @@ The following structure has evolved so that I can keep datasets 'sustainable' --
   +- (...)                scripts, output, graphics, writeup, etc.
   +- (...)                that extract as much as I'd need of the gameday data
   +- (...)                to do any runs on the computer cluster that are needed
-  +- (...)                I'm assuming this already has its own structure
+  +- (...)                I'm assume this already has its own structure
   +- (...)                and there's no sense disrupting it
 |
 + sports/baseball/ballparks
