@@ -1,0 +1,534 @@
+05/13/1871   NA Washington     NA Cleveland      Lincoln Park Grounds, Cincinnati OH
+05/27/1871   NA Washington     NA Boston         Union Grounds, Brooklyn, NY
+07/04/1871   NA Washington     NA Boston         Lincoln Park Grounds, Cincinnati OH
+07/08/1871   NA Ft. Wayne      NA Washington     Madison Avenue Grounds, Baltimore MD
+07/22/1871   NA Philadelphia   NA Cleveland      Lincoln Park Grounds, Cincinnati OH
+08/08/1871   NA Cleveland      NA Rockford       Lake Front Park I, Chicago, IL
+10/30/1871   NA Philadelphia   NA Chicago        Union Grounds, Brooklyn, NY
+05/29/1872   NA Baltimore      NA Cleveland      23rd Street Park, Chicago, IL
+05/30/1872   NA Baltimore      NA Cleveland      23rd Street Park, Chicago, IL
+06/17/1872   NA New York       NA Troy           23rd Street Park, Chicago, IL
+06/20/1872   NA New York       NA Troy           23rd Street Park, Chicago, IL
+06/21/1872   NA Brooklyn       NA Middletown     Hartford Trotting Park, Hartford CT
+06/24/1872   NA Philadelphia   NA Troy           23rd Street Park, Chicago, IL
+07/03/1872   NA Boston         NA Middletown     Hartford Trotting Park, Hartford CT
+07/04/1872   NA Baltimore      NA Troy           23rd Street Park, Chicago, IL
+07/23/1872   NA Troy           NA Middletown     Hampden Park Race Track, Springfield MA
+08/09/1872   NA Brooklyn       NA Middletown     Hartford Trotting Park, Hartford CT
+05/14/1873   NA Marylands      NA Canaries       Olympic Grounds, Washington, DC
+06/12/1873   NA Boston         NA Resolutes      Union Grounds, Brooklyn, NY
+07/04/1873   NA Brooklyn       NA New York       Elysian Field, Hoboken NJ
+07/16/1873   NA Philadelphia   NA Boston         Hampden Park Race Track, Springfield MA
+08/16/1873   NA Philadelphia   NA Boston         23rd Street Park, Chicago, IL
+08/19/1873   NA Boston         NA Philadelphia   23rd Street Park, Chicago, IL
+08/12/1874   NA Philadelphia   NA Hartford       South End Grounds I, Boston, MA
+10/30/1874   NA Hartford       NA Boston         Worcester Driving Park Grounds, Worcester, MA
+04/29/1875   NA Boston         NA Washington     Richmond Fair Grounds, Richmond VA
+05/01/1875   NA Boston         NA Washington     Richmond Fair Grounds, Richmond VA
+05/14/1875   NA Washington     NA Boston         Hampden Park Race Track, Springfield MA
+06/09/1875   NA Philadelphia   NA Washington     Newington Park, Baltimore, MD
+06/12/1875   NA New Haven      NA Hartford       Adelaide Avenue Grounds, Providence RI
+06/22/1875   NA Brooklyn       NA Boston         Adelaide Avenue Grounds, Providence RI
+06/24/1875   NA New Haven      NA Philadelphia   Fairview Park Fair Grounds, Dover DE
+09/21/1875   NA Hartford       NA Philadelphia   Star Baseball Park, Covington KY
+09/22/1875   NA St. Louis      NA Philadelphia   Ludlow Baseball Park, Ludlow KY
+04/30/1877   NL Boston         NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/09/1877   NL Boston         NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/12/1877   NL Boston         NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/16/1877   NL St. Louis      NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/18/1877   NL St. Louis      NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/19/1877   NL Chicago        NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/21/1877   NL Chicago        NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/23/1877   NL Louisville     NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/25/1877   NL Louisville     NL Hartford       Union Grounds, Brooklyn, NY (17)
+06/27/1877   NL Louisville     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/07/1877   NL Boston         NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/08/1877   NL Boston         NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/17/1877   NL Cincinnati     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/18/1877   NL Cincinnati     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/20/1877   NL Louisville     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/21/1877   NL Louisville     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/23/1877   NL Louisville     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/27/1877   NL Cincinnati     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/28/1877   NL Cincinnati     NL Hartford       Union Grounds, Brooklyn, NY (17)
+08/31/1877   NL Louisville     NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/04/1877   NL Chicago        NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/08/1877   NL St. Louis      NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/11/1877   NL St. Louis      NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/12/1877   NL St. Louis      NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/14/1877   NL Chicago        NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/15/1877   NL Chicago        NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/18/1877   NL St. Louis      NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/21/1877   NL Chicago        NL Hartford       Union Grounds, Brooklyn, NY (17)
+09/22/1877   NA Chicago        NA Hartford       Howard Avenue Grounds, New Haven, CT
+07/09/1878   NL Boston         NL Indianapolis   Grand Avenue Park, St. Louis, MO
+07/11/1878   NL Boston         NL Indianapolis   Grand Avenue Park, St. Louis, MO
+07/13/1878   NL Boston         NL Indianapolis   Grand Avenue Park, St. Louis, MO
+07/26/1878   NL Milwaukee      NL Providence     Union Grounds, Brooklyn, NY
+08/22/1878   NL Providence     NL Indianapolis   Union Park, Pittsburgh PA
+08/23/1878   NL Providence     NL Indianapolis   Union Park, Pittsburgh PA
+08/24/1878   NL Providence     NL Indianapolis   Union Park, Pittsburgh PA
+09/11/1880   NL Providence     NL Troy           Riverside Park, Albany NY
+06/15/1881   NL Cleveland      NL Troy           Riverside Park, Albany NY
+09/10/1881   NL Worcester      NL Troy           Riverside Park, Albany NY
+05/16/1882   NL Providence     NL Troy           Riverside Park, Albany NY
+05/17/1882   NL Providence     NL Troy           Riverside Park, Albany NY
+05/18/1882   NL Providence     NL Troy           Riverside Park, Albany NY
+05/30/1882 1 NL Chicago        NL Troy           Greenbush Grounds, Greenbush (now in Rennselaer) NY
+05/30/1882 2 NL Chicago        NL Troy           Putnam Grounds, Troy NY
+08/25/1884   UA Washington     UA Baltimore      Monumental Park, Baltimore MD
+08/25/1884   UA St. Louis      UA Chicago        Exposition Park I, Pittsburgh PA (16)
+08/26/1884   UA St. Louis      UA Chicago        Exposition Park I, Pittsburgh PA (16)
+08/27/1884   UA St. Louis      UA Chicago        Exposition Park I, Pittsburgh PA (16)
+08/29/1884   UA St. Louis      UA Chicago        Exposition Park I, Pittsburgh PA (16)
+08/30/1884   UA St. Louis      UA Chicago        Exposition Park I, Pittsburgh PA (16)
+09/17/1884   UA St. Louis      UA Chicago        Belair Lot, Baltimore, MD
+10/10/1884   AA Indianapolis   AA Cincinnati     Washington Park I, Brooklyn, NY
+09/04/1885   NL Buffalo        NL Chicago        Wright Street Grounds, Milwaukee WI
+09/25/1885   NL Providence     NL Chicago        Wright Street Grounds, Milwaukee WI
+10/10/1885 1 NL Providence     NL Buffalo        Maple Avenue Driving Park, Elmira NY
+10/10/1885 2 NL Providence     NL Buffalo        Maple Avenue Driving Park, Elmira NY
+08/17/1887   NL Boston         NL Washington     Agricultural County Fairgrounds II, Worcester MA
+08/21/1887   AA New York       AA Cleveland      Cedar Avenue Driving Park, Cleveland OH (6)
+09/11/1887   AA Louisville     AA New York       Monitor Park, Weehawken NJ
+06/10/1888   AA Baltimore      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+07/22/1888   AA Baltimore      AA Cleveland      Beyerle's Park, Geauga Lake OH (6)
+07/29/1888   AA St. Louis      AA Cleveland      Beyerle's Park, Geauga Lake OH (6)
+08/05/1888   AA Kansas City    AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+08/26/1888   AA Louisville     AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+08/26/1888   AA St. Louis      AA Cleveland      Beyerle's Park, Geauga Lake OH (6)
+09/02/1888   AA Louisville     AA Cleveland      Beyerle's Park, Geauga Lake OH (6)
+10/14/1888   AA Cleveland      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+04/21/1889   AA Brooklyn       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+04/24/1889   NL Boston         NL New York       Oakdale Park, Jersey City NJ
+04/25/1889   NL Boston         NL New York       Oakdale Park, Jersey City NJ
+04/29/1889   NA Washington     NL New York       St. George Cricket Grounds, St. George NY
+04/30/1889   NA Washington     NL New York       St. George Cricket Grounds, St. George NY
+05/01/1889   NA Washington     NL New York       St. George Cricket Grounds, St. George NY
+05/02/1889   NA Washington     NL New York       St. George Cricket Grounds, St. George NY
+05/13/1889   NL Cleveland      NL New York       St. George Cricket Grounds, St. George NY
+05/14/1889   NL Cleveland      NL New York       St. George Cricket Grounds, St. George NY
+05/15/1889   NL Cleveland      NL New York       St. George Cricket Grounds, St. George NY
+05/16/1889   NL Cleveland      NL New York       St. George Cricket Grounds, St. George NY
+05/17/1889   NL Pittsburgh     NL New York       St. George Cricket Grounds, St. George NY
+05/18/1889   NL Pittsburgh     NL New York       St. George Cricket Grounds, St. George NY
+05/21/1889   NL Pittsburgh     NL New York       St. George Cricket Grounds, St. George NY
+05/22/1889   NL Chicago        NL New York       St. George Cricket Grounds, St. George NY
+05/23/1889   NL Chicago        NL New York       St. George Cricket Grounds, St. George NY
+05/24/1889   NL Chicago        NL New York       St. George Cricket Grounds, St. George NY
+05/25/1889   NL Chicago        NL New York       St. George Cricket Grounds, St. George NY
+05/26/1889   AA Baltimore      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+05/28/1889   NL Indianapolis   NL New York       St. George Cricket Grounds, St. George NY
+05/29/1889   NL Indianapolis   NL New York       St. George Cricket Grounds, St. George NY
+05/30/1889 1 NL Indianapolis   NL New York       St. George Cricket Grounds, St. George NY
+05/30/1889 2 NL Indianapolis   NL New York       St. George Cricket Grounds, St. George NY
+06/02/1889   AA Cincinnati     AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+06/09/1889   AA Kansas City    AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+06/10/1889   NL Boston         NL New York       St. George Cricket Grounds, St. George NY
+06/11/1889   NL Boston         NL New York       St. George Cricket Grounds, St. George NY
+06/13/1889   NL Philadelphia   NL New York       St. George Cricket Grounds, St. George NY
+06/14/1889   NL Philadelphia   NL New York       St. George Cricket Grounds, St. George NY
+06/16/1889   AA St. Louis      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+06/23/1889   AA Baltimore      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+06/30/1889   AA Brooklyn       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+08/04/1889   AA Louisville     AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/01/1889   AA Cincinnati     AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/08/1889   AA Louisville     AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/15/1889   AA St. Louis      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/22/1889   AA Baltimore      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/29/1889   AA Columbus       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+10/13/1889   AA Baltimore      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+04/27/1890   AA Syracuse       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+05/11/1890   AA Brooklyn       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+05/11/1890   AA Syracuse       AA Rochester      Windsor Beach Park, Irondequoit, NY (6)
+05/18/1890   AA Louisville     AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+05/18/1890   AA Columbus       AA Rochester      Windsor Beach Park, Irondequoit, NY (6)
+05/25/1890   AA St. Louis      AA Syracuse       Three Rivers Park, Three Rivers, NY (6)
+05/25/1890   AA St. Louis      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+05/25/1890   AA Louisville     AA Syracuse       Three Rivers Park, Three Rivers, NY (6)
+06/01/1890   AA Louisville     AA Rochester      Windsor Beach Park, Irondequoit, NY (6)
+06/01/1890   AA Toledo         AA Syracuse       Three Rivers Park, Three Rivers, NY (6)
+06/08/1890   AA Philadelphia   AA Rochester      Windsor Beach Park, Irondequoit, NY (6)
+06/15/1890   AA Brooklyn       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+06/15/1890   AA Rochester      AA Syracuse       Three Rivers Park, Three Rivers, NY (6)
+06/22/1890   AA Brooklyn       AA Rochester      Windsor Beach Park, Irondequoit, NY (6)
+06/22/1890   AA Syracuse       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+07/06/1890   AA Columbus       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+07/20/1890   AA St. Louis      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+07/20/1890   AA Columbus       AA Rochester      Windsor Beach Park, Irondequoit, NY (6)
+07/20/1890   AA Toledo         AA Syracuse       Three Rivers Park, Three Rivers, NY (6)
+07/27/1890   AA Columbus       AA Brooklyn       Long Island Grounds, Maspeth NY
+07/27/1890   AA Toledo         AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+07/30/1890   NL Brooklyn       NL Cleveland      Indianapolis Park, Indianapolis IN
+07/31/1890   NL New York       NL Cleveland      Indianapolis Park, Indianapolis IN
+08/02/1890   NL New York       NL Cleveland      Indianapolis Park, Indianapolis IN
+08/03/1890   AA Toledo         AA Brooklyn       Long Island Grounds, Maspeth NY
+08/03/1890   AA Louisville     AA Syracuse       Iron Pier, Syracuse, NY (6)
+08/31/1890   AA St. Louis      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/07/1890   AA Toledo         AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/14/1890   AA Baltimore      AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+09/18/1890   NL Cleveland      NL Pittsburgh     Mahaffey Park, Canton OH
+09/22/1890   NL New York       NL Pittsburgh     Island Grounds, Wheeling WV
+10/12/1890   AA Syracuse       AA Philadelphia   Gloucester Point Grounds, Gloucester City, NJ (6)
+10/02/1891   AA Columbus       AA Milwaukee      Athletic Park, Minneapolis MN
+06/30/1892 1 NL Washington     NL Philadelphia   Exposition Park III, Pittsburgh, PA
+06/30/1892 2 NL Washington     NL Philadelphia   Exposition Park III, Pittsburgh, PA
+08/23/1892 1 NL Boston         NL St. Louis      Association Park, Kansas City MO
+08/23/1892 2 NL Boston         NL St. Louis      Association Park, Kansas City MO
+10/15/1892   NL Chicago        NL St. Louis      Association Park, Kansas City MO
+08/11/1894 1 NL Washington     NL Philadelphia   University of Penn. Athletic Field, Philadelphia PA (13)
+08/11/1894 2 NL Washington     NL Philadelphia   University of Penn. Athletic Field, Philadelphia PA (13)
+08/14/1894   NL Louisville     NL Philadelphia   University of Penn. Athletic Field, Philadelphia PA (13)
+08/15/1894   NL Louisville     NL Philadelphia   University of Penn. Athletic Field, Philadelphia PA (13)
+08/16/1894   NL Louisville     NL Philadelphia   University of Penn. Athletic Field, Philadelphia PA (13)
+08/17/1894   NL Louisville     NL Philadelphia   University of Penn. Athletic Field, Philadelphia PA (13)
+06/12/1898   NL Pittsburgh     NL Cleveland      Euclid Beach Park, Collinwood OH (6)
+06/19/1898   NL Pittsburgh     NL Cleveland      Euclid Beach Park, Collinwood OH (6)
+07/29/1898 1 NL Baltimore      NL Cleveland      Baker Bowl, Philadelphia PA
+07/29/1898 2 NL Baltimore      NL Cleveland      Baker Bowl, Philadelphia PA
+07/30/1898 1 NL Baltimore      NL Cleveland      Baker Bowl, Philadelphia PA
+07/30/1898 2 NL Baltimore      NL Cleveland      Baker Bowl, Philadelphia PA
+08/05/1898   NL Washington     NL Cleveland      Baker Bowl, Philadelphia PA
+08/06/1898   NL Washington     NL Cleveland      Baker Bowl, Philadelphia PA
+08/08/1898 1 NL Washington     NL Cleveland      Baker Bowl, Philadelphia PA
+08/08/1898 2 NL Washington     NL Cleveland      Baker Bowl, Philadelphia PA
+08/11/1898   NL Baltimore      NL Cleveland      Baker Bowl, Philadelphia PA
+08/27/1898   NL Brooklyn       NL Cleveland      Culver Field II, Rochester NY
+08/28/1898   NL Brooklyn       NL Cleveland      Ontario Beach Grounds, Rochester NY
+08/29/1898   NL Brooklyn       NL Cleveland      Culver Field II, Rochester NY
+09/11/1898   NL Washington     NL New York       West New York Field Club Grounds, West New York NJ
+09/18/1898   NL New York       NL Brooklyn       West New York Field Club Grounds, West New York NJ
+09/28/1898   NL Cincinnati     NL Cleveland      Robison Field, St. Louis, MO
+09/29/1898   NL Cincinnati     NL Cleveland      Robison Field, St. Louis, MO
+10/02/1898   NL Washington     NL Brooklyn       West New York Field Club Grounds, West New York NJ
+10/08/1898   NL St. Louis      NL Cleveland      West Side Grounds, Chicago IL
+06/04/1899   NL Louisville     NL New York       West New York Field Club Grounds, West New York NJ
+07/16/1899   NL St. Louis      NL New York       West New York Field Club Grounds, West New York NJ
+08/13/1899   NL Louisville     NL New York       West New York Field Club Grounds, West New York NJ
+09/17/1899   NL St. Louis      NL New York       West New York Field Club Grounds, West New York NJ
+09/24/1899 2 NL Louisville     NL Cleveland      Robison Field, St. Louis, MO
+06/08/1902   AL Baltimore      AL Cleveland      Fairview Park, Dayton OH (6)
+06/15/1902   AL Boston         AL Cleveland      Mahaffey Park, Canton OH (6)
+06/22/1902   AL Washington     AL Cleveland      Jailhouse Flats, Fort Wayne IN (6)
+08/03/1902   AL Washington     AL Cleveland      Neil Park I, Columbus OH (6)
+08/31/1902   AL Boston         AL Cleveland      Jailhouse Flats, Fort Wayne IN (6)
+05/10/1903   AL Detroit        AL Cleveland      Mahaffey Park, Canton OH (6)
+05/17/1903   AL New York       AL Cleveland      Neil Park I, Columbus OH (6)
+05/24/1903   AL Washington     AL Detroit        Ramona Park, Grand Rapids MI (6)
+06/21/1903   AL Boston         AL Cleveland      Mahaffey Park, Canton OH (6)
+06/28/1903   AL Philadelphia   AL Detroit        Armory Park, Toledo OH (6)
+08/16/1903   AL New York       AL Detroit        Armory Park, Toledo OH (6)
+08/20/1903   NL St. Louis      NL Philadelphia   Columbia Park, Philadelphia PA (2)
+08/21/1903 1 NL St. Louis      NL Philadelphia   Columbia Park, Philadelphia PA (2)
+08/21/1903 2 NL St. Louis      NL Philadelphia   Columbia Park, Philadelphia PA (2)
+08/22/1903 1 NL Pittsburgh     NL Philadelphia   Columbia Park, Philadelphia PA (2)
+08/22/1903 2 NL Pittsburgh     NL Philadelphia   Columbia Park, Philadelphia PA (2)
+08/24/1903   NL Pittsburgh     NL Philadelphia   Columbia Park, Philadelphia PA (2)
+08/25/1903 1 NL Pittsburgh     NL Philadelphia   Columbia Park, Philadelphia PA (2)
+08/25/1903 2 NL Pittsburgh     NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/02/1903 1 NL Boston         NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/02/1903 2 NL Boston         NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/03/1903 1 NL Boston         NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/03/1903 2 NL Boston         NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/04/1903 1 NL Boston         NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/04/1903 2 NL Boston         NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/06/1903   NL Philadelphia   NL Boston         Rocky Point Park, Warwick RI (6)
+09/10/1903 1 NL New York       NL Philadelphia   Columbia Park, Philadelphia PA (2)
+09/10/1903 2 NL New York       NL Philadelphia   Columbia Park, Philadelphia PA (2)
+07/17/1904   AL Detroit        AL New York       Wiedenmayer's Park, Newark NJ (6)
+07/23/1905   AL Boston         AL Detroit        Neil Park II, Columbus OH (11)
+07/24/1905   AL Boston         AL Detroit        Neil Park II, Columbus OH (11)
+04/15/1911   NL Brooklyn       NL New York       Hilltop Park, New York NY (9)
+04/17/1911   NL Brooklyn       NL New York       Hilltop Park, New York NY (9)
+04/18/1911   NL Brooklyn       NL New York       Hilltop Park, New York NY (9)
+04/19/1911   NL Brooklyn       NL New York       Hilltop Park, New York NY (9)
+04/25/1911   NL Boston         NL New York       Hilltop Park, New York NY (9)
+04/26/1911   NL Boston         NL New York       Hilltop Park, New York NY (9)
+04/27/1911   NL Boston         NL New York       Hilltop Park, New York NY (9)
+04/28/1911   NL Boston         NL New York       Hilltop Park, New York NY (9)
+05/09/1911   NL Chicago        NL New York       Hilltop Park, New York NY (9)
+05/10/1911   NL Chicago        NL New York       Hilltop Park, New York NY (9)
+05/11/1911   NL Chicago        NL New York       Hilltop Park, New York NY (9)
+05/12/1911   NL Chicago        NL New York       Hilltop Park, New York NY (9)
+05/13/1911   NL St. Louis      NL New York       Hilltop Park, New York NY (9)
+05/15/1911   NL St. Louis      NL New York       Hilltop Park, New York NY (9)
+05/16/1911   NL St. Louis      NL New York       Hilltop Park, New York NY (9)
+05/17/1911   NL Chicago        NL New York       Hilltop Park, New York NY (9)
+05/18/1911   NL Pittsburgh     NL New York       Hilltop Park, New York NY (9)
+05/19/1911   NL Pittsburgh     NL New York       Hilltop Park, New York NY (9)
+05/20/1911   NL Pittsburgh     NL New York       Hilltop Park, New York NY (9)
+05/22/1911   NL Pittsburgh     NL New York       Hilltop Park, New York NY (9)
+05/23/1911   NL Cincinnati     NL New York       Hilltop Park, New York NY (9)
+05/24/1911   NL Cincinnati     NL New York       Hilltop Park, New York NY (9)
+05/25/1911   NL Cincinnati     NL New York       Hilltop Park, New York NY (9)
+05/26/1911   NL Philadelphia   NL New York       Hilltop Park, New York NY (9)
+05/27/1911   NL Philadelphia   NL New York       Hilltop Park, New York NY (9)
+05/29/1911   NL Philadelphia   NL New York       Hilltop Park, New York NY (9)
+05/30/1911 1 NL Brooklyn       NL New York       Hilltop Park, New York NY (9)
+05/30/1911 2 NL Brooklyn       NL New York       Hilltop Park, New York NY (9)
+05/30/1912   AL Philadelphia   AL New York       Polo Grounds V, New York NY (12)
+09/02/1912 1 AL Boston         AL New York       Polo Grounds V, New York NY (12)
+09/02/1912 2 AL Boston         AL New York       Polo Grounds V, New York NY (12)
+04/19/1913 1 NL New York       NL Boston         Fenway Park, Boston MA (12)
+04/19/1913 2 NL New York       NL Boston         Fenway Park, Boston MA (12)
+05/30/1913 1 NL Brooklyn       NL Boston         Fenway Park, Boston MA (12)
+05/30/1913 2 NL Brooklyn       NL Boston         Fenway Park, Boston MA (12)
+08/01/1914   NL St. Louis      NL Boston         Fenway Park, Boston MA (6)
+08/08/1914   NL Cincinnati     NL Boston         Fenway Park, Boston MA (6)
+09/07/1914 1 NL New York       NL Boston         Fenway Park, Boston MA (12)
+09/07/1914 2 NL New York       NL Boston         Fenway Park, Boston MA (12)
+09/08/1914   NL New York       NL Boston         Fenway Park, Boston MA (12)
+09/09/1914 1 NL Philadelphia   NL Boston         Fenway Park, Boston MA (12)
+09/09/1914 2 NL Philadelphia   NL Boston         Fenway Park, Boston MA (12)
+09/10/1914 1 NL Philadelphia   NL Boston         Fenway Park, Boston MA (12)
+09/10/1914 2 NL Philadelphia   NL Boston         Fenway Park, Boston MA (12)
+09/11/1914   NL Philadelphia   NL Boston         Fenway Park, Boston MA (12)
+09/12/1914   NL Brooklyn       NL Boston         Fenway Park, Boston MA (12)
+09/14/1914   NL Brooklyn       NL Boston         Fenway Park, Boston MA (12)
+09/15/1914   NL Brooklyn       NL Boston         Fenway Park, Boston MA (12)
+09/16/1914   NL St. Louis      NL Boston         Fenway Park, Boston MA (12)
+09/17/1914   NL St. Louis      NL Boston         Fenway Park, Boston MA (12)
+09/18/1914   NL St. Louis      NL Boston         Fenway Park, Boston MA (12)
+09/19/1914   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (12)
+09/21/1914   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (12)
+09/22/1914   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (12)
+09/23/1914 1 NL Cincinnati     NL Boston         Fenway Park, Boston MA (12)
+09/23/1914 2 NL Cincinnati     NL Boston         Fenway Park, Boston MA (12)
+09/24/1914 1 NL Cincinnati     NL Boston         Fenway Park, Boston MA (12)
+09/24/1914 2 NL Cincinnati     NL Boston         Fenway Park, Boston MA (12)
+09/25/1914 1 NL Cincinnati     NL Boston         Fenway Park, Boston MA (12)
+09/25/1914 2 NL Cincinnati     NL Boston         Fenway Park, Boston MA (12)
+09/26/1914 1 NL Chicago        NL Boston         Fenway Park, Boston MA (12)
+09/26/1914 2 NL Chicago        NL Boston         Fenway Park, Boston MA (12)
+09/28/1914   NL Chicago        NL Boston         Fenway Park, Boston MA (12)
+09/29/1914   NL Chicago        NL Boston         Fenway Park, Boston MA (12)
+10/12/1914   AL Philadelphia   NL Boston         Fenway Park, Boston MA (12) [World Series]
+10/13/1914   AL Philadelphia   NL Boston         Fenway Park, Boston MA (12) [World Series]
+04/14/1915   NL Philadelphia   NL Boston         Fenway Park, Boston MA (14)
+04/15/1915   NL Philadelphia   NL Boston         Fenway Park, Boston MA (14)
+04/17/1915   NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+04/19/1915 1 NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+04/19/1915 2 NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+04/20/1915   NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+04/21/1915   NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+05/06/1915   NL New York       NL Boston         Fenway Park, Boston MA (14)
+05/07/1915   NL New York       NL Boston         Fenway Park, Boston MA (14)
+05/08/1915   NL New York       NL Boston         Fenway Park, Boston MA (14)
+05/10/1915   NL New York       NL Boston         Fenway Park, Boston MA (14)
+05/11/1915   NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+05/12/1915   NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+05/14/1915   NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+05/15/1915   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (14)
+05/18/1915   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (14)
+05/19/1915   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (14)
+05/20/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+05/21/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+05/22/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+05/24/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+05/25/1915   NL Cincinnati     NL Boston         Fenway Park, Boston MA (14)
+05/27/1915   NL Cincinnati     NL Boston         Fenway Park, Boston MA (14)
+05/28/1915 1 NL Philadelphia   NL Boston         Fenway Park, Boston MA (14)
+05/28/1915 2 NL Philadelphia   NL Boston         Fenway Park, Boston MA (14)
+05/29/1915   NL Philadelphia   NL Boston         Fenway Park, Boston MA (14)
+05/31/1915 1 NL Philadelphia   NL Boston         Fenway Park, Boston MA (14)
+05/31/1915 2 NL Philadelphia   NL Boston         Fenway Park, Boston MA (14)
+06/01/1915   NL New York       NL Boston         Fenway Park, Boston MA (14)
+06/02/1915   NL New York       NL Boston         Fenway Park, Boston MA (14)
+06/03/1915   NL New York       NL Boston         Fenway Park, Boston MA (14)
+06/22/1915   NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+06/23/1915   NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+06/24/1915   NL Brooklyn       NL Boston         Fenway Park, Boston MA (14)
+07/09/1915   NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+07/10/1915 1 NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+07/10/1915 2 NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+07/12/1915 1 NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+07/12/1915 2 NL St. Louis      NL Boston         Fenway Park, Boston MA (14)
+07/13/1915 1 NL Pittsburgh     NL Boston         Fenway Park, Boston MA (14)
+07/13/1915 2 NL Pittsburgh     NL Boston         Fenway Park, Boston MA (14)
+07/15/1915   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (14)
+07/16/1915   NL Pittsburgh     NL Boston         Fenway Park, Boston MA (14)
+07/17/1915 1 NL Cincinnati     NL Boston         Fenway Park, Boston MA (14)
+07/17/1915 2 NL Cincinnati     NL Boston         Fenway Park, Boston MA (14)
+07/19/1915   NL Cincinnati     NL Boston         Fenway Park, Boston MA (14)
+07/20/1915   NL Cincinnati     NL Boston         Fenway Park, Boston MA (14)
+07/21/1915   NL Cincinnati     NL Boston         Fenway Park, Boston MA (14)
+07/22/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+07/23/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+07/24/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+07/26/1915   NL Chicago        NL Boston         Fenway Park, Boston MA (14)
+10/11/1915   NL Philadelphia   AL Boston         Braves Field, Boston MA (12) [World Series]
+10/12/1915   NL Philadelphia   AL Boston         Braves Field, Boston MA (12) [World Series]
+09/05/1918   AL Boston         NL Chicago        Comiskey Park I, Chicago IL (12) [World Series]
+09/06/1918   AL Boston         NL Chicago        Comiskey Park I, Chicago IL (12) [World Series]
+09/07/1918   AL Boston         NL Chicago        Comiskey Park I, Chicago IL (12) [World Series]
+05/16/1927   NL St. Louis      NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/17/1927   NL St. Louis      NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/20/1927 1 NL Cincinnati     NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/20/1927 2 NL Cincinnati     NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/21/1927 1 NL Cincinnati     NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/21/1927 2 NL Cincinnati     NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/23/1927   NL Brooklyn       NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/24/1927   NL Brooklyn       NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/27/1927 1 NL Boston         NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/27/1927 2 NL Boston         NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/28/1927 1 NL Boston         NL Philadelphia   Shibe Park, Philadelphia PA (10)
+05/28/1927 2 NL Boston         NL Philadelphia   Shibe Park, Philadelphia PA (10)
+04/28/1929   AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+05/26/1929   AL New York       AL Boston         Braves Field, Boston, MA (6)
+06/02/1929   AL Cleveland      AL Boston         Braves Field, Boston, MA (6)
+06/09/1929   AL Detroit        AL Boston         Braves Field, Boston, MA (6)
+06/16/1929   AL St. Louis      AL Boston         Braves Field, Boston, MA (6)
+06/30/1929   AL New York       AL Boston         Braves Field, Boston, MA (6)
+07/28/1929   AL Detroit        AL Boston         Braves Field, Boston, MA (6)
+08/04/1929   AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+09/01/1929   AL New York       AL Boston         Braves Field, Boston, MA (6)
+09/02/1929 1 AL Washington     AL Boston         Braves Field, Boston, MA (6)
+09/02/1929 2 AL Washington     AL Boston         Braves Field, Boston, MA (6)
+09/08/1929 1 AL St. Louis      AL Boston         Braves Field, Boston, MA (6)
+09/08/1929 2 AL St. Louis      AL Boston         Braves Field, Boston, MA (6)
+09/15/1929 1 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+09/15/1929 2 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+09/22/1929   AL Cleveland      AL Boston         Braves Field, Boston, MA (6)
+09/29/1929   AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+04/20/1930   AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+05/04/1930   AL Cleveland      AL Boston         Braves Field, Boston, MA (6)
+05/11/1930   AL St. Louis      AL Boston         Braves Field, Boston, MA (6)
+05/18/1930   AL New York       AL Boston         Braves Field, Boston, MA (6)
+06/22/1930 1 AL Detroit        AL Boston         Braves Field, Boston, MA (6)
+06/22/1930 2 AL Detroit        AL Boston         Braves Field, Boston, MA (6)
+06/29/1930 1 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+06/29/1930 2 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+07/06/1930   AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+08/10/1930   AL Detroit        AL Boston         Braves Field, Boston, MA (6)
+08/17/1930 1 AL Cleveland      AL Boston         Braves Field, Boston, MA (6)
+08/17/1930 2 AL Cleveland      AL Boston         Braves Field, Boston, MA (6)
+08/24/1930 1 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+08/24/1930 2 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+08/31/1930   AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+09/28/1930   AL New York       AL Boston         Braves Field, Boston, MA (6)
+05/31/1931 1 AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+05/31/1931 2 AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+06/07/1931   AL St. Louis      AL Boston         Braves Field, Boston, MA (6)
+06/14/1931   AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+07/12/1931 1 AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+07/12/1931 2 AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+07/19/1931   AL Cleveland      AL Boston         Braves Field, Boston, MA (6)
+07/26/1931 1 AL Detroit        AL Boston         Braves Field, Boston, MA (6)
+07/26/1931 2 AL Detroit        AL Boston         Braves Field, Boston, MA (6)
+08/02/1931 1 AL New York       AL Boston         Braves Field, Boston, MA (6)
+08/02/1931 2 AL New York       AL Boston         Braves Field, Boston, MA (6)
+08/30/1931   AL New York       AL Boston         Braves Field, Boston, MA (6)
+09/06/1931   AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+09/13/1931 1 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+09/13/1931 2 AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+05/08/1932   AL St. Louis      AL Boston         Braves Field, Boston, MA (6)
+05/15/1932   AL Chicago        AL Boston         Braves Field, Boston, MA (6)
+05/29/1932 1 AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+05/29/1932 2 AL Philadelphia   AL Boston         Braves Field, Boston, MA (6)
+04/28/1946 1 NL Philadelphia   NL Boston         Fenway Park, Boston MA (1)
+04/28/1946 2 NL Philadelphia   NL Boston         Fenway Park, Boston MA (1)
+04/19/1956   NL Philadelphia   NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+05/16/1956   NL St. Louis      NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+06/25/1956   NL Chicago        NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+07/25/1956   NL Cincinnati     NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+07/31/1956   NL Milwaukee      NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+08/07/1956   NL Pittsburgh     NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+08/15/1956   NL New York       NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+04/22/1957   NL Philadelphia   NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+05/03/1957   NL St. Louis      NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+06/05/1957   NL Chicago        NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+06/10/1957   NL Milwaukee      NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+07/12/1957   NL Cincinnati     NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+08/07/1957   NL New York       NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+08/16/1957   NL Pittsburgh     NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+09/03/1957   NL Philadelphia   NL Brooklyn       Roosevelt Stadium, Jersey City NJ (5)
+05/15/1968   AL California     AL Chicago        County Stadium, Milwaukee WI (5)
+05/28/1968   AL Baltimore      AL Chicago        County Stadium, Milwaukee WI (5)
+06/17/1968   AL Cleveland      AL Chicago        County Stadium, Milwaukee WI (5)
+06/24/1968   AL Minnesota      AL Chicago        County Stadium, Milwaukee WI (5)
+07/11/1968   AL New York       AL Chicago        County Stadium, Milwaukee WI (5)
+07/22/1968   AL Oakland        AL Chicago        County Stadium, Milwaukee WI (5)
+08/02/1968   AL Washington     AL Chicago        County Stadium, Milwaukee WI (5)
+08/08/1968   AL Boston         AL Chicago        County Stadium, Milwaukee WI (5)
+08/26/1968   AL Detroit        AL Chicago        County Stadium, Milwaukee WI (5)
+04/23/1969   AL California     AL Chicago        County Stadium, Milwaukee WI (5)
+05/22/1969   AL Detroit        AL Chicago        County Stadium, Milwaukee WI (5)
+05/28/1969   AL New York       AL Chicago        County Stadium, Milwaukee WI (5)
+06/11/1969   AL Cleveland      AL Chicago        County Stadium, Milwaukee WI (5)
+06/16/1969   AL Seattle        AL Chicago        County Stadium, Milwaukee WI (5)
+07/02/1969   AL Minnesota      AL Chicago        County Stadium, Milwaukee WI (5)
+07/07/1969   AL Oakland        AL Chicago        County Stadium, Milwaukee WI (5)
+08/06/1969   AL Washington     AL Chicago        County Stadium, Milwaukee WI (5)
+08/13/1969   AL Boston         AL Chicago        County Stadium, Milwaukee WI (5)
+09/01/1969   AL Baltimore      AL Chicago        County Stadium, Milwaukee WI (5)
+09/26/1969   AL Kansas City    AL Chicago        County Stadium, Milwaukee WI (5)
+04/01/1996   AL Toronto        AL Oakland        Cashman Field, Las Vegas NV (8)
+04/03/1996   AL Toronto        AL Oakland        Cashman Field, Las Vegas NV (8)
+04/04/1996   AL Detroit        AL Oakland        Cashman Field, Las Vegas NV (8)
+04/05/1996   AL Detroit        AL Oakland        Cashman Field, Las Vegas NV (8)
+04/06/1996   AL Detroit        AL Oakland        Cashman Field, Las Vegas NV (8)
+04/07/1996   AL Detroit        AL Oakland        Cashman Field, Las Vegas NV (8)
+08/16/1996   NL New York       NL San Diego      Estadio de Beisbol Monterrey, Monterrey MX (5)
+08/17/1996   NL New York       NL San Diego      Estadio de Beisbol Monterrey, Monterrey MX (5)
+08/18/1996   NL New York       NL San Diego      Estadio de Beisbol Monterrey, Monterrey MX (5)
+04/19/1997 1 NL St. Louis      NL San Diego      Aloha Stadium, Honolulu HI (5)
+04/19/1997 2 NL St. Louis      NL San Diego      Aloha Stadium, Honolulu HI (5)
+04/20/1997   NL St. Louis      NL San Diego      Aloha Stadium, Honolulu HI (5)
+04/15/1998   AL Anaheim        AL New York       Shea Stadium, New York NY (7)
+04/04/1999   NL Colorado       NL San Diego      Estadio de Beisbol Monterrey, Monterrey MX (5)
+03/29/2000   NL Chicago        NL New York       Tokyo Dome, Tokyo JAP (5)
+03/30/2000   NL New York       NL Chicago        Tokyo Dome, Tokyo JAP (5)
+04/01/2001   AL Texas          AL Toronto        Estadio Hiram Bithorn, San Juan PR (5)
+04/11/2003   NL New York       NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/12/2003   NL New York       NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/13/2003   NL New York       NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/14/2003   NL New York       NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/15/2003   NL Atlanta        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/16/2003   NL Atlanta        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/17/2003   NL Atlanta        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/19/2003 1 NL Cincinnati     NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/19/2003 2 NL Cincinnati     NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/20/2003   NL Cincinnati     NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+06/03/2003   AL Anaheim        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+06/04/2003   AL Anaheim        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+06/05/2003   AL Anaheim        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+06/06/2003   AL Texas          NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+06/07/2003   AL Texas          NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+06/08/2003   AL Texas          NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+09/05/2003   NL Florida        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+09/06/2003   NL Florida        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+09/07/2003   NL Florida        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+09/09/2003   NL Chicago        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+09/10/2003   NL Chicago        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+09/11/2003   NL Chicago        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+03/30/2004   AL New York       AL Tampa Bay      Tokyo Dome, Tokyo JAP (5)
+03/31/2004   AL New York       AL Tampa Bay      Tokyo Dome, Tokyo JAP (5)
+04/09/2004   NL New York       NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/10/2004   NL New York       NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/11/2004   NL New York       NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/13/2004   NL Florida        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/14/2004   NL Florida        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+04/15/2004   NL Florida        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+05/18/2004   NL Milwaukee      NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+05/19/2004   NL Milwaukee      NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+05/20/2004   NL Milwaukee      NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+05/21/2004   NL San Francisco  NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+05/22/2004   NL San Francisco  NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/02/2004   AL Toronto        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/03/2004   AL Toronto        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/04/2004   AL Toronto        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/05/2004   NL Atlanta        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/06/2004   NL Atlanta        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/07/2004   NL Atlanta        NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/08/2004   NL Pittsburgh     NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/09/2004   NL Pittsburgh     NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/10/2004   NL Pittsburgh     NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+07/11/2004   NL Pittsburgh     NL Montreal       Estadio Hiram Bithorn, San Juan PR (4)
+09/13/2004   NL Montreal       NL Florida        U.S. Cellular Field, Chicago IL (3)
+09/14/2004   NL Montreal       NL Florida        U.S. Cellular Field, Chicago IL (3)
+04/10/2007   AL Anaheim        AL Cleveland      Miller Park, Milwaukee WI (15)
+04/11/2007   AL Anaheim        AL Cleveland      Miller Park, Milwaukee WI (15)
+04/12/2007   AL Anaheim        AL Cleveland      Miller Park, Milwaukee WI (15)
+05/15/2007   AL Texas          AL Tampa Bay      The Ballpark at Disney's Wide World of Sports, Lake Buena Vista FL (5)
+05/16/2007   AL Texas          AL Tampa Bay      The Ballpark at Disney's Wide World of Sports, Lake Buena Vista FL (5)
+05/17/2007   AL Texas          AL Tampa Bay      The Ballpark at Disney's Wide World of Sports, Lake Buena Vista FL (5)

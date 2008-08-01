@@ -1,0 +1,471 @@
+  alpkdc	anahei		arling		bennet
+  bosbpk	bpkarl		clevel		columb
+  comis2	comisk		county		detbpk
+  dodger	exhibi		fenway		griffi
+  hilltp	huntin		jacobs		kauffm
+  kcymun	kingdo		league		lloyds
+  memori	metrod		metrop		minbpk
+  nyybpk	oakbpk		oaklan		oriole
+  oriopk	pologr		rfksta		seabpk
+  sheast	shibep		sickss		skydom
+  sports	sthsid		tigers		tropic
+  wrigla	yankee
+
+23rd Street Park				    CHI02 -
+3Com Park at Candlestick Point			    SFO02 -
+AT&amp;T Park					    SFO03 -
+Adelaide Avenue Grounds				    PRO01 -
+Agricultural County Fair Grounds I		    WOR01 -
+Agricultural County Fair Grounds II		    WOR02 -
+Agricultural Society Fair Grounds		    RCK01 -
+Allens Pasture					    RIC02 -
+Aloha Stadium					    HON01 -
+American League Park I				    WAS07 -
+American League Park II				    WAS08 -
+Angel Stadium of Anaheim			    ANA01 -
+Arlington Stadium				    ARL01 -
+Armory Park					    TOL04 -
+Association Park				    KAN02 -
+Astrodome					    HOU02 -
+Athletic Park (Kansas City)			    KAN01 -
+Athletic Park (Minneapolis)			    MIN01 -
+Athletic Park (Washington)			    WAS04 -
+Atlanta-Fulton County Stadium			    ATL01 -
+Avenue Grounds					    CIN02 -
+Baker Bowl					    PHI09 -
+Bank Street Grounds				    CIN03 -
+Belair Lot					    BAL04 -
+Bennett Park					    DET02 -
+Borchert Field					    MIL03 -
+Boundary Field					    WAS06 -
+Braves Field					    BOS08 -
+Brotherhood Park				    CLE04 -
+Bruce Grounds					    IND03 -
+Burns Park					    DET03 -
+Busch Stadium I					    STL07 -
+Busch Stadium II				    STL09 -
+Busch Stadium III				    STL10 -
+Capitol Grounds					    WAS03 -
+Capitoline Grounds				    NYC02 -
+Cashman Field					    LAS01 -
+Cedar Avenue Driving Park			    CLE09 -
+Centennial Park					    PHI02 -
+Chase Field					    PHO01 -
+Cinergy Field					    CIN08 -
+Citizens Bank Park				    PHI13 -
+Cleveland Stadium				    CLE07 -
+Colt Stadium					    HOU01 -
+Columbia Park (Altoona)				    ALT01 -
+Columbia Park (Philadelphia)			    PHI10 -
+Comerica Park					    DET05 -
+Comiskey Park I					    CHI10 -
+Congress Street Grounds				    BOS04 -
+Connie Mack Stadium				    PHI11 -
+Coors Field					    DEN02 -
+County Stadium					    MIL05 -
+Crosley Field					    CIN07 -
+Culver Field I					    ROC01 -
+Culver Field II					    ROC02 -
+Dartmouth Grounds				    BOS02 -
+Dodger Stadium					    LOS03 -
+Dolphins Stadium				    MIA01 -
+Eastern Park					    NYC11 -
+Ebbets Field					    NYC15 -
+Eclipse Park I					    LOU02 -
+Eclipse Park II					    LOU03 -
+Elysian Field					    HOB01 -
+Estadio Hiram Bithorn				    SJU01 -
+Estadio Monterrey				    MNT01 -
+Euclid Beach Park				    CLL01 -
+Exhibition Stadium				    TOR01 -
+Exposition Park					    KAN03 -
+Exposition Park I				    PIT02 -
+Exposition Park II				    PIT03 -
+Exposition Park III				    PIT05 -
+Fairview Park					    DAY01 -
+Fairview Park Fair Grounds			    DOV01 -
+Federal League Park				    IND07 -
+Fenway Park					    BOS07 -
+Forbes Field					    PIT06 -
+Forepaugh Park					    PHI07 -
+Geauga Lake Grounds				    GEA01 -
+Gloucester Point Grounds			    GLO01 -
+Gordon and Koppel Field				    KAN04 -
+Grand Avenue Park				    STL02 -
+Grand Duchess					    FOR01 -
+Great American Ball Park			    CIN09 -
+Greenbush Grounds				    ALB02 -
+Griffith Stadium				    WAS09 -
+Hampden Park Race Track				    SPR01 -
+Handlan's Park					    STL08 -
+Harrison Park					    HAR01 -
+Hartford Ball Club Grounds			    HRT01 -
+Hartford Trotting Park				    HRT02 -
+Haymakers' Grounds				    TRO01 -
+Hilltop Park					    NYC13 -
+Howard Avenue Grounds				    NEW01 -
+Hubert H. Humphrey Metrodome			    MIN03 -
+Huntingdon Grounds I				    PHI06 -
+Huntingdon Grounds II				    PHI14 -
+Huntington Avenue Baseball Grounds		    BOS06 -
+Indianapolis Park				    IND06 -
+International Fair Association Grounds		    BUF04 -
+Iron Pier					    SYR03 -
+Island Grounds					    WHE01 -
+Jacobs Field					    CLE08 -
+Jailhouse Flats					    FOR03 -
+Jefferson Street Grounds			    PHI01 -
+Kauffman Stadium				    KAN06 -
+Keystone Park					    PHI05 -
+Kingdome					    SEA02 -
+LA Memorial Coliseum				    LOS01 -
+Lake Front Park I				    CHI01 -
+Lake Front Park II				    CHI03 -
+Lake Front Park III				    CHI04 -
+Lakeside Park					    SYR04 -
+League Park (Cincinnati) I			    CIN04 -
+League Park (Cincinnati) II			    CIN05 -
+League Park (Toledo)				    TOL01 -
+League Park I					    CLE02 -
+League Park II					    CLE03 -
+League Park III					    CLE05 -
+League Park IV					    CLE06 -
+Lincoln Park Grounds				    CIN01 -
+Lloyd Street Grounds				    MIL04 -
+Long Island Grounds				    MAS01 -
+Louisville Baseball Park			    LOU01 -
+Ludlow Baseball Park				    LUD01 -
+Madison Avenue Grounds				    BAL01 -
+Mahaffey Park					    CAN01 -
+Mansfield Club Grounds				    MID01 -
+Maple Avenue Driving Park			    ELM01 -
+Memorial Stadium				    BAL11 -
+Messer Street Grounds				    PRO02 -
+Metropolitan Park				    NYC06 -
+Metropolitan Stadium				    MIN02 -
+Mile High Stadium				    DEN01 -
+Miller Park					    MIL06 -
+Milwaukee Base-Ball Grounds			    MIL01 -
+Minute Maid Park				    HOU03 -
+Monitor Grounds					    WEE01 -
+Monumental Park					    BAL05 -
+Municipal Stadium				    KAN05 -
+National Association Grounds			    CLE01 -
+National Grounds				    WAS02 -
+Neil Park I					    COL03 -
+Neil Park II					    COL04 -
+Network Associates Coliseum			    OAK01 -
+Newington Park					    BAL02 -
+Oakdale Park (Jersey City)			    JER01 -
+Oakdale Park (Philadelphia)			    PHI03 -
+Olympic Grounds					    WAS01 -
+Olympic Park I					    BUF02 -
+Olympic Park II					    BUF03 -
+Ontario Beach Grounds				    ROC03 -
+Oriole Park I					    BAL03 -
+Oriole Park II					    BAL06 -
+Oriole Park III					    BAL07 -
+Oriole Park IV					    BAL09 -
+Oriole Park at Camden Yards			    BAL12 -
+PNC Park					    PIT08 -
+Palace of the Fans				    CIN06 -
+Parc Jarry					    MON01 -
+Pendleton Park					    PEN01 -
+Perry Park					    KEO01 -
+PetCo Park					    SAN02 -
+Polo Grounds I (Southeast Diamond)		    NYC03 -
+Polo Grounds II (Southwest Diamond)		    NYC04 -
+Polo Grounds III				    NYC09 -
+Polo Grounds IV					    NYC10 -
+Polo Grounds V					    NYC14 -
+Proposed Boston Red Sox Park			    BOS09 -
+Proposed Minnesota Twins Park			    MIN04 -
+Proposed New York Yankees Park			    NYC19 -
+Proposed Oakland Athletics Stadium		    OAK02 -
+Putnam Grounds					    TRO02 -
+Qualcomm Stadium				    SAN01 -
+Ramona Park					    GRA01 -
+Rangers Ballpark in Arlington			    ARL02 -
+Recreation Park (Columbus) I			    COL01 -
+Recreation Park (Columbus) II			    COL02 -
+Recreation Park (Detroit)			    DET01 -
+Recreation Park (Philadelphia)			    PHI04 -
+Recreation Park (Pittsburgh)			    PIT04 -
+Red Stockings Base-Ball Park			    STL01 -
+Richmond Fair Grounds				    RIC01 -
+Ridgewood Park I				    NYC07 -
+Ridgewood Park II				    NYC18 -
+Riverside Grounds				    BUF01 -
+Riverside Park					    ALB01 -
+Robert F. Kennedy Stadium			    WAS10 -
+Robison Field					    STL05 -
+Rocky Point Park				    WAR01 -
+Rogers Centre					    TOR02 -
+Roosevelt Stadium				    JER02 -
+Safeco Field					    SEA03 -
+Seals Stadium					    SFO01 -
+Seventh Street Park I				    IND02 -
+Seventh Street Park II				    IND04 -
+Seventh Street Park III				    IND05 -
+Shea Stadium					    NYC17 -
+Sick's Stadium					    SEA01 -
+South End Grounds I				    BOS01 -
+South End Grounds II				    BOS03 -
+South End Grounds III				    BOS05 -
+South Side Park I				    CHI05 -
+South Side Park II				    CHI07 -
+South Side Park III				    CHI09 -
+South Street Park				    IND01 -
+Speranza Park					    TOL03 -
+Sportsman's Park I				    STL03 -
+Sportsman's Park II				    STL06 -
+St. George Cricket Grounds			    SAI01 -
+Stade Olympique					    MON02 -
+Star Baseball Park				    COV01 -
+Star Park I					    SYR01 -
+Star Park II					    SYR02 -
+Swampoodle Grounds				    WAS05 -
+Swinney Park					    FOR02 -
+Terrapin Park					    BAL10 -
+The Ballpark at Disney's Wide World of Sports	    LBV01 -
+Three Rivers Park				    THR01 -
+Three Rivers Stadium				    PIT07 -
+Tiger Stadium					    DET04 -
+Tokyo Dome					    TOK01 -
+Tri-State Fair Grounds				    TOL02 -
+Tropicana Field					    STP01 -
+Troy Ball Club Grounds				    WAT01 -
+Turner Field					    ATL02 -
+U.S. Cellular Field				    CHI12 -
+Union Grounds					    STL04 -
+Union Grounds (Brooklyn)			    NYC01 -
+Union Park					    PIT01 -
+Union Street Park				    WIL01 -
+University of Penn. Athletic Field		    PHI08 -
+Veterans Stadium				    PHI12 -
+Washington Park I				    NYC05 -
+Washington Park II				    NYC08 -
+Washington Park III				    NYC12 -
+Waverly Fairgrounds				    WAV01 -
+West New York Field Club Grounds		    WNY01 -
+West Side Grounds				    CHI08 -
+West Side Park					    CHI06 -
+Wiedenmeyer's Park				    NWK01 -
+Windsor Beach					    IRO01 -
+Wright Street Grounds				    MIL02 -
+Wrigley Field					    CHI11 -
+Wrigley Field (Los Angeles)			    LOS02 -
+Yankee Stadium					    NYC16 -
+
+
+
+
+
+American League Park                        name          alpkdc          -
+Angel Stadium of Anaheim                    name          anahei          -
+Arlington Stadium                           name          arling          -
+Bennett Park                                name          bennet          -
+Cisco Field                                 name          oakbpk          -
+Cleveland Municipal Stadium                 name          clevel          -
+Columbia Park                               name          columb          -
+Comerica Park                               name          detbpk          -
+Comiskey Park                               name          comisk          -
+Dodger Stadium                              name          dodger          -
+Exhibition Stadium                          name          exhibi          -
+Fenway Park                                 name          fenway          -
+Griffith Stadium                            name          griffi          -
+Hilltop Park                                name          hilltp          -
+Hubert H. Humphrey Metrodome                name          metrod          -
+Huntington Avenue Grounds                   name          huntin          -
+Jacobs Field                                name          jacobs          -
+
+Kauffman Stadium                            name          kauffm          -
+League Park                                 name          league          -
+Lloyd Street Grounds                        name          lloyds          -
+McAfee Coliseum                             name          oaklan          -
+Memorial Stadium                            name          memori          -
+Metropolitan Stadium                        name          metrop          -
+Milwaukee County Stadium                    name          county          -
+Municipal Stadium                           name          kcymun          -
+New Fenway Park                             name          bosbpk          -
+New Yankee Stadium                          name          nyybpk          -
+Oriole Park                                 name          oriopk          -
+Oriole Park at Camden Yards                 name          oriole          -
+Polo Grounds                                name          pologr          -
+Polo Grounds IV                             name          pologr          -
+Proposed Twins Ballpark                     name          minbpk          -
+Rangers Ballpark in Arlington               name          bpkarl          -
+Robert F. Kennedy Memorial Stadium          name          rfksta          -
+
+
+Shea Stadium                                name          sheast          -
+Shibe Park / Connie Mack Stadium            name          shibep          -
+Sicks' Stadium                              name          sickss          -
+South Side Park                             name          sthsid          -
+Sportsman's Park                            name          sports          -
+Tiger Stadium                               name          tigers          -
+
+U.S. Cellular Field                         name          comis2          -
+Wrigley Field                               name          wrigla          -
+Yankee Stadium                              name          yankee          -
+
+
+American League ballparks                   title         index           -
+
+
+American League Park in Washington, DC      title         alpkdc          - WAS07 08
+Angel Stadium of Anaheim                    title         anahei          - ANA01
+Arlington Stadium                           title         arling          - ARL01
+
+
+
+
+Bennett Park                                title         bennet          - DET02
+
+
+
+
+Cisco Field                      - OAK02		            title         oakbpk         
+																
+																
+Cleveland Municipal Stadium      - CLE07		            title         clevel         
+																
+Columbia Park                    - PHI10		            title         columb         
+Comerica Park                    - DET05		            title         detbpk         
+Comiskey Park                    - CHI10		            title         comisk         
+																
+Dodger Stadium                   - LOS03		            title         dodger         
+Exhibition Stadium               - TOR01		            title         exhibi         
+Fenway Park                      - BOS07		            title         fenway         
+Griffith Stadium                 - WAS09		            title         griffi         
+Hilltop Park                     - NYC13		            title         hilltp         
+Hubert H. Humphrey Metrodome     - MIN03		            title         metrod         
+Huntington Avenue Grounds        - BOS06		            title         huntin         
+Jacobs Field                     - CLE08		            title         jacobs         
+Kauffman Stadium                 - KAN06		            title         kauffm         
+Kingdome                         - SEA02		            title         kingdo         
+League Park                      - CLE06 (05,04,03)	            title         league         
+Lloyd Street Grounds             - MIL04		            title         lloyds         
+McAfee Coliseum                  - OAK01		            title         oaklan         
+Memorial Stadium                 - BAL11		            title         memori         
+Metropolitan Stadium             - MIN02		            title         metrop         
+Milwaukee County Stadium         - MIL05		            title         county         
+Municipal Stadium                - KAN05		            title         kcymun         
+New Fenway Park                  - BOS09		            title         bosbpk         
+New Yankee stadium               - NYC19		            title         nyybpk         
+Oriole Park                      - BAL03 06 07 09	            title         oriopk         
+Oriole Park at Camden Yards      - BAL12		            title         oriole         
+Polo Grounds                     - NYC03 04 09 10 14	            title         pologr         
+Polo Grounds IV                  - NYC10 14		            name          pologr         
+Proposed Twins ballpark          - MIN04		            title         minbpk         
+RFK Stadium                      - WAS10		            title         rfksta         
+Rangers Ballpark in Arlington    - ARL02		            title         bpkarl         
+Rogers Centre                    - TOR02		            title         skydom         
+Safeco Field                     - SEA03		            title         seabpk         
+Shea Stadium                     - NYC17		            title         sheast         
+Shibe Park                       - PHI11		            title         shibep         
+Sicks' Stadium                   - SEA01		            title         sickss         
+South Side Park                  - CHI05 07 09		            title         sthsid         
+Sportsman's Park                 - STL03 06		            title         sports         
+Tiger Stadium                    - DET04		            title         tigers         
+Tropicana Field                  - STP01		            title         tropic         
+U.S. Cellular Field              - CHI12		            title         comis2         
+Wrigley Field in Los Angeles     - 		            title         wrigla         
+Yankee Stadium                   - NYC16		            title         yankee         
+
+
+
+| pacbel	| AT&T Park				| SFO03
+| anahei	| Angel Stadium of Anaheim		| ANA01
+| arling	| Arlington Stadium			| ARL01
+| astrod	| Astrodome				| HOU02
+| fulton	| Atlanta-Fulton County Stadium		| ATL01
+| bakerb	| Baker Bowl				| PHI09
+| bennet	| Bennett Park				| DET02
+| braves	| Braves Field				| BOS08
+| 3compk	| Candlestick Park			| SFO02
+| bk1bpk	| Chase Field				| PHO01
+| phibpk	| Citizens Bank Park			| PHI13
+| clevel	| Cleveland Municipal Stadium		| CLE07
+| coltst	| Colt Stadium				| HOU01
+| columb	| Columbia Park				| PHI10
+| detbpk	| Comerica Park				| DET05
+| comisk	| Comiskey Park				| CHI10
+| coorsf	| Coors Field				| DEN02
+| crosle	| Crosley Field				| CIN07
+| dodger	| Dodger Stadium			| LOS03
+| propla	| Dolphin Stadium			| MIA01
+| ebbets	| Ebbets Field				| NYC15			
+| exhibi	| Exhibition Stadium			| TOR01			
+| exposi	| Exposition Park			| TOR01			
+| fenway	| Fenway Park				| TOR01			
+| forbes	| Forbes Field				| PIT06			
+| cinbpk	| Great American Ball Park		| CIN09			
+| griffi	| Griffith Stadium			| WAS09			
+| hilltp	| Hilltop Park				| NYC13			
+| hibith	| Hiram Bithorn Stadium			| SJU01			
+| metrod	| Hubert H. Humphrey Metrodome		| MIN03			
+| huntin	| Huntington Avenue Grounds		| BOS06			
+| qualco	| Jack Murphy Stadium			| SAN01			
+| jacobs	| Jacobs Field				| CLE08			
+| jarryp	| Jarry Park				| MON01			
+| kauffm	| Kauffman Stadium			| KAN06			
+| kingdo	| Kingdome				| SEA02			
+| olympi	| Le Stade Olympique			| MON02			
+| league	| League Park				| CLE06 (05,04,03)	
+| lloyds	| Lloyd Street Grounds			| MIL04			
+| laxcol	| Los Angeles Memorial Coliseum		| LOS01			
+| oaklan	| McAfee Coliseum			| OAK01			
+| memori	| Memorial Stadium			| BAL11			
+| metrop	| Metropolitan Stadium			| MIN02	
+| milehi	| Mile High Stadium			| DEN01			
+| miller	| Miller Park				| MIL06			
+| county	| Milwaukee County Stadium		| MIL05			
+| bpkaus	| Minute Maid Park			| HOU03			
+| kcymun	| Municipal Stadium			| KAN05				
+| oriole	| Oriole Park at Camden Yards		| BAL12			
+| sdobpk	| PETCO Park				| SAN02			
+| pitbpk	| PNC Park				| PIT08			
+| palace	| Palace of the Fans			| CIN06			
+| bpkarl	| Rangers Ballpark in Arlington		| ARL02 		
+| cinerg	| Riverfront Stadium			| CIN08			
+| rfksta	| Robert F. Kennedy Memorial Stadium	| WAS10			
+| robiso	| Robison Field				| STL05			
+| skydom	| Rogers Centre				| TOR02			
+| seabpk	| Safeco Field				| SEA03			
+| sealss	| Seals Stadium				| SFO01			
+| sheast	| Shea Stadium				| NYC17			
+| shibep	| Shibe Park / Connie Mack Stadium	| PHI11			
+| sickss	| Sicks' Stadium			| SEA01			
+| 3river	| Three Rivers Stadium			| PIT07			
+| tigers	| Tiger Stadium				| DET04			
+| tropic	| Tropicana Field			| STP01			
+| turner	| Turner Field				| ATL02			
+| comis2	| U.S. Cellular Field			| CHI12			
+| vetera	| Veterans Stadium			| PHI12			
+| wrigle	| Wrigley Field				| CHI11			
+| wrigla	| Wrigley Field in Los Angeles		| LOS02			
+| yankee	| Yankee Stadium			| NYC16	
+
+| oriopk	| Oriole Park				| BAL09
+| alpkdc	| American League Park (DC)		| WAS07
+| pologr	| Polo Grounds IV			| NYC14		
+| sthsid	| South Side Park			| CHI09
+| sports	| Sportsman's Park			| STL07
+| washin	| Washington Park			| NYC12
+| wstsid	| West Side Grounds			| CHI08
+| buschs	| Busch Stadium				| STL09
+| stlbpk	| Busch Stadium				| STL10
+				
+| bosbpk	| Proposed Fenway Park			| BOS09			
+| nyybpk	| Proposed Yankee park			| NYC19			
+| minbpk	| Proposed Twins Ballpark		| MIN04		
+| monbpk	| Labatt Park (Prop. Expos Park)	| MON03			
+| miabpk	| Miami ballpark (Prop. Marlins Park)	| MIA01
+| wasbpk	| Nationals Park (Prop. Nationals Park)	| WAS11
+| nymbpk	| Citi Field (Prop. Mets Park)  	| NYC20
+| oakbpk	| Cisco Field (Prop. Oakland A's Park) 	| OAK02
+
+
+| pologr	| Polo Grounds				| NYC03 04 09 10 14	
+| sthend	| South End Grounds			| BOS01 03 05		

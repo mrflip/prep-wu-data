@@ -1,0 +1,31 @@
+body, p, h1, h2, h3, table, td, th, ul, ol, textarea, input {
+      font-family: verdana,helvetica,arial,sans-serif;
+}
+
+td		   { width:100%;}
+td.team            { margin:2px;       border: 1px solid #a0a0f0;  }
+div.vcard          { margin:0.5em;     float:left;  width:75%; }
+div.logo	   { margin-top: 20px; float:right; width:20%; 	text-align:right;  }
+
+div.adr, .tel, .url { margin-left:0.5em; }
+
+/* we would use h1.fn>a instead of putting class="fn org url" on the <a> but IE6 is dumb. */
+h1.fn, a.fn  { 
+        font-family: Georgia, "Times New Roman", serif;
+	margin-left:0;
+	color:black;   
+	font-size:x-large; 
+	margin: 0.25em 0 0.25em 0;
+	text-decoration:none; 
+}
+h1.fn:hover        { color: #202070; }
+.street-address    { color: #202040; }
+h2.building	   { margin:inherit; font-size: medium; font-weight:normal; }
+.extended-address  { color: #202040; }
+.locality          { color: #202040; }
+.region            { color: #202040; }
+.country-name      { color: #202040; }
+.postal-code       { color: #202040; }
+.tel               { color: #202040; }
+.tel:before        { content:"tel: ";}
+.logo              { border: 0px none; }

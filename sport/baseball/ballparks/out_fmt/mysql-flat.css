@@ -1,0 +1,15 @@
+
+TD {
+   border: dashed gray;
+   border-width:  0 1px 0 1px;
+   padding-left: 4px;
+
+   border-bottom:  1px solid #ccc;
+}
+
+THEAD>TR>TD { 
+   border-bottom:  1px solid gray;
+}
+
+
+table {  border-collapse: collapse; } 

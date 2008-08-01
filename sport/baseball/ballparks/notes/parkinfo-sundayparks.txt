@@ -1,0 +1,87 @@
+h_team	beg	end	nParks	nSunPks	nWkdPks	sunGms	totGms  wkdGms	SunFrac	sunParks		wkdParks	                Parks
+BOS	1929	1931	2	1	1	46	234	188	0.1966	BOS08			BOS07				BOS07,BOS08
+BR3	1886	1886	2	1	1	14	70	56	0.2000	NYC07			NYC05				NYC05,NYC07
+BR3	1887	1888	2	1	1	35	150	115	0.2333	NYC18			NYC05				NYC05,NYC18
+BR3	1889	1889	3	1	2	14	71	57	0.1972	NYC18			NYC05,NYC08			NYC05,NYC08,NYC18
+CHN	1893	1893	2	1	1	14	73	59	0.1918	CHI08			CHI07				CHI07,CHI08
+
+DET	1901	1902	2	1	1	23	137	114	0.1679	DET03			DET02				DET02,DET03
+DET	1903	1903	3	2	1	3	65	62	0.0462	GRA01,TOL04		DET02				DET02,GRA01,TOL04
+DET	1905	1905	2	1	2	1	76	75	0.0132	COL04			COL04,DET02			COL04,DET02
+
+IN2	1884	1884	2	1	1	11	56	45	0.1964	IND03			IND02				IND02,IND03
+NY1	1898	1899	2	1	1	5	152	147	0.0329	WNY01			NYC10				NYC10,WNY01
+PH4	1888	1890	2	1	1	31	220	189	0.1409	GLO01			PHI01				GLO01,PHI01
+RC2	1890	1890	2	1	1	6	63	57	0.0952	IRO01			ROC01				IRO01,ROC01
+SR2	1890	1890	3	2	1	6	60	54	0.1000	SYR03,THR01		SYR02				SYR02,SYR03,THR01
+
+		^^^^^^^^^^ YES
+
+
+-- Check that season is Sunday Park / Weekday Park
+SELECT G.h_team AS teamID, G.yearID, G.park_ID AS parkID, sunGames, wkdGames, totGames, ROUND(100*IFNULL(sunGames,0)/totGames) AS sunPct
+  FROM		(SELECT h_team, beg, end FROM SundaySpecificParks WHERE sunParks IS NOT NULL) TY
+  LEFT JOIN (SELECT h_team, YEAR(date) AS yearID, COUNT(*) AS totGames FROM vizsagedb_retrosheet.GamesFlat S GROUP BY h_team, YEAR(date)           ) Seas
+		 ON	(Seas.h_team=TY.h_team AND (Seas.yearID BETWEEN TY.beg AND TY.end))
+  LEFT JOIN	(SELECT h_team, YEAR(date) AS yearID, park_ID              FROM vizsagedb_retrosheet.GamesFlat S GROUP BY h_team, YEAR(date), S.park_ID) G
+		 ON	(G.h_team=TY.h_team AND (G.yearID = Seas.yearID))
+  LEFT JOIN	(SELECT h_team, park_ID AS sunParks, YEAR(date) AS yearID, COUNT(*) AS sunGames
+    				FROM vizsagedb_retrosheet.GamesFlat S WHERE dayOfWeek =  'Sun' GROUP BY h_team, S.park_ID, YEAR(date)) SunG
+		 ON ((G.h_team=SunG.h_team) AND (G.yearID = SunG.yearID) AND (G.park_ID = sunParks))
+  LEFT JOIN	(SELECT h_team, park_ID AS wkdParks, YEAR(date) AS yearID, COUNT(*) AS wkdGames
+    				FROM vizsagedb_retrosheet.GamesFlat S WHERE dayOfWeek != 'Sun' GROUP BY h_team, S.park_ID, YEAR(date)) WkdG
+		 ON ((G.h_team=WkdG.h_team) AND (G.yearID=WkdG.yearID) AND (G.park_ID = wkdParks))
+  GROUP BY	G.h_team, G.yearID, G.park_ID
+
+-- Check that park is non-Sunday
+SELECT G.h_team AS a_teamID, G.park_ID AS a_parkID, MIN(Seas.yearID) as beg, MAX(Seas.yearID) as end,
+	SUM(wkdGames) AS y_wkdGames, SUM(parkGames) AS y_parkGames, SUM(seasGames) AS y_seasGames, 
+	ROUND(100*IFNULL(SUM(wkdGames),0)/SUM(parkGames)) AS z_wkdPkPct, ROUND(100*IFNULL(SUM(wkdGames),0)/SUM(seasGames)) AS z_wkdPct
+  FROM		(SELECT h_team, beg, end FROM SundaySpecificParks WHERE sunParks IS NULL) TY
+  -- Count the number of games in this Season
+  LEFT JOIN (SELECT h_team, YEAR(date) AS yearID, COUNT(*) AS seasGames FROM vizsagedb_retrosheet.GamesFlat S GROUP BY h_team, YEAR(date)           ) Seas
+		 ON	(Seas.h_team=TY.h_team AND (Seas.yearID BETWEEN TY.beg AND TY.end) AND seasGames > 40)
+  -- The number of games at each park in that Season
+  LEFT JOIN	(SELECT h_team, YEAR(date) AS yearID, COUNT(*) AS parkGames, park_ID              FROM vizsagedb_retrosheet.GamesFlat S GROUP BY h_team, YEAR(date), S.park_ID) G
+		 ON	(G.h_team=TY.h_team AND (G.yearID = Seas.yearID))
+  -- The number of weekday games at each park in that Season
+  LEFT JOIN	(SELECT h_team, park_ID AS wkdParks, YEAR(date) AS yearID, COUNT(*) AS wkdGames
+    				FROM vizsagedb_retrosheet.GamesFlat S WHERE dayOfWeek != 'Sun' GROUP BY h_team, S.park_ID, YEAR(date)) WkdG
+		 ON ((G.h_team=WkdG.h_team) AND (G.yearID=WkdG.yearID) AND (G.park_ID = wkdParks))
+  GROUP BY	G.h_team
+  ORDER BY 	z_wkdPct, end
+
+SELECT h_team AS teamID, park_ID AS parkID, G.* FROM GamesFlat G
+  WHERE h_team IN ('SR1') OR (park_ID IN ('SYR04', 'SYR01'))
+			
+		----- NO
+			
+BOS	1932	1932	2	2	1	16	77	61	0.2078	BOS07,BOS08		BOS07				BOS07,BOS08
+BR4	1890	1890	3	2	2	9	38	29	0.2368	MAS01,NYC18		NYC09,NYC18			MAS01,NYC09,NYC18
+BRO	1898	1898	2	1	1	2	74	72	0.0270	WNY01			NYC12				NYC12,WNY01
+BRO	1956	1957	2	1	2	37	154	117	0.2403	NYC15			JER02,NYC15			JER02,NYC15
+BSN	1903	1903	2	1	1	1	68	67	0.0147	WAR01			BOS05				BOS05,WAR01
+BSN	1946	1946	2	2	1	23	77	54	0.2987	BOS07,BOS08		BOS08				BOS07,BOS08
+CHA	1968	1969	2	1	2	39	162	123	0.2407	CHI10			CHI10,MIL05			CHI10,MIL05
+CHN	2000	2000	2	1	2	13	81	68	0.1605	CHI11			CHI11,TOK01			CHI11,TOK01
+CHU	1884	1884	3	1	3	7	41	34	0.1707	CHI05			BAL04,CHI05,PIT04		BAL04,CHI05,PIT04
+CL3	1887	1887	2	1	1	1	60	59	0.0167	CLE09			CLE03				CLE03,CLE09
+CL3	1888	1888	2	1	1	4	60	56	0.0667	GEA01			CLE03				CLE03,GEA01
+CL4	1898	1898	7	2	5	3	57	54	0.0526	CLL01,ROC03		CHI08,CLE05,PHI09,ROC02,STL05	CHI08,CLE05,CLL01,PHI09,ROC02,ROC03,STL05
+CL4	1899	1899	2	1	1	1	42	41	0.0238	STL05			CLE05				CLE05,STL05
+CLE	1902	1902	5	4	1	5	65	60	0.0769	CAN01,COL03,DAY01,FOR03	CLE05				CAN01,CLE05,COL03,DAY01,FOR03
+CLE	1903	1903	3	2	1	3	74	71	0.0405	CAN01,COL03		CLE05				CAN01,CLE05,COL03
+CLE	1936	1936	2	2	1	15	81	66	0.1852	CLE06,CLE07		CLE06				CLE06,CLE07
+CLE	1940	1946	2	1	2	106	391	285	0.2711	CLE07			CLE06,CLE07			CLE06,CLE07
+CN2	1884	1884	2	1	2	13	57	44	0.2281	CIN04			CIN04,NYC05			CIN04,NYC05
+FLO	2004	2004	2	1	2	11	80	69	0.1375	MIA01			CHI12,MIA01			CHI12,MIA01
+LS3	1893	1893	2	1	2	3	53	50	0.0566	LOU03			LOU02,LOU03			LOU02,LOU03
+ML3	1891	1891	2	1	2	5	21	16	0.2381	MIL03			MIL03,MIN01			MIL03,MIN01
+NY4	1887	1887	2	1	1	1	63	62	0.0159	WEE01			SAI01				SAI01,WEE01
+NYA	1904	1904	2	1	1	1	75	74	0.0133	NWK01			NYC13				NWK01,NYC13
+NYA	1998	1998	2	1	2	12	81	69	0.1481	NYC16			NYC16,NYC17			NYC16,NYC17
+NYN	2000	2000	2	1	2	12	81	69	0.1481	NYC17			NYC17,TOK01			NYC17,TOK01
+SDN	1999	1999	2	2	1	14	81	67	0.1728	MNT01,SAN01		SAN01				MNT01,SAN01
+SLN	1892	1892	2	1	2	11	75	64	0.1467	STL03			KAN02,STL03			KAN02,STL03
+TBA	2004	2004	2	1	2	11	80	69	0.1375	STP01			STP01,TOK01			STP01,TOK01
+TOR	2001	2001	2	2	1	14	82	68	0.1707	SJU01,TOR02		TOR02                           SJU01,TOR02

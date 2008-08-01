@@ -1,0 +1,100 @@
+
+BAL09 is Am lg park as well?
+take 
+
+IND07	Washington Park
+
+STL07			(and STL06)	overlap on ballparks.com
+
+Tenant: 	New York Giants 
+Opened: 	1883 	
+Last game: 	1888 	
+Location: 	Northern edge of Central Park between 5th & 6th Aves. from 110th to 112th Sts. 	
+Fate: 		Abandoned when NYC confiscated the property 	
+parkID		NYC03
+parkID		NYC04
+	
+Tenant: 	New York Giants 
+Opened: 	1889 
+Last Game:	1890 
+Location:	Southern half of Coogan's Hollow between 155th and 157th Sts. 	
+Fate:		Giants moved to larger field to the north when the Players League abandoned it 	
+parkID:		NYC09
+
+Tenant: 	New York Giants 
+Opened: 	April 22, 1891
+Last Game:	April 14, 1911
+Location:	Northern half of Coogan's Hollow between 157th and 159th Sts.
+Fate: 		Burned down
+parkID:		NYC10
+
+Park:		S E Grounds I 
+Tenants: 	Boston Braves - A.K.A. Red Caps, Doves, Rustlers, Beaneaters, Bees (NL, 1876-1914)
+Opened: 	May 16, 1871 
+Last game: 	Sep. 10, 1887 Location: Columbus and Walpole. Walpole ran behind home plate, Columbus along the 1st base side of the field. The New York, New Haven and Hartford Railroad tracks ran along the 3rd base side of the field. Behind the outfield was a railroad roundhouse, and behind that was Gainsborough.
+Capacity: 	n/a 
+Fate: 		Demolished 9/87 
+Surface: 	Grass
+Location:	Columbus and Walpole. Walpole ran behind home plate, Columbus along the 1st base side of the field. The New York, New Haven and Hartford Railroad tracks ran along the 3rd base side of the field. Behind the outfield was a railroad roundhouse, and behind that was Gainsborough.
+parkID:		BOS01
+
+Park:		S E Grounds II 
+Tenants: 		
+Opened:		May 25, 1888 
+Last game: 	May 15, 1894 
+Capacity: 	6,800 (1888) 
+Fate: 		Burned down 
+Surface: 	Grass
+Location:	Columbus and Walpole. Walpole ran behind home plate, Columbus along the 1st base side of the field. The New York, New Haven and Hartford Railroad tracks ran along the 3rd base side of the field. Behind the outfield was a railroad roundhouse, and behind that was Gainsborough.
+parkID:		BOS03
+
+
+Park:		S E Grounds III
+Tenants: 		
+Opened: 	July 20, 1894
+Last game: 	Aug. 11, 1914
+Capacity: 	n/a
+Fate: 		Demolished
+Surface: 	Grass
+Location:	Columbus and Walpole. Walpole ran behind home plate, Columbus along the 1st base side of the field. The New York, New Haven and Hartford Railroad tracks ran along the 3rd base side of the field. Behind the outfield was a railroad roundhouse, and behind that was Gainsborough.
+Dimensions:	Left field: 250 ft. (pre-1912), 350 ft. (1912); left center: 445 ft.; deepest left center: 450 ft.; center field: 440 ft.; right center: 440 ft.; right field: 255 ft.
+Fences:		Center field: 6 ft.; right field: 20 ft.
+parkID:		BOS05
+
+
+SELECT BT.teamID, T.parkID, P.name, T.teamID,BT.lgID, BT.divID, BT.name, F.franchName, T.games,T.neutralsite, T.beg,T.end,MIN(BT.yearID), MAX(BT.yearID), 
+	BT.parknameBDB, T.parknameBDB, 
+	F.franchID, F.active, F.NAassoc
+FROM (SELECT CONCAT(Q.teamIDretro, ':', IFNULL(Q.park,'')) AS parknameBDB, Q.* FROM vizsagedb_baseballdatabank.Teams Q) BT
+LEFT JOIN Parks_teams T  	ON T.teamID=BT.teamIDretro AND (BT.parknameBDB = T.parknameBDB)
+LEFT JOIN Parks_Parks P 	ON T.parkID=P.parkID 
+LEFT JOIN vizsagedb_baseballdatabank.TeamsFranchises F  ON F.franchID=BT.franchID
+GROUP BY BT.teamID, BT.park, T.parkID HAVING T.parkID IS NOT NULL
+ORDER BY F.franchName, BT.teamID , T.parkID, BT.teamID
+
+
+-- 
+-- SportsLogos.net
+--
+SELECT	L.franchName, L.franchID, L.role, L.type, L.beg, L.end, L.description,
+		F.*, T.teamID, T.name
+  FROM 		Parks_logos L
+  LEFT JOIN	vizsagedb_baseballdatabank.TeamsFranchises F ON F.franchName = L.franchName
+  LEFT JOIN vizsagedb_baseballdatabank.Teams           T on T.franchID   = F.franchID    AND (T.yearID BETWEEN L.beg AND L.end)
+  WHERE 	sl_lgID IN (53,54) AND L.franchName NOT IN ('ALCS', 'ALDS', 'NLCS', 'NLDS', 'American League', 'National League')
+  GROUP BY	L.franchName, F.franchID, F.franchName  -- T.name, 
+  ORDER BY	F.franchName ASC, L.franchName ASC
+
+
+
+-- All teams, by franchise
+SELECT F.franchID, T.teamID, T.name, F.franchName,
+	GROUP_CONCAT(DISTINCT T.lgID SEPARATOR ' | ') AS lgs,
+	MIN(T.yearID) AS beg, MAX(T.yearID) AS end, 
+	F.*, COUNT(DISTINCT T.teamID) AS numteams
+  FROM 		vizsagedb_baseballdatabank.Teams           T
+  LEFT JOIN vizsagedb_baseballdatabank.TeamsFranchises F ON F.franchID = T.franchID
+  GROUP BY	F.franchID, T.teamID
+	HAVING end > 1900
+  ORDER BY	T.name, F.franchID, T.teamID 
+

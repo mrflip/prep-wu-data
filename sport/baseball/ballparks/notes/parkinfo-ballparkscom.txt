@@ -1,0 +1,333 @@
+alpkdc.htm:<P><B>Tenant: </B>Washington Senators (later Minnesota Twins; AL)<BR>
+alpkdc.htm:<B>Opened: </B>April 29, 1901<BR>
+alpkdc.htm:<B>First night game: </B>Never<BR>
+alpkdc.htm:<B>Last Senators game: </B>September 27, 1902<BR>
+alpkdc.htm:<B>Surface: </B>Grass<BR>
+alpkdc.htm:<B>Capacity: </B>n/a</P>
+alpkdc.htm:<P><B>Location: </B>At the corner of Florida Avenue NE and Trinidad Avenue NE. Left field (NE), what would become Neal Street NE; third base (NW), Trinidad; first base (SW), Florida Avenue NE; right field (SE), Bladensburg Road.
+alpkdc.htm:<P><B>Dimensions: </B>n/a</P>
+alpkdc.htm:<P><B>Fences: </B>n/a</P>
+anahei.htm:<P><B>Tenant: </B>Los Angeles Angels (AL)<BR>
+anahei.htm:<B>Opened: </B>April 19, 1966<BR>
+anahei.htm:<B>Surface: </B>Bluegrass<BR>
+anahei.htm:<B>Capacity: </B>43,000 (1966); 64,593 (1979); 33,851 (1997); 45,050 (1998)</P>
+anahei.htm:<P><B>Location: </B>Left field (N), Katella Avenue; third base (W), 2000 State College Boulevard, then Interstate 5; first base (S), Orangewood Avenue; right field (E), Orange Freeway, then Santa Ana River; center field (NE), Amtrak Railroad Station.</P>
+anahei.htm:<P><B>Dimensions: </B>Foul lines: 333 (1966), 330 (1997); bullpens: 362 (1966-1997); power alleys: 375 (1966), 369 (1973), 374 (1974), 370 (1989), 365 (1998); deep alleys: 386 (1966), 395 (1998); center field: 406 (1966), 402 (1973), 404 (1974), 406 (1998); backstop: 55 (1966), 60.5 (1973).</P>
+anahei.htm:<P><B>Fences: </B>Majority of the fence: 10 (wire, 1966); 7.86 (wire, 1973); 7.86 (padded, 1981); corners between foul poles and bullpens: 4.75 (steel, 1966); left-center between 386 and 404 markers: 7.5 (padded, 1981); padded posts at the left sides of both left and right field; bullpen gates: 9.95 (wire, 1966), 9 (padded, 1981); left field to right center: 8 feet, right center to right field: 18 feet (1998).</P>
+arling.htm:<P><B>Tenant: </B>Texas Rangers (AL)<BR>
+arling.htm:<B>Opened: </B>1965<BR>
+arling.htm:<B>First Rangers game: </B>April 21, 1972<BR>
+arling.htm:<B>Demolished: </B>1994<BR>
+arling.htm:<B>Surface: </B>Tifway 419 Bermuda grass<BR>
+arling.htm:<B>Capacity: </B>10,500 (1965); 35,185 (1972); 41,097 (1979); 43,521(1992)</P>
+arling.htm:<B>Location:</B> Adjacent to Six Flags over Texas on the west side of the amusement park in the center of a parking lot bound by Stadium Drive E (E), E Randol Mill Road (S), Pennant Drive (W) and Copeland Road and I-30 (N).<P>
+arling.htm:<B>Dimensions:</B> Foul lines: 330; power alleys: 380 (1972), 370 (1974), 383 (1981), 380 (1982); center field: 400; backstop: 60 foul territory: small.<P>
+arling.htm:<B>Fences:</B> 11 (1972); 12 (1981); 11 (1986).<P>
+bennet.htm:<P><B>Tenant: </B>Detroit Tigers (AL)<BR>
+bennet.htm:<B>Opened: </B>1896<BR>
+bennet.htm:<B>First Tigers game: </B>April 25, 1901<BR>
+bennet.htm:<B>First night game: </B>Never<BR>
+bennet.htm:<B>Last Tigers game: </B>September 10, 1911 (Tiger Stadium was built on the site in 1912).<BR>
+bennet.htm:<B>Surface: </B>Grass<BR>
+bennet.htm:<B>Capacity: </B>5,000 (1896); 8,500 (1901); 14,000 (1910).</P>
+bennet.htm:<P><B>Location: </B>Left field (W), National (Cochrane) Avenue; third base (S), Michigan Avenue; first base (E), Trumbull Avenue; right field (N), Cherry Street, in the Corktown neighborhood of downtown Detroit.</P>
+bennet.htm:<P><B>Dimensions: </B>n/a</P>
+bennet.htm:<P><B>Fences: </B> 10 feet.</P>
+bosbpk.htm:<P><B>Tenant: </B>Boston Red Sox (AL)<BR>
+bosbpk.htm:<B>Surface: </B>Bluegrass<BR>
+bosbpk.htm:<B>Capacity: </B>44,130 (baseball only)</P>
+bosbpk.htm:<P><B>Location: </B>Adjacent to the current Fenway Park and incorporating some of the existing structure.  Home plate would be moved two hundred six yards directly behind its current location. Left field (N), Brookline Avenue and Yawkey Way; third base (W), Brookline Avenue and an extended Kilmamock Street; first base (S), Boylston Street; right field (E), a new alley.</P>
+bosbpk.htm:<P><B>Dimensions: </B>The same as the current Fenway Park.</P>
+bosbpk.htm:<P><B>Fences: </B>The same as the current Fenway Park.</P>
+bpkarl.htm:<P><B>Tenant: </B>Texas Rangers (AL)<BR>
+bpkarl.htm:<B>Opened: </B>April 1, 1994<BR>
+bpkarl.htm:<B>Surface: </B>Bermuda Tifway 419 grass<BR>
+bpkarl.htm:<B>Capacity: </B>49,178</P>
+bpkarl.htm:<P><B>Location: </B>Adjacent to Six Flags over Texas on the west side of the amusement park at the northwest corner of East Randol Mill Road and Ballpark Way.  Left field (E) Ballpark Way, right field (S) E Randol Mill Road and parking lot, 1st base (W) Pennant Drive and parking lot, 3rd base (N) park, Copeland Road and I-30.</P>
+bpkarl.htm:<P><B>Dimensions: </B>Left field: 334 ft.; left-center: 388 ft.; center field: 400 ft.; right-center deepest: 407 ft.; right-center: 381 ft.; right field: 325 ft.; backstop: 60 ft.; foul territory: small.</P>
+bpkarl.htm:<P><B>Fences: </B>Left field: 14 ft.; center and right fields: 8 ft.</P>
+clevel.htm:<B>Opened: </B>July 1, 1931<BR>
+clevel.htm:<B>First Indians game: </B>July 31, 1932<BR>
+clevel.htm:<B>First night game: </B>June 27, 1939<BR>
+clevel.htm:<B>Last Indians game: </B>October 3, 1993<BR>
+clevel.htm:<B>Demolished: </B>November 1996<BR>
+clevel.htm:<B>Surface: </B>Bluegrass<BR>
+clevel.htm:<B>Capacity: </B>78,000 (1931); 74,483 (1989)</P>
+clevel.htm:<P><B>Location: </B>On the shore of Lake Erie between the lake and downtown Cleveland.  1st base (S) W. 3rd and Cleveland Memorial Shoreway; 3rd base (W) Erieside Ave., Lake Erie and W. 3rd; left field (N)Erieside Ave. and Lake Erie; right field (E) Cleveland Memorial Shoreway.</P>
+clevel.htm:<P><B>Dimensions: </B>Foul lines: 322 (1932), 320 (1933), 319 (April 27, 1947), 320 (June 6, 1947), 321 (1948), 320 (1953); corners where fence meets stadium walls: 362 (June 6, 1947), 360 (1980), 370 (1991); power alleys: 435 (1932), 365 (1947), 362 (1948), 385 (1949), 380 (1954), 400 (1965), 390 (1967), 395 (1968), 385 (1970), 395 (1991); short left-center: 377 (1980), 390 (1991), 364 (1992); deep left-center: 387 (1980), 400 (1991), 375 (1992); grandstand corners: 435 (1932); bleacher corners: 463 (1932); corners where inner 8-foot fence meets tall 16-foot straightaway center fence: 417 (1991); center field: 470 (1932), 467 (1938), 450 (1939), 468 (April 1947), 410 (April 27, 1947), 408 (1966), 407 (1967), 410 (1968), 400 (1970), 415 (1991), 404 (1992); deep right-center: 395 (1980), 400 (1991), 370 (1992); short right-center: 385 (1980), 390 (1991), 360 (1992); backstop: 60 (1991); foul territory: very large.</P>
+clevel.htm:<P><B>Fences: </B>Left and right field: 5.25 (concrete, 1932), 5.5 (wire, April 27, 1947), 5.25 (concrete, June 6, 1947), 6 (concrete, 1955), 9 (wire, 1976), 7 (wire, 1977), 8 (canvas padding, 1984); center field: 12 (concrete, 1932), 5.5 (wire, April 27, 1947), 8 (wire, 1975), 9 (wire, 1976), 8 (wire, 1977), 8 (canvas padding, 1984), 16 (for a 36-foot-wide are in dead center, angling down to the lower fences in the alleys, canvas padding, 1991), 8 (canvas padding, all the way around the outfield, 1992).</P>
+columb.htm:<B>Tenant: </B>Philadelphia Athletics (AL)<BR>
+columb.htm:<B>Opened: </B>April 26, 1901<BR>
+columb.htm:<B>First night game: </B>Never<BR>
+columb.htm:<B>Surface: </B>Grass<BR>
+columb.htm:<B>Capacity: </B>9,500 (1901); 13,600 (1905).</P>
+columb.htm:<P><B>Location: </B>In the Brewerytown section of Philadelphia on the 2900 block of Columbia Avenue. Left field (N by NE), Columbia Avenue; 3rd base (W by NW), 30th Street; 1st base (S by SW), Oxford Street; right field (E by SE), 29th Street.</P>
+columb.htm:<P><B>Dimensions: </B>n/a</P>
+columb.htm:<P><B>Fences: </B>n/a</P>
+comis2.htm:<P><B>Tenant: </B>Chicago White Sox (AL)<BR>
+comis2.htm:<B>Opened: </B>April 18, 1991<BR>
+comis2.htm:<B>Surface: </B>Bluegrass<BR>
+comis2.htm:<B>Capacity: </B>44,321 (1991); 45,936 (2001); 39,336 (2004); 40,615 (2005)</P>
+comis2.htm:<P><B>Location: </B>Left field (E), South Wentworth Avenue; third base (N), West 35th Street; first base (W), C&amp;W Railroad tracks; right field (S), West 37th Street.</P>
+comis2.htm:<P><B>Dimensions: </B>Left field: 347 feet (1991), 330 feet (2001); left-center: 375 feet (1991), 377 feet (2001); center field: 400 feet (1991); right-center: 375 feet (1991), 372 feet (2001); right field: feet (1991), 335 feet (2001); backstop: 60 feet (1991).</P>
+comis2.htm:<P><B>Fences: </B>8 ft.</P>
+comisk.htm:<P><B>Tenant: </B>Chicago White Sox<BR>
+comisk.htm:<B>Opened: </B>July 1, 1910<BR>
+comisk.htm:<B>First night game: </B>August 14, 1939<BR>
+comisk.htm:<B>Demolished: </B>1991<BR>
+comisk.htm:<B>Surface: </B>Grass (1910); infield artificial (1969); infield grass (1976).<BR>
+comisk.htm:<B>Capacity: </B>32,000 (1910); 52,000 (1927).</P>
+comisk.htm:<P><B>Location:</B> Left field (N), West 34th; third base (W), Portland Avenue, later called South Shield’s Avenue; first base (S), 324 West 35th Street; right field (E), South Wentworth Avenue, later Dan Ryan Expressway/I-94.</P>
+comisk.htm:<P><B>Dimensions:</B> Foul lines: 363 (1910), 362 (1911), 365 (1927), 362 (1930), 342 (1934), 353 (1935), 340 (1936), 352 (1937), 332 (April 22, 1949), 352 (May 5, 1949), 335 (1969), 352 (marked, 1971), 349 (actual, 1971), 341 (1983), 347 (1986); power alleys: 382 (1910), 375 (1927), 370 (1934), 382 (1942), 362 (April 22, 1949), 375 (May 5, 1949), 382 (1954), 365 (1955), 375 (1956), 365 (1959), 375 (1968), 370 (1969), 375 (marked, 1971), 382 (actual, 1971), 374 (1983), 382 (1986); center field: 420 (1910), 450 (1926), 455 (1927), 450 (1930), 436 (1934), 422 (1936), 440 (1937), 420 (April 22, 1949), 415 (May 5, 1949), 410 (1951), 415 (1952), 400 (1969), 440 (1976), 445 (1977), 402 (marked, 1981), 409 (actual, 1981), 401 (1983), 409 (1986); backstop: 98 (1910), 71 (1933), 85 (1934), 86 (1955); foul territory: large.</P>
+comisk.htm: <P><B>Fences:</B> Foul lines and power alleys: 12 (concrete, 1955), 9.83 (concrete, 1959), 5 (wire, 1969), 9.83 (concrete, 1971); center field: 15 (1927), 30 (1948), 17 (1976), 18 (1980); left-center to right-center inner fences: 5 (canvas, 1949), 6.5 (24-foot section in front of bullpens, 1969), 9 (1974), 7 (canvas, 1981), 7.5 (1982), 11 (1984), 7.5 (1986).</P>
+detbpk.htm:<P><B>Tenant: </B>Detroit Tigers (AL)<BR>
+detbpk.htm:<B>Opened: </B>April 11, 2000 (against the Seattle Mariners)<BR>
+detbpk.htm:<B>Surface: </B>Grass<BR>
+detbpk.htm:<B>Capacity: </B>40,000 (2000); 40,950 (2005)</P>
+detbpk.htm:<P><B>Location: </B>Home plate (N by NW), Montcalm; 1st base/right field (W by SW), Whitherell; center field (S by SE), Adams; 3rd base/left field (E by NE), Brush.</P>
+detbpk.htm:<P><B>Dimensions: </B>Left field: 345 feet (2000); left-center: 395 feet (2000), 370 feet (2003); center field: 420 feet (2000); right-center: 365 feet (2000); right field: 330 feet (2000); foul territory: small.</P>
+detbpk.htm:<P><B>Fences: </B>8 feet, except in right-center field, where the fence is 11 feet tall.</P>
+exhibi.htm:<B>Tenant: </B>Toronto Blue Jays (AL); Toronto Argonauts (CFL)<BR>
+exhibi.htm:<B>Opened: </B>1879<BR>
+exhibi.htm:<B>First Blue Jays game: </B>April 7, 1977<BR>
+exhibi.htm:<B>Last Blue Jays game: </B>May 28, 1989<BR>
+exhibi.htm:<B>Capacity: </B>25,303 (1959); 38,522 (1977); 43,737 (1978)<BR>
+exhibi.htm:<B>Surface: </B>Artificial</P>
+exhibi.htm:<P><B>Location:</B> Near Lake Ontario about a mile west of downtown Toronto between Gardiner Expressway and Lake Shore Boulevard West.</P>
+exhibi.htm:<P><B>Dimensions:</B> Foul line: 330 ft.; power alleys: 375 ft.; center field: 400 ft.; backstop: 60 ft.</P>
+exhibi.htm:<P><B>Fences:</B> 12 ft. (8 canvas below 4 wire).</P>
+fenway.htm:<P><B>Tenant: </B>Boston Red Sox (AL)<BR>
+fenway.htm:<B>Opened: </B>April 20, 1912<BR>
+fenway.htm:<B>First night game: </B>June 13, 1947<BR>
+fenway.htm:<B>Surface: </B>Bluegrass</P>
+fenway.htm:<P><B>Capacity: </B>35,000 (1912); 35,500 (1947); 35,200 (1949); 34,824 (1953); 34,819 (1958); 33,368 (1960); 33,357 (1961); 33,524 (1965); 33,375 (1968); 33,379 (1971); 33,437 (1976); 33,513 (1977); 33,538 (1979); 33,536 (1981); 33,465 (1983); 33,583 (1985); 34,182 (1989); 34,171 (1991); 33,925 (1992); 34,218 (1993); 33,577 for day games and 33,993 for night games (2001); 36,298 (2004); 37,654 (2006); 38,805 (2007).</P>
+fenway.htm:<P><B>Location: </B>Left field (N), Lansdowne Street, Boston & Albany Railroad tracks and Massachusetts Turnpike (I-90); third base (W), Brookline Avenue and Jersey Street (renamed Yawkey Way after BoSox owner in 1976), also bowling alley building attached to park; first base (S), Van Ness Street (built after park was done); right field (E), Ipswich Street and Fenway Garage building.</P>
+fenway.htm:<P><B>Dimensions: </B>Left field: 324 (1921), 320.5 (1926), 320 (1930), 318 (1931), 320 (1933), 312 (1934), 315 (1936) [figure revised to 310 in 1995]; left-center: 379 (1934); deep left-center at flagpole: 388 (1934); flagpole removed from field of play (1970); center field: 488 (1922), 468 (1930), 388.67 (1934), 389.67 (1954), 390 (current); deepest corner, just right of center: 550 (1922), 593 (1931), 420 (1934) [Note: 593 is cited in 1931-1933 Bluebooks; this could be a misprint.] right-center, just right of deepest corner where the bullpen begins: 380 (1938), 383 (1955); right of right-center: 405 (1939), 382 (1940), 381 (1942), 380 (1943); right field: 313.5 (1921), 358.5 (1926), 358 (1930), 325 (1931), 358 (1933), 334 (1934), 332 (1936), 322 (1938), 332 (1939), 304 (1940), 302 (1942); backstop: 68 (1912), 60 (1934); foul territory: smallest in the majors.</P>
+fenway.htm:<P><B>Fences: </B>Left field: 25 (wood, 1912), 37.17 (tin over wood over concrete lower section, 1934), 37.17 (hard plastic, 1976); left-field wall to center bleacher wall behind flagpole: 18 sloping to 17 (concrete, 1934), crash pad added from 18 inches to 6 feet on left and center field walls (1976); center field to bullpen fence: 8.75 (wood, 1940); right-center bullpen fence: 5.25 (wood, 1940); right-field wall and railing: bullpen 3.42 sloping to 5.37 at foul pole (steel, 1940); right-field belly: the low railing and wall curve out sharply from the 302 marker at the right-field foul pole into deep right field.</P>
+griffi.htm:<B>Opened: </B>1891<BR>
+griffi.htm:<B>First Senators game: </B>Aprill 22, 1903<BR>
+griffi.htm:<B>First night game: </B>May 28, 1941<BR>
+griffi.htm:<B>Demolished: </B>January 26, 1965<BR>
+griffi.htm:<B>Capacity: </B>32,000 (1921); 27,550 (1961).</P>
+griffi.htm:<P><B>Location: </B>Left field (E), Larch (later Fifth) Street NW; third base (N), Howard University, then Pomeroy (later W) Street NW; first base (W), J. Frank Kelley Lumber and Mill Works, then Georgia Avenue (also called Seventh Street) NW; right field (S), Spruce Street (later U) Street NW.</P>
+griffi.htm:<P><B>Dimensions: </B>Left field: 407 (1911), 424 (1921), 358 (1926), 407 (1931), 402 (1936), 405 (1942), 375 (Opening Day, 1947), 405 (remainder, 1947), 402 (1948), 386 (1950), 408 (1951), 405 (1952), 388 (1954), 386 (1956), 350 (1957), 388 (1961); left of left-center at corner: 383 (1931), 366 (1954), 360 (1956); right of left-center at bend in bleachers: 409 (1942), 398 (1954), 383 (1955), 380 (1956); left-center: 391 (1911), 380 (1950); center field: 421; center field corner to left of building protection wall: 423 (1926), 441 (1930), 422 (1931), 426 (1936), 420 (1942), 426 (1948), 420 (1950), 394 (1951), 420 (1952), 421 (1953), 426 (1954), 421 (1955), 426 (1961); inner tip of building protection wall: 409 (1943), 408 (1953); deepest corner-right end of building protection wall, right-center: 378 (1954), 372 (1955), 373 (1956); right field 328 (1909), 326 (1921), 328 (marked, 1926), 320 (actual, 1926), 320 (1956); backstop: 61.</P>
+griffi.htm:<P><B>Fences: </B>Left field: 11.25 (foul pole to 408 mark concrete, 1953), 12 (from 410 corner near left-field foul pole to 408 mark just right of dead center, 1954), 8 to 10 (wood in the corner in front of the bullpen at the foul pole, 1955), 6.5 (wire and plywood in front of bullpen, 1956); center field: 30 (concrete 408 mark to 457, 1954), 6 (wire and plywood, 1956); right-center: to the left of the scoreboard in front of the bullpen: 4 (wood from 457 mark to 435 mark, 1953), 10 (wood, 1955), 4 (wood, 1959); right-center scoreboard: 41 (1946); National Bohemian Beer bottle: 56 (1946); right field 30 (concrete, 1953), 31 (concrete, 1954).</P>
+hilltp.htm:<P><B>Tenant: </B>New York Highlanders (Yankees; AL)<BR>
+hilltp.htm:<B>Opened: </B>April 30, 1903<BR>
+hilltp.htm:<B>First night game: </B>Never<BR>
+hilltp.htm:<B>Last Yankees game: </B>October 5, 1912<BR>
+hilltp.htm:<B>Demolished: </B>1914<BR>
+hilltp.htm:<B>Surface: </B>Grass<BR>
+hilltp.htm:<B>Capacity: </B>16,000 plus standing room (up to an additional 15,000).</P>
+hilltp.htm:<P><B>Location: </B>In the Washington Heights section of Manhattan, on the west side of Broadway. Left field (N), 168th Street; 3rd base (W), Fort Washington Avenue; 1st base (S), 165th Street; right field (E), Broadway.</P>
+hilltp.htm:<P><B>Dimensions: </B>Left field: 365 feet; center field: 542; right field: 400.</P>
+hilltp.htm:<P><B>Fences: </B>15 to 20 feet high.</P>
+huntin.htm:<P><B>Tenant: </B>Boston Red Sox (A.K.A. Americans, Pilgrims, Puritans, Plymouth Rocks, Somersets).<BR>
+huntin.htm:<B>Opened: </B>May 8, 1901<BR>
+huntin.htm:<B>First night game: </B>Never<BR>
+huntin.htm:<B>Demolished: </B>n/a<BR>
+huntin.htm:<B>Surface: </B>Grass<BR>
+huntin.htm:<B>Capacity: </B>11,500 (1901)</P>
+huntin.htm:<P><B>Location: </B>Left field (NW), Huntington Avenue; third base (SW), Bryant (Rogers) Street, now Forsyth Street; first base (SE) New Gravelly Pt. and New York, New Haven and Hartford Railroad tracks; right field (NE), New Gravelly Pt.</P>
+huntin.htm:<P><B>Dimensions: </B>Left field: 350 ft.; left center: 440 ft.; center field: 530 ft. (1901), 635 ft. (1908); right field: 280 ft. (1901), 320 ft. (1908); backstop: 60 ft.</P>
+huntin.htm:<P><B>Fences: </B>n/a</P>
+jacobs.htm:<P><B>Tenant: </B>Cleveland Indians (AL)<BR>
+jacobs.htm:<B>Opened: </B>April 4, 1994<BR>
+jacobs.htm:<B>Surface: </B>Kentucky Blue Grass<BR>
+jacobs.htm:<B>Capacity: </B>43,345</P>
+jacobs.htm:<P><B>Location: </B>Left field (NW), East Huron Road; third base (SW), Broadway/Ontario Street; first base (SE), Carnegie Avenue; right field (NE), East 9th Street.</P>
+jacobs.htm:<P><B>Dimensions: </B>Left field: 325 ft.; left-center: 370 ft.;center field: 405 ft.; right-center: 375 ft.; right field: 325 ft.; foul territory: small.</P>
+jacobs.htm:<P><B>Fences: </B>Left field: 19 ft.; center and right fields: 8 ft.</P>
+kauffm.htm:<P><B>Tenant: </B>Kansas City Royals<BR>
+kauffm.htm:<B>Opened: </B>April 10, 1973<BR>
+kauffm.htm:<B>Surface: </B>AstroTurf-8 (1973-1994); Grass (1995-present)<BR>
+kauffm.htm:<B>Capacity: </B>40,625 (1973); 39,000 (2010)</P>
+kauffm.htm:<P><B>Location: </B>Center field (NE), Spectacular Drive, then Interstate 70; third base (NW), Lancer Lane, then Dutton Brookfield Drive; home plate (SW), Royal Way, then Chiefs Way, Arrowhead Stadium, Raytown Road, and CRI&P Railroad tracks; first base (SE), Red Coat Drive, then Blue Ridge Cut-off; Stadium Drive encircles the park.</P>
+kauffm.htm:<P><B>Dimensions: </B>Foul lines: 330 ft. (1973); power alleys: 375 ft. (1973), 385 ft. (1990), 375 ft. (1995); center field: 410 ft. (1973), 400 ft. (1995); backstop: 60 ft.; foul territory: small.</P>
+kauffm.htm:<P><B>Fences: </B>12 ft. (canvas, 1973), 9 ft. (canvas, 1995).</P>
+kcymun.htm:<B>Opened: </B>July 3, 1923<BR>
+kcymun.htm:<B>First night game: </B>n/a<BR>
+kcymun.htm:<B>Demolished: </B>1976<BR>
+kcymun.htm:<B>Capacity: </B>16,000 (1923); 17,476 (1940); 30,296 (1955); 35,561 (1971)</P>
+kcymun.htm:<P><B>Location: </B>One and a half miles southeast of downtown Kansas City at the intersection of 22nd street and Brooklyn Avenue.  Left field (N) 21st Street; third base (E) Euclid Avenue; first base (S), 22nd Street; right field (E), Brooklyn Avenue.</P>
+kcymun.htm:<P><B>Dimensions: </B>Left field: 350 (1923), 312 (1955), 330 (1956), 370 (1961), 353 (1962), 331 (1963), 370 (1965), 369 (1967); left-center: 408 (1923), 382 (1955), 375 (1957), 390 (1961), 364 (1963), 392 (1964), 409 (1965), 408 (1969); center field: 450 (1923), 432 (1950), 430 (1955), 421 (1956), 410 (1964), 421 (1965); right-center: 382 (1955), 387 (1957), 364 (1962), 360 (1963), 392 (1964), 360 (1965), 382 (1969); right: field 350 (1923), 347 (1955), 352 (1956), 353 (1957), 338 (1963), 325 (1965), 338 (1966); backstop: 60 (1955), 70 (1963).</P>
+kcymun.htm:<P><B>Fences: </B>Left field: 24 (screen, 1955), 18.5 (concrete, 1958), 38.5 (20 screen over 18.5 concrete, 1959), 10 (1961), 13.5 (1962), 10 (1963), 22 (1967), 13 (1969); center field: 24 (1955), 12 (1958), 14 (1959), 12 (1961), 13.5 (1962), 10 (1963), 22 (screen, 1966), 40 (screen, 1969), 22 (screen, 1970); right field: 12 (1955), 14 (1959), 12 (1961), 13.5 (1962), 10 (1963), 4.5 (plywood, 1965), 40 (screen, 1966), 13 (1969), 12 (screen, 1970).</P>
+kingdo.htm:<B>Opened: </B>March 27, 1976<BR>
+kingdo.htm:<B>First Mariners game: </B>April 6, 1977<BR>
+kingdo.htm:<B>Last Mariners game: </B>June 27, 1999<BR>
+kingdo.htm:<B>Surface: </B>Astroturf<BR>
+kingdo.htm:<B>Capacity: </B>59,166 (baseball); 66,000 (football).</P>
+kingdo.htm:<P><B>Location: </B>Left field (N), 201 South King Street; third base (W), 589 Occidental Avenue South; first base (S), South Royal Brougham Way; right field (E), Fourth Avenue South and Burlington Northern Railroad tracks.</P>
+kingdo.htm:<P><B>Dimensions: </B>Left field: 315 (1977), 316 (marked, 1978), 314 (actual, 1978), 324 (1990), 331 (1991); left-center: 375 (1977), 365 (1978), 357 (1981), 362 (1990), 376 (1991); deep left-center: 385 (1990), 389 (1991); center field: 405 (1977), 410 (1978), 405 (1981), 410 (1986), 405 (1991); deep right-center: 375 (1990), 380 (1991); right-center: 375 (1977), 365 (1978), 357 (1981), 352 (1990); right field: 315 (1977), 316 (1978), 314 (1990), 312 (1991); speakers in left (3), left-center, and center: 110 (1977), 133.5 (1981); 11 other speakers: 132; backstop: 63; apex of dome: 250; foul territory: large.</P>
+kingdo.htm:<P><B>Fences: </B>Left field: 11.5 (wood, 1977), 17.5 (6 plexiglass over wood, 1988), 11.5 (wood, 1990); center field: 11.5 (wood, 1977); right field: 11.5 (wood, 1977), 23.25 (wood, 1982).</P>
+league.htm:<P><B>Tenant: </B>Cleveland Indians (AL)<BR>
+league.htm:<B>Opened: </B>May 1, 1891<BR>
+league.htm:<B>First night game: </B>Never<BR>
+league.htm:<B>Demolished: </B>1951<BR>
+league.htm:<B>Capacity: </B>9,000 (1891); 21,414 (1910)</P>
+league.htm:<P><B>Location: </B>Intersection of East 66th Street and Lexington Avenue 3 miles east of City Hall.  1st base (W)  E 66th St.; 3rd base (N) Linwood Ave.; left field (E) E 70th St.; right Field (S) Lexington Ave.</P>
+league.htm:<P><B>Dimensions: </B>Left field: 385 (1910), 376 (1920), 374 (1930), 373 (1934), 374 (1938), 375 (1942); left-center: 415 (1942); deepest corner, just left of center field: 505 (1910), 450 (1920), 467 (1930), 465 (1938), 460 (1939); center field: 420; right field: 290 (1921), 240 (when roped off for overflow crowds); backstop: 76 (1910), 60 (1942).</P>
+league.htm:<P><B>Fences: </B>Left field: 5 (concrete); left-center: 10 (7 screen above 3 concrete); center field scoreboard: 35; right-center clock: 20 (left and right sides), 22 (center of clock); right-center field: parts not covered by chicken wire screen, 45 (20 concrete topped by 25 steel chicken wire screen supports, 1920); right field: parts covered by chicken wire screen, 45 (20 concrete topped by 25 chicken wire screen, 1920).</P>
+lloyds.htm:<P><B>Tenant: </B>Milwaukee Brewers (later St. Louis Browns, Baltimore Orioles; AL)<BR>
+lloyds.htm:<B>Opened: </B>May 3, 1901<BR>
+lloyds.htm:<B>First night game: </B>Never<BR>
+lloyds.htm:<B>Last Brewers game: </B>September 12, 1901<BR>
+lloyds.htm:<B>Surface: </B>Grass<BR>
+lloyds.htm:<B>Capacity: </B>n/a</P>
+lloyds.htm:<P><B>Location: </B>About one mile northwest of downtown Milwaukee in the eastern part of a block bound by West North Street on the north, North 16th Street on the east, North 18th Street on the west and West Lloyd Street on the south. The field faced due north, so Lloyd Street ran directly behind home plate and the grandstand.</P>
+lloyds.htm:<P><B>Dimensions: </B>n/a</P>
+lloyds.htm:<P><B>Fences: </B>20 feet (canvas screen).</P>
+memori.htm:<B>Opened: </B>1950<BR>
+memori.htm:<B>First Orioles Game: </B>April 15, 1954<BR>
+memori.htm:<B>Last Orioles game: </B>October 6, 1991<BR>
+memori.htm:<B>Demolished: </B>April 21, 2001 (begun November 2000); the Memorial Wall was finally demolished in February 2002<BR>
+memori.htm:<B>Surface: </B>Bluegrass<BR>
+memori.htm:<B>Capacity: </B>31,000 (1950); 47,855 (1953); 47,778 (1958); 49,375 (1961); 49,373 (1964); 52,184 (1965); 52,185 (1968); 52,137 (1969); 53,208 (1970); 52,862 (1979); 53,208 (1982); 52,860 (1983); 53,198 (1985); 54,076 (1986); 54,002 (1987); 54,017 (1988); 53,371 (1991).</P>
+memori.htm:<P><B>Location: </B>Center field (N), East 36th Street; third base (W), Ellerslie Avenue; home plate (S), 1000 East 33rd Street; section of 33rd Street near ballpark is known as Babe Ruth Plaza; first base (E), Ednor Road.</P>
+memori.htm:<P><B>Dimensions: </B>Foul lines: 309; where the 7-foot fence meets the 14-foot wall, 360; power alleys: 446 (1954), 447 (1955), 405 (1956), 380 (1958), 370 (1962), 385 (1970), 375 (1976), 378 (1977), 376 (1980), 378 (1990); center field: 445 (1954), 450 (1955), 425 (1956), 410 (1958), 400 (1976), 405 (1977), 410 (1978), 405 (1980); backstop: 78 (1954), 58 (1961), 54 (1980), 75 (1987); foul territory: large.</P>
+memori.htm:<P><B>Fences: </B>Foul-line corners: 11.33 (concrete, 1954), 14 (11 concrete below 3 plywood, 1959); these walls bounce balls toward center, reducing triples; left-center to right-center: 10 (hedges April and May, 1954), 8 (wire June, 1954), 7 (wire, 1955), 6 (wire, 1958), 14 (wire, 1961), 6 (wire, 1963), 7 (canvas, 1977).</P>
+metrod.htm:<B>Opened: </B>April 3, 1982<BR>
+metrod.htm:<B>Surface: </B>SporTurf (1982 to 1986), Astroturf (1987 to 2003), FieldTurf (2004 to date)<BR>
+metrod.htm:<B>Capacity: </B>55,883 (baseball); 63,000 (football)</P>
+metrod.htm:<P><B>Location: </B>Left field (NE), Fourth Street South; third base (NW), 501 Chicago Avenue South (Kirby Puckett Place); first base (SW), Fiftth Street South; right field (SE), Eleventh Avenue South.<P>
+metrod.htm:<P><B>Dimensions: </B>Left field: 344 (1982), 343 (1983); left-center: 385; center field: 407 (1982), 408 (1983); right-center: 367; right field: 327; backstop: 60; apex of dome: 186; foul territory: small.<P>
+metrod.htm:<P><B>Fences: </B>Left field: 7 (canvas, 1982), 13 (6 plexiglass above 7 canvas, 1983); center field: 7 (canvas, 1982); right field: 7 (canvas, 1982), 13 (canvas, early in 1983), 23 (canvas, later in 1983).<P>
+metrop.htm:<B>Opened: </B>April 24, 1956<BR>
+metrop.htm:<B>First Twins game: </B>April 21, 1961<BR>
+metrop.htm:<B>Last Twins game: </B>September 30, 1981<BR>
+metrop.htm:<B>Demolished: </B>1985<BR>
+metrop.htm:<B>Surface: </B>Grass<BR>
+metrop.htm:<B>Capacity: </B>18,200 (1956); 30,637 (1961); 40,000 (1964); 45,919 (1975)</P>
+metrop.htm:<P><B>Location: </B>In Bloomington, a suburb fifteen miles south of downtown Minneapolis, near the Minneapolis-St. Paul International Airport.  1st base (W) Cedar Avenue South; right field (E) East 83rd Street; Left field (S) 24th Avenue South; 3rd base (N) 83rd Street (renamed to Killebrew Drive).</P>
+metrop.htm:<P><B>Dimensions: </B>Left field: 329 (1961), 330 (1962), 344 (1965), 346 (1967), 330 (1975), 343 (1977); short left center: 365 (1961); 360 (1966), 373 (1972), 350 (1975), 346 (1976), 360 (1977); deep left center: 402 (1961), 435 (1965), 430 (1968), 410 (1975), 406 (1976); deepest left center corner: 430 (1965), 406 (1975); center field: 412 (1961), 430 (1965), 425 (1968), 410 (1975), 402 (1977); deepest right center corner: 430 (1965); deepest right center: 402 (1961), 435 (1965), 430 (1968), 410 (1977); short right center: 365 (1961), 373 (1968), 365 (1972), 370 (1977); right field: 329 (1961), 330 (1962); backstop: 60.</P>
+metrop.htm:<P><B>Fences: </B>Left field: 8 (wire, 1961), 12 (1964), 7 (1974), 12 (1977); center field: 8 (wire, 1961); right field: 8 (wire, 1961), 12 (1964), 8 (1970); right field corner bt the foul pole: 5 (3 concrete base, then 2 steel).</P>
+minbpk.htm:<P><B>Tenant: </B>Minnesota Twins (AL)<BR>
+minbpk.htm:<B>Surface: </B>Grass<BR>
+minbpk.htm:<B>Capacity: </B>40,000 (baseball only)</P>
+minbpk.htm:<P><B>Location: </B>In the Warehouse District, just north of Target Center in downtown Minneapolis. Left field (NE), 5th Street; 3rd base (NW), BN and Santa Fe Rail Road tracks &amp; HERC Plant (Hennepin County Garbage Burner); 1st base (SW), 7th Street; right field (SE), 3rd Avenue &amp; I-394.</P>
+minbpk.htm:<P><B>Dimensions: </B>Left field: 328 feet; left-center: 371 feet; center field: 402 feet; right-center: 371 feet; right field: 331 feet.</P>
+minbpk.htm:<P><B>Fences: </B>Undetermined.</P>
+nyybpk.htm:<P><B>Tenant: </B>New York Yankees (AL)<BR>
+nyybpk.htm:<B>Capacity: </B>51,800<BR>
+nyybpk.htm:<B>Surface: </B>Grass</P>
+nyybpk.htm:<P><B>Location: </B>Just north of the existing stadium, between 161st and 164th Streets, and between Jerome and River Avenues.</P>
+nyybpk.htm:<P><B>Dimensions: </B>Same as Yankee Stadium</P>
+nyybpk.htm:<P><B>Fences: </B>Same as Yankee Stadium</P>
+oakbpk.htm:<P><B>Tenant: </B>Oakland Athletics (AL)<BR>
+oakbpk.htm:<B>Capacity: </B>35,000 (estimated)<BR>
+oakbpk.htm:<B>Surface: </B>Grass</P>
+oakbpk.htm:<P><B>Location: </B>On a 143-acre parcel near Fremont's Pacific Commons shopping center. It is bordered by Cushing Parkway on the southeast and southwest, the Nimitz Freeway (I-880) on the northeast and Bunche Drive, then Automall Parkway on the northwest.</P>
+oaklan.htm:<B>Opened: </B>1966<BR>
+oaklan.htm:<B>First A's game: </B>April 17, 1968<BR>
+oaklan.htm:<B>Surface: </B>Bluegrass<BR>
+oaklan.htm:<B>Capacity: </B>50,000 (1968), 49,649 (1977), 50,255 (1981), 50,219 (1983), 50,255 (1985), 50,219 (1986), 49,219 (1987), 50,219 (1988), 49,219 (1989), 48,219 (1990), 47,450 (1991), 47,313 (1992), 48,219 (1996, baseball)</P>
+oaklan.htm:<P><B>Location: </B>Center field (NE), San Leandro Street and Southern Pacific Railroad tracks; third base (NW), 66th Avenue; home plate (SW), Nimitz Freeway (I-880); first base (SE), Hegenberger Road.</P>
+oaklan.htm:<P><B>Dimensions: </B>Foul lines: 330; power alleys: 378 (1968), 375 (1969), 372 (1981), 375 (current); center field: 410 (1968), 400 (1969), 396 (1981), 397 (1982), 400 (1990); backstop: 90 (1968), 60 (1969); foul territory: largest in majors.</P>
+oaklan.htm:<P><B>Fences: </B>8 ft. (plywood, 1968); 10 ft. (canvas over plywood and plexiglass, 1981); 8 ft. (1986); 8 ft. in left, center and right fields, 16 ft. in the power alleys (1996).</P>
+oriole.htm:<P><B>Tenant: </B>Baltimore Orioles (AL)<BR>
+oriole.htm:<B>Opened: </B>April 6, 1992<BR>
+oriole.htm:<B>Surface: </B>Maryland Bluegrass<BR>
+oriole.htm:<B>Capacity: </B>48,262</P>
+oriole.htm:<P><B>Location: </B>Left field (N by NW), Camden Street; third base (W by SW), Russell Street; first base (S by SE), Martin Luther King Boulevard; right field (E by NE), Howard Street.</P>
+oriole.htm:<P><B>Dimensions: </B>
+oriole.htm:<P><B>Fences: </B>25 ft. in right field, 7 ft. elsewhere.</P>
+oriopk.htm:<P><B>Tenant: </B>Baltimore Orioles (later NY Yankees).<BR>
+oriopk.htm:<B>Opened: </B>April 26, 1901<BR>
+oriopk.htm:<B>First night game: </B>Never<BR>
+oriopk.htm:<B>Last Orioles game: </B>September 29, 1902<BR>
+oriopk.htm:<B>Surface: </B>Grass<BR>
+oriopk.htm:<B>Capacity: </B>n/a</P>
+oriopk.htm:<P><B>Location: </B>The ballpark faced a few degrees west of due south. East 29th Street ran directly behind home plate and the grandstand on the north side of the field. York (Greenmount) Avenue ran from behind the grandstand beyond third base on the east side of the park. Barclay Street ran from behind the grandstand beyond first base on the west side of the park. The outfield was enclosed by Barclay Street in right field, York (Greenmount) Avenue in a small part of left field and by what was to become 28th Street in left and center fields.</P>
+oriopk.htm:<P><B>Dimensions: </B>n/a</P>
+oriopk.htm:<P><B>Fences: </B>n/a</P>
+rfksta.htm:<B>Opened: </B>October 1, 1961 (Redskins game)<BR>
+rfksta.htm:<B>First Senators game: </B>April 9, 1962<BR>
+rfksta.htm:<B>Last Senators game: </B>September 30, 1971<BR>
+rfksta.htm:<B>First Nationals game: </B>April 14, 2005<BR>
+rfksta.htm:<B>Last Nationals game: </B>September 23, 2007<BR>
+rfksta.htm:<B>Surface: </B>Grass (Prescription Athletic Turf)<BR>
+rfksta.htm:<B>Capacity: </B>43,500 (1962), 45,016 (1971,baseball); 55,672 (football)</P>
+rfksta.htm:<P><B>Location: </B>Corner of Independence Avenue and 22nd Street in Southeast Washington D.C.</P>
+rfksta.htm:<P><B>Dimensions: </B>Left field: 335 ft.; left-center: 380 ft.; center field: 408 ft.; right-center: 380 ft.; right field: 335 ft.; backstop: 60 ft.</P>
+rfksta.htm:<P><B>Fences: </B>Left field: 7 ft. (wire screen).</P>
+seabpk.htm:<B>Opened: </B>July 15, 1999 (against the San Diego Padres)<BR>
+seabpk.htm:<B>Surface: </B>Grass<BR>
+seabpk.htm:<B>Capacity: </B>46,621 (baseball only); main bowl: 24,399; club level: 4,254; suite level: 936; upper bowl: 16,022; disabled seats: 1,010 (505 companion seats).</P>
+seabpk.htm:<P><B>Location: </B>Left field (N), Royal Brougham Way; third base (W), First Avenue South; first base (S), South Atlantic Street; right field (E), Third Avenue South.</P>
+seabpk.htm:<P><B>Dimensions: </B>Left field foul pole: 331 ft.; left field power alley: 390 ft.; center field: 405 ft.; right field power alley: 386 ft.; right field foul pole: 326 ft.</P>
+seabpk.htm:<P><B>Fences: </B>8 feet.</P>
+shibep.htm:<B>Opened: </B>April 12, 1909<BR>
+shibep.htm:<B>First night game: </B>May 16, 1939<BR>
+shibep.htm:<B>Demolished: </B>June 1976<BR>
+shibep.htm:<B>Capacity: </B>20,000 (1909); 33,000 (1925).</P>
+shibep.htm:<P><B>Location: </B>Left field (N), West Somerset Street; third base (W), North 21st Street; first base (S), West Lehigh Avenue; right field (E), North 20th Street.</P>
+shibep.htm:<P><B>Dimensions: </B>Left field: 360 (1909), 378 (late, 1909), 380 (1921), 334 (1922), 312 (1926), 334 (1930); center field: 515 (early, 1909), 502 (late, 1909), 468 (1922), 448 (1950), 440 (1951), 460 (1953), 468 (1954), 447 (1956), 410 (1969); right-center: 393 (1909), 390 (1969); right-center, left of scoreboard: 400 (1942); right field: 360 (early, 1909), 340 (late, 1909), 380 (1921), 307 (1926), 331 (1931), 331 (to lower, 1934), 329 (to upper iron fence, 1934); backstop: 90 (1942), 86 (1943), 78 (1956), 64 (1960).</P>
+shibep.htm:<P><B>Fences: </B>Left field to left-center: 12 (4 screen above 8 concrete, 1949); center field, small section: 20 (1955), 8 (wood, 1956), 3 (canvas, 1969); right-center scoreboard: 50 (top of black scoreboard, 1956), 60 (top of Ballantine Beer Sign, 1956); right field: 12 (concrete, 1909), 34 (22 corrugated iron above 12 concrete, 1935), 30 (1943), 50 (1949), 40 (1953), 30 (1954), 40 (1955), 32 (1956).</P>
+sickss.htm:<P><B>Tenant: </B>Seattle Pilots (AL; later Milwaukee Brewers, AL/NL)<BR>
+sickss.htm:<B>Opened: </B>1938<BR>
+sickss.htm:<B>First night game: </B>n/a<BR>
+sickss.htm:<B>First Pilots game: </B>April 11, 1969<BR>
+sickss.htm:<B>Last Pilots game: </B>October 2, 1969<BR>
+sickss.htm:<B>Demolished: </B>1979<BR>
+sickss.htm:<B>Surface: </B>Grass<BR>
+sickss.htm:<B>Capacity: </B>15,000 (1913); 11,000 (1938); 18,000 April 1969); 25,420 (June 1969).</P>
+sickss.htm:<P><B>Location: </B> 1st base (W), 2700 Rainier Avenue South; right field (S), South McClellan Street; left field (E), Empire Way South (now Martin Luther King Jr. Way South); 3rd base (N), Bayview Street.</P>
+sickss.htm:<P><B>Dimensions: </B>Left field: 325 ft. (1938), 305 ft. (1969); power alleys: 345 ft. (1969); corners just right and left of center: 405 ft.(1969); center field: 400 ft. (1938), 402 ft. (1969); right field: 325 ft.(1938), 320 ft.; backstop: 54 ft.; foul territory: very small.</P>
+sickss.htm:<P><B>Fences: </B>Left field: 8 ft. (3 ft. concrete below 5 ft. wire); center field: 12.55 ft. (3 ft. concrete below 9.55 ft. wire); right field: 8 ft.(3 ft. concrete below 5 ft. wire).</P>
+skydom.htm:<B>Opened: </B>June 5, 1989<BR>
+skydom.htm:<B>Surface: </B>AstroGrass (1989); FieldTurf (2005)<BR>
+skydom.htm:<B>Capacity: </B>50,516 (baseball); 53,000 (football)</P>
+skydom.htm:<P><B>Location: </B>Center field (N), Front Street West; third base (W), Spadina Avenue; home plate (S), Gardiner Expressway; first base (E), John Street and CN Tower, the world’s tallest freestanding structure.</P>
+skydom.htm:<P><B>Dimensions: </B>Foul lines: 328 ft.; power alleys: 375 ft.; center field: 400 ft.; backstop: 60 ft.</P>
+skydom.htm:<P><B>Fences: </B>10 ft.</P>
+sports.htm:<B>Opened: </B>April 23, 1902<BR>
+sports.htm:<B>First night game: </B>May 24, 1940<BR>
+sports.htm:<B>Demolished: </B>1966<BR>
+sports.htm:<B>Capacity: </B>8,000 (1902); 18,000 (1909); 34,000 (1926); 30,500 (1953).</P>
+sports.htm:<P><B>Location:</B> Left field (NE), Sullivan Avenue; third base (NW), North Spring Avenue; first base (SW), 3623 Dodier Street; right field (SE), 2911 North Grand Avenue, later North Grand Boulevard. Same location as earlier Sportsman’s Parks, but turned around so that home plate was in the west-southwest corner.</P>
+sports.htm:<P><B>Dimensions:</B> Left field: 368 (1909), 340 (1921), 356 (1923), 355 (1926), 360 (1930), 351.1 (1931); left-center: 379; center field: 430 (1926), 450 (1930), 445 (1931), 420 (1938), 422 (1939); deepest corner just left of dead center: 426 (1938); deepest corner just right of dead center: 422 (1938); right-center: 354 (1942); right field: 335 (1909), 315 (1921), 320 (1926), 310 (1931), 332 (1938), 309.5 (1939); backstop: 75 (1942), 67 (1953).</P>
+sports.htm:<P><B>Fences:</B> Left to center: 11.5 (concrete); 354 mark in right-center to right: 11.5 (1909), 33 (11.5 concrete below 21.5 wire, July 5, 1929), 11.5 (1955), 36.67 (11.5 concrete below 25.17 wire, 1956).</P>
+sthsid.htm:<P><B>Tenant: </B>Chicago White Sox (AL)<BR>
+sthsid.htm:<B>Opened: </B>April 24, 1901<BR>
+sthsid.htm:<B>First night game: </B>Never<BR>
+sthsid.htm:<B>Last White Sox game: </B>June 27, 1910<BR>
+sthsid.htm:<B>Surface: </B>Grass<BR>
+sthsid.htm:<B>Capacity: </B>15,000</P>
+sthsid.htm:<P><B>Location: </B>In the south side of Chicago. Left field (N), old cricket grounds and 37th Street; third base (W), South Princeton Avenue; first base (S), West 39th Street (West Pershing Road); right field (E), South Wentworth Avenue.</P>
+sthsid.htm:<P><B>Dimensions: </B>n/a</P>
+sthsid.htm:<P><B>Fences: </B>n/a</P>
+tigers.htm:<P><B>Tenant: </B>Detroit Tigers (AL)<BR>
+tigers.htm:<B>Opened: </B>April 20, 1912<BR>
+tigers.htm:<B>First night game: </B>June 15,1948<BR>
+tigers.htm:<B>Last Tigers game: </B>September 27, 1999<BR>
+tigers.htm:<B>Surface: </B>Bluegrass<BR>
+tigers.htm:<B>Capacity: </B>23,000 (1912); 30,000; (1923); 52,416 (1937)</P>
+tigers.htm:<P><B>Location: </B>2121 Trumbull Avenue, in the Corktown neighborhood of downtown Detroit. Left field (NW), Cherry Street, later Kaline Drive, and Interstate 75; third base (SW), National Avenue, later Cochrane Avenue; first base (SE), Michigan Avenue; right field (NE), Trumbull Avenue.</P>
+tigers.htm:<P><B>Dimensions: </B>Left field: 345 (1921), 340.58 (1926), 339 (1930), 367 (1931), 339 (1934) 340 (1938), 342 (1939), 340 (1942); left-center: 365 (1942); center field: 467 (1927), 455 (1930), 464 (1931), 459 (1936), 450 (1937), 440 (1938), 450 (1939), 420 (1942), 440 (1944); right-center: 370 (1942), 375 (1982), 370 (current); right field: 370 (1921), 370.91 (1926), 372 (1930), 367 (1931), 325 (1936), 315 (1939), 325 (1942), 302 (1954), 325 (1955); backstop: 54.35 (1954), 66 (1955); foul territory: small.</P>
+tigers.htm:<P><B>Fences: </B>All fences: 5 concrete topped by screen; left field 20 (1935), 30 (1937), 10 (1938), 12 (1940), 15 (1946), 12 (1953), 14 (1954), 12 (1955), 11 (1958), 9 (1962); center field: 9 (1940), 15 (1946), 11 (1950), 9 (1953), 14 (1954), 9 (1955); right of flag pole: 7 (1946); right field: 8 (1940), 30 (1944), 10 (1945), 20 (1950), 8 (1953), 9 (1958), 30 (1961), 9 (1962); flag pole: 125 in play (5 feet in front of fence in center field, just left of dead center).</P>
+tropic.htm:<P><B>Tenant: </B>Tampa Bay Rays (AL)<BR>
+tropic.htm:<B>Opened: </B>March 3, 1990<BR>
+tropic.htm:<B>First Rays game: </B>March 31, 1998<BR>
+tropic.htm:<B>Surface: </B>Astroturf with dirt infield (1998-1999); FieldTurf with dirt infield (2000-present)<BR>
+tropic.htm:<B>Capacity: </B>45,000</P>
+tropic.htm:<P><B>Location: </B>Left field (N), 1st Avenue South; third base (W), 16th Street North; first base (S), 4th Avenue South; right field (E), 10th Street South.</P>
+tropic.htm:<P><B>Dimensions: </B>Left field: 315 ft.; left-center: 370 ft.; center field: 404 ft.; right-center: 370 ft.; right field: 322 ft.; backstop: 50 ft.; roof: 225 ft.; foul territory: small.</P>
+tropic.htm:<P><B>Fences: </B>9&#189; feet.</P>
+wrigla.htm:<P><B>Tenant: </B>Los Angeles Angels (AL)<BR>
+wrigla.htm:<B>Opened: </B>September 29, 1925<BR>
+wrigla.htm:<B>First Angels game: </B>April 27, 1961<BR>
+wrigla.htm:<B>Last Angels game: </B>October 1, 1961<BR>
+wrigla.htm:<B>Demolished: </B>1966<BR>
+wrigla.htm:<B>Capacity: </B>22,000 (1925), 20,457 (1961)<BR>
+wrigla.htm:<B>Surface: </B>Grass</P>
+wrigla.htm:<B>Location: </B>In south-central Los Angeles at the intersection of 42nd Place and Avalon Boulevard.  First base (S), 42nd Place; right field (E), Avalon Boulevard; left field (N), 41st Place; third base (W), San Pedro Street.<P>
+wrigla.htm:<B>Dimensions: </B>Left field 340 ft..; power alleys: 345 ft.; center field: 412 ft.; right field: 338.5 ft.; backstop: 56 ft.<P>
+wrigla.htm:<B>Fences: </B>Left field to center field: 14.5 ft.; center field to right field: 9 ft. (6 ft. wire above 3 ft. concrete)<P>
+yankee.htm:<P><B>Tenant: </B>New York Yankees (AL)<BR>
+yankee.htm:<B>Opened: </B>April 18, 1923<BR>
+yankee.htm:<B>First night game: </B>May 28, 1946<BR>
+yankee.htm:<B>Surface: </B>Merion Bluegrass<BR></P>
+yankee.htm:<P><B>Capacity: </B>58,000 (1923); 62,000 (1926); 82,000 (1927); 67,113 (1928); 62,000 (1929); 71,699 (1937); 70,000 (1942);67,000 (1948); 67,205 (1958); 67,337 (1961); 67,000 (1965); 65,010 (1971); 54,028 (1976); 57,145 (1977); 57,545 (1980).</P>
+yankee.htm:<P><B>Location: </B>Left field (NE), East 161st Street; third base (NW), Doughly Street, later Ruppert Place; home plate (W), Major Degan Expressway/Interstate 87 and Harlem River; first base (SW), East 157th Street; right field (SE), River Avenue and IRT elevated tracks; in the southwest Bronx.</P>
+yankee.htm:<P><B>Dimensions: </B>Left field: 280.58 (1923), 301 (1928), 312 (1976), 318 (1988); left side of bullpen gate in short left-center: 395 (1923), 402 (1928), 387 (1976), 379 (1985); right side of bullpen gate: 415 (1937); deepest left-center: 500 (1923), 490 (1924), 457 (1937), 430 (1976), 411 (1985), 399 (1988); left side of cente-field screen: 466 (1937); center field: 487 (1923), 461 (1937), 463 (1967), 417 (1976), 410 (1985), 408 (1988); deepest right-center: 429 (1923), 407 (1937), 385 (1976); left side of bullpen gate in short right-center: 350 (1923), 367 (1937), 353 (1976); right side of bullpen gate: 344 (1937); right field 294.75 (1923), 295 (1930), 296 (1939), 310 (1976), 314 (1988); backstop: 82 (1942), 80 (1953), 84 (1976); foul territory: large for the catcher behind home plate, but small for fielders down the foul lines.</P>
+yankee.htm:<P><B>Fences: </B>Left-field foul line: 3.92 (3 wire above .92 concrete, 1923), 8 (canvas, 1976); left-center, left of visitors’ bullpen: 3.58 (3 wire above .58 concrete); right of visitors’ bullpen: 7.83 (3 wire above 4.83 concrete), 7 (canvas, 1976); center field, left screen when up for hitters’ background: 20 (1953), 22.25 (1959), 22.42 (1954); screen when down: 13.83, (canvas, 1976); right-center, right of screen: 14.5 (3 wire above 11.5 concrete, 1923); left of home bullpen: 7.83 (3 wire above 4.83 concrete, 1923); right of home bullpen: 3.58 (3 wire above .58 concrete, 1923), 8 (canvas, 1976), 9 (canvas, 1979); right field foul line: 3.75 (3 wire above .75 concrete, 1923), 10 (canvas, 1976).</P>

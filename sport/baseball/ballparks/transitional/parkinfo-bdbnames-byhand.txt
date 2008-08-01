@@ -1,0 +1,274 @@
+ALA_Angel Stadium                                   =>	ANA01 - Angel Stadium of Anaheim
+ANA_Angel Stadium                                   =>  ANA01 - Angel Stadium of Anaheim
+ANA_Angels Stadium of Anaheim                       =>  ANA01 - Angel Stadium of Anaheim
+ANA_Edison International Field                      =>  ANA01 - Angel Stadium of Anaheim
+BOS_Huntington Avenue Grounds                       =>  BOS06 - Huntington Avenue Baseball Grounds
+BOS_Fenway Park I                                   =>  BOS07 - Fenway Park
+BOS_Fenway Park II                                  =>  BOS07 - Fenway Park
+BSN_Fenway Park I                                   =>  BOS07 - Fenway Park
+CH2_23rd Street Grounds                             =>  CHI02 - 23rd Street Park
+CHA_Comiskey Park                                   =>  CHI10 - Comiskey Park I
+CHA_Comiskey Park                                   =>  CHI10 - Comiskey Park I
+CHA_Comiskey Park II                                =>  CHI12 - U.S. Cellular Field
+FW1_Hamilton Field                                  =>  FOR01 - Grand Duchess
+IN2_Seventh Street Park                             =>  IND02 - Seventh Street Park I
+KC2_Association Park I                              =>  KAN02 - Association Park
+KCN_Association Park                                =>  KAN02 - Association Park
+MON_Hiram Bithorn Stadium                           =>  SJU01 - Estadio Hiram Bithorn
+NH1_Hamilton Park                                   =>  NEW01 - Howard Avenue Grounds
+
+NY1_Polo Grounds I West Diamond			    =>	NYC03						Polo Grounds I West Diamond
+NY1_Polo Grounds II				    =>	NYC09 - Polo Grounds III
+NY1_Polo Grounds III                                =>	NYC10 - Polo Grounds IV
+NY1_Polo Grounds IV                                 =>	NYC14 - Polo Grounds V
+NYA_Polo Grounds IV                                 =>	NYC14 - Polo Grounds V
+NYN_Polo Grounds IV                                 =>	NYC14 - Polo Grounds V
+NYA_Yankee Stadium I                                =>  NYC16 - Yankee Stadium				Should be ..I  from 23-73
+NYA_Yankee Stadium II                               =>  NYC16 - Yankee Stadium				and       ..II from 76 to now
+OAK_Oakland Coliseum                                =>  OAK01 - Network Associates Coliseum
+PH3_Centennial Grounds                              =>  PHI02 - Centennial Park
+RIC_Allen Pasture                                   =>  RIC02 - Allens Pasture
+
+SL1_Red Stocking Baseball Park                      =>  STL01 - Red Stockings Base-Ball Park
+TEX_The Ballpark at Arlington                       =>  ARL02 - Rangers Ballpark in Arlington
+WOR_Worcester Driving Park Grounds                  =>  WOR01 - Agricultural County Fair Grounds I
+
+WS1_Griffith Stadium I                              =>  WAS09 - Griffith Stadium
+WS1_Griffith Stadium II                             =>  WAS09 - Griffith Stadium			Why two stadiums?
+WS2_Griffith Stadium II                             =>  WAS09 - Griffith Stadium
+
+BL1_Olympics Grounds                                =>  WAS01 - Olympic Grounds
+WS3_Olympics Grounds                                =>  WAS01 - Olympic Grounds
+WS5_Olympics Grounds                                =>  WAS01 - Olympic Grounds
+WS6_Olympics Grounds                                =>  WAS01 - Olympic Grounds
+NY4_Polo Grounds I West Diamond			    =>	NYC03						NY4 played Polo Grounds I (Southeast Diamond) 1883,4,5
+NY1_Polo Grounds				    =>	NYC03						NY1 played Polo Grounds I (Southeast Diamond) 1883,4,5,6,7,8
+
+BL2_Oriole Park					    =>	BAL03	1883-1889
+BL3_Oriole Park					    =>	BAL06	1890
+BL3_Union Park					    =>	BAL07	1891
+BLA_Oriole Park					    =>	BAL09	1901-1902
+BLN_Union Park					    =>	BAL07	1892-1899
+BR2_Union Grounds				    =>	NYC01	1873-1875
+CH1_Union Base-Ball Grounds			    =>	CHI01	1871					Are down for one game in NYC01 - the Union Grounds - and not CHI01 - the Union Base-Ball Grounds
+CHF_Wrigley Field				    =>	CHI11	1914-1915
+CHN_Wrigley Field				    =>	CHI11	1916-2006
+CIN_League Park I in Cincinnati			    =>	CIN04
+CIN_League Park II in Cincinnati		    =>	CIN05
+CL3_National League Park II			    =>	CLE03	1887-1888
+CL4_League Park I				    =>	CLE05	1891-1899
+CL4_National League Park			    =>	CLE03	1889-1890
+CL5_Recreation Park I				    =>	COL01	1883-4
+CL6_Recreation Park II				    =>	COL02	1889-1891
+CLE_League Park I				    =>	CLE05	01-09
+CLE_League Park II				    =>	CLE06	10-31 32-46
+CN2_League Park I in Cincinnati			    =>	CIN04
+DTN_Recreation Park				    =>	DET01	1881-1888
+IN3_Athletic Park I				    =>	IND04		    
+IN3_Athletic Park II				    =>	IND05
+KC1_Municipal Stadium I				    =>	KAN05
+KCA_Municipal Stadium II			    =>	KAN05	(Why two parks?)
+LAA_Wrigley Field (LA)				    =>	LOS02	1961
+ML3_Athletic Field				    =>	MIN01
+NY1_Oakdale Park				    =>	JER01	1889
+PH4_Athletic Park				    =>	PHI01	(PHI07??)
+PH4_Oakdale Park				    =>	PHI03	1882
+PHA_Columbia Park				    =>	PHI10	1901-1908
+PHI_Recreation Park				    =>	PHI01	1883-1886
+PIT_Recreation Park				    =>	PIT04	1887-1890
+PT1_Recreation Park				    =>	PIT04	1884-1886	really is 188501886
+TL1_League Park					    =>	TOL01	1884
+WS1_American League Park I			    =>	WAS07	1901-1903
+WS2_American League Park II			    =>	WAS08	1904-1910
+WS4_Nationals Grounds				    =>	WAS02	1872
+WS7_Athletic Park				    =>	WAS04
+WS8_Swampdoodle Grounds				    =>	WAS05	1886-1889
+
+ALT_						    =>	ALT01	1884
+BFP_						    =>	BUF03	1890	
+BLF_						    =>	BAL10	1914-15	
+BLU_						    =>	BAL04	1884	
+BRF_						    =>	NYC12	1914-15	
+BRP_						    =>	NYC11	1890	
+BSP_						    =>	BOS04	1890	
+BSU_						    =>	BOS02	1884	
+BUF_						    =>	BUF04	1914-15	
+CHP_						    =>	CHI07	1890	
+CHU_						    =>	CIN03	1884	
+CLP						    =>	CLE04	1890	
+CNU_						    =>	CHI05	1884	
+IND_						    =>	IND07	1914	
+KCF_						    =>	KAN04	1914-15	
+KCU_						    =>	KAN01	1884	
+MLU_						    =>	MIL02	1884	
+NEW_						    =>	HAR01	1915	
+NYP_						    =>	NYC10	1890	
+PHP_						    =>	PHI07	1890	
+PHU_						    =>	PHI05	1884	
+PTF_						    =>	PIT05	1914-15	
+PTP_						    =>	PIT05	1890	
+SLF_						    =>	STL08	1914-15	
+SLU_						    =>	STL04	1884	
+WIL_						    =>	WIL01	1884	
+WSU_						    =>	WAS03	1884	
+
+Also:
+CHU							BAL04
+CHU							PIT04
+
+						NY1		NY4		NYP	NYA		NYN
+NYC03:Polo Grounds I (Southeast Diamond)	1883-88		1883-85		
+NYC04:Polo Grounds II (Southwest Diamond)			1883
+NYC09:Polo Grounds III				1889-90
+NYC10:Polo Grounds IV				1891-11				1890
+NYC14:Polo Grounds V				1911-57					1912-1922	1962-63
+
+Braves at Fenway Park I 1915-1946 in gl and rsh, 1915 only in BDB
+
+Is this correct?
+"18711030","0","Mon","PH1","NA",28,"CH1","NA",28,4,1,,"","","","","NYC01",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","","","","mcbrd101","Dick McBride","woodj106","Jimmy Wood","","",,,,,,,"mcbrd101","McBride","zettg101","Zettlein",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CH1 is down for one game in NYC01 - the Union Grounds - and not CHI01 - the Union Base-Ball Grounds
+
+
+	'ALA:Angel Stadium'				=>'ANA01',
+	'ANA:Angel Stadium'				=>'ANA01',
+	'ANA:Angels Stadium of Anaheim'			=>'ANA01',
+	'ANA:Edison International Field'		=>'ANA01',
+	'BL1:Olympics Grounds'				=>'WAS01',
+	'BL2:Oriole Park'				=>'BAL03',
+	'BL3:Oriole Park'				=>'BAL06',
+	'BL3:Union Park'				=>'BAL07',
+	'BLA:Oriole Park'				=>'BAL09',
+	'BLN:Union Park'				=>'BAL07',
+	'BOS:Fenway Park I'				=>'BOS07',
+	'BOS:Fenway Park II'				=>'BOS07',
+	'BOS:Huntington Avenue Grounds'			=>'BOS06',
+	'BR2:Union Grounds'				=>'NYC01',
+	'BSN:Fenway Park I'				=>'BOS07',
+	'CH1:Union Base-Ball Grounds'			=>'CHI01',
+	'CH2:23rd Street Grounds'			=>'CHI02',
+	'CHA:Comiskey Park'				=>'CHI10',
+	'CHA:Comiskey Park'				=>'CHI10',
+	'CHA:Comiskey Park II'				=>'CHI12',
+	'CHF:Wrigley Field'				=>'CHI11',
+	'CHN:Wrigley Field'				=>'CHI11',
+	'CIN:League Park I in Cincinnati'		=>'CIN04',
+	'CIN:League Park II in Cincinnati'		=>'CIN05',
+	'CL3:National League Park II'			=>'CLE03',
+	'CL4:League Park I'				=>'CLE05',
+	'CL4:National League Park'			=>'CLE03',
+	'CL5:Recreation Park I'				=>'COL01',
+	'CL6:Recreation Park II'			=>'COL02',
+	'CLE:League Park I'				=>'CLE05',
+	'CLE:League Park II'				=>'CLE06',
+	'CN2:League Park I in Cincinnati'		=>'CIN04',
+	'DTN:Recreation Park'				=>'DET01',
+	'FW1:Hamilton Field'				=>'FOR01',
+	'IN2:Seventh Street Park'			=>'IND02',
+	'IN3:Athletic Park I'				=>'IND04',
+	'IN3:Athletic Park II'				=>'IND05',
+	'KC1:Municipal Stadium I'			=>'KAN05',
+	'KC2:Association Park I'			=>'KAN02',
+	'KCA:Municipal Stadium II'			=>'KAN05',
+	'KCN:Association Park'				=>'KAN02',
+	'LAA:Wrigley Field (LA)'			=>'LOS02',
+	'ML3:Athletic Field'				=>'MIN01',
+	'MON:Hiram Bithorn Stadium'			=>'SJU01',
+	'NH1:Hamilton Park'				=>'NEW01',
+	'NY1:Oakdale Park'				=>'JER01',
+	'NY1:Polo Grounds'				=>'NYC03',
+	'NY1:Polo Grounds I West Diamond'		=>'NYC03',
+	'NY1:Polo Grounds II'				=>'NYC09',
+	'NY1:Polo Grounds III'				=>'NYC10',
+	'NY1:Polo Grounds IV'				=>'NYC14',
+	'NY4:Polo Grounds I West Diamond'		=>'NYC03',
+	'NYA:Polo Grounds IV'				=>'NYC14',
+	'NYA:Yankee Stadium I'				=>'NYC16',
+	'NYA:Yankee Stadium II'				=>'NYC16',
+	'NYN:Polo Grounds IV'				=>'NYC14',
+	'OAK:Oakland Coliseum'				=>'OAK01',
+	'PH3:Centennial Grounds'			=>'PHI02',
+	'PH4:Athletic Park'				=>'PHI01',
+	'PH4:Oakdale Park'				=>'PHI03',
+	'PHA:Columbia Park'				=>'PHI10',
+	'PHI:Recreation Park'				=>'PHI01',
+	'PIT:Recreation Park'				=>'PIT04',
+	'PT1:Recreation Park'				=>'PIT04',
+	'RIC:Allen Pasture'				=>'RIC02',
+	'SL1:Red Stocking Baseball Park'		=>'STL01',
+	'TEX:The Ballpark at Arlington'			=>'ARL02',
+	'TL1:League Park'				=>'TOL01',
+	'WOR:Worcester Driving Park Grounds'		=>'WOR01',
+	'WS1:American League Park I'			=>'WAS07',
+	'WS1:Griffith Stadium I'			=>'WAS09',
+	'WS1:Griffith Stadium II'			=>'WAS09',
+	'WS2:American League Park II'			=>'WAS08',
+	'WS2:Griffith Stadium II'			=>'WAS09',
+	'WS3:Olympics Grounds'				=>'WAS01',
+	'WS4:Nationals Grounds'				=>'WAS02',
+	'WS5:Olympics Grounds'				=>'WAS01',
+	'WS6:Olympics Grounds'				=>'WAS01',
+	'WS7:Athletic Park'				=>'WAS04',
+	'WS8:Swampdoodle Grounds'			=>'WAS05',
+
+	'ALT:'						=>'ALT01',
+	'BFP:'						=>'BUF03',
+	'BLF:'						=>'BAL10',
+	'BLU:'						=>'BAL04',
+	'BRF:'						=>'NYC12',
+	'BRP:'						=>'NYC11',
+	'BSP:'						=>'BOS04',
+	'BSU:'						=>'BOS02',
+	'BUF:'						=>'BUF04',
+	'CHP:'						=>'CHI07',
+	'CHU:'						=>'CIN03',
+	'CLP'						=>'CLE04',
+	'CNU:'						=>'CHI05',
+	'IND:'						=>'IND07',
+	'KCF:'						=>'KAN04',
+	'KCU:'						=>'KAN01',
+	'MLU:'						=>'MIL02',
+	'NEW:'						=>'HAR01',
+	'NYP:'						=>'NYC10',
+	'PHP:'						=>'PHI07',
+	'PHU:'						=>'PHI05',
+	'PTF:'						=>'PIT05',
+	'PTP:'						=>'PIT05',
+	'SLF:'						=>'STL08',
+	'SLU:'						=>'STL04',
+	'WIL:'						=>'WIL01',
+	'WSU:'						=>'WAS03',
+
+    my %othernames = map { &fixname($_) } 
+    (
+     '23rd Street Grounds'		=>'23rd Street Park',
+     'Allen Pasture'			=>'Allens Pasture',
+     'Angel Stadium'			=>'Angel Stadium of Anaheim',
+     'Angels Stadium of Anaheim'	=>'Angel Stadium of Anaheim',
+     'Association Park I'		=>'Association Park',
+     'Athletic Field'			=>'Athletic Park (minneapolis)',
+     'Centennial Grounds'		=>'Centennial Park',
+     'Comiskey Park'			=>'Comiskey Park I',
+     'Edison International Field'	=>'Edison International Field of Anaheim',
+     'Fenway Park I'			=>'Fenway Park',
+     'Fenway Park II'			=>'Fenway Park',
+     'Griffith Stadium I'		=>'Griffith Stadium',
+     'Griffith Stadium II'		=>'Griffith Stadium',
+     'Hamilton Park'			=>'Howard Avenue Grounds',
+     'Hiram Bithorn Stadium'		=>'Estadio Hiram Bithorn',
+     'Huntington Avenue Grounds'	=>'Huntington Avenue Baseball Grounds',
+     'League Park I in Cincinnati'	=>'League Park (Cincinnati) I',
+     'League Park II in Cincinnati'	=>'League Park (Cincinnati) II',
+     'Olympics Grounds'			=>'Olympic Grounds',
+     'Polo Grounds I NY1!1883'		=>'Polo Grounds I (Southeast Diamond)',
+     'Red Stocking Baseball Park'	=>'Red Stockings Base-Ball Park',
+     'Seventh Street Park'		=>'Seventh Street Park I',
+     'The Ballpark at Arlington'	=>'The Ballpark in Arlington',
+     'Worcester Driving Park Grounds'	=>'Agricultural County Fair Grounds I',
+     'Wrigley Field (LA)'		=>'Wrigley Field (Los Angeles)',
+     'Yankee Stadium I'			=>'Yankee Stadium',
+     'Yankee Stadium II'		=>'Yankee Stadium',	
+     ''			=>'',
+     ''			=>'',
+
+    );

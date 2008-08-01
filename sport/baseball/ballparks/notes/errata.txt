@@ -1,0 +1,878 @@
+Locations Unknown:			
+  St. George Cricket Grounds 
+  Messer Street Grounds
+  Hartford Ball Club Grounds
+  St. Louis Maroons  1885-1886, Union Grounds
+  Star Park I
+  Putnam Grounds
+  Haymakers' Grounds
+  Troy Ballclub Grounds
+  Riverside Park
+
+
+
+Change N.name to parkname Need to stuff in name for Lake Buena Vista
+1874-10-30 park from HRT01 to WOR01
+
+
+Adopted:
+	Name			from rshtml
+	->	Other Names	from everything else
+		beg, end	from rshtml
+		auth		from rshtml
+	->	comments	from pc, and by hand
+	->	teams		from gl, rsh and bdb
+	lat, long		from kml
+	a,city,st,zip,tel,ctry	from mlb website
+	beg			from gamelogs
+	end			from gamelogs
+	logo, url, spanishurl	from mlb
+
+Check these teams really match these parks
+
+
+-- Check sketchy parks
+SELECT P.*,
+	P.parkID,
+	GROUP_CONCAT(DISTINCT T.teamID  ORDER BY T.teamID  DESC SEPARATOR ' ; ') AS Teams,
+	GROUP_CONCAT(DISTINCT N.name    ORDER BY N.name    DESC SEPARATOR ' ; ') AS OtherNames,
+	GROUP_CONCAT(DISTINCT C.comment ORDER BY C.comment DESC SEPARATOR ' ; ') AS Comments
+FROM    	Parks_parks P
+LEFT JOIN 	Parks_teams T ON P.parkID=T.parkID
+LEFT JOIN 	Parks_names N ON P.parkID=N.parkID AND (P.currname != N.name)
+LEFT JOIN 	Parks_comts C ON P.parkID=C.parkID
+WHERE P.parkID IN ( 'ALB01', 'ALB02', 'BUF01', 'ANA01', 'ANA01', 'BAL01', 'BAL01', 'BOS02',
+'BOS04', 'BOS07', 'CHI07', 'CHI08', 'LBV01', 'MIL01', 'LOU03', 'MIL02',
+'MIN01', 'MIL03', 'NEW01', 'NYC05', 'NYC07', 'NYC18', 'NYC08', 'NYC01',
+'NYC01', 'NYC01', 'NYC13', 'NYC14', 'PHI11', 'PHI09', 'PIT01', 'PIT02',
+'PIT02', 'PIT04', 'SPR01', 'SYR04', 'TRO01', 'TRO02', 'WAT01', 'WOR02', 'FOR02')
+GROUP BY	P.parkID
+ORDER BY beg
+
+GL has 3 extra games at IND06 from 7-28 to 8-02 in 1890
+
+
+. ALB01/BUF01	BFN	1884	1889	BDB lists Riverside Park. http://www.retrosheet.org/neutral19.htm uses Riverside Park using Riverside grounds as per retrosheet
+  ANA01		ALA/LAA	2006	2006	Disagreement about teamID. Coerced ALA to ANA
+  ANA01		ANA	1997	2005/06	Disagreement about teamID. Coerced ALA to ANA
+  BAL01/BAL01	BL4			BDB lists Newington Park,  should be BAL01. Using BAL01 as per retrosheet.
+  BOS02 	BSN			pc gives BSN:5/16 to 6/20/1894.		    Ignoring.
+  BOS04 	BS2			pc gives BS2:1891 should this be BS2:1890.  Ignoring.
+  BOS07		BSN		1915/46	Gamelogs give 2 games in 1946: BSN194604281 and BSN194604282 Other sources don't, and I can't find a mention of it.  Keeping GL games.
+  CHI07/CHI08	CHN 1894 / 1893		In 1893 CHN played CHI08 on Sundays, and CHI07 on Weekdays, then moved to CHI08 permanently before 1894 season.  Using RS not BDB data
+  LBV01					no TBA games in GL's yet (2007).  Added record by hand.
+  MIL01/LOU03	ML2			BDB lists Eclipse Park II. Using MIL01 as per retrosheet.
+  MIL02		MLU/UA/BFN/PRO 1884-5	pc gives UA:1884; BFN:9/4/1885; PRO: 9/25/1885 but rsh only MLU for 12 games.  Ignoring PC
+  MIN01/MIL03	ML3			BDB gives Athletic Field,  should be MIL03?  Listed in one gamelog game pc gives ML2 rsh gives  ML3.  Checked against http://www.retrosheet.org/neutral19.htm -- this is correct
+  NEW01		HAR			Gamelogs show 1 HAR game at NEW01 (HAR187709220).  Not in http://www.retrosheet.org/neutral19.htm
+  NYC 5,7,18,08 BR4			BDB has different parks than RS. Ignoring BDB
+  NYC01		BS1  1871-05-27 0	NYC01 is 'Union Grounds (Brooklyn)'.  possibly BOS02, 'Union Park" or BOS01       Should check GL
+  NYC01		CH1  1871-10-30 0	NYC01 is 'Union Grounds (Brooklyn)'.  possibly CHI01, "Union Base-ball Grounds"?  Should check GL
+  NYC01		HAR	1877	1877	Wikipedia says "The team left Hartford and moved to Brooklyn, New York for the 1877 season to become the Brooklyn Hartfords", but BDB shows it as still being Hartford Dark Blues.  Ignoring BDB
+  NYC13/NYC14	NYA 1912 / 1913		gamelogs gives 3 1912-05-30 and 1912-09-02.1,.2 t NYC14 during 1912 season, then moves to NYC14 permanently in 1913 -- Checked against http://www.retrosheet.org/neutral.htm
+  PHI11/PHI09	PHI 1938 / 1927		gamelogs list PHI11 for 12 games from 1927-05-16 to 1927-05-28 and then not again until 1938 -- Checked against http://www.retrosheet.org/neutral.htm
+  PIT01		IN1  1878-08-22 to -24	pc gives PRO: 3 games rsh gives IN1 only -- Using IN1 from http://www.retrosheet.org/neutral19.htm
+  PIT02/PIT04				Gamelogs lists CHU vs SLU at PIT02. pc gives PTU: 8/25 to 8/30/1884 games. Using PIT04 and CHU from http://www.retrosheet.org/neutral19.htm
+  PIT02/PIT04	PT1 1884 / 1885		gamelogs list PT1 moving from PIT02 to  PIT04 at end 1884; BDB lists it at end of 1883.  Ignoring BDB
+  SPR01					pc gives TRO and rsh gives MID; they agree on game dates --  using MID from http://www.retrosheet.org/neutral19.htm
+  SYR04		SR1			No one else knows about this park. parkcodes has SYR04,Lakeside Park,,Syracuse,NY,1879-05-31,1879-08-09,NL,"SR1: Sundays".  Not in http://www.retrosheet.org/neutral19.htm
+  WOR02					PC gives BSN game, gl shows WS8 game.
+  FOR02					????		
+  STL* is screwed up in BDB:
+	'SL1:Red Stocking Baseball Park'		=>'STL01',
+	'SL3:Sportsman\'s Park I'                       =>'STL02',
+	'SL4:Sportsman\'s Park I'                       =>'STL03',
+	'SL5:Sportsman\'s Park I'                       =>'STL04',
+	'SLA:Sportsman\'s Park III'                     =>'STL06',
+        'SLA:Sportsman\'s Park IV'                      =>'STL07',
+        'SLN:Sportsman\'s Park IV'                      =>'STL07',
+
+  TRO01/ALB02/WAT01/TRO02	TRN	1882	BDB and GL wrong in 1882
+  # http://www.retrosheet.org/neutral19.htm
+  # GL.xml hand-edited to include
+  # CHU-1884-08-25 to 08-30 CHU vs SLU are at PIT02, not PIT04 -- http://www.retrosheet.org/neutral19.htm
+  # TRN-1882-05-30.1 CHN vs TRN in ALB02 (Greenbush), not ALB01 (Riverside)  05/30/1882 1 NL Chicago        NL Troy           Greenbush Grounds, Greenbush (now in Rennselaer) NY  
+  # TRN-1882-05-30.2 CHN vs TRN in TRO02 (Putnam),    not WAT01 (Troy)       05/30/1882 2 NL Chicago        NL Troy           Putnam Grounds, Troy NY 
+
+Wiedenmeyer's Park on rsh
+Wiedenmayer's Park in altgames (e->a)
+  1899-09-25 gamenum in day differs neutralgms vs gl
+  gl wrong site for 1929-09-02 games
+  gl missing 1885-09-04, 1885-09-25
+  BS1 1874-10-30    v HR1  is at not WOR01 not HRT01
+  CHN 1885-09-25,04 v PRO is at MIL02 not CHI06
+
+BDB probably harmlessly inaccurate
+  LOU02		LS3	1892	1892	1892-04-12	1892	1893	1893-05-04	71	Louisville Colonels	
+  BOS07		BSN	1915/13		BDB doesn't mention BSN in fenway for parts of 1913 and 1914
+  CHI04		CHN	1882/83		-- gamelogs lists CHN moving from CHI03 to CHI04 for 1883 season, BDB lists it for both in 1882
+  CHI06		CHN		1890/91	BDB and rs report different move dates
+  CHI08		CHN	1894/93		BDB and rs report different move dates
+  CHI05		CHN			BDB has 1891-1893
+  BAL06		BL3		1890/91	BDB doesn't note first few games in BAL06 before move
+  ALB01		TRN	1882		glogs gives 7 random games, bdb shows none.
+  PIT04		CHU			gl has 5 games in 1884, bdb none
+
+BDB names these different
+	'BFP:Olympic Park II'                         =>'BUF03',   1  	#                                          BFP park from 1890 to 1890				   
+	'BLU:Belair Lot'                              =>'BAL04',   2  	#                                          BLU park from 1884 to 1884	
+	'BRF:Washington Park III'                     =>'NYC12',   3  	#                                          BRF park from 1914 to 1915	
+	'BRP:Eastern Park'                            =>'NYC11',   4  	#                                          BRP park from 1890 to 1890	
+	'BSP:Congress Street Grounds'                 =>'BOS04',   5  	#                                          BSP park from 1890 to 1890	
+	'BUF:International Fair Association Grounds'  =>'BUF04',   6  	#                                          BUF park from 1914 to 1915	
+	'CHP:South Side Park II'                      =>'CHI07',   7  	#                                          CHP park from 1890 to 1890	
+	'CHU:South Side Park I'                       =>'CHI05',   8  	#                                          CHU park from 1884 to 1884	
+	'CNU:Bank Street Grounds'                     =>'CIN03',   9  	#                                          CNU park from 1884 to 1884	
+	'KCF:Gordon and Koppel Field'                 =>'KAN04',  10  	#                                          KCF park from 1914 to 1915	
+	'KCU:Athletic Park (Kansas City)'             =>'KAN01',  11  	#                                          KCU park from 1884 to 1884	
+	'MLU:Wright Street Grounds'                   =>'MIL02',  12  	#                                          MLU park from 1884 to 1884	
+	'NYP:Polo Grounds IV'                         =>'NYC10',  13  	#                                          NYP park from 1890 to 1890	
+	'PHP:Forepaugh Park'                          =>'PHI07',  14  	#                                          PHP park from 1890 to 1890	
+	'PHU:Keystone Park'                           =>'PHI05',  15  	#                                          PHU park from 1884 to 1884	
+	'PTF:Exposition Park III'                     =>'PIT05',  16  	#                                          PTF park from 1914 to 1915	
+	'PTP:Exposition Park III'                     =>'PIT05',  17  	#                                          PTP park from 1890 to 1890	
+	'PIT:Exposition Park'                         =>'PIT05',  18  	# Exposition Park III                      				
+	'PIT:Exposition Park'                         =>'PIT05',  19  	# Exposition Park III                      				
+	'WIL:Union Street Park'                       =>'WIL01',  20  	#                                          WIL park from 1884 to 1884	
+	'WSU:Capitol Grounds'                         =>'WAS03',  21  	#                                          WSU park from 1884 to 1884	
+	'SL5:Sportsman's Park I'                      =>'STL04',  22  	# Union Grounds                            				
+	'SL3:Sportsman's Park I'                      =>'STL02',  23  	# Grand Avenue Park                        				
+	'SLA:Sportsman's Park III'                    =>'STL06',  24  	# Sportsman's Park II                      				
+	'SLA:Sportsman's Park IV'                     =>'STL07',  25  	# Busch Stadium I                          				
+	'SLN:Sportsman's Park IV'                     =>'STL07',  26  	# Busch Stadium I                          				
+	'SLN:Sportsman's Park IV'                     =>'STL07',  27  	# Busch Stadium I                          				
+	'SLN:Sportsman's Park IV'                     =>'STL07',  28  	# Busch Stadium I                          				
+	'NY1:Polo Grounds I'                          =>'NYC03',  29  	# Polo Grounds I (Southeast Diamond)       				
+	'NY4:Polo Grounds I West Diamond'             =>'NYC03',  30  	# Polo Grounds I (Southeast Diamond)       				
+	'NY1:Polo Grounds II'                         =>'NYC09',  31  	# Polo Grounds III                         				
+	'NY1:Polo Grounds III'                        =>'NYC10',  32  	# Polo Grounds IV                          				
+	'NY1:Polo Grounds III'                        =>'NYC10',  33  	# Polo Grounds IV                          				
+	'NY1:Polo Grounds IV'                         =>'NYC14',  34  	# Polo Grounds V                           				
+	'NY1:Polo Grounds IV'                         =>'NYC14',  35  	# Polo Grounds V                           				
+	'NYA:Polo Grounds IV'                         =>'NYC14',  36  	# Polo Grounds V                           				
+	'NYN:Polo Grounds IV'                         =>'NYC14',  37  	# Polo Grounds V                           				
+	'BL2:Oriole Park'                             =>'BAL03',  38  	# Oriole Park I                            				
+	'BL3:Oriole Park'                             =>'BAL06',  39  	# Oriole Park II                           				
+	'BL3:Union Park'                              =>'BAL07',  40  	# Oriole Park III                          				
+	'BLN:Union Park'                              =>'BAL07',  41  	# Oriole Park III                          				
+	'BLA:Oriole Park'                             =>'BAL09',  42  	# Oriole Park IV                           				
+	'CIN:League Park I in Cincinnati'             =>'CIN04',  43  	# League Park (Cincinnati) I               				
+	'CN2:League Park I in Cincinnati'             =>'CIN04',  44  	# League Park (Cincinnati) I               				
+	'CIN:League Park II in Cincinnati'            =>'CIN05',  45  	# League Park (Cincinnati) II              				
+	'TL1:League Park'                             =>'TOL01',  46  	# League Park (Toledo)                     				
+	'CL2:Kennard Street Park'                     =>'CLE02',  47  	# League Park I                            				
+	'CL3:National League Park II'                 =>'CLE03',  48  	# League Park II                           				
+	'CL4:National League Park'                    =>'CLE03',  49  	# League Park II                           				
+	'CL4:League Park I'                           =>'CLE05',  50  	# League Park III                          				
+	'CLE:League Park I'                           =>'CLE05',  51  	# League Park III                          				
+	'CLE:League Park II'                          =>'CLE06',  52  	# League Park IV                           				
+	'CLE:League Park II'                          =>'CLE06',  53  	# League Park IV                           				
+	'CH2:23rd Street Grounds'                     =>'CHI02',  54  	# 23rd Street Park                         				
+	'CHN:23rd Street Grounds'                     =>'CHI02',  55  	# 23rd Street Park                         				
+	'CH1:Union Base-Ball Grounds'                 =>'CHI01',  56  	# Lake Front Park I                        				
+	'CHN:Lake Front Park I'                       =>'CHI03',  57  	# Lake Front Park II                       				
+	'CHN:Lake Front Park I'                       =>'CHI03',  58  	# Lake Front Park II                       				
+	'CHN:Lake Front Park II'                      =>'CHI04',  59  	# Lake Front Park III                      				
+	'CHN:Lake Front Park II'                      =>'CHI04',  60  	# Lake Front Park III                      				
+	'CHN:West Side Park II'                       =>'CHI08',  61  	# West Side Grounds                        				
+	'CHN:West Side Park I'                        =>'CHI06',  62  	# West Side Park                           				
+	'CHN:South Side Park I'                       =>'CHI07',  63  	# South Side Park II                       				
+	'CHA:South Side Park II'                      =>'CHI09',  64  	# South Side Park III                      				
+	'CHA:South Side Park II'                      =>'CHI09',  65  	# South Side Park III                      				
+	'PHA:Shibe Park'                              =>'PHI11',  66  	# Connie Mack Stadium                      				
+	'PHI:Shibe Park'                              =>'PHI11',  67  	# Connie Mack Stadium                      				
+	'PHI:Shibe Park'                              =>'PHI11',  68  	# Connie Mack Stadium                      				
+	'BSU:Union Park'                              =>'BOS02',  69  	# Dartmouth Grounds                        BSU park from 1884 to 1884	
+	'IND:Washington Park'                         =>'IND07',  70  	# Federal League Park                      IND park from 1914 to 1914	
+	'FW1:Hamilton Field'                          =>'FOR01',  71  	# Grand Duchess                            				
+	'SLF:Federal League Park'                     =>'STL08',  72  	# Handlan's Park                           SLF park from 1914 to 1915	
+	'NEW:Harrison Field'                          =>'HAR01',  73  	# Harrison Park                            NEW park from 1915 to 1915	
+	'NH1:Hamilton Park'                           =>'NEW01',  74  	# Howard Avenue Grounds                    				
+	'PHI:Philadelphia Baseball Grounds'           =>'PHI06',  75  	# Huntingdon Grounds I                     				
+	'PH3:Centennial Grounds'                      =>'PHI02',  76  	# Centennial Park                          				
+	'BL4:Newington Park'                          =>'BAL01',  77  	# Madison Avenue Grounds                   				
+	'ML2:Eclipse Park II'                         =>'MIL01',  78  	# Milwaukee Base-Ball Grounds              				
+	'WOR:Worcester Driving Park Grounds'          =>'WOR01',  79  	# Agricultural County Fair Grounds I       				
+	'ML3:Athletic Field'                          =>'MIL03',  80  	# Borchert Field                           				
+	'CLP:Players League Park'                     =>'CLE04',  81  	# Brotherhood Park                         CLP park from 1890 to 1890	
+	'BR4:Ridgewood Park'                          =>'NYC18',  82  	# Ridgewood Park II                        				
+	'BFN:Riverside Park'                          =>'BUF01',  83  	# Riverside Grounds                        				
+	'PH4:Athletic Park'                           =>'PHI01',  84  	# Jefferson Street Grounds                 				
+	'IN2:Seventh Street Park'                     =>'IND02',  85  	# Seventh Street Park I                    				
+	'IN3:Athletic Park I'                         =>'IND04',  86  	# Seventh Street Park II                   				
+	'IN3:Athletic Park II'                        =>'IND05',  87  	# Seventh Street Park III                  				
+	'SE1:Sicks Stadium'                           =>'SEA01',  88  	# Sick's Stadium                           				
+	'SR1:Newell Park'                             =>'SYR01',  89  	# Star Park I                              				
+	'WS8:Swampdoodle Grounds'                     =>'WAS05',  90  	# Swampoodle Grounds                       				
+	'BLF:Oriole Park V'                           =>'BAL10',  91  	# Terrapin Park                            BLF park from 1914 to 1915	
+	'DET:Briggs Stadium'                          =>'DET04',  92  	# Tiger Stadium                            				
+	'DET:Navin Field'                             =>'DET04',  93  	# Tiger Stadium                            				
+	'SLU:Union Grounds (Saint Louis)'             =>'STL04',  94  	# Union Grounds                            SLU park from 1884 to 1884	
+	'BR1:Union Grounds'                           =>'NYC01',  95  	# Union Grounds (Brooklyn)                 				
+	'BR2:Union Grounds'                           =>'NYC01',  96  	# Union Grounds (Brooklyn)                 				
+	'KC2:Association Park I'                      =>'KAN02',  97  	# Association Park                         				
+	'KC1:Municipal Stadium I'                     =>'KAN05',  98  	# Municipal Stadium                        				
+	'KCA:Municipal Stadium II'                    =>'KAN05',  99  	# Municipal Stadium                        				
+	'WS1:Griffith Stadium I'                      =>'WAS09',  a0  	# Griffith Stadium                         				
+	'WS1:Griffith Stadium II'                     =>'WAS09',  a1  	# Griffith Stadium                         				
+	'WS2:Griffith Stadium II'                     =>'WAS09',  a2  	# Griffith Stadium                         				
+	'NYA:Yankee Stadium I'                        =>'NYC16',  a3  	# Yankee Stadium                           				
+	'NYA:Yankee Stadium II'                       =>'NYC16',  a4  	# Yankee Stadium                           				
+	'BSN:Fenway Park I'                           =>'BOS07',  a5  	# Fenway Park								
+	'BOS:Fenway Park I'                           =>'BOS07',  a6  	# Fenway Park                              				
+	'BOS:Fenway Park II'                          =>'BOS07',  a7  	# Fenway Park                              				
+
+These check out OK
+ . BOS07	BSN			the Boston Braves used Fenway Park for scattered games in 1913, for the 1914 World Series and from 1914-09-07 untile the end of the 1915 season, when Braves Field was completed.  Plus a couple weird games in 1946.
+ . BOS08	BOS			played Sunday games at BOS08 from 1929 to 1932 
+ . CHI07	CHN			moved from CHI07 to CHI08 durint 1893 season
+ . CHI08	CHN			moved from CHI07 to CHI08 durint 1893 season
+ . CHI11	CHF			played at wrigley 1914-1915
+ . CHI12	FLO			In September 2004, the Florida Marlins, who were already in town playing the Cubs, used the stadium for two games against the Montreal Expos while Hurricane Ivan hit Florida.  http://en.wikipedia.org/wiki/U.S._Cellular_Field#Trivia
+ . HRT01	HAR,HR1			HR1 played HRT01 1874-05-01 to 1875-10, HAR played HRT01 1876-05-01 to 1876-09, HAR played NYC01 1877-04    to 1877-09
+ . LOS03	CAL			Dodger Stadium was also the home of the Los Angeles Angels between 1962 and 1965. To avoid constantly referring to their landlords, the Angels called the park Chávez Ravine Stadium (or just "Chávez Ravine"), after the former geographic feature in which the stadium had been constructed. http://en.wikipedia.org/wiki/Dodger_Stadium
+ . LOS03	LAA			Dodger Stadium was also the home of the Los Angeles Angels between 1962 and 1965. To avoid constantly referring to their landlords, the Angels called the park Chávez Ravine Stadium (or just "Chávez Ravine"), after the former geographic feature in which the stadium had been constructed. http://en.wikipedia.org/wiki/Dodger_Stadium
+ . MAS01	BR4	1890	1890	Long Island Grounds	 2 gms		RShtml shows three parks for BR4 in 1890
+ . MIL05	MIL/MLN			Brewers moved from AL to NL on 1997-11-06 http://en.wikipedia.org/wiki/Milwaukee_Brewers#1994-98:_Realignment.2F.22We.27re_taking_this_thing_National.22
+ . MIL05	CHA			played 11 home games at MIL05 in 1965 (one against every other franchise in the American League at the time).
+ . NEW01	NEW			http://en.wikipedia.org/wiki/Newark_Pepper
+ . NYC01	HAR			left HRT01 and moved to NYC01 for the 1877 season to become the Brooklyn Hartfords
+ . NYC09	BR4	1890	1890	Polo Grounds III	 8 gms
+ . NYC17	NYA			http://en.wikipedia.org/wiki/Shea_Stadium#Home_of_the_New_York_Mets
+ . NYC17	NYA	1974		The New York Yankees played their home games in Shea Stadium during the 1974 and 1975 seasons while Yankee Stadium was being renovated. The move to Shea had been proposed earlier in the decade, but the Mets, as Shea's primary tenants, refused to sign off on the deal. However, when the city stepped in to pay for renovating Yankee Stadium, the Mets had little choice but to agree to share Shea with the Yankees.
+ . NYC17	NYA	1998		Incidentally, on April 15, 1998 the Yankees also played one "home" game at Shea[1] after a beam collapsed at Yankee Stadium two days before, destroying several rows of seats[2]. Former Mets star Darryl Strawberry, then playing for the Yankees, hit a home run during the game. This prompted the famous New York "apple" (noted below) to briefly, but not fully, emerge from the upside down "top hat" in center field, much to the delight of the crowd present.
+ . NYC18	BR4	1890	1890	Ridgewood Park II	28 gms
+ . SJU01	MON			Played 22 'home' games at SJU01 in 2003 and 2004 prior to their move to Washington, D.C. as the Washington Nationals
+ . SJU01	TOR			The stadium hosted Major League Baseball's Opening Day Game in 2001, in which the Toronto Blue Jays faced the Texas Rangers. However, 4,000 who bought tickets were turned away despite when the police determined the safe capacity of the park had been vastly exceeded.
+   TOK01	NYN	2000-03-29     	New York Mets				Tokyo		JA	1	
+   TOK01	CHN	2000-03-30     	Chicago White Stockings			Tokyo		JA	1	
+   SJU01	TOR	2001-04-01     	Toronto Blue Jays			San Juan	PR	1	
+   TOK01	TBA	2004-03-30-31  	Tampa Bay Devil Rays			Tokyo		JA	2	
+   CHI12	FLO	2004-09-13-14  	Florida Marlins				Chicago		IL	2	
+   HON01	SDN	1997-04-19-20	San Diego Padres			Honolulu	HI	3	
+
+These name differences caused trouble
+  ANA01		ANA 2005	2006	vs LAA	vs ALA
+  MIL05		ML1 1953	1965	vs MLN
+  MIL05		ML4 1970	1997	vs MIL
+
+Sunday Games
+  hteam	beg	end	nParks	nSunPks	nWkdPks	sunGms	totGms  wkdGms	SunFrac	sunParks	wkdParks	Parks
+  BOS	1929	1931	2	1	1	46	234	188	0.1966	BOS08		BOS07		BOS07,BOS08
+  BR3	1886	1886	2	1	1	14	70	56	0.2000	NYC07		NYC05		NYC05,NYC07	    	NYC07,Ridgewood Park,,Brooklyn,NY,1886-05-02,1890-06-08,AA,		       "BR3: Sundays (1886-1889); BR4: 1980"
+  BR3	1887	1888	2	1	1	35	150	115	0.2333	NYC18		NYC05		NYC05,NYC18
+  BR3	1889	1889	3	1	2	14	71	57	0.1972	NYC18		NYC05,NYC08	NYC05,NYC08,NYC18
+  CHN	1893	1893	2	1	1	14	73	59	0.1918	CHI08		CHI07		CHI07,CHI08
+  DET	1901	1902	2	1	1	23	137	114	0.1679	DET03		DET02		DET02,DET03	   	DET03,Burns Park,West End Park,Detroit,MI,1901-04-28,1902-09-07,AL,	       "Sundays only"
+  DET	1903	1903	3	2	1	3	65	62	0.0462	GRA01,TOL04	DET02		DET02,GRA01,TOL04
+  DET	1905	1905	2	1	2	1	76	75	0.0132	COL04		COL04,DET02	COL04,DET02
+  IN2	1884	1884	2	1	1	11	56	45	0.1964	IND03		IND02		IND02,IND03	   	IND03,Bruce Grounds,,Indianapolis,IN,1884-05-18,1884-09-21,AA,	       "Sundays"
+  NY1	1898	1899	2	1	1	5	152	147	0.0329	WNY01		NYC10		NYC10,WNY01
+  PH4	1888	1890	2	1	1	31	220	189	0.1409	GLO01		PHI01		GLO01,PHI01	   	GLO01,Gloucester Point Grounds,,Gloucester City,NJ,1888-08-05,1890-10-12,AA, "Sundays; PH4 6/10/1888"
+  RC2	1890	1890	2	1	1	6	63	57	0.0952	IRO01		ROC01		IRO01,ROC01	   	IRO01,Windsor Beach,,Irondequoit,NY,1890-05-11,1890-07-20,AA,		       "RC2: Sundays"
+  SR2	1890	1890	3	2	1	6	60	54	0.1000	SYR03,THR01	SYR02		SYR02,SYR03,THR01   	THR01,Three Rivers Park,,Three Rivers,NY,1890-05-18,1890-07-20,AA,	       "SR2: Sundays"
+										SYR04???						SYR04,Lakeside Park,,Syracuse,NY,1879-05-31,1879-08-09,NL,		       "SR1: Sundays"
+
+Only game at this park, suspicious team for this city
+  BAL04		CHU	Chicago/Pittsburgh (Union League)	Baltimore	MD	1	1884-09-17	1884-09-17
+  BOS01		HR1	Hartford Dark Blues			Boston		MA	1	1874-08-12	1874-08-12
+  CAN01		CLE	Cleveland Blues				Canton		OH	3	1902-06-15	1903-06-21
+  CAN01		PIT	Pittsburg Alleghenys			Canton		OH	1	1890-09-18	1890-09-18
+  CHI02		BS1	Boston Red Stockings			Chicago		IL	1	1873-08-16	1873-08-16
+  CIN01		WS3	Washington Olympics			Cincinnati	OH	1	1871-07-04	1871-07-04
+  HRT01		BS1	Boston Red Stockings			Hartford	CT	1	1874-10-30	1874-10-30
+  NYC01		BS1	Boston Red Stockings			Brooklyn	NY	1	1871-05-27	1871-05-27
+  NYC01		CH1	Chicago White Stockings			Brooklyn	NY	1	1871-10-30	1871-10-30
+  NYC01		PRO	Providence Grays			Brooklyn	NY	1	1878-07-26	1878-07-26
+  NYC05		CN2	Cincinnati Red Stockings		Brooklyn	NY	1	1884-10-10	1884-10-10
+  PIT01	*	IN1	Indianapolis Blues			Pittsburgh	PA	3	1878-08-22	1878-08-24
+  PRO01		BS1	Boston Red Stockings			Providence	RI	1	1875-06-22	1875-06-22
+  RIC01		WS6	Washington Nationals			Richmond	VA	2	1875-04-29	1875-05-01
+  ROC02		CL4	Cleveland Spiders			Rochester	NY	2	1898-08-27	1898-08-29
+  ROC03		CL4	Cleveland Spiders			Rochester	NY	1	1898-08-28	1898-08-28
+  SPR01	*	BS1	Boston Red Stockings			Springfield-- Funny Parks	MA	2	1873-07-16	1875-05-14
+  STL02		IN1	Indianapolis Blues			Saint Louis	MO	3	1878-07-09	1878-07-13
+  WAR01		BSN	Boston Red Caps				Warwick		RI	1	1903-09-06	1903-09-06
+  WOR02	*	WS8	Washington Nationals			Worcester	MA	1	1887-08-17	1887-08-17
+
+These look fine
+  CIN01		CL1	Cleveland Forest Citys			Cincinnati	OH	2	1871-05-13	1871-07-22
+  BAL01		WS3	Washington Olympics			Baltimore	MD	1	1871-07-08	1871-07-08
+  CHI01		RC1	Rockford Forest Citys			Chicago		IL	1	1871-08-08	1871-08-08
+  CHI02		CL1	Cleveland Forest Citys			Chicago		IL	2	1872-05-29	1872-05-30
+  HRT02		MID	Middletown Mansfields			Hartford	CT	3	1872-06-21	1872-08-09
+  SPR01		MID	Middletown Mansfields			Springfield	MA	1	1872-07-23	1872-07-23
+  BAL01		BL4	Baltimore Marylands			Baltimore	MD	1	1873-04-14	1873-04-14
+  WAS01		BL1	Baltimore Canaries			Washington	DC	1	1873-05-14	1873-05-14
+  NYC01		ELI	Elizabeth Resolutes			Brooklyn	NY	1	1873-06-12	1873-06-12
+  HOB01		NY2	New York Mutuals			Hoboken		NJ	1	1873-07-04	1873-07-04
+  CHI02		PH2	Philadelphia Whites			Chicago		IL	1	1873-08-19	1873-08-19
+  PHI02		PH1	Philadelphia Athletics			Philadelphia	PA	1	1875-06-04	1875-06-04
+  PRO01		HR1	Hartford Dark Blues			Providence	RI	1	1875-06-12	1875-06-12
+  DOV01		PH1	Philadelphia Athletics			Dover		DE	1	1875-06-24	1875-06-24
+  COV01		PH2	Philadelphia Whites			Covington	KY	1	1875-09-21	1875-09-21
+  BAL02		WS6	Washington Nationals			Baltimore	MD	1	1875-06-09	1875-06-09
+  LUD01		PH2	Philadelphia Whites			Ludlow		KY	1	1875-09-22	1875-09-22
+  NEW01		HAR	Hartford Dark Blues			New Haven	CT	1	1877-09-22	1877-09-22
+  BAL05		BLU	Baltimore Monumentals			Baltimore	MD	1	1884-08-25	1884-08-25
+  TOL02		TL1	Toledo Blue Stockings			Toledo		OH	1	1884-09-13	1884-09-13
+  ELM01		BFN	Buffalo Bisons				Elmira		NY	2	1885-10-10	1885-10-10
+  CLE09		CL3	Cleveland Blues				Cleveland	OH	1	1887-08-21	1887-08-21
+  WEE01		NY4	New York Metropolitans			Weehawken	NJ	1	1887-09-11	1887-09-11
+  JER01		NY1	New York Gothams			Jersey City	NJ	2	1889-04-24	1889-04-25
+  MAS01		BR4	Brooklyn Gladiators			Maspeth		NY	2	1890-07-27	1890-08-03
+  SYR03		SR2	Syracuse Stars				Syracuse	NY	1	1890-08-03	1890-08-03
+  WHE01		PIT	Pittsburg Alleghenys			Wheeling	WV	1	1890-09-22	1890-09-22
+  MIN01		ML3	Milwaukee Brewers			Minneapolis	MN	1	1891-10-02	1891-10-02
+  PIT05		PHI	Philadelphia Quakers			Pittsburgh	PA	2	1892-06-30	1892-06-30
+  KAN02		SLN	St. Louis Browns			Kansas City	MO	3	1892-08-23	1892-10-15
+  CLL01		CL4	Cleveland Spiders			Collinwood	OH	2	1898-06-12	1898-06-19
+  WNY01		BRO	Brooklyn Bridegrooms			West New York	NJ	2	1898-09-18	1898-10-02
+  STL05		CL4	Cleveland Spiders			Saint Louis	MO	3	1898-09-28	1899-09-24
+  CHI08		CL4	Cleveland Spiders			Chicago		IL	1	1898-10-08	1898-10-08
+  DAY01		CLE	Cleveland Blues				Dayton		OH	1	1902-06-08	1902-06-08
+  FOR03		CLE	Cleveland Blues				Fort Wayne	IN	2	1902-06-22	1902-08-31
+  COL03		CLE	Cleveland Blues				Columbus	OH	2	1902-08-03	1903-05-17
+  GRA01		DET	Detroit Tigers				Grand Rapids	MI	1	1903-05-24	1903-05-24
+  TOL04		DET	Detroit Tigers				Toledo		OH	2	1903-06-28	1903-08-16
+  NWK01		NYA	New York Highlanders			Newark		NJ	1	1904-07-17	1904-07-17
+  COL04		DET	Detroit Tigers				Columbus	OH	2	1905-07-23	1905-07-24
+  TOK01		NYN	New York Mets				Tokyo		JA	1	2000-03-29	2000-03-29
+  TOK01		CHN	Chicago White Stockings			Tokyo		JA	1	2000-03-30	2000-03-30
+  SJU01		TOR	Toronto Blue Jays			San Juan	PR	1	2001-04-01	2001-04-01
+  TOK01		TBA	Tampa Bay Devil Rays			Tokyo		JA	2	2004-03-30	2004-03-31
+  CHI12		FLO	Florida Marlins				Chicago		IL	2	2004-09-13	2004-09-14
+
+
+  Zip codes not found
+    # 	LBV01	Lake Buena Vista FL	US	32830			Orlando, FL
+    # 	IRO01	Irondequoit	 NY	US	14617,21,22		Rochester	NY
+    # 	LUD01	Ludlow		 KY	US	41016			Covington	KY	
+    # 	MIN02	Bloomington	 MN	US	55420,25,31,35,37,38,39	Minneapolis	MN	
+    # 	GEA01	Geauga Lake	 OH	US	44202			Aurora		OH		City: http://en.wikipedia.org/wiki/Geauga_Lake
+    # 	CLL01	Collinwood	 OH	US	44110			Cleveland	OH 		City: http://en.wikipedia.org/wiki/Collinwood		
+    # 	PEN01	Pendleton	 OH	US	45226			Cincinnati	OH  	Schmidt Field Park  is now located on the site  Park: http://en.wikipedia.org/wiki/Pendleton_Park				
+    # 	SAI01	Saint George	 NY	US				Staten Island	NY	Park: http://en.wikipedia.org/wiki/St._George_Cricket_Grounds							
+    # 	THR01	Three Rivers	 NY	US	13041			Clay	   	NY		Park: 
+    # 	WAV01	Waverly		 NJ	US	07112			Newark	 	NJ		Park: http://en.wikipedia.org/wiki/Waverly_Fairgrounds				
+
+
+---------------------------------------------------------------------------
+--
+-- Put parks back together
+--
+---------------------------------------------------------------------------
+
+-- Put parks back together
+SELECT P.parkID,
+	GROUP_CONCAT(DISTINCT T.teamID  ORDER BY T.teamID  DESC SEPARATOR ';') AS Teams,
+	GROUP_CONCAT(DISTINCT N.name    ORDER BY N.name    DESC SEPARATOR ';') AS OtherNames,
+	GROUP_CONCAT(DISTINCT C.comment ORDER BY C.comment DESC SEPARATOR '!') AS Comments,
+	P.*
+FROM    	Parks_parks P
+LEFT JOIN 	Parks_teams T ON P.parkID=T.parkID
+LEFT JOIN 	Parks_names N ON P.parkID=N.parkID AND (P.currname_rsh != N.name)
+LEFT JOIN 	Parks_comts C ON P.parkID=C.parkID
+GROUP BY	P.parkID
+
+
+-- BDB Team-Park-Years
+SELECT BT.teamID, BT.name, BT.park, MIN(yearID) AS beg, MAX(yearID) AS end, BT.franchID, BT.divID, BT.teamIDretro
+  FROM  	vizsagedb_baseballdatabank.Teams BT
+  GROUP BY	teamID, lgID, park
+  ORDER BY	teamID, beg, park
+
+-- Gamelogs and BDB
+SELECT G.park_ID, G.h_team, G.v_team,  P.currname_rsh, 
+		BT.teamID, BT.name, BT.park, beg, end, BT.franchID, BT.divID, BT.teamIDretro,
+		G.*
+  FROM vizsagedb_retrosheet.GamesFlat G
+  LEFT JOIN Parks_parks P ON G.park_ID = P.parkID
+  LEFT JOIN (SELECT teamID, name, park, MIN(yearID) AS beg, MAX(yearID) AS end, franchID, divID, teamIDretro
+				FROM  vizsagedb_baseballdatabank.Teams GROUP BY teamID, lgID, park) BT 
+		ON	( (G.h_team=BT.teamID) AND (YEAR(G.date) BETWEEN beg AND end) )
+WHERE 1
+  AND G.h_team IN ('NYA') 
+  AND YEAR(date) BETWEEN 1912 AND 1915
+  -- AND G.park_ID LIKE 'BOS07' 
+
+-- Gamelogs
+SELECT		G.park_ID, G.h_team, G.v_team,  P.currname_rsh, G.*
+  FROM		vizsagedb_retrosheet.GamesFlat G
+  LEFT JOIN	Parks_parks P ON G.park_ID = P.parkID
+  WHERE	1
+  AND		G.h_team IN ('BSN') 
+  AND		YEAR(date) BETWEEN 1912 AND 1915
+  -- AND	G.park_ID LIKE 'BOS07' 
+  ORDER BY	park_ID,  G.h_team, date
+
+-- pull from Teams and BDBTeams
+SELECT SUM(games_gl) AS games, T.parkID, T.teamID, BDBT.name, BDBT.park, N.name AS parkname, P.city_rsh
+  FROM		Parks_names N
+  LEFT JOIN	Parks_teams T				ON N.parkID = T.parkID
+  LEFT JOIN	vizsagedb_baseballdatabank.Teams BDBT	ON T.teamID = BDBT.teamIDretro
+  LEFT JOIN	Parks_parks P				ON P.parkID = T.parkID
+  WHERE 	(N.name LIKE '%Expos%')
+  GROUP BY T.parkID, T.teamID, N.name
+  ORDER BY parkname, T.parkID, T.teamID
+
+-- List teams flat
+SELECT P.* FROM Parks_teams P
+WHERE teamID IN ('CNU')
+ORDER BY teamID, zbeg_gl, parkID
+
+-- List teams flat
+SELECT	T.parkID, T.teamID, BT.name, 
+       	P.city_rsh, P.state_rsh,
+		T.games_gl,
+       	T.zbeg_bdb, T.zbeg_rsh, T.zbeg_gl, 
+       	T.zend_bdb, T.zend_rsh, T.zend_gl  
+  FROM		Parks_teams T
+  LEFT JOIN	vizsagedb_baseballdatabank.Teams BT ON T.teamID = BT.teamID
+  LEFT JOIN	Parks_parks P				        ON P.parkID = T.parkID
+  WHERE		games_gl < 4
+  GROUP BY	T.parkID, T.teamID
+  ORDER BY	teamID, zbeg_gl, parkID, parkID
+
+
+-- List teams flat
+SELECT	T.parkID, T.teamID, BT.name, 
+       	P.city_rsh, P.state_rsh,
+		T.games_gl, T.zbeg_gl, DATEDIFF(T.zend_gl, T.zbeg_gl) AS span
+  FROM		Parks_teams T
+  LEFT JOIN	vizsagedb_baseballdatabank.Teams BT ON ((T.teamID = BT.teamID) AND (BT.yearID BETWEEN YEAR(T.zbeg_gl) AND YEAR(T.zend_gl)))
+  LEFT JOIN	Parks_parks P				        ON P.parkID = T.parkID
+  WHERE		games_gl < 4
+  GROUP BY	T.parkID, T.teamID
+  ORDER BY	span , teamID, parkID, zbeg_gl, parkID
+
+
+---------------------------------------------------------------------------
+--
+-- examing neutral games
+--
+---------------------------------------------------------------------------
+
+-- examing neutral games
+SELECT Q.parkID, Q. neutralsite_comment, Q.neut_games, Q.h_teamname, Q.h_lg FROM (
+SELECT COUNT(*) AS neut_games, N.h_teamname, N.parkname , P.parkID, G.h_team, T.beg, MIN(N.gamedate) AS beg_neut, MAX(N.gamedate) AS end_neut, T.end, T.games-COUNT(*) AS ggDiff, T.games, 
+	CONCAT(IFNULL(G.h_team, CASE P.parkID WHEN 'BOS07' THEN 'BSN' WHEN 'BOS08' THEN 'BOS' WHEN 'CHI10' THEN 'CHN' WHEN 'LBV01' THEN 'TBA' WHEN 'MIL06' THEN 'CLE' ELSE '????' END), 
+		' played ', COUNT(*), ' games here as an alternate (neutral) site from ', MIN(N.gamedate), ' until ', MAX(N.gamedate), IF(N.comment='', '', CONCAT(': ', N.comment)) ) AS neutralsite_comment,  
+	N.h_lg, G.v_team, N.v_teamname, N.v_lg, P.city, P.state
+  FROM 		Parks_neutralgames N
+  LEFT JOIN	Parks_parks P ON (P.parkID = N.parkID) 
+  LEFT JOIN	vizsagedb_retrosheet.GamesFlat G
+		ON	(G.date = N.gamedate) 
+	AND 	(G.park_ID = N.parkID) 
+	AND		((G.gameNumInDay = N.gnum_in_day) 	OR (gamedate='1899-09-24' AND h_team='CL4')) 
+	AND 	((G.h_league = N.h_lg) 				OR (gamedate='1877-09-22'))
+  LEFT JOIN	Parks_teams T ON (T.teamID = G.h_team) AND (T.parkID = P.parkID)
+GROUP BY P.parkID, T.teamID, N.comment -- , gamedate, gnum_in_day, h_teamname, v_teamname
+HAVING 1 -- AND ((h_team IS NULL) OR (ggDiff != 0)) 
+		-- AND parkID IN ('BOS08')
+		-- AND N.comment NOT LIKE "%[World Series]"
+		 AND NOT ((parkID="CHI08" AND h_team="CHN") OR (parkID='WAS01' AND h_team='WS5')) -- two games played, we don't want the owner team game
+ORDER BY neut_games, N.h_teamname, N.parkname, P.parkID, NOT ISNULL(h_team), ggDiff DESC, beg_neut, P.parkID, T.teamID 
+) Q ORDER BY neut_games
+
+
+
+
+-- examing neutral games
+SELECT P.parkID, 
+       IFNULL(G.h_team, CASE P.parkID WHEN 'BOS07' THEN 'BSN' WHEN 'BOS08' THEN 'BOS' WHEN 'CHI10' THEN 'CHN' WHEN 'LBV01' THEN 'TBA' WHEN 'MIL06' THEN 'CLE' ELSE '????' END) AS teamID,
+       T.beg, MIN(N.gamedate) AS beg_neut, MAX(N.gamedate) AS end_neut, T.end, T.games-COUNT(*) AS ggDiff, T.games, COUNT(*) AS neut_games, 
+       N.gnum_in_day, N.h_teamname, N.h_lg, G.v_team, N.v_teamname, N.v_lg, N.city, P.city, N.state, P.state, N.parkname, N.comment, P.*
+  FROM 		Parks_neutralgames N
+  LEFT JOIN	Parks_parks P ON (P.parkID = N.parkID) 
+  LEFT JOIN	vizsagedb_retrosheet.GamesFlat G
+		ON	(G.date = N.gamedate) 
+	AND 	(G.park_ID = N.parkID) 
+	AND	((G.gameNumInDay = N.gnum_in_day) 	OR (gamedate='1899-09-24' AND h_team='CL4')) 
+	AND 	((G.h_league = N.h_lg) 				OR (gamedate='1877-09-22'))
+  LEFT JOIN	Parks_teams T ON (T.teamID = G.h_team) AND (T.parkID = P.parkID)
+GROUP BY P.parkID, T.teamID   -- gamedate, gnum_in_day
+HAVING 1 -- AND ((h_team IS NULL) OR (ggDiff > 0)) 
+	--	AND parkID NOT IN ('TRO02', 'LBV01', 'MIL06', 'PHI11')
+	--	AND N.comment NOT LIKE "%[World Series]"
+	--	AND NOT ((parkID="CHI08" AND h_team="CHN") OR (parkID='BOS08' AND h_team='BOS')) -- two games played, we don't want the owner team game
+ORDER BY P.parkID, NOT ISNULL(h_team), ggDiff DESC, beg_neut, P.parkID, T.teamID 
+
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'WOR01' WHERE `GamesFlat`.`date` = '1874-10-30' AND `GamesFlat`.`gameNumInDay`=0 AND `GamesFlat`.`v_team`='HR1' AND `GamesFlat`.`h_team`= 'BS1';
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'ALB02' WHERE `GamesFlat`.`date` = '1882-05-30' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '1' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'CHN' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'TRN' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'TRO02' WHERE `GamesFlat`.`date` = '1882-05-30' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '2' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'CHN' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'TRN' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'PIT02' WHERE `GamesFlat`.`date` = '1884-08-25' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '0' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'SLU' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'CHU' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'PIT02' WHERE `GamesFlat`.`date` = '1884-08-27' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '0' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'SLU' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'CHU' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'PIT02' WHERE `GamesFlat`.`date` = '1884-08-29' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '0' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'SLU' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'CHU' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'PIT02' WHERE `GamesFlat`.`date` = '1884-08-30' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '0' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'SLU' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'CHU' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'MIL02' WHERE `GamesFlat`.`date` = '1885-09-04' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '0' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'BFN' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'CHN' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'MIL02' WHERE `GamesFlat`.`date` = '1885-09-25' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '0' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'PRO' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'CHN' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'BOS08' WHERE `GamesFlat`.`date` = '1929-09-02' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '1' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'WS1' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'BOS' LIMIT 1 ;
+UPDATE `vizsagedb_retrosheet`.`GamesFlat` SET `park_ID` = 'BOS08' WHERE `GamesFlat`.`date` = '1929-09-02' AND CONVERT( `GamesFlat`.`gameNumInDay` USING utf8 ) = '2' AND CONVERT( `GamesFlat`.`v_team` USING utf8 ) = 'WS1' AND CONVERT( `GamesFlat`.`h_team` USING utf8 ) = 'BOS' LIMIT 1 ;
+
+
+---------------------------------------------------------------------------
+--
+-- Funny Parks
+--
+---------------------------------------------------------------------------
+
+SELECT SUM(games_gl) AS games, T.parkID, T.teamID, BDBT.name, BDBT.park, N.name AS parkname, P.city_rsh
+  FROM		Parks_names N
+  LEFT JOIN	Parks_teams T				ON N.parkID = T.parkID
+  LEFT JOIN	vizsagedb_baseballdatabank.Teams BDBT	ON T.teamID = BDBT.teamIDretro
+  LEFT JOIN	Parks_parks P				ON P.parkID = T.parkID
+  WHERE 	(N.name LIKE '%thletic%') OR (N.name LIKE '%Col%mbia%')	OR (N.name LIKE '%League%') OR (N.name LIKE '%Oakdale%')
+	OR	(N.name LIKE '%Recreat%') OR (N.name LIKE '%nion%') 	OR (N.name LIKE '%Wrigle%') OR (N.name LIKE '%Expos%')
+  GROUP BY T.parkID, T.teamID
+  ORDER BY parkname, T.parkID, T.teamID
+
+
+---------------------------------------------------------------------------
+--
+-- Funny Dates
+--
+---------------------------------------------------------------------------
+-- Compare GL and all imported dates
+SELECT G.park_ID AS parkID, 
+	MIN(G.date) AS beg, P.zbeg_pc, MAX(G.date) AS end, P.zend_pc , 
+	DATEDIFF(MIN(G.date), P.beg)        AS pkBdiff, DATEDIFF(MAX(G.date),P.end)        AS pkEdiff,
+	DATEDIFF(MIN(G.date), P.zbeg_pc)    AS pcBdiff, DATEDIFF(MAX(G.date),P.zend_pc)    AS pcEdiff, 
+	DATEDIFF(MIN(G.date),MIN(T.beg))    AS ttBdiff, DATEDIFF(MAX(G.date),MAX(T.end))   AS ttEdiff,
+	YEAR(MIN(G.date)) - MIN(T.zbeg_rsh) AS rsBdiff, MAX(T.zend_rsh) -YEAR(MAX(G.date)) AS rsEdiff,
+	SUM(T.games) AS Tgames, P.games
+FROM vizsagedb_retrosheet.GamesFlat G
+LEFT JOIN 	Parks_parks P	ON P.parkID=G.park_ID
+LEFT JOIN	Parks_teams T	ON P.parkID=T.parkID
+GROUP BY park_ID
+ORDER BY rsBdiff, rsEdiff, pkBdiff DESC, pkEdiff DESC, pcBdiff DESC, pcEdiff DESC
+
+
+SELECT T.name, T.park, MIN(yearID) AS beg, MAX(yearID) AS end, T.* FROM vizsagedb_baseballdatabank.Teams T
+GROUP BY teamID, lgID, park
+ORDER BY teamID, beg, lgID
+
+-- any game where the gl, rshtml or pc precede the rshtml date
+SELECT TT.parkID, TT.teamID, TT.teamname, TT.zbeg_gl, earliest, TT.zend_gl, latest, D.*
+  FROM		Parks_teams TT,
+    (SELECT P.parkID, SUM(T.games_gl) AS games,
+	    P.zbeg_rsh, MIN(T.zbeg_bdb), MIN(T.zbeg_rsh), MIN(N.zbeg_rsh), P.zbeg_pc,		 MIN(T.zbeg_gl),
+	    LEAST(	IFNULL(MIN(T.zbeg_bdb),3000), IFNULL(MIN(T.zbeg_rsh), 3000), IFNULL(MIN(N.zbeg_rsh), 3000), IFNULL(YEAR(P.zbeg_pc), 3000), IFNULL(YEAR(MIN(T.zbeg_gl)),3000)) AS earliest, '-- end --',
+	    P.zend_rsh, MAX(T.zend_bdb), MAX(T.zend_rsh), MAX(N.zend_rsh), P.zend_pc,		 MAX(T.zend_gl),
+	    GREATEST(	IFNULL(MAX(T.zend_bdb),	  0), IFNULL(MAX(T.zend_rsh),	 0), IFNULL(MAX(N.zend_rsh),	0), IFNULL(YEAR(P.zend_pc),    0), IFNULL(YEAR(MAX(T.zend_gl)),	  0)) AS latest,   '-- beg --',
+	    P.currname_rsh
+	FROM	  Parks_parks P
+	LEFT JOIN Parks_names N ON P.parkID = N.parkID
+	LEFT JOIN Parks_teams T ON P.parkID = T.parkID
+	GROUP BY  P.parkID
+	HAVING	  (earliest != P.zbeg_rsh) OR (latest != P.zend_rsh) OR (P.zbeg_rsh IS NULL) OR (P.zend_rsh IS NULL) ) D
+    WHERE TT.parkID = D.parkID
+
+-- games where there's a disagreement about the team dates
+
+SELECT * FROM Parks_teams P
+  WHERE		( (zbeg_bdb IS NOT NULL) AND (zbeg_gl IS NOT NULL) AND (zbeg_bdb != YEAR(zbeg_gl)) )
+  OR		( (zend_bdb IS NOT NULL) AND (zend_gl IS NOT NULL) AND (zend_bdb != YEAR(zend_gl)) )
+  OR		( (zbeg_rsh IS NOT NULL) AND (zbeg_gl IS NOT NULL) AND (zbeg_rsh != YEAR(zbeg_gl)) )
+  OR		( (zend_rsh IS NOT NULL) AND (zend_gl IS NOT NULL) AND (zend_rsh != YEAR(zend_gl)) )
+  OR		( (zend_gl IS NULL) )
+  ORDER BY teamID , zbeg_gl, zbeg_bdb, parkID
+
+These all check out
+  parkID	teamID	teamIDlahman45	teamIDBRteamIDBDfranchID_bdb	franchID_rsh	teamname	fhName	lgIDbdb	lgIDpc	lgIDrsh	zbegbdb	zbegrsh	zbeg_gl 	zendbdb	zendrsh	zendgl  	gamesgl	src	src_gl	src_rsh"
+  ANA01		ALA	ANA	LAA	LAA	ANA		Los Angeles Angels of 	Los Angeles  Ana	AL	AL		2006				2006					bdb		
+  ANA01		ANA	ANA	LAA	LAA	ANA	ANA	Los Angeles Angels of 	Los Angeles  Ana	AL	AL	AL	1997	1997	1997-04-02	2005	2006	2006-10-01	812	bdb	gl	1"
+  BAL06		BL3	BL3	BAL	BL3	BLO	BAL	Baltimore Orioles	Baltimore Orioles	AA	AA	AA	1890	1890	1890-08-27	1890	1891	1891-05-09	36	bdb	gl	1"
+  BOS07		BSN	BSN	BSN	BSN	ATL	BOS	Boston Braves		Atlanta Braves		NL	AL	NL	1915	1913	1913-04-19	1915	1946	1946-04-28	87	bdb	gl	1"
+  CHI04		CHN	CHN	CHC	CHN	CHC	CHI	Chicago White Stockings	Chicago Cubs		NL	NL	NL	1882	1883	1883-05-05	1884	1884	1884-10-11	106	bdb	gl	1"
+  CHI06		CHN	CHN	CHC	CHN	CHC	CHI	Chicago White Stockings	Chicago Cubs		NL	NL	NL	1885	1885	1885-06-06	1890	1891	1891-10-02	431	bdb	gl	1"
+  CHI08		CHN	CHN	CHC	CHN	CHC	CHI	Chicago Colts		Chicago Cubs		NL	NL	NL	1894	1893	1893-05-14	1915	1915	1915-10-03	1687	bdb	gl	1"
+  LOU02		LS3	LS3	LOU	LS3	LOU	LOU	Louisville Colonels	Louisville Colonels	NL		NL	1892	1892	1892-04-12	1892	1893	1893-05-04	71	bdb	gl	1"
+  NYC14		NYA	NYA	NYY	NYA	NYY	NY	New York Yankees	New York Yankees	AL		AL	1913	1912	1912-05-30	1922	1922	1922-09-10	764	bdb	gl	1"
+  NYC17		NYA	NYA	NYY	NYA	NYY	NY	New York Yankees	New York Yankees	AL	NL	AL	1974	1974	1974-04-06	1975	1998	1998-04-15	160	bdb	gl	1"
+  PHI11		PHI	PHI	PHI	PHI	PHI	PHI	Philadelphia Phillies	Philadelphia Phillies	NL		NL	1938	1927	1927-05-16	1970	1970	1970-10-01	2558	bdb	gl	1"
+  PIT02		PT1	PT1	PIT	PT1	PIT	PIT	Pittsburg Alleghenys	Pittsburgh Pirates	AA		AA	1882	1882	1882-05-10	1883	1884	1884-10-15	125	bdb	gl	1"
+  PIT04		PT1	PT1	PIT	PT1	PIT	PIT	Pittsburg Alleghenys	Pittsburgh Pirates	AA		AA	1884	1885	1885-04-28	1886	1886	1886-10-12	130	bdb	gl	1"
+  ALB02		TRN					TRO									NL		1882				1882					1
+  TRO02		TRN	TRN	TRO	TRN	TRT	TRO	Troy Trojans		Troy Trojans		NL	NL	NL	1879	1879	1879-05-28	1879	1882	1879-09-20	41	bdb	gl	1"
+
+
+---------------------------------------------------------------------------
+--
+-- BDB doesn't match
+--
+---------------------------------------------------------------------------
+
+-- Get BDB mismatches
+SELECT T.parkID, T.teamID, P.currname_rsh, BT.park, T.games_gl, T.zbeg_bdb, T.zbeg_rsh, T.zbeg_gl, T.zend_bdb, T.zend_rsh, T.zend_gl
+  FROM 		Parks_teams 	T
+  LEFT JOIN Parks_parks 	P ON P.parkID = T.parkID
+  LEFT JOIN	vizsagedb_baseballdatabank.Teams BT
+		ON	T.teamID = BT.teamID
+		AND	BT.yearID = IFNULL(T.zbeg_bdb, T.zbeg_rsh)  -- BETWEEN IFNULL(T.zbeg_bdb, T.zbeg_rsh) AND IFNULL(T.zend_bdb, T.zend_rsh)
+  WHERE (P.parkID in (SELECT parkID FROM Parks_teams WHERE zbeg_bdb IS NULL)
+			OR T.teamID IN ('BR1'))
+	AND	(T.teamID NOT IN ('BFN', 'BL1', 'BL2', 'BL4', 'BLU', 'BOS', 'BR1', 'BR2', 'BR3', 'BR4', 'BRO', 'BS1', 'BSN', 'CH1'))
+  ORDER BY T.teamID, IFNULL(YEAR(T.zbeg_gl), T.zbeg_bdb), T.games_gl, T.parkID, T.parkID
+
+
+---------------------------------------------------------------------------
+--
+-- Zips for each City
+--
+---------------------------------------------------------------------------
+
+-- Zips for each City
+SELECT P.parkID, P.currname,
+	P.city, P.state, P.country, P.zip, 
+	MIN(Z.zip) as ziprange_beg, MAX(Z.zip) AS ziprange_end, 
+	IFNULL(P.lat, AVG(Z.lat)) as lat_approx, 
+	IFNULL(P.lng, AVG(Z.lng)) AS lng_approx, 
+	Z.*,
+	GROUP_CONCAT(DISTINCT T.teamID  ORDER BY T.teamID  DESC SEPARATOR ';') AS Teams, 
+	GROUP_CONCAT(DISTINCT N.name    ORDER BY N.name    DESC SEPARATOR ';') AS OtherNames, 
+	GROUP_CONCAT(DISTINCT C.comment ORDER BY C.comment DESC SEPARATOR '!') AS Comments, 
+	P.* 
+FROM    	Parks_parks P 
+LEFT JOIN 	Parks_teams T ON P.parkID=T.parkID
+LEFT JOIN 	Parks_names N ON P.parkID=N.parkID -- AND (P.currname_rsh != N.name)
+LEFT JOIN 	Parks_comts C ON P.parkID=C.parkID
+LEFT JOIN	ZipCodes 	Z ON (P.zip = Z.zip) OR (P.city = Z.city AND P.state = Z.state)
+WHERE 1
+	-- AND (city_pc != city_rsh) OR (city_rsh != city_mlb) OR (city_rsh IS NULL) OR (city_pc IS NULL)
+	-- AND		P.parkID LIKE 'CHI%' 
+	AND 	P.country='US' AND county IS NULL
+GROUP BY	P.parkID
+ORDER BY Z.state, Z.zip, P.country
+
+
+---------------------------------------------------------------------------
+--
+-- Sunday-only parks
+--
+---------------------------------------------------------------------------
+
+-- Sunday-only parks, grouping by team runs of years
+SELECT h_team, Parks, sunParks, wkdParks,
+	MIN(yearID) AS beg, MAX(yearID) AS end,
+	numParks, numSunParks, numWkdParks,
+	SUM(totGames) AS totGames, SUM(sunGames) AS sunGames, SUM(wkdGames) AS wkdGames, SUM(sunGames)/SUM(totGames) AS SunFrac
+  FROM (
+    -- Sunday-only parks, grouping by team year
+    SELECT	G.h_team, G.yearID,
+    		GROUP_CONCAT(DISTINCT G.park_ID ORDER BY G.park_ID) AS Parks,            -- List of all Parks played at in this team+year
+    		GROUP_CONCAT(DISTINCT sunParks ORDER BY sunParks) AS sunParks, -- List of all Parks played at on Sunday   in this team+year
+    		GROUP_CONCAT(DISTINCT wkdParks ORDER BY wkdParks) AS wkdParks, -- List of all Parks played at on Weekdays in this team+year,
+    		COUNT(DISTINCT G.park_ID) AS numParks, COUNT(DISTINCT sunParks) AS numSunParks, COUNT(DISTINCT wkdParks) AS numWkdParks,
+    		SUM(totGames) AS totGames, SUM(SunG.sunGames) AS sunGames, SUM(WkdG.wkdGames) AS wkdGames
+      -- From each team+park+year
+      FROM	    (SELECT h_team, A.park_ID,             YEAR(date) AS yearID, COUNT(*) AS totGames
+    				FROM vizsagedb_retrosheet.GamesFlat A                          GROUP BY h_team, A.park_ID, YEAR(date)) G
+      -- Count the games in each team+park+year that are played on Sunday; NULL if no Sunday games at that park
+      LEFT JOIN (SELECT h_team, S.park_ID AS sunParks, YEAR(date) AS yearID, COUNT(*) AS sunGames
+    				FROM vizsagedb_retrosheet.GamesFlat S WHERE dayOfWeek =  'Sun' GROUP BY h_team, S.park_ID, YEAR(date)) SunG
+    	    ON	G.h_team=SunG.h_team AND G.yearID=SunG.yearID AND G.park_ID = SunG.sunParks
+      -- Count the games in each team+park+year that are NOT played on Sunday; NULL if no Weekday games at that park
+      LEFT JOIN (SELECT h_team, W.park_ID AS wkdParks, YEAR(date) AS yearID, COUNT(*) AS wkdGames
+    				FROM vizsagedb_retrosheet.GamesFlat W WHERE dayOfWeek != 'Sun' GROUP BY h_team, W.park_ID, YEAR(date)) WkdG
+    	    ON	G.h_team=WkdG.h_team AND G.yearID=WkdG.yearID AND G.park_ID = WkdG.wkdParks
+      -- Bin all the team+park+years into just team+years
+      GROUP BY	G.h_team, G.yearID
+      -- Keeping the team+years that have different (or no) Sunday and Weekday parks.
+      HAVING	( (sunParks IS NULL) )
+      -- HAVING	( (wkdParks IS NULL) ) -- OR (sunParks IS NULL) ) -- OR (sunParks != wkdParks) )
+      ORDER BY	sunParks, wkdParks, G.h_team, yearID
+  ) R
+  GROUP BY h_team, Parks, sunParks, wkdParks
+  ORDER BY h_team, beg, Parks
+
+-- Check that park is non-Sunday
+SELECT * FROM
+	(SELECT h_team, park_ID, YEAR(date) AS yearID, COUNT(*) AS sunGames, 0 AS wkdGames
+		FROM vizsagedb_retrosheet.GamesFlat G WHERE dayOfWeek = 'Sun'
+		GROUP BY h_team, YEAR(date), park_ID
+	UNION
+	SELECT h_team, park_ID, YEAR(date) AS yearID, COUNT(*) AS wkdGames, 0 AS sunGames
+		FROM vizsagedb_retrosheet.GamesFlat G WHERE dayOfWeek != 'Sun'
+		GROUP BY h_team, YEAR(date), park_ID
+	) A
+	WHERE 	(h_team IN ('BR3')) AND yearID BETWEEN 1886 AND 1889
+
+-- Check that park is non-Sunday
+SELECT	G.h_team, YEAR(G.date) AS yearID, G.park_ID, G.*
+  FROM vizsagedb_retrosheet.GamesFlat G
+	WHERE 	dayOfWeek = 'Sun'
+	AND		(G.park_ID IN ('PHI11', 'PHI10')) AND YEAR(date)<=1933
+
+---------------------------------------------------------------------------
+--
+-- Funny Leagues
+--
+---------------------------------------------------------------------------
+
+SELECT * FROM Parks_teams P
+  WHERE		( (lgID_bdb IS NOT NULL) AND (lgID_pc IS NOT NULL)  AND (lgID_bdb != lgID_pc) )
+  OR		( (lgID_rsh IS NOT NULL) AND (lgID_pc IS NOT NULL)  AND (lgID_rsh != lgID_pc) )
+  OR		( (lgID_rsh IS NOT NULL) AND (lgID_bdb IS NOT NULL) AND (lgID_rsh != lgID_bdb) )
+  ORDER BY lgID_bdb , zbeg_gl, teamID , zbeg_bdb, parkID
+
+These are all reconciled
+
+---------------------------------------------------------------------------
+--
+-- Noted during import
+--
+---------------------------------------------------------------------------
+
+No BSN games found
+  <park parkID="BOS02" active_bdb="N" city_pc="Boston" city_rsh="Boston" currname_rsh="Dartmouth Grounds" lgID_pc="" name_bdb="Union Park" state_pc="MA" state_rsh="MA" zbeg_bdb="1884" zbeg_pc="1884-04-30" zbeg_rsh="1884" zend_bdb="1884" zend_pc="1884-09-24" zend_rsh="1884">
+    <comment>BSU</comment>
+    <comment>BSN:5/16 to 6/20/1894</comment>
+    <name name="Dartmouth Grounds" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1884" zend_rsh="1884" />
+    <name name="Union Park" nick="1" src_pcaka="1" />
+    <team teamID="BSU" franchID_bdb="BRD" franchID_rsh="BOS" franchName="Boston Reds" games_gl="57" lgID_bdb="UA" lgID_rsh="UA" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="BSU" teamIDBR="BOS" teamIDlahman45="BSU" teamname="Boston Reds" zbeg_bdb="1884" zbeg_gl="1884-04-30" zbeg_rsh="1884" zend_bdb="1884" zend_gl="1884-09-24" zend_rsh="1884" />
+  </park>
+
+BOS04		BS2:1891 <-- should be BS2:1890
+  <park parkID="BOS04" active_bdb="N" city_pc="Boston" city_rsh="Boston" currname_rsh="Congress Street Grounds" lgID_pc="" name_bdb="Congress Street Grounds" state_pc="MA" state_rsh="MA" zbeg_bdb="1891" zbeg_pc="1890-04-19" zbeg_rsh="1890" zend_bdb="1891" zend_pc="1894-06-20" zend_rsh="1894">
+    <comment>BSP:1891; BS2:1891; BSN:5/16 to 6/20/1894</comment>
+    <name name="Congress Street Grounds" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1890" zend_rsh="1894" />
+    <team teamID="BS2" franchID_bdb="BRS" franchID_rsh="BOS" franchName="Boston Reds" games_gl="70" lgID_bdb="AA" lgID_rsh="AA" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="BS2" teamIDBR="BOS" teamIDlahman45="BS2" teamname="Boston Reds" zbeg_bdb="1891" zbeg_gl="1891-04-18" zbeg_rsh="1891" zend_bdb="1891" zend_gl="1891-10-03" zend_rsh="1891" />
+    <team teamID="BSN" franchID_bdb="ATL" franchID_rsh="BOS" franchName="Atlanta Braves" games_gl="27" lgID_bdb="NL" lgID_rsh="NL" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="BSN" teamIDBR="BSN" teamIDlahman45="BSN" teamname="Boston Beaneaters" zbeg_bdb="1894" zbeg_gl="1894-05-16" zbeg_rsh="1894" zend_bdb="1894" zend_gl="1894-06-20" zend_rsh="1894" />
+    <team teamID="BSP" franchID_bdb="BRS" franchID_rsh="BOS" franchName="Boston Reds" games_gl="70" lgID_bdb="PL" lgID_rsh="PL" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="BSP" teamIDBR="BOS" teamIDlahman45="BSP" teamname="Boston Reds" zbeg_bdb="1890" zbeg_gl="1890-04-19" zbeg_rsh="1890" zend_bdb="1890" zend_gl="1890-09-10" zend_rsh="1890" />
+  </park>
+
+BOS07		BSN dates inconsistent
+  <park parkID="BOS07" active_bdb="Y" active_mlb="1" city_mlb="Boston" city_pc="Boston" city_rsh="Boston" country_mlb="US" currname_rsh="Fenway Park" extaddr_mlb="" fn org url="Boston Red Sox" href="http://redsox.mlb.com" lat="42.34666" lgID_pc="AL" lng="-71.09698" logofile_mlb="logo_bos_79x76.jpg" name_bdb="Fenway Park II" parkname_mlb="Fenway Park" range="1000" spanishurl_mlb="" state_mlb="MA" state_pc="MA" state_rsh="MA" streetaddr_mlb="4 Yawkey Way" teamname_mlb="Boston Red Sox" tel_mlb="(617) 267-9440" url_mlb="redsox.com" zbeg_bdb="1934" zbeg_pc="1912-04-20" zbeg_rsh="1912" zend_bdb="2006" zend_pc="" zend_rsh="2006" zip_mlb="02215">
+    <name name="Fenway Park" auth="1" src_mlb="1" src_pc="1" src_rsh="1" zbeg_rsh="1912" zend_rsh="2006" />
+    <team teamID="BOS" franchID_bdb="BOS" franchID_rsh="BOS" franchName="Boston Red Sox" games_gl="7369" lgID_bdb="AL" lgID_rsh="AL" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="BOS" teamIDBR="BOS" teamIDlahman45="BOS" teamname="Boston Red Sox" zbeg_bdb="1934" zbeg_gl="1912-04-20" zbeg_rsh="1912" zend_bdb="2006" zend_gl="2006-10-01" zend_rsh="2006" />
+    <team teamID="BSN" franchID_bdb="ATL" franchID_rsh="BOS" franchName="Atlanta Braves" games_gl="87" lgID_bdb="NL" lgID_rsh="NL" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="BSN" teamIDBR="BSN" teamIDlahman45="BSN" teamname="Boston Braves" zbeg_bdb="1915" zbeg_gl="1913-04-19" zbeg_rsh="1913" zend_bdb="1915" zend_gl="1946-04-28" zend_rsh="1946" />
+  </park>
+
+LBV01  no TBA games found
+    <park>
+        <parkID>LBV01</parkID>
+        <name>The Ballpark at Disney's Wide World of Sports</name>
+        <aka></aka>
+        <city>Lake Buena Vista</city>
+        <state>FL</state>
+        <start>2007-05-15</start>
+        <end>2007-05-17</end>
+        <leagueID>AL</leagueID>
+        <comment>TBA: 3 games</comment>
+    </park>
+
+MIL02    parkcodes gives different teams
+  <park parkID="MIL02" active_bdb="N" city_pc="Milwaukee" city_rsh="Milwaukee" currname_rsh="Wright Street Grounds" lgID_pc="" name_bdb="Wright Street Grounds" state_pc="WI" state_rsh="WI" zbeg_bdb="1884" zbeg_pc="1884-09-27" zbeg_rsh="1884" zend_bdb="1884" zend_pc="1885-09-25" zend_rsh="1884">
+    <comment>UA:1884</comment>
+    <comment>BFN:9/4/1885</comment>
+    <comment>PRO: 9/25/1885</comment>
+    <name name="Wright Street Grounds" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1884" zend_rsh="1884" />
+    <team teamID="MLU" franchID_bdb="MLU" franchID_rsh="MIL" franchName="Milwaukee Brewers" games_gl="12" lgID_bdb="UA" lgID_rsh="UA" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="MLU" teamIDBR="MIL" teamIDlahman45="MLU" teamname="Milwaukee Brewers" zbeg_bdb="1884" zbeg_gl="1884-09-27" zbeg_rsh="1884" zend_bdb="1884" zend_gl="1884-10-12" zend_rsh="1884" />
+  </park>
+
+MIN01  ML2 vs ML3
+  <park parkID="MIN01" active_bdb="N" city_pc="Minneapolis" city_rsh="Minneapolis" currname_rsh="Athletic Park (Minneapolis)" lgID_pc="AA" name_bdb="Athletic Field" state_pc="MN" state_rsh="MN" zbeg_bdb="1891" zbeg_pc="1891-10-02" zbeg_rsh="1891" zend_bdb="1891" zend_pc="1891-10-02" zend_rsh="1891">
+    <comment>ML2</comment>
+    <name name="Athletic Park" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1891" zend_rsh="1891" />
+    <name name="Athletic Park (Minneapolis)" auth="1" src_rsh="1" zbeg_rsh="1891" zend_rsh="1891" />
+    <team teamID="ML3" franchID_bdb="MLA" franchID_rsh="MIL" franchName="Milwaukee Brewers" games_gl="1" lgID_bdb="AA" lgID_rsh="AA" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="ML3" teamIDBR="MIL" teamIDlahman45="ML3" teamname="Milwaukee Brewers" zbeg_bdb="1891" zbeg_gl="1891-10-02" zbeg_rsh="1891" zend_bdb="1891" zend_gl="1891-10-02" zend_rsh="1891" />
+  </park>
+
+PIT01  PRO? IN1?
+  <park parkID="PIT01" city_pc="Pittsburgh" city_rsh="Pittsburgh" currname_rsh="Union Park" lgID_pc="NL" state_pc="PA" state_rsh="PA" zbeg_pc="1878-08-22" zbeg_rsh="1878" zend_pc="1878-08-24" zend_rsh="1878">
+    <comment>PRO: 3 games</comment>
+    <name name="Union Park" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1878" zend_rsh="1878" />
+    <team teamID="IN1" franchID_rsh="IND" games_gl="3" lgID_rsh="NL" src_gl="gl" src_rsh="1" zbeg_gl="1878-08-22" zbeg_rsh="1878" zend_gl="1878-08-24" zend_rsh="1878" />
+  </park>
+
+PIT02  PTU?
+  <park parkID="PIT02" active_bdb="Y" city_pc="Pittsburgh" city_rsh="Pittsburgh" currname_rsh="Exposition Park I" lgID_pc="" name_bdb="Exposition Park I" state_pc="PA" state_rsh="PA" zbeg_bdb="1882" zbeg_pc="1882-05-09" zbeg_rsh="1882" zend_bdb="1883" zend_pc="1884-08-30" zend_rsh="1884">
+    <comment>PT1:1882-1883</comment>
+    <comment>PTU: 8/25 to 8/30/1884</comment>
+    <name name="Exposition Park I" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1882" zend_rsh="1884" />
+    <name name="Lower Field" nick="1" src_pcaka="1" />
+    <team teamID="PT1" franchID_bdb="PIT" franchID_rsh="PIT" franchName="Pittsburgh Pirates" games_gl="125" lgID_bdb="AA" lgID_rsh="AA" src="bdb" src_gl="gl" src_rsh="1" teamIDBDB="PT1" teamIDBR="PIT" teamIDlahman45="PT1" teamname="Pittsburg Alleghenys" zbeg_bdb="1882" zbeg_gl="1882-05-10" zbeg_rsh="1882" zend_bdb="1883" zend_gl="1884-10-15" zend_rsh="1884" />
+  </park>
+
+SPR01  Right game dates, but TRO vs MID
+  <park parkID="SPR01" city_pc="Springfield" city_rsh="Springfield" currname_rsh="Hampden Park Race Track" lgID_pc="NA" state_pc="MA" state_rsh="MA" zbeg_pc="1872-07-23" zbeg_rsh="1872" zend_pc="1875-05-14" zend_rsh="1875">
+    <comment>TRO:7/23/1872</comment>
+    <comment>BS1:7/16/1873,5/14/1875</comment>
+    <name name="Hampden Park Race Track" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1872" zend_rsh="1875" />
+    <name name="Springfield Track" nick="1" src_pcaka="1" />
+    <team teamID="BS1" franchID_rsh="BOS" games_gl="2" lgID_rsh="NA" src_gl="gl" src_rsh="1" zbeg_gl="1873-07-16" zbeg_rsh="1873" zend_gl="1875-05-14" zend_rsh="1875" />
+    <team teamID="MID" franchID_rsh="MAN" games_gl="1" lgID_rsh="NA" src_gl="gl" src_rsh="1" zbeg_gl="1872-07-23" zbeg_rsh="1872" zend_gl="1872-07-23" zend_rsh="1872" />
+  </park>
+
+WOR02  Says BSN game, gl shows WS8 game.
+  <park parkID="WOR02" city_pc="Worcester" city_rsh="Worcester" currname_rsh="Agricultural County Fair Grounds II" lgID_pc="NL" state_pc="MA" state_rsh="MA" zbeg_pc="1887-08-17" zbeg_rsh="1887" zend_pc="1887-08-17" zend_rsh="1887">
+    <comment>1 BSN game</comment>
+    <name name="Agricultural County Fair Grounds II" auth="1" src_pc="1" src_rsh="1" zbeg_rsh="1887" zend_rsh="1887" />
+    <team teamID="WS8" franchID_rsh="WAS" games_gl="1" lgID_rsh="NL" src_gl="gl" src_rsh="1" zbeg_gl="1887-08-17" zbeg_rsh="1887" zend_gl="1887-08-17" zend_rsh="1887" />
+  </park>
+
+
+== Ballparks URL at Retrosheet moved ==
+The Retrosheet Park Directory has moved to [http://retrosheet.org/boxesetc/MISC/PKDIR.htm]
+--~~~~
+
+
+
+
+---------------------------------------------------------------------------
+--
+-- Not good queries
+--
+---------------------------------------------------------------------------
+
+-- Match against BDB
+SELECT P.parkID, T.teamID, P.name, P.nameBDB, BT.park, T.games, 
+	T.beg, MIN(BT.yearID), T.beg_bdb, T.beg_rsh, T.end, T.end_bdb, MAX(BT.yearID), T.end_rsh,
+	BT.*
+  FROM 		Parks_teams 	T
+  LEFT JOIN Parks_parks 	P ON P.parkID = T.parkID
+  LEFT JOIN Parks_othernames     N ON P.parkID = N.parkID
+  LEFT JOIN	vizsagedb_baseballdatabank.Teams BT ON T.teamID = BT.teamIDretro AND (IFNULL(BT.park,'') = N.name) AND BT.yearID BETWEEN YEAR(T.beg) AND YEAR(T.end)
+  GROUP BY	P.parkID, T.teamID HAVING BT.teamID IS NULL
+  ORDER BY  T.teamID, T.beg, T.games, T.parkID, T.parkID
+
+SELECT T.teamIDretro, T.name, T.park, MIN(yearID) as beg, MAX(yearID) as end, T.* FROM vizsagedb_baseballdatabank.Teams T
+  GROUP BY teamID, park
+  ORDER BY teamID
+
+-- Each team-park from BDB
+SELECT BT.teamID, BT.yearID, BT.teamIDretro, BT.name
+  ,		COUNT(*) AS yearGames, T.*
+  FROM		vizsagedb_baseballdatabank.Teams BT 
+  LEFT JOIN	Parks_teams T ON (BT.teamIDretro=T.teamID) AND BT.yearID BETWEEN YEAR(T.beg) AND IFNULL(YEAR(T.end), '9999-12-31')
+  LEFT JOIN vizsagedb_retrosheet.GamesFlat G ON (G.h_team = BT.teamID) AND (YEAR(G.date) = BT.yearID) AND (G.park_ID = T.parkID)
+  GROUP BY BT.teamID, BT.yearID, T.parkID 
+  ORDER BY BT.teamID, BT.yearID 
+
+-- Make teams-for-each-park table
+SELECT GROUP_CONCAT(CONCAT(Q.parkID, ' (',Q.games,')') SEPARATOR '; '), SUM(Q.games), SUM(Q.games)-Q.Ghome,  Q.* FROM
+  (	SELECT G.h_team AS teamID, BT.yearID, G.park_ID AS parkID, MIN(G.date) AS beg, MAX(G.date) AS end
+	  ,		COUNT(*) AS games, BT.G, BT.Ghome
+	  ,		GROUP_CONCAT(DISTINCT G.h_league) as gLgs, BT.lgID
+	  ,		BT.name, BT.park, IF(GROUP_CONCAT(DISTINCT G.h_league)=BT.lgID, '', '!!!!') AS lgCheck
+	  FROM		vizsagedb_retrosheet.GamesFlat   G 
+	  LEFT JOIN	vizsagedb_baseballdatabank.Teams BT ON (BT.teamIDretro=G.h_team) AND (YEAR(G.date)= BT.yearID)
+	  -- WHERE 	(G.date BETWEEN '1984-01-01' AND '1989-12-31')
+	  GROUP BY	G.h_team, YEAR(G.date), G.park_ID -- HAVING G.park_ID='TOK01'
+	  ORDER BY	G.h_team, beg
+	) Q
+GROUP BY	teamID, yearID
+
+-- Each Park-team-name from new parkinfo
+-- SELECT P.parkID, P.name, T.parknameBDB,
+--        T.teamID, T.games, BT.teamID AS teamIDBDB, BT.teamID, BT.name, BT.park, BT.beg AS beg_bt, BT.end AS end_bt,
+--        T.beg, T.beg_bdb, T.beg_rsh, T.end, T.end_bdb, T.end_rsh,
+--        P.games, P.beg, P.end
+--   FROM 	(SELECT BDBT.teamID, BDBT.teamIDretro, BDBT.name, BDBT.park, MIN(BDBT.yearID) as beg, MAX(BDBT.yearID) as end 
+-- 		   FROM vizsagedb_baseballdatabank.Teams BDBT GROUP BY teamID, park ORDER BY teamID) BT
+--   LEFT JOIN Parks_teams      T ON BT.teamID = T.teamID
+--   LEFT JOIN	Parks_parks      P ON T.parkID = P.parkID AND (CONCAT(BT.teamID, ':', IFNULL(BT.park, ''))=T.parknameBDB) --  BT.beg, '-', BT.end, ':', 
+--   GROUP BY BT.teamID, BT.park, BT.beg, T.teamID, P.parkID
+--   ORDER BY BT.teamID, BT.park, BT.beg, T.teamID, T.beg, T.teamID, P.parkID
+
