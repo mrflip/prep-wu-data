@@ -1,0 +1,1 @@
+wget -erobots=off -r -l8 --no-clobber --no-remove-listing --relative --no-parent  -Atar,txt,xls --no-host-directories --cut-dirs=2 --limit-rate=50k -nv -a /work/DataSources/Data_Weather/wget-`datename`.log --random-wait ftp://ftp.ncdc.noaa.gov/pub/data/gsod/
