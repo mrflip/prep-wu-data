@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'imw/utils'
-require 'imw/dataset'
+require 'twitter_names_model'
 include IMW; IMW.verbose = true
 as_dset __FILE__
 
