@@ -9,9 +9,9 @@ TAGS
 .svn
 .bzr
 .hg
-/**/cache/*
-/**/log/*
-/**/tmp/*/*
-/**/db/*.sqlite3
-/**/config/database.yml
-/**/*DONTVERSION*
+cache/*
+log/*
+tmp/*/*
+db/*.sqlite3
+config/database.yml
+*DONTVERSION*
