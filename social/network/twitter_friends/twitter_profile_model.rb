@@ -3,7 +3,7 @@ class User
   include DataMapper::Resource
   # Basic info
   property      :id,                         Integer,           :serial => true
-  property      :twitter_name,               String,            :nullable => false, :unique_index => :twitter_name
+  property      :twitter_name,               String # ,            :nullable => false, :unique_index => :twitter_name
   property      :file_date,                  DateTime
   property      :twitter_id,                 Integer
 
@@ -41,11 +41,12 @@ class User
   #
   # Associations
   #
-  # has, n, :users, :join_table => 'followers',
-  #   :left_foreign_key  => 'follower_id', :right_foreign_key => 'follows_id'
+  # has n, :followings
+  has n, :followers, :class_name => self.name, :through => Resource
+  #has n, :follows,   :through => :followings, :class_name => 'User'
 
   # has n,      :follows,                 :through => Following, :child_key => :follows_id
-  #   :associated_class => 'User', :join_table => 'following', :right_foreign_key => follows_id
+  #   :associated_class => 'User', :join_table => 'following'
   # has n,      :statuses
 
   def seen_profile_page
@@ -75,14 +76,15 @@ class User
 
 end
 
-# #
-# # Following
-# #
-# class Following
-#   include DataMapper::Resource
-#   property       :follower_id,                  Integer,        :key => true
-#   property       :follows_id,                   Integer,        :key => true
-# end
+#
+# Following
+#
+class Following
+  include DataMapper::Resource
+  # belongs_to :user
+  belongs_to :follower, :class_name => 'User'
+  belongs_to :follow,   :class_name => 'User'
+end
 
 #
 #   #

@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
+require "rubygems"
 require 'imw/utils'; include IMW; IMW.verbose = true
 require 'twitter_names_model'
 as_dset __FILE__
-require "rubygems"
 require "YAML"
 
 TWITTER_NAME_RE = %r{^ +<a href="http://twitter.com/([^"]+)" class="url" rel="contact"} #"
