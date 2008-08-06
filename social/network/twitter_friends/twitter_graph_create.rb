@@ -1,61 +1,209 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'dm-core'
+require 'imw/utils'
+require 'imw/dataset/datamapper'
+require 'JSON'
+require 'activesupport'
+include IMW; IMW.verbose = true
+as_dset __FILE__
 
-# --- FILE ----
-# twitter_name
-# file_date
+require 'imw/dataset/stats/counter'
+DataMapper::Logger.new(STDOUT, :debug)
 
-# --- SIDE ----
-# twitter_id                    <link href="http://twitter.com/statuses/user_timeline/1554031.rss" />
-# real_name             fn      <div class="section"><address><ul class="about vcard entry-author"><li><span class="label">Name</span> <span class="fn">Philip Flip Kromer</span></li>
-# Location              adr     <li><span class="label">Location</span> <span class="adr">iPhone: 30.290983,-97.736720</span></li>
-# Web                   url     <li><span class="label">Web</span> <a href="http://infochimps.com" class="url" rel="me nofollow">http://infochimps...</a></li>
-# Bio                   bio     <li id="bio"><span class="label">Bio</span> <span class="bio">Building tools to Organize and Explore massive information sources</span></li>
-# stats
-# - following_count             <div class="section"><ul class="stats"><li><span id="following_count" class="stats_count numeric">50</span>
-# - followers_count             <span id="followers_count" class="stats_count numeric">49</span>
-# - favorites_count             <span id="favourites_count" class="stats_count numeric">0</span>
-# - updates_count               <span class="stats_count numeric">178</span><
 #
-# [following_names              <div class="section"><div id="friends"><span class="vcard"><a href="http://twitter.com/sinned" class="url" rel="contact" title="Dennis Yang"><img alt="Dennis Yang" class="photo fn" height="24" id="profile-image" src="http://s3.amazonaws.com/twitter_production/profile_images/41865892/dennis_grass_edit_mini.png" width="24" /></a>
+# Setup database
+#
+require 'twitter_friends_db_definition'; setup_twitter_friends_connection()
+require 'twitter_profile_model'
 
-# --- MAIN ---
+
+class GraphDumper
+  attr_reader :file_format
+  def initialize
+    @dump_file = nil
+  end
+  def dump_file file_base, &block
+    @dump_file ||= File.open("#{file_base}.#{self.file_format}",'w')
+  end
+end
+
+class XGMMLDumper < GraphDumper
+  def header()
+    %Q{<?xml version="1.0"?>}
+  end
+  def graph_open()
+    %Q{
+  <graph directed='1' Rootnode='1'
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ns1="http://www.w3.org/1999/xlink"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns="http://www.cs.rpi.edu/XGMML">}
+  end
+  def graph_end()  "\n</graph>" end
+
+
+end
+
+class SIFDumper < GraphDumper
+  def initialize
+    super
+    @file_format = :sif
+  end
+  def header()       ''  end
+  def graph_open()   ''  end
+  def graph_end()    ''  end
+  def dump_relationship from, to, edge_type=:to
+    @dump_file << "#{from} #{edge_type} #{to}\n"
+  end
+  def dump_node node
+    # pass
+  end
+end
+
+class TwitterGraph
+  attr_accessor :users_seen
+  def initialize
+    self.users_seen = RecordCounter.new
+  end
+
+  def dump_graph graph_file_base
+    dumper = SIFDumper.new()
+    dumper.dump_file(path_to(graph_file_base))
+    announce "beginning friendship dump"
+    # Friendship.all_by_chunks do |follower_id, friend_id|
+    #   users_seen.unless_seen([:user, friend_id]  ){ dumper.dump_node(friend_id)   }
+    #   users_seen.unless_seen([:user, follower_id]){ dumper.dump_node(follower_id) }
+    #   dumper.dump_relationship follower_id, friend_id, :flw
+    # end
+    User.all_by_chunks do |user|
+      users_seen.unless_seen([:user, user]){ dumper.dump_node(user.id) }
+      # user.followers.each do |follower|
+      #   dumper.dump_relationship follower.id, user.id, :flw
+      # end
+    end
+    announce "end #{users_seen.length} seen"
+  end
+end
+
+class Friendship < Fiddle
+  def to_xgmml
+    %Q{
+    <edge label="f" source="#{follower_id}" target="#{friend_id}"></edge>}
+  end
+  #
+  # uses an efficient query to dump a massive load
+  #
+  def self.all_by_sql limits, &block
+    query = all_by_sql_query limits
+    announce query
+    repository(:default).adapter.query(query).each do |friendship_struct|
+
+      yield friendship_struct.to_a
+    end
+  end
+
+  def self.all_chunk limits
+    conditions = {
+      :offset   => limits.min,
+      :limit    => limits.max,
+      # :includes => ['follower.twitter_name', 'friend.twitter_name', :friend_id, :follower_id]
+    }
+    self.all(conditions).each do |f|
+      yield [f.follower_id, f.friend_id]
+    end
+  end
+  def self.all_by_sql_query limits
+    %Q{
+      SELECT F.follower_id, F.friend_id,
+             follower.twitter_name AS follower_name,
+             friend.twitter_name   AS friend_name
+        FROM       friendships F
+        RIGHT JOIN  users friend   ON F.friend_id   = friend.id
+        RIGHT JOIN  users follower ON F.follower_id = follower.id
+      WHERE (friend.followers_count   > 30) AND (follower.followers_count > 60)
+      LIMIT #{limits.first}, #{limits.last}
+    }
+  end
+end
+
+# id name label labelanchor edgeanchor weight
+class User < Fiddle
+  def to_xgmml_big
+   #      <att name="tw_title"              value="#{real_name}"/>
+    %Q{
+    <node id="#{id}" name="#{twitter_name}" label="#{twitter_name}" weight="#{followers_count||0}">
+      <att name="tw_following_count"    value="#{following_count||0}"/>
+      <att name="tw_followers_count"    value="#{followers_count||0}"/>
+      <att name="tw_updates_count"      value="#{updates_count||0}"/>
+      <att name="tw_photo"              value="#{style_mini_img_url}"/>
+      <att name="tw_last_seen"          value="#{last_seen_update_time}"/>
+      <att name="tw_twitter_id"         value="#{twitter_id}"/>
+    </node>}
+  end
+  def to_xgmml
+    %Q{
+    <node id="#{id}" name="#{twitter_name}" label="#{twitter_name}"></node>}
+  end
+
+  def self.all_chunk limits
+    conditions = {
+      :offset   => limits.min,
+      :limit    => limits.max,
+      # :includes => ['follower.twitter_name', 'friend.twitter_name', :friend_id, :follower_id]
+    }
+    self.all(conditions).each do |u|
+      yield u
+    end
+  end
+
+end
+
+TwitterGraph.new.dump_graph [:fixd, 'graphs/testing']
+
+
+# File.open(path_to([:fixd, 'graphs/testing.xgmml']),'w') do |gf|
+#   users_seen = { }; ct = 0
+#   announce "beg"
+#   gf << xgmml_xml_header
+#   gf << xgmml_graph_tag_open
+#   # User.all(:limit=>100000).each do |user|
+#   #   users_seen[user.id] ||= true
+#   #   # track_progress :user,
+#   #   # puts user.to_xgmml
+#   #   #puts user.twitter_name
+#   # end
+#   Friendship.all(:limit=>100).each do |friendship|
+#     track_progress :rels_seen_users_seen, [(ct/1000).to_i, (users_seen.length/1000).to_i]
+#     gf << friendship.follower.to_xgmml unless users_seen.include?(friendship.follower.id)
+#     gf << friendship.friend.to_xgmml   unless users_seen.include?(friendship.friend.id)
+#     users_seen[friendship.follower.id] ||= true
+#     users_seen[friendship.friend.id]   ||= true
+#     gf << friendship.to_xgmml
+#   end
 #
-# <div id="content" ><div class="wrapper">
+#   gf << xgmml_graph_tag_end
 #
+#   announce "end #{users_seen.length} seen"
+#   puts users_seen.to_json
+# end
+
+
+# File.open(path_to([:fixd, 'graphs/testing.sif']),'w') do |gf|
+#   users_seen = { }; ct = 0
+#   announce "beg"
 #
-# latest_update_time
-# onpage_first_update
-# onpage_replies_count
-# onpage_atsign_count           <span class="entry-content"> @<a href
+#   Friendship.all.each do |friendship|
+#     track_progress :rels_seen_users_seen, [(ct/1000).to_i, (users_seen.length/1000).to_i]
+#     gf << "#{friendship.follower.twitter_name} flw #{friendship.friend.twitter_name}\n"
+#     users_seen[friendship.follower.id] ||= true
+#     users_seen[friendship.friend.id]   ||= true
+#     ct += 1
+#   end
 #
-# status (title)                <div class="hfeed"><div class="desc hentry">
-#                               <p class="entry-title entry-content">status: ... <a href="http://tinyurl.com/6j9qht">http://tinyurl.com/6j9qht</a></p>
-# status_time                   <p class="meta entry-meta"><a ... class="entry-date" rel="bookmark"><abbr class="published" title="2008-07-26T04:36:46+00:00">2 days</abbr> ago</a>
-# status_from                   from <a href="http://twitterfeed.com">twitterfeed</a> </p>
-#
-# [status_id, posting_user]
-# status (body                  <div class="tab"><table class="doing" id="timeline" cellspacing="0">
-# status_id                     <tr class="hentry" id="status_868589932"><td class="content"><span class="entry-content">
-# [status_id, users_atsigned]   @<a href="/MLB">MLB</a>.tv
-#                               </span>
-# [status_id, date]             <span class="meta entry-meta"><a ... class="entry-date" rel="bookmark"><abbr class="published" title="2008-07-25T23:55:34+00:00">06:55 PM July 25, 2008</abbr></a>
-# [status_id, fromsource]       from <a href="http://twitter.com/twinkleking">Twinkle</a>
-# [status_id, users_inreplyto]  <a href="http://twitter.com/MLB/statuses/193059672">in reply to MLB</a>
-# [status_id, links]
-#
-#
-# profile_image_url     ...     <h2 class="thumb" style='margin-bottom:25px'><a href="/account/profile_image/mrflip"><img alt="" border="0" id="profile-image" src="http://s3.amazonaws.com/twitter_production/profile_images/53592498/n877310082_2142521_5078_bigger.jpg" valign="middle" /></a>mrflip</h2><div class="clear"></div>
-#                               http://s3.amazonaws.com/twitter_production/profile_images/41865892/dennis_grass_edit_bigger.png
-# profile_image_url_mini        http://s3.amazonaws.com/twitter_production/profile_images/51596541/n712034_31126613_799_1__mini.jpg
-# background_image_url          http://s3.amazonaws.com/twitter_production/profile_background_images/2348065/2005Mar-AustinTypeTour-075_-_Rappers_Delight_Raindrop.jpg
-#
-# style:
-#  link_color                   a {color: #0000ff;}
-#  name_color                   h2.thumb, h2.thumb a {color: #6C0000;}
-#  text_color                   body { color: #000000;
-#  bg_color                     background-color: #BCC0C8;
-#  bg_image                     background: #BCC0C8 url(http://s3.amazo...)
-#  bg_image_tile                fixed no-repeat top left;;
-#  sidebar_fill_color           #side .notify { border: 1px solid #87bc44; }
-#  sidebar_border_color         #side .promo { border: 1px solid #87bc44; }
-#
-#
+#   announce "end #{users_seen.length} seen"
+# end
+
+
+

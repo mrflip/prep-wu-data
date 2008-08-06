@@ -1,7 +1,26 @@
 require 'rubygems'
 require 'dm-ar-finders'
+require 'dm-aggregates'
 
-class User
+
+class Fiddle
+  CHUNK_SIZE   = 10
+  MAX_CHUNKS   = 3
+  def self.all_by_chunks &block
+    n_chunks = [ (self.count/CHUNK_SIZE).to_i, MAX_CHUNKS ].min
+    (0 .. n_chunks).each do |chunk_i|
+      chunk_limits = [chunk_i*CHUNK_SIZE, (chunk_i+1)*CHUNK_SIZE]
+      announce "#{(chunk_limits.first/1000).to_i}k\t#{self.name.pluralize}"
+      all_chunk chunk_limits, &block
+      # all_by_sql chunk_limits, &block
+    end
+  end
+
+end
+
+
+
+class User < Fiddle
   include DataMapper::Resource
   # Basic info
   property      :id,                         Integer,           :serial => true
@@ -17,9 +36,9 @@ class User
   property      :updates_count,              Integer
 
   #
-  property      :real_name,                  String, :length => 255
-  property      :location,                   Text
-  property      :web,                        Text
+  property      :real_name,                  String,            :length => 255
+  property      :location,                   String,            :length => 255
+  property      :web,                        String,            :length => 255
   property      :bio,                        Text
 
   # Page appearance
@@ -36,14 +55,19 @@ class User
   property      :style_bg_img_tile,          Boolean
 
   # Status info on page
-  property      :latest_update_time,         DateTime
-  property      :pg1_first_update_time,      DateTime
+  property      :last_seen_update_time,      DateTime
+  property      :first_seen_update_time,     DateTime
 
   #
   # Associations
   #
-  has n, :friends,     :child_key => [:follower_id], :class_name => 'Friendship'
-  has n, :followers,   :child_key => [:friend_id],   :class_name => 'Friendship'
+  has n, :friendships,    :child_key => [:follower_id], :class_name => 'Friendship'
+  has n, :followerships,  :child_key => [:friend_id],   :class_name => 'Friendship'
+  has n, :statuses
+  #
+  # FIXME
+  def followers() self.followerships.map{ |f| f.follower.twitter_name } end
+  def friends()   self.friendships.map{   |f| f.friend.twitter_name   } end
 
   def seen_profile_page
     self.file_date
@@ -58,48 +82,48 @@ class User
   def self.err_404s_filename()    path_to [:fixd, "stats/twitter_404s.yaml"]   end
 
   def self.users_with_profile
-    #Dir[path_to(:ripd, "profiles/twitter_id_*")].each do |dir|
-    Dir[path_to(:temp, "profiles/simple")].each do |dir|
+    Dir[path_to(:ripd, "profiles/twitter_id_*")].each do |dir|
+    # Dir[path_to(:temp, "profiles/simple")].each do |dir|
       Dir[dir+'/*'].each do |profile_page|
         user = User.find_or_create(:twitter_name => File.basename(profile_page))
         yield user
       end
     end
   end
-
 end
 
 #
 # Following
 #
-class Friendship
+class Friendship < Fiddle
   include DataMapper::Resource
-  # property      :id,            Integer, :serial => true
   property      :follower_id,   Integer,                :key => true
   property      :friend_id,     Integer,                :key => true, :index => :friend_id
   belongs_to    :follower,      :class_name => 'User',  :child_key => [:follower_id]
   belongs_to    :friend,        :class_name => 'User',  :child_key => [:friend_id]
 end
 
+
 #
-#   #
-#   # Status
-#   #
-# class Status
-#   include DataMapper::Resource
-#   property      :twitter_status_id,          String
-#   property      :posting_user,               String   # user
-#   property      :datetime,                   DateTime
-#   property      :fromsource,                 String
-#   property      :inreplyto,                  String   # user
-#   property      :text,                       Text
-#   belongs_to    :user
-#   # has n,        :users_atsigned
-#   # has n,        :links
-#   # has n,        :hashtags
-# end
+# Status
 #
-#
+class Status
+  include DataMapper::Resource
+  property      :id,                         Integer, :serial => true
+  property      :twitter_id,                 Integer
+  property      :datetime,                   DateTime # Text                       # FIXME
+  property      :fromsource,                 String
+  property      :fromsource_url,             String
+  property      :inreplyto_name,             String, :length => 255
+  property      :inreplyto_status_id,        Integer
+  property      :content,                    Text
+  property      :users_atsigned,             Text
+  property      :hashtags,                   Text
+  property      :content_urls,               Text
+  # Associations
+  belongs_to    :user
+end
+
 #
 # class AtSign
 #   include DataMapper::Resource
@@ -111,13 +135,6 @@ end
 #   belongs_to    :user
 # end
 #
-# class Link
-#   include DataMapper::Resource
-#   property      :status_id
-#   property      :url
-#   belongs_to    :status
-# end
-#
 # class HashTag
 #   include DataMapper::Resource
 #   property      :posting_user
@@ -126,3 +143,11 @@ end
 #   belongs_to    :status
 #   belongs_to    :user
 # end
+#
+# class Link
+#   include DataMapper::Resource
+#   property      :status_id
+#   property      :url
+#   belongs_to    :status
+# end
+#
