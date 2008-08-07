@@ -1,18 +1,24 @@
+# -*- coding: utf-8 -*-
 require 'rubygems'
 require 'dm-ar-finders'
 require 'dm-aggregates'
 
 
 class Fiddle
-  CHUNK_SIZE   = 10
-  MAX_CHUNKS   = 3
-  def self.all_by_chunks &block
-    n_chunks = [ (self.count/CHUNK_SIZE).to_i, MAX_CHUNKS ].min
+  def self.all_by_chunks chunk_size, max_chunks=nil, &block
+    chunk_size ||= 1e6.to_i
+    n_chunks = [ (self.count/chunk_size).to_i, max_chunks ].compact.min
     (0 .. n_chunks).each do |chunk_i|
-      chunk_limits = [chunk_i*CHUNK_SIZE, (chunk_i+1)*CHUNK_SIZE]
+      chunk_limits = [chunk_i*chunk_size, (chunk_i+1)*chunk_size]
       announce "#{(chunk_limits.first/1000).to_i}k\t#{self.name.pluralize}"
       all_chunk chunk_limits, &block
-      # all_by_sql chunk_limits, &block
+    end
+  end
+
+  def self.all_chunk limits
+    conditions = { :offset   => limits.min, :limit    => limits.max, }
+    self.all(conditions).each do |u|
+      yield u
     end
   end
 

@@ -9,7 +9,7 @@ include IMW; IMW.verbose = true
 as_dset __FILE__
 
 require 'imw/dataset/stats/counter'
-DataMapper::Logger.new(STDOUT, :debug)
+DataMapper::Logger.new(STDOUT, :warn)
 
 #
 # Setup database
@@ -46,6 +46,9 @@ class XGMMLDumper < GraphDumper
 
 end
 
+
+
+
 class SIFDumper < GraphDumper
   def initialize
     super
@@ -68,21 +71,24 @@ class TwitterGraph
     self.users_seen = RecordCounter.new
   end
 
+
+  CHUNK_SIZE   = nil
+  MAX_CHUNKS   = 1
   def dump_graph graph_file_base
     dumper = SIFDumper.new()
     dumper.dump_file(path_to(graph_file_base))
     announce "beginning friendship dump"
-    # Friendship.all_by_chunks do |follower_id, friend_id|
-    #   users_seen.unless_seen([:user, friend_id]  ){ dumper.dump_node(friend_id)   }
-    #   users_seen.unless_seen([:user, follower_id]){ dumper.dump_node(follower_id) }
-    #   dumper.dump_relationship follower_id, friend_id, :flw
-    # end
-    User.all_by_chunks do |user|
-      users_seen.unless_seen([:user, user]){ dumper.dump_node(user.id) }
-      # user.followers.each do |follower|
-      #   dumper.dump_relationship follower.id, user.id, :flw
-      # end
+    Friendship.all_by_chunks(CHUNK_SIZE, MAX_CHUNKS) do |f|
+      # users_seen.unless_seen([:user, friend_id]  ){ dumper.dump_node(friend_id)   }
+      # users_seen.unless_seen([:user, follower_id]){ dumper.dump_node(follower_id) }
+      dumper.dump_relationship f.follower_id, f.friend_id, :flw
     end
+    # User.all_by_chunks do |user|
+    #   users_seen.unless_seen(user){ dumper.dump_node(user.id) }
+    #   user.friendships.each do |friendship|
+    #     dumper.dump_relationship friendship.friend_id, user.id, :flw
+    #   end
+    # end
     announce "end #{users_seen.length} seen"
   end
 end
@@ -101,17 +107,6 @@ class Friendship < Fiddle
     repository(:default).adapter.query(query).each do |friendship_struct|
 
       yield friendship_struct.to_a
-    end
-  end
-
-  def self.all_chunk limits
-    conditions = {
-      :offset   => limits.min,
-      :limit    => limits.max,
-      # :includes => ['follower.twitter_name', 'friend.twitter_name', :friend_id, :follower_id]
-    }
-    self.all(conditions).each do |f|
-      yield [f.follower_id, f.friend_id]
     end
   end
   def self.all_by_sql_query limits
@@ -147,63 +142,6 @@ class User < Fiddle
     <node id="#{id}" name="#{twitter_name}" label="#{twitter_name}"></node>}
   end
 
-  def self.all_chunk limits
-    conditions = {
-      :offset   => limits.min,
-      :limit    => limits.max,
-      # :includes => ['follower.twitter_name', 'friend.twitter_name', :friend_id, :follower_id]
-    }
-    self.all(conditions).each do |u|
-      yield u
-    end
-  end
-
 end
 
 TwitterGraph.new.dump_graph [:fixd, 'graphs/testing']
-
-
-# File.open(path_to([:fixd, 'graphs/testing.xgmml']),'w') do |gf|
-#   users_seen = { }; ct = 0
-#   announce "beg"
-#   gf << xgmml_xml_header
-#   gf << xgmml_graph_tag_open
-#   # User.all(:limit=>100000).each do |user|
-#   #   users_seen[user.id] ||= true
-#   #   # track_progress :user,
-#   #   # puts user.to_xgmml
-#   #   #puts user.twitter_name
-#   # end
-#   Friendship.all(:limit=>100).each do |friendship|
-#     track_progress :rels_seen_users_seen, [(ct/1000).to_i, (users_seen.length/1000).to_i]
-#     gf << friendship.follower.to_xgmml unless users_seen.include?(friendship.follower.id)
-#     gf << friendship.friend.to_xgmml   unless users_seen.include?(friendship.friend.id)
-#     users_seen[friendship.follower.id] ||= true
-#     users_seen[friendship.friend.id]   ||= true
-#     gf << friendship.to_xgmml
-#   end
-#
-#   gf << xgmml_graph_tag_end
-#
-#   announce "end #{users_seen.length} seen"
-#   puts users_seen.to_json
-# end
-
-
-# File.open(path_to([:fixd, 'graphs/testing.sif']),'w') do |gf|
-#   users_seen = { }; ct = 0
-#   announce "beg"
-#
-#   Friendship.all.each do |friendship|
-#     track_progress :rels_seen_users_seen, [(ct/1000).to_i, (users_seen.length/1000).to_i]
-#     gf << "#{friendship.follower.twitter_name} flw #{friendship.friend.twitter_name}\n"
-#     users_seen[friendship.follower.id] ||= true
-#     users_seen[friendship.friend.id]   ||= true
-#     ct += 1
-#   end
-#
-#   announce "end #{users_seen.length} seen"
-# end
-
-
-
