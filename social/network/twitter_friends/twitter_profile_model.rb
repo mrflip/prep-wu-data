@@ -4,29 +4,12 @@ require 'dm-ar-finders'
 require 'dm-aggregates'
 
 
-class Fiddle
-  def self.all_by_chunks chunk_size, max_chunks=nil, &block
-    chunk_size ||= 1e6.to_i
-    n_chunks = [ (self.count/chunk_size).to_i, max_chunks ].compact.min
-    (0 .. n_chunks).each do |chunk_i|
-      chunk_limits = [chunk_i*chunk_size, (chunk_i+1)*chunk_size]
-      announce "#{(chunk_limits.first/1000).to_i}k\t#{self.name.pluralize}"
-      all_chunk chunk_limits, &block
-    end
-  end
-
-  def self.all_chunk limits
-    conditions = { :offset   => limits.min, :limit    => limits.max, }
-    self.all(conditions).each do |u|
-      yield u
-    end
-  end
-
-end
+# class Fiddle
+# end
 
 
 
-class User < Fiddle
+class User # < Fiddle
   include DataMapper::Resource
   # Basic info
   property      :id,                         Integer,           :serial => true
@@ -87,26 +70,66 @@ class User < Fiddle
   end
   def self.err_404s_filename()    path_to [:fixd, "stats/twitter_404s.yaml"]   end
 
-  def self.users_with_profile
-    Dir[path_to(:ripd, "profiles/twitter_id_*")].each do |dir|
-    # Dir[path_to(:temp, "profiles/simple")].each do |dir|
+  def self.users_with_profile prefix=''
+    Dir[path_to(:ripd, "profiles/twitter_id_#{prefix}*")].each do |dir|
       Dir[dir+'/*'].each do |profile_page|
         user = User.find_or_create(:twitter_name => File.basename(profile_page))
         yield user
       end
     end
   end
+
+
+  def self.all_by_chunks chunk_size, max_chunks=nil, &block
+    chunk_size ||= 1e6.to_i
+    n_chunks = [ (self.count/chunk_size).to_i, max_chunks ].compact.min
+    (0 .. n_chunks).each do |chunk_i|
+      chunk_limits = [chunk_i*chunk_size, (chunk_i+1)*chunk_size]
+      announce "#{(chunk_limits.first/1000).to_i}k\t#{self.name.pluralize}"
+      all_chunk chunk_limits, &block
+    end
+  end
+
+  def self.all_chunk limits
+    conditions = { :offset   => limits.min, :limit    => limits.max, }
+    self.all(conditions).each do |u|
+      yield u
+    end
+  end
+
+
+
 end
 
 #
 # Following
 #
-class Friendship < Fiddle
+class Friendship # < Fiddle
   include DataMapper::Resource
   property      :follower_id,   Integer,                :key => true
   property      :friend_id,     Integer,                :key => true, :index => :friend_id
   belongs_to    :follower,      :class_name => 'User',  :child_key => [:follower_id]
   belongs_to    :friend,        :class_name => 'User',  :child_key => [:friend_id]
+
+
+  def self.all_by_chunks chunk_size, max_chunks=nil, &block
+    chunk_size ||= 1e6.to_i
+    n_chunks = [ (self.count/chunk_size).to_i, max_chunks ].compact.min
+    (0 .. n_chunks).each do |chunk_i|
+      chunk_limits = [chunk_i*chunk_size, (chunk_i+1)*chunk_size]
+      announce "#{(chunk_limits.first/1000).to_i}k\t#{self.name.pluralize}"
+      all_chunk chunk_limits, &block
+    end
+  end
+
+  def self.all_chunk limits
+    conditions = { :offset   => limits.min, :limit    => limits.max, }
+    self.all(conditions).each do |u|
+      yield u
+    end
+  end
+
+
 end
 
 
