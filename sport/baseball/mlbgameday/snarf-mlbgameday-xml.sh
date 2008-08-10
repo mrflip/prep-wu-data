@@ -1,21 +1,37 @@
 # must include trailing / on URL
 
-# for month in 10 09 ; do
-#     wget -erobots=off -r -l7 --no-clobber --relative --no-parent \
-# 	-Axml,txt --no-host-directories --cut-dirs=1 --limit-rate=25k \
+# for league in aaa afa asx ind milb mlb playertracker rok year_2006 aax afx bbc int min oly protected win year_2007 ; do
+#     wget -erobots=off -r -l8 --no-clobber --relative --no-parent \
+# 	-Axml,txt --no-host-directories --cut-dirs=1 \
 # 	-nv -a /work/DataSources/Data_MLB/wget-`datename`.log \
-# 	--random-wait -w 0.2 \
-# 	http://gd2.mlb.com/components/game/mlb/year_2007/month_$month/
-#     # !! make sure to include trailing / on URL !!
+# 	--limit-rate=25k  \
+# 	http://gd2.mlb.com/components/game/${league}/
 # done
 
-for league in aaa afa asx ind milb mlb playertracker rok year_2006 aax afx bbc int min oly protected win year_2007 ; do
-    wget -erobots=off -r -l8 --no-clobber --relative --no-parent \
-	-Axml,txt --no-host-directories --cut-dirs=1 \
-	-nv -a /work/DataSources/Data_MLB/wget-`datename`.log \
-	--limit-rate=25k  \
-	http://gd2.mlb.com/components/game/${league}/
-done
+# http://gd2.mlb.com/components/game/mlb/year_2008/month_07/day_06/gid_2008_07_06_flomlb_colmlb_1/pbp/pitchers/150430.xml
+#                                    0   1         2        3       4                             5   6        7  
 
-# --random-wait -w 0.2
+#     oly aaa afa asx ind rok aax afx bbc int min win milb playertracker year_2006 year_2007 protected 
+logdir="/data/log/sport/baseball/mlb_gameday"
+ripdir="/data/new"
+gd_url="gd2.mlb.com/components/game"
+mkdir -p $logdir
+cd $ripdir
+
+# # get the top-level directories
+# wget -r -l3 --no-clobber --relative --no-parent \
+#     -Axml,txt -nv -a $logdir/wget-`datename`.log \
+#     --random-wait -w0.5 \
+#     http://$gd_url/
+
+dirs=`find $gd_url -maxdepth 3 -mindepth 3 -type d | egrep -v 'year_200[567]' | grep 'month_' | egrep -v 'aaa/year_2008/month_0[123456]'`
+echo scraping `find $gd_url -maxdepth 3 -mindepth 3 -type d | egrep -v 'year_200[567]' | grep 'month_' | egrep -v 'aaa/year_2008/month_0[123456]' | cut -d/ -f4,5,6`
+
+for league_year_mo in $dirs ; do
+  wget -r -l7 --no-clobber --relative --no-parent \
+    -Axml,txt -nv -a $logdir/wget-`datename`.log \
+    --random-wait -w1.0  \
+    http://$league_year_mo/
+    # !! make sure to include trailing / on URL !!
+done
 
