@@ -160,7 +160,7 @@ end
 
 
 twitter_followers = {}
-User.users_with_profile do |user|
+User.users_with_profile('[wxyz]') do |user|
   track_progress :profile, user.twitter_name[0..0].downcase
   begin
     user.parse unless user.parsed
