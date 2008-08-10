@@ -71,8 +71,8 @@ class User # < Fiddle
   def self.err_404s_filename()    path_to [:fixd, "stats/twitter_404s.yaml"]   end
 
   def self.users_with_profile prefix=''
-    Dir[path_to(:ripd, "profiles/twitter_id_#{prefix}*")].each do |dir|
-      Dir[dir+'/*'].each do |profile_page|
+    Dir[path_to(:ripd, "profiles/twitter_id_#{prefix}*")].sort.each do |dir|
+      Dir[dir+'/*'].sort.each do |profile_page|
         user = User.find_or_create(:twitter_name => File.basename(profile_page))
         yield user
       end
