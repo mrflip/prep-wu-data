@@ -6,5 +6,6 @@ use IO::File;
 
 
 
-my $parks_all = XMLin('fixd/parkinfo-all.xml', SuppressEmpty=>'', KeyAttr=>{park=>'parkID'}, ForceArray => ['park']);
+my $parks_all = XMLin('fixd/parkinfo-all.xml', SuppressEmpty=>'', KeyAttr=>{park=>'parkID'},
+    ForceArray => ['park', 'othername', 'team', 'comment']);
 print Dump($parks_all);
