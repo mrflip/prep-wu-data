@@ -4,7 +4,7 @@ require 'dm-core'
 require 'imw/extract/hpricot'
 require 'imw/utils'
 require 'imw/dataset/datamapper'
-require 'JSON'
+require 'json'
 include IMW; IMW.verbose = true
 as_dset __FILE__
 
@@ -159,8 +159,9 @@ class User
 end
 
 
+filemask = ARGV[0] ; if filemask.blank? then raise "need to give a file mask or just a '*'" end
 twitter_followers = {}
-User.users_with_profile('[wxyz]') do |user|
+User.users_with_profile(filemask) do |user|
   track_progress :profile, user.twitter_name[0..0].downcase
   begin
     user.parse unless user.parsed
