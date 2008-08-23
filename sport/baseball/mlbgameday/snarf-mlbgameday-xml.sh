@@ -13,7 +13,7 @@
 
 #     oly aaa afa asx ind rok aax afx bbc int min win milb playertracker year_2006 year_2007 protected 
 logdir="/data/log/sport/baseball/mlb_gameday"
-ripdir="/data/new"
+ripdir="/data/ripd"
 gd_url="gd2.mlb.com/components/game"
 mkdir -p $logdir
 cd $ripdir
@@ -23,12 +23,12 @@ cd $ripdir
 #     -Axml,txt -nv -a $logdir/wget-`datename`.log \
 #     --random-wait -w0.5 \
 #     http://$gd_url/
-
-dirs=`find $gd_url -maxdepth 3 -mindepth 3 -type d | egrep -v 'year_200[567]' | grep 'month_' | egrep -v 'aaa/year_2008/month_0[123456]'`
-echo scraping `find $gd_url -maxdepth 3 -mindepth 3 -type d | egrep -v 'year_200[567]' | grep 'month_' | egrep -v 'aaa/year_2008/month_0[123456]' | cut -d/ -f4,5,6`
+# | egrep -v 'year_200[567]' | egrep -v 'aaa/year_2008/month_0[123456]
+dirs=`find $gd_url -maxdepth 3 -mindepth 3 -type d | grep 'month_' `
+echo scraping `find $gd_url -maxdepth 3 -mindepth 3 -type d | grep 'month_' | cut -d/ -f4,5,6`
 
 for league_year_mo in $dirs ; do
-  wget -r -l7 --no-clobber --relative --no-parent \
+  wget -r -l9 --no-clobber --relative --no-parent \
     -Axml,txt -nv -a $logdir/wget-`datename`.log \
     --random-wait -w1.0  \
     http://$league_year_mo/

@@ -14,7 +14,7 @@ class Park
   property      :num_games,             Integer
   property      :name,                  String
 
-  property      :streetaddr,            String
+  # property      :streetaddr,            String
   property      :extaddr,               String
   property      :city,                  String
   property      :state,                 String,         :length => 2
@@ -33,6 +33,8 @@ class Park
   has n,        :other_names,   :class_name => 'ParkOtherName'
   has n,        :comments,      :class_name => 'ParkComment'
 end
+
+Park.property 'streetaddr'.to_sym, String
 
 
 #
@@ -84,4 +86,4 @@ end
 #
 # Wipe DB and add new migration
 #
-# DataMapper.auto_migrate!
+DataMapper.auto_migrate!
