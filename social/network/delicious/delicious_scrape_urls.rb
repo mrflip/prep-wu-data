@@ -42,7 +42,7 @@ UNFETCHED_USERS_QUERY = %{
 def wget ripd_file
   return if File.exists?(ripd_file)
   `wget -x -nv "http://#{ripd_file}" `
-  sleep 1
+  sleep 5
 end
 
 def delicious_link_from_url_id url_id
@@ -60,10 +60,10 @@ end
 
 def wget_many_pages ripd_file, nlinks
   wget ripd_file                        # get first page w/ no query string
-  pages = [nlinks/100, 20].min          # get rest w/ page number
-  (1..pages).each do |page|
-    wget delicious_link_page_n(ripd_file, page)
-  end
+  # pages = [nlinks/100, 4].min          # get rest w/ page number
+  # (2..pages).each do |page|
+  #   wget delicious_link_page_n(ripd_file, page)
+  # end
 end
 
 

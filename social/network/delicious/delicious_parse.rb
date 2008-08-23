@@ -4,11 +4,11 @@ require 'dm-core'
 require 'fileutils'; include FileUtils
 require 'imw/utils'; include IMW; IMW.verbose = true
 require 'imw/extract/hpricot'
+require 'imw/extract/html_parser'
 require 'json'
 require 'yaml'
 require  File.dirname(__FILE__)+'/delicious_link_models.rb'
-require  File.dirname(__FILE__)+'/html_parser.rb'
-# as_dset 'urls/bulk/delicious', :cut_dirs => 0
+as_dset __FILE__
 
 class DeliciousLinksParser < HTMLParser
   #
@@ -23,7 +23,7 @@ class DeliciousLinksParser < HTMLParser
     raw_taggings_to_db raw_taggings, pagewide_link, pagewide_socialite
     raw_taggings
   end
-  
+
   def find_pagewide_socialite hdoc
     # get user
     nil
@@ -38,7 +38,7 @@ class DeliciousLinksParser < HTMLParser
     DeliciousLink.find_or_create(
       { :delicious_id => delicious_id },
       { :link_url     => link_url,
-        :title        => canonical_title, 
+        :title        => canonical_title,
         :num_delicious_savers => num_delicious_savers })
   end
 
@@ -93,13 +93,13 @@ class DeliciousLinksParser < HTMLParser
       super
     end
   end
-  
+
   # pivot parse_links' intermediate structure into yaml raw_taggings
   def raw_taggings_to_db raw_taggings, pagewide_link=nil, pagewide_socialite=nil
     date_tagged = ''
     raw_taggings.map do |raw|
       if pagewide_link then link = pagewide_link
-      else 
+      else
         link      = DeliciousLink.find_or_create(
           { :delicious_id => delicious_link_id_from_raw(raw) },
           { :link_url     => link_url_from_raw(raw),
@@ -116,11 +116,11 @@ class DeliciousLinksParser < HTMLParser
       end
       # Socialite linked to link
       date_tagged = date_tagged_from_raw(raw, date_tagged)
-      linking = SocialitesLink.find_or_create({ 
-          :delicious_link_id => link.id, 
+      linking = SocialitesLink.find_or_create({
+          :delicious_link_id => link.id,
           :socialite_id => socialite.id  })
-      linking.attributes = { 
-        :date_tagged  => date_tagged, 
+      linking.attributes = {
+        :date_tagged  => date_tagged,
         :text         => text_from_raw(raw),
         :description  => description_from_raw(raw)
       }
@@ -136,22 +136,21 @@ class DeliciousLinksParser < HTMLParser
   end
 end
 
-RIPD_ROOT = File.expand_path('~/ics/bulk/ripd/')
-cd RIPD_ROOT do
+cd path_to(:ripd_root) do
   delicious_parser = DeliciousLinksParser.new
   delicious_files = Dir['delicious.com/mrflip/dataset?detail=3&setcount=100&page=1']
   delicious_files += Dir['delicious.com/**/*'].find_all{|f| File.file?(f) }
-  delicious_files += Dir['delicious.com/url/**/*'].find_all{|f| File.file?(f) } 
+  delicious_files += Dir['delicious.com/url/**/*'].find_all{|f| File.file?(f) }
   delicious_files.each do |delicious_file|
     # note -- we don't do anything with the date of the file: rip once, that's it.
     ripd_url = RippedUrl.i_parse_joo!(delicious_file)
     if ripd_url.tried_parse
       announce("  skipping #{ripd_url.description}\t(already %s parse)" % [ripd_url.did_parse ? 'did   ' : 'failed'])
-    else 
+    else
       announce("  parsing  #{ripd_url.description}")
       ripd_url.tried_parse = true
       begin       result = delicious_parser.parse_html_file(delicious_file)
-      rescue;     warn "parse failed for #{delicious_file}" ; ripd_url.did_parse = false ; result = false;  end      
+      rescue;     warn "parse failed for #{delicious_file}" ; ripd_url.did_parse = false ; result = false;  end
       ripd_url.i_did_parse_joo! if result
       ripd_url.save
     end
