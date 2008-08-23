@@ -4,13 +4,12 @@ require 'dm-core'
 require 'fileutils'; include FileUtils
 require 'imw/utils'; include IMW; IMW.verbose = true
 require 'imw/extract/hpricot'
+require 'imw/extract/html_parser.rb'
 require 'json'
 require 'yaml'
 require  File.dirname(__FILE__)+'/delicious_link_models.rb'
-require  File.dirname(__FILE__)+'/html_parser.rb'
+as_dset __FILE__
 # as_dset 'urls/bulk/delicious', :cut_dirs => 0
-
-RIPD_DIR = File.expand_path('~/ics/bulk/ripd')
 
 UNFETCHED_URLS_QUERY = %{
   SELECT d.delicious_id, d.num_delicious_savers AS popularity, d.link_url, d.title
@@ -42,7 +41,7 @@ UNFETCHED_USERS_QUERY = %{
 def wget ripd_file
   return if File.exists?(ripd_file)
   `wget -x -nv "http://#{ripd_file}" `
-  sleep 5
+  sleep 60
 end
 
 def delicious_link_from_url_id url_id
@@ -67,7 +66,7 @@ def wget_many_pages ripd_file, nlinks
 end
 
 
-cd RIPD_DIR do
+cd path_to(:ripd_root) do
   repository(:default).adapter.query(UNFETCHED_USERS_QUERY).each do |struct|
     delicious_user_id, popularity = struct.to_a
     next if delicious_user_id =~ /!/ # bogosity marker
@@ -76,7 +75,7 @@ cd RIPD_DIR do
   end
 end
 
-cd RIPD_DIR do
+cd path_to(:ripd_root) do
   repository(:default).adapter.query(UNFETCHED_URLS_QUERY).each do |struct|
     delicious_url_id, popularity, link_url, link_title = struct.to_a
     announce "%5d saves: %-40s %-40s " % [popularity, (link_url||'')[6..45], (link_title||'')[0..39]]
