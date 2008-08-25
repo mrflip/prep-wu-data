@@ -150,7 +150,7 @@ cd path_to(:ripd_root) do
       announce("  parsing  #{ripd_url.description}")
       ripd_url.tried_parse = true
       begin       result = delicious_parser.parse_html_file(delicious_file)
-      rescue;     warn "parse failed for #{delicious_file}" ; ripd_url.did_parse = false ; result = false;  end
+      rescue Exception => e; warn "parse failed for #{delicious_file}: #{e}" ; ripd_url.did_parse = false ; result = false;  end
       ripd_url.i_did_parse_joo! if result
       ripd_url.save
     end

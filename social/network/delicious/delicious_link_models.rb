@@ -16,25 +16,25 @@ IMW::DataSet.setup_remote_connection IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.mer
 # Tag:          tags links,                             used by socialites
 
 #
-# First steps towards craws that can give an implied trust metric.  
+# First steps towards craws that can give an implied trust metric.
 #   follow/follower graph
 #   # follow/followers
 #   # comments / posts / favorites / favorited
 #   explicit karma
 # sources:
 #   Twitter
-#   FriendFeed 
+#   FriendFeed
 #   Plurk (has explicit karma)
-#   Twine	
+#   Twine
 #   MetaFilter (also asked / answered numbers)
 #   Ma.gnolia.com
 #
-class DeliciousLink # < Fiddle
+class DeliciousLink
   include DataMapper::Resource
   # Basic info
   property      :id,                    Integer,  :serial => true
-  property      :link_url,              String,   :length => 1024
-  property      :delicious_id,          String,   :length => 32,          :unique_index => true
+  property      :link_url,              String,   :length => 1024, :nullable => false
+  property      :delicious_id,          String,   :length => 32,   :nullable => false,          :unique_index => true
   property      :num_delicious_savers,  Integer
   property      :title,                 String,   :length => 255
   has n,        :taggings
@@ -46,7 +46,7 @@ end
 class Tag
   include DataMapper::Resource
   property      :id,                    Integer,  :serial => true
-  property      :name,                  String,   :length => 50 # ,    :unique_index => :tag_name
+  property      :name,                  String,   :length => 50,  :nullable => false,    :unique_index => :name
   has n,        :taggings
   has n,        :delicious_links,  :through => :taggings
   has n,        :socialites_tags
@@ -57,16 +57,17 @@ end
 class Socialite
   include DataMapper::Resource
   property   :id,                    Integer,   :serial => true
-  property   :name,                  String,                     :unique_index => :socialite_name
-  property   :uniqname,              String,    :length => 255,  :unique_index => :socialite_uniqname
-  property   :description,           Text
-  property   :bio_url,               String,    :length => 255
-  property   :toptags,               Text # serialized top 10 tags
+  property   :uniqname,              String,    :length => 100,  :nullable => false, :unique_index => :socialite_uniqname
   property   :following_count,       Integer
   property   :followers_count,       Integer
   property   :updates_count,         Integer
   # property :last_update_at,        DateTime
   # property :first_update_at,       DateTime
+  # property :toptags,               Text # serialized top 10 tags
+  property   :name,                  String,    :length => 40
+  property   :description,           Text
+  property   :bio_url,               String,    :length => 255
+  #
   has n, :friendships,    :child_key => [:follower_id], :class_name => 'Friendship'
   has n, :followerships,  :child_key => [:friend_id],   :class_name => 'Friendship'
   has n, :taggings
@@ -83,9 +84,9 @@ end
 
 class Tagging
   include DataMapper::Resource
-  property    :tag_id,        Integer,        :key => true
-  property    :delicious_link_id, Integer,    :key => true
-  property    :socialite_id,  Integer,        :key => true
+  property    :tag_id,        Integer,                  :key => true
+  property    :delicious_link_id, Integer,              :key => true
+  property    :socialite_id,  Integer,                  :key => true
   belongs_to  :tag
   belongs_to  :socialite
   belongs_to  :delicious_link
@@ -93,8 +94,8 @@ end
 
 class SocialitesTag
   include DataMapper::Resource
-  property    :tag_id,        Integer,  :key => true
-  property    :socialite_id,  Integer,  :key => true
+  property    :tag_id,        Integer,                  :key => true
+  property    :socialite_id,  Integer,                  :key => true
   property    :tagged_count,  Integer
   belongs_to  :socialite
   belongs_to  :tag
@@ -102,8 +103,8 @@ end
 
 class SocialitesLink
   include DataMapper::Resource
-  property    :delicious_link_id,        Integer,  :key => true
-  property    :socialite_id,  Integer,   :key => true
+  property    :delicious_link_id, Integer,              :key => true
+  property    :socialite_id,  Integer,                  :key => true
   property    :date_tagged,   DateTime
   property    :text,          String
   property    :description,   Text
@@ -113,17 +114,17 @@ end
 
 class Friendship
   include DataMapper::Resource
-  property    :follower_id,   Integer,  :key => true
-  property    :friend_id,     Integer,  :key => true, :index => :friend_id
+  property    :follower_id,   Integer,                                  :key => true
+  property    :friend_id,     Integer,                                  :key => true, :index => :friend_id
   belongs_to  :follower,      :class_name => 'Socialite',  :child_key => [:follower_id]
   belongs_to  :friend,        :class_name => 'Socialite',  :child_key => [:friend_id]
 end
 
-class RippedUrl 
+class RippedUrl
   include DataMapper::Resource
   include IMW_URI
-  
-  property      :id,              Integer,        :serial   => true
+
+  property      :id,              Integer,                           :serial   => true
   property      :ripd_url,        String,    :length => 1024
   property      :scheme,          String
   property      :user,            String
@@ -133,16 +134,16 @@ class RippedUrl
   property      :path,            Text
   property      :query,           Text
   property      :fragment,        Text
-  
+
   property      :tried_parse,     Boolean,                        :default => false
   property      :did_parse,       Boolean,                        :default => false
   property      :ripd_file,       String,    :length => 1024
   property      :ripd_file_date,  DateTime
   property      :ripd_file_size,  Integer
-  property      :rippable_type,	  String,    :length =>  10,    :index => :rippable_param,     :index => :rippable_user
-  property      :rippable_param,  String,    :length => 255,    :index => :rippable_param
-  property      :rippable_user,	  String,    :length =>  50,    :index => :rippable_user
-  property      :ripped_page,	  Integer
+  property      :rippable_type,   String,    :length =>  10,    :nullable => false, :index => :rippable_param,     :index => :rippable_user
+  property      :rippable_param,  String,    :length => 255,                    :index => :rippable_param
+  property      :rippable_user,   String,    :length =>  50,                    :index => :rippable_user
+  property      :ripped_page,     Integer
 
   # ::off:: note: instance method
   def i_did_parse_joo!
@@ -150,7 +151,7 @@ class RippedUrl
     self.save
     self
   end
-  
+
   # FIXME -- make it before_save; denormalize.
   def set_rippable_info_from_url!
     # pull page from query string
@@ -158,7 +159,7 @@ class RippedUrl
     page ||= 1
     # pull type, param from path
     _, type, param = %r{^/([^/]+)(?:/(.*?))?$}.match(self.path).to_a
-    case 
+    case
     when ['tag', 'url'].include?(type)  then type, user, param = [type,       nil,  param]
     when ['search'].include?(type)      then type, user, param = [type,       nil,  self.query]
     when param.blank?                   then type, user, param = ['user',     type, nil]
@@ -168,21 +169,21 @@ class RippedUrl
     self.save
     self
   end
-  
+
   # ::off:: note: class method
   def self.i_parse_joo! ripd_file, ripd_url=nil
     ripd_url ||= 'http://'+ripd_file
     ripd = self.find_or_create_from_url(ripd_url)
 
     ripd.attributes = { :ripd_url => ripd_url,
-      :ripd_file => ripd_file, 
+      :ripd_file => ripd_file,
       :ripd_file_size => File.size( ripd_file),
       :ripd_file_date => File.mtime(ripd_file) }
     ripd.set_rippable_info_from_url!
     ripd.save
     ripd
   end
-  
+
   def description
     case self.rippable_type
     when 'tag', 'url', 'search' then "page %3d for %-4s %s"        % [self.ripped_page, self.rippable_type+':',  self.rippable_param]
@@ -192,5 +193,5 @@ class RippedUrl
       self.to_s
     end
   end
-  
+
 end
