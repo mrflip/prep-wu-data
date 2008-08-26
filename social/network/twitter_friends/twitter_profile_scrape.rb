@@ -9,13 +9,6 @@ require 'json'
 include IMW; IMW.verbose = true
 as_dset __FILE__
 
-# 
-# Usage
-#
-# ./twitter_profile_scrape.rb > log/twitter_`datename`.log 2>&1 &
-# tail -f log/twitter_`datename`.log
-
-
 #
 # Setup database
 #
