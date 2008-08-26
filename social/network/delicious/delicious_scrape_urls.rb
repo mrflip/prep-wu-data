@@ -39,10 +39,17 @@ UNFETCHED_USERS_QUERY = %{
 #FIXME -- Above query won't fetch unless pg 0 is there.
 
 def wget ripd_file
-  return if File.exists?(ripd_file)
-  `wget -x -nv "http://#{ripd_file}" `
-  FileUtils.touch ripd_file
-  sleep 90
+  cd path_to(:ripd_root) do
+    if File.exists?(ripd_file) then
+      # puts "Skipping #{ripd_file}";
+      return ;
+    end
+    print `wget -x -nv "http://#{ripd_file}" `
+    success = File.exists?(ripd_file)
+    FileUtils.touch ripd_file  # leave a 0-byte turd so we don't refresh
+    sleep 90
+    return success
+  end
 end
 
 def delicious_feed_link *pathsegs
@@ -73,39 +80,41 @@ def wget_many_pages ripd_file, nlinks
   # end
 end
 
+def get_delicious_json item, val
+  case item
+  when :user
+    return if user =~ /!/ # bogosity marker
+    wget delicious_feed_link(                 user)
+    wget delicious_feed_link(:userinfo,       user)
+    wget delicious_feed_link(:networkmembers, user)
+    wget delicious_feed_link(:networkfans,    user)
+  when :url, :urlhash then
+    wget delicious_feed_link(:url, val)
+  when :tag     then
+    wget delicious_feed_link(:tag, val)
+  end
+end
 
 def json_get_users
-  cd path_to(:ripd_root) do
-    repository(:default).adapter.query('SELECT s.name as socialite_name, s.id AS popularity FROM socialites s ORDER BY popularity').each do |struct|
-      user, popularity = struct.to_a
-      next if user =~ /!/ # bogosity marker
-      announce "%5d current links, user %s" % [popularity, user]
-      wget delicious_feed_link(                 user)
-      wget delicious_feed_link(:userinfo,       user)
-      wget delicious_feed_link(:networkmembers, user)
-      wget delicious_feed_link(:networkfans,    user)
-    end
+  repository(:default).adapter.query('SELECT s.name as socialite_name, s.id AS popularity FROM socialites s ORDER BY popularity').each do |struct|
+    user, popularity = struct.to_a
+    announce "%5d current links, user %s" % [popularity, user]
+    get_delicious_json :user, user
   end
 end
-json_get_users
 
 def html_wget_users
-  cd path_to(:ripd_root) do
-    repository(:default).adapter.query(UNFETCHED_USERS_QUERY).each do |struct|
-      delicious_user_id, popularity = struct.to_a
-      next if delicious_user_id =~ /!/ # bogosity marker
-      announce "%5d current links, user %s" % [popularity, delicious_user_id]
-      wget delicious_link_page_n(delicious_link_from_user_id(delicious_user_id), 1)
-    end
+  repository(:default).adapter.query(UNFETCHED_USERS_QUERY).each do |struct|
+    delicious_user_id, popularity = struct.to_a
+    next if delicious_user_id =~ /!/ # bogosity marker
+    announce "%5d current links, user %s" % [popularity, delicious_user_id]
+    wget delicious_link_page_n(delicious_link_from_user_id(delicious_user_id), 1)
   end
-
 end
 def html_wget_urls
-  cd path_to(:ripd_root) do
-    repository(:default).adapter.query(UNFETCHED_URLS_QUERY).each do |struct|
-      delicious_url_id, popularity, link_url, link_title = struct.to_a
-      announce "%5d saves: %-40s %-40s " % [popularity, (link_url||'')[6..45], (link_title||'')[0..39]]
-      wget_many_pages delicious_link_from_url_id(delicious_url_id), popularity
-    end
+  repository(:default).adapter.query(UNFETCHED_URLS_QUERY).each do |struct|
+    delicious_url_id, popularity, link_url, link_title = struct.to_a
+    announce "%5d saves: %-40s %-40s " % [popularity, (link_url||'')[6..45], (link_title||'')[0..39]]
+    wget_many_pages delicious_link_from_url_id(delicious_url_id), popularity
   end
 end
