@@ -1,7 +1,6 @@
 module IMW
   def setup_twitter_friends_connection
-    # DataSet.setup_connection :mysql, 'imw', 'local_pass_14_312', 'localhost', 'imw_twitter_friends'
     hostname = `hostname -s`.chomp
-    DataMapper::setup(:default, "sqlite3:///#{Dir.pwd}/fixd/db/twitter_friends-#{hostname}.sqlite")
+    DataMapper::setup(:default, "sqlite3:///#{File.dirname(__FILE__)}/fixd/db/twitter_friends-#{hostname}.sqlite")
   end
 end
