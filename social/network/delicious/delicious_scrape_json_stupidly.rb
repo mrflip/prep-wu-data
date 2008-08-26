@@ -9,7 +9,13 @@ require 'digest/md5'
 # require  File.dirname(__FILE__)+'/delicious_link_models.rb'
 as_dset __FILE__
 
-require 'delicious_scrape_urls'
+#
+#  Usage
+#   ./delicious_scrape_json_stupidly.rb >> ./log/delicious-json-scrape-`datename`.log 2>&1 &
+#   tail -f ./log/delicious-json-scrape-`datename`.log &
+#
+
+require 'delicious_scrape_html_ugly'
 DEL_BASE_URL = "feeds.delicious.com/v2/json"
 HASHER = Digest::MD5.new
 

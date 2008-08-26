@@ -9,6 +9,13 @@ require 'json'
 include IMW; IMW.verbose = true
 as_dset __FILE__
 
+# 
+# Usage
+#
+# ./twitter_profile_scrape.rb > log/twitter_`datename`.log 2>&1 &
+# tail -f log/twitter_`datename`.log
+
+
 #
 # Setup database
 #
@@ -37,7 +44,7 @@ def wget rip_url, ripd_file=nil, sleep_time=30
     FileUtils.touch        ripd_file  # leave a 0-byte turd so we don't refresh
     sleep sleep_time
     return success
-  end
+  end  
 end
 
 class User
