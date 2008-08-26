@@ -17,7 +17,6 @@ DataMapper::Logger.new(STDOUT, :warn)
 require 'twitter_friends_db_definition'; setup_twitter_friends_connection()
 require 'twitter_profile_model'
 
-
 class GraphDumper
   attr_reader :file_format
   def initialize
@@ -42,12 +41,7 @@ class XGMMLDumper < GraphDumper
         xmlns="http://www.cs.rpi.edu/XGMML">}
   end
   def graph_end()  "\n</graph>" end
-
-
 end
-
-
-
 
 class SIFDumper < GraphDumper
   def initialize
@@ -70,8 +64,6 @@ class TwitterGraph
   def initialize
     self.users_seen = RecordCounter.new
   end
-
-
   CHUNK_SIZE   = nil
   MAX_CHUNKS   = 1
   def dump_graph graph_file_base
@@ -105,7 +97,6 @@ class Friendship < Fiddle
     query = all_by_sql_query limits
     announce query
     repository(:default).adapter.query(query).each do |friendship_struct|
-
       yield friendship_struct.to_a
     end
   end
@@ -141,7 +132,6 @@ class User < Fiddle
     %Q{
     <node id="#{id}" name="#{twitter_name}" label="#{twitter_name}"></node>}
   end
-
 end
 
 TwitterGraph.new.dump_graph [:fixd, 'graphs/testing']

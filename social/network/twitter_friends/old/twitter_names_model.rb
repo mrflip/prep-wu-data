@@ -3,7 +3,6 @@ require 'imw/dataset'
 include IMW
 
 class TwitterUser
-
   attr_reader :twitter_name
   attr_accessor :n_followers, :n_following
 
