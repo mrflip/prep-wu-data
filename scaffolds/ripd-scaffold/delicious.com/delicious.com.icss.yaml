@@ -1,0 +1,78 @@
+--- # !infochimps.org/^icss
+
+datasets:
+- name:                 'delicious.com'
+  tag_list:             ''
+  category:             '' 			# do what seems right, but do it the same way each time.
+  notes_by_role:
+      description:                      
+          name:         'Description'
+          body:         >
+              (description of this dataset)
+
+      rights:
+          name:         'Rights'
+          body:         >
+              (look for a rights statement,
+              if any, and paste it in here)
+
+  rights_uniqname:      ''              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+  valuation:
+      bonus:            0
+  url:                  'http://delicious.com'
+
+  #
+  # Mandatory fields ^^^   Optional fields vvvv
+  # -----------------------------------------------------------------------
+      
+  #
+  # Besides the auto-generated links and credits, if you see anything that
+  # stands out as useful add it as its own entry.
+  #
+  # These are hashes; the 'role' should be something unique within each hash
+  # and whenever applicable share a common prefix.  (That is: if there are
+  # several usage notes, call them usage_intro:, usage_section_1, ...)
+  #
+  links_by_role:
+      # usage:
+      #     full_url:     ''
+      #     text:         >-
+      #         text
+  role_credits:
+      # context:
+      #     contributor:  ''
+      #     citation:     ''
+
+  #
+  # These are convenience methods that will auto-generate the given
+  # associations.  Invent your own if you're repeating effort across a
+  # ton of these.
+  #
+  make_contributor_from_name_and_url:   true
+  make_main_credit_from_name_and_url:   true
+  make_main_source_link_from_url:       true  
+  create_approve_and_rate_as_one:       dhruv # your name here
+
+    
+  payloads_by_name:
+      # "":
+      #    file_path:      "/meta/infochimps_datasets/"
+      #    format:         "yaml"
+
+#
+# If you add any credits above (under role_credits),
+# enter the corresponding contributor here.
+#
+# A contributor only appears in more than one schema
+# file you only need it to 
+#   
+contributors:
+# - name:                 ''
+#   url:                  ''
+#   desc:                 ''
+#   base_trustification:  0
+
+# Leave this line alone
+icss:
+  version:              0.5
+  moreinfo:             http://infochimps.org/info/icss
