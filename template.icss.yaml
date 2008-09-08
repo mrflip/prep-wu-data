@@ -1,0 +1,47 @@
+--- # !infochimps.org/^icss
+
+icss:
+  version:              0.5
+  moreinfo:             http://infochimps.org/info/icss
+
+datasets:
+- name:                 ''
+  tag_list:             ''
+  url:                  ''
+  category:             ''
+  role_credits:
+      infochimped:
+          contributor:  flip_infochimps_org
+          citation:     ''
+  created_by:           flip_infochimps_org  
+  approved_by:          flip.infochimps.org
+  approved_at:          2008-08-08T08:08:08
+  links_by_role:
+      main:
+          full_url:     ''
+          text:         ''
+      usage:
+          full_url:     ''
+          text:         ''
+  notes_by_role:
+      description:
+          name:         ''
+  user_ratings:
+      flip:
+          [ 1, 1, 1, 1 ]
+      dhruv:
+          [ 1, 1, 1, 1 ]
+  payloads_by_name:
+     # "":
+     #    file_path:      "/meta/infochimps_datasets/"
+     #    format:         "yaml"
+  valuation:
+      bonus:            0
+  rights_uniqname:      ''
+
+contributors:
+- name:                 ''
+  url:                  ''
+  desc:                 ''
+  base_trustification:  0
+  
