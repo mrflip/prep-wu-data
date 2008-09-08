@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: ucrel.lancs.ac.uk"
+      category: 
+      created_at: "2008-09-08T00:04:08Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:04:08Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:08Z"
+        role: rights_note
+        id: 103
+        version: 1
+        noteable_id: 59
+      - name: Description
+        created_at: "2008-09-08T00:04:08Z"
+        body: Rip of http://ucrel.lancs.ac.uk
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:08Z"
+        role: description
+        id: 104
+        version: 1
+        noteable_id: 59
+      updated_at: "2008-09-08T00:04:08Z"
+      valuation: 
+        bonus: 10
+      url: http://ucrel.lancs.ac.uk
+      created_by: flip.infochimps.org
+      id: 59
+      uniqname: ripd_ucrel-lancs-ac-uk
+      version: 1
+      approved_at: "2008-09-07T19:04:07Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://ucrel.lancs.ac.uk
+        created_at: "2008-09-08T00:04:08Z"
+        revhost: 
+        updated_at: "2008-09-08T00:04:08Z"
+        role: main
+        text: http://ucrel.lancs.ac.uk
+        id: 65
+        version: 1
+        path: 
+        linkable_id: 59
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:04:07Z"
+        updated_at: "2008-09-08T00:04:08Z"
+        dataset_id: 59
+        role: infochimped
+        id: 53
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:04:08Z"
+        file_path: ripd/ucrel.lancs.ac.uk
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:04:08Z"
+        dataset_id: 59
+        signature: 
+        file_name: ripd/ucrel.lancs.ac.uk
+        id: 57
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:44Z"
+
+
+

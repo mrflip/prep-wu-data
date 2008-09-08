@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: MSDS"
+      category: 
+      created_at: "2008-09-08T00:03:52Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:52Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:52Z"
+        role: rights_note
+        id: 73
+        version: 1
+        noteable_id: 44
+      - name: Description
+        created_at: "2008-09-08T00:03:52Z"
+        body: Rip of http://MSDS
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:52Z"
+        role: description
+        id: 74
+        version: 1
+        noteable_id: 44
+      updated_at: "2008-09-08T00:03:52Z"
+      valuation: 
+        bonus: 10
+      url: http://MSDS
+      created_by: flip.infochimps.org
+      id: 44
+      uniqname: ripd_msds
+      version: 1
+      approved_at: "2008-09-07T19:03:52Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://MSDS
+        created_at: "2008-09-08T00:03:52Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:52Z"
+        role: main
+        text: http://MSDS
+        id: 50
+        version: 1
+        path: 
+        linkable_id: 44
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:52Z"
+        updated_at: "2008-09-08T00:03:52Z"
+        dataset_id: 44
+        role: infochimped
+        id: 38
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:52Z"
+        file_path: ripd/MSDS
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:52Z"
+        dataset_id: 44
+        signature: 
+        file_name: ripd/MSDS
+        id: 42
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:15Z"
+
+
+

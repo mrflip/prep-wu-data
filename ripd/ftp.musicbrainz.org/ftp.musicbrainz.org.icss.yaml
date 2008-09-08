@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: ftp.musicbrainz.org"
+      category: 
+      created_at: "2008-09-08T00:03:33Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:33Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:33Z"
+        role: rights_note
+        id: 37
+        version: 1
+        noteable_id: 26
+      - name: Description
+        created_at: "2008-09-08T00:03:33Z"
+        body: Rip of http://ftp.musicbrainz.org
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:33Z"
+        role: description
+        id: 38
+        version: 1
+        noteable_id: 26
+      updated_at: "2008-09-08T00:03:33Z"
+      valuation: 
+        bonus: 10
+      url: http://ftp.musicbrainz.org
+      created_by: flip.infochimps.org
+      id: 26
+      uniqname: ripd_ftp-musicbrainz-org
+      version: 1
+      approved_at: "2008-09-07T19:03:32Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://ftp.musicbrainz.org
+        created_at: "2008-09-08T00:03:33Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:33Z"
+        role: main
+        text: http://ftp.musicbrainz.org
+        id: 32
+        version: 1
+        path: 
+        linkable_id: 26
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:32Z"
+        updated_at: "2008-09-08T00:03:33Z"
+        dataset_id: 26
+        role: infochimped
+        id: 20
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:33Z"
+        file_path: ripd/ftp.musicbrainz.org
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:33Z"
+        dataset_id: 26
+        signature: 
+        file_name: ripd/ftp.musicbrainz.org
+        id: 24
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:24Z"
+
+
+

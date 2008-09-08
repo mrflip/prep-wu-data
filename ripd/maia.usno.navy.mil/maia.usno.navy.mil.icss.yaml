@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: maia.usno.navy.mil"
+      category: 
+      created_at: "2008-09-08T00:03:49Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:49Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:49Z"
+        role: rights_note
+        id: 67
+        version: 1
+        noteable_id: 41
+      - name: Description
+        created_at: "2008-09-08T00:03:49Z"
+        body: Rip of http://maia.usno.navy.mil
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:49Z"
+        role: description
+        id: 68
+        version: 1
+        noteable_id: 41
+      updated_at: "2008-09-08T00:03:49Z"
+      valuation: 
+        bonus: 10
+      url: http://maia.usno.navy.mil
+      created_by: flip.infochimps.org
+      id: 41
+      uniqname: ripd_maia-usno-navy-mil
+      version: 1
+      approved_at: "2008-09-07T19:03:49Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://maia.usno.navy.mil
+        created_at: "2008-09-08T00:03:49Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:49Z"
+        role: main
+        text: http://maia.usno.navy.mil
+        id: 47
+        version: 1
+        path: 
+        linkable_id: 41
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:49Z"
+        updated_at: "2008-09-08T00:03:49Z"
+        dataset_id: 41
+        role: infochimped
+        id: 35
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:49Z"
+        file_path: ripd/maia.usno.navy.mil
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:49Z"
+        dataset_id: 41
+        signature: 
+        file_name: ripd/maia.usno.navy.mil
+        id: 39
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:33Z"
+
+
+

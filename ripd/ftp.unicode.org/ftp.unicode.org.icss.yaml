@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: ftp.unicode.org"
+      category: 
+      created_at: "2008-09-08T00:03:37Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:37Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:37Z"
+        role: rights_note
+        id: 45
+        version: 1
+        noteable_id: 30
+      - name: Description
+        created_at: "2008-09-08T00:03:37Z"
+        body: Rip of http://ftp.unicode.org
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:37Z"
+        role: description
+        id: 46
+        version: 1
+        noteable_id: 30
+      updated_at: "2008-09-08T00:03:37Z"
+      valuation: 
+        bonus: 10
+      url: http://ftp.unicode.org
+      created_by: flip.infochimps.org
+      id: 30
+      uniqname: ripd_ftp-unicode-org
+      version: 1
+      approved_at: "2008-09-07T19:03:37Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://ftp.unicode.org
+        created_at: "2008-09-08T00:03:37Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:37Z"
+        role: main
+        text: http://ftp.unicode.org
+        id: 36
+        version: 1
+        path: 
+        linkable_id: 30
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:37Z"
+        updated_at: "2008-09-08T00:03:37Z"
+        dataset_id: 30
+        role: infochimped
+        id: 24
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:37Z"
+        file_path: ripd/ftp.unicode.org
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:37Z"
+        dataset_id: 30
+        signature: 
+        file_name: ripd/ftp.unicode.org
+        id: 28
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:26Z"
+
+
+

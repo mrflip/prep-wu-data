@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: www.cs.utexas.edu"
+      category: 
+      created_at: "2008-09-08T00:04:19Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:04:19Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:19Z"
+        role: rights_note
+        id: 125
+        version: 1
+        noteable_id: 70
+      - name: Description
+        created_at: "2008-09-08T00:04:19Z"
+        body: Rip of http://www.cs.utexas.edu
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:19Z"
+        role: description
+        id: 126
+        version: 1
+        noteable_id: 70
+      updated_at: "2008-09-08T00:04:19Z"
+      valuation: 
+        bonus: 10
+      url: http://www.cs.utexas.edu
+      created_by: flip.infochimps.org
+      id: 70
+      uniqname: ripd_www-cs-utexas-edu
+      version: 1
+      approved_at: "2008-09-07T19:04:18Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://www.cs.utexas.edu
+        created_at: "2008-09-08T00:04:19Z"
+        revhost: 
+        updated_at: "2008-09-08T00:04:19Z"
+        role: main
+        text: http://www.cs.utexas.edu
+        id: 76
+        version: 1
+        path: 
+        linkable_id: 70
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:04:19Z"
+        updated_at: "2008-09-08T00:04:19Z"
+        dataset_id: 70
+        role: infochimped
+        id: 64
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:04:19Z"
+        file_path: ripd/www.cs.utexas.edu
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:04:19Z"
+        dataset_id: 70
+        signature: 
+        file_name: ripd/www.cs.utexas.edu
+        id: 68
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:52Z"
+
+
+

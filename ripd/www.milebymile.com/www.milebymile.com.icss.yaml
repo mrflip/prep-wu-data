@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: www.milebymile.com"
+      category: 
+      created_at: "2008-09-08T00:04:26Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:04:26Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:26Z"
+        role: rights_note
+        id: 139
+        version: 1
+        noteable_id: 77
+      - name: Description
+        created_at: "2008-09-08T00:04:26Z"
+        body: Rip of http://www.milebymile.com
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:26Z"
+        role: description
+        id: 140
+        version: 1
+        noteable_id: 77
+      updated_at: "2008-09-08T00:04:26Z"
+      valuation: 
+        bonus: 10
+      url: http://www.milebymile.com
+      created_by: flip.infochimps.org
+      id: 77
+      uniqname: ripd_www-milebymile-com
+      version: 1
+      approved_at: "2008-09-07T19:04:26Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://www.milebymile.com
+        created_at: "2008-09-08T00:04:26Z"
+        revhost: 
+        updated_at: "2008-09-08T00:04:26Z"
+        role: main
+        text: http://www.milebymile.com
+        id: 83
+        version: 1
+        path: 
+        linkable_id: 77
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:04:26Z"
+        updated_at: "2008-09-08T00:04:26Z"
+        dataset_id: 77
+        role: infochimped
+        id: 71
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:04:26Z"
+        file_path: ripd/www.milebymile.com
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:04:26Z"
+        dataset_id: 77
+        signature: 
+        file_name: ripd/www.milebymile.com
+        id: 75
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:57Z"
+
+
+

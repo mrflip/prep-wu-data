@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: physchem.ox.ac.uk"
+      category: 
+      created_at: "2008-09-08T00:04:00Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:04:00Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:00Z"
+        role: rights_note
+        id: 89
+        version: 1
+        noteable_id: 52
+      - name: Description
+        created_at: "2008-09-08T00:04:00Z"
+        body: Rip of http://physchem.ox.ac.uk
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:00Z"
+        role: description
+        id: 90
+        version: 1
+        noteable_id: 52
+      updated_at: "2008-09-08T00:04:00Z"
+      valuation: 
+        bonus: 10
+      url: http://physchem.ox.ac.uk
+      created_by: flip.infochimps.org
+      id: 52
+      uniqname: ripd_physchem-ox-ac-uk
+      version: 1
+      approved_at: "2008-09-07T19:04:00Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://physchem.ox.ac.uk
+        created_at: "2008-09-08T00:04:00Z"
+        revhost: 
+        updated_at: "2008-09-08T00:04:00Z"
+        role: main
+        text: http://physchem.ox.ac.uk
+        id: 58
+        version: 1
+        path: 
+        linkable_id: 52
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:04:00Z"
+        updated_at: "2008-09-08T00:04:00Z"
+        dataset_id: 52
+        role: infochimped
+        id: 46
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:04:00Z"
+        file_path: ripd/physchem.ox.ac.uk
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:04:00Z"
+        dataset_id: 52
+        signature: 
+        file_name: ripd/physchem.ox.ac.uk
+        id: 50
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:40Z"
+
+
+

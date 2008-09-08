@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: nsc.org"
+      category: 
+      created_at: "2008-09-08T00:03:55Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:55Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:55Z"
+        role: rights_note
+        id: 79
+        version: 1
+        noteable_id: 47
+      - name: Description
+        created_at: "2008-09-08T00:03:55Z"
+        body: Rip of http://nsc.org
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:55Z"
+        role: description
+        id: 80
+        version: 1
+        noteable_id: 47
+      updated_at: "2008-09-08T00:03:55Z"
+      valuation: 
+        bonus: 10
+      url: http://nsc.org
+      created_by: flip.infochimps.org
+      id: 47
+      uniqname: ripd_nsc-org
+      version: 1
+      approved_at: "2008-09-07T19:03:55Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://nsc.org
+        created_at: "2008-09-08T00:03:55Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:55Z"
+        role: main
+        text: http://nsc.org
+        id: 53
+        version: 1
+        path: 
+        linkable_id: 47
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:55Z"
+        updated_at: "2008-09-08T00:03:55Z"
+        dataset_id: 47
+        role: infochimped
+        id: 41
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:55Z"
+        file_path: ripd/nsc.org
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:55Z"
+        dataset_id: 47
+        signature: 
+        file_name: ripd/nsc.org
+        id: 45
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:36Z"
+
+
+

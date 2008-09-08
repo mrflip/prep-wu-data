@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: download.srv.cs.cmu.edu"
+      category: 
+      created_at: "2008-09-08T00:03:27Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:27Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:27Z"
+        role: rights_note
+        id: 27
+        version: 1
+        noteable_id: 21
+      - name: Description
+        created_at: "2008-09-08T00:03:27Z"
+        body: Rip of http://download.srv.cs.cmu.edu
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:27Z"
+        role: description
+        id: 28
+        version: 1
+        noteable_id: 21
+      updated_at: "2008-09-08T00:03:27Z"
+      valuation: 
+        bonus: 10
+      url: http://download.srv.cs.cmu.edu
+      created_by: flip.infochimps.org
+      id: 21
+      uniqname: ripd_download-srv-cs-cmu-edu
+      version: 1
+      approved_at: "2008-09-07T19:03:27Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://download.srv.cs.cmu.edu
+        created_at: "2008-09-08T00:03:27Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:27Z"
+        role: main
+        text: http://download.srv.cs.cmu.edu
+        id: 27
+        version: 1
+        path: 
+        linkable_id: 21
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:27Z"
+        updated_at: "2008-09-08T00:03:27Z"
+        dataset_id: 21
+        role: infochimped
+        id: 15
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:27Z"
+        file_path: ripd/download.srv.cs.cmu.edu
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:27Z"
+        dataset_id: 21
+        signature: 
+        file_name: ripd/download.srv.cs.cmu.edu
+        id: 19
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:20Z"
+
+
+

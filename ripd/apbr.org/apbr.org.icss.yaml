@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: apbr.org"
+      category: 
+      created_at: "2008-09-08T00:03:20Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:20Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:20Z"
+        role: rights_note
+        id: 11
+        version: 1
+        noteable_id: 13
+      - name: Description
+        created_at: "2008-09-08T00:03:20Z"
+        body: Rip of http://apbr.org
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:20Z"
+        role: description
+        id: 12
+        version: 1
+        noteable_id: 13
+      updated_at: "2008-09-08T00:03:20Z"
+      valuation: 
+        bonus: 10
+      url: http://apbr.org
+      created_by: flip.infochimps.org
+      id: 13
+      uniqname: ripd_apbr-org
+      version: 1
+      approved_at: "2008-09-07T19:03:19Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://apbr.org
+        created_at: "2008-09-08T00:03:20Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:20Z"
+        role: main
+        text: http://apbr.org
+        id: 19
+        version: 1
+        path: 
+        linkable_id: 13
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:19Z"
+        updated_at: "2008-09-08T00:03:20Z"
+        dataset_id: 13
+        role: infochimped
+        id: 7
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:20Z"
+        file_path: ripd/apbr.org
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:20Z"
+        dataset_id: 13
+        signature: 
+        file_name: ripd/apbr.org
+        id: 11
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:15Z"
+
+
+

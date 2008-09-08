@@ -106,6 +106,7 @@ class DeliciousLinksParser < HTMLParser
             :num_delicious_savers => num_delicious_savers_from_raw(raw) })
         link.title = text_from_raw(raw) if link.title.blank?
         link.save
+        puts link.attributes.to_yaml
       end
       if pagewide_socialite then socialite = pagewide_socialite
       else
@@ -144,7 +145,7 @@ cd path_to(:ripd_root) do
   delicious_files.each do |delicious_file|
     # note -- we don't do anything with the date of the file: rip once, that's it.
     ripd_url = RippedUrl.i_parse_joo!(delicious_file)
-    if ripd_url.tried_parse
+    if ripd_url.tried_parse && false  # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!comment out & false!!!!!!!!!!!!!!!!!!!!!!!!
       announce("  skipping #{ripd_url.description}\t(already %s parse)" % [ripd_url.did_parse ? 'did   ' : 'failed'])
     else
       announce("  parsing  #{ripd_url.description}")

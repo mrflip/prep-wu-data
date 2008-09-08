@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: members.aol.com"
+      category: 
+      created_at: "2008-09-08T00:03:51Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:51Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:51Z"
+        role: rights_note
+        id: 71
+        version: 1
+        noteable_id: 43
+      - name: Description
+        created_at: "2008-09-08T00:03:51Z"
+        body: Rip of http://members.aol.com
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:51Z"
+        role: description
+        id: 72
+        version: 1
+        noteable_id: 43
+      updated_at: "2008-09-08T00:03:51Z"
+      valuation: 
+        bonus: 10
+      url: http://members.aol.com
+      created_by: flip.infochimps.org
+      id: 43
+      uniqname: ripd_members-aol-com
+      version: 1
+      approved_at: "2008-09-07T19:03:51Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://members.aol.com
+        created_at: "2008-09-08T00:03:51Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:51Z"
+        role: main
+        text: http://members.aol.com
+        id: 49
+        version: 1
+        path: 
+        linkable_id: 43
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:51Z"
+        updated_at: "2008-09-08T00:03:51Z"
+        dataset_id: 43
+        role: infochimped
+        id: 37
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:51Z"
+        file_path: ripd/members.aol.com
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:51Z"
+        dataset_id: 43
+        signature: 
+        file_name: ripd/members.aol.com
+        id: 41
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:34Z"
+
+
+

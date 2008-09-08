@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: quackle"
+      category: 
+      created_at: "2008-09-08T00:04:03Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:04:03Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:03Z"
+        role: rights_note
+        id: 95
+        version: 1
+        noteable_id: 55
+      - name: Description
+        created_at: "2008-09-08T00:04:03Z"
+        body: Rip of http://quackle
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:03Z"
+        role: description
+        id: 96
+        version: 1
+        noteable_id: 55
+      updated_at: "2008-09-08T00:04:03Z"
+      valuation: 
+        bonus: 10
+      url: http://quackle
+      created_by: flip.infochimps.org
+      id: 55
+      uniqname: ripd_quackle
+      version: 1
+      approved_at: "2008-09-07T19:04:03Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://quackle
+        created_at: "2008-09-08T00:04:03Z"
+        revhost: 
+        updated_at: "2008-09-08T00:04:03Z"
+        role: main
+        text: http://quackle
+        id: 61
+        version: 1
+        path: 
+        linkable_id: 55
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:04:03Z"
+        updated_at: "2008-09-08T00:04:03Z"
+        dataset_id: 55
+        role: infochimped
+        id: 49
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:04:04Z"
+        file_path: ripd/quackle
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:04:04Z"
+        dataset_id: 55
+        signature: 
+        file_name: ripd/quackle
+        id: 53
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:42Z"
+
+
+

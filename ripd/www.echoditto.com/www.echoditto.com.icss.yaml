@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: www.echoditto.com"
+      category: 
+      created_at: "2008-09-08T00:04:21Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:04:21Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:21Z"
+        role: rights_note
+        id: 129
+        version: 1
+        noteable_id: 72
+      - name: Description
+        created_at: "2008-09-08T00:04:21Z"
+        body: Rip of http://www.echoditto.com
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:21Z"
+        role: description
+        id: 130
+        version: 1
+        noteable_id: 72
+      updated_at: "2008-09-08T00:04:21Z"
+      valuation: 
+        bonus: 10
+      url: http://www.echoditto.com
+      created_by: flip.infochimps.org
+      id: 72
+      uniqname: ripd_www-echoditto-com
+      version: 1
+      approved_at: "2008-09-07T19:04:21Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://www.echoditto.com
+        created_at: "2008-09-08T00:04:21Z"
+        revhost: 
+        updated_at: "2008-09-08T00:04:21Z"
+        role: main
+        text: http://www.echoditto.com
+        id: 78
+        version: 1
+        path: 
+        linkable_id: 72
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:04:21Z"
+        updated_at: "2008-09-08T00:04:21Z"
+        dataset_id: 72
+        role: infochimped
+        id: 66
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:04:21Z"
+        file_path: ripd/www.echoditto.com
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:04:21Z"
+        dataset_id: 72
+        signature: 
+        file_name: ripd/www.echoditto.com
+        id: 70
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:54Z"
+
+
+

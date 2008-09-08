@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: golf.sports.yahoo.com"
+      category: 
+      created_at: "2008-09-08T00:03:40Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:40Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:40Z"
+        role: rights_note
+        id: 51
+        version: 1
+        noteable_id: 33
+      - name: Description
+        created_at: "2008-09-08T00:03:40Z"
+        body: Rip of http://golf.sports.yahoo.com
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:40Z"
+        role: description
+        id: 52
+        version: 1
+        noteable_id: 33
+      updated_at: "2008-09-08T00:03:40Z"
+      valuation: 
+        bonus: 10
+      url: http://golf.sports.yahoo.com
+      created_by: flip.infochimps.org
+      id: 33
+      uniqname: ripd_golf-sports-yahoo-com
+      version: 1
+      approved_at: "2008-09-07T19:03:40Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://golf.sports.yahoo.com
+        created_at: "2008-09-08T00:03:40Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:40Z"
+        role: main
+        text: http://golf.sports.yahoo.com
+        id: 39
+        version: 1
+        path: 
+        linkable_id: 33
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:40Z"
+        updated_at: "2008-09-08T00:03:40Z"
+        dataset_id: 33
+        role: infochimped
+        id: 27
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:40Z"
+        file_path: ripd/golf.sports.yahoo.com
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:40Z"
+        dataset_id: 33
+        signature: 
+        file_name: ripd/golf.sports.yahoo.com
+        id: 31
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:28Z"
+
+
+

@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: stuff.metafilter.com"
+      category: 
+      created_at: "2008-09-08T00:04:05Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:04:05Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:05Z"
+        role: rights_note
+        id: 99
+        version: 1
+        noteable_id: 57
+      - name: Description
+        created_at: "2008-09-08T00:04:05Z"
+        body: Rip of http://stuff.metafilter.com
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:04:05Z"
+        role: description
+        id: 100
+        version: 1
+        noteable_id: 57
+      updated_at: "2008-09-08T00:04:05Z"
+      valuation: 
+        bonus: 10
+      url: http://stuff.metafilter.com
+      created_by: flip.infochimps.org
+      id: 57
+      uniqname: ripd_stuff-metafilter-com
+      version: 1
+      approved_at: "2008-09-07T19:04:05Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://stuff.metafilter.com
+        created_at: "2008-09-08T00:04:06Z"
+        revhost: 
+        updated_at: "2008-09-08T00:04:06Z"
+        role: main
+        text: http://stuff.metafilter.com
+        id: 63
+        version: 1
+        path: 
+        linkable_id: 57
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:04:05Z"
+        updated_at: "2008-09-08T00:04:05Z"
+        dataset_id: 57
+        role: infochimped
+        id: 51
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:04:06Z"
+        file_path: ripd/stuff.metafilter.com
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:04:06Z"
+        dataset_id: 57
+        signature: 
+        file_name: ripd/stuff.metafilter.com
+        id: 55
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:43Z"
+
+
+

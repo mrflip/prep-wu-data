@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: had.co.nz"
+      category: 
+      created_at: "2008-09-08T00:03:41Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:41Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:41Z"
+        role: rights_note
+        id: 53
+        version: 1
+        noteable_id: 34
+      - name: Description
+        created_at: "2008-09-08T00:03:41Z"
+        body: Rip of http://had.co.nz
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:41Z"
+        role: description
+        id: 54
+        version: 1
+        noteable_id: 34
+      updated_at: "2008-09-08T00:03:41Z"
+      valuation: 
+        bonus: 10
+      url: http://had.co.nz
+      created_by: flip.infochimps.org
+      id: 34
+      uniqname: ripd_had-co-nz
+      version: 1
+      approved_at: "2008-09-07T19:03:41Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://had.co.nz
+        created_at: "2008-09-08T00:03:41Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:41Z"
+        role: main
+        text: http://had.co.nz
+        id: 40
+        version: 1
+        path: 
+        linkable_id: 34
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:41Z"
+        updated_at: "2008-09-08T00:03:41Z"
+        dataset_id: 34
+        role: infochimped
+        id: 28
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:41Z"
+        file_path: ripd/had.co.nz
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:41Z"
+        dataset_id: 34
+        signature: 
+        file_name: ripd/had.co.nz
+        id: 32
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:29Z"
+
+
+

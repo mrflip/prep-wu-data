@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: ovrt.nist.gov"
+      category: 
+      created_at: "2008-09-08T00:03:59Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:59Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:59Z"
+        role: rights_note
+        id: 87
+        version: 1
+        noteable_id: 51
+      - name: Description
+        created_at: "2008-09-08T00:03:59Z"
+        body: Rip of http://ovrt.nist.gov
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:59Z"
+        role: description
+        id: 88
+        version: 1
+        noteable_id: 51
+      updated_at: "2008-09-08T00:03:59Z"
+      valuation: 
+        bonus: 10
+      url: http://ovrt.nist.gov
+      created_by: flip.infochimps.org
+      id: 51
+      uniqname: ripd_ovrt-nist-gov
+      version: 1
+      approved_at: "2008-09-07T19:03:59Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://ovrt.nist.gov
+        created_at: "2008-09-08T00:03:59Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:59Z"
+        role: main
+        text: http://ovrt.nist.gov
+        id: 57
+        version: 1
+        path: 
+        linkable_id: 51
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:59Z"
+        updated_at: "2008-09-08T00:03:59Z"
+        dataset_id: 51
+        role: infochimped
+        id: 45
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:59Z"
+        file_path: ripd/ovrt.nist.gov
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:59Z"
+        dataset_id: 51
+        signature: 
+        file_name: ripd/ovrt.nist.gov
+        id: 49
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:39Z"
+
+
+

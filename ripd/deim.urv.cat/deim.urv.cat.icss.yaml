@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: deim.urv.cat"
+      category: 
+      created_at: "2008-09-08T00:03:23Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:24Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:24Z"
+        role: rights_note
+        id: 19
+        version: 1
+        noteable_id: 17
+      - name: Description
+        created_at: "2008-09-08T00:03:24Z"
+        body: Rip of http://deim.urv.cat
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:24Z"
+        role: description
+        id: 20
+        version: 1
+        noteable_id: 17
+      updated_at: "2008-09-08T00:03:23Z"
+      valuation: 
+        bonus: 10
+      url: http://deim.urv.cat
+      created_by: flip.infochimps.org
+      id: 17
+      uniqname: ripd_deim-urv-cat
+      version: 1
+      approved_at: "2008-09-07T19:03:23Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://deim.urv.cat
+        created_at: "2008-09-08T00:03:24Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:24Z"
+        role: main
+        text: http://deim.urv.cat
+        id: 23
+        version: 1
+        path: 
+        linkable_id: 17
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:23Z"
+        updated_at: "2008-09-08T00:03:23Z"
+        dataset_id: 17
+        role: infochimped
+        id: 11
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:24Z"
+        file_path: ripd/deim.urv.cat
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:24Z"
+        dataset_id: 17
+        signature: 
+        file_name: ripd/deim.urv.cat
+        id: 15
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:18Z"
+
+
+

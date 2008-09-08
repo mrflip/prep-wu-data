@@ -1,0 +1,87 @@
+
+--- 
+metadatasets: 
+  contributors: []
+
+  datasets: 
+  - dataset: 
+      approved_by: flip.infochimps.org
+      name: "Ripped Site: doc"
+      category: 
+      created_at: "2008-09-08T00:03:25Z"
+      notes: 
+      - name: Check with site owner
+        created_at: "2008-09-08T00:03:25Z"
+        body: As always, please be respectful of this site's resources, and of any restrictions placed on the data found there
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:25Z"
+        role: rights_note
+        id: 23
+        version: 1
+        noteable_id: 19
+      - name: Description
+        created_at: "2008-09-08T00:03:25Z"
+        body: Rip of http://doc
+        noteable_type: Dataset
+        updated_at: "2008-09-08T00:03:25Z"
+        role: description
+        id: 24
+        version: 1
+        noteable_id: 19
+      updated_at: "2008-09-08T00:03:25Z"
+      valuation: 
+        bonus: 10
+      url: http://doc
+      created_by: flip.infochimps.org
+      id: 19
+      uniqname: ripd_doc
+      version: 1
+      approved_at: "2008-09-07T19:03:25Z"
+      rights_id: 
+      updated_by: 
+      links: 
+      - full_url: http://doc
+        created_at: "2008-09-08T00:03:25Z"
+        revhost: 
+        updated_at: "2008-09-08T00:03:25Z"
+        role: main
+        text: http://doc
+        id: 25
+        version: 1
+        path: 
+        linkable_id: 19
+        linkable_type: Dataset
+      credits: 
+      - citation: 
+        contributor_id: 
+        created_at: "2008-09-08T00:03:25Z"
+        updated_at: "2008-09-08T00:03:25Z"
+        dataset_id: 19
+        role: infochimped
+        id: 13
+        desc: 
+      num_downloads: 0
+      payloads: 
+      - uploaded_by: 
+        created_at: "2008-09-08T00:03:25Z"
+        file_path: ripd/doc
+        format: 
+        size: 
+        stats: 
+        shape: 
+        updated_at: "2008-09-08T00:03:25Z"
+        dataset_id: 19
+        signature: 
+        file_name: ripd/doc
+        id: 17
+        signed_by: 
+        file_date: 
+        fingerprint: 
+      collection_id: 
+      is_collection: false
+icss: 
+  icss_version: 1.0
+  generated_at: "2008-09-08T00:19:19Z"
+
+
+
