@@ -5,24 +5,24 @@ datasets:
   tag_list:             'dns internet whois network name resolve ripe'
   category:             ''
   notes_by_role:
-      description:                      
+      description:			
           name:         'RIPE Internic Name Registry (WHOIS Database)'
           body:         'This file contains the full whois for domains covered by RIPE (Europe, mostly).'
       rights:
           name:         'RIPE Copyright statement'
           body:         >
-                Copyright (c) by RIPE NCC
-                
-                Restricted rights.
-                
-                Except for agreed Internet operational purposes, no part of this
-                publication may be reproduced, stored in a retrieval system, or
-                transmitted, in any form or by any means, electronic, mechanical,
-                recording, or otherwise, without prior permission of the RIPE NCC
-                on behalf of the copyright holders. Any use of this material to
-                target advertising or similar activities are explicitly forbidden
-                and may be prosecuted. The RIPE NCC requests to be notified of
-                any such activities or suspicions thereof.
+		Copyright (c) by RIPE NCC
+		
+		Restricted rights.
+		
+		Except for agreed Internet operational purposes, no part of this
+		publication may be reproduced, stored in a retrieval system, or
+		transmitted, in any form or by any means, electronic, mechanical,
+		recording, or otherwise, without prior permission of the RIPE NCC
+		on behalf of the copyright holders. Any use of this material to
+		target advertising or similar activities are explicitly forbidden
+		and may be prosecuted. The RIPE NCC requests to be notified of
+		any such activities or suspicions thereof.
 
 
   rights_uniqname:      'believed_closed'              # CC-BY-NC | PD-Govt | believed_open | believed_closed | none_stated
