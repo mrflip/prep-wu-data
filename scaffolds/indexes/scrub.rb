@@ -1,8 +1,7 @@
-#! /usr/bin/env ruby
 # -*- coding: utf-8 -*-
 require 'rubygems'
 require 'active_support'
-$KCODE = 'UTF8'
+require 'uuidtools'
 
 module Scrub
   class Generic
@@ -69,7 +68,7 @@ module Scrub
   end
 
   module BeginsWithAlpha
-    attr_accessor :slug
+    mattr_accessor :slug
     self.slug = 'x'
     # prepend #{slug}#{replacer} to the string if it starts with non-alpha.
     # so, for instance '23jumpstreet' => 'x_23jumpstreet'
@@ -126,23 +125,6 @@ module Scrub
     include Scrub::Lowercased
   end
 
-  #
-  # start with a letter, and contain only A-Za-z0-9_
-  #
-  class SimplifiedURL < Scrub::Generic
-    self.complaint  = "should follow our zany simplified URL rules: com.domain.dot-reversed:schemeifnothttp/path/seg_men-ts/stuff.ext-SHA1ifweird"
-
-    SAFE_CHARS      = %r{a-zA-Z0-9\-\._!\(\)\*\'}
-    PATH_CHARS      = %r{\$&\+,:=@\/;}
-    RESERVED_CHARS  = %r{\$&\+,:=@\/;\?\%}
-    UNSAFE_CHARS    = %r{\\ \"\#<>\[\]\^\`\|\~\{\}}
-    self.validator  = %r{#{SAFE_CHARS+RESERVED_CHARS}}u
-    self.replacer   = ''
-    include Scrub::Lowercased
-
-
-  end
-
   # UNIQNAME_RE  = %r{\A[a-z][]*\z}i # ascii, not :alpha: etc.
   # UNIQNAME_MSG = "should start with a letter, and contain only characters like a-z0-9_-."
   #
@@ -163,47 +145,3 @@ module Scrub
   RE_EMAIL_RFC2822   = /\A#{RE_EMAIL_N_RFC2822}@#{RE_DOMAIN_HEAD}#{RE_DOMAIN_TLD}\z/i
 
 end
-
-
-test_strings = [
-  nil, '', '12', '123', 'simple', 'UPPER', 'CamelCased', 'iden_tifier_23_',
-  'twentyfouralphacharslong', 'twentyfiveatozonlyletters', 'hello.-_there@funnychar.com',
-  "tab\t", "newline\n",
-  "Iñtërnâtiônàlizætiøn",
-  'semicolon;', 'quote"', 'tick\'', 'backtick`', 'percent%', 'plus+', 'space ',
-  'leftanglebracket<', 'ampersand&',
-  "control char-bel\x07"]
-
-
-scrubbers = {
-  :unicode_title   => Scrub::UnicodeTitle.new,
-  :title           => Scrub::Title.new,
-  :identifier      => Scrub::Identifier.new,
-  :free_text       => Scrub::FreeText.new,
-  :uniqname        => Scrub::Uniqname.new,
-  :simplified_url  => Scrub::URLPathSeg.new,
-  # :domain        => Scrub::Domain.new,
-  # :email         => Scrub::Email.new,
-}
-
-scrubbers.each do |scrubber_name, scrubber|
-  puts scrubber_name
-  results = test_strings.map do |test_string|
-    [!!scrubber.valid?(test_string), scrubber.sanitize(test_string).inspect, test_string.inspect ]
-  end
-  results.sort_by{|val,san,orig| val ? 1 : -1 }.each do |val,san,orig|
-    puts "  %-5s %-30s %-30s" % [val,san,orig]
-  end
-end
-
-
-
-# 'foo@bar.com', 'foo@newskool-tld.museum', 'foo@twoletter-tld.de', 'foo@nonexistant-tld.qq',
-#         'r@a.wk', '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com',
-#         'hello.-_there@funnychar.com', 'uucp%addr@gmail.com', 'hello+routing-str@gmail.com',
-#         'domain@can.haz.many.sub.doma.in',],
-#       :invalid => [nil, '', '!!@nobadchars.com', 'foo@no-rep-dots..com', 'foo@badtld.xxx', 'foo@toolongtld.abcdefg',
-#         'Iñtërnâtiônàlizætiøn@hasnt.happened.to.email', 'need.domain.and.tld@de', "tab\t", "newline\n",
-#         'r@.wk', '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail2.com',
-#         # these are technically allowed but not seen in practice:
-#         'uucp!addr@gmail.com', 'semicolon;@gmail.com', 'quote"@gmail.com', 'tick\'@gmail.com', 'backtick`@gmail.com', 'space @gmail.com', 'bracket<@gmail.com', 'bracket>@gmail.com'
