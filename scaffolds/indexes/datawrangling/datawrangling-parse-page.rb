@@ -8,7 +8,9 @@ require 'imw/extract/hpricot'
 require 'imw/extract/html_parser'
 require 'json'
 require 'yaml'
-require  File.dirname(__FILE__)+'/ics-models.rb'
+$: << File.dirname(__FILE__)+'/..'
+require 'ics-models.rb'
+
 as_dset __FILE__
 
 dw_contrib = Contributor.create({
@@ -32,16 +34,17 @@ els = HTMLParser.new({
       }
     })
 
-parsed = els.parse_html_file('rawd/scrapes/www.datawrangling.com/some-datasets-available-on-the-web')
+parsed = els.parse_html_file('rawd/www.datawrangling.com/some-datasets-available-on-the-web')
 parsed = parsed.to_a[0][1] #discard first level
 # puts parsed.to_yaml
 
 parsed.each do |linky|
-  dataset = Dataset.find_or_create(:url        => linky[:link_url])
+  dataset = Dataset.find_by_url(linky[:link_url]) || Dataset.new(:url => linky[:link_url])
+  dataset.name = linky[:desc]
   dataset.description = linky[:desc]
-  dataset.tag_with(:dw, linky[:tags])
   dataset.add_internal_note(:datawrangling_page, linky)
   dataset.register_info(:harvested, :datawrangling)
   dataset.credit(dw_contrib, :role => 'indexed', :desc => 'This link harvested from the index on Pete Skomoroch\'s blog, http://www.datawrangling.com/some-datasets-available-on-the-web')
   dataset.save
+  dataset.tag_with(:dw, linky[:tags])
 end

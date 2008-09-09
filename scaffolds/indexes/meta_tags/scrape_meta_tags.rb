@@ -8,40 +8,44 @@ require 'imw/extract/hpricot'
 require 'imw/extract/html_parser'
 require 'json'
 require 'yaml'
-require  File.dirname(__FILE__)+'/ics-models.rb'
+$: << File.dirname(__FILE__)+'/..'
+require 'ics-models.rb'
 as_dset __FILE__
+# --exclude-domains=www.strikeiron.com,www.ers.usda.gov,paida.sourceforge.net
 
-dw_contrib = Contributor.create({
-    :name => 'Pete Skomoroch',
-    :url  => 'http://datawrangling.com',
-    :desc => '(From http://datawrangling.com/about):
-
-Director of Advanced Analytics at Juice and live in the Washington, DC area. I’m also a consultant for various machine learning, finance, and information retrieval related projects which come my way.
-
-Before relocating to DC in 2006, I was a member of the Biodefense Systems group at MIT Lincoln Laboratory where my work spanned several areas including machine learning algorithms, monte carlo simulations, wireless sensor networks, and web based decision support systems. Prior to joining the lab, I worked for several years at a Cambridge startup called Profitlogic (acquired by Oracle), where I constructed predictive models and software for retail revenue optimization. I was also a database consultant at Fidelity Investments focusing on Oracle and Java. Graduated from Brandeis University with a double major in mathematics and physics, and have done some non-degree graduate coursework in machine learning and neural networks at MIT. I have research experience in physics, biology, and computer science.',
-    :base_trustification => 20,
+#
+# Extract information from header and prominent page tags
+#
+els = HTMLParser.new({
+    '//head' => {
+      'title'                                      => :page_title,
+      { 'meta[@name="keywords"]'     => :content } => :keywords ,
+      { 'meta[@name="description"]'  => :content } => :description,
+      { 'link[@rel="Shortcut Icon"]' => :href    } => :favicon_url,
+    },
+    '//body//h1' => [:h1],
+    '//body//h2' => [:h2],
+    '//body//caption' => [:table_captions]
   })
 
-els = HTMLParser.new({
-      '//div.entrybody/ul/li' => {
-        { 'a' => :href          } => :link_url ,
-        { 'a' => :tags          } => :tags,
-        'a'                       => :desc,
-        { 'a' => :last_visit    } => :last_visit,
-        { 'a' => :add_date      } => :add_date,
-      }
-    })
 
-parsed = els.parse_html_file('rawd/scrapes/www.datawrangling.com/some-datasets-available-on-the-web')
-parsed = parsed.to_a[0][1] #discard first level
-# puts parsed.to_yaml
+robo_contrib = Contributor.find_by_uniqname('autobot-ape')
+Dataset.all.each do |dataset|
+  # Cache a copy of each page
+  linky = dataset.links.first
+  linky.wget :root => [:rawd, 'scrapes'], :noisy => false
+  # Parse, pivot
+  parsed = els.parse_html_file('rawd/scrapes/'+linky.ripd_file)
+  next unless parsed; if !parsed['//head'].blank? then parsed.merge!( parsed.delete('//head')[0]||{} ) end
+  puts parsed.to_yaml
 
-parsed.each do |linky|
-  dataset = Dataset.find_or_create(:url        => linky[:link_url])
-  dataset.description = linky[:desc]
-  dataset.tag_with(:dw, linky[:tags])
-  dataset.add_internal_note(:datawrangling_page, linky)
-  dataset.register_info(:harvested, :datawrangling)
-  dataset.credit(dw_contrib, :role => 'indexed', :desc => 'This link harvested from the index on Pete Skomoroch\'s blog, http://www.datawrangling.com/some-datasets-available-on-the-web')
+  # Stuff into dataset
+  dataset.notes << dataset.notes.find_or_create({ :role => 'scraped_title'      }, :desc => parsed[:page_title]  ) if !parsed[:page_title].blank?
+  dataset.notes << dataset.notes.find_or_create({ :role => 'scraped_description'}, :desc => parsed[:description] ) if !parsed[:description].blank?
+  dataset.links << dataset.links.find_or_create({ :role => '_favicon_url'       }, :full_url => parsed[:favicon_url], :name => 'favicon' ) if !parsed[:favicon_url].blank?
+  dataset.tag_with :scraped_meta_keywords, parsed[:keywords]
+  page_headers = parsed.values_at(:h1, :h2, :table_captions).flatten.compact.join("\n")
+  dataset.notes << dataset.notes.find_or_create({ :role => 'scraped_header_tags_from_page'}, :name => '<h1>, <h2> and <caption> tags', :desc => page_headers )
+  dataset.credit(robo_contrib, :role => 'harvested', :desc => 'Some data harvested by our robochimp.')
   dataset.save
 end
