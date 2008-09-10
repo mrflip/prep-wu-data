@@ -43,7 +43,8 @@ notes:
   coverage: ''
   rights: ''
   see_also: "- /datasets/tag/constant\n"
-  story_usage: This is just one giant number.
+  role:          usage
+  desc:          This is just one giant number.
 ratings:
   - initial:
       accurate:

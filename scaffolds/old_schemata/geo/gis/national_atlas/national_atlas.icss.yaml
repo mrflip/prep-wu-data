@@ -23,7 +23,8 @@ notes:
     Nearly all information collected by the Federal Government is in the public domain and use of raw data produced under this project is not restricted in any way. Both "National Atlas of the United States" and "The National Atlas of the United States of America" are registered trademarks of the United States Department of the Interior. ...
     Although the content of most National Atlas Web pages is in the public domain, some pages may contain material that is copyrighted by others and used by the National Atlas with permission. You may need to obtain permission from the copyright owner for other uses. Furthermore, some non-National Atlas data, products, and information linked, or referred to, from this site may be protected under U.S. and foreign copyright laws. You may need to obtain permission from the copyright owner to acquire, use, reproduce, or distribute these materials.
   see_also: "- ~\n"
-  story_usage: ''
+  role:          usage
+  desc:          ''
 ratings:
   - initial:
       accurate:

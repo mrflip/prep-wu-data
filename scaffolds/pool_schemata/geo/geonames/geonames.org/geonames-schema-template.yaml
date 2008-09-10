@@ -1,0 +1,88 @@
+--- # !infochimps.org/^icss
+
+datasets:
+  - name:                       'GeoNames Data Dump'
+    tag_list:                   ''
+    url:                        'http://www.geonames.org/'
+    license_info:
+        license_handle:         'CC-BY'              # CC-BY-NC | PD-Govt | believed_open | none_stated
+        desc:                   'This work is licensed under a Creative Commons Attribution 3.0 License.'
+    notes_by_role:
+        description:
+            body:
+                The GeoNames geographical database is available for download free of charge under a creative commons attribution license. It contains over eight million geographical names and consists of 6.5 million unique features whereof 2.2 million populated places and 1.8 million alternate names. All features are categorized into one out of nine feature classes and further subcategorized into one out of 645 feature codes. (more statistics ...).
+                The data is accessible free of charge through a number of webservices and a daily database export. GeoNames is already serving up to over 11 million web service requests per day. 
+        rights:
+            name:               ''
+            body:               ''
+    valuation:
+        bonus:                  0
+
+    #
+    # These are hashes; the 'role' should be something unique within each hash
+    # and whenever applicable share a common prefix.  (That is: if there are
+    # several usage notes, call them usage_intro:, usage_section_1, ...)
+    #
+    role_credits:
+        main:
+            contributor:        'org.geonames'
+            citation:           ''
+    links_by_role:
+        # usage:
+        #     full_url:         'http://www.geonames.org/'
+        #     text: >-
+        #         text
+        main:
+            full_url:           'http://www.geonames.org/'
+            text: >-
+                GeoNames geographical datadabase
+        about:
+            full_url:           'http://www.geonames.org/about.html'
+            text: >-
+                About GeoNames 
+  
+    payloads_by_name:
+        # "":
+        #    file_path:      "/meta/infochimps_datasets/"
+        #    format:         "yaml"
+  
+    #
+    # These are convenience methods that will auto-generate the given
+    # associations.  Invent your own if you're repeating effort across a
+    # ton of these
+    #
+    make_contributor_from_name_and_url:   true
+    make_main_credit_from_name_and_url:   true
+    make_main_source_link_from_url:       true  
+    create_approve_and_rate_as_one:       dhruv # your name here
+  
+    # This does what create_approve_and_rate_as_one does
+    # created_by:           dhruv_infochimps_org  
+    # approved_by:          dhruv.infochimps.org
+    # approved_at:          2008-08-08T08:08:08
+    # user_ratings:
+    #     dhruv:
+    #         [ 1, 1, 1, 1 ]
+    field_names:
+      - stock_symbol
+      - stock_name
+      - date_iso
+      - stock_price_open
+      - stock_price_close
+      - stock_price_lo
+      - stock_price_hi
+      - stock_price_adj_open
+      - stock_price_adj_close
+      - stock_price_adj_lo
+      - stock_price_adj_hi
+      - stock_volume
+
+contributors:
+  - name:                 ''
+    url:                  ''
+    desc:                 ''
+    base_trustification:  0
+
+icss:
+    version:              0.5
+    moreinfo:             http://infochimps.org/info/icss

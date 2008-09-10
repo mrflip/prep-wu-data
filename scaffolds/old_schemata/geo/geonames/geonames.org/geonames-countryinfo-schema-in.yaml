@@ -7,19 +7,21 @@ schema_in_:
                         - name:  ""
                           url:   "http://"
                           role:  creator
-                          story: |
+                          desc: |
                               
                         - name:  ""
                           url:   "http://"
                           role:  creator
-                          story: |
+                          desc: |
     fields:
                         - ["", ""]
-    story:              >
+    desc:              >
                         
-    story_usage:        >
+    role:               usage
+    desc:               >
                         
-    story_quality:      >
+    role:               quality
+    desc:               >
                         X This data is ...
     rights:             >
                         

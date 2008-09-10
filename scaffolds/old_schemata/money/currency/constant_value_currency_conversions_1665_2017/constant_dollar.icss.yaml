@@ -28,7 +28,8 @@ notes:
   coverage: ''
   rights: ''
   see_also: "- ~\n"
-  story_usage: |2
+  role:          usage
+  desc:          |2
        
        To convert dollars of any year 1665 to estimated 2017 to dollars of the base year (CPI [1982-84], 2005, or other years, DIVIDE
        that year's dollar amount by the conversion factor (CF) for that base year, rounded to no more than four decimal places (more cautious:

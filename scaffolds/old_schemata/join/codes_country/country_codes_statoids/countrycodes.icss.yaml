@@ -70,7 +70,8 @@ notes:
   see_also: |
     - currencycodes
     - languagecodes
-  story_usage: There are further notes and references at http://www.statoids.com/wab.html
+  role:          usage
+  desc:          There are further notes and references at http://www.statoids.com/wab.html
 ratings:
   - initial:
       accurate:

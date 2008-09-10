@@ -10,7 +10,8 @@ notes:
   coverage: '[ { time: 0-0 } ]'
   rights: ''
   see_also: "- ~\n"
-  story_usage: 2 This is a reasonable start but probably not complete.  It is also
+  role: usage
+  desc:          2 This is a reasonable start but probably not complete.  It is also
 ratings:
   - initial:
       accurate:

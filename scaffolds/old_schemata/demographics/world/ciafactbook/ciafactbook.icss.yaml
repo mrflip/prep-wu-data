@@ -1053,7 +1053,8 @@ notes:
   see_also: |
     - countrycodes
     - currencycodes
-  story_usage: 'Refer to the [https://www.cia.gov/library/publications/the-world-factbook/docs/notesanddefs.html CIA Factbook Notes and Definitions] for usage information, definitions, sources and more.'
+  role:          usage
+  desc:          'Refer to the [https://www.cia.gov/library/publications/the-world-factbook/docs/notesanddefs.html CIA Factbook Notes and Definitions] for usage information, definitions, sources and more.'
 ratings:
   - initial:
       accurate:

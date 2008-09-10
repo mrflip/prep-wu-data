@@ -100,7 +100,8 @@ name: Datasets distributed by Infochimp.org
 notes:
   coverage: ''
   rights: ''
-  story_usage: ''
+  role:          usage
+  desc:          ''
 ratings:
   - initial:
       accurate:

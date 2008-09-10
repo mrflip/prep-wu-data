@@ -17,7 +17,8 @@ notes:
     Usage notes contained here carry the copyright of the primary source.
     The dataset represents a comprehensive indexing of factual information, and is given here in a unique and novel presentation.
   see_also: "- ~\n"
-  story_usage: ''
+  role:          usage
+  desc:          ''
 ratings:
   - initial:
       accurate:

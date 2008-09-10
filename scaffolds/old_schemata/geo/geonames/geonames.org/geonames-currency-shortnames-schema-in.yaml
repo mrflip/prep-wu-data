@@ -28,23 +28,23 @@ head:
                         - name:  'Geonames user samokk'
                           url:   'http://forum.geonames.org/gforum/posts/list/437.page'
                           role:  'creator'
-                          story: ''
+                          desc: ''
                         - name:  'Wikipedia'
                           url:   'http://en.wikipedia.org/wiki/List_of_circulating_currencies'
                           role:  'creator'
-                          story: ''
+                          desc: ''
                         - name:  'Geonames'
                           url:   'http://www.geonames.org/'
                           role:  'distributor'
-                          story: ''
+                          desc: ''
                         - name:  'Philip (flip) Kromer'
                           url:   'http://infochimp.org/user/flip'
                           role:  'prepared'
-                          story: 'Converted for [http://infochimp.org|infochimp] project'
+                          desc: 'Converted for [http://infochimp.org|infochimp] project'
     fields:             
                         - { n: "currency_code_iso4217", t: "string.3", u: "money.currency.code.iso4217", d: "ISO 4217 (3-letter) currency code"}
                         - { n: "currency_shortname",    t: "string",   u: "money.currency.name",         d: "Short name / symbol"}
-    story:              >
+    desc:              >
                         Here is the list of circulating currencies' symbols, that, I think, would be suitable for the language dump.
                         
                         I have copied them from http://en.wikipedia.org/wiki/List_of_circulating_currencies
@@ -55,11 +55,13 @@ head:
                         Regards,
                         
                         Sami Dalouche
-    story_usage:        >
+    role:                 usage
+    desc:                 >
                         File is utf-8 encoded.
                         
                         Note that there may be several short names for a single currency: The ISO code is unique, but the shortname is not.
-    story_quality:      "3 This data is widely used but not authoritative"
+    role:               quality
+    desc:               "3 This data is widely used but not authoritative"
     rights:             "Public domain"
     see_also:
                         - ""

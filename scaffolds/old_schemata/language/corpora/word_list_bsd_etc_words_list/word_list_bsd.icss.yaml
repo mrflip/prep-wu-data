@@ -18,7 +18,8 @@ notes:
     - words_twl
     - words_osw
     - corpora_nltk
-  story_usage: ''
+  role:          usage
+  desc:          ''
 ratings:
   - initial:
       accurate:

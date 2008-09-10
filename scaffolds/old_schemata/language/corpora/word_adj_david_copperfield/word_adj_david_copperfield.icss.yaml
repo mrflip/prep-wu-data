@@ -37,7 +37,8 @@ notes:
   coverage: ''
   rights: ''
   see_also: "- ~\n"
-  story_usage: ''
+  role:          usage
+  desc:          ''
 ratings:
   - initial:
       accurate:

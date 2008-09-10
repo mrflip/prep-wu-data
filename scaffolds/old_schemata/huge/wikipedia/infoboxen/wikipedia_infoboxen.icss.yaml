@@ -32,7 +32,8 @@ notes:
     
     You may be able to partially fulfill the latter two obligations by providing a conspicuous direct link back to the Wikipedia article hosted on this website. You also need to provide access to a transparent copy of the new text. However, please note that the Wikimedia Foundation makes no guarantee to retain authorship information and a transparent copy of articles. Therefore, you are encouraged to provide this authorship information and a transparent copy with your derived works."
   see_also: "- ~\n"
-  story_usage: ''
+  role:          usage
+  desc:          ''
 ratings:
   - initial:
       accurate:

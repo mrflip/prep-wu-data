@@ -1,0 +1,53 @@
+
+
+# * The schema 
+# <blockquote><pre>
+#   - { name: unit_from,                  type: str},
+#   - { name: unit_to,                    type: str},
+#   - { name: conversion_mantissa,        type: float},
+#   - { name: conversion_exponent,        type: float},
+#   - { name: is_exact,                   type: boolean},
+#   - { name: footnotes,
+#       type: seq,
+#       sequence: str }
+# </pre></blockquote>
+# 
+# And the cartoon
+# <blockquote><pre>
+#   { :each    => '//table.texttable/tr[@valign="top"]:not(:first-child)',
+#     :makes   => :unit_conversion, # a UnitConversion struct
+#     :mapping => [
+#       '/td'      	  => { :unit_from, :unit_to, :conversion_mantissa, :conversion_exponent],
+#       '/td/b'    	  => :is_exact,
+#       '/td/a'    	  => :footnotes,
+#     ]
+#   }
+# </pre></blockquote>
+# 
+# Would give something like
+# <blockquote><pre>
+#   - unit_from: 		 'dyne centimeter (dyn · cm)'
+#     unit_to:		 ' newton meter (N · m)'
+#     conversion_mantissa:  1.0
+#     conversion_exponent: -0.7
+#     
+#   - unit_from: 		 'centimeter of mercury (0 °C) <a href="http://physics.nist.gov/Pubs/SP811/footnotes.html#f13">13</a>'
+#     unit_to:		 ' pascal (Pa)'
+#     conversion_mantissa: 1.33322
+#     conversion_exponent: 3
+# </pre></blockquote>
+# 
+# units_url = 'http://physics.nist.gov/Pubs/SP811/appenB8.html'
+# units_table = HTMLParser.new({
+#     :database  => :staging_db,
+#     :schema    => ICSSchema.load(:infochimps, :dataset, 'nist_guide_to_si_units_conversion_factors_by_quantity'),
+#     :url       => [:ripd, ['http://physics.nist.gov/Pubs/SP811/appenB9.html]],
+#     :cartoon   => [
+#         { :each    => '//table.texttable',
+#           :makes   => :units_group, # a UnitsGroup struct
+#           :mapping => [
+#             '/tr:first-child/th'
+#             'td'      => [ :unit_from, :unit_to, :conversion_mantissa, :conversion_exponent],
+#             'td/nobr' => [ :abbr_from, :abbr_to, ],
+
+            

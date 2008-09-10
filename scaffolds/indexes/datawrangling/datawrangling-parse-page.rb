@@ -28,7 +28,7 @@ els = HTMLParser.new({
       '//div.entrybody/ul/li' => {
         { 'a' => :href          } => :link_url ,
         { 'a' => :tags          } => :tags,
-        'a'                       => :desc,
+          'a'                     => :desc,
         { 'a' => :last_visit    } => :last_visit,
         { 'a' => :add_date      } => :add_date,
       }

@@ -36,7 +36,8 @@ notes:
     - longtermhistoricalstocks
     - stocks_hist_div_split
     - constant_dollars
-  story_usage: ''
+  role:          usage
+  desc:          ''
 ratings:
   - initial:
       accurate:

@@ -33,7 +33,8 @@ notes:
   coverage: '[ { time: 2000 to 2000 } ]'
   rights: ''
   see_also: "- ~\n"
-  story_usage: |-
+  role:          usage
+  desc:          |-
     The nodes have values that indicate to which conferences they belong.  The values are as follows:
       0 = Atlantic Coast
       1 = Big East

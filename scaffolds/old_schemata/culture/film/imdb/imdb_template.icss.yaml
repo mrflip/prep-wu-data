@@ -9,19 +9,19 @@ infochimps_schema:
     ratings:
         accurate:
             rating: 3
-            story:  These files have not been checked for conversion errors.
+            desc:  These files have not been checked for conversion errors.
             by:     initial
         authoritative:
             rating: 5
-            story:  ''
+            desc:  ''
             by:     initial
         comprehensive:
             rating: 5
-            story:  ''
+            desc:  ''
             by:     initial
         interesting:
             rating: 5
-            story:  ''
+            desc:  ''
             by:     initial
             
     contributors:
@@ -154,7 +154,7 @@ infochimps_schema:
         OS/2, Windows 95/NT (text based interface only).
 
         See the "description section":#desc above for more information on the IMDb 
-        including how to access it; how to install the software; the history and 
+        including how to access it; how to install the software; the hidesc and 
         organization of the data; and other common questions.
 
         Contact the IMDb coordinator, Col Needham <col@imdb.com> if you have any 
@@ -258,13 +258,13 @@ infochimps_schema:
         World Wide Web, an e-mail interface or for local installation on Unix, Amiga 
         OS/2, Windows 95/NT (text only), Amiga and MS-DOS machines.
 
-        In its seven year history the IMDb has grown from a small informal project to 
+        In its seven year hidesc the IMDb has grown from a small informal project to 
         a major Internet resource. The WWW interface to the database is one of the most 
         popular and well-known sites of any class on the web. It is frequently cited 
         as a model for how to create and organise a major web site and has received 
         numerous awards and honours over the years.
 
-      history:
+      hidesc:
         So where did it all start? Well, it all began back in 1989 when someone
         started a discussion in the USENET newsgroup rec.arts.movies about who were the
         most attractive looking actresses around. In response to this thread, a college
@@ -499,9 +499,9 @@ infochimps_schema:
         -----------
         (song)        =  The writer is the author (composer?) of a song on
                          which the screenplay was based.
-        (story)       =  The writer contributed on the story for the
+        (desc)       =  The writer contributed on the desc for the
                          screenplay only or the writer is the author of a
-                         story on which the movie was based.
+                         desc on which the movie was based.
         (play)        =  The writer is the author of the play on which the
                          screenplay was based.
         (novel)       =  The writer is the author of the novel on which the
@@ -517,7 +517,7 @@ infochimps_schema:
                          screenplay was based.
         (also XXX)    =  The writer was involved in some other aspect than just
                          writing the screenplay.  They may have authored the novel
-                         the screenplay was based on, or developed the story, etc.
+                         the screenplay was based on, or developed the desc, etc.
 
         Composers Key
         -------------

@@ -94,7 +94,8 @@ notes:
     - longtermhistoricalstocks
     - stocks_hist_div_split
     - constant_dollars
-  story_usage: |-
+  role:          usage
+  desc:          |-
     # Greatest eclipse is defined as the instant when the axis of the Moon's shadow passes closest to Earth's center. For total eclipses, the instant of greatest eclipse is virtually identical to the instants of greatest magnitude and greatest duration. However, for annular eclipses, the instant of greatest duration may occur at either the time of greatest eclipse or near the sunrise and sunset points of the eclipse path.
     # Hybrid eclipses are also known as annular/total eclipses. They occur when the vertex of the Moon's umbral shadow pierces Earth's surface along the central path of an annular eclipse. The eclipse's character then changes to total along the section of the path where the umbral vertex extends beneath Earth's surface. The central paths of hybrid eclipses usually (but not always) begin and end as annular eclipses, but become total along some middle portion of the path.
 ratings:

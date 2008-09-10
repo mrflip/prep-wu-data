@@ -334,19 +334,19 @@ infochimp_head:
   contributors:
   - name: Geonames user samokk
     role: creator
-    story: ''
+    desc: ''
     url: http://forum.geonames.org/gforum/posts/list/437.page
   - name: Wikipedia
     role: creator
-    story: ''
+    desc: ''
     url: http://en.wikipedia.org/wiki/List_of_circulating_currencies
   - name: Geonames
     role: distributor
-    story: ''
+    desc: ''
     url: http://www.geonames.org/
   - name: Philip (flip) Kromer
     role: prepared
-    story: Converted for [http://infochimp.org|infochimp] project
+    desc: Converted for [http://infochimp.org|infochimp] project
     url: http://infochimp.org/user/flip
   coverage: {}
   fields:
@@ -363,7 +363,7 @@ infochimp_head:
   rights: Public domain
   see_also:
   - ''
-  story: 'Here is the list of circulating currencies'' symbols, that, I think, would
+  desc: 'Here is the list of circulating currencies'' symbols, that, I think, would
     be suitable for the language dump.
 
     I have copied them from http://en.wikipedia.org/wiki/List_of_circulating_currencies
@@ -376,8 +376,10 @@ infochimp_head:
     Sami Dalouche
 
     '
-  story_quality: 3 This data is widely used but not authoritative
-  story_usage: 'File is utf-8 encoded.
+  role:          quality
+  desc:          3 This data is widely used but not authoritative
+  role:          usage
+  desc:          'File is utf-8 encoded.
 
     Note that there may be several short names for a single currency: The ISO code
     is unique, but the shortname is not.

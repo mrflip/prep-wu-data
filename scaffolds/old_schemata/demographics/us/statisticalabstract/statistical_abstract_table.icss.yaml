@@ -41,19 +41,19 @@ infochimps_schema:
     ratings:
         accurate:
             rating: 3
-            story:  These files have not been checked for conversion errors.
+            desc:  These files have not been checked for conversion errors.
             by:     initial
         authoritative:
             rating: 5
-            story:  ''
+            desc:  ''
             by:     initial
         comprehensive:
             rating: 5
-            story:  ''
+            desc:  ''
             by:     initial
         interesting:
             rating: 5
-            story:  ''
+            desc:  ''
             by:     initial
     contributors:
       - uniqid: gov.census/statab
