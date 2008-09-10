@@ -21,7 +21,7 @@ metadatasets:
       notes: 
       - name: Free Open Datasets - Find Everything about Something
         created_at: "2008-09-07T23:53:27Z"
-        body: ""
+        desc: ""
         noteable_type: Dataset
         updated_at: "2008-09-07T23:53:27Z"
         role: description
@@ -67,7 +67,7 @@ metadatasets:
         revhost: 
         updated_at: "2008-09-07T23:53:27Z"
         role: usage
-        text: About the format of the metadata dump
+        desc: About the format of the metadata dump
         id: 15
         version: 1
         path: 
@@ -78,7 +78,7 @@ metadatasets:
         revhost: 
         updated_at: "2008-09-07T23:53:27Z"
         role: main
-        text: Infochimps
+        desc: Infochimps
         id: 16
         version: 1
         path: 

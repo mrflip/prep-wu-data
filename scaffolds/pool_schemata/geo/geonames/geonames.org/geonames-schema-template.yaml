@@ -2,19 +2,160 @@
 
 datasets:
   - name:                       'GeoNames Data Dump'
-    tag_list:                   ''
+    tag_list:                   'geo geonames places zip postal code fips time zone tz feature geolocation address mapping map gis'
     url:                        'http://www.geonames.org/'
     license_info:
         license_handle:         'CC-BY'              # CC-BY-NC | PD-Govt | believed_open | none_stated
-        desc:                   'This work is licensed under a Creative Commons Attribution 3.0 License.'
+        desc: >-
+            __From "http://www.geonames.org/export/#dump":http://www.geonames.org/export/#dump __
+            * free : GeoNames data is free. Datasets of lesser quality and coverage from other 'vendors' may cost more than 25.000$ per year.
+            * cc-by licence (creative commons attributions license). You should give credit to GeoNames when using data or web services with a link or another reference to GeoNames.
+            * commercial usage is allowed
+            * 'as is' : The data is provided "as is" without warranty or any representation of accuracy, timeliness or completeness.
+            * 50'000 credits limit per day and IP address. A credit is a web service request hit for most services. An exception is thrown when the limit is exceeded.
+            * Service Level Agreement is available for our commercial web services.
+
+            The Data is provided "as is" without warranty or any representation of accuracy, timeliness or completeness.
+
+    facts:
+        - encoding:     utf8
+            
     notes_by_role:
         description:
-            body:
+            desc:
                 The GeoNames geographical database is available for download free of charge under a creative commons attribution license. It contains over eight million geographical names and consists of 6.5 million unique features whereof 2.2 million populated places and 1.8 million alternate names. All features are categorized into one out of nine feature classes and further subcategorized into one out of 645 feature codes. (more statistics ...).
                 The data is accessible free of charge through a number of webservices and a daily database export. GeoNames is already serving up to over 11 million web service requests per day. 
-        rights:
-            name:               ''
-            body:               ''
+        sources:
+            name:               'Sources and Contributions'
+            desc:               >-
+                * Sources : GeoNames is aggregating over hundred different "data sources.":http://www.geonames.org/data-sources.html
+                * Ambassadors : "GeoNames Ambassadors":http://www.geonames.org/team.html#ambassadors help in many countries.
+                * Wiki : A "wiki":http://www.geonames.org/manual.html allows to view the data and quickly fix error and add missing places.
+                * Donations and Sponsoring : Costs for running GeoNames are covered by "donations and sponsoring.":http://www.geonames.org/donations.html
+        api:
+            name:       'Web service (data API) description'
+            desc: >-
+                GeoNames if offering a wide range of sophisticated web services.
+
+                * web service overview
+                * web service documentation
+                * web service client libraries
+        format:
+            name:   'Data format'
+            desc: >-
+                The data format is tab-delimited text in utf8 encoding.
+
+        usage:
+            name: Format of the database dump
+            desc: >-
+                (From http://download.geonames.org/export/dump/readme.txt)
+                
+                Readme for Geonames.org :
+                =========================
+
+                This work is licensed under a Creative Commons Attribution 3.0 License,
+                see http://creativecommons.org/licenses/by/3.0/
+                The Data is provided "as is" without warranty or any representation of accuracy, timeliness or completeness.
+
+                Contact GeoNames (license@geonames.org) if you want to license the data without the 'attributions by' restriction.
+
+                The data format is tab-delimited text in utf8 encoding.
+
+
+                Files :
+                -------
+                XX.zip                   : features for country with iso code XX
+                allCountries.zip         : all countries combined in one file.
+                cities1000.zip           : all cities with a population > 1000 (ca 80.000)
+                cities5000.zip           : all cities with a population > 5000 (ca 40.000)
+                cities15000.zip          : all cities with a population > 15000 (ca 20.000)
+                alternateNames.zip       : two files, alternate names with language codes and geonameId, file with iso language codes
+                admin1Codes.txt          : names for administrative subdivision 'admin1 code' (UTF8), the code '00' stands for 'unkown code', includes obsolete codes
+                admin1CodesASCII.txt     : ascii names of admin divisions. (beta > http://forum.geonames.org/gforum/posts/list/208.page#1143)
+                admin2Codes.txt          : names for administrative subdivision 'admin2 code' (UTF8), Format : concatenated codes <tab>name <tab> asciiname <tab> geonameId
+                iso-languagecodes.txt    : iso 639 language codes, as used for alternate names in file alternateNames.zip
+                featureCodes.txt         : name and description for feature classes and feature codes 
+                timeZones.txt            : timezoneId, gmt offset on 1st of January, dst offset to gmt on 1st of July (of the current year)
+                countryInfo.txt          : country information : iso codes, fips codes, languages, capital ,...
+                                           see the geonames webservices for additional country information,
+                                                bounding box                         : http://ws.geonames.org/countryInfo?
+                                                country names in different languages : http://ws.geonames.org/countryInfoCSV?lang=it
+                modifications-<date>.txt : all records modified on the previous day, the date is in yyyy-MM-dd format. You can use this file to daily synchronize your own geonames database.
+                deletes-<date>.txt       : all records deleted on the previous day, format : geonameId <tab> name <tab> comment.
+
+                alternateNamesModifications-<date>.txt : all alternate names modified on the previous day,
+                alternateNamesDeletes-<date>.txt       : all alternate names deleted on the previous day, format : alternateNameId <tab> geonameId <tab> name <tab> comment.
+                userTags.zip		: user tags , format : geonameId <tab> tag.
+
+
+                The main 'geoname' table has the following fields :
+                ---------------------------------------------------
+                geonameid         : integer id of record in geonames database
+                name              : name of geographical point (utf8) varchar(200)
+                asciiname         : name of geographical point in plain ascii characters, varchar(200)
+                alternatenames    : alternatenames, comma separated varchar(4000) (varchar(5000) for SQL Server)
+                latitude          : latitude in decimal degrees (wgs84)
+                longitude         : longitude in decimal degrees (wgs84)
+                feature class     : see http://www.geonames.org/export/codes.html, char(1)
+                feature code      : see http://www.geonames.org/export/codes.html, varchar(10)
+                country code      : ISO-3166 2-letter country code, 2 characters
+                cc2               : alternate country codes, comma separated, ISO-3166 2-letter country code, 60 characters
+                admin1 code       : fipscode (subject to change to iso code), isocode for the us and ch, see file admin1Codes.txt for display names of this code; varchar(20)
+                admin2 code       : code for the second administrative division, a county in the US, see file admin2Codes.txt; varchar(80) 
+                admin3 code       : code for third level administrative division, varchar(20)
+                admin4 code       : code for fourth level administrative division, varchar(20)
+                population        : integer 
+                elevation         : in meters, integer
+                gtopo30           : average elevation of 30'x30' (ca 900mx900m) area in meters, integer
+                timezone          : the timezone id (see file timeZone.txt)
+                modification date : date of last modification in yyyy-MM-dd format
+
+
+
+                The table 'alternate names' :
+                -----------------------------
+                alternateNameId   : the id of this alternate name, int
+                geonameid         : geonameId referring to id in table 'geoname', int
+                isolanguage       : iso 639 language code 2- or 3-characters; 4-characters 'post' for postal codes and 'iata' or 'icao' for airport codes, fr-1793 for French Revolution names, varchar(7)
+                alternate name    : alternate name or name variant, varchar(200)
+                isPreferredName   : '1', if this alternate name is an official/preferred name
+                isShortName       : '1', if this is a short name like 'California' for 'State of California'
+
+
+                Remark : the field 'alternatenames' in the table 'geoname' is a short version of the 'alternatenames' table. You probably don't need both. 
+                If you don't need to know the language of a name variant, the field 'alternatenames' will be sufficient. If you need to know the language
+                of a name variant, then you will need to load the table 'alternatenames' and you can drop the column in the geoname table.
+
+
+
+                Statistics on the number of features per country and the feature class and code distributions : http://www.geonames.org/statistics/ 
+
+
+                Continent codes :
+                AF : Africa			geonameId=6255146
+                AS : Asia			geonameId=6255147
+                EU : Europe			geonameId=6255148
+                NA : North America		geonameId=6255149
+                OC : Oceania			geonameId=6255151
+                SA : South America		geonameId=6255150
+                AN : Antarctica			geonameId=6255152
+
+
+                If you find errors or miss important places, please do use the wiki-style edit interface on our website 
+                http://www.geonames.org to correct inaccuacies and to add new records. 
+                Thanks in the name of the geonames community for your valuable contribution.
+
+
+                More Information is also available in the geonames faq :
+
+                * http://forum.geonames.org/gforum/forums/show/6.page
+                
+                The forum : http://forum.geonames.org
+            
+                or the google group : http://groups.google.com/group/geonames
+
+
+                
     valuation:
         bonus:                  0
 
@@ -24,9 +165,9 @@ datasets:
     # several usage notes, call them usage_intro:, usage_section_1, ...)
     #
     role_credits:
-        main:
-            contributor:        'org.geonames'
-            citation:           ''
+        # main:
+        #     contributor:        'geonames.org'
+        #     citation:           ''
     links_by_role:
         # usage:
         #     full_url:         'http://www.geonames.org/'
@@ -40,7 +181,11 @@ datasets:
             full_url:           'http://www.geonames.org/about.html'
             text: >-
                 About GeoNames 
-  
+        download:
+            full_url:           'http://download.geonames.org/export/dump/'
+            text: >-
+                Full dumps of the GeoNames database
+
     payloads_by_name:
         # "":
         #    file_path:      "/meta/infochimps_datasets/"
@@ -54,7 +199,7 @@ datasets:
     make_contributor_from_name_and_url:   true
     make_main_credit_from_name_and_url:   true
     make_main_source_link_from_url:       true  
-    create_approve_and_rate_as_one:       dhruv # your name here
+    create_approve_and_rate_as_one:       flip # your name here
   
     # This does what create_approve_and_rate_as_one does
     # created_by:           dhruv_infochimps_org  
@@ -63,25 +208,51 @@ datasets:
     # user_ratings:
     #     dhruv:
     #         [ 1, 1, 1, 1 ]
-    field_names:
-      - stock_symbol
-      - stock_name
-      - date_iso
-      - stock_price_open
-      - stock_price_close
-      - stock_price_lo
-      - stock_price_hi
-      - stock_price_adj_open
-      - stock_price_adj_close
-      - stock_price_adj_lo
-      - stock_price_adj_hi
-      - stock_volume
 
-contributors:
-  - name:                 ''
-    url:                  ''
-    desc:                 ''
-    base_trustification:  0
+    tables:
+      - name:       geoname
+        desc:       |
+            The main 'geoname' table has the following fields :
+            ---------------------------------------------------
+            geonameid         : integer id of record in geonames database
+            name              : name of geographical point (utf8) varchar(200)
+            asciiname         : name of geographical point in plain ascii characters, varchar(200)
+            alternatenames    : alternatenames, comma separated varchar(4000) (varchar(5000) for SQL Server)
+            latitude          : latitude in decimal degrees (wgs84)
+            longitude         : longitude in decimal degrees (wgs84)
+            feature class     : see http://www.geonames.org/export/codes.html, char(1)
+            feature code      : see http://www.geonames.org/export/codes.html, varchar(10)
+            country code      : ISO-3166 2-letter country code, 2 characters
+            cc2               : alternate country codes, comma separated, ISO-3166 2-letter country code, 60 characters
+            admin1 code       : fipscode (subject to change to iso code), isocode for the us and ch, see file admin1Codes.txt for display names of this code; varchar(20)
+            admin2 code       : code for the second administrative division, a county in the US, see file admin2Codes.txt; varchar(80) 
+            admin3 code       : code for third level administrative division, varchar(20)
+            admin4 code       : code for fourth level administrative division, varchar(20)
+            population        : integer 
+            elevation         : in meters, integer
+            gtopo30           : average elevation of 30'x30' (ca 900mx900m) area in meters, integer
+            timezone          : the timezone id (see file timeZone.txt)
+            modification date : date of last modification in yyyy-MM-dd format
+      - name:       alternate_names
+        desc: |
+            
+            Remark : the field 'alternatenames' in the table 'geoname' is a short version of the 'alternatenames' table. You probably don't need both. 
+            If you don't need to know the language of a name variant, the field 'alternatenames' will be sufficient. If you need to know the language
+            of a name variant, then you will need to load the table 'alternatenames' and you can drop the column in the geoname table.
+
+
+            alternateNameId   : the id of this alternate name, int
+            geonameid         : geonameId referring to id in table 'geoname', int
+            isolanguage       : iso 639 language code 2- or 3-characters; 4-characters 'post' for postal codes and 'iata' or 'icao' for airport codes, fr-1793 for French Revolution names, varchar(7)
+            alternate name    : alternate name or name variant, varchar(200)
+            isPreferredName   : '1', if this alternate name is an official/preferred name
+            isShortName       : '1', if this is a short name like 'California' for 'State of California'
+
+# contributors:
+#   - name:                 ''
+#     url:                  ''
+#     desc:                 ''
+#     base_trustification:  0
 
 icss:
     version:              0.5

@@ -1,53 +1,157 @@
-infochimps_schema:
-    name:               ''
-    handle:            ''
-    collection:         ''
-    tags:               >-
-    
-    fields: []
-    
-    ratings:
-        accurate:
-            rating: 3
-            desc:  These files have not been checked for conversion errors.
-            by:     initial
-        authoritative:
-            rating: 5
-            desc:  ''
-            by:     initial
-        comprehensive:
-            rating: 5
-            desc:  ''
-            by:     initial
-        interesting:
-            rating: 5
-            desc:  ''
-            by:     initial
-            
-    contributors:
-      - name:         'IMDB.com'
-        handle:      'com.imdb'
-        url:          'http://imdb.com'
-        role:         'gathered'
-        cite:         ''        
-        desc:         |
-                    
-      - name:         'ftp.funet.fi'
-        handle:      'fi.funet.ftp'
-        url:          'http://ftp.funet.fi/pub/mirrors/ftp.imdb.com/'
+--- # !infochimps.org/^icss
+
+datasets:
+  - name:               Internet Movie Database (IMDB) Data Dump
+    tag_list:           movies film culture actor actress director
+    url:                http://ftp.funet.fi/pub/mirrors/ftp.imdb.com/
+    is_collection:      true
+    license_info:
+        license_handle:         'distribution_free-usage_restricted'              # CC-BY-NC | PD-Govt | believed_open | none_stated
+        desc: >-
+                The objective of the database is to provide useful and up to date movie 
+                information *freely* available on-line, across as many systems and platforms 
+                as possible. The information is NOT public domain, however, permission is 
+                granted to distribute it freely in an electronic form only, providing certain
+                conditions are met. A copy of the license attached to each database file is
+                included below for reference.
+
+                License
+                -------
+
+                    This is a  database  of  movie  related  information  compiled  by
+                    Internet  Movie  Database  Ltd (IMDb). While every effort has been
+                    made to  ensure  the  accuracy  of  the  database  IMDb  gives  no
+                    warranty  as  to  the accuracy of the information contained in the
+                    database.  IMDb  reserves  the  right  to   withdraw   or   delete
+                    information at any time. 
+
+                    This service is provided for the information of users only. It  is
+                    not   provided  with  the  intention  that  users  rely  upon  the
+                    information for any purposes. Accordingly,  IMDb  shall  under  no
+                    circumstances  be liable for any loss or damage, including but not
+                    limited to loss of profits, goodwill or indirect or  consequential
+                    loss   arising   out   of  any  use  of  or  inaccuracies  in  the
+                    information. All warranties express or  implied  are  excluded  to
+                    the fullest extent permissible by law. 
+
+                    All information in this file  is  Copyright  1998  Internet  Movie
+                    Database  Limited.  Reproduction,  distribution or transmission by
+                    any means without the prior permission of IMDb is prohibited.  All
+                    rights reserved. 
+
+                    For further information contact <licensing@imdb.com>
+
+                         -------------------------------------------------------
+
+                    All data and software released by Internet Movie Database  Ltd  is
+                    freely  available  to  anyone  within certain limitations. You are
+                    encouraged to quote subsets of the database  in  USENET  articles,
+                    movie  related  FAQs,  magazine  articles etc. We do ask, however,
+                    that you make reference to the source of the data  and  provide  a
+                    pointer to the database for the benefit of the reader. 
+
+                    Permission is granted  by  the  copyright  holder  to  allow  free
+                    distribution  of  this  file  and  any  other part of the Internet
+                    Movie  Database  in  an  ELECTRONIC  FORM  ONLY,   providing   the
+                    following conditions are met: 
+
+                         1. NO FEE OF ANY KIND, however indirect, will be  charged
+                            for  its  distribution.  If  this file is being stored
+                            for  later  distribution  to  anyone   that   can   be
+                            construed   as   a   customer   of  yourself  or  your
+                            organisation YOU MUST contact Internet Movie  Database
+                            Ltd for permission. 
+
+                         2. Each  of  the  database  files  may   be   distributed
+                            individually  but  only  in an unaltered form. All the
+                            header and trailer information, including this  notice
+                            and  the  details  on how to access the database, must
+                            remain intact. 
+
+                         3. Specifically the files may NOT be  used  to  construct
+                            any  kind  of  on-line database (except for individual
+                            personal use). Clearance for  ALL  such  on-line  data
+                            resources   must  be  requested  from  Internet  Movie
+                            Database Ltd 
+
+                         4. In addition, copies of  the  Internet  Movie  Database
+                            frequently  asked  questions  list and additions guide
+                            must be made available in the same area / by the  same
+                            method as the other database files. 
+
+                         5. CD-ROM  distribution  is  prohibited  without  written
+                            permission from the Internet Movie Database Ltd 
+
+                    Distribution by e-mail, BBS and  Internet  systems  is  positively
+                    encouraged within these limitations. 
+
+                    The files and software which make up the  movie  database  may  be
+                    uploaded  to  commercial  BBS  systems  providing  that  the above
+                    conditions are met and no *additional* fees are applied above  the
+                    standard connect time or downloading charges. 
+
+                    For further information contact <licensing@imdb.com>
+          
+    credits:
+      - url:          'http://imdb.com'
+        role:         'main'
+                
+      - url:          'http://ftp.funet.fi'
         role:         'distributed'
-        cite:         '' 
-        desc:         |
-                    
-      - handle:  org.infochimp/flip
-        name: Philip (flip) Kromer
-        url: http://infochimps.org/users/flip
-        role: converted
-        
+    tables:
+        - actors
+        - actresses
+        - aka-names
+        - aka-titles
+        - alternate-versions
+        - biographies
+        - business
+        - certificates
+        - cinematographers
+        - color-info
+        - complete-cast
+        - complete-crew
+        - composers
+        - costume-designers
+        - countries
+        - crazy-credits
+        - directors
+        - distributors
+        - editors
+        - filesizes
+        - genres
+        - german-aka-titles
+        - goofs
+        - iso-aka-titles
+        - italian-aka-titles
+        - keywords
+        - language
+        - laserdisc
+        - literature
+        - locations
+        - miscellaneous-companies
+        - miscellaneous
+        - movie-links
+        - movies
+        - mpaa-ratings-reasons
+        - plot
+        - producers
+        - production-companies
+        - production-designers
+        - quotes
+        - ratings
+        - release-dates
+        - running-times
+        - sound-mix
+        - soundtracks
+        - special-effects-companies
+        - taglines
+        - technical
+        - trivia
+        - writers
+              
     notes:
       desc: |-
-        a
-          
         For further details on how to search the IMDb please see:
 
         * http://www.imdb.com/faq-search
@@ -59,92 +163,6 @@ infochimps_schema:
       file_structure: |-
           
       rights: |-
-
-
-        The objective of the database is to provide useful and up to date movie 
-        information *freely* available on-line, across as many systems and platforms 
-        as possible. The information is NOT public domain, however, permission is 
-        granted to distribute it freely in an electronic form only, providing certain
-        conditions are met. A copy of the license attached to each database file is
-        included below for reference.
-
-        License
-        -------
-
-            This is a  database  of  movie  related  information  compiled  by
-            Internet  Movie  Database  Ltd (IMDb). While every effort has been
-            made to  ensure  the  accuracy  of  the  database  IMDb  gives  no
-            warranty  as  to  the accuracy of the information contained in the
-            database.  IMDb  reserves  the  right  to   withdraw   or   delete
-            information at any time. 
-
-            This service is provided for the information of users only. It  is
-            not   provided  with  the  intention  that  users  rely  upon  the
-            information for any purposes. Accordingly,  IMDb  shall  under  no
-            circumstances  be liable for any loss or damage, including but not
-            limited to loss of profits, goodwill or indirect or  consequential
-            loss   arising   out   of  any  use  of  or  inaccuracies  in  the
-            information. All warranties express or  implied  are  excluded  to
-            the fullest extent permissible by law. 
-
-            All information in this file  is  Copyright  1998  Internet  Movie
-            Database  Limited.  Reproduction,  distribution or transmission by
-            any means without the prior permission of IMDb is prohibited.  All
-            rights reserved. 
-
-            For further information contact <licensing@imdb.com>
-
-                 -------------------------------------------------------
-
-            All data and software released by Internet Movie Database  Ltd  is
-            freely  available  to  anyone  within certain limitations. You are
-            encouraged to quote subsets of the database  in  USENET  articles,
-            movie  related  FAQs,  magazine  articles etc. We do ask, however,
-            that you make reference to the source of the data  and  provide  a
-            pointer to the database for the benefit of the reader. 
-
-            Permission is granted  by  the  copyright  holder  to  allow  free
-            distribution  of  this  file  and  any  other part of the Internet
-            Movie  Database  in  an  ELECTRONIC  FORM  ONLY,   providing   the
-            following conditions are met: 
-
-                 1. NO FEE OF ANY KIND, however indirect, will be  charged
-                    for  its  distribution.  If  this file is being stored
-                    for  later  distribution  to  anyone   that   can   be
-                    construed   as   a   customer   of  yourself  or  your
-                    organisation YOU MUST contact Internet Movie  Database
-                    Ltd for permission. 
-
-                 2. Each  of  the  database  files  may   be   distributed
-                    individually  but  only  in an unaltered form. All the
-                    header and trailer information, including this  notice
-                    and  the  details  on how to access the database, must
-                    remain intact. 
-
-                 3. Specifically the files may NOT be  used  to  construct
-                    any  kind  of  on-line database (except for individual
-                    personal use). Clearance for  ALL  such  on-line  data
-                    resources   must  be  requested  from  Internet  Movie
-                    Database Ltd 
-
-                 4. In addition, copies of  the  Internet  Movie  Database
-                    frequently  asked  questions  list and additions guide
-                    must be made available in the same area / by the  same
-                    method as the other database files. 
-
-                 5. CD-ROM  distribution  is  prohibited  without  written
-                    permission from the Internet Movie Database Ltd 
-
-            Distribution by e-mail, BBS and  Internet  systems  is  positively
-            encouraged within these limitations. 
-
-            The files and software which make up the  movie  database  may  be
-            uploaded  to  commercial  BBS  systems  providing  that  the above
-            conditions are met and no *additional* fees are applied above  the
-            standard connect time or downloading charges. 
-
-            For further information contact <licensing@imdb.com>
-          
 
       read_me: >-
         This directory contains the latest release of The Internet Movie Database (IMDb)
@@ -624,5 +642,198 @@ infochimps_schema:
         The names and titles themselves are the keys into the data and must be
         unique, hence the need for Roman numerals. Other solutions are
         possible, but we feel that the current solution is the best for the 
-        time being and hope this view is also shared by our users.          
-          
+        time being and hope this view is also shared by our users.
+
+      included_tables:
+          name:         'Detailed description of the datasets'
+          desc: >-
+                3.1 Cast Lists
+                --------------
+
+                  List                 | Maintained by
+                  ---------------------|-------------------------------------------
+                  Actors               | Giancarlo Cairella <actors@imdb.com>
+                  Actresses            | Giancarlo Cairella <actresses@imdb.com>
+                  Cast Completion      | Col Needham <cn@imdb.com>
+                  ---------------------|-------------------------------------------
+
+
+                Each filmography entry consists of up to five pieces of information: the 
+                name, the title, an attributes field (to store, for example, academy award 
+                nominations), the character name and a number to specify their position in
+                the credits. 
+
+                Please note that guest appearances on TV-shows are not eligible for the cast
+                databases owing to the volume and accuracy of this type of information. Guest
+                appearances for well-known people can be stored separately in the biographies
+                section.
+
+                Note that the actors and actress lists only contain filmography information -
+                biographical data such as date and place of birth, real name etc. is stored
+                in the biographies list.
+
+                The cast completion list simply records which movies have full cast lists
+                in the database (i.e. everyone listed in the credits of the movie is in the 
+                actors/actresses lists).
+
+
+                3.2 Crew Lists
+                --------------
+
+                The following lists are of a similar format to the cast lists in that they
+                contain filmographies for people in the respective fields:
+
+                  List                 | Maintained by
+                  ---------------------|-------------------------------------------
+                  Cinematographers     | Michel Hafner <cinematographers@imdb.com>
+                  Composers            | Michel Hafner <composers@imdb.com>
+                  Costume Designers    | Peter Simeon <costumes@imdb.com>
+                  Directors            | Michel Hafner <directors@imdb.com>
+                  Editors              | Peter Simeon <editors@imdb.com>
+                  Misc. Filmography    | Peter Simeon <misc-crew@imdb.com>
+                  Producers            | Andre Bernhardt <producers@imdb.com>
+                  Production Designers | Peter Simeon <prod-designers@imdb.com>
+                  Writers              | Jon Reeves <writers@imdb.com>
+                  ---------------------|-------------------------------------------
+
+                The miscellaneous filmography list is a "catch all" for people in careers not
+                covered by the other filmography lists. Anyone who worked on a movie can be 
+                listed here. The idea is to spin-off new filmography lists from it if the 
+                volume of data relating to a particular type of contribution justifies a new 
+                separate list.
+
+
+                3.3 Titles Lists
+                ----------------
+
+                The following sections contain information relating to individual titles:
+
+                  List                 | Maintained by
+                  ---------------------|-------------------------------------------
+                  Alternative Titles   | Michel Hafner <aka-titles@imdb.com>
+                  Alternative Versions | Giancarlo Cairella <versions@imdb.com>
+                  Awards               | Oliver Heidelbach <awards@imdb.com>
+                  Business             | Giancarlo Cairella <business@imdb.com>
+                  Certificates         | Mark Harding <certificates@imdb.com>
+                  Color Information    | Mark Harding <color@imdb.com>
+                  Countries            | Mark Harding <countries@imdb.com>
+                  Crazy Credits        | Mark Harding <crazy-credits@imdb.com>
+                  Distributors         | Rob Hartill <prod-companies@imdb.com>
+                  Genres               | Colin Tinto <genres@imdb.com>
+                  Goofs                | Murray Chapman <goofs@imdb.com>
+                  Language             | Mark Harding <release-dates@imdb.com>
+                  Laser Discs          | Peter Simeon <laserdiscs@imdb.com>
+                  Literature           | Giancarlo Cairella <literature@imdb.com>
+                  Locations            | Rob Hartill <locations@imdb.com>
+                  Misc. Companies      | Mark Harding <release-dates@imdb.com>
+                  Movie Links          | Murray Chapman <movie-links@imdb.com>
+                  Movies               | Michel Hafner <original-titles@imdb.com>
+                  MPAA Ratings Reasons | Mark Harding <mah@imdb.com>
+                  Plot Summaries       | Colin Tinto <plots@imdb.com>
+                  Production Companies | Rob Hartill <prod-companies@imdb.com>
+                  Quotes               | Bob Glickstein <quotes@imdb.com>
+                  Ratings              | Col Needham <cn@imdb.com>
+                  Release Dates        | Jon Reeves <release-dates@imdb.com>
+                  Running Times        | Mark Harding <running-times@imdb.com>
+                  SFX Companies        | Rob Hartill <prod-companies@imdb.com>
+                  Sound Mix            | Mark Harding <sound-mix@imdb.com>
+                  Soundtracks          | Ron Higgins <soundtracks@imdb.com>
+                  Tag Lines            | Rob Hartill <tag-lines@imdb.com>
+                  Technical Info       | Peter Simeon <simeon@imdb.com>
+                  Trivia               | Murray Chapman <trivia@imdb.com>
+                  ---------------------|-------------------------------------------
+
+                The alternative titles list contains original foreign language, video titles, 
+                TV titles etc. for the primary titles in the database.
+
+                The alternative versions list describes differences between various releases
+                of the same movies (directors cuts, censorship issues etc)
+
+                The certificates list contains the certificates / ratings classifications
+                (MPAA, BBFC etc.)
+
+                The color information list records whether the movie was shot in color or
+                black & white.
+
+                The countries list records the country of origin.
+
+                The crazy credits list contains trivia and jokes appearing in movie credits.
+
+                The distributors list records the name or names of companies that
+                distributed movies, this covers both domestic, international, re-releases
+                and video releases.
+
+                The genres list records the genres which describe the movie.
+
+                The goofs list contains a list of unintentional mistakes in movies.
+
+                The laserdisc list contains details of LD releases.
+
+                The literature list records references to essays, critical analyses and books
+                relating to specific movies.
+
+                The locations list holds information on where movies were filmed (with the
+                exception of studio locations which are covered in the 'business' list).
+
+                The movie links list notes links between movies in the database, such as 
+                sequels, remakes and also trivial connections such as homages and spoofs.
+
+                The movies list contains the year of release along with any awards given to 
+                the movie as a whole.
+
+                The MPAA ratings reasons list contains extra information on why movies have
+                been awarded particular certificates by the MPAA (violence, sex, language etc).
+                The information is provided by the MPAA themselves.
+
+                The plot summaries list has brief outlines of the movies in the database.
+
+                The production companies list records the production company / studio which 
+                produced the movie.
+
+                The quotes list contains memorable quotes.
+
+                The ratings list is a massive on-going electronic poll wherein users of the
+                database rate movies on a ten point scale from 1 (bad) to 10 (good).
+
+                The release dates list records the release dates of movies on a country by 
+                country basis.
+
+                The running times list contains the length in minutes of movies in the
+                database.
+
+                The sound mix list records whether movies are recorded in mono, stereo etc.
+
+                The soundtracks list contains details of songs featured on the soundtracks.
+
+                The taglines list contains advertising tag lines used to publicise movies 
+                (e.g. for Alien "In space no-one can hear you scream")
+
+                The technical list records technical information such as aspect ratio, 
+                negative formats, print formats, cinematographic process etc.
+
+                The trivia list contains all kinds of trivia for movies from cameo appearances
+                to behind-the-scenes information.
+
+
+                3.4 Biographies List
+                --------------------
+
+                The biographies list contains personal trivia on people in the database 
+                including but not limited to: dates of birth, dates of death,
+                mini-biographies, agent's addresses, marital status and other works.
+
+
+                3.5 Alternative Names List
+                --------------------------
+
+                The alternative names list contains details of different names people have 
+                been billed under during their careers.
+
+                    
+contributors:
+  - name:         'IMDB.com'
+    url:          'http://imdb.com'
+                
+  - name:         'ftp.funet.fi'
+    url:          'http://ftp.funet.fi/'
+
