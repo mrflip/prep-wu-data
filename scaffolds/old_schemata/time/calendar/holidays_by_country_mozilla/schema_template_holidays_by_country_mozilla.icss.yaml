@@ -8,7 +8,7 @@
     # (Name it the same as the dataset if it's a collection of one)
     collection:     Holidays by country
 
-    coll_uniqid:    holidays_by_country
+    coll_handle:   holidays_by_country
 
     coll_tags:      'holidays holiday country calendar christmas "boxing day" chanukah ramadan'
 
@@ -23,7 +23,7 @@
     #
     contributors:
       - name:           ''
-        uniqid:         
+        handle:        
         url:            
         role:           
         cite:           ''
@@ -49,7 +49,7 @@
     fields:
       -
         name:              
-        uniqid:            
+        handle:           
         tags:              
         units:             
         datatype:
@@ -59,6 +59,6 @@
         tags:              
         units:             
         datatype:          
-        uniqid:         
+        handle:        
         desc:             |
             

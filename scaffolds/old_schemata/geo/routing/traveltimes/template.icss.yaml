@@ -1,5 +1,5 @@
 -- infochimps_schema_template:
-    coll_uniqid:    traveltimes  
+    coll_handle:   traveltimes  
     collection:     Traveltimes
     notes:
       desc:     |-
@@ -16,7 +16,7 @@
 
     contributors:
       - name:       # name
-        uniqid:     # uniqid
+        handle:    # uniqid
         url:        # url
         cite:       # cite
         desc: |-

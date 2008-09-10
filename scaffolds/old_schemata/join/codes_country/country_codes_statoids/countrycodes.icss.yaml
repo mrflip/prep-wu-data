@@ -1,12 +1,12 @@
 contributors:
   - desc: ~
-    uniqid: Statoids.com
+    handle:  Statoids.com
     url: http://www.statoids.com/wab.html
   - desc: ~
-    uniqid: ISO
+    handle:  ISO
     url: www.iso.org/iso/english_country_names_and_code_elements
   - desc: ~
-    uniqid: United Nations Statistics division
+    handle:  United Nations Statistics division
     url: http://unstats.un.org/unsd/methods/m49/m49alpha.htm
 desc: |-
   Excellent cross reference of many major coding systems for countries by [http://www.statoids.com/wab.html statoids.com].
@@ -16,53 +16,53 @@ fields:
       ISO-3166-1 Country code, alpha-2 two letter code
       http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm
     name: geo.country.code.iso3166_alpha2
-    uniqid: geo_country_code_iso3166_alpha2
+    handle:  geo_country_code_iso3166_alpha2
   - desc: |
       ISO-3166-1 Country code, alpha-3 three letter code
       http://unstats.un.org/unsd/methods/m49/m49alpha.htm
     name: geo.country.code.iso3166_alpha_3
-    uniqid: geo_country_code_iso3166_alpha_3
+    handle:  geo_country_code_iso3166_alpha_3
   - desc: |
       ISO-3166-1 Numerical code
       http://unstats.un.org/unsd/methods/m49/m49alpha.htm            
     name: geo.country.code.iso3166_numeric
-    uniqid: geo_country_code_iso3166_numeric
+    handle:  geo_country_code_iso3166_numeric
   - desc: |
       ITU country code
       http://www.itu.int/cgi-bin/htsh/mm/scripts/mm.list?_search=ITUstates&_languageid=1
     name: geo.code.country_ITU
-    uniqid: geo_code_country_itu
+    handle:  geo_code_country_itu
   - desc: |
       US FIPS location code
       http://earth-info.nga.mil/gns/html/digraphs.htm
     name: geo.code.country_FIPS
-    uniqid: geo_code_country_fips
+    handle:  geo_code_country_fips
   - desc: "International Olympics Committee designation\n"
     name: geo.code.country_IOC
-    uniqid: geo_code_country_ioc
+    handle:  geo_code_country_ioc
   - desc: |
       FIFA soccer designations
       http://en.wikipedia.org/wiki/List_of_FIFA_country_codes
     name: geo.code.country_FIFA
-    uniqid: geo_code_country_fifa
+    handle:  geo_code_country_fifa
   - desc: |
       Distinguishing Signs of Vehicles in International Traffic
       http://www.unece.org/trans/doc/2003/wp1/disting-signs-5-2003.pdf
     name: geo.code.country_DSC
-    uniqid: geo_code_country_dsc
+    handle:  geo_code_country_dsc
   - desc: |
       World Meteorological Organization
       http://icoads.noaa.gov/metadata/wmo47/wmo_quarterly/47CodeTables9903.html
     name: geo.code.country_WMO
-    uniqid: geo_code_country_wmo
+    handle:  geo_code_country_wmo
   - desc: |
       US Library of Congress MARC codes for bibilographic information
       http://www.loc.gov/marc/countries/cou_home.html
     name: geo.code.country_MARC
-    uniqid: geo_code_country_marc
+    handle:  geo_code_country_marc
   - desc: ~
     name: country_independence_status
-    uniqid: country_independence_status
+    handle:  country_independence_status
 name: Country Code Cross reference
 notes:
   coverage: '[ { spatial: global } ]'
@@ -87,5 +87,5 @@ ratings:
         desc: Incrediby useful when you need it (as a join table or to sanitize crufty data) but otherwise it's just a list of codes.
         rating: 2
 tags: 'ISO3166, ISO, two, three, letter, UN, country, code, nation, state, id, join, table, tld, top, level, domain, name, dns, geo, geographic, geocode'
-uniqid: countrycodes
+handle:  countrycodes
 uniqid2: country_code_cross_reference

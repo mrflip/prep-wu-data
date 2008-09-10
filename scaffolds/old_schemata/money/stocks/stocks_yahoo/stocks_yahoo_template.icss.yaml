@@ -1,12 +1,12 @@
 - infochimps_schema:
     collection:         US Stock Market
-    coll_uniqid:        stocks_yahoo
+    coll_handle:       stocks_yahoo
     coll_tags:          >-
         financial, stock, daily, high, hi, low, lo, close, open, market, NYSE,
         NASDAQ, Dow, s&p, standard, and, poors, 500, volume, split, adjusted
         money finance stock market price trade        
     name:               Daily 1970-Current Open, Close, Hi, Low and Volume
-    uniqid:             stocks_hist_daily_price
+    handle:            stocks_hist_daily_price
     tags:               >-
         financial, stock, daily, high, hi, low, lo, close, open, market, NYSE,
         NASDAQ, Dow, s&p, standard, and, poors, 500, volume, split, adjusted
@@ -32,10 +32,10 @@
       
         - url:        http://www.nasdaq.com/asp/symbols.asp?exchange=q
           name:       NASDAQ site
-          story:      Company Symbols to Names
+          desc:       Company Symbols to Names
           
-        - url:        http://infochimp.org/flip
-          name:       infochimp.org/flip
+        - url:        http://infochimps.org/users/flip
+          name:       infochimps.org/users/flip
           title:      Philip (flip) Kromer 
           role:       converted
           

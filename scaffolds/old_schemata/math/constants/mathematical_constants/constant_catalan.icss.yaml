@@ -1,14 +1,14 @@
 contributors:
   - desc: ~
     role: creator
-    uniqid: Patrick Demichel
+    handle:  Patrick Demichel
     url: ftp://ftp.sunet.se/pub/Science/constant/zipped/
   - desc: ~
     role: distributor
-    uniqid: ftp.sunet.se
+    handle:  ftp.sunet.se
     url: ftp://ftp.sunet.se/pub/Science/constant/zipped/
   - desc: An earlier version of this file
-    uniqid: Thomas Papanikolaou
+    handle:  Thomas Papanikolaou
     url: ~
 desc: |-
   3,779,957 decimals of "Catalan's Constant":http://en.wikipedia.org/wiki/Catalan%27s_constant
@@ -37,7 +37,7 @@ desc: |-
 fields:
   - desc: One gigantic number.  Must be used with Arbitratry precision math libraries.
     name: desc
-    uniqid: desc
+    handle:  desc
 name: 3.8 Million decimals of the Catalan Constant
 notes:
   coverage: ''
@@ -60,5 +60,5 @@ ratings:
         desc: Don't know why you'd need this but my inner datamonkey thinks it's awesome nonetheless
         rating: 1
 tags: 'math, number, constant, catalan, probability, huge, silly, computer, randomness'
-uniqid: constant_catalan
+handle:  constant_catalan
 uniqid2: 3_8_million_decimals_of_the_catalan_constant

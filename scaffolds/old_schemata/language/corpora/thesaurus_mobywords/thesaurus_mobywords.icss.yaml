@@ -1,15 +1,15 @@
-coll_uniqid: thesaurus_mobywords
+coll_handle:  thesaurus_mobywords
 collection: 'Thesaurus - Moby Words'
 contributors:
   - name: Grant Ward
-    uniqid: grady@gradyward.com
+    handle:  grady@gradyward.com
     url: http://www.gutenberg.org/browse/authors/w#a1132
   - name: Mike Pullen
     role: prepared
-    uniqid: globaltraveler5565@yahoo.com
+    handle:  globaltraveler5565@yahoo.com
   - name: Project Gutenberg
     role: distributed
-    story: |-2
+    desc:  |-2
          
          __What follows is the file information provided by Project
          Gutenberg.  It's included in whole even though much of the technical
@@ -440,7 +440,7 @@ fields:
   - datatype: seq
     name: synonym_group
     tags: language.word.english language.synonym
-    uniqid: synonym_group
+    handle:  synonym_group
     units: language.word.english
 name: 'Thesaurus - Moby Thesaurus (Grady Ward/Project Gutenberg)'
 notes:
@@ -669,15 +669,15 @@ ratings:
         rating: 3
       authoritative:
         rating: 3
-        story: Has been widely distributed as part of the Project Gutenberg eText project.
+        desc:  Has been widely distributed as part of the Project Gutenberg eText project.
       comprehensive:
         rating: 3
-        story: 'Makes no claims towards comprehensiveness, but has good coverage and is highly useful'
+        desc:  'Makes no claims towards comprehensiveness, but has good coverage and is highly useful'
       interesting:
         rating: 3
 tags: |-2
      
      language, words, corpus, corpora, thesaurus, meaning, word, list, synonym, network, group, synset, semantic
      
-uniqid: thesaurus_mobywords
+handle:  thesaurus_mobywords
 uniqid2: thesaurus_moby_thesaurus_grady_wardproject_gutenberg

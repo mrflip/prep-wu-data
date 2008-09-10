@@ -9,7 +9,7 @@ metadatasets:
       updated_at: "2008-09-07T23:49:51Z"
       url: flip.infochimps.org
       id: 4
-      uniqname: flip_infochimps_org
+      handle:  flip_infochimps_org
       version: 1
       desc: Building tools to organize, explore and comprehend massive information streams
   datasets: 
@@ -33,7 +33,7 @@ metadatasets:
         created_at: "2008-09-07T23:49:51Z"
         updated_at: "2008-09-07T23:49:51Z"
         id: 2
-        uniqname: infochimps_cc-by
+        handle:  infochimps_cc-by
         statement: |-
           Information contributed to infochimps.org is and will always be free and open.
           
@@ -56,7 +56,7 @@ metadatasets:
       url: http://infochimps.org
       created_by: flip_infochimps_org
       id: 10
-      uniqname: infochimps_org
+      handle:  infochimps_org
       version: 1
       approved_at: "2008-08-23T14:07:00Z"
       rights_id: 2

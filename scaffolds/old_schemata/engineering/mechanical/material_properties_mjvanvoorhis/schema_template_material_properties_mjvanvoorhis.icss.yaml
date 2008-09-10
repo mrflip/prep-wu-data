@@ -6,7 +6,7 @@
     
     collection: Mechanical Engineering Technical Data
 
-    coll_uniqid: mech_eng_tech_data
+    coll_handle:  mech_eng_tech_data
 
     coll_tags: |
         engineering "material data" strength "unit converter" steel aluminum brass bronze "physical properties"
@@ -25,7 +25,7 @@
     contributors:
       
       - name:       'M J VanVoorhis'
-        uniqid:     ourworld.cs.com/MJVanVoorhis
+        handle:    ourworld.cs.com/MJVanVoorhis
         url:        http://ourworld.cs.com/MJVanVoorhis/techdata/techdata.htm    
         role:           
         cite:           ''

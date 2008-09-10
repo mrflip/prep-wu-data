@@ -1,7 +1,7 @@
 ---
 - infochimps_schema:
         name:           Alphabetical frequency list of the whole corpus (lemmatized)
-        uniqid:         word_freq_bnc_all_lemma
+        handle:        word_freq_bnc_all_lemma
         tags:           |
             frequency word words "word count" "word counts" corpus corpora corpuses lemma alphabetized alphabetical
         notes:

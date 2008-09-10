@@ -6,13 +6,13 @@ infochimps_dataset:
     url:          http://www.antichildporn.org/reveal.html
     
     fields:
-      - uniqname:         word
+      - handle:          word
         type_tags:        word:english
         data_type:        str
         desc:             >
             stems, not words: see usage notes.
         
-      - uniqname:         category
+      - handle:          category
         type_tags:        word:english
         data_type:        str
         desc:             reason this word requires consideration
@@ -43,7 +43,7 @@ infochimps_dataset:
     credits:
       - url:              http://www.antichildporn.org/reveal.html
         name:             Anti-Child Pornography Organization
-        uniqname: antichildporn.org/reveal
+        handle:  antichildporn.org/reveal
         desc:             >
           The concept behind this software is to help bridging the technology gap
           between the knowledgeable child who is on the Internet, yet lacking the
@@ -84,7 +84,7 @@ infochimps_dataset:
   
       - url:      http://nymphs.org/RevealDirtyWordList.txt
         name:     BobCat
-        uniqname: nymphs.org/BobCat
+        handle:  nymphs.org/BobCat
         desc:     |
           This list taken from a posting of 2002.08.30 by 'BobCat' enumerating
           the list extracted from the reveal.exe program

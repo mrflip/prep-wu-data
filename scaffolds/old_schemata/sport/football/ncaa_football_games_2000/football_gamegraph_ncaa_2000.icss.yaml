@@ -1,33 +1,33 @@
 contributors:
   - cite: 'M. Girvan and M. E. J. Newman, Proc. Natl. Acad. Sci. USA 99, 7821-7826 (2002).'
-    story: ~
-    uniqid: M. Girvan and M. E. J. Newman
+    desc:  ~
+    handle:  M. Girvan and M. E. J. Newman
     url: http://www-personal.umich.edu/~mejn/netdata/adjnoun.zip
   - desc: "This page contains links to some network data sets I've compiled over the years. All of these are free for scientific use to the best of my knowledge, meaning that the original authors have already made the data freely available, or that I have consulted the authors and received permission to the post the data here, or that the data are mine. You are (as far as I know) free to make whatever use of these data you like, provided that you appropriately cite the original sources."
     role: distributor
-    uniqid: Mark Newman
+    handle:  Mark Newman
     url: http://www-personal.umich.edu/~mejn/netdata/index.html
-  - desc: 'Converted by Philip (flip) Kromer or the [http://infochimp.org|infochimp] project.'
+  - desc: 'Converted by Philip (flip) Kromer or the [http://infochimps.org|infochimp] project.'
     role: converted
-    uniqid: Philip (flip) Kromer
-    url: http://infochimp.org/user/flip
+    handle:  Philip (flip) Kromer
+    url: http://infochimps.org/user/flip
 desc: 'network of American football games between Division IA colleges during regular season Fall 2000, as compiled by M. Girvan and M. Newman. cite: M. Girvan and M. E. J. Newman, Community structure in social and biological networks, Proc. Natl. Acad. Sci. USA 99, 7821-7826 (2002).'
 fields:
   - desc: ~
     name: node_id
-    uniqid: node_id
+    handle:  node_id
   - desc: ~
     name: node_value_team
-    uniqid: node_value_team
+    handle:  node_value_team
   - desc: ~
     name: node_value_conference
-    uniqid: node_value_conference
+    handle:  node_value_conference
   - desc: ~
     name: edge_from
-    uniqid: edge_from
+    handle:  edge_from
   - desc: ~
     name: edge_to
-    uniqid: edge_to
+    handle:  edge_to
 name: Network of American football games between Division IA colleges during regular season Fall 2000.
 notes:
   coverage: '[ { time: 2000 to 2000 } ]'
@@ -62,5 +62,5 @@ ratings:
         desc: Limited scope
         rating: 1
 tags: 'network, graph, football, division, ia, ncaa, fall, 2000, "regular, season", us, america, culture, sport, "american football", college'
-uniqid: football_gamegraph_ncaa_2000
+handle:  football_gamegraph_ncaa_2000
 uniqid2: network_of_american_football_games_between_division_ia_colleges_during_regular_season_fall_2000

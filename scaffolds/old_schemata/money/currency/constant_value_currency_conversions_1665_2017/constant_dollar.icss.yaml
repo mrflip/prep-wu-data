@@ -11,13 +11,13 @@ contributors:
           Fax:          (541) 737-2289;
           e-mail:       Robert.Sahr@oregonstate.edu
           
-    uniqid: Robert Sahr
+    handle:  Robert Sahr
     url: http://oregonstate.edu/cla/polisci/faculty-research/sahr/sahr.htm
   - cite: 'John J. McCusker, "How Much Is That in Real Money?", Proceedings of the American Antiquarian Society (2001), Table A-1, Column 6'
     desc: |-
       Conversion factors for years prior to 1913 are re-based from data in John J. McCusker, "How Much Is That in Real Money?," (The McCusker data use 1860 as the base year, with 1860 = 1.00. To produce conversion factors for 1665-1912, the McCusker data are re-based, as indicated at the top of each CF column.)
       McCusker's offprint How Much Is That In Real Money?, revised 2001 (ISBN 1-929545-01-1) is available from the American Antiquarian Society for $15 plus shipping and handling  through their web site:  http://www.americanantiquarian.org/Offprints/order.htm.
-    uniqid: John J. McCusker
+    handle:  John J. McCusker
     url: http://www.americanantiquarian.org/Offprints/order.htm
 desc: |-
   Conversion factors to convert current dollars from years 1665 to estimated 2017 to dollars of CPI (1982-84), 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, estimated 2007, and two special CPI measures
@@ -165,5 +165,5 @@ ratings:
         desc: Useful in financial analysis or as a join table for time series data
         rating: 3
 tags: 'currency, constant, dollars, pound, historical, finance'
-uniqid: constant_dollar
+handle:  constant_dollar
 uniqid2: current_dollars_from_years_1665_to_estimated_2017_to_dollars_of_consumer_price_index_at_various_years

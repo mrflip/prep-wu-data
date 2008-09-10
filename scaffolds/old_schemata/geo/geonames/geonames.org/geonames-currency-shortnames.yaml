@@ -346,8 +346,8 @@ infochimp_head:
     url: http://www.geonames.org/
   - name: Philip (flip) Kromer
     role: prepared
-    desc: Converted for [http://infochimp.org|infochimp] project
-    url: http://infochimp.org/user/flip
+    desc: Converted for [http://infochimps.org|infochimp] project
+    url: http://infochimps.org/user/flip
   coverage: {}
   fields:
   - description: ISO 4217 (3-letter) currency code

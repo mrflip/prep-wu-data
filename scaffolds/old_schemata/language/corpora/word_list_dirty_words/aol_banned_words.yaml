@@ -18,11 +18,11 @@ infochimps_dataset:
   
   
     fields:
-      - uniqname:       word
+      - handle:        word
         type_tags:      word:english
         data_type:      str
         
-      - uniqname:       category
+      - handle:        category
         type_tags:      word:english
         data_type:      str
         desc:           severity of perceived indecency

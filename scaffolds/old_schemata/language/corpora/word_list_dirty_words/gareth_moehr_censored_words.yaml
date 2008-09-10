@@ -28,16 +28,16 @@ infochimps_dataset:
           
   
     fields:
-      - uniqname:         word
+      - handle:          word
         type_tags:        word:english
         data_type:        str
         
-      - uniqname:         note
+      - handle:          note
         type_tags:        word:english
         data_type:        str
         desc:             word is indecent in general, or in a certain use only.
   
-      - uniqname:         category
+      - handle:          category
         type_tags:        word:english
         data_type:        str
         desc:             reason this word is considered indecent

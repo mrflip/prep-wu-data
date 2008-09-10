@@ -1,7 +1,7 @@
 - infochimps_schema:
 
     collection:     British National Corpus
-    coll_uniqid:    word_freq_bnc
+    coll_handle:   word_freq_bnc
     coll_tags:  |
         language word words corpus corpora corpuses stemming "textual analysis"
         "word counts" 
@@ -9,14 +9,14 @@
 
     contributors:
       - name: British National Corpus
-        uniqid:
+        handle: 
         url:
         role:
         cite:
         desc:
 
       - name:   Leech, Geoffrey, Paul Rayson and Andrew Wilson
-        uniqid: ucrel.lancs.ac.uk/bncfreq
+        handle:  ucrel.lancs.ac.uk/bncfreq
         url:    http://ucrel.lancs.ac.uk/bncfreq
         role: |
             These authors analyzed the British National Corpus and published their results in a book.
@@ -79,21 +79,21 @@
         tags:       word words language
         units:      word
         datatype:   str
-        uniqid:     word 
+        handle:    word 
         desc:       |
             Word type (headword followed by any variant forms) - see pp.4-5 of "Leech, Rayson, & Wilson (2001)":#word_frequencies_book
       - name:       Part of Speech
         tags:       grammar language
         units:      part_of_speech
         datatype:   str
-        uniqid:     PoS
+        handle:    PoS
         desc:       |
             Part of speech (grammatical word class) - see pp. 12-13 of "Leech, Rayson, & Wilson (2001)":#word_frequencies_book
       - name:       Frequency
         tags:       frequency counts ppm "parts per million" count
         units:      ppm(word/word)
         datatype:   int
-        uniqid:     freq
+        handle:    freq
         desc:       |
             Rounded frequency per million word tokens (down to a minimum of 10 occurrences of a lemma per million) - see p. 5 of of "Leech, Rayson, & Wilson (2001)":#word_frequencies_book
             
@@ -116,30 +116,30 @@
 #       @       @       Betty   13      90      0.62
 
 # fields:
-#   - uniqname: head_word
+#   - handle:  head_word
 #     name:     Head word - the root word
 #     desc:     Word type (headword followed by any variant forms) - see pp.4-5
 
-#   - uniqname: PoS
+#   - handle:  PoS
 #     name:     Part of speech
 #     desc:     Part of speech (grammatical word class - see pp. 12-13)
 
 
-  # - uniqname: lemmas
+  # - handle:  lemmas
   #   name:     word variants:
   #   - lemma
   #   - ppm
   #   - range
   #   - disp
   # 
-  # - uniqname: freq
+  # - handle:  freq
   #   name:     Rounded frequency per million word tokens
   #   desc:     Rounded frequency per million word tokens (down to a minimum of 10 occurrences of a lemma per million)- see pp. 5
   # - name:     Range
-  #   uniqname: Ra
+  #   handle:  Ra
   #   desc:     Range: number of sectors of the corpus (out of a maximum of 100) in which the word occurs
   # - name:     Dispersion value
-  #   uniqname: Disp
+  #   handle:  Disp
   #   desc:     |
   # 
   #       Dispersion value (Juilland's D) from a minimum of 0.00 to a maximum of 1.00.

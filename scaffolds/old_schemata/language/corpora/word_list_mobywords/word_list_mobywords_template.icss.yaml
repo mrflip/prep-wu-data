@@ -1,5 +1,5 @@
 - infochimps_schema:
-    coll_uniqid: word_list_mobywords
+    coll_handle:  word_list_mobywords
     collection: 'Word List - Moby Word'
     ratings:
       accurate:       { rating: 3, by: 'initial', desc: 'Has been widely distributed as part of the Project Gutenberg eText project.' }
@@ -176,11 +176,11 @@
 
     contributors:
       - name: Grant Ward
-        uniqid: grady@gradyward.com
+        handle:  grady@gradyward.com
         url: http://www.gutenberg.org/browse/authors/w#a1132
       - name: Mike Pullen
         role: prepared
-        uniqid: globaltraveler5565@yahoo.com
+        handle:  globaltraveler5565@yahoo.com
       - name: Project Gutenberg
         role: distributed
         url: http://www.gutenberg.org/etext/3202

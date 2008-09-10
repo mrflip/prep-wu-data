@@ -11,7 +11,7 @@ infochimp_schema:
 		units:	entity.corporation.id.code.stocksymbol
 		tags:		entity.corporation.id
 
-    story:              >--
+    desc:               >--
         	Word Lists, Multiple Language Lists of Common Words,  
 		Hyphenation, Part of Speech, Pronunciation, Thesaurus
 
@@ -280,7 +280,7 @@ hart@pobox.com
      - url:       http://www.gutenberg.org/browse/authors/w#a1132
      	 name:	Grant Ward
 	 shortname:	grady@gradyward.com
-       story:     
+       desc:      
      - name:	Mike Pullen, 
 	 shortname:	globaltraveler5565@yahoo.com
 	 role:	prepared
@@ -288,7 +288,7 @@ hart@pobox.com
      - url:      	http://www.gutenberg.org/etext/3202
        name:     	Project Gutenberg
        role:	distributed
-       story:    	>-
+       desc:     	>-
 Copyright laws are changing all over the world, be sure to check
 the laws for your country before redistributing these files!!!
 

@@ -38,9 +38,9 @@ head:
                           role:  'distributor'
                           desc: ''
                         - name:  'Philip (flip) Kromer'
-                          url:   'http://infochimp.org/user/flip'
+                          url:   'http://infochimps.org/user/flip'
                           role:  'prepared'
-                          desc: 'Converted for [http://infochimp.org|infochimp] project'
+                          desc: 'Converted for [http://infochimps.org|infochimp] project'
     fields:             
                         - { n: "currency_code_iso4217", t: "string.3", u: "money.currency.code.iso4217", d: "ISO 4217 (3-letter) currency code"}
                         - { n: "currency_shortname",    t: "string",   u: "money.currency.name",         d: "Short name / symbol"}

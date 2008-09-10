@@ -11,7 +11,7 @@ infochimp_schema:
 		units:	language.english.word
 		tags:		language.english.word
 
-    story:              >-
+    desc:               >-
 		74,550 common dictionary words (common.txt)
 		A list of words in common with two or more published dictionaries.
 		This gives the developer of a custom spelling checker a good
@@ -289,7 +289,7 @@ hart@pobox.com
      - url:       http://www.gutenberg.org/browse/authors/w#a1132
      	 name:	Grant Ward
 	 shortname:	grady@gradyward.com
-       story:     
+       desc:      
      - name:	Mike Pullen, 
 	 shortname:	globaltraveler5565@yahoo.com
 	 role:	prepared
@@ -297,7 +297,7 @@ hart@pobox.com
      - url:      	http://www.gutenberg.org/etext/3202
        name:     	Project Gutenberg
        role:	distributed
-       story:    	>-
+       desc:     	>-
 		h2. __Project Gutenberg's information about this dataset__
 The Project Gutenberg Etext of Moby Word II by Grady Ward
 

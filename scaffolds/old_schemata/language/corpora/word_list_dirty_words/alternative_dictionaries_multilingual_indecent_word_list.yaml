@@ -7,7 +7,7 @@ infochimps_dataset:
             h2. The Alternative Dictionaries
             ** Slang, profanities, insults and vulgarisms from all the world**
         name: ~
-        uniqname: ~
+        handle:  ~
         url: ~
     name: "The Alternative Dictionaries: Multilingual indecent word lists"
     notes: 

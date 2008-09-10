@@ -2,14 +2,14 @@
     
     collection: 'Odds of dying by cause of death'
     
-    coll_uniqid: odds_of_death
+    coll_handle:  odds_of_death
     
     coll_tags:  |
         morbid odds dying death "cause of death" cause
         'odds, chances, death, injury, accident, mortality, Transport, automobile, gun, handgun, police, strange, suffocation, suicide, dog, bite, execution, firearm, medical'
 
     name: 'Odds of Death Due to Injury, United States, 2004'
-    uniqid: odds_of_death
+    handle:  odds_of_death
     tags:   |
         morbid odds dying death "cause of death" cause causes
     
@@ -17,7 +17,7 @@
 
     contributors:
       - name:   'National Safety Council'
-        uniqid: national_safety_council
+        handle:  national_safety_council
         url:    http://www.nsc.org/lrs/statinfo/odds.htm
         role:
         cite:
@@ -69,19 +69,19 @@
     
     fields:
         name: cause_of_death_ICD_code
-        uniqid: cause_of_death_icd_code
+        handle:  cause_of_death_icd_code
       - desc: |
             Deaths are classified on the basis of the Tenth Revision of the World Health Organization's 
             \"The International Classification of Diseases\" (ICD), specifically the External Cause of Morbidity
             and Mortality classifications in ICD-10.
         name: cause_of_death_classification_name
-        uniqid: cause_of_death_classification_name
+        handle:  cause_of_death_classification_name
       - desc: Description of the cause of death
         name: cause_of_death_odds_one_year
-        uniqid: cause_of_death_odds_one_year
+        handle:  cause_of_death_odds_one_year
       - desc: 'One year odds are approximated by dividing the 2004 population (293,656,842) by the number of deaths.'
         name: cause_of_death_odds_lifetime
-        uniqid: cause_of_death_odds_lifetime
+        handle:  cause_of_death_odds_lifetime
       - desc: Lifetime odds are approximated by dividing the one-year odds by the life expectancy of a person born in 2004 (77.9 years).
               
     ratings:

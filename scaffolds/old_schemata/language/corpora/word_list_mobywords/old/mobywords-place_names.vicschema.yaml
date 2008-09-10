@@ -234,7 +234,7 @@ hart@pobox.com
      - url:       http://www.gutenberg.org/browse/authors/w#a1132
      	 name:	Grant Ward
 	 shortname:	grady@gradyward.com
-       story:     
+       desc:      
      - name:	Mike Pullen, 
 	 shortname:	globaltraveler5565@yahoo.com
 	 role:	prepared
@@ -242,7 +242,7 @@ hart@pobox.com
      - url:      	http://www.gutenberg.org/etext/3202
        name:     	Project Gutenberg
        role:	distributed
-       story:    	>-
+       desc:     	>-
 		h2. __Project Gutenberg's information about this dataset__
 The Project Gutenberg Etext of Moby Word II by Grady Ward
 

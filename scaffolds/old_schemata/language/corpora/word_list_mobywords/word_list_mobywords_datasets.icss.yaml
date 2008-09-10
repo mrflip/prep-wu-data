@@ -7,33 +7,33 @@
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Letter frequency - Substring frequency in an Amy Tan Novel'
     notes:
       desc: "467 current fiction substrings (fiction.txt) The most frequently occurring 467 character sequences (n-grams) occurring in a best-selling novel by Amy Tan in 1990.\n\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, fiction, novel, adjacency, frequency, \"amy tan\", character, letter, gram, ngram, bigram"
-    uniqid: letter_freq_mobywords_amy_tan
+    handle:  letter_freq_mobywords_amy_tan
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - List of Acronyms'
     notes:
       desc: "6,213 acronyms (acronyms.txt) common acronyms & abbreviations\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, acronym, abbreviation, initialism"
-    uniqid: word_list_mobywords_acronyms
+    handle:  word_list_mobywords_acronyms
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: 'word'
+        handle:  'word'
         units: language.word.english
     name: Word List - 350,000+ Simple English Words
     notes:
@@ -46,92 +46,92 @@
       comprehensive:  { rating: 3, by: 'initial', desc: '' }
       interesting:    { rating: 3, by: 'initial', desc: '' }
     tags: "language, words, corpus, corpora, lexical, common, word, list, all, single"
-    uniqid: word_list_mobywords_all_simple
+    handle:  word_list_mobywords_all_simple
     
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - 74,000+ Common English Dictionary Words'
     notes:
       desc: "74,550 common dictionary words -- A list of words in common with two or more published dictionaries. This gives the developer of a custom spelling checker a good beginning pool of relatively common words.\n  "
     tags: "language, words, corpus, corpora, lexical, common, word, list, ordinary, frequent, stop"
-    uniqid: word_list_mobywords_common
+    handle:  word_list_mobywords_common
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - 100,000+ official crossword words'
     notes:
       desc: "113,809 official crosswords A list of words permitted in crossword games such as Scrabble(tm). Compatible with the first edition of the Official Scrabble Players Dictionary(tm).  Since this list has all forms: -ing, -ed, -s, and so on of words, it makes a good addition when building a custom spelling dictionary.\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, ospd, scrabble, crossword, game, lexicon, twl"
-    uniqid: word_list_mobywords_crossword
+    handle:  word_list_mobywords_crossword
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: "Word List - Additional words present in the 2nd ed Official Scrabble (TM) Player's Dictionary (OSPD 2)"
     notes:
       desc: '4,160 official crosswords delta (crswd-d.txt) When combined with the 113,809 crosswords file, it produces the official crossword list compatible with the second edition of the Official Scrabble Players Dictionary.  (Scrabble is a registered trademark of Milton-Bradley licensed to Merriam-Webster.)'
     tags: "language, words, corpus, corpora, lexical, common, word, list, ospd, scrabble, crossword, game, lexicon, twl"
-    uniqid: word_list_mobywords_crossword_ospd2_delta
+    handle:  word_list_mobywords_crossword_ospd2_delta
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - 1,000+ Most Frequent words in King James Bible'
     notes:
       desc: "1,185 King James Version frequent substrings (KJVfreq.txt) The most frequently occurring 1,185 substrings in the King James Version Bible ranked and counted by order of frequency.\n  "
     tags: "language, words, corpus, corpora, lexical, common, word, list, dictionary, lexicon, 'word list', lexical, stemming, common, stop, frequency, english, rate"
-    uniqid: word_list_mobywords_freq_bible
+    handle:  word_list_mobywords_freq_bible
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - 1,000 Most Frequently Used English Words by Frequency'
     notes:
       desc: "This file consists of the 1,000 most frequently used English words from a wide variety of common texts listed in decreasing order of frequency\n\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, dictionary, lexicon, 'word list', lexical, stemming, common, stop, frequency, english, rate"
-    uniqid: word_list_mobywords_freq_broad_corpus
+    handle:  word_list_mobywords_freq_broad_corpus
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - 1000 Most Frequent Words from an Internet Corpus'
     notes:
       desc: 'This file consists of the 1,000 most frequently used English words as used on the Internet computer network in 1992.'
     tags: "language, words, corpus, corpora, lexical, common, word, list, dictionary, lexicon, 'word list', lexical, stemming, common, stop, frequency, english, rate"
-    uniqid: word_list_mobywords_freq_internet
+    handle:  word_list_mobywords_freq_internet
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: given_name
         tags: language.word.english given_name
-        uniqid: given_name
+        handle:  given_name
         units: language.word.english
     name: 'Word List - 21,000+ Common Given Names (US & Great Britain)'
     notes:
@@ -142,69 +142,69 @@
          their basic word list with this one.
 
     tags: "language, words, corpus, corpora, lexical, common, word, list, given, first, christian, name, baby"
-    uniqid: word_list_mobywords_given_names_english
+    handle:  word_list_mobywords_given_names_english
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: given_name
         tags: language.word.english given_name
-        uniqid: given_name
+        handle:  given_name
         units: language.word.english
     name: 'Word List - 4,900+ Common Female Given Names (English-speaking Countries)'
     notes:
       desc: "4,946 female names (names-f.txt) Frequent given names of females in English speaking countries.   Spelling checkers may want to supplement their basic word list with this one.\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, given, first, christian, name, baby"
-    uniqid: word_list_mobywords_given_names_english_female
+    handle:  word_list_mobywords_given_names_english_female
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: given_name
         tags: language.word.english given_name
-        uniqid: given_name
+        handle:  given_name
         units: language.word.english
     name: 'Word List - 3,800+ Common Male Given Names (English-speaking Countries)'
     notes:
       desc: "3,800 male names Frequent given names of male in English speaking countries.   Spelling checkers may want to supplement their basic word list with this one.\n\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, given, first, christian, name, baby"
-    uniqid: word_list_mobywords_given_names_english_male
+    handle:  word_list_mobywords_given_names_english_male
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - 250,000+ Hyphenated, Capitalized and Compound English words'
     notes:
       desc: "Over 256,700 hyphenated or other entries containing more than one word as well as all capitalized words and acronyms.  Phrases were considered 'common' if they or variations of them occur in standard dictionaries or thesauruses.\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, hyphenated, capitalized, capitalised, compound, phrase, proper"
-    uniqid: word_list_mobywords_hyphenated
+    handle:  word_list_mobywords_hyphenated
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - Commonly Misspelled English Words'
     notes:
       desc: "366 often misspelled words (oftenmis.txt) many of the most commonly misspelled words in English speaking countries\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, spelling, dictionary, spell, check, error, mistake, misspelled"
-    uniqid: word_list_mobywords_misspelled
+    handle:  word_list_mobywords_misspelled
 
 - infochimps_schema:
     fields:
       - datatype: str
         name: word
         tags: language.word.english geo.placename
-        uniqid: word
+        handle:  word
         units: language.word.english
     name: 'Word List - 10,000+ Common Place Names'
     notes:
       desc: "10,196 places (places.txt) a large selection of place names in the United States\n\n   "
     tags: "language, words, corpus, corpora, lexical, common, word, list, geo, geographic, place, name, spell, check"
-    uniqid: word_list_mobywords_place_names
+    handle:  word_list_mobywords_place_names

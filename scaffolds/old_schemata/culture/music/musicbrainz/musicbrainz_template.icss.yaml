@@ -1,8 +1,8 @@
 - infochimps_schema:
     name:               ''
-    uniqid:             ''
+    handle:            ''
     collection:         ''
-    coll_uniqid:        ''
+    coll_handle:       ''
     coll_tags:          >-
 
     linkinfo:
@@ -82,7 +82,7 @@
             and sequelae for more information on their contributions.
             
       - name:       Philip (flip) Kromer
-        url:        http://infochimp.org/flip
+        url:        http://infochimps.org/users/flip
         role:       converted
 
     ratings:

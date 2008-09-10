@@ -46,7 +46,7 @@ infochimps_dataset:
           
   
     fields:
-      - uniqname:         word
+      - handle:          word
         type_tags:        word:english
         data_type:        str
         

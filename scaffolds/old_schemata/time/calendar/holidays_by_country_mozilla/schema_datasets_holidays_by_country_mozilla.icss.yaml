@@ -2,7 +2,7 @@
 - infochimps_schema:
 
     name:       'Holidays Algeria'
-    uniqid:     holidays_algeria
+    handle:    holidays_algeria
     tags:       'Algeria holidays calendar'
     notes:
         desc: |-

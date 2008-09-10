@@ -1,11 +1,11 @@
 -- infochimps_schema_template:
-    coll_uniqid:    dbpedia_infoboxen
+    coll_handle:   dbpedia_infoboxen
     collection:     Datasets drawn from Wikipedia, by DBPedia
     # name:
-    # uniqid:
+    # handle: 
     # tags:
     # fields:
-    #     - uniqid:     
+    #     - handle:    
     #       name:       
     #       desc:       
     #       tags:       
@@ -56,7 +56,7 @@
 
     contributors:
       - name:       wikipedia.org
-        uniqid:     wikipedia.org
+        handle:    wikipedia.org
         url:        http://en.wikipedia.org/wiki/Wikipedia:Database_download
         desc:       |
             (Taken from "Wikipedia's 'About' page":http://en.wikipedia.org/wiki/Wikipedia:About
@@ -78,7 +78,7 @@
             encyclopedia. (See also: Wikipedia:Statistics).
         
       - name:       dbpedia.org
-        uniqid:     dbpedia.org
+        handle:    dbpedia.org
         url:        http://wiki.dbpedia.org/Downloads
         desc: |-
             DBpedia is a community effort to extract structured information from

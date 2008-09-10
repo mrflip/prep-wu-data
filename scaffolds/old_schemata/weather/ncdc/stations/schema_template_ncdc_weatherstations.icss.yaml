@@ -3,88 +3,88 @@ contributors:
     role: source
     title: National Climactic Data Center
     url: http://www.ncdc.noaa.gov/oa/climate/surfaceinventories.html
-  - name: infochimp.org/flip
+  - name: infochimps.org/users/flip
     role: converted
     title: Philip (flip) Kromer
-    url: http://infochimp.org/flip
+    url: http://infochimps.org/users/flip
 fields:
   - name: USAF_weatherstation_code
-    story: Air Force Datsav3 station number
+    desc:  Air Force Datsav3 station number
     tags: entity.id.USAF_weatherstation_code
     type: int:6
-    uniqid: usaf_weatherstation_code
+    handle:  usaf_weatherstation_code
     units: ~
   - name: WBAN_weatherstation_code
-    story: NCDC WBAN number
+    desc:  NCDC WBAN number
     tags: entity.id.WBAN_weatherstation_code
     type: int:5
-    uniqid: wban_weatherstation_code
+    handle:  wban_weatherstation_code
     units: ~
   - name: station_name
-    story: Weather Station Name
+    desc:  Weather Station Name
     tags: entity.name.weatherstation
     type: string:30
-    uniqid: station_name
+    handle:  station_name
     units: ~
   - name: country_code_wmo
-    story: WMO historical country ID
+    desc:  WMO historical country ID
     tags: location.countrycode.wmo.a2
     type: string:2
-    uniqid: country_code_wmo
+    handle:  country_code_wmo
     units: ~
   - name: country_code_fips
-    story: FIPS country ID
+    desc:  FIPS country ID
     tags: location.countrycode.fips.a2
     type: string:2
-    uniqid: country_code_fips
+    handle:  country_code_fips
     units: ~
   - name: us_state
-    story: State (for stations in the US)
+    desc:  State (for stations in the US)
     tags: location.regioncode.us_state.a2
     type: string:2
-    uniqid: us_state
+    handle:  us_state
     units: ~
   - name: ICAO_call_sign
-    story: Weather Station ICAO call sign
+    desc:  Weather Station ICAO call sign
     tags: entity.id.ICAO_call_sign
     type: string:4
-    uniqid: icao_call_sign
+    handle:  icao_call_sign
     units: ~
   - name: lat
-    story: Latitude in decimal degrees
+    desc:  Latitude in decimal degrees
     tags: location.coordinate.latitude
     type: fixed:2.3
-    uniqid: lat
+    handle:  lat
     units: degrees_latitude
   - name: lng
-    story: Longitude in decimal degrees
+    desc:  Longitude in decimal degrees
     tags: location.coordinate.longitude
     type: fixed:3.3
-    uniqid: lng
+    handle:  lng
     units: degrees_longitude
   - name: elevation
-    story: Elevation in meters
+    desc:  Elevation in meters
     tags: location.coordinate.altitude_sea_level
     type: fixed:4.1
-    uniqid: elevation
+    handle:  elevation
     units: meters
   - name: data_collection_number_of_hourly_records
-    story: Number of NCDC Global Hourly ISD records collected in the given time period
+    desc:  Number of NCDC Global Hourly ISD records collected in the given time period
     tags: data.records.rate
     type: int:5
-    uniqid: data_collection_number_of_hourly_records
+    handle:  data_collection_number_of_hourly_records
     units: number
   - name: data_collection_year
-    story: Year of record
+    desc:  Year of record
     tags: data.timestamp.year
     type: int:4
-    uniqid: data_collection_year
+    handle:  data_collection_year
     units: year
   - name: data_collection_month
-    story: Month of record
+    desc:  Month of record
     tags: data.timestamp.month
     type: int:2
-    uniqid: data_collection_month
+    handle:  data_collection_month
     units: month
 name: NCDC Global Hourly Weather Stations
 notes:
@@ -107,7 +107,7 @@ notes:
        For details, please consult
        "WMO Resolution 40 on the Exchange of Meterological Data":http://www.wmo.int/pages/about/Resolution40.html.
   see_also: NCDC Global Hourly Weather (ISD-Lite)
-  story: |-2
+  desc:  |-2
     
        This file gives the name, location, and data inventory for all the
        weather stations in the <abbr title="US National Climactic Data Center">NCDC</abbr>
@@ -157,18 +157,18 @@ ratings:
   - initial:
       accurate:
         rating: 5
-        story: ''
+        desc:  ''
       authoritative:
         rating: 5
-        story: ''
+        desc:  ''
       comprehensive:
         rating: 5
-        story: ''
+        desc:  ''
       interesting:
         rating: 1
-        story: ''
+        desc:  ''
 tags: global hourly weather atmospheric pressure temperature huge meta station location
-uniqid: ncdc_global_hourly_weather_stations
+handle:  ncdc_global_hourly_weather_stations
 uniqid2: ncdc_global_hourly_weather_stations
 
 - imw_flat_file:

@@ -1,15 +1,15 @@
 contributors:
   - desc: ~
-    uniqid: ~
+    handle:  ~
     url: hazard.org
   - desc: ~
-    uniqid: "Converted by (your name here!) - contact help@infochimp.org if you'd like to help make this dataset useful."
-    url: http://infochimp.org/helpwanted
+    handle:  "Converted by (your name here!) - contact help@infochimps.org if you'd like to help make this dataset useful."
+    url: http://infochimps.org/helpwanted
 desc: 'Big Pile of 270,000+ Material Safety Data Sheets (MSDS)'
 fields:
   - desc: PLACEHOLDER
     name: PLACEHOLDER
-    uniqid: placeholder
+    handle:  placeholder
 name: Material Safety Data Sheets (MSDS)
 notes:
   coverage: ''
@@ -34,5 +34,5 @@ ratings:
         desc: 'Very difficult to find for free, but of narrow interest'
         rating: 4
 tags: "chemical, chemistry, danger, health, hazard, materials, engineering, materials, safety, datasheets, data, sheet\n"
-uniqid: msds_hazardcom
+handle:  msds_hazardcom
 uniqid2: material_safety_data_sheets_msds

@@ -4,7 +4,7 @@
     # Fundamental description
         
     collection:         'Physical and Chemical Constants and Conversions'
-    coll_uniqid:        phys_chem_constants_conversions
+    coll_handle:       phys_chem_constants_conversions
     coll_tags:          |
         constants physical chemical 
         
@@ -15,7 +15,7 @@
     contributors:
         
       - name:           'National Institute of Standards and Technology'
-        uniqid:         physics.nist.gov
+        handle:        physics.nist.gov
         url:            http://physics.nist.gov/Pubs/SP811/appenB8.html
         role:           
         cite:           

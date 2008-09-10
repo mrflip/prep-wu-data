@@ -4,7 +4,7 @@
     # Fundamental description
         
     collection:         'Anthropometric data of children'
-    coll_uniqid:        children_anthopometric_data
+    coll_handle:       children_anthopometric_data
     coll_tags:          |
          anthropometric children child kid kids
     formats:            { csv: {}, flat: {} }
@@ -14,7 +14,7 @@
     contributors:
         
       - name:           'NIST Information Technology Laboratory, AnthroKids'
-        uniqid:         ovrt.nist.gov/projects/anthrokids
+        handle:        ovrt.nist.gov/projects/anthrokids
         url:            http://ovrt.nist.gov/projects/anthrokids/
         role:           
         cite:           

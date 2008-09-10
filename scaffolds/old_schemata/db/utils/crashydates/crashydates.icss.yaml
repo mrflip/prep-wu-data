@@ -1,10 +1,10 @@
 contributors:
   - desc: ~
-    uniqid: 'Shared and converted by Philip (flip) Kromer for the [http://infochimp.org|infochimp] project.'
-    url: http://infochimp.org/user/flip
+    handle:  'Shared and converted by Philip (flip) Kromer for the [http://infochimps.org|infochimp] project.'
+    url: http://infochimps.org/user/flip
 desc: 'A list of dates which, due to historical convention, human error, or hardware flaws can pose pitfalls to computer programs.  These dates can be used to test computers that handle time data, such as banking, payroll or Mars rovers.'
 fields:
-  - uniqid: ~
+  - handle:  ~
 name: Computer Crash Dates
 notes:
   coverage: '[ { time: 0-0 } ]'
@@ -26,5 +26,5 @@ ratings:
         desc: 'Interest to programmers, otherwise not.'
         rating: 1
 tags: 'crash, dangerous, date, time, computer, landmark, testing, boundary, borderline, pitfall, snafu'
-uniqid: computer_crashydates
+handle:  computer_crashydates
 uniqid2: computer_crash_dates

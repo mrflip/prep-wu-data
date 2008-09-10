@@ -1,7 +1,7 @@
 --- 
 - infochimps_schema:
     name:               'Anthropometric data of children'
-    uniqid:             children_anthopometric_data
+    handle:            children_anthopometric_data
     tags:               |
         anthropometric children child kid kids
     notes:

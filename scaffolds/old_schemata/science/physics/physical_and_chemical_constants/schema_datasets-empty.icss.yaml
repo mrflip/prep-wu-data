@@ -10,7 +10,7 @@
 
 - infochimps_schema:
     name:               'Fundamental Physical Constants'
-    uniqid:             phys_constants
+    handle:            phys_constants
     tags:               |
         physical constants constant SI h hbar g Planck Boltzmann Newton Pascal Coulomb
         mass charge force pressure "electric field" "magnetic field"
@@ -20,21 +20,21 @@
 
     fields:
       - name:           'Quantity'
-        uniqid:         quantity
+        handle:        quantity
         tags:           "physical constant"
         units:          name
         datatype:       str
         desc:           |
             
       - name:           'Value'
-        uniqid:         value
+        handle:        value
         tags:           "value of the quantity in scientific notation"
         units:          various
         datatype:       float:%e
         desc:           |
             
       - name:           'Uncertainty'
-        uniqid:         uncert
+        handle:        uncert
         tags:           "uncertainty of the value"
         units:          various
         datatype:       float:%e
@@ -43,7 +43,7 @@
         
 - infochimps_schema:
     name:               'Conversion factors for units'
-    uniqid:             unit_conversion_factors
+    handle:            unit_conversion_factors
     tags:               |
         unit conversion factors SI
     notes:
@@ -52,7 +52,7 @@
 
    fields:
       - name:           'To convert from'
-        uniqid:         from
+        handle:        from
         tags:           "starting units to convert from"
         units:          name
         datatype:       str  
@@ -61,7 +61,7 @@
             
    fields:
       - name:           'to'
-        uniqid:         to
+        handle:        to
         tags:           "units to convert to"
         units:          name
         datatype:       str
@@ -70,7 +70,7 @@
             
    fields:
       - name:           'Factor Significand'
-        uniqid:         significand
+        handle:        significand
         tags:           "first part of scientific notation"
         units:          dimensionless
         datatype:       float
@@ -80,7 +80,7 @@
             
     fields:
       - name:           'Factor Exponent'
-        uniqid:         exponent
+        handle:        exponent
         tags:           "exponent of scientific notation"
         units:          dimensionless
         datatype:       int

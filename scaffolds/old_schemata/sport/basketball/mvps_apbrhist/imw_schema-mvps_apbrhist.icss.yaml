@@ -4,7 +4,7 @@
     # Fundamental description
     #
     name:               Statistical Abstract of the United States 2008
-    uniqname:           statisticalabstract_2008
+    handle:            statisticalabstract_2008
     id:                 1
     tags:               "us united states usa america census demographics government "
     formats:            { csv: {}, yaml: {}, xls: {} }
@@ -23,12 +23,12 @@
         url:            http://www.census.gov/statab/www
         role:           source
         desc:           ""
-        uniqname:       gov.census/statab
+        handle:        gov.census/statab
       - name:           Philip (flip) Kromer
         id:             4
-        url:            http://infochimp.org/flip
+        url:            http://infochimps.org/users/flip
         role:           converted
-        uniqname:       org.infochimp/flip
+        handle:        org.infochimp/flip
 
     #
     # Free-form descriptive notes
@@ -49,7 +49,7 @@
     # 
     fields:
       - name:           Census Date
-        uniqname:       census_date
+        handle:        census_date
         concepts:       date
         units:          date.iso
         datatype:       date
@@ -57,43 +57,43 @@
         concepts:       _note
         units:          _note
         datatype:       str
-        uniqname:       census_data_notes
+        handle:        census_data_notes
       - name:           Resident population - Number
         concepts:       country persons
         units:          persons
         datatype:       int
-        uniqname:       resident_population_number
+        handle:        resident_population_number
       - name:           Resident population - Per square mile of land area
         concepts:       country numberdensity:persons-area
         units:          persons / mile^2
         datatype:       float
-        uniqname:       resident_population_per_square_mile_of_land_area
+        handle:        resident_population_per_square_mile_of_land_area
       - name:           Resident population - Increase over preceding census - Number
         concepts:       country rate:persons-time
         units:          persons / year
         datatype:       int
-        uniqname:       resident_population_increase_over_preceding_census_number
+        handle:        resident_population_increase_over_preceding_census_number
       - name:           Resident population - Increase over preceding census - Percent
         concepts:       country rate:pct_persons-time
         units:          (persons/persons)% / year
         datatype:       float:2.1
-        uniqname:       resident_population_increase_over_preceding_census_percent
+        handle:        resident_population_increase_over_preceding_census_percent
       - name:           Area - Land
         concepts:       country area
         units:          mile^2
         datatype:       int
-        uniqname:       area_land
+        handle:        area_land
       - name:           Area - Water
         concepts:       country area
         units:          mile^2
         datatype:       int
-        uniqname:       area_water
+        handle:        area_water
         desc:           ''
           
     # Information and processing instructions specific to each dataset.
     datasets:
       - name:           'Population and Area: 1790 to 2000 (Statistical Abstract 2008 Table 0001)'
-        uniqname:       statab2008_0001_populationandarea1790to2000
+        handle:        statab2008_0001_populationandarea1790to2000
         tags:           'population "population density" area growth'
         notes:
             desc:       "For every US census since 1790, the total US population, its population density (population per mile) and their absolute and  percentage change."
@@ -103,7 +103,7 @@
             statistical_abstract_table_number:        1
 
       - name:           'Happy #2'
-        uniqname:       happy_2
+        handle:        happy_2
         tags:           'population "population density" area growth hi there monkey balls'
         notes:
             desc:       "Testy testasdfasd asdf  asdf asdf "

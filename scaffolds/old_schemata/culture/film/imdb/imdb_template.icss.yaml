@@ -1,6 +1,6 @@
 infochimps_schema:
     name:               ''
-    uniqid:             ''
+    handle:            ''
     collection:         ''
     tags:               >-
     
@@ -26,22 +26,22 @@ infochimps_schema:
             
     contributors:
       - name:         'IMDB.com'
-        uniqid:       'com.imdb'
+        handle:      'com.imdb'
         url:          'http://imdb.com'
         role:         'gathered'
         cite:         ''        
         desc:         |
                     
       - name:         'ftp.funet.fi'
-        uniqid:       'fi.funet.ftp'
+        handle:      'fi.funet.ftp'
         url:          'http://ftp.funet.fi/pub/mirrors/ftp.imdb.com/'
         role:         'distributed'
         cite:         '' 
         desc:         |
                     
-      - uniqid: org.infochimp/flip
+      - handle:  org.infochimp/flip
         name: Philip (flip) Kromer
-        url: http://infochimp.org/flip
+        url: http://infochimps.org/users/flip
         role: converted
         
     notes:

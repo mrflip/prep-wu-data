@@ -1,8 +1,8 @@
 infochimps_schema_template:
     name:           Global Hourly Weather Data 
-    uniqid:         global_hourly_isdlite
+    handle:        global_hourly_isdlite
     collection:     Hourly Weather Data (ISD Lite) by State, 50+ years
-    coll_uniqid:    global_hourly_isdlite
+    coll_handle:   global_hourly_isdlite
     tags:           global hourly weather atmospheric pressure temperature huge ncdc ncdc_weather climate isd surface precipitation 
     
     formats: 
@@ -11,53 +11,53 @@ infochimps_schema_template:
     contributors:
       - name: National Climactic Data Center
         role: source
-        uniqid: ncdc.noaa.gov
+        handle:  ncdc.noaa.gov
         url: http://www.ncdc.noaa.gov/oa/climate/surfaceinventories.html
-      - uniqid: infochimps.org/flip
+      - handle:  infochimps.org/users/flip
         role: converted
         name: Philip (flip) Kromer
         url: http://infochimps.org/blog
     fields:
       - name: Observation Datetime
-        story: 'Time of observation, rounded to nearest whole hour'
+        desc:  'Time of observation, rounded to nearest whole hour'
         tags: time.point.datetime resolution.hour
         type: datetime
-        uniqid: observation_datetime
+        handle:  observation_datetime
         units: datetime.iso
       - name: Air Temperature
-        story: The temperature of the air
+        desc:  The temperature of the air
         tags: environment.air.temperature
         type: fixed:5.1
-        uniqid: air_temperature
+        handle:  air_temperature
         units: temperature:celsius
       - name: Dew Point Temperature
-        story: The temperature to which a given parcel of air must be cooled at constant pressure and water vapor content in order for saturation to occur.
+        desc:  The temperature to which a given parcel of air must be cooled at constant pressure and water vapor content in order for saturation to occur.
         tags: environment.air.dewpoint_temperature
         type: fixed:5.1
-        uniqid: dew_point_temperature
+        handle:  dew_point_temperature
         units: temperature:celsius
       - name: Sea Level Pressure
-        story: The air pressure relative to Mean Sea Level (MSL).
+        desc:  The air pressure relative to Mean Sea Level (MSL).
         tags: environment.air.pressure
         type: fixed:5.1
-        uniqid: sea_level_pressure
+        handle:  sea_level_pressure
         units: pressure:hecto.pascals
       - name: Wind Direction
-        story: |-
+        desc:  |-
           The angle, measured in a clockwise direction, between true north and the direction from which the wind is blowing.
           *NOTE:  Wind direction for calm winds is coded as 0.
         tags: environment.air.wind_direction
         type: fixed:5.1
-        uniqid: wind_direction
+        handle:  wind_direction
         units: angle:degrees
       - name: Wind Speed Rate
-        story: The rate of horizontal travel of air past a fixed point.
+        desc:  The rate of horizontal travel of air past a fixed point.
         tags: environment.air.wind_speed
         type: fixed:5.1
-        uniqid: wind_speed_rate
+        handle:  wind_speed_rate
         units: speed:meters.per_second
       - name: Sky Condition Total Coverage Code
-        story: |-
+        desc:  |-
           The code that denotes the fraction of the total celestial dome covered by clouds or other obscuring phenomena.
           DOMAIN:
            0: None, SKC or CLR
@@ -82,22 +82,22 @@ infochimps_schema_template:
           19: Dark overcast
         tags: environment.weather.sky_coverage.code
         type: integer:6
-        uniqid: sky_condition_total_coverage_code
+        handle:  sky_condition_total_coverage_code
       - name: 'Liquid Precipitation Depth Dimension - One Hour Duration'
-        story: |-
+        desc:  |-
           The depth of liquid precipitation that is measured over a one hour accumulation period.
           h3. NOTE:  Trace precipitation is coded as -1
         tags: environment.weather.liquid_precipitation_last_hour
         type: fixed:5.1
-        uniqid: liquid_precipitation_depth_dimension_one_hour_duration
+        handle:  liquid_precipitation_depth_dimension_one_hour_duration
         units: length:millimeters
       - name: 'Liquid Precipitation Depth Dimension - Six Hour Duration'
-        story: |-
+        desc:  |-
           The depth of liquid precipitation that is measured over a six hour accumulation period.
           h3. NOTE:  Trace precipitation is coded as -1
         tags: ~
         type: fixed:5.1
-        uniqid: liquid_precipitation_depth_dimension_six_hour_duration
+        handle:  liquid_precipitation_depth_dimension_six_hour_duration
         units: length:millimeters
         
 

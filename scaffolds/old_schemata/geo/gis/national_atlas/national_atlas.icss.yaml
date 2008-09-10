@@ -1,18 +1,18 @@
 contributors:
   - desc: ~
-    uniqid: National Atlas
+    handle:  National Atlas
     url: nationalatlas.gov
   - desc: ~
-    uniqid: "Converted by (your name here!) - contact help@infochimp.org if you'd like to help make this dataset useful."
-    url: http://infochimp.org/helpwanted
+    handle:  "Converted by (your name here!) - contact help@infochimps.org if you'd like to help make this dataset useful."
+    url: http://infochimps.org/helpwanted
 desc: |-
-  This is the placeholder for a series of several dozen rich geographical information layers from the National Atlas of the United States. Contact help@infochimp.org if you'd like to help make it available.
+  This is the placeholder for a series of several dozen rich geographical information layers from the National Atlas of the United States. Contact help@infochimps.org if you'd like to help make it available.
   "Nationalatlas.gov is the new National Atlas of the United States. This new atlas provides a comprehensive, maplike view into the enormous wealth of geospatial and geostatistical data collected for the United States. It is designed to enhance and extend our geographic knowledge and understanding and to foster national self-awareness."
   
   Description of contents and fields are at http://nationalatlas.gov/atlasftp.html
   This dataset hasn't been converted to a universal format yet.
 fields:
-  - uniqid: ~
+  - handle:  ~
 name: 'National Atlas of the United States - PLACEHOLDER'
 notes:
   coverage: ''
@@ -40,5 +40,5 @@ ratings:
         desc: Highly dimensional and densely quantified
         rating: 5
 tags: "geo, geographic, atlas, map, mapping, layer, huge\n"
-uniqid: national_atlas
+handle:  national_atlas
 uniqid2: national_atlas_of_the_united_states_placeholder

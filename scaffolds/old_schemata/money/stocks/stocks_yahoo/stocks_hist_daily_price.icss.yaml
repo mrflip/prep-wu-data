@@ -5,81 +5,81 @@ contributors:
     shortname: finance.yahoo.com
     url: http://ichart.finance.yahoo.com/table.csv?s=AAPL&a=00&b=1&c=1900&d=11&e=31&f=2030&g=v&ignore=.csv
   - name: NASDAQ site
-    story: Company Symbols to Names
+    desc:  Company Symbols to Names
     url: http://www.nasdaq.com/asp/symbols.asp?exchange=q
-  - name: infochimp.org/flip
+  - name: infochimps.org/users/flip
     role: converted
     title: Philip (flip) Kromer
-    url: http://infochimp.org/flip
+    url: http://infochimps.org/users/flip
 fields:
   - datatype: str
     name: Stock Symbol
     tags: entity.corporation.id
-    uniqid: stock_symbol
+    handle:  stock_symbol
     units: entity.corporation.id.code.stocksymbol
   - datatype: str
     name: Stock Name
     tags: entity.corporation.name
-    uniqid: stock_name
+    handle:  stock_name
     units: ~
   - datatype: date
     name: Date
     tags: date
-    uniqid: date
+    handle:  date
     units: date.ISO
   - datatype: float
     desc: 'Opening price, not adjusted for Splits, Dividends or Inflation'
     name: 'Stock Price - open'
     tags: currency.usd
-    uniqid: stock_price_open
+    handle:  stock_price_open
     units: currency.usd.nonadj
   - datatype: float
     desc: 'Closing price, not adjusted for Splits, Dividends or Inflation'
     name: 'Stock Price - close'
     tags: currency.usd
-    uniqid: stock_price_close
+    handle:  stock_price_close
     units: currency.usd.nonadj
   - datatype: float
     desc: 'Lowest daily traded price, not adjusted for Splits, Dividends or Inflation'
     name: 'Stock Price - lo'
     tags: currency.usd
-    uniqid: stock_price_lo
+    handle:  stock_price_lo
     units: currency.usd.nonadj
   - datatype: float
     desc: 'Highest daily traded price, not adjusted for Splits, Dividends or Inflation'
     name: 'Stock Price - hi'
     tags: currency.usd
-    uniqid: stock_price_hi
+    handle:  stock_price_hi
     units: currency.usd.nonadj
   - datatype: float
     desc: 'Opening price, adjusted for Splits and Dividends but not for Inflation'
     name: 'Stock Price - Adjusted open'
     tags: currency.usd
-    uniqid: stock_price_adjusted_open
+    handle:  stock_price_adjusted_open
     units: currency.usd.nonadj
   - datatype: float
     desc: 'Closing price, adjusted for Splits and Dividends but not for Inflation'
     name: 'Stock Price - Adjusted close'
     tags: currency.usd
-    uniqid: stock_price_adjusted_close
+    handle:  stock_price_adjusted_close
     units: currency.usd.nonadj
   - datatype: float
     desc: 'Lowest daily traded price, adjusted for Splits and Dividends but not for Inflation'
     name: 'Stock Price - Adjusted lo'
     tags: currency.usd
-    uniqid: stock_price_adjusted_lo
+    handle:  stock_price_adjusted_lo
     units: currency.usd.nonadj
   - datatype: float
     desc: 'Highest daily traded price, adjusted for Splits and Dividends but not for Inflation'
     name: 'Stock Price - Adjusted hi'
     tags: currency.usd
-    uniqid: stock_price_adjusted_hi
+    handle:  stock_price_adjusted_hi
     units: currency.usd.nonadj
   - datatype: int
     desc: Number of shares traded that day
     name: Stock Volume
     tags: rate.finance.trade.stocks
-    uniqid: stock_volume
+    handle:  stock_volume
     units: thousand shares / day
 name: 'NASDAQ Daily 1970-Current Open, Close, Hi, Low and Volume'
 notes:
@@ -91,15 +91,15 @@ ratings:
   - initial:
       accurate:
         rating: 4
-        story: Should be checked against a secondary source.
+        desc:  Should be checked against a secondary source.
       authoritative:
         rating: 5
-        story: Published by Yahoo
+        desc:  Published by Yahoo
       comprehensive:
         rating: 3
-        story: Only daily; only 30 something years.
+        desc:  Only daily; only 30 something years.
       interesting:
         rating: 5
-        story: ''
+        desc:  ''
 tags: 'financial, stock, daily, high, hi, low, lo, close, open, market, NYSE, NASDAQ, Dow, s&p, standard, and, poors, 500, volume, split, adjusted money finance stock market price trade'
-uniqid: stocks_hist_daily_price
+handle:  stocks_hist_daily_price

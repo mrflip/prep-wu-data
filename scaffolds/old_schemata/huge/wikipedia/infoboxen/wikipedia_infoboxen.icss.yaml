@@ -1,13 +1,13 @@
 contributors:
   - desc: ~
-    uniqid: NAME
+    handle:  NAME
     url: http://
   - desc: ~
-    uniqid: "Converted by (your name here!) - contact help@infochimp.org if you'd like to help make this dataset useful."
-    url: http://infochimp.org/helpwanted
+    handle:  "Converted by (your name here!) - contact help@infochimps.org if you'd like to help make this dataset useful."
+    url: http://infochimps.org/helpwanted
 desc: 'All the infoboxes from Wikipedia broken out into individual tables, covering everything from airports to weather using tagged fields.'
 fields:
-  - uniqid: ~
+  - handle:  ~
 name: 'Wikipedia Infobox table - PLACEHOLDER'
 notes:
   coverage: ''
@@ -49,5 +49,5 @@ ratings:
         desc: Many of these data sets catalog and quantify information never previously available in semantically rich form.
         rating: 5
 tags: "wikipedia, infobox \n"
-uniqid: wikipedia_infobox
+handle:  wikipedia_infobox
 uniqid2: wikipedia_infobox_table_placeholder

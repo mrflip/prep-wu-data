@@ -12,7 +12,7 @@ infochimps_dataset:
       - url:      http://home.teleport.com/~stevena/scrabble/expurg.html
         name:     Steven Alexander
       - name:     "Official Scrabble Players' Dictionary vol. 3"
-        uniqname: ospd3
+        handle:  ospd3
   
     notes:
       desc:         >-
@@ -32,11 +32,11 @@ infochimps_dataset:
         (For more about the dictionaries used for competitive Scrabble, see the Scrabble FAQ.)
   
     fields:
-      - uniqname:         word
+      - handle:          word
         type_tags:        word:english
         data_type:        str
         
-      - uniqname:         stem_of
+      - handle:          stem_of
         type_tags:        list:word word:english word_stem
         optional:         true
         
