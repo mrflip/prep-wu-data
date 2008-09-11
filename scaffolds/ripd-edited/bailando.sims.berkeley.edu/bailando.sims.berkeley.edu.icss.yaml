@@ -1,0 +1,94 @@
+--- # !infochimps.org/^icss
+
+datasets:
+- name:                 'bailando.sims.berkeley.edu'
+  tag_list:             'corpus email enron trial'
+  category:             'language/corpora' 			# do what seems right, but do it the same way each time.
+  notes_by_role:
+      description:                      
+          name:         'Enron Emails'
+          body:         >
+
+            This website is the UC Berkeley SIMS group's page.  The
+            group has a focus on creating new ways to access and
+            display information.  One of their projects is a
+            visualizer for a collection of emails from Enron
+            employees.  It is this project's data that should be in
+            Infochimps.
+           
+      rights:
+          name:         'Public Domain (government data)'
+          body:         >
+            The emails were collected and published by the Federal
+            Energy Regulatory Commission during its investigation of
+            Enron and are consequently in te public domain.
+
+  rights_uniqname:      'PD-Govt'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+  valuation:
+      bonus:            0
+  url:                  'http://bailando.sims.berkeley.edu'
+
+  #
+  # Mandatory fields ^^^   Optional fields vvvv
+  # -----------------------------------------------------------------------
+      
+  #
+  # Besides the auto-generated links and credits, if you see anything that
+  # stands out as useful add it as its own entry.
+  #
+  # These are hashes; the 'role' should be something unique within each hash
+  # and whenever applicable share a common prefix.  (That is: if there are
+  # several usage notes, call them usage_intro:, usage_section_1, ...)
+  #
+  links_by_role:
+    background:
+          full_url:     'http://www-2.cs.cmu.edu/~enron/'
+          description:  'more information'
+          text:         >-
+            This dataset was collected and prepared by the CALO Project
+            (A Cognitive Assistant that Learns and Organizes). It
+            contains data from about 150 users, mostly senior
+            management of Enron, organized into folders. The corpus
+            contains a total of about 0.5M messages. This data was
+            originally made public, and posted to the web, by the
+            Federal Energy Regulatory Commission during its
+            investigation.
+
+  role_credits:
+      # context:
+      #     contributor:  ''
+      #     citation:     ''
+
+  #
+  # These are convenience methods that will auto-generate the given
+  # associations.  Invent your own if you're repeating effort across a
+  # ton of these.
+  #
+  make_contributor_from_name_and_url:   true
+  make_main_credit_from_name_and_url:   true
+  make_main_source_link_from_url:       true  
+  create_approve_and_rate_as_one:       dhruv # your name here
+
+    
+  payloads_by_name:
+      # "":
+      #    file_path:      "/meta/infochimps_datasets/"
+      #    format:         "yaml"
+
+#
+# If you add any credits above (under role_credits),
+# enter the corresponding contributor here.
+#
+# A contributor only appears in more than one schema
+# file you only need it to 
+#   
+contributors:
+# - name:                 ''
+#   url:                  ''
+#   desc:                 ''
+#   base_trustification:  0
+
+# Leave this line alone
+icss:
+  version:              0.5
+  moreinfo:             http://infochimps.org/info/icss

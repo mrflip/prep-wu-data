@@ -1,0 +1,104 @@
+--- # !infochimps.org/^icss
+
+datasets:
+- name:                 '3dmodels'
+  tag_list:             '3d wireframe content'
+  category:             'technology/software' 			# do what seems right, but do it the same way each time.
+  notes_by_role:
+      description:                      
+          name:         'Description'
+          body:         >
+            3dmodels.com is a website which hosts images, wireframes,
+            animations, textures, &c, in a variety of formats for use
+            in modeling and the design of software.
+
+      rights:
+          name:         'Rights'
+          body:         >
+
+            No explicit rights statement is included at the website.
+            Claims of its being a "marketplace" seem to contradict
+            other phrases such as "grow this collection for the
+            benefit of our community."
+            
+  rights_uniqname:      'none_stated'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+  valuation:
+      bonus:            0
+  url:                  'http://www.3dmodels.com'
+
+  #
+  # Mandatory fields ^^^   Optional fields vvvv
+  # -----------------------------------------------------------------------
+      
+  #
+  # Besides the auto-generated links and credits, if you see anything that
+  # stands out as useful add it as its own entry.
+  #
+  # These are hashes; the 'role' should be something unique within each hash
+  # and whenever applicable share a common prefix.  (That is: if there are
+  # several usage notes, call them usage_intro:, usage_section_1, ...)
+  #
+  links_by_role:
+    usage:
+      full_url:     'http://www.3dmodels.com/Welcome.html'
+      description:  'synopsis on homepage'
+      text:         >-
+        Close your eyes....
+        (Yes, we know you can keep on reading with your eyes closed!)
+
+        Imagine your next 3D Project...  Imagine developing all of the
+        content for your video, game, movie, etc...  Countless hours
+        developing wireframes, animation, textures, and more.  Yes, we
+        feel your pain...
+
+        Now, imagine a marketplace for 3D models and content.  Imagine
+        being able to find complete models, wireframes, animations,
+        textures and more...  Quickly and easily find assets
+        appropriate for your project.  Imagine being able to
+        contribute to this marketplace to improve and grow this
+        collection for the benefit of our community.
+
+        We are developing such a site.  A member-driven marketplace
+        for 3D content and services.  We look forward to empowering
+        the 3D in all of us.
+
+        Check back with us soon as we make this vision a 3D reality.
+        
+  role_credits:
+      # context:
+      #     contributor:  ''
+      #     citation:     ''
+
+  #
+  # These are convenience methods that will auto-generate the given
+  # associations.  Invent your own if you're repeating effort across a
+  # ton of these.
+  #
+  make_contributor_from_name_and_url:   true
+  make_main_credit_from_name_and_url:   true
+  make_main_source_link_from_url:       true  
+  create_approve_and_rate_as_one:       dhruv # your name here
+
+    
+  payloads_by_name:
+      # "":
+      #    file_path:      "/meta/infochimps_datasets/"
+      #    format:         "yaml"
+
+#
+# If you add any credits above (under role_credits),
+# enter the corresponding contributor here.
+#
+# A contributor only appears in more than one schema
+# file you only need it to 
+#   
+contributors:
+# - name:                 ''
+#   url:                  ''
+#   desc:                 ''
+#   base_trustification:  0
+
+# Leave this line alone
+icss:
+  version:              0.5
+  moreinfo:             http://infochimps.org/info/icss

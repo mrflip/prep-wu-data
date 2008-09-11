@@ -1,0 +1,101 @@
+--- # !infochimps.org/^icss
+
+datasets:
+- name:                 'feeds.delicious.com'
+  tag_list:             'web 2.0 feed bookmark'
+  category:             'technology/internet' 			# do what seems right, but do it the same way each time.
+  notes_by_role:
+      description:                      
+          name:         'Description'
+          body:         >
+
+            delicious.com is a "social bookmarking" website that
+            allows users to share their Internet bookmarks with each
+            other.  This dataset is a crawl of the feeds published by
+            users of delicious.com.
+
+
+      rights:
+          name:         'Rights'
+          body:         >
+            Delicious, the Delicious logo and the Delicious design, as
+            well as "Yahoo!", the Yahoo! logo, Y! and the Y! logo, are
+            the trademarks or trade dress of Yahoo!, and may not be
+            used without express written permission from Yahoo!, other
+            than for attribution. All other trademarks not owned by
+            Yahoo! that appear on Delicious are the property of their
+            respective owners, who may or may not be affiliated with,
+            connected to, or sponsored by Yahoo!. Delicious-originated
+            content included on the Site, such as text, graphics,
+            logos, data compilations, APIs, software and the
+            compilation of all content on the Site, is the property of
+            Delicious and its licensers and protected by United States
+            and international copyright laws. Except as set out in
+            these Delicious Terms, no reproduction of any
+            Delicious-originated content is permitted without written
+            permission from Delicious.
+
+            Any use or reproduction of user-posted content must comply
+            with the terms of the respective license(s) and must
+            include a label indicating such license.
+
+  rights_uniqname:      'not_open'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+  valuation:
+      bonus:            0
+  url:                  'http://feeds.delicious.com'
+
+  #
+  # Mandatory fields ^^^   Optional fields vvvv
+  # -----------------------------------------------------------------------
+      
+  #
+  # Besides the auto-generated links and credits, if you see anything that
+  # stands out as useful add it as its own entry.
+  #
+  # These are hashes; the 'role' should be something unique within each hash
+  # and whenever applicable share a common prefix.  (That is: if there are
+  # several usage notes, call them usage_intro:, usage_section_1, ...)
+  #
+  links_by_role:
+      # usage:
+      #     full_url:     ''
+      #     text:         >-
+      #         text
+  role_credits:
+      # context:
+      #     contributor:  ''
+      #     citation:     ''
+
+  #
+  # These are convenience methods that will auto-generate the given
+  # associations.  Invent your own if you're repeating effort across a
+  # ton of these.
+  #
+  make_contributor_from_name_and_url:   true
+  make_main_credit_from_name_and_url:   true
+  make_main_source_link_from_url:       true  
+  create_approve_and_rate_as_one:       dhruv # your name here
+
+    
+  payloads_by_name:
+      # "":
+      #    file_path:      "/meta/infochimps_datasets/"
+      #    format:         "yaml"
+
+#
+# If you add any credits above (under role_credits),
+# enter the corresponding contributor here.
+#
+# A contributor only appears in more than one schema
+# file you only need it to 
+#   
+contributors:
+# - name:                 ''
+#   url:                  ''
+#   desc:                 ''
+#   base_trustification:  0
+
+# Leave this line alone
+icss:
+  version:              0.5
+  moreinfo:             http://infochimps.org/info/icss
