@@ -1,0 +1,91 @@
+contributors:
+  - desc: ~
+    handle:  Statoids.com
+    url: http://www.statoids.com/wab.html
+  - desc: ~
+    handle:  ISO
+    url: www.iso.org/iso/english_country_names_and_code_elements
+  - desc: ~
+    handle:  United Nations Statistics division
+    url: http://unstats.un.org/unsd/methods/m49/m49alpha.htm
+desc: |-
+  Excellent cross reference of many major coding systems for countries by [http://www.statoids.com/wab.html statoids.com].
+  You can also find detailed information on most countries and states at that site.
+fields:
+  - desc: |
+      ISO-3166-1 Country code, alpha-2 two letter code
+      http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm
+    name: geo.country.code.iso3166_alpha2
+    handle:  geo_country_code_iso3166_alpha2
+  - desc: |
+      ISO-3166-1 Country code, alpha-3 three letter code
+      http://unstats.un.org/unsd/methods/m49/m49alpha.htm
+    name: geo.country.code.iso3166_alpha_3
+    handle:  geo_country_code_iso3166_alpha_3
+  - desc: |
+      ISO-3166-1 Numerical code
+      http://unstats.un.org/unsd/methods/m49/m49alpha.htm            
+    name: geo.country.code.iso3166_numeric
+    handle:  geo_country_code_iso3166_numeric
+  - desc: |
+      ITU country code
+      http://www.itu.int/cgi-bin/htsh/mm/scripts/mm.list?_search=ITUstates&_languageid=1
+    name: geo.code.country_ITU
+    handle:  geo_code_country_itu
+  - desc: |
+      US FIPS location code
+      http://earth-info.nga.mil/gns/html/digraphs.htm
+    name: geo.code.country_FIPS
+    handle:  geo_code_country_fips
+  - desc: "International Olympics Committee designation\n"
+    name: geo.code.country_IOC
+    handle:  geo_code_country_ioc
+  - desc: |
+      FIFA soccer designations
+      http://en.wikipedia.org/wiki/List_of_FIFA_country_codes
+    name: geo.code.country_FIFA
+    handle:  geo_code_country_fifa
+  - desc: |
+      Distinguishing Signs of Vehicles in International Traffic
+      http://www.unece.org/trans/doc/2003/wp1/disting-signs-5-2003.pdf
+    name: geo.code.country_DSC
+    handle:  geo_code_country_dsc
+  - desc: |
+      World Meteorological Organization
+      http://icoads.noaa.gov/metadata/wmo47/wmo_quarterly/47CodeTables9903.html
+    name: geo.code.country_WMO
+    handle:  geo_code_country_wmo
+  - desc: |
+      US Library of Congress MARC codes for bibilographic information
+      http://www.loc.gov/marc/countries/cou_home.html
+    name: geo.code.country_MARC
+    handle:  geo_code_country_marc
+  - desc: ~
+    name: country_independence_status
+    handle:  country_independence_status
+name: Country Code Cross reference
+notes:
+  coverage: '[ { spatial: global } ]'
+  rights: ''
+  see_also: |
+    - currencycodes
+    - languagecodes
+  role:          usage
+  desc:          There are further notes and references at http://www.statoids.com/wab.html
+ratings:
+  - initial:
+      accurate:
+        desc: 'There are a maddening array of standards, with codes entering and departing from usage'
+        rating: 4
+      authoritative:
+        desc: All data is traced back to international standards bodies.  The source site specializes in data organization of country information.
+        rating: 4
+      comprehensive:
+        desc: Covers all countries
+        rating: 5
+      interesting:
+        desc: Incrediby useful when you need it (as a join table or to sanitize crufty data) but otherwise it's just a list of codes.
+        rating: 2
+tags: 'ISO3166, ISO, two, three, letter, UN, country, code, nation, state, id, join, table, tld, top, level, domain, name, dns, geo, geographic, geocode'
+handle:  countrycodes
+uniqid2: country_code_cross_reference

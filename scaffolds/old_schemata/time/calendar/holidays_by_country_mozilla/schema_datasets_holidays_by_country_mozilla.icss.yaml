@@ -1,0 +1,9 @@
+--- 
+- infochimps_schema:
+
+    name:       'Holidays Algeria'
+    handle:    holidays_algeria
+    tags:       'Algeria holidays calendar'
+    notes:
+        desc: |-
+            Holidays and their date of observation in Algeria

@@ -1,0 +1,44 @@
+contributors:
+  - desc: ~
+    handle:  National Atlas
+    url: nationalatlas.gov
+  - desc: ~
+    handle:  "Converted by (your name here!) - contact help@infochimps.org if you'd like to help make this dataset useful."
+    url: http://infochimps.org/helpwanted
+desc: |-
+  This is the placeholder for a series of several dozen rich geographical information layers from the National Atlas of the United States. Contact help@infochimps.org if you'd like to help make it available.
+  "Nationalatlas.gov is the new National Atlas of the United States. This new atlas provides a comprehensive, maplike view into the enormous wealth of geospatial and geostatistical data collected for the United States. It is designed to enhance and extend our geographic knowledge and understanding and to foster national self-awareness."
+  
+  Description of contents and fields are at http://nationalatlas.gov/atlasftp.html
+  This dataset hasn't been converted to a universal format yet.
+fields:
+  - handle:  ~
+name: 'National Atlas of the United States - PLACEHOLDER'
+notes:
+  coverage: ''
+  rights: |-
+    Usage notes contained here carry the copyright of the primary source.
+    The dataset represents a comprehensive indexing of factual information, and is given here in a unique and novel presentation.
+    
+    Nearly all information collected by the Federal Government is in the public domain and use of raw data produced under this project is not restricted in any way. Both "National Atlas of the United States" and "The National Atlas of the United States of America" are registered trademarks of the United States Department of the Interior. ...
+    Although the content of most National Atlas Web pages is in the public domain, some pages may contain material that is copyrighted by others and used by the National Atlas with permission. You may need to obtain permission from the copyright owner for other uses. Furthermore, some non-National Atlas data, products, and information linked, or referred to, from this site may be protected under U.S. and foreign copyright laws. You may need to obtain permission from the copyright owner to acquire, use, reproduce, or distribute these materials.
+  see_also: "- ~\n"
+  role:          usage
+  desc:          ''
+ratings:
+  - initial:
+      accurate:
+        desc: Based on the best available data
+        rating: 5
+      authoritative:
+        desc: 'Prepared by experts from data subject to government standards, and widely used by third parties.'
+        rating: 5
+      comprehensive:
+        desc: Exhaustively covers the US but only the US
+        rating: 4
+      interesting:
+        desc: Highly dimensional and densely quantified
+        rating: 5
+tags: "geo, geographic, atlas, map, mapping, layer, huge\n"
+handle:  national_atlas
+uniqid2: national_atlas_of_the_united_states_placeholder

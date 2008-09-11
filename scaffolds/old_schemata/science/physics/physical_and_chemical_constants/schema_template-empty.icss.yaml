@@ -1,0 +1,36 @@
+--- 
+- infochimps_schema:
+        
+    # Fundamental description
+        
+    collection:         'Physical and Chemical Constants and Conversions'
+    coll_handle:       phys_chem_constants_conversions
+    coll_tags:          |
+        constants physical chemical 
+        
+    formats:            { flat: {} }
+    
+    # Contributors
+    
+    contributors:
+        
+      - name:           'National Institute of Standards and Technology'
+        handle:        physics.nist.gov
+        url:            http://physics.nist.gov/Pubs/SP811/appenB8.html
+        role:           
+        cite:           
+        desc:           |
+            From the NIST guide for the use of the International System of Units (SI).
+            NIST coordinates the Federal Government policy on the conversion to the SI 
+            by Federal agencies and on the use of the SI by United States industry and the public.
+
+    # Free-form descriptive notes
+    
+    notes:
+        
+        coll_desc:      |
+            Physical and chemical constants and conversions between different units.
+        usage:          |
+            
+        rights:         |
+

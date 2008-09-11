@@ -1,0 +1,89 @@
+infochimps_schema:
+  - pool:
+      handle:    miscellany
+      datasets:
+        - name:           'On-screen Deaths in the Four "Rambo" Movies'
+          handle:        rambo_movie_deaths
+          tags:           "rambo, stallone, death, war, killed, tortured, movies, culture, film, gun, violence\n"
+          contributors:
+            - name: John Mueller
+              role: collected
+              url: http://psweb.sbs.ohio-state.edu/faculty/jmueller/
+              handle:  psweb.sbs.ohio-state.edu/faculty/jmueller
+              desc: |-
+                  John Mueller
+
+                  Woody Hayes Chair of National Security Studies, Mershon Center
+
+                  Professor of Political Science
+
+            - name: Los Angeles Times
+              role: published
+              url: 'http://www.latimes.com/news/opinion/sunday/commentary/la-op-mueller20jan20,0,1618101.story'
+              handle:  www.latimes.com
+            - name: Philip (flip) Kromer
+              role: uploaded
+              url: http://infochimps.org/users/flip
+              handle:  infochimps.org/users/flip
+
+          notes:
+              desc: |
+                  Tabulates the number and characteristics of on-screen deaths in all four Rambo movies
+                  Excerpted from http://www.latimes.com/news/opinion/sunday/commentary/la-op-mueller20jan20,0,1618101.story
+
+              see_also: |
+                - oif_casualties
+                - oaf_casualties
+
+          fields:
+            - desc: 'Number, in series, of this film'
+              name: id
+              handle:  id
+            - desc: Movie Title
+              name: title
+              handle:  title
+            - desc: Number of villains killed by Rambo while Rambo is wearing his shirt
+              name: badguys_killedby_rambo_shirt_on
+              handle:  badguys_killedby_rambo_shirt_on
+            - desc: Number of villains killed by Rambo while Rambo is *not* wearing his shirt
+              name: badguys_killedby_ramboshirt_off
+              handle:  badguys_killedby_ramboshirt_off
+            - desc: 'Number of villains killed by Rambo, total'
+              name: badguys_killedby_rambo_total
+              handle:  badguys_killedby_rambo_total
+            - desc: Number of villains killed by accomplices of Rambo
+              name: badguys_killedby_rambo_accomplice
+              handle:  badguys_killedby_rambo_accomplice
+            - desc: Number of good guys killed by villains
+              name: goodguys_killedby_badguys
+              handle:  goodguys_killedby_badguys
+            - desc: 'Number of characters killed, total'
+              name: killed_total
+              handle:  killed_total
+            - desc: 'Movie running time, in minutes'
+              name: running_time_min
+              handle:  running_time_min
+            - desc: Rate of characters killed per minute
+              name: killed_per_minute
+              handle:  killed_per_minute
+            - desc: 'Movie running time of first on-screen death, in minutes'
+              name: runtime_of_first_killed
+              handle:  runtime_of_first_killed
+            - desc: Rate of characters killed per minute *after* (and including) the first on-screen death
+              name: killed_per_minute_after_first
+              handle:  killed_per_minute_after_first
+            - desc: 'Number of Movie sequences in which Rambo is shot at, to no result'
+              name: sequences_rambo_shot_at_no_result
+              handle:  sequences_rambo_shot_at_no_result
+            - desc: Number of Movie sequences in which a good guy is tortured by a bad guy
+              name: sequences_goodguy_torturedby_badguy
+              handle:  sequences_goodguy_torturedby_badguy
+            - desc: Number of sex scenes
+              name: sex_scenes
+              handle:  sex_scenes
+          ratings:
+            - initial:
+                accurate:         { rating: 3 }
+                authoritative:    { rating: 4 }
+                comprehensive:    { rating: 1 }
+                interesting:      { rating: 5 }

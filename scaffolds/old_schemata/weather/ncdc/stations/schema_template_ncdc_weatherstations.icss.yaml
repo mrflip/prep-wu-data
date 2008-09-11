@@ -1,0 +1,214 @@
+contributors:
+  - name: ncdc.noaa.gov
+    role: source
+    title: National Climactic Data Center
+    url: http://www.ncdc.noaa.gov/oa/climate/surfaceinventories.html
+  - name: infochimps.org/users/flip
+    role: converted
+    title: Philip (flip) Kromer
+    url: http://infochimps.org/users/flip
+fields:
+  - name: USAF_weatherstation_code
+    desc:  Air Force Datsav3 station number
+    tags: entity.id.USAF_weatherstation_code
+    type: int:6
+    handle:  usaf_weatherstation_code
+    units: ~
+  - name: WBAN_weatherstation_code
+    desc:  NCDC WBAN number
+    tags: entity.id.WBAN_weatherstation_code
+    type: int:5
+    handle:  wban_weatherstation_code
+    units: ~
+  - name: station_name
+    desc:  Weather Station Name
+    tags: entity.name.weatherstation
+    type: string:30
+    handle:  station_name
+    units: ~
+  - name: country_code_wmo
+    desc:  WMO historical country ID
+    tags: location.countrycode.wmo.a2
+    type: string:2
+    handle:  country_code_wmo
+    units: ~
+  - name: country_code_fips
+    desc:  FIPS country ID
+    tags: location.countrycode.fips.a2
+    type: string:2
+    handle:  country_code_fips
+    units: ~
+  - name: us_state
+    desc:  State (for stations in the US)
+    tags: location.regioncode.us_state.a2
+    type: string:2
+    handle:  us_state
+    units: ~
+  - name: ICAO_call_sign
+    desc:  Weather Station ICAO call sign
+    tags: entity.id.ICAO_call_sign
+    type: string:4
+    handle:  icao_call_sign
+    units: ~
+  - name: lat
+    desc:  Latitude in decimal degrees
+    tags: location.coordinate.latitude
+    type: fixed:2.3
+    handle:  lat
+    units: degrees_latitude
+  - name: lng
+    desc:  Longitude in decimal degrees
+    tags: location.coordinate.longitude
+    type: fixed:3.3
+    handle:  lng
+    units: degrees_longitude
+  - name: elevation
+    desc:  Elevation in meters
+    tags: location.coordinate.altitude_sea_level
+    type: fixed:4.1
+    handle:  elevation
+    units: meters
+  - name: data_collection_number_of_hourly_records
+    desc:  Number of NCDC Global Hourly ISD records collected in the given time period
+    tags: data.records.rate
+    type: int:5
+    handle:  data_collection_number_of_hourly_records
+    units: number
+  - name: data_collection_year
+    desc:  Year of record
+    tags: data.timestamp.year
+    type: int:4
+    handle:  data_collection_year
+    units: year
+  - name: data_collection_month
+    desc:  Month of record
+    tags: data.timestamp.month
+    type: int:2
+    handle:  data_collection_month
+    units: month
+name: NCDC Global Hourly Weather Stations
+notes:
+  coverage: global
+  formats: '[yaml]'
+  rights: |-2
+       
+       h2. WMO Resolution 40
+       
+       h3. NOAA Policy
+    
+       The following data and products may have conditions placed on their
+       international commercial use. They can be used within the U.S. or for
+       non-commercial international activities without restriction. The
+       non-U.S. data cannot be redistributed for commercial
+       purposes. Re-distribution of these data by others must provide this same
+       notification. A log of IP addresses accessing these data and products
+       will be maintained and may be made available to data providers.
+    
+       For details, please consult
+       "WMO Resolution 40 on the Exchange of Meterological Data":http://www.wmo.int/pages/about/Resolution40.html.
+  see_also: NCDC Global Hourly Weather (ISD-Lite)
+  desc:  |-2
+    
+       This file gives the name, location, and data inventory for all the
+       weather stations in the <abbr title="US National Climactic Data Center">NCDC</abbr>
+       Integrated Surface Database (Global Hourly) weather datasets.
+    
+       h2. Important Note on Redistribution:
+    
+           The non-U.S. data (ie, data for other countries) within this
+           database are subject to WMO Resolution 40 restrictions, and cannot
+           be redistributed within or outside of the U.S. for any commercial
+           activities.  See **Rights & Restrictions** below.
+    
+       h2. About the Integrated Surface Database
+    
+       The Integrated Surface Database (ISD) consists of global hourly and
+       synoptic observations compiled from numerous sources, into a single
+       common ASCII format and common data model. ISD was developed as a joint
+       activity within Asheville's Federal Climate Complex. The National
+       Climatic Data Center, with U.S. Air Force and Navy partners, began the
+       effort in 1998 with the assistance of external funding from several
+       sources. ISD integrates data from over 100 original data sources,
+       including numerous data formats which were key-entered from paper forms
+       during the 1950's-1970's timeframe. ISD Version 1 was released in 2001,
+       with Version 2 (additional quality control applied) in 2003. Since 2003,
+       there have been continued incremental improvements in automated quality
+       control software.
+    
+       The database comprises over 20,000 stations worldwide, with some having
+       data as far back as 1901, though the data show a substantial increase in
+       volume in the 1940's and again in the early 1970's. Currently there are
+       over 11,000 stations "active" and updated daily in the database. Total
+       data volume (uncompressed) is over 350 gigabytes. ISD includes numerous
+       parameters such as wind speed and direction, wind gust, temperature, dew
+       point, cloud data, sea level pressure, altimeter setting, station
+       pressure, present weather, visibility, precipitation amounts for various
+       time periods, snow depth, and various other elements as observed by each
+       station.
+    
+       
+  usage: |-
+    Data were obtained from NOAA's "NCDC FTP site":ftp://ftp.ncdc.noaa.gov/pub/data/noaa/
+    h3. Notes:
+    
+    Missing station name, etc indicate the metadata are not currently available.
+    The term "bogus" indicates that the station name, etc are not available.
+ratings:
+  - initial:
+      accurate:
+        rating: 5
+        desc:  ''
+      authoritative:
+        rating: 5
+        desc:  ''
+      comprehensive:
+        rating: 5
+        desc:  ''
+      interesting:
+        rating: 1
+        desc:  ''
+tags: global hourly weather atmospheric pressure temperature huge meta station location
+handle:  ncdc_global_hourly_weather_stations
+uniqid2: ncdc_global_hourly_weather_stations
+
+- imw_flat_file:
+        name:           station_info
+        filename:       ncdc-weather-data/metadata/ISH-HISTORY.TXT
+        skip_head:      17
+        picture:        |
+            s6    .s5   .s30                           s2.s2.s2.s4  ..ci5   .ci6    .ci5
+            USAF   WBAN  STATION NAME                  CTRY  ST CALL  LAT    LON     ELEV(.1M)
+            010014 99999 SOERSTOKKEN                   NO NO    ENSO  +59783 +005350 +00500
+            999999 94995 UNIVERSITY OF NEBRASKA        US US NE C52A  +40848 -096565 +03624
+
+        fields:
+            - USAF_weatherstation_code
+            - WBAN_weatherstation_code
+            - station_name
+            - country_code_wmo
+            - country_code_fips
+            - us_state
+            - ICAO_call_sign
+            - lat_sign
+            - lat
+            - lng_sign
+            - lng
+            - elev_sign
+            - elev 
+        
+- imw_flat_file:
+        name:           station_inventory
+        filename:       ncdc-weather-data/metadata/ish-inventory.txt
+        skip_head:      8
+        # max_records:    10000
+        picture:        |
+            s6    .s5   .i4   .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6    .i6
+            USAF   WBAN  YEAR  JAN    FEB    MAR    APR    MAY    JUN    JUL    AUG    SEP    OCT    NOV    DEC
+            010000 99999 2001  0      0      0      0      0      0      0      0      1      2      6      2
+            
+        fields:
+            - USAF_weatherstation_code
+            - WBAN_weatherstation_code
+            - data_inventory_year
+            - data_inventory_months:         rest
+

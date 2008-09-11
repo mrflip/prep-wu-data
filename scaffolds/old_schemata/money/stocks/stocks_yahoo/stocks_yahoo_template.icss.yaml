@@ -1,0 +1,112 @@
+- infochimps_schema:
+    collection:         US Stock Market
+    coll_handle:       stocks_yahoo
+    coll_tags:          >-
+        financial, stock, daily, high, hi, low, lo, close, open, market, NYSE,
+        NASDAQ, Dow, s&p, standard, and, poors, 500, volume, split, adjusted
+        money finance stock market price trade        
+    name:               Daily 1970-Current Open, Close, Hi, Low and Volume
+    handle:            stocks_hist_daily_price
+    tags:               >-
+        financial, stock, daily, high, hi, low, lo, close, open, market, NYSE,
+        NASDAQ, Dow, s&p, standard, and, poors, 500, volume, split, adjusted
+        money finance stock market price trade
+    notes:
+        desc:           >-
+            Daily Open, Close, Low, High and Volume.
+        see_also:       >-
+            - longtermhistoricalstocks
+            - stocks_hist_div_split
+            - constant_dollars
+        coverage:       '[ { time: 1970 to now } ]'
+        usage:          >-
+            "Adjusted" price is corrected for [wp:dividend]s and [wp:stock split]s.
+            Note that the adjusted price propagates *backwards* through those
+            price modifiers to find the adjusted value.
+              
+    contributors:
+        - url:        http://ichart.finance.yahoo.com/table.csv?s=AAPL&a=00&b=1&c=1900&d=11&e=31&f=2030&g=v&ignore=.csv
+          name:       Yahoo Finance
+          shortname:  finance.yahoo.com
+          role:       distributed
+      
+        - url:        http://www.nasdaq.com/asp/symbols.asp?exchange=q
+          name:       NASDAQ site
+          desc:       Company Symbols to Names
+          
+        - url:        http://infochimps.org/users/flip
+          name:       infochimps.org/users/flip
+          title:      Philip (flip) Kromer 
+          role:       converted
+          
+    # Fields
+    fields:
+          - name:       stock_symbol
+            datatype:   str
+            units:      entity.corporation.id.code.stocksymbol
+            tags:       entity.corporation.id
+          - name:       stock_exchange
+            datatype:   str
+            units:      entity.corporation.id.code.stocksymbol
+            tags:       entity.corporation.id entity.corporation.id.code.exchange            
+          # - name:       Stock Name
+          #   datatype:   str
+          #   units:  
+          #   tags:       entity.corporation.name
+          - name:       date
+            datatype:   date
+            units:      date.ISO
+            tags:       date
+          - name:       stock_price_open
+            datatype:   float
+            units:      currency.usd.nonadj
+            tags:       currency.usd
+            desc:       Opening price, not adjusted for Splits, Dividends or Inflation
+          - name:       stock_price_close
+            datatype:   float
+            units:      currency.usd.nonadj
+            tags:       currency.usd
+            desc:       Closing price, not adjusted for Splits, Dividends or Inflation
+          - name:       stock_price_lo
+            datatype:   float
+            units:      currency.usd.nonadj
+            tags:       currency.usd
+            desc:       Lowest daily traded price, not adjusted for Splits, Dividends or Inflation
+          - name:       stock_price_high
+            datatype:   float
+            units:      currency.usd.nonadj
+            tags:       currency.usd
+            desc:       Highest daily traded price, not adjusted for Splits, Dividends or Inflation
+          # - name:       stock_price_adj_open
+          #   datatype:   float
+          #   units:      currency.usd.nonadj
+          #   tags:       currency.usd
+          #   desc:       Opening price, adjusted for Splits and Dividends but not for Inflation
+          - name:       stock_price_adj_close
+            datatype:   float
+            units:      currency.usd.nonadj
+            tags:       currency.usd
+            desc:       Closing price, adjusted for Splits and Dividends but not for Inflation
+          # - name:       stock_price_adj_lo
+          #   datatype:   float
+          #   units:      currency.usd.nonadj
+          #   tags:       currency.usd
+          #   desc:       Lowest daily traded price, adjusted for Splits and Dividends but not for Inflation
+          # - name:       stock_price_adj_hi
+          #   datatype:   float
+          #   units:      currency.usd.nonadj
+          #   tags:       currency.usd
+          #   desc:       Highest daily traded price, adjusted for Splits and Dividends but not for Inflation
+          - name:       stock_volume       
+            datatype:   int
+            units:      thousand shares / day
+            tags:       rate.finance.trade.stocks
+            desc:       Number of shares traded that day
+
+
+    # Ratings
+    ratings:
+        interesting:        { rating: 5, story: "" }
+        accurate:           { rating: 4, story: "Should be checked against a secondary source." }
+        authoritative:      { rating: 5, story: "Published by Yahoo" }
+        comprehensive:      { rating: 3, story: "Only daily; only 30 something years." }

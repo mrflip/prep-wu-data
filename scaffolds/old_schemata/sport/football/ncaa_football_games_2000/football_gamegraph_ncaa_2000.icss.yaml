@@ -1,0 +1,66 @@
+contributors:
+  - cite: 'M. Girvan and M. E. J. Newman, Proc. Natl. Acad. Sci. USA 99, 7821-7826 (2002).'
+    desc:  ~
+    handle:  M. Girvan and M. E. J. Newman
+    url: http://www-personal.umich.edu/~mejn/netdata/adjnoun.zip
+  - desc: "This page contains links to some network data sets I've compiled over the years. All of these are free for scientific use to the best of my knowledge, meaning that the original authors have already made the data freely available, or that I have consulted the authors and received permission to the post the data here, or that the data are mine. You are (as far as I know) free to make whatever use of these data you like, provided that you appropriately cite the original sources."
+    role: distributor
+    handle:  Mark Newman
+    url: http://www-personal.umich.edu/~mejn/netdata/index.html
+  - desc: 'Converted by Philip (flip) Kromer or the [http://infochimps.org|infochimp] project.'
+    role: converted
+    handle:  Philip (flip) Kromer
+    url: http://infochimps.org/user/flip
+desc: 'network of American football games between Division IA colleges during regular season Fall 2000, as compiled by M. Girvan and M. Newman. cite: M. Girvan and M. E. J. Newman, Community structure in social and biological networks, Proc. Natl. Acad. Sci. USA 99, 7821-7826 (2002).'
+fields:
+  - desc: ~
+    name: node_id
+    handle:  node_id
+  - desc: ~
+    name: node_value_team
+    handle:  node_value_team
+  - desc: ~
+    name: node_value_conference
+    handle:  node_value_conference
+  - desc: ~
+    name: edge_from
+    handle:  edge_from
+  - desc: ~
+    name: edge_to
+    handle:  edge_to
+name: Network of American football games between Division IA colleges during regular season Fall 2000.
+notes:
+  coverage: '[ { time: 2000 to 2000 } ]'
+  rights: ''
+  see_also: "- ~\n"
+  role:          usage
+  desc:          |-
+    The nodes have values that indicate to which conferences they belong.  The values are as follows:
+      0 = Atlantic Coast
+      1 = Big East
+      2 = Big Ten
+      3 = Big Twelve
+      4 = Conference USA
+      5 = Independents
+      6 = Mid-American
+      7 = Mountain West
+      8 = Pacific Ten
+      9 = Southeastern
+     10 = Sun Belt
+     11 = Western Athletic
+ratings:
+  - initial:
+      accurate:
+        rating: 3
+      authoritative:
+        desc: Used in published peer-reviewed papers by an expert in network theory (though assumedly not football).
+        rating: 4
+      comprehensive:
+        desc: 'Only one season, not very dimensional'
+        rating: 1
+      interesting:
+        desc: Limited scope
+        rating: 1
+tags: 'network, graph, football, division, ia, ncaa, fall, 2000, "regular, season", us, america, culture, sport, "american football", college'
+handle:  football_gamegraph_ncaa_2000
+uniqid2: network_of_american_football_games_between_division_ia_colleges_during_regular_season_fall_2000

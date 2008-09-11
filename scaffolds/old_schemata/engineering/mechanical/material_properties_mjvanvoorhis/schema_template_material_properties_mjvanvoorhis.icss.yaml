@@ -1,0 +1,64 @@
+--- 
+- infochimps_schema:
+    #
+    # Fundamental description
+    #
+    
+    collection: Mechanical Engineering Technical Data
+
+    coll_handle:  mech_eng_tech_data
+
+    coll_tags: |
+        engineering "material data" strength "unit converter" steel aluminum brass bronze "physical properties"
+        "cast iron" "area properties" "mass properties" bolts screws nuts "unit conversion" units unit
+
+    # each format 
+    formats:            { csv:   {}, yaml:  {}, xls:   {} }
+    
+    #
+    # Contributors
+    #
+    #   People/organizations who created or prepared the dataset. Include links
+    #   and citations wherever possible. This gives credit where it's deserved,
+    #   and allows people to trace the provenance of the data.
+    #
+    contributors:
+      
+      - name:       'M J VanVoorhis'
+        handle:    ourworld.cs.com/MJVanVoorhis
+        url:        http://ourworld.cs.com/MJVanVoorhis/techdata/techdata.htm    
+        role:           
+        cite:           ''
+        desc:       |
+            As a registered professional engineer in the State of Utah, I
+            may be of service to you.  Please contact me at <a
+            href="mailto:MJVanVoorhis@compuserve.com">VVES</a> for
+            inquiries.
+            
+    notes:
+        coll_desc:       |
+            Engineering Technical Data Reference Tables
+            
+            This page provides a listing of engineering reference data that is commonly found in
+            reference books. As a mechanical engineer, I have found that the World Wide Web is a
+            wonderful way to communicate standards to many people in a way that can be efficient and
+            valuable. I am attempting to start something good with this page and look forward to your
+            comments. Additional links to web pages of interest to engineers preceed the data table
+            links.
+
+            **Please Note**:
+                
+            This data must be used with proper dilligence and care. Verification of results by
+            independent means is essential for any design that can imperil life or property using the
+            information provided in this database. Liability for damages resulting from activities
+            using this data rest completely with the user who assumes all risk. 
+      
+        usage:          |
+              (...)
+      
+        rights:         |-
+            Infochimps contacted the author about usage rights but recieved no response.
+            Since it's publically available on the web, and this was the author's own purpose, 
+            anyone can use it.
+      
+

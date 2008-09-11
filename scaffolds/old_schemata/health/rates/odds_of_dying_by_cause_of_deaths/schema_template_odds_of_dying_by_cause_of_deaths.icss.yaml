@@ -1,0 +1,92 @@
+- infochimps_schema:
+    
+    collection: 'Odds of dying by cause of death'
+    
+    coll_handle:  odds_of_death
+    
+    coll_tags:  |
+        morbid odds dying death "cause of death" cause
+        'odds, chances, death, injury, accident, mortality, Transport, automobile, gun, handgun, police, strange, suffocation, suicide, dog, bite, execution, firearm, medical'
+
+    name: 'Odds of Death Due to Injury, United States, 2004'
+    handle:  odds_of_death
+    tags:   |
+        morbid odds dying death "cause of death" cause causes
+    
+    formats:    { txt => {}, yaml => {}, csv => {} }
+
+    contributors:
+      - name:   'National Safety Council'
+        handle:  national_safety_council
+        url:    http://www.nsc.org/lrs/statinfo/odds.htm
+        role:
+        cite:
+      - desc:   |
+            All the causes of accidental death, broken down by category and given as rate and odds, for the US in 2004
+            The National Safety Council has been compiling and reporting on injury data every year since the 1920s. 
+            The table below was prepared in response to frequent inquiries to the Council concerning the odds of dying
+            from or being killed by a specific incident or occurrence such as a lightning strike or a plane crash.
+ 
+    notes:
+    
+        coll_desc: |-
+            All the causes of accidental death, broken down by category and given as rate and odds, for the US in 2004
+            The National Safety Council has been compiling and reporting on injury data every year since the 1920s. 
+            The table below was prepared in response to frequent inquiries to the Council concerning the odds of dying
+            from or being killed by a specific incident or occurrence such as a lightning strike or a plane crash.
+            
+            National Safety Council estimates based on data from National Center for Health Statistics and U.S. 
+            Census Bureau. Deaths are classified on the basis of the Tenth Revision of the World Health Organization's
+            "The International Classification of Diseases" (ICD). Numbers following titles refer to External Cause
+            of Morbidity and Mortality classifications in ICD-10. One year odds are approximated by dividing the 
+            2004 population (293,656,842) by the number of deaths. Lifetime odds are approximated by dividing the
+            one-year odds by the life expectancy of a person born in 2004 (77.9 years).
+        usage:  |-
+            The odds given in this table are statistical averages over the whole U.S. population and do not necessarily reflect the chances of death for a particular person from a particular external cause. Any individual's odds of dying from various external causes are affected by the activities in which they participate, where they live and drive, what kind of work they do, and other factors.
+            The table has four columns. The first column gives the manner of injury such as motor-vehicle crash, fall, fire, etc. The second column gives the total number of deaths nationwide due to the manner of injury in 2004 (the latest year for which data are available). The third column gives the odds of dying in one year due to the manner of injury. The fourth column gives the lifetime odds of dying from the manner of injury.
+            
+            Statements about the odds or chances of dying from a given cause of death may be made as follows:
+            * The odds of dying from (manner of injury) in 2004 were 1 in (value given in the one-year odds column).
+            
+            * The life-time odds of dying from (manner of injury) for a person born in 2004 were 1 in (value given in the lifetime odds column).
+            For example, referring to the first line of the table below:
+            
+            * The odds of dying from an injury in 2004 were 1 in 1,756.
+            * The lifetime odds of dying from an injury for a person born in 2004 were 1 in 23.
+
+            
+        rights: |-
+            Usage notes contained here carry the copyright of the primary source.
+            The dataset represents a comprehensive indexing of factual information, and is given here in a 
+            unique and novel presentation.  
+            
+    notes:
+        desc:    |
+            All the causes of accidental death, broken down by category and given as rate and odds, for the US in 2004
+            The National Safety Council has been compiling and reporting on injury data every year since the 1920s. 
+            The table below was prepared in response to frequent inquiries to the Council concerning the odds of dying
+            from or being killed by a specific incident or occurrence such as a lightning strike or a plane crash.
+    
+    fields:
+        name: cause_of_death_ICD_code
+        handle:  cause_of_death_icd_code
+      - desc: |
+            Deaths are classified on the basis of the Tenth Revision of the World Health Organization's 
+            \"The International Classification of Diseases\" (ICD), specifically the External Cause of Morbidity
+            and Mortality classifications in ICD-10.
+        name: cause_of_death_classification_name
+        handle:  cause_of_death_classification_name
+      - desc: Description of the cause of death
+        name: cause_of_death_odds_one_year
+        handle:  cause_of_death_odds_one_year
+      - desc: 'One year odds are approximated by dividing the 2004 population (293,656,842) by the number of deaths.'
+        name: cause_of_death_odds_lifetime
+        handle:  cause_of_death_odds_lifetime
+      - desc: Lifetime odds are approximated by dividing the one-year odds by the life expectancy of a person born in 2004 (77.9 years).
+              
+    ratings:
+        accurate:       {rating: 3, by: 'flip', desc: 'Depends on causes reported by local agencies. There will necessarily be classification and reporting errors.'}
+        authoritative:  {rating: 5, by: 'flip', desc: 'Prepared by experts using the best available data.'}
+        comprehensive:  {rating: 2, by: 'flip', desc: 'Covers only one year (2004) and one country (US), but does so comprehensively: it is based on government-mandated reporting.'}
+        interesting:    {rating: 4, by: 'flip', desc: 'Fascinating to browse'}
+

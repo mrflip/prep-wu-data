@@ -1,0 +1,1074 @@
+
+
+# copy files, append .xml
+# credit www4.wiwiss.fu-berlin.de/factbook
+# fix field names
+# format: xml
+# snippet
+
+
+# Country rdf:about="http://www4.wiwiss.fu-berlin.de/factbook/resource
+# HIVorAIDS_deaths
+# administrativedivisions
+# administrativedivisions_note
+# airports_withpavedrunways_total
+# airports_withunpavedrunways_total
+# area_comparative
+# area_land
+# area_note
+# area_total
+# area_water
+# background
+# budget_expenditures
+# capital_daylightsavingtime
+# capital_geographiccoordinates
+# capital_name
+# capital_timedifference
+# climate
+# constitution
+# constitution_note
+# countryname_conventionallongform
+# countryname_conventionalshortform
+# countryname_locallongform
+# countryname_localshortform
+# currency_code
+# currency_code__note
+# currencycode
+# debt_external
+# dependentareas
+# dependentareas_note
+# disputes_international
+# economy_overview
+# elevationextremes_highestpoint_place
+# elevationextremes_lowestpoint_place
+# environment_currentissues
+# executivebranch_cabinet
+# executivebranch_chiefofstate
+# executivebranch_electionresults
+# executivebranch_elections
+# executivebranch_headofgovernment
+# factbookcode
+# fiscalyear
+# flag
+# flag rdf:resource="https://www.cia.gov/library/publications/the-world-factbook/flags
+# flagdescription
+# flags
+# geos
+# governmenttype
+# independence
+# internetcountrycode
+# internethosts
+# internetusers
+# investment_grossfixed
+# irrigatedland_total
+# judicialbranch
+# landboundary
+# landboundary rdf:resource="http://www4.wiwiss.fu-berlin.de/factbook/resource
+# landuse_note
+# large_flag
+# large_flag rdf:resource="https://www.cia.gov/library/publications/the-world-factbook/flags
+# legalsystem
+# legislativebranch
+# legislativebranch_electionresults
+# legislativebranch_elections
+# literacy_definition
+# location
+# map
+# map rdf:resource="https://www.cia.gov/library/publications/the-world-factbook/maps
+# maps
+# maritimeclaims_exclusiveeconomiczone
+# merchantmarine_foreign_owned
+# merchantmarine_note
+# merchantmarine_registeredinothercountries
+# militaryexpenditures_dollarfigure
+# militaryserviceageandobligation
+# name
+# nationalholiday
+# nationality_adjective
+# nationality_noun
+# naturalgas_provedreserves
+# oil_provedreserves
+# population_note
+# portsandterminals
+# publicdebt
+# radiobroadcaststations
+# railways_standardgauge
+# resource
+# roadways_paved
+# roadways_total
+# suffrage
+# telephones_mainlinesinuse
+# telephones_mobilecellular
+# telephonesystem_domestic
+# telephonesystem_generalassessment
+# telephonesystem_international
+# televisionbroadcaststations
+# terrain
+# totalfertilityrate
+# url
+# url rdf:resource="https://www.cia.gov/cia/publications/factbook/geos
+
+
+
+
+
+
+
+
+
+
+contributors:
+  - desc: ~
+    handle:  https://www.cia.gov/cia/publications/factbook
+    url: US Central Intelligence Agency
+desc: |-2
+  
+     Please also see the CIA Factbook frequenly asked questions at
+     https://www.cia.gov/library/publications/the-world-factbook/docs/faqs.html#General
+  
+     * Terminology Note: Due to the highly structured nature of the Factbook database, some collective generic terms have to be used. For example, the word Country in the Country name entry refers to a wide variety of dependencies, areas of special sovereignty, uninhabited islands, and other entities in addition to the traditional countries or independent states. Military is also used as an umbrella term for various civil defense, security, and defense activities in many entries. The Independence entry includes the usual colonial independence dates and former ruling states as well as other significant nationhood dates such as the traditional founding date or the date of unification, federation, confederation, establishment, or state succession that are not strictly independence dates. Dependent areas have the nature of their dependency status noted in this same entry.
+     
+fields:
+  - desc: 'This entry usually highlights major historic events and current issues and may include a statement about one or two key future trends.            '
+    name: description
+    handle:  description
+  - desc: "This entry identifies the country's regional location, neighboring countries, and adjacent bodies of water."
+    name: geo.loc.desc
+    handle:  geo_loc_desc
+  - desc: 'This entry includes rounded latitude and longitude figures for the purpose of finding the approximate geographic center of an entity and is based on the Gazetteer of Conventional Names, Third Edition, August 1988, US Board on Geographic Names and on other sources.'
+    name: geo.lat.dec
+    handle:  geo_lat_dec
+  - desc: 'This entry includes rounded latitude and longitude figures for the purpose of finding the approximate geographic center of an entity and is based on the Gazetteer of Conventional Names, Third Edition, August 1988, US Board on Geographic Names and on other sources.'
+    name: geo.lng.dec
+    handle:  geo_lng_dec
+  - desc: This entry includes the name of the Factbook reference map on which a country may be found. The entry on Geographic coordinates may be helpful in finding some smaller countries.
+    name: map references
+    handle:  map_references
+  - desc: Total area is the sum of all land and water areas delimited by international boundaries and/or coastlines.
+    name: area_total
+    handle:  area_total
+  - desc: 'Land area is the aggregate of all surfaces delimited by international boundaries and/or coastlines, excluding inland water bodies (lakes, reservoirs, rivers).'
+    name: area_land
+    handle:  area_land
+  - desc: 'Water area is the sum of the surfaces of all inland water bodies, such as lakes, reservoirs, or rivers, as delimited by international boundaries and/or coastlines.'
+    name: area_water
+    handle:  area_water
+  - desc: 'This entry provides an area comparison based on total area equivalents. Most entities are compared with the entire US or one of the 50 states based on area measurements (1990 revised) provided by the US Bureau of the Census. The smaller entities are compared with Washington, DC (178 sq km, 69 sq mi) or The Mall in Washington, DC (0.59 sq km, 0.23 sq mi, 146 acres).'
+    name: area_comparative
+    handle:  area_comparative
+  - desc: 'This entry contains the total length of all land boundaries and the individual lengths for each of the contiguous border countries. When available, official lengths published by national statistical agencies are used. Because surveying methods may differ, country border lengths reported by contiguous countries may differ.'
+    name: land_boundaries_total
+    handle:  land_boundaries_total
+  - desc: 'This entry contains the total length of all land boundaries and the individual lengths for each of the contiguous border countries. When available, official lengths published by national statistical agencies are used. Because surveying methods may differ, country border lengths reported by contiguous countries may differ.'
+    name: land_boundaries_border countries
+    handle:  land_boundaries_border_countries
+  - desc: 'This entry gives the total length of the boundary between the land area (including islands) and the sea.            '
+    name: coastline
+    handle:  coastline
+  - desc: 'This entry includes the following claim, the definition of which is excerpted from the United Nations Convention on the Law of the Sea (UNCLOS), which alone contains the full and definitive description: territorial sea - the sovereignty of a coastal state extends beyond its land territory and internal waters to an adjacent belt of sea, described as the territorial sea in the UNCLOS (Part II); this sovereignty extends to the air space over the territorial sea as well as its underlying seabed and subsoil; every state has the right to establish the breadth of its territorial sea up to a limit not exceeding 12 nautical miles; the normal baseline for measuring the breadth of the territorial sea is the mean low-water line along the coast as marked on large-scale charts officially recognized by the coastal state; the UNCLOS describes specific rules for archipelagic states.'
+    name: maritime_claims_territorial sea
+    handle:  maritime_claims_territorial_sea
+  - desc: "This entry includes the following claim, the definition of which is excerpted from the United Nations Convention on the Law of the Sea (UNCLOS), which alone contains the full and definitive description: contiguous zone - according to the UNCLOS (Article 33), this is a zone contiguous to a coastal state's territorial sea, over which it may exercise the control necessary to: prevent infringement of its customs, fiscal, immigration, or sanitary laws and regulations within its territory or territorial sea; punish infringement of the above laws and regulations committed within its territory or territorial sea; the contiguous zone may not extend beyond 24 nautical miles from the baselines from which the breadth of the territorial sea is measured (e.g. the US has claimed a 12-nautical mile contiguous zone in addition to its 12-nautical mile territorial sea)."
+    name: maritime_claims_contiguous zone
+    handle:  maritime_claims_contiguous_zone
+  - desc: 'This entry includes the following claim, the definition of which is excerpted from the United Nations Convention on the Law of the Sea (UNCLOS), which alone contains the full and definitive description: exclusive economic zone (EEZ) - the UNCLOS (Part V) defines the EEZ as a zone beyond and adjacent to the territorial sea in which a coastal state has: sovereign rights for the purpose of exploring and exploiting, conserving and managing the natural resources, whether living or non-living, of the waters superjacent to the seabed and of the seabed and its subsoil, and with regard to other activities for the economic exploitation and exploration of the zone, such as the production of energy from the water, currents, and winds; jurisdiction with regard to the establishment and use of artificial islands, installations, and structures; marine scientific research; the protection and preservation of the marine environment; the outer limit of the exclusive economic zone shall not exceed 200 nautical miles from the baselines from which the breadth of the territorial sea is measured.'
+    name: maritime_claims_exclusive economic zone
+    handle:  maritime_claims_exclusive_economic_zone
+  - desc: 'This entry includes the following claim, the definition of which is excerpted from the United Nations Convention on the Law of the Sea (UNCLOS), which alone contains the full and definitive description: continental shelf - the UNCLOS (Article 76) defines the continental shelf of a coastal state as comprising the seabed and subsoil of the submarine areas that extend beyond its territorial sea throughout the natural prolongation of its land territory to the outer edge of the continental margin, or to a distance of 200 nautical miles from the baselines from which the breadth of the territorial sea is measured where the outer edge of the continental margin does not extend up to that distance; the continental margin comprises the submerged prolongation of the landmass of the coastal state, and consists of the seabed and subsoil of the shelf, the slope and the rise; wherever the continental margin extends beyond 200 nautical miles from the baseline, coastal states may extend their claim to a distance not to exceed 350 nautical miles from the baseline or 100 nautical miles from the 2500 meter isobath; it does not include the deep ocean floor with its oceanic ridges or the subsoil thereof.'
+    name: maritime_claims_continental shelf
+    handle:  maritime_claims_continental_shelf
+  - desc: 'This entry includes the following claim, the definition of which is excerpted from the United Nations Convention on the Law of the Sea (UNCLOS), which alone contains the full and definitive description: exclusive fishing zone - while this term is not used in the UNCLOS, some states (e.g., the United Kingdom) have chosen not to claim an EEZ, but rather to claim jurisdiction over the living resources off their coast; in such cases, the term exclusive fishing zone is often used; the breadth of this zone is normally the same as the EEZ or 200 nautical miles.'
+    name: maritime_claims_exclusive fishing zone
+    handle:  maritime_claims_exclusive_fishing_zone
+  - desc: brief description of typical weather regimes throughout the year.
+    name: climate
+    handle:  climate
+  - desc: brief description of the topography.
+    name: terrain
+    handle:  terrain
+  - desc: highest point of elevation
+    name: elevation_lowest point
+    handle:  elevation_lowest_point
+  - desc: lowest point of elevation
+    name: elevation_highest point
+    handle:  elevation_highest_point
+  - desc: "This entry lists a country's mineral, petroleum, hydropower, and other resources of commercial importance."
+    name: natural_resources
+    handle:  natural_resources
+  - desc: 'This entry contains the percentage shares of total land area cultivated for crops like wheat, maize, and rice that are replanted after each harvest'
+    name: land_use_arable land
+    handle:  land_use_arable_land
+  - desc: 'This entry contains the percentage shares of total land area for crops like citrus, coffee, and rubber that are not replanted after each harvest; includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber.'
+    name: land_use_permanent crops
+    handle:  land_use_permanent_crops
+  - desc: 'other - any land not arable or under permanent crops; includes permanent meadows and pastures, forests and woodlands, built-on areas, roads, barren land, etc.  Percentage shares of total land area that is neither arable land - (land cultivated for crops like wheat, maize, and rice that are replanted after each harvest), or permanent crops (land cultivated for crops like citrus, coffee, and rubber that are not replanted after each harvest, including land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber)'
+    name: land_use_other
+    handle:  land_use_other
+  - desc: square kilometers of land area that is artificially supplied with water.
+    name: irrigated land
+    handle:  irrigated_land
+  - desc: Potential natural disasters.
+    name: natural hazards
+    handle:  natural_hazards
+  - desc: |-
+      This entry lists the most pressing and important environmental problems. The following terms and abbreviations are used throughout the entry:
+      Acidification - the lowering of soil and water pH due to acid precipitation and deposition usually through precipitation; this process disrupts ecosystem nutrient flows and may kill freshwater fish and plants dependent on more neutral or alkaline conditions (see acid rain).
+      
+      Acid rain - characterized as containing harmful levels of sulfur dioxide or nitrogen oxide; acid rain is damaging and potentially deadly to the earth's fragile ecosystems; acidity is measured using the pH scale where 7 is neutral, values greater than 7 are considered alkaline, and values below 5.6 are considered acid precipitation; note - a pH of 2.4 (the acidity of vinegar) has been measured in rainfall in New England.
+      Aerosol - a collection of airborne particles dispersed in a gas, smoke, or fog.
+      
+      Afforestation - converting a bare or agricultural space by planting trees and plants; reforestation involves replanting trees on areas that have been cut or destroyed by fire.
+      Asbestos - a naturally occurring soft fibrous mineral commonly used in fireproofing materials and considered to be highly carcinogenic in particulate form.
+      
+      Biodiversity - also biological diversity; the relative number of species, diverse in form and function, at the genetic, organism, community, and ecosystem level; loss of biodiversity reduces an ecosystem's ability to recover from natural or man-induced disruption.
+      Bio-indicators - a plant or animal species whose presence, abundance, and health reveal the general condition of its habitat.
+      
+      Biomass - the total weight or volume of living matter in a given area or volume.
+      Carbon cycle - the term used to describe the exchange of carbon (in various forms, e.g., as carbon dioxide) between the atmosphere, ocean, terrestrial biosphere, and geological deposits.
+      
+      Catchments - assemblages used to capture and retain rainwater and runoff; an important water management technique in areas with limited freshwater resources, such as Gibraltar.
+      DDT (dichloro-diphenyl-trichloro-ethane) - a colorless, odorless insecticide that has toxic effects on most animals; the use of DDT was banned in the US in 1972.
+      
+      Defoliants - chemicals which cause plants to lose their leaves artificially; often used in agricultural practices for weed control, and may have detrimental impacts on human and ecosystem health.
+      Deforestation - the destruction of vast areas of forest (e.g., unsustainable forestry practices, agricultural and range land clearing, and the over exploitation of wood products for use as fuel) without planting new growth.
+      
+      Desertification - the spread of desert-like conditions in arid or semi-arid areas, due to overgrazing, loss of agriculturally productive soils, or climate change.
+      Dredging - the practice of deepening an existing waterway; also, a technique used for collecting bottom-dwelling marine organisms (e.g., shellfish) or harvesting coral, often causing significant destruction of reef and ocean-floor ecosystems.
+      
+      Drift-net fishing - done with a net, miles in extent, that is generally anchored to a boat and left to float with the tide; often results in an over harvesting and waste of large populations of non-commercial marine species (by-catch) by its effect of "sweeping the ocean clean."
+      Ecosystems - ecological units comprised of complex communities of organisms and their specific environments.
+      
+      Effluents - waste materials, such as smoke, sewage, or industrial waste which are released into the environment, subsequently polluting it.
+      Endangered species - a species that is threatened with extinction either by direct hunting or habitat destruction.
+      
+      Freshwater - water with very low soluble mineral content; sources include lakes, streams, rivers, glaciers, and underground aquifers.
+      Greenhouse gas - a gas that "traps" infrared radiation in the lower atmosphere causing surface warming; water vapor, carbon dioxide, nitrous oxide, methane, hydrofluorocarbons, and ozone are the primary greenhouse gases in the Earth's atmosphere.
+      
+      Groundwater - water sources found below the surface of the earth often in naturally occurring reservoirs in permeable rock strata; the source for wells and natural springs.
+      Highlands Water Project - a series of dams constructed jointly by Lesotho and South Africa to redirect Lesotho's abundant water supply into a rapidly growing area in South Africa; while it is the largest infrastructure project in southern Africa, it is also the most costly and controversial; objections to the project include claims that it forces people from their homes, submerges farmlands, and squanders economic resources.
+      
+      Inuit Circumpolar Conference (ICC) - represents the 145,000 Inuits of Russia, Alaska, Canada, and Greenland in international environmental issues; a General Assembly convenes every three years to determine the focus of the ICC; the most current concerns are long-range transport of pollutants, sustainable development, and climate change.
+      Metallurgical plants - industries which specialize in the science, technology, and processing of metals; these plants produce highly concentrated and toxic wastes which can contribute to pollution of ground water and air when not properly disposed.
+      
+      Noxious substances - injurious, very harmful to living beings.
+      Overgrazing - the grazing of animals on plant material faster than it can naturally regrow leading to the permanent loss of plant cover, a common effect of too many animals grazing limited range land.
+      
+      Ozone shield - a layer of the atmosphere composed of ozone gas (O3) that resides approximately 25 miles above the Earth's surface and absorbs solar ultraviolet radiation that can be harmful to living organisms.
+      Poaching - the illegal killing of animals or fish, a great concern with respect to endangered or threatened species.
+      
+      Pollution - the contamination of a healthy environment by man-made waste.
+      Potable water - water that is drinkable, safe to be consumed.
+      
+      Salination - the process through which fresh (drinkable) water becomes salt (undrinkable) water; hence, desalination is the reverse process; also involves the accumulation of salts in topsoil caused by evaporation of excessive irrigation water, a process that can eventually render soil incapable of supporting crops.
+      Siltation - occurs when water channels and reservoirs become clotted with silt and mud, a side effect of deforestation and soil erosion.
+      
+      Slash-and-burn agriculture - a rotating cultivation technique in which trees are cut down and burned in order to clear land for temporary agriculture; the land is used until its productivity declines at which point a new plot is selected and the process repeats; this practice is sustainable while population levels are low and time is permitted for regrowth of natural vegetation; conversely, where these conditions do not exist, the practice can have disastrous consequences for the environment .
+      Soil degradation - damage to the land's productive capacity because of poor agricultural practices such as the excessive use of pesticides or fertilizers, soil compaction from heavy equipment, or erosion of topsoil, eventually resulting in reduced ability to produce agricultural products.
+      
+      Soil erosion - the removal of soil by the action of water or wind, compounded by poor agricultural practices, deforestation, overgrazing, and desertification.
+      Ultraviolet (UV) radiation - a portion of the electromagnetic energy emitted by the sun and naturally filtered in the upper atmosphere by the ozone layer; UV radiation can be harmful to living organisms and has been linked to increasing rates of skin cancer in humans.   
+      
+      Water-born diseases - those in which bacteria survive in, and are transmitted through, water; always a serious threat in areas with an untreated water supply.
+    name: environment_current_issues
+    handle:  environment_current_issues
+  - desc: Participation in international environmental agreements the country is party to. Agreements are listed in alphabetical order by the abbreviated form of the full name.
+    name: environment_international_agreements_party to
+    handle:  environment_international_agreements_party_to
+  - desc: 'Participation in international environmental agreements the country has signed, but not ratified. Agreements are listed in alphabetical order by the abbreviated form of the full name.'
+    name: environment_international_agreements_signed_not_ratified
+    handle:  environment_international_agreements_signed_not_ratified
+  - desc: miscellaneous geographic information of significance not included elsewhere.
+    name: geography_note
+    handle:  geography_note
+  - desc: "Estimate from the US Bureau of the Census based on statistics from population censuses, vital statistics registration systems, or sample surveys pertaining to the recent past and on assumptions about future trends. The total population presents one overall measure of the potential impact of the country on the world and within its region. Note: Starting with the 1993 Factbook, demographic estimates for some countries (mostly African) have explicitly taken into account the effects of the growing impact of the HIV/AIDS epidemic. These countries are currently: The Bahamas, Benin, Botswana, Brazil, Burkina Faso, Burma, Burundi, Cambodia, Cameroon, Central African Republic, Democratic Republic of the Congo, Republic of the Congo, Cote d'Ivoire, Ethiopia, Gabon, Ghana, Guyana, Haiti, Honduras, Kenya, Lesotho, Malawi, Mozambique, Namibia, Nigeria, Rwanda, South Africa, Swaziland, Tanzania, Thailand, Togo, Uganda, Zambia, and Zimbabwe."
+    name: population
+    handle:  population
+  - desc: "istribution of the population according to age. Information is included by sex and age group (0-14 years, 15-64 years, 65 years and over). The age structure of a population affects a nation's key socioeconomic issues. Countries with young populations (high percentage under age 15) need to invest more in schools, while countries with older populations (high percentage ages 65 and over) need to invest more in the health sector. The age structure can also be used to help predict potential political issues. For example, the rapid growth of a young adult population unable to find employment can lead to unrest."
+    name: population_aged_0years_to_14years
+    handle:  population_aged_0years_to_14years
+  - desc: "istribution of the population according to age. Information is included by sex and age group (0-14 years, 15-64 years, 65 years and over). The age structure of a population affects a nation's key socioeconomic issues. Countries with young populations (high percentage under age 15) need to invest more in schools, while countries with older populations (high percentage ages 65 and over) need to invest more in the health sector. The age structure can also be used to help predict potential political issues. For example, the rapid growth of a young adult population unable to find employment can lead to unrest."
+    name: population_aged_15years_to_64years
+    handle:  population_aged_15years_to_64years
+  - desc: "istribution of the population according to age. Information is included by sex and age group (0-14 years, 15-64 years, 65 years and over). The age structure of a population affects a nation's key socioeconomic issues. Countries with young populations (high percentage under age 15) need to invest more in schools, while countries with older populations (high percentage ages 65 and over) need to invest more in the health sector. The age structure can also be used to help predict potential political issues. For example, the rapid growth of a young adult population unable to find employment can lead to unrest."
+    name: population_aged_65years_and_older
+    handle:  population_aged_65years_and_older
+  - desc: 'This entry is the age that divides a population into two numerically equal groups; that is, half the people are younger than this age and half are older. It is a single index that summarizes the age distribution of a population. Currently, the median age ranges from a low of about 15 in Uganda and Gaza Strip to 40 or more in several European countries and Japan. See the entry for "Age structure" for the importance of a young versus an older age structure and, by implication, a low versus a higher median age.'
+    name: median_age_total
+    handle:  median_age_total
+  - desc: 'This entry is the age that divides a population into two numerically equal groups; that is, half the people are younger than this age and half are older. It is a single index that summarizes the age distribution of a population. Currently, the median age ranges from a low of about 15 in Uganda and Gaza Strip to 40 or more in several European countries and Japan. See the entry for "Age structure" for the importance of a young versus an older age structure and, by implication, a low versus a higher median age.'
+    name: median_age_male
+    handle:  median_age_male
+  - desc: 'This entry is the age that divides a population into two numerically equal groups; that is, half the people are younger than this age and half are older. It is a single index that summarizes the age distribution of a population. Currently, the median age ranges from a low of about 15 in Uganda and Gaza Strip to 40 or more in several European countries and Japan. See the entry for "Age structure" for the importance of a young versus an older age structure and, by implication, a low versus a higher median age.'
+    name: median_age_female
+    handle:  median_age_female
+  - desc: 'Average annual percent change in the population, resulting from a surplus (or deficit) of births over deaths and the balance of migrants entering and leaving a country. The rate may be positive or negative. The growth rate is a factor in determining how great a burden would be imposed on a country by the changing needs of its people for infrastructure (e.g., schools, hospitals, housing, roads), resources (e.g., food, water, electricity), and jobs. Rapid population growth can be seen as threatening by neighboring countries.'
+    name: population growth rate
+    handle:  population_growth_rate
+  - desc: 'This entry gives the average annual number of births during a year per 1,000 persons in the population at midyear; also known as crude birth rate. The birth rate is usually the dominant factor in determining the rate of population growth. It depends on both the level of fertility and the age structure of the population.'
+    name: birth rate
+    handle:  birth_rate
+  - desc: 'This entry gives the average annual number of deaths during a year per 1,000 population at midyear; also known as crude death rate. The death rate, while only a rough indicator of the mortality situation in a country, accurately indicates the current mortality impact on population growth. This indicator is significantly affected by age distribution, and most countries will eventually show a rise in the overall death rate, in spite of continued decline in mortality at all ages, as declining fertility results in an aging population.'
+    name: death rate
+    handle:  death_rate
+  - desc: 'This entry includes the figure for the difference between the number of persons entering and leaving a country during the year per 1,000 persons (based on midyear population). An excess of persons entering the country is referred to as net immigration (e.g., 3.56 migrants/1,000 population); an excess of persons leaving the country as net emigration (e.g., -9.26 migrants/1,000 population). The net migration rate indicates the contribution of migration to the overall level of population change. High levels of migration can cause problems such as increasing unemployment and potential ethnic strife (if people are coming in) or a reduction in the labor force, perhaps in certain key sectors (if people are leaving).'
+    name: net migration rate
+    handle:  net_migration_rate
+  - desc: 'This entry includes the number of males for each female in five age groups - at birth, under 15 years, 15-64 years, 65 years and over, and for the total population. Sex ratio at birth has recently emerged as an indicator of certain kinds of sex discrimination in some countries. For instance, high sex ratios at birth in some Asian countries are now attributed to sex-selective abortion and infanticide due to a strong preference for sons. This will affect future marriage patterns and fertility patterns. Eventually, it could cause unrest among young adult males who are unable to find partners.'
+    name: sex_ratio_at_birth
+    handle:  sex_ratio_at_birth
+  - desc: 'This entry includes the number of males for each female in five age groups - at birth, under 15 years, 15-64 years, 65 years and over, and for the total population. Sex ratio at birth has recently emerged as an indicator of certain kinds of sex discrimination in some countries. For instance, high sex ratios at birth in some Asian countries are now attributed to sex-selective abortion and infanticide due to a strong preference for sons. This will affect future marriage patterns and fertility patterns. Eventually, it could cause unrest among young adult males who are unable to find partners.'
+    name: sex_ratio_under_15_years
+    handle:  sex_ratio_under_15_years
+  - desc: 'This entry includes the number of males for each female in five age groups - at birth, under 15 years, 15-64 years, 65 years and over, and for the total population. Sex ratio at birth has recently emerged as an indicator of certain kinds of sex discrimination in some countries. For instance, high sex ratios at birth in some Asian countries are now attributed to sex-selective abortion and infanticide due to a strong preference for sons. This will affect future marriage patterns and fertility patterns. Eventually, it could cause unrest among young adult males who are unable to find partners.'
+    name: sex_ratio_15_years_to_64_years
+    handle:  sex_ratio_15_years_to_64_years
+  - desc: 'This entry includes the number of males for each female in five age groups - at birth, under 15 years, 15-64 years, 65 years and over, and for the total population. Sex ratio at birth has recently emerged as an indicator of certain kinds of sex discrimination in some countries. For instance, high sex ratios at birth in some Asian countries are now attributed to sex-selective abortion and infanticide due to a strong preference for sons. This will affect future marriage patterns and fertility patterns. Eventually, it could cause unrest among young adult males who are unable to find partners.'
+    name: sex_ratio_65_years_and_over
+    handle:  sex_ratio_65_years_and_over
+  - desc: 'This entry includes the number of males for each female in five age groups - at birth, under 15 years, 15-64 years, 65 years and over, and for the total population. Sex ratio at birth has recently emerged as an indicator of certain kinds of sex discrimination in some countries. For instance, high sex ratios at birth in some Asian countries are now attributed to sex-selective abortion and infanticide due to a strong preference for sons. This will affect future marriage patterns and fertility patterns. Eventually, it could cause unrest among young adult males who are unable to find partners.'
+    name: sex_ratio_total_population
+    handle:  sex_ratio_total_population
+  - desc: 'This entry gives the number of deaths of infants under one year old in a given year per 1,000 live births in the same year; included is the total death rate, and deaths by sex, male and female. This rate is often used as an indicator of the level of health in a country.'
+    name: infant_mortality_rate_total
+    handle:  infant_mortality_rate_total
+  - desc: 'This entry gives the number of deaths of infants under one year old in a given year per 1,000 live births in the same year; included is the total death rate, and deaths by sex, male and female. This rate is often used as an indicator of the level of health in a country.'
+    name: infant_mortality_rate_male
+    handle:  infant_mortality_rate_male
+  - desc: 'This entry gives the number of deaths of infants under one year old in a given year per 1,000 live births in the same year; included is the total death rate, and deaths by sex, male and female. This rate is often used as an indicator of the level of health in a country.'
+    name: infant_mortality_rate_female
+    handle:  infant_mortality_rate_female
+  - desc: 'The average number of years to be lived by a group of people born in the same year, if mortality at each age remains constant in the future. The entry includes total population as well as the male and female components. Life expectancy at birth is also a measure of overall quality of life in a country and summarizes the mortality at all ages. It can also be thought of as indicating the potential return on investment in human capital and is necessary for the calculation of various actuarial measures.'
+    name: life_expectancy_at_birth_total_population
+    handle:  life_expectancy_at_birth_total_population
+  - desc: 'The average number of years to be lived by a group of people born in the same year, if mortality at each age remains constant in the future. The entry includes total population as well as the male and female components. Life expectancy at birth is also a measure of overall quality of life in a country and summarizes the mortality at all ages. It can also be thought of as indicating the potential return on investment in human capital and is necessary for the calculation of various actuarial measures.'
+    name: life_expectancy_at_birth_male
+    handle:  life_expectancy_at_birth_male
+  - desc: 'The average number of years to be lived by a group of people born in the same year, if mortality at each age remains constant in the future. The entry includes total population as well as the male and female components. Life expectancy at birth is also a measure of overall quality of life in a country and summarizes the mortality at all ages. It can also be thought of as indicating the potential return on investment in human capital and is necessary for the calculation of various actuarial measures.'
+    name: life_expectancy_at_birth_female
+    handle:  life_expectancy_at_birth_female
+  - desc: 'This entry gives a figure for the average number of children that would be born per woman if all women lived to the end of their childbearing years and bore children according to a given fertility rate at each age. The total fertility rate (TFR) is a more direct measure of the level of fertility than the crude birth rate, since it refers to births per woman. This indicator shows the potential for population change in the country. A rate of two children per woman is considered the replacement rate for a population, resulting in relative stability in terms of total numbers. Rates above two children indicate populations growing in size and whose median age is declining. Higher rates may also indicate difficulties for families, in some situations, to feed and educate their children and for women to enter the labor force. Rates below two children indicate populations decreasing in size and growing older. Global fertility rates are in general decline and this trend is most pronounced in industrialized countries, especially Western Europe, where populations are projected to decline dramatically over the next 50 years.'
+    name: total_fertility_rate
+    handle:  total_fertility_rate
+  - desc: Estimate of the percentage of adults (aged 15-49) living with HIV/AIDS. The adult prevalence rate is calculated by dividing the estimated number of adults living with HIV/AIDS at yearend by the total adult population at yearend.
+    name: hiv_aids_adult_prevalence_rate
+    handle:  hiv_aids_adult_prevalence_rate
+  - desc: 'Estimate of all people (adults and children) alive at yearend with HIV infection, whether or not they have developed symptoms of AIDS.'
+    name: hiv_aids_people_living_with_hiv_aids
+    handle:  hiv_aids_people_living_with_hiv_aids
+  - desc: Estimate of the number of adults and children who died of AIDS during a given calendar year.
+    name: hiv_aids_deaths
+    handle:  hiv_aids_deaths
+  - desc: |-
+      Major infectious diseases likely to be encountered in countries where the risk of such diseases is assessed to be very high as compared to the United States. These infectious diseases represent risks to US government personnel traveling to the specified country for a period of less than three years. The degree of risk is assessed by considering the foreign nature of these infectious diseases, their severity, and the probability of being affected by the diseases present. The diseases listed do not necessarily represent the total disease burden experienced by the local population.
+      The risk to an individual traveler varies considerably by the specific location, visit duration, type of activities, type of accommodations, time of year, and other factors. Consultation with a travel medicine physician is needed to evaluate individual risk and recommend appropriate preventive measures such as vaccines.
+      
+      Diseases are organized into the following six exposure categories shown in italics and listed in typical descending order of risk. Note: The sequence of exposure categories listed in individual country entries may vary according to local conditions.
+      food or waterborne diseases acquired through eating or drinking on the local economy:
+      
+      Hepatitis A - viral disease that interferes with the functioning of the liver; spread through consumption of food or water contaminated with fecal matter, principally in areas of poor sanitation; victims exhibit fever, jaundice, and diarrhea; 15% of victims will experience prolonged symptoms over 6-9 months; vaccine available.
+      Hepatitis E - water-borne viral disease that interferes with the functioning of the liver; most commonly spread through fecal contamination of drinking water; victims exhibit jaundice, fatigue, abdominal pain, and dark colored urine.
+      
+      Typhoid fever - bacterial disease spread through contact with food or water contaminated by fecal matter or sewage; victims exhibit sustained high fevers; left untreated, mortality rates can reach 20%.
+      vectorborne diseases acquired through the bite of an infected arthropod:
+      
+      Malaria - caused by single-cell parasitic protozoa Plasmodium; transmitted to humans via the bite of the female Anopheles mosquito; parasites multiply in the liver attacking red blood cells resulting in cycles of fever, chills, and sweats accompanied by anemia; death due to damage to vital organs and interruption of blood supply to the brain; endemic in 100, mostly tropical, countries with 90% of cases and the majority of 1.5-2.5 million estimated annual deaths occurring in sub-Saharan Africa.
+      Dengue fever - mosquito-borne (Aedes aegypti) viral disease associated with urban environments; manifests as sudden onset of fever and severe headache; occasionally produces shock and hemorrhage leading to death in 5% of cases.
+      
+      Yellow fever - mosquito-borne viral disease; severity ranges from influenza-like symptoms to severe hepatitis and hemorrhagic fever; occurs only in tropical South America and sub-Saharan Africa, where most cases are reported; fatality rate is less than 20%.
+      Japanese Encephalitis - mosquito-borne (Culex tritaeniorhynchus) viral disease associated with rural areas in Asia; acute encephalitis can progress to paralysis, coma, and death; fatality rates 30%.
+      
+      African Trypanosomiasis - caused by the parasitic protozoa Trypanosoma; transmitted to humans via the bite of bloodsucking Tsetse flies; infection leads to malaise and irregular fevers and, in advanced cases when the parasites invade the central nervous system, coma and death; endemic in 36 countries of sub-Saharan Africa; cattle and wild animals act as reservoir hosts for the parasites.
+      Cutaneous Leishmaniasis - caused by the parasitic protozoa leishmania; transmitted to humans via the bite of sandflies; results in skin lesions that may become chronic; endemic in 88 countries; 90% of cases occur in Iran, Afghanistan, Syria, Saudi Arabia, Brazil, and Peru; wild and domesticated animals as well as humans can act as reservoirs of infection.
+      
+      Plague - bacterial disease transmitted by fleas normally associated with rats; person-to-person airborne transmission also possible; recent plague epidemics occurred in areas of Asia, Africa, and South America associated with rural areas or small towns and villages; manifests as fever, headache, and painfully swollen lymph nodes; disease progresses rapidly and without antibiotic treatment leads to pneumonic form with a death rate in excess of 50%.
+      Crimean-Congo hemorrhagic fever - tick-borne viral disease; infection may also result from exposure to infected animal blood or tissue; geographic distribution includes Africa, Asia, the Middle East, and Eastern Europe; sudden onset of fever, headache, and muscle aches followed by hemorrhaging in the bowels, urine, nose, and gums; mortality rate is approximately 30%.
+      
+      Rift Valley fever - viral disease affecting domesticated animals and humans; transmission is by mosquito and other biting insects; infection may also occur through handling of infected meat or contact with blood; geographic distribution includes eastern and southern Africa where cattle and sheep are raised; symptoms are generally mild with fever and some liver abnormalities, but the disease may progress to hemorrhagic fever, encephalitis, or ocular disease; fatality rates are low at about 1% of cases.
+      Chikungunya - mosquito-borne (Aedes aegypti) viral disease associated with urban environments, similar to Dengue Fever; characterized by sudden onset of fever, rash, and severe joint pain usually lasting 3-7 days, some cases result in persistent arthritis.
+      
+      water contact diseases acquired through swimming or wading in freshwater lakes, streams, and rivers:
+      Leptospirosis - bacterial disease that affects animals and humans; infection occurs through contact with water, food, or soil contaminated by animal urine; symptoms include high fever, severe headache, vomiting, jaundice, and diarrhea; untreated, the disease can result in kidney damage, liver failure, meningitis, or respiratory distress; fatality rates are low but left untreated recovery can take months.
+      
+      Schistosomiasis - caused by parasitic trematode flatworm Schistosoma; fresh water snails act as intermediate host and release larval form of parasite that penetrates the skin of people exposed to contaminated water; worms mature and reproduce in the blood vessels, liver, kidneys, and intestines releasing eggs, which become trapped in tissues triggering an immune response; may manifest as either urinary or intestinal disease resulting in decreased work or learning capacity; mortality, while generally low, may occur in advanced cases usually due to bladder cancer; endemic in 74 developing countries with 80% of infected people living in sub-Saharan Africa; humans act as the reservoir for this parasite.
+      aerosolized dust or soil contact disease acquired through inhalation of aerosols contaminated with rodent urine:
+      
+      Lassa fever - viral disease carried by rats of the genus Mastomys; endemic in portions of West Africa; infection occurs through direct contact with or consumption of food contaminated by rodent urine or fecal matter containing virus particles; fatality rate can reach 50% in epidemic outbreaks.
+      respiratory disease acquired through close contact with an infectious person:
+      
+      Meningococcal meningitis - bacterial disease causing an inflammation of the lining of the brain and spinal cord; one of the most important bacterial pathogens is Neisseria meningitidis because of its potential to cause epidemics; symptoms include stiff neck, high fever, headaches, and vomiting; bacteria are transmitted from person to person by respiratory droplets and facilitated by close and prolonged contact resulting from crowded living conditions, often with a seasonal distribution; death occurs in 5-15% of cases, typically within 24-48 hours of onset of symptoms; highest burden of meningococcal disease occurs in the hyperendemic region of sub-Saharan Africa known as the "Meningitis Belt" which stretches from Senegal east to Ethiopia.
+      animal contact disease acquired through direct contact with local animals:
+      
+      Rabies - viral disease of mammals usually transmitted through the bite of an infected animal, most commonly dogs; virus affects the central nervous system causing brain alteration and death; symptoms initially are non-specific fever and headache progressing to neurological symptoms; death occurs within days of the onset of symptoms.
+    name: major_infectious_diseases_list
+    handle:  major_infectious_diseases_list
+  - desc: see notes for major_infectious_diseases_list
+    name: major_infectious_diseases_degree_of_risk
+    handle:  major_infectious_diseases_degree_of_risk
+  - desc: see notes for major_infectious_diseases_list
+    name: major_infectious_diseases_food_or_waterborne_diseases
+    handle:  major_infectious_diseases_food_or_waterborne_diseases
+  - desc: see notes for major_infectious_diseases_list
+    name: major_infectious_diseases_vectorborne_diseases
+    handle:  major_infectious_diseases_vectorborne_diseases
+  - desc: see notes for major_infectious_diseases_list
+    name: major_infectious_diseases_water_contact_diseases
+    handle:  major_infectious_diseases_water_contact_diseases
+  - desc: see notes for major_infectious_diseases_list
+    name: major_infectious_diseases_aerosolized_dust_or_soil contact_diseases
+    handle:  major_infectious_diseases_aerosolized_dust_or_soil_contact_diseases
+  - desc: see notes for major_infectious_diseases_list
+    name: major_infectious_diseases_respiratory_diseases
+    handle:  major_infectious_diseases_respiratory_diseases
+  - desc: see notes for major_infectious_diseases_list
+    name: major_infectious_diseases_animal_contact_disease
+    handle:  major_infectious_diseases_animal_contact_disease
+  - desc: Noun form identifying term for citizens
+    name: nationality_noun
+    handle:  nationality_noun
+  - desc: Adjective form identifying term for citizens
+    name: nationality_adjective
+    handle:  nationality_adjective
+  - desc: Ordered listing of ethnic groups starting with the largest and normally includes the percent of total population.
+    name: ethnic_groups
+    handle:  ethnic_groups
+  - desc: Ordered listing of religions by adherents starting with the largest group and sometimes includes the percent of total population.
+    name: religions
+    handle:  religions
+  - desc: Rank ordering of languages starting with the largest and sometimes includes the percent of total population speaking that language.
+    name: languages
+    handle:  languages
+  - desc: 'These entries includes a definition of literacy and Census Bureau percentages for the total population, males, and females. There are no universal definitions and standards of literacy. Unless otherwise specified, all rates are based on the most common definition - the ability to read and write at a specified age. Detailing the standards that individual countries use to assess the ability to read and write is beyond the scope of the Factbook. Information on literacy, while not a perfect measure of educational results, is probably the most easily available and valid for international comparisons. Low levels of literacy, and education in general, can impede the economic development of a country in the current rapidly changing, technology-driven world.'
+    name: literacy_definition
+    handle:  literacy_definition
+  - desc: 'These entries includes a definition of literacy and Census Bureau percentages for the total population, males, and females. There are no universal definitions and standards of literacy. Unless otherwise specified, all rates are based on the most common definition - the ability to read and write at a specified age. Detailing the standards that individual countries use to assess the ability to read and write is beyond the scope of the Factbook. Information on literacy, while not a perfect measure of educational results, is probably the most easily available and valid for international comparisons. Low levels of literacy, and education in general, can impede the economic development of a country in the current rapidly changing, technology-driven world.'
+    name: literacy_total_population
+    handle:  literacy_total_population
+  - desc: 'These entries includes a definition of literacy and Census Bureau percentages for the total population, males, and females. There are no universal definitions and standards of literacy. Unless otherwise specified, all rates are based on the most common definition - the ability to read and write at a specified age. Detailing the standards that individual countries use to assess the ability to read and write is beyond the scope of the Factbook. Information on literacy, while not a perfect measure of educational results, is probably the most easily available and valid for international comparisons. Low levels of literacy, and education in general, can impede the economic development of a country in the current rapidly changing, technology-driven world.'
+    name: literacy_male
+    handle:  literacy_male
+  - desc: 'These entries includes a definition of literacy and Census Bureau percentages for the total population, males, and females. There are no universal definitions and standards of literacy. Unless otherwise specified, all rates are based on the most common definition - the ability to read and write at a specified age. Detailing the standards that individual countries use to assess the ability to read and write is beyond the scope of the Factbook. Information on literacy, while not a perfect measure of educational results, is probably the most easily available and valid for international comparisons. Low levels of literacy, and education in general, can impede the economic development of a country in the current rapidly changing, technology-driven world.'
+    name: literacy_female
+    handle:  literacy_female
+  - desc: Miscellaneous demographic information of significance not included elsewhere.
+    name: people_misc
+    handle:  people_misc
+  - desc: "The country_name_ entries includes all forms of the country's name approved by the US Board on Geographic Names (Italy is used as an example): conventional long form (Italian Republic), conventional short form (Italy), local long form (Repubblica Italiana), local short form (Italia), former (Kingdom of Italy), as well as the abbreviation. Also see the Terminology note in the CIA Factbook dataset entry"
+    name: country_name_conventional_long_form
+    handle:  country_name_conventional_long_form
+  - desc: "The country_name_ entries includes all forms of the country's name approved by the US Board on Geographic Names (Italy is used as an example): conventional long form (Italian Republic), conventional short form (Italy), local long form (Repubblica Italiana), local short form (Italia), former (Kingdom of Italy), as well as the abbreviation. Also see the Terminology note in the CIA Factbook dataset entry"
+    name: country_name_conventional_short_form
+    handle:  country_name_conventional_short_form
+  - desc: "The country_name_ entries includes all forms of the country's name approved by the US Board on Geographic Names (Italy is used as an example): conventional long form (Italian Republic), conventional short form (Italy), local long form (Repubblica Italiana), local short form (Italia), former (Kingdom of Italy), as well as the abbreviation. Also see the Terminology note in the CIA Factbook dataset entry"
+    name: country_name_local_long_form
+    handle:  country_name_local_long_form
+  - desc: "The country_name_ entries includes all forms of the country's name approved by the US Board on Geographic Names (Italy is used as an example): conventional long form (Italian Republic), conventional short form (Italy), local long form (Repubblica Italiana), local short form (Italia), former (Kingdom of Italy), as well as the abbreviation. Also see the Terminology note in the CIA Factbook dataset entry"
+    name: country_name_local_short_form
+    handle:  country_name_local_short_form
+  - desc: "The country_name_ entries includes all forms of the country's name approved by the US Board on Geographic Names (Italy is used as an example): conventional long form (Italian Republic), conventional short form (Italy), local long form (Repubblica Italiana), local short form (Italia), former (Kingdom of Italy), as well as the abbreviation. Also see the Terminology note in the CIA Factbook dataset entry"
+    name: country_name_former
+    handle:  country_name_former
+  - desc: |-
+      The country_name_ entries includes all forms of the country's name approved by the US Board on Geographic Names (Italy is used as an example): conventional long form (Italian Republic), conventional short form (Italy), local long form (Repubblica Italiana), local short form (Italia), former (Kingdom of Italy), as well as the abbreviation. Also see the Terminology note in the CIA Factbook dataset entry.
+      * (Note: 'country_name_abbreviation' is not the ISO 3166 or any similar country code field, it is a conversationally-used abbreviation such as "US or USA" for the United States of America.)
+    name: country_name_abbreviation
+    handle:  country_name_abbreviation
+  - desc: Formal relationship between a particular nonindependent entity and an independent state.
+    name: dependency_status
+    handle:  dependency_status
+  - desc: |-
+      This entry gives the basic form of government. Definitions of the major governmental terms are as follows. (Note that for some countries more than one definition applies.):
+      Absolute monarchy - a form of government where the monarch rules unhindered, i.e., without any laws, constitution, or legally organized oposition.
+      
+      Anarchy - a condition of lawlessness or political disorder brought about by the absence of governmental authority.
+      Authoritarian - a form of government in which state authority is imposed onto many aspects of citizens' lives.
+      
+      Commonwealth - a nation, state, or other political entity founded on law and united by a compact of the people for the common good.
+      Communist - a system of government in which the state plans and controls the economy and a single - often authoritarian - party holds power; state controls are imposed with the elimination of private ownership of property or capital while claiming to make progress toward a higher social order in which all goods are equally shared by the people (i.e., a classless society).
+      
+      Confederacy (Confederation) - a union by compact or treaty between states, provinces, or territories, that creates a central government with limited powers; the constituent entities retain supreme authority over all matters except those delegated to the central government.
+      Constitutional - a government by or operating under an authoritative document (constitution) that sets forth the system of fundamental laws and principles that determines the nature, functions, and limits of that government.
+      
+      Constitutional democracy - a form of government in which the sovereign power of the people is spelled out in a governing constitution.
+      Constitutional monarchy - a system of government in which a monarch is guided by a constitution whereby his/her rights, duties, and responsibilities are spelled out in written law or by custom.
+      
+      Democracy - a form of government in which the supreme power is retained by the people, but which is usually exercised indirectly through a system of representation and delegated authority periodically renewed.
+      Democratic republic - a state in which the supreme power rests in the body of citizens entitled to vote for officers and representatives responsible to them.
+      
+      Dictatorship - a form of government in which a ruler or small clique wield absolute power (not restricted by a constitution or laws).
+      Ecclesiastical - a government administrated by a church.
+      
+      Emirate - similar to a monarchy or sultanate, but a government in which the supreme power is in the hands of an emir (the ruler of a Muslim state); the emir may be an absolute overlord or a sovereign with constitutionally limited authority.
+      Federal (Federation) - a form of government in which sovereign power is formally divided - usually by means of a constitution - between a central authority and a number of constituent regions (states, colonies, or provinces) so that each region retains some management of its internal affairs; differs from a confederacy in that the central government exerts influence directly upon both individuals as well as upon the regional units.
+      
+      Federal republic - a state in which the powers of the central government are restricted and in which the component parts (states, colonies, or provinces) retain a degree of self-government; ultimate sovereign power rests with the voters who chose their governmental representatives.
+      Islamic republic - a particular form of government adopted by some Muslim states; although such a state is, in theory, a theocracy, it remains a republic, but its laws are required to be compatible with the laws of Islam.
+      
+      Maoism - the theory and practice of Marxism-Leninism developed in China by Mao Zedong (Mao Tse-tung), which states that a continuous revolution is necessary if the leaders of a communist state are to keep in touch with the people.
+      Marxism - the political, economic, and social principles espoused by 19th century economist Karl Marx; he viewed the struggle of workers as a progression of historical forces that would proceed from a class struggle of the proletariat (workers) exploited by capitalists (business owners), to a socialist "dictatorship of the proletariat," to, finally, a classless society - Communism.
+      
+      Marxism-Leninism - an expanded form of communism developed by Lenin from doctrines of Karl Marx; Lenin saw imperialism as the final stage of capitalism and shifted the focus of workers' struggle from developed to underdeveloped countries.
+      Monarchy - a government in which the supreme power is lodged in the hands of a monarch who reigns over a state or territory, usually for life and by hereditary right; the monarch may be either a sole absolute ruler or a sovereign - such as a king, queen, or prince - with constitutionally limited authority.
+      
+      Oligarchy - a government in which control is exercised by a small group of individuals whose authority generally is based on wealth or power.
+      Parliamentary democracy - a political system in which the legislature (parliament) selects the government - a prime minister, premier, or chancellor along with the cabinet ministers - according to party strength as expressed in elections; by this system, the government acquires a dual responsibility: to the people as well as to the parliament.
+      
+      Parliamentary government (Cabinet-Parliamentary government) - a government in which members of an executive branch (the cabinet and its leader - a prime minister, premier, or chancellor) are nominated to their positions by a legislature or parliament, and are directly responsible to it; this type of government can be dissolved at will by the parliament (legislature) by means of a no confidence vote or the leader of the cabinet may dissolve the parliament if it can no longer function.
+      Parliamentary monarchy - a state headed by a monarch who is not actively involved in policy formation or implementation (i.e., the exercise of sovereign powers by a monarch in a ceremonial capacity); true governmental leadership is carried out by a cabinet and its head - a prime minister, premier, or chancellor - who are drawn from a legislature (parliament).
+      
+      Presidential - a system of government where the executive branch exists separately from a legislature (to which it is generally not accountable).
+      Republic - a representative democracy in which the people's elected deputies (representatives), not the people themselves, vote on legislation.
+      
+      Socialism - a government in which the means of planning, producing, and distributing goods is controlled by a central government that theoretically seeks a more just and equitable distribution of property and labor; in actuality, most socialist governments have ended up being no more than dictatorships over workers by a ruling elite.
+      Sultanate - similar to a monarchy, but a government in which the supreme power is in the hands of a sultan (the head of a Muslim state); the sultan may be an absolute ruler or a sovereign with constitutionally limited authority.
+      
+      Theocracy - a form of government in which a Deity is recognized as the supreme civil ruler, but the Deity's laws are interpreted by ecclesiastical authorities (bishops, mullahs, etc.); a government subject to religious authority.
+      Totalitarian - a government that seeks to subordinate the individual to the state by controlling not only all political and economic matters, but also the attitudes, values, and beliefs of its population.
+    name: government_type
+    handle:  government_type
+  - desc: 'This entry gives the name of the seat of government, its geographic coordinates, the time difference relative to Coordinated Universal Time (UTC) and the time observed in Washington, DC, and, if applicable, information on daylight saving time (DST). Where appropriate, a special note has been added to highlight those countries that have multiple time zones.'
+    name: capital_name
+    handle:  capital_name
+  - desc: 'This entry gives the name of the seat of government, its geographic coordinates, the time difference relative to Coordinated Universal Time (UTC) and the time observed in Washington, DC, and, if applicable, information on daylight saving time (DST). Where appropriate, a special note has been added to highlight those countries that have multiple time zones.'
+    name: capital_geographic_coordinates
+    handle:  capital_geographic_coordinates
+  - desc: 'This entry gives the name of the seat of government, its geographic coordinates, the time difference relative to Coordinated Universal Time (UTC) and the time observed in Washington, DC, and, if applicable, information on daylight saving time (DST). Where appropriate, a special note has been added to highlight those countries that have multiple time zones.'
+    name: capital_time_difference
+    handle:  capital_time_difference
+  - desc: 'This entry gives the name of the seat of government, its geographic coordinates, the time difference relative to Coordinated Universal Time (UTC) and the time observed in Washington, DC, and, if applicable, information on daylight saving time (DST). Where appropriate, a special note has been added to highlight those countries that have multiple time zones.'
+    name: capital_daylight_saving_time
+    handle:  capital_daylight_saving_time
+  - desc: 'This entry generally gives the numbers, designatory terms, and first-order administrative divisions as approved by the US Board on Geographic Names (BGN). Changes that have been reported but not yet acted on by the BGN are noted.'
+    name: administrative_divisions
+    handle:  administrative_divisions
+  - desc: This entry contains an alphabetical listing of all nonindependent entities associated in some way with a particular independent state.
+    name: dependent_areas
+    handle:  dependent_areas
+  - desc: 'For most countries, this entry gives the date that sovereignty was achieved and from which nation, empire, or trusteeship. For the other countries, the date given may not represent "independence" in the strict sense, but rather some significant nationhood event such as the traditional founding date or the date of unification, federation, confederation, establishment, fundamental change in the form of government, or state succession. Dependent areas include the notation "none" followed by the nature of their dependency status. Also see the Terminology note in the CIA Factbook dataset entry.'
+    name: independence
+    handle:  independence
+  - desc: 'The primary national day of celebration - usually independence day.'
+    name: national_holiday
+    handle:  national_holiday
+  - desc: 'Dates of adoption, revisions, and major amendments.'
+    name: constitution
+    handle:  constitution
+  - desc: "Abrief description of the legal system's historical roots, role in government, and acceptance of International Court of Justice (ICJ) jurisdiction."
+    name: legal_system
+    handle:  legal_system
+  - desc: The age at enfranchisement and whether the right to vote is universal or restricted.
+    name: suffrage
+    handle:  suffrage
+  - desc: Chief of state includes the name and title of the titular leader of the country who represents the state at official and ceremonial functions but may not be involved with the day-to-day activities of the government.
+    name: executive_branch_chief_of_state
+    handle:  executive_branch_chief_of_state
+  - desc: 'Head of government includes the name and title of the top administrative leader who is designated to manage the day-to-day activities of the government. For example, in the UK, the monarch is the chief of state, and the prime minister is the head of government. In the US, the president is both the chief of state and the head of government.'
+    name: executive_branch_head_of_government
+    handle:  executive_branch_head_of_government
+  - desc: Cabinet includes the official name for this body of high-ranking advisers and the method for selection of members.
+    name: executive_branch_cabinet
+    handle:  executive_branch_cabinet
+  - desc: 'Elections includes the nature of election process or accession to power, date of the last election, and date of the next election.'
+    name: executive_branch_elections
+    handle:  executive_branch_elections
+  - desc: Election results includes the percent of vote for each candidate in the last election.
+    name: executive_branch_election_results
+    handle:  executive_branch_election_results
+  - desc: 'This entry contains information on the structure (unicameral, bicameral, tricameral), formal name, number of seats, and term of office. Elections includes the nature of election process or accession to power, date of the last election, and date of the next election. Election results includes the percent of vote and/or number of seats held by each party in the last election.'
+    name: legislative_branch_elections
+    handle:  legislative_branch_elections
+  - desc: 'This entry contains information on the structure (unicameral, bicameral, tricameral), formal name, number of seats, and term of office. Elections includes the nature of election process or accession to power, date of the last election, and date of the next election. Election results includes the percent of vote and/or number of seats held by each party in the last election.'
+    name: legislative_branch_election_results
+    handle:  legislative_branch_election_results
+  - desc: The name(s) of the highest court(s) and a brief description of the selection process for members.
+    name: judicial_branch
+    handle:  judicial_branch
+  - desc: A listing of significant political organizations and their leaders.
+    name: political_parties_and_leaders
+    handle:  political_parties_and_leaders
+  - desc: 'A listing of political, social, labor, or religious organizations with leaders involved in politics, but not standing for legislative election.'
+    name: political_pressure_groups_and leaders
+    handle:  political_pressure_groups_and_leaders
+  - desc: Lists in alphabetical order by abbreviation those international organizations in which the subject country is a member or participates in some other way.
+    name: international_organization_participation
+    handle:  international_organization_participation
+  - desc: The chief of mission for this country's diplomatic representation in the US.
+    name: diplomatic_representation_in_the_us_chief_of_mission
+    handle:  diplomatic_representation_in_the_us_chief_of_mission
+  - desc: The chancery for this country's diplomatic representation in the US.
+    name: diplomatic_representation_in_the_us_chancery
+    handle:  diplomatic_representation_in_the_us_chancery
+  - desc: The telephone for this country's diplomatic representation in the US.
+    name: diplomatic_representation_in_the_us_telephone
+    handle:  diplomatic_representation_in_the_us_telephone
+  - desc: The FAX for this country's diplomatic representation in the US.
+    name: diplomatic_representation_in_the_us_fax
+    handle:  diplomatic_representation_in_the_us_fax
+  - desc: The consulate general locations for this country's diplomatic representation in the US.
+    name: diplomatic_representation_in_the_us_consulate(s)_general
+    handle:  diplomatic_representation_in_the_us_consulates_general
+  - desc: The consulate locations for this country's diplomatic representation in the US.
+    name: diplomatic_representation_in_the_us_consulate(s)
+    handle:  diplomatic_representation_in_the_us_consulates
+  - desc: The chief of mission for the US embassy in this country.
+    name: diplomatic_representation_from_the_us_chief_of_mission
+    handle:  diplomatic_representation_from_the_us_chief_of_mission
+  - desc: 'The embassy street address for the US embassy in this country. '
+    name: diplomatic_representation_from_the_us_embassy_address
+    handle:  diplomatic_representation_from_the_us_embassy_address
+  - desc: The mailing address for the US embassy in this country
+    name: diplomatic_representation_from_the_us_mailing_address
+    handle:  diplomatic_representation_from_the_us_mailing_address
+  - desc: US Embassy telephone number
+    name: diplomatic_representation_from_the_us_telephone
+    handle:  diplomatic_representation_from_the_us_telephone
+  - desc: US Embassy Fax numer
+    name: diplomatic_representation_from_the_us_fax
+    handle:  diplomatic_representation_from_the_us_fax
+  - desc: US Consulates General locations
+    name: diplomatic_representation_from_the_us_consulates_general
+    handle:  diplomatic_representation_from_the_us_consulates_general
+  - desc: US Consulates locations
+    name: diplomatic_representation_from_the_us_consulates
+    handle:  diplomatic_representation_from_the_us_consulates
+  - desc: US Diplomatic branch office locations
+    name: diplomatic_representation_from_the_us_branch_office(s)
+    handle:  diplomatic_representation_from_the_us_branch_offices
+  - desc: A written flag description produced from actual flags or the best information available at the time the entry was written. The flags of independent states are used by their dependencies unless there is an officially recognized local flag. Some disputed and other areas do not have flags.
+    name: flag_description
+    handle:  flag_description
+  - desc: Miscellaneous government information of significance not included elsewhere.
+    name: government_misc
+    handle:  government_misc
+  - desc: 'Briefly describes the type of economy, including the degree of market orientation, the level of economic development, the most important natural resources, and the unique areas of specialization. It also characterizes major economic events and policy changes in the most recent 12 months and may include a statement about one or two key future macroeconomic trends.'
+    name: economy_overview
+    handle:  economy_overview
+  - desc: "Gross domestic product (GDP) or value of all final goods and services produced within a nation in a given year. A nation's GDP at purchasing power parity (PPP) exchange rates is the sum value of all goods and services produced in the country valued at prices prevailing in the United States. This is the measure most economists prefer when looking at per-capita welfare and when comparing living conditions or use of resources across countries. The measure is difficult to compute, as a US dollar value has to be assigned to all goods and services in the country regardless of whether these goods and services have a direct equivalent in the United States (for example, the value of an ox-cart or non-US military equipment); as a result, PPP estimates for some countries are based on a small and sometimes different set of goods and services. In addition, many countries do not formally participate in the World Bank's PPP project that calculates these measures, so the resulting GDP estimates for these countries may lack precision. For many developing countries, PPP-based GDP measures are multiples of the official exchange rate (OER) measure. The difference between the OER- and PPP-denominated GDP values for most of the weathly industrialized countries are generally much smaller."
+    name: gdp_purchasing_power_parity
+    handle:  gdp_purchasing_power_parity
+  - desc: |-2
+       
+       Gross domestic product (GDP) or value of all final goods and
+       services produced within a nation in a given year. A nation's GDP at
+       offical exchange rates (OER) is the home-currency-denominated annual
+       GDP figure divided by the bilateral average US exchange rate with
+       that country in that year. The measure is simple to compute and
+       gives a precise measure of the value of output. Many economists
+       prefer this measure when gauging the economic power an economy
+       maintains vis-a-vis its neighbors, judging that an exchange rate
+       captures the purchasing power a nation enjoys in the international
+       marketplace. Official exchange rates, however, can be artifically
+       fixed and/or subject to manipulation - resulting in claims of the
+       country having an under- or over-valued currency - and are not
+       necessarily the equivalent of a market-determined exchange
+       rate. Moreover, even if the official exchange rate is
+       market-determined, market exchange rates are frequently established
+       by a relatively small set of goods and services (the ones the
+       country trades) and may not capture the value of the larger set of
+       goods the country produces. Furthermore, OER-converted GDP is not
+       well suited to comparing domestic GDP over time, since
+       appreciation/depreciation from one year to the next will make the
+       OER GDP value rise/fall regardless of whether
+       home-currency-denominated GDP changed.
+       
+    name: gdp_official_exchange_rate
+    handle:  gdp_official_exchange_rate
+  - desc: GDP growth on an annual basis adjusted for inflation and expressed as a percent.
+    name: gdp_real_growth_rate
+    handle:  gdp_real_growth_rate
+  - desc: GDP growth on an annual basis adjusted for inflation and expressed as a percent.
+    name: gdp_per_capita
+    handle:  gdp_per_capita
+  - desc: percentage contribution of agriculture to total GDP. The distribution will total less than 100 percent if the data are incomplete.
+    name: gdp_composition_by_agriculture
+    handle:  gdp_composition_by_agriculture
+  - desc: percentage contribution of industry to total GDP. The distribution will total less than 100 percent if the data are incomplete.
+    name: gdp_composition_by_industry
+    handle:  gdp_composition_by_industry
+  - desc: percentage contribution of services to total GDP. The distribution will total less than 100 percent if the data are incomplete.
+    name: gdp_composition_by_services
+    handle:  gdp_composition_by_services
+  - desc: Total labor force figure.
+    name: labor_force
+    handle:  labor_force
+  - desc: The percentage distribution of the labor force by occupation. The distribution will total less than 100 percent if the data are incomplete.
+    name: labor_force_by_occupation
+    handle:  labor_force_by_occupation
+  - desc: Percent of the labor force that is without jobs. Substantial underemployment might be noted.
+    name: unemployment_rate
+    handle:  unemployment_rate
+  - desc: 'National estimates of the percentage of the population falling below the poverty line are based on surveys of sub-groups, with the results weighted by the number of people in each group. Definitions of poverty vary considerably among nations. For example, rich nations generally employ more generous standards of poverty than poor nations.'
+    name: population_below_poverty_line
+    handle:  population_below_poverty_line
+  - desc: 'Household income or consumption by the highest 10% in income Data on household income or consumption come from household surveys, the results adjusted for household size. Nations use different standards and procedures in collecting and adjusting the data. Surveys based on income will normally show a more unequal distribution than surveys based on consumption. The quality of surveys is improving with time, yet caution is still necessary in making inter-country comparisons.'
+    name: household_income_or_consumption_by_lowest_10pct
+    handle:  household_income_or_consumption_by_lowest_10pct
+  - desc: 'Household income or consumption by the highest 10% in income Data on household income or consumption come from household surveys, the results adjusted for household size. Nations use different standards and procedures in collecting and adjusting the data. Surveys based on income will normally show a more unequal distribution than surveys based on consumption. The quality of surveys is improving with time, yet caution is still necessary in making inter-country comparisons.'
+    name: household_income_or_consumption_by_highest_10pct
+    handle:  household_income_or_consumption_by_highest_10pct
+  - desc: "This index measures the degree of inequality in the distribution of family income in a country. The index is calculated from the Lorenz curve, in which cumulative family income is plotted against the number of families arranged from the poorest to the richest. The index is the ratio of (a) the area between a country's Lorenz curve and the 45 degree helping line to (b) the entire triangular area under the 45 degree line. The more nearly equal a country's income distribution, the closer its Lorenz curve to the 45 degree line and the lower its Gini index, e.g., a Scandinavian country with an index of 25. The more unequal a country's income distribution, the farther its Lorenz curve from the 45 degree line and the higher its Gini index, e.g., a Sub-Saharan country with an index of 50. If income were distributed with perfect equality, the Lorenz curve would coincide with the 45 degree line and the index would be zero; if income were distributed with perfect inequality, the Lorenz curve would coincide with the horizontal axis and the right vertical axis and the index would be 100."
+    name: distribution_of_family_income_gini_index
+    handle:  distribution_of_family_income_gini_index
+  - desc: Annual percent change in consumer prices compared with the previous year's consumer prices.
+    name: inflation_rate_consumer_prices
+    handle:  inflation_rate_consumer_prices
+  - desc: 'Total business spending on fixed assets, such as factories, machinery, equipment, dwellings, and inventories of raw materials, which provide the basis for future production. It is measured gross of the depreciation of the assets, i.e., it includes invesment that merely replaces worn-out or scrapped capital.'
+    name: investment_gross_fixed
+    handle:  investment_gross_fixed
+  - desc: 'Budget Revenues calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.'
+    name: budget_revenues
+    handle:  budget_revenues
+  - desc: 'Budget Expenditures calculated on an exchange rate basis i.e., not in purchasing power parity (PPP) terms.'
+    name: budget_expenditures
+    handle:  budget_expenditures
+  - desc: 'Budget Capital Expenditures calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.'
+    name: budget_capital_expenditures
+    handle:  budget_capital_expenditures
+  - desc: "Cumulative total of all government borrowings less repayments that are denominated in a country's home currency. Public debt should not be confused with external debt, which reflects the foreign currency liabilities of both the private and public sector and must be financed out of foreign exchange earnings."
+    name: public_debt
+    handle:  public_debt
+  - desc: An ordered listing of major crops and products starting with the most important.
+    name: agriculture_products
+    handle:  agriculture_products
+  - desc: Rank ordering of industries starting with the largest by value of annual output.
+    name: industries
+    handle:  industries
+  - desc: 'Annual percentage increase in industrial production (includes manufacturing, mining, and construction).'
+    name: industrial_production_growth_rate
+    handle:  industrial_production_growth_rate
+  - desc: Annual electricity generated expressed in kilowatt-hours. The discrepancy between the amount of electricity generated and/or imported and the amount consumed and/or exported is accounted for as loss in transmission and distribution.
+    name: electricity_production
+    handle:  electricity_production
+  - desc: 'Total electricity generated annually plus imports and minus exports, expressed in kilowatt-hours. The discrepancy between the amount of electricity generated and/or imported and the amount consumed and/or exported is accounted for as loss in transmission and distribution.'
+    name: electricity_consumption
+    handle:  electricity_consumption
+  - desc: Total exported electricity in kilowatt-hours.
+    name: electricity_exports
+    handle:  electricity_exports
+  - desc: Total imported electricity in kilowatt-hours.
+    name: electricity_imports
+    handle:  electricity_imports
+  - desc: 'Total oil produced in barrels per day (bbl/day). The discrepancy between the amount of oil produced and/or imported and the amount consumed and/or exported is due to the omission of stock changes, refinery gains, and other complicating factors.'
+    name: oil_production
+    handle:  oil_production
+  - desc: 'Total oil consumed in barrels per day (bbl/day). The discrepancy between the amount of oil produced and/or imported and the amount consumed and/or exported is due to the omission of stock changes, refinery gains, and other complicating factors.'
+    name: oil_consumption
+    handle:  oil_consumption
+  - desc: 'Total oil exported in barrels per day (bbl/day), including both crude oil and oil products.'
+    name: oil_exports
+    handle:  oil_exports
+  - desc: 'Total oil imported in barrels per day (bbl/day), including both crude oil and oil products.'
+    name: oil_imports
+    handle:  oil_imports
+  - desc: 'Stock of proved reserves of crude oil in barrels (bbl). Proved reserves are those quantities of petroleum which, by analysis of geological and engineering data, can be estimated with a high degree of confidence to be commercially recoverable from a given date forward, from known reservoirs and under current economic conditions.'
+    name: oil_proved_reserves
+    handle:  oil_proved_reserves
+  - desc: Total natural gas produced in cubic meters (cu m). The discrepancy between the amount of natural gas produced and/or imported and the amount consumed and/or exported is due to the omission of stock changes and other complicating factors.
+    name: natural_gas_production
+    handle:  natural_gas_production
+  - desc: Total natural gas consumed in cubic meters (cu m). The discrepancy between the amount of natural gas produced and/or imported and the amount consumed and/or exported is due to the omission of stock changes and other complicating factors.
+    name: natural_gas_consumption
+    handle:  natural_gas_consumption
+  - desc: Total natural gas exported in cubic meters (cu m).
+    name: natural_gas_exports
+    handle:  natural_gas_exports
+  - desc: Total natural gas imported in cubic meters (cu m).
+    name: natural_gas_imports
+    handle:  natural_gas_imports
+  - desc: 'Stock of proved reserves of natural gas in cubic meters (cu m). Proved reserves are those quantities of natural gas, which, by analysis of geological and engineering data, can be estimated with a high degree of confidence to be commercially recoverable from a given date forward, from known reservoirs and under current economic conditions.'
+    name: natural_gas_proved_reserves
+    handle:  natural_gas_proved_reserves
+  - desc: "Country's net trade in goods and services, plus net earnings from rents, interest, profits, and dividends, and net transfer payments (such as pension funds and worker remittances) to and from the rest of the world during the period specified. These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms."
+    name: current_account_balance
+    handle:  current_account_balance
+  - desc: 'Total US dollar amount of merchandise exports on an f.o.b. (free on board) basis. These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.'
+    name: exports
+    handle:  exports
+  - desc: Rank ordering of exported products starting with the most important; it sometimes includes the percent of total dollar value.
+    name: exports_commodities
+    handle:  exports_commodities
+  - desc: Rank ordering of trading partners starting with the most important; it sometimes includes the percent of total dollar value.
+    name: exports_partners
+    handle:  exports_partners
+  - desc: 'Total US dollar amount of merchandise imports on a c.i.f. (cost, insurance, and freight) or f.o.b. (free on board) basis. These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.'
+    name: imports
+    handle:  imports
+  - desc: Rank ordering of imported products starting with the most important; it sometimes includes the percent of total dollar value.
+    name: imports_commodities
+    handle:  imports_commodities
+  - desc: Rank ordering of trading partners starting with the most important; it sometimes includes the percent of total dollar value.
+    name: imports_partners
+    handle:  imports_partners
+  - desc: "Dollar value for the stock of all financial assets that are available to the central monetary authority for use in meeting a country's balance of payments needs as of the end-date of the period specified. This category includes not only foreign currency and gold, but also a country's holdings of Special Drawing Rights in the International Monetary Fund, and its reserve position in the Fund."
+    name: reserves_of_foreign_exchange and gold
+    handle:  reserves_of_foreign_exchange_and_gold
+  - desc: 'Total public and private debt owed to nonresidents repayable in foreign currency, goods, or services. These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.'
+    name: debt_external
+    handle:  debt_external
+  - desc: 'Net official development assistance (ODA) from Organization for Economic Cooperation and Development (OECD) nations to developing countries and multilateral organizations. ODA is defined as financial assistance that is concessional in character, has the main objective to promote economic development and welfare of the less developed countries (LDCs), and contains a grant element of at least 25%. The entry does not cover other official flows (OOF) or private flows. These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.'
+    name: economic_aid_donor
+    handle:  economic_aid_donor
+  - desc: 'This entry, which is subject to major problems of definition and statistical coverage, refers to the net inflow of Official Development Finance (ODF) to recipient countries. The figure includes assistance from the World Bank, the IMF, and other international organizations and from individual nation donors. Formal commitments of aid are included in the data. Omitted from the data are grants by private organizations. Aid comes in various forms including outright grants and loans. The entry thus is the difference between new inflows and repayments. These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.'
+    name: economic_aid_recipient
+    handle:  economic_aid_recipient
+  - desc: 'This entry identifies the national medium of exchange and, in parenthesis, gives the International Organization for Standardization (ISO) 4217 alphabetic currency code for each country.'
+    name: currency_(code)
+    handle:  currency_code
+  - desc: "Official value of a country's monetary unit at a given date or over a given period of time, as expressed in units of local currency per US dollar and as determined by international market forces or official fiat."
+    name: exchange_rates
+    handle:  exchange_rates
+  - desc: "The beginning and ending months for a country's accounting period of 12 months, which often is the calendar year but which may begin in any month. All yearly references are for the calendar year (CY) unless indicated as a noncalendar fiscal year (FY)."
+    name: fiscal_year
+    handle:  fiscal_year
+  - desc: Total number of main telephone lines in use.
+    name: telephones_main_lines_in use
+    handle:  telephones_main_lines_in_use
+  - desc: Total number of mobile cellular telephone subscribers.
+    name: telephones_mobile_cellular
+    handle:  telephones_mobile_cellular
+  - desc: 'This entry includes a brief general assessment of the system with details on the domestic components. See [https://www.cia.gov/library/publications/the-world-factbook/docs/notesanddefs.html#2124 CIA Factbook Notes and Definitions] for abbreviations used here. '
+    name: telephone_system_general_assessment_domestic
+    handle:  telephone_system_general_assessment_domestic
+  - desc: 'This entry includes a brief general assessment of the system with details on the international component. See [https://www.cia.gov/library/publications/the-world-factbook/docs/notesanddefs.html#2124 CIA Factbook Notes and Definitions] for abbreviations used here. '
+    name: telephone_system_international
+    handle:  telephone_system_international
+  - desc: 'Total number of AM, FM, and shortwave broadcast stations.'
+    name: radio_broadcast_stations
+    handle:  radio_broadcast_stations
+  - desc: Total number of separate broadcast stations plus any repeater stations.
+    name: television_broadcast_stations
+    handle:  television_broadcast_stations
+  - desc: The two-letter codes maintained by the International Organization for Standardization (ISO) in the ISO 3166 Alpha-2 list and used by the Internet Assigned Numbers Authority (IANA) to establish country-coded top-level domains (ccTLDs).
+    name: internet_country_code
+    handle:  internet_country_code
+  - desc: "Number of Internet hosts available within a country. An Internet host is a computer connected directly to the Internet; normally an Internet Service Provider's (ISP) computer is a host. Internet users may use either a hard-wired terminal, at an institution with a mainframe computer connected directly to the Internet, or may connect remotely by way of a modem via telephone line, cable, or satellite to the Internet Service Provider's host computer. The number of hosts is one indicator of the extent of Internet connectivity."
+    name: internet_hosts
+    handle:  internet_hosts
+  - desc: Number of users within a country that access the Internet. Statistics vary from country to country and may include users who access the Internet at least several times a week to those who access it only once within a period of several months.
+    name: internet_users
+    handle:  internet_users
+  - desc: Miscellaneous communications information of significance not included elsewhere.
+    name: communications_misc
+    handle:  communications_misc
+  - desc: 'Total number of airports or airfields recognizable from the air. The runway(s) may be paved (concrete or asphalt surfaces) or unpaved (grass, earth, sand, or gravel surfaces) but may include closed or abandoned installations. Airports or airfields that are no longer recognizable (overgrown, no facilities, etc.) are not included. Note that not all airports have accommodations for refueling, maintenance, or air traffic control.'
+    name: airports_count_total
+    handle:  airports_count_total
+  - desc: 'total number of airports with paved runways (concrete or asphalt surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.            '
+    name: airports_count_with_paved_runways_total
+    handle:  airports_count_with_paved_runways_total
+  - desc: 'total number of airports with paved runways (concrete or asphalt surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.        '
+    name: airports_count_with_paved_runways_over_3047m
+    handle:  airports_count_with_paved_runways_over_3047m
+  - desc: 'total number of airports with paved runways (concrete or asphalt surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.            '
+    name: airports_count_with_paved_runways_2438m_to_3047m
+    handle:  airports_count_with_paved_runways_2438m_to_3047m
+  - desc: 'total number of airports with paved runways (concrete or asphalt surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.            '
+    name: airports_count_with_paved_runways_1524m_to_2437m
+    handle:  airports_count_with_paved_runways_1524m_to_2437m
+  - desc: 'total number of airports with paved runways (concrete or asphalt surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.            '
+    name: airports_count_with_paved_runways_914m_to_1523m
+    handle:  airports_count_with_paved_runways_914m_to_1523m
+  - desc: 'total number of airports with paved runways (concrete or asphalt surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.            '
+    name: airports_count_with_paved_runways_under_914m
+    handle:  airports_count_with_paved_runways_under_914m
+  - desc: 'This entry gives the total number of airports with unpaved runways (grass, dirt, sand, or gravel surfaces). Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.'
+    name: airports_count_with_unpaved_runways_total
+    handle:  airports_count_with_unpaved_runways_total
+  - desc: 'This entry gives the total number of airports with unpaved runways (grass, dirt, sand, or gravel surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.'
+    name: airports_count_over_3047m
+    handle:  airports_count_over_3047m
+  - desc: 'This entry gives the total number of airports with unpaved runways (grass, dirt, sand, or gravel surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.'
+    name: airports_count_2438m_to_3047m
+    handle:  airports_count_2438m_to_3047m
+  - desc: 'This entry gives the total number of airports with unpaved runways (grass, dirt, sand, or gravel surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.'
+    name: airports_count_1524m_to_2437m
+    handle:  airports_count_1524m_to_2437m
+  - desc: 'This entry gives the total number of airports with unpaved runways (grass, dirt, sand, or gravel surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.'
+    name: airports_count_914m_to_1523m
+    handle:  airports_count_914m_to_1523m
+  - desc: 'This entry gives the total number of airports with unpaved runways (grass, dirt, sand, or gravel surfaces) by length. For airports with more than one runway, only the longest runway is included according to the following five groups - (1) over 3,047 m, (2) 2,438 to 3,047 m, (3) 1,524 to 2,437 m, (4) 914 to 1,523 m, and (5) under 914 m. Only airports with usable runways are included in this listing. Not all airports have facilities for refueling, maintenance, or air traffic control.'
+    name: airports_count_under_914m
+    handle:  airports_count_under_914m
+  - desc: 'Total number of heliports with hard-surface runways, helipads, or landing areas that support routine sustained helicopter operations exclusively and have support facilities including one or more of the following facilities: lighting, fuel, passenger handling, or maintenance. It includes former airports used exclusively for helicopter operations but excludes heliports limited to day operations and natural clearings that could support helicopter landings and takeoffs.'
+    name: heliports
+    handle:  heliports
+  - desc: 'The lengths and types of pipelines for transporting products like natural gas, crude oil, or petroleum products.'
+    name: pipelines
+    handle:  pipelines
+  - desc: Total route length of the railway network.  Other gauges are listed under note.
+    name: railways_total
+    handle:  railways_total
+  - desc: 'Total route length of the broad gauge railway network. '
+    name: railways_broad_gauge
+    handle:  railways_broad_gauge
+  - desc: 'Total route length of the standard gauge railway network. '
+    name: railways_standard_gauge
+    handle:  railways_standard_gauge
+  - desc: 'Total route length of the narrow gauge railway network. '
+    name: railways_narrow_gauge
+    handle:  railways_narrow_gauge
+  - desc: 'Total route length of the dual gauge railway network. '
+    name: railways_dual_gauge
+    handle:  railways_dual_gauge
+  - desc: Total length of the road network
+    name: roadways_total
+    handle:  roadways_total
+  - desc: Length of the unpaved portion of the road network
+    name: roadways_paved
+    handle:  roadways_paved
+  - desc: Length of the unpaved portion of the road network
+    name: roadways_unpaved
+    handle:  roadways_unpaved
+  - desc: 'This entry gives the total length of navigable rivers, canals, and other inland bodies of water.'
+    name: waterways
+    handle:  waterways
+  - desc: 'Merchant marine may be defined as all ships engaged in the carriage of goods; or all commercial vessels (as opposed to all nonmilitary ships), which excludes tugs, fishing vessels, offshore oil rigs, etc. Total includes the number of ships (1,000 GRT or over), total DWT for those ships, and total GRT for those ships. DWT or dead weight tonnage is the total weight of cargo, plus bunkers, stores, etc., that a ship can carry when immersed to the appropriate load line. GRT or gross register tonnage is a figure obtained by measuring the entire sheltered volume of a ship available for cargo and passengers and converting it to tons on the basis of 100 cubic feet per ton; there is no stable relationship between GRT and DWT.'
+    name: merchant_marine_total
+    handle:  merchant_marine_total
+  - desc: 'Merchant marine may be defined as all ships engaged in the carriage of goods; or all commercial vessels (as opposed to all nonmilitary ships), which excludes tugs, fishing vessels, offshore oil rigs, etc. Ships by type includes a listing of barge carriers, bulk cargo ships, cargo ships, chemical tankers, combination bulk carriers, combination ore/oil carriers, container ships, liquefied gas tankers, livestock carriers, multifunctional large-load carriers, petroleum tankers, passenger ships, passenger/cargo ships, railcar carriers, refrigerated cargo ships, roll-on/roll-off cargo ships, short-sea passenger ships, specialized tankers, and vehicle carriers.'
+    name: merchant_marine_ships_by_type
+    handle:  merchant_marine_ships_by_type
+  - desc: 'Merchant marine may be defined as all ships engaged in the carriage of goods; or all commercial vessels (as opposed to all nonmilitary ships), which excludes tugs, fishing vessels, offshore oil rigs, etc. Ships that fly the flag of one country but belong to owners in another. '
+    name: merchant_marine_foreign-owned
+    handle:  merchant_marine_foreign_owned
+  - desc: 'Merchant marine may be defined as all ships engaged in the carriage of goods; or all commercial vessels (as opposed to all nonmilitary ships), which excludes tugs, fishing vessels, offshore oil rigs, etc. Ships that belong to owners in one country but fly the flag of another.'
+    name: merchant_marine_registered_in_other_countries
+    handle:  merchant_marine_registered_in_other_countries
+  - desc: 'major ports and terminals primarily on the basis of the amount of cargo tonnage shipped through the facilities on an annual basis. In some instances, the number of containers handled or ship visits were also considered.'
+    name: ports_and_terminals
+    handle:  ports_and_terminals
+  - desc: Miscellaneous transportation information of significance not included elsewhere.
+    name: transportation_misc
+    handle:  transportation_misc
+  - desc: 'Service branches subordinate to defense ministries or the equivalent (typically ground, naval, air, and marine forces).'
+    name: military_branches
+    handle:  military_branches
+  - desc: Required ages for voluntary or conscript military service and the length of service obligation.
+    name: military_service_age_and obligation
+    handle:  military_service_age_and_obligation
+  - desc: Number of males falling in the military age range for the country and assumes that every individual is fit to serve.
+    name: manpower_available_for_military service_males_age_15-49
+    handle:  manpower_available_for_military_service_males_age_15_49
+  - desc: Number of females falling in the military age range for the country and assumes that every individual is fit to serve.
+    name: manpower_available_for_military service_females_age_15-49
+    handle:  manpower_available_for_military_service_females_age_15_49
+  - desc: Number of males falling in the military age range for the country and who are not otherwise disqualified for health reasons; accounts for the health situation in the country and provides a more realistic estimate of the actual number fit to serve.
+    name: manpower_fit_for_military service_males_age_15-49
+    handle:  manpower_fit_for_military_service_males_age_15_49
+  - desc: Number of females falling in the military age range for the country and who are not otherwise disqualified for health reasons; accounts for the health situation in the country and provides a more realistic estimate of the actual number fit to serve.
+    name: manpower_fit_for_military service_females_age_15-49
+    handle:  manpower_fit_for_military_service_females_age_15_49
+  - desc: Number of draft-age males entering the military manpower pool in any given year and is a measure of the availability of draft-age young adults.
+    name: manpower_reaching_military_age annually_males
+    handle:  manpower_reaching_military_age_annually_males
+  - desc: Number of draft-age females entering the military manpower pool in any given year and is a measure of the availability of draft-age young adults.
+    name: manpower_reaching_military_age annually_females
+    handle:  manpower_reaching_military_age_annually_females
+  - desc: 'Spending on defense programs for the most recent year available as a percent of gross domestic product (GDP); the GDP is calculated on an exchange rate basis, i.e., not in terms of purchasing power parity (PPP).'
+    name: military_expenditures_percent_of_gdp
+    handle:  military_expenditures_percent_of_gdp
+  - desc: Miscellaneous military information of significance not included elsewhere.
+    name: military_misc
+    handle:  military_misc
+  - desc: 'This entry includes a wide variety of situations that range from traditional bilateral boundary disputes to unilateral claims of one sort or another. Information regarding disputes over international terrestrial and maritime boundaries has been reviewed by the US Department of State. References to other situations involving borders or frontiers may also be included, such as resource disputes, geopolitical questions, or irredentist issues; however, inclusion does not necessarily constitute official acceptance or recognition by the US Government.'
+    name: disputes_international
+    handle:  disputes_international
+  - desc: 'This entry includes those persons residing in a country as refugees. The definition of a refugee according to a United Nations Convention is "a person who is outside his/her country of nationality or habitual residence; has a well-founded fear of persecution because of his/her race, religion, nationality, membership in a particular social group or political opinion; and is unable or unwilling to avail himself/herself of the protection of that country, or to return there, for fear of persecution." The UN established the Office of the UN High Commissioner for Refugees (UNHCR) in 1950 to handle refugee matters worldwide. The UN Relief and Works Agency for Palestine Refugees in the Near East (UNRWA) has a different operational definition for a Palestinian refugee: "a person whose normal place of residence was Palestine during the period 1 June 1946 to 15 May 1948 and who lost both home and means of livelihood as a result of the 1948 conflict." However, UNHCR also assists some 400,000 Palestinian refugees not covered under the UNRWA definition. The term "internally displaced person" is not specifically covered in the UN Convention; it is used to describe people who have fled their homes for reasons similar to refugees, but who remain within their own national territory and are subject to the laws of that state.'
+    name: refugees
+    handle:  refugees
+  - desc: 'This entry includes those persons residing in a country as internally displaced persons (IDPs). The definition of a refugee according to a United Nations Convention is "a person who is outside his/her country of nationality or habitual residence; has a well-founded fear of persecution because of his/her race, religion, nationality, membership in a particular social group or political opinion; and is unable or unwilling to avail himself/herself of the protection of that country, or to return there, for fear of persecution." The UN established the Office of the UN High Commissioner for Refugees (UNHCR) in 1950 to handle refugee matters worldwide. The UN Relief and Works Agency for Palestine Refugees in the Near East (UNRWA) has a different operational definition for a Palestinian refugee: "a person whose normal place of residence was Palestine during the period 1 June 1946 to 15 May 1948 and who lost both home and means of livelihood as a result of the 1948 conflict." However, UNHCR also assists some 400,000 Palestinian refugees not covered under the UNRWA definition. The term "internally displaced person" is not specifically covered in the UN Convention; it is used to describe people who have fled their homes for reasons similar to refugees, but who remain within their own national territory and are subject to the laws of that state.'
+    name: idps
+    handle:  idps
+  - desc: |-
+      Trafficking in persons is modern-day slavery, involving victims who are forced, defrauded, or coerced into labor or sexual exploitation. The International Labor Organization (ILO), the UN agency charged with addressing labor standards, employment, and social protection issues, estimates that 12.3 million people worldwide are enslaved in forced labor, bonded labor, forced child labor, sexual servitude, and involuntary servitude at any given time. Human trafficking is a multi-dimensional threat, depriving people of their human rights and freedoms, risking global health, promoting social breakdown, inhibiting development by depriving countries of their human capital, and helping fuel the growth of organized crime. In 2000, the US Congress passed the Trafficking Victims Protection Act (TVPA), reauthorized in 2003 and 2005, which provides tools for the US to combat trafficking in persons, both domestically and abroad. One of the law's key components is the creation of the US Department of State's annual Trafficking in Persons Report, which assesses the government response (i.e., the current situation) in some 150 countries with a significant number of victims trafficked across their borders who are recruited, harbored, transported, provided, or obtained for forced labor or sexual exploitation. Countries in the annual report are rated in three tiers, based on government efforts to combat trafficking. The countries identified in this entry are those listed in the 2007 Trafficking in Persons Report as Tier 2 Watch List or Tier 3 based on the following tier rating definitions:
+      Tier 2 Watch List countries do not fully comply with the minimum standards for the elimination of trafficking but are making significant efforts to do so, and meet one of the following criteria:
+      
+      # they display a high or significantly increasing numbof victims,
+      # they have failed to provide evidence of increasing efforts to combat trafficking in persons, or,
+      
+      # they have committed to take action over the next year.
+      
+      Tier 3 countries neither satisfy the minimum standards for the elimination of trafficking nor demonstrate a significant effort to do so. Countries in this tier are subject to potential non-humanitarian and non-trade sanctions.
+    name: trafficking_in_persons_current_situation
+    handle:  trafficking_in_persons_current_situation
+  - desc: |-2
+      
+       Trafficking in persons is modern-day slavery, involving victims who are forced, defrauded, or coerced into labor or sexual exploitation. The International Labor Organization (ILO), the UN agency charged with addressing labor standards, employment, and social protection issues, estimates that 12.3 million people worldwide are enslaved in forced labor, bonded labor, forced child labor, sexual servitude, and involuntary servitude at any given time. Human trafficking is a multi-dimensional threat, depriving people of their human rights and freedoms, risking global health, promoting social breakdown, inhibiting development by depriving countries of their human capital, and helping fuel the growth of organized crime. In 2000, the US Congress passed the Trafficking Victims Protection Act (TVPA), reauthorized in 2003 and 2005, which provides tools for the US to combat trafficking in persons, both domestically and abroad. One of the law's key components is the creation of the US Department of State's annual Trafficking in Persons Report, which assesses the government response (i.e., the current situation) in some 150 countries with a significant number of victims trafficked across their borders who are recruited, harbored, transported, provided, or obtained for forced labor or sexual exploitation. Countries in the annual report are rated in three tiers, based on government efforts to combat trafficking. The countries identified in this entry are those listed in the 2007 Trafficking in Persons Report as Tier 2 Watch List or Tier 3 based on the following tier rating definitions:
+      
+       Tier 2 Watch List countries do not fully comply with the minimum standards for the elimination of trafficking but are making significant efforts to do so, and meet one of the following criteria:
+      
+       # they display a high or significantly increasing numbof victims,
+      
+       # they have failed to provide evidence of increasing efforts to combat trafficking in persons, or,
+      
+       # they have committed to take action over the next year.
+       
+      
+       Tier 3 countries neither satisfy the minimum standards for the elimination of trafficking nor demonstrate a significant effort to do so. Countries in this tier are subject to potential non-humanitarian and non-trade sanctions.
+       
+    name: trafficking_in_persons_tier_rating
+    handle:  trafficking_in_persons_tier_rating
+  - desc: |-
+      This entry gives information on the five categories of illicit drugs - narcotics, stimulants, depressants (sedatives), hallucinogens, and cannabis. These categories include many drugs legally produced and prescribed by doctors as well as those illegally produced and sold outside of medical channels.
+      Cannabis (Cannabis sativa) is the common hemp plant, which provides hallucinogens with some sedative properties, and includes marijuana (pot, Acapulco gold, grass, reefer), tetrahydrocannabinol (THC, Marinol), hashish (hash), and hashish oil (hash oil).
+      
+      Coca (mostly Erythroxylum coca) is a bush with leaves that contain the stimulant used to make cocaine. Coca is not to be confused with cocoa, which comes from cacao seeds and is used in making chocolate, cocoa, and cocoa butter.
+      Cocaine is a stimulant derived from the leaves of the coca bush.
+      
+      Depressants (sedatives) are drugs that reduce tension and anxiety and include chloral hydrate, barbiturates (Amytal, Nembutal, Seconal, phenobarbital), benzodiazepines (Librium, Valium), methaqualone (Quaalude), glutethimide (Doriden), and others (Equanil, Placidyl, Valmid).
+      Drugs are any chemical substances that effect a physical, mental, emotional, or behavioral change in an individual.
+      
+      Drug abuse is the use of any licit or illicit chemical substance that results in physical, mental, emotional, or behavioral impairment in an individual.
+      Hallucinogens are drugs that affect sensation, thinking, self-awareness, and emotion. Hallucinogens include LSD (acid, microdot), mescaline and peyote (mexc, buttons, cactus), amphetamine variants (PMA, STP, DOB), phencyclidine (PCP, angel dust, hog), phencyclidine analogues (PCE, PCPy, TCP), and others (psilocybin, psilocyn).
+      
+      Hashish is the resinous exudate of the cannabis or hemp plant (Cannabis sativa).
+      Heroin is a semisynthetic derivative of morphine.
+      
+      Mandrax is a trade name for methaqualone, a pharmaceutical depressant.
+      Marijuana is the dried leaf of the cannabis or hemp plant (Cannabis sativa).
+      
+      Methaqualone is a pharmaceutical depressant, referred to as mandrax in Southwest Asia and Africa.
+      Narcotics are drugs that relieve pain, often induce sleep, and refer to opium, opium derivatives, and synthetic substitutes. Natural narcotics include opium (paregoric, parepectolin), morphine (MS-Contin, Roxanol), codeine (Tylenol with codeine, Empirin with codeine, Robitussan AC), and thebaine. Semisynthetic narcotics include heroin (horse, smack), and hydromorphone (Dilaudid). Synthetic narcotics include meperidine or Pethidine (Demerol, Mepergan), methadone (Dolophine, Methadose), and others (Darvon, Lomotil).
+      
+      Opium is the brown, gummy exudate of the incised, unripe seedpod of the opium poppy.
+      Opium poppy (Papaver somniferum) is the source for the natural and semisynthetic narcotics.
+      
+      Poppy straw is the entire cut and dried opium poppy-plant material, other than the seeds. Opium is extracted from poppy straw in commercial operations that produce the drug for medical use.
+      Qat (kat, khat) is a stimulant from the buds or leaves of Catha edulis that is chewed or drunk as tea.
+      
+      Quaaludes is the North American slang term for methaqualone, a pharmaceutical depressant.
+      Stimulants are drugs that relieve mild depression, increase energy and activity, and include cocaine (coke, snow, crack), amphetamines (Desoxyn, Dexedrine), ephedrine, ecstasy (clarity, essence, doctor, Adam), phenmetrazine (Preludin), methylphenidate (Ritalin), and others (Cylert, Sanorex, Tenuate).
+    name: illicit_drugs
+    handle:  illicit_drugs
+name: CIA Factbook
+notes:
+  coverage: '[ { spatial:global } ]'
+  rights: |
+    The source material is in the public domain
+    
+    From https://www.cia.gov/library/publications/the-world-factbook/docs/faqs.html :
+        
+      Can I use some or all of The World Factbook for my Web site (book, research project, homework, etc.)?
+      
+      The World Factbook is in the public domain and may be used freely by anyone at anytime without seeking permission. However, US Code prohibits use of the CIA seal in a manner which implies that the CIA approved, endorsed, or authorized such use. If you have any questions about your intended use, you should consult with legal counsel. Further information on The World Factbook's use is described on the Contributors and Copyright Information page. As a courtesy, please cite The World Factbook when used.
+  see_also: |
+    - countrycodes
+    - currencycodes
+  role:          usage
+  desc:          'Refer to the [https://www.cia.gov/library/publications/the-world-factbook/docs/notesanddefs.html CIA Factbook Notes and Definitions] for usage information, definitions, sources and more.'
+ratings:
+  - initial:
+      accurate:
+        desc: 'Best available data.  However, many stats derive from local governments with differing methodology.  These numbers may in some cases be colored by self-interests (and, one must admit, could hold for the CIA as well).  The researchers attempt to control for these sources of bias but cannot do so completely.'
+        rating: 4
+      authoritative:
+        desc: Prepared by expert analysts at the US Central Intelligence Agency; widely referred to and referenced by impartial third parties across the globe.
+        rating: 5
+      comprehensive:
+        desc: Completely and exhaustively describes every nation and nation-like-thing in the world.
+        rating: 5
+      interesting:
+        desc: 'Broad, rich and authoritative.'
+        rating: 5
+tags: 'cia, world, country, economy, geography, demographics, transportation, land, area, coastline, age, agriculture, aid, airports, arable, area, birth_rate, border, boundary, branch, branches, budget, cabinet, capita, capital, cellular, chancery, chief, climate, coastline, code, commodities, communications, comparative, constitution, consulate, consumption, coordinates, countries, country, crops, currency, death_rate, debt, definition, degree, dependency, dependent, description, difference, diplomatic, diplomatic_agreements, disease, displaced, disputes, distribution, divisions, domestic, drugs, economic, economy, election, electricity, elevation, embassy, environment, ethnic, exchange, executive, expectancy, expenditures, exports, external, extremes, female, females, fertility, fiscal, fishing, flag, food, force, foreign, foreign, owned, gas, gdp, geographic, geography, gini, gold, government, gross, groups, growth, hazards, head, heliports, highest, hiv, aids, holiday, hosts, household, idps, illicit, imports, income, independence, industrial, industries, industry, infant, infectious, inflation, internally, international, internet, introduction, investment, irrigated, issues, judicial, labor, land, languages, leaders, legal, legislative, lines, literacy, living, local, location, long, lowest, mailing, main, major, male, manpower, map, marine, maritime, median, merchant, migration, military, mission, mobile, mortality, name, narrow, national, nationality, net, not, note, noun, obligation, occupation, of, office(s), official, oil, or, organization, other, over, overview, parity, participation, parties, partners, party, paved, people, per, percent, percentage, permanent, persons, pipelines, point, political, population, ports, poverty, power, pressure, prevalence, prices), production, products, proved, public, purchasing, radio, railways, rate, rate), rates, ratified, rating, ratio, reaching, real, recipient, references, refugees, registered, religions, representation, reserves, resources, respiratory, results, revenues, risk, roadways, runways, saving, sea, sector, service, services, sex, ships, short, signed, situation, soil, standard, state, stations, status, structure, suffrage, system, telephone, telephones, television, terminals, terrain, territorial, tier, time, total, trafficking, transnational, transportation, type, under, unemployment, unpaved, us, users, waterways'
+handle:  ciafactbook
+uniqid2: cia_factbook

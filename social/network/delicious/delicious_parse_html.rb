@@ -3,7 +3,6 @@ require 'rubygems'
 require 'dm-core'
 require 'fileutils'; include FileUtils
 require 'imw/utils'; include IMW; IMW.verbose = true
-require 'imw/extract/hpricot'
 require 'imw/extract/html_parser'
 require 'json'
 require 'yaml'

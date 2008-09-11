@@ -1,0 +1,44 @@
+# infochimp schema template
+schema_in_:
+    title:              
+    tags:               
+    initialrating:      
+    contributors:
+                        - name:  ""
+                          url:   "http://"
+                          role:  creator
+                          desc: |
+                              
+                        - name:  ""
+                          url:   "http://"
+                          role:  creator
+                          desc: |
+    fields:
+                        - ["", ""]
+    desc:              >
+                        
+    role:               usage
+    desc:               >
+                        
+    role:               quality
+    desc:               >
+                        X This data is ...
+    rights:             >
+                        
+    see_also:
+                        - ""
+    coverage:           { }
+
+    # Loader needs to set
+    #   uploaded_by    
+    #   created_at 
+    #   lastmod_by
+    #   lastmod_at
+    #   approved_by
+    #   approved_at
+    #   dnloaded_count 
+    #   rows          
+    #   cols          
+    #   size
+        
+    			

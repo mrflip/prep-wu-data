@@ -1,0 +1,39 @@
+contributors:
+  - desc: |
+      I have tried and failed to figure out who originally prepared this word list.  It is a standard part of most unix distributions.
+      It is available under the BSD license.  See http://www.coe.berkeley.edu/labnotes/history_unix.html
+    handle:  BSD
+    url: http://www.bsd.org/
+desc: This is the standard /usr/dict/words list distributed with most unix distributions.
+fields:
+  - desc: ~
+    name: word
+    handle:  word
+name: Common English words and word tokens
+notes:
+  coverage: ''
+  rights: ''
+  see_also: |
+    - words_moby
+    - words_twl
+    - words_osw
+    - corpora_nltk
+  role:          usage
+  desc:          ''
+ratings:
+  - initial:
+      accurate:
+        desc: The word lists in the 'see also' section may be superior.
+        rating: 3
+      authoritative:
+        desc: Part of most Unix-type distributions
+        rating: 4
+      comprehensive:
+        desc: 'Useful for general-purpose tasks, but for more complete purposes see NLTK or other word lists published here.'
+        rating: 2
+      interesting:
+        desc: Better sources exist.
+        rating: 1
+tags: 'word, list, bsd, unix, english, names, tokens, language, corpus, corpora'
+handle:  word_list_bsd
+uniqid2: common_english_words_and_word_tokens

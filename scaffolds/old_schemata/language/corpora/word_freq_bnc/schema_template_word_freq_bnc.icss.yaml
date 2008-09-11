@@ -1,0 +1,173 @@
+- infochimps_schema:
+
+    collection:     British National Corpus
+    coll_handle:   word_freq_bnc
+    coll_tags:  |
+        language word words corpus corpora corpuses stemming "textual analysis"
+        "word counts" 
+    formats:            { csv:   {}, yaml:  {}, xls:   {} }
+
+    contributors:
+      - name: British National Corpus
+        handle: 
+        url:
+        role:
+        cite:
+        desc:
+
+      - name:   Leech, Geoffrey, Paul Rayson and Andrew Wilson
+        handle:  ucrel.lancs.ac.uk/bncfreq
+        url:    http://ucrel.lancs.ac.uk/bncfreq
+        role: |
+            These authors analyzed the British National Corpus and published their results in a book.
+        cite:   Geoffrey Leech, Paul Rayson, Andrew Wilson. Word Frequencies in Written and Spoken English: based on the British National Corpus (2001). pp. 320, Longman, London. ISBN 0582-32007-0 (Paperback)         
+        desc: |
+            Books of English word frequencies have in the past suffered from
+            severe limitations of sample size and breadth. They have also tended
+            to be restricted to word forms alone. Most importantly, almost all
+            have dealt only with written language. This book overcomes these
+            limitations. It is derived from the British National Corpus - a
+            100,000,000 word electronic databank sampled from the whole range of
+            present-day English, spoken and written - and makes use of the
+            grammatical information that has been added to each word in the
+            corpus.
+
+            Key features Includes frequencies for present-day speech (including everyday conversation) as well as for writing
+
+            * Rank-ordered and alphabetical frequency lists for the whole corpus and for various subdivisions: e.g. informative vs. imaginative writing, conversational vs. other varieties of speech
+            * Entries take account of grammatical parts of speech (e.g. round as a preposition is listed separately from round as an adjective)
+            * Includes discussions of a number of thematic frequency lists such as colour terms, female vs. male terms, etc
+
+            For a review, see
+                Word Frequencies in Written and Spoken English: Based on the British National Corpus. Hunston, Susan (Review of:
+                    Leech, Geoffrey; Rayson, Paul; Wilson, Andrew), Language Awareness, 2002, 11, 2, 152-157.
+                Direct link: http://www.multilingual-matters.net/la/011/0143/la0110143.pdf
+
+    notes:
+        coll_desc:  |
+            Each dataset in this collection contains a list of words with
+            grammatical information (so as to separate different uses of the
+            same word) and frequencies in written and spoken English culled
+            from the British National Corpus (BNC), a 100,000,000 word electronic
+            databank.
+
+            The BNC project was
+            carried out and is managed by an industrial/academic consortium
+            lead by Oxford University Press, of which the other members are
+            major dictionary publishers Addison-Wesley Longman and Larousse
+            Kingfisher Chambers; academic research centres at Oxford
+            University Computing Services, Lancaster University's Centre for
+            Computer Corpus Research on Language, and the British Library's
+            Research and Innovation Centre.
+            
+            The data collected by the BNC was analyzed and published as
+            <span id="word_frequencies_book">
+                Word Frequencies in Written and Spoken English: based on the British National Corpus.
+                    Geoffrey Leech, Paul Rayson, Andrew Wilson (2001) pp. 320, Longman, London. ISBN 0582-32007-0 (Paperback)
+            </span>
+
+            Each dataset in this collection is drawn from one chapter of
+            this book.  Different datasets (chapters) compare different components of
+            the BNC, ie. - written vs. spoken English or conversational vs.
+            task-oriented language.
+        usage:
+        rights:
+        
+    fields:
+
+      - name:       Word       
+        tags:       word words language
+        units:      word
+        datatype:   str
+        handle:    word 
+        desc:       |
+            Word type (headword followed by any variant forms) - see pp.4-5 of "Leech, Rayson, & Wilson (2001)":#word_frequencies_book
+      - name:       Part of Speech
+        tags:       grammar language
+        units:      part_of_speech
+        datatype:   str
+        handle:    PoS
+        desc:       |
+            Part of speech (grammatical word class) - see pp. 12-13 of "Leech, Rayson, & Wilson (2001)":#word_frequencies_book
+      - name:       Frequency
+        tags:       frequency counts ppm "parts per million" count
+        units:      ppm(word/word)
+        datatype:   int
+        handle:    freq
+        desc:       |
+            Rounded frequency per million word tokens (down to a minimum of 10 occurrences of a lemma per million) - see p. 5 of of "Leech, Rayson, & Wilson (2001)":#word_frequencies_book
+            
+    ratings:
+        accurate:       {by: initial, rating: 3, desc: These files have not been checked for conversion errors.}
+        authoritative:  {by: initial, rating: 5, desc: ''}
+        comprehensive:  {by: initial, rating: 5, desc: ''}
+        interesting:    {by: initial, rating: 5, desc: ''}
+
+
+#       main|@  PoS     lemma   ppm     Range   disp
+# ----------------------------------------------------
+#       best    Adv     :       81      100     0.96
+#       bet     Verb    %       23      96      0.81
+#       @       @       bet     21      93      0.79
+#       @       @       bets    0       25      0.80
+#       @       @       betting 2       72      0.88
+#       better  Adv     :       143     100     0.95
+#       Betty   NoP     %       14      90      0.62
+#       @       @       Betty   13      90      0.62
+
+# fields:
+#   - handle:  head_word
+#     name:     Head word - the root word
+#     desc:     Word type (headword followed by any variant forms) - see pp.4-5
+
+#   - handle:  PoS
+#     name:     Part of speech
+#     desc:     Part of speech (grammatical word class - see pp. 12-13)
+
+
+  # - handle:  lemmas
+  #   name:     word variants:
+  #   - lemma
+  #   - ppm
+  #   - range
+  #   - disp
+  # 
+  # - handle:  freq
+  #   name:     Rounded frequency per million word tokens
+  #   desc:     Rounded frequency per million word tokens (down to a minimum of 10 occurrences of a lemma per million)- see pp. 5
+  # - name:     Range
+  #   handle:  Ra
+  #   desc:     Range: number of sectors of the corpus (out of a maximum of 100) in which the word occurs
+  # - name:     Dispersion value
+  #   handle:  Disp
+  #   desc:     |
+  # 
+  #       Dispersion value (Juilland's D) from a minimum of 0.00 to a maximum of 1.00.
+  # 
+  #       Dispersion measures how _typical_, as opposed to _common_ a word is.
+  #       For example, the words "enthalpy" (a term from chemistry) and "wrestle"
+  #       both occur in the BNC at roughly 3 parts per million.  However, it seems
+  #       likely that only a few documents would mention 'enthalpy' (and that
+  #       those few were so excited about it they used it over and over again).
+  #       The dispersion of 'enthalpy' comes in at 0.15 -- values near zero
+  #       indicate concentration in a very few texts.  The dispersion for
+  #       'wrestle', on the other hand, comes in at a near-ubiquitous 0.92 --
+  #       values near one show uniform usage frequency throughout the corpus.
+  #       
+  #       To find Juilland's D,
+  #       
+  #         For each equal chunk [c1, c2, ... cN] within the corpus, take the
+  #         corpus component frequencies freqs = [f1, f2, ... fn].  Next get the
+  #         coefficient of variation V as
+  #         
+  #           V = std_dev(freqs) / mean(freqs)
+  #         
+  #         The dispersion coerces the values within the range 0 (all occurrences
+  #         came from a single chunk) to 1 (every chunk had exactly the same
+  #         number of occurrences):
+  # 
+  #            D = 1 - ( V / sqrt(n-1) )
+  #            
+  #         (a little bit of thought and the back of a napkin will show this
+  #         indeed ranges from 0 to 1)
+

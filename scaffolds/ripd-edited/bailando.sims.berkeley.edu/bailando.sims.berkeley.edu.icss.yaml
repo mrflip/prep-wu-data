@@ -31,7 +31,7 @@ datasets:
   #
   # Mandatory fields ^^^   Optional fields vvvv
   # -----------------------------------------------------------------------
-      
+
   #
   # Besides the auto-generated links and credits, if you see anything that
   # stands out as useful add it as its own entry.
@@ -68,7 +68,6 @@ datasets:
   make_main_credit_from_name_and_url:   true
   make_main_source_link_from_url:       true  
   create_approve_and_rate_as_one:       dhruv # your name here
-
     
   payloads_by_name:
       # "":

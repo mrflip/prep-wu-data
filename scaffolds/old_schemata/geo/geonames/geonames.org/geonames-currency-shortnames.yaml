@@ -1,0 +1,390 @@
+infochimp_body:
+- - currency_code_iso4217
+  - currency_shortname
+- - AED
+  - !!python/str 'د.إ'
+- - AFN
+  - !!python/str '؋'
+- - ALL
+  - L
+- - AMD
+  - !!python/str 'դր.'
+- - ANG
+  - !!python/str 'ƒ'
+- - AOA
+  - Kz
+- - ARS
+  - $
+- - AUD
+  - $
+- - AWG
+  - !!python/str 'ƒ'
+- - AZN
+  - AZN
+- - BAM
+  - KM
+- - BBD
+  - $
+- - BDT
+  - !!python/str '৳'
+- - BGN
+  - !!python/str 'лв'
+- - BHD
+  - !!python/str 'ب.د'
+- - BIF
+  - Fr
+- - BMD
+  - $
+- - BND
+  - $
+- - BOB
+  - Bs.
+- - BRL
+  - R$
+- - BSD
+  - $
+- - BTN
+  - BTN
+- - BWP
+  - P
+- - BYR
+  - Br
+- - BZD
+  - $
+- - CAD
+  - $
+- - CDF
+  - Fr
+- - CHF
+  - Fr
+- - CLP
+  - $
+- - CNY
+  - !!python/str '¥'
+- - COP
+  - $
+- - CRC
+  - !!python/str '₡'
+- - CSD
+  - CSD
+- - CUP
+  - $
+- - CVE
+  - $
+  - ''
+- - CVE
+  - Esc
+- - CYP
+  - !!python/str '£'
+- - CZK
+  - !!python/str 'Kč'
+- - DJF
+  - Fr
+- - DKK
+  - kr
+- - DOP
+  - $
+- - DZD
+  - !!python/str 'د.ج'
+- - EEK
+  - KR
+- - EGP
+  - !!python/str '£'
+  - !!python/str 'ج.م'
+- - ERN
+  - ERN
+- - ETB
+  - ETB
+- - EUR
+  - !!python/str '€'
+- - FJD
+  - $
+- - FKP
+  - !!python/str '£'
+- - GBP
+  - !!python/str '£'
+- - GEL
+  - !!python/str 'ლ'
+- - GHC
+  - !!python/str '₵'
+- - GIP
+  - !!python/str '£'
+- - GMD
+  - D
+- - GNF
+  - Fr
+- - GPD
+  - !!python/str '£'
+- - GTQ
+  - Q
+- - GYD
+  - $
+- - HKD
+  - $
+- - HNL
+  - L
+- - HRK
+  - kn
+- - HTG
+  - G
+- - HUF
+  - Ft
+- - IDR
+  - Rp
+- - ILS
+  - !!python/str '₪'
+- - INR
+  - !!python/str '₨'
+- - IQD
+  - !!python/str 'ع.د'
+- - IRR
+  - !!python/str '﷼'
+- - ISK
+  - kr
+- - JMD
+  - $
+- - JOD
+  - !!python/str 'د.ا'
+- - JPY
+  - !!python/str '¥'
+- - KES
+  - Sh
+- - KGS
+  - KGS
+- - KHR
+  - !!python/str '៛'
+- - KMF
+  - Fr
+- - KPW
+  - !!python/str '₩'
+- - KRW
+  - !!python/str '₩'
+- - KWD
+  - !!python/str 'د.ك'
+- - KYD
+  - $
+- - KZT
+  - !!python/str 'Т'
+- - LAK
+  - !!python/str '₭'
+- - LBP
+  - !!python/str 'ل.ل'
+- - LKR
+  - !!python/str 'ரூ'
+- - LRD
+  - $
+- - LSL
+  - L
+- - LTL
+  - Lt
+- - LVL
+  - Ls
+- - LYD
+  - !!python/str 'ل.د'
+- - MAD
+  - !!python/str 'د.م.'
+- - MDL
+  - L
+- - MGA
+  - MGA
+- - MKD
+  - !!python/str 'ден'
+- - MMK
+  - K
+- - MNT
+  - !!python/str '₮'
+- - MOP
+  - P
+- - MRO
+  - UM
+- - MTL
+  - !!python/str '₤'
+- - MUR
+  - !!python/str '₨'
+- - MVR
+  - !!python/str 'ރ.'
+- - MWK
+  - MK
+- - MXN
+  - $
+- - MYR
+  - RM
+- - MZN
+  - MZN
+- - NAD
+  - $
+- - NGN
+  - !!python/str '₦'
+- - NIO
+  - C$
+- - NOK
+  - kr
+- - NPR
+  - !!python/str '₨'
+- - NZD
+  - $
+- - OMR
+  - !!python/str 'ر.ع.'
+- - PAB
+  - B/.
+- - PEN
+  - S/.
+- - PGK
+  - K
+- - PHP
+  - !!python/str '₱'
+- - PKR
+  - !!python/str '₨'
+- - PLN
+  - !!python/str 'zł'
+- - PYG
+  - !!python/str '₲'
+- - QAR
+  - !!python/str 'ر.ق'
+- - RON
+  - RON
+- - RUB
+  - !!python/str 'р.'
+- - RWF
+  - Fr
+- - SAR
+  - !!python/str 'ر.س'
+- - SBD
+  - $
+- - SCR
+  - !!python/str '₨'
+- - SDD
+  - SDD
+- - SEK
+  - kr
+- - SGD
+  - $
+- - SHP
+  - !!python/str '£'
+- - SKK
+  - Sk
+- - SLL
+  - Le
+- - SOS
+  - Sh
+- - SRD
+  - $
+- - STD
+  - Db
+- - SYP
+  - !!python/str '£'
+  - ''
+- - SYP
+  - !!python/str 'ل.س'
+- - SZL
+  - L
+- - THB
+  - !!python/str '฿'
+- - TJS
+  - !!python/str 'ЅМ'
+- - TMM
+  - m
+- - TND
+  - !!python/str 'د.ت'
+- - TOP
+  - T$
+- - TRY
+  - !!python/str '₤'
+- - TTD
+  - $
+- - TWD
+  - $
+- - TZS
+  - Sh
+- - UAH
+  - !!python/str '₴'
+- - UGX
+  - Sh
+- - USD
+  - $
+- - UYU
+  - $
+- - UZS
+  - UZS
+- - VEB
+  - Bs
+- - VND
+  - !!python/str '₫'
+- - VUV
+  - Vt
+- - WST
+  - T
+- - XAF
+  - Fr
+- - XCD
+  - $
+- - XOF
+  - Fr
+- - XPF
+  - Fr
+- - YER
+  - !!python/str '﷼'
+- - ZAR
+  - R
+- - ZMK
+  - ZK
+- - ZWD
+  - $
+infochimp_head:
+  contributors:
+  - name: Geonames user samokk
+    role: creator
+    desc: ''
+    url: http://forum.geonames.org/gforum/posts/list/437.page
+  - name: Wikipedia
+    role: creator
+    desc: ''
+    url: http://en.wikipedia.org/wiki/List_of_circulating_currencies
+  - name: Geonames
+    role: distributor
+    desc: ''
+    url: http://www.geonames.org/
+  - name: Philip (flip) Kromer
+    role: prepared
+    desc: Converted for [http://infochimps.org|infochimp] project
+    url: http://infochimps.org/user/flip
+  coverage: {}
+  fields:
+  - description: ISO 4217 (3-letter) currency code
+    name: currency_code_iso4217
+    type: string.3
+    units: money.currency.code.iso4217
+  - description: Short name / symbol
+    name: currency_shortname
+    type: string
+    units: money.currency.name
+  initialrating: 4
+  name: geonames-currency-shortnames
+  rights: Public domain
+  see_also:
+  - ''
+  desc: 'Here is the list of circulating currencies'' symbols, that, I think, would
+    be suitable for the language dump.
+
+    I have copied them from http://en.wikipedia.org/wiki/List_of_circulating_currencies
+    When wikipedia doesn''t give any symbol, I just use the currency code itself.
+
+    Hope it is useful for you,
+
+    Regards,
+
+    Sami Dalouche
+
+    '
+  role:          quality
+  desc:          3 This data is widely used but not authoritative
+  role:          usage
+  desc:          'File is utf-8 encoded.
+
+    Note that there may be several short names for a single currency: The ISO code
+    is unique, but the shortname is not.
+
+    '
+  tags: currency iso 4217 iso4217 money finance code conversion common name
+  title: 'Currency short names: ISO Currency Codes to common symbols'
+

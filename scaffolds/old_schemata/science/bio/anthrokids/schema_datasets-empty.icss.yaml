@@ -1,0 +1,265 @@
+--- 
+- infochimps_schema:
+    name:               'Anthropometric data of children'
+    handle:            children_anthopometric_data
+    tags:               |
+        anthropometric children child kid kids
+    notes:
+        desc:           |
+            The results of a 1977 study which collected anthropometric data of children.
+
+    _process:
+        -   ['ripd_url',    'ovrt.nist.gov/projects/anthrokids']
+        # 
+        -   ['datafile',    'ripd', 'orig77/children.txt',      'fixd', '.flat.txt']
+        -   ['datafile',    'ripd', 'orig77/individuals.csv',   'fixd', '.csv']
+        -   ['doc_file',    'ripd', '*.gif',                    'fixd', '#{orig_name}']
+
+    # Field listing
+
+    fields:
+      - name:			Weight              
+
+      - name:			Stature             
+
+      - name:			Vertical Grip Rch   
+
+      - name:			Frontal Grip Reach  
+
+      - name:			Lateral Grip Reach  
+
+      - name:			Step Height         
+
+      - name:			Supine Stature      
+
+      - name:			Standing Cg F Feet  
+
+      - name:			Sitting Height      
+
+      - name:			Eye Hgt Sitting     
+
+      - name:			Max Hip Br Seated   
+
+      - name:			Thigh Br Max        
+
+      - name:			Thigh Clearence     
+
+      - name:			Buttock-Knee Len    
+
+      - name:			Knee Height         
+
+      - name:			Supine Sitting Hgt  
+
+      - name:			Seated Cg Ab Seat   
+
+      - name:			Head Circ           
+
+      - name:			Head Breadth        
+
+      - name:			Head Length         
+
+      - name:			Bizygomatic Brdth   
+
+      - name:			Frontal Breadth     
+
+      - name:			Lower Face Height   
+
+      - name:			Face Height         
+
+      - name:			Head Height         
+
+      - name:			Tragion To B Head   
+
+      - name:			Tragion To T Head   
+
+      - name:			Ear-Sellion Depth   
+
+      - name:			Bitragion Breadth   
+
+      - name:			Mouth Breadth       
+
+      - name:			Nose Length         
+
+      - name:			Neck Circ           
+
+      - name:			Neck Br Lateral     
+
+      - name:			Clavicale-Acromion  
+
+      - name:			Shoulder Breadth    
+
+      - name:			Biacromial Breadth  
+
+      - name:			Shoulder-Elbow Lth  
+
+      - name:			Acromion-Radiale L  
+
+      - name:			Upper Arm Circ      
+
+      - name:			Upper Arm Depth     
+
+      - name:			Elbow-Hand Length   
+
+      - name:			Radiale-Stylion L   
+
+      - name:			Forearm Circ        
+
+      - name:			Forearm Breadth     
+
+      - name:			Wrist Circ          
+
+      - name:			Wrist Breadth       
+
+      - name:			Hand Lenght         
+
+      - name:			Hand Breadth        
+
+      - name:			Minimum Hand Clear  
+
+      - name:			Thumb Crotch-Mid F  
+
+      - name:			Thumb Length        
+
+      - name:			Thumb Diameter      
+
+      - name:			Index Finger Len    
+
+      - name:			Index Finger Dia    
+
+      - name:			Middle Finger Len   
+
+      - name:			Middle Finger Dia   
+
+      - name:			Mid Finger-Tuumb G  
+
+      - name:			Maximum Fist Circ   
+
+      - name:			Maximum Fist Brth   
+
+      - name:			Maximum Fist Depth  
+
+      - name:			Suprasternale Hgt   
+
+      - name:			Chest Hgt At Axill  
+
+      - name:			Chest Circ          
+
+      - name:			Chest Br At Axilla  
+
+      - name:			Waist Height        
+
+      - name:			Waist Circ          
+
+      - name:			Waist Breadth       
+
+      - name:			Waist Circ Natural  
+
+      - name:			Iliocristale Hgt    
+
+      - name:			Hip Hgt At Butt     
+
+      - name:			Hip Circ            
+
+      - name:			Hip Br At Troc      
+
+      - name:			Iliospinale Hgt     
+
+      - name:			Bispinous Breadth   
+
+      - name:			Gluteral Furrow Ht  
+
+      - name:			Trochanteric Hgt    
+
+      - name:			Upper Thigh Circ    
+
+      - name:			Upper Thigh Depth   
+
+      - name:			Tibiale Height      
+
+      - name:			Calf Circ Ht        
+
+      - name:			Calf Circ           
+
+      - name:			Calf Depth          
+
+      - name:			Ankle Circ          
+
+      - name:			Ankle Breadth       
+
+      - name:			Sphyrion Height     
+
+      - name:			Foot Length         
+
+      - name:			Foot Breadth        
+
+      - name:			Age In Years        
+
+      - name:			Sex                 
+
+      - name:			Cg Type             
+
+      - name:			Cg Number           
+
+      - name:			Cg Weight           
+
+      - name:			Standing Cg Pct St  
+
+      - name:			Std Cg In Ant-Post  
+
+      - name:			Pelvic Height       
+
+      - name:			Pelvic Heightt      
+
+      - name:			Seated Cg Pct Sith  
+
+      - name:			Seated Cg F Back    
+
+      - name:			Seat Cg F Butt-Kne  
+
+      - name:			Location            
+
+      - name:			Age In Months       
+
+      - name:			Birth Date        10
+
+      - name:			Measurement Date  10
+
+      - name:			Measurement Set Tp  
+
+      - name:			Measurer Number     
+
+      - name:			Computer Number     
+
+      - name:			Race                
+
+      - name:			Grade Level         
+
+      - name:			Handedness          
+
+      - name:			Number Of Brothers  
+
+      - name:			Number Of Sisters   
+
+      - name:			Twin                
+
+      - name:			Birth Order         
+
+      - name:			Mothers Occupation  
+
+      - name:			Fathers Occupation  
+
+      - name:			Mothers Education   
+
+      - name:			Fathers Education   
+
+      - name:			Years In Community  
+
+      - name:			Comment Codes       
+
+      - name:			Anthropometer No    
+
+      - name:			Caliper No          
+
+      - name:			Girth No            
+      
+      

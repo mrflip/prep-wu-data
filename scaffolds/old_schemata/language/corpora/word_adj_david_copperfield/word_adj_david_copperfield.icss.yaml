@@ -1,0 +1,57 @@
+contributors:
+  - cite: |
+      M. E. J. Newman, Finding community structure in networks using the eigenvectors of matrices, Preprint physics/0605087 (2006).
+      M. E. J. Newman, Phys. Rev. E 74, 036104 (2006).
+    desc: ~
+    name: Mark Newman
+    url: http://www-personal.umich.edu/~mejn/netdata/adjnoun.zip
+  - desc: "This page contains links to some network data sets I've compiled over the years. All of these are free for scientific use to the best of my knowledge, meaning that the original authors have already made the data freely available, or that I have consulted the authors and received permission to the post the data here, or that the data are mine. You are (as far as I know) free to make whatever use of these data you like, provided that you appropriately cite the original sources."
+    name: Mark Newman
+    role: distributor
+    url: http://www-personal.umich.edu/~mejn/netdata/index.html
+  - desc: The adjacency information is from a novel by Mr. Dickens
+    name: Charles Dickens
+    role: source_material
+  - desc: 'For the [http://infochimps.org|infochimp] project.'
+    name: Philip (flip) Kromer
+    url: http://infochimps.org/user/flip
+desc: 'Word adjacencies: A network of common adjective and noun adjacencies for the novel "David Copperfield" by Charles Dickens, as described by M. Newman.  Nodes represent the most commonly occurring adjectives and nouns in the book.  Node values are 0 for adjectives and 1 for nouns.  Edges connect any pair of words that occur in adjacent position in the text of the book. cite: M. E. J. Newman, Finding community structure in networks using the eigenvectors of matrices, Preprint physics/0605087 (2006). cite: M. E. J. Newman, Phys. Rev. E 74, 036104 (2006).'
+fields:
+  - desc: ~
+    name: node_id
+    handle:  node_id
+  - desc: ~
+    name: node_value_word
+    handle:  node_value_word
+  - desc: ~
+    name: node_value_part_of_speech
+    handle:  node_value_part_of_speech
+  - desc: ~
+    name: edge_from
+    handle:  edge_from
+  - desc: ~
+    name: edge_to
+    handle:  edge_to
+name: Adjacency network of common adjectives and nouns in the novel David Copperfield by Charles Dickens
+notes:
+  coverage: ''
+  rights: ''
+  see_also: "- ~\n"
+  role:          usage
+  desc:          ''
+ratings:
+  - initial:
+      accurate:
+        rating: 3
+      authoritative:
+        desc: Used in published peer-reviewed papers by an expert in network theory (though assumedly not Dickens).
+        rating: 4
+      comprehensive:
+        desc: 'One book, although complete coverage.  Pair-adjacency only.'
+        rating: 2
+      interesting:
+        desc: Limited scope
+        rating: 2
+tags: 'words, literature, language, network, graph, adjacency, "David Copperfield" dickens, charles, adjective, noun, part, of, speech, pos'
+handle:  word_adj_david_copperfield
+uniqid2: adjacency_network_of_common_adjectives_and_nouns_in_the_novel_david_copperfield_by_charles_dickens
