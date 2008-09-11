@@ -19,6 +19,22 @@ require 'delicious_scrape_html_ugly'
 DEL_BASE_URL = "feeds.delicious.com/v2/json"
 HASHER = Digest::MD5.new
 
+
+# a = {
+#   "u":"http:\/\/infochimps.org\/",
+#   "d":"Infochimps.org: Free Redistributable Data Sets of Every Kind",
+#   "t":["databases","internet","research","nakijken"],
+#   "dt":"2008-05-10T17:13:06Z",
+#   "n":"assembling and interconnecting the world's best repository for raw data -- a sort of giant free allmanac, with tables on everything you can put in a table."
+# }
+# {
+#   "u":  "http:\/\/woork.blogspot.com\/2008\/08\/10-handwritten-fonts-you-cant-miss.html",
+#   "d":  "Woork: 10 Handwritten fonts you can't miss",
+#   "t": ["typography","fonts","webdesign"],
+#   "dt": "2008-08-25T01:08:48Z",
+#   "n":  ""
+# }
+
 KEYSMAP = {
   # 'dt'       =>   :date,
   # 'd'        =>   :desc,

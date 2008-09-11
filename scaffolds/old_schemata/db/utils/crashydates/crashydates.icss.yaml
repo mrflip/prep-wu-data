@@ -1,30 +1,85 @@
-contributors:
-  - desc: ~
-    handle:  'Shared and converted by Philip (flip) Kromer for the [http://infochimps.org|infochimp] project.'
-    url: http://infochimps.org/user/flip
-desc: 'A list of dates which, due to historical convention, human error, or hardware flaws can pose pitfalls to computer programs.  These dates can be used to test computers that handle time data, such as banking, payroll or Mars rovers.'
-fields:
-  - handle:  ~
-name: Computer Crash Dates
-notes:
-  coverage: '[ { time: 0-0 } ]'
-  rights: ''
-  see_also: "- ~\n"
-  role: usage
-  desc:          2 This is a reasonable start but probably not complete.  It is also
-ratings:
-  - initial:
-      accurate:
-        rating: 3
-      authoritative:
-        desc: The source listed above gives a well-tested list prepared by an expert. This recreated list is neither.
-        rating: 2
-      comprehensive:
-        desc: "This dataset is unannotated for copyright reasons.  Maybe you'd like to investigate and describe why each of these dates is pivotal?  If so, please respect the original author's intellectual property and follow our [help:Guidelines for annotated data]. See the website referenced above for a comprehensive and annotated listing"
-        rating: 1
-      interesting:
-        desc: 'Interest to programmers, otherwise not.'
-        rating: 1
-tags: 'crash, dangerous, date, time, computer, landmark, testing, boundary, borderline, pitfall, snafu'
-handle:  computer_crashydates
-uniqid2: computer_crash_dates
+datasets:
+  - name:               'Dates for testing Software Applictions'
+    desc: >
+        A list of dates which, due to historical convention, human error, or
+        hardware flaws can pose pitfalls to computer programs.  These dates can
+        be used to test computers that handle time data, such as banking,
+        payroll or Mars rovers.'
+        
+    tag_list:       'crash, dangerous, date, time, computer, landmark, testing, boundary, bug, test'
+    license_info:
+        license_handle:         'not_open'
+        desc: >-
+
+    facts:
+            
+    notes_by_role:
+        description:
+            desc: >-
+
+        usage:
+            name: 
+            desc: >-
+                
+    valuation:
+        bonus:                  0
+
+    #
+    # These are hashes; the 'role' should be something unique within each hash
+    # and whenever applicable share a common prefix.  (That is: if there are
+    # several usage notes, call them usage_intro:, usage_section_1, ...)
+    #
+    role_credits:
+        # main:
+        #     contributor:      ''
+        #     citation:         ''
+    links_by_role:
+        # usage:
+        #     full_url:         ''
+        #     text: >-
+        #         text
+        main:
+            full_url:           ''
+            text: >-
+                
+        download:
+            full_url:           ''
+            text: >-
+
+
+    payloads_by_name:
+        # "":
+        #    file_path:      "/meta/infochimps_datasets/"
+        #    format:         "yaml"
+  
+    #
+    # These are convenience methods that will auto-generate the given
+    # associations.  Invent your own if you're repeating effort across a
+    # ton of these
+    #
+    make_contributor_from_name_and_url:   true
+    make_main_credit_from_name_and_url:   true
+    make_main_source_link_from_url:       true  
+    create_approve_and_rate_as_one:       flip # your name here
+  
+    # This does what create_approve_and_rate_as_one does
+    # created_by:           dhruv_infochimps_org  
+    # approved_by:          dhruv.infochimps.org
+    # approved_at:          2008-08-08T08:08:08
+    # user_ratings:
+    #     dhruv:
+    #         [ 1, 1, 1, 1 ]
+
+    tables:
+      - name:       ''
+        desc: |
+
+# contributors:
+#   - name:                 ''
+#     url:                  ''
+#     desc:                 ''
+#     base_trustification:  0
+
+icss:
+    version:              0.5
+    moreinfo:             http://infochimps.org/info/icss

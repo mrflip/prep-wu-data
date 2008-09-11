@@ -1,9 +1,9 @@
 infochimps_schema:
-    collection: Statistical Abstract of the United States
-    tags:   us united states america census demographics population government
-    handle:  statistical_abstract_table
-    name: Statistical Abstract Table
-    fields: []
+    collection:         Statistical Abstract of the United States
+    tags:               us united states america census demographics population government
+    handle:             statistical_abstract_table
+    name:               Statistical Abstract Table
+    is_collection:      true
     notes:
       desc: |-
         The Statistical Abstract of the United States is the standard summary of statistics on the social, political, and economic organization of the United States. It is also designed to serve as a guide to other statistical publications and sources. The latter function is served by the introductory text to each section, the source note appearing below each table, and Appendix I, which comprises the Guide to Sources of Statistics, the Guide to State Statistical Abstracts, and the Guide to Foreign Statistical Abstracts.
@@ -38,35 +38,21 @@ infochimps_schema:
       rights: |-
         All US Census Bureau materials, regardless of the media, are entirely in the public domain. There are no user fees, site licenses, or any special agreements etc for the public or private use, and or reuse of any census title. As tax funded product, it's all in the public record.
         Some of our products, however, are special cases. [...] The Statistical Abstract has some data covered by copyright law.  Check the table's footnotes to determine if the data are covered by copyright law.
-    ratings:
-        accurate:
-            rating: 3
-            desc:  These files have not been checked for conversion errors.
-            by:     initial
-        authoritative:
-            rating: 5
-            desc:  ''
-            by:     initial
-        comprehensive:
-            rating: 5
-            desc:  ''
-            by:     initial
-        interesting:
-            rating: 5
-            desc:  ''
-            by:     initial
-    contributors:
-      - handle:  gov.census/statab
-        name: US Census Bureau
-        url: http://www.census.gov/statab/www
-        role: source
-        cite: |-
-          U.S. Census Bureau,
-          Statistical Abstract of the United States: 2008 (127th Edition)
-          Washington, DC, 2007;
-          "http://www.census.gov/statab/www/":http://www.census.gov/statab/www
-        desc: ''
-      - handle:  org.infochimp/flip
-        name: Philip (flip) Kromer
-        url: http://infochimps.org/users/flip
-        role: converted
+    user_ratings:
+        flip:
+            [ 3, 5, 5, 5 ]
+contributors:
+  - handle:  gov.census/statab
+    name: US Census Bureau
+    url: http://www.census.gov/statab/www
+    role: source
+    cite: |-
+      U.S. Census Bureau,
+      Statistical Abstract of the United States: 2008 (127th Edition)
+      Washington, DC, 2007;
+      "http://www.census.gov/statab/www/":http://www.census.gov/statab/www
+    desc: ''
+  - handle:  org.infochimp/flip
+    name: Philip (flip) Kromer
+    url: http://infochimps.org/users/flip
+    role: converted

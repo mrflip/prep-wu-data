@@ -106,3 +106,15 @@ SELECT t.name, tg.*, d.link_url, d.title, d.num_delicious_savers AS savers, t2.n
   LEFT JOIN link_taggings   tg2 ON tg.link_id = tg2.link_id
   LEFT JOIN tags             t2 ON tg2.tag_id = t2.id
   WHERE t.name = "corpus"
+
+
+
+
+SELECT link_url, num_delicious_savers, title, GROUP_CONCAT(DISTINCT t.name)
+  FROM 		imw_social_network_delicious.delicious_links d
+  LEFT JOIN taggings tg ON d.id = tg.delicious_link_id
+  LEFT JOIN tags t	    ON t.id = tg.tag_id
+WHERE num_delicious_savers > 10000 AND t.name = 'dataset'
+GROUP BY d.id
+ORDER BY num_delicious_savers DESC
+LIMIT 100  

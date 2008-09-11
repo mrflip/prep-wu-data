@@ -47,14 +47,18 @@ contributors:
         and following for more information on their contributions.
   
 datasets:
-  - name:               ''
+  - name:               'MusicBrainz Project - Database Dump'
     is:collection:      true
-    tags:               ''
+    tags:               'music large culture artist singer art song album title lyrics release label track'
     credits:
+      - url:          'http://musicbrainz.org/doc/DatabaseDownload'
+        role:         'distributed'
       - url:          'http://musicbrainz.org/doc/Development'
         role:         'gathered'       
       - url:          'http://musicbrainz.org/doc/HelpWanted'
-        role:         'gathered'
+        role:         'gathered' 
+      - url:          'http://musicbrainz.org/'
+        role:         'main'
         
 
     license_info:
@@ -146,25 +150,14 @@ datasets:
               (Substitute the date of the release you download in that command.)
 
               After that, follow the instructions given in mb_server/INSTALL.
-        
-    # fields in datasets schema        
-                    
-            
-      - name:       Philip (flip) Kromer
-        url:        http://infochimps.org/users/flip
-        role:       converted
 
-    ratings:
-        accurate:       { rating: 2, by: 'initial', desc: 'These files have not been checked for conversion errors.' }
-        authoritative:  { rating: 2, by: 'initial', desc: 'These files have not been checked for conversion errors.' }
-        comprehensive:  { rating: 2, by: 'initial', desc: 'These files have not been checked for conversion errors.' }
-        interesting:    { rating: 2, by: 'initial', desc: 'These files have not been checked for conversion errors.' }        
-
+        - name:         'MusicBrainz Developers'
+          url:          'http://musicbrainz.org/doc/Development'
+          desc:         |
+              "Development":http://musicbrainz.org/doc/Development
     
     notes:
-        # desc:         in dataset schema
-        
-        collection_description: |
+        description: |
             h2. The MusicBrainz project
 
             MusicBrainz
@@ -190,7 +183,7 @@ datasets:
               identify tracks in your music collection and then write consistent
               and accurate metadata to your music files.
 
-        collection_schema:    |
+        data structure:    |
 
             This document describes the database structure of the MusicBrainz
             database, as of the Subversion copy at 20th August 2003. It is not
@@ -342,10 +335,6 @@ datasets:
             documents. The easiest way to get a running database is to install a
             VirtualMusicBrainzServer.
 
-            
-    # formats:  [] # added by packager
-    # fileinfo: [] # added by packager
-    # dnload_count
         
   - name:               'Music Artists'
     tags:               >-

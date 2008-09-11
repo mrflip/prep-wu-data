@@ -6,7 +6,6 @@
 # format: xml
 # snippet
 
-
 # Country rdf:about="http://www4.wiwiss.fu-berlin.de/factbook/resource
 # HIVorAIDS_deaths
 # administrativedivisions
@@ -110,8 +109,39 @@
 
 
 
-
-
+name: CIA Factbook
+notes:
+  coverage: '[ { spatial:global } ]'
+  rights: |
+    The source material is in the public domain
+    
+    From https://www.cia.gov/library/publications/the-world-factbook/docs/faqs.html :
+        
+      Can I use some or all of The World Factbook for my Web site (book, research project, homework, etc.)?
+      
+      The World Factbook is in the public domain and may be used freely by anyone at anytime without seeking permission. However, US Code prohibits use of the CIA seal in a manner which implies that the CIA approved, endorsed, or authorized such use. If you have any questions about your intended use, you should consult with legal counsel. Further information on The World Factbook's use is described on the Contributors and Copyright Information page. As a courtesy, please cite The World Factbook when used.
+  see_also: |
+    - countrycodes
+    - currencycodes
+  role:          usage
+  desc:          'Refer to the [https://www.cia.gov/library/publications/the-world-factbook/docs/notesanddefs.html CIA Factbook Notes and Definitions] for usage information, definitions, sources and more.'
+ratings:
+  - initial:
+      accurate:
+        desc: 'Best available data.  However, many stats derive from local governments with differing methodology.  These numbers may in some cases be colored by self-interests (and, one must admit, could hold for the CIA as well).  The researchers attempt to control for these sources of bias but cannot do so completely.'
+        rating: 4
+      authoritative:
+        desc: Prepared by expert analysts at the US Central Intelligence Agency; widely referred to and referenced by impartial third parties across the globe.
+        rating: 5
+      comprehensive:
+        desc: Completely and exhaustively describes every nation and nation-like-thing in the world.
+        rating: 5
+      interesting:
+        desc: 'Broad, rich and authoritative.'
+        rating: 5
+tags: 'cia, world, country, economy, geography, demographics, transportation, land, area, coastline, age, agriculture, aid, airports, arable, area, birth_rate, border, boundary, branch, branches, budget, cabinet, capita, capital, cellular, chancery, chief, climate, coastline, code, commodities, communications, comparative, constitution, consulate, consumption, coordinates, countries, country, crops, currency, death_rate, debt, definition, degree, dependency, dependent, description, difference, diplomatic, diplomatic_agreements, disease, displaced, disputes, distribution, divisions, domestic, drugs, economic, economy, election, electricity, elevation, embassy, environment, ethnic, exchange, executive, expectancy, expenditures, exports, external, extremes, female, females, fertility, fiscal, fishing, flag, food, force, foreign, foreign, owned, gas, gdp, geographic, geography, gini, gold, government, gross, groups, growth, hazards, head, heliports, highest, hiv, aids, holiday, hosts, household, idps, illicit, imports, income, independence, industrial, industries, industry, infant, infectious, inflation, internally, international, internet, introduction, investment, irrigated, issues, judicial, labor, land, languages, leaders, legal, legislative, lines, literacy, living, local, location, long, lowest, mailing, main, major, male, manpower, map, marine, maritime, median, merchant, migration, military, mission, mobile, mortality, name, narrow, national, nationality, net, not, note, noun, obligation, occupation, of, office(s), official, oil, or, organization, other, over, overview, parity, participation, parties, partners, party, paved, people, per, percent, percentage, permanent, persons, pipelines, point, political, population, ports, poverty, power, pressure, prevalence, prices), production, products, proved, public, purchasing, radio, railways, rate, rate), rates, ratified, rating, ratio, reaching, real, recipient, references, refugees, registered, religions, representation, reserves, resources, respiratory, results, revenues, risk, roadways, runways, saving, sea, sector, service, services, sex, ships, short, signed, situation, soil, standard, state, stations, status, structure, suffrage, system, telephone, telephones, television, terminals, terrain, territorial, tier, time, total, trafficking, transnational, transportation, type, under, unemployment, unpaved, us, users, waterways'
+handle:  ciafactbook
+uniqid2: cia_factbook
 
 
 
@@ -1039,36 +1069,3 @@ fields:
       Stimulants are drugs that relieve mild depression, increase energy and activity, and include cocaine (coke, snow, crack), amphetamines (Desoxyn, Dexedrine), ephedrine, ecstasy (clarity, essence, doctor, Adam), phenmetrazine (Preludin), methylphenidate (Ritalin), and others (Cylert, Sanorex, Tenuate).
     name: illicit_drugs
     handle:  illicit_drugs
-name: CIA Factbook
-notes:
-  coverage: '[ { spatial:global } ]'
-  rights: |
-    The source material is in the public domain
-    
-    From https://www.cia.gov/library/publications/the-world-factbook/docs/faqs.html :
-        
-      Can I use some or all of The World Factbook for my Web site (book, research project, homework, etc.)?
-      
-      The World Factbook is in the public domain and may be used freely by anyone at anytime without seeking permission. However, US Code prohibits use of the CIA seal in a manner which implies that the CIA approved, endorsed, or authorized such use. If you have any questions about your intended use, you should consult with legal counsel. Further information on The World Factbook's use is described on the Contributors and Copyright Information page. As a courtesy, please cite The World Factbook when used.
-  see_also: |
-    - countrycodes
-    - currencycodes
-  role:          usage
-  desc:          'Refer to the [https://www.cia.gov/library/publications/the-world-factbook/docs/notesanddefs.html CIA Factbook Notes and Definitions] for usage information, definitions, sources and more.'
-ratings:
-  - initial:
-      accurate:
-        desc: 'Best available data.  However, many stats derive from local governments with differing methodology.  These numbers may in some cases be colored by self-interests (and, one must admit, could hold for the CIA as well).  The researchers attempt to control for these sources of bias but cannot do so completely.'
-        rating: 4
-      authoritative:
-        desc: Prepared by expert analysts at the US Central Intelligence Agency; widely referred to and referenced by impartial third parties across the globe.
-        rating: 5
-      comprehensive:
-        desc: Completely and exhaustively describes every nation and nation-like-thing in the world.
-        rating: 5
-      interesting:
-        desc: 'Broad, rich and authoritative.'
-        rating: 5
-tags: 'cia, world, country, economy, geography, demographics, transportation, land, area, coastline, age, agriculture, aid, airports, arable, area, birth_rate, border, boundary, branch, branches, budget, cabinet, capita, capital, cellular, chancery, chief, climate, coastline, code, commodities, communications, comparative, constitution, consulate, consumption, coordinates, countries, country, crops, currency, death_rate, debt, definition, degree, dependency, dependent, description, difference, diplomatic, diplomatic_agreements, disease, displaced, disputes, distribution, divisions, domestic, drugs, economic, economy, election, electricity, elevation, embassy, environment, ethnic, exchange, executive, expectancy, expenditures, exports, external, extremes, female, females, fertility, fiscal, fishing, flag, food, force, foreign, foreign, owned, gas, gdp, geographic, geography, gini, gold, government, gross, groups, growth, hazards, head, heliports, highest, hiv, aids, holiday, hosts, household, idps, illicit, imports, income, independence, industrial, industries, industry, infant, infectious, inflation, internally, international, internet, introduction, investment, irrigated, issues, judicial, labor, land, languages, leaders, legal, legislative, lines, literacy, living, local, location, long, lowest, mailing, main, major, male, manpower, map, marine, maritime, median, merchant, migration, military, mission, mobile, mortality, name, narrow, national, nationality, net, not, note, noun, obligation, occupation, of, office(s), official, oil, or, organization, other, over, overview, parity, participation, parties, partners, party, paved, people, per, percent, percentage, permanent, persons, pipelines, point, political, population, ports, poverty, power, pressure, prevalence, prices), production, products, proved, public, purchasing, radio, railways, rate, rate), rates, ratified, rating, ratio, reaching, real, recipient, references, refugees, registered, religions, representation, reserves, resources, respiratory, results, revenues, risk, roadways, runways, saving, sea, sector, service, services, sex, ships, short, signed, situation, soil, standard, state, stations, status, structure, suffrage, system, telephone, telephones, television, terminals, terrain, territorial, tier, time, total, trafficking, transnational, transportation, type, under, unemployment, unpaved, us, users, waterways'
-handle:  ciafactbook
-uniqid2: cia_factbook
