@@ -1,25 +1,30 @@
 --- # !infochimps.org/^icss
 
 datasets:
-- name:                 '63.240.106.223'
-  tag_list:             ''
-  category:             '' 			# do what seems right, but do it the same way each time.
+- name:                 'www.fhwa.dot.gov'
+  tag_list:             'highways transportation'
+  category:             'geo/routing' 			# do what seems right, but do it the same way each time.
   notes_by_role:
       description:                      
           name:         'Description'
           body:         >
-              (description of this dataset)
+
+            Yearly data from the Federal Highway Administration on
+            such topics as fuel and vehicle use, driver licensing,
+            financing of highways, highway extens, characteristics,
+            and performance, and travel habits of drivers.
 
       rights:
           name:         'Rights'
           body:         >
-              (look for a rights statement,
-              if any, and paste it in here)
 
-  rights_uniqname:      ''              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+            Government data.
+
+            
+  rights_uniqname:      'PD-Govt'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
   valuation:
       bonus:            0
-  url:                  'http://63.240.106.223'
+  url:                  'http://www.fhwa.dot.gov'
 
   #
   # Mandatory fields ^^^   Optional fields vvvv

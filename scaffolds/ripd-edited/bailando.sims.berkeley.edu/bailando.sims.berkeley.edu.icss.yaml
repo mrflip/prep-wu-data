@@ -1,30 +1,37 @@
 --- # !infochimps.org/^icss
 
 datasets:
-- name:                 'feeds.delicious.com'
-  tag_list:             ''
-  category:             '' 			# do what seems right, but do it the same way each time.
+- name:                 'bailando.sims.berkeley.edu'
+  tag_list:             'corpus email enron trial'
+  category:             'language/corpora' 			# do what seems right, but do it the same way each time.
   notes_by_role:
       description:                      
-          name:         'Description'
+          name:         'Enron Emails'
           body:         >
-              (description of this dataset)
 
+            This website is the UC Berkeley SIMS group's page.  The
+            group has a focus on creating new ways to access and
+            display information.  One of their projects is a
+            visualizer for a collection of emails from Enron
+            employees.  It is this project's data that should be in
+            Infochimps.
+           
       rights:
-          name:         'Rights'
+          name:         'Public Domain (government data)'
           body:         >
-              (look for a rights statement,
-              if any, and paste it in here)
+            The emails were collected and published by the Federal
+            Energy Regulatory Commission during its investigation of
+            Enron and are consequently in te public domain.
 
-  rights_uniqname:      ''              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+  rights_uniqname:      'PD-Govt'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
   valuation:
       bonus:            0
-  url:                  'http://feeds.delicious.com'
+  url:                  'http://bailando.sims.berkeley.edu'
 
   #
   # Mandatory fields ^^^   Optional fields vvvv
   # -----------------------------------------------------------------------
-      
+
   #
   # Besides the auto-generated links and credits, if you see anything that
   # stands out as useful add it as its own entry.
@@ -34,10 +41,19 @@ datasets:
   # several usage notes, call them usage_intro:, usage_section_1, ...)
   #
   links_by_role:
-      # usage:
-      #     full_url:     ''
-      #     text:         >-
-      #         text
+    background:
+          full_url:     'http://www-2.cs.cmu.edu/~enron/'
+          description:  'more information'
+          text:         >-
+            This dataset was collected and prepared by the CALO Project
+            (A Cognitive Assistant that Learns and Organizes). It
+            contains data from about 150 users, mostly senior
+            management of Enron, organized into folders. The corpus
+            contains a total of about 0.5M messages. This data was
+            originally made public, and posted to the web, by the
+            Federal Energy Regulatory Commission during its
+            investigation.
+
   role_credits:
       # context:
       #     contributor:  ''
@@ -52,7 +68,6 @@ datasets:
   make_main_credit_from_name_and_url:   true
   make_main_source_link_from_url:       true  
   create_approve_and_rate_as_one:       dhruv # your name here
-
     
   payloads_by_name:
       # "":
