@@ -1,0 +1,111 @@
+--- # !infochimps.org/^icss
+
+datasets:
+- name:                 'ftp.musicbrainz.org'
+  tag_list:             'music mp3 artist song album'
+  category:             'culture/music' 			# do what seems right, but do it the same way each time.
+  notes_by_role:
+      description:                      
+          name:         'Description'
+          body:         >
+
+            The data downloaded from MusicBrainz is a dump of their
+            musical metdata database.  It contains information about
+            artists, songs, albums, and tags, all supplied by users.
+
+      rights:
+          name:         'Rights'
+          body:         >
+
+            Attribution-NonCommercial-ShareAlike 2.0
+            C O M M O N S  D E E D
+
+            You are free:
+
+              * to copy, distribute, display, and perform the work
+              * to make derivative works
+
+              Under the following conditions:
+                
+                Attribution: You must give the original author credit.
+                
+                Noncommercial: You may not use this work for
+                commercial purposes.
+
+                Share Alike: If you alter, transform, or build upon
+                this work, you may distribute the resulting work only
+                under a license identical to this one.
+
+                * For any reuse or distribution, you must make clear
+                  to others the license terms of this work.
+                * Any of these conditions can be waived if you get
+                  permission from the copyright holder.
+
+  rights_uniqname:      'CC-BY-NC-SA'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+  valuation:
+      bonus:            0
+  url:                  'http://ftp.musicbrainz.org'
+
+  #
+  # Mandatory fields ^^^   Optional fields vvvv
+  # -----------------------------------------------------------------------
+      
+  #
+  # Besides the auto-generated links and credits, if you see anything that
+  # stands out as useful add it as its own entry.
+  #
+  # These are hashes; the 'role' should be something unique within each hash
+  # and whenever applicable share a common prefix.  (That is: if there are
+  # several usage notes, call them usage_intro:, usage_section_1, ...)
+  #
+  links_by_role:
+      usage:
+          full_url:     'http://musicbrainz.org/doc/AboutMusicBrainz'
+          description:  'MusicBrainz About page'
+          text:         >-
+
+            MusicBrainz is a user-maintained community music
+            metadatabase. Music metadata is information such as the
+            artist name, the release title, and the list of tracks
+            that appear on a release. MusicBrainz collects this
+            information about recordings and makes it available to the
+            public.
+
+  role_credits:
+      # context:
+      #     contributor:  ''
+      #     citation:     ''
+
+  #
+  # These are convenience methods that will auto-generate the given
+  # associations.  Invent your own if you're repeating effort across a
+  # ton of these.
+  #
+  make_contributor_from_name_and_url:   true
+  make_main_credit_from_name_and_url:   true
+  make_main_source_link_from_url:       true  
+  create_approve_and_rate_as_one:       dhruv # your name here
+
+    
+  payloads_by_name:
+      # "":
+      #    file_path:      "/meta/infochimps_datasets/"
+      #    format:         "yaml"
+
+#
+# If you add any credits above (under role_credits),
+# enter the corresponding contributor here.
+#
+# A contributor only appears in more than one schema
+# file you only need it to 
+#   
+contributors:
+# - name:                 ''
+#   url:                  ''
+#   desc:                 ''
+#   base_trustification:  0
+
+# Leave this line alone
+icss:
+  version:              0.5
+  moreinfo:             http://infochimps.org/info/icss
