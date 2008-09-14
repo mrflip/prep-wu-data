@@ -1,19 +1,29 @@
 #!/usr/bin/env ruby
-require  File.dirname(__FILE__)+'/delicious_link_models.rb'
-require 'fileutils'; include FileUtils
-require 'imw/utils'; include IMW; IMW.verbose = true
-require 'imw/dataset/datamapper/uri'
+$: << File.dirname(__FILE__)+'/.'
+require 'rubygems'
+require 'imw'; include IMW
+require 'imw/dataset'
+require 'fileutils'; include FileUtils::Verbose
 
-# #
-# # Wipe DB and add new migration
-# #
-# DataMapper.auto_migrate!
-#
-#
-# # Destroy old
-# announce "Destroying old"
-# [DeliciousLink, Socialite, Tag, Tagging, SocialitesTag, SocialitesLink, Friendship].each do |klass|
-#   klass.all.each{ |l| l.destroy }
+
+DataMapper::Logger.new(STDOUT, :debug) # uncomment to debug
+DataMapper.setup_remote_connection IMW::ICS_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'ics_social_network_delicious ' })
+
+[Contributor, Credit, Dataset, Field, LicenseInfo, License, Note, Payload, Rating, Tagging, Tag, User, Linking, Link].each do |klass|
+  $stderr.puts "Migrating #{klass.to_s}"
+  klass.auto_upgrade!
+end
+
+DataMapper.auto_upgrade!
+
+# raise "Skipped! Uncomment!"
+
+# load_pool_from_disk(:ripd_root, 'com.delicious/**/*')
+
+# repository(:default).adapter.query('SELECT l.id AS link_id FROM links l LEFT JOIN link_assets la ON l.id = la.id WHERE la.id IS NULL').each do |link_id|
+#   if ! LinkAsset.get(link_id)
+#     link = Link.get(link_id)
+#     # puts link.attributes
+#     LinkAsset.create( link.attributes )
+#   end
 # end
-
-raise "Skipped! Uncomment!"
