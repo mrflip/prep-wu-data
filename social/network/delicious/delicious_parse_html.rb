@@ -85,7 +85,9 @@ class DeliciousAssetsPostParser
       }, {
         :name        => hsh[:link_title],
       })
-    link.wget :wait => 0 # this is ok, we only fetch ~1 per site
+    unless link.full_url =~ /delicious.com/
+      link.wget :wait => 0 # this is ok, we only fetch ~1 per site
+    end
     link.save
     link
   end
@@ -107,8 +109,8 @@ class DeliciousAssetsPostParser
       dataset     = define_dataset      delicious_link, contributor
       link        = define_link         delicious_link
       define_associations dataset, link
-      # p [dataset.tags.map{|tag| tag.name }, dataset.taggers.map{|tagger| tagger.name }]
     end
+    delicious_links.length.to_s
   end
 end
 
@@ -116,24 +118,25 @@ class FilePoolProcessor
   include Asset::Processor
   attr_accessor :assets
 
-  # reset -- clear all processings from the given context
-  def unprocess context
-    Processing.all(:context => context).each(&:destroy) # Clear all out
-  end
-
-  def asset_query
+  def assets_to_parse
     # asset_query = { :uuid => ['8817d5af79f35447ba3df4cb323ece7a', 'cd8ebf51dcdc5ec0ba032613addb5aa9', '043786c7cf50543e89892ee5b6637498']}
-    asset_query = { }
+    asset_query = { :handle.like => '%/url/%page=1' }
+    LinkAsset.all(asset_query)
   end
 
   def parse
     delicious_parser = DeliciousAssetsHTMLParser.new(DELICIOUS_PAGE_STRUCTURE)
-    self.assets = process(LinkAsset.all(asset_query), :delicious, delicious_parser)
+    self.assets = process(assets_to_parse, :delicious, delicious_parser)
+  end
+
+  def assets_to_post_process
+    # Processing.all({ :context=> :delicious })
+    assets_to_parse.map{|asset| Processing.all({ :context => :delicious, :asset_id => asset.id })}.flatten
   end
 
   def post_process
     post_processor = DeliciousAssetsPostParser.new
-    process(Processing.all({ :context=> :delicious }), :post, post_processor)
+    process(assets_to_post_process, :post, post_processor)
   end
 end
 
