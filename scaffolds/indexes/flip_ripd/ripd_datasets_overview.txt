@@ -1,0 +1,92 @@
+http://ftp.cs.unc.edu/pub/projects/image/CHVRTD				|2|	Collection of 3D Models for Rendering Algorithms							|3dmodels 3d model voxel volumetric	     
+http://graphics.stanford.edu/data/3Dscanrep				|2|	The Stanford 3D Scanning Repository									|3dmodels 3d model voxel volumetric	     
+http://www-graphics.stanford.edu/data/voldata				|3|	The Stanford volume data archive 									|3dmodels 3d model voxel volumetric	     
+http://www.martinreddy.net/ukvrsig					|2|	The UK VR-SIG 3D Object Archive	 									|3dmodels 3d model voxel volumetric	     				
+http://www.sjbaker.org/teapot						|2|	The Utah Teapot 3D Rendering Model  									|3dmodels 3d model voxel volumetric	     
+http://63.240.106.223/natcrsrating					|2|	National Golf Course Rating Database 									|sports golf course rating geolocation	     
+http://bailando.sims.berkeley.edu/enron					|4|	Enron Email Dataset (With Topic and Sentiment)								|					     
+http://baseball1.com							|5|	Historical Baseball Statistics (The 'Lahman Database')							|baseball teams sport players hall_of_fame hof
+http://bulk.resource.org/copyright					|5|	US Copyright database											|
+http://citeseer.ist.psu.edu						|5|	CiteSeer Scientific Literature Digital Library								|
+http://deim.urv.cat/~aarenas/data					|2|	Collection of Network Graph Datasets									|
+http://delicious.com/mrflip						|2|	Index of Open Datasets by delicious.com/mrflip								|
+http://delicious.com/pskomoroch						|2|	Index of Open Datasets by delicious.com/pskomoroch							|
+http://download.srv.cs.cmu.edu/~enron					|3|	Enron Trial Email Dataset (Main)									|
+http://edwardbetts.com/postboxes					|2|	Location of Every Postbox in the UK									|
+http://edwardbetts.com/rail_timetable_parser				|3|	British National Rail Timetable Parser									|
+http://examples.oreilly.com/baseballhks					|2|	Baseball Database (from book 'Baseball Hacks')								|
+ftp://ftp.musicbrainz.org/pub/musicbrainz/data				|5|	Dump of the MusicBrainz Database									|
+ftp://ftp.ripe.net/ripe/dbase						|4|	RIPE WHOIS (DNS to Hostname)										|
+ftp://ftp.sunet.se/pub							|3|	Science and Biological Datasets from Usenet								|
+ftp://ftp3.innovectra.net/sbcbooks					|2|	Yellow Pages for many US Cities (PDF Only)								|
+http://futureboy.homeip.net/frinkdata					|4|	Comprehensive Unit Conversion formulas									|
+http://famous-family-trees.googlegroups.com				|5| 	Famous Family Trees in Genealogical format								|
+http://pjcj.sytes.net/svn/Gedcom					|3|	Family Trees from pjcj.sytes.net in GEDCOM (Genealogical)						|
+http://www3.dcs.hull.ac.uk/public/genealogy				|3|	Family Trees from dcs.hull.ac.uk in GEDCOM (Genealogical)						|
+http://golf.sports.yahoo.com/tracker					|2|	Golf Course Ratings from the Yahoo! Handicap Tracker							|
+http://had.co.nz/data/movies						|3|	Formatted Conversion of the IMDB dataset								|
+http://hazard.com							|4|	Huge collection of MSDS											|
+http://lib.stat.cmu.edu/datasets					|3|	StatLib---Datasets Archive										|
+http://licenses/svn_https_cctools.svn.sourceforge.net/svnroot/cctools	|4|	Every Creative Commons License in RDF Format								|
+http://licenses/www.opensource.org/licenses				|2|	List of all Open Source Software Licenses								|
+http://lynx.isc.org/lynx2.8.6/lynx2-8-6					|3|	All SGML Entities and their Unicode Representation							|
+http://maia.usno.navy.mil/ser7						|3|	Earth Orientation Parameters -- Converts Time to Universal Position					|
+http://mcdc2.missouri.edu/webrepts					|4|	Missouri Census Data Center (MCDC) - US Census Datasets							|
+http://measuringworth.com						|5|	Historical Exchange Rates and Constant Currency conversions						|
+http://members.aol.com/apbrhist						|2|	Association of Historical Baseball Researchers								|
+http://nhts.ornl.gov							|3|	National Household Travel Survey									|
+http://nsc.org/lrs/statinfo						|5|	Odds of Dying by Cause of Death										|
+http://numbrary.com							|4|	Goverment Datasets in Universal Formats									|
+http://oregonstate.edu/cla/polisci/faculty-research/sahr		|5|	Constant Currency Value Conversions									|
+http://ovrt.nist.gov/projects/anthrokids				|4|	Anthrokids - Anthropometric data on Children								|
+http://physchem.ox.ac.uk/MSDS						|4|	Materials Safety Datasets (MSDS) from physchem.ox.ac.uk							|
+http://physics.nist.gov/cuu/Constants					|5|	Values of Universal Constants from NIST									|
+http://physics.nist.gov/Pubs/SP811/appenB8_files			|5|	Conversion Factors between physical units from NIST							|
+http://prdownloads.sourceforge.net/nltk					|5|	Text Corpora from the Natural Language Toolkit								|
+http://quackle/quackle.cvs.sourceforge.net/quackle/quackle/data		|3|	Scrabble Rack Value for any combination of Tiles							|
+http://sd.wareonearth.com/~phil/npanxx					|3|	North American Numbering Plan (NPA / NXX) - Map Telephone Exchange to Number and Geolocation		|
+http://sociology.osu.edu/mdm						|5|	Crime data 1960-2004 for over 17,000 police departments							|
+http://stuff.metafilter.com/infodump					|4|	Metafilter Community blog database export								|
+http://ucrel.lancs.ac.uk/bncfreq					|4|	Word Frequency from the British National Corpus								|
+http://voteview.com							|3|	Voting Records and Political Spectrum Rankings for every US Congress					|
+http://www-odi.nhtsa.dot.gov/downloads					|4|	National Highway Traffic Safety Administration(NHTSA) Automotive Recall and Consumer Defect Database	|
+http://eh.net/databases							| |														|
+http://electoral-vote.com/evp2007					| |														|
+http://www.baseball-databank.org					| |														|
+http://www-personal.umich.edu/~mejn/netdata				| |														|
+http://www.alternative-dictionaries.net/dictionary			| |														|
+http://www.amstat.org/publications/jse/datasets				| |														|
+http://www.apbr.org							| |														|
+http://www.archive.org/download/amazon_crawl.cp				| |														|
+http://www.baseball-databank.org/files					| |														|
+http://www.census.gov/compendia/smadb					| |														|
+http://www.census.gov/compendia/statab					| |														|
+http://www.census.gov/const						| |														|
+http://www.census.gov/fsrscripts					| |														|
+http://www.census.gov/geo						| |														|
+http://www.census.gov/geo/tigerline					| |														|
+http://www.census.gov/popest						| |														|
+http://www.cia.gov/library/publications/the-world-factbook		| |														|
+http://www.cs.cmu.edu/~enron						| |														|
+http://www.cs.utexas.edu/users/ml/riddle/data				| |														|
+http://www.databasebasketball.com					| |														|
+http://www.echoditto.com						| |														|
+http://www.fhwa.dot.gov/policy/ohim					| |														|
+http://www.geonames.org/export						| |														|
+http://www.h-net.org/~business/bhcweb					| |														|
+http://www.milebymile.com						| |														|
+http://www.retrosheet.org/ballparks					| |														|
+http://www.retrosheet.org/boxesetc					| |														|
+http://www.retrosheet.org/gamelogs					| |														|
+http://www.retrosheet.org/transactions					| |														|
+http://www.retrosheet.org/wanted					| |														|
+http://www.ucc.ie/pub/sgml						| |														|
+http://www.umass.edu/statdata						| |														|
+http://www.whatdotheyknow.com/request					| |														|
+http://www.zillow.com/labs						| |														|
+http://www4.wiwiss.fu-berlin.de/eurostat				| |														|
+http://www4.wiwiss.fu-berlin.de/factbook				| |														|
+ftp://ftp.ncdc.noaa.gov/pub/data/gsod					| |														|
+ftp://ftp.ncdc.noaa.gov/pub/data/inventories				| |														|
+ftp://ftp.ncdc.noaa.gov/pub/data/noaa					| |														|
+ftp://ftp.resource.org							| |														|

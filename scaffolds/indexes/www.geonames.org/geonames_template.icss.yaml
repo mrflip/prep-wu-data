@@ -1,0 +1,38 @@
+--- # !infochimps.org/^icss
+
+datasets:
+    - tag_list:         post postal zip code international mail geo gis geolocation place names
+      category:         geo/postalcodes
+      collection_id:    geonames.com_postal_codes
+      is_collection:    false
+      credits:
+          contributor_handle:   http://www.geonames.com
+          role:                 indexed
+          desc:
+              The list of sources "geonames.org":http://geonames.org uses for postal ('ZIP') codes.
+
+              Taken from http://www.geonames.org/postal-codes-sources.html
+        
+contributors:
+  - name:                 Philip (flip) Kromer
+    handle:               flip.infochimps.org
+    url:                  http://mrflip.com/
+    desc:                 Building tools to organize, explore and comprehend massive information streams
+
+  - name:                 Dhruv 'Perfect Timing' Bansal
+    handle:               dhruv.infochimps.org
+    url:                  dhruvbansal.com
+    desc:                 Perfect Timing.
+    base_trustification:  50
+
+  - name:             http://www.geonames.com
+    handle:           http://www.geonames.com
+    url:              http://www.geonames.com
+    desc: >
+        * Sources : GeoNames is aggregating over hundred different "data sources.":http://www.geonames.org/data-sources.html
+        * Ambassadors : "GeoNames Ambassadors":http://www.geonames.org/team.html#ambassadors help in many countries.
+        * Wiki : A "wiki":http://www.geonames.org/manual.html allows to view the data and quickly fix error and add missing places.
+        * Donations and Sponsoring : Costs for running GeoNames are covered by "donations and sponsoring.":http://www.geonames.org/donations.html
+    base_trustification: 20
+
+

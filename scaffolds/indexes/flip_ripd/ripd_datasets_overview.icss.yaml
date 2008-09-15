@@ -1,0 +1,20 @@
+--- # !infochimps.org/^icss
+
+datasets:
+    - tag_list:         ripd to_tag
+      category:         
+      collection_id:    flip_ripd
+      is_collection:    false
+      credits:
+          contributor_handle:   flip.infochimps.org
+          role:                 indexed
+          desc:
+              A bunch of datasets itinerantly gathered by flip.infochimps.org
+        
+contributors:
+  - name:                 Philip (flip) Kromer
+    handle:               flip.infochimps.org
+    url:                  http://mrflip.com/
+    desc:                 Building tools to organize, explore and comprehend massive information streams
+
+
