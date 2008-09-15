@@ -120,7 +120,8 @@ class FilePoolProcessor
 
   def assets_to_parse
     # asset_query = { :uuid => ['8817d5af79f35447ba3df4cb323ece7a', 'cd8ebf51dcdc5ec0ba032613addb5aa9', '043786c7cf50543e89892ee5b6637498']}
-    asset_query = { :handle.like => '%/url/%page=1' }
+    # asset_query = { :handle.like => '%/url/%page=1' }
+    asset_query = { :order => [:id.desc] }
     LinkAsset.all(asset_query)
   end
 
@@ -145,7 +146,7 @@ end
 processor = FilePoolProcessor.new
 # processor.unprocess(:delicious)
 # processor.unprocess(:post)
-# processor.parse
+processor.parse
 processor.post_process
 
 #ac85ce1950f100c8874a9461cd8093cc

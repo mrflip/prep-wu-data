@@ -2,15 +2,19 @@
 --
 -- tag counts
 -- 
+
 SELECT COUNT(*) AS tagged_count, t.*
   FROM 		tags t 
   LEFT JOIN 	taggings tg ON tg.tag_id = t.id
   WHERE 	t.name LIKE '%data%'
     OR 		t.name LIKE '%stats%'
     OR 		t.name LIKE '%statistic%'
+    OR 		t.name LIKE '%semantic%'
   GROUP BY 	t.id
   ORDER BY 	tagged_count DESC, t.name
 ;
+
+
 ---------------------------------------------------------------------------
 --
 -- datasets by tags
@@ -144,3 +148,20 @@ CREATE TEMPORARY TABLE foo_missing
 --   ORDER BY	full_mult DESC
 --;
 -- tag-associated datasets that aren't found by the big 3 (they're the ones with nullity == 1
+
+
+-- Neighbor tags for a given tag
+
+SELECT IF(t2.name LIKE '%data%', t2.name, NULL) AS big3t, t2.name AS tag_name, t2.id AS tag_id, COUNT(*) AS affinity, sd.* 
+  FROM
+  ( SELECT count(*) AS multiplicity, d.id AS dataset_id, d.handle, d.name AS dataset_name
+      FROM taggings tg
+  	  LEFT JOIN tags t ON t.id = tg.tag_id
+  	  LEFT JOIN datasets d ON d.id = tg.taggable_id
+	  WHERE t.name LIKE  '%semantic%'
+	  GROUP BY d.id
+	  ORDER BY multiplicity DESC, d.id ) sd
+  LEFT JOIN taggings tg2 	ON sd. dataset_id = tg2.taggable_id
+  LEFT JOIN tags t2 		ON t2.id = tg2.tag_id
+  GROUP BY	t2.id, sd.dataset_id
+  ORDER BY  sd.dataset_id, affinity DESC

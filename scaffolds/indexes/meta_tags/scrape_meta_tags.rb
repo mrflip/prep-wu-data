@@ -1,22 +1,17 @@
 #!/usr/bin/env ruby
-# -*- coding: utf-8 -*-
 require 'rubygems'
 require 'dm-core'
 require 'fileutils'; include FileUtils
-require 'imw/utils'; include IMW; IMW.verbose = true
-require 'imw/extract/hpricot'
+require 'imw'; include IMW
+require 'imw/dataset'
+require 'imw/dataset/asset'
 require 'imw/extract/html_parser'
-require 'json'
-require 'yaml'
-$: << File.dirname(__FILE__)+'/..'
-require 'ics-models.rb'
 as_dset __FILE__
-# --exclude-domains=www.strikeiron.com,www.ers.usda.gov,paida.sourceforge.net
 
 #
 # Extract information from header and prominent page tags
 #
-els = HTMLParser.new({
+GENERIC_PAGE_STRUCTURE = {
     '//head' => {
       'title'                                      => :page_title,
       { 'meta[@name="keywords"]'     => :content } => :keywords ,
@@ -26,10 +21,27 @@ els = HTMLParser.new({
     '//body//h1' => [:h1],
     '//body//h2' => [:h2],
     '//body//caption' => [:table_captions]
-  })
+  }
 
 
-robo_contrib = Contributor.find_by_uniqname('autobot-ape')
+
+class FilePoolProcessor
+  include Asset::Processor
+  attr_accessor :assets
+
+  def assets_to_parse
+    asset_query = { :handle.like => '%/url/%page=1' }
+    LinkAsset.all(asset_query)
+  end
+
+  def parse
+    delicious_parser = DeliciousAssetsHTMLParser.new(DELICIOUS_PAGE_STRUCTURE)
+    self.assets = process(assets_to_parse, :delicious, delicious_parser)
+  end
+
+end
+processor = FilePoolProcessor.new
+
 Dataset.all.each do |dataset|
   # Cache a copy of each page
   linky = dataset.links.first
