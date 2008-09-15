@@ -13,46 +13,28 @@ as_dset __FILE__
 # Connect to all the repos we want to import from
 #
 # DataMapper::Logger.new(STDOUT, :debug)
-REPOSITORY_DBNAMES = [
-  [:ics_dev,           'ics_dev',                      ],
-  [:delicious,         'ics_social_network_delicious'  ],
-]
-open_repositories REPOSITORY_DBNAMES, IMW::ICS_DATABASE_CONNECTION_PARAMS
+REPOSITORY_DBNAMES = { 
+  :ics_dev   =>         'ics_dev',                      
+  # :scaffold_indexes =>  'ics_scaffold_indexes',         
+  :delicious =>        'ics_social_network_delicious',
+}
+DataMapper.open_repositories REPOSITORY_DBNAMES, IMW::ICS_DATABASE_CONNECTION_PARAMS
 
-
-
-require 'delicious_datasets_interesting_to_infochimps'
-class FilePoolProcessor
-  include Asset::Processor
-  attr_accessor :assets
-  
-  def assets_to_parse
-    repository(:delicious) do 
-      
-    end
-  end
-
-  def parse
-    delicious_parser = DeliciousAssetsScraper.new()
-    self.assets = process(assets_to_parse, :scrape, delicious_parser)
-  end
-end
-
-
-class DeliciousICSBridge
-  def parse asset
-    # unpack struct
-    tagging_count, tag_name, asset_url, asset_name, facts = results.to_a
-    # build new asset
-    delicious_link_id  = Digest::MD5.hexdigest(asset_url)
-    delicious_link_url = "http://delicious.com/url/#{delicious_link_id}?detail=3&setcount=100&page=1"
-    # puts Dir["/data/ripd/com.delicious/url/*#{delicious_link_id}*+3D1-*"]
-    asset = LinkAsset.find_or_create({ :full_url => delicious_link_url })
-    asset.update_attributes :name => asset_name, :created_by  => 2
-    asset
-    end
-  end
-end
-
-processor = FilePoolProcessor.new
-processor.parse
+#
+# Find all datasets with an interesting tag
+#
+# DATASETS_TO_IMPORT = %{ 
+#         REPLACE INTO `ics_dev`.datasets
+#               (delicious_taggings,                  base_trust,                    approved_at,      approved_by,
+#                  uuid,   id,   handle,   created_at,   updated_at,   category,   collection_id,   is_collection,   valuation,   metastats,   facts,   created_by,   updated_by)
+#         SELECT COUNT(*) AS delicious_taggings, 0 AS base_trust, UTC_TIMESTAMP() AS approved_at, 1 AS approved_by, 
+#                d.uuid, d.id, d.handle, d.created_at, d.updated_at, d.category, d.collection_id, d.is_collection, d.valuation, d.metastats, d.facts, d.created_by, d.updated_by
+#           FROM          tags t
+#           LEFT JOIN taggings tg ON t.id = tg.tag_id
+#           LEFT JOIN datasets d  ON d.id = tg.taggable_id
+#           WHERE         t.name LIKE '%semantic%'
+#           GROUP BY      d.id
+#           ORDER BY 	delicious_taggings DESC
+# }
+# Find datasets to import
+# repository(:delicious).adapter.query(DATASETS_TO_IMPORT)

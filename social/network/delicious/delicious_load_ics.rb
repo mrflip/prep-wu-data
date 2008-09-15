@@ -13,10 +13,9 @@ as_dset __FILE__
 DataMapper.setup_remote_connection IMW::ICS_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'ics_social_network_delicious ' })
 
 
+
 class DeliciousAssetsPostParser
-
   def parse asset
-
   end
 end
 

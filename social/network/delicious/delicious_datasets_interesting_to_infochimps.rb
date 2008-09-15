@@ -13,7 +13,6 @@ SELECT COUNT(*) AS `tagging_count`, t.name AS `tag_name`, d.handle AS `asset_url
   ORDER BY      tagging_count DESC, t.name
 }
 
-
 def delicious_datasets_interesting_to_infochimps()
   repository(:default).adapter.query(DELICIOUS_DATASETS_INTERESTING_TO_INFOCHIMPS)
 end
