@@ -1,0 +1,293 @@
+--- # !infochimps.org/^icss
+
+datasets:
+- name:                 'www.milebymile.com'
+  tag_list:             'highway raod_trip travel itinerary'
+  category:             'geo/routing' 			# do what seems right, but do it the same way each time.
+  notes_by_role:
+      description:                      
+          name:         'Description'
+          body:         >
+
+            This is a collection of information on major routes in the
+            US, Canada, and Mexico.  Each route has information on
+            distances, exits, and destinations along its length.
+
+      rights:
+          name:         'Rights'
+          body:         >
+
+            The information, artwork, text, video, software, audio,
+            newsletters, or pictures (collectively, "Materials")
+            contained on the milebymile.com Web site are protected by
+            copyright laws. You may only access and use the Materials
+            for personal or educational purposes. You may not modify
+            or use the Materials for any other purpose without MILE BY
+            MILE MEDIA's express written consent. Except as provided
+            below, you may not reproduce, republish, post, transmit or
+            distribute any Materials on the milebymile.com Web site.
+            
+  rights_uniqname:      'not_open'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+  valuation:
+      bonus:            0
+  url:                  'http://www.milebymile.com'
+
+  #
+  # Mandatory fields ^^^   Optional fields vvvv
+  # -----------------------------------------------------------------------
+      
+  #
+  # Besides the auto-generated links and credits, if you see anything that
+  # stands out as useful add it as its own entry.
+  #
+  # These are hashes; the 'role' should be something unique within each hash
+  # and whenever applicable share a common prefix.  (That is: if there are
+  # several usage notes, call them usage_intro:, usage_section_1, ...)
+  #
+  links_by_role:
+      usage:
+          full_url:     'http://www.milebymile.com/legal.html'
+          description:  'Terms and Conditions for milebymile.com'
+          text:         >-
+
+
+            Access to and use of the milebymile.com Web site is
+            provided subject to these terms and conditions. PLEASE
+            READ THESE TERMS CAREFULLY AS USE OF THIS SITE CONSTITUTES
+            ACCEPTANCE OF THESE TERMS AND CONDITIONS.
+
+            Use of Material on the milebymile.com Web Site(s)
+
+            The information, artwork, text, video, software, audio,
+            newsletters, or pictures (collectively, "Materials")
+            contained on the milebymile.com Web site are protected by
+            copyright laws. You may only access and use the Materials
+            for personal or educational purposes. You may not modify
+            or use the Materials for any other purpose without MILE BY
+            MILE MEDIA's express written consent. Except as provided
+            below, you may not reproduce, republish, post, transmit or
+            distribute any Materials on the milebymile.com Web site.
+
+            You may print Materials on the milebymile.com Web site for
+            personal or educational purposes only, and you must
+            include any copyright notice originally included with the
+            Materials in all copies.
+
+            Any computer Material downloadable or otherwise available
+            from the milebymile.com Web site is licensed subject to
+            the terms of the applicable license agreement. The
+            downloading of Materials is at your own risk. Any damage
+            to your system, business loss, consequential, direct or
+            indirect damages, or damages in general, which has
+            occurred as a result of milebymile.com Material is not the
+            responsibility of MILE BY MILE MEDIA.
+
+            The Materials included on the milebymile.com Web site have
+            been compiled by MILE BY MILE MEDIA from a variety of
+            sources, and are subject to change without notice.
+
+            All media files on the milebymile.com Web site are
+            protected by copyright laws. You may not, under any
+            circumstances, reproduce, record, publish, publicly
+            exhibit, or distribute any media files made available for
+            playback on the milebymile.com Web site without MILE BY
+            MILE MEDIA's express written consent.
+
+            Disclaimer of Warranty
+
+            The services, information or data (collectively,
+            "Information") made available at the milebymile.com Web
+            site are provided "AS IS", without warranties of any
+            kind. MILE BY MILE MEDIA expressly disclaims any
+            representations and warranties, including without
+            limitation, the implied warranties of merchantability and
+            fitness for a particular purpose. MILE BY MILE MEDIA shall
+            have absolutely no liability in connection with the
+            services including without limitation, any liability for
+            damage to your computer hardware, data, information,
+            Materials, business, property and person resulting from
+            the Information or the lack of information available on
+            the milebymile.com Web site. MILE BY MILE MEDIA shall have
+            no liability for:
+
+              1. any loss or injury caused, in whole or in part, by
+              its actions, omissions, or negligence, or for
+              contingencies beyond its control, in procuring,
+              compiling, or delivering the Information;
+
+              2. any errors, omissions, or inaccuracies in the
+              Information regardless of how caused, or delays or
+              interruptions in delivery of the Information; or
+
+              3. any decision made or action taken or not taken in
+              reliance upon the Information furnished hereunder.
+
+              MILE BY MILE MEDIA makes no warranty, representation or
+              guaranty as to the content, sequence, accuracy,
+              timeliness or completeness of the Information or that
+              the Information may be relied upon for any reason. MILE
+              BY MILE MEDIA makes no warranty, representation or
+              guaranty that the Information will be uninterrupted or
+              error free or that any defects can be corrected. For
+              purposes of this page, "MILE BY MILE MEDIA" shall
+              include James Love, and its divisions, subsidiaries,
+              successors, parent companies, and their employees,
+              partners, principals, agents and representatives, and
+              any third-party providers or sources of information or
+              data.
+
+              Limitation of Liability
+              
+              Under no circumstances shall MILE BY MILE MEDIA be
+              liable for any losses or damages whatsoever, whether in
+              contract, tort or otherwise, from the use of, or
+              reliance on, the Materials, the Information, or from the
+              use of the Internet generally.
+
+              Hyperlinks
+
+              You are granted a limited, nonexclusive right to create
+              a hyperlink to this Website only, provided such link
+              does not portray milebymile.com or any of its products
+              and services in a false, misleading, derogatory or
+              otherwise defamatory manner. This limited right may be
+              revoked at any time. You may not use, frame or utilize
+              framing techniques to enclose any MILE BY MILE MEDIA
+              trademark, logo or other proprietary information,
+              including the images found at this Website, the content
+              of any text or the layout/design of any page or form
+              contained on a page without MILE BY MILE MEDIA's express
+              written consent. Except as noted above, you are not
+              conveyed any right or license by implication, estoppel,
+              or otherwise in or under any patent, trademark,
+              copyright, or proprietary right of MILE BY MILE MEDIA or
+              any third party. MILE BY MILE MEDIA makes no claim or
+              representation regarding, and accepts no responsibility
+              for, the quality, content, nature or reliability of
+              Websites accessible by hyperlink from this Website, or
+              Websites linking to this Website. The linked sites are
+              not under the control of MILE BY MILE MEDIA, and MILE BY
+              MILE MEDIA is not responsible for the contents of any
+              linked site or any link contained in a linked site, or
+              any review, changes or updates to such sites. MILE BY
+              MILE MEDIA is providing these links to you only as a
+              convenience, and the inclusion of any link does not
+              imply affiliation, endorsement, or adoption by MILE BY
+              MILE MEDIA of the site or any information contained
+              therein. Third-Party Content & Services milebymile.com
+              may provide hyperlinks to Webpages and content of third
+              parties ("Third-Party Content") as a service to those
+              interested in this information. MILE BY MILE MEDIA does
+              not monitor nor does MILE BY MILE MEDIA have control
+              over any Third-Party Content or third-party
+              Websites. MILE BY MILE MEDIA does not endorse or adopt
+              any Third-Party Content and can make no guarantee as to
+              its accuracy or completeness. MILE BY MILE MEDIA does
+              not warrant the accuracy of any information contained
+              therein and undertakes no responsibility to update or
+              review any Third-Party Content. Users use these
+              hyperlinks and Third Party-Content contained therein at
+              their own risk.
+
+              PLEASE READ CAREFULLY.
+
+              By submitting information to this site you agree to the
+              following: You acknowledge and represent that the
+              information you are submitting are your own information
+              and have not been copied from someone else or from a
+              book or map. You agree that MILE BY MILE MEDIA may
+              modify the information you are submitting by, among
+              other things, making editorial revisions. You agree that
+              MILE BY MILE MEDIA may use, reproduce, display,
+              distribute and make derivative works of the information
+              you are submitting royalty-free (that is, without
+              compensation to you) for any purpose, commercial or
+              otherwise, and in any medium (including but not limited
+              to print, film, or electronic storage devices) and may
+              grant the same rights to third parties. So credit is
+              given where credit is due, MILE BY MILE MEDIA agrees to
+              publish your name and related data along with any of
+              your information that are posted on milebymile.com, and
+              you agree that your name and related data may be posted
+              along with the information you are submitting. You
+              acknowledge and agree that the above terms and
+              conditions supplement (and do not limit in any way) the
+              Terms and Conditions of Use, available under the "Legal
+              Notice" link on this Website's homepage, which are
+              legally binding on you.
+
+              Modification & Amendments
+
+              MILE BY MILE MEDIA reserves the right to amend at any
+              time any policies governing this Website, including this
+              Notice and milebymile.com Privacy Policy, by posting the
+              amended terms and providing notice of such
+              amendments. The amended terms shall be effective
+              immediately after they are initially posted on this
+              Website. If you do not accept the amended terms, you
+              should cease using this Website.
+
+              Severability
+
+              If any provision of these terms and conditions shall be
+              deemed unlawful, void, or for any reason unenforceable,
+              then that provision shall be deemed severable from these
+              terms and conditions and shall not affect the validity
+              and enforceability of any remaining provisions.
+
+              Copyright and Trademark Notices
+
+              Copyright© James Love and/or its licensors, 1999-2005,
+              all rights reserved. "Mile By Mile", "milebymile", are
+              trademarks of service marks of James Love.
+
+              All trademarks and logos contained in the Materials and
+              Information are the property of their respective
+              owners. Use of such trademarks and logos are strictly
+              prohibited without obtaining the prior permission for
+              use from their rightful owners.
+
+              Location of Web Site.
+
+              This web site is controlled under the laws of
+              Canada. Any claim relating to this site or services
+              provided through this site will be governed by the laws
+            
+  role_credits:
+      # context:
+      #     contributor:  ''
+      #     citation:     ''
+
+  #
+  # These are convenience methods that will auto-generate the given
+  # associations.  Invent your own if you're repeating effort across a
+  # ton of these.
+  #
+  make_contributor_from_name_and_url:   true
+  make_main_credit_from_name_and_url:   true
+  make_main_source_link_from_url:       true  
+  create_approve_and_rate_as_one:       dhruv # your name here
+
+    
+  payloads_by_name:
+      # "":
+      #    file_path:      "/meta/infochimps_datasets/"
+      #    format:         "yaml"
+
+#
+# If you add any credits above (under role_credits),
+# enter the corresponding contributor here.
+#
+# A contributor only appears in more than one schema
+# file you only need it to 
+#   
+contributors:
+# - name:                 ''
+#   url:                  ''
+#   desc:                 ''
+#   base_trustification:  0
+
+# Leave this line alone
+icss:
+  version:              0.5
+  moreinfo:             http://infochimps.org/info/icss

@@ -2,21 +2,25 @@
 
 datasets:
 - name:                 'quackle'
-  tag_list:             ''
-  category:             '' 			# do what seems right, but do it the same way each time.
+  tag_list:             'scrabble word_game alphabet word'
+  category:             'language' 			# do what seems right, but do it the same way each time.
   notes_by_role:
       description:                      
           name:         'Description'
           body:         >
-              (description of this dataset)
-
+            Quackle is a crossword game AI and this dataset consists
+            of alphabets, word lists, and strategies used in building
+            it or other, similar programs.
       rights:
           name:         'Rights'
           body:         >
-              (look for a rights statement,
-              if any, and paste it in here)
-
-  rights_uniqname:      ''              	# CC-BY-NC | PD-Govt | believed_open | none_stated
+            This program is free software; you can redistribute it
+            and/or modify it under the terms of the GNU General Public
+            License as published by the Free Software Foundation;
+            either version 2 of the License, or (at your option) any
+            later version.
+            
+  rights_uniqname:      'GPL'              	# CC-BY-NC | PD-Govt | believed_open | none_stated
   valuation:
       bonus:            0
   url:                  'http://quackle'
@@ -34,6 +38,9 @@ datasets:
   # several usage notes, call them usage_intro:, usage_section_1, ...)
   #
   links_by_role:
+    description:
+      full_url: "http://web.mit.edu/jasonkb/www/quackle/"
+      description: "Quackle home page"
       # usage:
       #     full_url:     ''
       #     text:         >-
