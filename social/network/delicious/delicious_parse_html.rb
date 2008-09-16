@@ -40,8 +40,12 @@ end
 
 class DeliciousAssetsPostParser
 
+  def get_contributor_handle hsh
+    'http://delicious.com/' + ( hsh[:user_name] || hsh[:linker_tag_url] || "unparsed-delicious-user-#{rand}" )
+  end
+
   def define_contributor hsh
-    user_url = 'http://delicious.com/' + ( hsh[:user_name] || hsh[:linker_tag_url] || "fuck-#{rand}" )
+    user_url = get_contributor_handle(hsh)
     user_url.gsub!(%r{//+}, '/')
     contributor = Contributor.find_or_create({
         :handle => user_url
@@ -131,8 +135,8 @@ class FilePoolProcessor
   end
 
   def assets_to_post_process
-    # Processing.all({ :context=> :delicious })
-    assets_to_parse.map{|asset| Processing.all({ :context => :delicious, :asset_id => asset.id })}.flatten
+    Processing.all({ :context=> :delicious })
+    # assets_to_parse.map{|asset| Processing.all({ :context => :delicious, :asset_id => asset.id })}.flatten
   end
 
   def post_process
@@ -146,7 +150,7 @@ end
 processor = FilePoolProcessor.new
 # processor.unprocess(:delicious)
 # processor.unprocess(:post)
-processor.parse
+# processor.parse
 processor.post_process
 
 #ac85ce1950f100c8874a9461cd8093cc

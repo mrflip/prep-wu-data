@@ -32,12 +32,13 @@ def get_columns repo
   columns_map
 end
 def get_all_columns()
-  column_cache_file = 'ics_import_column_cache.yaml'
-  columns = File.exist?(column_cache_file) ? YAML.load(File.open(column_cache_file)) : { }
+  # column_cache_file = 'ics_import_column_cache.yaml'
+  #columns = File.exist?(column_cache_file) ? YAML.load(File.open(column_cache_file)) : { }
+  columns = { }
   REPOSITORY_DBNAMES.keys.each do |repo|
     columns[repo] = get_columns(repo) unless columns.include?(repo)
   end
-  YAML.dump(columns, File.open(column_cache_file, 'w'))
+  # YAML.dump(columns, File.open(column_cache_file, 'w'))
   columns
 end
 

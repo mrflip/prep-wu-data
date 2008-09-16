@@ -36,4 +36,4 @@ DATASETS_TO_IMPORT = %{
           ORDER BY      delicious_taggings DESC
 }
 # Find datasets to import
-repository(:delicious).adapter.query(DATASETS_TO_IMPORT)
+repository(:delicious).adapter.execute(DATASETS_TO_IMPORT)

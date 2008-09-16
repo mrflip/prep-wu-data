@@ -12,21 +12,13 @@ as_dset __FILE__
 #
 # Connect to all the repos we want to import from
 #
-DataMapper::Logger.new(STDOUT, :debug)
-REPOSITORY_DBNAMES = {
-  :ics_dev          => 'ics_dev',
-  :scaffold_indexes => 'ics_scaffold_indexes',
-  # :delicious      => 'ics_social_network_delicious',
-}
-DataMapper.open_repositories REPOSITORY_DBNAMES, IMW::ICS_DATABASE_CONNECTION_PARAMS
-
-#
-# Note the presencs of 
-#  ON DUPLICATE KEY UPDATE c=c+1; for handles?
-#
+# DataMapper::Logger.new(STDOUT, :debug)
+require 'ics_import_columns'
+columns = get_all_columns()
 
 #
 # Find all datasets with an interesting tag
+#
 DATASETS_TO_IMPORT = %{
         REPLACE INTO `ics_dev`.datasets
               (        delicious_taggings,       base_trust,                    approved_at,      approved_by,
@@ -36,4 +28,4 @@ DATASETS_TO_IMPORT = %{
           FROM          `ics_scaffold_indexes`.datasets d
 }
 # Find datasets to import
-repository(:scaffold_indexes).adapter.query(DATASETS_TO_IMPORT)
+repository(:scaffold_indexes).adapter.execute(DATASETS_TO_IMPORT)

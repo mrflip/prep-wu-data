@@ -9,7 +9,7 @@ require 'imw/extract/html_parser'
 # require  File.dirname(__FILE__)+'/delicious_link_models.rb'
 as_dset __FILE__
 
-# DataMapper::Logger.new(STDOUT, :debug)
+DataMapper::Logger.new(STDOUT, :debug)
 require 'ics_import_columns'
 
 class InfochimpsImportClumsily
@@ -55,7 +55,7 @@ class InfochimpsImportClumsily
   end
   def import_association klass, join_table, join_attr, parent_id
     query = build_association_query(klass, join_table, join_attr, parent_id)
-    workaround_query_runner(query)
+    run_query(query)
   end
 
   #
@@ -72,23 +72,16 @@ class InfochimpsImportClumsily
   end
   def import_wholesale klass
     query = build_wholesale_query(klass)
-    workaround_query_runner(query)
+    run_query(query)
   end
 
   #
   # datamapper hates nul result queries.
   # filter exception 'undefined method .fields. for nil'
   #
-  def workaround_query_runner query
+  def run_query query
     raise unless query =~ /REPLACE INTO .ics_dev.\./
-    begin
-      repository(dest).adapter.query(query)
-    rescue Exception => e
-      if e.to_s !~ /undefined method .fields. for nil/
-        puts query
-        raise e
-      end
-    end
+    repository(dest).adapter.execute(query)
   end
 
   #
@@ -118,11 +111,14 @@ wholesale_klasses = [
   Tag,
 ]
 
-importer = InfochimpsImportClumsily.new(:scaffold_indexes, :ics_dev)
-association_klasses.each  do |klass, join_table, join_attr, parent_id|
-  importer.import_association(klass, join_table, join_attr, parent_id)
-end
-
-wholesale_klasses.each do |klass|
-  importer.import_wholesale klass
+[:scaffold_indexes, :delicious].each do |src|
+  importer = InfochimpsImportClumsily.new(src, :ics_dev)
+  association_klasses.each  do |klass, join_table, join_attr, parent_id|
+    # puts '', '','*'*75, klass.to_s, '*', ''
+    importer.import_association(klass, join_table, join_attr, parent_id)
+  end
+  wholesale_klasses.each do |klass|
+    importer.import_wholesale klass
+  end
+  run_query(%{ UPDATE `ics_dev`.taggings SET context = 'tags' })
 end

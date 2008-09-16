@@ -28,7 +28,7 @@ class FilePoolProcessor
       tagging_count, tag_name, asset_url, asset_name, facts = results.to_a
       # build new asset
       delicious_link_id  = Digest::MD5.hexdigest(asset_url)
-      delicious_link_url = "http://delicious.com/url/#{delicious_link_id}?detail=3&setcount=100&page=1"
+      delicious_link_url = "http://delicious.com/url/#{delicious_link_id}?detail=3&setcount=100&page=2"
       # puts Dir["/data/ripd/com.delicious/url/*#{delicious_link_id}*+3D1-*"]
       asset = LinkAsset.find_or_create({ :full_url => delicious_link_url })
       asset.update_attributes :name => asset_name, :created_by  => 2
