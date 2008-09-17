@@ -10,6 +10,8 @@ as_dset __FILE__
 DataMapper::Logger.new(STDOUT, :debug) # uncomment to debug
 DataMapper.setup_remote_connection IMW::ICS_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'ics_scaffold_indexes' })
 
+Dataset.auto_upgrade!
+
 class SimpleProcessor
   include Asset::Processor
 
@@ -44,7 +46,7 @@ class SimpleProcessor
           :tagger_id   => contributor.id,  :tagger_type   => Contributor.to_s,
         })
     end
-   
+
     credit = Credit.find_or_create({
         :dataset_id => ds.id, :contributor_id => contributor.id, :role => hsh['credits']['role'] },
       hsh['credits'].slice('desc', 'citation'))

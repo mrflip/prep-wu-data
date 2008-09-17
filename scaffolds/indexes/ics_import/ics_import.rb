@@ -42,7 +42,7 @@ class InfochimpsImportClumsily
   # pull only resources keyed off a given association
   #
   def build_association_query klass, join_table, join_attr, parent_id
-    table_name, attrs = table_and_attrs(klass)
+    table_name, attrs = ['datasets', %w[base_trust, name]] # table_and_attrs(klass)
     query = %{
         REPLACE INTO `#{dest_db}`.#{table_name}
                 (#{attrs.map{|a| "`"+a+"`"}.join(",   ")})
@@ -81,7 +81,8 @@ class InfochimpsImportClumsily
   #
   def run_query query
     raise unless query =~ /REPLACE INTO .ics_dev.\./
-    repository(dest).adapter.execute(query)
+    # repository(dest).adapter.execute(query)
+    puts '', '*'*75, query, '', ''
   end
 
   #
@@ -94,22 +95,20 @@ end
 # klass defs
 #
 association_klasses = [
-  [Note,          'datasets',  'noteable_id',   'id'],
-  [Tagging,       'datasets',  'taggable_id',   'id'],
-  # [LicenseInfo,   'datasets',  'dataset_id',    'id'],
-  [Rating,        'datasets',  'rateable_id',   'id'],
-  [Linking,       'datasets',  'linkable_id',   'id'],
-  [Credit,        'datasets',  'dataset_id',    'id'],
-  [Link,          'linkings',  'id',            'link_id'],
-  [Contributor,   'credits',   'id',            'contributor_id'],
-  # fields
-  # licenses
-  # payloads
+  [Dataset,       'datasets',  'uuid',            'uuid'],
+  # [Note,          'datasets',  'noteable_id',   'id'],
+  # [Tagging,       'datasets',  'taggable_id',   'id'],
+  # # [LicenseInfo,   'datasets',  'dataset_id',    'id'],
+  # [Rating,        'datasets',  'rateable_id',   'id'],
+  # [Linking,       'datasets',  'linkable_id',   'id'],
+  # [Credit,        'datasets',  'dataset_id',    'id'],
+  # [Link,          'linkings',  'id',            'link_id'],
+  # [Contributor,   'credits',   'id',            'contributor_id'],
   #
 ]
-wholesale_klasses = [
-  Tag,
-]
+## wholesale_klasses = [
+##   Tag,
+## ]
 
 [:scaffold_indexes, :delicious].each do |src|
   importer = InfochimpsImportClumsily.new(src, :ics_dev)
@@ -122,3 +121,5 @@ wholesale_klasses = [
   end
   run_query(%{ UPDATE `ics_dev`.taggings SET context = 'tags' })
 end
+
+
