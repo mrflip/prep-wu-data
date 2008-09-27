@@ -9,10 +9,10 @@ require 'json'
 include IMW; IMW.verbose = true
 as_dset __FILE__
 
-# 
+#
 # Usage
 #
-# ./twitter_profile_scrape.rb > log/twitter_`datename`.log 2>&1 &
+# ./twitter_profile_scrape.rb >> log/twitter_`datename`.log 2>&1 &
 # tail -f log/twitter_`datename`.log
 
 
@@ -44,7 +44,7 @@ def wget rip_url, ripd_file=nil, sleep_time=30
     FileUtils.touch        ripd_file  # leave a 0-byte turd so we don't refresh
     sleep sleep_time
     return success
-  end  
+  end
 end
 
 class User
@@ -59,9 +59,9 @@ end
 
 def scrape_pass threshold, offset = 0
   # User.announce_stats("Scraping %6d..%-6d for popular+unrequested users" % [offset, threshold+offset])
-  popular_and_neglected = User.all :requested => nil, 
+  popular_and_neglected = User.all :requested => nil,
      :fields => [:twitter_name, :followers_count, :requested, :scraped, :parsed, :id],
-     :order  => [:followers_count.desc], 
+     :order  => [:followers_count.desc],
      :limit  => threshold, :offset => offset
   popular_and_neglected.each do |user|
     track_progress :popularity, "#{user.followers_count}"
