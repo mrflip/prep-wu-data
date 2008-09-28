@@ -6,11 +6,21 @@ require 'dm-types'
 #
 # Word Frequency
 #
+module WordFrequency
+  PARTS_OF_SPEECH = %w[
+    NoC  NoP  Adj  Num  Verb Uncl Adv  Fore Int  Pron Prep
+    Conj DetP Lett Det  VMod Neg  Ex   Form Inf  Gen  Err  ClO
+  ].map(&:to_sym)
 
-PARTS_OF_SPEECH = %w[
-  NoC  NoP  Adj  Num  Verb Uncl Adv  Fore Int  Pron Prep
-  Conj DetP Lett Det  VMod Neg  Ex   Form Inf  Gen  Err  ClO
-]
+  CONTEXTS = %w[
+    spoken written task conv imaginative informative
+  ].map(&:to_sym)
+
+  CORPORA = %w[
+    bnc
+  ].map(&:to_sym)
+end
+
 
 class HeadWord
   include DataMapper::Resource
@@ -18,7 +28,7 @@ class HeadWord
   property      :orig,          String,         :length      => 100,    :nullable => false, :default => ''
   property      :text,          String,         :length      => 100,    :nullable => false, :default => ''
   #
-  property      :pos,           Enum[*PARTS_OF_SPEECH]
+  property      :pos,           Enum[*WordFrequency::PARTS_OF_SPEECH]
   has n,        :word_stats
 end
 
@@ -29,14 +39,17 @@ class Lemma
   property      :text,          String,         :length      => 100,    :nullable => false, :default => ''
   #
   property      :head,          Integer
-  # has n,        :word_stats
+  # has n,       :word_stats
 end
 
 class WordStats
-  property      :context,       Float
+  property      :corpus,        Enum[*WordFrequency::CORPORA]
+  property      :context,       Enum[*WordFrequency::CONTEXTS]
   property      :word_id,       Integer
   property      :word_type,     String
   belongs_to    :head_word
+  before :save, :set_corpus;    def set_corpus()    self.corpus    ||= :bnc end
+  before :save, :set_word_type; def set_word_type() self.word_type ||= :head end
   #
   property      :freq,          Float
   property      :range,         Float
@@ -44,10 +57,13 @@ class WordStats
 end
 
 class LogLikelihood
-  property      :context,       Float
+  property      :context,       Enum[*WordFrequency::CONTEXTS]
+  property      :corpus,        Enum[*WordFrequency::CORPORA]
   property      :word_id,       Integer
   property      :word_type,     String
   belongs_to    :head_word
+  before :save, :set_corpus;    def set_corpus()    self.corpus    ||= :bnc end
+  before :save, :set_word_type; def set_word_type() self.word_type ||= :head end
   #
   property      :value,         Float
   property      :sign,          Float
