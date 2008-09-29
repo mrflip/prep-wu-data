@@ -17,7 +17,7 @@ SELECT      s.campus_id1, s.y1, s.m_bin1, s.m_bin2, COUNT(*) AS num_in_m_bin12
   FROM      student_trans s
   WHERE     s.campus_id1 = s.campus_id2
   GROUP BY  s.campus_id1, s.y1, s.m_bin1, s.m_bin2
-; 
+;
 SELECT "Time ", NOW();
 
 SELECT      s.m_bin1, s.m_bin2, COUNT(*) AS num_in_m_bin12 
