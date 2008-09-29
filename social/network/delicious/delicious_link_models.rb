@@ -8,7 +8,6 @@ require 'imw/dataset/datamapper/uri'
 #DataMapper::Logger.new(STDOUT, :debug)
 IMW::DataSet.setup_remote_connection IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_social_network_delicious' })
 
-
 #
 # Models for the delicious.com (formerly del.icio.us) social network
 #

@@ -5,25 +5,18 @@ require 'imw/extract/line_parser'
 require 'word_freq_bnc_models'
 require 'imw/utils/extensions/typed_struct'
 
-DataMapper::Logger.new(STDOUT, :debug)
+# DataMapper::Logger.new(STDOUT, :debug)
 DataMapper.setup_remote_connection IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_language_corpora_word_freq' })
-HeadWord.auto_upgrade!
-Lemma.auto_upgrade!
-WordStat.auto_upgrade!
-LogLikelihood.auto_upgrade!
-
-# ALTER TABLE `imw_language_corpora_word_freq`.`lemmas` 
-#  MODIFY COLUMN `encoded` VARCHAR(100) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
-#  MODIFY COLUMN `text`    VARCHAR(100) CHARACTER SET utf8  COLLATE utf8_bin  NOT NULL;
-# ALTER TABLE `imw_language_corpora_word_freq`.`head_words` 
-#  MODIFY COLUMN `encoded` VARCHAR(100) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
-#  MODIFY COLUMN `text`    VARCHAR(100) CHARACTER SET utf8  COLLATE utf8_bin  NOT NULL;
+# HeadWord.auto_upgrade!
+# Lemma.auto_upgrade!
+# WordStat.auto_upgrade!
+# LogLikelihood.auto_upgrade!
 
 class RawWordFreq < TypedStruct.new(
-    [:context, :corpus, :head, :pos,    :lemma, :freq,    :range,    :disp, ],
-    [nil,      nil,     nil,   :to_sym, nil,    :to_f,    :to_f,     :to_f, ])
+    [:context, :corpus, :head, :pos,  :lemma, :freq,    :range,    :disp, ],
+    [nil,      nil,     nil,   nil,   nil,    :to_f,    :to_f,     :to_f, ])
   def initialize(*vals)
-    super :all, *vals
+    super 'all', *vals
     self.remap!
   end
 end
@@ -33,9 +26,9 @@ files_list = [
   # [ [:head, :pos, :lemma, :freq_sp, :range_sp, :disp_sp, :ll_sign_sp_wr, :log_lkhd_sp_wr, :freq_wr, :range_wr, :disp_wr], 'ripd/2_1_spokenvwritten_alpha.txt', ],
   # [ [:head, :pos, :lemma, :freq_co, :range_co, :disp_co, :ll_sign_co_to, :log_lkhd_co_to, :freq_to, :range_to, :disp_to], 'ripd/3_1_demogvcg_alpha.txt', ],
   # [ [:head, :pos, :lemma, :freq_im, :range_im, :disp_im, :ll_sign_im_in, :log_lkhd_im_in, :freq_in, :range_in, :disp_in], 'ripd/4_1_imagvinform_alpha.txt', ],
-  # [ RawWordFreq, 'ripd/1_1_all_fullalpha.txt', ],
+  [ RawWordFreq, 'ripd/1_1_all_fullalpha.txt', ],
   # [ RawWordFreq, 'rawd/1_1_all_fullalpha-40k.txt', ],
-  [   RawWordFreq, 'rawd/1_1_all_fullalpha-200.txt', ],
+  # [ RawWordFreq, 'rawd/1_1_all_fullalpha-200.txt', ],
 ]
 
 def process_files files_list
@@ -46,11 +39,13 @@ def process_files files_list
     wf_parser.parse(File.open(file_in)) do |line|
       track_count :lines
       # raw record
-      vals = [:bnc] + (line.chomp.split("\t")[1..-1])
+      vals = ['bnc'] + (line.chomp.split("\t")[1..-1])
       record = factory.new(*vals)
       # stuff into DB
       if record.head != '@'
-        word = last_headword_seen = HeadWord.make(record)
+        word  = last_headword_seen = HeadWord.make(record)       
+        lemma = Lemma.update_or_create(:head_word_id => word.id, :encoded => word.encoded); lemma.save
+        lemma_stat = WordStat.make(lemma, record)        
       else
         word = Lemma.make(last_headword_seen, record)
       end

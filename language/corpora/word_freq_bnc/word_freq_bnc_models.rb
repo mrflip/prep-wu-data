@@ -10,48 +10,37 @@ module WordFrequency
   PARTS_OF_SPEECH = %w[
     NoC  NoP  Adj  Num  Verb Uncl Adv  Fore Int  Pron Prep
     Conj DetP Lett Det  VMod Neg  Ex   Form Inf  Gen  Err  ClO
-  ].map(&:to_sym)
+  ].map(&:to_s)
 
   CONTEXTS = %w[
     all spoken written task conv imaginative informative
-  ].map(&:to_sym)
+  ].map(&:to_s)
 
   CORPORA = %w[
     bnc
-  ].map(&:to_sym)
-end
-
-class IdempotentResource
-  cattr_accessor :attr_mapping
-  cattr_accessor :key_attrs
-  def remap *vals
-    vals[0]
-  end
-  def self.make *vals
-    vals = remap(*vals)
-    self.find_or_create(vals.slice(*key_attrs))
-    self.attributes = vals
-  end
+  ].map(&:to_s)
 end
 
 class HeadWord
   include DataMapper::Resource
   property      :id,            Integer,        :serial      => true
-  property      :encoded,       String,         :length      => 100,    :nullable => false, :default => '', :index => :encoded
-  property      :text,          String,         :length      => 100,    :nullable => false, :default => '', :index => :text
+  property      :encoded,       String,         :length      => 60,    :nullable => false, :default => '', :index => :encoded
+  property      :text,          String,         :length      => 60,    :nullable => false, :default => '', :index => :text
   #
   property      :pos,           Enum[*WordFrequency::PARTS_OF_SPEECH], :index => [:text, :encoded]
-  has n,        :word_stats,    :word_type => 'HeadWord'
+  has n,        :lemmas
+  has n,        :word_stats,      :word_type => 'HeadWord', :child_key => [:word_id]
+  has n,        :log_likelihoods, :word_type => 'HeadWord', :child_key => [:word_id]
   #
   def decode_word
-    self.text = self.encoded if self.text.blank?
+    self.text = self.encoded if self.text.blank? || self.attribute_dirty?(:encoded)
   end
   before :save, :decode_word
   #
   def self.make raw_record
     head_word = self.update_or_create({:encoded => raw_record[:head], :pos => raw_record[:pos]})
     head_word.save
-    Lemma.update_or_create(:head_word_id => head_word.id, :encoded => head_word.encoded)
+    Lemma.update_or_create(:head_word_id => head_word.id, :encoded => head_word.encoded).save
     head_word
   end
 end
@@ -59,15 +48,16 @@ end
 class Lemma
   include DataMapper::Resource
   property      :id,            Integer,        :serial      => true
-  property      :encoded,       String,         :length      => 100,    :nullable => false, :default => ''
-  property      :text,          String,         :length      => 100,    :nullable => false, :default => ''
+  property      :encoded,       String,         :length      => 60,    :nullable => false, :default => '', :index => :encoded
+  property      :text,          String,         :length      => 60,    :nullable => false, :default => '', :index => :text
   #
-  property      :head_word_id,  Integer,        :unique_index => true
+  property      :head_word_id,  Integer,        :index => true
   belongs_to    :head_word
-  has n,        :word_stats,    :word_type => 'Lemma'
+  has n,        :word_stats,      :word_type => 'Lemma', :child_key => [:word_id]
+  has n,        :log_likelihoods, :word_type => 'Lemma', :child_key => [:word_id]
   #
   def decode_word
-    self.text = self.encoded if self.text.blank?
+    self.text = self.encoded if self.text.blank? || self.attribute_dirty?(:encoded)
   end
   before :save, :decode_word
   #
@@ -80,11 +70,10 @@ end
 
 class WordStat
   include DataMapper::Resource
-  property      :corpus,         Enum[*WordFrequency::CORPORA],  :key => true
-  property      :context,        Enum[*WordFrequency::CONTEXTS], :key => true
-  property      :word_id,        Integer,                        :key => true
-  property      :word_type,      String,                         :key => true
-  belongs_to    :word, :child_key => [:word_id]
+  property      :corpus,         String,  :key => true
+  property      :context,        String,  :key => true
+  property      :word_id,        Integer,                        :key => true, :index => :word
+  property      :word_type,      String,                         :key => true, :index => :word
   before :save, :set_corpus;     def set_corpus()    self.corpus    ||= :bnc end
   #
   property      :freq,           Float
@@ -103,13 +92,11 @@ end
 
 class LogLikelihood
   include DataMapper::Resource
-  property      :context,       Enum[*WordFrequency::CONTEXTS]
-  property      :corpus,        Enum[*WordFrequency::CORPORA]
-  property      :word_id,  Integer
-  property      :word_type,     String
-  belongs_to    :word
+  property      :corpus,         String,  :key => true
+  property      :context,        String,  :key => true
+  property      :word_id,        Integer,                        :key => true, :index => :word
+  property      :word_type,      String,                         :key => true, :index => :word
   before :save, :set_corpus;    def set_corpus()    self.corpus    ||= :bnc end
-  before :save, :set_word_type; def set_word_type() self.word_type ||= :head end
   #
   property      :value,         Float
   property      :sign,          Float
