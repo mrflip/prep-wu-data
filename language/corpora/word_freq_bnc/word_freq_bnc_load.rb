@@ -12,6 +12,13 @@ Lemma.auto_upgrade!
 WordStat.auto_upgrade!
 LogLikelihood.auto_upgrade!
 
+# ALTER TABLE `imw_language_corpora_word_freq`.`lemmas` 
+#  MODIFY COLUMN `encoded` VARCHAR(100) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+#  MODIFY COLUMN `text`    VARCHAR(100) CHARACTER SET utf8  COLLATE utf8_bin  NOT NULL;
+# ALTER TABLE `imw_language_corpora_word_freq`.`head_words` 
+#  MODIFY COLUMN `encoded` VARCHAR(100) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+#  MODIFY COLUMN `text`    VARCHAR(100) CHARACTER SET utf8  COLLATE utf8_bin  NOT NULL;
+
 class RawWordFreq < TypedStruct.new(
     [:context, :corpus, :head, :pos,    :lemma, :freq,    :range,    :disp, ],
     [nil,      nil,     nil,   :to_sym, nil,    :to_f,    :to_f,     :to_f, ])
@@ -35,14 +42,19 @@ def process_files files_list
   files_list.each do |factory, file_in|
     banner "Munging #{file_in}.  This may take several minutes."
     wf_parser = LineOrientedFileParser.new :skip_head => 2, :factory => false
+    last_headword_seen = nil
     wf_parser.parse(File.open(file_in)) do |line|
       track_count :lines
       # raw record
       vals = [:bnc] + (line.chomp.split("\t")[1..-1])
       record = factory.new(*vals)
       # stuff into DB
-      head_word = HeadWord.make(record)
-      word_stat = WordStat.make(head_word, record)
+      if record.head != '@'
+        word = last_headword_seen = HeadWord.make(record)
+      else
+        word = Lemma.make(last_headword_seen, record)
+      end
+      word_stat = WordStat.make(word, record)
     end
   end
 end

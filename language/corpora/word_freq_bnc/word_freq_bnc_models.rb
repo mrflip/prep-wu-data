@@ -2,7 +2,6 @@
 require 'imw'
 require 'imw/dataset/datamapper'
 require 'dm-types'
-require 'dm-polymorphic'
 
 #
 # Word Frequency
@@ -22,23 +21,38 @@ module WordFrequency
   ].map(&:to_sym)
 end
 
+class IdempotentResource
+  cattr_accessor :attr_mapping
+  cattr_accessor :key_attrs
+  def remap *vals
+    vals[0]
+  end
+  def self.make *vals
+    vals = remap(*vals)
+    self.find_or_create(vals.slice(*key_attrs))
+    self.attributes = vals
+  end
+end
+
 class HeadWord
   include DataMapper::Resource
   property      :id,            Integer,        :serial      => true
-  property      :encoded,       String,         :length      => 100,    :nullable => false, :default => ''
-  property      :text,          String,         :length      => 100,    :nullable => false, :default => ''
+  property      :encoded,       String,         :length      => 100,    :nullable => false, :default => '', :index => :encoded
+  property      :text,          String,         :length      => 100,    :nullable => false, :default => '', :index => :text
   #
-  property      :pos,           Enum[*WordFrequency::PARTS_OF_SPEECH]
-  has n,        :word_stats,    :via => :statsable
+  property      :pos,           Enum[*WordFrequency::PARTS_OF_SPEECH], :index => [:text, :encoded]
+  has n,        :word_stats,    :word_type => 'HeadWord'
   #
-  before :save, :decode_word
   def decode_word
     self.text = self.encoded if self.text.blank?
   end
-  def self.make word_freq
-    hw = self.update_or_create({:encoded => word_freq[:head], :pos => word_freq[:pos]})
-    hw.save
-    hw
+  before :save, :decode_word
+  #
+  def self.make raw_record
+    head_word = self.update_or_create({:encoded => raw_record[:head], :pos => raw_record[:pos]})
+    head_word.save
+    Lemma.update_or_create(:head_word_id => head_word.id, :encoded => head_word.encoded)
+    head_word
   end
 end
 
@@ -48,28 +62,39 @@ class Lemma
   property      :encoded,       String,         :length      => 100,    :nullable => false, :default => ''
   property      :text,          String,         :length      => 100,    :nullable => false, :default => ''
   #
-  property      :head,          Integer
-  has n,        :word_stats,    :via => :statsable
+  property      :head_word_id,  Integer,        :unique_index => true
+  belongs_to    :head_word
+  has n,        :word_stats,    :word_type => 'Lemma'
+  #
+  def decode_word
+    self.text = self.encoded if self.text.blank?
+  end
+  before :save, :decode_word
+  #
+  def self.make head_word, raw_record
+    lemma = self.update_or_create({:head_word_id => head_word.id, :encoded => raw_record[:lemma]})
+    lemma.save
+    lemma
+  end
 end
 
 class WordStat
   include DataMapper::Resource
-  property      :corpus,        Enum[*WordFrequency::CORPORA],  :key => true
-  property      :context,       Enum[*WordFrequency::CONTEXTS], :key => true
-  is            :polymorphic,   :statsable
-  # property      :word_id,        Integer,                        :key => true
-  # property      :word_type,      String,                         :key => true
-  # belongs_to    :word, :child_key => [:word_id]
+  property      :corpus,         Enum[*WordFrequency::CORPORA],  :key => true
+  property      :context,        Enum[*WordFrequency::CONTEXTS], :key => true
+  property      :word_id,        Integer,                        :key => true
+  property      :word_type,      String,                         :key => true
+  belongs_to    :word, :child_key => [:word_id]
+  before :save, :set_corpus;     def set_corpus()    self.corpus    ||= :bnc end
   #
-  property      :freq,          Float
-  property      :range,         Float
-  property      :disp,          Float
+  property      :freq,           Float
+  property      :range,          Float
+  property      :disp,           Float
 
-  def self.make word, word_freq
-    # :word_id => word.id, :word_type => word.class
+  def self.make word, raw_record
     word_stat = self.update_or_create(
-      {:statsable => word}.merge(word_freq.slice(:corpus, :context)),
-      word_freq.slice(:freq, :range, :disp)
+      {:word_id => word.id, :word_type => word.class}.merge(raw_record.slice(:corpus, :context)),
+      raw_record.slice(:freq, :range, :disp)
       )
     word_stat.save
     word_stat
