@@ -4,7 +4,7 @@
 -- Denormalize campuses by student
 --
 
-INSERT IGNORE INTO `taks_rawk`.`campus_aggregate` (
+INSERT IGNORE INTO `taks_rawk`.`student_campus_year` (
 	`year`,		`student_id`,	`campus_id`,
 	`district`,	`county`,	`region`,
 	`campus_type`,	`closed`,	`enrollment`,
