@@ -3,7 +3,6 @@
 --
 -- Copy values across
 --
-
 INSERT IGNORE INTO `taks_rawk`.`student_trans` (
 	`y1`,   	`id`,
 	`campus_id1`,	`grade1`,
@@ -26,12 +25,12 @@ INSERT IGNORE INTO `taks_rawk`.`student_trans` (
     WHERE 	sy1.year = 2003
       AND 	sy2.year = 2004
 ;
+SELECT COUNT(*) AS num_student_trans    FROM `taks_rawk`.`student_trans`;
 
 -- ---------------------------------------------------------------------------
 --
 -- Copy values across
 --
-
 INSERT IGNORE INTO `taks_rawk`.`student_trans` (
 	`y1`,   	`id`,
 	`campus_id1`,	`grade1`,
@@ -54,12 +53,12 @@ INSERT IGNORE INTO `taks_rawk`.`student_trans` (
     WHERE 	sy1.year = 2004
       AND 	sy2.year = 2005
 ;
+SELECT COUNT(*) AS num_student_trans    FROM `taks_rawk`.`student_trans`;
 
 -- ---------------------------------------------------------------------------
 --
 -- Copy values across
 --
-
 INSERT IGNORE INTO `taks_rawk`.`student_trans` (
 	`y1`,   	`id`,
 	`campus_id1`,	`grade1`,
@@ -82,12 +81,12 @@ INSERT IGNORE INTO `taks_rawk`.`student_trans` (
     WHERE 	sy1.year = 2005
       AND 	sy2.year = 2006
 ;
+SELECT COUNT(*) AS num_student_trans    FROM `taks_rawk`.`student_trans`;
 
 -- ---------------------------------------------------------------------------
 --
 -- Copy values across
 --
-
 INSERT IGNORE INTO `taks_rawk`.`student_trans` (
 	`y1`,   	`id`,
 	`campus_id1`,	`grade1`,
@@ -110,3 +109,4 @@ INSERT IGNORE INTO `taks_rawk`.`student_trans` (
     WHERE 	sy1.year = 2006
       AND 	sy2.year = 2007
 ;
+SELECT COUNT(*) AS num_student_trans    FROM `taks_rawk`.`student_trans`;

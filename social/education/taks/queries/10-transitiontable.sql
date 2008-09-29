@@ -9,7 +9,7 @@ DROP   TABLE  IF EXISTS `taks_rawk`.`student_trans`
 CREATE TABLE  `taks_rawk`.`student_trans` (
   `y1`   	SMALLINT(4) 	UNSIGNED 	  NOT NULL	COMMENT '',
   `id` 		MEDIUMINT 	UNSIGNED ZEROFILL NOT NULL	COMMENT '',
-  `campus_id1` 	INT(9) 		UNSIGNED ZEROFILL DEFAULT NULL	COMMENT '',
+  `campus_id1` 	INT   		UNSIGNED ZEROFILL DEFAULT NULL	COMMENT '',
   `grade1` 	TINYINT(2) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `m_bin1` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'binned raw;    NULL, 0, 1, .. 9',
   `m_met1` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'met standards  NULL, 0, 1', 
@@ -20,7 +20,7 @@ CREATE TABLE  `taks_rawk`.`student_trans` (
   `sex1` 	CHAR(1) 		 	  DEFAULT NULL	COMMENT 'Sex',
   `migsta1` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'Migrant status',
   `titlei1` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'Title I status',
-  `campus_id2` 	INT(9) 		UNSIGNED ZEROFILL DEFAULT NULL	COMMENT '',
+  `campus_id2` 	INT     	UNSIGNED ZEROFILL DEFAULT NULL	COMMENT '',
   `grade2` 	TINYINT(2) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `m_bin2` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'binned raw;    NULL, 0, 1, .. 9',
   `m_met2` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'met standards  NULL, 0, 1', 
@@ -49,3 +49,4 @@ ENGINE=MyISAM PACK_KEYS=1 CHARSET=ASCII  PARTITION BY LIST(y1) (
     PARTITION y2007 VALUES IN (2007)
 )
 ;
+

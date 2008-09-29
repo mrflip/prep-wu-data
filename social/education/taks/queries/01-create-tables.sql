@@ -2,34 +2,21 @@
 --
 -- Create student id - stuidnum code mapping
 --
-DROP   TABLE  IF EXISTS `taks_rawk`.`student_id_codes`
-; 
-CREATE TABLE `taks_rawk`.`student_id_codes` (
-  id		MEDIUMINT ZEROFILL UNSIGNED AUTO_INCREMENT 	NOT NULL,
-  student_code 	CHAR(9) 					NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE  KEY student_code  (`student_code`)
-) ENGINE=MyISAM PACK_KEYS=1 CHARSET=ASCII
-;
-INSERT INTO `taks_rawk`.`student_id_codes` (student_code)
-  SELECT DISTINCT s.stuidnum FROM taks.students s
-;
--- ---------------------------------------------------------------------------
---
--- Create campus id - campus code mapping
---
-DROP   TABLE  IF EXISTS `taks_rawk`.`campus_id_codes`
-; 
-CREATE TABLE `taks_rawk`.`campus_id_codes` (
-  id		MEDIUMINT ZEROFILL UNSIGNED AUTO_INCREMENT 	NOT NULL,
-  campus_code 	INT(9)  					NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE  KEY campus_code (`campus_code`)
-) ENGINE=MyISAM PACK_KEYS=1 CHARSET=ASCII
-;
-INSERT INTO `taks_rawk`.`campus_id_codes` (campus_code)
-  SELECT DISTINCT c.campus FROM taks.campuses c
-;
+
+-- DROP   TABLE  IF EXISTS `taks_rawk`.`student_id_codes`
+-- ; 
+-- CREATE TABLE `taks_rawk`.`student_id_codes` (
+--   id		MEDIUMINT ZEROFILL UNSIGNED AUTO_INCREMENT 	NOT NULL,
+--   student_code 	CHAR(9) 					NOT NULL,
+--   PRIMARY KEY (`id`),
+--   UNIQUE  KEY student_code  (`student_code`)
+-- ) ENGINE=MyISAM PACK_KEYS=1 CHARSET=ASCII
+-- ;
+-- INSERT IGNORE INTO `taks_rawk`.`student_id_codes` (student_code)
+--         SELECT DISTINCT stuidnum FROM taks.students     WHERE stuidnum IS NOT NULL
+-- ;
+SELECT COUNT(*) AS num_student_ids FROM `taks_rawk`.`student_id_codes`;
+
 
 -- ---------------------------------------------------------------------------
 --
@@ -48,7 +35,8 @@ INSERT INTO `taks_rawk`.`years` (year, y1, y2) VALUES
   (2003, 2003, 2004), 
   (2004, 2004, 2005), 
   (2005, 2005, 2006), 
-  (2006, 2006, NULL)
+  (2006, 2006, 2007), 
+  (2007, 2007, NULL)
 ;
 
 -- ---------------------------------------------------------------------------
@@ -60,7 +48,7 @@ DROP   TABLE  IF EXISTS `taks_rawk`.`students`
 CREATE TABLE  `taks_rawk`.`students` (
   `year` 	SMALLINT(4) 	UNSIGNED 	  NOT NULL	COMMENT '',
   `id` 		MEDIUMINT 	UNSIGNED ZEROFILL NOT NULL	COMMENT '',
-  `campus_id` 	INT(9) 		UNSIGNED ZEROFILL DEFAULT NULL	COMMENT '',
+  `campus_id` 	INT  		UNSIGNED ZEROFILL DEFAULT NULL	COMMENT '',
   `grade` 	TINYINT(2) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `missing` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'existed in prev. year, not anymore',
   `m_bin` 	TINYINT(1) 	UNSIGNED 	  DEFAULT NULL	COMMENT 'binned raw;    NULL, 0, 1, .. 9',
@@ -109,7 +97,7 @@ DROP   TABLE  IF EXISTS `taks_rawk`.`campuses`
 ; 
 CREATE TABLE  `taks_rawk`.`campuses` (
   `year` 	SMALLINT(4) 	UNSIGNED 	  NOT NULL,
-  `id`		MEDIUMINT 	UNSIGNED ZEROFILL NOT NULL,
+  `id`		INT     	UNSIGNED ZEROFILL NOT NULL,
   `district` 	MEDIUMINT(6) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `county` 	SMALLINT(3) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `region` 	TINYINT(2) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',

@@ -9,7 +9,7 @@ DROP   TABLE  IF EXISTS `taks_rawk`.`student_campus_year`
 CREATE TABLE  `taks_rawk`.`student_campus_year` (
   `year` 	SMALLINT(4) 	UNSIGNED 	  NOT NULL,
   `student_id`	MEDIUMINT 	UNSIGNED ZEROFILL NOT NULL,
-  `campus_id`	MEDIUMINT 	UNSIGNED ZEROFILL NOT NULL,
+  `campus_id`	INT      	UNSIGNED ZEROFILL NOT NULL,
   `district` 	MEDIUMINT(6) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `county` 	SMALLINT(3) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `region` 	TINYINT(2) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
@@ -24,7 +24,7 @@ CREATE TABLE  `taks_rawk`.`student_campus_year` (
   `min_grade` 	TINYINT(3) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   `max_grade` 	TINYINT(3) 	UNSIGNED 	  DEFAULT NULL	COMMENT '',
   PRIMARY KEY 		(`year`,`student_id`),
-  UNIQUE KEY 		(`year`,`campus_id`),
+  KEY     		(`year`,`campus_id`),
   KEY `student_id`	(`student_id`),
   KEY `district` 	(`district`),
   KEY `county` 		(`county`),
