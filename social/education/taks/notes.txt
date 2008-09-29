@@ -1,0 +1,2 @@
+you may want to add ORDER BY NULL statement after GROUP_BY to avoid
+unnecessary sorting with filesort
