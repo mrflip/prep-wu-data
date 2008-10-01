@@ -22,14 +22,15 @@ class WordUsage
   include DataMapper::Resource
   property      :speaker_id,    Integer, :key => true,                :nullable => false
   property      :event_id,      Integer, :key => true,                :nullable => false
-  property      :order,         Integer, :key => true
+  property      :word_order,    Integer, :key => true
   #
+  property      :para,          Integer
   property      :raw_word,      String,                 :length => 60, :nullable => false
   property      :norm_word,     String,                 :length => 60, :nullable => false, :index => :norm_word
   #
-  def self.make speaker, event, word, order
-    find_or_create :speaker_id => speaker.id, :event_id => event.id,
-      :raw_word => word, :norm_word => word, :order => order
+  def self.make speaker, event, raw_word, norm_word, para, word_order
+    update_or_create({ :speaker_id => speaker.id, :event_id => event.id, :word_order => word_order, },
+      { :raw_word => raw_word, :norm_word => norm_word, :para => para, })
   end
 end
 
