@@ -1,37 +1,34 @@
 #!/usr/bin/env ruby
-require 'imw/utils'
-class Array #:nodoc:
-  def in_groups_of(number, fill_with = nil, &block)
-    require 'enumerator'
-    collection = dup
-    collection << fill_with until collection.size.modulo(number).zero?
-    collection.each_slice(number, &block)
-  end
-end
+require 'imw'
+require 'wordcloud_models'
+
+DataMapper::Logger.new(STDOUT, :debug)
+DataMapper.setup_remote_connection IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_language_corpora_word_freq' })
+WordFreq.auto_upgrade!
+WordUsage.auto_upgrade!
+Event.auto_upgrade!
+Speaker.auto_upgrade!
 
 class DebateAnalyzer
-  attr_accessor :topic
-  def initialize(topic)
-    self.topic = topic
+  attr_accessor :topic, :trnames_speakers
+  def initialize(topic, trnames, trnames_speakers)
+    self.topic    = topic
+    self.trnames_speakers = trnames_speakers
   end
-
-  def dump_file step, group
-    File.open("#{topic}-#{step}-#{group.downcase}.txt", 'w')
-  end
+  def trnames()  trnames_speakers.keys   end
+  def speakers() trnames_speakers.values end
 
   #
   # Get lines for each speaker
   #
   def split_raw_by_speaker
     # Split by speaker
-    lines = File.open("rawd/#{topic}-raw.txt").read.split(/\n(OBAMA|LEHRER|MCCAIN): /)[1..-1]
-    # Dump each speaker's liknes
-    spkr_lines = { 'LEHRER' => [], 'OBAMA' => [], 'MCCAIN' => [], }
-    lines.in_groups_of(2){|spkr,text| spkr_lines[spkr] << text }
-    spkr_lines.each do |group,texts| dump_file("lines", group) << texts ; end
+    lines = File.open("rawd/#{topic}-raw.txt").read.split(/\n(#{trnames.join('|')}): /)[1..-1]
+    # Break out each speaker's lines
+    spkr_lines = { } ; speakers.each{|spkr| spkr_lines[spkr] = [] }
+    lines.in_groups_of(2){|spkr,text| spkr_lines[trnames_speakers[spkr]] << text }
     spkr_lines
   end
-
 
   def depunctuate texts
     reversible_phrases = {
@@ -58,33 +55,36 @@ class DebateAnalyzer
     word_list
   end
   def word_lists spkr_lines
-    spkr_words = {}
-    spkr_lines.each{|spkr, texts| spkr_words[spkr] = depunctuate(texts)}
-    spkr_words.each do |group,words| dump_file("words", group) << words.join(" "); end
-    spkr_words
+    spkr_words = []
+    spkr_lines.each{|spkr, texts| spkr_words[spkr] = depunctuate(texts) }
+    spkr_words.each_with_index do
+      WordUsage.make(speaker, event, word, order)
+    end
   end
 
-  def histogram words
-    hist = { }
-    words.each{|w| hist[w]||=0; hist[w] += 1 }
-    hist
-  end
-  def histograms spkr_words
-    spkr_hists = {}
-    spkr_words.each{|spkr, words| spkr_hists[spkr] = histogram(words) }
-    total_words = {}
-    spkr_words.each{|spkr, words| total_words[spkr] = words.length }
-    spkr_hists.each do |spkr,hist| dump_file("hists", spkr) << [
-        "\n** #{spkr} ** #{total_words[spkr]} words\n\n",
-        hist.sort_by{|w,n| -n}.map{|w,n| "%6d\t%7.3f\t%s\n"%[n, (1000.0*n)/total_words[spkr], w] }
-      ].flatten
-    end
-    spkr_hists
-  end
+  # def histogram words
+  #   hist = { }
+  #   words.each{|w| hist[w]||=0; hist[w] += 1 }
+  #   hist
+  # end
+  # def histograms spkr_words
+  #   spkr_hists = {}
+  #   spkr_words.each{|spkr, words| spkr_hists[spkr] = histogram(words) }
+  #   total_words = {}
+  #   spkr_words.each{|spkr, words| total_words[spkr] = words.length }
+  #   spkr_hists
+  # end
 
 end
 
-da = DebateAnalyzer.new "words_debate_20080926"
-spkr_lines = da.split_raw_by_speaker
-spkr_words = da.word_lists spkr_lines
-spkr_hists = da.histograms spkr_words
+trnames_speakers = {
+  'LEHRER' => Speaker.find_or_create(:name => 'Jim Lehrer'),
+  'OBAMA'  => Speaker.find_or_create(:name => 'Barack Obama'),
+  'MCCAIN' => Speaker.find_or_create(:name => 'John McCain'),
+}
+event = Events.find_or_create(:name => 'First Presidential Candidate Debate',
+    :date => '2008-09-26', :site => 'University of Mississippi', :city => 'Oxford', :state => 'MS', :country => 'us')
+da = DebateAnalyzer.new("words_debate_20080926", trnames_speakers)
+# spkr_lines = da.split_raw_by_speaker
+# spkr_words = da.word_lists spkr_lines,
+
