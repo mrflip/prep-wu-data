@@ -10,13 +10,14 @@ require 'newspaper_mapping'
 require 'cities_mapping'
 require 'map_projection'
 
-Endorsement = Struct.new(:prez, :prev, :movement, :circ, :lat, :lng, :country, :st, :city, :fixme, :paper, :state)
+Endorsement = Struct.new(:prez, :prez04, :prev, :movement, :rank, :daily, :sun, :circ, :lat, :lng, :country, :st, :city, :paper)
+PREZ04        = { 'B'  => 'Bush', ''   => '(none)', 'N/A' => '(none)', 'K' => 'Kerry', }
 
 def get_endorsements(raw_filename)
-  endorsements = []
+  endorsements = {}
   File.open(raw_filename) do |f|
     3.times do f.readline end
-    prez  = 'BO'
+    prez  = 'Obama'
     city  = ''
     state = ''
     country = 'us'
@@ -27,26 +28,29 @@ def get_endorsements(raw_filename)
       when (l.upcase == l)
         state = l.downcase
       when (l == 'JOHN McCAIN')
-        prez = 'JM'
+        prez = 'McCain'
         2.times{f.readline}
       else
         m = /^(.*?)(?: \((B|K|N\/A|)\))?: ([0-9,]+)?/.match(l)
         if m
           paper, prev, circ = m.captures.map{|e| (e||'').strip}
           circ = circ.gsub(/[^0-9]/,'').to_i
+          movement = get_movement(prev, prez)
+          prez04 = PREZ04[prev]
           st = STATE_ABBREVIATIONS[state.upcase]
           city, lat, lng, paper, fixme = fix_city_and_paper(paper, st)
-          movement = get_movement(prev, prez)
           lat, lng = get_city_coords(city, st)
+          rank, daily, sun, *_ = NEWSPAPER_CIRCS[paper]
           # offset abutting
           case
           when ['The Seattle Times', 'The Capital Times', 'La Opinion'].include?(paper)                         then lng -= 0.2
           when ['el Diario La Prensa', 'Southwest News-Herald', 'Yamhill Valley News-Register'].include?(paper) then lng += 0.1
           when ['Chicago Tribune',   'The Daily News'].include?(paper) then  lng -= 0.2
           when ['Chicago Sun-Times', 'New York Post' ].include?(paper) then  lng += 0.6
-          when (city == 'Honolulu') then lng, lat = ll_from_xy(380,758-626)
+          when (city  == 'Honolulu')  then lng, lat = ll_from_xy(380,  758-626)
           end
-          endorsements << Endorsement.new(prez, prev, movement, circ, lat, lng, country, st, city, fixme, paper)
+          lat = (lat*100).round()/100.0 if lat;           lng = (lng*100).round()/100.0 if lng;
+          endorsements[paper] = Endorsement.new(prez, prez04, prev, movement, rank, daily, sun, circ, lat, lng, country, st, city, paper)
         else
           puts "Bad Line '#{l}'"
         end
@@ -57,7 +61,7 @@ def get_endorsements(raw_filename)
 end
 
 MOVEMENT_FROM = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, }
-MOVEMENT_TO   = { 'JM' => -2, 'BO' => 2, }
+MOVEMENT_TO   = { 'McCain' => -2, 'Obama' => 2, }
 def get_movement prev, prez
   MOVEMENT_TO[prez] - MOVEMENT_FROM[prev||'']
 end
@@ -93,7 +97,7 @@ def fix_city_and_paper(paper, st)
     city  = paper.gsub(/^The /, '').gsub(/([^ ]*) ([^ ]*).*?/, '\1 \2')
     fixme = city
     lat, lng = get_city_coords(city, st)
-    puts '  %-40s => [%-25s %-12s %-12s],' % ["\"#{paper}\"", "\"#{city}\",", "#{'%10.5f'%(lat||0)},", "#{'%10.5f'%(lng||0)},"]
+    puts '  %-40s => [%-25s %-12s %-12s], # fix me' % ["\"#{paper}\"", "\"#{city}\",", "#{'%10.5f'%(lat||0)},", "#{'%10.5f'%(lng||0)},"]
   end
   [city, lat, lng, paper, fixme]
 end
@@ -101,7 +105,7 @@ end
 def popup_text endorsement
   peeps = [
     { 'B'  => 'Bush',   ''   => 'None', 'N/A' => 'None', 'K' => 'Kerry', }[endorsement[:prev]],
-    { 'JM' => 'McCain', 'BO' => 'Obama', }[endorsement[:prez]]
+    endorsement[:prez]
   ]
   circ = [ endorsement.circ == 0 ? 'unknown' : endorsement.circ ]
   "%s <br />%s, %s<br />circulation %s<br />2004: %s 2008: %s" % (endorsement.values_of(:paper, :city, :st)+circ+peeps)
@@ -131,7 +135,7 @@ def point_for_graph endorsement, content=nil
   hsh
 end
 def hash_for_graph endorsements
-  endorsements = endorsements.sort_by{|e| -e[:circ] } # must be by circ so bubbles don't get buried
+  endorsements = endorsements.values.sort_by{|e| -e[:circ] } # must be by circ so bubbles don't get buried
   hsh = { 'chart' => { 'graphs' => { 'graph' => [
           { 'gid' => 0,
             'point' => endorsements.map{|e| point_for_graph(e)} +
@@ -173,16 +177,38 @@ endorsements = get_endorsements(raw_filename)
 puts "Writing to intermediate file #{tsv_out_filename}"
 File.open(tsv_out_filename, 'w') do |tsv_out|
   tsv_out << Endorsement.members.map{|s| s.capitalize}.join("\t") + "\n"
-  endorsements.each do |endorsement|
+  endorsements.each do |paper, endorsement|
     tsv_out << endorsement.to_a.join("\t")+"\n"
   end
 end
-dump_hash_for_graph endorsements.reject{|e| ['AK' ].include?(e.st) }, graph_xml_filename
+dump_hash_for_graph endorsements.reject{|paper,e| ['AK' ].include?(e.st) }, graph_xml_filename
 
 def comma_float(f)
   s = f ? ('%10.5f' % f) : ''
   "#{s},"
 end
+
+def td el
+  "<td>#{el}</td>"
+end
+def table_row endorsement
+  endorsement.to_a.join("\t")
+end
+NEWSPAPER_CIRCS.each do |paper, circ|
+  next if endorsements.include?(paper)
+  # rank, daily, sun, city, st = circ
+  rank, circ, daily, sun, lat, lng, st, city, valid = circ
+  lat, lng = get_city_coords(city, st) if st
+  if (paper == 'USA Today') then lng, lat = ll_from_xy(1050, 758-75) end
+  endorsements[paper] = Endorsement.new('', '', '', '', rank, daily, sun, daily, lat, lng, 'us', st, city, paper)
+end
+# endorsements.sort_by{|paper, e| e.circ}.each{|p,e| puts table_row(e)}
+
+# endorsements.sort_by{|paper, e| [(!!e.city ? 0 : 1), e.circ]}.each do |paper, e|
+#   puts '  %-45s => [ %3d, %9d, %9d, %9d, %8.3f, %8.3f, "%2s", %-30s %s ],' % [
+#     "'%s'"%e.paper, e.rank, e.circ, e.daily, e.sun, e.lat||0, e.lng||0, e.st, "'%s',"%(e.city ? e.city : e.paper.gsub(/^The /, '')), !!e.city
+#   ]
+# end
 
 # Presidential Endorsements by Major Newspapers in the 2008 General Election
 # Editor & Publisher
@@ -190,9 +216,10 @@ end
 # election 2008 election2008 president general newspaper endorsement politics
 # Source data by Dexter Hill and Greg Mitchell Editor & Publisher
 
-# endorsements.sort_by(&:city).each do |e| puts('#  [%-21s %-3s "",  ], #%s%-20s%s' %
-#     ["\"#{e.city}\",", "\"#{e.st}\",",
-#       %Q{\nwget -O- \"http://www.census.gov/cgi-bin/gazetteer?},
-#       '%s,+%s"' % [e.city.gsub(/\s/,"+"), e.st],
-#       %q{-nv 2>/dev/null | egrep -i '(<li><strong|Location)'},
-#     ]) if (!get_city_coords(e.city, e.st)[1]) end
+endorsements.each do |p,e|
+  puts('%s%-20s%s' %
+    [ %Q{wget -O- \"http://www.census.gov/cgi-bin/gazetteer?},
+      '%s,+%s" ' % [e.city.gsub(/\s/,"+"), e.st],
+      %q{ -nv 2>/dev/null | egrep -i '(<li><strong|Location)'},
+    ]) if (!get_city_coords(e.city, e.st)[1])
+end

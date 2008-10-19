@@ -1,3 +1,4 @@
+
 CITIES_MAPPING = [
   ["Anniston",          "AL", "ANB", 33.58,  -85.85],
   ["Auburn",            "AL", "AUO", 32.67,  -85.44],
@@ -343,14 +344,14 @@ CITIES_MAPPING = [
   ["Cecil",             "FL", "NZC", 30.22,  -81.88],
   ["Crestview",         "FL", "CEW", 30.78,  -86.52],
   ["Cross City",        "FL", "CTY", 29.62,  -83.10],
-  ["Daytona Bch",       "FL", "DAB", 29.18,  -81.05],
+  ["Daytona Beach",     "FL", "DAB", 29.18,  -81.05],
   ["Duke Fld",          "FL", "EGI", 30.65,  -86.52],
   ["Eglin AFB",         "FL", "VPS", 30.48,  -86.53],
   ["Egmont Key",        "FL", "X91", 27.60,  -82.77],
-  ["Fort Lauderd",      "FL", "FXE", 26.13,  -80.13],
+  ["Fort Lauderdale",   "FL", "FXE", 26.13,  -80.13],
+  ["Fort Lauderdale",   "FL", "FLL", 26.07,  -80.15],
   ["Fort Myers",        "FL", "FMY", 26.58,  -81.87],
-  ["Ft Lauderdale",     "FL", "FLL", 26.07,  -80.15],
-  ["Ft Myers",          "FL", "RSW", 26.65,  -81.87],
+  ["Fort Myers",        "FL", "RSW", 26.65,  -81.87],
   ["Gainesville",       "FL", "GNV", 29.68,  -82.27],
   ["Homestead",         "FL", "HST", 25.48,  -80.38],
   ["Hurlburt Fld",      "FL", "HRT", 30.43,  -86.68],
@@ -376,7 +377,7 @@ CITIES_MAPPING = [
   ["Pensacola",         "FL", "NPA", 30.35,  -87.32],
   ["Pensacola",         "FL", "PNS", 30.47,  -87.20],
   ["Ruskin",            "FL", "TBW", 27.97,  -82.60],
-  ["Saint Peters",      "FL", "PIE", 27.92,  -82.68],
+  ["St. Petersburg",  "FL", "PIE", 27.92,  -82.68],
   ["Sanford",           "FL", "SFB", 28.78,  -81.25],
   ["Sarasota",          "FL", "SRQ", 27.40,  -82.55],
   ["Tallahassee",       "FL", "TLH", 30.38,  -84.37],
@@ -384,7 +385,7 @@ CITIES_MAPPING = [
   ["Titusville",        "FL", "TIX", 28.52,  -80.80],
   ["Tyndall AFB",       "FL", "PAM", 30.07,  -85.58],
   ["Vero Beach",        "FL", "VRB", 27.65,  -80.42],
-  ["W Palm Beach",      "FL", "PBI", 26.68,  -80.12],
+  ["Palm Beach",        "FL", "PBI", 26.68,  -80.12],
   ["Whiting Fld",       "FL", "NSE", 30.72,  -87.02],
 
   ["Albany",            "GA", "ABY", 31.53,  -84.18],
@@ -595,8 +596,8 @@ CITIES_MAPPING = [
 
   ["Andrews AFB",       "MD", "ADW", 38.82,  -76.87],
   ["Baltimore",         "MD", "BAL", 39.18,  -76.67],
-  ["Baltimore",         "MD", "BWI", 39.18,  -76.67],
-  ["Baltimore",         "MD", "MTN", 39.33,  -76.42],
+  ["Baltimore/BWI",     "MD", "BWI", 39.18,  -76.67],
+  ["Baltimore/MTN",     "MD", "MTN", 39.33,  -76.42],
   ["Fort Meade",        "MD", "FME", 39.08,  -76.77],
   ["Hagerstown",        "MD", "HGR", 39.70,  -77.72],
   ["Ocean City",        "MD", "N80", 38.55,  -75.13],
@@ -680,7 +681,7 @@ CITIES_MAPPING = [
   ["Pequot Lake",       "MN", "P39", 46.60,  -94.32],
   ["Redwood Falls",     "MN", "RWF", 44.55,  -95.08],
   ["Rochester",         "MN", "RST", 43.92,  -92.50],
-  ["Saint Paul",        "MN", "STP", 44.93,  -93.05],
+  ["St. Paul",          "MN", "STP", 44.93,  -93.05],
   ["St Cloud",          "MN", "STC", 45.55,  -94.07],
   ["Thief River",       "MN", "TVF", 48.07,  -96.18],
   ["Tofte",             "MN", "P61", 47.58,  -90.83],
@@ -774,7 +775,7 @@ CITIES_MAPPING = [
   ["North Platte",      "NE", "LBF", 41.13, -100.68],
   ["O'neill",           "NE", "ONL", 42.47,  -98.68],
   ["Offutt AFB",        "NE", "OFF", 41.12,  -95.92],
-  ["Omaha/Eppley",      "NE", "OMA", 41.30,  -95.90],
+  ["Omaha",             "NE", "OMA", 41.30,  -95.90],
   ["Ord/Sharp",         "NE", "ODX", 41.62,  -98.95],
   ["Scottsbluff",       "NE", "BFF", 41.87, -103.60],
   ["Sidney Muni",       "NE", "SNY", 41.10, -102.98],
@@ -822,7 +823,7 @@ CITIES_MAPPING = [
   ["Mcguire AFB",       "NJ", "WRI", 40.02,  -74.60],
   ["Millville",         "NJ", "MIV", 39.37,  -75.07],
   ["Morristown",        "NJ", "MMU", 40.80,  -74.42],
-  ["Newark Intl",       "NJ", "EWR", 40.70,  -74.17],
+  ["Newark",            "NJ", "EWR", 40.70,  -74.17],
   ["Teterboro",         "NJ", "TEB", 40.85,  -74.05],
   ["Trenton",           "NJ", "TTN", 40.28,  -74.82],
 
@@ -906,7 +907,7 @@ CITIES_MAPPING = [
   ["New Bern",          "NC", "EWN", 35.08,  -77.05],
   ["New River",         "NC", "NCA", 34.70,  -77.43],
   ["Pope AFB",          "NC", "POB", 35.17,  -79.02],
-  ["Raleigh-Durh",      "NC", "RDU", 35.87,  -78.78],
+  ["Raleigh",           "NC", "RDU", 35.87,  -78.78],
   ["Rocky Mt",          "NC", "RWI", 35.85,  -77.88],
   ["Seymour-John",      "NC", "GSB", 35.33,  -77.97],
   ["Southern Pin",      "NC", "SOP", 35.24,  -79.39],
@@ -957,8 +958,8 @@ CITIES_MAPPING = [
   ["Lawton",            "OK", "LAW", 34.57,  -98.42],
   ["Mcalester",         "OK", "MLC", 34.88,  -95.78],
   ["Norman",            "OK", "OUN", 35.23,  -97.47],
-  ["Oklahoma Cty",      "OK", "OKC", 35.40,  -97.60],
-  ["Oklahoma Cty",      "OK", "PWA", 35.53,  -97.65],
+  ["Oklahoma City",     "OK", "OKC", 35.40,  -97.60],
+  ["Oklahoma City",     "OK", "PWA", 35.53,  -97.65],
   ["Page",              "OK", "PGO", 34.68,  -94.62],
   ["Ponca City",        "OK", "PNC", 36.73,  -97.10],
   ["Stillwater",        "OK", "SWO", 36.16,  -97.09],
@@ -1287,9 +1288,17 @@ CITIES_MAPPING = [
   ["Vancouver", 	"WA", "",   45.63420, -122.64327],
   ["Lowell", 		"MA", "",   42.63871, -71.32214],
   ["Walnut Creek", 	"CA", "",   37.90201, -122.04084],
-  
+  ["Akron",     	"OH", "",   40.946714, -81.20544],
+  ["Norfolk", 		"VA", "",   36.92320, -76.24494],
+  ["Melville", 		"NY", "",   40.78205, -73.41196],
+  ["Hackensack", 	"NJ", "",   40.88930, -74.04611],
+  ["West Nyack", 	"NY", "",   41.09100, -73.96920],
+  ["Greensburg", 	"PA", "",   40.31093, -79.54439],
+  ["New Castle", 	"DE", "",   39.66640, -75.57039],
+  ["Anaheim", 		"CA", "",   33.83890, -117.87233],
+  ["Arlington Heights", "IL", "",   42.09495, -87.98202],
+  ["Asbury Park", 	"NJ", "",   40.22315, -74.01143],
 ]
-#  ["",               "", "",    ],
 
 def get_city_coords(city, st)
   c,s,a,lat,lng = CITIES_MAPPING.find{|c,s,a,lat,lng| (city =~ /#{c}/) && (st =~ /#{s}/) }
@@ -1302,6 +1311,3 @@ end
 # Location: \([0-9\.]+\) N, \([0-9\.]+\) W<br>
 #
 # ["\1", 		"\2", "",   \3, -\4],
-
-
-#      47.355572 -68.296509

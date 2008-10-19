@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings> 
   <!-- Map Overlay -->
-  <!-- <background> <file>google_map.jpg</file> <alpha>60</alpha>  </background> -->
-  <background> <file>simple_map.png</file> <alpha>60</alpha>  </background>
+  <!-- <background> <file>pix/google_map.jpg</file> <alpha>60</alpha>  </background> -->
+  <background> <file>pix/simple_map.png</file> <alpha>60</alpha>  </background>
 
   <!-- Geometry -->
   <grid>
