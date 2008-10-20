@@ -161,28 +161,29 @@ NEWSPAPER_CIRCS = {
   'USA Today'                              => [   1,   2284219,   2284219,         0,   47.683,  -79.911, "  ", '',                            false ],
 
   # 20081019
-  "Tuscaloosa News"                        => [   0,         0,         0,         0,   33.230,  -87.620, "AL", "Tuscaloosa",                  false], # fixed loc
-  "Daily Breeze"                           => [   0,         0,         0,         0,   33.800, -118.330, "CA", "Torrance",                    false], # fixed loc
-  "Marin Independent-Journal"              => [   0,         0,         0,         0,   38.035, -122.743, "CA", "Marin County",                false], # fixed loc
-  "Pasadena Star-News"                     => [   0,         0,         0,         0,   34.161, -118.139, "CA", "Pasadena",                    false], # fixed loc
-  "Boulder Camera"                         => [   0,         0,         0,         0,   40.027, -105.251, "CO", "Boulder",                     false], # fixed loc
-  "Idaho Statesman"                        => [   0,         0,         0,         0,   43.570, -116.220, "ID", "Boise",                       false], # fixed loc
-  "Rockford Register"                      => [   0,         0,         0,         0,   42.200,  -89.100, "IL", "Rockford",                    false], # fixed loc
-  "Columbia Daily Tribune"                 => [   0,         0,         0,         0,   38.820,  -92.220, "MO", "Columbia",                    false], # fixed loc
-  "Concord Monitor"                        => [   0,         0,         0,         0,   43.200,  -71.500, "NH", "Concord",                     false], # fixed loc
-  "Nashua Telegraph"                       => [   0,         0,         0,         0,   42.780,  -71.520, "NH", "Nashua",                      false], # fixed loc
-  "Las Vegas Sun"                          => [   0,         0,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false], # fixed loc
-  "Durham Herald-Sun"                      => [   0,         0,         0,         0,   35.980,  -78.915, "NC", "Durham",                      false], # fixed loc
-  "Times-Reporter"                         => [   0,         0,         0,         0,   40.487,  -81.441, "OH", "New Philadelphia",            false], # fixed loc
-  "Register-Guard"                         => [   0,         0,         0,         0,   44.120, -123.220, "OR", "Eugene",                      false], # fixed loc
-  "Bryan/College Station Eagle"            => [   0,         0,         0,         0,   30.669,  -96.365, "TX", "Bryan",                       false], # fixed loc
-  "Burlington Free Press"                  => [   0,         0,         0,         0,   44.470,  -73.150, "VT", "Burlington",                  false], # fixed loc
-  "Bakersfield Californian"                => [   0,         0,         0,         0,   35.430, -119.050, "CA", "Bakersfield",                 false], # fixed loc
-  "Beaumont Monitor"                       => [   0,         0,         0,         0,   30.088,  -94.144, "TX", "Beaumont",                    false], # fixed loc
-  "Corpus Christi Caller-Times"            => [   0,         0,         0,         0,   27.706,  -97.293, "TX", "Corpus Christi",              false], # fixed loc
-  "Wharton Journal Spectator"              => [   0,         0,         0,         0,   29.316,  -96.099, "TX", "Wharton",                     false], # fixed loc
-  "Wichita Falls Times Record"             => [   0,         0,         0,         0,   33.898,  -98.516, "TX", "Wichita Falls",               false], # fixed loc
-  "The Daily Press"                        => [   0,         0,         0,         0,   36.923,  -76.245, "VA", "Norfolk",                     false], # fixed loc
+  "Tuscaloosa News"                        => [   0,         0,         0,         0,   33.230,  -87.620, "AL", "Tuscaloosa",                  false],
+  "Daily Breeze"                           => [   0,         0,         0,         0,   33.800, -118.330, "CA", "Torrance",                    false],
+  "Marin Independent-Journal"              => [   0,         0,         0,         0,   38.035, -122.743, "CA", "Marin County",                false],
+  "Pasadena Star-News"                     => [   0,         0,         0,         0,   34.161, -118.139, "CA", "Pasadena",                    false],
+  "Boulder Camera"                         => [   0,         0,         0,         0,   40.027, -105.251, "CO", "Boulder",                     false],
+  "Idaho Statesman"                        => [   0,         0,         0,         0,   43.570, -116.220, "ID", "Boise",                       false],
+  "Rockford Register"                      => [   0,         0,         0,         0,   42.200,  -89.100, "IL", "Rockford",                    false],
+  "Columbia Daily Tribune"                 => [   0,         0,         0,         0,   38.820,  -92.220, "MO", "Columbia",                    false],
+  "Concord Monitor"                        => [   0,         0,         0,         0,   43.200,  -71.500, "NH", "Concord",                     false],
+  "Nashua Telegraph"                       => [   0,         0,         0,         0,   42.780,  -71.520, "NH", "Nashua",                      false],
+  "Las Vegas Sun"                          => [   0,         0,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false],
+  "Durham Herald-Sun"                      => [   0,         0,         0,         0,   35.980,  -78.915, "NC", "Durham",                      false],
+  "Times-Reporter"                         => [   0,         0,         0,         0,   40.487,  -81.441, "OH", "New Philadelphia",            false],
+  "Register-Guard"                         => [   0,         0,         0,         0,   44.120, -123.220, "OR", "Eugene",                      false],
+  "Bryan/College Station Eagle"            => [   0,         0,         0,         0,   30.669,  -96.365, "TX", "Bryan",                       false],
+  "Burlington Free Press"                  => [   0,         0,         0,         0,   44.470,  -73.150, "VT", "Burlington",                  false],
+  "Bakersfield Californian"                => [   0,         0,         0,         0,   35.430, -119.050, "CA", "Bakersfield",                 false],
+  "Beaumont Monitor"                       => [   0,         0,         0,         0,   30.088,  -94.144, "TX", "Beaumont",                    false],
+  "Corpus Christi Caller-Times"            => [   0,         0,         0,         0,   27.706,  -97.293, "TX", "Corpus Christi",              false],
+  "Wharton Journal Spectator"              => [   0,         0,         0,         0,   29.316,  -96.099, "TX", "Wharton",                     false],
+  "Wichita Falls Times Record"             => [   0,         0,         0,         0,   33.898,  -98.516, "TX", "Wichita Falls",               false],
+  "The Daily Press"                        => [   0,     83367,     83367,    107701,   36.923,  -76.245, "VA", "Norfolk",                     false],
+  "Anchorage Daily News"                   => [   0,     71711,     71711,     89423,   61.170, -150.020, "AK", "Anchorage",                     true],
 
 }
 

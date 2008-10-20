@@ -194,10 +194,10 @@ def hash_for_graph endorsements, endorsement_bins
           },
           { 'gid' => 1, 'title' => 'Endorsement Legend', 'point' => summary_points(endorsements, endorsement_bins)},
           { 'gid' => 2, 'title' => 'Circulation Legend', 'point' => [
-              { 'x' =>  -71.0, 'y' => ll_from_xy(40, 100 - 7)[1], 'value' => Math.sqrt(2_100_000), 'bullet_alpha' => 0 },
+              { 'x' =>  -50.0, 'y' => ll_from_xy(40, 100 - 7)[1], 'value' => Math.sqrt(2_100_000), 'bullet_alpha' => 0 },
               # { 'x' => -118.4, 'y' => 33.93,                      'value' => Math.sqrt(  773_884), 'content' => 'Circulation 250,000', 'bullet' => 'square' },
-              { 'x' => ll_from_xy(1345-150,  94 - 7)[0], 'y' => ll_from_xy(40, 212 - 7)[1], 'value' => Math.sqrt(  500_000), 'content' => '500k' },
-              { 'x' => ll_from_xy(1345-150,  94 - 7)[0], 'y' => ll_from_xy(40, 175 - 7)[1], 'value' => Math.sqrt(   25_000), 'content' => '25k' },
+              { 'x' => ll_from_xy(1000-80,  0)[0], 'y' => ll_from_xy(0, 198 - 7)[1], 'value' => Math.sqrt(  500_000), 'content' => '500k' },
+              { 'x' => ll_from_xy(1000-80,  0)[0], 'y' => ll_from_xy(0, 175 - 7)[1], 'value' => Math.sqrt(   50_000), 'content' => '50k' },
           ]}
         ]}}}
   XmlSimple.xml_out hsh, 'KeepRoot' => true
@@ -212,21 +212,31 @@ def dump_hash_for_graph endorsements, graph_xml_filename, endorsement_bins
   end
 end
 
+
 #
 #
 #
+def as_millions(f) '%3.1f'%[ f / 1_000_000.0] + 'M' end
 def summary_points endorsements, endorsement_bins
   legend_points = []
-  yval_for_mv = { 3=>105, 1 => 80, -1 => 55, -3 => 30 };
-  prez_for_mv = { 3=>'Obama', 1 => 'Obama',         -1 => 'McCain',       -3 => 'McCain' };
-  prev_for_mv = { 3=>'Bush',  1 => 'Kerry/none', -1 => 'Bush/none', -3 => 'Kerry' };
+  yval_for_mv = { 'O' => 122, 3=>100, 1 => 80, 'M' => 57, -1 => 35, -3 => 15 };
+  prez_for_mv = { 3=>'Obama', 1 => 'Obama',      -1 => 'McCain',    -3 => 'McCain' };
+  prev_for_mv = { 3=>'Bush',  1 => 'Kerry or none', -1 => 'Bush or none', -3 => 'Kerry' };
+  #
+  tot_p = { }; tot_c = { }; [-3, -1, 1, 3].each do |mv|
+    tot_p[mv] = endorsement_bins[mv][:papers].length; tot_c[mv] = endorsement_bins[mv][:total_circ]
+  end
   [3, 1, -1, -3].each do |mv|
-    lng = -78.0
-    lat = ll_from_xy(33, yval_for_mv[mv] - 4)[1]
-    legend_popup  = "%s (%s in '04)<br/>%s papers, ~%s circ."%       [prez_for_mv[mv], prev_for_mv[mv], endorsement_bins[mv][:papers].length, endorsement_bins[mv][:millions_circ], ]
-    label_text    = "%s (%s '04) %s/~%s tot."% [prez_for_mv[mv], prev_for_mv[mv], endorsement_bins[mv][:papers].length, endorsement_bins[mv][:millions_circ], ]
-    legend_points << point_for_graph({ :lng => lng, :lat => lat, :movement => mv, :circ =>  7500 }, legend_popup )
-    puts "<label> <x>!242.0</x> <y>!#{yval_for_mv[mv]}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
+    lng, lat = ll_from_xy(1000-140, yval_for_mv[mv])
+    legend_popup  = "Now endorsing %s,<br/>endorsed %s in 2004<br/>%s papers, ~%s circ."% [prez_for_mv[mv], prev_for_mv[mv], tot_p[mv], as_millions(tot_c[mv]), ]
+    legend_points << point_for_graph({ :lng => lng, :lat => lat, :movement => mv, :circ =>  7500 }, legend_popup ).merge({ 'bullet_alpha' => 70 })
+    label_text    = "%s in '04"% [ prev_for_mv[mv] ]
+    puts "<label> <x>!121.0</x> <y>!#{yval_for_mv[mv]+5}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
+  end
+  [ ['O', "%s (%s/~%s tot)"% ['Obama',  tot_p[ 3] + tot_p[ 1], as_millions(tot_c[ 3]+tot_c[ 1]) ]],
+    ['M', "%s (%s/~%s tot)"% ['McCain', tot_p[-3] + tot_p[-1], as_millions(tot_c[-3]+tot_c[-1]) ]],
+  ].each do |mv, label_text|
+    puts "<label> <x>!145.0</x> <y>!#{yval_for_mv[mv]}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
   end
   legend_points
 end
@@ -306,8 +316,7 @@ endorsement_table = ''
 endorsement_table << table_headings()
 [3, 1, -1, -3, nil].each do |bin|
   vals = endorsement_bins[bin]
-  vals[:millions_circ] = '%3.1f'%[vals[:total_circ]/1_000_000.0] + 'M'
-  endorsement_table << "  <tr><th colspan='8' scope='colgroup' class='chunk'>#{vals[:title]}: #{vals[:papers].length} papers, #{vals[:millions_circ]} total circulation</th></tr>"
+  endorsement_table << "  <tr><th colspan='8' scope='colgroup' class='chunk'>#{vals[:title]}: #{vals[:papers].length} papers, #{as_millions(vals[:total_circ])} total circulation</th></tr>"
   vals[:papers].each do |endorsement|
     endorsement_table << table_row(endorsement)
   end

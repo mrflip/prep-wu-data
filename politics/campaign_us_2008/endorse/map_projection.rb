@@ -34,7 +34,7 @@ IMG_PTS = {
   "Washington, NW Indented Tip" => [  62,  37],
   "Denver"                      => [ 479, 331],
   "Chicago"                     => [ 874, 267],
-  "TR"                          => [1345, 758],
+  "TR"                          => [1000, 564],
   "BL"                          => [0,    0],
 }
 
@@ -51,13 +51,13 @@ end
 
 def ll_from_xy x, y
   [
-    (x - 2867.97) / 22.75,
-    ((758-y) - 1452.57) / -28.89,
+    (x         - 2118) /  16.8,
+    ((564 - y) - 1081) / -21.5,
   ]
 end
 
 def fake_points
-  tr_x, tr_y = ll_from_xy(1345,758)
+  tr_x, tr_y = ll_from_xy(1000,534)
   bl_x, bl_y = ll_from_xy(0,   0)
   LANDMARK_PTS.map{|name, ll|
     {'x'=> ll[1], 'y' => ll[0], 'value' => 50, 'content' => "#{name}: #{'%6.2f'%ll[1]} : #{'%6.2f'%ll[0]}", 'bullet_color' => "44ff44" }
