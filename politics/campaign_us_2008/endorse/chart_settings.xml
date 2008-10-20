@@ -32,7 +32,7 @@
     </graph>
     <graph gid="1" >
       <!-- No Line --> <alpha>0</alpha> <color>1111ff</color>
-      <bullet>bubble</bullet> <bullet_max_size>20</bullet_max_size>
+      <bullet>bubble</bullet> <bullet_max_size>17</bullet_max_size>
       <balloon_text>{description}</balloon_text> 
     </graph>    
     <graph gid="2" >
@@ -44,11 +44,14 @@
   </graphs>
   
   <labels>
-    <label> <x>!234.0</x> <y>!115</y> <text>Endorsed Obama (Bush in 04)         </text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-    <label> <x>!234.0</x> <y>! 91</y> <text>Endorsed Obama (Kerry or None in 04)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-    <label> <x>!234.0</x> <y>! 68</y>  <text>Endorsed McCain (Bush or None in 04)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-    <label> <x>!234.0</x> <y>! 45</y>  <text>Endorsed McCain (Kerry in 04)       </text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-    <label> <x>!300</x>   <y>!150</y>  <text>Circulation</text> <align>center</align> <text_size>13</text_size> <text_color>777777</text_color> </label>
+    <label> <x>!300</x>   <y>!150</y> <text>Circulation</text> <align>center</align> <text_size>12</text_size> <text_color>777777</text_color> </label>
+
+
+<label> <x>!242.0</x> <y>!105</y> <text>Obama (Bush '04) 17/~2.7M tot.</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!242.0</x> <y>!80</y> <text>Obama (Kerry/none '04) 81/~9.1M tot.</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!242.0</x> <y>!55</y> <text>McCain (Bush/none '04) 27/~3.0M tot.</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!242.0</x> <y>!30</y> <text>McCain (Kerry '04) 1/~0.0M tot.</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+
   </labels>
 
   <bullets>   <hover_brightness>-32</hover_brightness>      </bullets>
@@ -62,6 +65,7 @@
   <!-- clean up graph appearance -->
   <legend>    <enabled>false</enabled> <x>30</x> <y>!30</y> </legend>
   <axes><x> <alpha>0</alpha> </x> <y> <alpha>0</alpha> </y> </axes>
+  <zoom>  <target>false</target> </zoom>
   <decimals_separator>.</decimals_separator>
   <thousands_separator>,</thousands_separator>
   <font>Trebuchet MS, sans-serif</font>

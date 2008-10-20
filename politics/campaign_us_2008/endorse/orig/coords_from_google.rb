@@ -69,3 +69,25 @@ OLD_NEWSPAPER_MAPPING = {
   # "The Washington Post"                 => ['Washington',       38.95, -77.46],
   # "Wheeling News-Register"              => ['Wheeling',         %q{40° 3' 50" N}, %q{80° 43' 16" W}],
 }
+
+
+def fix_coord coord
+  if coord =~ / ([NSEW])/
+    sgn = { "N" => 1, "E" => 1, "W" => -1, "S" => -1}[$1]
+    m = /([\d\.]+)°(?: ([\d\.]+)\'(?: ([\d\.]+)\")?)? ([NSEW])/.match(coord)
+    if m
+      deg, min, sec, _ = m.captures
+      coord = sgn * (deg.to_f + (min||0).to_f/60 + (sec||0).to_f/3600)
+    else
+      coord = sgn * coord[0..-3].to_f
+    end
+  end
+  coord
+end
+
+def coords_from_google(paper, city, st)
+    lat = fix_coord raw_lat
+    lng = fix_coord raw_lng
+    if get_city_coords(city, st)[0] then lat, lng = get_city_coords(city, st)  end
+
+end
