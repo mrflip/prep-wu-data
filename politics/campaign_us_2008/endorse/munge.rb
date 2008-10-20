@@ -324,9 +324,9 @@ endorsement_table << table_headings()
     endorsement_table << '<tr><td colspan="8" style="text-align:center"><em>(none yet)</em></td></tr>'
   end
 end
-html_template = File.open('endorsement_graph_template.html').read
+html_template = File.open('endorsements_map_template.html').read
 html_template.gsub!(/<!-- Endorsement Table Goes Here -->/, endorsement_table)
-File.open('endorsement_graph.html','w'){|f| f << html_template}
+File.open('endorsements_map.html','w'){|f| f << html_template}
 
 #
 # Run the graph generation
