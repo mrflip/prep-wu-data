@@ -1,183 +1,183 @@
-The Nation						| Kerry	|			|
-The Idaho Statesman					| Kerry	|			|
-The New Republic					| Kerry	|			|
-The New Yorker						| Kerry	|			|
-Akron Beacon-Journal					| Kerry	| Akron			| Ohio
-Tribune							| Kerry	| Albuquerque		| New Mexico
-Morning Call						| Kerry	| Allentown		| Pennsylvania
-Amarillo Globe-News					| Bush	| Amarillo		| Texas
-Anchorage Daily News					| Kerry	| Anchorage		| Alaska
-Atlanta Journal-Constitution				| Kerry	| Atlanta		| Georgia
-Austin American-Statesman				| Bush	| Austin		| Texas
-The Sun							| Kerry	| Baltimore		| Maryland
-Bangor Daily News					| Kerry	| Bangor		| Maine
-The Birmingham News					| Bush	| Birmingham		| Alabama
-Bismarck Tribune					| Kerry	| Bismarck		| North Dakota
-Bloomington Pantagraph					| Bush	| Bloomington		| Illinois
-Bluefield Daily Telegraph				| Bush	| Bluefield		| West Virginia
-Idaho Statesman						| Kerry	| Boise			| Idaho
-The Boston Globe					| Kerry	| Boston		| Massachusetts
-Bradenton Herald					| Kerry	| Bradenton		| Florida
-Bremerton Sun						| Kerry	| Bremerton		| Washington
-Bridgewater Courier-News				| Kerry	| Bridgewater		| New Jersey
-Buffalo News						| Kerry	| Buffalo		| New York
-The Repository						| Bush	| Canton		| Ohio
-Carbondale Southern Illiosian				| Bush	| Carbondale		| Illinois
-Carlsbad Current-Argus					| Bush	| Carlsbad		| New Mexico
-Cedar Rapids Gazette					| Bush	| Cedar Rapids		| Iowa
-Champaign News-Gazette					| Bush	| Champaign		| Illinois
-The Charleston Gazette					| Kerry	| Charleston		| West Virginia
-The Charlotte Observer					| Kerry	| Charlotte		| North Carolina
-Chattanooga Times					| Kerry	| Chattanooga		| Tennessee
-Chicago Sun-Times					| Kerry	| Chicago		|
-Chicago Tribune						| Bush	| Chicago		| Illinois
-The Cincinnati Enquirer					| Bush	| Cincinnati		| Ohio
-Cincinnati Post						| Bush	| Cincinnati		| Ohio
-Clarksville Leaf-Chronicle				| Bush	| Clarksville		| Tennessee
-The Plain Dealer					| None	| Cleveland		| Ohio
-Columbia Daily Tribune					| Kerry	| Columbia		| Missouri
-Columbus Dispatch					| Bush	| Columbus		| Ohio
-Concord Monitor						| Kerry	| Concord		| New Hampshire
-Crawford Lone Star Iconoclast				| Kerry	| Crawford		| Texas
-Dallas Morning News					| Bush	| Dallas		| Texas
-Davenport Quad-City Times				| Kerry	| Davenport		| Iowa
-Dayton Daily News					| Kerry	| Dayton		| Ohio
-Daytona Beach News-Journal				| Kerry	| Daytona Beach		| Florida
-Delaware News Journal					| Kerry	| Delaware		|
-The Denver Post						| Bush	| Denver		| Colorado
-The Rocky Mountain News					| Bush	| Denver		| Colorado
-The Des Moines Register					| Kerry	| Des Moines		| Iowa
-Detroit Free Press					| Kerry	| Detroit		| Michigan
-The Detroit News					| None	| Detroit		| Michigan
-Duluth News Tribune					| Kerry	| Duluth		| Minnesota
-The Durango Herald					| Kerry	| Durango		| Colorado
-The Express-Times					| Bush	| Easton		| Pennsylvania
-Easton Star Democrat					| Bush	| Easton		| Maryland
-El Paso Times						| Bush	| El Paso		| Texas
-Evansville Courier & Press				| Bush	| Evansville		| Indiana
-Everett Herald						| Kerry	| Everett		| Washington
-Falls Church News-Press					| Kerry	| Falls Church		| Virginia
-Fargo Forum						| Bush	| Fargo			| North Dakota
-Farmington Daily Times					| Bush	| Farmington		| New Mexico
-The Courier						| Bush	| Findlay		| Ohio
-Flint Journal						| Kerry	| Flint			| Michigan
-Fort Collins Coloradoan					| Kerry	| Fort Collins		| Colorado
-Fort Smith Southwest Times Record			| Bush	| Fort Smith		| Arkansas
-Fort Worth Star-Telegram				| Bush	| Fort Worth		| Texas
-Fredericksburg The Freelance-Star			| Bush	| Fredericksburg	| Virginia
-Freeport Standard Journal				| Bush	| Freeport		| Illinois
-The Fresno Bee						| Kerry	| Fresno		| California
-Grand Forks Herald					| Kerry	| Grand Forks		| North Dakota
-The Daily Sentinel					| Bush	| Grand Junction	| Colorado
-The Record						| Kerry	| Hackensack		| New Jersey
-Harrisburg Patriot-News					| None	| Harrisburg		| Pennsylvania
-The Honolulu Advertiser					| Kerry	| Honolulu		| Hawaii
-Houston Chronicle					| Bush	| Houston		| Texas
-The Indianapolis Star					| Bush	| Indianapolis		| Indiana
-International Financial Times				| Kerry	| International		|
-The Economist						| Kerry	| International		|
-Journal							| Kerry	| Ithaca		| New York
-Jackson Sun						| Kerry	| Jackson		| Tennessee
-Kansas City Star					| Kerry	| Kansas City		| Missouri
-Lakeland Ledger						| Bush	| Lakeland		| Florida
-Lansing State Journal					| Kerry	| Lansing		| Michigan
-Las Cruces Sun-News					| Bush	| Las Cruces		| New Mexico
-Las Vegas Review					| Bush	| Las Vegas		| Nevada
-Las Vegas Sun						| Kerry	| Las Vegas		| Nevada
-Lexington Herald-Leader					| Kerry	| Lexington		| Kentucky
-Arkansas Democrat-Gazette				| Bush	| Little Rock		| Arkansas
-Long Island Newsday					| Kerry	| Long Island		| New York
-The Courier-Journal					| Kerry	| Louisville		| Kentucky
-The (Lowell) Sun					| Bush	| Lowell		| Massachusetts
-Union Leader						| Bush	| Manchester		| New Hampshire
-Mason City Globe-Gazette				| Bush	| Mason City		| Iowa
-Mail Tribune						| Kerry	| Medford		| Oregon
-The Commercial Appeal					| Kerry	| Memphis		| Tennessee
-Merced Sun-Star						| Kerry	| Merced		| California
-Miami Herald						| Kerry	| Miami			| Florida
-Midland Midland Daily News				| Bush	| Midland		| Michigan
-Star-Tribune						| Kerry	| Minneapolis		|
-Register						| Bush	| Mobile		| Alabama
-The Modesto Bee						| Kerry	| Modesto		| California
-Montgomery Advertiser					| Kerry	| Montgomery		| Alabama
-The Muskegon Chronicle					| Kerry	| Muskegon		| Michigan
-Myrtle Beach The Sun News				| Kerry	| Myrtle Beach		| South Carolina
-Nashua Telegraph					| Kerry	| Nashua		| New Hampshire
-The Tennessean						| Kerry	| Nashville		| Tennessee
-New Orleans Times-Picayune				| None	| New Orleans		| Louisiana
-Times-Reporter						| Bush	| New Philadelphia	| Ohio
-New York Daily News					| Bush	| New York		| New York
-New York Post						| Bush	| New York		| New York
-New York Sun						| Bush	| New York		| New York
-The New York Times					| Kerry	| New York		| New York
-New York Times Union					| Kerry	| New York		|
-The Star-Ledger						| Kerry	| Newark		| New Jersey
-Newport News Daily Press				| Kerry	| Newport News		| Virginia
-Ocala Star-Banner					| Bush	| Ocala			| Florida
-The Oklahoman						| Bush	| Oklahoma City		| Oklahoma
-Olympia Olympian					| Kerry	| Olympia		| Washington
-Omaha World-Herald					| Bush	| Omaha			| Nebraska
-Orlando Sentinel					| Kerry	| Orlando		| Florida
-The Palm Beach Post					| Kerry	| Palm Beach		| Florida
-Parkersburg The Parkersburg News			| Bush	| Parkersburg		| West Virginia
-Parkersburg The Parkersburg Sentinel			| Bush	| Parkersburg		| West Virginia
-Philadelphia Daily News					| Kerry	| Philadelphia		| Pennsylvania
-Philadelphia Inquirer					| Kerry	| Philadelphia		| Pennsylvania
-Arizona Republic					| Bush	| Phoenix		| Arizona
-Pittsburgh Pittsburgh Tribune-Review			| Bush	| Pittsburgh		| Pennsylvania
-Pittsburgh Post-Gazette					| Kerry	| Pittsburgh		| Pennsylvania
-Pontiac The Oakland Press				| Bush	| Pontiac		| Michigan
-Port Huron Times Herald					| Kerry	| Port Huron		| Michigan
-Portland Herald-Press					| Kerry	| Portland		| Maine
-The Oregonian of Portland				| Kerry	| Portland		| Oregon
-Poughkeepsie Journal					| Bush	| Poughkeepsie		| New York
-The Pueblo Chieftain					| Bush	| Pueblo		| Colorado
-News & Observer						| Kerry	| Raleigh		| North Carolina
-Reno Gazette-Journal					| Kerry	| Reno			| Nevada
-Richmond Times-Dispatch					| Bush	| Richmond		| Virginia
-The Press-Enterprise					| Bush	| Riverside		| California
-Roanoke Times						| Kerry	| Roanoke		| Virginia
-Rockford Register					| Kerry	| Rockford		| Illinois
-The Sacramento Bee					| Kerry	| Sacramento		| California
-Saint Joseph Herald-Palladium				| Bush	| Saint Joseph		| Michigan
-The Salt Lake Tribune					| Bush	| Salt Lake City	| Utah
-San Antonio Express-News				| Bush	| San Antonio		| Texas
-San Diego Union-Tribune					| Bush	| San Diego		| California
-San Francisco Chronicle					| Kerry	| San Francisco		| California
-San Jose Mercury News					| Kerry	| San Jose		| California
-Santa Rosa The Press Democrat				| Kerry	| Santa Rosa		| California
-Savannah Morning News					| Bush	| Savannah		| Georgia
-Scranton Times						| None	| Scranton		| Pennsylvania
-Seattle Post-Intelligencer				| Kerry	| Seattle		| Washington
-The Seattle Times					| Kerry	| Seattle		| Washington
-Press							| Kerry	| Sheboygan		| Wisconsin
-Sioux City Journal					| Bush	| Sioux City		| Iowa
-Sioux Falls Argus Leader				| Bush	| Sioux Falls		| South Dakota
-Spartanburg Herald-Journal				| Bush	| Spartanburg		| South Carolina
-Springfield News-Leader					| Kerry	| Springfield		| Missouri
-Springfield Republican					| Kerry	| Springfield		| Massachusetts
-St. Louis Post-Dispatch					| Kerry	| St. Louis		| Missouri
-St. Louis American					| Kerry	| St. Louis		| Missouri
-St. Paul Pioneer-Press					| Bush	| St. Paul		| Minnesota
-St. Petersburg Times					| Kerry	| St. Petersburg	| Florida
-State College Centre Daily Times			| Kerry	| State College		| Pennsylvania
-The (Stockton) Record					| Bush	| Stockton		| California
-The News Tribune					| Kerry	| Tacoma		| Washington
-Tampa Tribune						| None	| Tampa			| Florida
-The Blade						| Kerry	| Toledo		| Ohio
-Traverse City Record-Eagle				| Kerry	| Traverse City		| Michigan
-Trenton Times						| Kerry	| Trenton		| New Jersey
-Arizona Daily Star					| Kerry	| Tucson		| Arizona
-Tulsa World						| Bush	| Tulsa			| Oklahoma
-Vacaville Reporter					| Bush	| Vacaville		| California
-Vallejo Times-Herald					| Kerry	| Vallejo		| California
-The Columbian						| Bush	| Vancouver		| Washington
-Waco Tribune-Herald					| Kerry	| Waco			| Texas
-The Washington Post					| Kerry	| Washington		| D.C.
-The Washington Times					| Bush	| Washington		| D.C.
-Wilkes-Barre Citizens Voice				| Kerry	| Wilkes-Barre		| Pennsylvania
-Wilkes-Barre Times Leader				| Kerry	| Wilkes-Barre		| Pennsylvania
-Winston-Salem Journal					| None	| Winston-Salem		| North Carolina
-Woodbury Gloucester County Times			| Kerry	| Woodbury		| New Jersey
-Worcester Telegram and Gazette				| Kerry	| Worcester		| Massachusetts
-York Daily Record                                       | Bush  | York                  | Pennsylvania
+The Nation						|Kerry	|			|
+The Idaho Statesman					|Kerry	|			|
+The New Republic					|Kerry	|			|
+The New Yorker						|Kerry	|			|
+Akron Beacon-Journal					|Kerry	| Akron			| Ohio
+Tribune							|Kerry	| Albuquerque		| New Mexico
+Morning Call						|Kerry	| Allentown		| Pennsylvania
+Amarillo Globe-News					|Bush	| Amarillo		| Texas
+Anchorage Daily News					|Kerry	| Anchorage		| Alaska
+Atlanta Journal-Constitution				|Kerry	| Atlanta		| Georgia
+Austin American-Statesman				|Bush	| Austin		| Texas
+The Sun							|Kerry	| Baltimore		| Maryland
+Bangor Daily News					|Kerry	| Bangor		| Maine
+The Birmingham News					|Bush	| Birmingham		| Alabama
+Bismarck Tribune					|Kerry	| Bismarck		| North Dakota
+Bloomington Pantagraph					|Bush	| Bloomington		| Illinois
+Bluefield Daily Telegraph				|Bush	| Bluefield		| West Virginia
+Idaho Statesman						|Kerry	| Boise			| Idaho
+The Boston Globe					|Kerry	| Boston		| Massachusetts
+Bradenton Herald					|Kerry	| Bradenton		| Florida
+Bremerton Sun						|Kerry	| Bremerton		| Washington
+Bridgewater Courier-News				|Kerry	| Bridgewater		| New Jersey
+Buffalo News						|Kerry	| Buffalo		| New York
+The Repository						|Bush	| Canton		| Ohio
+Carbondale Southern Illiosian				|Bush	| Carbondale		| Illinois
+Carlsbad Current-Argus					|Bush	| Carlsbad		| New Mexico
+Cedar Rapids Gazette					|Bush	| Cedar Rapids		| Iowa
+Champaign News-Gazette					|Bush	| Champaign		| Illinois
+The Charleston Gazette					|Kerry	| Charleston		| West Virginia
+The Charlotte Observer					|Kerry	| Charlotte		| North Carolina
+Chattanooga Times					|Kerry	| Chattanooga		| Tennessee
+Chicago Sun-Times					|Kerry	| Chicago		|
+Chicago Tribune						|Bush	| Chicago		| Illinois
+The Cincinnati Enquirer					|Bush	| Cincinnati		| Ohio
+Cincinnati Post						|Bush	| Cincinnati		| Ohio
+Clarksville Leaf-Chronicle				|Bush	| Clarksville		| Tennessee
+The Plain Dealer					|(none)	| Cleveland		| Ohio
+Columbia Daily Tribune					|Kerry	| Columbia		| Missouri
+Columbus Dispatch					|Bush	| Columbus		| Ohio
+Concord Monitor						|Kerry	| Concord		| New Hampshire
+Crawford Lone Star Iconoclast				|Kerry	| Crawford		| Texas
+Dallas Morning News					|Bush	| Dallas		| Texas
+Davenport Quad-City Times				|Kerry	| Davenport		| Iowa
+Dayton Daily News					|Kerry	| Dayton		| Ohio
+Daytona Beach News-Journal				|Kerry	| Daytona Beach		| Florida
+Delaware News Journal					|Kerry	| Delaware		|
+The Denver Post						|Bush	| Denver		| Colorado
+The Rocky Mountain News					|Bush	| Denver		| Colorado
+The Des Moines Register					|Kerry	| Des Moines		| Iowa
+Detroit Free Press					|Kerry	| Detroit		| Michigan
+The Detroit News					|(none)	| Detroit		| Michigan
+Duluth News Tribune					|Kerry	| Duluth		| Minnesota
+The Durango Herald					|Kerry	| Durango		| Colorado
+The Express-Times					|Bush	| Easton		| Pennsylvania
+Easton Star Democrat					|Bush	| Easton		| Maryland
+El Paso Times						|Bush	| El Paso		| Texas
+Evansville Courier & Press				|Bush	| Evansville		| Indiana
+Everett Herald						|Kerry	| Everett		| Washington
+Falls Church News-Press					|Kerry	| Falls Church		| Virginia
+Fargo Forum						|Bush	| Fargo			| North Dakota
+Farmington Daily Times					|Bush	| Farmington		| New Mexico
+The Courier						|Bush	| Findlay		| Ohio
+Flint Journal						|Kerry	| Flint			| Michigan
+Fort Collins Coloradoan					|Kerry	| Fort Collins		| Colorado
+Fort Smith Southwest Times Record			|Bush	| Fort Smith		| Arkansas
+Fort Worth Star-Telegram				|Bush	| Fort Worth		| Texas
+Fredericksburg The Freelance-Star			|Bush	| Fredericksburg	| Virginia
+Freeport Standard Journal				|Bush	| Freeport		| Illinois
+The Fresno Bee						|Kerry	| Fresno		| California
+Grand Forks Herald					|Kerry	| Grand Forks		| North Dakota
+The Daily Sentinel					|Bush	| Grand Junction	| Colorado
+The Record						|Kerry	| Hackensack		| New Jersey
+Harrisburg Patriot-News					|(none)	| Harrisburg		| Pennsylvania
+The Honolulu Advertiser					|Kerry	| Honolulu		| Hawaii
+Houston Chronicle					|Bush	| Houston		| Texas
+The Indianapolis Star					|Bush	| Indianapolis		| Indiana
+International Financial Times				|Kerry	| International		|
+The Economist						|Kerry	| International		|
+Journal							|Kerry	| Ithaca		| New York
+Jackson Sun						|Kerry	| Jackson		| Tennessee
+Kansas City Star					|Kerry	| Kansas City		| Missouri
+Lakeland Ledger						|Bush	| Lakeland		| Florida
+Lansing State Journal					|Kerry	| Lansing		| Michigan
+Las Cruces Sun-News					|Bush	| Las Cruces		| New Mexico
+Las Vegas Review					|Bush	| Las Vegas		| Nevada
+Las Vegas Sun						|Kerry	| Las Vegas		| Nevada
+Lexington Herald-Leader					|Kerry	| Lexington		| Kentucky
+Arkansas Democrat-Gazette				|Bush	| Little Rock		| Arkansas
+Long Island Newsday					|Kerry	| Long Island		| New York
+The Courier-Journal					|Kerry	| Louisville		| Kentucky
+The (Lowell) Sun					|Bush	| Lowell		| Massachusetts
+Union Leader						|Bush	| Manchester		| New Hampshire
+Mason City Globe-Gazette				|Bush	| Mason City		| Iowa
+Mail Tribune						|Kerry	| Medford		| Oregon
+The Commercial Appeal					|Kerry	| Memphis		| Tennessee
+Merced Sun-Star						|Kerry	| Merced		| California
+Miami Herald						|Kerry	| Miami			| Florida
+Midland Midland Daily News				|Bush	| Midland		| Michigan
+Star-Tribune						|Kerry	| Minneapolis		|
+Register						|Bush	| Mobile		| Alabama
+The Modesto Bee						|Kerry	| Modesto		| California
+Montgomery Advertiser					|Kerry	| Montgomery		| Alabama
+The Muskegon Chronicle					|Kerry	| Muskegon		| Michigan
+Myrtle Beach The Sun News				|Kerry	| Myrtle Beach		| South Carolina
+Nashua Telegraph					|Kerry	| Nashua		| New Hampshire
+The Tennessean						|Kerry	| Nashville		| Tennessee
+New Orleans Times-Picayune				|(none)	| New Orleans		| Louisiana
+Times-Reporter						|Bush	| New Philadelphia	| Ohio
+New York Daily News					|Bush	| New York		| New York
+New York Post						|Bush	| New York		| New York
+New York Sun						|Bush	| New York		| New York
+The New York Times					|Kerry	| New York		| New York
+New York Times Union					|Kerry	| New York		|
+The Star-Ledger						|Kerry	| Newark		| New Jersey
+Newport News Daily Press				|Kerry	| Newport News		| Virginia
+Ocala Star-Banner					|Bush	| Ocala			| Florida
+The Oklahoman						|Bush	| Oklahoma City		| Oklahoma
+Olympia Olympian					|Kerry	| Olympia		| Washington
+Omaha World-Herald					|Bush	| Omaha			| Nebraska
+Orlando Sentinel					|Kerry	| Orlando		| Florida
+The Palm Beach Post					|Kerry	| Palm Beach		| Florida
+Parkersburg The Parkersburg News			|Bush	| Parkersburg		| West Virginia
+Parkersburg The Parkersburg Sentinel			|Bush	| Parkersburg		| West Virginia
+Philadelphia Daily News					|Kerry	| Philadelphia		| Pennsylvania
+Philadelphia Inquirer					|Kerry	| Philadelphia		| Pennsylvania
+Arizona Republic					|Bush	| Phoenix		| Arizona
+Pittsburgh Pittsburgh Tribune-Review			|Bush	| Pittsburgh		| Pennsylvania
+Pittsburgh Post-Gazette					|Kerry	| Pittsburgh		| Pennsylvania
+Pontiac The Oakland Press				|Bush	| Pontiac		| Michigan
+Port Huron Times Herald					|Kerry	| Port Huron		| Michigan
+Portland Herald-Press					|Kerry	| Portland		| Maine
+The Oregonian of Portland				|Kerry	| Portland		| Oregon
+Poughkeepsie Journal					|Bush	| Poughkeepsie		| New York
+The Pueblo Chieftain					|Bush	| Pueblo		| Colorado
+News & Observer						|Kerry	| Raleigh		| North Carolina
+Reno Gazette-Journal					|Kerry	| Reno			| Nevada
+Richmond Times-Dispatch					|Bush	| Richmond		| Virginia
+The Press-Enterprise					|Bush	| Riverside		| California
+Roanoke Times						|Kerry	| Roanoke		| Virginia
+Rockford Register					|Kerry	| Rockford		| Illinois
+The Sacramento Bee					|Kerry	| Sacramento		| California
+Saint Joseph Herald-Palladium				|Bush	| Saint Joseph		| Michigan
+The Salt Lake Tribune					|Bush	| Salt Lake City	| Utah
+San Antonio Express-News				|Bush	| San Antonio		| Texas
+San Diego Union-Tribune					|Bush	| San Diego		| California
+San Francisco Chronicle					|Kerry	| San Francisco		| California
+San Jose Mercury News					|Kerry	| San Jose		| California
+Santa Rosa The Press Democrat				|Kerry	| Santa Rosa		| California
+Savannah Morning News					|Bush	| Savannah		| Georgia
+Scranton Times						|(none)	| Scranton		| Pennsylvania
+Seattle Post-Intelligencer				|Kerry	| Seattle		| Washington
+The Seattle Times					|Kerry	| Seattle		| Washington
+Press							|Kerry	| Sheboygan		| Wisconsin
+Sioux City Journal					|Bush	| Sioux City		| Iowa
+Sioux Falls Argus Leader				|Bush	| Sioux Falls		| South Dakota
+Spartanburg Herald-Journal				|Bush	| Spartanburg		| South Carolina
+Springfield News-Leader					|Kerry	| Springfield		| Missouri
+Springfield Republican					|Kerry	| Springfield		| Massachusetts
+St. Louis Post-Dispatch					|Kerry	| St. Louis		| Missouri
+St. Louis American					|Kerry	| St. Louis		| Missouri
+St. Paul Pioneer-Press					|Bush	| St. Paul		| Minnesota
+St. Petersburg Times					|Kerry	| St. Petersburg	| Florida
+State College Centre Daily Times			|Kerry	| State College		| Pennsylvania
+The (Stockton) Record					|Bush	| Stockton		| California
+The News Tribune					|Kerry	| Tacoma		| Washington
+Tampa Tribune						|(none)	| Tampa			| Florida
+The Blade						|Kerry	| Toledo		| Ohio
+Traverse City Record-Eagle				|Kerry	| Traverse City		| Michigan
+Trenton Times						|Kerry	| Trenton		| New Jersey
+Arizona Daily Star					|Kerry	| Tucson		| Arizona
+Tulsa World						|Bush	| Tulsa			| Oklahoma
+Vacaville Reporter					|Bush	| Vacaville		| California
+Vallejo Times-Herald					|Kerry	| Vallejo		| California
+The Columbian						|Bush	| Vancouver		| Washington
+Waco Tribune-Herald					|Kerry	| Waco			| Texas
+The Washington Post					|Kerry	| Washington		| D.C.
+The Washington Times					|Bush	| Washington		| D.C.
+Wilkes-Barre Citizens Voice				|Kerry	| Wilkes-Barre		| Pennsylvania
+Wilkes-Barre Times Leader				|Kerry	| Wilkes-Barre		| Pennsylvania
+Winston-Salem Journal					|(none)	| Winston-Salem		| North Carolina
+Woodbury Gloucester County Times			|Kerry	| Woodbury		| New Jersey
+Worcester Telegram and Gazette				|Kerry	| Worcester		| Massachusetts
+York Daily Record                                       |Bush	| York                  | Pennsylvania

@@ -22,7 +22,7 @@ require 'map_projection'
 
 MOVEMENT_FROM = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, }
 MOVEMENT_TO   = { 'McCain' => -2, 'Obama' => 2, }
-PREZ04        = { 'B'  => 'Bush', ''   => '(none)', 'N/A' => '(none)', 'K' => 'Kerry', }
+PREZ04        = { 'B'  => 'Bush', ''   => '', 'N/A' => '(none)', 'K' => 'Kerry', }
 class Endorsement < Struct.new(
   :prez, :prev, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
   :movement, :prez04 # don't set these -- will be set from other attrs
@@ -50,16 +50,17 @@ class Endorsement < Struct.new(
   #
   def fix_lat_lng_overlap
     return unless lat && lng
-    case
-    when ['The Seattle Times', 'The Capital Times', 'La Opinion'].include?(paper)
-      self.lng -= 0.2
-    when ['el Diario', 'Southwest News-Herald', 'Yamhill Valley News-Register'].include?(paper)
-      self.lng += 0.1
-    when ['Chicago Tribune',   'The Daily News'].include?(paper)
-      self.lng -= 0.2
-    when ['Chicago Sun-Times', 'New York Post' ].include?(paper)
-      self.lng += 0.6
-    when (city  == 'Honolulu')
+    shifts = {
+      'Chicago Sun-Times' =>  0.4, 'Chicago Tribune'    => -0.2, 'Southwest News-Herald' =>  0.1,
+      'The Seattle Times' => -0.2, 'The Capital Times'  => -0.2,
+      'New York Post'     =>  0.4, 'The Daily News'     => -0.2,
+      'el Diario'         =>  0.1, 'Yamhill Valley News-Register' =>  0.1,
+      'La Opinion'        =>  0.3, 'Los Angeles Daily News'     =>  -0.4,
+    }
+    if (lng_shift = shifts[paper])
+      self.lng += lng_shift
+    end
+    if (city  == 'Honolulu')
       self.lng, self.lat = ll_from_xy(380,  758-626)
     end
     self.lat = (lat*100).round()/100.0
@@ -150,6 +151,18 @@ def find_missing_cities city, st
       %q{ -nv 2>/dev/null | egrep -i '(<li><strong|Location)'},
     ]) if (!get_city_coords(city, st)[1])
 end
+def find_prez04_from_wikipedia endorsement
+  wp_prez04 = PREZ04_FROM_WIKIPEDIA[endorsement.paper]
+  return unless wp_prez04
+  if (wp_prez04 != endorsement.prev)
+    if endorsement.prev == ''
+      endorsement.prez04 = PREZ04[wp_prez04]
+    else
+      puts "Mismatch: wp #{wp_prez04} e&p #{endorsement.prez04} for #{endorsement.paper}"
+    end
+  end
+end
+
 
 #
 # XML-able hash for amcharts point
@@ -177,8 +190,9 @@ end
 # Readable text for the popup balloon
 #
 def popup_text endorsement
-  circ = [ endorsement.circ == 0 ? 'unknown' : endorsement.circ ]
-  "%s <br />%s, %s<br />2004: %s 2008: %s<br />circulation %s" % (endorsement.values_of(:paper, :city, :st, :prez04, :prez)+circ)
+  circ   = endorsement.circ == 0 ? 'unknown' : endorsement.circ
+  prez04 = endorsement.prez04 == '' ? '--' : endorsement.prez04
+  "%s <br />%s, %s<br />2008: %s 2004: %s<br />circulation %s" % (endorsement.values_of(:paper, :city, :st, :prez)+[prez04, circ])
 end
 #
 # XML-able hash for whole amcharts graph
@@ -308,6 +322,9 @@ endorsements.sort_by{|paper, e| [-e.circ.to_i, e[:st], e[:paper].gsub(/^The /,''
   if (!e.st) || (!e.lat) then p e  end
   endorsement_bins[bin][:papers]     << e
   endorsement_bins[bin][:total_circ] += e.circ
+  #
+  #
+  find_prez04_from_wikipedia(e)
 end
 #
 # Dump HTML for endorsement status

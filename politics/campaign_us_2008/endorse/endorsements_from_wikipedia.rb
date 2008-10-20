@@ -60,7 +60,7 @@ NEWSPAPER_CIRCS.sort_by{|name,info| [name, info[7], ] }.each do |name, info|
   # end
 
   if (np = BY_NAME[name])
-    prez04 = case np.prez04 when 'Kerry' then 'K' when 'Bush' then 'B' when 'None' then 'N/A' end
+    prez04 = case np.prez04 when 'Kerry' then 'K' when 'Bush' then 'B' when '(none)' then 'N/A' end
     puts ( "  %-30s => '%s'," % ["\"#{name}\"", prez04] )
   else
     # $stderr.puts("Missing paper #{name}") if rank > 0

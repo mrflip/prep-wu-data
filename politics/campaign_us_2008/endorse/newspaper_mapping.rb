@@ -197,6 +197,8 @@ NEWSPAPER_CIRCS = {
 
 
 PREZ04_FROM_WIKIPEDIA = {
+
+
   "Akron Beacon-Journal"         => 'K',
   "Amarillo Globe-News"          => 'B',
   "Anchorage Daily News"         => 'K',
@@ -294,4 +296,5 @@ PREZ04_FROM_WIKIPEDIA = {
   "Times-Reporter"               => 'B',
   "Tulsa World"                  => 'B',
   "Union Leader"                 => 'B',
+
 }
