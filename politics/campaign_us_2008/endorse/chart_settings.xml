@@ -47,12 +47,12 @@
     <label> <x>!146</x>   <y>!152</y> <text>Circulation</text> <align>center</align> <text_size>12</text_size> <text_color>777777</text_color> </label>
 
 
-<label> <x>!121.0</x> <y>!105</y> <text>Bush in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-<label> <x>!121.0</x> <y>!85</y> <text>Kerry/none in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-<label> <x>!121.0</x> <y>!40</y> <text>Bush/none in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-<label> <x>!121.0</x> <y>!20</y> <text>Kerry in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-<label> <x>!145.0</x> <y>!125</y> <text>Obama (98/~11.8M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-<label> <x>!145.0</x> <y>!59</y> <text>McCain (28/~3.0M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!131</x> <y>!105</y> <text>Bush in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!131</x> <y>!85</y> <text>Kerry or none in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!131</x> <y>!40</y> <text>Bush or none in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!131</x> <y>!20</y> <text>Kerry in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!155</x> <y>!122</y> <text>Obama (112/~13.4M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!155</x> <y>!57</y> <text>McCain (39/~3.7M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
 
 <!--  (Bush '04) 17/~2.7M tot. ) 27/~3.0M -->
 

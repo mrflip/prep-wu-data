@@ -17,7 +17,7 @@ require 'map_projection'
 # Source data by Dexter Hill and Greg Mitchell Editor & Publisher
 
 # to spot check count
-# cat rawd/endorsements-raw-20081019.txt | egrep  '^\(?.[a-z]' | wc -l
+# cat rawd/endorsements-raw-20081020.txt | egrep  '^\(?.[a-z]' | wc -l
 
 
 MOVEMENT_FROM = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, }
@@ -61,7 +61,7 @@ class Endorsement < Struct.new(
       self.lng += lng_shift
     end
     if (city  == 'Honolulu')
-      self.lng, self.lat = ll_from_xy(380,  758-626)
+      self.lng, self.lat = ll_from_xy(279, 564-466)
     end
     self.lat = (lat*100).round()/100.0
     self.lng = (lng*100).round()/100.0
@@ -234,6 +234,7 @@ def as_millions(f) '%3.1f'%[ f / 1_000_000.0] + 'M' end
 def summary_points endorsements, endorsement_bins
   legend_points = []
   yval_for_mv = { 'O' => 122, 3=>100, 1 => 80, 'M' => 57, -1 => 35, -3 => 15 };
+  xval = 150
   prez_for_mv = { 3=>'Obama', 1 => 'Obama',      -1 => 'McCain',    -3 => 'McCain' };
   prev_for_mv = { 3=>'Bush',  1 => 'Kerry or none', -1 => 'Bush or none', -3 => 'Kerry' };
   #
@@ -241,16 +242,16 @@ def summary_points endorsements, endorsement_bins
     tot_p[mv] = endorsement_bins[mv][:papers].length; tot_c[mv] = endorsement_bins[mv][:total_circ]
   end
   [3, 1, -1, -3].each do |mv|
-    lng, lat = ll_from_xy(1000-140, yval_for_mv[mv])
+    lng, lat = ll_from_xy(1000-xval, yval_for_mv[mv])
     legend_popup  = "Now endorsing %s,<br/>endorsed %s in 2004<br/>%s papers, ~%s circ."% [prez_for_mv[mv], prev_for_mv[mv], tot_p[mv], as_millions(tot_c[mv]), ]
     legend_points << point_for_graph({ :lng => lng, :lat => lat, :movement => mv, :circ =>  7500 }, legend_popup ).merge({ 'bullet_alpha' => 70 })
     label_text    = "%s in '04"% [ prev_for_mv[mv] ]
-    puts "<label> <x>!121.0</x> <y>!#{yval_for_mv[mv]+5}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
+    puts "<label> <x>!#{xval-19}</x> <y>!#{yval_for_mv[mv]+5}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
   end
   [ ['O', "%s (%s/~%s tot)"% ['Obama',  tot_p[ 3] + tot_p[ 1], as_millions(tot_c[ 3]+tot_c[ 1]) ]],
     ['M', "%s (%s/~%s tot)"% ['McCain', tot_p[-3] + tot_p[-1], as_millions(tot_c[-3]+tot_c[-1]) ]],
   ].each do |mv, label_text|
-    puts "<label> <x>!145.0</x> <y>!#{yval_for_mv[mv]}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
+    puts "<label> <x>!#{xval+5}</x> <y>!#{yval_for_mv[mv]}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
   end
   legend_points
 end
@@ -258,18 +259,11 @@ end
 #
 # Extract the endorsements
 #
-PROCESS_DATE = '20081019'
+PROCESS_DATE = '20081020'
 raw_filename       = "rawd/endorsements-raw-#{PROCESS_DATE}.txt"
 tsv_out_filename   = "fixd/endorsements-cooked-#{PROCESS_DATE}.tsv"
 graph_xml_filename = "fixd/endorsements-graph-#{PROCESS_DATE}.xml"
 endorsements = get_endorsements(raw_filename)
-puts "Writing to intermediate file #{tsv_out_filename}"
-File.open(tsv_out_filename, 'w') do |tsv_out|
-  tsv_out << Endorsement.members.map{|s| s.capitalize}.join("\t") + "\n"
-  endorsements.each do |paper, endorsement|
-    tsv_out << endorsement.to_a.join("\t")+"\n"
-  end
-end
 
 #
 # Create the table of endorsements
@@ -349,6 +343,17 @@ File.open('endorsements_map.html','w'){|f| f << html_template}
 # Run the graph generation
 #
 dump_hash_for_graph endorsements, graph_xml_filename, endorsement_bins
+
+#
+# Dump as tsv too
+#
+puts "Writing to intermediate file #{tsv_out_filename}"
+File.open(tsv_out_filename, 'w') do |tsv_out|
+  tsv_out << Endorsement.members.map{|s| s.capitalize}.join("\t") + "\n"
+  endorsements.sort_by{|p,e| -e.circ }.each do |paper, endorsement|
+    tsv_out << endorsement.to_a.join("\t")+"\n"
+  end
+end
 
 
 #
