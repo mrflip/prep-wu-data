@@ -46,8 +46,9 @@ endorsements = endorsements.reject{|e| e.circ==0 }.sort_by{|e| e.circ}[0..-1]
 endorsements.each_with_index{|e,i| e.all_rank = i }
 
 BARGRAPH_COLORS = {
-   3 => '#4E94E1',  2 => '#A1BDDF',  1 => '#A1BDDF', 0 => '#999999',
-  -3 => '#E45353', -2 => '#E1A0A0', -1 => '#E1A0A0' }
+   3 => '#3030DB',  2 => '#9F9FE0',  1 => '#9F9FE0', 0 => '#999999',
+  -3 => '#DB3030', -2 => '#E1A0A0', -1 => '#E1A0A0' }
+# A31818 A1BDDF
 def make_bargraph_point e
 
   { 'content' => (case e.prez when 'Obama' then -e.circ    when 'McCain' then e.circ   else 0  end),

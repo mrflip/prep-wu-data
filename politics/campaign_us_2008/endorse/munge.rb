@@ -20,9 +20,9 @@ require 'map_projection'
 # cat rawd/endorsements-raw-20081020.txt | egrep  '^\(?.[a-z]' | wc -l
 
 
-MOVEMENT_FROM = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, }
+MOVEMENT_FROM = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, 'N' => 1 }
 MOVEMENT_TO   = { 'McCain' => -2, 'Obama' => 2, }
-PREZ04        = { 'B'  => 'Bush', ''   => '', 'N/A' => '(none)', 'K' => 'Kerry', }
+PREZ04        = { 'B'  => 'Bush', ''   => '', 'N/A' => '(none)', 'K' => 'Kerry', 'N' => 'Nader' }
 class Endorsement < Struct.new(
   :prez, :prev, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
   :movement, :prez04 # don't set these -- will be set from other attrs
@@ -77,16 +77,17 @@ def get_endorsements(raw_filename)
     state = ''
     f.each do |l|
       l.chomp!
+      l.gsub!(/>>+/, '')
       l.gsub!(/Foster.*s Daily/, 'Foster\'s Daily')
       next if l =~ /^\s*$/
       case
       when (l.upcase == l)
-        state = l.downcase
+        state = l.downcase.gsub(/\s+\([0-9]+\)$/, '')
       when (l == 'JOHN McCAIN')
         prez = 'McCain'
         2.times{f.readline}
       else
-        m = /^([^\:]*?)(?: \((B|K|N\/A|)\))?:? *([0-9,]+)?$/.match(l)
+        m = /^([^\:]*?)(?: \((B|K|N|N\/A|)\))?:? *([0-9,]+)?$/.match(l)
         if m
           paper, prev, circ = m.captures.map{|e| (e||'').strip};
           prev ||= ''
@@ -111,7 +112,9 @@ def fix_city_and_paper(orig_paper, state, circ)
   else
     paper = orig_paper
   end
-  if (orig_paper =~ /Lowell.*Sun/) || (orig_paper =~ /Stockton.*Record/)
+  if (orig_paper =~ /Lowell.*Sun/) ||
+      (orig_paper =~ /Stockton.*Record/) ||
+      (orig_paper =~ /Daily News.*Los Angeles/)
     paper = orig_paper
   end
   # and un-abbreviate state
@@ -135,7 +138,7 @@ def fix_city_and_paper(orig_paper, state, circ)
     lat ||= 0; lng ||= 0
     dump_for_newspaper_mapping(rank, circ, daily, sun, lat, lng, st, city, paper, true, 'needs city fixed')
   end
-  if ['USA Today'].include?(paper) then city = "[National]"; st = '' ; lng, lat = ll_from_xy(1050, 758-75) end
+  if ['USA Today'].include?(paper) then city = "[National]"; st = '' ; lng, lat = ll_from_xy(1050, 2000 + 758-75) end # fix position in newspar_mmpao
   [rank, circ, daily, sun, lat, lng, st, city, paper]
 end
 def dump_for_newspaper_mapping rank, circ, daily, sun, lat, lng, st, city, paper, needsfix, comment
@@ -169,19 +172,18 @@ end
 #
 def point_for_graph endorsement, content=nil
   hsh = { }
-  # hsh['content'] = "#{endorsement[:city]} - #{endorsement[:lng]} - #{hsh['x']} | #{endorsement[:lat]} - #{hsh['y']}"
   hsh['content'] = content || popup_text(endorsement)
   hsh['x'], hsh['y'] = [ endorsement[:lng], endorsement[:lat] ]
   hsh['value'] = Math.sqrt(endorsement[:circ])
   # Bullet Appearance
   hsh['bullet_color'] = {
-    -3 => 'ff1111', -2 => 'cc7777', -1 => 'cc7777', 0 => '999999',
+    -3 => 'ff1111', -2 => 'cc7777', -1 => 'cc7777', nil => '888888',
      3 => '1111ff',  2 => '7777cc',  1 => '7777cc',             }[endorsement[:movement]]
   hsh['bullet_alpha'] = {
-    -3 => 60, -2 => 60, -1 => 60, 0 => 60,
+    -3 => 60, -2 => 60, -1 => 60, nil => 15,
      3 => 60,  2 => 60,  1  => 60,                              }[endorsement[:movement]]
   hsh['bullet'] = {
-    -3 => 'round_outline', -2 => 'bubble', -1 => 'bubble', 0 => 'bubble',
+    -3 => 'round_outline', -2 => 'bubble', -1 => 'bubble', nil => 'round',
      3 => 'round_outline',  2 => 'bubble',  1 => 'bubble',      }[endorsement[:movement]]
   hsh.each{|k,v| puts "Unset value for #{k} in #{hsh['content']}" unless v; }
   hsh
@@ -190,9 +192,10 @@ end
 # Readable text for the popup balloon
 #
 def popup_text endorsement
+  prez = (endorsement.prez == '') ? '(no endorsement yet)' : endorsement.prez
   circ   = endorsement.circ == 0 ? 'unknown' : endorsement.circ
   prez04 = endorsement.prez04 == '' ? '--' : endorsement.prez04
-  "%s <br />%s, %s<br />2008: %s 2004: %s<br />circulation %s" % (endorsement.values_of(:paper, :city, :st, :prez)+[prez04, circ])
+  "%s <br />%s, %s<br />2008: %s 2004: %s<br />circulation %s" % (endorsement.values_of(:paper, :city, :st)+[prez, prez04, circ])
 end
 #
 # XML-able hash for whole amcharts graph
@@ -202,7 +205,7 @@ def hash_for_graph endorsements, endorsement_bins
   hsh = { 'chart' => { 'graphs' => { 'graph' => [
           # points
           { 'gid' => 0, 'point' =>
-            endorsements.reject{|e| e.prez == ''}.map{|e| point_for_graph(e)} +
+            endorsements.map{|e| point_for_graph(e)} +  # .reject{|e| e.prez == ''}
             # fake_points +
             [ { 'x' => -71.0, 'y' => ll_from_xy(40, 100 - 7)[1], 'value' => Math.sqrt(2_100_000), 'bullet_alpha' => 0 }, ] # sets the max size
           },
@@ -236,7 +239,7 @@ def summary_points endorsements, endorsement_bins
   yval_for_mv = { 'O' => 122, 3=>100, 1 => 80, 'M' => 57, -1 => 35, -3 => 15 };
   xval = 150
   prez_for_mv = { 3=>'Obama', 1 => 'Obama',      -1 => 'McCain',    -3 => 'McCain' };
-  prev_for_mv = { 3=>'Bush',  1 => 'Kerry or none', -1 => 'Bush or none', -3 => 'Kerry' };
+  prev_for_mv = { 3=>'Bush',  1 => 'Kerry, Nader or none', -1 => 'Bush or none', -3 => 'Kerry or Nader' };
   #
   tot_p = { }; tot_c = { }; [-3, -1, 1, 3].each do |mv|
     tot_p[mv] = endorsement_bins[mv][:papers].length; tot_c[mv] = endorsement_bins[mv][:total_circ]
@@ -259,7 +262,7 @@ end
 #
 # Extract the endorsements
 #
-PROCESS_DATE = '20081020'
+PROCESS_DATE = '20081022'
 raw_filename       = "rawd/endorsements-raw-#{PROCESS_DATE}.txt"
 tsv_out_filename   = "fixd/endorsements-cooked-#{PROCESS_DATE}.tsv"
 graph_xml_filename = "fixd/endorsements-graph-#{PROCESS_DATE}.xml"
@@ -304,12 +307,12 @@ end
 #
 endorsement_bins = {
   nil => {:papers => [], :total_circ => 0, :title => 'Top 100 papers (by circulation) that have not yet endorsed a candidate', },
-   -3 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Kerry in 2004)', },
+   -3 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Kerry or Nader in 2004)', },
    -2 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (no endorsement in 2004)',     },
    -1 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Bush or none in 2004)',  },
     3 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Bush in 2004)', },
     2 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (no endorsement in 2004)',     },
-    1 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Kerry or none in 2004)',  },
+    1 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Kerry, Nader or none in 2004)',  },
 }
 endorsements.sort_by{|paper, e| [-e.circ.to_i, e[:st], e[:paper].gsub(/^The /,'')]}.each do |paper,e|
   bin = case e.movement when -2 then -1 when 2 then 1 else e.movement end
