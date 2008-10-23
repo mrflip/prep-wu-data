@@ -93,7 +93,7 @@ NEWSPAPER_CIRCS = {
   'The Palm Beach Post'                    => [  62,    164474,    164474,    195608,   26.680,  -80.120, "FL", 'Palm Beach',                  false ],
   'The Hartford Courant'                   => [  61,    168158,    168158,    237933,   41.730,  -72.650, "CT", 'Hartford',                    false ],
   'Austin American-Statesman'              => [  60,    170309,    170309,    206505,   30.300,  -97.700, "TX", 'Austin',                      false ],
-  "Las Vegas Sun"                          => [  0,      25000,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false ],
+  "Las Vegas Sun"                          => [  0,     174341,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false ],
   'Las Vegas Review-Journal'               => [  59,    174341,    174341,    199602,   36.080, -115.170, "NV", 'Las Vegas',                   false ],
   'The Virginian Pilot'                    => [  58,    175005,    175005,    200012,   36.923,  -76.245, "VA", 'Norfolk',                     false ],
   'Richmond Times-Dispatch'                => [  57,    175265,    175265,    205895,   37.500,  -77.330, "VA", 'Richmond',                    false ],
@@ -232,6 +232,15 @@ NEWSPAPER_CIRCS = {
   "Tyler Morning Telegraph"                => [  0,     35598,         0,         0,   32.328,  -95.304, "TX", "Tyler",                       false],
   "The Daily News Record"                  => [  0,     30908,         0,         0,   38.437,  -78.874, "VA", "Harrisonburg",                false],
 
+
+  "Merced Sun Star"                        => [  0,     15015,         0,         0,   37.280, -120.520, "CA", "Merced",                      false], # fixed loc
+  "North Adams Transcript"                 => [  0,         0,         0,         0,   42.687,  -73.114, "MA", "North Adams",                 false], # fixed loc
+  "The Daily Star"                         => [  0,         0,         0,         0,   42.870,  -75.120, "NY", "Oneonta",                     false], # fixed loc
+  "Longview News-Journal"                  => [  0,         0,         0,         0,   32.380,  -94.720, "TX", "Longview",                    false], # fixed loc
+  "Virginia Gazette"                       => [  0,         0,         0,         0,   37.270,  -76.707, "VA", "Williamsburg",                false], # fixed loc
+  "The Register Citizen"                   => [  0,         0,         0,         0,   41.835,  -73.129, "CT", "Torrington",                  false], # fixed loc
+  "Cape Coral Daily Breeze"                => [  0,         0,         0,         0,   26.638,  -81.997, "FL", "Cape Coral",                  false], # fixed loc
+
 }
 # removed:
   # "Beaumont Monitor"                     => [  0,         0,         0,         0,   30.088,  -94.144, "TX", "Beaumont",                    false],
@@ -329,7 +338,7 @@ PREZ04_FROM_WIKIPEDIA = {
   "The Oklahoman"                => 'B',
   "The Oregonian of Portland"    => 'K',
   "The Palm Beach Post"          => 'K',
-  "The Plain Dealer"             => 'N/A',
+  "The Plain Dealer"             => 'N',
   "The Press-Enterprise"         => 'B',
   "The Pueblo Chieftain"         => 'B',
   "The Record"                   => 'K',

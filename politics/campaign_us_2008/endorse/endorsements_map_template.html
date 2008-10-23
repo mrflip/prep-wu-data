@@ -46,7 +46,7 @@
 	var so = new SWFObject("temp/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
 	so.addVariable("path", "");
 	so.addVariable("settings_file", encodeURIComponent("chart_settings.xml"));
-	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph-20081022.xml"));
+	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph.xml"));
 	so.write("flashcontent");
 	// ]]>
     </script>
@@ -163,10 +163,22 @@
           processed using the <a href="http://github.com/infochimps/imw/">Infinite Monkeywrench</a>.
         </li>
       </ul>
-      <p>
-        In cities with several newspapers, some bubbles have been offset horizontally for clarity.<br/>
-	  Also: Seriously though -- how many newspapers does the Bay Area need?
-	</p>
+      <p>Notes:</p>
+      <ol>
+        <li>In cities with several newspapers, some bubbles have been offset horizontally for clarity.</li>
+
+        <li id="wtftwoendorsements"></a>Split Endorsements: Note (esp. in conjunction with the
+	commentary above) that
+	the <a href="http://en.wikipedia.org/wiki/Chattanooga_Times_Free_Press">Chattanooga
+	Times Free Press</a> has two editorial pages, one liberal
+	(<em>Times</em>) and one conservative (<em>Free Press</em>), each
+	issuing its own endorsement. The Las Vegas Sun maintains
+	a <a href="http://en.wikipedia.org/wiki/Las_Vegas_Sun">similar split
+	personality</a>.  In each case, the papers' circulation and thus
+	bubble size are divided equally, but their rank order is assigned at full weight.</li>
+	
+        <li>Also: Seriously though -- how many newspapers does the Bay Area need?</li>
+      </ol>
     </div>
 
     <br/>
@@ -178,6 +190,7 @@
 <!-- Endorsement Table Goes Here -->             
             
         </table>
+	
       </div>
   </div> <!-- container -->
 </body>

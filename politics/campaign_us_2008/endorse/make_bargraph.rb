@@ -30,8 +30,7 @@ class Endorsement < Struct.new(
   end
 end
 
-PROCESS_DATE = '20081020'
-tsv_in_filename         = "fixd/endorsements-cooked-#{PROCESS_DATE}.tsv"
+tsv_in_filename         = "fixd/endorsements-cooked.tsv"
 xml_bargraph_filename   = "fixd/endorsements-bargraph.xml"
 
 #
