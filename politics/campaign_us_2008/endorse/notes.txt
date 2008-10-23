@@ -1,3 +1,24 @@
+
+http://en.wikipedia.org/wiki/Mercator_projection
+
+ x = lng - lng_0
+
+ y = ln ( tan(lat) + sec(lat) )
+
+ lat = arctan(sinh(y))
+ lng = x + lng_0
+
+* Google maps use a mercator projection
+
+=====
+
+Gall-Peters
+
+x = R * lng      * pi/(180 * sqrt(2))
+y = R * sin(lat) * sqrt(2)
+
+
+
 ===========================================================================
 Anchorage Daily News 	Circulation 	71,711 Daily 89,423 Sunday
 Daily Press        Circulation           83,367       107,701 

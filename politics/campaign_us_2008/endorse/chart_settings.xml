@@ -74,4 +74,6 @@
   <thousands_separator>,</thousands_separator>
   <font>Trebuchet MS, sans-serif</font>
   <text_color>ffffff</text_color>
+  <!-- check for updated data -->
+  <add_time_stamp>true</add_time_stamp>
 </settings>

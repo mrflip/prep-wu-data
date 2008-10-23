@@ -1,8 +1,11 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Presidential Endorsements</title>
-
+  <title>infochimps.org: Geography of Newspaper Endorsements for 2008 US Election</title>
+  <meta http-equiv="description" content="Map Visualizing Presidential Endorsements by Major Newspapers in the 2008 General Election" />
+  <meta name="description"       content="Map Visualizing Presidential Endorsements by Major Newspapers in the 2008 General Election" />
+  <meta http-equiv="keywords"    content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
+  <meta name="Keywords"          content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
   <style>
     div {
     font: 10pt 'Trebuchet MS', sans-serif; line-height: 1.4; color:#444444
@@ -20,13 +23,14 @@
     th.chunk  { background-color: inherit; padding: 1.25em 10px 0.25em; text-align: left;  }
     div.centered     { margin: auto }
     td.lat, td.lng { display: none }
+    h1 { text-align: center }
   </style>
 
 </head>
 
 <body>
   <div style="margin:auto; width:1000px">
-    <h1>Presidential Endorsements by Major Newspapers in the 2008 General Election</h1>
+    <h1>Newspaper Endorsements in the 2008 US Presidential Election</h1>
 
     <!-- saved from url=(0013)about:internet -->
     <!-- amxy script-->
@@ -47,15 +51,87 @@
     <!-- end of amxy script -->
 
     <hr/>
-    <div style="float:right">
+    <!-- amcolumn script-->
+    <script type="text/javascript" src="temp/amcolumn/swfobject.js"></script>
+    <div id="flashcontent_bargraph" style="float:left; width:500">
+      <strong>You need to upgrade your Flash Player</strong>
+    </div>
+    <script type="text/javascript">
+      // <![CDATA[		
+	var so = new SWFObject("temp/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
+	so.addVariable("path", "");
+	so.addVariable("settings_file", encodeURIComponent("chart_settings-bargraph.xml"));        // you can set two or more different settings files here (separated by commas)
+	so.addVariable("data_file",     encodeURIComponent("fixd/endorsements-bargraph.xml"));		
+	//  so.addVariable("loading_settings", "LOADING SETTINGS");   // you can set custom "loading settings" text here
+	//  so.addVariable("loading_data", "LOADING DATA");           // you can set custom "loading data" text here
+  	//  so.addVariable("preloader_color", "#000000");	
+	so.write("flashcontent_bargraph");
+  	// ]]>
+    </script>
+    <!-- end of amcolumn script -->
+
+    <div style="float:right; width:490; padding: 2em 0 1em 10px">
+      
+      <p><em>Blog Post for this <a href="http://blog.infochimps.org/2008/10/22/2008election-newspaper-endorsement-map/" style="color:#449">over here.</a></em></p>
+      
+      <p>Apart from the unsurprising
+      evidence that (choose one: [[Obama is the overwhelming choice]] -OR-
+      [[there is overwhelming liberal media bias]]), I'm struck by the mismatch
+      between papers' endorsements and their "Red State" vs "Blue State"
+      alignment.</p>
+      
+      <ul>
+        
+        <li>I think the amount of red in the blue states is a market effect. If
+        you're the Boston Herald, there's no percentage in agreeing with the
+        Boston Globe; similarly The Daily News vs New York Post, SF Examiner vs
+        SF Chronicle &amp;c.  That's why the Tribune endorsement, even accounting for
+        hometown bias, is so striking.  I don't mean that they're cynically
+        pandering; rather that in a market with multiple papers readers, and
+        journalists are efficiently sorted into two separate camps. (And the
+        axis doesn't have to be political: though the Chronic and the Statesman
+        are politically distinct I see their main difference being lifestyle
+        vs. traditional news).</li>
+        
+        <li>The amount of blue in the red states highlights how foolishly
+        incomplete the "<a title="One Fish Two Fish Red Fish Blue Fish?"
+        href="http://en.wikipedia.org/wiki/One_Fish_Two_Fish_Red_Fish_Blue_Fish">Red
+        State</a>/<a
+        href="http://en.wikipedia.org/wiki/Red_states_and_blue_states">Blue
+        State</a>" model is for anything but electoral college returns.  The <a
+        href="http://www-personal.umich.edu/~mejn/election/">largest part of the
+        Red/Blue split is Rural/Urban</a> -- look at the electoral cartogram for
+        the last election and almost every city is blue, even in the south and
+        mountain; and almost all of our rural areal is red.  The exceptions,
+        chiefly Dallas, Houston and Boise, stand noticeably alone as having red
+        unpaired with blue.  (Though in this election even the Houston Chronicle
+        is endorsing Obama.)  I'm going to try to make a map colored by county,
+        but there are no good off-the-shelf tools for doing this (that I've
+        found).</li>
+        
+      </ul>
+      
+      <p>This seems to speak of why so many on the right feel there's a <abbr
+      title="Mainstream Media">MSM</abbr> bias -- 50% of the country is urban,
+      50% rural, but newspapers are located exclusively in urban areas.  So,
+      surprisingly, the major right-leaning papers are all located in parts of
+      the country we consider highly <em>leftish</em>.
+
+       The largest urban areas are thus both «<em>the most liberal</em>» and
+       «<em>the most likely to support a sizeable conservative target
+       audience</em>».</p>
+    </div>
+    <br/>
+    <div style="clear:both; margin:auto; width:600px; margin-top:3em">
       <p>
         By <a href="http://infochimps.org">Philip (Flip) Kromer</a>, flip@infochimps.org, using data from
-          <a href="http://www.editorandpublisher.com/eandp/news/article_display.jsp?vnu_content_id=1003875230">Editor & Publisher</a><br/>
+          <a href="http://www.editorandpublisher.com/eandp/news/article_display.jsp?vnu_content_id=1003875230">Editor & Publisher</a>.<br/>
         Visualization released under <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a> license
         (source code <a href="http://github.com/mrflip/infochimps-data/tree/master/politics/campaign_us_2008/endorse">here</a>),
         for everything else see below.
       </p>
-      Credits:
+      
+      <p>Credits:</p>
       <ul>
         <li>
           Endorsement data from
@@ -88,7 +164,7 @@
       </ul>
       <p>
         In cities with several newspapers, some bubbles have been offset horizontally for clarity.<br/>
-	  Seriously though -- how many newspapers does the Bay Area need?
+	  Also: Seriously though -- how many newspapers does the Bay Area need?
 	</p>
     </div>
 
