@@ -1,0 +1,111 @@
+http://www.ct.gov/sots/cwp/view.asp?a=3188&q=392558
+County	RepublicanBush andCheney	DemocraticKerry and Edwards	GreenCobb and La Marche	Concerned CitizensPeroutka andBaldwin	LibertarianBadnarik andCampagna	Petitioning CandidateNader andCamejo
+Fairfield	189,605	205,902	1,913	342	822	2,383
+Hartford	154,919	229,902	2,794	399	784	3,005
+Litchfield	50,160	44,647	465	105	237	1,054
+Middlesex	35,252	47,292	425	57	215	743
+New Haven	160,390	199,060	2,689	385	691	3,176
+New London	49,931	66,062	670	141	340	1,210
+Tolland	31,245	39,146	337	55	164	782
+Windham	22,324	25,477	271	59	114	616
+	693,826	857,488	9,564	1,543	3,367	12,969
+Plurality: 163,662						
+
+									http://www.state.ma.us/sec/ele/eleidx.htm
+									http://www.state.me.us/sos/cec/elec/elec.htm
+									http://www.elections.state.ri.us
+									http://webster.state.nh.us/sos/electionsnew.htm
+									http://vermont-elections.org/soshome.htm
+
+									Connecticut
+									http://en.wikipedia.org/wiki/United_States_presidential_election_in_Connecticut,_2004
+County	John F. Kerry	George W. Bush	Others	2000 result			
+Hartford	58.7%	229,902	39.5%	154,919	1.8%	6,987	−1.5
+Middlesex	56.3%	47,292	42.0%	35,252	1.7%	1,440	+1.4
+New London	55.8%	66,062	42.2%	49,931	2.0%	2,367	+0.4
+Tolland	54.6%	39,146	43.6%	31,245	1.9%	1,338	+1.6
+New Haven	54.3%	199,060	43.8%	160,390	1.9%	6,942	-3.7
+Windham	52.1%	25,477	45.7%	22,324	2.2%	1,060	+2.5
+Fairfield	51.4%	205,902	47.3%	189,605	1.4%	5,460	-0.9
+Litchfield	46.2%	44,647	51.9%	50,160	1.9%	1,861	-1.7
+
+
+									Massachusetts
+									http://en.wikipedia.org/wiki/U.S._presidential_election,_2004,_in_Massachusetts
+County	John F. Kerry	George W. Bush	Others	2000 result			
+Suffolk	75.6%	182,592	22.8%	54,923	1.3%	3,130	+4.2
+Berkshire	73.1%	47,743	25.7%	16,806	1.1%	742	+9.2
+Dukes	72.7%	7,265	26.0%	2,602	1.3%	130	+10.9
+Hampshire	69.4%	51,680	28.6%	21,315	1.9%	1,427	+13.2
+Franklin	68.4%	25,550	29.6%	11,058	2.1%	773	+14.6
+Middlesex	64.0%	440,862	34.5%	237,815	1.5%	10,283	+2.5
+Bristol	63.5%	147,854	35.4%	82,524	1.1%	2,500	-1.0
+Nantucket	63.0%	3,608	35.6%	2,040	1.3%	76	+4.7
+Hampden	60.9%	113,710	38.0%	70,925	1.1%	2,004	+2.7
+Norfolk	60.2%	199,392	38.6%	127,763	1.2%	3,982	+0.8
+Essex	58.2%	194,068	40.5%	135,114	1.2%	4,051	+0.7
+Worcester	56.4%	192,142	42.3%	144,094	1.3%	4,400	+0.4
+Barnstable	54.6%	72,156	44.3%	58,527	1.1%	1,465	+3.1
+Plymouth	53.7%	125,178	45.3%	105,603	1.1%	2,516	-0.8
+
+									Maine
+									http://en.wikipedia.org/wiki/United_States_presidential_election_in_Maine,_2004
+County	John F. Kerry	George W. Bush	Others			
+Androscoggin	54.4%	30,503	43.7%	24,519	1.9%	1,045
+Aroostook	51.9%	19,569	46.5%	17,564	1.6%	600
+Cumberland	58.2%	94,846	40.1%	65,384	1.7%	2,732
+Franklin	54.8%	9,465	42.7%	7,378	2.4%	418
+Hancock	54.5%	18,048	43.5%	14,405	2.0%	669
+Kennebec	53.3%	35,616	44.6%	29,761	2.1%	1,395
+Knox	54.6%	12,690	43.5%	10,103	2.0%	454
+Lincoln	51.3%	11,351	46.8%	10,370	1.9%	421
+Oxford	52.7%	16,618	45.0%	14,196	2.3%	732
+Penobscot	49.2%	40,417	49.1%	40,318	1.7%	1,377
+Piscataquis	44.4%	4,409	53.3%	5,299	2.3%	232
+Sagadahoc	52.7%	11,107	45.1%	9,497	2.3%	475
+Somerset	50.0%	13,555	47.8%	12,953	2.2%	600
+Waldo	51.8%	11,555	46.2%	10,309	2.0%	454
+Washington	48.5%	8,391	49.8%	8,619	1.7%	300
+York	53.3%	58,702	45.0%	49,526	1.6%	1,805
+
+									New Hampshire
+									http://en.wikipedia.org/wiki/United_States_presidential_election_in_New_Hampshire,_2004
+County	John F. Kerry	George W. Bush	Others			
+Cheshire	59.1%	24,438	39.8%	16,463	1.1%	446
+Grafton	55.7%	26,180	43.2%	20,277	1.1%	514
+Strafford	55.6%	32,942	43.6%	25,825	0.9%	514
+Sullivan	52.4%	11,434	46.5%	10,142	1.0%	228
+Merrimack	52.2%	39,975	47.0%	36,060	0.8%	612
+Coos	50.7%	8,585	48.1%	8,143	1.2%	197
+Hillsborough	48.2%	94,121	51.0%	99,724	0.8%	1,582
+Rockingham	47.5%	75,437	51.7%	82,069	0.8%	1,310
+Carroll	47.2%	13,319	51.8%	14,614	1.0%	289
+Belknap	43.6%	14,080	55.5%	17,920	0.9%	298
+
+
+									Rhode Island
+									http://en.wikipedia.org/wiki/United_States_presidential_election_in_Rhode_Island,_2004
+County	John F. Kerry	George W. Bush	Others			
+Providence	62.6%	144,811	35.6%	82,337	1.8%	4,176
+Bristol	58.4%	14,448	39.8%	9,855	1.7%	429
+Newport	56.9%	22,992	41.1%	16,622	2.0%	812
+Washington	55.4%	34,679	42.4%	26,533	2.3%	1,422
+Kent	54.9%	42,830	43.2%	33,699	1.9%	1,489
+
+									Vermont
+									http://en.wikipedia.org/wiki/United_States_presidential_election_in_Vermont,_2004
+County	John F. Kerry	George W. Bush	Others			
+Windham	66.4%	15,489	31.2%	7,280	2.3%	547
+Chittenden	63.5%	49,369	34.0%	26,422	2.5%	1,905
+Lamoille	62.7%	7,636	35.0%	4,260	2.3%	285
+Washington	61.0%	19,177	36.4%	11,461	2.6%	810
+Windsor	60.3%	18,561	37.3%	11,491	2.3%	715
+Addison	60.0%	11,147	38.1%	7,077	1.9%	355
+Bennington	58.1%	11,069	39.9%	7,616	2.0%	380
+Grand Isle	55.1%	2,246	43.0%	1,754	1.9%	77
+Orange	54.8%	8,159	43.1%	6,421	2.1%	315
+Franklin	53.2%	10,598	44.9%	8,936	1.9%	386
+Orleans	51.7%	6,330	46.3%	5,666	2.0%	246
+Rutland	51.3%	15,904	46.6%	14,440	2.0%	631
+Caledonia	50.0%	7,106	47.6%	6,765	2.4%	340
+Essex	43.4%	1,276	54.2%	1,591	2.4%	70

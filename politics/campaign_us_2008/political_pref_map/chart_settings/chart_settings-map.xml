@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings> 
+  <!-- Map Overlay -->
+  <!-- <background> <file></file> <alpha>60</alpha>  </background> -->
+
+  <!-- Geometry -->
+  <grid>
+    <x> <approx_count>100</approx_count> <alpha>5</alpha> </x>
+    <y> <approx_count>100</approx_count> <alpha>5</alpha> </y>
+  </grid>
+  <values>
+    <x> <min></min> <max></max>  <strict_min_max></strict_min_max>
+
+    </x>
+    <y> <min></min> <max></max>  <strict_min_max></strict_min_max> </y>
+  </values>
+  <plot_area>
+    <color>ddddee</color> <alpha>80</alpha>
+    <!-- <margins> <left>4</left> <right>-19</right> <top>6</top> <bottom>-5</bottom> </margins> -->
+  </plot_area>
+  
+  <graphs> 
+    <graph gid="0" >
+      <!-- No Line -->
+      <alpha>0</alpha> <color>1111ff</color> <title>Margin of Victory by County Population</title>
+      <!-- Bubbles -->
+      <bullet>bubble</bullet> 
+      <bullet_max_size>20</bullet_max_size>
+      <bullet_min_size>4</bullet_min_size>
+      <!-- Popups -->       
+      <balloon_text>{description}</balloon_text> 
+      <bullet_alpha>60</bullet_alpha>
+    </graph>
+  </graphs>
+  
+  <labels>
+  </labels>
+
+  <bullets>   <hover_brightness>-32</hover_brightness>      </bullets>
+  <balloon>
+    <border_width>1</border_width> 
+    <border_alpha>50</border_alpha>
+    <border_color>180808</border_color>
+    <color>444444</color>
+    <alpha>75</alpha>
+  </balloon>
+  <!-- clean up graph appearance -->
+  <legend>    <enabled>false</enabled> <x>30</x> <y>!30</y> </legend>
+  <axes>
+    <x>
+      <alpha>100</alpha>
+      <logarithmic>true</logarithmic>
+    </x>
+    <y>
+      <alpha>100</alpha>
+    </y>
+  </axes>
+  <zoom>  <target>false</target> </zoom>
+  <decimals_separator>.</decimals_separator>
+  <thousands_separator>,</thousands_separator>
+  <font>Trebuchet MS, sans-serif</font>
+  <text_color>ffffff</text_color>
+  <!-- check for updated data -->
+  <add_time_stamp>true</add_time_stamp>
+</settings>
