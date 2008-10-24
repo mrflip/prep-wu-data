@@ -45,7 +45,6 @@ NEWSPAPER_CIRCS = {
   'The (Stockton) Record'                  => [   0,     57486,     57486,         0,   37.900, -121.250, "CA", 'Stockton',                    false ],
   'Honolulu Star-Bulletin'                 => [   0,     64305,     64305,         0,   28.610, -109.360, "HI", 'Honolulu',                    false ],
   'The Repository'                         => [   0,     65789,     65789,         0,   40.920,  -81.430, "OH", 'Canton',                      false ],
-  'Chattanooga Times'                      => [   0,     71716,     71716,         0,   35.030,  -85.200, "TN", 'Chattanooga',                 false ],
   'The Modesto Bee'                        => [   0,     78001,     78001,         0,   37.630, -120.950, "CA", 'Modesto',                     false ],
   'The San Francisco Examiner'             => [   0,     80000,     80000,         0,   37.750, -122.680, "CA", 'San Francisco',               false ],
   'Wisconsin State Journal'                => [   0,     87930,     87930,         0,   43.130,  -89.330, "WI", 'Madison',                     false ],
@@ -93,7 +92,7 @@ NEWSPAPER_CIRCS = {
   'The Palm Beach Post'                    => [  62,    164474,    164474,    195608,   26.680,  -80.120, "FL", 'Palm Beach',                  false ],
   'The Hartford Courant'                   => [  61,    168158,    168158,    237933,   41.730,  -72.650, "CT", 'Hartford',                    false ],
   'Austin American-Statesman'              => [  60,    170309,    170309,    206505,   30.300,  -97.700, "TX", 'Austin',                      false ],
-  "Las Vegas Sun"                          => [  0,     174341,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false ],
+  "Las Vegas Sun"                          => [  59,     174341,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false ],
   'Las Vegas Review-Journal'               => [  59,    174341,    174341,    199602,   36.080, -115.170, "NV", 'Las Vegas',                   false ],
   'The Virginian Pilot'                    => [  58,    175005,    175005,    200012,   36.923,  -76.245, "VA", 'Norfolk',                     false ],
   'Richmond Times-Dispatch'                => [  57,    175265,    175265,    205895,   37.500,  -77.330, "VA", 'Richmond',                    false ],
@@ -152,8 +151,8 @@ NEWSPAPER_CIRCS = {
   'Los Angeles Times'                      => [   4,    773884,    773884,    773884,   33.930, -118.400, "CA", 'Los Angeles',                 false ],
   'The New York Times'                     => [   3,   1077256,   1077256,   1476400,   40.770,  -73.980, "NY", 'New York',                    false ],
   'The Wall Street Journal'                => [   2,   2069463,   2069463,         0,   40.770,  -73.980, "NY", 'New York',                    false ],
-  # 'USA Today'                              => [   1,   2284219,   2284219,         0,   47.683,  -79.911, "  ", '',                            false ],
-  'USA Today'                              => [   1,   2284219,   2284219,         0,   80.683,  -79.911, "  ", '',                            false ],
+  # 'USA Today'                              => [   1,   2284219,   2284219,         0,   47.683,  -79.911, "  ", '',                          false ],
+  'USA Today'                              => [   1,   2284219,   2284219,         0,   80.683,  -79.911, "",   '',                            false ],
 
 
   # 20081019
@@ -211,6 +210,7 @@ NEWSPAPER_CIRCS = {
   "The Lubbock Avalanche-Journal"          => [  0,     49094,         0,         0,   33.650, -101.820, "TX", "Lubbock",                     false],
   "The Winchester Star"                    => [  0,     20218,         0,         0,   39.174,  -78.175, "VA", "Winchester",                  false],
 
+  # 20081022
   "Inland Valley Daily Bulletin"           => [  0,     53903,         0,         0,   34.054, -117.606, "CA", "Ontario",                     false],
   "San Mateo Daily Journal"                => [  0,     14800,         0,         0,   33.380, -117.580, "CA", "San Mateo",                   false],
   "Aspen Daily News"                       => [  0,     12500,         0,         0,   39.220, -106.870, "CO", "Aspen",                       false],
@@ -228,11 +228,12 @@ NEWSPAPER_CIRCS = {
   "Bartlesville Examiner-Enterprise"       => [  0,     18400,         0,         0,   36.750,  -96.000, "OK", "Bartlesville",                false],
   "Public Opinion"                         => [  0,     16679,         0,         0,   39.932,  -77.656, "PA", "Chambersburg",                false],
   "The Sentinel"                           => [  0,     11863,         0,         0,   40.597,  -77.574, "PA", "Lewistown",                   false],
+  'Chattanooga Times'                      => [  0,     71716,     71716,         0,   35.030,  -85.200, "TN", 'Chattanooga',                 false ],
   "The Chattanooga Free Press"             => [  0,     71716,         0,         0,   35.030,  -85.200, "TN", "Chattanooga",                 false],
   "Tyler Morning Telegraph"                => [  0,     35598,         0,         0,   32.328,  -95.304, "TX", "Tyler",                       false],
   "The Daily News Record"                  => [  0,     30908,         0,         0,   38.437,  -78.874, "VA", "Harrisonburg",                false],
 
-
+  # 20081023
   "Merced Sun Star"                        => [  0,     15015,         0,         0,   37.280, -120.520, "CA", "Merced",                      false], # fixed loc
   "North Adams Transcript"                 => [  0,         0,         0,         0,   42.687,  -73.114, "MA", "North Adams",                 false], # fixed loc
   "The Daily Star"                         => [  0,         0,         0,         0,   42.870,  -75.120, "NY", "Oneonta",                     false], # fixed loc

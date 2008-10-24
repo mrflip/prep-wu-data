@@ -51,8 +51,8 @@
 <label> <x>!131</x> <y>!85</y> <text>Kerry or none in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
 <label> <x>!131</x> <y>!40</y> <text>Bush or none in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
 <label> <x>!131</x> <y>!20</y> <text>Kerry in '04</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-<label> <x>!155</x> <y>!122</y> <text>Obama (112/~13.4M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
-<label> <x>!155</x> <y>!57</y> <text>McCain (39/~3.7M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!155</x> <y>!122</y> <text>Obama (128/~14.8M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
+<label> <x>!155</x> <y>!57</y> <text>McCain (49/~4.0M tot)</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>
 
 <!--  (Bush '04) 17/~2.7M tot. ) 27/~3.0M -->
 

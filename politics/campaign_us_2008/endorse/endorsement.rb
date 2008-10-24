@@ -5,7 +5,7 @@ PREZ04                  = { 'B'  => 'Bush', ''   => '', 'N/A' => '(none)', 'K' =
 SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review-Journal', 'The Chattanooga Free Press', 'Chattanooga Times']
 class Endorsement < Struct.new(
   :prez, :prev, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
-  :movement, :prez04 # don't set these -- will be set from other attrs
+  :movement, :prez04, :all_rank # don't set these -- will be set from other attrs
   )
   def initialize(*args)
     super *args
@@ -30,18 +30,22 @@ class Endorsement < Struct.new(
   #
   def fix_lat_lng_overlap
     return unless lat && lng
-    shifts = {
+    lngshifts = {
       'Chicago Sun-Times' =>  0.4, 'Chicago Tribune'    => -0.2, 'Southwest News-Herald' =>  0.1,
       'The Seattle Times' => -0.2, 'The Capital Times'  => -0.2,
-      'New York Post'     =>  0.4, 'The Daily News'     => -0.2,
+      'New York Post'     =>  0.4, 'The Daily News'     => -0.2, 'The New York Times' => 0.8,
+      'The Wall Street Journal' => 1,
       'el Diario'         =>  0.1, 'Yamhill Valley News-Register' =>  0.1,
       'La Opinion'        =>  0.3, 'Los Angeles Daily News'     =>  -0.4,
       'Las Vegas Sun'     => -0.2, 'Las Vegas Review-Journal' => 0.2,
       'Chattanooga Times' => -0.2, 'The Chattanooga Free Press' => 0.2,
     }
-    if (lng_shift = shifts[paper])
-      self.lng += lng_shift
-    end
+    latshifts = {
+      'The New York Times' => -0.4,
+      'The Wall Street Journal' => -0.4,
+    }
+    if (lng_shift = lngshifts[paper]) then self.lng += lng_shift end
+    if (lat_shift = latshifts[paper]) then self.lat += lat_shift end
     if (city  == 'Honolulu')
       self.lng, self.lat = ll_from_xy(279, 564-466)
     end
@@ -59,8 +63,32 @@ class Endorsement < Struct.new(
   def circ_as_text
     case
     when circ == 0         then 'unknown'
-    when split_endorsement then "#{circ}/2 (see <a href='#wtftwoendorsements'>note #2)</a>"
-    else                        circ
+    when split_endorsement then "#{circ}/2 - see <a href='#wtftwoendorsements'>note #2</a>"
+    else                        circ.to_s
     end
   end
+
+  #
+  #
+  #
+  def city_st
+    (paper == 'USA Today') ? "[national]" : "#{city}, #{st}"
+  end
+
+  def prez_as_text
+     (prez == '') ? '(none yet)' : prez
+  end
+
+  def self.party_color candidate
+    case candidate
+    when 'Obama', 'Kerry', 'Gore', 'Clinton'    then 'blue'
+    when 'Bush', 'McCain', 'Dole'               then 'red'
+    when 'N', '(none)'                          then 'gray'
+    when ''                                     then 'none'
+    else
+      raise "Haven't met candidate #{candidate}"
+    end
+  end
+  def prez04_color() self.class.party_color(prez04) end
+  def prez_color()   self.class.party_color(prez) end
 end

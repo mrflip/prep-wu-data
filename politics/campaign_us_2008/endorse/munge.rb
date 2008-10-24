@@ -90,7 +90,7 @@ def fix_city_and_paper(orig_paper, state, circ)
     lat ||= 0; lng ||= 0
     dump_for_newspaper_mapping(rank, circ, daily, sun, lat, lng, st, city, paper, true, 'needs city fixed')
   end
-  if ['USA Today'].include?(paper) then city = "[National]"; st = '' ; lng, lat = ll_from_xy(1050, 2000 + 758-75) end # fix position in newspar_mmpao
+  if paper == 'USA Today' then city = "[National]"; st = '' ; lng, lat = ll_from_xy(1050, 2000 + 758-75) end # fix position in newspar_mmpao
   [rank, circ, daily, sun, lat, lng, st, city, paper]
 end
 def dump_for_newspaper_mapping rank, circ, daily, sun, lat, lng, st, city, paper, needsfix, comment
@@ -143,10 +143,11 @@ end
 # Readable text for the popup balloon
 #
 def popup_text endorsement
-  prez = (endorsement.prez == '') ? '(no endorsement yet)' : endorsement.prez
+  prez   = endorsement.prez_as_text
   circ   = endorsement.circ_as_text
+  rank   = (endorsement.rank==0) ? '' : " (##{endorsement.rank})"
   prez04 = endorsement.prez04 == '' ? '--' : endorsement.prez04
-  "%s <br />%s, %s<br />2008: %s 2004: %s<br />circulation %s" % (endorsement.values_of(:paper, :city, :st)+[prez, prez04, circ])
+  "%s <br />%s, %s<br />2008: %s 2004: %s<br />circulation %s%s" % (endorsement.values_of(:paper, :city, :st)+[prez, prez04, circ, rank])
 end
 #
 # XML-able hash for whole amcharts graph
@@ -198,7 +199,8 @@ def summary_points endorsements, endorsement_bins
   [3, 1, -1, -3].each do |mv|
     lng, lat = ll_from_xy(1000-xval, yval_for_mv[mv])
     legend_popup  = "Now endorsing %s,<br/>endorsed %s in 2004<br/>%s papers, ~%s circ."% [prez_for_mv[mv], prev_for_mv[mv], tot_p[mv], as_millions(tot_c[mv]), ]
-    legend_points << point_for_graph(Endorsement.new('','','',7500,0,0,lat,lng,'','','',mv,''), legend_popup ).merge({ 'bullet_alpha' => 70 })
+    e = Endorsement.new('','','',7500,0,0,lat,lng,'','','',''); e.movement = mv
+    legend_points << point_for_graph(e, legend_popup ).merge({ 'bullet_alpha' => 70 })
     label_text    = "%s in '04"% [ prev_for_mv[mv] ]
     puts "<label> <x>!#{xval-19}</x> <y>!#{yval_for_mv[mv]+5}</y> <text>#{label_text}</text> <align>left</align> <text_size>13</text_size> <text_color>444444</text_color> </label>"
   end
@@ -213,7 +215,7 @@ end
 #
 # Extract the endorsements
 #
-PROCESS_DATE = '20081023'
+PROCESS_DATE = '20081024'
 raw_filename       = "rawd/endorsements-raw-#{PROCESS_DATE}.txt"
 tsv_out_filename   = "fixd/endorsements-cooked.tsv"
 graph_xml_filename = "fixd/endorsements-graph.xml"
@@ -233,12 +235,11 @@ def table_headings
     ].join('</th><th scope="col">') + "</th></tr>"
 end
 def table_row e
-  city_st = "#{e.city}, #{e.st}"
   '    <tr>' + [
     (e.rank == 0 ? td('-', 3) : td(e.rank, 3)),
-    td(e.paper,35), td(city_st, 40),
+    td(e.paper,35), td(e.city_st, 40),
     td(e.circ_as_text, 9),
-    td(e.prez,6), td(e.prez04, 6),
+    td(e.prez, 6, e.prez_color), td(e.prez04, 6, e.prez04_color),
     td("%6.1f"%e.lat, 6, :lat), td("%6.1f"%e.lng, 6, :lng),
   ].join('') + '</tr>'
 end
@@ -254,6 +255,11 @@ NEWSPAPER_CIRCS.each do |paper, info|
   endorsements[paper] = Endorsement.new('', '', rank, circ, daily, sun, lat, lng, st, city, paper)
 end
 #
+# Assign an overall rank
+# (note that this *isn't* the 'national rank' -- papers out of the top 100 could be missing, and split endorsements mess this up)
+#
+endorsements.sort_by{|p,e| -e.circ}.each_with_index{|pe,i| pe[1].all_rank = i+1 }
+#
 # Sort all newspapers by their endorsed status
 #
 endorsement_bins = {
@@ -265,9 +271,7 @@ endorsement_bins = {
     2 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (no endorsement in 2004)',     },
     1 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Kerry or none in 2004)',  },
 }
-endorsements.sort_by{|paper, e| [-e.circ.to_i, e[:st], e[:paper].gsub(/^The /,'')]}.each_with_index do |paper_e, i|
-  paper, e = paper_e
-  e.rank = i+1
+endorsements.sort_by{|paper, e| [-e.circ.to_i, e[:st], e[:paper].gsub(/^The /,'')]}.each do |paper, e|
   bin = case e.movement when -2 then -1 when 2 then 1 else e.movement end
   if (!e.st) || (!e.lat) then p e  end
   endorsement_bins[bin][:papers]     << e
@@ -308,6 +312,7 @@ File.open(tsv_out_filename, 'w') do |tsv_out|
   tsv_out << Endorsement.members.map{|s| s.capitalize}.join("\t") + "\n"
   endorsements.sort_by{|p,e| -e.circ }.each do |paper, endorsement|
     tsv_out << endorsement.to_a.join("\t")+"\n"
+    # dump_for_newspaper_mapping( *(endorsement.values_of(:rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper)+[false, '']) )
   end
 end
 

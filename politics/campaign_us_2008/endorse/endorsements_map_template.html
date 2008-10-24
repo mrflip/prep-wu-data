@@ -3,29 +3,28 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>infochimps.org: Geography of Newspaper Endorsements for 2008 US Election</title>
   <meta http-equiv="description" content="Map Visualizing Presidential Endorsements by Major Newspapers in the 2008 General Election" />
-  <meta name="description"       content="Map Visualizing Presidential Endorsements by Major Newspapers in the 2008 General Election" />
-  <meta http-equiv="keywords"    content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
-  <meta name="Keywords"          content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
+  <meta name="description"	 content="Map Visualizing Presidential Endorsements by Major Newspapers in the 2008 General Election" />
+  <meta http-equiv="keywords"	 content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
+  <meta name="Keywords"		 content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
   <style>
-    div {
-    font: 10pt 'Trebuchet MS', sans-serif; line-height: 1.4; color:#444444
-    }
-    a {text-decoration:none}
-    a         { color: #222244; font-weight: bold }
-    a:visited { color: #442244 }
-    a:hover   { color: #222288; background-color: #f8f8d0}
-    a:focus   { color: #882222 }
-    hr        { margin: 2.5em 0 1em 0; border: 1px solid #ccc }
-    hr, br    { clear:both}
-    p, ul 	{ margin : 0 }
-    p 	{ margin-top: 1em }
-    th  	{ background-color: #eee;    padding: 1em 10px;           text-align: center }
-    th.chunk  { background-color: inherit; padding: 1.25em 10px 0.25em; text-align: left;  }
-    div.centered     { margin: auto }
-    td.lat, td.lng { display: none }
-    h1 { text-align: center }
-
-    div.endorsementmap { margin:auto; width:1000px; min-height:564px; background:'pix/county04_map.png' }
+    div		{ font: 10pt 'Trebuchet MS', sans-serif; line-height: 1.4; color:#444444 }
+    a		{ text-decoration:none }
+    a		{ color: #222244; font-weight: bold }
+    a:visited	{ color: #442244 }
+    a:hover	{ color: #222288; background-color: #f8f8d0}
+    a:focus	{ color: #882222 }
+    hr		{ margin: 2.5em 0 1em 0; border: 1px solid #ccc }
+    hr, br	{ clear:both}
+    p, ul	{ margin : 0 }
+    p		{ margin-top: 1em }
+    td		{ padding: 2px 6px }
+    th		{ background-color: #eee;    padding: 1em 10px;		  text-align: center }
+    th.chunk	{ background-color: inherit; padding: 1.25em 10px 0.25em; text-align: left;  }
+    div.centered    { margin: auto }
+    td.lat, td.lng  { display: none }
+    td.red	{ background-color: #fff4f4} td.blue { background-color: #f4f4ff} td.gray { background-color: #fafafa}	td.none { background-color: inherit }	
+    h1		{ text-align: center }
+    div.endorsementmap	{ margin:auto; width:1000px; min-height:564px; background:'pix/county04_map.png' }
   </style>
 
 </head>
@@ -45,8 +44,8 @@
 	// <![CDATA[		
 	var so = new SWFObject("temp/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings.xml"));
-	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph.xml"));
+	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-map.xml?20081023a"));
+	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph.xml?20081023a"));
 	so.write("flashcontent");
 	// ]]>
     </script>
@@ -62,8 +61,8 @@
       // <![CDATA[		
 	var so = new SWFObject("temp/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings-bargraph.xml"));        // you can set two or more different settings files here (separated by commas)
-	so.addVariable("data_file",     encodeURIComponent("fixd/endorsements-bargraph.xml"));		
+	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-bargraph.xml?20081023a"));        // you can set two or more different settings files here (separated by commas)
+	so.addVariable("data_file",     encodeURIComponent("fixd/endorsements-bargraph.xml?20081023a"));		
 	//  so.addVariable("loading_settings", "LOADING SETTINGS");   // you can set custom "loading settings" text here
 	//  so.addVariable("loading_data", "LOADING DATA");           // you can set custom "loading data" text here
   	//  so.addVariable("preloader_color", "#000000");	
@@ -82,8 +81,7 @@
       between papers' endorsements and their "Red State" vs "Blue State"
       alignment.</p>
       
-      <ul>
-        
+      <ul>        
         <li>I think the amount of red in the blue states is a market effect. If
         you're the Boston Herald, there's no percentage in agreeing with the
         Boston Globe; similarly The Daily News vs New York Post, SF Examiner vs
@@ -92,6 +90,9 @@
         the other alignment is wrong, or chosen cynically -- simply that in a
         market supporting multiple papers, readers and journalists are
         efficiently sorted into two separate camps.</li>
+
+        <li>Because we don't double count, our 'total circulation endorsing'
+        figures differ slightly from E&amp;P's</li>
         
         <li>The amount of blue in the red states highlights how foolishly
         incomplete the "<a title="One Fish Two Fish Red Fish Blue Fish?"
@@ -102,7 +103,7 @@
         of the Red/Blue split is Rural/Urban</a>.  Look at
         the <a href="http://www-personal.umich.edu/~mejn/election/countymap30701280x1024.png">electoral
         cartogram</a> for the last election and almost every city is blue, even
-        in the south and mountain; and almost all rural areal is red, even in
+        in the south and mountain, while almost all rural areal is red, even in
         California and Massachusetts.  The urban exceptions on the cartogram --
         chiefly Dallas, Houston and Boise -- stand noticeably alone on the
         endorsement map as having red unpaired with blue.  (Though in this
@@ -185,7 +186,7 @@
     <hr>
       <div >
         <h2 style="text-align: center">List of Endorsements</h2>
-        <table style=' margin: auto; float:none '>
+        <table style=' margin: auto; float:none; ; font-size: 0.9em ' cellspacing="0">
 
 <!-- Endorsement Table Goes Here -->             
             

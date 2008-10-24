@@ -87,8 +87,8 @@
     <value>                                                   <!-- value axis -->
       <enabled>false</enabled>                                 <!-- [true] (true / false) -->
       <reverse></reverse>                                     <!-- [false] (true / false) whether to reverse this axis values or not. If set to true, values will start from biggest number and will end with a smallest number -->    
-      <min>-800000</min>                                         <!-- [] (Number) minimum value of this axis. If empty, this value will be calculated automatically. -->
-      <max> 800000</max>                                     <!-- [] (Number) maximum value of this axis. If empty, this value will be calculated automatically -->
+      <min>-1100000</min>                                         <!-- [] (Number) minimum value of this axis. If empty, this value will be calculated automatically. -->
+      <max> 1100000</max>                                     <!-- [] (Number) maximum value of this axis. If empty, this value will be calculated automatically -->
       <strict_min_max></strict_min_max>                       <!-- [false] (true / false) by default, if your values are bigger then defined max (or smaller then defined min), max and min is changed so that all the chart would fit to chart area. If you don't want this, set this option to true. -->
       <frequency>10</frequency>                                 <!-- [1] (Number) how often values should be placed, 1 - near every gridline, 2 - near every second gridline... -->
       <rotate></rotate>                                       <!-- [0] (0 - 90) angle of rotation. If you want to rotate by degree from 1 to 89, you must have font.swf file in fonts folder -->

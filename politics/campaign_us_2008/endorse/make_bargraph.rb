@@ -17,15 +17,17 @@ class Endorsement < Struct.new(
   )
   def initialize(*args)
     super *args
-    [:circ, :daily, :sun, :movement].each{|attr| self[attr] = self[attr].to_i }
-    [:lat, :lng                    ].each{|attr| self[attr] = self[attr].to_f }
+    [:circ, :daily, :sun, :movement, :rank, :all_rank
+    ].each{|attr| self[attr] = self[attr].to_i }
+    [:lat, :lng
+    ].each{|attr| self[attr] = self[attr].to_f }
     self.movement ||= 0
   end
 
 
   def self.load(tsv_file)
     File.open(tsv_file).readlines.map do |line|
-      self.new( *line.split(/\t/) )
+      self.new( *line.chomp.split(/\t/) )
     end[1..-1]
   end
 end
@@ -42,14 +44,13 @@ endorsements = Endorsement.load(tsv_in_filename)
 # Create sorted series data
 #
 endorsements = endorsements.reject{|e| e.circ==0 }.sort_by{|e| e.circ}[0..-1]
-endorsements.each_with_index{|e,i| e.all_rank = i }
+endorsements.each{|e| e.all_rank = endorsements.length - e.all_rank }
 
 BARGRAPH_COLORS = {
    3 => '#3030DB',  2 => '#9F9FE0',  1 => '#9F9FE0', 0 => '#999999',
   -3 => '#DB3030', -2 => '#E1A0A0', -1 => '#E1A0A0' }
 # A31818 A1BDDF
 def make_bargraph_point e
-
   { 'content' => (case e.prez when 'Obama' then -e.circ    when 'McCain' then e.circ   else 0  end),
     'xid'     => e.all_rank,
     'color'   => BARGRAPH_COLORS[e.movement],
