@@ -10,6 +10,7 @@ require 'newspaper_mapping'
 require 'cities_mapping'
 require 'map_projection'
 require 'endorsement'
+require 'metropolitan_areas'
 
 # Presidential Endorsements by Major Newspapers in the 2008 General Election
 # Editor & Publisher
@@ -19,6 +20,7 @@ require 'endorsement'
 
 # to spot check count
 # cat rawd/endorsements-raw-20081020.txt | egrep  '^\(?.[a-z]' | wc -l
+
 
 def parse_ep_endorsements(raw_filename)
   endorsements = {}
@@ -255,12 +257,20 @@ NEWSPAPER_CIRCS.each do |paper, info|
   endorsements[paper] = Endorsement.new('', '', rank, circ, daily, sun, lat, lng, st, city, paper)
 end
 #
-# Assign an overall rank
-# (note that this *isn't* the 'national rank' -- papers out of the top 100 could be missing, and split endorsements mess this up)
+# Post-process the full list
 #
-endorsements.sort_by{|p,e| -e.circ}.each_with_index{|pe,i| pe[1].all_rank = i+1 }
+endorsements.sort_by{|p,e| -e.circ}.each_with_index do |pe,i|
+  paper, endorsement = pe
+  # Assign an overall rank
+  # (note that this *isn't* the 'national rank' -- papers out of the top 100 could be missing, and split endorsements mess this up)
+  endorsement.all_rank = i+1
+  # Dig up the metro, if any
+  endorsement.metro    = CityMetro.get(endorsement.st, endorsement.city)
+end
+
+
 #
-# Sort all newspapers by their endorsed status
+# Bin all newspapers by their endorsed status
 #
 endorsement_bins = {
   nil => {:papers => [], :total_circ => 0, :title => 'Top 100 papers (by circulation) that have not yet endorsed a candidate', },
