@@ -4,6 +4,8 @@ require 'rubygems'
 require 'yaml'
 require 'xmlsimple'
 require 'imw/utils/extensions/core'
+require 'active_support'
+require 'action_view/helpers/number_helper'; include ActionView::Helpers::NumberHelper
 #
 require 'state_abbreviations'
 require 'newspaper_mapping'
@@ -233,17 +235,31 @@ def td el, width=0, html_class=nil, style=nil
 end
 def table_headings
   "<tr><th scope='col'>"+ [
-    "Circ. Rk", "Paper", "City", "Circulation", "2008 Endorsement", "2004 Endorsement"
+    "Circulation<br>Rank", "Paper", "City", "Circulation",
+    "Population Rank<br/>of Metro Area",
+    "2008<br/>Endorsement", "2004<br/>Endorsement"
     ].join('</th><th scope="col">') + "</th></tr>"
 end
+def pct(num) number_to_percentage(100*num, :precision => 0) end
 def table_row e
+  if (e.metro && e.metro.metro_stature == 'MSA')
+    metro_pop, metro_poprank =  e.metro.values_of(:pop_2007, :pop_rank)
+    # short_name = e.metro.metro_nickname
+    short_name = e.metro.metro_name.gsub(/([^,-]+)(?:[^,]*), (\w\w).*$/, '\1')
+    metro_name = "%s (%s)" % [short_name, e.metro.metro_st]
+    penetration = pct(e.circ.to_f / metro_pop)
+  else
+    metro_name, metro_pop, metro_poprank, penetration = []
+  end
   '    <tr>' + [
     (e.rank == 0 ? td('-', 3) : td(e.rank, 3)),
     td(e.paper,35), td(e.city_st, 40),
     td(e.circ_as_text, 9),
+    # td(metro_name, 30), td(metro_pop, 6), td(penetration, 5),
+    td(metro_poprank, 3),
     td(e.prez, 6, e.prez_color), td(e.prez04, 6, e.prez04_color),
     td("%6.1f"%e.lat, 6, :lat), td("%6.1f"%e.lng, 6, :lng),
-  ].join('') + '</tr>'
+  ].join('') + "</tr>\n"
 end
 #
 # add in those top-100 newspapers not yet listed
@@ -305,6 +321,14 @@ endorsement_table << table_headings()
     endorsement_table << '<tr><td colspan="8" style="text-align:center"><em>(none yet)</em></td></tr>'
   end
 end
+#
+# # Top 100 papers by metro
+# endorsement_table << "  <tr><th colspan='8' scope='colgroup' class='chunk'>Top 100 papers w/ Metro pop</th></tr>"
+# #reject{|paper, e| e.rank == 0 }.
+# endorsements.find_all{|paper, e| e.metro && e.metro.pop_rank }.sort_by{|paper, e| [e.metro.pop_rank, e.all_rank]}.each do |paper, e|
+#   endorsement_table << table_row(e)
+# end
+
 html_template = File.open('endorsements_map_template.html').read
 html_template.gsub!(/<!-- Endorsement Table Goes Here -->/, endorsement_table)
 File.open('endorsements_map.html','w'){|f| f << html_template}

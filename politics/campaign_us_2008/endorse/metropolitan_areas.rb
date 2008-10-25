@@ -1,10 +1,41 @@
-class CityMetro < Struct.new(:st, :metro_city, :city, :cbsa_code, :fips_state, :fips_place, :metro_st, :metro_stature)
-  METROS_MAPPING_SAVE_FILENAME   = 'fixd/metros_mapping.yaml'
+
+class MetropolitanArea < Struct.new(
+    :pop_2007, :pop_2000, :pop_rank, 
+    :pop_chg_pct_00_07, :pop_chg_pct_avg, 
+    :pop_at_or_above, :pop_aoa_pct, 
+    :metro_st, :metro_name, :metro_nickname, :csa_name)
+  ALL_METROS_SAVE_FILENAME   = 'fixd/all_metros.yaml'
   #
   def self.load
+    puts "Loading #{self.to_s} from cached..."
+    YAML.load(File.open(ALL_METROS_SAVE_FILENAME))
+  end
+  def self.dump
+    puts "Dumping #{self.to_s} to cached..."
+    YAML.dump(@all_metros, File.open(ALL_METROS_SAVE_FILENAME, 'w'))
+  end
+  def self.all_metros
+    return @all_metros if @all_metros
+    @all_metros = load()
+  end
+  def self.find_by_name metro_name
+    all_metros.find{|metro| (metro.metro_name == metro_name) }
+  end
+end
+
+class CityMetro < Struct.new(
+    :st, :city, :fips_state, :fips_place, 
+    :cbsa_code, :metro_name, :metro_stature,
+    *(MetropolitanArea.members-['metro_name'])
+    )
+  METROS_MAPPING_SAVE_FILENAME   = 'fixd/cities_to_metros.yaml'
+  #
+  def self.load
+    puts "Loading #{self.to_s} from cached..."
     YAML.load(File.open(METROS_MAPPING_SAVE_FILENAME))
   end
   def self.dump
+    puts "Dumping #{self.to_s} to cached..."
     YAML.dump(@cities_to_metros, File.open(METROS_MAPPING_SAVE_FILENAME, 'w'))
   end
   #
@@ -17,4 +48,3 @@ class CityMetro < Struct.new(:st, :metro_city, :city, :cbsa_code, :fips_state, :
     self.cities_to_metros[ [st, city] ]
   end
 end
-

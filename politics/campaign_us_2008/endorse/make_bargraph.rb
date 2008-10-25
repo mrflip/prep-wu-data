@@ -17,10 +17,8 @@ class Endorsement < Struct.new(
   )
   def initialize(*args)
     super *args
-    [:circ, :daily, :sun, :movement, :rank, :all_rank
-    ].each{|attr| self[attr] = self[attr].to_i }
-    [:lat, :lng
-    ].each{|attr| self[attr] = self[attr].to_f }
+    [:circ, :daily, :sun, :movement, :rank, :all_rank].each{|attr| self[attr] = self[attr].to_i }
+    [:lat, :lng                                      ].each{|attr| self[attr] = self[attr].to_f }
     self.movement ||= 0
   end
 

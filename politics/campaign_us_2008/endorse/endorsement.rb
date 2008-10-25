@@ -13,6 +13,8 @@ class Endorsement < Struct.new(
     fix_movement
     fix_lat_lng_overlap
     self.prez04 = PREZ04[prev]
+    [:circ, :daily, :sun, :movement, :rank, :all_rank].each{|attr| self[attr] = self[attr].to_i if self[attr] }
+    [:lat, :lng                                      ].each{|attr| self[attr] = self[attr].to_f if self[attr] }
   end
   #
   # score the endorsement: 1 point for d=>d, 2 for none => d, 3 for r => d
