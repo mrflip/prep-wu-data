@@ -1,11 +1,11 @@
 
-MOVEMENT_FROM           = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, 'N' => 1 }
+MOVEMENT_FROM           = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, 'N' => 0 }
 MOVEMENT_TO             = { 'McCain' => -2, 'Obama' => 2, }
 PREZ04                  = { 'B'  => 'Bush', ''   => '', 'N/A' => '(none)', 'K' => 'Kerry', 'N' => '(none)' }
 SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review-Journal', 'The Chattanooga Free Press', 'Chattanooga Times']
 class Endorsement < Struct.new(
   :prez, :prev, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
-  :movement, :prez04, :all_rank # don't set these -- will be set from other attrs
+  :movement, :prez04, :all_rank, :metro # don't set these -- will be set from other attrs
   )
   def initialize(*args)
     super *args
@@ -69,16 +69,17 @@ class Endorsement < Struct.new(
   end
 
   #
-  #
+  # attributes as text
   #
   def city_st
     (paper == 'USA Today') ? "[national]" : "#{city}, #{st}"
   end
-
   def prez_as_text
      (prez == '') ? '(none yet)' : prez
   end
-
+  #
+  # Color code for table
+  #
   def self.party_color candidate
     case candidate
     when 'Obama', 'Kerry', 'Gore', 'Clinton'    then 'blue'

@@ -7,7 +7,7 @@
   <meta http-equiv="keywords"	 content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
   <meta name="Keywords"		 content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
   <style>
-    div		{ font: 10pt 'Trebuchet MS', sans-serif; line-height: 1.4; color:#444444 }
+    div		{ font: 10pt 'Trebuchet MS', sans-serif; line-height: 1.4; color:#333 }
     a		{ text-decoration:none }
     a		{ color: #222244; font-weight: bold }
     a:visited	{ color: #442244 }
@@ -44,8 +44,8 @@
 	// <![CDATA[		
 	var so = new SWFObject("temp/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-map.xml?20081023a"));
-	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph.xml?20081023a"));
+	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-map.xml?20081024"));
+	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph.xml?20081024"));
 	so.write("flashcontent");
 	// ]]>
     </script>
@@ -61,8 +61,8 @@
       // <![CDATA[		
 	var so = new SWFObject("temp/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-bargraph.xml?20081023a"));        // you can set two or more different settings files here (separated by commas)
-	so.addVariable("data_file",     encodeURIComponent("fixd/endorsements-bargraph.xml?20081023a"));		
+	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-bargraph.xml?20081024"));        // you can set two or more different settings files here (separated by commas)
+	so.addVariable("data_file",     encodeURIComponent("fixd/endorsements-bargraph.xml?20081024"));		
 	//  so.addVariable("loading_settings", "LOADING SETTINGS");   // you can set custom "loading settings" text here
 	//  so.addVariable("loading_data", "LOADING DATA");           // you can set custom "loading data" text here
   	//  so.addVariable("preloader_color", "#000000");	
@@ -91,37 +91,38 @@
         market supporting multiple papers, readers and journalists are
         efficiently sorted into two separate camps.</li>
 
-        <li>Because we don't double count, our 'total circulation endorsing'
-        figures differ slightly from E&amp;P's</li>
-        
         <li>The amount of blue in the red states highlights how foolishly
         incomplete the "<a title="One Fish Two Fish Red Fish Blue Fish?"
         href="http://en.wikipedia.org/wiki/One_Fish_Two_Fish_Red_Fish_Blue_Fish">Red
-        State</a>/<a href="http://en.wikipedia.org/wiki/Red_states_and_blue_states">Blue
-        State</a>" model is for anything but electoral college returns.
-        The <a href="http://www-personal.umich.edu/~mejn/election/">largest part
-        of the Red/Blue split is Rural/Urban</a>.  Look at
-        the <a href="http://www-personal.umich.edu/~mejn/election/countymap30701280x1024.png">electoral
-        cartogram</a> for the last election and almost every city is blue, even
-        in the south and mountain, while almost all rural areal is red, even in
+        State</a>/<a
+        href="http://en.wikipedia.org/wiki/Red_states_and_blue_states">Blue
+        State</a>" model is for anything but electoral college returns.  The <a
+        href="http://www-personal.umich.edu/~mejn/election/">largest part of the
+        Red/Blue split is Rural/Urban</a>.  Consider the <a
+        href="http://www-personal.umich.edu/~mejn/election/countymap30701280x1024.png">electoral
+        cartogram</a> for the last election. Almost every city is blue, even in
+        the south and mountain, while almost all rural areal is red, even in
         California and Massachusetts.  The urban exceptions on the cartogram --
         chiefly Dallas, Houston and Boise -- stand noticeably alone on the
-        endorsement map as having red unpaired with blue.  (Though in this
-        election even the Houston Chronicle is endorsing Obama.)  I'm hoping to
-        try to make an underlying map colored by county, but have not yet found
-        good off-the-shelf tools for doing so.</li>
+        endorsement map as having red unpaired with blue.  (in this election
+        even the Houston Chronicle is endorsing Obama, but they are quite
+        traditionally Republican.) </li>
         
       </ul>
       
       <p>This seems to speak of why so many on the right feel there's a <abbr
-      title="Mainstream Media">MSM</abbr> bias -- 50% of the country is urban,
-      50% rural, but newspapers are located exclusively in urban areas.  So,
-      surprisingly, the major right-leaning papers are all located in parts of
-      the country we consider highly <em>leftish</em>.
+      title="Mainstream Media">MSM</abbr> bias. Roughly 50% of the country lives
+      in a <a
+      href="http://en.wikipedia.org/wiki/Table_of_United_States_Metropolitan_Statistical_Areas">top-50
+      metro area</a> (metros of over a million people: like Salt Lake City or
+      Raleigh, NC and on up), 50% live outside (in rural areas, or in cities
+      like Fresno, CA and Allentown/Bethlehem, PA or smaller).  But our major
+      newspapers are located almost exclusively in urban areas. </p>
 
-       The largest urban areas are thus both «<em>the most liberal</em>» and
-       «<em>the most likely to support a sizeable conservative target
-       audience</em>».</p>
+      <p>Thus, surprisingly, the <strong>major right-leaning papers are located in
+      parts of the country we consider highly <em>leftish</em></strong>: the largest
+      urban areas are both «<em>the most liberal</em>» and «<em>the most
+      likely to support a sizeable conservative target audience</em>».</p>
     </div>
     <br/>
     <div style="clear:both; margin:auto; width:600px; margin-top:3em">
@@ -178,6 +179,9 @@
 	personality</a>.  In each case, the papers' circulation and thus
 	bubble size are divided equally, but their rank order is assigned at full weight.</li>
 	
+        <li>Because we don't double count, our 'total circulation endorsing'
+        figures differ slightly from E&amp;P's</li>
+        
         <li>Also: Seriously though -- how many newspapers does the Bay Area need?</li>
       </ol>
     </div>

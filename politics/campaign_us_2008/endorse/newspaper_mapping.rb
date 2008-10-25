@@ -29,7 +29,7 @@ NEWSPAPER_CIRCS = {
   'Falls Church News-Press'                => [   0,     30500,     30500,         0,   38.890,  -77.170, "VA", 'Falls Church',                false ],
   'Daily Review'                           => [   0,     30704,     30704,         0,   37.650, -122.120, "CA", 'Hayward',                     false ],
   'The Daily Sentinel'                     => [   0,     31349,     31349,         0,   39.090, -108.550, "CO", 'Grand Junction',              false ],
-  'Arkansas Times'                         => [   0,     34000,     34000,         0,   35.220,  -92.380, "AR", 'Little Rock',                 false ],
+  # 'Arkansas Times'                         => [   0,     34000,     34000,         0,   35.220,  -92.380, "AR", 'Little Rock',                 false ],
   'The Muskegon Chronicle'                 => [   0,     41114,     41114,         0,   43.170,  -86.250, "MI", 'Muskegon',                    false ],
   'The (Lowell) Sun'                       => [   0,     44439,         0,         0,   42.640,  -71.320, "MA", 'Lowell',                      false ],
   'The Express-Times'                      => [   0,     44561,     44561,         0,   40.690,  -75.220, "PA", 'Easton',                      false ],
@@ -40,7 +40,7 @@ NEWSPAPER_CIRCS = {
   'The Baltimore Examiner'                 => [   0,     50000,     50000,         0,   39.180,  -76.670, "MD", 'Baltimore',                   false ],
   'Asheville Citizen-Times'                => [   0,     50160,     50160,         0,   35.430,  -82.550, "NC", 'Asheville',                   false ],
   'Union Leader'                           => [   0,     51782,     51782,         0,   42.930,  -71.430, "NH", 'Manchester',                  false ],
-  'el Diario'                              => [   0,     53856,     53856,         0,   40.770,  -73.880, "NY", 'New York City',               false ],
+  'el Diario'                              => [   0,     53856,     53856,         0,   40.770,  -73.880, "NY", 'New York',                    false ],
   'San Bernardino Sun'                     => [   0,     54315,     54315,         0,   34.140, -117.290, "CA", 'San Bernardino',              false ],
   'The (Stockton) Record'                  => [   0,     57486,     57486,         0,   37.900, -121.250, "CA", 'Stockton',                    false ],
   'Honolulu Star-Bulletin'                 => [   0,     64305,     64305,         0,   28.610, -109.360, "HI", 'Honolulu',                    false ],
@@ -89,10 +89,10 @@ NEWSPAPER_CIRCS = {
   'Investor\'s Business Daily'             => [  65,    161421,    161421,         0,   33.930, -118.400, "CA", 'Los Angeles',                 false ],
   'The Record'                             => [  64,    163329,    163329,    195525,   40.889,  -74.046, "NJ", 'Hackensack',                  false ],
   'Riverside Press-Enterprise'             => [  63,    164189,    164189,    172730,   33.950, -117.450, "CA", 'Riverside',                   false ],
-  'The Palm Beach Post'                    => [  62,    164474,    164474,    195608,   26.680,  -80.120, "FL", 'Palm Beach',                  false ],
+  'The Palm Beach Post'                    => [  62,    164474,    164474,    195608,   26.680,  -80.120, "FL", 'West Palm Beach',             false ],
   'The Hartford Courant'                   => [  61,    168158,    168158,    237933,   41.730,  -72.650, "CT", 'Hartford',                    false ],
   'Austin American-Statesman'              => [  60,    170309,    170309,    206505,   30.300,  -97.700, "TX", 'Austin',                      false ],
-  "Las Vegas Sun"                          => [  59,     174341,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false ],
+  "Las Vegas Sun"                          => [  59,    174341,         0,         0,   36.080, -115.170, "NV", "Las Vegas",                   false ],
   'Las Vegas Review-Journal'               => [  59,    174341,    174341,    199602,   36.080, -115.170, "NV", 'Las Vegas',                   false ],
   'The Virginian Pilot'                    => [  58,    175005,    175005,    200012,   36.923,  -76.245, "VA", 'Norfolk',                     false ],
   'Richmond Times-Dispatch'                => [  57,    175265,    175265,    205895,   37.500,  -77.330, "VA", 'Richmond',                    false ],
@@ -146,8 +146,8 @@ NEWSPAPER_CIRCS = {
   'Houston Chronicle'                      => [   9,    494131,    494131,    632797,   29.970,  -95.350, "TX", 'Houston',                     false ],
   'Chicago Tribune'                        => [   8,    541663,    541663,    541663,   41.900,  -87.850, "IL", 'Chicago',                     false ],
   'The Washington Post'                    => [   7,    673180,    673180,    673180,   38.910,  -77.020, "DC", 'Washington',                  false ],
-  'New York Post'                          => [   6,    702488,    702488,    702488,   40.770,  -73.380, "NY", 'New York City',               false ],
-  "Daily News"                             => [   5,    703137,    718174,    703137,   40.770,  -74.180, "NY", "New York City",               false ],
+  'New York Post'                          => [   6,    702488,    702488,    702488,   40.770,  -73.380, "NY", 'New York',                    false ],
+  "Daily News"                             => [   5,    703137,    718174,    703137,   40.770,  -74.180, "NY", "New York",                    false ],
   'Los Angeles Times'                      => [   4,    773884,    773884,    773884,   33.930, -118.400, "CA", 'Los Angeles',                 false ],
   'The New York Times'                     => [   3,   1077256,   1077256,   1476400,   40.770,  -73.980, "NY", 'New York',                    false ],
   'The Wall Street Journal'                => [   2,   2069463,   2069463,         0,   40.770,  -73.980, "NY", 'New York',                    false ],
@@ -195,7 +195,7 @@ NEWSPAPER_CIRCS = {
   "Statesman-Journal"                      => [  0,     47152,         0,         0,   44.920, -123.000, "OR", "Salem",                       false],
   "The Daily Item"                         => [  0,     24879,         0,         0,   40.862,  -76.788, "PA", "Sunbury",                     false],
   "The Eagle"                              => [  0,     21654,         0,         0,   30.669,  -96.365, "TX", "Bryan",                       false],
-  "The Olympian"                           => [  0,     30755,         0,         0,   46.970, -122.900, "WA", "Olympian",                    false],
+  "The Olympian"                           => [  0,     30755,         0,         0,   46.970, -122.900, "WA", "Olympia",                     false],
   "Tri-City Herald"                        => [  0,     40830,         0,         0,   46.203, -119.170, "WA", "Kennewick",                   false],
   "Walla Walla Union-Bulletin"             => [  0,     13624,         0,         0,   46.100, -118.280, "WA", "Walla Walla",                 false],
   "Daily Times-Call"                       => [  0,     21127,         0,         0,   40.173, -105.112, "CO", "Longmont",                    false],
@@ -234,13 +234,24 @@ NEWSPAPER_CIRCS = {
   "The Daily News Record"                  => [  0,     30908,         0,         0,   38.437,  -78.874, "VA", "Harrisonburg",                false],
 
   # 20081023
+  "Cape Coral Daily Breeze"                => [  0,      2015,         0,         0,   26.638,  -81.997, "FL", "Cape Coral",                  false], # fixed circ
+  "Longview News-Journal"                  => [  0,     27590,         0,         0,   32.380,  -94.720, "TX", "Longview",                    false], # fixed circ
   "Merced Sun Star"                        => [  0,     15015,         0,         0,   37.280, -120.520, "CA", "Merced",                      false], # fixed loc
-  "North Adams Transcript"                 => [  0,         0,         0,         0,   42.687,  -73.114, "MA", "North Adams",                 false], # fixed loc
-  "The Daily Star"                         => [  0,         0,         0,         0,   42.870,  -75.120, "NY", "Oneonta",                     false], # fixed loc
-  "Longview News-Journal"                  => [  0,         0,         0,         0,   32.380,  -94.720, "TX", "Longview",                    false], # fixed loc
-  "Virginia Gazette"                       => [  0,         0,         0,         0,   37.270,  -76.707, "VA", "Williamsburg",                false], # fixed loc
-  "The Register Citizen"                   => [  0,         0,         0,         0,   41.835,  -73.129, "CT", "Torrington",                  false], # fixed loc
-  "Cape Coral Daily Breeze"                => [  0,         0,         0,         0,   26.638,  -81.997, "FL", "Cape Coral",                  false], # fixed loc
+  "North Adams Transcript"                 => [  0,      5949,         0,         0,   42.687,  -73.114, "MA", "North Adams",                 false], # fixed circ
+  "The Daily Star"                         => [  0,     14391,         0,         0,   42.870,  -75.120, "NY", "Oneonta",                     false], # fixed circ
+  "The Register Citizen"                   => [  0,      8217,         0,         0,   41.835,  -73.129, "CT", "Torrington",                  false], # fixed circ
+  # "Virginia Gazette"                       => [  0,         0,         0,         0,   37.270,  -76.707, "VA", "Williamsburg",                false], # fixed loc
+
+  # 20081024
+
+  "Vail Daily"                             => [  0,     10525,         0,         0,   39.639, -106.358, "CO", "Vail",                        false], # fixed loc
+  "Lake County News-Sun"                   => [  0,     16899,         0,         0,   42.371,  -87.868, "IL", "Waukegan",                    false], # fixed loc
+  "The Ledger Independent"                 => [  0,         0,         0,         0,   38.630,  -83.780, "KY", "Maysville",                   false], # fixed loc
+  "Muskogee Phoenix"                       => [  0,         0,         0,         0,   35.748,  -95.352, "OK", "Muskogee",                    false], # fixed loc
+  "Corvallis Gazette-Times"                => [  0,     12092,         0,         0,   44.500, -123.280, "OR", "Corvallis",                   false], # fixed loc
+  "Stevens Point Journal"                  => [  0,         0,         0,         0,   44.528,  -89.561, "WI", "Stevens Point",               false], # fixed loc
+  "McCook Daily Gazette"                   => [  0,      5903,         0,         0,   40.204, -100.620, "NE", "McCook",                      false], # fixed loc
+  "Kerrville Daily Times"                  => [  0,      8971,         0,         0,   29.980,  -99.080, "TX", "Kerrville",                   false], # fixed loc
 
 }
 # removed:

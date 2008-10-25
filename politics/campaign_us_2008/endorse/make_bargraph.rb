@@ -51,10 +51,11 @@ BARGRAPH_COLORS = {
   -3 => '#DB3030', -2 => '#E1A0A0', -1 => '#E1A0A0' }
 # A31818 A1BDDF
 def make_bargraph_point e
+  rk = (e.rank==0) ? '' : " (##{e.rank})"
   { 'content' => (case e.prez when 'Obama' then -e.circ    when 'McCain' then e.circ   else 0  end),
     'xid'     => e.all_rank,
     'color'   => BARGRAPH_COLORS[e.movement],
-    'description' => "#{e.paper}<br/>Circulation #{e.circ}<br>2008:#{e.prez}, 2004:#{(e.prez04=='' ? 'none' : e.prez04 )}",
+    'description' => "#{e.paper}<br/>Circulation #{e.circ}#{rk}<br>2008:#{e.prez}, 2004:#{(e.prez04=='' ? 'none' : e.prez04 )}",
   }
 end
 
