@@ -12,8 +12,7 @@ require 'map_projection'
 
 class Endorsement < Struct.new(
   :prez, :prev, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
-    :movement, :prez04,
-    :all_rank
+  :movement, :prez04, :all_rank, :metro # don't set these -- will be set from other attrs
   )
   def initialize(*args)
     super *args
