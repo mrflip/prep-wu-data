@@ -19,10 +19,11 @@ td			{ padding: 2px 6px }
 th			{ background-color: #eee;    padding: 1em 10px;		  text-align: center }
 th.chunk		{ background-color: inherit; padding: 1.25em 10px 0.25em; text-align: left;  }
 div.centered    	{ margin: auto }
-td.lat, td.lng  	{ display: none }
+td.lat, td.lng, .hid 	{ display: none }
 td.red			{ background-color: #fff4f4}
 td.blue 		{ background-color: #f4f4ff}
 td.gray 		{ background-color: #fafafa}
-td.none 		{ background-color: inherit }	
+td.none 		{ background-color: inherit }
+td.poprk	 	{ text-align: right  }
 h1			{ text-align: center }
 div.endorsementmap	{ margin:auto; width:1000px; min-height:564px; background:'pix/county04_map.png' }

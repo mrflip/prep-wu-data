@@ -233,13 +233,6 @@ def td el, width=0, html_class=nil, style=nil
   style      = style      ? " style='#{html_class}'" : ''
   "%-#{width+9+html_class.length}s" % ["<td#{html_class}>#{el}</td>"]
 end
-def table_headings
-  "<tr><th scope='col'>"+ [
-    "Circulation<br>Rank", "Paper", "City", "Circulation",
-    "Population Rank<br/>of Metro Area",
-    "2008<br/>Endorsement", "2004<br/>Endorsement"
-    ].join('</th><th scope="col">') + "</th></tr>"
-end
 def pct(num) number_to_percentage(100*num, :precision => 0) end
 def table_row e
   if (e.metro && e.metro.metro_stature == 'MSA')
@@ -253,11 +246,11 @@ def table_row e
   end
   '    <tr>' + [
     (e.rank == 0 ? td('-', 3) : td(e.rank, 3)),
-    td(e.paper,35), td(e.city_st, 40),
-    td(e.circ_as_text, 9),
-    # td(metro_name, 30), td(metro_pop, 6), td(penetration, 5),
-    td(metro_poprank, 3),
-    td(e.prez, 6, e.prez_color), td(e.prez04, 6, e.prez04_color),
+    td(e.paper,35), td(e.circ_as_text, 9),
+    td(metro_name, 30, :hid), td(metro_pop, 6, :hid), td(penetration, 5, :hid),
+    td(metro_poprank, 3, :poprk),
+    td(e.city_st, 40),
+    td(e.prez04, 6, e.prez04_color), td(e.prez, 6, e.prez_color),
     td("%6.1f"%e.lat, 6, :lat), td("%6.1f"%e.lng, 6, :lng),
   ].join('') + "</tr>\n"
 end
@@ -310,7 +303,6 @@ end
 # Dump HTML for endorsement status
 #
 endorsement_table = ''
-endorsement_table << table_headings()
 [3, 1, -1, -3, nil].each do |bin|
   vals = endorsement_bins[bin]
   endorsement_table << "  <tr><th colspan='8' scope='colgroup' class='chunk'>#{vals[:title]}: #{vals[:papers].length} papers, #{as_millions(vals[:total_circ])} total circulation</th></tr>"
