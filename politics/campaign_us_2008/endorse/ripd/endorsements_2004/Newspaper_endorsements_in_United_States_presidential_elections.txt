@@ -1,0 +1,60 @@
+Newspaper 	City/State 	Year 	Democratic 	Nominated? 	Republican 	Nominated? 	General election endorsement 	Won?
+Austin American Statesman 	Austin Texas 	2008					Barack Obama[1]	
+		2004					George W. Bush 	Yes
+Boston Globe 	Boston, Massachusetts 	2008	Barack Obama[2] 	Yes 	John McCain[3] 	Yes 	Barack Obama[4] 	 ?
+		2004	John Kerry[5] 	Yes 	(incumbent George W. Bush) 	N/A 	John Kerry[6] 	No
+		2000	Al Gore[7] 	Yes 	John McCain[7] 	No 	Al Gore[8] 	No
+Dallas Morning News 	Dallas, Texas 	2008	Barack Obama[9] 	Yes 	Mike Huckabee[10] 	No 	John McCain[11] 	 ?
+Denver Post 	Denver, Colorado 	2008	Hillary Clinton[12] 	No 	Mitt Romney[12] 	No 	Barack Obama[13] 	 ?
+Des Moines Register 	Des Moines, Iowa 	2008	Hillary Clinton[14] 	No 	John McCain[14] 	Yes 	TBD 	 ?
+		2004	John Edwards[15] 	No 	(incumbent George W. Bush) 	N/A 	John Kerry[16] 	No
+		2000	Bill Bradley[17] 	No 	John McCain[18] 	No 	Al Gore[19] 	No
+Detroit Free Press 	Detroit, Michigan 	2008	None 	N/A 	John McCain 	Yes 	Barack Obama[20] 	 ?
+		2004	John Kerry 	Yes 	(incumbent George W. Bush) 	N/A 	John Kerry 	No
+		2000			John McCain[21] 	No 	Al Gore 	No
+Kansas City Star 	Kansas City, Missouri 	2008	Hillary Clinton[22] 	No 	John McCain[23] 	Yes 	Barack Obama[24] 	 ?
+		2004	John Kerry 	Yes 	(incumbent George W. Bush) 	N/A 	John Kerry 	No
+		2000	Bill Bradley 	No 			Al Gore 	No
+Los Angeles Times 	Los Angeles, California 	2008	Barack Obama[25] 	Yes 	John McCain[25] 	Yes 	Barack Obama [26] 	 ?
+New Hampshire Union Leader 	Manchester, New Hampshire 	2008			John McCain 	Yes 	TBD 	 ?
+		2004	Joseph Lieberman[27] 	No 	(incumbent George W. Bush) 	N/A 		
+		2000			Steve Forbes 	No 		
+		1996	(incumbent Bill Clinton) 	N/A 	Pat Buchanan 	No 		
+New York Times 	New York City, New York 	2008	Hillary Clinton[28] 	No 	John McCain[29] 	Yes 	Barack Obama 	 ?
+		2004	John Kerry[30] 	Yes 	(incumbent George W. Bush) 	N/A 	John Kerry 	No
+		2000	Al Gore[31] 	Yes 	John McCain[31] 	No 	Al Gore 	No
+Sacramento Bee 	Sacramento, California 	2008	Barack Obama[32] 	Yes 	John McCain[33] 	Yes 	Barack Obama[34] 	 ?
+		2004	John Kerry 	Yes 	(incumbent George W. Bush) 	N/A 	John Kerry 	No
+		2000			John McCain[35] 	No 	Al Gore 	No
+		1996	(incumbent Bill Clinton) 	N/A 	Robert Dole 	Yes 	Bill Clinton 	Yes
+Chicago Tribune 	Chicago, IL 	2008					Barack Obama[36]	
+		2004					George W. Bush[37] 	Yes
+Washington Post 	Washington, DC 	2008					Barack Obama[38]	
+		2004					John Kerry[39] 	No
+New York Post 	New York, NY 	2008					John McCain[40]	
+		2004					George W. Bush[41] 	Yes
+Houston Chronicle 	Houston, TX 	2008					Barack Obama[42]	
+		2004					George W. Bush[43] 	Yes
+Philadelphia Inquirer 	Philadelphia, PA 	2008					Barack Obama[44]	
+		2004					John Kerry[45] 	No
+[[Minneapolis Star Tribune 	Minneapolis, MN 	2004					John Kerry[46] 	No
+Arizona Republic 	Phoenix, AZ 	2004					George W. Bush[47] 	Yes
+Atlanta Journal Constitution 	Atlanta, GA 	2008					Barack Obama[48]	
+		2004					John Kerry[49] 	No
+San Francisco Chronicle 	San Francisco, CA 	2008					Barack Obama[50]	
+		2004					John Kerry[51] 	No
+The Seattle Times 	Seattle, WA 	2008					Barack Obama[52] 	N/A
+		2004					John Kerry[53] 	?
+St. Louis Post-Dispatch 	St. Louis, MO 	2008					Barack Obama[54]	
+		2004					John Kerry[55] 	No
+Cleveland Plain Dealer 	Cleveland, OH 	2008					Barack Obama[56] 	 ?
+Milwaukee Journal-Sentinal 	Milwaukee, WI 	2004					John Kerry[57] 	No
+The San Diego Union Tribune 	San Diego, CA 	2004					George W. Bush[58] 	Yes
+St. Petersburg Times 	St. Petersburg, FL 	2004					John Kerry[59] 	No
+		2000					George W. Bush[60] 	Yes
+The Baltimore Sun 	Baltimore, MD 	2004						
+Portland Oregonian 	Portland, OR 	2008					Barack Obama[61]	
+		2004					John Kerry[62] 	No
+The Miami Herald 	Miami, FL 	2008					Barack Obama[63]	
+		2004					John Kerry[64] 	No
+The Columbus Dispatch 	Columbus, OH 	2004					George W. Bush[65] 	Yes
