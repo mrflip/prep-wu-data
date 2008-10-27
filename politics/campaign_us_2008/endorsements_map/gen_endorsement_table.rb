@@ -75,3 +75,8 @@ end
 # endorsements.find_all{|paper, e| e.metro && e.metro.pop_rank }.sort_by{|paper, e| [e.metro.pop_rank, e.all_rank]}.each do |paper, e|
 #   endorsement_table << table_row(e)
 # end
+
+
+html_template = File.open('endorsements_map_template.html').read
+html_template.gsub!(/<!-- Endorsement Table Goes Here -->/, endorsement_table)
+File.open('endorsements_map.html','w'){|f| f << html_template}

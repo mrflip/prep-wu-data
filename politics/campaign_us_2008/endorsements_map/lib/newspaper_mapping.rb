@@ -2,7 +2,6 @@
 #
 # # http://www.burrellesluce.com/top100/2008_Top_100List.pdf
 NEWSPAPER_CIRCS = {
-
   # paper                                      rank       circ      daily     sunday       lat       lng    st  city                           needfix
   'Naples Daily-News'                      => [   0,         0,         0,         0,   26.130,  -81.800, "FL", 'Naples',                      false ],
   'Mountain Valley News'                   => [   0,      2000,      2000,         0,   38.900, -107.930, "CO", 'Cedaredge',                   false ],
@@ -151,10 +150,8 @@ NEWSPAPER_CIRCS = {
   'Los Angeles Times'                      => [   4,    773884,    773884,    773884,   33.930, -118.400, "CA", 'Los Angeles',                 false ],
   'The New York Times'                     => [   3,   1077256,   1077256,   1476400,   40.770,  -73.980, "NY", 'New York',                    false ],
   'The Wall Street Journal'                => [   2,   2069463,   2069463,         0,   40.770,  -73.980, "NY", 'New York',                    false ],
-  # 'USA Today'                              => [   1,   2284219,   2284219,         0,   47.683,  -79.911, "  ", '',                          false ],
+  # 'USA Today' #moved it off map          => [   1,   2284219,   2284219,         0,   47.683,  -79.911, "  ", '',                          false ],
   'USA Today'                              => [   1,   2284219,   2284219,         0,   80.683,  -79.911, "",   '',                            false ],
-
-
   # 20081019
   "Tuscaloosa News"                        => [  0,     32768,         0,         0,   33.230,  -87.620, "AL", "Tuscaloosa",                  false],
   "Daily Breeze"                           => [  0,     66599,         0,         0,   33.800, -118.330, "CA", "Torrance",                    false],
@@ -164,7 +161,6 @@ NEWSPAPER_CIRCS = {
   "Naples Daily-News"                      => [  0,     66272,         0,         0,   26.130,  -81.800, "FL", "Naples",                      false],
   "Idaho Statesman"                        => [  0,     61927,         0,         0,   43.570, -116.220, "ID", "Boise",                       false],
   "Anchorage Daily News"                   => [  0,     71711,     71711,     89423,   61.170, -150.020, "AK", "Anchorage",                   false],
-
   "Bangor Daily News"                      => [  0,     55627,     28600,         0,   44.800,  -68.820, "ME", "Bangor",                      false],
   "Bakersfield Californian"                => [  0,     59433,         0,         0,   35.430, -119.050, "CA", "Bakersfield",                 false],
   "Brunswick Times-Record"                 => [  0,      9317,         0,         0,   43.880,  -69.930, "ME", "Brunswick",                   false],
@@ -184,7 +180,6 @@ NEWSPAPER_CIRCS = {
   "Times Record News"                      => [  0,     28888,         0,         0,   33.898,  -98.516, "TX", "Wichita Falls",               false],
   "Rockford Register Star"                 => [  0,     55913,         0,         0,   42.200,  -89.100, "IL", "Rockford",                    false],
   "Daily Press"                            => [  0,     91508,     83367,    107701,   37.130,  -76.500, "VA", "Newport News",                false],
-
   # 20081020
   "Long Beach Press Telegram"              => [  0,     85595,         0,         0,   33.820, -118.150, "CA", "Long Beach",                  false],
   "San Gabriel Valley Tribune"             => [  0,     40051,         0,         0,   34.095, -118.098, "CA", "San Gabriel",                 false],
@@ -209,7 +204,6 @@ NEWSPAPER_CIRCS = {
   "Beaumont Enterprise"                    => [  0,     45684,         0,         0,   30.088,  -94.144, "TX", "Beaumont",                    false],
   "The Lubbock Avalanche-Journal"          => [  0,     49094,         0,         0,   33.650, -101.820, "TX", "Lubbock",                     false],
   "The Winchester Star"                    => [  0,     20218,         0,         0,   39.174,  -78.175, "VA", "Winchester",                  false],
-
   # 20081022
   "Inland Valley Daily Bulletin"           => [  0,     53903,         0,         0,   34.054, -117.606, "CA", "Ontario",                     false],
   "San Mateo Daily Journal"                => [  0,     14800,         0,         0,   33.380, -117.580, "CA", "San Mateo",                   false],
@@ -232,7 +226,6 @@ NEWSPAPER_CIRCS = {
   "The Chattanooga Free Press"             => [  0,     71716,         0,         0,   35.030,  -85.200, "TN", "Chattanooga",                 false],
   "Tyler Morning Telegraph"                => [  0,     35598,         0,         0,   32.328,  -95.304, "TX", "Tyler",                       false],
   "The Daily News Record"                  => [  0,     30908,         0,         0,   38.437,  -78.874, "VA", "Harrisonburg",                false],
-
   # 20081023
   "Cape Coral Daily Breeze"                => [  0,      2015,         0,         0,   26.638,  -81.997, "FL", "Cape Coral",                  false], # fixed circ
   "Longview News-Journal"                  => [  0,     27590,         0,         0,   32.380,  -94.720, "TX", "Longview",                    false], # fixed circ
@@ -240,10 +233,8 @@ NEWSPAPER_CIRCS = {
   "North Adams Transcript"                 => [  0,      5949,         0,         0,   42.687,  -73.114, "MA", "North Adams",                 false], # fixed circ
   "The Daily Star"                         => [  0,     14391,         0,         0,   42.870,  -75.120, "NY", "Oneonta",                     false], # fixed circ
   "The Register Citizen"                   => [  0,      8217,         0,         0,   41.835,  -73.129, "CT", "Torrington",                  false], # fixed circ
-  # "Virginia Gazette"                       => [  0,         0,         0,         0,   37.270,  -76.707, "VA", "Williamsburg",                false], # fixed loc
-
+  # "Virginia Gazette"                     => [  0,         0,         0,         0,   37.270,  -76.707, "VA", "Williamsburg",                false], # fixed loc
   # 20081024
-
   "Vail Daily"                             => [  0,     10525,         0,         0,   39.639, -106.358, "CO", "Vail",                        false], # fixed loc
   "Lake County News-Sun"                   => [  0,     16899,         0,         0,   42.371,  -87.868, "IL", "Waukegan",                    false], # fixed loc
   "The Ledger Independent"                 => [  0,         0,         0,         0,   38.630,  -83.780, "KY", "Maysville",                   false], # fixed loc
@@ -252,11 +243,10 @@ NEWSPAPER_CIRCS = {
   "Stevens Point Journal"                  => [  0,         0,         0,         0,   44.528,  -89.561, "WI", "Stevens Point",               false], # fixed loc
   "McCook Daily Gazette"                   => [  0,      5903,         0,         0,   40.204, -100.620, "NE", "McCook",                      false], # fixed loc
   "Kerrville Daily Times"                  => [  0,      8971,         0,         0,   29.980,  -99.080, "TX", "Kerrville",                   false], # fixed loc
-
 }
 # removed:
-  # "Beaumont Monitor"                     => [  0,         0,         0,         0,   30.088,  -94.144, "TX", "Beaumont",                    false],
-  # "Wharton Journal-Spectator"              => [  0,      5000,         0,         0,   29.316,  -96.099, "TX", "Wharton",                     false], # weekly
+# "Beaumont Monitor"                     => [  0,         0,         0,         0,   30.088,  -94.144, "TX", "Beaumont",                    false],
+# "Wharton Journal-Spectator"              => [  0,      5000,         0,         0,   29.316,  -96.099, "TX", "Wharton",                     false], # weekly
 
 # wget -nv -O- 2>/dev/null 'http://google.com/search?q=Brunswick+Times-Record+circulation'        | ruby -ne '($_ =~ %r{id=aob([^!]+)!}) && puts($1)'
 # circs.each do |rank, paper, daily, sun, weekly|
@@ -266,9 +256,7 @@ NEWSPAPER_CIRCS = {
 #   puts '  [%-50s %10d, %10d, %10d,]' % ["\"#{paper}\", ", daily, sun, weekly]
 # end
 
-
 PREZ04_FROM_WIKIPEDIA = {
-
   "Akron Beacon-Journal"         => 'K',
   "Amarillo Globe-News"          => 'B',
   "Anchorage Daily News"         => 'K',
@@ -366,5 +354,4 @@ PREZ04_FROM_WIKIPEDIA = {
   "The Times-Reporter"           => 'B',
   "Tulsa World"                  => 'B',
   "Union Leader"                 => 'B',
-
 }

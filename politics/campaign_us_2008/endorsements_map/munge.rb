@@ -24,7 +24,6 @@ require 'dump'
 # to spot check count
 # cat rawd/endorsements-raw-20081020.txt | egrep  '^\(?.[a-z]' | wc -l
 
-
 #
 # Extract the endorsements
 #
@@ -57,11 +56,6 @@ endorsements.sort_by{|p,e| -e.circ}.each_with_index do |pe,i|
   endorsement.metro    = CityMetro.get(endorsement.st, endorsement.city)
 end
 
-
-html_template = File.open('endorsements_map_template.html').read
-html_template.gsub!(/<!-- Endorsement Table Goes Here -->/, endorsement_table)
-File.open('endorsements_map.html','w'){|f| f << html_template}
-
 #
 # Run the graph generation
 #
@@ -80,13 +74,3 @@ dump_hash_for_graph endorsements, graph_xml_filename, endorsement_bins
 dump_yaml endorsements
 dump_csv  endorsements
 dump_csv  endorsements, :separator => "\t"
-
-#
-# These
-#
-
-# endorsements.sort_by{|paper, e| [(!!e.city ? 0 : 1), e.circ]}.each do |paper, e|
-#   puts '  %-45s => [ %3d, %9d, %9d, %9d, %8.3f, %8.3f, "%2s", %-30s %s ],' % [
-#     "'%s'"%e.paper, e.rank, e.circ, e.daily, e.sun, e.lat||0, e.lng||0, e.st, "'%s',"%(e.city ? e.city : e.paper.gsub(/^The /, '')), !!e.city
-#   ]
-# end
