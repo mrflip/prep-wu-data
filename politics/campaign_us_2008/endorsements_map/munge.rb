@@ -7,13 +7,13 @@ require 'imw/utils/extensions/core'
 require 'active_support'
 require 'action_view/helpers/number_helper'; include ActionView::Helpers::NumberHelper
 #
-require 'state_abbreviations'
-require 'newspaper_mapping'
+#require 'state_abbreviations'
+#require 'newspaper_mapping'
 require 'cities_mapping'
 require 'map_projection'
 require 'endorsement'
 require 'metropolitan_areas'
-require 'dump'
+require 'lib/hash_of_structs'
 
 # Presidential Endorsements by Major Newspapers in the 2008 General Election
 # Editor & Publisher
@@ -23,15 +23,6 @@ require 'dump'
 
 # to spot check count
 # cat rawd/endorsements-raw-20081020.txt | egrep  '^\(?.[a-z]' | wc -l
-
-#
-# Extract the endorsements
-#
-PROCESS_DATE = '20081024'
-raw_filename       = "rawd/endorsements-raw-#{PROCESS_DATE}.txt"
-tsv_out_filename   = "fixd/endorsements-cooked.tsv"
-graph_xml_filename = "fixd/endorsements-graph.xml"
-endorsements = parse_ep_endorsements(raw_filename)
 
 #
 # add in those top-100 newspapers not yet listed

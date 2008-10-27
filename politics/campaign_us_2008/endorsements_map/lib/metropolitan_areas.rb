@@ -1,8 +1,8 @@
 
 class MetropolitanArea < Struct.new(
-    :pop_2007, :pop_2000, :pop_rank, 
-    :pop_chg_pct_00_07, :pop_chg_pct_avg, 
-    :pop_at_or_above, :pop_aoa_pct, 
+    :pop_2007, :pop_2000, :pop_rank,
+    :pop_chg_pct_00_07, :pop_chg_pct_avg,
+    :pop_at_or_above, :pop_aoa_pct,
     :metro_st, :metro_name, :metro_nickname, :csa_name)
   ALL_METROS_SAVE_FILENAME   = 'fixd/all_metros.yaml'
   #
@@ -24,7 +24,7 @@ class MetropolitanArea < Struct.new(
 end
 
 class CityMetro < Struct.new(
-    :st, :city, :fips_state, :fips_place, 
+    :st, :city, :fips_state, :fips_place,
     :cbsa_code, :metro_name, :metro_stature,
     *(MetropolitanArea.members-['metro_name'])
     )
@@ -43,7 +43,7 @@ class CityMetro < Struct.new(
     return @cities_to_metros if @cities_to_metros
     @cities_to_metros = load()
   end
-  
+
   def self.get(st, city)
     self.cities_to_metros[ [st, city] ]
   end

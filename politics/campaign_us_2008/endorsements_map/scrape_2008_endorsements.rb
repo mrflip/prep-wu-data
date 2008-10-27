@@ -5,9 +5,10 @@ lines = `links -dump 'http://www.editorandpublisher.com/eandp/news/article_displ
 # lines = File.open('/tmp/foo').read
 lines = lines.gsub(/\A.*?(BARACK OBAMA.*?)WEEKLIES . COLLEGE.*/m, '\1')
 
-destdir                  = 'ripd/endorsements_2008/'
+year = 2008
+destdir                  = "ripd/endorsements_#{year}/"
 endorsement_raw_filename = "endorsements-raw-#{Time.now.strftime("%Y%m%d")}.txt"
-linkdest                 = 'endorsements-raw.txt'
+linkdest                 = "endorsements-raw-#{year}.txt"
 File.open(destdir+endorsement_raw_filename, 'w') do |f|
   f << lines
 end

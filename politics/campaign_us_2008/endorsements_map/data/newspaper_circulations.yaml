@@ -1,0 +1,739 @@
+Usa Today				|2284219        |Washington						|
+Wall Street Journal			|2069463        |New York City						|New York Co.
+Times					|1077256        |New York City						|New York Co.
+Times					|773884		|Los Angeles						|Los Angeles Co.
+News					|703137		|New York City						|New York Co.
+Post					|702488		|New York City						|New York Co.
+Washington Post				|673180		|Washington						|
+Tribune					|541663		|Chicago						|Cook Co.
+Chronicle				|494131		|Houston						|Harris Co.
+Republic				|413332		|Phoenix						|Maricopa Co.
+Newsday					|379613		|Long Island						|Melville P.O.
+Chronicle				|370345		|San Francisco						|San Francisco Co.
+Morning News				|368313		|Dallas						|Dallas Co.
+Globe					|350605		|Boston						|Suffolk Co.
+Star-Ledger				|345130		|Newark						|Essex Co.
+Inquirer				|334150		|Philadelphia						|Philadelphia Co.
+Plain Dealer				|330280		|Cleveland						|Cuyahoga Co.
+Journal-Constitution			|326907		|Atlanta						|Fulton Co.
+Star Tribune				|322362		|Minneapolis-St. Paul					|Hennepin Co.
+Times					|316007		|St. Petersburg					|Pinellas Co.
+Sun-Times				|312274		|Chicago						|Cook Co.
+Free Press				|308944		|Detroit						|Wayne Co.
+Oregonian				|304399		|Portland						|Multnomah Co.
+Union-Tribune				|288669		|San Diego						|San Diego Co.
+Bee					|268755		|Sacramento						|Sacramento Co.
+Star					|255303		|Indianapolis						|Marion Co.
+Post-Dispatch				|255057		|St. Louis						|Independent City
+Star					|252785		|Kansas City						|Jackson Co.
+Register				|250724		|Orange Co.						|Santa Ana P.O.
+Miami Herald				|240223		|Miami							|Miami-Dade Co.
+Mercury News				|234772		|San Jose						|Santa Clara Co.
+Sun					|232360		|Baltimore						|Independent City
+Sentinel				|227593		|Orlando						|Orange Co.
+Express-News				|225447		|San Antonio						|Bexar Co.
+Denver Post				|225193		|Denver						|Denver Co.
+Rocky Mountain News			|225065		|Denver						|Denver Co.
+Times					|220863		|Seattle						|King Co.
+Tribune					|220522		|Tampa							|Hillsborough Co.
+South Florida Sun-Sentinel		|218286		|Fort Lauderdale					|Broward Co.
+Journal Sentinel			|217755		|Milwaukee						|Milwaukee Co.
+Courier-Journal				|215328		|Louisville						|Jefferson Co.
+Post-Gazette				|214374		|Pittsburgh						|Allegheny Co.
+Enquirer				|212369		|Cincinnati						|Hamilton Co.
+Observer				|210616		|Charlotte						|Mecklenburg Co.
+Star-Telegram				|207045		|Fort Worth						|Tarrant Co.
+Oklahoman				|201771		|Oklahoma City						|Oklahoma Co.
+Dispatch				|199524		|Columbus						|Franklin Co.
+Pioneer Press				|191768		|St. Paul						|Ramsey Co.
+News					|188171		|Detroit						|Wayne Co.
+Contra Costa Times			|183086		|Walnut Creek						|Contra Costa Co.
+Herald					|182350		|Boston						|Suffolk Co.
+Democrat Gazette			|182212		|Little Rock						|Pulaski Co.
+Times-Picayune				|179834		|New Orleans						|Orleans Parish
+World-Herald				|178545		|Omaha							|Douglas Co.
+News					|178365		|Buffalo						|Erie Co.
+News & Observer				|176083		|Raleigh						|Wake Co.
+Times-Dispatch				|175265		|Richmond						|Independent City
+Virginian-Pilot				|175005		|Norfolk-Portsmouth- Virginia Beach-Chesapeake		|Independent Cities
+Review-Journal				|174341		|Las Vegas						|Clark Co.
+American-Statesman			|170309		|Austin						|Travis Co.
+Courant					|168158		|Hartford						|Hartford Co.
+Post					|164474		|West Palm Beach					|Palm Beach Co.
+Press-Enterprise			|164189		|Riverside Co.						|Riverside P.O.
+Record					|163329		|Bergen Co.						|Hackensack P.O.
+Investors Business Daily		|161421		|Los Angeles						|Los Angeles Co.
+Tennessean				|161131		|Nashville						|Davidson Co.
+Tribune-Review				|150911		|Greensburg						|Westmoreland Co.
+Bee					|150334		|Fresno						|Fresno Co.
+Commercial Appeal			|146961		|Memphis						|Shelby Co.
+Democrat & Chronicle			|145913		|Rochester						|Monroe Co.
+Times-Union				|144391		|Jacksonville						|Duval Co.
+Herald					|143152		|Chicago Suburban					|Cook Co.) (Arlington Heights P.O.
+Asbury Park Press			|140882		|Neptune						|Monmouth Co.
+News					|140438		|Birmingham						|Jefferson Co.
+Advertiser				|140331		|Honolulu						|Honolulu Co.
+Journal					|139055		|Providence						|Providence Co.
+Register				|138519		|Des Moines						|Polk Co.
+Daily News				|137344		|Los Angeles						|Los Angeles Co.
+Post-Intelligencer			|129563		|Seattle						|King Co.
+Press					|128930		|Grand Rapids						|Kent Co.
+Tribune					|121699		|Salt Lake City					|Salt Lake Co.
+Beacon Journal				|119929		|Akron							|Summit Co.
+Blade					|119901		|Toledo						|Lucas Co.
+News Sentinel				|117262		|Knoxville						|Knox Co.
+News					|116690		|Dayton						|Montgomery Co.
+Herald-Tribune				|114904		|Sarasota						|Sarasota Co.
+La Opinion				|114892		|Los Angeles						|Los Angeles Co.
+Daily Star				|113373		|Tucson						|Pima Co.
+World					|112968		|Tulsa							|Tulsa Co.
+News Tribune				|111778		|Tacoma						|Pierce Co.
+News Journal				|110171		|Wilmington						|New Castle Co.
+Post-Standard				|110061		|Syracuse						|Onondaga Co.
+Herald-Leader				|109624		|Lexington						|Fayette Co.
+Morning Call				|108797		|Allentown						|Lehigh Co.
+Treasure Coast News/ Press-Tribune	|108781		|Stuart						|Martin Co.
+Journal News				|108092		|Westchester Co.					|White Plains P.O.
+Daily News				|107269		|Philadelphia						|Philadelphia Co.
+Times-Shamrock Newspapers		|103788		|Wilkes-Barre						|Luzerne Co.
+Journal					|102902		|Albuquerque						|Bernalillo Co.
+State					|101010		|Columbia						|Richland Co.
+Post And Courier			|100400		|Charleston						|Charleston Co.
+News-Journal				|99627		|Daytona Beach						|Volusia Co.
+Press-Register				|99433		|Mobile						|Mobile Co.
+Advocate				|97912		|Baton Rouge						|East Baton Rouge Parish
+Tribune					|96535		|Oakland						|Alameda Co.
+Patriot-News				|95588		|Harrisburg						|Dauphin Co.
+Gazette					|93859		|Colorado Springs					|El Paso Co.
+Times					|93763		|Washington						|
+News-Press				|92340		|Fort Myers						|Lee Co.
+Spokesman-Review			|89779		|Spokane						|Spokane Co.
+Times Union				|89256		|Albany						|Albany Co.
+Times					|88927		|Roanoke						|Independent City
+North County Times			|88677		|Escondido-Oceanside-Vista- San Marcos			|San Diego Co.
+State Journal				|87930		|Madison						|Dane Co.
+Star					|86276		|Ventura Co.						|Ventura P.O.
+Press-Telegram				|85595		|Los Angeles Co.					|Long Beach P.O.
+Times Of Northwest Indiana		|85195		|Munster						|Lake Co.
+News & Record				|84339		|Greensboro						|Guilford Co.
+Republican				|83897		|Springfield						|Hampden Co.
+Eagle					|82912		|Wichita						|Sedgwick Co.
+Clarion-Ledger				|82673		|Jackson						|Hinds Co.
+Journal					|81930		|Winston-Salem						|Forsyth Co.
+Telegram & Gazette			|81437		|Worcester						|Worcester Co.
+Daily Press				|81241		|Newport News-Hampton- Williamsburg			|Independent Cities
+News					|81010		|Greenville						|Greenville Co.
+El Nuevo Herald				|79963		|Miami							|Miami-Dade Co.
+Florida Today				|79499		|Melbourne						|Brevard Co.
+Journal Star				|78350		|Lincoln						|Lancaster Co.
+Press Democrat				|78022		|Santa Rosa						|Sonoma Co.
+Bee					|78001		|Modesto						|Stanislaus Co.
+Journal					|76288		|Flint							|Genesee Co.
+Post					|76014		|Fairfield Co.						|Bridgeport P.O.
+Times Herald-Record			|75745		|Middletown						|Orange Co.
+Deseret Morning News			|73817		|Salt Lake City					|Salt Lake Co.
+Register				|72613		|New Haven						|New Haven Co.
+Times					|72027		|El Paso						|El Paso Co.
+Times Free Press			|71716		|Chattanooga						|Hamilton Co.
+East Valley Tribune			|71153		|Phoenix Suburban					|Mesa P.O.
+Chronicle				|68434		|Augusta						|Richmond Co.
+Courier & Press				|68220		|Evansville						|Vanderburgh Co.
+Register-Guard				|67400		|Eugene						|Lane Co.
+Tribune					|66886		|South Bend-Mishawaka					|St. Joseph Co.
+Press					|66822		|Atlantic City						|Atlantic Co.
+Courier-Post				|66617		|Cherry Hill-Camden					|Camden Co.
+Oakland Press				|66422		|Pontiac						|Oakland Co.
+Daily News				|66272		|Naples						|Collier Co.
+Breeze					|65960		|Los Angeles Co.					|Torrance P.O.
+Ledger					|65948		|Lakeland						|Polk Co.
+Repository				|65789		|Canton						|Stark Co.
+Journal Star				|65320		|Peoria						|Peoria Co.
+Press Herald				|64938		|Portland						|Cumberland Co.
+Journal Gazette				|64304		|Fort Wayne						|Allen Co.
+Daily News				|62893		|Anchorage						|Anchorage Borough
+Idaho Statesman				|61927		|Boise							|Ada Co.
+Observer				|61875		|Fayetteville						|Cumberland Co.
+Standard-Examiner			|61696		|Ogden							|Weber Co.
+Post-Tribune				|60325		|Merrillville						|Lake Co.
+Courier Times				|60233		|Bucks Co.						|Levittown P.O.
+Californian				|59433		|Bakersfield						|Kern Co.
+Eagle					|59262		|Reading						|Berks Co.
+State Journal				|58948		|Lansing-East Lansing					|Ingham Co.
+Gazette					|57945		|Cedar Rapids-Marion					|Linn Co.
+Record					|57486		|Stockton						|San Joaquin Co.
+Gazette-Journal				|57423		|Reno							|Washoe Co.
+News Journal				|57089		|Pensacola						|Escambia Co.
+Advance					|56875		|Staten Island						|Richmond Co.
+Telegraph				|56510		|Macon							|Bibb Co.
+Vindicator				|56412		|Youngstown						|Mahoning Co.
+Christian Science Monitor		|56083		|Boston						|Suffolk Co.
+Register Star				|55913		|Rockford						|Winnebago Co.
+News					|55627		|Bangor						|Penobscot Co.
+Times-News				|55397		|Erie							|Erie Co.
+Times					|54745		|Trenton						|Mercer Co.
+Sun					|54315		|San Bernardino					|San Bernardino Co.
+News-Leader				|54307		|Springfield						|Greene Co.
+Inland Valley Daily Bulletin		|53903		|Ontario						|San Bernardino Co.
+El Diario La Prensa			|53856		|New York City						|New York Co.
+Press-Gazette				|53600		|Green Bay						|Brown Co.
+Caller-Times				|53368		|Corpus Christi					|Nueces Co.
+Times					|53194		|Huntsville						|Madison Co.
+Desert Sun				|53091		|Palm Springs-Palm Desert				|Riverside Co.
+Times					|52267		|Shreveport						|Caddo Parish
+News-Democrat				|51974		|Belleville						|St. Clair Co.
+Quad-City Times				|51890		|Davenport-Bettendorf					|Scott Co.
+New Hampshire Union Leader		|51782		|Manchester						|Hillsborough Co.
+Patriot Ledger				|51105		|Quincy						|Norfolk Co.
+Post Crescent				|51029		|Appleton						|Outagamie Co.)- Neenah-Menasha (Winnebago Co.
+Republican-American			|50903		|Waterbury						|New Haven Co.
+Herald					|50272		|Everett						|Snohomish Co.
+Citizen-Times				|50160		|Asheville						|Buncombe Co.
+Democrat				|49939		|Tallahassee						|Leon Co.
+Sun News				|49889		|Myrtle Beach						|Horry Co.
+State Journal-Register			|49839		|Springfield						|Sangamon Co.
+Chieftain				|49169		|Pueblo						|Pueblo Co.
+Gazette					|49127		|Kalamazoo						|Kalamazoo Co.
+Avalanche-Journal			|49094		|Lubbock						|Lubbock Co.
+Home News Tribune			|49076		|East Brunswick					|Middlesex Co.
+Argus Leader				|48960		|Sioux Falls						|Minnehaha Co.
+Macomb Daily				|48741		|Mount Clemens						|Macomb Co.
+Herald					|48618		|Bradenton						|Manatee Co.
+Monitor					|48609		|Mcallen						|Hidalgo Co.
+Press & Sun-Bulletin			|48306		|Binghamton						|Broome Co.
+Forum					|48303		|Fargo							|Cass Co.)						  Nd-Moorhead (Clay Co.					  Mn
+Gazette					|48061		|Charleston						|Kanawha Co.
+Daily Record				|47989		|York							|York Co.
+Pantagraph				|47764		|Bloomington-Normal					|Mclean Co.
+News					|47709		|Savannah						|Chatham Co.
+Star-News				|47620		|Wilmington						|New Hanover Co.
+Gazette					|47277		|Schenectady						|Schenectady Co.
+Statesman Journal			|47131		|Salem							|Marion Co.
+News					|47058		|Ann Arbor						|Washtenaw Co.
+Sun					|46886		|Charlotte Co.						|Charlotte Harbor P.O.
+Women'S Wear Daily			|46728		|New York City						|New York Co.
+Free Lance-Star				|46672		|Fredericksburg					|Independent City
+Intelligencer Journal			|46357		|Lancaster						|Lancaster Co.
+Eagle-Tribune				|46059		|North Andover						|Essex Co.
+Enterprise				|45684		|Beaumont						|Jefferson Co.
+Gazette					|45530		|Billings						|Yellowstone Co.
+Star-Banner				|45424		|Ocala							|Marion Co.
+Advertiser				|45060		|Montgomery						|Montgomery Co.
+Capital-Journal				|44864		|Topeka						|Shawnee Co.
+Globe-News				|44764		|Amarillo						|Potter Co.
+Sun					|44658		|Gainesville						|Alachua Co.
+Columbian				|44623		|Vancouver						|Clark Co.
+Sun Herald				|44613		|Biloxi-Gulfport					|Harrison Co.
+Express-Times				|44561		|Easton						|Northampton Co.)						  Pa Phillipsburg (Warren Co.						  Nj
+Sun					|44439		|Lowell						|Middlesex Co.
+Times-News				|44096		|Kingsport						|Sullivan Co.
+Cape Cod Times				|43709		|Barnstable Co.					|Hyannis P.O.
+Daily Times				|42879		|Delaware Co.						|Primos/Upper Darby
+Ledger-Enquirer				|42830		|Columbus						|Muscogee Co.
+Capital					|42825		|Annapolis						|Anne Arundel Co.
+Herald-Journal				|42380		|Spartanburg						|Spartanburg Co.
+News-Gazette				|42302		|Champaign-Urbana					|Champaign Co.
+Free Press				|41901		|Burlington						|Chittenden Co.
+Southtown Star				|41868		|Chicago Suburban					|Cook Co.) (Tinley Park P.O.
+Courier					|41142		|Waterloo-Cedar Falls-Evansdale			|Black Hawk Co.
+Chronicle				|41114		|Muskegon						|Muskegon Co.
+Journal					|41096		|Sioux City						|Woodbury Co.
+Tri-City Herald				|40830		|Pasco							|Franklin Co.)-Kennewick- Richland (Benton Co.
+San Gabriel Valley Tribune		|40812		|Los Angeles Co.					|West Covina P.O.
+Daily Advertiser			|40496		|Lafayette						|Lafayette Parish
+Southwest Times Record			|40231		|Fort Smith						|Sebastian Co.
+New Era					|40068		|Lancaster						|Lancaster Co.
+News-Post				|40035		|Frederick						|Frederick Co.
+Intelligencer				|40015		|Bucks Co.						|Doylestown P.O.
+Trentonian				|39449		|Trenton						|Mercer Co.
+Observer-Dispatch			|39293		|Utica							|Oneida Co.
+News					|39143		|Saginaw						|Saginaw Co.
+Herald-News				|38520		|Joliet						|Will Co.
+County Times				|38466		|Beaver						|Beaver Co.
+Times Leader				|38229		|Wilkes-Barre						|Luzerne Co.
+Herald Courier				|38088		|Bristol						|Independent City						  Va-Tn
+Herald-Republic				|38077		|Yakima						|Yakima Co.
+Tribune-Democrat			|37673		|Johnstown						|Cambria Co.
+Journal Inquirer			|37475		|Manchester						|Hartford Co.
+Journal					|37265		|Poughkeepsie						|Dutchess Co.
+News-Herald				|36948		|Lake Co.						|Willoughby P.O.
+Northeast Mississippi Daily Journal	|36929		|Tupelo						|Lee Co.
+Tribune-Herald				|36708		|Waco							|Mclennan Co.
+Northwest Herald			|36594		|Crystal Lake						|Mchenry Co.
+American Press				|36270		|Lake Charles						|Calcasieu Parish
+Tribune					|35885		|San Luis Obispo					|San Luis Obispo Co.
+Daily Sun				|35808		|The Villages						|Lake/Sumter/Marion Cos.
+Northwest Daily News			|35775		|Fort Walton Beach					|Okaloosa Co.
+Morning Telegraph			|35598		|Tyler							|Smith Co.
+Eagle					|35416		|Dothan						|Houston Co.
+News-Press				|35061		|Santa Barbara						|Santa Barbara Co.
+Day					|34730		|New London						|New London Co.
+Journal And Courier			|34545		|Lafayette-West Lafayette				|Tippecanoe Co.
+Herald & Review				|34480		|Decatur						|Macon Co.
+News & Advance				|33931		|Lynchburg						|Independent City
+News					|33582		|Springdale						|Washington Co.) - Rogers (Benton Co.
+Advocate				|33549		|Victoria						|Victoria Co.
+News-Press				|33546		|St. Joseph						|Buchanan Co.
+Record					|33405		|Morristown-Parsippany					|Morris Co.
+News-Star				|33239		|Monroe						|Ouachita Parish
+Herald					|33048		|Provo							|Utah Co.
+News					|32860		|Lima							|Allen Co.
+Herald-Sun				|32845		|Durham						|Durham Co.
+News					|32789		|Tuscaloosa						|Tuscaloosa Co.
+Times					|32784		|Burlington Co.					|Willingboro P.O.
+Herald-Mail				|32711		|Hagerstown						|Washington Co.
+Bulletin				|32455		|Bend							|Deschutes Co.
+Record Searchlight			|32147		|Redding						|Shasta Co.
+Sun					|32121		|Jackson						|Madison Co.
+Independent Journal			|31909		|Marin Co.						|Novato P.O.
+Tribune					|31759		|La Crosse						|La Crosse Co.
+Observer-Reporter			|31755		|Washington						|Washington Co.
+Dispatch				|31694		|York							|York Co.
+Mirror					|31658		|Altoona						|Blair Co.
+Star/Press				|31512		|Muncie						|Delaware Co.
+Courier-News				|31370		|Bridgewater						|Somerville P.O.
+Sentinel				|31349		|Grand Junction					|Mesa Co.
+News					|31237		|Florence						|Florence Co.
+News					|31019		|Hutchinson						|Reno Co.
+News-Record				|30908		|Harrisonburg						|Independent City
+Town Talk				|30858		|Alexandria-Pineville					|Rapides Parish
+Herald					|30848		|Rock Hill						|York Co.
+News Herald				|30829		|Panama City						|Bay Co.
+Citizen Patriot				|30825		|Jackson						|Jackson Co.
+Olympian				|30755		|Olympia						|Thurston Co.
+Press					|30670		|Johnson City						|Washington Co.
+Tribune					|30631		|Great Falls						|Cascade Co.
+Enterprise				|30405		|Brockton						|Plymouth Co.
+Mail Tribune				|30349		|Medford						|Jackson Co.
+Standard-Times				|30306		|New Bedford						|Bristol Co.
+Post-Star				|30265		|Glens Falls						|Warren Co.
+Times					|30183		|Bay City						|Bay Co.
+Daily Press				|30169		|Victorville						|San Bernardino Co.
+Gazette					|30103		|Gastonia						|Gaston Co.
+Citrus County Chronicle			|29594		|Crystal River						|Citrus Co.
+Tribune Chronicle			|29364		|Warren						|Trumbull Co.
+Times Daily				|29200		|Florence						|Lauderdale Co.)- Sheffield-Tuscumbia-Muscle Shoals (Colbert Co.
+News					|29125		|Salem							|Essex Co.
+Enterprise-Record			|29113		|Chico							|Butte Co.
+Reporter-News				|29108		|Abilene						|Taylor Co.
+Camera					|28994		|Boulder						|Boulder Co.
+Herald					|28933		|Monterey						|Monterey Co.
+Journal					|28907		|Rapid City						|Pennington Co.
+Times Record News			|28888		|Wichita Falls						|Wichita Co.
+Kitsap Sun				|28792		|Bremerton						|Kitsap Co.
+Progress				|28697		|Charlottesville					|Independent City
+Star-Tribune				|28312		|Casper						|Natrona Co.
+News Journal				|28272		|Mansfield						|Richland Co.
+Telegraph Herald			|28207		|Dubuque						|Dubuque Co.)						  Ia- East Dubuque (Jo Daviess Co.						  Il
+Journal Times				|28103		|Racine						|Racine Co.
+Journal					|28026		|Salina						|Saline Co.
+Missoulian				|27955		|Missoula						|Missoula Co.
+Times-News				|27954		|Cumberland						|Allegany Co.
+News-Times				|27909		|Danbury						|Fairfield Co.
+Star-News				|27900		|Los Angeles Co.					|Pasadena P.O.
+Register-Herald				|27737		|Beckley						|Raleigh Co.
+Banner-Herald				|27672		|Athens						|Clarke Co.
+Herald					|27650		|Grand Forks						|Grand Forks Co.)						  Nd- East Grand Forks (Polk Co.					  Mn
+News-Journal				|27590		|Longview						|Gregg Co.
+Herald-Dispatch				|27463		|Huntington						|Cabell Co.
+Eagle					|27423		|Butler						|Butler Co.
+Southern Illinoisan			|27413		|Carbondale						|Jackson Co.)- Herrin (Williamson Co.)- Marion (Williamson Co.)- Murphysboro (Jackson Co.
+Messenger-Inquirer			|27276		|Owensboro						|Daviess Co.
+Beacon News				|27238		|Aurora						|Kane Co.
+Herald-Times				|27103		|Bloomington						|Monroe Co.
+Tribune					|27051		|Bismarck						|Burleigh Co.
+Eagle					|26427		|Pittsfield						|Berkshire Co.
+Times					|26375		|Watertown						|Jefferson Co.
+Coloradoan				|26312		|Fort Collins						|Larimer Co.
+Times					|25982		|San Mateo						|San Mateo Co.
+Republican & Herald			|25873		|Schuylkill						|Pottsville P.O.
+Times					|25868		|St. Cloud						|Stearns					  Benton & Sherburne Cos.
+Chronicle-Telegram			|25698		|Elyria						|Lorain Co.
+Daily Local News			|25686		|West Chester						|Chester Co.
+Leader-Telegram				|25581		|Eau Claire						|Eau Claire Co.
+Times Herald				|25386		|Port Huron						|St. Clair Co.
+Journal					|25334		|Lorain						|Lorain Co.
+Sun-Gazette				|25328		|Williamsport						|Lycoming Co.
+Jersey Journal				|24940		|Jersey City						|Hudson Co.
+Standard-Times				|24919		|San Angelo						|Tom Green Co.
+Daily Item				|24879		|Sunbury						|Northumberland Co.
+Sun					|24768		|Paducah						|Mccracken Co.
+News-Sun				|24684		|Springfield						|Clark Co.
+Carroll County Times			|24623		|Westminster						|Carroll Co.
+News					|24535		|Kenosha						|Kenosha Co.
+Star					|24518		|Anniston						|Calhoun Co.
+Herald-Standard				|24341		|Uniontown						|Fayette Co.
+News-Sentinel				|24196		|Fort Wayne						|Allen Co.
+Times					|24157		|Salisbury						|Wicomico Co.
+Centre Daily Times			|24029		|State College						|Centre Co.
+Star-Gazette				|23995		|Elmira						|Chemung Co.
+Citizen					|23756		|Tucson						|Pima Co.
+Valley Morning Star			|23400		|Harlingen						|Cameron Co.
+Sentinel				|23290		|Santa Cruz						|Santa Cruz Co.
+Times					|23189		|Woodbury						|Gloucester Co.
+Advocate				|23088		|Stamford						|Fairfield Co.
+Herald					|22719		|Bellingham						|Whatcom Co.
+Dominion Post				|22683		|Morgantown						|Monongalia Co.
+Metrowest Daily News			|22613		|Framingham						|Middlesex Co.
+World					|22579		|Wenatchee						|Chelan Co.
+Spectrum				|22514		|St. George						|Washington Co.
+Times Reporter				|22428		|New Philadelphia-Dover				|Tuscarawas Co.
+Constitution				|22309		|Lawton						|Comanche Co.
+Record					|22150		|Wooster						|Wayne Co.
+Bulletin				|22121		|Norwich						|New London Co.
+Free Press				|22072		|Mankato						|Blue Earth Co.)- North Mankato (Nicollet Co.
+Maui News				|21974		|Wailuku						|Maui Co.
+News					|21962		|Longview						|Cowlitz Co.
+Mail					|21723		|Charleston						|Kanawha Co.
+Reflector				|21703		|Greenville						|Pitt Co.
+Post					|21481		|Salisbury-Spencer-East Spencer			|Rowan Co.
+News					|21473		|Parkersburg						|Wood Co.
+Times					|21353		|Maryville-Alcoa					|Blount Co.
+Sun-News				|21341		|Las Cruces						|Dona Ana Co.
+Register				|21275		|Sandusky						|Erie Co.
+Daily News				|21240		|Bowling Green						|Warren Co.
+Record					|21214		|Hickory						|Catawba Co.
+Herald Bulletin				|21199		|Anderson						|Madison Co.
+Mercury					|21186		|Pottstown						|Montgomery Co.
+Times-Call				|21127		|Longmont						|Boulder Co.
+Hollywood Reporter			|20964		|Los Angeles						|Los Angeles Co.
+Herald-Palladium			|20905		|Benton Harbor-St. Joseph				|Berrien Co.
+Enquirer				|20854		|Battle Creek						|Calhoun Co.
+Daily Herald				|20828		|Wausau						|Marathon Co.
+Daily					|20770		|Decatur						|Morgan Co.
+Tribune					|20587		|Kokomo						|Howard Co.
+Independent				|20475		|Grand Island						|Hall Co.
+Appeal-Democrat				|20428		|Marysville-Yuba City					|Yuba Co.
+Leaf-Chronicle				|20354		|Clarksville						|Montgomery Co.
+Times-News				|20325		|Twin Falls						|Twin Falls County
+Gazette					|20272		|Janesville						|Rock Co.
+Times					|20264		|Santa Maria						|Santa Barbara Co.
+Star					|20218		|Winchester						|Independent City
+Northwestern				|20140		|Oshkosh						|Winnebago Co.
+News					|20098		|Lebanon						|Lebanon Co.
+Press					|20069		|Sheboygan						|Sheboygan Co.
+Herald-Whig				|19996		|Quincy						|Adams Co.
+News					|19877		|Monroe						|Monroe Co.
+Sun					|19830		|Jonesboro						|Craighead Co.
+Register & Bee				|19830		|Danville						|Independent City
+Sun					|19494		|Hanover						|York Co.
+Enterprise				|19483		|High Point						|Guilford Co.
+Journalnews				|19432		|Hamilton						|Butler Co.
+Reporter-Telegram			|19407		|Midland						|Midland Co.
+Times-Standard				|19397		|Eureka						|Humboldt Co.
+Telegram				|19361		|Temple						|Bell Co.
+Times-Delta				|19310		|Visalia						|Tulare Co.
+Herald News				|19309		|Fall River						|Bristol Co.
+Herald					|19252		|Sharon-Farrell-Sharpsville- Hermitage			|Mercer Co.
+Island Packet				|19157		|Hilton Head Island					|Beaufort Co.
+News					|18972		|Minot							|Ward Co.
+Hawk Eye				|18921		|Burlington						|Des Moines Co.
+Press-Republican			|18908		|Plattsburgh						|Clinton Co.
+Times					|18832		|Gadsden						|Etowah Co.
+Sauk Valley Newspapers			|18720		|Dixon							|Lee Co. - Whiteside Co.
+News-Review				|18691		|Roseburg						|Douglas Co.
+Record					|18528		|St. Augustine						|St. Johns Co.
+News-Argus				|18460		|Goldsboro						|Wayne Co.
+Intelligencer				|18450		|Wheeling						|Ohio Co.
+Herald					|18408		|Killeen						|Bell Co.
+Advocate				|18193		|Newark						|Licking Co.
+Times And Democrat			|18142		|Orangeburg						|Orangeburg Co.
+Tribune					|18131		|Columbia						|Boone Co.
+Pocono Record				|18121		|Stroudsburg-East Stroudsburg				|Monroe Co.
+Citizen Tribune				|18086		|Morristown						|Hamblen Co.
+Journal					|18012		|Martinsburg						|Berkeley Co.
+Gazette					|18001		|Northampton						|Hampshire Co.
+Sentinel-Record				|17943		|Hot Springs						|Garland Co.
+Freeman					|17909		|Kingston						|Ulster Co.
+Sun Chronicle				|17799		|Attleboro - North Attleboro				|Bristol Co.
+Reporter				|17751		|Vacaville						|Solano Co.
+Post-Journal				|17672		|Jamestown						|Chautauqua Co.
+Globe					|17666		|Mason City						|Cerro Gordo Co.
+Crescent-News				|17566		|Defiance						|Defiance Co.
+Standard				|17514		|Aiken							|Aiken Co.
+Daily Times				|17485		|Farmington						|San Juan Co.
+Independent				|17465		|Ashland						|Boyd Co.
+American				|17462		|Hattiesburg						|Forrest Co.
+Times Recorder				|17450		|Zanesville						|Muskingum Co.
+News And Eagle				|17323		|Enid							|Garfield Co.
+Journal					|17285		|Middletown						|Butler Co.
+News Leader				|17238		|Staunton						|Independent City
+Journal					|17218		|Marietta						|Cobb Co.
+Sentinel				|17212		|Holland						|Ottawa Co.
+Morning Times				|17145		|Laredo						|Webb Co.
+Telegraph				|17030		|Bluefield						|Mercer Co.
+Times-Herald				|16957		|Vallejo						|Solano Co.
+Times-News				|16949		|Hendersonville					|Henderson Co.
+Star-Beacon				|16931		|Ashtabula						|Ashtabula Co.
+Gazette					|16909		|Niagara Falls						|Niagara Co.
+Lake County News Sun			|16899		|Waukegan-North Chicago				|Lake Co.
+Independent Tribune			|16898		|Concord-Kannapolis					|Cabarrus Co.
+Democrat-Herald				|16891		|Albany						|Linn Co.
+Journal					|16882		|Vineland-Millville					|Cumberland Co.
+Public Opinion				|16679		|Chambersburg						|Franklin Co.
+Herald					|16654		|Brownsville						|Cameron Co.
+News					|16492		|Norfolk						|Madison Co.
+News					|16465		|New Castle						|Lawrence Co.
+News Tribune				|16441		|Jefferson City					|Cole Co.
+Messenger				|16355		|Fort Dodge						|Webster Co.
+Capital Times				|16335		|Madison						|Dane Co.
+Valley News				|16330		|Lebanon-Hanover					|Grafton Co.) (White River Junction						  Vt P.O.
+Register				|16263		|Napa							|Napa Co.
+Courier					|16178		|Grants Pass						|Josephine Co.
+Daily Times				|16131		|Valdosta						|Lowndes Co.
+Bulletin				|16060		|Martinsville						|Independent City
+Sun					|15964		|Naperville						|Dupage Co.
+Peninsula Daily News			|15806		|Port Angeles						|Clallam Co.
+News-Sentinel				|15771		|Lodi							|San Joaquin Co.
+Wyoming Tribune-Eagle			|15762		|Cheyenne						|Laramie Co.
+Salinas Californian			|15740		|Salinas						|Monterey Co.
+Courier					|15700		|Houma							|Terrebonne Parish
+Northern Virginia Daily			|15695		|Strasburg						|Shenandoah Co.
+News					|15689		|Midland						|Midland Co.
+Exponent Telegram			|15630		|Clarksburg						|Harrison Co.
+Palladium-Item				|15453		|Richmond						|Wayne Co.
+Mississippi Press			|15411		|Pascagoula						|Jackson Co.
+Sentinel & Enterprise			|15319		|Fitchburg-Leominster					|Worcester Co.
+Gazette					|15241		|Indiana						|Indiana Co.
+American News				|15200		|Aberdeen						|Brown County
+Times					|15074		|Ottawa						|Lasalle Co.
+Chronicle Tribune			|15043		|Marion						|Grant Co.
+Sun-Star				|15015		|Merced						|Merced Co.
+Whittier Daily News			|14977		|Los Angeles Co.					|Whittier P.O.
+News					|14963		|Opelika						|Lee Co.
+Index-Journal				|14833		|Greenwood						|Greenwood Co.
+Phoenix					|14816		|Muskogee						|Muskogee Co.
+Hour					|14814		|Norwalk						|Fairfield Co.
+Journal					|14771		|Ithaca						|Tompkins Co.
+News-Miner				|14761		|Fairbanks						|Fairbanks North Star Borough
+Finger Lakes Times			|14744		|Geneva						|Ontario Co.
+Montana Standard			|14740		|Butte							|Silver Bow Co.)-Anaconda (Deer Lodge Co.
+Times Leader				|14692		|Belmont Co.						|Martins Ferry P.O.
+Herald					|14660		|Newton						|Sussex Co.
+Reporter				|14598		|Fond Du Lac						|Fond Du Lac Co.
+Independent				|14548		|Gallup						|Mckinley Co.
+Daily Star				|14391		|Oneonta						|Otsego Co.
+Star-Herald				|14367		|Scottsbluff						|Scotts Bluff Co.
+Daily News Journal			|14317		|Murfreesboro						|Rutherford Co.
+Independent Record			|14315		|Helena						|Lewis & Clark Co.
+Sentinel				|14314		|Carlisle						|Cumberland Co.
+Mining Journal				|14263		|Marquette						|Marquette Co.
+Telegram				|14254		|Rocky Mount						|Edgecombe & Nash Cos.
+Telegram				|14205		|Adrian						|Lenawee Co.
+Sun					|14131		|Greeneville						|Greene Co.
+Nonpareil				|14051		|Council Bluffs					|Pottawattamie Co.
+Star					|13964		|Meridian						|Lauderdale Co.
+Herald Times Reporter			|13964		|Manitowoc-Two Rivers					|Manitowoc Co.
+Journal-Courier				|13922		|Jacksonville						|Morgan Co.
+Record & Landmark			|13885		|Statesville						|Iredell Co.
+Times Herald				|13823		|Norristown						|Montgomery Co.
+Record					|13755		|Troy							|Rensselaer Co.
+Union-Bulletin				|13624		|Walla Walla						|Walla Walla Co.
+Recorder				|13578		|Greenfield						|Franklin Co.
+Tribune					|13454		|Meadville						|Crawford Co.
+Times News				|13450		|Lehighton						|Carbon Co.
+Times Herald				|13387		|Olean							|Cattaraugus Co.
+Press-Citizen				|13352		|Iowa City						|Johnson Co.
+Reporter				|13312		|Lansdale						|Montgomery Co.
+Citizen					|13235		|Dalton						|Whitfield Co.
+Commercial-News				|13162		|Danville						|Vermilion Co.
+Daily American				|13159		|Somerset						|Somerset Co.
+Livingston County Daily Press & Argus	|13131		|Howell						|Livingston Co.
+Sentinel				|13093		|Rome							|Oneida Co.
+Herald-Star				|13043		|Steubenville						|Jefferson Co.
+Gazette					|13038		|Chillicothe						|Ross Co.
+Progress-Index				|12937		|Petersburg						|Dinwiddie Co.
+Transcript				|12921		|Norman						|Cleveland Co.
+News-Register				|12821		|Wheeling						|Ohio Co.
+Banner					|12767		|Cleveland						|Bradley Co.
+American Banker				|12689		|New York City						|New York Co.
+Daily News-Sun				|12660		|Sun City						|Maricopa Co.
+News					|12445		|Port Arthur						|Jefferson Co.
+Sentinel				|12390		|Hanford						|Kings Co.
+Hub					|12389		|Kearney						|Buffalo Co.
+Gazette					|12346		|Beaufort						|Beaufort Co.
+News					|12326		|Palatka						|Putnam Co.
+Times-Mail				|12313		|Bedford						|Lawrence Co.
+Daily News				|12262		|Newburyport						|Essex Co.
+Chronicle				|12226		|Geneva						|Kane Co.
+Journal-Standard			|12187		|Freeport						|Stephenson Co.
+Public Opinion				|12181		|Watertown						|Codington Co.
+Eagle-Gazette				|12160		|Lancaster						|Fairfield Co.
+Sentinel				|12119		|Keene							|Cheshire Co.
+Daily News				|12100		|Effingham						|Effingham Co.
+Gazette-Times				|12092		|Corvallis						|Benton Co.
+Independent				|12081		|Massillon						|Stark Co.
+Potomac News				|11976		|Prince William Co					|Manassas P.O.) Prince William Co (Woodbridge P.O.
+Dispatch				|11931		|Brainerd						|Crow Wing Co.
+Sentinel				|11863		|Lewistown						|Mifflin Co.
+World					|11804		|Coos Bay-North Bend					|Coos Co.
+Telegraph				|11790		|North Platte						|Lincoln Co.
+Herald					|11658		|Portsmouth						|Rockingham Co.
+Times-Gazette				|11578		|Ashland						|Ashland Co.
+Sun					|11565		|Flagstaff						|Coconino Co.
+Herald					|11556		|Clinton						|Clinton Co.
+Journal					|11543		|Lisbon						|Columbiana Co.
+Union Democrat				|11506		|Sonora						|Tuolumne Co.
+News-Herald				|11332		|Marshfield						|Wood Co.
+Daily News				|11287		|Winona						|Winona Co.
+Courier News				|11263		|Elgin							|Kane Co.
+Herald-Argus				|11251		|La Porte						|La Porte Co.
+Journal					|11234		|Stevens Point						|Portage Co.
+Courier					|11134		|Conroe						|Montgomery Co.
+Imperial Valley Press			|11125		|El Centro						|Imperial Co.
+Enterprise-Journal			|11097		|Mccomb						|Pike Co.
+Times-Union				|11047		|Warsaw						|Kosciusko Co.
+Herald-Citizen				|11044		|Cookeville						|Putnam Co.
+Gazette					|10991		|Sterling-Rock Falls					|Whiteside Co.
+Mountain Eagle				|10918		|Jasper						|Walker Co.
+Union-Sun & Journal			|10901		|Lockport						|Niagara Co.
+Post-Athenian				|10873		|Athens						|Mcminn Co.
+Messenger				|10831		|Canandaigua						|Ontario Co.
+Advance					|10812		|Elizabeth City					|Pasquotank Co.
+Daily Tribune				|10766		|Wisconsin Rapids					|Wood Co.
+Sentinel-Tribune			|10759		|Bowling Green						|Wood Co.
+Citizen					|10733		|Auburn						|Cayuga Co.
+Inter-Mountain				|10719		|Elkins						|Randolph Co.
+Gleaner					|10653		|Henderson						|Henderson Co.
+Times					|10645		|Marietta						|Washington Co.
+Dispatch				|10555		|Lexington						|Davidson Co.
+Comet					|10501		|Thibodaux						|Lafourche Parish
+Times-West Virginian			|10415		|Fairmont						|Marion Co.
+Time					|10394		|Greenwich						|Fairfield Co.
+News-Sun				|10388		|Hobbs							|Lea Co.
+Times-Observer				|10313		|Warren						|Warren Co.
+Garden Island				|10262		|Lihue							|Kauai Co.
+News Herald				|10114		|Morganton						|Burke Co.
+News-Dispatch				|10103		|Michigan City						|Laporte Co.
+Observer				|10024		|Dunkirk-Fredonia					|Chautauqua Co.
+Leader-Herald				|10020		|Gloversville-Johnstown				|Fulton Co.
+News					|10013		|Alpena						|Alpena Co.
+Times					|10005		|Gloucester						|Essex Co.
+Times					|9878		|Bryan							|Williams Co.
+News-Times				|9823		|El Dorado						|Union Co.
+Daily Citizen				|9732		|Beaver Dam						|Dodge Co.
+Journal Gazette				|9697		|Mattoon						|Coles Co.
+Today'S Sunbeam				|9674		|Salem							|Salem Co.
+Herald					|9646		|New Britain						|Hartford Co.
+Chronicle				|9643		|Dekalb						|Dekalb Co.
+News-Item				|9624		|Shamokin						|Northumberland Co.
+Times					|9621		|Gettysburg						|Adams Co.
+Caledonian-Record			|9609		|St. Johnsbury						|Caledonia Co.
+Sun					|9596		|Mount Pleasant					|Isabella Co.
+Tribune					|9529		|Grand Haven						|Ottawa Co.
+Courier Herald				|9516		|Dublin						|Laurens Co.
+Advertiser-Tribune			|9475		|Tiffin						|Seneca Co.
+Tribune					|9396		|Royal Oak						|Oakland Co.
+Times-Republican			|9349		|Marshalltown						|Marshall Co.
+Citizen					|9346		|Key West						|Monroe Co.
+Review					|9340		|East Liverpool					|Columbiana Co.
+Times Record				|9317		|Brunswick						|Cumberland Co.
+Times-Enterprise			|9303		|Thomasville						|Thomas Co.
+Daily News				|9193		|Iron Mountain-Kingsford				|Dickinson Co.
+Mesabi Daily News			|9143		|Virginia						|St. Louis Co.
+Ledger Independent			|9074		|Maysville						|Mason Co.
+East Oregonian				|9071		|Pendleton						|Umatilla Co.
+Gazette					|9059		|Taunton						|Bristol Co.
+Herald					|9048		|Sanford						|Lee Co.
+Mohave Valley Daily News		|9016		|Bullhead City						|Mohave Co.
+Dispatch				|9001		|Casa Grande						|Pinal Co.
+News-Review				|8994		|Petoskey						|Emmet Co.
+Press					|8993		|Escanaba						|Delta Co.
+World					|8991		|Opelousas						|St. Landry Parish
+Democrat				|8883		|Woodland						|Yolo Co.
+Herald					|8870		|Durango						|La Plata Co.
+Telegram				|8867		|Columbus						|Platte Co.
+Reflector				|8866		|Norwalk						|Huron Co.
+Reformer				|8814		|Brattleboro						|Windham Co.
+Saratogian				|8731		|Saratoga Springs					|Saratoga Co.
+News-Sun				|8722		|Kendallville						|Noble Co.
+Express					|8711		|Lock Haven						|Clinton Co.
+Mining Gazette				|8672		|Houghton						|Houghton Co.
+News-Topic				|8655		|Lenoir						|Caldwell Co.
+News					|8560		|Ponca City						|Kay Co.
+Enquirer-Journal			|8490		|Monroe						|Union Co.
+Daily News				|8417		|Milford						|Worcester Co.
+Tribune					|8404		|Fremont						|Dodge Co.
+Times Argus				|8360		|Barre-Montpelier					|Washington Co.
+News-Press				|8330		|Stillwater						|Payne Co.
+Press					|8285		|Bristol						|Hartford Co.
+Register Citizen			|8217		|Torrington						|Litchfield Co.
+Journal					|8156		|Park Hills						|St. Francois Co.
+News-Star				|8150		|Shawnee						|Pottawatomie Co.
+News					|8049		|Greenville						|Montcalm Co.
+Times-Georgian				|8019		|Carrollton						|Carroll Co.
+Courier-Post				|8010		|Hannibal						|Marion Co.
+Journal					|7920		|New Ulm						|Brown Co.
+Eagle Times				|7903		|Claremont						|Sullivan Co.
+Telegraph				|7729		|Dixon							|Lee Co.
+Journal Messenger			|7712		|Prince William Co					|( Prince William Co Manassas P.O.) Prince William Co (Woodbridge P.O.)
+Leader-Call				|7636		|Laurel						|Jones Co.
+Daily Sun				|7578		|Beatrice						|Gage Co.
+Messenger				|7552		|Madisonville						|Hopkins Co.
+News					|7537		|Ludington						|Mason Co.
+El Nuevo Heraldo			|7486		|Brownsville						|Cameron Co.
+News Virginian				|7478		|Waynesboro						|Independent City
+Dispatch				|7452		|Henderson						|Vance Co.
+News					|7315		|Bridgeton						|Cumberland Co.
+People'S Press				|7314		|Owatonna						|Steele Co.
+Star-Exponent				|7252		|Culpeper						|County
+News					|7159		|Tonawanda						|Tonawanda ( Erie Co.)- North Tonawanda (Niagara Co.)
+Facts					|7094		|Redlands						|San Bernardino Co.
+Tribune-News				|7048		|Cartersville						|Bartow Co.
+Independent				|7012		|Marshall						|Lyon Co.
+Commonwealth				|6992		|Greenwood						|Leflore Co.
+News					|6986		|Red Bluff						|Tehama Co.
+Current-Argus				|6966		|Carlsbad						|Eddy Co.
+Journal					|6943		|Muscatine						|Muscatine Co.
+News					|6936		|Griffin						|Spalding Co.
+Gazette					|6902		|Emporia						|Lyon Co.
+Press					|6876		|Middletown						|Middlesex Co.
+Record-Bee				|6825		|Lakeport						|Lake Co.
+Evening Star				|6753		|Auburn						|Dekalb Co.
+News Messenger				|6737		|Marshall						|Harrison Co.
+Times-Courier				|6558		|Charleston						|Coles Co.
+Corinthian				|6533		|Corinth						|Alcorn Co.
+Sentinel				|6525		|Fairmont						|Martin Co.
+Leader					|6525		|Shawano						|Shawano Co.
+Banner					|6502		|Bennington						|Bennington Co.
+Dispatch				|6501		|Oneida						|Madison County
+Jackson County Floridan			|6487		|Marianna						|Jackson Co.
+Daily News				|6468		|Alamogordo						|Otero Co.
+Journal					|6434		|Ukiah							|Mendocino Co.
+Bolivar Commercial			|6161		|Cleveland						|Bolivar Co.
+Advance-Register			|6159		|Tulare						|Tulare Co.
+Transcript				|5949		|North Adams						|Berkshire Co.
+Tribune					|5903		|Coshocton						|Coshocton Co.
+Register				|5880		|Richmond						|Madison Co.
+Telegraph-Forum				|5838		|Bucyrus						|Crawford Co.
+News					|5752		|Salem							|Columbiana Co.
+News					|5724		|Gardner						|Worcester Co.
+Plainsman				|5638		|Huron							|Beadle Co.
+Record					|5575		|Lompoc						|Santa Barbara Co.
+Breeze-Courier				|5557		|Taylorville						|Christian Co.
+Boomerang				|5242		|Laramie						|Albany Co.
+Times					|5150		|Weirton						|Hancock Co.
+Register-Star				|5088		|Hudson						|Columbia Co.
+Tribune					|5082		|Canton						|Cherokee Co.
+Daily Register				|4870		|Portage						|Columbia Co.
+Reporter Times				|4744		|Martinsville						|Morgan Co.
+Daily News Tribune			|4716		|Waltham						|Middlesex Co.
+Triplicate				|4670		|Crescent City						|Del Norte Co.
+Register				|4632		|Brookings						|Brookings Co.
+Desert Dispatch				|4556		|Barstow						|San Bernardino Co.
+Herald- Republican			|4533		|Angola						|Steuben Co.
+Daily Tribune				|4519		|Hibbing						|St. Louis Co.
+Courier					|4458		|Winfield						|Cowley Co.
+Item					|4377		|Picayune						|Pearl River Co.
+Leader					|4312		|Orange						|Orange Co.
+News Republic				|4261		|Baraboo						|Sauk Co.
+La Frontera				|4000		|Mcallen						|Hidalgo Co.
+Daily News Transcript			|3725		|Dedham						|Norfolk Co.
+Douglas County Sentinel			|3666		|Douglasville						|Douglas Co.
+Ellwood City Ledger			|3425		|Ellwood						|Lawrence Co.
+Journal Record				|3411		|Oklahoma City						|Oklahoma Co.
+Daily Mail				|3317		|Catskill						|Greene Co.
+Sentinel				|3081		|Parkersburg						|Wood Co.
+Freeman-Journal				|2699		|Webster City						|Hamilton Co.
+Journal-Register			|2690		|Medina						|Orleans Co.
+Phoenix					|2566		|Phoenixville						|Chester Co.
+News Tribune				|1449		|Jefferson City					|Cole Co.
