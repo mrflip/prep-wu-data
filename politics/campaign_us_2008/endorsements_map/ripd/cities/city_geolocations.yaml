@@ -1,0 +1,12281 @@
+--- 
+? 
+  - OH
+  - Middletown
+: !ruby/struct:CityGeolocation 
+  city: Middletown
+  state: OH
+  airport: ""
+  lat: 39.5057
+  lng: -84.37357
+
+? 
+  - WI
+  - Appleton
+: !ruby/struct:CityGeolocation 
+  city: Appleton
+  state: WI
+  airport: ATW
+  lat: 44.25
+  lng: -88.52
+
+? 
+  - WA
+  - Hanford
+: !ruby/struct:CityGeolocation 
+  city: Hanford
+  state: WA
+  airport: HMS
+  lat: 46.57
+  lng: -119.6
+
+? 
+  - MT
+  - Monida
+: !ruby/struct:CityGeolocation 
+  city: Monida
+  state: MT
+  airport: MQM
+  lat: 44.57
+  lng: -112.32
+
+? 
+  - IN
+  - South Bend
+: !ruby/struct:CityGeolocation 
+  city: South Bend
+  state: IN
+  airport: SBN
+  lat: 41.7
+  lng: -86.32
+
+? 
+  - DE
+  - Wilmington
+: !ruby/struct:CityGeolocation 
+  city: Wilmington
+  state: DE
+  airport: ILG
+  lat: 39.67
+  lng: -75.6
+
+? 
+  - KS
+  - Medicine Ldg
+: !ruby/struct:CityGeolocation 
+  city: Medicine Ldg
+  state: KS
+  airport: P28
+  lat: 37.3
+  lng: -98.58
+
+? 
+  - WA
+  - Everet/Paine
+: !ruby/struct:CityGeolocation 
+  city: Everet/Paine
+  state: WA
+  airport: PAE
+  lat: 47.92
+  lng: -122.28
+
+? 
+  - VA
+  - Chesapeake
+: !ruby/struct:CityGeolocation 
+  city: Chesapeake
+  state: VA
+  airport: W39
+  lat: 37.5
+  lng: -76.2
+
+? 
+  - AK
+  - Attu
+: !ruby/struct:CityGeolocation 
+  city: Attu
+  state: AK
+  airport: ATU
+  lat: 53.5
+  lng: -173.3
+
+? 
+  - CA
+  - Lancaster
+: !ruby/struct:CityGeolocation 
+  city: Lancaster
+  state: CA
+  airport: WJF
+  lat: 34.73
+  lng: -118.22
+
+? 
+  - WA
+  - Pasco
+: !ruby/struct:CityGeolocation 
+  city: Pasco
+  state: WA
+  airport: PSC
+  lat: 46.27
+  lng: -119.12
+
+? 
+  - IL
+  - Bistate Park
+: !ruby/struct:CityGeolocation 
+  city: Bistate Park
+  state: IL
+  airport: CPS
+  lat: 38.57
+  lng: -90.15
+
+? 
+  - LA
+  - Boothville
+: !ruby/struct:CityGeolocation 
+  city: Boothville
+  state: LA
+  airport: BVE
+  lat: 29.55
+  lng: -89.67
+
+? 
+  - IL
+  - Rockford
+: !ruby/struct:CityGeolocation 
+  city: Rockford
+  state: IL
+  airport: RFD
+  lat: 42.2
+  lng: -89.1
+
+? 
+  - MI
+  - Saginaw
+: !ruby/struct:CityGeolocation 
+  city: Saginaw
+  state: MI
+  airport: MBS
+  lat: 43.53
+  lng: -84.08
+
+? 
+  - AZ
+  - Winslow
+: !ruby/struct:CityGeolocation 
+  city: Winslow
+  state: AZ
+  airport: INW
+  lat: 35.02
+  lng: -110.73
+
+? 
+  - WI
+  - Milwaukee
+: !ruby/struct:CityGeolocation 
+  city: Milwaukee
+  state: WI
+  airport: MWC
+  lat: 43.12
+  lng: -88.05
+
+? 
+  - TX
+  - Laredo Intl
+: !ruby/struct:CityGeolocation 
+  city: Laredo Intl
+  state: TX
+  airport: LRD
+  lat: 27.53
+  lng: -99.47
+
+? 
+  - SC
+  - Mcentire
+: !ruby/struct:CityGeolocation 
+  city: Mcentire
+  state: SC
+  airport: MMT
+  lat: 33.92
+  lng: -80.8
+
+? 
+  - CA
+  - Van Nuys
+: !ruby/struct:CityGeolocation 
+  city: Van Nuys
+  state: CA
+  airport: VNY
+  lat: 34.22
+  lng: -118.48
+
+? 
+  - MS
+  - Greenville
+: !ruby/struct:CityGeolocation 
+  city: Greenville
+  state: MS
+  airport: GLH
+  lat: 33.48
+  lng: -90.98
+
+? 
+  - VA
+  - Virginia Beach
+: !ruby/struct:CityGeolocation 
+  city: Virginia Beach
+  state: VA
+  airport: ""
+  lat: 36.73935
+  lng: -76.04366
+
+? 
+  - OR
+  - Brookings
+: !ruby/struct:CityGeolocation 
+  city: Brookings
+  state: OR
+  airport: 4BK
+  lat: 42.08
+  lng: -124.47
+
+? 
+  - ID
+  - Twin Falls
+: !ruby/struct:CityGeolocation 
+  city: Twin Falls
+  state: ID
+  airport: TWF
+  lat: 42.48
+  lng: -114.48
+
+? 
+  - CT
+  - New Haven
+: !ruby/struct:CityGeolocation 
+  city: New Haven
+  state: CT
+  airport: N11
+  lat: 41.27
+  lng: -72.9
+
+? 
+  - NE
+  - Ainsworth
+: !ruby/struct:CityGeolocation 
+  city: Ainsworth
+  state: NE
+  airport: ANW
+  lat: 42.58
+  lng: -99.98
+
+? 
+  - WI
+  - Rhinelander
+: !ruby/struct:CityGeolocation 
+  city: Rhinelander
+  state: WI
+  airport: RHI
+  lat: 45.63
+  lng: -89.45
+
+? 
+  - TX
+  - Ellington Af
+: !ruby/struct:CityGeolocation 
+  city: Ellington Af
+  state: TX
+  airport: EFD
+  lat: 29.62
+  lng: -95.17
+
+? 
+  - TX
+  - Brownsville
+: !ruby/struct:CityGeolocation 
+  city: Brownsville
+  state: TX
+  airport: BRO
+  lat: 25.9
+  lng: -97.43
+
+? 
+  - OH
+  - Findlay
+: !ruby/struct:CityGeolocation 
+  city: Findlay
+  state: OH
+  airport: FDY
+  lat: 41.02
+  lng: -83.67
+
+? 
+  - AK
+  - Duffys Tavern
+: !ruby/struct:CityGeolocation 
+  city: Duffys Tavern
+  state: AK
+  airport: 5SZ
+  lat: 62.73
+  lng: -143.92
+
+? 
+  - CA
+  - Los Alamitos
+: !ruby/struct:CityGeolocation 
+  city: Los Alamitos
+  state: CA
+  airport: SLI
+  lat: 33.78
+  lng: -118.05
+
+? 
+  - CO
+  - Pueblo
+: !ruby/struct:CityGeolocation 
+  city: Pueblo
+  state: CO
+  airport: PUB
+  lat: 38.28
+  lng: -104.52
+
+? 
+  - CA
+  - Santa Cruz
+: !ruby/struct:CityGeolocation 
+  city: Santa Cruz
+  state: CA
+  airport: STS
+  lat: 36.97325
+  lng: -122.03582
+
+? 
+  - MI
+  - Detroit
+: !ruby/struct:CityGeolocation 
+  city: Detroit
+  state: MI
+  airport: DTW
+  lat: 42.23
+  lng: -83.33
+
+? 
+  - ID
+  - Malad City
+: !ruby/struct:CityGeolocation 
+  city: Malad City
+  state: ID
+  airport: MLD
+  lat: 42.17
+  lng: -112.32
+
+? 
+  - IL
+  - Chicago/Meigs
+: !ruby/struct:CityGeolocation 
+  city: Chicago/Meigs
+  state: IL
+  airport: CGX
+  lat: 41.87
+  lng: -87.62
+
+? 
+  - VA
+  - Charlottesville
+: !ruby/struct:CityGeolocation 
+  city: Charlottesville
+  state: VA
+  airport: CHO
+  lat: 38.13
+  lng: -78.45
+
+? 
+  - UT
+  - Hill AFB
+: !ruby/struct:CityGeolocation 
+  city: Hill AFB
+  state: UT
+  airport: HIF
+  lat: 41.12
+  lng: -111.97
+
+? 
+  - AZ
+  - Deer Valley
+: !ruby/struct:CityGeolocation 
+  city: Deer Valley
+  state: AZ
+  airport: DVT
+  lat: 33.68
+  lng: -112.08
+
+? 
+  - KY
+  - Jackson
+: !ruby/struct:CityGeolocation 
+  city: Jackson
+  state: KY
+  airport: JKL
+  lat: 37.6
+  lng: -83.32
+
+? 
+  - CA
+  - Mammoth Lks
+: !ruby/struct:CityGeolocation 
+  city: Mammoth Lks
+  state: CA
+  airport: MMH
+  lat: 37.63
+  lng: -118.92
+
+? 
+  - MN
+  - Thief River
+: !ruby/struct:CityGeolocation 
+  city: Thief River
+  state: MN
+  airport: TVF
+  lat: 48.07
+  lng: -96.18
+
+? 
+  - ID
+  - Malta
+: !ruby/struct:CityGeolocation 
+  city: Malta
+  state: ID
+  airport: 77M
+  lat: 42.3
+  lng: -113.37
+
+? 
+  - MI
+  - Grand Rapids
+: !ruby/struct:CityGeolocation 
+  city: Grand Rapids
+  state: MI
+  airport: GRR
+  lat: 42.88
+  lng: -85.52
+
+? 
+  - CA
+  - Camp Pendlet
+: !ruby/struct:CityGeolocation 
+  city: Camp Pendlet
+  state: CA
+  airport: NFG
+  lat: 33.3
+  lng: -117.35
+
+? 
+  - ID
+  - Boise
+: !ruby/struct:CityGeolocation 
+  city: Boise
+  state: ID
+  airport: BOI
+  lat: 43.57
+  lng: -116.22
+
+? 
+  - HI
+  - Kilauea Pt
+: !ruby/struct:CityGeolocation 
+  city: Kilauea Pt
+  state: HI
+  airport: 0Z5
+  lat: 22.38
+  lng: -159.67
+
+? 
+  - CA
+  - Miramar NAS
+: !ruby/struct:CityGeolocation 
+  city: Miramar NAS
+  state: CA
+  airport: NKX
+  lat: 32.87
+  lng: -117.15
+
+? 
+  - MT
+  - Glendive
+: !ruby/struct:CityGeolocation 
+  city: Glendive
+  state: MT
+  airport: GDV
+  lat: 47.13
+  lng: -104.8
+
+? 
+  - CA
+  - Marin County
+: !ruby/struct:CityGeolocation 
+  city: Marin County
+  state: CA
+  airport: ""
+  lat: 38.0353
+  lng: -122.74346
+
+? 
+  - NY
+  - Monticello
+: !ruby/struct:CityGeolocation 
+  city: Monticello
+  state: NY
+  airport: MSV
+  lat: 41.7
+  lng: -74.8
+
+? 
+  - CO
+  - Craig-Moffat
+: !ruby/struct:CityGeolocation 
+  city: Craig-Moffat
+  state: CO
+  airport: CAG
+  lat: 40.5
+  lng: -107.53
+
+? 
+  - NV
+  - Ind Sprng Rn
+: !ruby/struct:CityGeolocation 
+  city: Ind Sprng Rn
+  state: NV
+  airport: L76
+  lat: 36.57
+  lng: -115.67
+
+? 
+  - KS
+  - Olathe
+: !ruby/struct:CityGeolocation 
+  city: Olathe
+  state: KS
+  airport: OJC
+  lat: 38.85
+  lng: -94.9
+
+? 
+  - CO
+  - Limon
+: !ruby/struct:CityGeolocation 
+  city: Limon
+  state: CO
+  airport: LIC
+  lat: 39.18
+  lng: -103.7
+
+? 
+  - VA
+  - Harrisonburg
+: !ruby/struct:CityGeolocation 
+  city: Harrisonburg
+  state: VA
+  airport: ""
+  lat: 38.43672
+  lng: -78.87397
+
+? 
+  - TX
+  - Dallas/Love
+: !ruby/struct:CityGeolocation 
+  city: Dallas/Love
+  state: TX
+  airport: DAL
+  lat: 32.85
+  lng: -96.85
+
+? 
+  - NY
+  - Syracuse
+: !ruby/struct:CityGeolocation 
+  city: Syracuse
+  state: NY
+  airport: SYR
+  lat: 43.12
+  lng: -76.12
+
+? 
+  - OR
+  - Ontario
+: !ruby/struct:CityGeolocation 
+  city: Ontario
+  state: OR
+  airport: ONO
+  lat: 44.02
+  lng: -117.02
+
+? 
+  - CA
+  - Mojave
+: !ruby/struct:CityGeolocation 
+  city: Mojave
+  state: CA
+  airport: MHV
+  lat: 35.05
+  lng: -118.15
+
+? 
+  - NY
+  - Dansville
+: !ruby/struct:CityGeolocation 
+  city: Dansville
+  state: NY
+  airport: DSV
+  lat: 42.97
+  lng: -78.2
+
+? 
+  - AK
+  - Hoonah Seapl
+: !ruby/struct:CityGeolocation 
+  city: Hoonah Seapl
+  state: AK
+  airport: Z49
+  lat: 58.1
+  lng: -135.45
+
+? 
+  - MI
+  - Ypsilanti
+: !ruby/struct:CityGeolocation 
+  city: Ypsilanti
+  state: MI
+  airport: YIP
+  lat: 42.23
+  lng: -83.53
+
+? 
+  - NY
+  - Fort Drum
+: !ruby/struct:CityGeolocation 
+  city: Fort Drum
+  state: NY
+  airport: GTB
+  lat: 44.05
+  lng: -75.73
+
+? 
+  - AK
+  - Valdez 2
+: !ruby/struct:CityGeolocation 
+  city: Valdez 2
+  state: AK
+  airport: VDZ
+  lat: 61.13
+  lng: -146.25
+
+? 
+  - NE
+  - North Omaha
+: !ruby/struct:CityGeolocation 
+  city: North Omaha
+  state: NE
+  airport: OVN
+  lat: 41.37
+  lng: -96.02
+
+? 
+  - SD
+  - Sioux Falls
+: !ruby/struct:CityGeolocation 
+  city: Sioux Falls
+  state: SD
+  airport: FSD
+  lat: 43.58
+  lng: -96.73
+
+? 
+  - SD
+  - Pierre
+: !ruby/struct:CityGeolocation 
+  city: Pierre
+  state: SD
+  airport: PIR
+  lat: 44.38
+  lng: -100.28
+
+? 
+  - MO
+  - Spickard
+: !ruby/struct:CityGeolocation 
+  city: Spickard
+  state: MO
+  airport: P35
+  lat: 40.25
+  lng: -93.72
+
+? 
+  - NE
+  - Hastings
+: !ruby/struct:CityGeolocation 
+  city: Hastings
+  state: NE
+  airport: HSI
+  lat: 40.6
+  lng: -98.43
+
+? 
+  - NV
+  - Reno
+: !ruby/struct:CityGeolocation 
+  city: Reno
+  state: NV
+  airport: RNO
+  lat: 39.5
+  lng: -119.78
+
+? 
+  - TX
+  - Chase NAS
+: !ruby/struct:CityGeolocation 
+  city: Chase NAS
+  state: TX
+  airport: NIR
+  lat: 28.37
+  lng: -97.67
+
+? 
+  - TX
+  - Austin
+: !ruby/struct:CityGeolocation 
+  city: Austin
+  state: TX
+  airport: AUS
+  lat: 30.3
+  lng: -97.7
+
+? 
+  - OR
+  - Meacham
+: !ruby/struct:CityGeolocation 
+  city: Meacham
+  state: OR
+  airport: MEH
+  lat: 45.5
+  lng: -118.4
+
+? 
+  - MO
+  - Cp Girardeau
+: !ruby/struct:CityGeolocation 
+  city: Cp Girardeau
+  state: MO
+  airport: CGI
+  lat: 37.23
+  lng: -89.58
+
+? 
+  - MN
+  - Fairmont
+: !ruby/struct:CityGeolocation 
+  city: Fairmont
+  state: MN
+  airport: FRM
+  lat: 43.65
+  lng: -94.42
+
+? 
+  - CA
+  - Santa Barb
+: !ruby/struct:CityGeolocation 
+  city: Santa Barb
+  state: CA
+  airport: SBA
+  lat: 34.43
+  lng: -119.83
+
+? 
+  - FL
+  - St. Petersburg
+: !ruby/struct:CityGeolocation 
+  city: St. Petersburg
+  state: FL
+  airport: PIE
+  lat: 27.92
+  lng: -82.68
+
+? 
+  - MA
+  - Bedford
+: !ruby/struct:CityGeolocation 
+  city: Bedford
+  state: MA
+  airport: BED
+  lat: 42.47
+  lng: -71.28
+
+? 
+  - WI
+  - La Crosse
+: !ruby/struct:CityGeolocation 
+  city: La Crosse
+  state: WI
+  airport: LSE
+  lat: 43.87
+  lng: -91.25
+
+? 
+  - OK
+  - Tulsa
+: !ruby/struct:CityGeolocation 
+  city: Tulsa
+  state: OK
+  airport: TUL
+  lat: 36.2
+  lng: -95.9
+
+? 
+  - CA
+  - Merced
+: !ruby/struct:CityGeolocation 
+  city: Merced
+  state: CA
+  airport: MCE
+  lat: 37.28
+  lng: -120.52
+
+? 
+  - AZ
+  - Payson
+: !ruby/struct:CityGeolocation 
+  city: Payson
+  state: AZ
+  airport: 0E4
+  lat: 34.23
+  lng: -111.33
+
+? 
+  - IL
+  - Centralia
+: !ruby/struct:CityGeolocation 
+  city: Centralia
+  state: IL
+  airport: ENL
+  lat: 38.51
+  lng: -89.09
+
+? 
+  - AK
+  - Talkeetna
+: !ruby/struct:CityGeolocation 
+  city: Talkeetna
+  state: AK
+  airport: TKA
+  lat: 62.3
+  lng: -150.1
+
+? 
+  - NY
+  - Binghamton
+: !ruby/struct:CityGeolocation 
+  city: Binghamton
+  state: NY
+  airport: BGM
+  lat: 42.22
+  lng: -75.98
+
+? 
+  - IL
+  - Champaign/Urbana
+: !ruby/struct:CityGeolocation 
+  city: Champaign/Urbana
+  state: IL
+  airport: CMI
+  lat: 40.03
+  lng: -88.28
+
+? 
+  - AK
+  - Wales
+: !ruby/struct:CityGeolocation 
+  city: Wales
+  state: AK
+  airport: WAA
+  lat: 66.03
+  lng: -168.08
+
+? 
+  - TN
+  - Bristol
+: !ruby/struct:CityGeolocation 
+  city: Bristol
+  state: TN
+  airport: TRI
+  lat: 36.48
+  lng: -82.4
+
+? 
+  - NC
+  - Hot Springs
+: !ruby/struct:CityGeolocation 
+  city: Hot Springs
+  state: NC
+  airport: HSS
+  lat: 35.9
+  lng: -82.82
+
+? 
+  - GA
+  - Brunswick
+: !ruby/struct:CityGeolocation 
+  city: Brunswick
+  state: GA
+  airport: SSI
+  lat: 31.15
+  lng: -81.38
+
+? 
+  - CA
+  - Long Beach
+: !ruby/struct:CityGeolocation 
+  city: Long Beach
+  state: CA
+  airport: LGB
+  lat: 33.82
+  lng: -118.15
+
+? 
+  - VA
+  - Norfolk Rgnl
+: !ruby/struct:CityGeolocation 
+  city: Norfolk Rgnl
+  state: VA
+  airport: ORF
+  lat: 36.9
+  lng: -76.2
+
+? 
+  - NY
+  - New York/JFK
+: !ruby/struct:CityGeolocation 
+  city: New York/JFK
+  state: NY
+  airport: JFK
+  lat: 40.65
+  lng: -73.78
+
+? 
+  - CO
+  - Alamosa
+: !ruby/struct:CityGeolocation 
+  city: Alamosa
+  state: CO
+  airport: ALS
+  lat: 37.45
+  lng: -105.87
+
+? 
+  - AK
+  - Willow Arpt
+: !ruby/struct:CityGeolocation 
+  city: Willow Arpt
+  state: AK
+  airport: Z22
+  lat: 61.75
+  lng: -150.05
+
+? 
+  - IN
+  - Bloomington
+: !ruby/struct:CityGeolocation 
+  city: Bloomington
+  state: IN
+  airport: BMG
+  lat: 39.13
+  lng: -86.62
+
+? 
+  - WV
+  - Parkersburg
+: !ruby/struct:CityGeolocation 
+  city: Parkersburg
+  state: WV
+  airport: PKB
+  lat: 39.35
+  lng: -81.43
+
+? 
+  - AK
+  - Oliktok Dew
+: !ruby/struct:CityGeolocation 
+  city: Oliktok Dew
+  state: AK
+  airport: OLI
+  lat: 70.5
+  lng: -149.88
+
+? 
+  - MN
+  - St Cloud
+: !ruby/struct:CityGeolocation 
+  city: St Cloud
+  state: MN
+  airport: STC
+  lat: 45.55
+  lng: -94.07
+
+? 
+  - CA
+  - March AFB
+: !ruby/struct:CityGeolocation 
+  city: March AFB
+  state: CA
+  airport: RIV
+  lat: 33.88
+  lng: -117.27
+
+? 
+  - VA
+  - Roanoke Muni
+: !ruby/struct:CityGeolocation 
+  city: Roanoke Muni
+  state: VA
+  airport: ROA
+  lat: 37.32
+  lng: -79.97
+
+? 
+  - AK
+  - Umiat
+: !ruby/struct:CityGeolocation 
+  city: Umiat
+  state: AK
+  airport: UMT
+  lat: 69.37
+  lng: -152.13
+
+? 
+  - MN
+  - Intl Falls
+: !ruby/struct:CityGeolocation 
+  city: Intl Falls
+  state: MN
+  airport: INL
+  lat: 48.57
+  lng: -93.38
+
+? 
+  - CA
+  - Arcata
+: !ruby/struct:CityGeolocation 
+  city: Arcata
+  state: CA
+  airport: ACV
+  lat: 40.98
+  lng: -124.1
+
+? 
+  - IA
+  - Spencer
+: !ruby/struct:CityGeolocation 
+  city: Spencer
+  state: IA
+  airport: 3SE
+  lat: 43.17
+  lng: -95.15
+
+? 
+  - OH
+  - Akron
+: !ruby/struct:CityGeolocation 
+  city: Akron
+  state: OH
+  airport: ""
+  lat: 40.946714
+  lng: -81.20544
+
+? 
+  - PA
+  - Wilkes-Barre
+: !ruby/struct:CityGeolocation 
+  city: Wilkes-Barre
+  state: PA
+  airport: AVP
+  lat: 41.33
+  lng: -75.73
+
+? 
+  - CA
+  - San Mateo
+: !ruby/struct:CityGeolocation 
+  city: San Mateo
+  state: CA
+  airport: L98
+  lat: 33.38
+  lng: -117.58
+
+? 
+  - CA
+  - Mount Wilson
+: !ruby/struct:CityGeolocation 
+  city: Mount Wilson
+  state: CA
+  airport: MWS
+  lat: 34.23
+  lng: -118.07
+
+? 
+  - NV
+  - Mercury
+: !ruby/struct:CityGeolocation 
+  city: Mercury
+  state: NV
+  airport: DRA
+  lat: 36.62
+  lng: -116.02
+
+? 
+  - OK
+  - Hobart
+: !ruby/struct:CityGeolocation 
+  city: Hobart
+  state: OK
+  airport: HBR
+  lat: 35.0
+  lng: -99.05
+
+? 
+  - NC
+  - Jacksonville
+: !ruby/struct:CityGeolocation 
+  city: Jacksonville
+  state: NC
+  airport: OAJ
+  lat: 34.82
+  lng: -77.62
+
+? 
+  - FL
+  - Lakeland
+: !ruby/struct:CityGeolocation 
+  city: Lakeland
+  state: FL
+  airport: LAL
+  lat: 28.03
+  lng: -81.95
+
+? 
+  - MO
+  - Vichy/Rolla
+: !ruby/struct:CityGeolocation 
+  city: Vichy/Rolla
+  state: MO
+  airport: VIH
+  lat: 38.13
+  lng: -91.77
+
+? 
+  - CT
+  - Danbury
+: !ruby/struct:CityGeolocation 
+  city: Danbury
+  state: CT
+  airport: DXR
+  lat: 41.37
+  lng: -73.48
+
+? 
+  - KY
+  - London
+: !ruby/struct:CityGeolocation 
+  city: London
+  state: KY
+  airport: LOZ
+  lat: 37.08
+  lng: -84.07
+
+? 
+  - NV
+  - Fallon NAS
+: !ruby/struct:CityGeolocation 
+  city: Fallon NAS
+  state: NV
+  airport: NFL
+  lat: 39.42
+  lng: -118.7
+
+? 
+  - IL
+  - Bloomington
+: !ruby/struct:CityGeolocation 
+  city: Bloomington
+  state: IL
+  airport: BMI
+  lat: 40.48
+  lng: -88.93
+
+? 
+  - UT
+  - Wendover
+: !ruby/struct:CityGeolocation 
+  city: Wendover
+  state: UT
+  airport: ENV
+  lat: 41.22
+  lng: -114.05
+
+? 
+  - UT
+  - Price/Carbon
+: !ruby/struct:CityGeolocation 
+  city: Price/Carbon
+  state: UT
+  airport: PUC
+  lat: 39.62
+  lng: -110.75
+
+? 
+  - CA
+  - Fort Ord
+: !ruby/struct:CityGeolocation 
+  city: Fort Ord
+  state: CA
+  airport: OAR
+  lat: 36.68
+  lng: -121.77
+
+? 
+  - GA
+  - Macon/Lewis
+: !ruby/struct:CityGeolocation 
+  city: Macon/Lewis
+  state: GA
+  airport: MCN
+  lat: 32.7
+  lng: -83.65
+
+? 
+  - MN
+  - New Ulm
+: !ruby/struct:CityGeolocation 
+  city: New Ulm
+  state: MN
+  airport: ""
+  lat: 44.31309
+  lng: -94.46372
+
+? 
+  - FL
+  - Tyndall AFB
+: !ruby/struct:CityGeolocation 
+  city: Tyndall AFB
+  state: FL
+  airport: PAM
+  lat: 30.07
+  lng: -85.58
+
+? 
+  - AK
+  - Sand Point
+: !ruby/struct:CityGeolocation 
+  city: Sand Point
+  state: AK
+  airport: SDP
+  lat: 55.33
+  lng: -160.5
+
+? 
+  - TX
+  - Rockport
+: !ruby/struct:CityGeolocation 
+  city: Rockport
+  state: TX
+  airport: RKP
+  lat: 28.08
+  lng: -97.03
+
+? 
+  - TX
+  - D.w. Hooks
+: !ruby/struct:CityGeolocation 
+  city: D.w. Hooks
+  state: TX
+  airport: DWH
+  lat: 30.07
+  lng: -95.55
+
+? 
+  - SC
+  - Columbia
+: !ruby/struct:CityGeolocation 
+  city: Columbia
+  state: SC
+  airport: CAE
+  lat: 33.95
+  lng: -81.12
+
+? 
+  - NY
+  - Jamestown
+: !ruby/struct:CityGeolocation 
+  city: Jamestown
+  state: NY
+  airport: JHW
+  lat: 42.15
+  lng: -79.25
+
+? 
+  - MI
+  - Manistee
+: !ruby/struct:CityGeolocation 
+  city: Manistee
+  state: MI
+  airport: MBL
+  lat: 44.27
+  lng: -86.25
+
+? 
+  - AK
+  - Fairbanks
+: !ruby/struct:CityGeolocation 
+  city: Fairbanks
+  state: AK
+  airport: FAI
+  lat: 64.82
+  lng: -147.87
+
+? 
+  - IN
+  - Fort Wayne
+: !ruby/struct:CityGeolocation 
+  city: Fort Wayne
+  state: IN
+  airport: FWA
+  lat: 41.0
+  lng: -85.2
+
+? 
+  - WA
+  - Whidbey Is
+: !ruby/struct:CityGeolocation 
+  city: Whidbey Is
+  state: WA
+  airport: NUW
+  lat: 48.35
+  lng: -122.65
+
+? 
+  - CA
+  - Santa Monica
+: !ruby/struct:CityGeolocation 
+  city: Santa Monica
+  state: CA
+  airport: SMO
+  lat: 34.02
+  lng: -118.45
+
+? 
+  - WY
+  - Rock Springs
+: !ruby/struct:CityGeolocation 
+  city: Rock Springs
+  state: WY
+  airport: RKS
+  lat: 41.6
+  lng: -109.07
+
+? 
+  - MT
+  - Jordan
+: !ruby/struct:CityGeolocation 
+  city: Jordan
+  state: MT
+  airport: JDN
+  lat: 47.33
+  lng: -106.93
+
+? 
+  - KY
+  - Bowling Gren
+: !ruby/struct:CityGeolocation 
+  city: Bowling Gren
+  state: KY
+  airport: BWG
+  lat: 36.97
+  lng: -86.43
+
+? 
+  - CO
+  - Trinidad
+: !ruby/struct:CityGeolocation 
+  city: Trinidad
+  state: CO
+  airport: TAD
+  lat: 37.25
+  lng: -104.33
+
+? 
+  - AL
+  - Selma
+: !ruby/struct:CityGeolocation 
+  city: Selma
+  state: AL
+  airport: SEM
+  lat: 32.34
+  lng: -86.99
+
+? 
+  - VA
+  - Staunton
+: !ruby/struct:CityGeolocation 
+  city: Staunton
+  state: VA
+  airport: SHD
+  lat: 38.27
+  lng: -78.85
+
+? 
+  - CO
+  - Ft Col/Lovel
+: !ruby/struct:CityGeolocation 
+  city: Ft Col/Lovel
+  state: CO
+  airport: FNL
+  lat: 40.45
+  lng: -105.02
+
+? 
+  - LA
+  - Grand Isle
+: !ruby/struct:CityGeolocation 
+  city: Grand Isle
+  state: LA
+  airport: AXO
+  lat: 29.18
+  lng: -90.07
+
+? 
+  - NM
+  - Roswell
+: !ruby/struct:CityGeolocation 
+  city: Roswell
+  state: NM
+  airport: ROW
+  lat: 33.3
+  lng: -104.53
+
+? 
+  - AK
+  - Snowshoe Lk
+: !ruby/struct:CityGeolocation 
+  city: Snowshoe Lk
+  state: AK
+  airport: 5SO
+  lat: 62.03
+  lng: -146.67
+
+? 
+  - TX
+  - Marfa
+: !ruby/struct:CityGeolocation 
+  city: Marfa
+  state: TX
+  airport: MRF
+  lat: 30.37
+  lng: -104.02
+
+? 
+  - OK
+  - Mcalester
+: !ruby/struct:CityGeolocation 
+  city: Mcalester
+  state: OK
+  airport: MLC
+  lat: 34.88
+  lng: -95.78
+
+? 
+  - FL
+  - Key West
+: !ruby/struct:CityGeolocation 
+  city: Key West
+  state: FL
+  airport: EYW
+  lat: 24.55
+  lng: -81.75
+
+? 
+  - CO
+  - Eagle
+: !ruby/struct:CityGeolocation 
+  city: Eagle
+  state: CO
+  airport: EGE
+  lat: 39.65
+  lng: -106.92
+
+? 
+  - SC
+  - Myrtle Beach
+: !ruby/struct:CityGeolocation 
+  city: Myrtle Beach
+  state: SC
+  airport: MYR
+  lat: 33.68
+  lng: -78.93
+
+? 
+  - OH
+  - Toledo
+: !ruby/struct:CityGeolocation 
+  city: Toledo
+  state: OH
+  airport: TOL
+  lat: 41.6
+  lng: -83.8
+
+? 
+  - OH
+  - Columbus
+: !ruby/struct:CityGeolocation 
+  city: Columbus
+  state: OH
+  airport: CMH
+  lat: 40.0
+  lng: -82.88
+
+? 
+  - AK
+  - Palmer
+: !ruby/struct:CityGeolocation 
+  city: Palmer
+  state: AK
+  airport: PAQ
+  lat: 61.6
+  lng: -149.08
+
+? 
+  - IL
+  - Macomb
+: !ruby/struct:CityGeolocation 
+  city: Macomb
+  state: IL
+  airport: MQB
+  lat: 40.52
+  lng: -90.66
+
+? 
+  - AK
+  - Skagway
+: !ruby/struct:CityGeolocation 
+  city: Skagway
+  state: AK
+  airport: SGY
+  lat: 59.75
+  lng: -135.53
+
+? 
+  - UT
+  - Hanksville
+: !ruby/struct:CityGeolocation 
+  city: Hanksville
+  state: UT
+  airport: 4HV
+  lat: 38.37
+  lng: -110.72
+
+? 
+  - SD
+  - Custer
+: !ruby/struct:CityGeolocation 
+  city: Custer
+  state: SD
+  airport: 0V1
+  lat: 43.77
+  lng: -103.6
+
+? 
+  - NY
+  - Rochester
+: !ruby/struct:CityGeolocation 
+  city: Rochester
+  state: NY
+  airport: ROC
+  lat: 43.12
+  lng: -77.67
+
+? 
+  - MN
+  - Albert Lea
+: !ruby/struct:CityGeolocation 
+  city: Albert Lea
+  state: MN
+  airport: AEL
+  lat: 43.68
+  lng: -93.37
+
+? 
+  - VA
+  - Fort Belvoir
+: !ruby/struct:CityGeolocation 
+  city: Fort Belvoir
+  state: VA
+  airport: DAA
+  lat: 38.72
+  lng: -77.18
+
+? 
+  - KY
+  - Ft Campbell
+: !ruby/struct:CityGeolocation 
+  city: Ft Campbell
+  state: KY
+  airport: HOP
+  lat: 36.67
+  lng: -87.5
+
+? 
+  - FL
+  - Key West NAS
+: !ruby/struct:CityGeolocation 
+  city: Key West NAS
+  state: FL
+  airport: NQX
+  lat: 24.57
+  lng: -81.68
+
+? 
+  - CA
+  - China Lake
+: !ruby/struct:CityGeolocation 
+  city: China Lake
+  state: CA
+  airport: NID
+  lat: 35.68
+  lng: -117.68
+
+? 
+  - MN
+  - Bemidji Muni
+: !ruby/struct:CityGeolocation 
+  city: Bemidji Muni
+  state: MN
+  airport: BJI
+  lat: 47.5
+  lng: -94.93
+
+? 
+  - WA
+  - Seattle/Boeing
+: !ruby/struct:CityGeolocation 
+  city: Seattle/Boeing
+  state: WA
+  airport: BFI
+  lat: 47.53
+  lng: -122.3
+
+? 
+  - NE
+  - Broken Bow
+: !ruby/struct:CityGeolocation 
+  city: Broken Bow
+  state: NE
+  airport: BBW
+  lat: 41.43
+  lng: -99.65
+
+? 
+  - HI
+  - Maui
+: !ruby/struct:CityGeolocation 
+  city: Maui
+  state: HI
+  airport: JHM
+  lat: 20.97
+  lng: -156.83
+
+? 
+  - NC
+  - Durham
+: !ruby/struct:CityGeolocation 
+  city: Durham
+  state: NC
+  airport: ""
+  lat: 35.98043
+  lng: -78.91496
+
+? 
+  - VA
+  - Langley AFB
+: !ruby/struct:CityGeolocation 
+  city: Langley AFB
+  state: VA
+  airport: LFI
+  lat: 37.08
+  lng: -76.37
+
+? 
+  - TX
+  - Plainview
+: !ruby/struct:CityGeolocation 
+  city: Plainview
+  state: TX
+  airport: PVW
+  lat: 34.17
+  lng: -101.71
+
+? 
+  - NY
+  - Massena
+: !ruby/struct:CityGeolocation 
+  city: Massena
+  state: NY
+  airport: MSS
+  lat: 44.93
+  lng: -74.85
+
+? 
+  - AK
+  - Juneau
+: !ruby/struct:CityGeolocation 
+  city: Juneau
+  state: AK
+  airport: JNU
+  lat: 58.37
+  lng: -134.58
+
+? 
+  - AZ
+  - Yuma Mcas
+: !ruby/struct:CityGeolocation 
+  city: Yuma Mcas
+  state: AZ
+  airport: NYL
+  lat: 32.65
+  lng: -114.62
+
+? 
+  - WA
+  - Tacoma
+: !ruby/struct:CityGeolocation 
+  city: Tacoma
+  state: WA
+  airport: TIW
+  lat: 47.27
+  lng: -122.58
+
+? 
+  - KS
+  - Mcconnell Af
+: !ruby/struct:CityGeolocation 
+  city: Mcconnell Af
+  state: KS
+  airport: IAB
+  lat: 37.62
+  lng: -97.27
+
+? 
+  - NM
+  - Grants
+: !ruby/struct:CityGeolocation 
+  city: Grants
+  state: NM
+  airport: GNT
+  lat: 35.17
+  lng: -107.9
+
+? 
+  - MT
+  - Broadus
+: !ruby/struct:CityGeolocation 
+  city: Broadus
+  state: MT
+  airport: 4BQ
+  lat: 45.67
+  lng: -105.67
+
+? 
+  - FL
+  - Miami/Tamiami
+: !ruby/struct:CityGeolocation 
+  city: Miami/Tamiami
+  state: FL
+  airport: TMB
+  lat: 25.65
+  lng: -80.43
+
+? 
+  - MI
+  - Menominee
+: !ruby/struct:CityGeolocation 
+  city: Menominee
+  state: MI
+  airport: MNM
+  lat: 45.12
+  lng: -87.63
+
+? 
+  - MI
+  - Copper Harb
+: !ruby/struct:CityGeolocation 
+  city: Copper Harb
+  state: MI
+  airport: P59
+  lat: 47.47
+  lng: -87.85
+
+? 
+  - AK
+  - Galbraith Lk
+: !ruby/struct:CityGeolocation 
+  city: Galbraith Lk
+  state: AK
+  airport: GBH
+  lat: 68.48
+  lng: -149.48
+
+? 
+  - NE
+  - Falls City
+: !ruby/struct:CityGeolocation 
+  city: Falls City
+  state: NE
+  airport: FNB
+  lat: 40.07
+  lng: -95.58
+
+? 
+  - MI
+  - Battle Creek
+: !ruby/struct:CityGeolocation 
+  city: Battle Creek
+  state: MI
+  airport: BTL
+  lat: 42.3
+  lng: -85.23
+
+? 
+  - LA
+  - Intercoastal
+: !ruby/struct:CityGeolocation 
+  city: Intercoastal
+  state: LA
+  airport: 7R4
+  lat: 29.73
+  lng: -92.12
+
+? 
+  - MA
+  - Fort Devens
+: !ruby/struct:CityGeolocation 
+  city: Fort Devens
+  state: MA
+  airport: AYE
+  lat: 42.57
+  lng: -71.6
+
+? 
+  - CA
+  - Susanville
+: !ruby/struct:CityGeolocation 
+  city: Susanville
+  state: CA
+  airport: SVE
+  lat: 40.63
+  lng: -120.95
+
+? 
+  - MO
+  - Muskogee
+: !ruby/struct:CityGeolocation 
+  city: Muskogee
+  state: MO
+  airport: MKO
+  lat: 35.66
+  lng: -95.36
+
+? 
+  - KS
+  - Ft Leavnwrth
+: !ruby/struct:CityGeolocation 
+  city: Ft Leavnwrth
+  state: KS
+  airport: FLV
+  lat: 39.37
+  lng: -94.92
+
+? 
+  - OR
+  - Aurora
+: !ruby/struct:CityGeolocation 
+  city: Aurora
+  state: OR
+  airport: 3S2
+  lat: 45.25
+  lng: -122.75
+
+? 
+  - DC
+  - Washington/Natl
+: !ruby/struct:CityGeolocation 
+  city: Washington/Natl
+  state: DC
+  airport: DCA
+  lat: 38.85
+  lng: -77.04
+
+? 
+  - WV
+  - Bluefield
+: !ruby/struct:CityGeolocation 
+  city: Bluefield
+  state: WV
+  airport: BLF
+  lat: 37.3
+  lng: -81.22
+
+? 
+  - TX
+  - Abilene
+: !ruby/struct:CityGeolocation 
+  city: Abilene
+  state: TX
+  airport: ABI
+  lat: 32.42
+  lng: -99.68
+
+? 
+  - CA
+  - Blythe
+: !ruby/struct:CityGeolocation 
+  city: Blythe
+  state: CA
+  airport: BLH
+  lat: 33.62
+  lng: -114.72
+
+? 
+  - MS
+  - Golden Trian
+: !ruby/struct:CityGeolocation 
+  city: Golden Trian
+  state: MS
+  airport: GTR
+  lat: 33.45
+  lng: -88.58
+
+? 
+  - NE
+  - Cozad
+: !ruby/struct:CityGeolocation 
+  city: Cozad
+  state: NE
+  airport: CZD
+  lat: 40.87
+  lng: -100.0
+
+? 
+  - IN
+  - W Lafayette
+: !ruby/struct:CityGeolocation 
+  city: W Lafayette
+  state: IN
+  airport: LAF
+  lat: 40.42
+  lng: -86.93
+
+? 
+  - VT
+  - Wilmington
+: !ruby/struct:CityGeolocation 
+  city: Wilmington
+  state: VT
+  airport: MNW
+  lat: 42.88
+  lng: -72.88
+
+? 
+  - TN
+  - Chattanooga
+: !ruby/struct:CityGeolocation 
+  city: Chattanooga
+  state: TN
+  airport: CHA
+  lat: 35.03
+  lng: -85.2
+
+? 
+  - PA
+  - Muir
+: !ruby/struct:CityGeolocation 
+  city: Muir
+  state: PA
+  airport: MUI
+  lat: 40.43
+  lng: -76.57
+
+? 
+  - AL
+  - Fort Rucker
+: !ruby/struct:CityGeolocation 
+  city: Fort Rucker
+  state: AL
+  airport: OZR
+  lat: 31.28
+  lng: -85.72
+
+? 
+  - GA
+  - Atlanta/Fltn
+: !ruby/struct:CityGeolocation 
+  city: Atlanta/Fltn
+  state: GA
+  airport: FTY
+  lat: 33.78
+  lng: -84.52
+
+? 
+  - MT
+  - Wolf Point
+: !ruby/struct:CityGeolocation 
+  city: Wolf Point
+  state: MT
+  airport: OLF
+  lat: 48.1
+  lng: -105.58
+
+? 
+  - KS
+  - Hutchinson
+: !ruby/struct:CityGeolocation 
+  city: Hutchinson
+  state: KS
+  airport: HUT
+  lat: 38.07
+  lng: -97.87
+
+? 
+  - AK
+  - Eldred Rock
+: !ruby/struct:CityGeolocation 
+  city: Eldred Rock
+  state: AK
+  airport: ERO
+  lat: 59.62
+  lng: -135.37
+
+? 
+  - NM
+  - Los Alamos
+: !ruby/struct:CityGeolocation 
+  city: Los Alamos
+  state: NM
+  airport: LAM
+  lat: 35.88
+  lng: -106.28
+
+? 
+  - AK
+  - Petersburg
+: !ruby/struct:CityGeolocation 
+  city: Petersburg
+  state: AK
+  airport: PSG
+  lat: 56.82
+  lng: -132.97
+
+? 
+  - AL
+  - Maxwell AFB
+: !ruby/struct:CityGeolocation 
+  city: Maxwell AFB
+  state: AL
+  airport: MXF
+  lat: 32.38
+  lng: -86.37
+
+? 
+  - OH
+  - Canton
+: !ruby/struct:CityGeolocation 
+  city: Canton
+  state: OH
+  airport: CAK
+  lat: 40.92
+  lng: -81.43
+
+? 
+  - FL
+  - Cape Canaveral
+: !ruby/struct:CityGeolocation 
+  city: Cape Canaveral
+  state: FL
+  airport: XMR
+  lat: 28.47
+  lng: -80.55
+
+? 
+  - AL
+  - Montgomery
+: !ruby/struct:CityGeolocation 
+  city: Montgomery
+  state: AL
+  airport: MGM
+  lat: 32.3
+  lng: -86.4
+
+? 
+  - HI
+  - Lihue-Kauai
+: !ruby/struct:CityGeolocation 
+  city: Lihue-Kauai
+  state: HI
+  airport: LIH
+  lat: 21.98
+  lng: -159.35
+
+? 
+  - AK
+  - Point Lay
+: !ruby/struct:CityGeolocation 
+  city: Point Lay
+  state: AK
+  airport: PIZ
+  lat: 69.82
+  lng: -162.92
+
+? 
+  - NY
+  - White Plains
+: !ruby/struct:CityGeolocation 
+  city: White Plains
+  state: NY
+  airport: HPN
+  lat: 41.07
+  lng: -73.72
+
+? 
+  - MA
+  - Pittsfield
+: !ruby/struct:CityGeolocation 
+  city: Pittsfield
+  state: MA
+  airport: PSF
+  lat: 42.26
+  lng: -73.18
+
+? 
+  - ID
+  - Sun Valley
+: !ruby/struct:CityGeolocation 
+  city: Sun Valley
+  state: ID
+  airport: SUN
+  lat: 43.5
+  lng: -114.3
+
+? 
+  - MI
+  - Sawyer AFB
+: !ruby/struct:CityGeolocation 
+  city: Sawyer AFB
+  state: MI
+  airport: SAW
+  lat: 46.35
+  lng: -87.4
+
+? 
+  - NE
+  - Lincoln Muni
+: !ruby/struct:CityGeolocation 
+  city: Lincoln Muni
+  state: NE
+  airport: LNK
+  lat: 40.85
+  lng: -96.75
+
+? 
+  - WI
+  - Volk Fld
+: !ruby/struct:CityGeolocation 
+  city: Volk Fld
+  state: WI
+  airport: VOK
+  lat: 43.93
+  lng: -90.27
+
+? 
+  - OK
+  - Bartlesville
+: !ruby/struct:CityGeolocation 
+  city: Bartlesville
+  state: OK
+  airport: BVO
+  lat: 36.75
+  lng: -96.0
+
+? 
+  - CA
+  - Fort Hunter
+: !ruby/struct:CityGeolocation 
+  city: Fort Hunter
+  state: CA
+  airport: HGT
+  lat: 36.0
+  lng: -121.32
+
+? 
+  - WY
+  - Laramie
+: !ruby/struct:CityGeolocation 
+  city: Laramie
+  state: WY
+  airport: LAR
+  lat: 41.32
+  lng: -105.68
+
+? 
+  - TX
+  - Dallas/Addis
+: !ruby/struct:CityGeolocation 
+  city: Dallas/Addis
+  state: TX
+  airport: ADS
+  lat: 32.97
+  lng: -96.83
+
+? 
+  - TX
+  - Brownwood
+: !ruby/struct:CityGeolocation 
+  city: Brownwood
+  state: TX
+  airport: BWD
+  lat: 31.79
+  lng: -98.96
+
+? 
+  - SC
+  - Florence
+: !ruby/struct:CityGeolocation 
+  city: Florence
+  state: SC
+  airport: FLO
+  lat: 34.18
+  lng: -79.72
+
+? 
+  - NM
+  - Northrup Str
+: !ruby/struct:CityGeolocation 
+  city: Northrup Str
+  state: NM
+  airport: E28
+  lat: 32.9
+  lng: -106.4
+
+? 
+  - TX
+  - Port Arthur
+: !ruby/struct:CityGeolocation 
+  city: Port Arthur
+  state: TX
+  airport: BPT
+  lat: 30.58
+  lng: -94.02
+
+? 
+  - NE
+  - Imperial
+: !ruby/struct:CityGeolocation 
+  city: Imperial
+  state: NE
+  airport: IML
+  lat: 40.53
+  lng: -101.63
+
+? 
+  - PA
+  - Philadelphia
+: !ruby/struct:CityGeolocation 
+  city: Philadelphia
+  state: PA
+  airport: PHL
+  lat: 39.88
+  lng: -75.25
+
+? 
+  - MT
+  - Butte
+: !ruby/struct:CityGeolocation 
+  city: Butte
+  state: MT
+  airport: BTM
+  lat: 45.95
+  lng: -112.5
+
+? 
+  - MN
+  - Litchfield
+: !ruby/struct:CityGeolocation 
+  city: Litchfield
+  state: MN
+  airport: Y69
+  lat: 45.13
+  lng: -94.52
+
+? 
+  - CA
+  - Imperial Bch
+: !ruby/struct:CityGeolocation 
+  city: Imperial Bch
+  state: CA
+  airport: NRS
+  lat: 32.57
+  lng: -117.12
+
+? 
+  - KY
+  - Maysville
+: !ruby/struct:CityGeolocation 
+  city: Maysville
+  state: KY
+  airport: ""
+  lat: 38.62953
+  lng: -83.78005
+
+? 
+  - IL
+  - Mount Vernon
+: !ruby/struct:CityGeolocation 
+  city: Mount Vernon
+  state: IL
+  airport: MVN
+  lat: 38.32
+  lng: -88.86
+
+? 
+  - GA
+  - Savannah Mun
+: !ruby/struct:CityGeolocation 
+  city: Savannah Mun
+  state: GA
+  airport: SAV
+  lat: 32.13
+  lng: -81.2
+
+? 
+  - KS
+  - Salina
+: !ruby/struct:CityGeolocation 
+  city: Salina
+  state: KS
+  airport: SLN
+  lat: 38.8
+  lng: -97.65
+
+? 
+  - ID
+  - Mccall
+: !ruby/struct:CityGeolocation 
+  city: Mccall
+  state: ID
+  airport: MYL
+  lat: 44.88
+  lng: -116.1
+
+? 
+  - NV
+  - Lovelock
+: !ruby/struct:CityGeolocation 
+  city: Lovelock
+  state: NV
+  airport: LOL
+  lat: 40.1
+  lng: -118.92
+
+? 
+  - WA
+  - Stampede Pas
+: !ruby/struct:CityGeolocation 
+  city: Stampede Pas
+  state: WA
+  airport: SMP
+  lat: 47.28
+  lng: -121.33
+
+? 
+  - TX
+  - Laughlin AFB
+: !ruby/struct:CityGeolocation 
+  city: Laughlin AFB
+  state: TX
+  airport: DLF
+  lat: 29.37
+  lng: -100.78
+
+? 
+  - ND
+  - Jamestown
+: !ruby/struct:CityGeolocation 
+  city: Jamestown
+  state: ND
+  airport: JMS
+  lat: 46.92
+  lng: -98.68
+
+? 
+  - NY
+  - Saranac Lk
+: !ruby/struct:CityGeolocation 
+  city: Saranac Lk
+  state: NY
+  airport: SLK
+  lat: 44.38
+  lng: -74.2
+
+? 
+  - GA
+  - Ft Stewart
+: !ruby/struct:CityGeolocation 
+  city: Ft Stewart
+  state: GA
+  airport: LHW
+  lat: 31.88
+  lng: -81.57
+
+? 
+  - CA
+  - Travis AFB
+: !ruby/struct:CityGeolocation 
+  city: Travis AFB
+  state: CA
+  airport: SUU
+  lat: 38.27
+  lng: -121.93
+
+? 
+  - AR
+  - Ft Smith
+: !ruby/struct:CityGeolocation 
+  city: Ft Smith
+  state: AR
+  airport: FSM
+  lat: 35.33
+  lng: -94.37
+
+? 
+  - TX
+  - Dallas NAS
+: !ruby/struct:CityGeolocation 
+  city: Dallas NAS
+  state: TX
+  airport: NBE
+  lat: 32.73
+  lng: -96.97
+
+? 
+  - AK
+  - Barter Islan
+: !ruby/struct:CityGeolocation 
+  city: Barter Islan
+  state: AK
+  airport: BTI
+  lat: 70.13
+  lng: -143.63
+
+? 
+  - MD
+  - Fort Meade
+: !ruby/struct:CityGeolocation 
+  city: Fort Meade
+  state: MD
+  airport: FME
+  lat: 39.08
+  lng: -76.77
+
+? 
+  - MI
+  - Traverse Cty
+: !ruby/struct:CityGeolocation 
+  city: Traverse Cty
+  state: MI
+  airport: TVC
+  lat: 44.73
+  lng: -85.58
+
+? 
+  - TX
+  - Lufkin
+: !ruby/struct:CityGeolocation 
+  city: Lufkin
+  state: TX
+  airport: LFK
+  lat: 31.23
+  lng: -94.75
+
+? 
+  - MN
+  - Brainerd-Crw
+: !ruby/struct:CityGeolocation 
+  city: Brainerd-Crw
+  state: MN
+  airport: BRD
+  lat: 46.4
+  lng: -94.13
+
+? 
+  - AZ
+  - Scottsdale
+: !ruby/struct:CityGeolocation 
+  city: Scottsdale
+  state: AZ
+  airport: SDL
+  lat: 33.62
+  lng: -111.92
+
+? 
+  - NJ
+  - Newark
+: !ruby/struct:CityGeolocation 
+  city: Newark
+  state: NJ
+  airport: EWR
+  lat: 40.7
+  lng: -74.17
+
+? 
+  - MI
+  - Flint/Bishop
+: !ruby/struct:CityGeolocation 
+  city: Flint/Bishop
+  state: MI
+  airport: FNT
+  lat: 42.97
+  lng: -83.75
+
+? 
+  - CA
+  - Salinas
+: !ruby/struct:CityGeolocation 
+  city: Salinas
+  state: CA
+  airport: SNS
+  lat: 36.67
+  lng: -121.6
+
+? 
+  - UT
+  - Moab
+: !ruby/struct:CityGeolocation 
+  city: Moab
+  state: UT
+  airport: CNY
+  lat: 38.77
+  lng: -109.75
+
+? 
+  - SC
+  - Shaw AFB
+: !ruby/struct:CityGeolocation 
+  city: Shaw AFB
+  state: SC
+  airport: SSC
+  lat: 33.97
+  lng: -80.47
+
+? 
+  - OR
+  - La Grande
+: !ruby/struct:CityGeolocation 
+  city: La Grande
+  state: OR
+  airport: LGD
+  lat: 45.28
+  lng: -118.0
+
+? 
+  - AK
+  - Tahneta Pass
+: !ruby/struct:CityGeolocation 
+  city: Tahneta Pass
+  state: AK
+  airport: 5GN
+  lat: 61.9
+  lng: -147.3
+
+? 
+  - CA
+  - Mather AFB
+: !ruby/struct:CityGeolocation 
+  city: Mather AFB
+  state: CA
+  airport: MHR
+  lat: 38.57
+  lng: -121.3
+
+? 
+  - NJ
+  - Asbury Park
+: !ruby/struct:CityGeolocation 
+  city: Asbury Park
+  state: NJ
+  airport: ""
+  lat: 40.22315
+  lng: -74.01143
+
+? 
+  - IL
+  - Arlington Heights
+: !ruby/struct:CityGeolocation 
+  city: Arlington Heights
+  state: IL
+  airport: ""
+  lat: 42.09495
+  lng: -87.98202
+
+? 
+  - AZ
+  - Davis-M AFB
+: !ruby/struct:CityGeolocation 
+  city: Davis-M AFB
+  state: AZ
+  airport: DMA
+  lat: 32.17
+  lng: -110.88
+
+? 
+  - MO
+  - Ft Leonard
+: !ruby/struct:CityGeolocation 
+  city: Ft Leonard
+  state: MO
+  airport: TBN
+  lat: 37.75
+  lng: -92.13
+
+? 
+  - CA
+  - Mcclellan
+: !ruby/struct:CityGeolocation 
+  city: Mcclellan
+  state: CA
+  airport: MCC
+  lat: 38.67
+  lng: -121.4
+
+? 
+  - SC
+  - Spartanburg
+: !ruby/struct:CityGeolocation 
+  city: Spartanburg
+  state: SC
+  airport: SPA
+  lat: 34.92
+  lng: -81.96
+
+? 
+  - PA
+  - Willow Grove
+: !ruby/struct:CityGeolocation 
+  city: Willow Grove
+  state: PA
+  airport: NXX
+  lat: 40.2
+  lng: -75.15
+
+? 
+  - CA
+  - Siskiyou
+: !ruby/struct:CityGeolocation 
+  city: Siskiyou
+  state: CA
+  airport: SIY
+  lat: 41.78
+  lng: -122.47
+
+? 
+  - CA
+  - Napa
+: !ruby/struct:CityGeolocation 
+  city: Napa
+  state: CA
+  airport: APC
+  lat: 38.22
+  lng: -122.28
+
+? 
+  - NV
+  - Hawthorne
+: !ruby/struct:CityGeolocation 
+  city: Hawthorne
+  state: NV
+  airport: HTH
+  lat: 38.55
+  lng: -118.63
+
+? 
+  - AK
+  - Kake Seaplan
+: !ruby/struct:CityGeolocation 
+  city: Kake Seaplan
+  state: AK
+  airport: KAE
+  lat: 56.97
+  lng: -133.95
+
+? 
+  - CO
+  - Englewood
+: !ruby/struct:CityGeolocation 
+  city: Englewood
+  state: CO
+  airport: APA
+  lat: 39.57
+  lng: -104.83
+
+? 
+  - FL
+  - Vero Beach
+: !ruby/struct:CityGeolocation 
+  city: Vero Beach
+  state: FL
+  airport: VRB
+  lat: 27.65
+  lng: -80.42
+
+? 
+  - CA
+  - Concord
+: !ruby/struct:CityGeolocation 
+  city: Concord
+  state: CA
+  airport: CCR
+  lat: 37.98
+  lng: -122.05
+
+? 
+  - AZ
+  - Fort Huachuc
+: !ruby/struct:CityGeolocation 
+  city: Fort Huachuc
+  state: AZ
+  airport: FHU
+  lat: 31.6
+  lng: -110.35
+
+? 
+  - NC
+  - Kinston
+: !ruby/struct:CityGeolocation 
+  city: Kinston
+  state: NC
+  airport: ISO
+  lat: 35.32
+  lng: -77.63
+
+? 
+  - AK
+  - Pt Alsworth
+: !ruby/struct:CityGeolocation 
+  city: Pt Alsworth
+  state: AK
+  airport: Z30
+  lat: 60.2
+  lng: -154.3
+
+? 
+  - LA
+  - Claiborne R
+: !ruby/struct:CityGeolocation 
+  city: Claiborne R
+  state: LA
+  airport: 01R
+  lat: 31.22
+  lng: -92.95
+
+? 
+  - MT
+  - W Yellowston
+: !ruby/struct:CityGeolocation 
+  city: W Yellowston
+  state: MT
+  airport: WYS
+  lat: 44.68
+  lng: -111.12
+
+? 
+  - MO
+  - West Plains
+: !ruby/struct:CityGeolocation 
+  city: West Plains
+  state: MO
+  airport: UNO
+  lat: 36.88
+  lng: -91.9
+
+? 
+  - CA
+  - Pleasanton
+: !ruby/struct:CityGeolocation 
+  city: Pleasanton
+  state: CA
+  airport: ""
+  lat: 37.67245
+  lng: -121.88906
+
+? 
+  - TX
+  - Longview
+: !ruby/struct:CityGeolocation 
+  city: Longview
+  state: TX
+  airport: GGG
+  lat: 32.38
+  lng: -94.72
+
+? 
+  - SD
+  - Lemmon
+: !ruby/struct:CityGeolocation 
+  city: Lemmon
+  state: SD
+  airport: Y22
+  lat: 45.93
+  lng: -102.17
+
+? 
+  - CO
+  - Denver
+: !ruby/struct:CityGeolocation 
+  city: Denver
+  state: CO
+  airport: DEN
+  lat: 39.75
+  lng: -104.87
+
+? 
+  - HI
+  - Kahului Maui
+: !ruby/struct:CityGeolocation 
+  city: Kahului Maui
+  state: HI
+  airport: OGG
+  lat: 20.9
+  lng: -156.43
+
+? 
+  - NY
+  - Farmingdale
+: !ruby/struct:CityGeolocation 
+  city: Farmingdale
+  state: NY
+  airport: FRG
+  lat: 40.73
+  lng: -73.43
+
+? 
+  - OK
+  - Gage
+: !ruby/struct:CityGeolocation 
+  city: Gage
+  state: OK
+  airport: GAG
+  lat: 36.3
+  lng: -99.77
+
+? 
+  - CA
+  - Ontario
+: !ruby/struct:CityGeolocation 
+  city: Ontario
+  state: CA
+  airport: ""
+  lat: 34.05441
+  lng: -117.60581
+
+? 
+  - IN
+  - Richmond
+: !ruby/struct:CityGeolocation 
+  city: Richmond
+  state: IN
+  airport: ""
+  lat: 39.82954
+  lng: -84.88542
+
+? 
+  - RI
+  - Block Island
+: !ruby/struct:CityGeolocation 
+  city: Block Island
+  state: RI
+  airport: BID
+  lat: 41.17
+  lng: -71.58
+
+? 
+  - IA
+  - Sioux City
+: !ruby/struct:CityGeolocation 
+  city: Sioux City
+  state: IA
+  airport: SUX
+  lat: 42.4
+  lng: -96.38
+
+? 
+  - FL
+  - Astor NAS
+: !ruby/struct:CityGeolocation 
+  city: Astor NAS
+  state: FL
+  airport: 90J
+  lat: 29.12
+  lng: -81.57
+
+? 
+  - CA
+  - Eureka
+: !ruby/struct:CityGeolocation 
+  city: Eureka
+  state: CA
+  airport: EKA
+  lat: 41.33
+  lng: -124.28
+
+? 
+  - NE
+  - Mullen
+: !ruby/struct:CityGeolocation 
+  city: Mullen
+  state: NE
+  airport: MHN
+  lat: 42.05
+  lng: -101.05
+
+? 
+  - PA
+  - Middletown
+: !ruby/struct:CityGeolocation 
+  city: Middletown
+  state: PA
+  airport: MDT
+  lat: 40.2
+  lng: -76.77
+
+? 
+  - HI
+  - Kaneohe Mca
+: !ruby/struct:CityGeolocation 
+  city: Kaneohe Mca
+  state: HI
+  airport: HNG
+  lat: 21.75
+  lng: -158.28
+
+? 
+  - ID
+  - Challis
+: !ruby/struct:CityGeolocation 
+  city: Challis
+  state: ID
+  airport: U15
+  lat: 44.52
+  lng: -114.22
+
+? 
+  - SC
+  - Anderson
+: !ruby/struct:CityGeolocation 
+  city: Anderson
+  state: SC
+  airport: AND
+  lat: 34.5
+  lng: -82.72
+
+? 
+  - NC
+  - Asheville
+: !ruby/struct:CityGeolocation 
+  city: Asheville
+  state: NC
+  airport: AVL
+  lat: 35.43
+  lng: -82.55
+
+? 
+  - MI
+  - Iron Mtn
+: !ruby/struct:CityGeolocation 
+  city: Iron Mtn
+  state: MI
+  airport: IMT
+  lat: 45.82
+  lng: -88.12
+
+? 
+  - NH
+  - Concord
+: !ruby/struct:CityGeolocation 
+  city: Concord
+  state: NH
+  airport: CON
+  lat: 43.2
+  lng: -71.5
+
+? 
+  - WY
+  - Cheyenne
+: !ruby/struct:CityGeolocation 
+  city: Cheyenne
+  state: WY
+  airport: CYS
+  lat: 41.15
+  lng: -104.82
+
+? 
+  - TN
+  - Smyrna
+: !ruby/struct:CityGeolocation 
+  city: Smyrna
+  state: TN
+  airport: MQY
+  lat: 36.0
+  lng: -86.5
+
+? 
+  - CA
+  - Sacramento
+: !ruby/struct:CityGeolocation 
+  city: Sacramento
+  state: CA
+  airport: SMF
+  lat: 38.7
+  lng: -121.6
+
+? 
+  - ME
+  - Caribou Mun
+: !ruby/struct:CityGeolocation 
+  city: Caribou Mun
+  state: ME
+  airport: CAR
+  lat: 46.87
+  lng: -68.02
+
+? 
+  - CO
+  - Gunnison
+: !ruby/struct:CityGeolocation 
+  city: Gunnison
+  state: CO
+  airport: GUC
+  lat: 38.55
+  lng: -106.92
+
+? 
+  - ID
+  - Mountn Home
+: !ruby/struct:CityGeolocation 
+  city: Mountn Home
+  state: ID
+  airport: MUO
+  lat: 43.05
+  lng: -115.87
+
+? 
+  - IA
+  - Mason City
+: !ruby/struct:CityGeolocation 
+  city: Mason City
+  state: IA
+  airport: MCW
+  lat: 43.15
+  lng: -93.33
+
+? 
+  - HI
+  - Barking San
+: !ruby/struct:CityGeolocation 
+  city: Barking San
+  state: HI
+  airport: BKH
+  lat: 22.05
+  lng: -160.3
+
+? 
+  - MI
+  - Pellston
+: !ruby/struct:CityGeolocation 
+  city: Pellston
+  state: MI
+  airport: PLN
+  lat: 45.57
+  lng: -84.8
+
+? 
+  - AZ
+  - Safford Awrs
+: !ruby/struct:CityGeolocation 
+  city: Safford Awrs
+  state: AZ
+  airport: E74
+  lat: 32.82
+  lng: -109.68
+
+? 
+  - NH
+  - Nashua
+: !ruby/struct:CityGeolocation 
+  city: Nashua
+  state: NH
+  airport: ASH
+  lat: 42.78
+  lng: -71.52
+
+? 
+  - NE
+  - Mccook
+: !ruby/struct:CityGeolocation 
+  city: Mccook
+  state: NE
+  airport: MCK
+  lat: 40.22
+  lng: -100.58
+
+? 
+  - IN
+  - Bakalar Af
+: !ruby/struct:CityGeolocation 
+  city: Bakalar Af
+  state: IN
+  airport: BAK
+  lat: 39.38
+  lng: -86.5
+
+? 
+  - HI
+  - Honolulu
+: !ruby/struct:CityGeolocation 
+  city: Honolulu
+  state: HI
+  airport: ""
+  lat: 21.31725
+  lng: -157.80423
+
+? 
+  - SD
+  - Aberdeen
+: !ruby/struct:CityGeolocation 
+  city: Aberdeen
+  state: SD
+  airport: ABR
+  lat: 45.45
+  lng: -98.43
+
+? 
+  - OH
+  - Rickenbacker
+: !ruby/struct:CityGeolocation 
+  city: Rickenbacker
+  state: OH
+  airport: LCK
+  lat: 39.82
+  lng: -82.93
+
+? 
+  - NY
+  - Oneonta
+: !ruby/struct:CityGeolocation 
+  city: Oneonta
+  state: NY
+  airport: N66
+  lat: 42.87
+  lng: -75.12
+
+? 
+  - NM
+  - Taos
+: !ruby/struct:CityGeolocation 
+  city: Taos
+  state: NM
+  airport: E23
+  lat: 36.42
+  lng: -105.57
+
+? 
+  - AK
+  - Lonely (dew)
+: !ruby/struct:CityGeolocation 
+  city: Lonely (dew)
+  state: AK
+  airport: LNI
+  lat: 70.92
+  lng: -153.23
+
+? 
+  - MI
+  - Lansing
+: !ruby/struct:CityGeolocation 
+  city: Lansing
+  state: MI
+  airport: LAN
+  lat: 42.77
+  lng: -84.6
+
+? 
+  - NE
+  - Columbus
+: !ruby/struct:CityGeolocation 
+  city: Columbus
+  state: NE
+  airport: OLU
+  lat: 41.45
+  lng: -97.35
+
+? 
+  - CO
+  - Grand Jct
+: !ruby/struct:CityGeolocation 
+  city: Grand Jct
+  state: CO
+  airport: GJT
+  lat: 39.12
+  lng: -108.53
+
+? 
+  - ME
+  - Bar Harbor
+: !ruby/struct:CityGeolocation 
+  city: Bar Harbor
+  state: ME
+  airport: BHB
+  lat: 44.45
+  lng: -68.37
+
+? 
+  - FL
+  - Duke Fld
+: !ruby/struct:CityGeolocation 
+  city: Duke Fld
+  state: FL
+  airport: EGI
+  lat: 30.65
+  lng: -86.52
+
+? 
+  - WY
+  - Casper
+: !ruby/struct:CityGeolocation 
+  city: Casper
+  state: WY
+  airport: CPR
+  lat: 42.92
+  lng: -106.47
+
+? 
+  - MO
+  - Richards-Geb
+: !ruby/struct:CityGeolocation 
+  city: Richards-Geb
+  state: MO
+  airport: GVW
+  lat: 38.85
+  lng: -94.55
+
+? 
+  - ID
+  - Coeur d'Alene
+: !ruby/struct:CityGeolocation 
+  city: Coeur d'Alene
+  state: ID
+  airport: COE
+  lat: 47.77
+  lng: -116.82
+
+? 
+  - NH
+  - Wolfeboro
+: !ruby/struct:CityGeolocation 
+  city: Wolfeboro
+  state: NH
+  airport: 8B8
+  lat: 44.0
+  lng: -71.38
+
+? 
+  - ME
+  - Brunswick
+: !ruby/struct:CityGeolocation 
+  city: Brunswick
+  state: ME
+  airport: NHZ
+  lat: 43.88
+  lng: -69.93
+
+? 
+  - AR
+  - Harrison
+: !ruby/struct:CityGeolocation 
+  city: Harrison
+  state: AR
+  airport: HRO
+  lat: 36.27
+  lng: -93.15
+
+? 
+  - KY
+  - Louisville
+: !ruby/struct:CityGeolocation 
+  city: Louisville
+  state: KY
+  airport: SDF
+  lat: 38.18
+  lng: -85.73
+
+? 
+  - VT
+  - Burlington
+: !ruby/struct:CityGeolocation 
+  city: Burlington
+  state: VT
+  airport: BTV
+  lat: 44.47
+  lng: -73.15
+
+? 
+  - UT
+  - Green River
+: !ruby/struct:CityGeolocation 
+  city: Green River
+  state: UT
+  airport: U28
+  lat: 39.0
+  lng: -110.15
+
+? 
+  - TX
+  - Mcallen
+: !ruby/struct:CityGeolocation 
+  city: Mcallen
+  state: TX
+  airport: MFE
+  lat: 26.18
+  lng: -98.23
+
+? 
+  - TX
+  - Greenville
+: !ruby/struct:CityGeolocation 
+  city: Greenville
+  state: TX
+  airport: GVT
+  lat: 33.07
+  lng: -96.07
+
+? 
+  - MI
+  - Pontiac
+: !ruby/struct:CityGeolocation 
+  city: Pontiac
+  state: MI
+  airport: PTK
+  lat: 42.67
+  lng: -83.42
+
+? 
+  - IN
+  - Terre Haute
+: !ruby/struct:CityGeolocation 
+  city: Terre Haute
+  state: IN
+  airport: HUF
+  lat: 39.45
+  lng: -87.3
+
+? 
+  - OR
+  - Portland
+: !ruby/struct:CityGeolocation 
+  city: Portland
+  state: OR
+  airport: PDX
+  lat: 45.6
+  lng: -122.6
+
+? 
+  - NE
+  - Burwell
+: !ruby/struct:CityGeolocation 
+  city: Burwell
+  state: NE
+  airport: BUB
+  lat: 41.78
+  lng: -99.15
+
+? 
+  - ID
+  - Idaho Falls
+: !ruby/struct:CityGeolocation 
+  city: Idaho Falls
+  state: ID
+  airport: IDA
+  lat: 43.52
+  lng: -112.07
+
+? 
+  - AL
+  - Auburn
+: !ruby/struct:CityGeolocation 
+  city: Auburn
+  state: AL
+  airport: AUO
+  lat: 32.67
+  lng: -85.44
+
+? 
+  - AR
+  - Texarkana
+: !ruby/struct:CityGeolocation 
+  city: Texarkana
+  state: AR
+  airport: TXK
+  lat: 33.45
+  lng: -94.0
+
+? 
+  - NJ
+  - Morristown
+: !ruby/struct:CityGeolocation 
+  city: Morristown
+  state: NJ
+  airport: MMU
+  lat: 40.8
+  lng: -74.42
+
+? 
+  - IL
+  - Galesburg
+: !ruby/struct:CityGeolocation 
+  city: Galesburg
+  state: IL
+  airport: GBG
+  lat: 40.93
+  lng: -90.43
+
+? 
+  - WI
+  - Wausau
+: !ruby/struct:CityGeolocation 
+  city: Wausau
+  state: WI
+  airport: AUW
+  lat: 44.92
+  lng: -89.62
+
+? 
+  - IL
+  - Quincy
+: !ruby/struct:CityGeolocation 
+  city: Quincy
+  state: IL
+  airport: UIN
+  lat: 39.93
+  lng: -91.2
+
+? 
+  - AK
+  - Port Alexndr
+: !ruby/struct:CityGeolocation 
+  city: Port Alexndr
+  state: AK
+  airport: Z76
+  lat: 56.25
+  lng: -134.65
+
+? 
+  - KS
+  - Wichita
+: !ruby/struct:CityGeolocation 
+  city: Wichita
+  state: KS
+  airport: ICT
+  lat: 37.65
+  lng: -97.43
+
+? 
+  - WV
+  - Lewisburg
+: !ruby/struct:CityGeolocation 
+  city: Lewisburg
+  state: WV
+  airport: LWB
+  lat: 37.87
+  lng: -80.4
+
+? 
+  - PA
+  - Lancaster
+: !ruby/struct:CityGeolocation 
+  city: Lancaster
+  state: PA
+  airport: LNS
+  lat: 40.13
+  lng: -76.3
+
+? 
+  - LA
+  - Fort Polk
+: !ruby/struct:CityGeolocation 
+  city: Fort Polk
+  state: LA
+  airport: POE
+  lat: 31.05
+  lng: -93.2
+
+? 
+  - IA
+  - Storm Lake
+: !ruby/struct:CityGeolocation 
+  city: Storm Lake
+  state: IA
+  airport: ""
+  lat: 42.64502
+  lng: -95.19985
+
+? 
+  - NC
+  - Winston-Salem
+: !ruby/struct:CityGeolocation 
+  city: Winston-Salem
+  state: NC
+  airport: INT
+  lat: 36.13
+  lng: -80.23
+
+? 
+  - MS
+  - Gulfport
+: !ruby/struct:CityGeolocation 
+  city: Gulfport
+  state: MS
+  airport: GPT
+  lat: 30.4
+  lng: -89.07
+
+? 
+  - AK
+  - Elfin Cove
+: !ruby/struct:CityGeolocation 
+  city: Elfin Cove
+  state: AK
+  airport: ELV
+  lat: 58.2
+  lng: -136.35
+
+? 
+  - MN
+  - Park Rapids
+: !ruby/struct:CityGeolocation 
+  city: Park Rapids
+  state: MN
+  airport: PKD
+  lat: 46.9
+  lng: -95.07
+
+? 
+  - GA
+  - Valdosta
+: !ruby/struct:CityGeolocation 
+  city: Valdosta
+  state: GA
+  airport: VLD
+  lat: 30.78
+  lng: -83.28
+
+? 
+  - CA
+  - Red Bluff
+: !ruby/struct:CityGeolocation 
+  city: Red Bluff
+  state: CA
+  airport: RBL
+  lat: 40.15
+  lng: -122.25
+
+? 
+  - AK
+  - Fort Yukon
+: !ruby/struct:CityGeolocation 
+  city: Fort Yukon
+  state: AK
+  airport: FYU
+  lat: 66.57
+  lng: -145.27
+
+? 
+  - AK
+  - Five Finger
+: !ruby/struct:CityGeolocation 
+  city: Five Finger
+  state: AK
+  airport: FIV
+  lat: 57.45
+  lng: -134.03
+
+? 
+  - NM
+  - Truth Or Con
+: !ruby/struct:CityGeolocation 
+  city: Truth Or Con
+  state: NM
+  airport: TCS
+  lat: 33.23
+  lng: -107.27
+
+? 
+  - CA
+  - Big Bear Apt
+: !ruby/struct:CityGeolocation 
+  city: Big Bear Apt
+  state: CA
+  airport: L35
+  lat: 34.27
+  lng: -116.68
+
+? 
+  - WI
+  - Green Bay
+: !ruby/struct:CityGeolocation 
+  city: Green Bay
+  state: WI
+  airport: GRB
+  lat: 44.48
+  lng: -88.13
+
+? 
+  - UT
+  - Tooele
+: !ruby/struct:CityGeolocation 
+  city: Tooele
+  state: UT
+  airport: T62
+  lat: 40.17
+  lng: -112.2
+
+? 
+  - TN
+  - Monteagle
+: !ruby/struct:CityGeolocation 
+  city: Monteagle
+  state: TN
+  airport: MGL
+  lat: 35.15
+  lng: -85.51
+
+? 
+  - IL
+  - Mattoon
+: !ruby/struct:CityGeolocation 
+  city: Mattoon
+  state: IL
+  airport: MTO
+  lat: 39.48
+  lng: -88.28
+
+? 
+  - AZ
+  - Prescott
+: !ruby/struct:CityGeolocation 
+  city: Prescott
+  state: AZ
+  airport: PRC
+  lat: 34.65
+  lng: -112.43
+
+? 
+  - AZ
+  - Kingman
+: !ruby/struct:CityGeolocation 
+  city: Kingman
+  state: AZ
+  airport: IGM
+  lat: 35.27
+  lng: -113.95
+
+? 
+  - CA
+  - Twenty9 Palm
+: !ruby/struct:CityGeolocation 
+  city: Twenty9 Palm
+  state: CA
+  airport: NXP
+  lat: 34.28
+  lng: -116.15
+
+? 
+  - WV
+  - White Sulph
+: !ruby/struct:CityGeolocation 
+  city: White Sulph
+  state: WV
+  airport: SSU
+  lat: 37.46
+  lng: -80.2
+
+? 
+  - OR
+  - Baker
+: !ruby/struct:CityGeolocation 
+  city: Baker
+  state: OR
+  airport: BKE
+  lat: 44.83
+  lng: -117.82
+
+? 
+  - KS
+  - Dodge City
+: !ruby/struct:CityGeolocation 
+  city: Dodge City
+  state: KS
+  airport: DDC
+  lat: 37.77
+  lng: -99.97
+
+? 
+  - WI
+  - Rice Lake
+: !ruby/struct:CityGeolocation 
+  city: Rice Lake
+  state: WI
+  airport: RIE
+  lat: 45.48
+  lng: -91.72
+
+? 
+  - AL
+  - Tuscaloosa
+: !ruby/struct:CityGeolocation 
+  city: Tuscaloosa
+  state: AL
+  airport: TCL
+  lat: 33.23
+  lng: -87.62
+
+? 
+  - MI
+  - Harbor Beach
+: !ruby/struct:CityGeolocation 
+  city: Harbor Beach
+  state: MI
+  airport: P58
+  lat: 43.83
+  lng: -82.53
+
+? 
+  - LA
+  - Baton Rouge
+: !ruby/struct:CityGeolocation 
+  city: Baton Rouge
+  state: LA
+  airport: BTR
+  lat: 30.53
+  lng: -91.15
+
+? 
+  - VA
+  - Newport News
+: !ruby/struct:CityGeolocation 
+  city: Newport News
+  state: VA
+  airport: PHF
+  lat: 37.13
+  lng: -76.5
+
+? 
+  - NC
+  - New River
+: !ruby/struct:CityGeolocation 
+  city: New River
+  state: NC
+  airport: NCA
+  lat: 34.7
+  lng: -77.43
+
+? 
+  - NC
+  - Greensboro
+: !ruby/struct:CityGeolocation 
+  city: Greensboro
+  state: NC
+  airport: GSO
+  lat: 36.08
+  lng: -79.95
+
+? 
+  - AK
+  - St Paul Is
+: !ruby/struct:CityGeolocation 
+  city: St Paul Is
+  state: AK
+  airport: SNP
+  lat: 57.15
+  lng: -170.22
+
+? 
+  - NV
+  - Battle Mtn
+: !ruby/struct:CityGeolocation 
+  city: Battle Mtn
+  state: NV
+  airport: BAM
+  lat: 40.62
+  lng: -116.87
+
+? 
+  - NC
+  - Charlotte
+: !ruby/struct:CityGeolocation 
+  city: Charlotte
+  state: NC
+  airport: CLT
+  lat: 35.22
+  lng: -80.93
+
+? 
+  - VT
+  - St Johnsbury
+: !ruby/struct:CityGeolocation 
+  city: St Johnsbury
+  state: VT
+  airport: 9B2
+  lat: 44.42
+  lng: -72.02
+
+? 
+  - OK
+  - Lawton
+: !ruby/struct:CityGeolocation 
+  city: Lawton
+  state: OK
+  airport: LAW
+  lat: 34.57
+  lng: -98.42
+
+? 
+  - AK
+  - New Andreafs
+: !ruby/struct:CityGeolocation 
+  city: New Andreafs
+  state: AK
+  airport: KSM
+  lat: 62.07
+  lng: -163.3
+
+? 
+  - KS
+  - Johnson Cnty
+: !ruby/struct:CityGeolocation 
+  city: Johnson Cnty
+  state: KS
+  airport: IXD
+  lat: 38.82
+  lng: -94.88
+
+? 
+  - LA
+  - Slidel
+: !ruby/struct:CityGeolocation 
+  city: Slidel
+  state: LA
+  airport: SIL
+  lat: 30.35
+  lng: -89.82
+
+? 
+  - FL
+  - Ruskin
+: !ruby/struct:CityGeolocation 
+  city: Ruskin
+  state: FL
+  airport: TBW
+  lat: 27.97
+  lng: -82.6
+
+? 
+  - NE
+  - Sidney Muni
+: !ruby/struct:CityGeolocation 
+  city: Sidney Muni
+  state: NE
+  airport: SNY
+  lat: 41.1
+  lng: -102.98
+
+? 
+  - WA
+  - Bremerton
+: !ruby/struct:CityGeolocation 
+  city: Bremerton
+  state: WA
+  airport: PWT
+  lat: 47.48
+  lng: -122.77
+
+? 
+  - NM
+  - Clayton Arpt
+: !ruby/struct:CityGeolocation 
+  city: Clayton Arpt
+  state: NM
+  airport: CAO
+  lat: 36.45
+  lng: -103.15
+
+? 
+  - OK
+  - Enid
+: !ruby/struct:CityGeolocation 
+  city: Enid
+  state: OK
+  airport: WDG
+  lat: 36.38
+  lng: -97.8
+
+? 
+  - AR
+  - Springdale
+: !ruby/struct:CityGeolocation 
+  city: Springdale
+  state: AR
+  airport: ASG
+  lat: 36.18
+  lng: -94.13
+
+? 
+  - NV
+  - Elko
+: !ruby/struct:CityGeolocation 
+  city: Elko
+  state: NV
+  airport: EKO
+  lat: 40.83
+  lng: -115.78
+
+? 
+  - WV
+  - Morgantown
+: !ruby/struct:CityGeolocation 
+  city: Morgantown
+  state: WV
+  airport: MGW
+  lat: 39.65
+  lng: -79.92
+
+? 
+  - ND
+  - Roseglen
+: !ruby/struct:CityGeolocation 
+  city: Roseglen
+  state: ND
+  airport: P24
+  lat: 47.75
+  lng: -101.83
+
+? 
+  - NY
+  - Westhampton
+: !ruby/struct:CityGeolocation 
+  city: Westhampton
+  state: NY
+  airport: FOK
+  lat: 40.85
+  lng: -72.63
+
+? 
+  - AZ
+  - Show Low
+: !ruby/struct:CityGeolocation 
+  city: Show Low
+  state: AZ
+  airport: SOW
+  lat: 34.27
+  lng: -110.0
+
+? 
+  - AR
+  - Pine Bluff
+: !ruby/struct:CityGeolocation 
+  city: Pine Bluff
+  state: AR
+  airport: PBF
+  lat: 34.17
+  lng: -91.93
+
+? 
+  - AK
+  - Unalakleet
+: !ruby/struct:CityGeolocation 
+  city: Unalakleet
+  state: AK
+  airport: UNK
+  lat: 63.88
+  lng: -160.8
+
+? 
+  - LA
+  - Eugene Is.
+: !ruby/struct:CityGeolocation 
+  city: Eugene Is.
+  state: LA
+  airport: 41I
+  lat: 28.47
+  lng: -91.78
+
+? 
+  - CO
+  - Boulder
+: !ruby/struct:CityGeolocation 
+  city: Boulder
+  state: CO
+  airport: ""
+  lat: 40.02688
+  lng: -105.25102
+
+? 
+  - WA
+  - Quillayute
+: !ruby/struct:CityGeolocation 
+  city: Quillayute
+  state: WA
+  airport: UIL
+  lat: 47.95
+  lng: -124.55
+
+? 
+  - PA
+  - Harrisburg
+: !ruby/struct:CityGeolocation 
+  city: Harrisburg
+  state: PA
+  airport: HAR
+  lat: 40.37
+  lng: -77.42
+
+? 
+  - NY
+  - Poughkeepsie
+: !ruby/struct:CityGeolocation 
+  city: Poughkeepsie
+  state: NY
+  airport: POU
+  lat: 41.63
+  lng: -73.88
+
+? 
+  - CA
+  - Alturas
+: !ruby/struct:CityGeolocation 
+  city: Alturas
+  state: CA
+  airport: S11
+  lat: 41.48
+  lng: -120.53
+
+? 
+  - IL
+  - Chicago/O'hare
+: !ruby/struct:CityGeolocation 
+  city: Chicago/O'hare
+  state: IL
+  airport: ORD
+  lat: 41.98
+  lng: -87.9
+
+? 
+  - KS
+  - Elkhart
+: !ruby/struct:CityGeolocation 
+  city: Elkhart
+  state: KS
+  airport: 1K5
+  lat: 37.0
+  lng: -101.88
+
+? 
+  - AZ
+  - Yuma
+: !ruby/struct:CityGeolocation 
+  city: Yuma
+  state: AZ
+  airport: YUM
+  lat: 33.1
+  lng: -115.0
+
+? 
+  - WY
+  - Cody
+: !ruby/struct:CityGeolocation 
+  city: Cody
+  state: WY
+  airport: COD
+  lat: 44.52
+  lng: -109.02
+
+? 
+  - ND
+  - Williston
+: !ruby/struct:CityGeolocation 
+  city: Williston
+  state: ND
+  airport: ISN
+  lat: 48.18
+  lng: -103.63
+
+? 
+  - ME
+  - Greenville
+: !ruby/struct:CityGeolocation 
+  city: Greenville
+  state: ME
+  airport: 6B2
+  lat: 45.78
+  lng: -69.63
+
+? 
+  - CO
+  - Steamboat Sp
+: !ruby/struct:CityGeolocation 
+  city: Steamboat Sp
+  state: CO
+  airport: SBS
+  lat: 40.48
+  lng: -106.82
+
+? 
+  - NM
+  - Las Vegas
+: !ruby/struct:CityGeolocation 
+  city: Las Vegas
+  state: NM
+  airport: LVS
+  lat: 35.65
+  lng: -105.15
+
+? 
+  - AZ
+  - Gila Bend
+: !ruby/struct:CityGeolocation 
+  city: Gila Bend
+  state: AZ
+  airport: GBN
+  lat: 33.55
+  lng: -113.17
+
+? 
+  - FL
+  - Apalachicola
+: !ruby/struct:CityGeolocation 
+  city: Apalachicola
+  state: FL
+  airport: AQQ
+  lat: 29.73
+  lng: -85.03
+
+? 
+  - AK
+  - Puntilla
+: !ruby/struct:CityGeolocation 
+  city: Puntilla
+  state: AK
+  airport: PTI
+  lat: 62.17
+  lng: -153.25
+
+? 
+  - GA
+  - Hunter Aaf
+: !ruby/struct:CityGeolocation 
+  city: Hunter Aaf
+  state: GA
+  airport: SVN
+  lat: 32.02
+  lng: -81.15
+
+? 
+  - WA
+  - Shelton
+: !ruby/struct:CityGeolocation 
+  city: Shelton
+  state: WA
+  airport: SHN
+  lat: 47.25
+  lng: -123.15
+
+? 
+  - TN
+  - Memphis Intl
+: !ruby/struct:CityGeolocation 
+  city: Memphis Intl
+  state: TN
+  airport: MEM
+  lat: 35.05
+  lng: -90.0
+
+? 
+  - OH
+  - Columbus Osu
+: !ruby/struct:CityGeolocation 
+  city: Columbus Osu
+  state: OH
+  airport: OSU
+  lat: 40.08
+  lng: -83.07
+
+? 
+  - LA
+  - Lafayette
+: !ruby/struct:CityGeolocation 
+  city: Lafayette
+  state: LA
+  airport: LFT
+  lat: 30.2
+  lng: -92.0
+
+? 
+  - CA
+  - Chino
+: !ruby/struct:CityGeolocation 
+  city: Chino
+  state: CA
+  airport: CNO
+  lat: 33.97
+  lng: -117.63
+
+? 
+  - AR
+  - Jonesboro
+: !ruby/struct:CityGeolocation 
+  city: Jonesboro
+  state: AR
+  airport: JBR
+  lat: 35.83
+  lng: -90.65
+
+? 
+  - MO
+  - St Joseph
+: !ruby/struct:CityGeolocation 
+  city: St Joseph
+  state: MO
+  airport: STJ
+  lat: 40.28
+  lng: -95.53
+
+? 
+  - FL
+  - Titusville
+: !ruby/struct:CityGeolocation 
+  city: Titusville
+  state: FL
+  airport: TIX
+  lat: 28.52
+  lng: -80.8
+
+? 
+  - CA
+  - Pasadena
+: !ruby/struct:CityGeolocation 
+  city: Pasadena
+  state: CA
+  airport: ""
+  lat: 34.1607
+  lng: -118.13872
+
+? 
+  - OK
+  - Vance AFB
+: !ruby/struct:CityGeolocation 
+  city: Vance AFB
+  state: OK
+  airport: END
+  lat: 36.33
+  lng: -97.92
+
+? 
+  - MI
+  - Coopersville
+: !ruby/struct:CityGeolocation 
+  city: Coopersville
+  state: MI
+  airport: C10
+  lat: 43.07
+  lng: -85.95
+
+? 
+  - AK
+  - Aniak
+: !ruby/struct:CityGeolocation 
+  city: Aniak
+  state: AK
+  airport: ANI
+  lat: 61.58
+  lng: -159.53
+
+? 
+  - OR
+  - Salem
+: !ruby/struct:CityGeolocation 
+  city: Salem
+  state: OR
+  airport: SLE
+  lat: 44.92
+  lng: -123.0
+
+? 
+  - OR
+  - Klamath Fall
+: !ruby/struct:CityGeolocation 
+  city: Klamath Fall
+  state: OR
+  airport: LMT
+  lat: 42.15
+  lng: -121.73
+
+? 
+  - ND
+  - Dickenson
+: !ruby/struct:CityGeolocation 
+  city: Dickenson
+  state: ND
+  airport: DIK
+  lat: 46.78
+  lng: -102.8
+
+? 
+  - MA
+  - Lawrence
+: !ruby/struct:CityGeolocation 
+  city: Lawrence
+  state: MA
+  airport: LWM
+  lat: 42.72
+  lng: -71.12
+
+? 
+  - CT
+  - Hartford
+: !ruby/struct:CityGeolocation 
+  city: Hartford
+  state: CT
+  airport: HFD
+  lat: 41.73
+  lng: -72.65
+
+? 
+  - NM
+  - Deming
+: !ruby/struct:CityGeolocation 
+  city: Deming
+  state: NM
+  airport: DMN
+  lat: 32.25
+  lng: -107.7
+
+? 
+  - AL
+  - Birmingham
+: !ruby/struct:CityGeolocation 
+  city: Birmingham
+  state: AL
+  airport: BHM
+  lat: 33.57
+  lng: -86.75
+
+? 
+  - AK
+  - Cape Spence
+: !ruby/struct:CityGeolocation 
+  city: Cape Spence
+  state: AK
+  airport: CSP
+  lat: 58.33
+  lng: -137.05
+
+? 
+  - CA
+  - Pt Arguello
+: !ruby/struct:CityGeolocation 
+  city: Pt Arguello
+  state: CA
+  airport: PGU
+  lat: 34.95
+  lng: -121.12
+
+? 
+  - NM
+  - Silver City
+: !ruby/struct:CityGeolocation 
+  city: Silver City
+  state: NM
+  airport: SVC
+  lat: 32.63
+  lng: -108.17
+
+? 
+  - MT
+  - Malmstrom
+: !ruby/struct:CityGeolocation 
+  city: Malmstrom
+  state: MT
+  airport: GFA
+  lat: 47.5
+  lng: -111.18
+
+? 
+  - NH
+  - Lebanon
+: !ruby/struct:CityGeolocation 
+  city: Lebanon
+  state: NH
+  airport: LEB
+  lat: 43.63
+  lng: -72.3
+
+? 
+  - NC
+  - Elizabeth
+: !ruby/struct:CityGeolocation 
+  city: Elizabeth
+  state: NC
+  airport: ECG
+  lat: 36.27
+  lng: -76.18
+
+? 
+  - TX
+  - Beaumont
+: !ruby/struct:CityGeolocation 
+  city: Beaumont
+  state: TX
+  airport: ""
+  lat: 30.08776
+  lng: -94.14446
+
+? 
+  - TN
+  - Memphis
+: !ruby/struct:CityGeolocation 
+  city: Memphis
+  state: TN
+  airport: ""
+  lat: 35.1056
+  lng: -90.00699
+
+? 
+  - RI
+  - Providence
+: !ruby/struct:CityGeolocation 
+  city: Providence
+  state: RI
+  airport: PVD
+  lat: 41.73
+  lng: -71.43
+
+? 
+  - CO
+  - Aspen
+: !ruby/struct:CityGeolocation 
+  city: Aspen
+  state: CO
+  airport: ASE
+  lat: 39.22
+  lng: -106.87
+
+? 
+  - TX
+  - Mineral Wlls
+: !ruby/struct:CityGeolocation 
+  city: Mineral Wlls
+  state: TX
+  airport: MWL
+  lat: 32.78
+  lng: -98.07
+
+? 
+  - NY
+  - Newburgh
+: !ruby/struct:CityGeolocation 
+  city: Newburgh
+  state: NY
+  airport: SWF
+  lat: 41.5
+  lng: -74.1
+
+? 
+  - NE
+  - North Platte
+: !ruby/struct:CityGeolocation 
+  city: North Platte
+  state: NE
+  airport: LBF
+  lat: 41.13
+  lng: -100.68
+
+? 
+  - IL
+  - Du Page
+: !ruby/struct:CityGeolocation 
+  city: Du Page
+  state: IL
+  airport: DPA
+  lat: 41.92
+  lng: -88.25
+
+? 
+  - NE
+  - Scottsbluff
+: !ruby/struct:CityGeolocation 
+  city: Scottsbluff
+  state: NE
+  airport: BFF
+  lat: 41.87
+  lng: -103.6
+
+? 
+  - MD
+  - Ocean City
+: !ruby/struct:CityGeolocation 
+  city: Ocean City
+  state: MD
+  airport: N80
+  lat: 38.55
+  lng: -75.13
+
+? 
+  - MI
+  - Escanaba
+: !ruby/struct:CityGeolocation 
+  city: Escanaba
+  state: MI
+  airport: ESC
+  lat: 45.73
+  lng: -87.08
+
+? 
+  - CA
+  - George AFB
+: !ruby/struct:CityGeolocation 
+  city: George AFB
+  state: CA
+  airport: VCV
+  lat: 34.58
+  lng: -117.38
+
+? 
+  - CA
+  - San Gabriel
+: !ruby/struct:CityGeolocation 
+  city: San Gabriel
+  state: CA
+  airport: ""
+  lat: 34.0947
+  lng: -118.09759
+
+? 
+  - NY
+  - Ogdensburg
+: !ruby/struct:CityGeolocation 
+  city: Ogdensburg
+  state: NY
+  airport: OGS
+  lat: 44.68
+  lng: -75.4
+
+? 
+  - CA
+  - Ontario Intl
+: !ruby/struct:CityGeolocation 
+  city: Ontario Intl
+  state: CA
+  airport: ONT
+  lat: 34.05
+  lng: -117.62
+
+? 
+  - MD
+  - Phillips
+: !ruby/struct:CityGeolocation 
+  city: Phillips
+  state: MD
+  airport: APG
+  lat: 39.47
+  lng: -76.17
+
+? 
+  - UT
+  - Vernal
+: !ruby/struct:CityGeolocation 
+  city: Vernal
+  state: UT
+  airport: VEL
+  lat: 40.45
+  lng: -109.52
+
+? 
+  - GA
+  - Atlanta/Dklb
+: !ruby/struct:CityGeolocation 
+  city: Atlanta/Dklb
+  state: GA
+  airport: PDK
+  lat: 33.88
+  lng: -84.3
+
+? 
+  - LA
+  - Lake Charles
+: !ruby/struct:CityGeolocation 
+  city: Lake Charles
+  state: LA
+  airport: LCH
+  lat: 30.12
+  lng: -93.22
+
+? 
+  - ID
+  - Mullan
+: !ruby/struct:CityGeolocation 
+  city: Mullan
+  state: ID
+  airport: S06
+  lat: 47.47
+  lng: -115.8
+
+? 
+  - IL
+  - Springfield
+: !ruby/struct:CityGeolocation 
+  city: Springfield
+  state: IL
+  airport: SPI
+  lat: 39.85
+  lng: -89.67
+
+? 
+  - TX
+  - Waco-Madison
+: !ruby/struct:CityGeolocation 
+  city: Waco-Madison
+  state: TX
+  airport: ACT
+  lat: 31.62
+  lng: -97.22
+
+? 
+  - FL
+  - Tallahassee
+: !ruby/struct:CityGeolocation 
+  city: Tallahassee
+  state: FL
+  airport: TLH
+  lat: 30.38
+  lng: -84.37
+
+? 
+  - CA
+  - Pt Arena
+: !ruby/struct:CityGeolocation 
+  city: Pt Arena
+  state: CA
+  airport: PAA
+  lat: 39.58
+  lng: -124.22
+
+? 
+  - AK
+  - Anchorage
+: !ruby/struct:CityGeolocation 
+  city: Anchorage
+  state: AK
+  airport: MRI
+  lat: 61.22
+  lng: -149.85
+
+? 
+  - PA
+  - Reading
+: !ruby/struct:CityGeolocation 
+  city: Reading
+  state: PA
+  airport: RDG
+  lat: 40.38
+  lng: -75.97
+
+? 
+  - FL
+  - Tampa
+: !ruby/struct:CityGeolocation 
+  city: Tampa
+  state: FL
+  airport: TPA
+  lat: 27.97
+  lng: -82.53
+
+? 
+  - FL
+  - Mayport NAS
+: !ruby/struct:CityGeolocation 
+  city: Mayport NAS
+  state: FL
+  airport: NRB
+  lat: 30.4
+  lng: -81.42
+
+? 
+  - CA
+  - Santa Rosa
+: !ruby/struct:CityGeolocation 
+  city: Santa Rosa
+  state: CA
+  airport: STS
+  lat: 38.52
+  lng: -122.82
+
+? 
+  - ME
+  - Houlton
+: !ruby/struct:CityGeolocation 
+  city: Houlton
+  state: ME
+  airport: HUL
+  lat: 46.13
+  lng: -67.78
+
+? 
+  - NM
+  - Cuba Awrs
+: !ruby/struct:CityGeolocation 
+  city: Cuba Awrs
+  state: NM
+  airport: 4SL
+  lat: 36.02
+  lng: -106.95
+
+? 
+  - FL
+  - Orlando
+: !ruby/struct:CityGeolocation 
+  city: Orlando
+  state: FL
+  airport: ORL
+  lat: 28.55
+  lng: -81.33
+
+? 
+  - HI
+  - Barbers Pt
+: !ruby/struct:CityGeolocation 
+  city: Barbers Pt
+  state: HI
+  airport: HNA
+  lat: 21.53
+  lng: -158.12
+
+? 
+  - AR
+  - Fayetteville
+: !ruby/struct:CityGeolocation 
+  city: Fayetteville
+  state: AR
+  airport: FYV
+  lat: 36.0
+  lng: -94.17
+
+? 
+  - CA
+  - Palm Springs
+: !ruby/struct:CityGeolocation 
+  city: Palm Springs
+  state: CA
+  airport: PSP
+  lat: 33.83
+  lng: -116.5
+
+? 
+  - AK
+  - Manley Ht Sp
+: !ruby/struct:CityGeolocation 
+  city: Manley Ht Sp
+  state: AK
+  airport: MLY
+  lat: 65.0
+  lng: -150.65
+
+? 
+  - CO
+  - Grand Junction
+: !ruby/struct:CityGeolocation 
+  city: Grand Junction
+  state: CO
+  airport: ""
+  lat: 39.0873
+  lng: -108.55292
+
+? 
+  - TX
+  - Corpus Chrst
+: !ruby/struct:CityGeolocation 
+  city: Corpus Chrst
+  state: TX
+  airport: NGP
+  lat: 27.7
+  lng: -97.28
+
+? 
+  - CA
+  - El Monte
+: !ruby/struct:CityGeolocation 
+  city: El Monte
+  state: CA
+  airport: EMT
+  lat: 34.08
+  lng: -118.03
+
+? 
+  - MT
+  - Drummond
+: !ruby/struct:CityGeolocation 
+  city: Drummond
+  state: MT
+  airport: 3DU
+  lat: 46.67
+  lng: -113.15
+
+? 
+  - TX
+  - Midland
+: !ruby/struct:CityGeolocation 
+  city: Midland
+  state: TX
+  airport: MAF
+  lat: 31.95
+  lng: -102.18
+
+? 
+  - LA
+  - High Island
+: !ruby/struct:CityGeolocation 
+  city: High Island
+  state: LA
+  airport: 01T
+  lat: 28.13
+  lng: -94.4
+
+? 
+  - WY
+  - Jackson
+: !ruby/struct:CityGeolocation 
+  city: Jackson
+  state: WY
+  airport: JAC
+  lat: 43.6
+  lng: -110.73
+
+? 
+  - NC
+  - Manteo Arpt
+: !ruby/struct:CityGeolocation 
+  city: Manteo Arpt
+  state: NC
+  airport: MQI
+  lat: 35.92
+  lng: -75.68
+
+? 
+  - CA
+  - Norton AFB
+: !ruby/struct:CityGeolocation 
+  city: Norton AFB
+  state: CA
+  airport: SBD
+  lat: 34.1
+  lng: -117.23
+
+? 
+  - MO
+  - St. Louis/Spirit
+: !ruby/struct:CityGeolocation 
+  city: St. Louis/Spirit
+  state: MO
+  airport: SUS
+  lat: 38.65
+  lng: -90.63
+
+? 
+  - WA
+  - Vancouver
+: !ruby/struct:CityGeolocation 
+  city: Vancouver
+  state: WA
+  airport: ""
+  lat: 45.6342
+  lng: -122.64327
+
+? 
+  - WA
+  - Moses Lake
+: !ruby/struct:CityGeolocation 
+  city: Moses Lake
+  state: WA
+  airport: MWH
+  lat: 47.2
+  lng: -119.32
+
+? 
+  - TX
+  - Tyler/Pounds
+: !ruby/struct:CityGeolocation 
+  city: Tyler/Pounds
+  state: TX
+  airport: TYR
+  lat: 32.37
+  lng: -95.4
+
+? 
+  - AR
+  - El Dorado
+: !ruby/struct:CityGeolocation 
+  city: El Dorado
+  state: AR
+  airport: ELD
+  lat: 33.22
+  lng: -92.8
+
+? 
+  - CA
+  - Imperial
+: !ruby/struct:CityGeolocation 
+  city: Imperial
+  state: CA
+  airport: IPL
+  lat: 32.83
+  lng: -115.57
+
+? 
+  - NV
+  - Ely/Yelland
+: !ruby/struct:CityGeolocation 
+  city: Ely/Yelland
+  state: NV
+  airport: ELY
+  lat: 39.28
+  lng: -114.85
+
+? 
+  - NJ
+  - Lakehurst
+: !ruby/struct:CityGeolocation 
+  city: Lakehurst
+  state: NJ
+  airport: NEL
+  lat: 40.03
+  lng: -74.35
+
+? 
+  - ME
+  - Bangor
+: !ruby/struct:CityGeolocation 
+  city: Bangor
+  state: ME
+  airport: BGR
+  lat: 44.8
+  lng: -68.82
+
+? 
+  - CA
+  - Riverside
+: !ruby/struct:CityGeolocation 
+  city: Riverside
+  state: CA
+  airport: RAL
+  lat: 33.95
+  lng: -117.45
+
+? 
+  - FL
+  - Cape Coral
+: !ruby/struct:CityGeolocation 
+  city: Cape Coral
+  state: FL
+  airport: ""
+  lat: 26.63767
+  lng: -81.99718
+
+? 
+  - TX
+  - Harlingen
+: !ruby/struct:CityGeolocation 
+  city: Harlingen
+  state: TX
+  airport: HRL
+  lat: 26.23
+  lng: -97.67
+
+? 
+  - RI
+  - Quonset Pt NAS
+: !ruby/struct:CityGeolocation 
+  city: Quonset Pt NAS
+  state: RI
+  airport: NCO
+  lat: 41.36
+  lng: -71.25
+
+? 
+  - CA
+  - Torrance
+: !ruby/struct:CityGeolocation 
+  city: Torrance
+  state: CA
+  airport: TOA
+  lat: 33.8
+  lng: -118.33
+
+? 
+  - MO
+  - Whiteman AFB
+: !ruby/struct:CityGeolocation 
+  city: Whiteman AFB
+  state: MO
+  airport: SZL
+  lat: 38.73
+  lng: -93.55
+
+? 
+  - WI
+  - Eau Claire
+: !ruby/struct:CityGeolocation 
+  city: Eau Claire
+  state: WI
+  airport: EAU
+  lat: 44.87
+  lng: -91.48
+
+? 
+  - CT
+  - Bridgeport
+: !ruby/struct:CityGeolocation 
+  city: Bridgeport
+  state: CT
+  airport: BDR
+  lat: 41.17
+  lng: -73.13
+
+? 
+  - CA
+  - Fullerton
+: !ruby/struct:CityGeolocation 
+  city: Fullerton
+  state: CA
+  airport: FUL
+  lat: 33.87
+  lng: -117.97
+
+? 
+  - IL
+  - Salem
+: !ruby/struct:CityGeolocation 
+  city: Salem
+  state: IL
+  airport: SLO
+  lat: 38.63
+  lng: -88.96
+
+? 
+  - MO
+  - St. Louis
+: !ruby/struct:CityGeolocation 
+  city: St. Louis
+  state: MO
+  airport: STL
+  lat: 38.75
+  lng: -90.37
+
+? 
+  - MA
+  - Otis ANGB
+: !ruby/struct:CityGeolocation 
+  city: Otis ANGB
+  state: MA
+  airport: FMH
+  lat: 41.65
+  lng: -70.52
+
+? 
+  - TX
+  - Big Sky
+: !ruby/struct:CityGeolocation 
+  city: Big Sky
+  state: TX
+  airport: BGS
+  lat: 32.39
+  lng: -101.48
+
+? 
+  - CA
+  - Lake Tahoe
+: !ruby/struct:CityGeolocation 
+  city: Lake Tahoe
+  state: CA
+  airport: TVL
+  lat: 38.9
+  lng: -120.0
+
+? 
+  - GA
+  - Columbus
+: !ruby/struct:CityGeolocation 
+  city: Columbus
+  state: GA
+  airport: CSG
+  lat: 32.52
+  lng: -84.93
+
+? 
+  - WI
+  - Oshkosh
+: !ruby/struct:CityGeolocation 
+  city: Oshkosh
+  state: WI
+  airport: OSH
+  lat: 44.0
+  lng: -88.57
+
+? 
+  - TX
+  - Childress
+: !ruby/struct:CityGeolocation 
+  city: Childress
+  state: TX
+  airport: CDS
+  lat: 34.43
+  lng: -100.28
+
+? 
+  - NY
+  - Niagara Fall
+: !ruby/struct:CityGeolocation 
+  city: Niagara Fall
+  state: NY
+  airport: IAG
+  lat: 43.1
+  lng: -78.95
+
+? 
+  - MS
+  - Columbus AFB
+: !ruby/struct:CityGeolocation 
+  city: Columbus AFB
+  state: MS
+  airport: CBM
+  lat: 33.65
+  lng: -88.45
+
+? 
+  - ID
+  - Gooding
+: !ruby/struct:CityGeolocation 
+  city: Gooding
+  state: ID
+  airport: GNG
+  lat: 43.0
+  lng: -115.17
+
+? 
+  - SC
+  - Nth Myrtle B
+: !ruby/struct:CityGeolocation 
+  city: Nth Myrtle B
+  state: SC
+  airport: CRE
+  lat: 33.82
+  lng: -78.72
+
+? 
+  - OH
+  - Cincinnati
+: !ruby/struct:CityGeolocation 
+  city: Cincinnati
+  state: OH
+  airport: LUK
+  lat: 39.1
+  lng: -84.43
+
+? 
+  - IA
+  - Ottumwa
+: !ruby/struct:CityGeolocation 
+  city: Ottumwa
+  state: IA
+  airport: OTM
+  lat: 41.1
+  lng: -92.45
+
+? 
+  - AK
+  - Dillingham
+: !ruby/struct:CityGeolocation 
+  city: Dillingham
+  state: AK
+  airport: DLG
+  lat: 59.05
+  lng: -158.52
+
+? 
+  - OR
+  - Astoria
+: !ruby/struct:CityGeolocation 
+  city: Astoria
+  state: OR
+  airport: AST
+  lat: 46.15
+  lng: -123.88
+
+? 
+  - FL
+  - Cross City
+: !ruby/struct:CityGeolocation 
+  city: Cross City
+  state: FL
+  airport: CTY
+  lat: 29.62
+  lng: -83.1
+
+? 
+  - MT
+  - Lewiston
+: !ruby/struct:CityGeolocation 
+  city: Lewiston
+  state: MT
+  airport: LWT
+  lat: 47.05
+  lng: -109.45
+
+? 
+  - MS
+  - Natchez
+: !ruby/struct:CityGeolocation 
+  city: Natchez
+  state: MS
+  airport: HEZ
+  lat: 31.62
+  lng: -91.25
+
+? 
+  - VT
+  - Montpelier
+: !ruby/struct:CityGeolocation 
+  city: Montpelier
+  state: VT
+  airport: MPV
+  lat: 44.2
+  lng: -72.57
+
+? 
+  - AR
+  - Little Rock
+: !ruby/struct:CityGeolocation 
+  city: Little Rock
+  state: AR
+  airport: LZK
+  lat: 34.83
+  lng: -92.25
+
+? 
+  - TX
+  - Kingsville
+: !ruby/struct:CityGeolocation 
+  city: Kingsville
+  state: TX
+  airport: NQI
+  lat: 27.5
+  lng: -97.82
+
+? 
+  - OR
+  - The Dalles
+: !ruby/struct:CityGeolocation 
+  city: The Dalles
+  state: OR
+  airport: DLS
+  lat: 45.62
+  lng: -121.15
+
+? 
+  - ND
+  - Lidgerwood
+: !ruby/struct:CityGeolocation 
+  city: Lidgerwood
+  state: ND
+  airport: P67
+  lat: 46.1
+  lng: -97.15
+
+? 
+  - IL
+  - Scott AFB
+: !ruby/struct:CityGeolocation 
+  city: Scott AFB
+  state: IL
+  airport: BLV
+  lat: 38.55
+  lng: -89.85
+
+? 
+  - MT
+  - Harlowton
+: !ruby/struct:CityGeolocation 
+  city: Harlowton
+  state: MT
+  airport: 3HT
+  lat: 46.43
+  lng: -109.83
+
+? 
+  - MT
+  - Sidney
+: !ruby/struct:CityGeolocation 
+  city: Sidney
+  state: MT
+  airport: SDY
+  lat: 47.72
+  lng: -104.18
+
+? 
+  - IN
+  - Elkhart
+: !ruby/struct:CityGeolocation 
+  city: Elkhart
+  state: IN
+  airport: EKM
+  lat: 41.72
+  lng: -86.0
+
+? 
+  - FL
+  - Bradenton
+: !ruby/struct:CityGeolocation 
+  city: Bradenton
+  state: FL
+  airport: ""
+  lat: 27.4879
+  lng: -82.57897
+
+? 
+  - NE
+  - Offutt AFB
+: !ruby/struct:CityGeolocation 
+  city: Offutt AFB
+  state: NE
+  airport: "OFF"
+  lat: 41.12
+  lng: -95.92
+
+? 
+  - GA
+  - Dobbins AFB
+: !ruby/struct:CityGeolocation 
+  city: Dobbins AFB
+  state: GA
+  airport: MGF
+  lat: 34.53
+  lng: -84.87
+
+? 
+  - CO
+  - Fraser
+: !ruby/struct:CityGeolocation 
+  city: Fraser
+  state: CO
+  airport: FSR
+  lat: 39.57
+  lng: -105.5
+
+? 
+  - MT
+  - Havre
+: !ruby/struct:CityGeolocation 
+  city: Havre
+  state: MT
+  airport: HVR
+  lat: 48.55
+  lng: -109.77
+
+? 
+  - GA
+  - Albany
+: !ruby/struct:CityGeolocation 
+  city: Albany
+  state: GA
+  airport: ABY
+  lat: 31.53
+  lng: -84.18
+
+? 
+  - MA
+  - New Bedford
+: !ruby/struct:CityGeolocation 
+  city: New Bedford
+  state: MA
+  airport: EWB
+  lat: 41.68
+  lng: -70.97
+
+? 
+  - CO
+  - Longmont
+: !ruby/struct:CityGeolocation 
+  city: Longmont
+  state: CO
+  airport: ""
+  lat: 40.1728
+  lng: -105.11169
+
+? 
+  - AL
+  - Troy
+: !ruby/struct:CityGeolocation 
+  city: Troy
+  state: AL
+  airport: TOI
+  lat: 31.87
+  lng: -86.02
+
+? 
+  - NE
+  - Beatrice
+: !ruby/struct:CityGeolocation 
+  city: Beatrice
+  state: NE
+  airport: BIE
+  lat: 40.32
+  lng: -96.75
+
+? 
+  - KS
+  - Hill City
+: !ruby/struct:CityGeolocation 
+  city: Hill City
+  state: KS
+  airport: HLC
+  lat: 39.38
+  lng: -99.83
+
+? 
+  - TX
+  - Cotulla
+: !ruby/struct:CityGeolocation 
+  city: Cotulla
+  state: TX
+  airport: COT
+  lat: 28.45
+  lng: -99.22
+
+? 
+  - OH
+  - Wright-Pat AFB
+: !ruby/struct:CityGeolocation 
+  city: Wright-Pat AFB
+  state: OH
+  airport: FFO
+  lat: 39.83
+  lng: -84.05
+
+? 
+  - MN
+  - Warroad
+: !ruby/struct:CityGeolocation 
+  city: Warroad
+  state: MN
+  airport: D45
+  lat: 48.93
+  lng: -95.35
+
+? 
+  - CO
+  - Akron
+: !ruby/struct:CityGeolocation 
+  city: Akron
+  state: CO
+  airport: AKO
+  lat: 40.17
+  lng: -103.22
+
+? 
+  - AK
+  - Dutch Harbor
+: !ruby/struct:CityGeolocation 
+  city: Dutch Harbor
+  state: AK
+  airport: DUT
+  lat: 53.88
+  lng: -166.53
+
+? 
+  - DC
+  - Washington
+: !ruby/struct:CityGeolocation 
+  city: Washington
+  state: DC
+  airport: DCA
+  lat: 38.90505
+  lng: -77.01616
+
+? 
+  - NE
+  - McCook
+: !ruby/struct:CityGeolocation 
+  city: McCook
+  state: NE
+  airport: ""
+  lat: 40.20411
+  lng: -100.62034
+
+? 
+  - MN
+  - Marshall Arpt
+: !ruby/struct:CityGeolocation 
+  city: Marshall Arpt
+  state: MN
+  airport: MML
+  lat: 44.45
+  lng: -95.82
+
+? 
+  - CA
+  - San Diego
+: !ruby/struct:CityGeolocation 
+  city: San Diego
+  state: CA
+  airport: SEE
+  lat: 32.82
+  lng: -116.97
+
+? 
+  - CO
+  - Salida
+: !ruby/struct:CityGeolocation 
+  city: Salida
+  state: CO
+  airport: S29
+  lat: 38.53
+  lng: -106.05
+
+? 
+  - UT
+  - Provo
+: !ruby/struct:CityGeolocation 
+  city: Provo
+  state: UT
+  airport: PVU
+  lat: 40.22
+  lng: -111.72
+
+? 
+  - PA
+  - Dubois
+: !ruby/struct:CityGeolocation 
+  city: Dubois
+  state: PA
+  airport: DUJ
+  lat: 41.18
+  lng: -78.9
+
+? 
+  - KS
+  - Hays
+: !ruby/struct:CityGeolocation 
+  city: Hays
+  state: KS
+  airport: HYS
+  lat: 38.85
+  lng: -99.27
+
+? 
+  - FL
+  - Macdill AFB
+: !ruby/struct:CityGeolocation 
+  city: Macdill AFB
+  state: FL
+  airport: MCF
+  lat: 27.85
+  lng: -82.52
+
+? 
+  - VA
+  - Williamsburg
+: !ruby/struct:CityGeolocation 
+  city: Williamsburg
+  state: VA
+  airport: ""
+  lat: 37.27
+  lng: -76.70685
+
+? 
+  - TX
+  - San Antonio
+: !ruby/struct:CityGeolocation 
+  city: San Antonio
+  state: TX
+  airport: SSF
+  lat: 29.33
+  lng: -98.47
+
+? 
+  - ND
+  - Grand Forks
+: !ruby/struct:CityGeolocation 
+  city: Grand Forks
+  state: ND
+  airport: RDR
+  lat: 47.97
+  lng: -97.4
+
+? 
+  - NY
+  - Utica
+: !ruby/struct:CityGeolocation 
+  city: Utica
+  state: NY
+  airport: UCA
+  lat: 43.15
+  lng: -75.38
+
+? 
+  - LA
+  - High Is
+: !ruby/struct:CityGeolocation 
+  city: High Is
+  state: LA
+  airport: 5R0
+  lat: 28.22
+  lng: -93.75
+
+? 
+  - VA
+  - Hot Springs
+: !ruby/struct:CityGeolocation 
+  city: Hot Springs
+  state: VA
+  airport: HSP
+  lat: 37.95
+  lng: -79.82
+
+? 
+  - TX
+  - Dallas
+: !ruby/struct:CityGeolocation 
+  city: Dallas
+  state: TX
+  airport: DAL
+  lat: 32.85
+  lng: -96.85
+
+? 
+  - TX
+  - Carswell AFB
+: !ruby/struct:CityGeolocation 
+  city: Carswell AFB
+  state: TX
+  airport: FWH
+  lat: 32.78
+  lng: -97.43
+
+? 
+  - NM
+  - Holloman AFB
+: !ruby/struct:CityGeolocation 
+  city: Holloman AFB
+  state: NM
+  airport: HMN
+  lat: 32.85
+  lng: -106.1
+
+? 
+  - NM
+  - Socorro
+: !ruby/struct:CityGeolocation 
+  city: Socorro
+  state: NM
+  airport: ONM
+  lat: 34.07
+  lng: -106.9
+
+? 
+  - FL
+  - Fort Lauderdale
+: !ruby/struct:CityGeolocation 
+  city: Fort Lauderdale
+  state: FL
+  airport: FLL
+  lat: 26.07
+  lng: -80.15
+
+? 
+  - WY
+  - Moorcroft
+: !ruby/struct:CityGeolocation 
+  city: Moorcroft
+  state: WY
+  airport: 4MC
+  lat: 44.35
+  lng: -104.81
+
+? 
+  - TX
+  - Kelly AFB
+: !ruby/struct:CityGeolocation 
+  city: Kelly AFB
+  state: TX
+  airport: SKF
+  lat: 29.38
+  lng: -98.58
+
+? 
+  - OR
+  - Hillsboro
+: !ruby/struct:CityGeolocation 
+  city: Hillsboro
+  state: OR
+  airport: HIO
+  lat: 45.53
+  lng: -122.95
+
+? 
+  - OK
+  - Ponca City
+: !ruby/struct:CityGeolocation 
+  city: Ponca City
+  state: OK
+  airport: PNC
+  lat: 36.73
+  lng: -97.1
+
+? 
+  - OK
+  - Fort Sill
+: !ruby/struct:CityGeolocation 
+  city: Fort Sill
+  state: OK
+  airport: FSI
+  lat: 34.65
+  lng: -98.4
+
+? 
+  - NC
+  - Pope AFB
+: !ruby/struct:CityGeolocation 
+  city: Pope AFB
+  state: NC
+  airport: POB
+  lat: 35.17
+  lng: -79.02
+
+? 
+  - ID
+  - Lewiston
+: !ruby/struct:CityGeolocation 
+  city: Lewiston
+  state: ID
+  airport: LWS
+  lat: 46.38
+  lng: -117.02
+
+? 
+  - AZ
+  - Goodyear
+: !ruby/struct:CityGeolocation 
+  city: Goodyear
+  state: AZ
+  airport: GYR
+  lat: 33.42
+  lng: -112.38
+
+? 
+  - TX
+  - Wharton
+: !ruby/struct:CityGeolocation 
+  city: Wharton
+  state: TX
+  airport: ""
+  lat: 29.31637
+  lng: -96.09904
+
+? 
+  - AK
+  - Chulitna
+: !ruby/struct:CityGeolocation 
+  city: Chulitna
+  state: AK
+  airport: Z00
+  lat: 62.88
+  lng: -149.83
+
+? 
+  - CA
+  - Santa Maria
+: !ruby/struct:CityGeolocation 
+  city: Santa Maria
+  state: CA
+  airport: SMX
+  lat: 34.9
+  lng: -120.45
+
+? 
+  - LA
+  - New Iberia
+: !ruby/struct:CityGeolocation 
+  city: New Iberia
+  state: LA
+  airport: ARA
+  lat: 30.03
+  lng: -91.88
+
+? 
+  - WI
+  - Stevens Point
+: !ruby/struct:CityGeolocation 
+  city: Stevens Point
+  state: WI
+  airport: ""
+  lat: 44.52768
+  lng: -89.5605
+
+? 
+  - TX
+  - Paris/Cox
+: !ruby/struct:CityGeolocation 
+  city: Paris/Cox
+  state: TX
+  airport: PRX
+  lat: 33.63
+  lng: -95.45
+
+? 
+  - OR
+  - Newport
+: !ruby/struct:CityGeolocation 
+  city: Newport
+  state: OR
+  airport: ONP
+  lat: 44.63
+  lng: -124.05
+
+? 
+  - NM
+  - Hobbs
+: !ruby/struct:CityGeolocation 
+  city: Hobbs
+  state: NM
+  airport: HOB
+  lat: 32.68
+  lng: -103.2
+
+? 
+  - MO
+  - Kansas City
+: !ruby/struct:CityGeolocation 
+  city: Kansas City
+  state: MO
+  airport: MKC
+  lat: 39.12
+  lng: -94.6
+
+? 
+  - CA
+  - Crescent Cty
+: !ruby/struct:CityGeolocation 
+  city: Crescent Cty
+  state: CA
+  airport: CEC
+  lat: 41.78
+  lng: -124.23
+
+? 
+  - TN
+  - Dyersburg
+: !ruby/struct:CityGeolocation 
+  city: Dyersburg
+  state: TN
+  airport: DYR
+  lat: 36.02
+  lng: -89.4
+
+? 
+  - OR
+  - Redmond
+: !ruby/struct:CityGeolocation 
+  city: Redmond
+  state: OR
+  airport: RDM
+  lat: 44.27
+  lng: -121.15
+
+? 
+  - CA
+  - San Francisco
+: !ruby/struct:CityGeolocation 
+  city: San Francisco
+  state: CA
+  airport: SFO
+  lat: 37.62
+  lng: -122.38
+
+? 
+  - NY
+  - Albany
+: !ruby/struct:CityGeolocation 
+  city: Albany
+  state: NY
+  airport: ALB
+  lat: 42.75
+  lng: -73.8
+
+? 
+  - NY
+  - Elmira
+: !ruby/struct:CityGeolocation 
+  city: Elmira
+  state: NY
+  airport: ELM
+  lat: 42.17
+  lng: -76.9
+
+? 
+  - CA
+  - Beale AFB
+: !ruby/struct:CityGeolocation 
+  city: Beale AFB
+  state: CA
+  airport: BAB
+  lat: 39.13
+  lng: -121.45
+
+? 
+  - NE
+  - O'neill
+: !ruby/struct:CityGeolocation 
+  city: O'neill
+  state: NE
+  airport: ONL
+  lat: 42.47
+  lng: -98.68
+
+? 
+  - MD
+  - Baltimore/BWI
+: !ruby/struct:CityGeolocation 
+  city: Baltimore/BWI
+  state: MD
+  airport: BWI
+  lat: 39.18
+  lng: -76.67
+
+? 
+  - CO
+  - Rifle
+: !ruby/struct:CityGeolocation 
+  city: Rifle
+  state: CO
+  airport: 1V1
+  lat: 39.53
+  lng: -107.8
+
+? 
+  - WA
+  - Toledo
+: !ruby/struct:CityGeolocation 
+  city: Toledo
+  state: WA
+  airport: TDO
+  lat: 46.48
+  lng: -122.8
+
+? 
+  - AK
+  - Cold Bay
+: !ruby/struct:CityGeolocation 
+  city: Cold Bay
+  state: AK
+  airport: CDB
+  lat: 55.2
+  lng: -162.72
+
+? 
+  - AK
+  - Minchumina
+: !ruby/struct:CityGeolocation 
+  city: Minchumina
+  state: AK
+  airport: MHM
+  lat: 63.9
+  lng: -152.27
+
+? 
+  - UT
+  - Saint George
+: !ruby/struct:CityGeolocation 
+  city: Saint George
+  state: UT
+  airport: SGU
+  lat: 37.08
+  lng: -113.6
+
+? 
+  - AK
+  - Adak
+: !ruby/struct:CityGeolocation 
+  city: Adak
+  state: AK
+  airport: ADK
+  lat: 51.88
+  lng: -176.65
+
+? 
+  - OR
+  - Bend
+: !ruby/struct:CityGeolocation 
+  city: Bend
+  state: OR
+  airport: ""
+  lat: 44.06604
+  lng: -121.31104
+
+? 
+  - MN
+  - Redwood Falls
+: !ruby/struct:CityGeolocation 
+  city: Redwood Falls
+  state: MN
+  airport: RWF
+  lat: 44.55
+  lng: -95.08
+
+? 
+  - WA
+  - Fairchild
+: !ruby/struct:CityGeolocation 
+  city: Fairchild
+  state: WA
+  airport: SKA
+  lat: 47.62
+  lng: -117.65
+
+? 
+  - AZ
+  - Williams AFB
+: !ruby/struct:CityGeolocation 
+  city: Williams AFB
+  state: AZ
+  airport: CHD
+  lat: 33.3
+  lng: -111.67
+
+? 
+  - MS
+  - Keesler AFB
+: !ruby/struct:CityGeolocation 
+  city: Keesler AFB
+  state: MS
+  airport: BIX
+  lat: 30.42
+  lng: -88.92
+
+? 
+  - MT
+  - Bozeman
+: !ruby/struct:CityGeolocation 
+  city: Bozeman
+  state: MT
+  airport: BZN
+  lat: 45.78
+  lng: -111.15
+
+? 
+  - AK
+  - Circle City
+: !ruby/struct:CityGeolocation 
+  city: Circle City
+  state: AK
+  airport: CRC
+  lat: 65.83
+  lng: -144.07
+
+? 
+  - CA
+  - Walnut Creek
+: !ruby/struct:CityGeolocation 
+  city: Walnut Creek
+  state: CA
+  airport: ""
+  lat: 37.90201
+  lng: -122.04084
+
+? 
+  - PA
+  - Latrobe
+: !ruby/struct:CityGeolocation 
+  city: Latrobe
+  state: PA
+  airport: LBE
+  lat: 40.28
+  lng: -79.4
+
+? 
+  - MN
+  - Hibbing
+: !ruby/struct:CityGeolocation 
+  city: Hibbing
+  state: MN
+  airport: HIB
+  lat: 47.38
+  lng: -92.85
+
+? 
+  - KS
+  - Topeka
+: !ruby/struct:CityGeolocation 
+  city: Topeka
+  state: KS
+  airport: TOP
+  lat: 39.07
+  lng: -95.62
+
+? 
+  - AK
+  - Nome
+: !ruby/struct:CityGeolocation 
+  city: Nome
+  state: AK
+  airport: OME
+  lat: 64.5
+  lng: -165.43
+
+? 
+  - IL
+  - Marseilles
+: !ruby/struct:CityGeolocation 
+  city: Marseilles
+  state: IL
+  airport: MMO
+  lat: 41.37
+  lng: -88.68
+
+? 
+  - TX
+  - Dallas/Redbr
+: !ruby/struct:CityGeolocation 
+  city: Dallas/Redbr
+  state: TX
+  airport: RBD
+  lat: 32.68
+  lng: -96.87
+
+? 
+  - NC
+  - Cape Hattera
+: !ruby/struct:CityGeolocation 
+  city: Cape Hattera
+  state: NC
+  airport: HAT
+  lat: 35.27
+  lng: -75.55
+
+? 
+  - AK
+  - Ketchikan
+: !ruby/struct:CityGeolocation 
+  city: Ketchikan
+  state: AK
+  airport: KTN
+  lat: 55.35
+  lng: -131.7
+
+? 
+  - NM
+  - Las Cruces
+: !ruby/struct:CityGeolocation 
+  city: Las Cruces
+  state: NM
+  airport: LRU
+  lat: 32.3
+  lng: -106.77
+
+? 
+  - ID
+  - Grangeville
+: !ruby/struct:CityGeolocation 
+  city: Grangeville
+  state: ID
+  airport: S80
+  lat: 45.92
+  lng: -116.13
+
+? 
+  - NH
+  - Berlin
+: !ruby/struct:CityGeolocation 
+  city: Berlin
+  state: NH
+  airport: BML
+  lat: 44.58
+  lng: -71.18
+
+? 
+  - VA
+  - Fort Eustis
+: !ruby/struct:CityGeolocation 
+  city: Fort Eustis
+  state: VA
+  airport: FAF
+  lat: 37.13
+  lng: -76.62
+
+? 
+  - PA
+  - Blairsville
+: !ruby/struct:CityGeolocation 
+  city: Blairsville
+  state: PA
+  airport: BSI
+  lat: 40.27
+  lng: -79.09
+
+? 
+  - AR
+  - Hot Springs
+: !ruby/struct:CityGeolocation 
+  city: Hot Springs
+  state: AR
+  airport: HOT
+  lat: 34.48
+  lng: -93.1
+
+? 
+  - IL
+  - Vandalia
+: !ruby/struct:CityGeolocation 
+  city: Vandalia
+  state: IL
+  airport: VLA
+  lat: 38.99
+  lng: -89.17
+
+? 
+  - GA
+  - Moody AFB
+: !ruby/struct:CityGeolocation 
+  city: Moody AFB
+  state: GA
+  airport: VAD
+  lat: 30.97
+  lng: -83.2
+
+? 
+  - MI
+  - Seul Choix
+: !ruby/struct:CityGeolocation 
+  city: Seul Choix
+  state: MI
+  airport: P75
+  lat: 45.92
+  lng: -85.92
+
+? 
+  - AK
+  - Bethel Arpt
+: !ruby/struct:CityGeolocation 
+  city: Bethel Arpt
+  state: AK
+  airport: BET
+  lat: 60.78
+  lng: -161.8
+
+? 
+  - IL
+  - Waukegan
+: !ruby/struct:CityGeolocation 
+  city: Waukegan
+  state: IL
+  airport: ""
+  lat: 42.3709
+  lng: -87.86799
+
+? 
+  - ID
+  - Pocatello
+: !ruby/struct:CityGeolocation 
+  city: Pocatello
+  state: ID
+  airport: PIH
+  lat: 42.92
+  lng: -112.6
+
+? 
+  - LA
+  - Shreveport
+: !ruby/struct:CityGeolocation 
+  city: Shreveport
+  state: LA
+  airport: SHV
+  lat: 32.47
+  lng: -93.82
+
+? 
+  - IA
+  - Dubuque
+: !ruby/struct:CityGeolocation 
+  city: Dubuque
+  state: IA
+  airport: DBQ
+  lat: 42.4
+  lng: -90.7
+
+? 
+  - AZ
+  - Yuma Prv Gd
+: !ruby/struct:CityGeolocation 
+  city: Yuma Prv Gd
+  state: AZ
+  airport: 1Y7
+  lat: 32.85
+  lng: -114.4
+
+? 
+  - OH
+  - Youngstown
+: !ruby/struct:CityGeolocation 
+  city: Youngstown
+  state: OH
+  airport: YNG
+  lat: 41.27
+  lng: -80.67
+
+? 
+  - OH
+  - Dayton
+: !ruby/struct:CityGeolocation 
+  city: Dayton
+  state: OH
+  airport: DAY
+  lat: 39.9
+  lng: -84.2
+
+? 
+  - GA
+  - La Grange
+: !ruby/struct:CityGeolocation 
+  city: La Grange
+  state: GA
+  airport: LGC
+  lat: 33.01
+  lng: -85.07
+
+? 
+  - MO
+  - Jefferson City
+: !ruby/struct:CityGeolocation 
+  city: Jefferson City
+  state: MO
+  airport: JEF
+  lat: 38.6
+  lng: -92.17
+
+? 
+  - IL
+  - Moline/Quad
+: !ruby/struct:CityGeolocation 
+  city: Moline/Quad
+  state: IL
+  airport: MLI
+  lat: 41.45
+  lng: -90.52
+
+? 
+  - FL
+  - Fort Myers
+: !ruby/struct:CityGeolocation 
+  city: Fort Myers
+  state: FL
+  airport: RSW
+  lat: 26.65
+  lng: -81.87
+
+? 
+  - TX
+  - Tyler
+: !ruby/struct:CityGeolocation 
+  city: Tyler
+  state: TX
+  airport: ""
+  lat: 32.3284
+  lng: -95.30359
+
+? 
+  - VA
+  - Lynchburg
+: !ruby/struct:CityGeolocation 
+  city: Lynchburg
+  state: VA
+  airport: LYH
+  lat: 37.33
+  lng: -79.2
+
+? 
+  - UT
+  - Roosevelt
+: !ruby/struct:CityGeolocation 
+  city: Roosevelt
+  state: UT
+  airport: U67
+  lat: 40.5
+  lng: -110.63
+
+? 
+  - AL
+  - Dothan
+: !ruby/struct:CityGeolocation 
+  city: Dothan
+  state: AL
+  airport: DHN
+  lat: 31.32
+  lng: -85.45
+
+? 
+  - CA
+  - Campo
+: !ruby/struct:CityGeolocation 
+  city: Campo
+  state: CA
+  airport: CZZ
+  lat: 32.62
+  lng: -116.47
+
+? 
+  - MS
+  - Laurel
+: !ruby/struct:CityGeolocation 
+  city: Laurel
+  state: MS
+  airport: LUL
+  lat: 31.67
+  lng: -89.17
+
+? 
+  - NM
+  - Gallup/Clark
+: !ruby/struct:CityGeolocation 
+  city: Gallup/Clark
+  state: NM
+  airport: GUP
+  lat: 35.52
+  lng: -108.78
+
+? 
+  - TX
+  - Randolph AFB
+: !ruby/struct:CityGeolocation 
+  city: Randolph AFB
+  state: TX
+  airport: RND
+  lat: 29.53
+  lng: -98.28
+
+? 
+  - AK
+  - Middleton Is
+: !ruby/struct:CityGeolocation 
+  city: Middleton Is
+  state: AK
+  airport: MDO
+  lat: 59.43
+  lng: -146.33
+
+? 
+  - GA
+  - Waycross
+: !ruby/struct:CityGeolocation 
+  city: Waycross
+  state: GA
+  airport: AYS
+  lat: 31.25
+  lng: -82.4
+
+? 
+  - LA
+  - Cameron Heli
+: !ruby/struct:CityGeolocation 
+  city: Cameron Heli
+  state: LA
+  airport: 7R5
+  lat: 29.78
+  lng: -93.3
+
+? 
+  - WI
+  - Madison
+: !ruby/struct:CityGeolocation 
+  city: Madison
+  state: WI
+  airport: MSN
+  lat: 43.13
+  lng: -89.33
+
+? 
+  - UT
+  - Delta
+: !ruby/struct:CityGeolocation 
+  city: Delta
+  state: UT
+  airport: U24
+  lat: 39.33
+  lng: -112.58
+
+? 
+  - MI
+  - Houghton Lake
+: !ruby/struct:CityGeolocation 
+  city: Houghton Lake
+  state: MI
+  airport: HTL
+  lat: 44.37
+  lng: -84.68
+
+? 
+  - ID
+  - Salmon
+: !ruby/struct:CityGeolocation 
+  city: Salmon
+  state: ID
+  airport: SMN
+  lat: 45.17
+  lng: -114.47
+
+? 
+  - AK
+  - Nenana
+: !ruby/struct:CityGeolocation 
+  city: Nenana
+  state: AK
+  airport: ENN
+  lat: 64.55
+  lng: -149.08
+
+? 
+  - NY
+  - Schenectady
+: !ruby/struct:CityGeolocation 
+  city: Schenectady
+  state: NY
+  airport: SCH
+  lat: 42.85
+  lng: -73.93
+
+? 
+  - NM
+  - Farmington
+: !ruby/struct:CityGeolocation 
+  city: Farmington
+  state: NM
+  airport: FMN
+  lat: 36.75
+  lng: -108.23
+
+? 
+  - FL
+  - Pensacola
+: !ruby/struct:CityGeolocation 
+  city: Pensacola
+  state: FL
+  airport: PNS
+  lat: 30.47
+  lng: -87.2
+
+? 
+  - OR
+  - Eugene
+: !ruby/struct:CityGeolocation 
+  city: Eugene
+  state: OR
+  airport: EUG
+  lat: 44.12
+  lng: -123.22
+
+? 
+  - OH
+  - Cleveland
+: !ruby/struct:CityGeolocation 
+  city: Cleveland
+  state: OH
+  airport: CLE
+  lat: 41.42
+  lng: -81.87
+
+? 
+  - NM
+  - Tucumcari
+: !ruby/struct:CityGeolocation 
+  city: Tucumcari
+  state: NM
+  airport: TCC
+  lat: 35.18
+  lng: -103.6
+
+? 
+  - AK
+  - Craig
+: !ruby/struct:CityGeolocation 
+  city: Craig
+  state: AK
+  airport: CGA
+  lat: 55.8
+  lng: -133.25
+
+? 
+  - MT
+  - Dillon
+: !ruby/struct:CityGeolocation 
+  city: Dillon
+  state: MT
+  airport: DLN
+  lat: 45.25
+  lng: -112.55
+
+? 
+  - ID
+  - Burley
+: !ruby/struct:CityGeolocation 
+  city: Burley
+  state: ID
+  airport: BYI
+  lat: 42.53
+  lng: -113.77
+
+? 
+  - AZ
+  - Phoenix
+: !ruby/struct:CityGeolocation 
+  city: Phoenix
+  state: AZ
+  airport: PHX
+  lat: 33.43
+  lng: -112.02
+
+? 
+  - MI
+  - Marquette
+: !ruby/struct:CityGeolocation 
+  city: Marquette
+  state: MI
+  airport: MQT
+  lat: 46.88
+  lng: -87.95
+
+? 
+  - IA
+  - Fort Dodge
+: !ruby/struct:CityGeolocation 
+  city: Fort Dodge
+  state: IA
+  airport: FOD
+  lat: 42.55
+  lng: -94.18
+
+? 
+  - HI
+  - Hilo
+: !ruby/struct:CityGeolocation 
+  city: Hilo
+  state: HI
+  airport: ITO
+  lat: 19.72
+  lng: -155.07
+
+? 
+  - CA
+  - Chico
+: !ruby/struct:CityGeolocation 
+  city: Chico
+  state: CA
+  airport: CIC
+  lat: 39.78
+  lng: -121.85
+
+? 
+  - WY
+  - Evanston
+: !ruby/struct:CityGeolocation 
+  city: Evanston
+  state: WY
+  airport: EVW
+  lat: 41.33
+  lng: -111.0
+
+? 
+  - PA
+  - Erie
+: !ruby/struct:CityGeolocation 
+  city: Erie
+  state: PA
+  airport: ERI
+  lat: 42.08
+  lng: -80.18
+
+? 
+  - NY
+  - Ithaca
+: !ruby/struct:CityGeolocation 
+  city: Ithaca
+  state: NY
+  airport: ITH
+  lat: 42.48
+  lng: -76.47
+
+? 
+  - CA
+  - Shelter Cove
+: !ruby/struct:CityGeolocation 
+  city: Shelter Cove
+  state: CA
+  airport: O87
+  lat: 40.03
+  lng: -124.07
+
+? 
+  - NJ
+  - Millville
+: !ruby/struct:CityGeolocation 
+  city: Millville
+  state: NJ
+  airport: MIV
+  lat: 39.37
+  lng: -75.07
+
+? 
+  - HI
+  - Waimea-Koha
+: !ruby/struct:CityGeolocation 
+  city: Waimea-Koha
+  state: HI
+  airport: MUE
+  lat: 20.0
+  lng: -156.12
+
+? 
+  - IL
+  - Chicago
+: !ruby/struct:CityGeolocation 
+  city: Chicago
+  state: IL
+  airport: CHI
+  lat: 41.9
+  lng: -87.65
+
+? 
+  - NV
+  - Nellis AFB
+: !ruby/struct:CityGeolocation 
+  city: Nellis AFB
+  state: NV
+  airport: LSV
+  lat: 36.23
+  lng: -115.03
+
+? 
+  - CA
+  - Anaheim
+: !ruby/struct:CityGeolocation 
+  city: Anaheim
+  state: CA
+  airport: ""
+  lat: 33.8389
+  lng: -117.87233
+
+? 
+  - NC
+  - Wilmington
+: !ruby/struct:CityGeolocation 
+  city: Wilmington
+  state: NC
+  airport: ILM
+  lat: 34.27
+  lng: -77.92
+
+? 
+  - IL
+  - Aurora
+: !ruby/struct:CityGeolocation 
+  city: Aurora
+  state: IL
+  airport: ARR
+  lat: 41.77
+  lng: -88.32
+
+? 
+  - CA
+  - Vandenberg
+: !ruby/struct:CityGeolocation 
+  city: Vandenberg
+  state: CA
+  airport: VBG
+  lat: 35.2
+  lng: -120.95
+
+? 
+  - WY
+  - Riverton
+: !ruby/struct:CityGeolocation 
+  city: Riverton
+  state: WY
+  airport: RIW
+  lat: 43.05
+  lng: -108.45
+
+? 
+  - TX
+  - Killeen
+: !ruby/struct:CityGeolocation 
+  city: Killeen
+  state: TX
+  airport: ILE
+  lat: 31.08
+  lng: -97.68
+
+? 
+  - TX
+  - Amarillo
+: !ruby/struct:CityGeolocation 
+  city: Amarillo
+  state: TX
+  airport: AMA
+  lat: 35.23
+  lng: -101.7
+
+? 
+  - SD
+  - Philip
+: !ruby/struct:CityGeolocation 
+  city: Philip
+  state: SD
+  airport: PHP
+  lat: 44.05
+  lng: -101.6
+
+? 
+  - OR
+  - Burns Arpt
+: !ruby/struct:CityGeolocation 
+  city: Burns Arpt
+  state: OR
+  airport: BNO
+  lat: 43.6
+  lng: -118.95
+
+? 
+  - OK
+  - Stillwater
+: !ruby/struct:CityGeolocation 
+  city: Stillwater
+  state: OK
+  airport: SWO
+  lat: 36.16
+  lng: -97.09
+
+? 
+  - MN
+  - Detroit Laks
+: !ruby/struct:CityGeolocation 
+  city: Detroit Laks
+  state: MN
+  airport: DTL
+  lat: 46.82
+  lng: -95.88
+
+? 
+  - AK
+  - Nikolski
+: !ruby/struct:CityGeolocation 
+  city: Nikolski
+  state: AK
+  airport: IKO
+  lat: 53.58
+  lng: -169.42
+
+? 
+  - MS
+  - Oxford
+: !ruby/struct:CityGeolocation 
+  city: Oxford
+  state: MS
+  airport: UOX
+  lat: 34.39
+  lng: -89.54
+
+? 
+  - NJ
+  - Atlantic Cty
+: !ruby/struct:CityGeolocation 
+  city: Atlantic Cty
+  state: NJ
+  airport: ACY
+  lat: 39.45
+  lng: -74.57
+
+? 
+  - AZ
+  - Tucson
+: !ruby/struct:CityGeolocation 
+  city: Tucson
+  state: AZ
+  airport: TUS
+  lat: 32.12
+  lng: -110.93
+
+? 
+  - CA
+  - Carlsbad
+: !ruby/struct:CityGeolocation 
+  city: Carlsbad
+  state: CA
+  airport: CRQ
+  lat: 33.13
+  lng: -117.28
+
+? 
+  - MT
+  - Missoula
+: !ruby/struct:CityGeolocation 
+  city: Missoula
+  state: MT
+  airport: MSO
+  lat: 46.92
+  lng: -114.08
+
+? 
+  - CA
+  - San Carlos
+: !ruby/struct:CityGeolocation 
+  city: San Carlos
+  state: CA
+  airport: SQL
+  lat: 37.52
+  lng: -122.25
+
+? 
+  - IA
+  - Des Moines
+: !ruby/struct:CityGeolocation 
+  city: Des Moines
+  state: IA
+  airport: DSM
+  lat: 41.53
+  lng: -93.65
+
+? 
+  - TX
+  - Bryan
+: !ruby/struct:CityGeolocation 
+  city: Bryan
+  state: TX
+  airport: ""
+  lat: 30.66855
+  lng: -96.3652
+
+? 
+  - WI
+  - Lone Rock
+: !ruby/struct:CityGeolocation 
+  city: Lone Rock
+  state: WI
+  airport: LNR
+  lat: 43.2
+  lng: -90.18
+
+? 
+  - AZ
+  - Douglas
+: !ruby/struct:CityGeolocation 
+  city: Douglas
+  state: AZ
+  airport: DUG
+  lat: 31.45
+  lng: -109.6
+
+? 
+  - NH
+  - Keene
+: !ruby/struct:CityGeolocation 
+  city: Keene
+  state: NH
+  airport: EEN
+  lat: 42.9
+  lng: -72.27
+
+? 
+  - TX
+  - Reese AFB
+: !ruby/struct:CityGeolocation 
+  city: Reese AFB
+  state: TX
+  airport: REE
+  lat: 33.6
+  lng: -102.05
+
+? 
+  - PA
+  - Bradford
+: !ruby/struct:CityGeolocation 
+  city: Bradford
+  state: PA
+  airport: BFD
+  lat: 41.8
+  lng: -78.63
+
+? 
+  - NC
+  - Fayetteville
+: !ruby/struct:CityGeolocation 
+  city: Fayetteville
+  state: NC
+  airport: FAY
+  lat: 35.0
+  lng: -78.88
+
+? 
+  - NM
+  - Corona
+: !ruby/struct:CityGeolocation 
+  city: Corona
+  state: NM
+  airport: 4CR
+  lat: 34.1
+  lng: -105.68
+
+? 
+  - NV
+  - Austin
+: !ruby/struct:CityGeolocation 
+  city: Austin
+  state: NV
+  airport: U31
+  lat: 39.5
+  lng: -117.08
+
+? 
+  - FL
+  - Gainesville
+: !ruby/struct:CityGeolocation 
+  city: Gainesville
+  state: FL
+  airport: GNV
+  lat: 29.68
+  lng: -82.27
+
+? 
+  - DE
+  - New Castle
+: !ruby/struct:CityGeolocation 
+  city: New Castle
+  state: DE
+  airport: ""
+  lat: 39.6664
+  lng: -75.57039
+
+? 
+  - NC
+  - Hickory
+: !ruby/struct:CityGeolocation 
+  city: Hickory
+  state: NC
+  airport: HKY
+  lat: 35.75
+  lng: -81.38
+
+? 
+  - CT
+  - Groton
+: !ruby/struct:CityGeolocation 
+  city: Groton
+  state: CT
+  airport: GON
+  lat: 41.33
+  lng: -72.05
+
+? 
+  - NH
+  - Mt Washingtn
+: !ruby/struct:CityGeolocation 
+  city: Mt Washingtn
+  state: NH
+  airport: MWN
+  lat: 44.27
+  lng: -71.3
+
+? 
+  - AK
+  - Shemy
+: !ruby/struct:CityGeolocation 
+  city: Shemy
+  state: AK
+  airport: SYA
+  lat: 53.2
+  lng: -174.13
+
+? 
+  - WA
+  - Bellingham
+: !ruby/struct:CityGeolocation 
+  city: Bellingham
+  state: WA
+  airport: BLI
+  lat: 48.8
+  lng: -122.53
+
+? 
+  - TX
+  - Sherman-Deni
+: !ruby/struct:CityGeolocation 
+  city: Sherman-Deni
+  state: TX
+  airport: F39
+  lat: 33.72
+  lng: -96.67
+
+? 
+  - TX
+  - San Angelo
+: !ruby/struct:CityGeolocation 
+  city: San Angelo
+  state: TX
+  airport: SJT
+  lat: 31.37
+  lng: -100.5
+
+? 
+  - MA
+  - Westfield
+: !ruby/struct:CityGeolocation 
+  city: Westfield
+  state: MA
+  airport: BAF
+  lat: 42.17
+  lng: -72.72
+
+? 
+  - CO
+  - Buckley
+: !ruby/struct:CityGeolocation 
+  city: Buckley
+  state: CO
+  airport: BKF
+  lat: 39.72
+  lng: -104.75
+
+? 
+  - FL
+  - Daytona Beach
+: !ruby/struct:CityGeolocation 
+  city: Daytona Beach
+  state: FL
+  airport: DAB
+  lat: 29.18
+  lng: -81.05
+
+? 
+  - IL
+  - Bradford
+: !ruby/struct:CityGeolocation 
+  city: Bradford
+  state: IL
+  airport: BDF
+  lat: 41.16
+  lng: -89.6
+
+? 
+  - NM
+  - Santa Fe
+: !ruby/struct:CityGeolocation 
+  city: Santa Fe
+  state: NM
+  airport: SAF
+  lat: 35.62
+  lng: -106.08
+
+? 
+  - MO
+  - Monett
+: !ruby/struct:CityGeolocation 
+  city: Monett
+  state: MO
+  airport: UMN
+  lat: 37.33
+  lng: -94.35
+
+? 
+  - IN
+  - Gary
+: !ruby/struct:CityGeolocation 
+  city: Gary
+  state: IN
+  airport: GYY
+  lat: 41.62
+  lng: -87.42
+
+? 
+  - AK
+  - Funter Bay
+: !ruby/struct:CityGeolocation 
+  city: Funter Bay
+  state: AK
+  airport: FNR
+  lat: 58.25
+  lng: -134.9
+
+? 
+  - WA
+  - Spokane
+: !ruby/struct:CityGeolocation 
+  city: Spokane
+  state: WA
+  airport: SFF
+  lat: 47.67
+  lng: -117.33
+
+? 
+  - SD
+  - Huron
+: !ruby/struct:CityGeolocation 
+  city: Huron
+  state: SD
+  airport: HON
+  lat: 44.38
+  lng: -98.22
+
+? 
+  - CA
+  - North Is
+: !ruby/struct:CityGeolocation 
+  city: North Is
+  state: CA
+  airport: NZY
+  lat: 32.7
+  lng: -117.2
+
+? 
+  - MO
+  - Columbia
+: !ruby/struct:CityGeolocation 
+  city: Columbia
+  state: MO
+  airport: COU
+  lat: 38.82
+  lng: -92.22
+
+? 
+  - NV
+  - Owyhee
+: !ruby/struct:CityGeolocation 
+  city: Owyhee
+  state: NV
+  airport: OWY
+  lat: 42.58
+  lng: -116.17
+
+? 
+  - MN
+  - St. Cloud
+: !ruby/struct:CityGeolocation 
+  city: St. Cloud
+  state: MN
+  airport: ""
+  lat: 45.55395
+  lng: -94.17035
+
+? 
+  - WA
+  - Omak
+: !ruby/struct:CityGeolocation 
+  city: Omak
+  state: WA
+  airport: 4OM
+  lat: 48.42
+  lng: -119.53
+
+? 
+  - TX
+  - Wichita Flls
+: !ruby/struct:CityGeolocation 
+  city: Wichita Flls
+  state: TX
+  airport: SPS
+  lat: 33.98
+  lng: -98.5
+
+? 
+  - PA
+  - Beaver Falls
+: !ruby/struct:CityGeolocation 
+  city: Beaver Falls
+  state: PA
+  airport: BVI
+  lat: 40.75
+  lng: -80.33
+
+? 
+  - OR
+  - Cascade
+: !ruby/struct:CityGeolocation 
+  city: Cascade
+  state: OR
+  airport: CZK
+  lat: 45.68
+  lng: -121.88
+
+? 
+  - AK
+  - Northway
+: !ruby/struct:CityGeolocation 
+  city: Northway
+  state: AK
+  airport: ORT
+  lat: 62.97
+  lng: -141.93
+
+? 
+  - AK
+  - Iliamna Arpt
+: !ruby/struct:CityGeolocation 
+  city: Iliamna Arpt
+  state: AK
+  airport: ILI
+  lat: 59.75
+  lng: -154.92
+
+? 
+  - AZ
+  - Falcon Fld
+: !ruby/struct:CityGeolocation 
+  city: Falcon Fld
+  state: AZ
+  airport: FFZ
+  lat: 33.47
+  lng: -111.73
+
+? 
+  - MT
+  - Glasgow
+: !ruby/struct:CityGeolocation 
+  city: Glasgow
+  state: MT
+  airport: GGW
+  lat: 48.22
+  lng: -106.62
+
+? 
+  - AK
+  - Hayes River
+: !ruby/struct:CityGeolocation 
+  city: Hayes River
+  state: AK
+  airport: 5HR
+  lat: 61.98
+  lng: -152.08
+
+? 
+  - WV
+  - Wheeling
+: !ruby/struct:CityGeolocation 
+  city: Wheeling
+  state: WV
+  airport: HLG
+  lat: 40.18
+  lng: -80.65
+
+? 
+  - RI
+  - Nth Kingston
+: !ruby/struct:CityGeolocation 
+  city: Nth Kingston
+  state: RI
+  airport: OQU
+  lat: 41.6
+  lng: -71.42
+
+? 
+  - LA
+  - Lk Palourde
+: !ruby/struct:CityGeolocation 
+  city: Lk Palourde
+  state: LA
+  airport: 7R3
+  lat: 29.7
+  lng: -91.1
+
+? 
+  - ME
+  - Presque Isle
+: !ruby/struct:CityGeolocation 
+  city: Presque Isle
+  state: ME
+  airport: PQI
+  lat: 46.68
+  lng: -68.05
+
+? 
+  - TX
+  - Alice
+: !ruby/struct:CityGeolocation 
+  city: Alice
+  state: TX
+  airport: ALI
+  lat: 27.73
+  lng: -98.03
+
+? 
+  - FL
+  - Crestview
+: !ruby/struct:CityGeolocation 
+  city: Crestview
+  state: FL
+  airport: CEW
+  lat: 30.78
+  lng: -86.52
+
+? 
+  - AK
+  - Big Delta
+: !ruby/struct:CityGeolocation 
+  city: Big Delta
+  state: AK
+  airport: BIG
+  lat: 64.0
+  lng: -145.73
+
+? 
+  - HI
+  - Fr Frigate
+: !ruby/struct:CityGeolocation 
+  city: Fr Frigate
+  state: HI
+  airport: 1Z6
+  lat: 24.45
+  lng: -166.47
+
+? 
+  - GA
+  - Robins AFB
+: !ruby/struct:CityGeolocation 
+  city: Robins AFB
+  state: GA
+  airport: WRB
+  lat: 32.63
+  lng: -83.6
+
+? 
+  - WV
+  - Clarksburg
+: !ruby/struct:CityGeolocation 
+  city: Clarksburg
+  state: WV
+  airport: CKB
+  lat: 39.28
+  lng: -80.23
+
+? 
+  - AK
+  - Haines Hrbor
+: !ruby/struct:CityGeolocation 
+  city: Haines Hrbor
+  state: AK
+  airport: Z26
+  lat: 59.23
+  lng: -135.43
+
+? 
+  - MT
+  - Thompson Fal
+: !ruby/struct:CityGeolocation 
+  city: Thompson Fal
+  state: MT
+  airport: 3TH
+  lat: 47.6
+  lng: -115.37
+
+? 
+  - AR
+  - Blytheville
+: !ruby/struct:CityGeolocation 
+  city: Blytheville
+  state: AR
+  airport: BYH
+  lat: 35.97
+  lng: -89.95
+
+? 
+  - AK
+  - Gustavus
+: !ruby/struct:CityGeolocation 
+  city: Gustavus
+  state: AK
+  airport: GST
+  lat: 58.42
+  lng: -135.73
+
+? 
+  - IA
+  - Cedar Rapids
+: !ruby/struct:CityGeolocation 
+  city: Cedar Rapids
+  state: IA
+  airport: CID
+  lat: 41.88
+  lng: -91.7
+
+? 
+  - MA
+  - Cape Cod Can
+: !ruby/struct:CityGeolocation 
+  city: Cape Cod Can
+  state: MA
+  airport: 30B
+  lat: 41.78
+  lng: -70.5
+
+? 
+  - NE
+  - Ord/Sharp
+: !ruby/struct:CityGeolocation 
+  city: Ord/Sharp
+  state: NE
+  airport: ODX
+  lat: 41.62
+  lng: -98.95
+
+? 
+  - MA
+  - S Weymouth
+: !ruby/struct:CityGeolocation 
+  city: S Weymouth
+  state: MA
+  airport: NZW
+  lat: 42.15
+  lng: -70.93
+
+? 
+  - ME
+  - Rockland
+: !ruby/struct:CityGeolocation 
+  city: Rockland
+  state: ME
+  airport: RKD
+  lat: 44.07
+  lng: -69.12
+
+? 
+  - TX
+  - Temple
+: !ruby/struct:CityGeolocation 
+  city: Temple
+  state: TX
+  airport: TPL
+  lat: 31.15
+  lng: -97.42
+
+? 
+  - FL
+  - Egmont Key
+: !ruby/struct:CityGeolocation 
+  city: Egmont Key
+  state: FL
+  airport: X91
+  lat: 27.6
+  lng: -82.77
+
+? 
+  - AK
+  - Sitka
+: !ruby/struct:CityGeolocation 
+  city: Sitka
+  state: AK
+  airport: SIT
+  lat: 57.07
+  lng: -135.35
+
+? 
+  - GA
+  - Alma
+: !ruby/struct:CityGeolocation 
+  city: Alma
+  state: GA
+  airport: AMG
+  lat: 31.53
+  lng: -82.52
+
+? 
+  - IA
+  - Lamoni
+: !ruby/struct:CityGeolocation 
+  city: Lamoni
+  state: IA
+  airport: 3OI
+  lat: 40.62
+  lng: -93.93
+
+? 
+  - TX
+  - Kerrville
+: !ruby/struct:CityGeolocation 
+  city: Kerrville
+  state: TX
+  airport: ERV
+  lat: 29.98
+  lng: -99.08
+
+? 
+  - TN
+  - Jackson
+: !ruby/struct:CityGeolocation 
+  city: Jackson
+  state: TN
+  airport: MKL
+  lat: 35.6
+  lng: -88.92
+
+? 
+  - SD
+  - Yankton
+: !ruby/struct:CityGeolocation 
+  city: Yankton
+  state: SD
+  airport: YKN
+  lat: 42.92
+  lng: -97.38
+
+? 
+  - IL
+  - DeKalb
+: !ruby/struct:CityGeolocation 
+  city: DeKalb
+  state: IL
+  airport: DKB
+  lat: 41.93
+  lng: -88.72
+
+? 
+  - CA
+  - San Miguel
+: !ruby/struct:CityGeolocation 
+  city: San Miguel
+  state: CA
+  airport: N5G
+  lat: 34.03
+  lng: -120.4
+
+? 
+  - CO
+  - Aurora
+: !ruby/struct:CityGeolocation 
+  city: Aurora
+  state: CO
+  airport: ""
+  lat: 39.71226
+  lng: -104.72977
+
+? 
+  - OR
+  - Pendleton
+: !ruby/struct:CityGeolocation 
+  city: Pendleton
+  state: OR
+  airport: PDT
+  lat: 45.68
+  lng: -118.85
+
+? 
+  - FL
+  - Melbourne
+: !ruby/struct:CityGeolocation 
+  city: Melbourne
+  state: FL
+  airport: MLB
+  lat: 28.1
+  lng: -80.63
+
+? 
+  - MO
+  - Springfield
+: !ruby/struct:CityGeolocation 
+  city: Springfield
+  state: MO
+  airport: SGF
+  lat: 37.23
+  lng: -93.38
+
+? 
+  - CA
+  - Moffet NAS
+: !ruby/struct:CityGeolocation 
+  city: Moffet NAS
+  state: CA
+  airport: NUQ
+  lat: 37.42
+  lng: -122.05
+
+? 
+  - SC
+  - Greenville
+: !ruby/struct:CityGeolocation 
+  city: Greenville
+  state: SC
+  airport: GSP
+  lat: 34.9
+  lng: -82.22
+
+? 
+  - AK
+  - Cape Decis
+: !ruby/struct:CityGeolocation 
+  city: Cape Decis
+  state: AK
+  airport: CDE
+  lat: 56.0
+  lng: -134.22
+
+? 
+  - IL
+  - Alton
+: !ruby/struct:CityGeolocation 
+  city: Alton
+  state: IL
+  airport: ALN
+  lat: 38.88
+  lng: -90.05
+
+? 
+  - AK
+  - Mekoryuk
+: !ruby/struct:CityGeolocation 
+  city: Mekoryuk
+  state: AK
+  airport: MYU
+  lat: 60.37
+  lng: -166.27
+
+? 
+  - AK
+  - Cape St Eli
+: !ruby/struct:CityGeolocation 
+  city: Cape St Eli
+  state: AK
+  airport: 5CE
+  lat: 60.33
+  lng: -145.0
+
+? 
+  - CO
+  - Cortez
+: !ruby/struct:CityGeolocation 
+  city: Cortez
+  state: CO
+  airport: CEZ
+  lat: 37.3
+  lng: -108.63
+
+? 
+  - MD
+  - Salisbury
+: !ruby/struct:CityGeolocation 
+  city: Salisbury
+  state: MD
+  airport: SBY
+  lat: 38.33
+  lng: -75.5
+
+? 
+  - AZ
+  - Luke
+: !ruby/struct:CityGeolocation 
+  city: Luke
+  state: AZ
+  airport: LUF
+  lat: 33.53
+  lng: -112.38
+
+? 
+  - UT
+  - Ogden
+: !ruby/struct:CityGeolocation 
+  city: Ogden
+  state: UT
+  airport: OGD
+  lat: 41.18
+  lng: -112.02
+
+? 
+  - OK
+  - Tinker AFB
+: !ruby/struct:CityGeolocation 
+  city: Tinker AFB
+  state: OK
+  airport: TIK
+  lat: 35.42
+  lng: -97.38
+
+? 
+  - IL
+  - Peoria
+: !ruby/struct:CityGeolocation 
+  city: Peoria
+  state: IL
+  airport: PIA
+  lat: 40.67
+  lng: -89.68
+
+? 
+  - ME
+  - Portland
+: !ruby/struct:CityGeolocation 
+  city: Portland
+  state: ME
+  airport: PWM
+  lat: 43.65
+  lng: -70.32
+
+? 
+  - NV
+  - Las Vegas
+: !ruby/struct:CityGeolocation 
+  city: Las Vegas
+  state: NV
+  airport: LAS
+  lat: 36.08
+  lng: -115.17
+
+? 
+  - PA
+  - Sunbury
+: !ruby/struct:CityGeolocation 
+  city: Sunbury
+  state: PA
+  airport: ""
+  lat: 40.8621
+  lng: -76.78807
+
+? 
+  - TX
+  - Dallas/FW
+: !ruby/struct:CityGeolocation 
+  city: Dallas/FW
+  state: TX
+  airport: DFW
+  lat: 32.9
+  lng: -97.03
+
+? 
+  - NC
+  - Raleigh
+: !ruby/struct:CityGeolocation 
+  city: Raleigh
+  state: NC
+  airport: RDU
+  lat: 35.87
+  lng: -78.78
+
+? 
+  - MA
+  - Westover
+: !ruby/struct:CityGeolocation 
+  city: Westover
+  state: MA
+  airport: CEF
+  lat: 42.2
+  lng: -72.53
+
+? 
+  - IL
+  - Taylorville
+: !ruby/struct:CityGeolocation 
+  city: Taylorville
+  state: IL
+  airport: TAZ
+  lat: 39.53
+  lng: -89.33
+
+? 
+  - NC
+  - Diamond Sho
+: !ruby/struct:CityGeolocation 
+  city: Diamond Sho
+  state: NC
+  airport: 44W
+  lat: 35.25
+  lng: -75.5
+
+? 
+  - MO
+  - Kirksville
+: !ruby/struct:CityGeolocation 
+  city: Kirksville
+  state: MO
+  airport: IRK
+  lat: 40.1
+  lng: -92.55
+
+? 
+  - NJ
+  - Fairfield
+: !ruby/struct:CityGeolocation 
+  city: Fairfield
+  state: NJ
+  airport: CDW
+  lat: 40.87
+  lng: -74.28
+
+? 
+  - ME
+  - Loring AFB
+: !ruby/struct:CityGeolocation 
+  city: Loring AFB
+  state: ME
+  airport: LIZ
+  lat: 46.95
+  lng: -67.88
+
+? 
+  - TX
+  - Ft Hood Aaf
+: !ruby/struct:CityGeolocation 
+  city: Ft Hood Aaf
+  state: TX
+  airport: HLR
+  lat: 31.15
+  lng: -97.72
+
+? 
+  - MT
+  - Billings
+: !ruby/struct:CityGeolocation 
+  city: Billings
+  state: MT
+  airport: BIL
+  lat: 45.8
+  lng: -108.53
+
+? 
+  - AK
+  - Gulkana Arpt
+: !ruby/struct:CityGeolocation 
+  city: Gulkana Arpt
+  state: AK
+  airport: GKN
+  lat: 62.15
+  lng: -145.45
+
+? 
+  - IL
+  - Marion
+: !ruby/struct:CityGeolocation 
+  city: Marion
+  state: IL
+  airport: MWA
+  lat: 37.75
+  lng: -89.0
+
+? 
+  - MD
+  - Patuxent
+: !ruby/struct:CityGeolocation 
+  city: Patuxent
+  state: MD
+  airport: NHK
+  lat: 38.28
+  lng: -76.4
+
+? 
+  - AK
+  - Valdez
+: !ruby/struct:CityGeolocation 
+  city: Valdez
+  state: AK
+  airport: VWS
+  lat: 61.13
+  lng: -146.35
+
+? 
+  - ME
+  - Augusta
+: !ruby/struct:CityGeolocation 
+  city: Augusta
+  state: ME
+  airport: AUG
+  lat: 44.32
+  lng: -69.8
+
+? 
+  - AK
+  - Healy River
+: !ruby/struct:CityGeolocation 
+  city: Healy River
+  state: AK
+  airport: 5EA
+  lat: 63.83
+  lng: -149.0
+
+? 
+  - AK
+  - Cordova
+: !ruby/struct:CityGeolocation 
+  city: Cordova
+  state: AK
+  airport: CDV
+  lat: 60.5
+  lng: -145.5
+
+? 
+  - KS
+  - Liberal
+: !ruby/struct:CityGeolocation 
+  city: Liberal
+  state: KS
+  airport: LBL
+  lat: 37.05
+  lng: -100.97
+
+? 
+  - MI
+  - Benton Harbor
+: !ruby/struct:CityGeolocation 
+  city: Benton Harbor
+  state: MI
+  airport: BEH
+  lat: 42.13
+  lng: -86.43
+
+? 
+  - OR
+  - Medford
+: !ruby/struct:CityGeolocation 
+  city: Medford
+  state: OR
+  airport: MFR
+  lat: 42.37
+  lng: -122.87
+
+? 
+  - CA
+  - Hayward
+: !ruby/struct:CityGeolocation 
+  city: Hayward
+  state: CA
+  airport: HWD
+  lat: 37.65
+  lng: -122.12
+
+? 
+  - MD
+  - Baltimore
+: !ruby/struct:CityGeolocation 
+  city: Baltimore
+  state: MD
+  airport: BAL
+  lat: 39.18
+  lng: -76.67
+
+? 
+  - NM
+  - Carlsbad
+: !ruby/struct:CityGeolocation 
+  city: Carlsbad
+  state: NM
+  airport: CNM
+  lat: 32.33
+  lng: -104.27
+
+? 
+  - NY
+  - Melville
+: !ruby/struct:CityGeolocation 
+  city: Melville
+  state: NY
+  airport: ""
+  lat: 40.78205
+  lng: -73.41196
+
+? 
+  - WA
+  - Wenatchee
+: !ruby/struct:CityGeolocation 
+  city: Wenatchee
+  state: WA
+  airport: EAT
+  lat: 47.4
+  lng: -120.2
+
+? 
+  - WA
+  - Oak Harbor
+: !ruby/struct:CityGeolocation 
+  city: Oak Harbor
+  state: WA
+  airport: 76S
+  lat: 48.25
+  lng: -122.68
+
+? 
+  - CA
+  - Alameda NAS
+: !ruby/struct:CityGeolocation 
+  city: Alameda NAS
+  state: CA
+  airport: NGZ
+  lat: 37.78
+  lng: -122.32
+
+? 
+  - CA
+  - Modesto
+: !ruby/struct:CityGeolocation 
+  city: Modesto
+  state: CA
+  airport: MOD
+  lat: 37.63
+  lng: -120.95
+
+? 
+  - WA
+  - Olympia
+: !ruby/struct:CityGeolocation 
+  city: Olympia
+  state: WA
+  airport: OLM
+  lat: 46.97
+  lng: -122.9
+
+? 
+  - PA
+  - Chambersburg
+: !ruby/struct:CityGeolocation 
+  city: Chambersburg
+  state: PA
+  airport: ""
+  lat: 39.93224
+  lng: -77.65643
+
+? 
+  - NY
+  - West Nyack
+: !ruby/struct:CityGeolocation 
+  city: West Nyack
+  state: NY
+  airport: ""
+  lat: 41.091
+  lng: -73.9692
+
+? 
+  - NY
+  - Islip
+: !ruby/struct:CityGeolocation 
+  city: Islip
+  state: NY
+  airport: ISP
+  lat: 40.78
+  lng: -73.1
+
+? 
+  - AK
+  - Barrow
+: !ruby/struct:CityGeolocation 
+  city: Barrow
+  state: AK
+  airport: BRW
+  lat: 71.3
+  lng: -156.78
+
+? 
+  - AK
+  - Skwentna
+: !ruby/struct:CityGeolocation 
+  city: Skwentna
+  state: AK
+  airport: SKW
+  lat: 61.97
+  lng: -151.2
+
+? 
+  - CA
+  - Santa Ana
+: !ruby/struct:CityGeolocation 
+  city: Santa Ana
+  state: CA
+  airport: SNA
+  lat: 33.67
+  lng: -117.88
+
+? 
+  - CA
+  - San Jose
+: !ruby/struct:CityGeolocation 
+  city: San Jose
+  state: CA
+  airport: SJC
+  lat: 37.37
+  lng: -121.92
+
+? 
+  - MN
+  - Rochester
+: !ruby/struct:CityGeolocation 
+  city: Rochester
+  state: MN
+  airport: RST
+  lat: 43.92
+  lng: -92.5
+
+? 
+  - AK
+  - Wainwright
+: !ruby/struct:CityGeolocation 
+  city: Wainwright
+  state: AK
+  airport: AIN
+  lat: 70.62
+  lng: -159.85
+
+? 
+  - TX
+  - Wichita Falls
+: !ruby/struct:CityGeolocation 
+  city: Wichita Falls
+  state: TX
+  airport: ""
+  lat: 33.89793
+  lng: -98.51628
+
+? 
+  - WY
+  - Worland
+: !ruby/struct:CityGeolocation 
+  city: Worland
+  state: WY
+  airport: WRL
+  lat: 43.97
+  lng: -107.97
+
+? 
+  - VT
+  - Rutland
+: !ruby/struct:CityGeolocation 
+  city: Rutland
+  state: VT
+  airport: RUT
+  lat: 43.53
+  lng: -73.95
+
+? 
+  - OK
+  - Page
+: !ruby/struct:CityGeolocation 
+  city: Page
+  state: OK
+  airport: PGO
+  lat: 34.68
+  lng: -94.62
+
+? 
+  - NC
+  - Fort Bragg
+: !ruby/struct:CityGeolocation 
+  city: Fort Bragg
+  state: NC
+  airport: FBG
+  lat: 35.13
+  lng: -78.93
+
+? 
+  - KY
+  - Paducah
+: !ruby/struct:CityGeolocation 
+  city: Paducah
+  state: KY
+  airport: PAH
+  lat: 37.07
+  lng: -88.77
+
+? 
+  - CA
+  - Ukiah
+: !ruby/struct:CityGeolocation 
+  city: Ukiah
+  state: CA
+  airport: UKI
+  lat: 39.13
+  lng: -123.2
+
+? 
+  - WY
+  - Rawlins
+: !ruby/struct:CityGeolocation 
+  city: Rawlins
+  state: WY
+  airport: RWL
+  lat: 41.8
+  lng: -107.2
+
+? 
+  - WA
+  - Fort Lewis
+: !ruby/struct:CityGeolocation 
+  city: Fort Lewis
+  state: WA
+  airport: GRF
+  lat: 47.08
+  lng: -122.58
+
+? 
+  - WA
+  - Colville
+: !ruby/struct:CityGeolocation 
+  city: Colville
+  state: WA
+  airport: 63S
+  lat: 48.88
+  lng: -118.47
+
+? 
+  - TX
+  - Del Rio
+: !ruby/struct:CityGeolocation 
+  city: Del Rio
+  state: TX
+  airport: DRT
+  lat: 29.37
+  lng: -100.92
+
+? 
+  - NE
+  - Alliance
+: !ruby/struct:CityGeolocation 
+  city: Alliance
+  state: NE
+  airport: AIA
+  lat: 42.05
+  lng: -102.8
+
+? 
+  - NH
+  - Dover
+: !ruby/struct:CityGeolocation 
+  city: Dover
+  state: NH
+  airport: ""
+  lat: 43.18975
+  lng: -70.88337
+
+? 
+  - FL
+  - Cecil
+: !ruby/struct:CityGeolocation 
+  city: Cecil
+  state: FL
+  airport: NZC
+  lat: 30.22
+  lng: -81.88
+
+? 
+  - NV
+  - Caliente
+: !ruby/struct:CityGeolocation 
+  city: Caliente
+  state: NV
+  airport: P38
+  lat: 37.62
+  lng: -114.52
+
+? 
+  - WY
+  - Lander
+: !ruby/struct:CityGeolocation 
+  city: Lander
+  state: WY
+  airport: LND
+  lat: 42.82
+  lng: -108.73
+
+? 
+  - NC
+  - Seymour-John
+: !ruby/struct:CityGeolocation 
+  city: Seymour-John
+  state: NC
+  airport: GSB
+  lat: 35.33
+  lng: -77.97
+
+? 
+  - NY
+  - New York/LGA
+: !ruby/struct:CityGeolocation 
+  city: New York/LGA
+  state: NY
+  airport: LGA
+  lat: 40.77
+  lng: -73.9
+
+? 
+  - NH
+  - Jaffrey
+: !ruby/struct:CityGeolocation 
+  city: Jaffrey
+  state: NH
+  airport: AFN
+  lat: 42.8
+  lng: -72.0
+
+? 
+  - AZ
+  - Grand Canyon
+: !ruby/struct:CityGeolocation 
+  city: Grand Canyon
+  state: AZ
+  airport: GCN
+  lat: 35.95
+  lng: -112.15
+
+? 
+  - WA
+  - Port Angeles
+: !ruby/struct:CityGeolocation 
+  city: Port Angeles
+  state: WA
+  airport: NOW
+  lat: 48.22
+  lng: -123.67
+
+? 
+  - OR
+  - Lake View
+: !ruby/struct:CityGeolocation 
+  city: Lake View
+  state: OR
+  airport: 4LW
+  lat: 42.18
+  lng: -120.35
+
+? 
+  - KS
+  - Russell
+: !ruby/struct:CityGeolocation 
+  city: Russell
+  state: KS
+  airport: RSL
+  lat: 38.87
+  lng: -98.82
+
+? 
+  - AK
+  - Cantwell
+: !ruby/struct:CityGeolocation 
+  city: Cantwell
+  state: AK
+  airport: Z68
+  lat: 63.38
+  lng: -148.95
+
+? 
+  - AK
+  - Five Mile
+: !ruby/struct:CityGeolocation 
+  city: Five Mile
+  state: AK
+  airport: FVM
+  lat: 65.93
+  lng: -149.83
+
+? 
+  - DC
+  - Washington/Dulles
+: !ruby/struct:CityGeolocation 
+  city: Washington/Dulles
+  state: DC
+  airport: IAD
+  lat: 38.95
+  lng: -77.46
+
+? 
+  - MA
+  - North Adams
+: !ruby/struct:CityGeolocation 
+  city: North Adams
+  state: MA
+  airport: ""
+  lat: 42.68677
+  lng: -73.11382
+
+? 
+  - TX
+  - Guadalupe Ps
+: !ruby/struct:CityGeolocation 
+  city: Guadalupe Ps
+  state: TX
+  airport: GDP
+  lat: 31.83
+  lng: -104.8
+
+? 
+  - TN
+  - Memphis NAS
+: !ruby/struct:CityGeolocation 
+  city: Memphis NAS
+  state: TN
+  airport: NQA
+  lat: 35.35
+  lng: -89.87
+
+? 
+  - NY
+  - Glens Falls
+: !ruby/struct:CityGeolocation 
+  city: Glens Falls
+  state: NY
+  airport: GFL
+  lat: 43.35
+  lng: -73.62
+
+? 
+  - KS
+  - Emporia
+: !ruby/struct:CityGeolocation 
+  city: Emporia
+  state: KS
+  airport: EMP
+  lat: 38.33
+  lng: -96.2
+
+? 
+  - VA
+  - Quantico Mca
+: !ruby/struct:CityGeolocation 
+  city: Quantico Mca
+  state: VA
+  airport: NYG
+  lat: 38.5
+  lng: -77.3
+
+? 
+  - IA
+  - Burlington
+: !ruby/struct:CityGeolocation 
+  city: Burlington
+  state: IA
+  airport: BRL
+  lat: 40.78
+  lng: -91.12
+
+? 
+  - KS
+  - Ft Riley
+: !ruby/struct:CityGeolocation 
+  city: Ft Riley
+  state: KS
+  airport: FRI
+  lat: 39.05
+  lng: -96.77
+
+? 
+  - AL
+  - Anniston
+: !ruby/struct:CityGeolocation 
+  city: Anniston
+  state: AL
+  airport: ANB
+  lat: 33.58
+  lng: -85.85
+
+? 
+  - AK
+  - Angoon
+: !ruby/struct:CityGeolocation 
+  city: Angoon
+  state: AK
+  airport: AGN
+  lat: 57.83
+  lng: -134.97
+
+? 
+  - VA
+  - Richmond
+: !ruby/struct:CityGeolocation 
+  city: Richmond
+  state: VA
+  airport: RIC
+  lat: 37.5
+  lng: -77.33
+
+? 
+  - MT
+  - Great Falls
+: !ruby/struct:CityGeolocation 
+  city: Great Falls
+  state: MT
+  airport: GTF
+  lat: 47.48
+  lng: -111.37
+
+? 
+  - LA
+  - Barksdale
+: !ruby/struct:CityGeolocation 
+  city: Barksdale
+  state: LA
+  airport: BAD
+  lat: 32.5
+  lng: -93.67
+
+? 
+  - NE
+  - Chadron
+: !ruby/struct:CityGeolocation 
+  city: Chadron
+  state: NE
+  airport: CDR
+  lat: 42.83
+  lng: -103.08
+
+? 
+  - NM
+  - Raton
+: !ruby/struct:CityGeolocation 
+  city: Raton
+  state: NM
+  airport: RTN
+  lat: 36.74
+  lng: -104.5
+
+? 
+  - FL
+  - Hurlburt Fld
+: !ruby/struct:CityGeolocation 
+  city: Hurlburt Fld
+  state: FL
+  airport: HRT
+  lat: 30.43
+  lng: -86.68
+
+? 
+  - TN
+  - Crossville
+: !ruby/struct:CityGeolocation 
+  city: Crossville
+  state: TN
+  airport: CSV
+  lat: 35.95
+  lng: -85.08
+
+? 
+  - MT
+  - Miles City
+: !ruby/struct:CityGeolocation 
+  city: Miles City
+  state: MT
+  airport: MLS
+  lat: 46.43
+  lng: -105.87
+
+? 
+  - MS
+  - Jackson
+: !ruby/struct:CityGeolocation 
+  city: Jackson
+  state: MS
+  airport: JAN
+  lat: 32.32
+  lng: -90.08
+
+? 
+  - KS
+  - Chanute
+: !ruby/struct:CityGeolocation 
+  city: Chanute
+  state: KS
+  airport: CNU
+  lat: 37.67
+  lng: -95.48
+
+? 
+  - MI
+  - Alpena
+: !ruby/struct:CityGeolocation 
+  city: Alpena
+  state: MI
+  airport: APN
+  lat: 45.07
+  lng: -83.57
+
+? 
+  - WY
+  - Yellowstone
+: !ruby/struct:CityGeolocation 
+  city: Yellowstone
+  state: WY
+  airport: P60
+  lat: 44.55
+  lng: -110.42
+
+? 
+  - TX
+  - Hondo
+: !ruby/struct:CityGeolocation 
+  city: Hondo
+  state: TX
+  airport: HDO
+  lat: 29.35
+  lng: -99.17
+
+? 
+  - CA
+  - Blue Canyon
+: !ruby/struct:CityGeolocation 
+  city: Blue Canyon
+  state: CA
+  airport: BLU
+  lat: 39.28
+  lng: -120.7
+
+? 
+  - AK
+  - Port Clarnce
+: !ruby/struct:CityGeolocation 
+  city: Port Clarnce
+  state: AK
+  airport: KPC
+  lat: 65.25
+  lng: -166.87
+
+? 
+  - CA
+  - Beaumont
+: !ruby/struct:CityGeolocation 
+  city: Beaumont
+  state: CA
+  airport: BUO
+  lat: 33.93
+  lng: -116.95
+
+? 
+  - AK
+  - Annette Isl
+: !ruby/struct:CityGeolocation 
+  city: Annette Isl
+  state: AK
+  airport: ANN
+  lat: 55.03
+  lng: -131.57
+
+? 
+  - KY
+  - Owensboro
+: !ruby/struct:CityGeolocation 
+  city: Owensboro
+  state: KY
+  airport: OWB
+  lat: 37.75
+  lng: -87.17
+
+? 
+  - CA
+  - Fresno
+: !ruby/struct:CityGeolocation 
+  city: Fresno
+  state: CA
+  airport: FAT
+  lat: 36.77
+  lng: -119.72
+
+? 
+  - IL
+  - Decatur
+: !ruby/struct:CityGeolocation 
+  city: Decatur
+  state: IL
+  airport: DEC
+  lat: 39.83
+  lng: -88.87
+
+? 
+  - AK
+  - Seward
+: !ruby/struct:CityGeolocation 
+  city: Seward
+  state: AK
+  airport: 5WD
+  lat: 60.18
+  lng: -149.75
+
+? 
+  - TX
+  - Gray AFB
+: !ruby/struct:CityGeolocation 
+  city: Gray AFB
+  state: TX
+  airport: GRK
+  lat: 31.07
+  lng: -97.83
+
+? 
+  - AK
+  - Prospect Crk
+: !ruby/struct:CityGeolocation 
+  city: Prospect Crk
+  state: AK
+  airport: PPC
+  lat: 66.82
+  lng: -150.65
+
+? 
+  - CA
+  - Castle AFB
+: !ruby/struct:CityGeolocation 
+  city: Castle AFB
+  state: CA
+  airport: MER
+  lat: 37.38
+  lng: -120.57
+
+? 
+  - NM
+  - Albuquerque
+: !ruby/struct:CityGeolocation 
+  city: Albuquerque
+  state: NM
+  airport: ABQ
+  lat: 35.05
+  lng: -106.6
+
+? 
+  - FL
+  - Palatka
+: !ruby/struct:CityGeolocation 
+  city: Palatka
+  state: FL
+  airport: ""
+  lat: 29.6492
+  lng: -81.65656
+
+? 
+  - VT
+  - Newport
+: !ruby/struct:CityGeolocation 
+  city: Newport
+  state: VT
+  airport: EFK
+  lat: 45.55
+  lng: -72.33
+
+? 
+  - MA
+  - Chatham
+: !ruby/struct:CityGeolocation 
+  city: Chatham
+  state: MA
+  airport: CHH
+  lat: 41.67
+  lng: -69.97
+
+? 
+  - CO
+  - Ouray County
+: !ruby/struct:CityGeolocation 
+  city: Ouray County
+  state: CO
+  airport: ""
+  lat: 38.15677
+  lng: -107.76579
+
+? 
+  - MI
+  - Chippewa
+: !ruby/struct:CityGeolocation 
+  city: Chippewa
+  state: MI
+  airport: CIU
+  lat: 46.25
+  lng: -84.47
+
+? 
+  - CO
+  - Air Force A
+: !ruby/struct:CityGeolocation 
+  city: Air Force A
+  state: CO
+  airport: AFF
+  lat: 39.52
+  lng: -105.35
+
+? 
+  - CA
+  - Edwards AFB
+: !ruby/struct:CityGeolocation 
+  city: Edwards AFB
+  state: CA
+  airport: EDW
+  lat: 34.9
+  lng: -117.88
+
+? 
+  - NC
+  - Mackall Aaf
+: !ruby/struct:CityGeolocation 
+  city: Mackall Aaf
+  state: NC
+  airport: HFF
+  lat: 35.03
+  lng: -79.5
+
+? 
+  - NY
+  - Watertown
+: !ruby/struct:CityGeolocation 
+  city: Watertown
+  state: NY
+  airport: ART
+  lat: 44.0
+  lng: -76.02
+
+? 
+  - MS
+  - Mccomb
+: !ruby/struct:CityGeolocation 
+  city: Mccomb
+  state: MS
+  airport: MCB
+  lat: 31.18
+  lng: -90.47
+
+? 
+  - FL
+  - Avon Park G
+: !ruby/struct:CityGeolocation 
+  city: Avon Park G
+  state: FL
+  airport: AGR
+  lat: 28.08
+  lng: -81.55
+
+? 
+  - NE
+  - Omaha
+: !ruby/struct:CityGeolocation 
+  city: Omaha
+  state: NE
+  airport: OMA
+  lat: 41.3
+  lng: -95.9
+
+? 
+  - CA
+  - Daggett
+: !ruby/struct:CityGeolocation 
+  city: Daggett
+  state: CA
+  airport: DAG
+  lat: 34.87
+  lng: -116.78
+
+? 
+  - AL
+  - Muscle Shoal
+: !ruby/struct:CityGeolocation 
+  city: Muscle Shoal
+  state: AL
+  airport: MSL
+  lat: 34.75
+  lng: -87.62
+
+? 
+  - OK
+  - Muskogee
+: !ruby/struct:CityGeolocation 
+  city: Muskogee
+  state: OK
+  airport: ""
+  lat: 35.7485
+  lng: -95.35187
+
+? 
+  - WA
+  - Burlington
+: !ruby/struct:CityGeolocation 
+  city: Burlington
+  state: WA
+  airport: 75S
+  lat: 48.5
+  lng: -122.33
+
+? 
+  - PA
+  - Johnstown
+: !ruby/struct:CityGeolocation 
+  city: Johnstown
+  state: PA
+  airport: JST
+  lat: 40.32
+  lng: -78.83
+
+? 
+  - OR
+  - North Bend
+: !ruby/struct:CityGeolocation 
+  city: North Bend
+  state: OR
+  airport: OTH
+  lat: 43.42
+  lng: -124.25
+
+? 
+  - MA
+  - Norwood
+: !ruby/struct:CityGeolocation 
+  city: Norwood
+  state: MA
+  airport: OWD
+  lat: 42.18
+  lng: -71.18
+
+? 
+  - NV
+  - Yucca Flat
+: !ruby/struct:CityGeolocation 
+  city: Yucca Flat
+  state: NV
+  airport: UCC
+  lat: 37.58
+  lng: -116.08
+
+? 
+  - TX
+  - Houston/Hobby
+: !ruby/struct:CityGeolocation 
+  city: Houston/Hobby
+  state: TX
+  airport: HOU
+  lat: 29.65
+  lng: -95.28
+
+? 
+  - SD
+  - Redig
+: !ruby/struct:CityGeolocation 
+  city: Redig
+  state: SD
+  airport: REJ
+  lat: 45.16
+  lng: -103.32
+
+? 
+  - MI
+  - Sault Ste M
+: !ruby/struct:CityGeolocation 
+  city: Sault Ste M
+  state: MI
+  airport: SSM
+  lat: 46.47
+  lng: -84.37
+
+? 
+  - WI
+  - Mosinee
+: !ruby/struct:CityGeolocation 
+  city: Mosinee
+  state: WI
+  airport: CWA
+  lat: 44.78
+  lng: -89.67
+
+? 
+  - TX
+  - Stephenville
+: !ruby/struct:CityGeolocation 
+  city: Stephenville
+  state: TX
+  airport: SEP
+  lat: 32.22
+  lng: -98.18
+
+? 
+  - PA
+  - Pittsburgh
+: !ruby/struct:CityGeolocation 
+  city: Pittsburgh
+  state: PA
+  airport: PIT
+  lat: 40.5
+  lng: -80.22
+
+? 
+  - NE
+  - Grand Island
+: !ruby/struct:CityGeolocation 
+  city: Grand Island
+  state: NE
+  airport: GRI
+  lat: 40.97
+  lng: -98.32
+
+? 
+  - HI
+  - Ke-Ahole/Kon
+: !ruby/struct:CityGeolocation 
+  city: Ke-Ahole/Kon
+  state: HI
+  airport: KOA
+  lat: 19.75
+  lng: -156.05
+
+? 
+  - AK
+  - Chandalar Lk
+: !ruby/struct:CityGeolocation 
+  city: Chandalar Lk
+  state: AK
+  airport: WCR
+  lat: 67.5
+  lng: -148.48
+
+? 
+  - GA
+  - Atlanta
+: !ruby/struct:CityGeolocation 
+  city: Atlanta
+  state: GA
+  airport: ATL
+  lat: 33.65
+  lng: -84.42
+
+? 
+  - FL
+  - Marianna
+: !ruby/struct:CityGeolocation 
+  city: Marianna
+  state: FL
+  airport: MAI
+  lat: 30.84
+  lng: -85.18
+
+? 
+  - FL
+  - Miami/Opa
+: !ruby/struct:CityGeolocation 
+  city: Miami/Opa
+  state: FL
+  airport: OPF
+  lat: 25.92
+  lng: -80.28
+
+? 
+  - LA
+  - S Marsh Isl
+: !ruby/struct:CityGeolocation 
+  city: S Marsh Isl
+  state: LA
+  airport: 7R8
+  lat: 28.3
+  lng: -91.98
+
+? 
+  - MS
+  - Meridian/Key
+: !ruby/struct:CityGeolocation 
+  city: Meridian/Key
+  state: MS
+  airport: MEI
+  lat: 32.33
+  lng: -88.75
+
+? 
+  - WA
+  - Seattle
+: !ruby/struct:CityGeolocation 
+  city: Seattle
+  state: WA
+  airport: SEA
+  lat: 47.45
+  lng: -122.3
+
+? 
+  - ND
+  - Devil's Lake
+: !ruby/struct:CityGeolocation 
+  city: Devil's Lake
+  state: ND
+  airport: P11
+  lat: 48.1
+  lng: -98.87
+
+? 
+  - GA
+  - Fort Benning
+: !ruby/struct:CityGeolocation 
+  city: Fort Benning
+  state: GA
+  airport: LSF
+  lat: 32.33
+  lng: -85.0
+
+? 
+  - NJ
+  - Barnegat Ls
+: !ruby/struct:CityGeolocation 
+  city: Barnegat Ls
+  state: NJ
+  airport: N78
+  lat: 40.28
+  lng: -74.28
+
+? 
+  - CA
+  - Visalia
+: !ruby/struct:CityGeolocation 
+  city: Visalia
+  state: CA
+  airport: VIS
+  lat: 36.32
+  lng: -119.4
+
+? 
+  - CA
+  - El Centro
+: !ruby/struct:CityGeolocation 
+  city: El Centro
+  state: CA
+  airport: NJK
+  lat: 32.82
+  lng: -115.68
+
+? 
+  - CO
+  - La Junta
+: !ruby/struct:CityGeolocation 
+  city: La Junta
+  state: CO
+  airport: LHX
+  lat: 38.05
+  lng: -103.52
+
+? 
+  - MA
+  - Marthas Vine
+: !ruby/struct:CityGeolocation 
+  city: Marthas Vine
+  state: MA
+  airport: MVY
+  lat: 41.4
+  lng: -70.62
+
+? 
+  - LA
+  - Houma
+: !ruby/struct:CityGeolocation 
+  city: Houma
+  state: LA
+  airport: HUM
+  lat: 29.57
+  lng: -90.65
+
+? 
+  - MD
+  - Andrews AFB
+: !ruby/struct:CityGeolocation 
+  city: Andrews AFB
+  state: MD
+  airport: ADW
+  lat: 38.82
+  lng: -76.87
+
+? 
+  - IN
+  - Grissom AFB
+: !ruby/struct:CityGeolocation 
+  city: Grissom AFB
+  state: IN
+  airport: GUS
+  lat: 40.65
+  lng: -86.15
+
+? 
+  - MS
+  - Greenwood
+: !ruby/struct:CityGeolocation 
+  city: Greenwood
+  state: MS
+  airport: GWO
+  lat: 33.5
+  lng: -90.08
+
+? 
+  - TX
+  - Corpus Christi
+: !ruby/struct:CityGeolocation 
+  city: Corpus Christi
+  state: TX
+  airport: ""
+  lat: 27.70572
+  lng: -97.29282
+
+? 
+  - FL
+  - Whiting Fld
+: !ruby/struct:CityGeolocation 
+  city: Whiting Fld
+  state: FL
+  airport: NSE
+  lat: 30.72
+  lng: -87.02
+
+? 
+  - IN
+  - Indianapolis
+: !ruby/struct:CityGeolocation 
+  city: Indianapolis
+  state: IN
+  airport: IND
+  lat: 39.73
+  lng: -86.27
+
+? 
+  - MT
+  - Cut Bank
+: !ruby/struct:CityGeolocation 
+  city: Cut Bank
+  state: MT
+  airport: CTB
+  lat: 48.6
+  lng: -112.37
+
+? 
+  - WY
+  - Big Piney
+: !ruby/struct:CityGeolocation 
+  city: Big Piney
+  state: WY
+  airport: BPI
+  lat: 42.57
+  lng: -110.1
+
+? 
+  - SD
+  - Mitchell
+: !ruby/struct:CityGeolocation 
+  city: Mitchell
+  state: SD
+  airport: MHE
+  lat: 43.77
+  lng: -98.03
+
+? 
+  - OK
+  - Altus AFB
+: !ruby/struct:CityGeolocation 
+  city: Altus AFB
+  state: OK
+  airport: LTS
+  lat: 34.67
+  lng: -99.27
+
+? 
+  - CA
+  - Oakland
+: !ruby/struct:CityGeolocation 
+  city: Oakland
+  state: CA
+  airport: OAK
+  lat: 37.73
+  lng: -122.22
+
+? 
+  - AK
+  - Mcgrath
+: !ruby/struct:CityGeolocation 
+  city: Mcgrath
+  state: AK
+  airport: MCG
+  lat: 62.97
+  lng: -155.62
+
+? 
+  - FL
+  - Sarasota
+: !ruby/struct:CityGeolocation 
+  city: Sarasota
+  state: FL
+  airport: SRQ
+  lat: 27.4
+  lng: -82.55
+
+? 
+  - IL
+  - Glenview NAS
+: !ruby/struct:CityGeolocation 
+  city: Glenview NAS
+  state: IL
+  airport: NBU
+  lat: 42.08
+  lng: -87.82
+
+? 
+  - MN
+  - St. Paul
+: !ruby/struct:CityGeolocation 
+  city: St. Paul
+  state: MN
+  airport: STP
+  lat: 44.93
+  lng: -93.05
+
+? 
+  - OH
+  - New Philadelphia
+: !ruby/struct:CityGeolocation 
+  city: New Philadelphia
+  state: OH
+  airport: ""
+  lat: 40.48665
+  lng: -81.44125
+
+? 
+  - CA
+  - Tustin Mcas
+: !ruby/struct:CityGeolocation 
+  city: Tustin Mcas
+  state: CA
+  airport: NTK
+  lat: 33.7
+  lng: -117.83
+
+? 
+  - UT
+  - Dugway Prvgr
+: !ruby/struct:CityGeolocation 
+  city: Dugway Prvgr
+  state: UT
+  airport: DPG
+  lat: 40.2
+  lng: -112.93
+
+? 
+  - TX
+  - Dalhart
+: !ruby/struct:CityGeolocation 
+  city: Dalhart
+  state: TX
+  airport: DHT
+  lat: 36.02
+  lng: -102.55
+
+? 
+  - SD
+  - Mobridge
+: !ruby/struct:CityGeolocation 
+  city: Mobridge
+  state: SD
+  airport: Y26
+  lat: 45.53
+  lng: -100.43
+
+? 
+  - PA
+  - Franklin
+: !ruby/struct:CityGeolocation 
+  city: Franklin
+  state: PA
+  airport: FKL
+  lat: 41.38
+  lng: -79.87
+
+? 
+  - OK
+  - Oklahoma City
+: !ruby/struct:CityGeolocation 
+  city: Oklahoma City
+  state: OK
+  airport: PWA
+  lat: 35.53
+  lng: -97.65
+
+? 
+  - CA
+  - Marysville
+: !ruby/struct:CityGeolocation 
+  city: Marysville
+  state: CA
+  airport: MYV
+  lat: 39.1
+  lng: -121.57
+
+? 
+  - CA
+  - Bishop
+: !ruby/struct:CityGeolocation 
+  city: Bishop
+  state: CA
+  airport: BIH
+  lat: 37.6
+  lng: -118.6
+
+? 
+  - CA
+  - Montague
+: !ruby/struct:CityGeolocation 
+  city: Montague
+  state: CA
+  airport: 1O5
+  lat: 41.73
+  lng: -122.53
+
+? 
+  - HI
+  - Upolo Pt Ln
+: !ruby/struct:CityGeolocation 
+  city: Upolo Pt Ln
+  state: HI
+  airport: 1Z2
+  lat: 20.42
+  lng: -156.47
+
+? 
+  - MN
+  - Fergus Falls
+: !ruby/struct:CityGeolocation 
+  city: Fergus Falls
+  state: MN
+  airport: FFM
+  lat: 46.3
+  lng: -96.07
+
+? 
+  - OH
+  - Mansfield
+: !ruby/struct:CityGeolocation 
+  city: Mansfield
+  state: OH
+  airport: MFD
+  lat: 40.82
+  lng: -82.52
+
+? 
+  - NC
+  - Dare Co Gr
+: !ruby/struct:CityGeolocation 
+  city: Dare Co Gr
+  state: NC
+  airport: 2DP
+  lat: 36.13
+  lng: -76.5
+
+? 
+  - CA
+  - San Luis Obi
+: !ruby/struct:CityGeolocation 
+  city: San Luis Obi
+  state: CA
+  airport: SBP
+  lat: 35.23
+  lng: -120.65
+
+? 
+  - OH
+  - Athens/Albany
+: !ruby/struct:CityGeolocation 
+  city: Athens/Albany
+  state: OH
+  airport: UNI
+  lat: 39.21
+  lng: -82.23
+
+? 
+  - AK
+  - Paxson
+: !ruby/struct:CityGeolocation 
+  city: Paxson
+  state: AK
+  airport: 5PX
+  lat: 63.03
+  lng: -145.5
+
+? 
+  - IL
+  - Chicago/Midway
+: !ruby/struct:CityGeolocation 
+  city: Chicago/Midway
+  state: IL
+  airport: MDW
+  lat: 41.78
+  lng: -87.75
+
+? 
+  - CA
+  - Pillaro Pt
+: !ruby/struct:CityGeolocation 
+  city: Pillaro Pt
+  state: CA
+  airport: 53Q
+  lat: 37.83
+  lng: -122.83
+
+? 
+  - CO
+  - Winter Park
+: !ruby/struct:CityGeolocation 
+  city: Winter Park
+  state: CO
+  airport: C96
+  lat: 40.0
+  lng: -105.87
+
+? 
+  - NC
+  - Southern Pin
+: !ruby/struct:CityGeolocation 
+  city: Southern Pin
+  state: NC
+  airport: SOP
+  lat: 35.24
+  lng: -79.39
+
+? 
+  - VA
+  - Winchester
+: !ruby/struct:CityGeolocation 
+  city: Winchester
+  state: VA
+  airport: ""
+  lat: 39.17447
+  lng: -78.175
+
+? 
+  - PA
+  - Altoona
+: !ruby/struct:CityGeolocation 
+  city: Altoona
+  state: PA
+  airport: AOO
+  lat: 40.3
+  lng: -78.32
+
+? 
+  - OK
+  - Clinton
+: !ruby/struct:CityGeolocation 
+  city: Clinton
+  state: OK
+  airport: CSM
+  lat: 35.35
+  lng: -99.2
+
+? 
+  - MN
+  - Mankato
+: !ruby/struct:CityGeolocation 
+  city: Mankato
+  state: MN
+  airport: MKT
+  lat: 44.22
+  lng: -93.92
+
+? 
+  - AL
+  - Gadsden
+: !ruby/struct:CityGeolocation 
+  city: Gadsden
+  state: AL
+  airport: GAD
+  lat: 33.97
+  lng: -86.09
+
+? 
+  - MI
+  - Jackson
+: !ruby/struct:CityGeolocation 
+  city: Jackson
+  state: MI
+  airport: JXN
+  lat: 42.27
+  lng: -84.47
+
+? 
+  - CA
+  - San Bernardino
+: !ruby/struct:CityGeolocation 
+  city: San Bernardino
+  state: CA
+  airport: ""
+  lat: 34.13975
+  lng: -117.29229
+
+? 
+  - WI
+  - Neenah
+: !ruby/struct:CityGeolocation 
+  city: Neenah
+  state: WI
+  airport: EEW
+  lat: 44.22
+  lng: -88.53
+
+? 
+  - TX
+  - Fort Worth
+: !ruby/struct:CityGeolocation 
+  city: Fort Worth
+  state: TX
+  airport: FTW
+  lat: 32.82
+  lng: -97.35
+
+? 
+  - DE
+  - Dover
+: !ruby/struct:CityGeolocation 
+  city: Dover
+  state: DE
+  airport: DOV
+  lat: 39.13
+  lng: -75.47
+
+? 
+  - AK
+  - Gambell
+: !ruby/struct:CityGeolocation 
+  city: Gambell
+  state: AK
+  airport: GAM
+  lat: 63.77
+  lng: -171.73
+
+? 
+  - ID
+  - Elk City
+: !ruby/struct:CityGeolocation 
+  city: Elk City
+  state: ID
+  airport: P69
+  lat: 45.82
+  lng: -115.43
+
+? 
+  - MN
+  - Duluth
+: !ruby/struct:CityGeolocation 
+  city: Duluth
+  state: MN
+  airport: DLH
+  lat: 46.83
+  lng: -92.18
+
+? 
+  - AK
+  - Eagle Arpt
+: !ruby/struct:CityGeolocation 
+  city: Eagle Arpt
+  state: AK
+  airport: EAA
+  lat: 64.77
+  lng: -141.15
+
+? 
+  - IN
+  - Muncie
+: !ruby/struct:CityGeolocation 
+  city: Muncie
+  state: IN
+  airport: MIE
+  lat: 40.23
+  lng: -85.38
+
+? 
+  - VA
+  - Oceana NAS
+: !ruby/struct:CityGeolocation 
+  city: Oceana NAS
+  state: VA
+  airport: NTU
+  lat: 36.82
+  lng: -76.03
+
+? 
+  - MO
+  - Joplin
+: !ruby/struct:CityGeolocation 
+  city: Joplin
+  state: MO
+  airport: JLN
+  lat: 37.17
+  lng: -94.5
+
+? 
+  - AK
+  - Wrangell
+: !ruby/struct:CityGeolocation 
+  city: Wrangell
+  state: AK
+  airport: WRG
+  lat: 56.48
+  lng: -132.37
+
+? 
+  - NV
+  - Wildhorse
+: !ruby/struct:CityGeolocation 
+  city: Wildhorse
+  state: NV
+  airport: AWH
+  lat: 41.33
+  lng: -116.25
+
+? 
+  - MA
+  - Lowell
+: !ruby/struct:CityGeolocation 
+  city: Lowell
+  state: MA
+  airport: ""
+  lat: 42.63871
+  lng: -71.32214
+
+? 
+  - VA
+  - Wallops Sta
+: !ruby/struct:CityGeolocation 
+  city: Wallops Sta
+  state: VA
+  airport: WAL
+  lat: 37.85
+  lng: -75.48
+
+? 
+  - OK
+  - Norman
+: !ruby/struct:CityGeolocation 
+  city: Norman
+  state: OK
+  airport: OUN
+  lat: 35.23
+  lng: -97.47
+
+? 
+  - ND
+  - Fargo
+: !ruby/struct:CityGeolocation 
+  city: Fargo
+  state: ND
+  airport: FAR
+  lat: 46.9
+  lng: -96.8
+
+? 
+  - FL
+  - Panama City
+: !ruby/struct:CityGeolocation 
+  city: Panama City
+  state: FL
+  airport: PFN
+  lat: 30.2
+  lng: -85.68
+
+? 
+  - NJ
+  - Teterboro
+: !ruby/struct:CityGeolocation 
+  city: Teterboro
+  state: NJ
+  airport: TEB
+  lat: 40.85
+  lng: -74.05
+
+? 
+  - TX
+  - Palacios
+: !ruby/struct:CityGeolocation 
+  city: Palacios
+  state: TX
+  airport: PSX
+  lat: 28.72
+  lng: -96.25
+
+? 
+  - CA
+  - Palo Alto
+: !ruby/struct:CityGeolocation 
+  city: Palo Alto
+  state: CA
+  airport: PAO
+  lat: 37.47
+  lng: -122.12
+
+? 
+  - AK
+  - Deadhorse
+: !ruby/struct:CityGeolocation 
+  city: Deadhorse
+  state: AK
+  airport: SCC
+  lat: 70.2
+  lng: -148.47
+
+? 
+  - NH
+  - Laconia
+: !ruby/struct:CityGeolocation 
+  city: Laconia
+  state: NH
+  airport: LCI
+  lat: 43.57
+  lng: -71.43
+
+? 
+  - CA
+  - Paso Robles
+: !ruby/struct:CityGeolocation 
+  city: Paso Robles
+  state: CA
+  airport: PRB
+  lat: 35.67
+  lng: -120.63
+
+? 
+  - CT
+  - Windsor Loc
+: !ruby/struct:CityGeolocation 
+  city: Windsor Loc
+  state: CT
+  airport: BDL
+  lat: 41.93
+  lng: -72.68
+
+? 
+  - CA
+  - Fremont
+: !ruby/struct:CityGeolocation 
+  city: Fremont
+  state: CA
+  airport: ""
+  lat: 37.5285
+  lng: -121.99712
+
+? 
+  - AK
+  - Bettles
+: !ruby/struct:CityGeolocation 
+  city: Bettles
+  state: AK
+  airport: BTT
+  lat: 66.92
+  lng: -151.52
+
+? 
+  - MI
+  - Kalamazoo
+: !ruby/struct:CityGeolocation 
+  city: Kalamazoo
+  state: MI
+  airport: AZO
+  lat: 42.23
+  lng: -85.55
+
+? 
+  - CO
+  - Lamar
+: !ruby/struct:CityGeolocation 
+  city: Lamar
+  state: CO
+  airport: 4LJ
+  lat: 38.12
+  lng: -102.6
+
+? 
+  - MI
+  - Ann Arbor
+: !ruby/struct:CityGeolocation 
+  city: Ann Arbor
+  state: MI
+  airport: ARB
+  lat: 42.22
+  lng: -83.75
+
+? 
+  - IL
+  - Kankakee
+: !ruby/struct:CityGeolocation 
+  city: Kankakee
+  state: IL
+  airport: IKK
+  lat: 41.07
+  lng: -87.85
+
+? 
+  - CA
+  - Pt Piedras
+: !ruby/struct:CityGeolocation 
+  city: Pt Piedras
+  state: CA
+  airport: PPD
+  lat: 36.12
+  lng: -121.47
+
+? 
+  - VA
+  - Norfolk
+: !ruby/struct:CityGeolocation 
+  city: Norfolk
+  state: VA
+  airport: ""
+  lat: 36.9232
+  lng: -76.24494
+
+? 
+  - WV
+  - Martinsburg
+: !ruby/struct:CityGeolocation 
+  city: Martinsburg
+  state: WV
+  airport: MRB
+  lat: 39.4
+  lng: -77.98
+
+? 
+  - TX
+  - College Stn
+: !ruby/struct:CityGeolocation 
+  city: College Stn
+  state: TX
+  airport: CLL
+  lat: 30.58
+  lng: -96.37
+
+? 
+  - ND
+  - Minot AFB
+: !ruby/struct:CityGeolocation 
+  city: Minot AFB
+  state: ND
+  airport: MIB
+  lat: 48.42
+  lng: -101.35
+
+? 
+  - ND
+  - Bismarck
+: !ruby/struct:CityGeolocation 
+  city: Bismarck
+  state: ND
+  airport: BIS
+  lat: 46.77
+  lng: -100.75
+
+? 
+  - UT
+  - Milford
+: !ruby/struct:CityGeolocation 
+  city: Milford
+  state: UT
+  airport: MLF
+  lat: 38.72
+  lng: -113.03
+
+? 
+  - AK
+  - Kotzebue
+: !ruby/struct:CityGeolocation 
+  city: Kotzebue
+  state: AK
+  airport: OTZ
+  lat: 66.87
+  lng: -162.63
+
+? 
+  - IN
+  - Evansville
+: !ruby/struct:CityGeolocation 
+  city: Evansville
+  state: IN
+  airport: EVV
+  lat: 38.05
+  lng: -87.53
+
+? 
+  - AK
+  - Sitkinak
+: !ruby/struct:CityGeolocation 
+  city: Sitkinak
+  state: AK
+  airport: SKJ
+  lat: 56.88
+  lng: -154.2
+
+? 
+  - SC
+  - Charleston
+: !ruby/struct:CityGeolocation 
+  city: Charleston
+  state: SC
+  airport: CHS
+  lat: 32.9
+  lng: -80.03
+
+? 
+  - MT
+  - Kalispell
+: !ruby/struct:CityGeolocation 
+  city: Kalispell
+  state: MT
+  airport: FCA
+  lat: 48.3
+  lng: -114.27
+
+? 
+  - NH
+  - Manchester
+: !ruby/struct:CityGeolocation 
+  city: Manchester
+  state: NH
+  airport: MHT
+  lat: 42.93
+  lng: -71.43
+
+? 
+  - MN
+  - Minneapolis
+: !ruby/struct:CityGeolocation 
+  city: Minneapolis
+  state: MN
+  airport: MSP
+  lat: 44.88
+  lng: -93.22
+
+? 
+  - KY
+  - Pikeville
+: !ruby/struct:CityGeolocation 
+  city: Pikeville
+  state: KY
+  airport: 5I3
+  lat: 37.48
+  lng: -82.52
+
+? 
+  - NC
+  - New Bern
+: !ruby/struct:CityGeolocation 
+  city: New Bern
+  state: NC
+  airport: EWN
+  lat: 35.08
+  lng: -77.05
+
+? 
+  - FL
+  - Sanford
+: !ruby/struct:CityGeolocation 
+  city: Sanford
+  state: FL
+  airport: SFB
+  lat: 28.78
+  lng: -81.25
+
+? 
+  - WY
+  - Sheridan
+: !ruby/struct:CityGeolocation 
+  city: Sheridan
+  state: WY
+  airport: SHR
+  lat: 44.77
+  lng: -106.97
+
+? 
+  - TX
+  - Victoria
+: !ruby/struct:CityGeolocation 
+  city: Victoria
+  state: TX
+  airport: VCT
+  lat: 28.85
+  lng: -96.92
+
+? 
+  - AK
+  - Kodiak
+: !ruby/struct:CityGeolocation 
+  city: Kodiak
+  state: AK
+  airport: ADQ
+  lat: 57.75
+  lng: -152.5
+
+? 
+  - MS
+  - Meridian NAS
+: !ruby/struct:CityGeolocation 
+  city: Meridian NAS
+  state: MS
+  airport: NMM
+  lat: 32.55
+  lng: -88.57
+
+? 
+  - WI
+  - Manitowac
+: !ruby/struct:CityGeolocation 
+  city: Manitowac
+  state: WI
+  airport: MTW
+  lat: 44.13
+  lng: -87.67
+
+? 
+  - MI
+  - Ironwood
+: !ruby/struct:CityGeolocation 
+  city: Ironwood
+  state: MI
+  airport: IWD
+  lat: 46.53
+  lng: -90.13
+
+? 
+  - NE
+  - Norfolk
+: !ruby/struct:CityGeolocation 
+  city: Norfolk
+  state: NE
+  airport: OFK
+  lat: 41.98
+  lng: -97.43
+
+? 
+  - MT
+  - Helena
+: !ruby/struct:CityGeolocation 
+  city: Helena
+  state: MT
+  airport: HLN
+  lat: 46.6
+  lng: -112.0
+
+? 
+  - MS
+  - Hattiesburg
+: !ruby/struct:CityGeolocation 
+  city: Hattiesburg
+  state: MS
+  airport: PIB
+  lat: 31.47
+  lng: -89.33
+
+? 
+  - VA
+  - Falls Church
+: !ruby/struct:CityGeolocation 
+  city: Falls Church
+  state: VA
+  airport: ""
+  lat: 38.88505
+  lng: -77.17455
+
+? 
+  - OH
+  - Willoughby
+: !ruby/struct:CityGeolocation 
+  city: Willoughby
+  state: OH
+  airport: LNN
+  lat: 41.63
+  lng: -81.4
+
+? 
+  - AK
+  - King Salmon
+: !ruby/struct:CityGeolocation 
+  city: King Salmon
+  state: AK
+  airport: AKN
+  lat: 58.68
+  lng: -156.65
+
+? 
+  - IA
+  - Waterloo Mun
+: !ruby/struct:CityGeolocation 
+  city: Waterloo Mun
+  state: IA
+  airport: ALO
+  lat: 42.55
+  lng: -92.4
+
+? 
+  - CA
+  - Lemoore NAS
+: !ruby/struct:CityGeolocation 
+  city: Lemoore NAS
+  state: CA
+  airport: NLC
+  lat: 36.33
+  lng: -119.95
+
+? 
+  - OR
+  - Corvallis
+: !ruby/struct:CityGeolocation 
+  city: Corvallis
+  state: OR
+  airport: CVO
+  lat: 44.5
+  lng: -123.28
+
+? 
+  - IL
+  - Carbondale
+: !ruby/struct:CityGeolocation 
+  city: Carbondale
+  state: IL
+  airport: MDH
+  lat: 37.78
+  lng: -89.25
+
+? 
+  - NJ
+  - Trenton
+: !ruby/struct:CityGeolocation 
+  city: Trenton
+  state: NJ
+  airport: TTN
+  lat: 40.28
+  lng: -74.82
+
+? 
+  - AK
+  - Lazy Mtn
+: !ruby/struct:CityGeolocation 
+  city: Lazy Mtn
+  state: AK
+  airport: 5WO
+  lat: 61.63
+  lng: -149.03
+
+? 
+  - CA
+  - San Jose/Rei
+: !ruby/struct:CityGeolocation 
+  city: San Jose/Rei
+  state: CA
+  airport: RHV
+  lat: 37.33
+  lng: -121.82
+
+? 
+  - WI
+  - Janesville
+: !ruby/struct:CityGeolocation 
+  city: Janesville
+  state: WI
+  airport: JVL
+  lat: 42.62
+  lng: -89.03
+
+? 
+  - UT
+  - Cedar City
+: !ruby/struct:CityGeolocation 
+  city: Cedar City
+  state: UT
+  airport: CDC
+  lat: 37.7
+  lng: -113.1
+
+? 
+  - SC
+  - Beaufort Mca
+: !ruby/struct:CityGeolocation 
+  city: Beaufort Mca
+  state: SC
+  airport: NBC
+  lat: 32.48
+  lng: -80.72
+
+? 
+  - OH
+  - Zanesville
+: !ruby/struct:CityGeolocation 
+  city: Zanesville
+  state: OH
+  airport: ZZV
+  lat: 39.95
+  lng: -81.9
+
+? 
+  - CA
+  - Palmdale
+: !ruby/struct:CityGeolocation 
+  city: Palmdale
+  state: CA
+  airport: PMD
+  lat: 35.05
+  lng: -118.13
+
+? 
+  - KS
+  - Col. J Jabar
+: !ruby/struct:CityGeolocation 
+  city: Col. J Jabar
+  state: KS
+  airport: 3KM
+  lat: 37.75
+  lng: -97.22
+
+? 
+  - CA
+  - San Clemente
+: !ruby/struct:CityGeolocation 
+  city: San Clemente
+  state: CA
+  airport: NUC
+  lat: 33.02
+  lng: -118.58
+
+? 
+  - AK
+  - Kenai
+: !ruby/struct:CityGeolocation 
+  city: Kenai
+  state: AK
+  airport: ENA
+  lat: 60.57
+  lng: -151.25
+
+? 
+  - UT
+  - Eagle Range
+: !ruby/struct:CityGeolocation 
+  city: Eagle Range
+  state: UT
+  airport: U16
+  lat: 41.05
+  lng: -113.07
+
+? 
+  - TX
+  - Lubbock
+: !ruby/struct:CityGeolocation 
+  city: Lubbock
+  state: TX
+  airport: LBB
+  lat: 33.65
+  lng: -101.82
+
+? 
+  - CO
+  - Durango
+: !ruby/struct:CityGeolocation 
+  city: Durango
+  state: CO
+  airport: DRO
+  lat: 37.15
+  lng: -107.75
+
+? 
+  - NY
+  - Ambrose
+: !ruby/struct:CityGeolocation 
+  city: Ambrose
+  state: NY
+  airport: N28
+  lat: 40.75
+  lng: -74.37
+
+? 
+  - PA
+  - Nth Philadel
+: !ruby/struct:CityGeolocation 
+  city: Nth Philadel
+  state: PA
+  airport: PNE
+  lat: 40.08
+  lng: -75.02
+
+? 
+  - NC
+  - Cherry Point
+: !ruby/struct:CityGeolocation 
+  city: Cherry Point
+  state: NC
+  airport: NKT
+  lat: 34.9
+  lng: -76.88
+
+? 
+  - NH
+  - Pease AFB
+: !ruby/struct:CityGeolocation 
+  city: Pease AFB
+  state: NH
+  airport: PSM
+  lat: 43.08
+  lng: -70.82
+
+? 
+  - GA
+  - Augusta/Bush
+: !ruby/struct:CityGeolocation 
+  city: Augusta/Bush
+  state: GA
+  airport: AGS
+  lat: 33.37
+  lng: -81.97
+
+? 
+  - CO
+  - Fort Carson
+: !ruby/struct:CityGeolocation 
+  city: Fort Carson
+  state: CO
+  airport: FCS
+  lat: 38.68
+  lng: -104.77
+
+? 
+  - WY
+  - Douglas
+: !ruby/struct:CityGeolocation 
+  city: Douglas
+  state: WY
+  airport: 4DG
+  lat: 42.75
+  lng: -105.38
+
+? 
+  - PA
+  - Allentown
+: !ruby/struct:CityGeolocation 
+  city: Allentown
+  state: PA
+  airport: ABE
+  lat: 40.65
+  lng: -75.43
+
+? 
+  - OR
+  - Cape Blanco
+: !ruby/struct:CityGeolocation 
+  city: Cape Blanco
+  state: OR
+  airport: 92S
+  lat: 43.38
+  lng: -124.95
+
+? 
+  - NY
+  - New York
+: !ruby/struct:CityGeolocation 
+  city: New York
+  state: NY
+  airport: NYC
+  lat: 40.77
+  lng: -73.98
+
+? 
+  - CO
+  - Greeley-Wld
+: !ruby/struct:CityGeolocation 
+  city: Greeley-Wld
+  state: CO
+  airport: GXY
+  lat: 40.43
+  lng: -104.63
+
+? 
+  - CO
+  - Vail
+: !ruby/struct:CityGeolocation 
+  city: Vail
+  state: CO
+  airport: ""
+  lat: 39.63947
+  lng: -106.3577
+
+? 
+  - WV
+  - Huntington
+: !ruby/struct:CityGeolocation 
+  city: Huntington
+  state: WV
+  airport: HTS
+  lat: 38.37
+  lng: -82.55
+
+? 
+  - SD
+  - Ellsworth Af
+: !ruby/struct:CityGeolocation 
+  city: Ellsworth Af
+  state: SD
+  airport: RCA
+  lat: 44.15
+  lng: -103.1
+
+? 
+  - CA
+  - Los Angeles
+: !ruby/struct:CityGeolocation 
+  city: Los Angeles
+  state: CA
+  airport: LAX
+  lat: 33.93
+  lng: -118.4
+
+? 
+  - CO
+  - Ft Collins
+: !ruby/struct:CityGeolocation 
+  city: Ft Collins
+  state: CO
+  airport: FCL
+  lat: 40.58
+  lng: -105.08
+
+? 
+  - OH
+  - Hamilton
+: !ruby/struct:CityGeolocation 
+  city: Hamilton
+  state: OH
+  airport: ""
+  lat: 39.39075
+  lng: -84.56409
+
+? 
+  - WA
+  - Kennewick
+: !ruby/struct:CityGeolocation 
+  city: Kennewick
+  state: WA
+  airport: ""
+  lat: 46.20305
+  lng: -119.17038
+
+? 
+  - WV
+  - Elkins
+: !ruby/struct:CityGeolocation 
+  city: Elkins
+  state: WV
+  airport: EKN
+  lat: 38.88
+  lng: -79.85
+
+? 
+  - PA
+  - Williamsport
+: !ruby/struct:CityGeolocation 
+  city: Williamsport
+  state: PA
+  airport: IPT
+  lat: 41.25
+  lng: -76.92
+
+? 
+  - PA
+  - Philipsburg
+: !ruby/struct:CityGeolocation 
+  city: Philipsburg
+  state: PA
+  airport: PSB
+  lat: 41.47
+  lng: -78.13
+
+? 
+  - MS
+  - Tupelo
+: !ruby/struct:CityGeolocation 
+  city: Tupelo
+  state: MS
+  airport: TUP
+  lat: 34.27
+  lng: -88.77
+
+? 
+  - MA
+  - Hyannis
+: !ruby/struct:CityGeolocation 
+  city: Hyannis
+  state: MA
+  airport: HYA
+  lat: 41.67
+  lng: -70.28
+
+? 
+  - TX
+  - Sanderson
+: !ruby/struct:CityGeolocation 
+  city: Sanderson
+  state: TX
+  airport: P07
+  lat: 30.17
+  lng: -102.42
+
+? 
+  - ME
+  - Rumford
+: !ruby/struct:CityGeolocation 
+  city: Rumford
+  state: ME
+  airport: RUM
+  lat: 44.88
+  lng: -70.88
+
+? 
+  - OR
+  - Troutdale
+: !ruby/struct:CityGeolocation 
+  city: Troutdale
+  state: OR
+  airport: TTD
+  lat: 45.55
+  lng: -122.4
+
+? 
+  - CA
+  - Sandburg
+: !ruby/struct:CityGeolocation 
+  city: Sandburg
+  state: CA
+  airport: SDB
+  lat: 34.75
+  lng: -118.73
+
+? 
+  - TN
+  - Clarksville
+: !ruby/struct:CityGeolocation 
+  city: Clarksville
+  state: TN
+  airport: CKV
+  lat: 36.62
+  lng: -87.42
+
+? 
+  - LA
+  - England AFB
+: !ruby/struct:CityGeolocation 
+  city: England AFB
+  state: LA
+  airport: AEX
+  lat: 31.33
+  lng: -92.55
+
+? 
+  - AL
+  - Mobile Aeros
+: !ruby/struct:CityGeolocation 
+  city: Mobile Aeros
+  state: AL
+  airport: BFM
+  lat: 30.63
+  lng: -88.07
+
+? 
+  - NJ
+  - Mcguire AFB
+: !ruby/struct:CityGeolocation 
+  city: Mcguire AFB
+  state: NJ
+  airport: WRI
+  lat: 40.02
+  lng: -74.6
+
+? 
+  - UT
+  - Bullfrog Mar
+: !ruby/struct:CityGeolocation 
+  city: Bullfrog Mar
+  state: UT
+  airport: U17
+  lat: 37.5
+  lng: -110.7
+
+? 
+  - PA
+  - State Colleg
+: !ruby/struct:CityGeolocation 
+  city: State Colleg
+  state: PA
+  airport: UNV
+  lat: 40.85
+  lng: -77.83
+
+? 
+  - AR
+  - Camden
+: !ruby/struct:CityGeolocation 
+  city: Camden
+  state: AR
+  airport: CDH
+  lat: 33.52
+  lng: -92.4
+
+? 
+  - IL
+  - Cairo
+: !ruby/struct:CityGeolocation 
+  city: Cairo
+  state: IL
+  airport: CTR
+  lat: 37.07
+  lng: -89.22
+
+? 
+  - CA
+  - Monterey
+: !ruby/struct:CityGeolocation 
+  city: Monterey
+  state: CA
+  airport: MRY
+  lat: 36.58
+  lng: -121.85
+
+? 
+  - LA
+  - Monroe
+: !ruby/struct:CityGeolocation 
+  city: Monroe
+  state: LA
+  airport: MLU
+  lat: 32.52
+  lng: -92.05
+
+? 
+  - CA
+  - Thermal
+: !ruby/struct:CityGeolocation 
+  city: Thermal
+  state: CA
+  airport: TRM
+  lat: 33.63
+  lng: -116.17
+
+? 
+  - FL
+  - Homestead
+: !ruby/struct:CityGeolocation 
+  city: Homestead
+  state: FL
+  airport: HST
+  lat: 25.48
+  lng: -80.38
+
+? 
+  - TX
+  - South Brazos
+: !ruby/struct:CityGeolocation 
+  city: South Brazos
+  state: TX
+  airport: T46
+  lat: 28.03
+  lng: -95.87
+
+? 
+  - NV
+  - Winnemucca
+: !ruby/struct:CityGeolocation 
+  city: Winnemucca
+  state: NV
+  airport: WMC
+  lat: 40.9
+  lng: -117.8
+
+? 
+  - LA
+  - New Orleans
+: !ruby/struct:CityGeolocation 
+  city: New Orleans
+  state: LA
+  airport: NEW
+  lat: 30.03
+  lng: -90.03
+
+? 
+  - AK
+  - Yakutat
+: !ruby/struct:CityGeolocation 
+  city: Yakutat
+  state: AK
+  airport: YAK
+  lat: 59.52
+  lng: -139.67
+
+? 
+  - MA
+  - Boston
+: !ruby/struct:CityGeolocation 
+  city: Boston
+  state: MA
+  airport: BOS
+  lat: 42.37
+  lng: -71.03
+
+? 
+  - AK
+  - Big River Lk
+: !ruby/struct:CityGeolocation 
+  city: Big River Lk
+  state: AK
+  airport: 5BI
+  lat: 60.82
+  lng: -152.3
+
+? 
+  - CA
+  - Stockton
+: !ruby/struct:CityGeolocation 
+  city: Stockton
+  state: CA
+  airport: SCK
+  lat: 37.9
+  lng: -121.25
+
+? 
+  - AK
+  - Tanana
+: !ruby/struct:CityGeolocation 
+  city: Tanana
+  state: AK
+  airport: TAL
+  lat: 65.17
+  lng: -152.1
+
+? 
+  - FL
+  - Patrick AFB
+: !ruby/struct:CityGeolocation 
+  city: Patrick AFB
+  state: FL
+  airport: COF
+  lat: 28.23
+  lng: -80.6
+
+? 
+  - KS
+  - Topeka/Forbe
+: !ruby/struct:CityGeolocation 
+  city: Topeka/Forbe
+  state: KS
+  airport: FOE
+  lat: 38.95
+  lng: -95.67
+
+? 
+  - NM
+  - White Sands
+: !ruby/struct:CityGeolocation 
+  city: White Sands
+  state: NM
+  airport: 2C2
+  lat: 32.63
+  lng: -106.4
+
+? 
+  - MD
+  - Hagerstown
+: !ruby/struct:CityGeolocation 
+  city: Hagerstown
+  state: MD
+  airport: HGR
+  lat: 39.7
+  lng: -77.72
+
+? 
+  - CA
+  - San Nic Isl
+: !ruby/struct:CityGeolocation 
+  city: San Nic Isl
+  state: CA
+  airport: NSI
+  lat: 33.25
+  lng: -119.45
+
+? 
+  - CA
+  - La Verne
+: !ruby/struct:CityGeolocation 
+  city: La Verne
+  state: CA
+  airport: POC
+  lat: 34.1
+  lng: -117.78
+
+? 
+  - WY
+  - Gillette
+: !ruby/struct:CityGeolocation 
+  city: Gillette
+  state: WY
+  airport: GCC
+  lat: 44.35
+  lng: -105.53
+
+? 
+  - WV
+  - Charleston
+: !ruby/struct:CityGeolocation 
+  city: Charleston
+  state: WV
+  airport: CRW
+  lat: 38.37
+  lng: -81.6
+
+? 
+  - WA
+  - Hoquiam
+: !ruby/struct:CityGeolocation 
+  city: Hoquiam
+  state: WA
+  airport: HQM
+  lat: 46.97
+  lng: -123.97
+
+? 
+  - MI
+  - Hancock
+: !ruby/struct:CityGeolocation 
+  city: Hancock
+  state: MI
+  airport: CMX
+  lat: 47.17
+  lng: -88.5
+
+? 
+  - MN
+  - Alexandria
+: !ruby/struct:CityGeolocation 
+  city: Alexandria
+  state: MN
+  airport: AXN
+  lat: 45.87
+  lng: -95.38
+
+? 
+  - NE
+  - Valentine
+: !ruby/struct:CityGeolocation 
+  city: Valentine
+  state: NE
+  airport: VTN
+  lat: 42.87
+  lng: -100.55
+
+? 
+  - CA
+  - Superior Val
+: !ruby/struct:CityGeolocation 
+  city: Superior Val
+  state: CA
+  airport: 4SU
+  lat: 35.33
+  lng: -117.1
+
+? 
+  - PA
+  - Lewistown
+: !ruby/struct:CityGeolocation 
+  city: Lewistown
+  state: PA
+  airport: ""
+  lat: 40.59731
+  lng: -77.57351
+
+? 
+  - UT
+  - Logan
+: !ruby/struct:CityGeolocation 
+  city: Logan
+  state: UT
+  airport: LGU
+  lat: 41.78
+  lng: -111.85
+
+? 
+  - TX
+  - El Paso
+: !ruby/struct:CityGeolocation 
+  city: El Paso
+  state: TX
+  airport: ELP
+  lat: 31.8
+  lng: -106.4
+
+? 
+  - OR
+  - Roseburg
+: !ruby/struct:CityGeolocation 
+  city: Roseburg
+  state: OR
+  airport: RBG
+  lat: 43.23
+  lng: -123.37
+
+? 
+  - KS
+  - Garden City
+: !ruby/struct:CityGeolocation 
+  city: Garden City
+  state: KS
+  airport: GCK
+  lat: 37.93
+  lng: -100.72
+
+? 
+  - PA
+  - Greensburg
+: !ruby/struct:CityGeolocation 
+  city: Greensburg
+  state: PA
+  airport: ""
+  lat: 40.31093
+  lng: -79.54439
+
+? 
+  - AK
+  - Port Heiden
+: !ruby/struct:CityGeolocation 
+  city: Port Heiden
+  state: AK
+  airport: PTH
+  lat: 56.95
+  lng: -158.62
+
+? 
+  - ID
+  - Soda Springs
+: !ruby/struct:CityGeolocation 
+  city: Soda Springs
+  state: ID
+  airport: U78
+  lat: 42.65
+  lng: -111.58
+
+? 
+  - KS
+  - Manhatten
+: !ruby/struct:CityGeolocation 
+  city: Manhatten
+  state: KS
+  airport: MHK
+  lat: 39.15
+  lng: -96.67
+
+? 
+  - IA
+  - Estherville
+: !ruby/struct:CityGeolocation 
+  city: Estherville
+  state: IA
+  airport: EST
+  lat: 43.4
+  lng: -94.75
+
+? 
+  - LA
+  - Missippi Can
+: !ruby/struct:CityGeolocation 
+  city: Missippi Can
+  state: LA
+  airport: 1G7
+  lat: 28.78
+  lng: -89.05
+
+? 
+  - VA
+  - Volens
+: !ruby/struct:CityGeolocation 
+  city: Volens
+  state: VA
+  airport: VQN
+  lat: 36.95
+  lng: -78.98
+
+? 
+  - TX
+  - Houston
+: !ruby/struct:CityGeolocation 
+  city: Houston
+  state: TX
+  airport: IAH
+  lat: 29.97
+  lng: -95.35
+
+? 
+  - ND
+  - Minot Intl
+: !ruby/struct:CityGeolocation 
+  city: Minot Intl
+  state: ND
+  airport: MOT
+  lat: 48.27
+  lng: -101.28
+
+? 
+  - NY
+  - Griffiss AFB
+: !ruby/struct:CityGeolocation 
+  city: Griffiss AFB
+  state: NY
+  airport: RME
+  lat: 43.23
+  lng: -75.4
+
+? 
+  - LA
+  - Alexandria
+: !ruby/struct:CityGeolocation 
+  city: Alexandria
+  state: LA
+  airport: ESF
+  lat: 31.38
+  lng: -92.3
+
+? 
+  - AK
+  - Ambler
+: !ruby/struct:CityGeolocation 
+  city: Ambler
+  state: AK
+  airport: Z60
+  lat: 67.1
+  lng: -157.85
+
+? 
+  - MD
+  - Baltimore/MTN
+: !ruby/struct:CityGeolocation 
+  city: Baltimore/MTN
+  state: MD
+  airport: MTN
+  lat: 39.33
+  lng: -76.42
+
+? 
+  - CA
+  - Oxnard
+: !ruby/struct:CityGeolocation 
+  city: Oxnard
+  state: CA
+  airport: OXR
+  lat: 34.2
+  lng: -119.2
+
+? 
+  - TX
+  - Bergstrom Af
+: !ruby/struct:CityGeolocation 
+  city: Bergstrom Af
+  state: TX
+  airport: BSM
+  lat: 30.2
+  lng: -97.68
+
+? 
+  - MN
+  - Worthington
+: !ruby/struct:CityGeolocation 
+  city: Worthington
+  state: MN
+  airport: OTG
+  lat: 43.65
+  lng: -95.58
+
+? 
+  - CA
+  - Truckee-Tahoe
+: !ruby/struct:CityGeolocation 
+  city: Truckee-Tahoe
+  state: CA
+  airport: TRK
+  lat: 39.32
+  lng: -120.13
+
+? 
+  - CO
+  - Leadville
+: !ruby/struct:CityGeolocation 
+  city: Leadville
+  state: CO
+  airport: LXV
+  lat: 39.25
+  lng: -106.3
+
+? 
+  - VA
+  - Danville
+: !ruby/struct:CityGeolocation 
+  city: Danville
+  state: VA
+  airport: DAN
+  lat: 36.57
+  lng: -79.33
+
+? 
+  - AL
+  - Huntsville
+: !ruby/struct:CityGeolocation 
+  city: Huntsville
+  state: AL
+  airport: HSV
+  lat: 34.65
+  lng: -86.77
+
+? 
+  - AR
+  - Walnut Ridge
+: !ruby/struct:CityGeolocation 
+  city: Walnut Ridge
+  state: AR
+  airport: ARG
+  lat: 36.13
+  lng: -90.93
+
+? 
+  - FL
+  - West Palm Beach
+: !ruby/struct:CityGeolocation 
+  city: West Palm Beach
+  state: FL
+  airport: PBI
+  lat: 26.73
+  lng: -80.1
+
+? 
+  - MO
+  - Poplar Bluff
+: !ruby/struct:CityGeolocation 
+  city: Poplar Bluff
+  state: MO
+  airport: P02
+  lat: 36.77
+  lng: -90.47
+
+? 
+  - CA
+  - El Toro
+: !ruby/struct:CityGeolocation 
+  city: El Toro
+  state: CA
+  airport: NZJ
+  lat: 33.67
+  lng: -117.73
+
+? 
+  - CO
+  - Brmfield/Jef
+: !ruby/struct:CityGeolocation 
+  city: Brmfield/Jef
+  state: CO
+  airport: BJC
+  lat: 39.9
+  lng: -105.12
+
+? 
+  - NC
+  - Greenville
+: !ruby/struct:CityGeolocation 
+  city: Greenville
+  state: NC
+  airport: ""
+  lat: 35.59982
+  lng: -77.37439
+
+? 
+  - TX
+  - Dyess AFB
+: !ruby/struct:CityGeolocation 
+  city: Dyess AFB
+  state: TX
+  airport: DYS
+  lat: 32.43
+  lng: -99.85
+
+? 
+  - MI
+  - Selfridge
+: !ruby/struct:CityGeolocation 
+  city: Selfridge
+  state: MI
+  airport: MTC
+  lat: 42.62
+  lng: -82.83
+
+? 
+  - CO
+  - Cedaredge
+: !ruby/struct:CityGeolocation 
+  city: Cedaredge
+  state: CO
+  airport: ""
+  lat: 38.89878
+  lng: -107.92633
+
+? 
+  - PA
+  - Easton
+: !ruby/struct:CityGeolocation 
+  city: Easton
+  state: PA
+  airport: ""
+  lat: 40.6863
+  lng: -75.22057
+
+? 
+  - VA
+  - Norfolk NAS
+: !ruby/struct:CityGeolocation 
+  city: Norfolk NAS
+  state: VA
+  airport: NGU
+  lat: 36.93
+  lng: -76.28
+
+? 
+  - TN
+  - Nashville
+: !ruby/struct:CityGeolocation 
+  city: Nashville
+  state: TN
+  airport: BNA
+  lat: 36.12
+  lng: -86.68
+
+? 
+  - MA
+  - Beverly
+: !ruby/struct:CityGeolocation 
+  city: Beverly
+  state: MA
+  airport: BVY
+  lat: 42.58
+  lng: -70.92
+
+? 
+  - TX
+  - Galveston
+: !ruby/struct:CityGeolocation 
+  city: Galveston
+  state: TX
+  airport: GLS
+  lat: 29.27
+  lng: -94.87
+
+? 
+  - CA
+  - Point Mugu
+: !ruby/struct:CityGeolocation 
+  city: Point Mugu
+  state: CA
+  airport: NTD
+  lat: 34.12
+  lng: -119.12
+
+? 
+  - CA
+  - Burbank
+: !ruby/struct:CityGeolocation 
+  city: Burbank
+  state: CA
+  airport: BUR
+  lat: 34.2
+  lng: -118.37
+
+? 
+  - CA
+  - Redding
+: !ruby/struct:CityGeolocation 
+  city: Redding
+  state: CA
+  airport: RDD
+  lat: 40.5
+  lng: -122.3
+
+? 
+  - LA
+  - Morgan City
+: !ruby/struct:CityGeolocation 
+  city: Morgan City
+  state: LA
+  airport: PTN
+  lat: 29.7
+  lng: -91.2
+
+? 
+  - TX
+  - Big Spring
+: !ruby/struct:CityGeolocation 
+  city: Big Spring
+  state: TX
+  airport: HCA
+  lat: 32.3
+  lng: -101.45
+
+? 
+  - PA
+  - Site R
+: !ruby/struct:CityGeolocation 
+  city: Site R
+  state: PA
+  airport: 43M
+  lat: 39.73
+  lng: -77.43
+
+? 
+  - NC
+  - Rocky Mt
+: !ruby/struct:CityGeolocation 
+  city: Rocky Mt
+  state: NC
+  airport: RWI
+  lat: 35.85
+  lng: -77.88
+
+? 
+  - MA
+  - Nantucket
+: !ruby/struct:CityGeolocation 
+  city: Nantucket
+  state: MA
+  airport: ACK
+  lat: 41.25
+  lng: -70.07
+
+? 
+  - FL
+  - Nasa Shuttle
+: !ruby/struct:CityGeolocation 
+  city: Nasa Shuttle
+  state: FL
+  airport: X68
+  lat: 28.62
+  lng: -80.68
+
+? 
+  - NV
+  - Tonopah
+: !ruby/struct:CityGeolocation 
+  city: Tonopah
+  state: NV
+  airport: TPH
+  lat: 38.07
+  lng: -117.08
+
+? 
+  - HI
+  - Molokai
+: !ruby/struct:CityGeolocation 
+  city: Molokai
+  state: HI
+  airport: MKK
+  lat: 21.15
+  lng: -157.1
+
+? 
+  - CO
+  - Montrose
+: !ruby/struct:CityGeolocation 
+  city: Montrose
+  state: CO
+  airport: MTJ
+  lat: 38.5
+  lng: -107.88
+
+? 
+  - IL
+  - Danville
+: !ruby/struct:CityGeolocation 
+  city: Danville
+  state: IL
+  airport: DNV
+  lat: 40.2
+  lng: -87.6
+
+? 
+  - AK
+  - Shishmaref
+: !ruby/struct:CityGeolocation 
+  city: Shishmaref
+  state: AK
+  airport: SHH
+  lat: 66.27
+  lng: -166.03
+
+? 
+  - UT
+  - Blanding
+: !ruby/struct:CityGeolocation 
+  city: Blanding
+  state: UT
+  airport: 4BL
+  lat: 38.03
+  lng: -109.78
+
+? 
+  - MI
+  - Muskegon
+: !ruby/struct:CityGeolocation 
+  city: Muskegon
+  state: MI
+  airport: MKG
+  lat: 43.17
+  lng: -86.25
+
+? 
+  - FL
+  - Miami
+: !ruby/struct:CityGeolocation 
+  city: Miami
+  state: FL
+  airport: MIA
+  lat: 25.82
+  lng: -80.28
+
+? 
+  - HI
+  - Honolulu Int
+: !ruby/struct:CityGeolocation 
+  city: Honolulu Int
+  state: HI
+  airport: HNL
+  lat: 21.35
+  lng: -157.93
+
+? 
+  - MN
+  - Tofte
+: !ruby/struct:CityGeolocation 
+  city: Tofte
+  state: MN
+  airport: P61
+  lat: 47.58
+  lng: -90.83
+
+? 
+  - CA
+  - Needles
+: !ruby/struct:CityGeolocation 
+  city: Needles
+  state: CA
+  airport: EED
+  lat: 34.77
+  lng: -114.62
+
+? 
+  - AK
+  - Whittier
+: !ruby/struct:CityGeolocation 
+  city: Whittier
+  state: AK
+  airport: 5WT
+  lat: 60.78
+  lng: -148.72
+
+? 
+  - SD
+  - Rapid City
+: !ruby/struct:CityGeolocation 
+  city: Rapid City
+  state: SD
+  airport: RAP
+  lat: 44.05
+  lng: -103.07
+
+? 
+  - FL
+  - Naples
+: !ruby/struct:CityGeolocation 
+  city: Naples
+  state: FL
+  airport: APF
+  lat: 26.13
+  lng: -81.8
+
+? 
+  - FL
+  - Jacksonville
+: !ruby/struct:CityGeolocation 
+  city: Jacksonville
+  state: FL
+  airport: NIP
+  lat: 30.23
+  lng: -81.68
+
+? 
+  - NV
+  - Eureka
+: !ruby/struct:CityGeolocation 
+  city: Eureka
+  state: NV
+  airport: P68
+  lat: 39.5
+  lng: -115.97
+
+? 
+  - FL
+  - Eglin AFB
+: !ruby/struct:CityGeolocation 
+  city: Eglin AFB
+  state: FL
+  airport: VPS
+  lat: 30.48
+  lng: -86.53
+
+? 
+  - MI
+  - Wurtsmith
+: !ruby/struct:CityGeolocation 
+  city: Wurtsmith
+  state: MI
+  airport: OSC
+  lat: 44.45
+  lng: -83.4
+
+? 
+  - MA
+  - Worcester
+: !ruby/struct:CityGeolocation 
+  city: Worcester
+  state: MA
+  airport: ORH
+  lat: 42.27
+  lng: -71.87
+
+? 
+  - UT
+  - Salt Lake City
+: !ruby/struct:CityGeolocation 
+  city: Salt Lake City
+  state: UT
+  airport: SLC
+  lat: 40.78
+  lng: -111.97
+
+? 
+  - TX
+  - Junction
+: !ruby/struct:CityGeolocation 
+  city: Junction
+  state: TX
+  airport: JCT
+  lat: 30.5
+  lng: -99.77
+
+? 
+  - CA
+  - Bicycle Lk
+: !ruby/struct:CityGeolocation 
+  city: Bicycle Lk
+  state: CA
+  airport: BYS
+  lat: 35.28
+  lng: -116.62
+
+? 
+  - NM
+  - Cannon
+: !ruby/struct:CityGeolocation 
+  city: Cannon
+  state: NM
+  airport: CVS
+  lat: 34.38
+  lng: -103.32
+
+? 
+  - AK
+  - Cape Hinchi
+: !ruby/struct:CityGeolocation 
+  city: Cape Hinchi
+  state: AK
+  airport: 5HN
+  lat: 60.38
+  lng: -147.08
+
+? 
+  - GA
+  - Rome/Russell
+: !ruby/struct:CityGeolocation 
+  city: Rome/Russell
+  state: GA
+  airport: RMG
+  lat: 34.35
+  lng: -85.17
+
+? 
+  - WA
+  - Yakima
+: !ruby/struct:CityGeolocation 
+  city: Yakima
+  state: WA
+  airport: YKM
+  lat: 46.57
+  lng: -120.53
+
+? 
+  - NY
+  - Plattsburgh
+: !ruby/struct:CityGeolocation 
+  city: Plattsburgh
+  state: NY
+  airport: PBG
+  lat: 44.65
+  lng: -73.47
+
+? 
+  - KS
+  - Goodland
+: !ruby/struct:CityGeolocation 
+  city: Goodland
+  state: KS
+  airport: GLD
+  lat: 39.37
+  lng: -101.7
+
+? 
+  - AK
+  - Homer
+: !ruby/struct:CityGeolocation 
+  city: Homer
+  state: AK
+  airport: HOM
+  lat: 59.63
+  lng: -151.5
+
+? 
+  - AL
+  - Mobile
+: !ruby/struct:CityGeolocation 
+  city: Mobile
+  state: AL
+  airport: MOB
+  lat: 30.68
+  lng: -88.25
+
+? 
+  - CA
+  - Hawthorne
+: !ruby/struct:CityGeolocation 
+  city: Hawthorne
+  state: CA
+  airport: HHR
+  lat: 33.92
+  lng: -118.33
+
+? 
+  - NY
+  - Buffalo
+: !ruby/struct:CityGeolocation 
+  city: Buffalo
+  state: NY
+  airport: BUF
+  lat: 42.93
+  lng: -78.73
+
+? 
+  - SD
+  - Chamberlain
+: !ruby/struct:CityGeolocation 
+  city: Chamberlain
+  state: SD
+  airport: CHB
+  lat: 43.75
+  lng: -99.32
+
+? 
+  - GA
+  - Athens
+: !ruby/struct:CityGeolocation 
+  city: Athens
+  state: GA
+  airport: AHN
+  lat: 33.95
+  lng: -83.32
+
+? 
+  - AK
+  - Mccarthy
+: !ruby/struct:CityGeolocation 
+  city: Mccarthy
+  state: AK
+  airport: MXY
+  lat: 61.43
+  lng: -142.92
+
+? 
+  - NM
+  - Moriarity
+: !ruby/struct:CityGeolocation 
+  city: Moriarity
+  state: NM
+  airport: 4MY
+  lat: 34.98
+  lng: -106.05
+
+? 
+  - WV
+  - Beckley
+: !ruby/struct:CityGeolocation 
+  city: Beckley
+  state: WV
+  airport: BKW
+  lat: 37.78
+  lng: -81.12
+
+? 
+  - OR
+  - Sexton
+: !ruby/struct:CityGeolocation 
+  city: Sexton
+  state: OR
+  airport: SXT
+  lat: 42.62
+  lng: -123.37
+
+? 
+  - TN
+  - Knoxville
+: !ruby/struct:CityGeolocation 
+  city: Knoxville
+  state: TN
+  airport: TYS
+  lat: 35.82
+  lng: -83.98
+
+? 
+  - KY
+  - Lexington
+: !ruby/struct:CityGeolocation 
+  city: Lexington
+  state: KY
+  airport: LEX
+  lat: 38.05
+  lng: -85.0
+
+? 
+  - CO
+  - Colo Sprgs
+: !ruby/struct:CityGeolocation 
+  city: Colo Sprgs
+  state: CO
+  airport: COS
+  lat: 38.82
+  lng: -104.72
+
+? 
+  - WA
+  - Walla Walla
+: !ruby/struct:CityGeolocation 
+  city: Walla Walla
+  state: WA
+  airport: ALW
+  lat: 46.1
+  lng: -118.28
+
+? 
+  - AZ
+  - Flagstaff
+: !ruby/struct:CityGeolocation 
+  city: Flagstaff
+  state: AZ
+  airport: FLG
+  lat: 35.13
+  lng: -111.67
+
+? 
+  - AK
+  - Farewell
+: !ruby/struct:CityGeolocation 
+  city: Farewell
+  state: AK
+  airport: FWL
+  lat: 62.85
+  lng: -154.47
+
+? 
+  - SD
+  - Brookings
+: !ruby/struct:CityGeolocation 
+  city: Brookings
+  state: SD
+  airport: BKX
+  lat: 44.3
+  lng: -96.8
+
+? 
+  - CA
+  - Bakersfield
+: !ruby/struct:CityGeolocation 
+  city: Bakersfield
+  state: CA
+  airport: BFL
+  lat: 35.43
+  lng: -119.05
+
+? 
+  - KS
+  - Concordia
+: !ruby/struct:CityGeolocation 
+  city: Concordia
+  state: KS
+  airport: CNK
+  lat: 39.55
+  lng: -97.65
+
+? 
+  - WA
+  - Pullman
+: !ruby/struct:CityGeolocation 
+  city: Pullman
+  state: WA
+  airport: PUW
+  lat: 46.75
+  lng: -117.12
+
+? 
+  - WA
+  - Mcchord AFB
+: !ruby/struct:CityGeolocation 
+  city: Mcchord AFB
+  state: WA
+  airport: TCM
+  lat: 47.15
+  lng: -122.48
+
+? 
+  - CA
+  - Mount Shasta
+: !ruby/struct:CityGeolocation 
+  city: Mount Shasta
+  state: CA
+  airport: MHS
+  lat: 41.32
+  lng: -122.32
+
+? 
+  - KY
+  - Ft Knox
+: !ruby/struct:CityGeolocation 
+  city: Ft Knox
+  state: KY
+  airport: FTK
+  lat: 37.9
+  lng: -85.97
+
+? 
+  - CT
+  - Torrington
+: !ruby/struct:CityGeolocation 
+  city: Torrington
+  state: CT
+  airport: ""
+  lat: 41.83496
+  lng: -73.12943
+
+? 
+  - MN
+  - Ely
+: !ruby/struct:CityGeolocation 
+  city: Ely
+  state: MN
+  airport: ELO
+  lat: 47.9
+  lng: -91.82
+
+? 
+  - IL
+  - Sterling
+: !ruby/struct:CityGeolocation 
+  city: Sterling
+  state: IL
+  airport: SQI
+  lat: 41.74
+  lng: -89.67
+
+? 
+  - MN
+  - Pequot Lake
+: !ruby/struct:CityGeolocation 
+  city: Pequot Lake
+  state: MN
+  airport: P39
+  lat: 46.6
+  lng: -94.32
+
+? 
+  - TX
+  - Wink
+: !ruby/struct:CityGeolocation 
+  city: Wink
+  state: TX
+  airport: INK
+  lat: 31.78
+  lng: -103.2
+
+? 
+  - OK
+  - Ardmore
+: !ruby/struct:CityGeolocation 
+  city: Ardmore
+  state: OK
+  airport: ADM
+  lat: 34.3
+  lng: -97.02
+
+? 
+  - AL
+  - Centreville
+: !ruby/struct:CityGeolocation 
+  city: Centreville
+  state: AL
+  airport: CKL
+  lat: 32.9
+  lng: -87.25
+
+? 
+  - MT
+  - Livingston
+: !ruby/struct:CityGeolocation 
+  city: Livingston
+  state: MT
+  airport: LVM
+  lat: 45.7
+  lng: -110.43
+
+? 
+  - HI
+  - Lanai-Lanai
+: !ruby/struct:CityGeolocation 
+  city: Lanai-Lanai
+  state: HI
+  airport: LNY
+  lat: 20.8
+  lng: -156.95
+
+? 
+  - AK
+  - Prudhoe Bay
+: !ruby/struct:CityGeolocation 
+  city: Prudhoe Bay
+  state: AK
+  airport: PUO
+  lat: 70.25
+  lng: -148.33
+
+? 
+  - OH
+  - Springfield
+: !ruby/struct:CityGeolocation 
+  city: Springfield
+  state: OH
+  airport: ""
+  lat: 39.9268
+  lng: -83.79658
+
+? 
+  - SD
+  - Watertown
+: !ruby/struct:CityGeolocation 
+  city: Watertown
+  state: SD
+  airport: ATY
+  lat: 44.92
+  lng: -97.15
+
+? 
+  - CA
+  - Livermore
+: !ruby/struct:CityGeolocation 
+  city: Livermore
+  state: CA
+  airport: LVK
+  lat: 37.7
+  lng: -121.82
+
+? 
+  - CT
+  - New London
+: !ruby/struct:CityGeolocation 
+  city: New London
+  state: CT
+  airport: 18N
+  lat: 41.3
+  lng: -72.08
+
+? 
+  - MN
+  - Grand Rapids
+: !ruby/struct:CityGeolocation 
+  city: Grand Rapids
+  state: MN
+  airport: GPZ
+  lat: 47.22
+  lng: -93.52
+
+? 
+  - NJ
+  - Hackensack
+: !ruby/struct:CityGeolocation 
+  city: Hackensack
+  state: NJ
+  airport: ""
+  lat: 40.8893
+  lng: -74.04611
+
+? 
+  - WA
+  - Renton
+: !ruby/struct:CityGeolocation 
+  city: Renton
+  state: WA
+  airport: RNT
+  lat: 47.5
+  lng: -122.22
+
+? 
+  - WA
+  - Ephrata
+: !ruby/struct:CityGeolocation 
+  city: Ephrata
+  state: WA
+  airport: EPH
+  lat: 47.32
+  lng: -119.52
+
+? 
+  - AZ
+  - Page
+: !ruby/struct:CityGeolocation 
+  city: Page
+  state: AZ
+  airport: PGA
+  lat: 36.93
+  lng: -111.45
+
+? 
+  - NE
+  - Kearney
+: !ruby/struct:CityGeolocation 
+  city: Kearney
+  state: NE
+  airport: EAR
+  lat: 40.73
+  lng: -99.0
+
