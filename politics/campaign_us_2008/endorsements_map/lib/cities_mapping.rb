@@ -257,7 +257,6 @@ CITIES_MAPPING = [
   ["San Jose",          "CA", "SJC", 37.37, -121.92],
   ["San Jose/Rei",      "CA", "RHV", 37.33, -121.82],
   ["San Luis Obi",      "CA", "SBP", 35.23, -120.65],
-  ["San Mateo",         "CA", "L98", 33.38, -117.58],
   ["San Miguel",        "CA", "N5G", 34.03, -120.40],
   ["San Nic Isl",       "CA", "NSI", 33.25, -119.45],
   ["Sandburg",          "CA", "SDB", 34.75, -118.73],
@@ -1311,6 +1310,7 @@ CITIES_MAPPING = [
   ["Wichita Falls",     "TX", "",   33.89793, -98.51628],
   ["New Philadelphia",  "OH", "",   40.48665, -81.44125],
 
+  # ["San Mateo",         "CA", "L98", 33.38, -117.58],
   ["San Gabriel",      "CA", "",   34.09470, -118.09759],
   ["Richmond",         "IN", "",   39.82954, -84.88542],
   ["Greenville",       "NC", "",   35.59982, -77.37439],

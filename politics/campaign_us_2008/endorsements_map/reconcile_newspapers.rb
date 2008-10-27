@@ -1,4 +1,9 @@
-# puts YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).to_yaml
+NEWSPAPER_CIRC_BL = YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).to_yaml
+ENDORSEMENTS = (
+  [1996,2000,2008].map{|year| "data/endorsements_#{year}_eandp.yaml"} +
+  ["endorsements_2004_wikipedia"]
+  )
+
 
 
 # def fix_city_and_paper(orig_paper, state, circ)
