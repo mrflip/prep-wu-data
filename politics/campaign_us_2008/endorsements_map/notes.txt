@@ -18,6 +18,7 @@ TODO
 
 * 
 * largest => smallest paper, by endorsement color, for each metro in order
+* 
 * about page with links to data, pix, screenshot.
 * an acts_as_pimp thingy
 
