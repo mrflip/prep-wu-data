@@ -911,12 +911,6 @@ Plain Dealer:
   :st: OH
   :prez_2008: Obama
   :prez_2004: none
-(Spokane) Spokesman-Review: 
-  :city: 
-  :paper: (Spokane) Spokesman-Review
-  :st: WA
-  :prez_2008: McCain
-  :prez_2004: Bush
 San Francisco Examiner: 
   :city: 
   :paper: San Francisco Examiner
@@ -1151,6 +1145,12 @@ Pittsburgh Post-Gazette:
   :st: PA
   :prez_2008: Obama
   :prez_2004: Kerry
+Spokesman-Review (Spokane): 
+  :city: 
+  :paper: Spokesman-Review (Spokane)
+  :st: WA
+  :prez_2008: McCain
+  :prez_2004: Bush
 Bartlesville Examiner-Enterprise: 
   :city: 
   :paper: Bartlesville Examiner-Enterprise

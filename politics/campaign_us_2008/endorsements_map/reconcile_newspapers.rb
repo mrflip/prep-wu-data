@@ -9,6 +9,12 @@ require 'action_view/helpers/number_helper'; include ActionView::Helpers::Number
 require 'lib/endorsement'
 require 'lib/geolocation'
 
+#
+# Oddities:
+# -- amarillo Globe-news
+#
+
+
 # NEWSPAPER_CIRC_BL   = YAML.load(File.open("data/newspapers_burrelles_luce.yaml"))
 # ENDORSEMENTS        = [2008,2000,1996].map{|year| "data/endorsements_#{year}_eandp.yaml"}
 ENDORSEMENT_FILENAMES = [
@@ -41,23 +47,39 @@ Endorsement.dump :literalize_keys => false
 
 Endorsement.load :literalize_keys => false
 
+def dump_as_hash e
+  st, city, paper = e.values_of(:st, :city, :paper)
+  paper.gsub!(/\'/, "''")
+  prezzes = e.prez.sort.map{|k,v| k if v }
+  puts "%-38s { :sun: %d, :paper: %-38s :st: '%s', :city: %-31s } # %s" % ["'#{paper}':", e.sun||1, "'#{paper}',", st, "'#{city}'", prezzes.compact.join(',')]
+end
+
 # Endorsement.all.sort_by{|paper, e| [e.paper, e.st||'', e.city||'' ]}.each do |paper, e|
 #   st, city, paper = e.values_of(:st, :city, :paper)
 #   next if (!city.blank?) || (paper == 'USA Today')
 #   puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
 # end
 
-Geolocation.load
-Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper, ]}.each do |paper, e|
-  st, city, paper = e.values_of(:st, :city, :paper)
-  # next if Geolocation[st, city] || !e.sun.blank? ||  (paper == 'USA Today')
-  paper.gsub!(/\'/, "''")
-  puts "%-32s\t{ :sun: %d, :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", e.sun||1, "'#{paper}',", st, "'#{city}'"]
+# Geolocation.load
+# Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper, ]}.each do |paper, e|
+#   next if Geolocation[st, city] || !e.sun.blank? ||  (paper == 'USA Today')
+# end
+
+city_papers = { }
+Endorsement.all.each do |paper, e|
+  (city_papers[[e.st||'', e.city||'']] ||= []) << e
 end
+city_papers.sort_by{|st_city, es| st_city }.each do |st_city, es|
+  next unless es.length > 1
+  es.each{|e| dump_as_hash(e) }
+end
+
+
+
 
 
 # 'Daily Herald':                         { :paper: 'Daily Herald',                      :st: 'IL', :city: 'Arlington Heights',  }"
 # -123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789
 # next if e.prez[2008] && e.prez[1996]
-# prezzes = e.prez.sort.map{|k,v| k if v }
+#
 # puts "%-2s\t%-20s\t%-36s\t%s" % [st, city, paper, prezzes.join("\t")]

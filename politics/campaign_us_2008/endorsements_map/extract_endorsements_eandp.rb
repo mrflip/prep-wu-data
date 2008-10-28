@@ -98,19 +98,19 @@ def fix_city_and_paper(orig_paper, state)
   # 
   # }
   case
-  when orig_paper =~ /(?:Lowell.*Sun|Stockton.*Record|Daily News.*Los Angeles)/
+  when orig_paper =~ /(?:Lowell.*Sun|Stockton.*Record|Daily News.*Los Angeles|Times.*Munster)/
     paper = "#{paper} (#{city})"
   when ([city, paper] == ['Arlington', 'Daily Herald']) then city = 'Arlington Heights'
   when (city == 'Bryan-College Station')                then city = 'Bryan'
   when (city == 'Neptune')                              then city = 'Asbury Park'
   when (city == 'Wilkes Barre')                         then city = 'Wilkes-Barre'
   when (paper == 'Kenne Sentinel')                      then city, paper = 'Keene', 'Keene Sentinel'
+  when (paper =~ /Spokesman.*Review/) && (orig_paper =~ /Spokane/) then paper = "Spokesman-Review (Spokane)"
   end
   paper.gsub!(/^The\s+/i, '')
   paper.gsub!(/\s+&\s+/, ' and ')
   [paper, city]
 end
-
 
 #
 # Extract the endorsements

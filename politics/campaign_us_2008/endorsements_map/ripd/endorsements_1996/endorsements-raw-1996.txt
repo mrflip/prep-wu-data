@@ -38,14 +38,14 @@ CALIFORNIA
 CLINTON
 
 
-Hayward Daily Review
+Daily Review
 Hollister Free Lance
 Modesto Bee
 Oakland Tribune
-Pleasanton Tri-Valley Herald
+Tri-Valley Herald, Pleasanton
 Salinas Californian
 San Jose Mercury News
-San Mateo Times
+San Mateo County Times
 Vallejo Times-Herald
 
 DOLE
@@ -106,7 +106,7 @@ Sullivan Daily Times
 
 DOLE
 Huntington Herald Press
-Indianapolis Star & News
+Indianapolis Star
 Martinsville Daily Reporter
 
 IOWA
@@ -228,7 +228,7 @@ Portsmouth Herald
 
 DOLE
 Foster's Daily Democrat
-Manchester Union Leader
+Union Leader
 
 NEW MEXICO
 
@@ -290,7 +290,7 @@ DOLE
 Ardmore Daily Ardmoreite
 Blackwell Journal-Tribune
 Edmond Evening Sun
-Daily Oklahoman
+Oklahoman
 Sapulpa Daily Herald
 
 OREGON
@@ -309,7 +309,7 @@ CLINTON
 Philadelphia Daily News
 Uniontown Herald Standard
 Wilkes-Barre Citizens' Voice
-Wilkes-Barre Times Leader
+Times-Leader, Wilkes-Barre
 
 DOLE
 Delaware County Daily Times
@@ -323,7 +323,7 @@ Pawtucket Times
 SOUTH CAROLINA
 
 DOLE
-Columbia State
+State
 Sumter Item
 
 SOUTH DAKOTA
@@ -338,7 +338,7 @@ TENNESSEE
 CLINTON
 Jackson Sun
 Johnson City Press
-Nashville Tennessean
+Tennessean
 Nashville Banner
 Paris Post Intelligencer
 
@@ -358,7 +358,6 @@ Abilene Reporter-News
 Amarillo Daily News
 Amarillo Globe Times
 Big Spring Herald
-Corpus Christi Caller-Times
 Dalhart Daily Texan
 Gainesville Daily Register
 Hereford Brand
@@ -382,7 +381,7 @@ CLINTON
 Seattle Post-Intelligencer
 
 DOLE
-Centralia Chronicle
+Chronicle, Centralia 
 Skagit Valley Herald
 
 WEST VIRGINIA
@@ -398,7 +397,7 @@ WISCONSIN
 
 CLINTON
 Green Bay News Chronicle
-Madison Capital Times
+Capital Times, Madison
 
 DOLE
 Beloit Daily News
@@ -446,7 +445,7 @@ The St. Louis Post-Dispatch
 ILLINOIS
 The Chicago Sun-Times
 GEORGIA
-The Atlanta Constitution
+The Atlanta Journal-Constitution
 WEST VIRGINIA
 The Charleston Gazette
 NEW HAMPSHIRE
@@ -495,8 +494,6 @@ The Santa Fe New Mexican
 WASHINGTON
 The Seattle Post-Intelligencer
 The Seattle Times
-MASSACHUSETTS
-The Union News, Springfield
 
 
 BOB DOLE
@@ -533,11 +530,11 @@ MISSISSIPPI
 The Clarion-Ledger, Jackson
 CONNECTICUT
 The Connecticut Post, Bridgeport
-The Day of New London
+The Day
 The New Haven Register
 The Norwich Bulletin
 TEXAS
-The Corpus Christi Caller Times
+Corpus Christi Caller-Times
 The Dallas Morning News
 The El Paso Herald-Post
 The Fort Worth Star-Telegram

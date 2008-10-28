@@ -1,580 +1,538 @@
 key	prez_2008	prez_2004	prez_2000	prez_1996	prez_1992	rank	circ	daily	sun	lat	lng	st	city	paper
-Portsmouth Herald	Obama		Gore	Clinton								NH	Portsmouth	Portsmouth Herald
-Nashville Tennessean				Clinton								TN	Nashville	Nashville Tennessean
-Yankton Daily Press and Dakotan				Dole								SD	Yankton	Yankton Daily Press and Dakotan
+Portsmouth Herald	Obama		Gore	Clinton					1			NH	Portsmouth	Portsmouth Herald
+Yankton Daily Press and Dakotan				Dole					1			SD	Yankton	Yankton Daily Press and Dakotan
 Eagle	Obama								0			TX	Bryan	Eagle
-Fort Collins Coloradoan	Obama		Gore									CO	Fort Collins	Fort Collins Coloradoan
+Fort Collins Coloradoan	Obama		Gore						1			CO	Fort Collins	Fort Collins Coloradoan
 Times Record News	McCain	none							0			TX	Wichita Falls	Times Record News
 LaCrosse Tribune	Obama								9			WI	LaCrosse	LaCrosse Tribune
-Manhattan Mercury				Dole								KS	Manhattan	Manhattan Mercury
-Martinsville Daily Reporter				Dole								IN	Martinsville	Martinsville Daily Reporter
-San Angelo Standard-Times	Obama		Bush									TX	San Angelo	San Angelo Standard-Times
-Hopkinsville Kentucky New Era				Dole								KY	Hopkinsville	Hopkinsville Kentucky New Era
-Rochester Democrat and Chronicle	Obama		Gore									NY	Rochester	Rochester Democrat and Chronicle
+Manhattan Mercury				Dole					1			KS	Manhattan	Manhattan Mercury
+Martinsville Daily Reporter				Dole					1			IN	Martinsville	Martinsville Daily Reporter
+San Angelo Standard-Times	Obama		Bush						1			TX	San Angelo	San Angelo Standard-Times
+Hopkinsville Kentucky New Era				Dole					1			KY	Hopkinsville	Hopkinsville Kentucky New Era
+Rochester Democrat and Chronicle	Obama		Gore						1			NY	Rochester	Rochester Democrat and Chronicle
 Honolulu Advertiser		Kerry	Gore	Clinton					0			HI	Honolulu	Honolulu Advertiser
 Akron Beacon-Journal	Obama	Kerry	Gore						0			OH	Akron	Akron Beacon-Journal
 Statesman-Journal	Obama	Kerry	Gore	Clinton					0			OR	Salem	Statesman-Journal
-Star-Tribune		Kerry							0			MN	Minneapolis	Star-Tribune
 Register-Guard	Obama	Kerry	Gore						0			OR	Eugene	Register-Guard
-Manchester Union Leader				Dole								NH	Manchester	Manchester Union Leader
-Post-Crescent			Gore									WI	Appleton	Post-Crescent
-Investors Business Daily			Bush									CA	Los Angeles	Investors Business Daily
-Liberal Southwest Daily Times				Dole								KS	Liberal	Liberal Southwest Daily Times
-Cullman Times				Dole								AL	Cullman	Cullman Times
-Hays Daily News	Obama											KS	Hays	Hays Daily News
-Sullivan Daily Times				Clinton								IN	Sullivan	Sullivan Daily Times
-News-Sentinel			Bush									IN	Fort Wayne	News-Sentinel
-Metrowest Daily News			Gore									MA	Framingham	Metrowest Daily News
-Patriot-News			Bush									PA	Harrisburg	Patriot-News
-Quad-City Times	Obama		Bush									IA	Davenport	Quad-City Times
+Liberal Southwest Daily Times				Dole					1			KS	Liberal	Liberal Southwest Daily Times
+Post-Crescent			Gore						1			WI	Appleton	Post-Crescent
+Cullman Times				Dole					1			AL	Cullman	Cullman Times
+Hays Daily News	Obama								1			KS	Hays	Hays Daily News
+Sullivan Daily Times				Clinton					1			IN	Sullivan	Sullivan Daily Times
 Orlando Sentinel	Obama	Kerry	Bush						0			FL	Orlando	Orlando Sentinel
 Arizona Daily Star		Kerry	Gore	Clinton					0			AZ	Tucson	Arizona Daily Star
-Berkshire Eagle	Obama		Gore									MA	Pittsfield	Berkshire Eagle
-Centralia Chronicle				Dole								WA	Centralia	Centralia Chronicle
+News-Sentinel			Bush						1			IN	Fort Wayne	News-Sentinel
+Quad-City Times	Obama		Bush						1			IA	Davenport	Quad-City Times
+Metrowest Daily News			Gore						1			MA	Framingham	Metrowest Daily News
+Berkshire Eagle	Obama		Gore						1			MA	Pittsfield	Berkshire Eagle
 Repository	Obama	Bush	Bush						0			OH	Canton	Repository
 Mason City Globe Gazette	Obama	Bush							0			IA	Mason City	Mason City Globe Gazette
-Chronicle	McCain											WA	Centralia	Chronicle
-Wooster Daily Record				Dole								OH	Wooster	Wooster Daily Record
-Boca Raton News			Gore									FL	Boca Raton	Boca Raton News
-New York Observer				Dole								NY	New York City	New York Observer
-Lawrence Journal-World				Dole								KS	Lawrence	Lawrence Journal-World
+Wooster Daily Record				Dole					1			OH	Wooster	Wooster Daily Record
+Boca Raton News			Gore						1			FL	Boca Raton	Boca Raton News
+New York Observer				Dole					1			NY	New York City	New York Observer
+Chronicle	McCain			Dole					1			WA	Centralia	Chronicle
+Lawrence Journal-World				Dole					1			KS	Lawrence	Lawrence Journal-World
 Tuscaloosa News	Obama	Kerry	Gore						0			AL	Tuscaloosa	Tuscaloosa News
-Free Lance-Star			Bush									VA	Fredericksburg	Free Lance-Star
-Ithaca Journal			Gore									NY	Ithaca	Ithaca Journal
-St. Johnsbury Caledonian-Record				Dole								VT	Saint Johnsbury	St. Johnsbury Caledonian-Record
-Huntington Herald-Dispatch	Obama	Kerry							0			WV	Huntington	Huntington Herald-Dispatch
+Ithaca Journal			Gore						1			NY	Ithaca	Ithaca Journal
+Free Lance-Star			Bush						1			VA	Fredericksburg	Free Lance-Star
+St. Johnsbury Caledonian-Record				Dole					1			VT	Saint Johnsbury	St. Johnsbury Caledonian-Record
+Huntington Herald-Dispatch	Obama	Kerry	Gore						0			WV	Huntington	Huntington Herald-Dispatch
 Palatka Daily News	McCain								0			FL	Palatka	Palatka Daily News
-Iowa City Press-Citizen			Gore									IA	Iowa City	Iowa City Press-Citizen
-Patriot Ledger			Bush									MA	Quincy	Patriot Ledger
-Intelligencer Journal	Obama											PA	Lancaster	Intelligencer Journal
-Alliance Review				Dole								OH	Alliance	Alliance Review
+Iowa City Press-Citizen			Gore						1			IA	Iowa City	Iowa City Press-Citizen
+Alliance Review				Dole					1			OH	Alliance	Alliance Review
+Intelligencer Journal	Obama								1			PA	Lancaster	Intelligencer Journal
+Patriot Ledger			Bush						1			MA	Quincy	Patriot Ledger
 Daily Reflector	Obama	Kerry							0			NC	Greenville	Daily Reflector
-Marietta Times			Bush									OH	Marietta	Marietta Times
+Marietta Times			Bush						1			OH	Marietta	Marietta Times
 Buffalo News	Obama	Kerry	Gore						0			NY	Buffalo	Buffalo News
-Clinton Herald				Dole								IA	Clinton	Clinton Herald
-Spokesman-Review			Bush	Dole								WA	Spokane	Spokesman-Review
-Daily Southtown			Gore									IL	Tinley Park	Daily Southtown
+Clinton Herald				Dole					1			IA	Clinton	Clinton Herald
 Star-Ledger	Obama	Kerry	Gore	Clinton					0			NJ	Newark	Star-Ledger
-Elko Daily Free Press	McCain			Dole								NV	Elko	Elko Daily Free Press
+Elko Daily Free Press	McCain			Dole					1			NV	Elko	Elko Daily Free Press
 Aspen Daily News	Obama	Kerry							0			CO	Aspen	Aspen Daily News
-Willoughby News-Herald				Dole								OH	Willoughby	Willoughby News-Herald
-Kalamazoo Gazette			Bush									MI	Kalamazoo	Kalamazoo Gazette
+Willoughby News-Herald				Dole					1			OH	Willoughby	Willoughby News-Herald
+Kalamazoo Gazette			Bush						1			MI	Kalamazoo	Kalamazoo Gazette
 Asbury Park Press	Obama	Bush	Bush	Clinton					9			NJ	Asbury Park	Asbury Park Press
-Press-Enterprise		Bush	Bush									CA	Riverside	Press-Enterprise
-McPherson Sentinel				Dole								KS	McPherson	McPherson Sentinel
+Daily Southtown			Gore						1			IL	Tinley Park	Daily Southtown
+McPherson Sentinel				Dole					1			KS	McPherson	McPherson Sentinel
 Charlotte Observer	Obama	Kerry	Gore	Clinton					0			NC	Charlotte	Charlotte Observer
 Daily Times-Call	McCain	Bush							0			CO	Longmont	Daily Times-Call
 Santa Fe New Mexican	Obama	Kerry		Clinton					0			NM	Santa Fe	Santa Fe New Mexican
 Tulsa World		Bush	Bush	Dole					0			OK	Tulsa	Tulsa World
 Sacramento Bee	Obama	Kerry	Gore	Clinton					0			CA	Sacramento	Sacramento Bee
-Green Bay News Chronicle				Clinton								WI	Green Bay	Green Bay News Chronicle
+Green Bay News Chronicle				Clinton					1			WI	Green Bay	Green Bay News Chronicle
 Bradenton Herald	McCain	Kerry	Bush						0			FL	Bradenton	Bradenton Herald
-Baltimore Sun	Obama											MD	Baltimore	Baltimore Sun
-Wyoming Tribune-Eagle			Bush									WY	Cheyenne	Wyoming Tribune-Eagle
-Claremont Eagle Times	McCain											NH	Claremont	Claremont Eagle Times
+Baltimore Sun	Obama	Kerry	Gore						1			MD	Baltimore	Baltimore Sun
+Claremont Eagle Times	McCain								1			NH	Claremont	Claremont Eagle Times
+Wyoming Tribune-Eagle			Bush						1			WY	Cheyenne	Wyoming Tribune-Eagle
 Knoxville News-Sentinel	McCain		Bush	Dole					0			TN	Knoxville	Knoxville News-Sentinel
-Courier-Journal		Kerry	Gore						0			KY	Louisville	Courier-Journal
-Gillette News-Record				Dole								WY	Gillette	Gillette News-Record
-State Journal-Register			Bush									IL	Springfield	State Journal-Register
-Connecticut Post			Bush	Dole								CT	Bridgeport	Connecticut Post
-Record (Stockton)	Obama	Bush	Bush									CA	Stockton	Record (Stockton)
+Gillette News-Record				Dole					1			WY	Gillette	Gillette News-Record
 Palladium-Item	Obama	Bush							0			IN	Richmond	Palladium-Item
-Albany Times-Union	Obama											NY	Albany	Albany Times-Union
+Albany Times-Union	Obama		Gore						1			NY	Albany	Albany Times-Union
 Wall Street Journal									0			NY	New York City	Wall Street Journal
+State Journal-Register			Bush						1			IL	Springfield	State Journal-Register
 Michigan Chronicle	Obama	none							0			MI	Detroit	Michigan Chronicle
-Hollister Free Lance				Clinton								CA	Hollister	Hollister Free Lance
+Hollister Free Lance				Clinton					1			CA	Hollister	Hollister Free Lance
 Contra Costa Times	Obama	Kerry	Bush						0			CA	Walnut Creek	Contra Costa Times
+Connecticut Post			Bush	Dole					1			CT	Bridgeport	Connecticut Post
+Record (Stockton)	Obama	Bush	Bush						1			CA	Stockton	Record (Stockton)
 Springfield News-Sun	Obama	Kerry							0			OH	Springfield	Springfield News-Sun
 Messenger	McCain	Bush							0			IA	Fort Dodge	Messenger
-Daily Review	Obama	Kerry							0			CA	Hayward	Daily Review
+Daily Review	Obama	Kerry		Clinton					0			CA	Hayward	Daily Review
 Daily Sentinel	McCain	Bush	Bush						0			CO	Grand Junction	Daily Sentinel
-Dispatch			Bush									IL	Moline	Dispatch
-Desert Sun	McCain		Bush									CA	Palm Springs	Desert Sun
+Dispatch			Bush						1			IL	Moline	Dispatch
 Chicago Tribune	Obama	Bush	Bush	Dole					0			IL	Chicago	Chicago Tribune
 Marin Independent-Journal	Obama	Kerry	Gore						9			CA	Marin County	Marin Independent-Journal
-Columbia State				Dole								SC	Columbia	Columbia State
+Desert Sun	McCain		Bush						1			CA	Palm Springs	Desert Sun
 Commercial Appeal	Obama	Kerry	Bush	Dole					0			TN	Memphis	Commercial Appeal
-Blackwell Journal-Tribune				Dole								OK	Blackwell	Blackwell Journal-Tribune
-High Point Enterprise			Bush									NC	High Point	High Point Enterprise
-Emporia Gazette			Gore									KS	Emporia	Emporia Gazette
+Blackwell Journal-Tribune				Dole					1			OK	Blackwell	Blackwell Journal-Tribune
+High Point Enterprise			Bush						1			NC	High Point	High Point Enterprise
+Emporia Gazette			Gore						1			KS	Emporia	Emporia Gazette
 Pittsburg Morning Sun				Dole					9			KS	Pittsburg	Pittsburg Morning Sun
-Oklahoman	McCain	Bush							0			OK	Oklahoma City	Oklahoman
-Midland Reporter-Telegram				Dole								TX	Midland	Midland Reporter-Telegram
-Ann Arbor News			Bush									MI	Ann Arbor	Ann Arbor News
-Paris News				Dole								TX	Paris	Paris News
+Oklahoman	McCain	Bush	Bush	Dole								OK	Oklahoma City	Oklahoman
+Midland Reporter-Telegram				Dole					1			TX	Midland	Midland Reporter-Telegram
+Ann Arbor News			Bush						1			MI	Ann Arbor	Ann Arbor News
+Paris News				Dole					1			TX	Paris	Paris News
 San Jose Mercury News	Obama	Kerry	Gore	Clinton					0			CA	San Jose	San Jose Mercury News
 Beaver County Times			Gore						9			PA	Beaver County	Beaver County Times
 el Diario	Obama	Kerry							0			NY	New York City	el Diario
-Ocala Star-Banner			Gore									FL	Ocala	Ocala Star-Banner
+Ocala Star-Banner			Gore						1			FL	Ocala	Ocala Star-Banner
 Milwaukee Journal Sentinel	Obama			Dole					0			WI	Milwaukee	Milwaukee Journal Sentinel
 Rockford Register Star	Obama	Kerry	Bush						0			IL	Rockford	Rockford Register Star
-Dalhart Daily Texan				Dole								TX	Dalhart	Dalhart Daily Texan
+Dalhart Daily Texan				Dole					1			TX	Dalhart	Dalhart Daily Texan
 Muskogee Daily Phoenix	Obama	Kerry	Bush						2			OK	Muskogee	Muskogee Daily Phoenix
 Dayton Daily News	Obama	Kerry	Gore	Clinton					0			OH	Dayton	Dayton Daily News
-Spartanburg Herald-Journal	McCain											SC	Spartanburg	Spartanburg Herald-Journal
-Traverse City Record-Eagle				Clinton								MI	Traverse City	Traverse City Record-Eagle
-Gainesville Sun			Gore									FL	Gainesville	Gainesville Sun
-Norwalk Reflector				Clinton								OH	Norwalk	Norwalk Reflector
+Spartanburg Herald-Journal	McCain		Bush						1			SC	Spartanburg	Spartanburg Herald-Journal
+Traverse City Record-Eagle				Clinton					1			MI	Traverse City	Traverse City Record-Eagle
+Gainesville Sun			Gore						1			FL	Gainesville	Gainesville Sun
+Norwalk Reflector				Clinton					1			OH	Norwalk	Norwalk Reflector
 Napa Valley Register	McCain	Bush							0			CA	Napa	Napa Valley Register
 Amarillo Globe-News	McCain	Bush							2			TX	Amarillo	Amarillo Globe-News
-West Chester Daily Local News				Dole								PA	West Chester	West Chester Daily Local News
+West Chester Daily Local News				Dole					1			PA	West Chester	West Chester Daily Local News
 Kerrville Daily Times	McCain			Dole					0			TX	Kerrville	Kerrville Daily Times
-Salem Evening News			Gore									MA	Salem	Salem Evening News
-Grand Forks Herald			Gore									ND	Grand Forks	Grand Forks Herald
-Galveston County Daily News	McCain		Bush									TX	Galveston	Galveston County Daily News
-Union News				Clinton								MA	Springfield	Union News
+Salem Evening News			Gore						1			MA	Salem	Salem Evening News
+Grand Forks Herald			Gore						1			ND	Grand Forks	Grand Forks Herald
+Galveston County Daily News	McCain		Bush						1			TX	Galveston	Galveston County Daily News
 Daily News Record	McCain		Bush						0			VA	Harrisonburg	Daily News Record
-Mitchell Daily Republic				Dole								SD	Mitchell	Mitchell Daily Republic
+Mitchell Daily Republic				Dole					1			SD	Mitchell	Mitchell Daily Republic
+Union News									1			MA	Springfield	Union News
 Shenandoah Valley News Today				Dole					9			IA	Shenandoah Valley	Shenandoah Valley News Today
-Saginaw News	Obama											MI	Saginaw	Saginaw News
-Nashville Banner				Clinton								TN	Nashville	Nashville Banner
-Daytona Beach News-Journal	Obama	Kerry		Clinton					0			FL	Daytona Beach	Daytona Beach News-Journal
-Bennington Banner	Obama											VT	Bennington	Bennington Banner
-Ledger			Bush									FL	Lakeland	Ledger
-Hayward Daily Review				Clinton								CA	Hayward	Hayward Daily Review
-Madison Capital Times				Clinton								WI	Madison	Madison Capital Times
-Pawtucket Times				Dole								RI	Pawtucket	Pawtucket Times
-Bowling Green Daily News	McCain											KY	Bowling Green	Bowling Green Daily News
-Taunton Daily Gazette				Clinton								MA	Taunton	Taunton Daily Gazette
-New Orleans Times-Picayune		N/A							0			LA	New Orleans	New Orleans Times-Picayune
-Hutchinson News			Gore	Dole								KS	Hutchinson	Hutchinson News
+Saginaw News	Obama								1			MI	Saginaw	Saginaw News
+Nashville Banner				Clinton					1			TN	Nashville	Nashville Banner
+Daytona Beach News-Journal	Obama	Kerry	Gore	Clinton					0			FL	Daytona Beach	Daytona Beach News-Journal
+Bennington Banner	Obama								1			VT	Bennington	Bennington Banner
+Pawtucket Times				Dole					1			RI	Pawtucket	Pawtucket Times
+Bowling Green Daily News	McCain								1			KY	Bowling Green	Bowling Green Daily News
+Taunton Daily Gazette				Clinton					1			MA	Taunton	Taunton Daily Gazette
+Hutchinson News			Gore	Dole					1			KS	Hutchinson	Hutchinson News
 Albuquerque Journal			Bush	Dole					0			NM	Albuquerque	Albuquerque Journal
-Ardmore Daily Ardmoreite				Dole								OK	Ardmore	Ardmore Daily Ardmoreite
+Ardmore Daily Ardmoreite				Dole					1			OK	Ardmore	Ardmore Daily Ardmoreite
 New York Times	Obama	Kerry	Gore	Clinton					0			NY	New York City	New York Times
 Chicago Sun-Times	Obama	Kerry	Bush	Clinton					0			IL	Chicago	Chicago Sun-Times
-Quincy Herald-Whig			Bush									IL	Quincy	Quincy Herald-Whig
-Ventura County Star			Bush	Dole								CA	Ventura	Ventura County Star
+Quincy Herald-Whig			Bush						1			IL	Quincy	Quincy Herald-Whig
+Ventura County Star			Bush	Dole					1			CA	Ventura	Ventura County Star
 San Francisco Chronicle	Obama	Kerry	Gore						0			CA	San Francisco	San Francisco Chronicle
-South Bend Tribune				Clinton								IN	South Bend	South Bend Tribune
-Coos Bay World				Dole								OR	Coos Bay	Coos Bay World
-Lakeland Ledger	Obama	Bush										FL	Lakeland	Lakeland Ledger
-Marietta Daily Journal			Bush									GA	Marietta	Marietta Daily Journal
-Southwest Times			Bush									VA	Pulaski	Southwest Times
-Belleville News-Democrat				Dole								IL	Belleville	Belleville News-Democrat
-Thomasville Times-Enterprise				Dole								GA	Thomasville	Thomasville Times-Enterprise
+South Bend Tribune				Clinton					1			IN	South Bend	South Bend Tribune
+Coos Bay World				Dole					1			OR	Coos Bay	Coos Bay World
+Lakeland Ledger	Obama	Bush	Bush						1			FL	Lakeland	Lakeland Ledger
+Marietta Daily Journal			Bush						1			GA	Marietta	Marietta Daily Journal
+Belleville News-Democrat				Dole					1			IL	Belleville	Belleville News-Democrat
+Southwest Times			Bush						1			VA	Pulaski	Southwest Times
+Thomasville Times-Enterprise				Dole					1			GA	Thomasville	Thomasville Times-Enterprise
 Sarasota Herald-Tribune	Obama	Kerry	Gore						0			FL	Sarasota	Sarasota Herald-Tribune
-Gloucester County Times	Obama											NJ	Woodbury	Gloucester County Times
 Lexington Herald-Leader	Obama	Kerry	Gore						0			KY	Lexington	Lexington Herald-Leader
-Long Beach Press Telegram	Obama	Bush							0			CA	Long Beach	Long Beach Press Telegram
-News-Press			Bush									FL	Fort Myers	News-Press
+Long Beach Press Telegram	Obama	Bush	Gore						0			CA	Long Beach	Long Beach Press Telegram
+Gloucester County Times	Obama								1			NJ	Woodbury	Gloucester County Times
 Columbia Daily Tribune	Obama	Kerry	Bush	Dole					0			MO	Columbia	Columbia Daily Tribune
-Talladega Daily Home				Clinton								AL	Talladega	Talladega Daily Home
+News-Press			Bush						1			FL	Fort Myers	News-Press
+Talladega Daily Home				Clinton					1			AL	Talladega	Talladega Daily Home
 Columbian	Obama	Bush	Bush						0			WA	Vancouver	Columbian
-Item			Bush									SC	Sumter	Item
-Grand Island Independent				Dole								NE	Grand Island	Grand Island Independent
-Ridgecrest Daily Independent				Dole								CA	Ridgecrest	Ridgecrest Daily Independent
+Grand Island Independent				Dole					1			NE	Grand Island	Grand Island Independent
+Ridgecrest Daily Independent				Dole					1			CA	Ridgecrest	Ridgecrest Daily Independent
 Daily Star	Obama	Kerry	Gore						0			NY	Oneonta	Daily Star
 Bremerion Sun				Dole					9			WA	Bremerion	Bremerion Sun
-Lynchburg News-Advance	McCain											VA	Lynchburg	Lynchburg News-Advance
-Muskogee Phoenix									2			OK	Muskogee	Muskogee Phoenix
+Lynchburg News-Advance	McCain								1			VA	Lynchburg	Lynchburg News-Advance
 Houston Chronicle	Obama	Bush	Bush	Dole					0			TX	Houston	Houston Chronicle
 Washington DC Examiner	McCain	none							0			DC	Washington	Washington DC Examiner
-Bay City News	Obama											MI	Bay City	Bay City News
+Bay City News	Obama								1			MI	Bay City	Bay City News
 Des Moines Register	Obama	Kerry	Gore	Clinton					0			IA	Des Moines	Des Moines Register
-Star Tribune			Gore									MN	Minneapolis	Star Tribune
-Bulletin			Bush									OR	Bend	Bulletin
-Ashland Daily Tidings	Obama			Clinton								OR	Ashland	Ashland Daily Tidings
+Ashland Daily Tidings	Obama			Clinton					1			OR	Ashland	Ashland Daily Tidings
 Inland Valley Daily Bulletin	Obama	Bush		Dole					0			CA	Ontario	Inland Valley Daily Bulletin
-Florence Times Daily	Obama											AL	Florence	Florence Times Daily
+Florence Times Daily	Obama								1			AL	Florence	Florence Times Daily
 Tri-City Herald	Obama	Kerry	Bush						0			WA	Kennewick	Tri-City Herald
-Democrat & Chronicle									0			NY	Rochester	Democrat & Chronicle
 North Adams Transcript	Obama								0			MA	North Adams	North Adams Transcript
 Fort Worth Star-Telegram	Obama	Bush	Bush	Dole					0			TX	Fort Worth	Fort Worth Star-Telegram
 Charleston Gazette	Obama	Kerry	Gore	Clinton					0			WV	Charleston	Charleston Gazette
 Columbus Dispatch	McCain	Bush	Bush	Dole					0			OH	Columbus	Columbus Dispatch
-Pantagraph	Obama	Bush	Bush									IL	Bloomington	Pantagraph
-Cumberland Times-News				Dole								MD	Cumberland	Cumberland Times-News
-Rutland Herald			Gore									VT	Rutland	Rutland Herald
+Cumberland Times-News				Dole					1			MD	Cumberland	Cumberland Times-News
+Rutland Herald			Gore						1			VT	Rutland	Rutland Herald
 Standard-Times	Obama	Kerry							0			MA	New Bedford	Standard-Times
+Pantagraph	Obama	Bush	Bush						1			IL	Bloomington	Pantagraph
 Bartlesville Examiner-Enterprise	McCain								0			OK	Bartlesville	Bartlesville Examiner-Enterprise
-Moberly Monitor-Index				Clinton								MO	Moberly	Moberly Monitor-Index
-Hickory Daily Record			Bush									NC	Hickory	Hickory Daily Record
-Whittier Daily News			Bush									CA	Whittier	Whittier Daily News
+Moberly Monitor-Index				Clinton					1			MO	Moberly	Moberly Monitor-Index
+Hickory Daily Record			Bush						1			NC	Hickory	Hickory Daily Record
+Whittier Daily News			Bush						1			CA	Whittier	Whittier Daily News
 Daily Item	Obama	none							0			PA	Sunbury	Daily Item
-Lincoln Journal-Star	McCain		Bush									NE	Lincoln	Lincoln Journal-Star
-North Platte Telegraph			Bush									NE	North Platte	North Platte Telegraph
+Lincoln Journal-Star	McCain		Bush						1			NE	Lincoln	Lincoln Journal-Star
+North Platte Telegraph			Bush						1			NE	North Platte	North Platte Telegraph
 Palm Beach Post	Obama	Kerry	Gore	Clinton					0			FL	West Palm Beach	Palm Beach Post
-Jacksonville Journal-Courier				Dole								IL	Jacksonville	Jacksonville Journal-Courier
+Jacksonville Journal-Courier				Dole					1			IL	Jacksonville	Jacksonville Journal-Courier
 Cincinnati Enquirer	McCain	Bush	Bush	Dole					0			OH	Cincinnati	Cincinnati Enquirer
-Washington Times			Bush	Dole								DC	Washington	Washington Times
-(Stockton) Record		Bush							0			CA	Stockton	(Stockton) Record
-Sioux City Journal	McCain											IA	Sioux City	Sioux City Journal
-Morning Star			Gore									NC	Wilmington	Morning Star
+Washington Times			Bush	Dole					1			DC	Washington	Washington Times
+Scranton Times			Bush						1			PA	Scranton	Scranton Times
+Sioux City Journal	McCain								1			IA	Sioux City	Sioux City Journal
 Salt Lake Tribune	Obama	Bush							0			UT	Salt Lake City	Salt Lake Tribune
 Post and Courier			Bush						0			SC	Charleston	Post and Courier
-Roanoke Times			Gore									VA	Roanoke	Roanoke Times
-Gainesville Daily Register				Dole								TX	Gainesville	Gainesville Daily Register
+Morning Star			Gore						1			NC	Wilmington	Morning Star
+Roanoke Times			Gore						1			VA	Roanoke	Roanoke Times
+Gainesville Daily Register				Dole					1			TX	Gainesville	Gainesville Daily Register
 St. Petersburg Times	Obama	Kerry	Gore						0			FL	Saint Petersburg	St. Petersburg Times
 Philadelphia Inquirer	Obama	Kerry	Gore	Clinton					0			PA	Philadelphia	Philadelphia Inquirer
-Athens Daily News				Dole								GA	Athens	Athens Daily News
+Athens Daily News				Dole					1			GA	Athens	Athens Daily News
 Las Vegas Sun	Obama	Kerry	Gore	Clinton					0			NV	Las Vegas	Las Vegas Sun
-Richmond Times-Dispach									2			VA	Richmond	Richmond Times-Dispach
-Paris Post Intelligencer				Clinton								TN	Paris	Paris Post Intelligencer
+Paris Post Intelligencer				Clinton					1			TN	Paris	Paris Post Intelligencer
 San Diego Union-Tribune	McCain	Bush	Bush						0			CA	San Diego	San Diego Union-Tribune
 Journal	McCain	Bush							0			MN	New Ulm	Journal
+Evansville Courier and Press			Bush	Dole					1			IN	Evansville	Evansville Courier and Press
+Elk City Daily News				Clinton					1			OK	Elk City	Elk City Daily News
+Galesburg Register-Mail	Obama								1			IL	Galesburg	Galesburg Register-Mail
 Sun (Lowell)	McCain	Bush	Bush									MA	Lowell	Sun (Lowell)
-Evansville Courier and Press			Bush	Dole								IN	Evansville	Evansville Courier and Press
-Elk City Daily News				Clinton								OK	Elk City	Elk City Daily News
-Galesburg Register-Mail	Obama											IL	Galesburg	Galesburg Register-Mail
-Mobile Register			Bush									AL	Mobile	Mobile Register
-Wilkes-Barre Citizens' Voice				Clinton								PA	Wilkes-Barre	Wilkes-Barre Citizens' Voice
-Virginian Pilot									0			VA	Norfolk	Virginian Pilot
+Mobile Register			Bush						1			AL	Mobile	Mobile Register
+Wilkes-Barre Citizens' Voice				Clinton					1			PA	Wilkes-Barre	Wilkes-Barre Citizens' Voice
 Las Vegas Review-Journal	McCain	Bush	Bush	Dole					0			NV	Las Vegas	Las Vegas Review-Journal
-Southwest Times Record			Bush									AR	Fort Smith	Southwest Times Record
-Red Wing Republican Eagle				Dole								MN	Red Wing	Red Wing Republican Eagle
+Red Wing Republican Eagle				Dole					1			MN	Red Wing	Red Wing Republican Eagle
 St. Cloud Times	Obama	Kerry							0			MN	Saint Cloud	St. Cloud Times
 Blade	Obama	Kerry	Gore						0			OH	Toledo	Blade
-Capital Times	Obama	Kerry	Gore						0			WI	Madison	Capital Times
+Capital Times	Obama	Kerry	Gore	Clinton					0			WI	Madison	Capital Times
+Southwest Times Record			Bush						1			AR	Fort Smith	Southwest Times Record
 Kansas City Star	Obama	Kerry	Gore	Dole					0			MO	Kansas City	Kansas City Star
-Journal Star			Bush									IL	Peoria	Journal Star
-Ottawa Herald				Clinton								KS	Ottawa	Ottawa Herald
-Syracuse Post-Standard	Obama											NY	Syracuse	Syracuse Post-Standard
+Ottawa Herald				Clinton					1			KS	Ottawa	Ottawa Herald
+Syracuse Post-Standard	Obama								1			NY	Syracuse	Syracuse Post-Standard
 Argus	Obama	Kerry							0			CA	Fremont	Argus
-Norfolk Daily News	McCain		Bush	Dole								NE	Norfolk	Norfolk Daily News
-Key West Citizen				Clinton								FL	Key West	Key West Citizen
+Norfolk Daily News	McCain		Bush	Dole					1			NE	Norfolk	Norfolk Daily News
+Key West Citizen				Clinton					1			FL	Key West	Key West Citizen
 Durango Herald	Obama	Kerry							0			CO	Durango	Durango Herald
-Birmingham Post-Herald			Bush									AL	Birmingham	Birmingham Post-Herald
-Scranton Times Tribune-Review			Bush									PA	Greensburg	Scranton Times Tribune-Review
-Casa Grande Dispatch				Dole								AZ	Casa Grande	Casa Grande Dispatch
+Journal Star			Bush						1			IL	Peoria	Journal Star
+Birmingham Post-Herald			Bush						1			AL	Birmingham	Birmingham Post-Herald
+Casa Grande Dispatch				Dole					1			AZ	Casa Grande	Casa Grande Dispatch
 Seattle Post-Intelligencer	Obama	Kerry	Gore	Clinton					0			WA	Seattle	Seattle Post-Intelligencer
-Flint Journal			Bush									MI	Flint	Flint Journal
+Flint Journal			Bush						1			MI	Flint	Flint Journal
 San Bernardino Sun	Obama	Bush							0			CA	San Bernardino	San Bernardino Sun
 Longview News-Journal	Obama	Kerry	Gore						0			TX	Longview	Longview News-Journal
-Selma Times-Journal				Dole								AL	Selma	Selma Times-Journal
-Pendleton East Oregonian				Clinton								OR	Pendleton	Pendleton East Oregonian
-Duluth News-Tribune			Gore									MN	Duluth	Duluth News-Tribune
+Selma Times-Journal				Dole					1			AL	Selma	Selma Times-Journal
+Pendleton East Oregonian				Clinton					1			OR	Pendleton	Pendleton East Oregonian
+Duluth News-Tribune			Gore						1			MN	Duluth	Duluth News-Tribune
 Southwest News-Herald	Obama	Kerry							0			IL	Chicago	Southwest News-Herald
-Idaho Press-Tribune			Bush									ID	Nampa	Idaho Press-Tribune
-Journal Times			Gore									WI	Racine	Journal Times
+Idaho Press-Tribune			Bush						1			ID	Nampa	Idaho Press-Tribune
 Ouray County Plaindealer	Obama	Kerry							9			CO	Ouray County	Ouray County Plaindealer
-Denver Rocky Mountain News			Bush									CO	Denver	Denver Rocky Mountain News
-Norwich Bulletin	Obama			Dole								CT	Norwich	Norwich Bulletin
-Parkersburg News				Dole								WV	Parkersburg	Parkersburg News
-Benton Courier				Clinton								AR	Benton	Benton Courier
-Shawnee News-Star			Bush									OK	Shawnee	Shawnee News-Star
-Green Bay Press Gazette	McCain		Bush									WI	Green Bay	Green Bay Press Gazette
-Tribune Chronicle			Bush									OH	Warren	Tribune Chronicle
-Harrison Daily Times				Clinton								AR	Harrison	Harrison Daily Times
-State	McCain	Bush	Bush						0			SC	Columbia	State
-Record-Journal			Gore									CT	Meriden	Record-Journal
+Journal Times			Gore						1			WI	Racine	Journal Times
+Norwich Bulletin	Obama			Dole					1			CT	Norwich	Norwich Bulletin
+Parkersburg News				Dole					1			WV	Parkersburg	Parkersburg News
+Benton Courier				Clinton					1			AR	Benton	Benton Courier
+Shawnee News-Star			Bush						1			OK	Shawnee	Shawnee News-Star
+Green Bay Press Gazette	McCain		Bush						1			WI	Green Bay	Green Bay Press Gazette
+State	McCain	Bush	Bush	Dole								SC	Columbia	State
+Times (Munster)			Bush						1			IN	Munster	Times (Munster)
+Harrison Daily Times				Clinton					1			AR	Harrison	Harrison Daily Times
+Tribune Chronicle			Bush						1			OH	Warren	Tribune Chronicle
 Wilmington Star-News	Obama	Kerry							0			NC	Wilmington	Wilmington Star-News
 Foster's Daily Democrat	McCain	Bush	Bush	Dole					0			NH	Dover	Foster's Daily Democrat
-Stuart News			Bush									FL	Stuart	Stuart News
-West Plains Daily Quill				Clinton								MO	West Plains	West Plains Daily Quill
+Stuart News			Bush						1			FL	Stuart	Stuart News
+West Plains Daily Quill				Clinton					1			MO	West Plains	West Plains Daily Quill
 Cape Coral Daily Breeze	McCain								0			FL	Cape Coral	Cape Coral Daily Breeze
 Daily Herald	Obama	Kerry	Bush						0			IL	Arlington Heights	Daily Herald
-Fargo Forum	McCain	Bush		Dole					0			ND	Fargo	Fargo Forum
+Record-Journal			Gore						1			CT	Meriden	Record-Journal
+Fargo Forum	McCain	Bush	Bush	Dole								ND		Fargo Forum
 Winchester Star	McCain	Bush							0			VA	Winchester	Winchester Star
-Winston-Salem Journal			Bush									NC	Winston-Salem	Winston-Salem Journal
-Oshkosh Northwestern				Dole								WI	Oshkosh	Oshkosh Northwestern
+Winston-Salem Journal			Bush						1			NC	Winston-Salem	Winston-Salem Journal
+Oshkosh Northwestern				Dole					1			WI	Oshkosh	Oshkosh Northwestern
 Macomb Daily			Gore						9			MI	Macomb	Macomb Daily
-Asheboro Courier-Tribune				Dole								NC	Asheboro	Asheboro Courier-Tribune
-Virginian-Pilot			Gore									VA	Norfolk	Virginian-Pilot
-Lodi News-Sentinel				Dole								CA	Lodi	Lodi News-Sentinel
+Asheboro Courier-Tribune				Dole					1			NC	Asheboro	Asheboro Courier-Tribune
+Lodi News-Sentinel				Dole					1			CA	Lodi	Lodi News-Sentinel
 Oregonian	Obama	Kerry	Bush	Clinton					0			OR	Portland	Oregonian
-Russell Daily News				Dole								KS	Russell	Russell Daily News
-Murray Ledger Times				Dole								KY	Murray	Murray Ledger Times
+Russell Daily News				Dole					1			KS	Russell	Russell Daily News
+Murray Ledger Times				Dole					1			KY	Murray	Murray Ledger Times
+Virginian-Pilot			Gore						0			VA	Norfolk	Virginian-Pilot
 Morning Call		Kerry	Bush						0			PA	Allentown	Morning Call
-Edinburg Daily Review				Clinton								TX	Edinburg	Edinburg Daily Review
+Edinburg Daily Review				Clinton					1			TX	Edinburg	Edinburg Daily Review
 Kingsport Daily News				Dole					2			TN	Kingsport	Kingsport Daily News
-Vicksburg Post				Dole								MS	Vicksburg	Vicksburg Post
-Observer-Reporter	Obama											PA	Washington	Observer-Reporter
+Vicksburg Post				Dole					1			MS	Vicksburg	Vicksburg Post
+Sumter Item			Bush	Dole								SC		Sumter Item
+Observer-Reporter	Obama								1			PA	Washington	Observer-Reporter
 Cortez Journal	Obama	Kerry							0			CO	Cortez	Cortez Journal
-Sumter Item				Dole								SC	Sumter	Sumter Item
-Herald-Dispatch			Gore									WV	Huntington	Herald-Dispatch
-Courier-Post			Bush									NJ	Cherry Hill	Courier-Post
-Uniontown Herald Standard				Clinton								PA	Uniontown	Uniontown Herald Standard
+Uniontown Herald Standard				Clinton					1			PA	Uniontown	Uniontown Herald Standard
+Courier-Post			Bush						1			NJ	Cherry Hill	Courier-Post
 Lubbock Avalanche-Journal	McCain	Bush	Bush	Dole					0			TX	Lubbock	Lubbock Avalanche-Journal
-Observer-Dispatch			Bush									NY	Utica	Observer-Dispatch
 Vail Daily	Obama								0			CO	Vail	Vail Daily
-Winnemucca Humbolt Sun				Clinton								NV	Winnemucca	Winnemucca Humbolt Sun
-Springfield Union News				Clinton								MA	Springfield	Springfield Union News
+Springfield Union News				Clinton					1			MA	Springfield	Springfield Union News
+Winnemucca Humbolt Sun				Clinton					1			NV	Winnemucca	Winnemucca Humbolt Sun
+Observer-Dispatch			Bush						1			NY	Utica	Observer-Dispatch
 Plain Dealer	Obama	none	Bush	Clinton					0			OH	Cleveland	Plain Dealer
 Pasadena Star-News	Obama	Bush	Bush						0			CA	Pasadena	Pasadena Star-News
-Day of New London				Dole								CT	New London	Day of New London
 Bangor Daily News	Obama	Kerry	Bush						0			ME	Bangor	Bangor Daily News
 Delaware County Daily Times			Bush	Dole					9			PA	Primos	Delaware County Daily Times
 News Journal	Obama	Kerry	Gore						0			DE	Wilmington	News Journal
+Sun			Bush									WA	Bremerton	Sun
 Gunnison Country Times	Obama	none							0			CO	Gunnison	Gunnison Country Times
-Sun		Kerry	Gore						0			MD	Baltimore	Sun
 Modesto Bee	Obama	Kerry	Gore	Clinton					0			CA	Modesto	Modesto Bee
 Hartford Courant	Obama		Bush	Clinton					0			CT	Hartford	Hartford Courant
 Wheeling News-Register	McCain	Bush							0			WV	Wheeling	Wheeling News-Register
-Forum			Bush									ND	Fargo	Forum
-Capital			Bush									MD	Annapolis	Capital
 Birmingham News		Bush	Bush						0			AL	Birmingham	Birmingham News
 Dallas Morning News	McCain	Bush	Bush	Dole					0			TX	Dallas	Dallas Morning News
-Albuquerque Tribune			Bush	Dole								NM	Albuquerque	Albuquerque Tribune
+Capital			Bush						1			MD	Annapolis	Capital
+Albuquerque Tribune			Bush	Dole					1			NM	Albuquerque	Albuquerque Tribune
 Arkansas Times									0			AR	Little Rock	Arkansas Times
-(Spokane) Spokesman-Review	McCain	Bush							0			WA	Spokane	(Spokane) Spokesman-Review
-Edmond Evening Sun				Dole								OK	Edmond	Edmond Evening Sun
-Wilkes-Barre Times Leader				Clinton								PA	Wilkes-Barre	Wilkes-Barre Times Leader
-Advertiser			Bush									LA	Lafayette	Advertiser
-Press Journal			Bush									FL	Vero Beach	Press Journal
-Marshalltown Times-Republican	McCain			Dole								IA	Marshalltown	Marshalltown Times-Republican
-Shreveport Times	Obama			Clinton								LA	Shreveport	Shreveport Times
-Waynesboro News-Virginian	McCain											VA	Waynesboro	Waynesboro News-Virginian
-Lansing State-Journal	Obama		Gore									MI	Lansing	Lansing State-Journal
-Beloit Daily News				Dole								WI	Beloit	Beloit Daily News
+Edmond Evening Sun				Dole					1			OK	Edmond	Edmond Evening Sun
+Shreveport Times	Obama		Gore	Clinton								LA		Shreveport Times
+Marshalltown Times-Republican	McCain			Dole					1			IA	Marshalltown	Marshalltown Times-Republican
+Advertiser			Bush						1			LA	Lafayette	Advertiser
+Press Journal			Bush						1			FL	Vero Beach	Press Journal
+Waynesboro News-Virginian	McCain								1			VA	Waynesboro	Waynesboro News-Virginian
+Lansing State-Journal	Obama		Gore						1			MI	Lansing	Lansing State-Journal
+Beloit Daily News				Dole					1			WI	Beloit	Beloit Daily News
 Amarillo Daily News				Dole					2			TX	Amarillo	Amarillo Daily News
 Yakima Herald-Republic	Obama	Bush							0			WA	Yakima	Yakima Herald-Republic
-Centre Daily Times			Gore									PA	State College	Centre Daily Times
 Finger Lakes Times				Dole					9			NY	Finger Lakes	Finger Lakes Times
 San Mateo Daily Journal	Obama								0			CA	San Mateo	San Mateo Daily Journal
+Centre Daily Times			Gore						1			PA	State College	Centre Daily Times
 Seattle Times	Obama	Kerry	Bush	Clinton					0			WA	Seattle	Seattle Times
-Gadsden Times			Bush	Dole								AL	Gadsden	Gadsden Times
+Gadsden Times			Bush	Dole					1			AL	Gadsden	Gadsden Times
 Bergen Record	Obama								9			NJ	Bergen	Bergen Record
-Investor's Business Daily									0			CA	Los Angeles	Investor's Business Daily
+Investor's Business Daily			Bush						0			CA	Los Angeles	Investor's Business Daily
 Virginia Gazette									0			VA	Williamsburg	Virginia Gazette
-Albany Herald				Dole								GA	Albany	Albany Herald
-Bristol Herald Courier	McCain											VA	Bristol	Bristol Herald Courier
+Albany Herald				Dole					1			GA	Albany	Albany Herald
+Bristol Herald Courier	McCain								1			VA	Bristol	Bristol Herald Courier
 Record		Kerry	Gore	Clinton					0			NJ	Hackensack	Record
-Winter Haven News Chief				Dole								FL	Winter Haven	Winter Haven News Chief
-Clarksdale Press-Register				Dole								MS	Clarksdale	Clarksdale Press-Register
-Holdrege Daily Citizen				Dole								NE	Holdrege	Holdrege Daily Citizen
-Press-Telegram			Gore									CA	Long Beach	Press-Telegram
-Wichita Eagle			Bush	Dole								KS	Wichita	Wichita Eagle
+Winter Haven News Chief				Dole					1			FL	Winter Haven	Winter Haven News Chief
+Clarksdale Press-Register				Dole					1			MS	Clarksdale	Clarksdale Press-Register
+Holdrege Daily Citizen				Dole					1			NE	Holdrege	Holdrege Daily Citizen
+Wichita Eagle			Bush	Dole					1			KS	Wichita	Wichita Eagle
 Tennessean	Obama	Kerry	Gore	Clinton					0			TN	Nashville	Tennessean
 Arkansas Democrat-Gazette		Bush	Bush						0			AR	Little Rock	Arkansas Democrat-Gazette
 Washington Post	Obama	Kerry	Gore						0			DC	Washington	Washington Post
 Boston Herald	McCain	Bush	Bush	Dole					0			MA	Boston	Boston Herald
-Greenville News				Dole								SC	Greenville	Greenville News
+Greenville News				Dole					1			SC	Greenville	Greenville News
 Sante Fe New Mexican			Gore						9			NM	Sante Fe	Sante Fe New Mexican
-Press Democrat			Gore									CA	Santa Rosa	Press Democrat
-Wenatchee World	Obama											WA	Wenatchee	Wenatchee World
-Fremont Tribune				Clinton								NE	Fremont	Fremont Tribune
-Post-Standard									0			NY	Syracuse	Post-Standard
-Jonesboro Sun				Clinton								AR	Jonesboro	Jonesboro Sun
+Wenatchee World	Obama								1			WA	Wenatchee	Wenatchee World
+Fremont Tribune				Clinton					1			NE	Fremont	Fremont Tribune
+Jonesboro Sun				Clinton					1			AR	Jonesboro	Jonesboro Sun
 Grand Rapids Press	McCain		Bush						0			MI	Grand Rapids	Grand Rapids Press
-North County Times	McCain		Bush									CA	Escondido	North County Times
-Warrensburg Daily Star-Journal				Dole								MO	Warrensburg	Warrensburg Daily Star-Journal
-Savannah Morning News			Bush	Dole								GA	Savannah	Savannah Morning News
+North County Times	McCain		Bush						1			CA	Escondido	North County Times
+Warrensburg Daily Star-Journal				Dole					1			MO	Warrensburg	Warrensburg Daily Star-Journal
+Savannah Morning News			Bush	Dole					1			GA	Savannah	Savannah Morning News
 Jackson Sun	McCain	Kerry		Clinton					0			TN	Jackson	Jackson Sun
-Owensboro Messenger-Inquirer			Bush									KY	Owensboro	Owensboro Messenger-Inquirer
-Chanute Tribune				Dole								KS	Chanute	Chanute Tribune
+Owensboro Messenger-Inquirer			Bush						1			KY	Owensboro	Owensboro Messenger-Inquirer
+Chanute Tribune				Dole					1			KS	Chanute	Chanute Tribune
 Corpus Christi Caller-Times	McCain	Kerry	Bush	Dole					2			TX	Corpus Christi	Corpus Christi Caller-Times
-Decatur Daily				Clinton								AL	Decatur	Decatur Daily
+Decatur Daily				Clinton					1			AL	Decatur	Decatur Daily
 News Tribune	Obama	Kerry	Gore						0			WA	Tacoma	News Tribune
 Olympian	Obama	Kerry							0			WA	Olympia	Olympian
-Harrisburg Patriot-News	Obama											PA	Harrisburg	Harrisburg Patriot-News
-Atlanta Journal-Constitution	Obama	Kerry	Gore						0			GA	Atlanta	Atlanta Journal-Constitution
+Harrisburg Patriot-News	Obama		Bush						1			PA	Harrisburg	Harrisburg Patriot-News
+Atlanta Journal-Constitution	Obama	Kerry	Gore	Clinton					0			GA	Atlanta	Atlanta Journal-Constitution
 Times-Reporter	Obama	Bush							0			OH	New Philadelphia	Times-Reporter
-Star-Gazette			Bush									NY	Elmira	Star-Gazette
-Journal and Courier			Bush									IN	Lafayette	Journal and Courier
-Herald-Journal			Bush									SC	Spartanburg	Herald-Journal
+Star-Gazette			Bush						1			NY	Elmira	Star-Gazette
+Journal and Courier			Bush						1			IN	Lafayette	Journal and Courier
 Daily Breeze	Obama	Bush							0			CA	Torrance	Daily Breeze
-El Paso Times			Bush									TX	El Paso	El Paso Times
-News-Times			Gore									CT	Danbury	News-Times
+El Paso Times			Bush						1			TX	El Paso	El Paso Times
 Denver Post	Obama	Bush	Gore	Clinton					0			CO	Denver	Denver Post
-Indianapolis Star		Bush	Bush						2			IN	Indianapolis	Indianapolis Star
+Indianapolis Star		Bush	Bush	Dole								IN		Indianapolis Star
 Daily News (Los Angeles)	Obama	Kerry	Bush						0			CA	Los Angeles	Daily News (Los Angeles)
+News-Times			Gore						1			CT	Danbury	News-Times
 Detroit News	McCain	N/A	Bush	Dole					0			MI	Detroit	Detroit News
-Florida Today	Obama		Gore	Clinton								FL	Melbourne	Florida Today
-Springfield News-Leader			Gore									MO	Springfield	Springfield News-Leader
+Springfield News-Leader			Gore						1			MO	Springfield	Springfield News-Leader
 Baltimore Examiner	McCain	none							0			MD	Baltimore	Baltimore Examiner
-St. Paul Pioneer-Press		Bush							0			MN	Saint Paul	St. Paul Pioneer-Press
-Jamestown Sun				Clinton								ND	Jamestown	Jamestown Sun
-Sapulpa Daily Herald				Dole								OK	Sapulpa	Sapulpa Daily Herald
+Florida Today	Obama		Gore	Clinton					1			FL	Melbourne	Florida Today
+Jamestown Sun				Clinton					1			ND	Jamestown	Jamestown Sun
+Sapulpa Daily Herald				Dole					1			OK	Sapulpa	Sapulpa Daily Herald
 St. Louis Post-Dispatch	Obama	Kerry	Gore	Clinton					0			MO	Saint Louis	St. Louis Post-Dispatch
 Merced Sun Star	Obama	Kerry							0			CA	Merced	Merced Sun Star
-Huntsville Times			Gore									AL	Huntsville	Huntsville Times
-Newton Kansan				Dole								KS	Newton	Newton Kansan
-Bend Bulletin	McCain	Bush							0			OR	Bend	Bend Bulletin
+Huntsville Times			Gore						1			AL	Huntsville	Huntsville Times
+Newton Kansan				Dole					1			KS	Newton	Newton Kansan
+Bend Bulletin	McCain	Bush	Bush						0			OR	Bend	Bend Bulletin
 Staten Island Advance			Gore						9			NY	Staten Island	Staten Island Advance
 New Haven Register	Obama	Bush	Bush	Dole					0			CT	New Haven	New Haven Register
 Corvallis Gazette-Times	Obama		Gore						0			OR	Corvallis	Corvallis Gazette-Times
-Louisville Courier-Journal	Obama	Kerry		Clinton								KY	Louisville	Louisville Courier-Journal
+Louisville Courier-Journal	Obama	Kerry	Gore	Clinton					1			KY	Louisville	Louisville Courier-Journal
 Middletown Journal	Obama								0			OH	Middletown	Middletown Journal
-Tribune			Bush									FL	Fort Pierce	Tribune
-Vindicator			Bush									OH	Youngstown	Vindicator
-Kingston Daily Freeman				Clinton								NY	Kingston	Kingston Daily Freeman
+Tribune			Bush						1			FL	Fort Pierce	Tribune
+Vindicator			Bush						1			OH	Youngstown	Vindicator
+Kingston Daily Freeman				Clinton					1			NY	Kingston	Kingston Daily Freeman
 San Antonio Express-News	McCain	Bush	Bush	Dole					0			TX	San Antonio	San Antonio Express-News
-Iola Register				Dole								KS	Iola	Iola Register
-Herald and Review			Bush									IL	Decatur	Herald and Review
-News and Record			Gore	Clinton								NC	Greensboro	News and Record
+Iola Register				Dole					1			KS	Iola	Iola Register
+Herald and Review			Bush						1			IL	Decatur	Herald and Review
 Asheville Citizen-Times	Obama	Kerry	Gore						0			NC	Asheville	Asheville Citizen-Times
-Cincinnati Post			Bush	Dole								OH	Cincinnati	Cincinnati Post
-Times			Gore									LA	Shreveport	Times
+Cincinnati Post			Bush	Dole					1			OH	Cincinnati	Cincinnati Post
+News and Record			Gore	Clinton					1			NC	Greensboro	News and Record
 Hawk Eye	Obama	Kerry	Gore						0			IA	Burlington	Hawk Eye
-Pleasanton Tri-Valley Herald				Clinton								CA	Pleasanton	Pleasanton Tri-Valley Herald
-Herald			Gore									WA	Everett	Herald
-News & Observer		Kerry							0			NC	Raleigh	News & Observer
+Herald			Gore						1			WA	Everett	Herald
+News & Observer		Kerry												News & Observer
 Brunswick Times-Record	Obama	Kerry							0			ME	Brunswick	Brunswick Times-Record
 Richmond County Daily Journal				Clinton					9			NC	Richmond County	Richmond County Daily Journal
 Walla Walla Union-Bulletin	Obama	Kerry	Bush						0			WA	Walla Walla	Walla Walla Union-Bulletin
 Tyler Morning Telegraph	McCain								0			TX	Tyler	Tyler Morning Telegraph
-Waycross Journal-Herald				Dole								GA	Waycross	Waycross Journal-Herald
-Kearney Hub				Dole								NE	Kearney	Kearney Hub
-Times-Picayune	Obama	none	Bush									LA	New Orleans	Times-Picayune
+Waycross Journal-Herald				Dole					1			GA	Waycross	Waycross Journal-Herald
+Kearney Hub				Dole					1			NE	Kearney	Kearney Hub
 San Gabriel Valley Tribune	Obama	Bush	Bush						0			CA	San Gabriel	San Gabriel Valley Tribune
+Times-Picayune	Obama	none	Bush						1			LA	New Orleans	Times-Picayune
 Concord Monitor	Obama	Kerry	Gore	Clinton					0			NH	Concord	Concord Monitor
-Minneapolis Star Tribune	Obama			Clinton								MN	Minneapolis	Minneapolis Star Tribune
+Minneapolis Star Tribune	Obama	Kerry	Gore	Clinton					1			MN	Minneapolis	Minneapolis Star Tribune
 Kingsport Times-News				Dole					2			TN	Kingsport	Kingsport Times-News
 Pueblo Chieftain	McCain	Bush							0			CO	Pueblo	Pueblo Chieftain
 Burlington Free Press	Obama	Kerry							0			VT	Burlington	Burlington Free Press
 Courier-News				Clinton					9			NJ	Bridgewater	Courier-News
-Great Falls Tribune			Gore	Clinton								MT	Great Falls	Great Falls Tribune
-Prescott Daily Courier				Dole								AZ	Prescott	Prescott Daily Courier
-Tryon Daily Bulletin				Dole								NC	Tryon	Tryon Daily Bulletin
+Tryon Daily Bulletin				Dole					1			NC	Tryon	Tryon Daily Bulletin
+Prescott Daily Courier				Dole					1			AZ	Prescott	Prescott Daily Courier
+Great Falls Tribune			Gore	Clinton					1			MT	Great Falls	Great Falls Tribune
+York Daily Record	Obama	Bush	Gore						1			PA	York	York Daily Record
 Chattanooga Free Press	McCain	Bush	Bush	Dole					0			TN	Chattanooga	Chattanooga Free Press
-York Daily Record	Obama	Bush	Gore									PA	York	York Daily Record
+Brattleboro Reformer	Obama								1			VT	Brattleboro	Brattleboro Reformer
+Tri-Valley Herald	Obama	Bush	Bush	Clinton					0			CA	Pleasanton	Tri-Valley Herald
 Providence Journal	Obama	Bush	Bush						0			RI	Providence	Providence Journal
-Tri-Valley Herald	Obama	Bush	Bush						0			CA	Pleasanton	Tri-Valley Herald
-Brattleboro Reformer	Obama											VT	Brattleboro	Brattleboro Reformer
 Storm Lake Times	Obama	Kerry							0			IA	Storm Lake	Storm Lake Times
-Union Leader	McCain	Bush	Bush						0			NH	Manchester	Union Leader
-Columbus Ledger-Enquirer	Obama	Bush	Gore									GA	Columbus	Columbus Ledger-Enquirer
+Union Leader	McCain	Bush	Bush	Dole					0			NH	Manchester	Union Leader
+Brookhaven Daily Leader				Dole					1			MS	Brookhaven	Brookhaven Daily Leader
+Greeley Daily Tribune			Bush						1			CO	Greeley	Greeley Daily Tribune
 Florida Times-Union									0			FL	Jacksonville	Florida Times-Union
-Greeley Daily Tribune			Bush									CO	Greeley	Greeley Daily Tribune
-Brookhaven Daily Leader				Dole								MS	Brookhaven	Brookhaven Daily Leader
-New Braunfels Herald-Zeitung	McCain											TX	New Braunfels	New Braunfels Herald-Zeitung
-La Opinion	Obama	Kerry							0			CA	Los Angeles	La Opinion
+Columbus Ledger-Enquirer	Obama	Bush	Gore						1			GA	Columbus	Columbus Ledger-Enquirer
 Skagit Valley Herald				Dole					9			WA	Skagit Valley	Skagit Valley Herald
-Pensacola News-Journal	Obama											FL	Pensacola	Pensacola News-Journal
-Tucson Citizen			Gore									AZ	Tucson	Tucson Citizen
+New Braunfels Herald-Zeitung	McCain								1			TX	New Braunfels	New Braunfels Herald-Zeitung
+La Opinion	Obama	Kerry							0			CA	Los Angeles	La Opinion
+Pensacola News-Journal	Obama								1			FL	Pensacola	Pensacola News-Journal
+Tucson Citizen			Gore						1			AZ	Tucson	Tucson Citizen
+Carlsbad Current-Argus			Bush						1			NM	Carlsbad	Carlsbad Current-Argus
 Los Angeles Times	Obama	none							0			CA	Los Angeles	Los Angeles Times
-Carlsbad Current-Argus			Bush									NM	Carlsbad	Carlsbad Current-Argus
-New York Daily News				Clinton								NY	New York City	New York Daily News
-Portland Press Herald	Obama		Gore									ME	Portland	Portland Press Herald
-Journal Gazette	Obama	Kerry	Gore	Clinton					0			IN	Fort Wayne	Journal Gazette
 Honolulu Star-Bulletin	Obama	Kerry							0			HI	Honolulu	Honolulu Star-Bulletin
-Times-Standard			Bush									CA	Eureka	Times-Standard
-Daily Globe	McCain											MN	Worthington	Daily Globe
-Daily Democrat	Obama											CA	Woodland	Daily Democrat
+Journal Gazette	Obama	Kerry	Gore	Clinton					0			IN	Fort Wayne	Journal Gazette
+Portland Press Herald	Obama		Gore						1			ME	Portland	Portland Press Herald
+New York Daily News				Clinton					1			NY	New York City	New York Daily News
 Daily Press	McCain	Kerry							0			VA	Newport News	Daily Press
-Daily Oklahoman			Bush	Dole								OK	Oklahoma City	Daily Oklahoman
+Daily Democrat	Obama								1			CA	Woodland	Daily Democrat
+Times-Standard			Bush						1			CA	Eureka	Times-Standard
+Daily Globe	McCain								1			MN	Worthington	Daily Globe
 News and Observer	Obama	Kerry	Gore									NC	Raleigh	News and Observer
-Santa Rosa Press-Democrat	Obama											CA	Santa Rosa	Santa Rosa Press-Democrat
+Santa Rosa Press-Democrat	Obama		Gore						1			CA	Santa Rosa	Santa Rosa Press-Democrat
 Orange County Register									0			CA	Anaheim	Orange County Register
-Wichita Falls Times Herald Record			Bush									TX	Wichita Falls	Wichita Falls Times Herald Record
 Anchorage Daily News	Obama	Kerry	Gore						0			AK	Anchorage	Anchorage Daily News
-Canandaigua Daily Messenger				Clinton								NY	Canandaigua	Canandaigua Daily Messenger
-Lebanon Dally Record				Dole								MO	Lebanon	Lebanon Dally Record
-Billings Gazette	Obama		Bush									MT	Billings	Billings Gazette
-Johnson City Press				Clinton								TN	Johnson City	Johnson City Press
-Rapid City Journal			Bush									SD	Rapid City	Rapid City Journal
-Daily Camera			Bush									CO	Boulder	Daily Camera
+Canandaigua Daily Messenger				Clinton					1			NY	Canandaigua	Canandaigua Daily Messenger
+Lebanon Dally Record				Dole					1			MO	Lebanon	Lebanon Dally Record
+Billings Gazette	Obama		Bush						1			MT	Billings	Billings Gazette
+Johnson City Press				Clinton					1			TN	Johnson City	Johnson City Press
+Rapid City Journal			Bush						1			SD	Rapid City	Rapid City Journal
 Hamilton Journal-News	Obama	Bush							0			OH	Hamilton	Hamilton Journal-News
-Augusta Chronicle			Bush	Dole								GA	Augusta	Augusta Chronicle
+Augusta Chronicle			Bush	Dole					1			GA	Augusta	Augusta Chronicle
 Antelope Valley Press				Dole					9			CA	Antelope Valley	Antelope Valley Press
-Glens Falls Post-Star	Obama											NY	Glens Falls	Glens Falls Post-Star
 Leaf-Chronicle	McCain	Bush							0			TN	Clarksville	Leaf-Chronicle
 Public Opinion	McCain	none							0			PA	Chambersburg	Public Opinion
+Glens Falls Post-Star	Obama								1			NY	Glens Falls	Glens Falls Post-Star
 Detroit Free Press	Obama	Kerry	Gore	Clinton					0			MI	Detroit	Detroit Free Press
-Advocate			Bush									CT	Stamford	Advocate
-Telegram and Gazette			Bush									MA	Worcester	Telegram and Gazette
-Eagle-Tribune	McCain		Bush	Dole								MA	Lawrence	Eagle-Tribune
-Reno Gazette-Journal	Obama		Gore	Clinton								NV	Reno	Reno Gazette-Journal
+Telegram and Gazette			Bush						1			MA	Worcester	Telegram and Gazette
+Advocate			Bush						1			CT	Stamford	Advocate
+Eagle-Tribune	McCain		Bush	Dole					1			MA	Lawrence	Eagle-Tribune
+Reno Gazette-Journal	Obama		Gore	Clinton					1			NV	Reno	Reno Gazette-Journal
 Muskegon Chronicle	Obama	Kerry							0			MI	Muskegon	Muskegon Chronicle
 Mail Tribune	Obama	Kerry							0			OR	Medford	Mail Tribune
 Newsday			Gore						0			NY	Melville	Newsday
-Atlanta Constitution				Clinton								GA	Atlanta	Atlanta Constitution
-Waterbury Republican-American			Bush									CT	Waterbury	Waterbury Republican-American
+Waterbury Republican-American			Bush						1			CT	Waterbury	Waterbury Republican-American
 Idaho Statesman	Obama	Kerry		Dole					0			ID	Boise	Idaho Statesman
-Hereford Brand				Dole								TX	Hereford	Hereford Brand
-Mount Airy News				Dole								NC	Mount Airy	Mount Airy News
-Boulder Camera	Obama	Kerry							0			CO	Boulder	Boulder Camera
-Muscatine Journal				Dole								IA	Muscatine	Muscatine Journal
-Syracuse Herald-American			Bush									NY	Syracuse	Syracuse Herald-American
-Indianapolis Star and News				Dole					2			IN	Indianapolis	Indianapolis Star and News
-Dominion Post			Bush									WV	Morgantown	Dominion Post
-Salinas Californian				Clinton								CA	Salinas	Salinas Californian
-Lexington Dispatch				Clinton								NC	Lexington	Lexington Dispatch
-Press of Atlantic City			Bush									NJ	Atlantic City	Press of Atlantic City
-Vallejo Times-Herald				Clinton								CA	Vallejo	Vallejo Times-Herald
+Boulder Camera	Obama	Kerry	Bush									CO		Boulder Camera
+Hereford Brand				Dole					1			TX	Hereford	Hereford Brand
+Muscatine Journal				Dole					1			IA	Muscatine	Muscatine Journal
+Mount Airy News				Dole					1			NC	Mount Airy	Mount Airy News
+Syracuse Herald-American			Bush						1			NY	Syracuse	Syracuse Herald-American
+Salinas Californian				Clinton					1			CA	Salinas	Salinas Californian
+Dominion Post			Bush						1			WV	Morgantown	Dominion Post
+Lexington Dispatch				Clinton					1			NC	Lexington	Lexington Dispatch
+Vallejo Times-Herald				Clinton					1			CA	Vallejo	Vallejo Times-Herald
+Press of Atlantic City			Bush						1			NJ	Atlantic City	Press of Atlantic City
 Amarillo Globe Times				Dole					2			TX	Amarillo	Amarillo Globe Times
 Philadelphia Daily News	Obama	Kerry	Gore	Clinton					0			PA	Philadelphia	Philadelphia Daily News
-St. Paul Pioneer Press			Bush	Clinton								MN	Saint Paul	St. Paul Pioneer Press
 Austin American-Statesman	Obama	Bush	Bush						0			TX	Austin	Austin American-Statesman
 Pittsburgh Post-Gazette	Obama	Kerry	Gore						0			PA	Pittsburgh	Pittsburgh Post-Gazette
+St. Paul Pioneer Press		Bush	Bush	Clinton					1			MN	Saint Paul	St. Paul Pioneer Press
 Richmond Times-Dispatch	McCain	Bush	Bush	Dole					2			VA	Richmond	Richmond Times-Dispatch
-Home News Tribune			Gore									NJ	East Brunswick	Home News Tribune
-Mesa Tribune				Clinton								AZ	Mesa	Mesa Tribune
-Pierre Capital Journal				Dole								SD	Pierre	Pierre Capital Journal
+Mesa Tribune				Clinton					1			AZ	Mesa	Mesa Tribune
+Home News Tribune			Gore						1			NJ	East Brunswick	Home News Tribune
+Pierre Capital Journal				Dole					1			SD	Pierre	Pierre Capital Journal
 New York Post	McCain	Bush	Bush	Dole					0			NY	New York City	New York Post
-(Lowell) Sun		Bush							0			MA	Lowell	(Lowell) Sun
-Daily Comet			Bush									LA	Thibodaux	Daily Comet
-Macon Telegraph	Obama											GA	Macon	Macon Telegraph
+Tribune-Review			Bush						0			PA	Greensburg	Tribune-Review
+Daily Comet			Bush						1			LA	Thibodaux	Daily Comet
+Victoria Advocate				Dole					1			TX	Victoria	Victoria Advocate
 Beaumont Enterprise	McCain	Bush	Bush						0			TX	Beaumont	Beaumont Enterprise
-Tribune-Review									0			PA	Greensburg	Tribune-Review
-Victoria Advocate				Dole								TX	Victoria	Victoria Advocate
-Corpus Christi Caller Times				Dole					2			TX	Corpus Christi	Corpus Christi Caller Times
+Macon Telegraph	Obama								1			GA	Macon	Macon Telegraph
 Greenwich Time			Bush						9			CT	Greenwich	Greenwich Time
+Willmar West Central Tribune				Dole					1			MN	Willmar	Willmar West Central Tribune
 Register Citizen	McCain	Bush							0			CT	Torrington	Register Citizen
-Erie Times-News	Obama	Bush	Bush									PA	Erie	Erie Times-News
-Willmar West Central Tribune				Dole								MN	Willmar	Willmar West Central Tribune
+Erie Times-News	Obama	Bush	Bush						1			PA	Erie	Erie Times-News
 Times of Trenton	Obama		Gore	Clinton					2			NJ	Trenton	Times of Trenton
-Clarion-Ledger			Gore	Dole								MS	Jackson	Clarion-Ledger
-Reporter	Obama	Bush										CA	Vacaville	Reporter
-Keene Sentinel	Obama		Gore									NH	Keene	Keene Sentinel
 Mountain Valley News	McCain								0			CO	Cedaredge	Mountain Valley News
-Anniston Star			Gore	Clinton								AL	Anniston	Anniston Star
-Joplin Globe			Bush	Dole								MO	Joplin	Joplin Globe
-News-Journal			Gore						9			FL	Daytona Beach	News-Journal
-Cedar Rapids Gazette				Dole								IA	Cedar Rapids	Cedar Rapids Gazette
-Oakland Tribune	Obama	Kerry		Clinton					0			CA	Oakland	Oakland Tribune
+Keene Sentinel	Obama		Gore						1			NH	Keene	Keene Sentinel
+Joplin Globe			Bush	Dole					1			MO	Joplin	Joplin Globe
+Anniston Star			Gore	Clinton					1			AL	Anniston	Anniston Star
+Reporter	Obama	Bush							1			CA	Vacaville	Reporter
 USA Today									0			""	""	USA Today
+Cedar Rapids Gazette				Dole					1			IA	Cedar Rapids	Cedar Rapids Gazette
+Clarion-Ledger			Gore	Dole					1			MS	Jackson	Clarion-Ledger
+Oakland Tribune	Obama	Kerry		Clinton					0			CA	Oakland	Oakland Tribune
 Lufkin Daily News	Obama	Kerry							0			TX	Lufkin	Lufkin Daily News
+Spokesman-Review (Spokane)	McCain	Bush	Bush	Dole					0			WA	Spokane	Spokesman-Review (Spokane)
 San Francisco Examiner	McCain	Bush	Gore	Clinton					0			CA	San Francisco	San Francisco Examiner
 Daily News	Obama	Bush	Gore						0			NY	New York City	Daily News
-Recorder	Obama											MA	Greenfield	Recorder
-Riverside Press-Enterprise	McCain	Bush							0			CA	Riverside	Riverside Press-Enterprise
-Charleston Daily Mail			Bush	Dole								WV	Charleston	Charleston Daily Mail
-Aurora Sentinel	Obama	Kerry							0			CO	Aurora	Aurora Sentinel
 Stevens Point Journal	Obama								0			WI	Stevens Point	Stevens Point Journal
+Aurora Sentinel	Obama	Kerry							0			CO	Aurora	Aurora Sentinel
+Recorder	Obama								1			MA	Greenfield	Recorder
+Charleston Daily Mail			Bush	Dole					1			WV	Charleston	Charleston Daily Mail
+Riverside Press-Enterprise	McCain	Bush	Bush						0			CA	Riverside	Riverside Press-Enterprise
 Las Cruces Sun-News	Obama	Bush	Bush						0			NM	Las Cruces	Las Cruces Sun-News
-Daily World			Bush									LA	Opelousas	Daily World
-Argus Leader	McCain											SD	Sioux Falls	Argus Leader
-Sikeston Standard Democrat				Dole								MO	Sikeston	Sikeston Standard Democrat
-Poughkeepsie Journal	Obama	Bush	Bush									NY	Poughkeepsie	Poughkeepsie Journal
+Sikeston Standard Democrat				Dole					1			MO	Sikeston	Sikeston Standard Democrat
+Argus Leader	McCain								1			SD	Sioux Falls	Argus Leader
+Poughkeepsie Journal	Obama	Bush	Bush						1			NY	Poughkeepsie	Poughkeepsie Journal
+Daily World			Bush						1			LA	Opelousas	Daily World
 South Florida Sun-Sentinel			Gore						0			FL	Fort Lauderdale	South Florida Sun-Sentinel
-Montgomery Advertiser			Bush									AL	Montgomery	Montgomery Advertiser
+Montgomery Advertiser			Bush						1			AL	Montgomery	Montgomery Advertiser
 Omaha World-Herald		Bush	Bush						0			NE	Omaha	Omaha World-Herald
-Durham Herald-Sun	Obama	none							0			NC	Durham	Durham Herald-Sun
 Sentinel	McCain	Bush							2			PA	Lewistown	Sentinel
-Record Searchlight			Bush									CA	Redding	Record Searchlight
-Times-Leader	Obama											PA	Wilkes-Barre	Times-Leader
+Durham Herald-Sun	Obama	none							0			NC	Durham	Durham Herald-Sun
 McCook Daily Gazette	McCain								0			NE	McCook	McCook Daily Gazette
+Record Searchlight			Bush						1			CA	Redding	Record Searchlight
+Times-Leader	Obama			Clinton					1			PA	Wilkes-Barre	Times-Leader
 Boston Globe	Obama	Kerry	Gore	Clinton					0			MA	Boston	Boston Globe
-Palestine Herald-Press				Clinton								TX	Palestine	Palestine Herald-Press
+Palestine Herald-Press				Clinton					1			TX	Palestine	Palestine Herald-Press
 Lake County News-Sun	Obama	Bush							0			IL	Waukegan	Lake County News-Sun
 Ledger Independent	Obama								0			KY	Maysville	Ledger Independent
+York Dispatch			Bush						1			PA	York	York Dispatch
 Wisconsin State Journal	Obama	Bush	Bush						0			WI	Madison	Wisconsin State Journal
-York Dispatch			Bush									PA	York	York Dispatch
-Rocky Mountain News		Bush		Dole					0			CO	Denver	Rocky Mountain News
-Alexandria Daily Town Talk			Bush									LA	Alexandria	Alexandria Daily Town Talk
-Monroe Evening-News				Dole								MI	Monroe	Monroe Evening-News
+Rocky Mountain News		Bush	Bush	Dole					0			CO	Denver	Rocky Mountain News
+Alexandria Daily Town Talk			Bush						1			LA	Alexandria	Alexandria Daily Town Talk
+Monroe Evening-News				Dole					1			MI	Monroe	Monroe Evening-News
 Naples Daily-News	Obama	Bush	Bush	Dole					2			FL	Naples	Naples Daily-News
 Tampa Tribune	McCain	N/A	Bush	Dole					0			FL	Tampa	Tampa Tribune
-Times Union			Gore									NY	Albany	Times Union
-Day	Obama		Bush									CT	New London	Day
-News-Gazette	McCain		Bush									IL	Champaign	News-Gazette
-El Paso Herald-Post				Dole								TX	El Paso	El Paso Herald-Post
-Fairfield Daily Republic				Dole								CA	Fairfield	Fairfield Daily Republic
+News-Gazette	McCain		Bush						1			IL	Champaign	News-Gazette
+Fairfield Daily Republic				Dole					1			CA	Fairfield	Fairfield Daily Republic
 Journal News			Bush						0			NY	West Nyack	Journal News
-Hernando Today				Dole								FL	Hernando	Hernando Today
+Hernando Today				Dole					1			FL	Hernando	Hernando Today
+Day	Obama		Bush	Dole					1			CT	New London	Day
 Roswell Daily Record	McCain								0			NM	Roswell	Roswell Daily Record
 Opelika-Auburn News				Dole					9			AL	Opelika-Auburn	Opelika-Auburn News
-San Mateo County Times	Obama	Kerry							2			CA	San Mateo	San Mateo County Times
+San Mateo County Times	Obama	Kerry		Clinton					2			CA	San Mateo	San Mateo County Times
+El Paso Herald-Post				Dole					1			TX	El Paso	El Paso Herald-Post
 Nashua Telegraph	Obama	Kerry							0			NH	Nashua	Nashua Telegraph
-Leesburg Daily Commercial				Clinton								FL	Leesburg	Leesburg Daily Commercial
+Leesburg Daily Commercial				Clinton					1			FL	Leesburg	Leesburg Daily Commercial
 Daily Astorian	Obama	Kerry		Clinton					0			OR	Astoria	Daily Astorian
 Courier	McCain	Bush	Bush						0			OH	Findlay	Courier
-Abilene Reporter-News			Bush	Dole								TX	Abilene	Abilene Reporter-News
+Abilene Reporter-News			Bush	Dole					1			TX	Abilene	Abilene Reporter-News
 Santa Cruz Sentinel	Obama	Kerry							0			CA	Santa Cruz	Santa Cruz Sentinel
-Huntington Herald Press				Dole								IN	Huntington	Huntington Herald Press
+Huntington Herald Press				Dole					1			IN	Huntington	Huntington Herald Press
 Fresno Bee	Obama	Kerry	Gore						0			CA	Fresno	Fresno Bee
 Chattanooga Times	Obama	Kerry	Gore						0			TN	Chattanooga	Chattanooga Times
-Maine Sunday Telegram			Gore	Clinton								ME	Portland	Maine Sunday Telegram
 Bakersfield Californian	McCain	Bush							0			CA	Bakersfield	Bakersfield Californian
-Topeka Capital-Journal				Dole								KS	Topeka	Topeka Capital-Journal
+Topeka Capital-Journal				Dole					1			KS	Topeka	Topeka Capital-Journal
+Maine Sunday Telegram			Gore	Clinton					1			ME	Portland	Maine Sunday Telegram
+Times Herald Record			Bush						1			TX	Wichita Falls	Times Herald Record
 Express-Times	Obama	Bush							0			PA	Easton	Express-Times
 Monterey County Herald	Obama	Kerry							0			CA	Monterey	Monterey County Herald
 Falls Church News-Press	Obama	Kerry							0			VA	Falls Church	Falls Church News-Press
-Muncie Star-Press	Obama											IN	Muncie	Muncie Star-Press
-Big Spring Herald				Dole								TX	Big Spring	Big Spring Herald
-Lancaster New Era	McCain											PA	Lancaster	Lancaster New Era
 Yamhill Valley News-Register	Obama	Bush							0			OR	McMinnville	Yamhill Valley News-Register
-San Mateo Times				Clinton					2			CA	San Mateo	San Mateo Times
+Muncie Star-Press	Obama								1			IN	Muncie	Muncie Star-Press
+Big Spring Herald				Dole					1			TX	Big Spring	Big Spring Herald
+Lancaster New Era	McCain								1			PA	Lancaster	Lancaster New Era
 Miami Herald	Obama	Kerry	Gore						0			FL	Miami	Miami Herald
 Arizona Republic	McCain	Bush	Bush						0			AZ	Phoenix	Arizona Republic

@@ -9,9 +9,9 @@ Iowa City Press-Citizen:
   :paper: Iowa City Press-Citizen
   :st: IA
   :prez_2000: Gore
-Press-Enterprise: 
-  :city: Riverside
-  :paper: Press-Enterprise
+Riverside Press-Enterprise: 
+  :city: 
+  :paper: Riverside Press-Enterprise
   :st: CA
   :prez_2000: Bush
 Sante Fe New Mexican: 
@@ -24,16 +24,16 @@ Kansas City Star:
   :paper: Kansas City Star
   :st: MO
   :prez_2000: Gore
-Item: 
-  :city: Sumter
-  :paper: Item
-  :st: SC
-  :prez_2000: Bush
 News Journal: 
   :city: Wilmington
   :paper: News Journal
   :st: DE
   :prez_2000: Gore
+Bend Bulletin: 
+  :city: 
+  :paper: Bend Bulletin
+  :st: OR
+  :prez_2000: Bush
 Daily Southtown: 
   :city: Tinley Park
   :paper: Daily Southtown
@@ -104,11 +104,6 @@ El Paso Times:
   :paper: El Paso Times
   :st: TX
   :prez_2000: Bush
-Spokesman-Review: 
-  :city: Spokane
-  :paper: Spokesman-Review
-  :st: WA
-  :prez_2000: Bush
 Bangor Daily News: 
   :city: 
   :paper: Bangor Daily News
@@ -164,15 +159,15 @@ Capital:
   :paper: Capital
   :st: MD
   :prez_2000: Bush
-Herald-Journal: 
-  :city: Spartanburg
-  :paper: Herald-Journal
-  :st: SC
-  :prez_2000: Bush
 Beaver County Times: 
   :city: 
   :paper: Beaver County Times
   :st: PA
+  :prez_2000: Gore
+Daytona Beach News-Journal: 
+  :city: 
+  :paper: Daytona Beach News-Journal
+  :st: FL
   :prez_2000: Gore
 Boston Herald: 
   :city: 
@@ -188,6 +183,11 @@ Journal Gazette:
   :city: Fort Wayne
   :paper: Journal Gazette
   :st: IN
+  :prez_2000: Gore
+Huntington Herald-Dispatch: 
+  :city: 
+  :paper: Huntington Herald-Dispatch
+  :st: WV
   :prez_2000: Gore
 York Daily Record: 
   :city: 
@@ -274,11 +274,6 @@ Omaha World-Herald:
   :paper: Omaha World-Herald
   :st: NE
   :prez_2000: Bush
-Patriot-News: 
-  :city: Harrisburg
-  :paper: Patriot-News
-  :st: PA
-  :prez_2000: Bush
 Morning Call: 
   :city: Allentown
   :paper: Morning Call
@@ -299,11 +294,11 @@ Marietta Times:
   :paper: Marietta Times
   :st: OH
   :prez_2000: Bush
-Investors Business Daily: 
-  :city: Los Angeles
-  :paper: Investors Business Daily
-  :st: CA
-  :prez_2000: Bush
+Baltimore Sun: 
+  :city: 
+  :paper: Baltimore Sun
+  :st: MD
+  :prez_2000: Gore
 Birmingham Post-Herald: 
   :city: 
   :paper: Birmingham Post-Herald
@@ -354,6 +349,11 @@ Keene Sentinel:
   :paper: Keene Sentinel
   :st: NH
   :prez_2000: Gore
+Lansing State-Journal: 
+  :city: 
+  :paper: Lansing State-Journal
+  :st: MI
+  :prez_2000: Gore
 State: 
   :city: Columbia
   :paper: State
@@ -374,10 +374,10 @@ Bradenton Herald:
   :paper: Bradenton Herald
   :st: FL
   :prez_2000: Bush
-Lansing State-Journal: 
+Louisville Courier-Journal: 
   :city: 
-  :paper: Lansing State-Journal
-  :st: MI
+  :paper: Louisville Courier-Journal
+  :st: KY
   :prez_2000: Gore
 Morning Star: 
   :city: Wilmington
@@ -459,11 +459,6 @@ Daily Herald:
   :paper: Daily Herald
   :st: IL
   :prez_2000: Bush
-Courier-Journal: 
-  :city: Louisville
-  :paper: Courier-Journal
-  :st: KY
-  :prez_2000: Gore
 Capital Times: 
   :city: Madison
   :paper: Capital Times
@@ -478,6 +473,11 @@ Southwest Times Record:
   :city: Fort Smith
   :paper: Southwest Times Record
   :st: AR
+  :prez_2000: Bush
+Sumter Item: 
+  :city: 
+  :paper: Sumter Item
+  :st: SC
   :prez_2000: Bush
 Seattle Post-Intelligencer: 
   :city: 
@@ -544,6 +544,11 @@ San Jose Mercury News:
   :paper: San Jose Mercury News
   :st: CA
   :prez_2000: Gore
+Tribune-Review: 
+  :city: Greensburg
+  :paper: Tribune-Review
+  :st: PA
+  :prez_2000: Bush
 Chattanooga Times: 
   :city: 
   :paper: Chattanooga Times
@@ -564,16 +569,16 @@ Courier-Post:
   :paper: Courier-Post
   :st: NJ
   :prez_2000: Bush
-Denver Rocky Mountain News: 
-  :city: 
-  :paper: Denver Rocky Mountain News
-  :st: CO
-  :prez_2000: Bush
 Columbian: 
   :city: Vancouver
   :paper: Columbian
   :st: WA
   :prez_2000: Bush
+Santa Rosa Press-Democrat: 
+  :city: 
+  :paper: Santa Rosa Press-Democrat
+  :st: CA
+  :prez_2000: Gore
 Asbury Park Press: 
   :city: 
   :paper: Asbury Park Press
@@ -589,21 +594,16 @@ Whittier Daily News:
   :paper: Whittier Daily News
   :st: CA
   :prez_2000: Bush
-Scranton Times Tribune-Review: 
-  :city: Greensburg
-  :paper: Scranton Times Tribune-Review
-  :st: PA
+Boulder Camera: 
+  :city: 
+  :paper: Boulder Camera
+  :st: CO
   :prez_2000: Bush
 Daily Comet: 
   :city: Thibodaux
   :paper: Daily Comet
   :st: LA
   :prez_2000: Bush
-Times: 
-  :city: Shreveport
-  :paper: Times
-  :st: LA
-  :prez_2000: Gore
 Telegram and Gazette: 
   :city: Worcester
   :paper: Telegram and Gazette
@@ -684,11 +684,6 @@ Press Journal:
   :paper: Press Journal
   :st: FL
   :prez_2000: Bush
-Daily Oklahoman: 
-  :city: Oklahoma City
-  :paper: Daily Oklahoman
-  :st: OK
-  :prez_2000: Bush
 Dallas Morning News: 
   :city: 
   :paper: Dallas Morning News
@@ -729,11 +724,6 @@ Fresno Bee:
   :paper: Fresno Bee
   :st: CA
   :prez_2000: Gore
-Ledger: 
-  :city: Lakeland
-  :paper: Ledger
-  :st: FL
-  :prez_2000: Bush
 State Journal-Register: 
   :city: Springfield
   :paper: State Journal-Register
@@ -754,11 +744,6 @@ Tribune:
   :paper: Tribune
   :st: FL
   :prez_2000: Bush
-Press-Telegram: 
-  :city: Long Beach
-  :paper: Press-Telegram
-  :st: CA
-  :prez_2000: Gore
 Quad-City Times: 
   :city: Davenport
   :paper: Quad-City Times
@@ -784,11 +769,6 @@ San Diego Union-Tribune:
   :paper: San Diego Union-Tribune
   :st: CA
   :prez_2000: Bush
-Herald-Dispatch: 
-  :city: Huntington
-  :paper: Herald-Dispatch
-  :st: WV
-  :prez_2000: Gore
 Gainesville Sun: 
   :city: 
   :paper: Gainesville Sun
@@ -808,11 +788,6 @@ Tennessean:
   :city: Nashville
   :paper: Tennessean
   :st: TN
-  :prez_2000: Gore
-Times Union: 
-  :city: Albany
-  :paper: Times Union
-  :st: NY
   :prez_2000: Gore
 Times-Standard: 
   :city: Eureka
@@ -844,6 +819,11 @@ Hutchinson News:
   :paper: Hutchinson News
   :st: KS
   :prez_2000: Gore
+Lakeland Ledger: 
+  :city: 
+  :paper: Lakeland Ledger
+  :st: FL
+  :prez_2000: Bush
 Birmingham News: 
   :city: 
   :paper: Birmingham News
@@ -864,11 +844,6 @@ Sun (Lowell):
   :paper: Sun (Lowell)
   :st: MA
   :prez_2000: Bush
-News-Journal: 
-  :city: Daytona Beach
-  :paper: News-Journal
-  :st: FL
-  :prez_2000: Gore
 Advocate: 
   :city: Stamford
   :paper: Advocate
@@ -878,11 +853,6 @@ Plain Dealer:
   :city: Cleveland
   :paper: Plain Dealer
   :st: OH
-  :prez_2000: Bush
-Daily Camera: 
-  :city: Boulder
-  :paper: Daily Camera
-  :st: CO
   :prez_2000: Bush
 San Francisco Examiner: 
   :city: 
@@ -914,10 +884,10 @@ Norfolk Daily News:
   :paper: Norfolk Daily News
   :st: NE
   :prez_2000: Bush
-Wichita Falls Times Herald Record: 
+Rocky Mountain News: 
   :city: 
-  :paper: Wichita Falls Times Herald Record
-  :st: TX
+  :paper: Rocky Mountain News
+  :st: CO
   :prez_2000: Bush
 Journal News: 
   :city: West Nyack
@@ -934,6 +904,11 @@ Southwest Times:
   :paper: Southwest Times
   :st: VA
   :prez_2000: Bush
+Harrisburg Patriot-News: 
+  :city: 
+  :paper: Harrisburg Patriot-News
+  :st: PA
+  :prez_2000: Bush
 Record: 
   :city: Hackensack
   :paper: Record
@@ -948,11 +923,6 @@ Naples Daily-News:
   :city: 
   :paper: Naples Daily-News
   :st: FL
-  :prez_2000: Bush
-Bulletin: 
-  :city: Bend
-  :paper: Bulletin
-  :st: OR
   :prez_2000: Bush
 Blade: 
   :city: Toledo
@@ -974,9 +944,29 @@ Marin Independent-Journal:
   :paper: Marin Independent-Journal
   :st: CA
   :prez_2000: Gore
+Shreveport Times: 
+  :city: 
+  :paper: Shreveport Times
+  :st: LA
+  :prez_2000: Gore
+Oklahoman: 
+  :city: Oklahoma City
+  :paper: Oklahoman
+  :st: OK
+  :prez_2000: Bush
 Record Searchlight: 
   :city: Redding
   :paper: Record Searchlight
+  :st: CA
+  :prez_2000: Bush
+Spartanburg Herald-Journal: 
+  :city: 
+  :paper: Spartanburg Herald-Journal
+  :st: SC
+  :prez_2000: Bush
+Investor's Business Daily: 
+  :city: Los Angeles
+  :paper: Investor's Business Daily
   :st: CA
   :prez_2000: Bush
 Ventura County Star: 
@@ -1024,6 +1014,11 @@ Knoxville News-Sentinel:
   :paper: Knoxville News-Sentinel
   :st: TN
   :prez_2000: Bush
+Albany Times-Union: 
+  :city: 
+  :paper: Albany Times-Union
+  :st: NY
+  :prez_2000: Gore
 St. Paul Pioneer Press: 
   :city: 
   :paper: St. Paul Pioneer Press
@@ -1069,6 +1064,11 @@ Asheville Citizen-Times:
   :paper: Asheville Citizen-Times
   :st: NC
   :prez_2000: Gore
+Spokesman-Review (Spokane): 
+  :city: Spokane
+  :paper: Spokesman-Review (Spokane)
+  :st: WA
+  :prez_2000: Bush
 Oregonian: 
   :city: Portland
   :paper: Oregonian
@@ -1095,10 +1095,10 @@ Erie Times-News:
   :st: PA
   :prez_2000: Bush
 Sun: 
-  :city: Baltimore
+  :city: Bremerton
   :paper: Sun
-  :st: MD
-  :prez_2000: Gore
+  :st: WA
+  :prez_2000: Bush
 Quincy Herald-Whig: 
   :city: 
   :paper: Quincy Herald-Whig
@@ -1139,11 +1139,6 @@ Longview News-Journal:
   :paper: Longview News-Journal
   :st: TX
   :prez_2000: Gore
-Forum: 
-  :city: Fargo
-  :paper: Forum
-  :st: ND
-  :prez_2000: Bush
 Wyoming Tribune-Eagle: 
   :city: Cheyenne
   :paper: Wyoming Tribune-Eagle
@@ -1179,6 +1174,11 @@ Providence Journal:
   :paper: Providence Journal
   :st: RI
   :prez_2000: Bush
+Fargo Forum: 
+  :city: 
+  :paper: Fargo Forum
+  :st: ND
+  :prez_2000: Bush
 Daily News: 
   :city: New York City
   :paper: Daily News
@@ -1204,11 +1204,11 @@ Star-Gazette:
   :paper: Star-Gazette
   :st: NY
   :prez_2000: Bush
-Star Tribune: 
-  :city: Minneapolis
-  :paper: Star Tribune
-  :st: MN
-  :prez_2000: Gore
+Scranton Times: 
+  :city: 
+  :paper: Scranton Times
+  :st: PA
+  :prez_2000: Bush
 Orlando Sentinel: 
   :city: 
   :paper: Orlando Sentinel
@@ -1299,10 +1299,20 @@ Portsmouth Herald:
   :paper: Portsmouth Herald
   :st: NH
   :prez_2000: Gore
+Minneapolis Star Tribune: 
+  :city: 
+  :paper: Minneapolis Star Tribune
+  :st: MN
+  :prez_2000: Gore
 San Gabriel Valley Tribune: 
   :city: 
   :paper: San Gabriel Valley Tribune
   :st: CA
+  :prez_2000: Bush
+Times Herald Record: 
+  :city: Wichita Falls
+  :paper: Times Herald Record
+  :st: TX
   :prez_2000: Bush
 Cincinnati Enquirer: 
   :city: 
@@ -1313,6 +1323,11 @@ Chicago Sun-Times:
   :city: 
   :paper: Chicago Sun-Times
   :st: IL
+  :prez_2000: Bush
+Times (Munster): 
+  :city: Munster
+  :paper: Times (Munster)
+  :st: IN
   :prez_2000: Bush
 Wisconsin State Journal: 
   :city: Madison
@@ -1334,6 +1349,11 @@ Press of Atlantic City:
   :paper: Press of Atlantic City
   :st: NJ
   :prez_2000: Bush
+Long Beach Press Telegram: 
+  :city: 
+  :paper: Long Beach Press Telegram
+  :st: CA
+  :prez_2000: Gore
 Staten Island Advance: 
   :city: 
   :paper: Staten Island Advance
@@ -1359,11 +1379,6 @@ News-Press:
   :paper: News-Press
   :st: FL
   :prez_2000: Bush
-Press Democrat: 
-  :city: Santa Rosa
-  :paper: Press Democrat
-  :st: CA
-  :prez_2000: Gore
 Honolulu Advertiser: 
   :city: 
   :paper: Honolulu Advertiser

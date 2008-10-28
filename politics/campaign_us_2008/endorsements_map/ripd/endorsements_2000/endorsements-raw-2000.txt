@@ -25,10 +25,10 @@ CALIFORNIA
 Contra Costa Times, Walnut Creek
 Daily News, Los Angeles
 The Desert Sun, Palm Springs
-Investors Business Daily, Los Angeles
+Investor's Business Daily, Los Angeles
 North County Times, Escondido
 Pasadena Star-News
-The Press-Enterprise, Riverside
+The Riverside Press-Enterprise
 The (Stockton) Record
 Record Searchlight, Redding
 The San Diego Union-Tribune
@@ -40,9 +40,9 @@ The Whittier Daily News
 
 COLORADO
 
-Daily Camera, Boulder
+Boulder Camera
 The Daily Sentinel, Grand Junction
-Denver Rocky Mountain News
+Rocky Mountain News
 Greeley Daily Tribune
 
 CONNECTICUT
@@ -62,7 +62,7 @@ The Washington Times
 FLORIDA
 
 Bradenton Herald
-The Ledger, Lakeland
+The Lakeland Ledger
 Naples Daily-News
 News-Press, Fort Myers
 Orlando Sentinel
@@ -87,7 +87,7 @@ Chicago Sun-Times
 Chicago Tribune
 Daily Herald, Arlington Heights
 The Dispatch, Moline
-Herald & Review, Decatur
+Herald and Review, Decatur
 Journal Star, Peoria
 The News-Gazette, Champaign
 The Pantagraph, Bloomington
@@ -138,7 +138,7 @@ Boston Herald
 The Eagle-Tribune, Lawrence
 The Patriot Ledger, Quincy
 The (Lowell) Sun
-Telegram & Gazette, Worcester
+Telegram and Gazette, Worcester
 
 MICHIGAN
 
@@ -207,7 +207,7 @@ Winston-Salem Journal
 
 NORTH DAKOTA
 
-Forum, Fargo
+Fargo Forum
 
 OHIO
 
@@ -223,14 +223,14 @@ The Vindicator, Youngstown
 
 OKLAHOMA
 
-The Daily Oklahoman, Oklahoma City
+The Oklahoman, Oklahoma City
 Muskogee Daily Phoenix
 The Shawnee News-Star
 Tulsa World
 
 OREGON
 
-The Bulletin, Bend
+The Bend Bulletin
 The Oregonian, Portland
 
 PENNSYLVANIA
@@ -238,8 +238,9 @@ PENNSYLVANIA
 Delaware County Daily Times, Primos
 Erie Times-News
 The Morning Call, Allentown
-The Patriot-News, Harrisburg
-Scranton Times Tribune-Review, Greensburg
+The Harrisburg Patriot-News
+Scranton Times
+Tribune-Review, Greensburg
 The York Dispatch
 
 RHODE ISLAND
@@ -248,8 +249,8 @@ The Providence Journal
 
 SOUTH CAROLINA
 
-Herald-Journal, Spartanburg
-The Item, Sumter
+Spartanburg Herald-Journal
+The Sumter Item
 The Post and Courier, Charleston
 The State, Columbia
 
@@ -277,7 +278,7 @@ Houston Chronicle
 Lubbock Avalanche-Journal
 San Angelo Standard-Times
 San Antonio Express-News
-Wichita Falls Times Herald Record
+Times Herald Record, Wichita Falls
 
 VIRGINIA
 
@@ -334,8 +335,8 @@ CALIFORNIA
 The Fresno Bee
 Marin Independent-Journal
 The Modesto Bee
-The Press Democrat, Santa Rosa
-Press-Telegram, Long Beach
+The Santa Rosa Press-Democrat
+Long Beach Press Telegram
 The Sacramento Bee
 San Francisco Chronicle
 San Francisco Examiner
@@ -369,7 +370,7 @@ Ocala Star-Banner
 The Palm Beach Post, West Palm Beach
 Sarasota Herald-Tribune
 South Florida Sun-Sentinel, Fort Lauderdale
-The News-Journal, Daytona Beach
+The Daytona Beach News-Journal
 St. Petersburg Times
 
 GEORGIA
@@ -402,12 +403,12 @@ The Hutchinson News
 
 KENTUCKY
 
-The Courier-Journal, Louisville
+The Louisville Courier-Journal
 Lexington Herald-Leader
 
 LOUISIANA
 
-The Times, Shreveport
+The Shreveport Times
 
 MAINE
 
@@ -416,7 +417,7 @@ Maine Sunday Telegram
 
 MARYLAND
 
-The Sun, Baltimore
+The Baltimore Sun
 
 MASSACHUSETTS
 
@@ -434,7 +435,7 @@ The Macomb Daily
 MINNESOTA
 
 Duluth News-Tribune
-Star Tribune, Minneapolis
+Minneapolis Star Tribune
 
 MISSISSIPPI
 
@@ -480,17 +481,17 @@ The Daily Star, Oneonta
 The Ithaca Journal
 Newsday, Melville
 The New York Times
-Rochester Democrat & Chronicle
+Rochester Democrat and Chronicle
 Staten Island Advance
-Times Union, Albany
+Albany Times-Union
 
 NORTH CAROLINA
 
 The Asheville Citizen-Times
 The Charlotte Observer
 Morning Star, Wilmington
-The News & Observer, Raleigh
-News & Record, Greensboro
+The News and Observer, Raleigh
+News and Record, Greensboro
 
 NORTH DAKOTA
 
@@ -544,7 +545,7 @@ Seattle Post-Intelligencer
 WEST VIRGINIA
 
 Charleston Gazette
-The Herald-Dispatch, Huntington
+The Huntington Herald-Dispatch
 
 WISCONSIN
 

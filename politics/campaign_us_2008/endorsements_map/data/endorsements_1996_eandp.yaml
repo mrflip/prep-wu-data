@@ -34,16 +34,6 @@ Delaware County Daily Times:
   :city: 
   :paper: Delaware County Daily Times
   :st: PA
-Wilkes-Barre Times Leader: 
-  :prez_1996: Clinton
-  :city: 
-  :paper: Wilkes-Barre Times Leader
-  :st: PA
-Asheboro Courier-Tribune: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Asheboro Courier-Tribune
-  :st: NC
 West Chester Daily Local News: 
   :prez_1996: Dole
   :city: 
@@ -54,11 +44,21 @@ Las Vegas Review-Journal:
   :city: 
   :paper: Las Vegas Review-Journal
   :st: NV
+Union Leader: 
+  :prez_1996: Dole
+  :city: 
+  :paper: Union Leader
+  :st: NH
 Santa Fe New Mexican: 
   :prez_1996: Clinton
   :city: 
   :paper: Santa Fe New Mexican
   :st: NM
+Asheboro Courier-Tribune: 
+  :prez_1996: Dole
+  :city: 
+  :paper: Asheboro Courier-Tribune
+  :st: NC
 Greenville News: 
   :prez_1996: Dole
   :city: 
@@ -94,11 +94,6 @@ Beloit Daily News:
   :city: 
   :paper: Beloit Daily News
   :st: WI
-Spokesman-Review: 
-  :prez_1996: Dole
-  :city: Spokane
-  :paper: Spokesman-Review
-  :st: WA
 Warrensburg Daily Star-Journal: 
   :prez_1996: Dole
   :city: 
@@ -134,11 +129,6 @@ Chanute Tribune:
   :city: 
   :paper: Chanute Tribune
   :st: KS
-Pleasanton Tri-Valley Herald: 
-  :prez_1996: Clinton
-  :city: 
-  :paper: Pleasanton Tri-Valley Herald
-  :st: CA
 Daytona Beach News-Journal: 
   :prez_1996: Clinton
   :city: 
@@ -184,11 +174,6 @@ Mount Airy News:
   :city: 
   :paper: Mount Airy News
   :st: NC
-Day of New London: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Day of New London
-  :st: CT
 Connecticut Post: 
   :prez_1996: Dole
   :city: Bridgeport
@@ -209,11 +194,6 @@ Kearney Hub:
   :city: 
   :paper: Kearney Hub
   :st: NE
-San Mateo Times: 
-  :prez_1996: Clinton
-  :city: 
-  :paper: San Mateo Times
-  :st: CA
 Florida Today: 
   :prez_1996: Clinton
   :city: 
@@ -239,6 +219,11 @@ Charleston Gazette:
   :city: 
   :paper: Charleston Gazette
   :st: WV
+San Mateo County Times: 
+  :prez_1996: Clinton
+  :city: 
+  :paper: San Mateo County Times
+  :st: CA
 Iola Register: 
   :prez_1996: Dole
   :city: 
@@ -249,16 +234,16 @@ Las Vegas Sun:
   :city: 
   :paper: Las Vegas Sun
   :st: NV
-Manchester Union Leader: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Manchester Union Leader
-  :st: NH
 Huntington Herald Press: 
   :prez_1996: Dole
   :city: 
   :paper: Huntington Herald Press
   :st: IN
+State: 
+  :prez_1996: Dole
+  :city: 
+  :paper: State
+  :st: SC
 Jonesboro Sun: 
   :prez_1996: Clinton
   :city: 
@@ -309,6 +294,11 @@ Green Bay News Chronicle:
   :city: 
   :paper: Green Bay News Chronicle
   :st: WI
+Indianapolis Star: 
+  :prez_1996: Dole
+  :city: 
+  :paper: Indianapolis Star
+  :st: IN
 Pierre Capital Journal: 
   :prez_1996: Dole
   :city: 
@@ -349,6 +339,11 @@ Times of Trenton:
   :city: 
   :paper: Times of Trenton
   :st: NJ
+Times-Leader: 
+  :prez_1996: Clinton
+  :city: Wilkes-Barre
+  :paper: Times-Leader
+  :st: PA
 Boston Globe: 
   :prez_1996: Clinton
   :city: 
@@ -379,6 +374,11 @@ Sumter Item:
   :city: 
   :paper: Sumter Item
   :st: SC
+Capital Times: 
+  :prez_1996: Clinton
+  :city: Madison
+  :paper: Capital Times
+  :st: WI
 Oshkosh Northwestern: 
   :prez_1996: Dole
   :city: 
@@ -429,6 +429,11 @@ Topeka Capital-Journal:
   :city: 
   :paper: Topeka Capital-Journal
   :st: KS
+Atlanta Journal-Constitution: 
+  :prez_1996: Clinton
+  :city: 
+  :paper: Atlanta Journal-Constitution
+  :st: GA
 Blackwell Journal-Tribune: 
   :prez_1996: Dole
   :city: 
@@ -529,11 +534,6 @@ El Paso Herald-Post:
   :city: 
   :paper: El Paso Herald-Post
   :st: TX
-Daily Oklahoman: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Daily Oklahoman
-  :st: OK
 Pendleton East Oregonian: 
   :prez_1996: Clinton
   :city: 
@@ -544,6 +544,11 @@ Dallas Morning News:
   :city: 
   :paper: Dallas Morning News
   :st: TX
+Chronicle: 
+  :prez_1996: Dole
+  :city: Centralia
+  :paper: Chronicle
+  :st: WA
 Willoughby News-Herald: 
   :prez_1996: Dole
   :city: 
@@ -574,21 +579,16 @@ Richmond Times-Dispatch:
   :city: 
   :paper: Richmond Times-Dispatch
   :st: VA
-Albuquerque Journal: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Albuquerque Journal
-  :st: NM
-Columbia State: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Columbia State
-  :st: SC
 West Plains Daily Quill: 
   :prez_1996: Clinton
   :city: 
   :paper: West Plains Daily Quill
   :st: MO
+Albuquerque Journal: 
+  :prez_1996: Dole
+  :city: 
+  :paper: Albuquerque Journal
+  :st: NM
 St. Louis Post-Dispatch: 
   :prez_1996: Clinton
   :city: 
@@ -599,6 +599,11 @@ Statesman-Journal:
   :city: Salem
   :paper: Statesman-Journal
   :st: OR
+Daily Review: 
+  :prez_1996: Clinton
+  :city: 
+  :paper: Daily Review
+  :st: CA
 Des Moines Register: 
   :prez_1996: Clinton
   :city: 
@@ -634,11 +639,6 @@ Shenandoah Valley News Today:
   :city: 
   :paper: Shenandoah Valley News Today
   :st: IA
-Union News: 
-  :prez_1996: Clinton
-  :city: Springfield
-  :paper: Union News
-  :st: MA
 Maine Sunday Telegram: 
   :prez_1996: Clinton
   :city: Portland
@@ -794,6 +794,11 @@ Shreveport Times:
   :city: 
   :paper: Shreveport Times
   :st: LA
+Oklahoman: 
+  :prez_1996: Dole
+  :city: 
+  :paper: Oklahoman
+  :st: OK
 Springfield Union News: 
   :prez_1996: Clinton
   :city: 
@@ -854,11 +859,6 @@ Yankton Daily Press and Dakotan:
   :city: 
   :paper: Yankton Daily Press and Dakotan
   :st: SD
-Madison Capital Times: 
-  :prez_1996: Clinton
-  :city: 
-  :paper: Madison Capital Times
-  :st: WI
 Kingston Daily Freeman: 
   :prez_1996: Clinton
   :city: 
@@ -889,6 +889,11 @@ Hernando Today:
   :city: 
   :paper: Hernando Today
   :st: FL
+Spokesman-Review (Spokane): 
+  :prez_1996: Dole
+  :city: Spokane
+  :paper: Spokesman-Review (Spokane)
+  :st: WA
 Oregonian: 
   :prez_1996: Clinton
   :city: Portland
@@ -904,11 +909,6 @@ Alliance Review:
   :city: 
   :paper: Alliance Review
   :st: OH
-Atlanta Constitution: 
-  :prez_1996: Clinton
-  :city: 
-  :paper: Atlanta Constitution
-  :st: GA
 Harrison Daily Times: 
   :prez_1996: Clinton
   :city: 
@@ -934,11 +934,6 @@ New York Observer:
   :city: 
   :paper: New York Observer
   :st: NY
-Indianapolis Star and News: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Indianapolis Star and News
-  :st: IN
 Corpus Christi Caller-Times: 
   :prez_1996: Dole
   :city: 
@@ -949,11 +944,21 @@ Red Wing Republican Eagle:
   :city: 
   :paper: Red Wing Republican Eagle
   :st: MN
+Tri-Valley Herald: 
+  :prez_1996: Clinton
+  :city: Pleasanton
+  :paper: Tri-Valley Herald
+  :st: CA
 Cumberland Times-News: 
   :prez_1996: Dole
   :city: 
   :paper: Cumberland Times-News
   :st: MD
+Day: 
+  :prez_1996: Dole
+  :city: 
+  :paper: Day
+  :st: CT
 Commercial Appeal: 
   :prez_1996: Dole
   :city: Memphis
@@ -1024,11 +1029,6 @@ Hartford Courant:
   :city: 
   :paper: Hartford Courant
   :st: CT
-Corpus Christi Caller Times: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Corpus Christi Caller Times
-  :st: TX
 Detroit Free Press: 
   :prez_1996: Clinton
   :city: 
@@ -1064,11 +1064,6 @@ Star-Ledger:
   :city: Newark
   :paper: Star-Ledger
   :st: NJ
-Centralia Chronicle: 
-  :prez_1996: Dole
-  :city: 
-  :paper: Centralia Chronicle
-  :st: WA
 Jackson Sun: 
   :prez_1996: Clinton
   :city: 
@@ -1089,11 +1084,6 @@ Taunton Daily Gazette:
   :city: 
   :paper: Taunton Daily Gazette
   :st: MA
-Nashville Tennessean: 
-  :prez_1996: Clinton
-  :city: 
-  :paper: Nashville Tennessean
-  :st: TN
 Pittsburg Morning Sun: 
   :prez_1996: Dole
   :city: 
@@ -1149,11 +1139,6 @@ Liberal Southwest Daily Times:
   :city: 
   :paper: Liberal Southwest Daily Times
   :st: KS
-Hayward Daily Review: 
-  :prez_1996: Clinton
-  :city: 
-  :paper: Hayward Daily Review
-  :st: CA
 Wooster Daily Record: 
   :prez_1996: Dole
   :city: 
