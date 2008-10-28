@@ -1,68 +1,63 @@
-NEWSPAPER_CIRC_BL = YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).to_yaml
-ENDORSEMENTS = (
-  [1996,2000,2008].map{|year| "data/endorsements_#{year}_eandp.yaml"} +
-  ["endorsements_2004_wikipedia"]
-  )
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+require 'rubygems'
+require 'yaml'; require 'json'
+require 'imw/utils/extensions/core'
+require 'active_support'
+require 'action_view/helpers/number_helper'; include ActionView::Helpers::NumberHelper
+#
+require 'lib/endorsement'
+require 'lib/geolocation'
+
+# NEWSPAPER_CIRC_BL   = YAML.load(File.open("data/newspapers_burrelles_luce.yaml"))
+# ENDORSEMENTS        = [2008,2000,1996].map{|year| "data/endorsements_#{year}_eandp.yaml"}
+ENDORSEMENT_FILENAMES = [
+  "data/endorsements_2004_wikipedia.yaml", "data/newspaper_cities.yaml"
+] + [2008, 2000, 1996].map{|year| "data/endorsements_#{year}_eandp.yaml"}
+ENDORSEMENT_LISTS = ENDORSEMENT_FILENAMES.map{|fn| YAML.load(File.open(fn)) }
+#
+Endorsement.class_eval do
+  def check_merge! e
+    self.members.map(&:to_sym).each do |attr|
+      next if e[attr].blank?
+      self[attr] = e[attr.to_sym] if self[attr].blank?
+      warn "Disagreement in #{attr} for #{paper}: '#{self[attr]}' vs '#{e[attr]}' (#{e.to_json})" if (self[attr] != e[attr.to_sym])
+    end
+  end
+
+end
+
+Endorsement.all = { }
+ENDORSEMENT_LISTS.each do |endorsement_objs|
+  endorsement_objs.each do |paper, hsh|
+    if (e = Endorsement[paper])
+      e.check_merge! hsh
+    else
+      Endorsement.add Endorsement.from_hash(hsh)
+    end
+  end
+end
+Endorsement.dump :literalize_keys => false
+
+Endorsement.load :literalize_keys => false
+
+# Endorsement.all.sort_by{|paper, e| [e.paper, e.st||'', e.city||'' ]}.each do |paper, e|
+#   st, city, paper = e.values_of(:st, :city, :paper)
+#   next if (!city.blank?) || (paper == 'USA Today')
+#   puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
+# end
+
+Geolocation.load
+Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper, ]}.each do |paper, e|
+  st, city, paper = e.values_of(:st, :city, :paper)
+  # next if Geolocation[st, city] || !e.sun.blank? ||  (paper == 'USA Today')
+  paper.gsub!(/\'/, "''")
+  puts "%-32s\t{ :sun: %d, :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", e.sun||1, "'#{paper}',", st, "'#{city}'"]
+end
 
 
-
-# def fix_city_and_paper(orig_paper, state, circ)
-#   # extract embedded city info
-#   if orig_paper =~ /^(.*) \((.*)\)(.*)/
-#     paper, city = [$1+($3||''), $2]
-#   else
-#     paper = orig_paper
-#   end
-#   if (orig_paper =~ /Lowell.*Sun/) ||
-#      (orig_paper =~ /Stockton.*Record/) ||
-#      (orig_paper =~ /Daily News.*Los Angeles/)
-#     paper = orig_paper
-#   end
-#   # and un-abbreviate state
-#   st = STATE_ABBREVIATIONS[state.upcase]
-#   case
-#   when NEWSPAPER_CIRCS.include?(paper)
-#     rank, circ2, daily, sun, lat, lng, st, city, needsfix = NEWSPAPER_CIRCS[paper]
-#     if circ == 0 then circ = daily end
-#     if needsfix
-#       lat, lng = get_city_coords(city, st)
-#       find_missing_cities(city, st) if !lat
-#       lat ||= 0; lng ||= 0
-#       dump_for_newspaper_mapping(rank, circ, daily, sun, lat, lng, st, city, paper, true, 'fixed loc')
-#     elsif circ2 != circ
-#       dump_for_newspaper_mapping(rank, circ, daily, sun, lat, lng, st, city, paper, false, 'fixed circ')
-#     end
-#   else
-#     rank, daily, sun = [0,0,0]
-#     city  ||= orig_paper.gsub(/^The /, '').gsub(/([^ ]*) ([^ ]*).*?/, '\1 \2')
-#     lat, lng = get_city_coords(city, st)
-#     lat ||= 0; lng ||= 0
-#     dump_for_newspaper_mapping(rank, circ, daily, sun, lat, lng, st, city, paper, true, 'needs city fixed')
-#   end
-#   if paper == 'USA Today' then city = "[National]"; st = '' ; lng, lat = ll_from_xy(1050, 2000 + 758-75) end # fix position in newspar_mmpao
-#   [rank, circ, daily, sun, lat, lng, st, city, paper]
-# end
-# def dump_for_newspaper_mapping rank, circ, daily, sun, lat, lng, st, city, paper, needsfix, comment
-#     puts '  %-40s => [%3d, %9d, %9d, %9d, %-9s %-9s "%s", %-30s %s], # %s' % [
-#       "\"#{paper}\"", rank, circ, daily, sun,
-#       "#{'%8.3f'%(lat)},", "#{'%8.3f'%(lng)},",  st, "\"#{city}\",", needsfix, comment]
-# end
-# # Find missing cities
-# def find_missing_cities city, st
-#   puts('%s%-20s%s' %
-#     [ %Q{wget -O- \"http://www.census.gov/cgi-bin/gazetteer?},
-#       '%s,+%s" ' % [city.gsub(/\s/,"+"), st],
-#       %q{ -nv 2>/dev/null | egrep -i '(<li><strong|Location)'},
-#     ]) if (!get_city_coords(city, st)[1])
-# end
-# def find_prez04_from_wikipedia endorsement
-#   wp_prez04 = PREZ04_FROM_WIKIPEDIA[endorsement.paper]
-#   return unless wp_prez04
-#   if (wp_prez04 != endorsement.prez_04)
-#     if endorsement.prez_04 == ''
-#       endorsement.prez04 = PREZ04[wp_prez04]
-#     else
-#       puts "Mismatch: wp #{wp_prez04} e&p #{endorsement.prez04} for #{endorsement.paper}"
-#     end
-#   end
-# end
+# 'Daily Herald':                         { :paper: 'Daily Herald',                      :st: 'IL', :city: 'Arlington Heights',  }"
+# -123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789
+# next if e.prez[2008] && e.prez[1996]
+# prezzes = e.prez.sort.map{|k,v| k if v }
+# puts "%-2s\t%-20s\t%-36s\t%s" % [st, city, paper, prezzes.join("\t")]

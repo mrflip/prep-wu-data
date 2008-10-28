@@ -1,97 +1,97 @@
-"Akron Beacon-Journal":        { 'prez': { 2004 => 'Kerry'      } }
-"Amarillo Globe-News":         { 'prez': { 2004 => 'Bush'       } }
-"Anchorage Daily News":        { 'prez': { 2004 => 'Kerry'      } }
-"Arizona Daily Star":          { 'prez': { 2004 => 'Kerry'      } }
-"Arizona Republic":            { 'prez': { 2004 => 'Bush'       } }
-"Arkansas Democrat-Gazette":   { 'prez': { 2004 => 'Bush'       } }
-"Atlanta Journal-Constitution":{ 'prez': { 2004 => 'Kerry'      } }
-"Austin American-Statesman":   { 'prez': { 2004 => 'Bush'       } }
-"Bangor Daily News":           { 'prez': { 2004 => 'Kerry'      } }
-"Buffalo News":                { 'prez': { 2004 => 'Kerry'      } }
-"Chattanooga Times":           { 'prez': { 2004 => 'Kerry'      } }
-"Chicago Sun-Times":           { 'prez': { 2004 => 'Kerry'      } }
-"Chicago Tribune":             { 'prez': { 2004 => 'Bush'       } }
-"Columbia Daily Tribune":      { 'prez': { 2004 => 'Kerry'      } }
-"Columbus Dispatch":           { 'prez': { 2004 => 'Bush'       } }
-"Concord Monitor":             { 'prez': { 2004 => 'Kerry'      } }
-"Dallas Morning News":         { 'prez': { 2004 => 'Bush'       } }
-"Dayton Daily News":           { 'prez': { 2004 => 'Kerry'      } }
-"Daytona Beach News-Journal":  { 'prez': { 2004 => 'Kerry'      } }
-"Detroit Free Press":          { 'prez': { 2004 => 'Kerry'      } }
-"Falls Church News-Press":     { 'prez': { 2004 => 'Kerry'      } }
-"Fort Worth Star-Telegram":    { 'prez': { 2004 => 'Bush'       } }
-"Houston Chronicle":           { 'prez': { 2004 => 'Bush'       } }
-"Idaho Statesman":             { 'prez': { 2004 => 'Kerry'      } }
-"The Kansas City Star":        { 'prez': { 2004 => 'Kerry'      } }
-"Las Cruces Sun-News":         { 'prez': { 2004 => 'Bush'       } }
-"Las Vegas Review":            { 'prez': { 2004 => 'Bush'       } }
-"Las Vegas Sun":               { 'prez': { 2004 => 'Kerry'      } }
-"Lexington Herald-Leader":     { 'prez': { 2004 => 'Kerry'      } }
-"Mail Tribune":                { 'prez': { 2004 => 'Kerry'      } }
-"Miami Herald":                { 'prez': { 2004 => 'Kerry'      } }
-"Morning Call":                { 'prez': { 2004 => 'Kerry'      } }
-"Nashua Telegraph":            { 'prez': { 2004 => 'Kerry'      } }
-"New Orleans Times-Picayune":  { 'prez': { 2004 => 'N/A'        } }
-"New York Post":               { 'prez': { 2004 => 'Bush'       } }
-"News & Observer":             { 'prez': { 2004 => 'Kerry'      } }
-"Omaha World-Herald":          { 'prez': { 2004 => 'Bush'       } }
-"Orlando Sentinel":            { 'prez': { 2004 => 'Kerry'      } }
-"Philadelphia Daily News":     { 'prez': { 2004 => 'Kerry'      } }
-"Philadelphia Inquirer":       { 'prez': { 2004 => 'Kerry'      } }
-"Pittsburgh Post-Gazette":     { 'prez': { 2004 => 'Kerry'      } }
-"Richmond Times-Dispatch":     { 'prez': { 2004 => 'Bush'       } }
-"Rockford Register":           { 'prez': { 2004 => 'Kerry'      } }
-"San Antonio Express-News":    { 'prez': { 2004 => 'Bush'       } }
-"San Diego Union-Tribune":     { 'prez': { 2004 => 'Bush'       } }
-"San Francisco Chronicle":     { 'prez': { 2004 => 'Kerry'      } }
-"San Jose Mercury News":       { 'prez': { 2004 => 'Kerry'      } }
-"Seattle Post-Intelligencer":  { 'prez': { 2004 => 'Kerry'      } }
-"St. Louis Post-Dispatch":     { 'prez': { 2004 => 'Kerry'      } }
-"St. Paul Pioneer-Press":      { 'prez': { 2004 => 'Bush'       } }
-"St. Petersburg Times":        { 'prez': { 2004 => 'Kerry'      } }
-"Star-Tribune":                { 'prez': { 2004 => 'Kerry'      } }
-"Tampa Tribune":               { 'prez': { 2004 => 'N/A'        } }
-"The (Lowell) Sun":            { 'prez': { 2004 => 'Bush'       } }
-"The (Stockton) Record":       { 'prez': { 2004 => 'Bush'       } }
-"The Birmingham News":         { 'prez': { 2004 => 'Bush'       } }
-"The Blade":                   { 'prez': { 2004 => 'Kerry'      } }
-"The Boston Globe":            { 'prez': { 2004 => 'Kerry'      } }
-"The Charleston Gazette":      { 'prez': { 2004 => 'Kerry'      } }
-"The Charlotte Observer":      { 'prez': { 2004 => 'Kerry'      } }
-"The Cincinnati Enquirer":     { 'prez': { 2004 => 'Bush'       } }
-"The Columbian":               { 'prez': { 2004 => 'Bush'       } }
-"The Commercial Appeal":       { 'prez': { 2004 => 'Kerry'      } }
-"The Courier":                 { 'prez': { 2004 => 'Bush'       } }
-"The Courier-Journal":         { 'prez': { 2004 => 'Kerry'      } }
-"The Daily Sentinel":          { 'prez': { 2004 => 'Bush'       } }
-"The Denver Post":             { 'prez': { 2004 => 'Bush'       } }
-"The Des Moines Register":     { 'prez': { 2004 => 'Kerry'      } }
-"The Detroit News":            { 'prez': { 2004 => 'N/A'        } }
-"The Durango Herald":          { 'prez': { 2004 => 'Kerry'      } }
-"The Express-Times":           { 'prez': { 2004 => 'Bush'       } }
-"The Fresno Bee":              { 'prez': { 2004 => 'Kerry'      } }
-"The Honolulu Advertiser":     { 'prez': { 2004 => 'Kerry'      } }
-"The Indianapolis Star":       { 'prez': { 2004 => 'Bush'       } }
-"The Modesto Bee":             { 'prez': { 2004 => 'Kerry'      } }
-"The Muskegon Chronicle":      { 'prez': { 2004 => 'Kerry'      } }
-"The New York Times":          { 'prez': { 2004 => 'Kerry'      } }
-"The News Tribune":            { 'prez': { 2004 => 'Kerry'      } }
-"The Oklahoman":               { 'prez': { 2004 => 'Bush'       } }
-"The Oregonian of Portland":   { 'prez': { 2004 => 'Kerry'      } }
-"The Palm Beach Post":         { 'prez': { 2004 => 'Kerry'      } }
-"The Plain Dealer":            { 'prez': { 2004 => 'none'       } }
-"The Press-Enterprise":        { 'prez': { 2004 => 'Bush'       } }
-"The Pueblo Chieftain":        { 'prez': { 2004 => 'Bush'       } }
-"The Record":                  { 'prez': { 2004 => 'Kerry'      } }
-"The Repository":              { 'prez': { 2004 => 'Bush'       } }
-"The Rocky Mountain News":     { 'prez': { 2004 => 'Bush'       } }
-"The Sacramento Bee":          { 'prez': { 2004 => 'Kerry'      } }
-"The Salt Lake Tribune":       { 'prez': { 2004 => 'Bush'       } }
-"The Seattle Times":           { 'prez': { 2004 => 'Kerry'      } }
-"The Star-Ledger":             { 'prez': { 2004 => 'Kerry'      } }
-"The Sun":                     { 'prez': { 2004 => 'Kerry'      } }
-"The Tennessean":              { 'prez': { 2004 => 'Kerry'      } }
-"The Washington Post":         { 'prez': { 2004 => 'Kerry'      } }
-"The Times-Reporter":          { 'prez': { 2004 => 'Bush'       } }
-"Tulsa World":                 { 'prez': { 2004 => 'Bush'       } }
-"Union Leader":                { 'prez': { 2004 => 'Bush'       } }
+"Akron Beacon-Journal":          { :paper: "Akron Beacon-Journal",          :prez_2004: 'Kerry'      }
+"Amarillo Globe-News":           { :paper: "Amarillo Globe-News",           :prez_2004: 'Bush'       }
+"Anchorage Daily News":          { :paper: "Anchorage Daily News",          :prez_2004: 'Kerry'      }
+"Arizona Daily Star":            { :paper: "Arizona Daily Star",            :prez_2004: 'Kerry'      }
+"Arizona Republic":              { :paper: "Arizona Republic",              :prez_2004: 'Bush'       }
+"Arkansas Democrat-Gazette":     { :paper: "Arkansas Democrat-Gazette",     :prez_2004: 'Bush'       }
+"Atlanta Journal-Constitution":  { :paper: "Atlanta Journal-Constitution",  :prez_2004: 'Kerry'      }
+"Austin American-Statesman":     { :paper: "Austin American-Statesman",     :prez_2004: 'Bush'       }
+"Bangor Daily News":             { :paper: "Bangor Daily News",             :prez_2004: 'Kerry'      }
+"Buffalo News":                  { :paper: "Buffalo News",                  :prez_2004: 'Kerry'      }
+"Chattanooga Times":             { :paper: "Chattanooga Times",             :prez_2004: 'Kerry'      }
+"Chicago Sun-Times":             { :paper: "Chicago Sun-Times",             :prez_2004: 'Kerry'      }
+"Chicago Tribune":               { :paper: "Chicago Tribune",               :prez_2004: 'Bush'       }
+"Columbia Daily Tribune":        { :paper: "Columbia Daily Tribune",        :prez_2004: 'Kerry'      }
+"Columbus Dispatch":             { :paper: "Columbus Dispatch",             :prez_2004: 'Bush'       }
+"Concord Monitor":               { :paper: "Concord Monitor",               :prez_2004: 'Kerry'      }
+"Dallas Morning News":           { :paper: "Dallas Morning News",           :prez_2004: 'Bush'       }
+"Dayton Daily News":             { :paper: "Dayton Daily News",             :prez_2004: 'Kerry'      }
+"Daytona Beach News-Journal":    { :paper: "Daytona Beach News-Journal",    :prez_2004: 'Kerry'      }
+"Detroit Free Press":            { :paper: "Detroit Free Press",            :prez_2004: 'Kerry'      }
+"Falls Church News-Press":       { :paper: "Falls Church News-Press",       :prez_2004: 'Kerry'      }
+"Fort Worth Star-Telegram":      { :paper: "Fort Worth Star-Telegram",      :prez_2004: 'Bush'       }
+"Houston Chronicle":             { :paper: "Houston Chronicle",             :prez_2004: 'Bush'       }
+"Idaho Statesman":               { :paper: "Idaho Statesman",               :prez_2004: 'Kerry'      }
+"Kansas City Star":              { :paper: "Kansas City Star",              :prez_2004: 'Kerry'      }
+"Las Cruces Sun-News":           { :paper: "Las Cruces Sun-News",           :prez_2004: 'Bush'       }
+"Las Vegas Review-Journal":      { :paper: "Las Vegas Review-Journal",      :prez_2004: 'Bush'       }
+"Las Vegas Sun":                 { :paper: "Las Vegas Sun",                 :prez_2004: 'Kerry'      }
+"Lexington Herald-Leader":       { :paper: "Lexington Herald-Leader",       :prez_2004: 'Kerry'      }
+"Mail Tribune":                  { :paper: "Mail Tribune",                  :prez_2004: 'Kerry'      }
+"Miami Herald":                  { :paper: "Miami Herald",                  :prez_2004: 'Kerry'      }
+"Morning Call":                  { :paper: "Morning Call",                  :prez_2004: 'Kerry'      }
+"Nashua Telegraph":              { :paper: "Nashua Telegraph",              :prez_2004: 'Kerry'      }
+"New Orleans Times-Picayune":    { :paper: "New Orleans Times-Picayune",    :prez_2004: 'N/A'        }
+"New York Post":                 { :paper: "New York Post",                 :prez_2004: 'Bush'       }
+"News & Observer":               { :paper: "News & Observer",               :prez_2004: 'Kerry'      }
+"Omaha World-Herald":            { :paper: "Omaha World-Herald",            :prez_2004: 'Bush'       }
+"Orlando Sentinel":              { :paper: "Orlando Sentinel",              :prez_2004: 'Kerry'      }
+"Philadelphia Daily News":       { :paper: "Philadelphia Daily News",       :prez_2004: 'Kerry'      }
+"Philadelphia Inquirer":         { :paper: "Philadelphia Inquirer",         :prez_2004: 'Kerry'      }
+"Pittsburgh Post-Gazette":       { :paper: "Pittsburgh Post-Gazette",       :prez_2004: 'Kerry'      }
+"Richmond Times-Dispatch":       { :paper: "Richmond Times-Dispatch",       :prez_2004: 'Bush'       }
+"Rockford Register Star":        { :paper: "Rockford Register Star",        :prez_2004: 'Kerry'      }
+"San Antonio Express-News":      { :paper: "San Antonio Express-News",      :prez_2004: 'Bush'       }
+"San Diego Union-Tribune":       { :paper: "San Diego Union-Tribune",       :prez_2004: 'Bush'       }
+"San Francisco Chronicle":       { :paper: "San Francisco Chronicle",       :prez_2004: 'Kerry'      }
+"San Jose Mercury News":         { :paper: "San Jose Mercury News",         :prez_2004: 'Kerry'      }
+"Seattle Post-Intelligencer":    { :paper: "Seattle Post-Intelligencer",    :prez_2004: 'Kerry'      }
+"St. Louis Post-Dispatch":       { :paper: "St. Louis Post-Dispatch",       :prez_2004: 'Kerry'      }
+"St. Paul Pioneer-Press":        { :paper: "St. Paul Pioneer-Press",        :prez_2004: 'Bush'       }
+"St. Petersburg Times":          { :paper: "St. Petersburg Times",          :prez_2004: 'Kerry'      }
+"Star-Tribune":                  { :paper: "Star-Tribune",                  :prez_2004: 'Kerry'      }
+"Tampa Tribune":                 { :paper: "Tampa Tribune",                 :prez_2004: 'N/A'        }
+"(Lowell) Sun":                  { :paper: "(Lowell) Sun",                  :prez_2004: 'Bush'       }
+"(Stockton) Record":             { :paper: "(Stockton) Record",             :prez_2004: 'Bush'       }
+"Birmingham News":               { :paper: "Birmingham News",               :prez_2004: 'Bush'       }
+"Blade":                         { :paper: "Blade",                         :prez_2004: 'Kerry'      }
+"Boston Globe":                  { :paper: "Boston Globe",                  :prez_2004: 'Kerry'      }
+"Charleston Gazette":            { :paper: "Charleston Gazette",            :prez_2004: 'Kerry'      }
+"Charlotte Observer":            { :paper: "Charlotte Observer",            :prez_2004: 'Kerry'      }
+"Cincinnati Enquirer":           { :paper: "Cincinnati Enquirer",           :prez_2004: 'Bush'       }
+"Columbian":                     { :paper: "Columbian",                     :prez_2004: 'Bush'       }
+"Commercial Appeal":             { :paper: "Commercial Appeal",             :prez_2004: 'Kerry'      }
+"Courier":                       { :paper: "Courier",                       :prez_2004: 'Bush'       }
+"Courier-Journal":               { :paper: "Courier-Journal",               :prez_2004: 'Kerry'      }
+"Daily Sentinel":                { :paper: "Daily Sentinel",                :prez_2004: 'Bush'       }
+"Denver Post":                   { :paper: "Denver Post",                   :prez_2004: 'Bush'       }
+"Des Moines Register":           { :paper: "Des Moines Register",           :prez_2004: 'Kerry'      }
+"Detroit News":                  { :paper: "Detroit News",                  :prez_2004: 'N/A'        }
+"Durango Herald":                { :paper: "Durango Herald",                :prez_2004: 'Kerry'      }
+"Express-Times":                 { :paper: "Express-Times",                 :prez_2004: 'Bush'       }
+"Fresno Bee":                    { :paper: "Fresno Bee",                    :prez_2004: 'Kerry'      }
+"Honolulu Advertiser":           { :paper: "Honolulu Advertiser",           :prez_2004: 'Kerry'      }
+"Indianapolis Star":             { :paper: "Indianapolis Star",             :prez_2004: 'Bush'       }
+"Modesto Bee":                   { :paper: "Modesto Bee",                   :prez_2004: 'Kerry'      }
+"Muskegon Chronicle":            { :paper: "Muskegon Chronicle",            :prez_2004: 'Kerry'      }
+"New York Times":                { :paper: "New York Times",                :prez_2004: 'Kerry'      }
+"News Tribune":                  { :paper: "News Tribune",                  :prez_2004: 'Kerry'      }
+"Oklahoman":                     { :paper: "Oklahoman",                     :prez_2004: 'Bush'       }
+"Oregonian":                     { :paper: "Oregonian",                     :prez_2004: 'Kerry'      }
+"Palm Beach Post":               { :paper: "Palm Beach Post",               :prez_2004: 'Kerry'      }
+"Plain Dealer":                  { :paper: "Plain Dealer",                  :prez_2004: 'none'       }
+"Press-Enterprise":              { :paper: "Press-Enterprise",              :prez_2004: 'Bush'       }
+"Pueblo Chieftain":              { :paper: "Pueblo Chieftain",              :prez_2004: 'Bush'       }
+"Record":                        { :paper: "Record",                        :prez_2004: 'Kerry'      }
+"Repository":                    { :paper: "Repository",                    :prez_2004: 'Bush'       }
+"Rocky Mountain News":           { :paper: "Rocky Mountain News",           :prez_2004: 'Bush'       }
+"Sacramento Bee":                { :paper: "Sacramento Bee",                :prez_2004: 'Kerry'      }
+"Salt Lake Tribune":             { :paper: "Salt Lake Tribune",             :prez_2004: 'Bush'       }
+"Seattle Times":                 { :paper: "Seattle Times",                 :prez_2004: 'Kerry'      }
+"Star-Ledger":                   { :paper: "Star-Ledger",                   :prez_2004: 'Kerry'      }
+"Sun":                           { :paper: "Sun",                           :prez_2004: 'Kerry'      }
+"Tennessean":                    { :paper: "Tennessean",                    :prez_2004: 'Kerry'      }
+"Washington Post":               { :paper: "Washington Post",               :prez_2004: 'Kerry'      }
+"Times-Reporter":                { :paper: "Times-Reporter",                :prez_2004: 'Bush'       }
+"Tulsa World":                   { :paper: "Tulsa World",                   :prez_2004: 'Bush'       }
+"Union Leader":                  { :paper: "Union Leader",                  :prez_2004: 'Bush'       }

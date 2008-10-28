@@ -1,61 +1,59 @@
+require File.dirname(__FILE__)+'/hash_of_structs'
 
-MOVEMENT_FROM           = { 'B'  => -1, ''   => 0, 'N/A' => 0, 'K' => 1, 'N' => 0 }
+PARTY_ALIGNMENT = {
+  'GHW Bush'  => -1, 'Dole'  => -1, 'Bush'  => -1, 'McCain' => -1,
+  'Clinton'   =>  1, 'Gore'  =>  1, 'Kerry' =>  1, 'Obama'  =>  1,
+  nil         =>  0, ''      =>  0, 'N/A'   =>  0, 'N'      =>  0 }
 MOVEMENT_TO             = { 'McCain' => -2, 'Obama' => 2, }
-PREZ04                  = { 'B'  => 'Bush', ''   => '', 'N/A' => '(none)', 'K' => 'Kerry', 'N' => '(none)' }
 SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review-Journal', 'The Chattanooga Free Press', 'Chattanooga Times']
 class Endorsement < Struct.new(
-  :prez, :prev, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
-  :movement, :prez04, :all_rank, :metro # don't set these -- will be set from other attrs
+  :prez_2008, :prez_2004, :prez_2000, :prez_1996, :prez_1992, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper
+  # :movement, :all_rank, :metro # don't set these -- will be set from other attrs
   )
+  include HashOfStructs
+  def self.make_key(paper) paper       end
+  def key()                self.paper  end
+
   def initialize(*args)
     super *args
-    # fix attributes
-    fix_movement
-    fix_lat_lng_overlap
-    self.prez04 = PREZ04[prev]
-    [:circ, :daily, :sun, :movement, :rank, :all_rank].each{|attr| self[attr] = self[attr].to_i if self[attr] }
-    [:lat, :lng                                      ].each{|attr| self[attr] = self[attr].to_f if self[attr] }
+  end
+
+  # fix attributes
+  def fix!
+    [:circ, :daily, :sun, :rank].each{|attr| self[attr] = self[attr].to_i if self[attr] }
+    [:lat, :lng                ].each{|attr| self[attr] = self[attr].to_f if self[attr] }
+  end
+
+  #
+  #
+  #
+  def prez
+    Hash.zip [2008, 2004, 2000, 1996, 1992], self.values_of(:prez_2008, :prez_2004, :prez_2000, :prez_1996, :prez_1992)
+  end
+  def self.set_prez hsh, yr, prez
+    hsh["prez_#{yr}".to_sym] = prez
   end
   #
   # score the endorsement: 1 point for d=>d, 2 for none => d, 3 for r => d
   # (and similarly for * => r)
   #
-  def fix_movement
-    if prez == ''
-      self.movement = nil
-    else
-      self.movement = MOVEMENT_TO[prez] - MOVEMENT_FROM[prev]
-    end
+  def movement yr1, yr2
+    from, to = [party_in(yr1), party_in(yr1)]
+    (from && to) ? (to - from) : nil
   end
-  #
-  # offset abutting cities
-  #
-  def fix_lat_lng_overlap
-    return unless lat && lng
-    lngshifts = {
-      'Chicago Sun-Times' =>  0.4, 'Chicago Tribune'    => -0.2, 'Southwest News-Herald' =>  0.1,
-      'The Seattle Times' => -0.2, 'The Capital Times'  => -0.2,
-      'New York Post'     =>  0.4, 'The Daily News'     => -0.2, 'The New York Times' => 0.8,
-      'The Wall Street Journal' => 1,
-      'el Diario'         =>  0.1, 'Yamhill Valley News-Register' =>  0.1,
-      'La Opinion'        =>  0.3, 'Los Angeles Daily News'     =>  -0.4,
-      'Las Vegas Sun'     => -0.2, 'Las Vegas Review-Journal' => 0.2,
-      'Chattanooga Times' => -0.2, 'The Chattanooga Free Press' => 0.2,
-    }
-    latshifts = {
-      'The New York Times' => -0.4,
-      'The Wall Street Journal' => -0.4,
-    }
-    if (lng_shift = lngshifts[paper]) then self.lng += lng_shift end
-    if (lat_shift = latshifts[paper]) then self.lat += lat_shift end
-    if (city  == 'Honolulu')
-      self.lng, self.lat = ll_from_xy(279, 564-466)
-    end
-    self.lat = (lat*100).round()/100.0
-    self.lng = (lng*100).round()/100.0
+  def party dood
+    PARTY_ALIGNMENT[dood]
   end
+  def party_in yr
+    party prez[yr]
+  end
+  def prez_as_text yr
+     (prez[yr].blank?) ? '(none yet)' : prez[yr]
+  end
+
   #
   # fix papers with split endorsements (two editorial boards)
+  #
   def split_endorsement
     SPLIT_ENDORSEMENTS.include?(paper)
   end
@@ -71,13 +69,10 @@ class Endorsement < Struct.new(
   end
 
   #
-  # attributes as text
+  # city
   #
   def city_st
     (paper == 'USA Today') ? "[national]" : "#{city}, #{st}"
-  end
-  def prez_as_text
-     (prez == '') ? '(none yet)' : prez
   end
   #
   # Color code for table
@@ -92,6 +87,5 @@ class Endorsement < Struct.new(
       raise "Haven't met candidate #{candidate}"
     end
   end
-  def prez04_color() self.class.party_color(prez04) end
-  def prez_color()   self.class.party_color(prez) end
+  def prez_color(yr) self.class.party_color(prez[yr]) end
 end

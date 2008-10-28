@@ -92,3 +92,32 @@ def summary_points endorsements, endorsement_bins
   end
   legend_points
 end
+
+
+  # #
+  # # offset abutting cities
+  # #
+  # def fix_lat_lng_overlap
+  #   return unless lat && lng
+  #   lngshifts = {
+  #     'Chicago Sun-Times' =>  0.4, 'Chicago Tribune'    => -0.2, 'Southwest News-Herald' =>  0.1,
+  #     'The Seattle Times' => -0.2, 'The Capital Times'  => -0.2,
+  #     'New York Post'     =>  0.4, 'The Daily News'     => -0.2, 'The New York Times' => 0.8,
+  #     'The Wall Street Journal' => 1,
+  #     'el Diario'         =>  0.1, 'Yamhill Valley News-Register' =>  0.1,
+  #     'La Opinion'        =>  0.3, 'Los Angeles Daily News'     =>  -0.4,
+  #     'Las Vegas Sun'     => -0.2, 'Las Vegas Review-Journal' => 0.2,
+  #     'Chattanooga Times' => -0.2, 'The Chattanooga Free Press' => 0.2,
+  #   }
+  #   latshifts = {
+  #     'The New York Times' => -0.4,
+  #     'The Wall Street Journal' => -0.4,
+  #   }
+  #   if (lng_shift = lngshifts[paper]) then self.lng += lng_shift end
+  #   if (lat_shift = latshifts[paper]) then self.lat += lat_shift end
+  #   if (city  == 'Honolulu')
+  #     self.lng, self.lat = ll_from_xy(279, 564-466)
+  #   end
+  #   self.lat = (lat*100).round()/100.0
+  #   self.lng = (lng*100).round()/100.0
+  # end

@@ -10,7 +10,9 @@ Missing/Spotchecked Newspaper Circulations
   http://en.wikipedia.org/wiki/List_of_newspapers_in_the_United_States_by_circulation
 
 City, St => lat, lng  
-
+#geonameid	name	asciinm	altnm	lat	lng	f_cl	f_code	cc	cc2	admin1	admin2	admin3	admin4	pop	elev	gtopo30	timezone	modification_date
+#4099296	Alma	Alma		35.4778	-94.221	P	PPL	US		AR	033			4474	132	133	America/Chicago	2006-01-17
+# 0		1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17      	18
 ===========================================================================
 
 

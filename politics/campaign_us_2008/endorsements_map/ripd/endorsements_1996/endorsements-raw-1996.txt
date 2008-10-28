@@ -100,7 +100,7 @@ Jacksonville Journal-Courier
 INDIANA
 
 CLINTON
-Fort Wayne Journal Gazette
+The Journal Gazette (Fort Wayne)
 South Bend Tribune
 Sullivan Daily Times
 
@@ -155,7 +155,7 @@ Taunton Daily Gazette
 
 DOLE
 Boston Herald
-Lawrence Eagle-Tribune
+Eagle-Tribune, Lawrence 
 
 MICHIGAN
 
@@ -238,7 +238,8 @@ Albuquerque Tribune
 NEW JERSEY
 
 CLINTON
-Trenton Times
+
+The Times of Trenton
 
 NEW YORK
 
@@ -367,7 +368,7 @@ Midland Reporter-Telegram
 San Antonio Express-News
 Victoria Advocate
 Dallas Morning News
-Fort Worth (Texas) Star-Telegram
+Fort Worth Star-Telegram
 Houston Chronicle
 
 VERMONT
@@ -425,7 +426,8 @@ NORTH CAROLINA
 Charlotte Observer
 News & Record, Greensboro
 LOUISIANA
-The Times, Shreveport
+Shreveport Times
+
 MAINE
 Maine Sunday Telegram, Portland
 CONNECTICUT
@@ -433,9 +435,9 @@ Hartford Courant
 WASHINGTON
 Seattle Post-Intelligencer
 NEW JERSEY
-Asbury Park Press, Neptune
+Asbury Park Press
 Courier-News, Bridgewater
-Record, Bergen County
+Record, Hackensack
  
 
 CLINTON
@@ -451,8 +453,8 @@ NEW HAMPSHIRE
 The Concord Monitor
 NEW JERSEY
 The Courier-News, Bridgewater
-The Star Ledger, Newark
-The Times of Trenton
+The Star-Ledger, Newark
+
 COLORADO
 The Denver Post
 IOWA
@@ -481,7 +483,7 @@ PENNSYLVANIA
 The Philadelphia Daily News
 OREGON
 The Oregonian, Portland
-The Statesman Journal, Salem
+The Statesman-Journal, Salem
 OHIO
 The Plain Dealer
 CALIFORNIA
@@ -541,23 +543,20 @@ The El Paso Herald-Post
 The Fort Worth Star-Telegram
 The Paris News
 INDIANA
-The Evansville Courier
-The Indianapolis Star
+The Evansville Courier and Press
 SOUTH CAROLINA
 The Greenville News
 IDAHO
 The Idaho Statesman, Boise
-KANSAS
-The Kansas City Star
 WISCONSIN
 The Milwaukee Journal Sentinel
 The Oshkosh Northwestern
 SOUTH DAKOTA
 The Mitchell Daily Republic
 FLORIDA
-The Naples Daily News
+The Naples Daily-News
 VIRGINIA
-The Richmond Times-Dispach
+The Richmond Times-Dispatch
 COLORADO
 The Rocky Mountain News, Denver
 OKLAHOMA

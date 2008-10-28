@@ -1,16 +1,40 @@
 #
 require File.dirname(__FILE__)+'/struct_dumper'
 
-class HashOfStructs
-  attr_accessor :klass, :objs
-  def initialize klass
-    self.klass = klass
-    self.objs   = {}
+module HashOfStructs
+  module ClassMethods
+    def all() @all = @all || load  end
+    def all=(newall) @all = newall      end
+
+    def [](*key_vals)
+      all[ make_key(*key_vals) ]
+    end
+    def add(*vals)
+      if (vals.length==1) && (vals.first.is_a? self)
+        obj = vals.first
+      else
+        obj = new(*vals)
+      end
+      @all[ obj.key ] = obj
+    end
+    #
+    # serialize
+    #
+    def load options={ }
+      options = options.reverse_merge :dir => :data, :literalize_keys => true
+      puts Time.now.to_s+" Loading #{self}"
+      self.all = StructDumper.load_tsv self, options
+      self.all
+    end
+    def dump options={ }
+      options = options.reverse_merge :dir => :data, :literalize_keys => true
+      puts Time.now.to_s+" Dumping #{self}"
+      StructDumper.dump_tsv @all, options
+    end
   end
 
-
-  def dump()    StructDumper.dump_objs objs, [:yaml, :xml, :csv]        end
-  def load()    self.objs = StructDumper.load_yaml :dir => :data        end
-  def save()    StructDumper.dump_yaml objs, :dir => :data              end
+  def self.included(base)
+    base.extend(ClassMethods)
+  end
 end
 
