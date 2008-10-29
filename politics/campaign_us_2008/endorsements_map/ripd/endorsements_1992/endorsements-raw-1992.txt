@@ -40,7 +40,7 @@ LOUISIANA
 Times, Shreveport
 
 MINNESOTA 
-Minneapolis Star Tribune 
+Star Tribune, Minneapolis
 
 MISSOURI 
 Kansas City Star 
@@ -49,7 +49,7 @@ NEW JERSEY
 Asbury Park Press
 Home News Tribune, East Brunswick
 Record (Bergen)
-Newark Star-Ledger
+Star-Ledger, Newark
 North Jersey Herald and News
 Times, Trenton 
 
@@ -299,7 +299,7 @@ NORTH CAROLINA
 Richmond County Daily Journal 
 Charlotte Observer 
 Daily Reflector, Greenville
-Raleigh News & Observer 
+News & Observer, Raleigh
 Washington Daily News 
 
 NORTH DAKOTA 
@@ -426,7 +426,7 @@ ARIZONA
 
 Casa Grande Dispatch 
 Arizona Republic 
-Prescott Courier 
+Prescott Daily Courier 
 
 ARKANSAS 
 
@@ -438,7 +438,7 @@ Fairfield Daily Republic
 Lodi News-Sentinel 
 San Pedro News-Pilot 
 Record Searchlight, Redding
-Torrance Daily Breeze 
+Daily Breeze, Torrance
 Victorville Daily Press 
 Santa Monica Outlook 
 Sacramento Union 

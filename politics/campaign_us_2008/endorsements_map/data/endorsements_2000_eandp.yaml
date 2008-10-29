@@ -39,6 +39,11 @@ News-Gazette:
   :city: Champaign
   :paper: News-Gazette
   :st: IL
+Stamford Advocate: 
+  :prez_2000: Bush
+  :city: 
+  :paper: Stamford Advocate
+  :st: CT
 News Tribune: 
   :prez_2000: Gore
   :city: Tacoma
@@ -169,11 +174,6 @@ Boston Herald:
   :city: 
   :paper: Boston Herald
   :st: MA
-Lafayette Journal and Courier: 
-  :prez_2000: Bush
-  :city: 
-  :paper: Lafayette Journal and Courier
-  :st: IN
 Tuscaloosa News: 
   :prez_2000: Gore
   :city: 
@@ -324,6 +324,11 @@ Portland Press Herald:
   :city: 
   :paper: Portland Press Herald
   :st: ME
+Journal and Courier: 
+  :prez_2000: Bush
+  :city: Lafayette
+  :paper: Journal and Courier
+  :st: IN
 Daily Star: 
   :prez_2000: Gore
   :city: Oneonta
@@ -824,11 +829,6 @@ Sun (Lowell):
   :city: Lowell
   :paper: Sun (Lowell)
   :st: MA
-Advocate: 
-  :prez_2000: Bush
-  :city: Stamford
-  :paper: Advocate
-  :st: CT
 Plain Dealer: 
   :prez_2000: Bush
   :city: Cleveland
@@ -919,11 +919,6 @@ News and Observer:
   :city: Raleigh
   :paper: News and Observer
   :st: NC
-Daily News (New York City): 
-  :prez_2000: Gore
-  :city: New York City
-  :paper: Daily News (New York City)
-  :st: NY
 News-Sentinel: 
   :prez_2000: Bush
   :city: Fort Wayne
@@ -1144,6 +1139,11 @@ Billings Gazette:
   :city: 
   :paper: Billings Gazette
   :st: MT
+Daily News: 
+  :prez_2000: Gore
+  :city: 
+  :paper: Daily News
+  :st: NY
 Providence Journal: 
   :prez_2000: Bush
   :city: 
@@ -1179,6 +1179,11 @@ Star-Gazette:
   :city: Elmira
   :paper: Star-Gazette
   :st: NY
+Star Tribune: 
+  :prez_2000: Gore
+  :city: Minneapolis
+  :paper: Star Tribune
+  :st: MN
 Orlando Sentinel: 
   :prez_2000: Bush
   :city: 
@@ -1274,11 +1279,6 @@ Portsmouth Herald:
   :city: 
   :paper: Portsmouth Herald
   :st: NH
-Minneapolis Star Tribune: 
-  :prez_2000: Gore
-  :city: 
-  :paper: Minneapolis Star Tribune
-  :st: MN
 San Gabriel Valley Tribune: 
   :prez_2000: Bush
   :city: 

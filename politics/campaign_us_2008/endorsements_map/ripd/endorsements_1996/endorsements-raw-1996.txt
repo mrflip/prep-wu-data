@@ -170,7 +170,7 @@ Detroit News
 MINNESOTA
 
 CLINTON
-Minneapolis Star Tribune
+Star Tribune, Minneapolis
 St. Paul Pioneer Press
 
 DOLE
@@ -344,7 +344,7 @@ Paris Post Intelligencer
 
 DOLE
 Chattanooga Free Press
-Kingsport Daily News
+# Kingsport Daily News # bogus?
 Kingsport Times-News
 
 TEXAS
@@ -469,7 +469,6 @@ Courier-Journal, Louisville
 ARIZONA
 The Mesa Tribune
 MINNESOTA
-The Minneapolis Star Tribune
 The St. Paul Pioneer Press
 TENNESSEE
 The Nashville Banner
@@ -548,7 +547,7 @@ WISCONSIN
 The Milwaukee Journal Sentinel
 The Oshkosh Northwestern
 SOUTH DAKOTA
-The Mitchell Daily Republic
+Daily Republic, Mitchell
 FLORIDA
 The Naples Daily-News
 VIRGINIA

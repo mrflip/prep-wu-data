@@ -259,6 +259,11 @@ Birmingham Post-Herald:
   :paper: Birmingham Post-Herald
   :st: AL
   :prez_1992: GHWBush
+Daily Breeze: 
+  :city: Torrance
+  :paper: Daily Breeze
+  :st: CA
+  :prez_1992: GHWBush
 Las Vegas Sun: 
   :city: 
   :paper: Las Vegas Sun
@@ -704,6 +709,11 @@ Fairfield Daily Republic:
   :paper: Fairfield Daily Republic
   :st: CA
   :prez_1992: GHWBush
+Prescott Daily Courier: 
+  :city: 
+  :paper: Prescott Daily Courier
+  :st: AZ
+  :prez_1992: GHWBush
 West Plains Daily Quill: 
   :city: 
   :paper: West Plains Daily Quill
@@ -969,11 +979,6 @@ Rocky Mountain News:
   :paper: Rocky Mountain News
   :st: CO
   :prez_1992: GHWBush
-Prescott Courier: 
-  :city: 
-  :paper: Prescott Courier
-  :st: AZ
-  :prez_1992: GHWBush
 Midland Reporter-Telegram: 
   :city: 
   :paper: Midland Reporter-Telegram
@@ -989,11 +994,6 @@ Janesville Gazette:
   :paper: Janesville Gazette
   :st: WI
   :prez_1992: GHWBush
-Raleigh News and Observer: 
-  :city: 
-  :paper: Raleigh News and Observer
-  :st: NC
-  :prez_1992: Clinton
 Naples Daily-News: 
   :city: 
   :paper: Naples Daily-News
@@ -1013,6 +1013,11 @@ Salisbury Daily Times:
   :city: 
   :paper: Salisbury Daily Times
   :st: MD
+  :prez_1992: Clinton
+News and Observer: 
+  :city: Raleigh
+  :paper: News and Observer
+  :st: NC
   :prez_1992: Clinton
 Oklahoman: 
   :city: 
@@ -1104,11 +1109,6 @@ Williston Daily Herald:
   :paper: Williston Daily Herald
   :st: ND
   :prez_1992: GHWBush
-Newark Star-Ledger: 
-  :city: 
-  :paper: Newark Star-Ledger
-  :st: NJ
-  :prez_1992: Clinton
 Daily News Record: 
   :city: Harrisonburg
   :paper: Daily News Record
@@ -1334,11 +1334,11 @@ Washington Times:
   :paper: Washington Times
   :st: DC
   :prez_1992: GHWBush
-Torrance Daily Breeze: 
-  :city: 
-  :paper: Torrance Daily Breeze
-  :st: CA
-  :prez_1992: GHWBush
+Star Tribune: 
+  :city: Minneapolis
+  :paper: Star Tribune
+  :st: MN
+  :prez_1992: Clinton
 Atlanta Daily World: 
   :city: 
   :paper: Atlanta Daily World
@@ -1368,6 +1368,11 @@ Modesto Bee:
   :city: 
   :paper: Modesto Bee
   :st: CA
+  :prez_1992: Clinton
+Star-Ledger: 
+  :city: Newark
+  :paper: Star-Ledger
+  :st: NJ
   :prez_1992: Clinton
 Jackson Sun: 
   :city: 
@@ -1403,11 +1408,6 @@ Herald:
   :city: Everett
   :paper: Herald
   :st: WA
-  :prez_1992: Clinton
-Minneapolis Star Tribune: 
-  :city: 
-  :paper: Minneapolis Star Tribune
-  :st: MN
   :prez_1992: Clinton
 Cincinnati Enquirer: 
   :city: 

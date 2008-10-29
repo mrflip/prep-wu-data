@@ -444,11 +444,6 @@ Ridgecrest Daily Independent:
   :paper: Ridgecrest Daily Independent
   :prez_1996: Dole
   :st: CA
-Kingsport Daily News: 
-  :city: 
-  :paper: Kingsport Daily News
-  :prez_1996: Dole
-  :st: TN
 Daily Republic: 
   :city: Mitchell
   :paper: Daily Republic
@@ -734,11 +729,6 @@ Rocky Mountain News:
   :paper: Rocky Mountain News
   :prez_1996: Dole
   :st: CO
-Mitchell Daily Republic: 
-  :city: 
-  :paper: Mitchell Daily Republic
-  :prez_1996: Dole
-  :st: SD
 Ashland Daily Tidings: 
   :city: 
   :paper: Ashland Daily Tidings
@@ -939,11 +929,6 @@ Day:
   :paper: Day
   :prez_1996: Dole
   :st: CT
-Commercial Appeal: 
-  :city: Memphis
-  :paper: Commercial Appeal
-  :prez_1996: Dole
-  :st: TN
 Elko Daily Free Press: 
   :city: 
   :paper: Elko Daily Free Press
@@ -969,6 +954,11 @@ Elk City Daily News:
   :paper: Elk City Daily News
   :prez_1996: Clinton
   :st: OK
+Commercial Appeal: 
+  :city: Memphis
+  :paper: Commercial Appeal
+  :prez_1996: Dole
+  :st: TN
 Kingsport Times-News: 
   :city: 
   :paper: Kingsport Times-News
@@ -1029,6 +1019,11 @@ Washington Times:
   :paper: Washington Times
   :prez_1996: Dole
   :st: DC
+Star Tribune: 
+  :city: Minneapolis
+  :paper: Star Tribune
+  :prez_1996: Clinton
+  :st: MN
 Belleville News-Democrat: 
   :city: 
   :paper: Belleville News-Democrat
@@ -1089,11 +1084,6 @@ Opelika-Auburn News:
   :paper: Opelika-Auburn News
   :prez_1996: Dole
   :st: AL
-Minneapolis Star Tribune: 
-  :city: 
-  :paper: Minneapolis Star Tribune
-  :prez_1996: Clinton
-  :st: MN
 Cincinnati Enquirer: 
   :city: 
   :paper: Cincinnati Enquirer

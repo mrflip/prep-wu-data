@@ -49,7 +49,7 @@
 "St. Louis Post-Dispatch":       { :paper: "St. Louis Post-Dispatch",       :prez_2004: 'Kerry'      }
 "St. Paul Pioneer Press":        { :paper: "St. Paul Pioneer Press",        :prez_2004: 'Bush'       }
 "St. Petersburg Times":          { :paper: "St. Petersburg Times",          :prez_2004: 'Kerry'      }
-"Minneapolis Star Tribune":      { :paper: "Minneapolis Star Tribune",      :prez_2004: 'Kerry'      }
+"Star Tribune":                  { :paper: "Star Tribune",      :prez_2004: 'Kerry'      }
 "Tampa Tribune":                 { :paper: "Tampa Tribune",                 :prez_2004: 'N/A'        }
 "Sun (Lowell)":                  { :paper: "Sun (Lowell)",                  :prez_2004: 'Bush'       }
 "Record (Stockton)":             { :paper: "Record (Stockton)",             :prez_2004: 'Bush'       }
@@ -62,7 +62,7 @@
 "Columbian":                     { :paper: "Columbian",                     :prez_2004: 'Bush'       }
 "Commercial Appeal":             { :paper: "Commercial Appeal",             :prez_2004: 'Kerry'      }
 "Courier (Findlay)":             { :paper: "Courier (Findlay)",             :prez_2004: 'Bush'       }
-"Louisville Courier-Journal":    { :paper: "Louisville Courier-Journal",    :prez_2004: 'Kerry'      }
+"Courier-Journal":               { :paper: "Courier-Journal",               :prez_2004: 'Kerry'      }
 "Daily Sentinel":                { :paper: "Daily Sentinel",                :prez_2004: 'Bush'       }
 "Denver Post":                   { :paper: "Denver Post",                   :prez_2004: 'Bush'       }
 "Des Moines Register":           { :paper: "Des Moines Register",           :prez_2004: 'Kerry'      }

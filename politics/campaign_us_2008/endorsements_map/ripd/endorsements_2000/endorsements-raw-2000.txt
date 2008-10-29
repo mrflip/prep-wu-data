@@ -47,7 +47,7 @@ Greeley Daily Tribune
 
 CONNECTICUT
 
-The Advocate, Stamford
+Stamford Advocate
 The Day, New London
 Connecticut Post, Bridgeport
 Greenwich Time
@@ -99,7 +99,7 @@ INDIANA
 
 Evansville Courier and Press
 The Indianapolis Star
-Lafayette Journal and Courier
+Journal and Courier, Lafayette
 The News-Sentinel, Fort Wayne
 The Times, Munster
 
@@ -435,7 +435,7 @@ The Macomb Daily
 MINNESOTA
 
 Duluth News-Tribune
-Minneapolis Star Tribune
+Star Tribune, Minneapolis
 
 MISSISSIPPI
 
@@ -476,7 +476,7 @@ The Santa Fe New Mexican
 NEW YORK
 
 The Buffalo News
-Daily News, New York City
+Daily News
 The Daily Star, Oneonta
 The Ithaca Journal
 Newsday, Melville
