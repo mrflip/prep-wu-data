@@ -13,6 +13,10 @@ require 'lib/metropolitan_areas'
 # Oddities:
 # -- amarillo Globe-news
 #
+
+#
+# merge warn on inconsistent vals
+#
 Endorsement.class_eval do
   def check_merge! e
     self.members.map(&:to_sym).each do |attr|
@@ -21,6 +25,15 @@ Endorsement.class_eval do
       warn "Disagreement in #{attr} for #{paper}: '#{self[attr]}' vs '#{e[attr]}' (#{e.to_json})" if (self[attr] != e[attr.to_sym])
     end
   end
+end
+
+#
+# recyclable dump
+#
+def dump_as_hash e, fudge_city=nil
+  paper   = e.paper.gsub(/\'/, "''")
+  puts "%-38s { :st: %4s, :city: %-31s %7d, :paper: %-38s } # %s" % [
+    "'#{paper}':", "'#{e.st}'", "'#{e.city}',", e.circ, "'#{e.paper}'", e.endorsement_hist_str]
 end
 
 #
@@ -42,47 +55,49 @@ end
 # Load top-100
 #
 YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).each do |paper, info|
+  hsh = Hash.zip([:paper, :rank, :daily, :sun], info)
   if (e = Endorsement[paper])
-    e.merge!( Hash.zip([:paper, :rank, :daily, :sun], info) )
+    e.merge!(hsh)
+    e.circ = e.daily if (e.circ.to_i == 0)
   else
-    warn "Missing paper #{paper} : #{info.inspect}"
+    Endorsement.add Endorsement.from_hash(hsh)
   end
 end
 
+# #
+# # Load metros
+# #
+# CityMetro.load
+# Endorsement.all.each do |paper, e|
+#   e.metro = CityMetro[e.st, e.city] || CityMetro.new
+# end
 
 
-#
-# Load metros
-#
-CityMetro.load
-def dump_as_hash e, fudge_city=nil
-  st, city, paper = e.values_of(:st, :city, :paper)
-  paper.gsub!(/\'/, "''")
-  prezzes = e.prez.sort.map{|k,v| k if v }
-  city = paper if fudge_city && city.blank?
-  puts "%-38s { :sun: %d, :paper: %-38s :st: '%s', :city: %-31s } # %s" % ["'#{paper}':", e.sun||1, "'#{paper}',", st, "'#{city}'", prezzes.compact.join(',')]
-end
-
-
-# Endorsement.dump :literalize_keys => false, :format => :tsv
+# #
+# # Load geolocations
+# #
+# Geolocation.load :format => :tsv
+# Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
+#   st, city, paper = e.values_of(:st, :city, :paper)
+#   next if paper == 'USA Today'
+#   if (city.blank?) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
+# end
 
 # Endorsement.load :literalize_keys => false, :format => :tsv
 
-# dump out for pasting into data/newspaper_cities
-Endorsement.all.sort_by{|paper, e| [e.prez.values.compact.length, e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
-  dump_as_hash e
-end
+#
+# coerce values
+#
+Endorsement.all.values.each(&:fix!)
 
+# # dump out for pasting into data/newspaper_cities
+# Endorsement.sort_by_circ.each do |paper, e|
+#   dump_as_hash e
+# end
 
-# # #
-# # # Dump endorsements with blank cities or cities that don't geolocate
-# # #
-# # Geolocation.load :format => :tsv
-# # Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
-# #   st, city, paper = e.values_of(:st, :city, :paper)
-# #   next if paper == 'USA Today'
-# #   if (city.blank?) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
-# # end
+Endorsement.dump :literalize_keys => false, :format => :tsv
+Endorsement.dump :literalize_keys => false, :format => :yaml
+
 # #
 # # #     puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
 # #
@@ -96,10 +111,6 @@ end
 # city_papers.sort_by{|st_city, es| [es.length, st_city] }.each do |st_city, es|
 #   # next if es.length <= 1
 #   es.each{|e| dump_as_hash(e) }
-# end
-
-# Endorsement.all.each do |paper, e|
-#   e.metro = CityMetro[e.st, e.city] || CityMetro.new
 # end
 #
 #

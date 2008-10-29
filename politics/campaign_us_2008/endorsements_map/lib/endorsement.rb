@@ -4,13 +4,17 @@ PARTY_ALIGNMENT = {
   'GHW Bush'  => -1, 'Dole'  => -1, 'Bush'  => -1, 'McCain' => -1,
   'Clinton'   =>  1, 'Gore'  =>  1, 'Kerry' =>  1, 'Obama'  =>  1,
   nil         =>  0, ''      =>  0, 'N/A'   =>  0, 'N'      =>  0 }
+PREZ_CODE       = {
+  'GHW Bush'  => 'HW', 'Dole' => 'D', 'Bush' => 'W',  'McCain' => 'M',
+  'Clinton'   => 'C',  'Gore' => 'G', 'Kerry' => 'K', 'Obama'  => 'O',
+  nil         =>  0, ''      =>  0
+}
 MOVEMENT_TO             = { 'McCain' => -2, 'Obama' => 2, }
 SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review-Journal', 'The Chattanooga Free Press', 'Chattanooga Times']
 class Endorsement < Struct.new(
   :prez_2008, :prez_2004, :prez_2000, :prez_1996, :prez_1992,
     :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
-    :metro
-  # :movement, :all_rank, :metro # don't set these -- will be set from other attrs
+    :metro, :tmp
   )
   include HashOfStructs
   def self.make_key(paper) paper       end
@@ -25,6 +29,15 @@ class Endorsement < Struct.new(
     [:circ, :daily, :sun, :rank].each{|attr| self[attr] = self[attr].to_i if self[attr] }
     [:lat, :lng                ].each{|attr| self[attr] = self[attr].to_f if self[attr] }
   end
+
+  #
+  # Sortable attributes
+  #
+  def self.sort_by_st_city_paper()  all.sort_by{|pp, e| [ e.st||'', e.city||'', e.paper||'', ]}           end
+  def self.sort_by_circ()           all.sort_by{|pp, e| [ (e.circ||0), e.st||'', e.city||'', e.paper||'', ]}  end
+  def self.sort_by_nprezzes()       all.sort_by{|pp, e| [ e.prez.values.compact.length, (e.circ||0), e.st||'', e.city||'', e.paper||'', ]}  end
+
+  #
 
   #
   #
@@ -62,6 +75,10 @@ class Endorsement < Struct.new(
   def circ_with_split
     split_endorsement ? circ/2 : circ
   end
+
+  #
+  # attrs as text
+  #
   def circ_as_text
     case
     when circ == 0         then 'unknown'
@@ -69,12 +86,17 @@ class Endorsement < Struct.new(
     else                        circ.to_s
     end
   end
-
-  #
-  # city
-  #
   def city_st
     (paper == 'USA Today') ? "[national]" : "#{city}, #{st}"
+  end
+  def endorsed_years
+    prez.sort.map{|k, v| k if v }
+  end
+  def endorsement_hist
+    endorsed_years.map{|yr| [yr, PREZ_CODE[prez[yr]]] }
+  end
+  def endorsement_hist_str
+    endorsement_hist.map{|yr, pr| yr ? ("%4s:%-2s"%[yr,pr]) : ' '*7 }.join(" ")
   end
   #
   # Color code for table
