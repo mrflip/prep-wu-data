@@ -1,0 +1,1601 @@
+--- 
+Brookhaven Daily Leader: 
+  :city: 
+  :paper: Brookhaven Daily Leader
+  :st: MS
+  :prez_1992: GHWBush
+Rochester Democrat and Chronicle: 
+  :city: 
+  :paper: Rochester Democrat and Chronicle
+  :st: NY
+  :prez_1992: Clinton
+Edinburg Daily Review: 
+  :city: 
+  :paper: Edinburg Daily Review
+  :st: TX
+  :prez_1992: Clinton
+Mississippi Press: 
+  :city: 
+  :paper: Mississippi Press
+  :st: MS
+  :prez_1992: GHWBush
+Kansas City Star: 
+  :city: 
+  :paper: Kansas City Star
+  :st: MO
+  :prez_1992: Clinton
+Delaware County Daily Times: 
+  :city: 
+  :paper: Delaware County Daily Times
+  :st: PA
+  :prez_1992: Clinton
+Lamar Daily News: 
+  :city: 
+  :paper: Lamar Daily News
+  :st: CO
+  :prez_1992: Clinton
+Stamford Advocate: 
+  :city: 
+  :paper: Stamford Advocate
+  :st: CT
+  :prez_1992: Clinton
+Daily Mountain Eagle: 
+  :city: 
+  :paper: Daily Mountain Eagle
+  :st: AL
+  :prez_1992: Clinton
+Staunton Daily News Leader: 
+  :city: 
+  :paper: Staunton Daily News Leader
+  :st: VA
+  :prez_1992: GHWBush
+Daily Press: 
+  :city: Newport News
+  :paper: Daily Press
+  :st: VA
+  :prez_1992: GHWBush
+Asheboro Courier-Tribune: 
+  :city: 
+  :paper: Asheboro Courier-Tribune
+  :st: NC
+  :prez_1992: GHWBush
+Sioux City Journal: 
+  :city: 
+  :paper: Sioux City Journal
+  :st: IA
+  :prez_1992: GHWBush
+Daily Californian: 
+  :city: 
+  :paper: Daily Californian
+  :st: CA
+  :prez_1992: Clinton
+Idaho Falls Post Register: 
+  :city: 
+  :paper: Idaho Falls Post Register
+  :st: ID
+  :prez_1992: Clinton
+Charlottesville Daily Progress: 
+  :city: 
+  :paper: Charlottesville Daily Progress
+  :st: VA
+  :prez_1992: Clinton
+Arizona Republic: 
+  :city: 
+  :paper: Arizona Republic
+  :st: AZ
+  :prez_1992: GHWBush
+San Pedro News-Pilot: 
+  :city: 
+  :paper: San Pedro News-Pilot
+  :st: CA
+  :prez_1992: GHWBush
+Plainview Daily Herald: 
+  :city: 
+  :paper: Plainview Daily Herald
+  :st: TX
+  :prez_1992: GHWBush
+Greenville News: 
+  :city: 
+  :paper: Greenville News
+  :st: SC
+  :prez_1992: GHWBush
+Palm Beach Post: 
+  :city: 
+  :paper: Palm Beach Post
+  :st: FL
+  :prez_1992: Clinton
+Houston Post: 
+  :city: 
+  :paper: Houston Post
+  :st: TX
+  :prez_1992: GHWBush
+Lubbock Avalanche-Journal: 
+  :city: 
+  :paper: Lubbock Avalanche-Journal
+  :st: TX
+  :prez_1992: GHWBush
+Morristown Citizen Tribune: 
+  :city: 
+  :paper: Morristown Citizen Tribune
+  :st: TN
+  :prez_1992: GHWBush
+Detroit News: 
+  :city: 
+  :paper: Detroit News
+  :st: MI
+  :prez_1992: GHWBush
+El Paso Times: 
+  :city: 
+  :paper: El Paso Times
+  :st: TX
+  :prez_1992: Clinton
+New York Times: 
+  :city: 
+  :paper: New York Times
+  :st: NY
+  :prez_1992: Clinton
+Okmulgee Daily Times: 
+  :city: 
+  :paper: Okmulgee Daily Times
+  :st: OK
+  :prez_1992: Clinton
+Bremerton Sun: 
+  :city: 
+  :paper: Bremerton Sun
+  :st: WA
+  :prez_1992: GHWBush
+Greenwich Time: 
+  :city: 
+  :paper: Greenwich Time
+  :st: CT
+  :prez_1992: Clinton
+Burlington County Times: 
+  :city: 
+  :paper: Burlington County Times
+  :st: NJ
+  :prez_1992: Clinton
+Sullivan Daily Times: 
+  :city: 
+  :paper: Sullivan Daily Times
+  :st: IN
+  :prez_1992: Clinton
+Canandaigua Daily Messenger: 
+  :city: 
+  :paper: Canandaigua Daily Messenger
+  :st: NY
+  :prez_1992: Clinton
+Ames Daily Tribune Hawk Eye: 
+  :city: 
+  :paper: Ames Daily Tribune Hawk Eye
+  :st: IA
+  :prez_1992: Clinton
+Chanute Tribune: 
+  :city: 
+  :paper: Chanute Tribune
+  :st: KS
+  :prez_1992: Clinton
+Daytona Beach News-Journal: 
+  :city: 
+  :paper: Daytona Beach News-Journal
+  :st: FL
+  :prez_1992: Clinton
+Lake City Reporter: 
+  :city: 
+  :paper: Lake City Reporter
+  :st: FL
+  :prez_1992: Clinton
+New Castle News: 
+  :city: 
+  :paper: New Castle News
+  :st: PA
+  :prez_1992: Clinton
+Southbridge News: 
+  :city: 
+  :paper: Southbridge News
+  :st: MA
+  :prez_1992: Clinton
+Mount Airy News: 
+  :city: 
+  :paper: Mount Airy News
+  :st: NC
+  :prez_1992: GHWBush
+York Daily Record: 
+  :city: 
+  :paper: York Daily Record
+  :st: PA
+  :prez_1992: Clinton
+Wilkes-Barre Citizens' Voice: 
+  :city: 
+  :paper: Wilkes-Barre Citizens' Voice
+  :st: PA
+  :prez_1992: Clinton
+Bloomfield Evening World: 
+  :city: 
+  :paper: Bloomfield Evening World
+  :st: IN
+  :prez_1992: Clinton
+Huntington Herald-Press: 
+  :city: 
+  :paper: Huntington Herald-Press
+  :st: IN
+  :prez_1992: GHWBush
+Record (Hackensack): 
+  :city: Hackensack
+  :paper: Record (Hackensack)
+  :st: NJ
+  :prez_1992: Clinton
+Camden Courier-Post: 
+  :city: 
+  :paper: Camden Courier-Post
+  :st: NJ
+  :prez_1992: Clinton
+Columbus Dispatch: 
+  :city: 
+  :paper: Columbus Dispatch
+  :st: OH
+  :prez_1992: GHWBush
+Kearney Hub: 
+  :city: 
+  :paper: Kearney Hub
+  :st: NE
+  :prez_1992: GHWBush
+Abilene Reporter-News: 
+  :city: 
+  :paper: Abilene Reporter-News
+  :st: TX
+  :prez_1992: GHWBush
+Omaha World-Herald: 
+  :city: 
+  :paper: Omaha World-Herald
+  :st: NE
+  :prez_1992: GHWBush
+Herald-Record: 
+  :city: 
+  :paper: Herald-Record
+  :st: NY
+  :prez_1992: Clinton
+Uniontown Herald-Standard: 
+  :city: 
+  :paper: Uniontown Herald-Standard
+  :st: PA
+  :prez_1992: Clinton
+Charleston Gazette: 
+  :city: 
+  :paper: Charleston Gazette
+  :st: WV
+  :prez_1992: Clinton
+Blue Springs Examiner: 
+  :city: 
+  :paper: Blue Springs Examiner
+  :st: MO
+  :prez_1992: GHWBush
+Salem Statesman-Journal: 
+  :city: 
+  :paper: Salem Statesman-Journal
+  :st: OR
+  :prez_1992: Clinton
+Birmingham Post-Herald: 
+  :city: 
+  :paper: Birmingham Post-Herald
+  :st: AL
+  :prez_1992: GHWBush
+Manchester Union Leader: 
+  :city: 
+  :paper: Manchester Union Leader
+  :st: NH
+  :prez_1992: GHWBush
+Las Vegas Sun: 
+  :city: 
+  :paper: Las Vegas Sun
+  :st: NV
+  :prez_1992: Clinton
+Contra Costa Times: 
+  :city: 
+  :paper: Contra Costa Times
+  :st: CA
+  :prez_1992: Clinton
+Newsday: 
+  :city: 
+  :paper: Newsday
+  :st: NY
+  :prez_1992: Clinton
+Charleston Daily Mail: 
+  :city: 
+  :paper: Charleston Daily Mail
+  :st: WV
+  :prez_1992: GHWBush
+Rome News-Tribune: 
+  :city: 
+  :paper: Rome News-Tribune
+  :st: GA
+  :prez_1992: GHWBush
+Jonesboro Sun: 
+  :city: 
+  :paper: Jonesboro Sun
+  :st: AR
+  :prez_1992: Clinton
+Daily Reflector: 
+  :city: Greenville
+  :paper: Daily Reflector
+  :st: NC
+  :prez_1992: Clinton
+Florida Times-Union: 
+  :city: 
+  :paper: Florida Times-Union
+  :st: FL
+  :prez_1992: GHWBush
+Johnstown Tribune-Democrat: 
+  :city: 
+  :paper: Johnstown Tribune-Democrat
+  :st: PA
+  :prez_1992: GHWBush
+Pittsburgh Press: 
+  :city: 
+  :paper: Pittsburgh Press
+  :st: PA
+  :prez_1992: GHWBush
+Holdrege Daily Citizen: 
+  :city: 
+  :paper: Holdrege Daily Citizen
+  :st: NE
+  :prez_1992: GHWBush
+Louisville Courier-Journal: 
+  :city: 
+  :paper: Louisville Courier-Journal
+  :st: KY
+  :prez_1992: Clinton
+Washington Daily News: 
+  :city: 
+  :paper: Washington Daily News
+  :st: NC
+  :prez_1992: Clinton
+Longview Daily News: 
+  :city: 
+  :paper: Longview Daily News
+  :st: WA
+  :prez_1992: Clinton
+New Smyrna Beach Observer: 
+  :city: 
+  :paper: New Smyrna Beach Observer
+  :st: FL
+  :prez_1992: GHWBush
+Phoenix: 
+  :city: 
+  :paper: Phoenix
+  :st: PA
+  :prez_1992: Clinton
+Orange Leader: 
+  :city: 
+  :paper: Orange Leader
+  :st: TX
+  :prez_1992: Clinton
+Woonsocket Call: 
+  :city: 
+  :paper: Woonsocket Call
+  :st: RI
+  :prez_1992: GHWBush
+Minot Daily News: 
+  :city: 
+  :paper: Minot Daily News
+  :st: ND
+  :prez_1992: Clinton
+Seattle Times: 
+  :city: 
+  :paper: Seattle Times
+  :st: WA
+  :prez_1992: Clinton
+Big Spring Herald: 
+  :city: 
+  :paper: Big Spring Herald
+  :st: TX
+  :prez_1992: GHWBush
+Coos Bay World: 
+  :city: 
+  :paper: Coos Bay World
+  :st: OR
+  :prez_1992: GHWBush
+Augusta Chronicle: 
+  :city: 
+  :paper: Augusta Chronicle
+  :st: GA
+  :prez_1992: GHWBush
+Griffin Daily News: 
+  :city: 
+  :paper: Griffin Daily News
+  :st: GA
+  :prez_1992: GHWBush
+Brattleboro Reformer: 
+  :city: 
+  :paper: Brattleboro Reformer
+  :st: VT
+  :prez_1992: Clinton
+Woodward News: 
+  :city: 
+  :paper: Woodward News
+  :st: OK
+  :prez_1992: Clinton
+News and Record: 
+  :city: Greensboro
+  :paper: News and Record
+  :st: NC
+  :prez_1992: Clinton
+Pryor Daily Times: 
+  :city: 
+  :paper: Pryor Daily Times
+  :st: OK
+  :prez_1992: Clinton
+Hollister Free Lance: 
+  :city: 
+  :paper: Hollister Free Lance
+  :st: CA
+  :prez_1992: Clinton
+Times of Trenton: 
+  :city: 
+  :paper: Times of Trenton
+  :st: NJ
+  :prez_1992: Clinton
+Gary Post-Tribune: 
+  :city: 
+  :paper: Gary Post-Tribune
+  :st: IN
+  :prez_1992: GHWBush
+Emporia Gazette: 
+  :city: 
+  :paper: Emporia Gazette
+  :st: KS
+  :prez_1992: Clinton
+Boston Globe: 
+  :city: 
+  :paper: Boston Globe
+  :st: MA
+  :prez_1992: Clinton
+Newton Kansan: 
+  :city: 
+  :paper: Newton Kansan
+  :st: KS
+  :prez_1992: Clinton
+Nashville Banner: 
+  :city: 
+  :paper: Nashville Banner
+  :st: TN
+  :prez_1992: Clinton
+Southwest Times Record: 
+  :city: 
+  :paper: Southwest Times Record
+  :st: AR
+  :prez_1992: Clinton
+Centre Daily Times: 
+  :city: 
+  :paper: Centre Daily Times
+  :st: PA
+  :prez_1992: Clinton
+Capital Times: 
+  :city: 
+  :paper: Capital Times
+  :st: WI
+  :prez_1992: Clinton
+Oshkosh Northwestern: 
+  :city: 
+  :paper: Oshkosh Northwestern
+  :st: WI
+  :prez_1992: GHWBush
+Vicksburg Post: 
+  :city: 
+  :paper: Vicksburg Post
+  :st: MS
+  :prez_1992: GHWBush
+Houston Chronicle: 
+  :city: 
+  :paper: Houston Chronicle
+  :st: TX
+  :prez_1992: GHWBush
+Decatur Daily: 
+  :city: 
+  :paper: Decatur Daily
+  :st: AL
+  :prez_1992: Clinton
+Seattle Post-Intelligencer: 
+  :city: 
+  :paper: Seattle Post-Intelligencer
+  :st: WA
+  :prez_1992: Clinton
+Blackwell Journal-Tribune: 
+  :city: 
+  :paper: Blackwell Journal-Tribune
+  :st: OK
+  :prez_1992: GHWBush
+High Point Enterprise: 
+  :city: 
+  :paper: High Point Enterprise
+  :st: NC
+  :prez_1992: GHWBush
+Nevada Appeal: 
+  :city: 
+  :paper: Nevada Appeal
+  :st: NV
+  :prez_1992: GHWBush
+Topeka Capital-Journal: 
+  :city: 
+  :paper: Topeka Capital-Journal
+  :st: KS
+  :prez_1992: GHWBush
+Atlanta Journal-Constitution: 
+  :city: 
+  :paper: Atlanta Journal-Constitution
+  :st: GA
+  :prez_1992: Clinton
+Lincoln Star: 
+  :city: 
+  :paper: Lincoln Star
+  :st: NE
+  :prez_1992: Clinton
+Conway Daily Sun: 
+  :city: 
+  :paper: Conway Daily Sun
+  :st: NH
+  :prez_1992: GHWBush
+San Jose Mercury News: 
+  :city: 
+  :paper: San Jose Mercury News
+  :st: CA
+  :prez_1992: Clinton
+Daily Astorian: 
+  :city: 
+  :paper: Daily Astorian
+  :st: OR
+  :prez_1992: Clinton
+Antelope Valley Press: 
+  :city: 
+  :paper: Antelope Valley Press
+  :st: CA
+  :prez_1992: GHWBush
+Norman Transcript: 
+  :city: 
+  :paper: Norman Transcript
+  :st: OK
+  :prez_1992: Clinton
+Chattanooga Times: 
+  :city: 
+  :paper: Chattanooga Times
+  :st: TN
+  :prez_1992: Clinton
+Columbian: 
+  :city: 
+  :paper: Columbian
+  :st: WA
+  :prez_1992: Clinton
+Daily Item: 
+  :city: Sunbury
+  :paper: Daily Item
+  :st: PA
+  :prez_1992: Clinton
+Asbury Park Press: 
+  :city: 
+  :paper: Asbury Park Press
+  :st: NJ
+  :prez_1992: Clinton
+Express-Times: 
+  :city: 
+  :paper: Express-Times
+  :st: PA
+  :prez_1992: Clinton
+Denton Record-Chronicle: 
+  :city: 
+  :paper: Denton Record-Chronicle
+  :st: TX
+  :prez_1992: GHWBush
+Joplin Globe: 
+  :city: 
+  :paper: Joplin Globe
+  :st: MO
+  :prez_1992: GHWBush
+Annapolis Capital: 
+  :city: 
+  :paper: Annapolis Capital
+  :st: MD
+  :prez_1992: GHWBush
+Garden City Telegram: 
+  :city: 
+  :paper: Garden City Telegram
+  :st: KS
+  :prez_1992: Clinton
+San Angelo Standard-Times: 
+  :city: 
+  :paper: San Angelo Standard-Times
+  :st: TX
+  :prez_1992: Clinton
+Fort Worth Star-Telegram: 
+  :city: 
+  :paper: Fort Worth Star-Telegram
+  :st: TX
+  :prez_1992: Clinton
+Greenwood Commonwealth: 
+  :city: 
+  :paper: Greenwood Commonwealth
+  :st: MS
+  :prez_1992: Clinton
+McCook Daily Gazette: 
+  :city: 
+  :paper: McCook Daily Gazette
+  :st: NE
+  :prez_1992: Perot
+Brunswick News: 
+  :city: 
+  :paper: Brunswick News
+  :st: GA
+  :prez_1992: GHWBush
+Huntsville Item: 
+  :city: 
+  :paper: Huntsville Item
+  :st: TX
+  :prez_1992: Clinton
+Greenfield Daily Reporter: 
+  :city: 
+  :paper: Greenfield Daily Reporter
+  :st: IN
+  :prez_1992: GHWBush
+Winter Haven News Chief: 
+  :city: 
+  :paper: Winter Haven News Chief
+  :st: FL
+  :prez_1992: GHWBush
+Gloucester County Times: 
+  :city: 
+  :paper: Gloucester County Times
+  :st: NJ
+  :prez_1992: Clinton
+Athens Daily News: 
+  :city: 
+  :paper: Athens Daily News
+  :st: GA
+  :prez_1992: GHWBush
+Times-Picayune: 
+  :city: New Orleans
+  :paper: Times-Picayune
+  :st: LA
+  :prez_1992: GHWBush
+Temple Daily Telegram: 
+  :city: 
+  :paper: Temple Daily Telegram
+  :st: TX
+  :prez_1992: Clinton
+Denver Post: 
+  :city: 
+  :paper: Denver Post
+  :st: CO
+  :prez_1992: Clinton
+Philadelphia Inquirer: 
+  :city: 
+  :paper: Philadelphia Inquirer
+  :st: PA
+  :prez_1992: Clinton
+Philadelphia Daily News: 
+  :city: 
+  :paper: Philadelphia Daily News
+  :st: PA
+  :prez_1992: Clinton
+Dallas Morning News: 
+  :city: 
+  :paper: Dallas Morning News
+  :st: TX
+  :prez_1992: GHWBush
+El Paso Herald-Post: 
+  :city: 
+  :paper: El Paso Herald-Post
+  :st: TX
+  :prez_1992: GHWBush
+Lufkin Daily News: 
+  :city: 
+  :paper: Lufkin Daily News
+  :st: TX
+  :prez_1992: Clinton
+Mobile Press Register: 
+  :city: 
+  :paper: Mobile Press Register
+  :st: AL
+  :prez_1992: GHWBush
+Anderson Independent-Mail: 
+  :city: 
+  :paper: Anderson Independent-Mail
+  :st: SC
+  :prez_1992: Clinton
+Charlotte Observer: 
+  :city: 
+  :paper: Charlotte Observer
+  :st: NC
+  :prez_1992: Clinton
+Fairfield Daily Republic: 
+  :city: 
+  :paper: Fairfield Daily Republic
+  :st: CA
+  :prez_1992: GHWBush
+West Plains Daily Quill: 
+  :city: 
+  :paper: West Plains Daily Quill
+  :st: MO
+  :prez_1992: GHWBush
+Douglas Daily Dispatch: 
+  :city: 
+  :paper: Douglas Daily Dispatch
+  :st: AZ
+  :prez_1992: Clinton
+Seguin Gazette-Enterprise: 
+  :city: 
+  :paper: Seguin Gazette-Enterprise
+  :st: TX
+  :prez_1992: Clinton
+Saratogian: 
+  :city: 
+  :paper: Saratogian
+  :st: NY
+  :prez_1992: Clinton
+Albuquerque Journal: 
+  :city: 
+  :paper: Albuquerque Journal
+  :st: NM
+  :prez_1992: GHWBush
+Bonham Favorite: 
+  :city: 
+  :paper: Bonham Favorite
+  :st: TX
+  :prez_1992: Clinton
+Southern Illinoisan: 
+  :city: 
+  :paper: Southern Illinoisan
+  :st: IL
+  :prez_1992: Clinton
+Milwaukee Sentinel: 
+  :city: 
+  :paper: Milwaukee Sentinel
+  :st: WI
+  :prez_1992: GHWBush
+WilloughbyNews-Herald: 
+  :city: 
+  :paper: WilloughbyNews-Herald
+  :st: OH
+  :prez_1992: GHWBush
+Fresno Bee: 
+  :city: 
+  :paper: Fresno Bee
+  :st: CA
+  :prez_1992: Clinton
+St. Louis Post-Dispatch: 
+  :city: 
+  :paper: St. Louis Post-Dispatch
+  :st: MO
+  :prez_1992: Clinton
+Syracuse Herald-American: 
+  :city: 
+  :paper: Syracuse Herald-American
+  :st: NY
+  :prez_1992: Perot
+Des Moines Register: 
+  :city: 
+  :paper: Des Moines Register
+  :st: IA
+  :prez_1992: Clinton
+Sacramento Union: 
+  :city: 
+  :paper: Sacramento Union
+  :st: CA
+  :prez_1992: GHWBush
+Bristol Herald-Courier: 
+  :city: 
+  :paper: Bristol Herald-Courier
+  :st: VA
+  :prez_1992: GHWBush
+Athens Messenger: 
+  :city: 
+  :paper: Athens Messenger
+  :st: OH
+  :prez_1992: Clinton
+Hope Star: 
+  :city: 
+  :paper: Hope Star
+  :st: AR
+  :prez_1992: Clinton
+Palestine Herald-Press: 
+  :city: 
+  :paper: Palestine Herald-Press
+  :st: TX
+  :prez_1992: Clinton
+York News-Times: 
+  :city: 
+  :paper: York News-Times
+  :st: NE
+  :prez_1992: GHWBush
+Lake Charles American Press: 
+  :city: 
+  :paper: Lake Charles American Press
+  :st: LA
+  :prez_1992: GHWBush
+Sacramento Bee: 
+  :city: 
+  :paper: Sacramento Bee
+  :st: CA
+  :prez_1992: Clinton
+Utica Observer-Dispatch: 
+  :city: 
+  :paper: Utica Observer-Dispatch
+  :st: NY
+  :prez_1992: Clinton
+Lancaster Intelligencer Journal: 
+  :city: 
+  :paper: Lancaster Intelligencer Journal
+  :st: PA
+  :prez_1992: Clinton
+San Bernadino Sun: 
+  :city: 
+  :paper: San Bernadino Sun
+  :st: CA
+  :prez_1992: Clinton
+San Diego Union-Tribune: 
+  :city: 
+  :paper: San Diego Union-Tribune
+  :st: CA
+  :prez_1992: GHWBush
+Columbus Telegram: 
+  :city: 
+  :paper: Columbus Telegram
+  :st: NE
+  :prez_1992: GHWBush
+West Central Tribune: 
+  :city: 
+  :paper: West Central Tribune
+  :st: MN
+  :prez_1992: GHWBush
+Potomac News: 
+  :city: 
+  :paper: Potomac News
+  :st: VA
+  :prez_1992: Clinton
+Brunswick Times Record: 
+  :city: 
+  :paper: Brunswick Times Record
+  :st: ME
+  :prez_1992: Clinton
+Caledonian-Record: 
+  :city: 
+  :paper: Caledonian-Record
+  :st: VT
+  :prez_1992: GHWBush
+Chattanooga News-Free Press: 
+  :city: 
+  :paper: Chattanooga News-Free Press
+  :st: TN
+  :prez_1992: GHWBush
+Edmond Evening Sun: 
+  :city: 
+  :paper: Edmond Evening Sun
+  :st: OK
+  :prez_1992: GHWBush
+Galveston County Daily News: 
+  :city: 
+  :paper: Galveston County Daily News
+  :st: TX
+  :prez_1992: Clinton
+Tennessean: 
+  :city: Nashville
+  :paper: Tennessean
+  :st: TN
+  :prez_1992: Clinton
+Memphis Commercial Appeal: 
+  :city: 
+  :paper: Memphis Commercial Appeal
+  :st: TN
+  :prez_1992: GHWBush
+Sapulpa Daily Herald: 
+  :city: 
+  :paper: Sapulpa Daily Herald
+  :st: OK
+  :prez_1992: GHWBush
+Hutchinson News: 
+  :city: 
+  :paper: Hutchinson News
+  :st: KS
+  :prez_1992: Clinton
+Lakeland Ledger: 
+  :city: 
+  :paper: Lakeland Ledger
+  :st: FL
+  :prez_1992: Clinton
+Bellingham Herald: 
+  :city: 
+  :paper: Bellingham Herald
+  :st: WA
+  :prez_1992: Clinton
+Redding Record Searchlight: 
+  :city: 
+  :paper: Redding Record Searchlight
+  :st: CA
+  :prez_1992: GHWBush
+Harrisonburg Daily News-Record: 
+  :city: 
+  :paper: Harrisonburg Daily News-Record
+  :st: VA
+  :prez_1992: GHWBush
+Alamogordo Daily News: 
+  :city: 
+  :paper: Alamogordo Daily News
+  :st: NM
+  :prez_1992: GHWBush
+Foster's Daily Democrat: 
+  :city: 
+  :paper: Foster's Daily Democrat
+  :st: NH
+  :prez_1992: GHWBush
+Ann Arbor News: 
+  :city: 
+  :paper: Ann Arbor News
+  :st: MI
+  :prez_1992: Clinton
+Gannett Suburban Newspapers: 
+  :city: 
+  :paper: Gannett Suburban Newspapers
+  :st: NY
+  :prez_1992: Clinton
+Lebanon Daily Record: 
+  :city: 
+  :paper: Lebanon Daily Record
+  :st: MO
+  :prez_1992: GHWBush
+Junction City Daily Union: 
+  :city: 
+  :paper: Junction City Daily Union
+  :st: KS
+  :prez_1992: Clinton
+Daily Camera: 
+  :city: 
+  :paper: Daily Camera
+  :st: CO
+  :prez_1992: Clinton
+San Francisco Examiner: 
+  :city: 
+  :paper: San Francisco Examiner
+  :st: CA
+  :prez_1992: Clinton
+Waycross Journal-Herald: 
+  :city: 
+  :paper: Waycross Journal-Herald
+  :st: GA
+  :prez_1992: Clinton
+Salina Journal: 
+  :city: 
+  :paper: Salina Journal
+  :st: KS
+  :prez_1992: Clinton
+Marshall News Messenger: 
+  :city: 
+  :paper: Marshall News Messenger
+  :st: TX
+  :prez_1992: Clinton
+Cincinnati Post: 
+  :city: 
+  :paper: Cincinnati Post
+  :st: OH
+  :prez_1992: GHWBush
+Norfolk Daily News: 
+  :city: 
+  :paper: Norfolk Daily News
+  :st: NE
+  :prez_1992: GHWBush
+Benton Courier: 
+  :city: 
+  :paper: Benton Courier
+  :st: AR
+  :prez_1992: Clinton
+St. Petersburg Times: 
+  :city: 
+  :paper: St. Petersburg Times
+  :st: FL
+  :prez_1992: Clinton
+Mansfield News Journal: 
+  :city: 
+  :paper: Mansfield News Journal
+  :st: OH
+  :prez_1992: GHWBush
+Montgomery Journal: 
+  :city: 
+  :paper: Montgomery Journal
+  :st: MD
+  :prez_1992: GHWBush
+Rocky Mountain News: 
+  :city: 
+  :paper: Rocky Mountain News
+  :st: CO
+  :prez_1992: GHWBush
+Prescott Courier: 
+  :city: 
+  :paper: Prescott Courier
+  :st: AZ
+  :prez_1992: GHWBush
+Midland Reporter-Telegram: 
+  :city: 
+  :paper: Midland Reporter-Telegram
+  :st: TX
+  :prez_1992: GHWBush
+Tucson Daily Territorial: 
+  :city: 
+  :paper: Tucson Daily Territorial
+  :st: AZ
+  :prez_1992: GHWBush
+Janesville Gazette: 
+  :city: 
+  :paper: Janesville Gazette
+  :st: WI
+  :prez_1992: GHWBush
+Raleigh News and Observer: 
+  :city: 
+  :paper: Raleigh News and Observer
+  :st: NC
+  :prez_1992: Clinton
+Naples Daily-News: 
+  :city: 
+  :paper: Naples Daily-News
+  :st: FL
+  :prez_1992: GHWBush
+Olympian: 
+  :city: 
+  :paper: Olympian
+  :st: WA
+  :prez_1992: Clinton
+Salisbury Daily Times: 
+  :city: 
+  :paper: Salisbury Daily Times
+  :st: MD
+  :prez_1992: Clinton
+Oklahoman: 
+  :city: 
+  :paper: Oklahoman
+  :st: OK
+  :prez_1992: GHWBush
+Farmington Daily Times: 
+  :city: 
+  :paper: Farmington Daily Times
+  :st: NM
+  :prez_1992: GHWBush
+Moberly Monitor-Index: 
+  :city: 
+  :paper: Moberly Monitor-Index
+  :st: MO
+  :prez_1992: Clinton
+Carlisle Sentinel: 
+  :city: 
+  :paper: Carlisle Sentinel
+  :st: PA
+  :prez_1992: GHWBush
+Vista Press: 
+  :city: 
+  :paper: Vista Press
+  :st: CA
+  :prez_1992: Clinton
+Shreveport Times: 
+  :city: 
+  :paper: Shreveport Times
+  :st: LA
+  :prez_1992: Clinton
+Oakland Tribune: 
+  :city: 
+  :paper: Oakland Tribune
+  :st: CA
+  :prez_1992: Clinton
+Arizona Daily Star: 
+  :city: 
+  :paper: Arizona Daily Star
+  :st: AZ
+  :prez_1992: Clinton
+Berkshire Eagle: 
+  :city: 
+  :paper: Berkshire Eagle
+  :st: MA
+  :prez_1992: Clinton
+San Antonio Express-News: 
+  :city: 
+  :paper: San Antonio Express-News
+  :st: TX
+  :prez_1992: GHWBush
+Hannibal Courier-Post: 
+  :city: 
+  :paper: Hannibal Courier-Post
+  :st: MO
+  :prez_1992: GHWBush
+Tri-City Herald: 
+  :city: 
+  :paper: Tri-City Herald
+  :st: WA
+  :prez_1992: Clinton
+La Opinion: 
+  :city: 
+  :paper: La Opinion
+  :st: CA
+  :prez_1992: Clinton
+LaCrosse Tribune: 
+  :city: 
+  :paper: LaCrosse Tribune
+  :st: WI
+  :prez_1992: Clinton
+Anchorage Daily News: 
+  :city: 
+  :paper: Anchorage Daily News
+  :st: AK
+  :prez_1992: Clinton
+Burlington Free Press: 
+  :city: 
+  :paper: Burlington Free Press
+  :st: VT
+  :prez_1992: Clinton
+Knoxville News-Sentinel: 
+  :city: 
+  :paper: Knoxville News-Sentinel
+  :st: TN
+  :prez_1992: GHWBush
+Williston Daily Herald: 
+  :city: 
+  :paper: Williston Daily Herald
+  :st: ND
+  :prez_1992: GHWBush
+Jacksonville Journal Courier: 
+  :city: 
+  :paper: Jacksonville Journal Courier
+  :st: IL
+  :prez_1992: GHWBush
+Newark Star-Ledger: 
+  :city: 
+  :paper: Newark Star-Ledger
+  :st: NJ
+  :prez_1992: Clinton
+Central Jersey Home News: 
+  :city: 
+  :paper: Central Jersey Home News
+  :st: NJ
+  :prez_1992: Clinton
+St. Paul Pioneer Press: 
+  :city: 
+  :paper: St. Paul Pioneer Press
+  :st: MN
+  :prez_1992: Clinton
+New York Post: 
+  :city: 
+  :paper: New York Post
+  :st: NY
+  :prez_1992: GHWBush
+Winchester Star: 
+  :city: 
+  :paper: Winchester Star
+  :st: VA
+  :prez_1992: GHWBush
+Times Leader: 
+  :city: Wilkes-Barre
+  :paper: Times Leader
+  :st: PA
+  :prez_1992: GHWBush
+Kirksville Daily Express and New Rolla Daily News: 
+  :city: 
+  :paper: Kirksville Daily Express and New Rolla Daily News
+  :st: MO
+  :prez_1992: GHWBush
+Dayton Daily News: 
+  :city: 
+  :paper: Dayton Daily News
+  :st: OH
+  :prez_1992: Clinton
+Grand Forks Herald: 
+  :city: 
+  :paper: Grand Forks Herald
+  :st: ND
+  :prez_1992: Clinton
+Spokesman-Review (Spokane): 
+  :city: 
+  :paper: Spokesman-Review (Spokane)
+  :st: WA
+  :prez_1992: Clinton
+Pueblo Chieftain: 
+  :city: 
+  :paper: Pueblo Chieftain
+  :st: CO
+  :prez_1992: GHWBush
+Medina County Gazette: 
+  :city: 
+  :paper: Medina County Gazette
+  :st: OH
+  :prez_1992: Clinton
+Oregonian: 
+  :city: Portland
+  :paper: Oregonian
+  :st: OR
+  :prez_1992: Clinton
+Mineral Wells Index: 
+  :city: 
+  :paper: Mineral Wells Index
+  :st: TX
+  :prez_1992: Clinton
+Harrison Daily Times: 
+  :city: 
+  :paper: Harrison Daily Times
+  :st: AR
+  :prez_1992: GHWBush
+Ellensburg Daily Record: 
+  :city: 
+  :paper: Ellensburg Daily Record
+  :st: WA
+  :prez_1992: Clinton
+Ada Evening News: 
+  :city: 
+  :paper: Ada Evening News
+  :st: OK
+  :prez_1992: Clinton
+Victorville Daily Press: 
+  :city: 
+  :paper: Victorville Daily Press
+  :st: CA
+  :prez_1992: GHWBush
+Parsons Sun: 
+  :city: 
+  :paper: Parsons Sun
+  :st: KS
+  :prez_1992: Clinton
+New Haven Register: 
+  :city: 
+  :paper: New Haven Register
+  :st: CT
+  :prez_1992: GHWBush
+Norton Daily Telegram Tiller and Toiler: 
+  :city: 
+  :paper: Norton Daily Telegram Tiller and Toiler
+  :st: KS
+  :prez_1992: GHWBush
+Red Wing Republican Eagle: 
+  :city: 
+  :paper: Red Wing Republican Eagle
+  :st: MN
+  :prez_1992: Perot
+Bristol Press Register Citizen: 
+  :city: 
+  :paper: Bristol Press Register Citizen
+  :st: CT
+  :prez_1992: Clinton
+Albuquerque Tribune: 
+  :city: 
+  :paper: Albuquerque Tribune
+  :st: NM
+  :prez_1992: GHWBush
+Elko Daily Free Press: 
+  :city: 
+  :paper: Elko Daily Free Press
+  :st: NV
+  :prez_1992: GHWBush
+Chicago Tribune: 
+  :city: 
+  :paper: Chicago Tribune
+  :st: IL
+  :prez_1992: GHWBush
+Stuttgart Daily Leader: 
+  :city: 
+  :paper: Stuttgart Daily Leader
+  :st: AR
+  :prez_1992: Clinton
+Longview News-Journal: 
+  :city: 
+  :paper: Longview News-Journal
+  :st: TX
+  :prez_1992: Clinton
+Elk City Daily News: 
+  :city: 
+  :paper: Elk City Daily News
+  :st: OK
+  :prez_1992: Clinton
+Milwaukee Journal: 
+  :city: 
+  :paper: Milwaukee Journal
+  :st: WI
+  :prez_1992: Clinton
+Victoria Advocate: 
+  :city: 
+  :paper: Victoria Advocate
+  :st: TX
+  :prez_1992: GHWBush
+Gainesville Daily Register: 
+  :city: 
+  :paper: Gainesville Daily Register
+  :st: TX
+  :prez_1992: GHWBush
+Amarillo Daily News: 
+  :city: 
+  :paper: Amarillo Daily News
+  :st: TX
+  :prez_1992: GHWBush
+Fargo Forum: 
+  :city: 
+  :paper: Fargo Forum
+  :st: ND
+  :prez_1992: GHWBush
+Daily News: 
+  :city: 
+  :paper: Daily News
+  :st: NY
+  :prez_1992: Clinton
+Waco Tribune-Herald: 
+  :city: 
+  :paper: Waco Tribune-Herald
+  :st: TX
+  :prez_1992: Clinton
+Hartford Courant: 
+  :city: 
+  :paper: Hartford Courant
+  :st: CT
+  :prez_1992: Clinton
+Lodi News-Sentinel: 
+  :city: 
+  :paper: Lodi News-Sentinel
+  :st: CA
+  :prez_1992: GHWBush
+Bryan-College Station Eagle: 
+  :city: 
+  :paper: Bryan-College Station Eagle
+  :st: TX
+  :prez_1992: GHWBush
+Middletown Times: 
+  :city: 
+  :paper: Middletown Times
+  :st: NY
+  :prez_1992: Clinton
+Detroit Free Press: 
+  :city: 
+  :paper: Detroit Free Press
+  :st: MI
+  :prez_1992: Clinton
+Springfield News-Leader: 
+  :city: 
+  :paper: Springfield News-Leader
+  :st: MO
+  :prez_1992: Clinton
+Brookings Daily Register: 
+  :city: 
+  :paper: Brookings Daily Register
+  :st: SD
+  :prez_1992: Clinton
+Eagle Times Claremont: 
+  :city: 
+  :paper: Eagle Times Claremont
+  :st: NH
+  :prez_1992: Clinton
+Orlando Sentinel: 
+  :city: 
+  :paper: Orlando Sentinel
+  :st: FL
+  :prez_1992: GHWBush
+Washington Times: 
+  :city: 
+  :paper: Washington Times
+  :st: DC
+  :prez_1992: GHWBush
+Cleveland Plain Dealer: 
+  :city: 
+  :paper: Cleveland Plain Dealer
+  :st: OH
+  :prez_1992: Clinton
+Torrance Daily Breeze: 
+  :city: 
+  :paper: Torrance Daily Breeze
+  :st: CA
+  :prez_1992: GHWBush
+Atlanta Daily World: 
+  :city: 
+  :paper: Atlanta Daily World
+  :st: GA
+  :prez_1992: GHWBush
+Centralia Chronicle: 
+  :city: 
+  :paper: Centralia Chronicle
+  :st: WA
+  :prez_1992: GHWBush
+Grand Island Independent: 
+  :city: 
+  :paper: Grand Island Independent
+  :st: NE
+  :prez_1992: GHWBush
+Belleville News-Democrat: 
+  :city: 
+  :paper: Belleville News-Democrat
+  :st: IL
+  :prez_1992: GHWBush
+Modesto Bee: 
+  :city: 
+  :paper: Modesto Bee
+  :st: CA
+  :prez_1992: Clinton
+Jackson Sun: 
+  :city: 
+  :paper: Jackson Sun
+  :st: TN
+  :prez_1992: Clinton
+Daily Freeman: 
+  :city: 
+  :paper: Daily Freeman
+  :st: NY
+  :prez_1992: Clinton
+Beaumont Enterprise: 
+  :city: 
+  :paper: Beaumont Enterprise
+  :st: TX
+  :prez_1992: GHWBush
+Tulsa World: 
+  :city: 
+  :paper: Tulsa World
+  :st: OK
+  :prez_1992: GHWBush
+Wahpeton Daily News: 
+  :city: 
+  :paper: Wahpeton Daily News
+  :st: ND
+  :prez_1992: GHWBush
+Taunton Daily Gazette: 
+  :city: 
+  :paper: Taunton Daily Gazette
+  :st: MA
+  :prez_1992: Clinton
+Herald: 
+  :city: Everett
+  :paper: Herald
+  :st: WA
+  :prez_1992: Clinton
+Finlay Courier: 
+  :city: 
+  :paper: Finlay Courier
+  :st: OH
+  :prez_1992: GHWBush
+Minneapolis Star Tribune: 
+  :city: 
+  :paper: Minneapolis Star Tribune
+  :st: MN
+  :prez_1992: Clinton
+Cincinnati Enquirer: 
+  :city: 
+  :paper: Cincinnati Enquirer
+  :st: OH
+  :prez_1992: GHWBush
+Portsmouth Herald: 
+  :city: 
+  :paper: Portsmouth Herald
+  :st: NH
+  :prez_1992: Clinton
+Chicago Sun-Times: 
+  :city: 
+  :paper: Chicago Sun-Times
+  :st: IL
+  :prez_1992: Clinton
+Olathe Daily News: 
+  :city: 
+  :paper: Olathe Daily News
+  :st: KS
+  :prez_1992: Clinton
+New Mexican: 
+  :city: 
+  :paper: New Mexican
+  :st: NM
+  :prez_1992: Clinton
+Trentonian: 
+  :city: 
+  :paper: Trentonian
+  :st: NJ
+  :prez_1992: GHWBush
+Times-Republican: 
+  :city: 
+  :paper: Times-Republican
+  :st: IA
+  :prez_1992: GHWBush
+El Cajon: 
+  :city: 
+  :paper: El Cajon
+  :st: CA
+  :prez_1992: Clinton
+North Jersey Herald and News: 
+  :city: 
+  :paper: North Jersey Herald and News
+  :st: NJ
+  :prez_1992: Clinton
+Richmond County Daily Journal: 
+  :city: 
+  :paper: Richmond County Daily Journal
+  :st: NC
+  :prez_1992: Clinton
+Wooster Daily Record: 
+  :city: 
+  :paper: Wooster Daily Record
+  :st: OH
+  :prez_1992: GHWBush
+Washington Post: 
+  :city: 
+  :paper: Washington Post
+  :st: DC
+  :prez_1992: Clinton
+Springfield News-Sun: 
+  :city: 
+  :paper: Springfield News-Sun
+  :st: OH
+  :prez_1992: Clinton
+Rock Springs Daily Rocket-Miner: 
+  :city: 
+  :paper: Rock Springs Daily Rocket-Miner
+  :st: WY
+  :prez_1992: Clinton
+Casa Grande Dispatch: 
+  :city: 
+  :paper: Casa Grande Dispatch
+  :st: AZ
+  :prez_1992: GHWBush
+Lake Sun Leader: 
+  :city: Camdenton
+  :paper: Lake Sun Leader
+  :st: MO
+  :prez_1992: Clinton
+Portland Commercial Review: 
+  :city: 
+  :paper: Portland Commercial Review
+  :st: IN
+  :prez_1992: Clinton
+Concord Monitor: 
+  :city: 
+  :paper: Concord Monitor
+  :st: NH
+  :prez_1992: Clinton
+Pocono Record: 
+  :city: 
+  :paper: Pocono Record
+  :st: PA
+  :prez_1992: Clinton
+Times Record News: 
+  :city: Wichita Falls
+  :paper: Times Record News
+  :st: TX
+  :prez_1992: GHWBush
+Lisbon Morning Journal: 
+  :city: 
+  :paper: Lisbon Morning Journal
+  :st: OH
+  :prez_1992: GHWBush
+Independence Examiner: 
+  :city: 
+  :paper: Independence Examiner
+  :st: MO
+  :prez_1992: Clinton
+Columbia Daily Tribune: 
+  :city: 
+  :paper: Columbia Daily Tribune
+  :st: MO
+  :prez_1992: Perot
+Wichita Eagle: 
+  :city: 
+  :paper: Wichita Eagle
+  :st: KS
+  :prez_1992: Clinton
+Seminole Producer: 
+  :city: 
+  :paper: Seminole Producer
+  :st: OK
+  :prez_1992: Clinton
+Savannah Morning News: 
+  :city: 
+  :paper: Savannah Morning News
+  :st: GA
+  :prez_1992: GHWBush
+Lexington Herald-Leader: 
+  :city: 
+  :paper: Lexington Herald-Leader
+  :st: KY
+  :prez_1992: Clinton
+Stephenville Empire-Tribune: 
+  :city: 
+  :paper: Stephenville Empire-Tribune
+  :st: TX
+  :prez_1992: Clinton
+Santa Monica Outlook: 
+  :city: 
+  :paper: Santa Monica Outlook
+  :st: CA
+  :prez_1992: GHWBush
+Columbus Ledger-Enquirer: 
+  :city: 
+  :paper: Columbus Ledger-Enquirer
+  :st: GA
+  :prez_1992: Clinton

@@ -31,7 +31,7 @@
 'USA Today':                           { :sun: 0, :paper: 'USA Today',                           :st: '', :city: ''                              } #
 'Claremont Eagle Times':               { :sun: 1, :paper: 'Claremont Eagle Times',               :st: 'NH', :city: 'Claremont'                     } # 2008
 'Carlsbad Current-Argus':              { :sun: 1, :paper: 'Carlsbad Current-Argus',              :st: 'NM', :city: 'Carlsbad'                      } # 2000
-'Lebanon Dally Record':                { :sun: 1, :paper: 'Lebanon Dally Record',                :st: 'MO', :city: 'Lebanon'                       } # 1996
+'Lebanon Daily Record':                { :sun: 1, :paper: 'Lebanon Daily Record',                :st: 'MO', :city: 'Lebanon'                       } # 1996
 'Boca Raton News':                     { :sun: 1, :paper: 'Boca Raton News',                     :st: 'FL', :city: 'Boca Raton'                    } # 2000
 'Wenatchee World':                     { :sun: 1, :paper: 'Wenatchee World',                     :st: 'WA', :city: 'Wenatchee'                     } # 2008
 'Blackwell Journal-Tribune':           { :sun: 1, :paper: 'Blackwell Journal-Tribune',           :st: 'OK', :city: 'Blackwell'                     } # 1996
@@ -171,7 +171,7 @@
 'Santa Cruz Sentinel':                 { :sun: 0, :paper: 'Santa Cruz Sentinel',                 :st: 'CA', :city: 'Santa Cruz'                    } # 2004,2008
 'Hernando Today':                      { :sun: 1, :paper: 'Hernando Today',                      :st: 'FL', :city: 'Hernando'                      } # 1996
 'Hereford Brand':                      { :sun: 1, :paper: 'Hereford Brand',                      :st: 'TX', :city: 'Hereford'                      } # 1996
-'Mobile Register':                     { :sun: 1, :paper: 'Mobile Register',                     :st: 'AL', :city: 'Mobile'                        } # 2000
+'Mobile Press Register':               { :sun: 1, :paper: 'Mobile Press Register',               :st: 'AL', :city: 'Mobile'                        } # 2000
 'Traverse City Record-Eagle':          { :sun: 1, :paper: 'Traverse City Record-Eagle',          :st: 'MI', :city: 'Traverse City'                 } # 1996
 'Winter Haven News Chief':             { :sun: 1, :paper: 'Winter Haven News Chief',             :st: 'FL', :city: 'Winter Haven'                  } # 1996
 'Norfolk Daily News':                  { :sun: 1, :paper: 'Norfolk Daily News',                  :st: 'NE', :city: 'Norfolk'                       } # 1996,2000,2008
@@ -432,7 +432,7 @@
 'Dallas Morning News':                 { :sun: 0, :paper: 'Dallas Morning News',                 :st: 'TX', :city: 'Dallas'                        } # 1996,2000,2004,2008
 'Huntsville Times':                    { :sun: 1, :paper: 'Huntsville Times',                    :st: 'AL', :city: 'Huntsville'                    } # 2000
 'Oakland Tribune':                     { :sun: 0, :paper: 'Oakland Tribune',                     :st: 'CA', :city: 'Oakland'                       } # 1996,2004,2008
-'Bay City News':                       { :sun: 1, :paper: 'Bay City News',                       :st: 'MI', :city: 'Bay City'                      } # 2008
+'Bay City Times':                      { :sun: 1, :paper: 'Bay City Times',                      :st: 'MI', :city: 'Bay City'                      } # 2008
 'Rockford Register Star':              { :sun: 0, :paper: 'Rockford Register Star',              :st: 'IL', :city: 'Rockford'                      } # 2000,2004,2008
 'Mount Airy News':                     { :sun: 1, :paper: 'Mount Airy News',                     :st: 'NC', :city: 'Mount Airy'                    } # 1996
 'Tribune':                             { :sun: 1, :paper: 'Tribune',                             :st: 'FL', :city: 'Fort Pierce'                   } # 2000
@@ -488,7 +488,6 @@
 'Wall Street Journal':                 { :sun: 0, :paper: 'Wall Street Journal',                 :st: 'NY', :city: 'New York City'                 } #
 'el Diario':                           { :sun: 0, :paper: 'el Diario',                           :st: 'NY', :city: 'New York City'                 } # 2004,2008
 'New York Times':                      { :sun: 0, :paper: 'New York Times',                      :st: 'NY', :city: 'New York City'                 } # 1996,2000,2004,2008
-'New York Daily News':                 { :sun: 1, :paper: 'New York Daily News',                 :st: 'NY', :city: 'New York City'                 } # 1996
 'New York Post':                       { :sun: 0, :paper: 'New York Post',                       :st: 'NY', :city: 'New York City'                 } # 1996,2000,2004,2008
 'Daily News':                          { :sun: 0, :paper: 'Daily News',                          :st: 'NY', :city: 'New York City'                 } # 2000,2004,2008
 'Syracuse Post-Standard':              { :sun: 1, :paper: 'Syracuse Post-Standard',              :st: 'NY', :city: 'Syracuse'                      } # 2008
@@ -524,3 +523,149 @@
 'Wisconsin State Journal':             { :sun: 0, :paper: 'Wisconsin State Journal',             :st: 'WI', :city: 'Madison'                       } # 2000,2004,2008
 'Charleston Gazette':                  { :sun: 0, :paper: 'Charleston Gazette',                  :st: 'WV', :city: 'Charleston'                    } # 1996,2000,2004,2008
 'Charleston Daily Mail':               { :sun: 1, :paper: 'Charleston Daily Mail',               :st: 'WV', :city: 'Charleston'                    } # 1996,2000
+
+
+'Sumter Item':                         { :sun: 1, :paper: 'Sumter Item',                         :st: 'SC', :city: 'Sumter'                              } # 1996,2000
+'Boulder Camera':                      { :sun: 1, :paper: 'Boulder Camera',                      :st: 'CO', :city: 'Boulder'                              } # 2000,2004,2008
+'Indianapolis Star':                   { :sun: 1, :paper: 'Indianapolis Star',                   :st: 'IN', :city: 'Indianapolis'                              } # 1996,2000,2004
+'Shreveport Times':                    { :sun: 1, :paper: 'Shreveport Times',                    :st: 'LA', :city: 'Shreveport'                              } # 1992,1996,2000,2008
+'Fargo Forum':                         { :sun: 1, :paper: 'Fargo Forum',                         :st: 'ND', :city: 'Fargo'                              } # 1996,2000,2004,2008
+'Daily Californian':                   { :sun: 1, :paper: 'Daily Californian',                   :st: 'CA', :city: 'Daily Californian'             } # 1992
+'El Cajon':                            { :sun: 1, :paper: 'El Cajon',                            :st: 'CA', :city: 'El Cajon'                      } # 1992
+'Southern Illinoisan':                 { :sun: 1, :paper: 'Southern Illinoisan',                 :st: 'IL', :city: 'Southern Illinoisan'           } # 1992
+'Daily Freeman':                       { :sun: 1, :paper: 'Daily Freeman',                       :st: 'NY', :city: 'Daily Freeman'                 } # 1992
+'New Mexican':                         { :sun: 1, :paper: 'New Mexican',                         :st: 'NM', :city: 'New Mexican'                   } # 1992
+'Nevada Appeal':                       { :sun: 1, :paper: 'Nevada Appeal',                       :st: 'NV', :city: 'Nevada'                 } # 1992
+'North Jersey Herald and News':        { :sun: 1, :paper: 'North Jersey Herald and News',        :st: 'NJ', :city: 'North Jersey Herald and News'  } # 1992
+'Daily Mountain Eagle':                { :sun: 1, :paper: 'Daily Mountain Eagle',                :st: 'AL', :city: 'Daily'          } # 1992
+'Hope Star':                           { :sun: 1, :paper: 'Hope Star',                           :st: 'AR', :city: 'Hope'                     } # 1992
+'Stuttgart Daily Leader':              { :sun: 1, :paper: 'Stuttgart Daily Leader',              :st: 'AR', :city: 'Stuttgart'        } # 1992
+'Douglas Daily Dispatch':              { :sun: 1, :paper: 'Douglas Daily Dispatch',              :st: 'AZ', :city: 'Douglas'        } # 1992
+'Prescott Courier':                    { :sun: 1, :paper: 'Prescott Courier',                    :st: 'AZ', :city: 'Prescott'              } # 1992
+'Tucson Daily Territorial':            { :sun: 1, :paper: 'Tucson Daily Territorial',            :st: 'AZ', :city: 'Tucson'      } # 1992
+'Redding Record Searchlight':          { :sun: 1, :paper: 'Redding Record Searchlight',          :st: 'CA', :city: 'Redding'    } # 1992
+'Sacramento Union':                    { :sun: 1, :paper: 'Sacramento Union',                    :st: 'CA', :city: 'Sacramento'              } # 1992
+'San Bernadino Sun':                   { :sun: 1, :paper: 'San Bernadino Sun',                   :st: 'CA', :city: 'San Bernadino'             } # 1992
+'San Pedro News-Pilot':                { :sun: 1, :paper: 'San Pedro News-Pilot',                :st: 'CA', :city: 'San Pedro'          } # 1992
+'Santa Monica Outlook':                { :sun: 1, :paper: 'Santa Monica Outlook',                :st: 'CA', :city: 'Santa Monica'          } # 1992
+'Torrance Daily Breeze':               { :sun: 1, :paper: 'Torrance Daily Breeze',               :st: 'CA', :city: 'Torrance'         } # 1992
+'Victorville Daily Press':             { :sun: 1, :paper: 'Victorville Daily Press',             :st: 'CA', :city: 'Victorville'       } # 1992
+'Vista Press':                         { :sun: 1, :paper: 'Vista Press',                         :st: 'CA', :city: 'Vista'                   } # 1992
+'Daily Camera':                        { :sun: 1, :paper: 'Daily Camera',                        :st: 'CO', :city: 'Camera'                  } # 1992
+'Lamar Daily News':                    { :sun: 1, :paper: 'Lamar Daily News',                    :st: 'CO', :city: 'Lamar'              } # 1992
+'Bristol Press Register Citizen':      { :sun: 1, :paper: 'Bristol Press Register Citizen',      :st: 'CT', :city: 'Bristol' } # 1992
+'Stamford Advocate':                   { :sun: 1, :paper: 'Stamford Advocate',                   :st: 'CT', :city: 'Stamford'             } # 1992
+'Lake City Reporter':                  { :sun: 1, :paper: 'Lake City Reporter',                  :st: 'FL', :city: 'Lake City'            } # 1992
+'Naples Daily News':                   { :sun: 1, :paper: 'Naples Daily News',                   :st: 'FL', :city: 'Naples News'             } # 1992
+'New Smyrna Beach Observer':           { :sun: 1, :paper: 'New Smyrna Beach Observer',           :st: 'FL', :city: 'New Smyrna Beach'     } # 1992
+'Atlanta Daily World':                 { :sun: 1, :paper: 'Atlanta Daily World',                 :st: 'GA', :city: 'Atlanta'           } # 1992
+'Brunswick News':                      { :sun: 1, :paper: 'Brunswick News',                      :st: 'GA', :city: 'Brunswick'                } # 1992
+'Griffin Daily News':                  { :sun: 1, :paper: 'Griffin Daily News',                  :st: 'GA', :city: 'Griffin'            } # 1992
+'Rome News-Tribune':                   { :sun: 1, :paper: 'Rome News-Tribune',                   :st: 'GA', :city: 'Rome'             } # 1992
+'Ames Daily Tribune Hawk Eye':         { :sun: 1, :paper: 'Ames Daily Tribune Hawk Eye',         :st: 'IA', :city: 'Ames'   } # 1992
+'Times-Republican':                    { :sun: 1, :paper: 'Times-Republican',                    :st: 'IA', :city: 'Times-Republican'              } # 1992
+'Idaho Falls Post Register':           { :sun: 1, :paper: 'Idaho Falls Post Register',           :st: 'ID', :city: 'Idaho Falls'     } # 1992
+'Jacksonville Journal Courier':        { :sun: 1, :paper: 'Jacksonville Journal Courier',        :st: 'IL', :city: 'Jacksonville'  } # 1992
+'Bloomfield Evening World':            { :sun: 1, :paper: 'Bloomfield Evening World',            :st: 'IN', :city: 'Bloomfield'      } # 1992
+'Gary Post-Tribune':                   { :sun: 1, :paper: 'Gary Post-Tribune',                   :st: 'IN', :city: 'Gary'             } # 1992
+'Greenfield Daily Reporter':           { :sun: 1, :paper: 'Greenfield Daily Reporter',           :st: 'IN', :city: 'Greenfield'     } # 1992
+'Huntington Herald-Press':             { :sun: 1, :paper: 'Huntington Herald-Press',             :st: 'IN', :city: 'Huntington'       } # 1992
+'Portland Commercial Review':          { :sun: 1, :paper: 'Portland Commercial Review',          :st: 'IN', :city: 'Portland'    } # 1992
+'Garden City Telegram':                { :sun: 1, :paper: 'Garden City Telegram',                :st: 'KS', :city: 'Garden City'          } # 1992
+'Junction City Daily Union':           { :sun: 1, :paper: 'Junction City Daily Union',           :st: 'KS', :city: 'Junction City'     } # 1992
+'Norton Daily Telegram Tiller and Toiler': { :sun: 1, :paper: 'Norton Daily Telegram Tiller and Toiler', :st: 'KS', :city: 'Norton' } # 1992
+'Olathe Daily News':                   { :sun: 1, :paper: 'Olathe Daily News',                   :st: 'KS', :city: 'Olathe'             } # 1992
+'Parsons Sun':                         { :sun: 1, :paper: 'Parsons Sun',                         :st: 'KS', :city: 'Parsons'                   } # 1992
+'Salina Journal':                      { :sun: 1, :paper: 'Salina Journal',                      :st: 'KS', :city: 'Salina'                } # 1992
+'Lake Charles American Press':         { :sun: 1, :paper: 'Lake Charles American Press',         :st: 'LA', :city: 'Lake Charles'   } # 1992
+'Southbridge News':                    { :sun: 1, :paper: 'Southbridge News',                    :st: 'MA', :city: 'Southbridge'              } # 1992
+'Annapolis Capital':                   { :sun: 1, :paper: 'Annapolis Capital',                   :st: 'MD', :city: 'Annapolis'             } # 1992
+'Montgomery Journal':                  { :sun: 1, :paper: 'Montgomery Journal',                  :st: 'MD', :city: 'Montgomery'            } # 1992
+'Brunswick Times Record':              { :sun: 1, :paper: 'Brunswick Times Record',              :st: 'ME', :city: 'Brunswick'        } # 1992
+'West Central Tribune':                { :sun: 1, :paper: 'West Central Tribune',                :st: 'MN', :city: 'West Central'          } # 1992
+'Blue Springs Examiner':               { :sun: 1, :paper: 'Blue Springs Examiner',               :st: 'MO', :city: 'Blue Springs'         } # 1992
+'Hannibal Courier-Post':               { :sun: 1, :paper: 'Hannibal Courier-Post',               :st: 'MO', :city: 'Hannibal'         } # 1992
+'Independence Examiner':               { :sun: 1, :paper: 'Independence Examiner',               :st: 'MO', :city: 'Independence'         } # 1992
+'Kirksville Daily Express and New Rolla Daily News': { :sun: 1, :paper: 'Kirksville Daily Express and New Rolla Daily News', :st: 'MO', :city: 'Kirksville Daily Express and New Rolla Daily News' } # 1992
+'Greenwood Commonwealth':              { :sun: 1, :paper: 'Greenwood Commonwealth',              :st: 'MS', :city: 'Greenwood'        } # 1992
+'Mississippi Press':                   { :sun: 1, :paper: 'Mississippi Press',                   :st: 'MS', :city: ''             } # 1992
+'Raleigh News and Observer':           { :sun: 1, :paper: 'Raleigh News and Observer',           :st: 'NC', :city: 'Raleigh'     } # 1992
+'Washington Daily News':               { :sun: 1, :paper: 'Washington Daily News',               :st: 'NC', :city: 'Washington'         } # 1992
+'Minot Daily News':                    { :sun: 1, :paper: 'Minot Daily News',                    :st: 'ND', :city: 'Minot'              } # 1992
+'Wahpeton Daily News':                 { :sun: 1, :paper: 'Wahpeton Daily News',                 :st: 'ND', :city: 'Wahpeton'           } # 1992
+'Williston Daily Herald':              { :sun: 1, :paper: 'Williston Daily Herald',              :st: 'ND', :city: 'Williston'        } # 1992
+'Columbus Telegram':                   { :sun: 1, :paper: 'Columbus Telegram',                   :st: 'NE', :city: 'Columbus'             } # 1992
+'Lincoln Star':                        { :sun: 1, :paper: 'Lincoln Star',                        :st: 'NE', :city: 'Lincoln'                  } # 1992
+'York News-Times':                     { :sun: 1, :paper: 'York News-Times',                     :st: 'NE', :city: 'York'               } # 1992
+'Conway Daily Sun':                    { :sun: 1, :paper: 'Conway Daily Sun',                    :st: 'NH', :city: 'Conway'              } # 1992
+'Eagle Times Claremont':               { :sun: 1, :paper: 'Eagle Times Claremont',               :st: 'NH', :city: 'Eagle'         } # 1992
+'Burlington County Times':             { :sun: 1, :paper: 'Burlington County Times',             :st: 'NJ', :city: 'Burlington'       } # 1992
+'Camden Courier-Post':                 { :sun: 1, :paper: 'Camden Courier-Post',                 :st: 'NJ', :city: 'Camden'           } # 1992
+'Newark Star-Ledger':                  { :sun: 1, :paper: 'Newark Star-Ledger',                  :st: 'NJ', :city: 'Newark'            } # 1992
+'Trentonian':                          { :sun: 1, :paper: 'Trentonian',                          :st: 'NJ', :city: 'Trentonian'                    } # 1992
+'Alamogordo Daily News':               { :sun: 1, :paper: 'Alamogordo Daily News',               :st: 'NM', :city: 'Alamogordo'         } # 1992
+'Farmington Daily Times':              { :sun: 1, :paper: 'Farmington Daily Times',              :st: 'NM', :city: 'Farmington'        } # 1992
+'Herald-Record':                       { :sun: 1, :paper: 'Herald-Record',                       :st: 'NY', :city: 'Herald-Record'                 } # 1992
+'Middletown Times':                    { :sun: 1, :paper: 'Middletown Times',                    :st: 'NY', :city: 'Middletown'              } # 1992
+'Saratogian':                          { :sun: 1, :paper: 'Saratogian',                          :st: 'NY', :city: 'Saratogian'                    } # 1992
+'Utica Observer-Dispatch':             { :sun: 1, :paper: 'Utica Observer-Dispatch',             :st: 'NY', :city: 'Utica'       } # 1992
+'Athens Messenger':                    { :sun: 1, :paper: 'Athens Messenger',                    :st: 'OH', :city: 'Athens'              } # 1992
+'Cleveland Plain Dealer':              { :sun: 1, :paper: 'Cleveland Plain Dealer',              :st: 'OH', :city: 'Cleveland'        } # 1992
+'Finlay Courier':                      { :sun: 1, :paper: 'Finlay Courier',                      :st: 'OH', :city: 'Finlay'                } # 1992
+'Lisbon Morning Journal':              { :sun: 1, :paper: 'Lisbon Morning Journal',              :st: 'OH', :city: 'Lisbon'        } # 1992
+'Mansfield News Journal':              { :sun: 1, :paper: 'Mansfield News Journal',              :st: 'OH', :city: 'Mansfield'        } # 1992
+'Medina County Gazette':               { :sun: 1, :paper: 'Medina County Gazette',               :st: 'OH', :city: 'Medina'         } # 1992
+'WilloughbyNews-Herald':               { :sun: 1, :paper: 'WilloughbyNews-Herald',               :st: 'OH', :city: 'Willoughby'         } # 1992
+'Ada Evening News':                    { :sun: 1, :paper: 'Ada Evening News',                    :st: 'OK', :city: 'Ada'              } # 1992
+'Oklahoman':                           { :sun: 1, :paper: 'Oklahoman',                           :st: 'OK', :city: 'Oklahoma City'               } # 1992
+'Norman Transcript':                   { :sun: 1, :paper: 'Norman Transcript',                   :st: 'OK', :city: 'Norman'             } # 1992
+'Okmulgee Daily Times':                { :sun: 1, :paper: 'Okmulgee Daily Times',                :st: 'OK', :city: 'Okmulgee'          } # 1992
+'Pryor Daily Times':                   { :sun: 1, :paper: 'Pryor Daily Times',                   :st: 'OK', :city: 'Pryor Times'             } # 1992
+'Seminole Producer':                   { :sun: 1, :paper: 'Seminole Producer',                   :st: 'OK', :city: 'Seminole'             } # 1992
+'Woodward News':                       { :sun: 1, :paper: 'Woodward News',                       :st: 'OK', :city: 'Woodward'                 } # 1992
+'Salem Statesman-Journal':             { :sun: 1, :paper: 'Salem Statesman-Journal',             :st: 'OR', :city: 'Salem'       } # 1992
+'Carlisle Sentinel':                   { :sun: 1, :paper: 'Carlisle Sentinel',                   :st: 'PA', :city: 'Carlisle'             } # 1992
+'Johnstown Tribune-Democrat':          { :sun: 1, :paper: 'Johnstown Tribune-Democrat',          :st: 'PA', :city: 'Johnstown'    } # 1992
+'Lancaster Intelligencer Journal':     { :sun: 1, :paper: 'Lancaster Intelligencer Journal',     :st: 'PA', :city: 'Lancaster' } # 1992
+'New Castle News':                     { :sun: 1, :paper: 'New Castle News',                     :st: 'PA', :city: 'New Castle News'               } # 1992
+'Phoenix':                             { :sun: 1, :paper: 'Phoenix',                             :st: 'PA', :city: 'Phoenix'                       } # 1992
+'Pittsburgh Press':                    { :sun: 1, :paper: 'Pittsburgh Press',                    :st: 'PA', :city: 'Pittsburgh'              } # 1992
+'Pocono Record':                       { :sun: 1, :paper: 'Pocono Record',                       :st: 'PA', :city: 'Stroudsburg'                 } # 1992
+'Sunbury Daily':                       { :sun: 1, :paper: 'Sunbury Daily',                       :st: 'PA', :city: 'Sunbury'                 } # 1992
+'Uniontown Herald-Standard':           { :sun: 1, :paper: 'Uniontown Herald-Standard',           :st: 'PA', :city: 'Uniontown'     } # 1992
+'Woonsocket Call':                     { :sun: 1, :paper: 'Woonsocket Call',                     :st: 'RI', :city: 'Woonsocket'               } # 1992
+'Anderson Independent-Mail':           { :sun: 1, :paper: 'Anderson Independent-Mail',           :st: 'SC', :city: 'Anderson'     } # 1992
+'Brookings Daily Register':            { :sun: 1, :paper: 'Brookings Daily Register',            :st: 'SD', :city: 'Brookings'      } # 1992
+'Chattanooga News-Free Press':         { :sun: 1, :paper: 'Chattanooga News-Free Press',         :st: 'TN', :city: 'Chattanooga'   } # 1992
+'Memphis Commercial Appeal':           { :sun: 1, :paper: 'Memphis Commercial Appeal',           :st: 'TN', :city: 'Memphis'     } # 1992
+'Morristown Citizen Tribune':          { :sun: 1, :paper: 'Morristown Citizen Tribune',          :st: 'TN', :city: 'Morristown'    } # 1992
+'Bonham Favorite':                     { :sun: 1, :paper: 'Bonham Favorite',                     :st: 'TX', :city: 'Bonham'               } # 1992
+'Bryan-College Station Eagle':         { :sun: 1, :paper: 'Bryan-College Station Eagle',         :st: 'TX', :city: 'Bryan-College'   } # 1992
+'Denton Record-Chronicle':             { :sun: 1, :paper: 'Denton Record-Chronicle',             :st: 'TX', :city: 'Denton'       } # 1992
+'Galveston Daily News':                { :sun: 1, :paper: 'Galveston Daily News',                :st: 'TX', :city: 'Galveston'          } # 1992
+'Houston Post':                        { :sun: 1, :paper: 'Houston Post',                        :st: 'TX', :city: 'Houston'                  } # 1992
+'Huntsville Item':                     { :sun: 1, :paper: 'Huntsville Item',                     :st: 'TX', :city: 'Huntsville'               } # 1992
+'Marshall News Messenger':             { :sun: 1, :paper: 'Marshall News Messenger',             :st: 'TX', :city: 'Marshall'       } # 1992
+'Mineral Wells Index':                 { :sun: 1, :paper: 'Mineral Wells Index',                 :st: 'TX', :city: 'Mineral Wells'           } # 1992
+'Orange Leader':                       { :sun: 1, :paper: 'Orange Leader',                       :st: 'TX', :city: 'Orange'                 } # 1992
+'Plainview Daily Herald':              { :sun: 1, :paper: 'Plainview Daily Herald',              :st: 'TX', :city: 'Plainview'        } # 1992
+'Seguin Gazette-Enterprise':           { :sun: 1, :paper: 'Seguin Gazette-Enterprise',           :st: 'TX', :city: 'Seguin'     } # 1992
+'Stephenville Empire-Tribune':         { :sun: 1, :paper: 'Stephenville Empire-Tribune',         :st: 'TX', :city: 'Stephenville'   } # 1992
+'Temple Daily Telegram':               { :sun: 1, :paper: 'Temple Daily Telegram',               :st: 'TX', :city: 'Temple'         } # 1992
+'Waco Tribune-Herald':                 { :sun: 1, :paper: 'Waco Tribune-Herald',                 :st: 'TX', :city: 'Waco'           } # 1992
+'Bristol Herald-Courier':              { :sun: 1, :paper: 'Bristol Herald-Courier',              :st: 'VA', :city: 'Bristol'        } # 1992
+'Charlottesville Daily Progress':      { :sun: 1, :paper: 'Charlottesville Daily Progress',      :st: 'VA', :city: 'Charlottesville' } # 1992
+'Harrisonburg Daily News-Record':      { :sun: 1, :paper: 'Harrisonburg Daily News-Record',      :st: 'VA', :city: 'Harrisonburg' } # 1992
+'Potomac News':                        { :sun: 1, :paper: 'Potomac News',                        :st: 'VA', :city: 'Potomac'                  } # 1992
+'Staunton Daily News Leader':          { :sun: 1, :paper: 'Staunton Daily News Leader',          :st: 'VA', :city: 'Staunton'    } # 1992
+'Caledonian-Record':                   { :sun: 1, :paper: 'Caledonian-Record',                   :st: 'VT', :city: 'Caledonian'             } # 1992
+'Bellingham Herald':                   { :sun: 1, :paper: 'Bellingham Herald',                   :st: 'WA', :city: 'Bellingham'             } # 1992
+'Bremerton Sun':                       { :sun: 1, :paper: 'Bremerton Sun',                       :st: 'WA', :city: 'Bremerton'                 } # 1992
+'Centralia Chronicle':                 { :sun: 1, :paper: 'Centralia Chronicle',                 :st: 'WA', :city: 'Centralia'           } # 1992
+'Ellensburg Daily Record':             { :sun: 1, :paper: 'Ellensburg Daily Record',             :st: 'WA', :city: 'Ellensburg'       } # 1992
+'Longview Daily News':                 { :sun: 1, :paper: 'Longview Daily News',                 :st: 'WA', :city: 'Longview'           } # 1992
+'Janesville Gazette':                  { :sun: 1, :paper: 'Janesville Gazette',                  :st: 'WI', :city: 'Janesville'            } # 1992
+'Milwaukee Journal':                   { :sun: 1, :paper: 'Milwaukee Journal',                   :st: 'WI', :city: 'Milwaukee'             } # 1992
+'Milwaukee Sentinel':                  { :sun: 1, :paper: 'Milwaukee Sentinel',                  :st: 'WI', :city: 'Milwaukee'            } # 1992
+'Rock Springs Daily Rocket-Miner':     { :sun: 1, :paper: 'Rock Springs Daily Rocket-Miner',     :st: 'WY', :city: 'Rock Springs' } # 1992
+

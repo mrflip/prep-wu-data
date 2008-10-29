@@ -9,15 +9,31 @@ require 'imw/utils/extensions/core'
 module StructDumper
   def self.dump_all objs, type_options
     type_options.each do |type, options|
-      options ||= { }
-      case type
-      when :xml   then dump_xml  objs, options
-      when :yaml  then dump_yaml objs, options
-      when :csv   then dump_csv  objs, options
-      when :tsv   then dump_tsv  objs, options
-      end
+      dump_from objs, type, options
     end
   end
+  def self.dump_from objs, type, options
+    case type
+    when :xml   then dump_xml  objs, options
+    when :yaml  then dump_yaml objs, options
+    when :csv   then dump_csv  objs, options
+    when :tsv   then dump_tsv  objs, options
+    end
+  end
+  def self.load_all klass, type_options
+    type_options.map do |type, options|
+      load_from klass, type, options||{}
+    end
+  end
+  def self.load_from klass, type, options = {}
+    case type
+    when :xml   then load_xml  klass, options
+    when :yaml  then load_yaml klass, options
+    when :csv   then load_csv  klass, options
+    when :tsv   then load_tsv  klass, options
+    end
+  end
+
   #
   # Automaticall generate destination filename
   #
@@ -109,7 +125,7 @@ module StructDumper
     klass   = magic_klass objs, options
     YAML.dump(objs, File.open(dump_filename(klass, :yaml, options), 'w'))
   end
-  def self.load_yaml options={}
+  def self.load_yaml klass, options={}
     objs = YAML.load(File.open(dump_filename(klass, :yaml, options)))
   end
   #

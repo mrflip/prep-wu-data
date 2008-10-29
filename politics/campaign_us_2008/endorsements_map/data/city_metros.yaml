@@ -1106,14 +1106,14 @@
 
 ? 
   - UT
-  - St. George
+  - Saint George
 : !ruby/struct:CityMetro 
   st: UT
-  city: St. George
+  city: Saint George
   fips_state: "49"
   fips_place: "65330"
   cbsa_code: "41100"
-  metro_name: St. George, UT MSA
+  metro_name: Saint George, UT MSA
   metro_stature: MSA
   pop_2007: 133791
   pop_2000: 90354
@@ -1700,14 +1700,14 @@
 
 ? 
   - PA
-  - St. Marys
+  - Saint Marys
 : !ruby/struct:CityMetro 
   st: PA
-  city: St. Marys
+  city: Saint Marys
   fips_state: "42"
   fips_place: "67344"
   cbsa_code: "41260"
-  metro_name: St. Marys, PA uSA
+  metro_name: Saint Marys, PA uSA
   metro_stature: uSA
   pop_2007: 
   pop_2000: 
@@ -1788,14 +1788,14 @@
 
 ? 
   - FL
-  - St. Petersburg
+  - Saint Petersburg
 : !ruby/struct:CityMetro 
   st: FL
-  city: St. Petersburg
+  city: Saint Petersburg
   fips_state: "12"
   fips_place: "63000"
   cbsa_code: "45300"
-  metro_name: Tampa-St. Petersburg-Clearwater, FL MSA
+  metro_name: Tampa-Saint Petersburg-Clearwater, FL MSA
   metro_stature: MSA
   pop_2007: 2723949
   pop_2000: 2396013
@@ -3324,7 +3324,7 @@
   pop_aoa_pct: 79.7
   metro_st: FL
   metro_nickname: ""
-  csa_name: Port St. Lucie-Sebastian-Vero Beach, FL CSA
+  csa_name: Port Saint Lucie-Sebastian-Vero Beach, FL CSA
 
 ? 
   - WY
@@ -6272,7 +6272,7 @@
   pop_aoa_pct: 79.7
   metro_st: FL
   metro_nickname: ""
-  csa_name: Port St. Lucie-Sebastian-Vero Beach, FL CSA
+  csa_name: Port Saint Lucie-Sebastian-Vero Beach, FL CSA
 
 ? 
   - TX
@@ -7366,7 +7366,7 @@
   fips_state: "12"
   fips_place: "39425"
   cbsa_code: "45300"
-  metro_name: Tampa-St. Petersburg-Clearwater, FL MSA
+  metro_name: Tampa-Saint Petersburg-Clearwater, FL MSA
   metro_stature: MSA
   pop_2007: 2723949
   pop_2000: 2396013
@@ -7388,7 +7388,7 @@
   fips_state: "27"
   fips_place: "17288"
   cbsa_code: "33460"
-  metro_name: Minneapolis-St. Paul-Bloomington, MN-WI MSA
+  metro_name: Minneapolis-Saint Paul-Bloomington, MN-WI MSA
   metro_stature: MSA
   pop_2007: 3208212
   pop_2000: 2968817
@@ -7399,7 +7399,7 @@
   pop_aoa_pct: 33.7
   metro_st: MN-WI
   metro_nickname: Twin Cities
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - FL
@@ -10913,7 +10913,7 @@
   fips_state: "12"
   fips_place: "71000"
   cbsa_code: "45300"
-  metro_name: Tampa-St. Petersburg-Clearwater, FL MSA
+  metro_name: Tampa-Saint Petersburg-Clearwater, FL MSA
   metro_stature: MSA
   pop_2007: 2723949
   pop_2000: 2396013
@@ -11815,7 +11815,7 @@
   fips_state: "27"
   fips_place: "06616"
   cbsa_code: "33460"
-  metro_name: Minneapolis-St. Paul-Bloomington, MN-WI MSA
+  metro_name: Minneapolis-Saint Paul-Bloomington, MN-WI MSA
   metro_stature: MSA
   pop_2007: 3208212
   pop_2000: 2968817
@@ -11826,7 +11826,7 @@
   pop_aoa_pct: 33.7
   metro_st: MN-WI
   metro_nickname: Twin Cities
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - TX
@@ -11940,14 +11940,14 @@
 
 ? 
   - MO
-  - St. Louis
+  - Saint Louis
 : !ruby/struct:CityMetro 
   st: MO
-  city: St. Louis
+  city: Saint Louis
   fips_state: "29"
   fips_place: "65000"
   cbsa_code: "41180"
-  metro_name: St. Louis, MO-IL MSA
+  metro_name: Saint Louis, MO-IL MSA
   metro_stature: MSA
   pop_2007: 2803707
   pop_2000: 2698672
@@ -11957,8 +11957,8 @@
   pop_at_or_above: 108527299
   pop_aoa_pct: 35.6
   metro_st: MO-IL
-  metro_nickname: Greater St. Louis
-  csa_name: St. Louis-St. Charles-Farmington, MO-IL CSA
+  metro_nickname: Greater Saint Louis
+  csa_name: Saint Louis-Saint Charles-Farmington, MO-IL CSA
 
 ? 
   - LA
@@ -12101,7 +12101,7 @@
   fips_state: "12"
   fips_place: "12875"
   cbsa_code: "45300"
-  metro_name: Tampa-St. Petersburg-Clearwater, FL MSA
+  metro_name: Tampa-Saint Petersburg-Clearwater, FL MSA
   metro_stature: MSA
   pop_2007: 2723949
   pop_2000: 2396013
@@ -14042,7 +14042,7 @@
   fips_state: "27"
   fips_place: "18116"
   cbsa_code: "33460"
-  metro_name: Minneapolis-St. Paul-Bloomington, MN-WI MSA
+  metro_name: Minneapolis-Saint Paul-Bloomington, MN-WI MSA
   metro_stature: MSA
   pop_2007: 3208212
   pop_2000: 2968817
@@ -14053,7 +14053,7 @@
   pop_aoa_pct: 33.7
   metro_st: MN-WI
   metro_nickname: Twin Cities
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - OR
@@ -16675,14 +16675,14 @@
 
 ? 
   - MO
-  - St. Charles
+  - Saint Charles
 : !ruby/struct:CityMetro 
   st: MO
-  city: St. Charles
+  city: Saint Charles
   fips_state: "29"
   fips_place: "64082"
   cbsa_code: "41180"
-  metro_name: St. Louis, MO-IL MSA
+  metro_name: Saint Louis, MO-IL MSA
   metro_stature: MSA
   pop_2007: 2803707
   pop_2000: 2698672
@@ -16692,8 +16692,8 @@
   pop_at_or_above: 108527299
   pop_aoa_pct: 35.6
   metro_st: MO-IL
-  metro_nickname: Greater St. Louis
-  csa_name: St. Louis-St. Charles-Farmington, MO-IL CSA
+  metro_nickname: Greater Saint Louis
+  csa_name: Saint Louis-Saint Charles-Farmington, MO-IL CSA
 
 ? 
   - NC
@@ -17137,14 +17137,14 @@
 
 ? 
   - MN
-  - St. Cloud
+  - Saint Cloud
 : !ruby/struct:CityMetro 
   st: MN
-  city: St. Cloud
+  city: Saint Cloud
   fips_state: "27"
   fips_place: "56896"
   cbsa_code: "41060"
-  metro_name: St. Cloud, MN MSA
+  metro_name: Saint Cloud, MN MSA
   metro_stature: MSA
   pop_2007: 185555
   pop_2000: 167392
@@ -17155,7 +17155,7 @@
   pop_aoa_pct: 76.5
   metro_st: MN
   metro_nickname: ""
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - MS
@@ -18535,7 +18535,7 @@
   fips_state: "27"
   fips_place: "43252"
   cbsa_code: "33460"
-  metro_name: Minneapolis-St. Paul-Bloomington, MN-WI MSA
+  metro_name: Minneapolis-Saint Paul-Bloomington, MN-WI MSA
   metro_stature: MSA
   pop_2007: 3208212
   pop_2000: 2968817
@@ -18546,7 +18546,7 @@
   pop_aoa_pct: 33.7
   metro_st: MN-WI
   metro_nickname: Twin Cities
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - OK
@@ -21241,7 +21241,7 @@
   fips_state: "27"
   fips_place: "51730"
   cbsa_code: "33460"
-  metro_name: Minneapolis-St. Paul-Bloomington, MN-WI MSA
+  metro_name: Minneapolis-Saint Paul-Bloomington, MN-WI MSA
   metro_stature: MSA
   pop_2007: 3208212
   pop_2000: 2968817
@@ -21252,7 +21252,7 @@
   pop_aoa_pct: 33.7
   metro_st: MN-WI
   metro_nickname: Twin Cities
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - SC
@@ -22119,14 +22119,14 @@
 
 ? 
   - MN
-  - St. Paul
+  - Saint Paul
 : !ruby/struct:CityMetro 
   st: MN
-  city: St. Paul
+  city: Saint Paul
   fips_state: "27"
   fips_place: "58000"
   cbsa_code: "33460"
-  metro_name: Minneapolis-St. Paul-Bloomington, MN-WI MSA
+  metro_name: Minneapolis-Saint Paul-Bloomington, MN-WI MSA
   metro_stature: MSA
   pop_2007: 3208212
   pop_2000: 2968817
@@ -22137,7 +22137,7 @@
   pop_aoa_pct: 33.7
   metro_st: MN-WI
   metro_nickname: Twin Cities
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - SD
@@ -23754,7 +23754,7 @@
   fips_state: "27"
   fips_place: "43000"
   cbsa_code: "33460"
-  metro_name: Minneapolis-St. Paul-Bloomington, MN-WI MSA
+  metro_name: Minneapolis-Saint Paul-Bloomington, MN-WI MSA
   metro_stature: MSA
   pop_2007: 3208212
   pop_2000: 2968817
@@ -23765,7 +23765,7 @@
   pop_aoa_pct: 33.7
   metro_st: MN-WI
   metro_nickname: Twin Cities
-  csa_name: Minneapolis-St. Paul-St. Cloud, MN-WI CSA
+  csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
 
 ? 
   - NH
@@ -24561,14 +24561,14 @@
 
 ? 
   - FL
-  - Port St. Lucie
+  - Port Saint Lucie
 : !ruby/struct:CityMetro 
   st: FL
-  city: Port St. Lucie
+  city: Port Saint Lucie
   fips_state: "12"
   fips_place: "58715"
   cbsa_code: "38940"
-  metro_name: Port St. Lucie, FL MSA
+  metro_name: Port Saint Lucie, FL MSA
   metro_stature: MSA
   pop_2007: 400121
   pop_2000: 319426
@@ -24579,7 +24579,7 @@
   pop_aoa_pct: 68.3
   metro_st: FL
   metro_nickname: ""
-  csa_name: Port St. Lucie-Sebastian-Vero Beach, FL CSA
+  csa_name: Port Saint Lucie-Sebastian-Vero Beach, FL CSA
 
 ? 
   - CA
@@ -24737,14 +24737,14 @@
 
 ? 
   - MO
-  - St. Joseph
+  - Saint Joseph
 : !ruby/struct:CityMetro 
   st: MO
-  city: St. Joseph
+  city: Saint Joseph
   fips_state: "29"
   fips_place: "64550"
   cbsa_code: "41140"
-  metro_name: St. Joseph, MO-KS MSA
+  metro_name: Saint Joseph, MO-KS MSA
   metro_stature: MSA
   pop_2007: 123339
   pop_2000: 122336
@@ -24825,10 +24825,10 @@
 
 ? 
   - NY
-  - New York
+  - New York City
 : !ruby/struct:CityMetro 
   st: NY
-  city: New York
+  city: New York City
   fips_state: "36"
   fips_place: "51000"
   cbsa_code: "35620"
@@ -27492,14 +27492,14 @@
 
 ? 
   - GA
-  - St. Marys
+  - Saint Marys
 : !ruby/struct:CityMetro 
   st: GA
-  city: St. Marys
+  city: Saint Marys
   fips_state: "13"
   fips_place: "67984"
   cbsa_code: "41220"
-  metro_name: St. Marys, GA uSA
+  metro_name: Saint Marys, GA uSA
   metro_stature: uSA
   pop_2007: 
   pop_2000: 

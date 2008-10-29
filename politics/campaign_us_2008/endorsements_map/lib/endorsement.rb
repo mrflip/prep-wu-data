@@ -7,7 +7,8 @@ PARTY_ALIGNMENT = {
 MOVEMENT_TO             = { 'McCain' => -2, 'Obama' => 2, }
 SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review-Journal', 'The Chattanooga Free Press', 'Chattanooga Times']
 class Endorsement < Struct.new(
-  :prez_2008, :prez_2004, :prez_2000, :prez_1996, :prez_1992, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper
+  :prez_2008, :prez_2004, :prez_2000, :prez_1996, :prez_1992, :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
+    :metro
   # :movement, :all_rank, :metro # don't set these -- will be set from other attrs
   )
   include HashOfStructs

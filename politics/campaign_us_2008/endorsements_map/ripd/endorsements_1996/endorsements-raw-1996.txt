@@ -194,7 +194,7 @@ West Plains Daily Quill
 DOLE
 Columbia Daily Tribune
 Joplin Globe
-Lebanon Dally Record
+Lebanon Daily Record
 Sikeston Standard Democrat
 Warrensburg Daily Star-Journal
 Kansas City Star
@@ -246,7 +246,7 @@ NEW YORK
 CLINTON
 Canandaigua Daily Messenger
 Kingston Daily Freeman
-New York Daily News
+Daily News
 
 DOLE
 Finger Lakes Times
@@ -476,7 +476,7 @@ TENNESSEE
 The Nashville Banner
 The Tennessean, Nashville
 NEW YORK
-The New York Daily News
+Daily News
 The New York Times
 PENNSYLVANIA
 The Philadelphia Daily News

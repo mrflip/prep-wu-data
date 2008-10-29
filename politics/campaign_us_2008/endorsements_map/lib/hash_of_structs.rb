@@ -21,15 +21,16 @@ module HashOfStructs
     # serialize
     #
     def load options={ }
-      options = options.reverse_merge :dir => :data, :literalize_keys => true
+      options = options.reverse_merge :dir => :data, :literalize_keys => true, :format => :yaml
+      p options
       puts Time.now.to_s+" Loading #{self}"
-      self.all = StructDumper.load_tsv self, options
+      self.all = StructDumper.load_from self, options[:format], options
       self.all
     end
     def dump options={ }
-      options = options.reverse_merge :dir => :data, :literalize_keys => true
+      options = options.reverse_merge :dir => :data, :literalize_keys => true, :format => :yaml
       puts Time.now.to_s+" Dumping #{self}"
-      StructDumper.dump_tsv @all, options
+      StructDumper.dump_from @all, options[:format], options
     end
   end
 

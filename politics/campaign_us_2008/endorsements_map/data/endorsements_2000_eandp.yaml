@@ -1,1416 +1,1421 @@
 --- 
 Rochester Democrat and Chronicle: 
+  :prez_2000: Gore
   :city: 
   :paper: Rochester Democrat and Chronicle
   :st: NY
-  :prez_2000: Gore
 Iowa City Press-Citizen: 
+  :prez_2000: Gore
   :city: 
   :paper: Iowa City Press-Citizen
   :st: IA
-  :prez_2000: Gore
 Riverside Press-Enterprise: 
+  :prez_2000: Bush
   :city: 
   :paper: Riverside Press-Enterprise
   :st: CA
-  :prez_2000: Bush
 Sante Fe New Mexican: 
+  :prez_2000: Gore
   :city: 
   :paper: Sante Fe New Mexican
   :st: NM
-  :prez_2000: Gore
 Kansas City Star: 
+  :prez_2000: Gore
   :city: 
   :paper: Kansas City Star
   :st: MO
-  :prez_2000: Gore
-News Journal: 
-  :city: Wilmington
-  :paper: News Journal
-  :st: DE
-  :prez_2000: Gore
 Bend Bulletin: 
+  :prez_2000: Bush
   :city: 
   :paper: Bend Bulletin
   :st: OR
-  :prez_2000: Bush
 Daily Southtown: 
+  :prez_2000: Gore
   :city: Tinley Park
   :paper: Daily Southtown
   :st: IL
-  :prez_2000: Gore
 Delaware County Daily Times: 
+  :prez_2000: Bush
   :city: Primos
   :paper: Delaware County Daily Times
   :st: PA
-  :prez_2000: Bush
 News-Gazette: 
+  :prez_2000: Bush
   :city: Champaign
   :paper: News-Gazette
   :st: IL
-  :prez_2000: Bush
 News Tribune: 
+  :prez_2000: Gore
   :city: Tacoma
   :paper: News Tribune
   :st: WA
-  :prez_2000: Gore
 Las Vegas Review-Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Las Vegas Review-Journal
   :st: NV
-  :prez_2000: Bush
 Union Leader: 
+  :prez_2000: Bush
   :city: Manchester
   :paper: Union Leader
   :st: NH
-  :prez_2000: Bush
 Arizona Republic: 
+  :prez_2000: Bush
   :city: Phoenix
   :paper: Arizona Republic
   :st: AZ
-  :prez_2000: Bush
 Palm Beach Post: 
+  :prez_2000: Gore
   :city: West Palm Beach
   :paper: Palm Beach Post
   :st: FL
-  :prez_2000: Gore
 Roanoke Times: 
+  :prez_2000: Gore
   :city: 
   :paper: Roanoke Times
   :st: VA
-  :prez_2000: Gore
 New York Times: 
+  :prez_2000: Gore
   :city: 
   :paper: New York Times
   :st: NY
-  :prez_2000: Gore
 Macomb Daily: 
+  :prez_2000: Gore
   :city: 
   :paper: Macomb Daily
   :st: MI
-  :prez_2000: Gore
 Lubbock Avalanche-Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Lubbock Avalanche-Journal
   :st: TX
-  :prez_2000: Bush
 Record (Stockton): 
+  :prez_2000: Bush
   :city: Stockton
   :paper: Record (Stockton)
   :st: CA
-  :prez_2000: Bush
 El Paso Times: 
+  :prez_2000: Bush
   :city: 
   :paper: El Paso Times
   :st: TX
-  :prez_2000: Bush
 Bangor Daily News: 
+  :prez_2000: Bush
   :city: 
   :paper: Bangor Daily News
   :st: ME
-  :prez_2000: Bush
 Detroit News: 
+  :prez_2000: Bush
   :city: 
   :paper: Detroit News
   :st: MI
-  :prez_2000: Bush
 Virginian-Pilot: 
+  :prez_2000: Gore
   :city: Norfolk
   :paper: Virginian-Pilot
   :st: VA
-  :prez_2000: Gore
 Record-Journal: 
+  :prez_2000: Gore
   :city: Meriden
   :paper: Record-Journal
   :st: CT
-  :prez_2000: Gore
 Greeley Daily Tribune: 
+  :prez_2000: Bush
   :city: 
   :paper: Greeley Daily Tribune
   :st: CO
-  :prez_2000: Bush
 Greenwich Time: 
+  :prez_2000: Bush
   :city: 
   :paper: Greenwich Time
   :st: CT
-  :prez_2000: Bush
 Daily News (Los Angeles): 
+  :prez_2000: Bush
   :city: Los Angeles
   :paper: Daily News (Los Angeles)
   :st: CA
-  :prez_2000: Bush
 Repository: 
+  :prez_2000: Bush
   :city: Canton
   :paper: Repository
   :st: OH
-  :prez_2000: Bush
 Eagle-Tribune: 
+  :prez_2000: Bush
   :city: Lawrence
   :paper: Eagle-Tribune
   :st: MA
-  :prez_2000: Bush
 News-Times: 
+  :prez_2000: Gore
   :city: Danbury
   :paper: News-Times
   :st: CT
-  :prez_2000: Gore
 Capital: 
+  :prez_2000: Bush
   :city: Annapolis
   :paper: Capital
   :st: MD
-  :prez_2000: Bush
 Beaver County Times: 
+  :prez_2000: Gore
   :city: 
   :paper: Beaver County Times
   :st: PA
-  :prez_2000: Gore
 Daytona Beach News-Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Daytona Beach News-Journal
   :st: FL
-  :prez_2000: Gore
 Boston Herald: 
+  :prez_2000: Bush
   :city: 
   :paper: Boston Herald
   :st: MA
-  :prez_2000: Bush
 Tuscaloosa News: 
+  :prez_2000: Gore
   :city: 
   :paper: Tuscaloosa News
   :st: AL
-  :prez_2000: Gore
 Journal Gazette: 
+  :prez_2000: Gore
   :city: Fort Wayne
   :paper: Journal Gazette
   :st: IN
-  :prez_2000: Gore
 Huntington Herald-Dispatch: 
+  :prez_2000: Gore
   :city: 
   :paper: Huntington Herald-Dispatch
   :st: WV
-  :prez_2000: Gore
 York Daily Record: 
+  :prez_2000: Gore
   :city: 
   :paper: York Daily Record
   :st: PA
-  :prez_2000: Gore
 Alexandria Daily Town Talk: 
+  :prez_2000: Bush
   :city: 
   :paper: Alexandria Daily Town Talk
   :st: LA
-  :prez_2000: Bush
 North County Times: 
+  :prez_2000: Bush
   :city: Escondido
   :paper: North County Times
   :st: CA
-  :prez_2000: Bush
+Record (Hackensack): 
+  :prez_2000: Gore
+  :city: Hackensack
+  :paper: Record (Hackensack)
+  :st: NJ
 Connecticut Post: 
+  :prez_2000: Bush
   :city: Bridgeport
   :paper: Connecticut Post
   :st: CT
-  :prez_2000: Bush
 Arkansas Democrat-Gazette: 
+  :prez_2000: Bush
   :city: Little Rock
   :paper: Arkansas Democrat-Gazette
   :st: AR
-  :prez_2000: Bush
 Grand Rapids Press: 
+  :prez_2000: Bush
   :city: 
   :paper: Grand Rapids Press
   :st: MI
-  :prez_2000: Bush
 Pantagraph: 
+  :prez_2000: Bush
   :city: Bloomington
   :paper: Pantagraph
   :st: IL
-  :prez_2000: Bush
 Journal Times: 
+  :prez_2000: Gore
   :city: Racine
   :paper: Journal Times
   :st: WI
-  :prez_2000: Gore
 Home News Tribune: 
+  :prez_2000: Gore
   :city: East Brunswick
   :paper: Home News Tribune
   :st: NJ
-  :prez_2000: Gore
 Chattanooga Free Press: 
+  :prez_2000: Bush
   :city: 
   :paper: Chattanooga Free Press
   :st: TN
-  :prez_2000: Bush
 Florida Today: 
+  :prez_2000: Gore
   :city: Melbourne
   :paper: Florida Today
   :st: FL
-  :prez_2000: Gore
 Columbus Dispatch: 
+  :prez_2000: Bush
   :city: 
   :paper: Columbus Dispatch
   :st: OH
-  :prez_2000: Bush
 Charleston Gazette: 
+  :prez_2000: Gore
   :city: 
   :paper: Charleston Gazette
   :st: WV
-  :prez_2000: Gore
 Buffalo News: 
+  :prez_2000: Gore
   :city: 
   :paper: Buffalo News
   :st: NY
-  :prez_2000: Gore
 Reno Gazette-Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Reno Gazette-Journal
   :st: NV
-  :prez_2000: Gore
 San Francisco Chronicle: 
+  :prez_2000: Gore
   :city: 
   :paper: San Francisco Chronicle
   :st: CA
-  :prez_2000: Gore
 Omaha World-Herald: 
+  :prez_2000: Bush
   :city: 
   :paper: Omaha World-Herald
   :st: NE
-  :prez_2000: Bush
 Morning Call: 
+  :prez_2000: Bush
   :city: Allentown
   :paper: Morning Call
   :st: PA
-  :prez_2000: Bush
 Abilene Reporter-News: 
+  :prez_2000: Bush
   :city: 
   :paper: Abilene Reporter-News
   :st: TX
-  :prez_2000: Bush
 Gadsden Times: 
+  :prez_2000: Bush
   :city: 
   :paper: Gadsden Times
   :st: AL
-  :prez_2000: Bush
 Marietta Times: 
+  :prez_2000: Bush
   :city: 
   :paper: Marietta Times
   :st: OH
-  :prez_2000: Bush
 Baltimore Sun: 
+  :prez_2000: Gore
   :city: 
   :paper: Baltimore Sun
   :st: MD
-  :prez_2000: Gore
 Birmingham Post-Herald: 
+  :prez_2000: Bush
   :city: 
   :paper: Birmingham Post-Herald
   :st: AL
-  :prez_2000: Bush
 Sarasota Herald-Tribune: 
+  :prez_2000: Gore
   :city: 
   :paper: Sarasota Herald-Tribune
   :st: FL
-  :prez_2000: Gore
 Newsday: 
+  :prez_2000: Gore
   :city: Melville
   :paper: Newsday
   :st: NY
-  :prez_2000: Gore
 Las Vegas Sun: 
+  :prez_2000: Gore
   :city: 
   :paper: Las Vegas Sun
   :st: NV
-  :prez_2000: Gore
 Rockford Register Star: 
+  :prez_2000: Bush
   :city: 
   :paper: Rockford Register Star
   :st: IL
-  :prez_2000: Bush
 Contra Costa Times: 
+  :prez_2000: Bush
   :city: Walnut Creek
   :paper: Contra Costa Times
   :st: CA
-  :prez_2000: Bush
 Portland Press Herald: 
+  :prez_2000: Gore
   :city: 
   :paper: Portland Press Herald
   :st: ME
-  :prez_2000: Gore
 Journal and Courier: 
+  :prez_2000: Bush
   :city: Lafayette
   :paper: Journal and Courier
   :st: IN
-  :prez_2000: Bush
 Daily Star: 
+  :prez_2000: Gore
   :city: Oneonta
   :paper: Daily Star
   :st: NY
-  :prez_2000: Gore
 Keene Sentinel: 
+  :prez_2000: Gore
   :city: 
   :paper: Keene Sentinel
   :st: NH
-  :prez_2000: Gore
 Lansing State-Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Lansing State-Journal
   :st: MI
-  :prez_2000: Gore
 State: 
+  :prez_2000: Bush
   :city: Columbia
   :paper: State
   :st: SC
-  :prez_2000: Bush
 Green Bay Press Gazette: 
+  :prez_2000: Bush
   :city: 
   :paper: Green Bay Press Gazette
   :st: WI
-  :prez_2000: Bush
 Charleston Daily Mail: 
+  :prez_2000: Bush
   :city: 
   :paper: Charleston Daily Mail
   :st: WV
-  :prez_2000: Bush
 Bradenton Herald: 
+  :prez_2000: Bush
   :city: 
   :paper: Bradenton Herald
   :st: FL
-  :prez_2000: Bush
 Louisville Courier-Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Louisville Courier-Journal
   :st: KY
-  :prez_2000: Gore
 Morning Star: 
+  :prez_2000: Gore
   :city: Wilmington
   :paper: Morning Star
   :st: NC
-  :prez_2000: Gore
 Daily Sentinel: 
+  :prez_2000: Bush
   :city: Grand Junction
   :paper: Daily Sentinel
   :st: CO
-  :prez_2000: Bush
 Metrowest Daily News: 
+  :prez_2000: Gore
   :city: Framingham
   :paper: Metrowest Daily News
   :st: MA
-  :prez_2000: Gore
 Indianapolis Star: 
+  :prez_2000: Bush
   :city: 
   :paper: Indianapolis Star
   :st: IN
-  :prez_2000: Bush
 Journal Star: 
+  :prez_2000: Bush
   :city: Peoria
   :paper: Journal Star
   :st: IL
-  :prez_2000: Bush
 Las Cruces Sun-News: 
+  :prez_2000: Bush
   :city: 
   :paper: Las Cruces Sun-News
   :st: NM
-  :prez_2000: Bush
 Seattle Times: 
+  :prez_2000: Bush
   :city: 
   :paper: Seattle Times
   :st: WA
-  :prez_2000: Bush
 News and Record: 
+  :prez_2000: Gore
   :city: Greensboro
   :paper: News and Record
   :st: NC
-  :prez_2000: Gore
 Times of Trenton: 
+  :prez_2000: Gore
   :city: 
   :paper: Times of Trenton
   :st: NJ
-  :prez_2000: Gore
 Hawk Eye: 
+  :prez_2000: Gore
   :city: Burlington
   :paper: Hawk Eye
   :st: IA
-  :prez_2000: Gore
 Augusta Chronicle: 
+  :prez_2000: Bush
   :city: 
   :paper: Augusta Chronicle
   :st: GA
-  :prez_2000: Bush
 Duluth News-Tribune: 
+  :prez_2000: Gore
   :city: 
   :paper: Duluth News-Tribune
   :st: MN
-  :prez_2000: Gore
 Fort Collins Coloradoan: 
+  :prez_2000: Gore
   :city: 
   :paper: Fort Collins Coloradoan
   :st: CO
-  :prez_2000: Gore
 Emporia Gazette: 
+  :prez_2000: Gore
   :city: 
   :paper: Emporia Gazette
   :st: KS
-  :prez_2000: Gore
 Boston Globe: 
+  :prez_2000: Gore
   :city: 
   :paper: Boston Globe
   :st: MA
-  :prez_2000: Gore
 Daily Herald: 
+  :prez_2000: Bush
   :city: Arlington Heights
   :paper: Daily Herald
   :st: IL
-  :prez_2000: Bush
 Capital Times: 
+  :prez_2000: Gore
   :city: Madison
   :paper: Capital Times
   :st: WI
-  :prez_2000: Gore
 Centre Daily Times: 
+  :prez_2000: Gore
   :city: State College
   :paper: Centre Daily Times
   :st: PA
-  :prez_2000: Gore
 Southwest Times Record: 
+  :prez_2000: Bush
   :city: Fort Smith
   :paper: Southwest Times Record
   :st: AR
-  :prez_2000: Bush
 Sumter Item: 
+  :prez_2000: Bush
   :city: 
   :paper: Sumter Item
   :st: SC
-  :prez_2000: Bush
 Seattle Post-Intelligencer: 
+  :prez_2000: Gore
   :city: 
   :paper: Seattle Post-Intelligencer
   :st: WA
-  :prez_2000: Gore
 Houston Chronicle: 
+  :prez_2000: Bush
   :city: 
   :paper: Houston Chronicle
   :st: TX
-  :prez_2000: Bush
 North Platte Telegraph: 
+  :prez_2000: Bush
   :city: 
   :paper: North Platte Telegraph
   :st: NE
-  :prez_2000: Bush
 Pasadena Star-News: 
+  :prez_2000: Bush
   :city: 
   :paper: Pasadena Star-News
   :st: CA
-  :prez_2000: Bush
 Register-Guard: 
+  :prez_2000: Gore
   :city: Eugene
   :paper: Register-Guard
   :st: OR
-  :prez_2000: Gore
 Corvallis Gazette-Times: 
+  :prez_2000: Gore
   :city: 
   :paper: Corvallis Gazette-Times
   :st: OR
-  :prez_2000: Gore
 High Point Enterprise: 
+  :prez_2000: Bush
   :city: 
   :paper: High Point Enterprise
   :st: NC
-  :prez_2000: Bush
 Tucson Citizen: 
+  :prez_2000: Gore
   :city: 
   :paper: Tucson Citizen
   :st: AZ
-  :prez_2000: Gore
 Carlsbad Current-Argus: 
+  :prez_2000: Bush
   :city: 
   :paper: Carlsbad Current-Argus
   :st: NM
-  :prez_2000: Bush
 Atlanta Journal-Constitution: 
+  :prez_2000: Gore
   :city: 
   :paper: Atlanta Journal-Constitution
   :st: GA
-  :prez_2000: Gore
 Lincoln Journal-Star: 
+  :prez_2000: Bush
   :city: 
   :paper: Lincoln Journal-Star
   :st: NE
-  :prez_2000: Bush
 Marietta Daily Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Marietta Daily Journal
   :st: GA
-  :prez_2000: Bush
 San Jose Mercury News: 
+  :prez_2000: Gore
   :city: 
   :paper: San Jose Mercury News
   :st: CA
-  :prez_2000: Gore
 Tribune-Review: 
+  :prez_2000: Bush
   :city: Greensburg
   :paper: Tribune-Review
   :st: PA
-  :prez_2000: Bush
 Chattanooga Times: 
+  :prez_2000: Gore
   :city: 
   :paper: Chattanooga Times
   :st: TN
-  :prez_2000: Gore
 Huntsville Times: 
+  :prez_2000: Gore
   :city: 
   :paper: Huntsville Times
   :st: AL
-  :prez_2000: Gore
 Poughkeepsie Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Poughkeepsie Journal
   :st: NY
+Daily News (Bowling Green): 
   :prez_2000: Bush
+  :city: Bowling Green
+  :paper: Daily News (Bowling Green)
+  :st: KY
 Courier-Post: 
+  :prez_2000: Bush
   :city: Cherry Hill
   :paper: Courier-Post
   :st: NJ
-  :prez_2000: Bush
 Columbian: 
+  :prez_2000: Bush
   :city: Vancouver
   :paper: Columbian
   :st: WA
-  :prez_2000: Bush
 Santa Rosa Press-Democrat: 
+  :prez_2000: Gore
   :city: 
   :paper: Santa Rosa Press-Democrat
   :st: CA
-  :prez_2000: Gore
 Asbury Park Press: 
+  :prez_2000: Bush
   :city: 
   :paper: Asbury Park Press
   :st: NJ
-  :prez_2000: Bush
 Kalamazoo Gazette: 
+  :prez_2000: Bush
   :city: 
   :paper: Kalamazoo Gazette
   :st: MI
-  :prez_2000: Bush
 Whittier Daily News: 
+  :prez_2000: Bush
   :city: 
   :paper: Whittier Daily News
   :st: CA
-  :prez_2000: Bush
 Boulder Camera: 
+  :prez_2000: Bush
   :city: 
   :paper: Boulder Camera
   :st: CO
-  :prez_2000: Bush
 Daily Comet: 
+  :prez_2000: Bush
   :city: Thibodaux
   :paper: Daily Comet
   :st: LA
-  :prez_2000: Bush
 Telegram and Gazette: 
+  :prez_2000: Bush
   :city: Worcester
   :paper: Telegram and Gazette
   :st: MA
-  :prez_2000: Bush
 Hickory Daily Record: 
+  :prez_2000: Bush
   :city: 
   :paper: Hickory Daily Record
   :st: NC
-  :prez_2000: Bush
 Anniston Star: 
+  :prez_2000: Gore
   :city: 
   :paper: Anniston Star
   :st: AL
-  :prez_2000: Gore
 San Angelo Standard-Times: 
+  :prez_2000: Bush
   :city: 
   :paper: San Angelo Standard-Times
   :st: TX
-  :prez_2000: Bush
 Fort Worth Star-Telegram: 
+  :prez_2000: Bush
   :city: 
   :paper: Fort Worth Star-Telegram
   :st: TX
-  :prez_2000: Bush
 Joplin Globe: 
+  :prez_2000: Bush
   :city: 
   :paper: Joplin Globe
   :st: MO
-  :prez_2000: Bush
 Patriot Ledger: 
+  :prez_2000: Bush
   :city: Quincy
   :paper: Patriot Ledger
   :st: MA
-  :prez_2000: Bush
 Philadelphia Inquirer: 
+  :prez_2000: Gore
   :city: 
   :paper: Philadelphia Inquirer
   :st: PA
-  :prez_2000: Gore
 Philadelphia Daily News: 
+  :prez_2000: Gore
   :city: 
   :paper: Philadelphia Daily News
   :st: PA
-  :prez_2000: Gore
 Dominion Post: 
+  :prez_2000: Bush
   :city: Morgantown
   :paper: Dominion Post
   :st: WV
-  :prez_2000: Bush
 Times-Picayune: 
+  :prez_2000: Bush
   :city: New Orleans
   :paper: Times-Picayune
   :st: LA
-  :prez_2000: Bush
 Denver Post: 
+  :prez_2000: Gore
   :city: 
   :paper: Denver Post
   :st: CO
-  :prez_2000: Gore
 Tribune Chronicle: 
+  :prez_2000: Bush
   :city: Warren
   :paper: Tribune Chronicle
   :st: OH
-  :prez_2000: Bush
 Rutland Herald: 
+  :prez_2000: Gore
   :city: 
   :paper: Rutland Herald
   :st: VT
-  :prez_2000: Gore
 Charlotte Observer: 
+  :prez_2000: Gore
   :city: 
   :paper: Charlotte Observer
   :st: NC
-  :prez_2000: Gore
 Press Journal: 
+  :prez_2000: Bush
   :city: Vero Beach
   :paper: Press Journal
   :st: FL
+Mobile Press Register: 
   :prez_2000: Bush
+  :city: 
+  :paper: Mobile Press Register
+  :st: AL
 Dallas Morning News: 
+  :prez_2000: Bush
   :city: 
   :paper: Dallas Morning News
   :st: TX
-  :prez_2000: Bush
 Desert Sun: 
+  :prez_2000: Bush
   :city: Palm Springs
   :paper: Desert Sun
   :st: CA
-  :prez_2000: Bush
 Richmond Times-Dispatch: 
+  :prez_2000: Bush
   :city: 
   :paper: Richmond Times-Dispatch
   :st: VA
-  :prez_2000: Bush
 Albuquerque Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Albuquerque Journal
   :st: NM
-  :prez_2000: Bush
 Vindicator: 
+  :prez_2000: Bush
   :city: Youngstown
   :paper: Vindicator
   :st: OH
-  :prez_2000: Bush
 Statesman-Journal: 
+  :prez_2000: Gore
   :city: Salem
   :paper: Statesman-Journal
   :st: OR
-  :prez_2000: Gore
 St. Louis Post-Dispatch: 
+  :prez_2000: Gore
   :city: 
   :paper: St. Louis Post-Dispatch
   :st: MO
-  :prez_2000: Gore
 Fresno Bee: 
+  :prez_2000: Gore
   :city: 
   :paper: Fresno Bee
   :st: CA
-  :prez_2000: Gore
 State Journal-Register: 
+  :prez_2000: Bush
   :city: Springfield
   :paper: State Journal-Register
   :st: IL
-  :prez_2000: Bush
 Syracuse Herald-American: 
+  :prez_2000: Bush
   :city: 
   :paper: Syracuse Herald-American
   :st: NY
-  :prez_2000: Bush
 Des Moines Register: 
+  :prez_2000: Gore
   :city: 
   :paper: Des Moines Register
   :st: IA
-  :prez_2000: Gore
 Tribune: 
+  :prez_2000: Bush
   :city: Fort Pierce
   :paper: Tribune
   :st: FL
-  :prez_2000: Bush
 Quad-City Times: 
+  :prez_2000: Bush
   :city: Davenport
   :paper: Quad-City Times
   :st: IA
-  :prez_2000: Bush
 Stuart News: 
+  :prez_2000: Bush
   :city: 
   :paper: Stuart News
   :st: FL
-  :prez_2000: Bush
 Sacramento Bee: 
+  :prez_2000: Gore
   :city: 
   :paper: Sacramento Bee
   :st: CA
-  :prez_2000: Gore
 Free Lance-Star: 
+  :prez_2000: Bush
   :city: Fredericksburg
   :paper: Free Lance-Star
   :st: VA
-  :prez_2000: Bush
 San Diego Union-Tribune: 
+  :prez_2000: Bush
   :city: 
   :paper: San Diego Union-Tribune
   :st: CA
-  :prez_2000: Bush
 Gainesville Sun: 
+  :prez_2000: Gore
   :city: 
   :paper: Gainesville Sun
   :st: FL
-  :prez_2000: Gore
-Mobile Register: 
-  :city: 
-  :paper: Mobile Register
-  :st: AL
-  :prez_2000: Bush
 Maine Sunday Telegram: 
+  :prez_2000: Gore
   :city: 
   :paper: Maine Sunday Telegram
   :st: ME
-  :prez_2000: Gore
 Tennessean: 
+  :prez_2000: Gore
   :city: Nashville
   :paper: Tennessean
   :st: TN
-  :prez_2000: Gore
 Times-Standard: 
+  :prez_2000: Bush
   :city: Eureka
   :paper: Times-Standard
   :st: CA
-  :prez_2000: Bush
 Galveston County Daily News: 
+  :prez_2000: Bush
   :city: 
   :paper: Galveston County Daily News
   :st: TX
-  :prez_2000: Bush
 Waterbury Republican-American: 
+  :prez_2000: Bush
   :city: 
   :paper: Waterbury Republican-American
   :st: CT
-  :prez_2000: Bush
 Shawnee News-Star: 
+  :prez_2000: Bush
   :city: 
   :paper: Shawnee News-Star
   :st: OK
-  :prez_2000: Bush
 Daily World: 
+  :prez_2000: Bush
   :city: Opelousas
   :paper: Daily World
   :st: LA
-  :prez_2000: Bush
 Hutchinson News: 
+  :prez_2000: Gore
   :city: 
   :paper: Hutchinson News
   :st: KS
-  :prez_2000: Gore
 Lakeland Ledger: 
+  :prez_2000: Bush
   :city: 
   :paper: Lakeland Ledger
   :st: FL
-  :prez_2000: Bush
 Birmingham News: 
+  :prez_2000: Bush
   :city: 
   :paper: Birmingham News
   :st: AL
-  :prez_2000: Bush
 Foster's Daily Democrat: 
+  :prez_2000: Bush
   :city: Dover
   :paper: Foster's Daily Democrat
   :st: NH
-  :prez_2000: Bush
 Ann Arbor News: 
+  :prez_2000: Bush
   :city: 
   :paper: Ann Arbor News
   :st: MI
-  :prez_2000: Bush
 Sun (Lowell): 
+  :prez_2000: Bush
   :city: Lowell
   :paper: Sun (Lowell)
   :st: MA
-  :prez_2000: Bush
 Advocate: 
+  :prez_2000: Bush
   :city: Stamford
   :paper: Advocate
   :st: CT
-  :prez_2000: Bush
 Plain Dealer: 
+  :prez_2000: Bush
   :city: Cleveland
   :paper: Plain Dealer
   :st: OH
-  :prez_2000: Bush
 San Francisco Examiner: 
+  :prez_2000: Gore
   :city: 
   :paper: San Francisco Examiner
   :st: CA
-  :prez_2000: Gore
 South Florida Sun-Sentinel: 
+  :prez_2000: Gore
   :city: Fort Lauderdale
   :paper: South Florida Sun-Sentinel
   :st: FL
-  :prez_2000: Gore
 Cincinnati Post: 
+  :prez_2000: Bush
   :city: 
   :paper: Cincinnati Post
   :st: OH
-  :prez_2000: Bush
 Observer-Dispatch: 
+  :prez_2000: Bush
   :city: Utica
   :paper: Observer-Dispatch
   :st: NY
-  :prez_2000: Bush
 St. Petersburg Times: 
+  :prez_2000: Gore
   :city: 
   :paper: St. Petersburg Times
   :st: FL
-  :prez_2000: Gore
 Norfolk Daily News: 
+  :prez_2000: Bush
   :city: 
   :paper: Norfolk Daily News
   :st: NE
-  :prez_2000: Bush
 Rocky Mountain News: 
+  :prez_2000: Bush
   :city: 
   :paper: Rocky Mountain News
   :st: CO
-  :prez_2000: Bush
 Journal News: 
+  :prez_2000: Bush
   :city: West Nyack
   :paper: Journal News
   :st: NY
-  :prez_2000: Bush
 Post and Courier: 
+  :prez_2000: Bush
   :city: Charleston
   :paper: Post and Courier
   :st: SC
-  :prez_2000: Bush
 Southwest Times: 
+  :prez_2000: Bush
   :city: Pulaski
   :paper: Southwest Times
   :st: VA
-  :prez_2000: Bush
 Harrisburg Patriot-News: 
+  :prez_2000: Bush
   :city: 
   :paper: Harrisburg Patriot-News
   :st: PA
-  :prez_2000: Bush
-Record: 
-  :city: Hackensack
-  :paper: Record
-  :st: NJ
-  :prez_2000: Gore
 Great Falls Tribune: 
+  :prez_2000: Gore
   :city: 
   :paper: Great Falls Tribune
   :st: MT
-  :prez_2000: Gore
 Naples Daily-News: 
+  :prez_2000: Bush
   :city: 
   :paper: Naples Daily-News
   :st: FL
-  :prez_2000: Bush
 Blade: 
+  :prez_2000: Gore
   :city: Toledo
   :paper: Blade
   :st: OH
-  :prez_2000: Gore
 News and Observer: 
+  :prez_2000: Gore
   :city: Raleigh
   :paper: News and Observer
   :st: NC
+Daily News (New York City): 
   :prez_2000: Gore
+  :city: New York City
+  :paper: Daily News (New York City)
+  :st: NY
 News-Sentinel: 
+  :prez_2000: Bush
   :city: Fort Wayne
   :paper: News-Sentinel
   :st: IN
-  :prez_2000: Bush
 Marin Independent-Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Marin Independent-Journal
   :st: CA
-  :prez_2000: Gore
 Shreveport Times: 
+  :prez_2000: Gore
   :city: 
   :paper: Shreveport Times
   :st: LA
-  :prez_2000: Gore
 Oklahoman: 
+  :prez_2000: Bush
   :city: Oklahoma City
   :paper: Oklahoman
   :st: OK
-  :prez_2000: Bush
 Record Searchlight: 
+  :prez_2000: Bush
   :city: Redding
   :paper: Record Searchlight
   :st: CA
-  :prez_2000: Bush
 Spartanburg Herald-Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Spartanburg Herald-Journal
   :st: SC
-  :prez_2000: Bush
 Investor's Business Daily: 
+  :prez_2000: Bush
   :city: Los Angeles
   :paper: Investor's Business Daily
   :st: CA
-  :prez_2000: Bush
 Ventura County Star: 
+  :prez_2000: Bush
   :city: 
   :paper: Ventura County Star
   :st: CA
-  :prez_2000: Bush
 Arizona Daily Star: 
+  :prez_2000: Gore
   :city: Tucson
   :paper: Arizona Daily Star
   :st: AZ
-  :prez_2000: Gore
 Berkshire Eagle: 
+  :prez_2000: Gore
   :city: Pittsfield
   :paper: Berkshire Eagle
   :st: MA
-  :prez_2000: Gore
 Tri-City Herald: 
+  :prez_2000: Bush
   :city: Kennewick
   :paper: Tri-City Herald
   :st: WA
-  :prez_2000: Bush
 San Antonio Express-News: 
+  :prez_2000: Bush
   :city: 
   :paper: San Antonio Express-News
   :st: TX
-  :prez_2000: Bush
 Anchorage Daily News: 
+  :prez_2000: Gore
   :city: 
   :paper: Anchorage Daily News
   :st: AK
-  :prez_2000: Gore
 Montgomery Advertiser: 
+  :prez_2000: Bush
   :city: 
   :paper: Montgomery Advertiser
   :st: AL
-  :prez_2000: Bush
 Winston-Salem Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Winston-Salem Journal
   :st: NC
-  :prez_2000: Bush
 Knoxville News-Sentinel: 
+  :prez_2000: Bush
   :city: 
   :paper: Knoxville News-Sentinel
   :st: TN
-  :prez_2000: Bush
 Albany Times-Union: 
+  :prez_2000: Gore
   :city: 
   :paper: Albany Times-Union
   :st: NY
-  :prez_2000: Gore
 St. Paul Pioneer Press: 
+  :prez_2000: Bush
   :city: 
   :paper: St. Paul Pioneer Press
   :st: MN
-  :prez_2000: Bush
 New York Post: 
+  :prez_2000: Bush
   :city: 
   :paper: New York Post
   :st: NY
-  :prez_2000: Bush
 Daily News Record: 
+  :prez_2000: Bush
   :city: Harrisonburg
   :paper: Daily News Record
   :st: VA
-  :prez_2000: Bush
 Pittsburgh Post-Gazette: 
+  :prez_2000: Gore
   :city: 
   :paper: Pittsburgh Post-Gazette
   :st: PA
-  :prez_2000: Gore
 Dayton Daily News: 
+  :prez_2000: Gore
   :city: 
   :paper: Dayton Daily News
   :st: OH
-  :prez_2000: Gore
 Grand Forks Herald: 
+  :prez_2000: Gore
   :city: 
   :paper: Grand Forks Herald
   :st: ND
-  :prez_2000: Gore
 Owensboro Messenger-Inquirer: 
+  :prez_2000: Bush
   :city: 
   :paper: Owensboro Messenger-Inquirer
   :st: KY
-  :prez_2000: Bush
 Courier: 
+  :prez_2000: Bush
   :city: Findlay
   :paper: Courier
   :st: OH
+Sun (Bremerton): 
   :prez_2000: Bush
+  :city: Bremerton
+  :paper: Sun (Bremerton)
+  :st: WA
 Asheville Citizen-Times: 
+  :prez_2000: Gore
   :city: 
   :paper: Asheville Citizen-Times
   :st: NC
-  :prez_2000: Gore
 Spokesman-Review (Spokane): 
+  :prez_2000: Bush
   :city: Spokane
   :paper: Spokesman-Review (Spokane)
   :st: WA
-  :prez_2000: Bush
 Oregonian: 
+  :prez_2000: Bush
   :city: Portland
   :paper: Oregonian
   :st: OR
-  :prez_2000: Bush
 Tampa Tribune: 
+  :prez_2000: Bush
   :city: 
   :paper: Tampa Tribune
   :st: FL
-  :prez_2000: Bush
 Ocala Star-Banner: 
+  :prez_2000: Gore
   :city: 
   :paper: Ocala Star-Banner
   :st: FL
-  :prez_2000: Gore
 Miami Herald: 
+  :prez_2000: Gore
   :city: 
   :paper: Miami Herald
   :st: FL
-  :prez_2000: Gore
 Erie Times-News: 
+  :prez_2000: Bush
   :city: 
   :paper: Erie Times-News
   :st: PA
-  :prez_2000: Bush
-Sun: 
-  :city: Bremerton
-  :paper: Sun
-  :st: WA
-  :prez_2000: Bush
 Quincy Herald-Whig: 
+  :prez_2000: Bush
   :city: 
   :paper: Quincy Herald-Whig
   :st: IL
-  :prez_2000: Bush
 Idaho Press-Tribune: 
+  :prez_2000: Bush
   :city: Nampa
   :paper: Idaho Press-Tribune
   :st: ID
-  :prez_2000: Bush
 New Haven Register: 
+  :prez_2000: Bush
   :city: 
   :paper: New Haven Register
   :st: CT
-  :prez_2000: Bush
 Akron Beacon-Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Akron Beacon-Journal
   :st: OH
-  :prez_2000: Gore
 Corpus Christi Caller-Times: 
+  :prez_2000: Bush
   :city: 
   :paper: Corpus Christi Caller-Times
   :st: TX
-  :prez_2000: Bush
 Herald and Review: 
+  :prez_2000: Bush
   :city: Decatur
   :paper: Herald and Review
   :st: IL
-  :prez_2000: Bush
 Tri-Valley Herald: 
+  :prez_2000: Bush
   :city: Pleasanton
   :paper: Tri-Valley Herald
   :st: CA
-  :prez_2000: Bush
 Longview News-Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Longview News-Journal
   :st: TX
-  :prez_2000: Gore
 Wyoming Tribune-Eagle: 
+  :prez_2000: Bush
   :city: Cheyenne
   :paper: Wyoming Tribune-Eagle
   :st: WY
-  :prez_2000: Bush
 Chicago Tribune: 
+  :prez_2000: Bush
   :city: 
   :paper: Chicago Tribune
   :st: IL
-  :prez_2000: Bush
 Albuquerque Tribune: 
+  :prez_2000: Bush
   :city: 
   :paper: Albuquerque Tribune
   :st: NM
-  :prez_2000: Bush
 Commercial Appeal: 
+  :prez_2000: Bush
   :city: Memphis
   :paper: Commercial Appeal
   :st: TN
-  :prez_2000: Bush
 Day: 
+  :prez_2000: Bush
   :city: New London
   :paper: Day
   :st: CT
-  :prez_2000: Bush
 Billings Gazette: 
+  :prez_2000: Bush
   :city: 
   :paper: Billings Gazette
   :st: MT
-  :prez_2000: Bush
 Providence Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Providence Journal
   :st: RI
-  :prez_2000: Bush
 Fargo Forum: 
+  :prez_2000: Bush
   :city: 
   :paper: Fargo Forum
   :st: ND
-  :prez_2000: Bush
-Daily News: 
-  :city: New York City
-  :paper: Daily News
-  :st: NY
-  :prez_2000: Gore
 Hartford Courant: 
+  :prez_2000: Bush
   :city: 
   :paper: Hartford Courant
   :st: CT
-  :prez_2000: Bush
 Springfield News-Leader: 
+  :prez_2000: Gore
   :city: 
   :paper: Springfield News-Leader
   :st: MO
-  :prez_2000: Gore
 Detroit Free Press: 
+  :prez_2000: Gore
   :city: 
   :paper: Detroit Free Press
   :st: MI
-  :prez_2000: Gore
 Star-Gazette: 
+  :prez_2000: Bush
   :city: Elmira
   :paper: Star-Gazette
   :st: NY
-  :prez_2000: Bush
 Scranton Times: 
+  :prez_2000: Bush
   :city: 
   :paper: Scranton Times
   :st: PA
-  :prez_2000: Bush
 Orlando Sentinel: 
+  :prez_2000: Bush
   :city: 
   :paper: Orlando Sentinel
   :st: FL
-  :prez_2000: Bush
 Austin American-Statesman: 
+  :prez_2000: Bush
   :city: 
   :paper: Austin American-Statesman
   :st: TX
-  :prez_2000: Bush
 Washington Times: 
+  :prez_2000: Bush
   :city: 
   :paper: Washington Times
   :st: DC
-  :prez_2000: Bush
 Dispatch: 
+  :prez_2000: Bush
   :city: Moline
   :paper: Dispatch
   :st: IL
-  :prez_2000: Bush
 Star-Ledger: 
+  :prez_2000: Gore
   :city: Newark
   :paper: Star-Ledger
   :st: NJ
-  :prez_2000: Gore
 Salem Evening News: 
+  :prez_2000: Gore
   :city: 
   :paper: Salem Evening News
   :st: MA
-  :prez_2000: Gore
 Modesto Bee: 
+  :prez_2000: Gore
   :city: 
   :paper: Modesto Bee
   :st: CA
-  :prez_2000: Gore
 Muskogee Daily Phoenix: 
+  :prez_2000: Bush
   :city: 
   :paper: Muskogee Daily Phoenix
   :st: OK
-  :prez_2000: Bush
 Rapid City Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Rapid City Journal
   :st: SD
-  :prez_2000: Bush
 York Dispatch: 
+  :prez_2000: Bush
   :city: 
   :paper: York Dispatch
   :st: PA
-  :prez_2000: Bush
 Herald: 
+  :prez_2000: Gore
   :city: Everett
   :paper: Herald
   :st: WA
-  :prez_2000: Gore
 Ithaca Journal: 
+  :prez_2000: Gore
   :city: 
   :paper: Ithaca Journal
   :st: NY
-  :prez_2000: Gore
 Beaumont Enterprise: 
+  :prez_2000: Bush
   :city: 
   :paper: Beaumont Enterprise
   :st: TX
-  :prez_2000: Bush
 Boca Raton News: 
+  :prez_2000: Gore
   :city: 
   :paper: Boca Raton News
   :st: FL
-  :prez_2000: Gore
 Tulsa World: 
+  :prez_2000: Bush
   :city: 
   :paper: Tulsa World
   :st: OK
-  :prez_2000: Bush
 Walla Walla Union-Bulletin: 
+  :prez_2000: Bush
   :city: 
   :paper: Walla Walla Union-Bulletin
   :st: WA
-  :prez_2000: Bush
 Post-Crescent: 
+  :prez_2000: Gore
   :city: Appleton
   :paper: Post-Crescent
   :st: WI
-  :prez_2000: Gore
 Portsmouth Herald: 
+  :prez_2000: Gore
   :city: 
   :paper: Portsmouth Herald
   :st: NH
-  :prez_2000: Gore
 Minneapolis Star Tribune: 
+  :prez_2000: Gore
   :city: 
   :paper: Minneapolis Star Tribune
   :st: MN
-  :prez_2000: Gore
 San Gabriel Valley Tribune: 
+  :prez_2000: Bush
   :city: 
   :paper: San Gabriel Valley Tribune
   :st: CA
-  :prez_2000: Bush
 Times Herald Record: 
+  :prez_2000: Bush
   :city: Wichita Falls
   :paper: Times Herald Record
   :st: TX
-  :prez_2000: Bush
 Cincinnati Enquirer: 
+  :prez_2000: Bush
   :city: 
   :paper: Cincinnati Enquirer
   :st: OH
-  :prez_2000: Bush
 Chicago Sun-Times: 
+  :prez_2000: Bush
   :city: 
   :paper: Chicago Sun-Times
   :st: IL
-  :prez_2000: Bush
 Times (Munster): 
+  :prez_2000: Bush
   :city: Munster
   :paper: Times (Munster)
   :st: IN
-  :prez_2000: Bush
 Wisconsin State Journal: 
+  :prez_2000: Bush
   :city: Madison
   :paper: Wisconsin State Journal
   :st: WI
-  :prez_2000: Bush
 Evansville Courier and Press: 
+  :prez_2000: Bush
   :city: 
   :paper: Evansville Courier and Press
   :st: IN
-  :prez_2000: Bush
 Washington Post: 
+  :prez_2000: Gore
   :city: 
   :paper: Washington Post
   :st: DC
-  :prez_2000: Gore
 Press of Atlantic City: 
+  :prez_2000: Bush
   :city: 
   :paper: Press of Atlantic City
   :st: NJ
-  :prez_2000: Bush
 Long Beach Press Telegram: 
+  :prez_2000: Gore
   :city: 
   :paper: Long Beach Press Telegram
   :st: CA
-  :prez_2000: Gore
 Staten Island Advance: 
+  :prez_2000: Gore
   :city: 
   :paper: Staten Island Advance
   :st: NY
-  :prez_2000: Gore
 Concord Monitor: 
+  :prez_2000: Gore
   :city: 
   :paper: Concord Monitor
   :st: NH
-  :prez_2000: Gore
 Clarion-Ledger: 
+  :prez_2000: Gore
   :city: Jackson
   :paper: Clarion-Ledger
   :st: MS
-  :prez_2000: Gore
 Flint Journal: 
+  :prez_2000: Bush
   :city: 
   :paper: Flint Journal
   :st: MI
-  :prez_2000: Bush
 News-Press: 
+  :prez_2000: Bush
   :city: Fort Myers
   :paper: News-Press
   :st: FL
-  :prez_2000: Bush
 Honolulu Advertiser: 
+  :prez_2000: Gore
   :city: 
   :paper: Honolulu Advertiser
   :st: HI
-  :prez_2000: Gore
 Advertiser: 
+  :prez_2000: Bush
   :city: Lafayette
   :paper: Advertiser
   :st: LA
-  :prez_2000: Bush
 Columbia Daily Tribune: 
+  :prez_2000: Bush
   :city: 
   :paper: Columbia Daily Tribune
   :st: MO
-  :prez_2000: Bush
 Wichita Eagle: 
+  :prez_2000: Bush
   :city: 
   :paper: Wichita Eagle
   :st: KS
-  :prez_2000: Bush
 Savannah Morning News: 
+  :prez_2000: Bush
   :city: 
   :paper: Savannah Morning News
   :st: GA
-  :prez_2000: Bush
 Lexington Herald-Leader: 
+  :prez_2000: Gore
   :city: 
   :paper: Lexington Herald-Leader
   :st: KY
+News Journal (Wilmington): 
   :prez_2000: Gore
+  :city: Wilmington
+  :paper: News Journal (Wilmington)
+  :st: DE
 Columbus Ledger-Enquirer: 
+  :prez_2000: Gore
   :city: 
   :paper: Columbus Ledger-Enquirer
   :st: GA
-  :prez_2000: Gore

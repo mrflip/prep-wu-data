@@ -18,10 +18,10 @@ at or above"	State	Metropolitan Statistical Area	Nickname(s)	Combined Statistica
 4179427	3251876	13	28.52%	4.07%	92149803	30.2%	AZ	"Phoenix-Mesa-Scottsdale, AZ MSA"	Valley of the Sun			
 4081371	3254817	14	25.39%	3.63%	96231174	31.5%	CA	"Riverside-San Bernardino-Ontario, CA MSA"	Inland Empire	"Los Angeles-Long Beach-Riverside, CA CSA"		
 3309347	3043885	15	8.72%	1.25%	99540521	32.6%	WA	"Seattle-Tacoma-Bellevue, WA MSA"	Seattle Metro	"Seattle-Tacoma-Olympia, WA CSA"		
-3208212	2968817	16	8.06%	1.15%	102748733	33.7%	MN-WI	"Minneapolis-St. Paul-Bloomington, MN-WI MSA"	Twin Cities	"Minneapolis-St. Paul-St. Cloud, MN-WI CSA"
+3208212	2968817	16	8.06%	1.15%	102748733	33.7%	MN-WI	"Minneapolis-Saint Paul-Bloomington, MN-WI MSA"	Twin Cities	"Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA"
 2974859	2813833	17	5.72%	0.82%	105723592	34.6%	CA	"San Diego-Carlsbad-San Marcos, CA MSA"	San Diego County	
-2803707	2698672	18	3.89%	0.56%	108527299	35.6%	MO-IL	"St. Louis, MO-IL MSA"	Greater St. Louis	"St. Louis-St. Charles-Farmington, MO-IL CSA"
-2723949	2396013	19	13.69%	1.96%	111251248	36.5%	FL	"Tampa-St. Petersburg-Clearwater, FL MSA"	Tampa Bay	
+2803707	2698672	18	3.89%	0.56%	108527299	35.6%	MO-IL	"Saint Louis, MO-IL MSA"	Greater Saint Louis	"Saint Louis-Saint Charles-Farmington, MO-IL CSA"
+2723949	2396013	19	13.69%	1.96%	111251248	36.5%	FL	"Tampa-Saint Petersburg-Clearwater, FL MSA"	Tampa Bay	
 2668056	2552996	20	4.51%	0.64%	113919304	37.3%	MD	"Baltimore-Towson, MD MSA"	Baltimore Metro	"Washington-Baltimore-Northern Virginia, DC-MD-VA-WV CSA"
 2464866	2179342	21	13.10%	1.87%	116384170	38.1%	CO	"Denver-Aurora, CO MSA"	"The Front Range,Denver Metropolitan Area, Mile-High Area"	"Denver-Aurora-Boulder, CO CSA"
 2355712	2431087	22	-3.10%	-0.44%	118739882	38.9%	PA	"Pittsburgh, PA MSA"	"Greater Pittsburgh, Pittsburgh Tri-State, Metro Pittsburgh, Three Rivers Region"	"Pittsburgh-New Castle, PA CSA"
@@ -128,7 +128,7 @@ at or above"	State	Metropolitan Statistical Area	Nickname(s)	Combined Statistica
 404197	399347	123	1.21%	0.17%	207298134	67.9%	CA	"Santa Barbara-Santa Maria-Goleta, CA MSA"	Santa Barbara County	
 402302	380843	124	5.63%	0.80%	207700436	68.1%	NH	"Manchester-Nashua, NH MSA"		"Boston-Worcester-Manchester, MA-RI-NH CSA"
 401955	373638	125	7.58%	1.08%	208102391	68.2%	PA	"Reading, PA MSA"		"Philadelphia-Camden-Vineland, PA-NJ-DE-MD CSA"
-400121	319426	126	25.26%	3.61%	208502512	68.3%	FL	"Port St. Lucie, FL MSA"		"Port St. Lucie-Sebastian-Vero Beach, FL CSA"
+400121	319426	126	25.26%	3.61%	208502512	68.3%	FL	"Port Saint Lucie, FL MSA"		"Port Saint Lucie-Sebastian-Vero Beach, FL CSA"
 387583	375968	127	3.09%	0.44%	208890095	68.4%	LA	"Shreveport-Bossier City, LA MSA"	Ark-La-Tex	"Shreveport-Bossier City-Minden, LA CSA"
 387210	335227	128	15.51%	2.22%	209277305	68.6%	TX	"Brownsville-Harlingen, TX MSA"	"Cameron County, Rio Grande Valley"	"Brownsville-Harlingen-Raymondville, TX CSA"
 386714	347218	129	11.37%	1.62%	209664019	68.7%	OR	"Salem, OR MSA"		
@@ -221,7 +221,7 @@ at or above"	State	Metropolitan Statistical Area	Nickname(s)	Combined Statistica
 191926	193568	216	-0.85%	-0.12%	232817129	76.3%	LA	"Lake Charles, LA MSA"		"Lake Charles-Jennings, LA CSA"
 190557	160026	217	19.08%	2.73%	233007686	76.3%	AZ	"Yuma, AZ MSA"	Yuma County	
 187405	166079	219	12.84%	1.83%	233195091	76.4%	GA	"Athens-Clarke County, GA MSA"		
-185555	167392	220	10.85%	1.55%	233380646	76.5%	MN	"St. Cloud, MN MSA"		"Minneapolis-St. Paul-St. Cloud, MN-WI CSA"
+185555	167392	220	10.85%	1.55%	233380646	76.5%	MN	"Saint Cloud, MN MSA"		"Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA"
 183733	175506	222	4.69%	0.67%	233564379	76.5%	IN	"Bloomington, IN MSA"		
 181860	177749	223	2.31%	0.33%	233746239	76.6%	NY	"Kingston, NY MSA"		"New York-Newark-Bridgeport, NY-NJ-CT-PA CSA"
 181499	170498	224	6.45%	0.92%	233927738	76.7%	FL	"Fort Walton Beach-Crestview-Destin, FL MSA"		
@@ -283,9 +283,9 @@ at or above"	State	Metropolitan Statistical Area	Nickname(s)	Combined Statistica
 134442	108685	295	23.70%	3.39%	242621064	79.5%	ID	"Coeur d'Alene, ID MSA"	Kootenai County	
 134215	129749	296	3.44%	0.49%	242755279	79.5%	TX-AR	"Texarkana, TX-AR MSA"		
 134043	120031	297	11.67%	1.67%	242889322	79.6%	GA	"Dalton, GA MSA"		
-133791	90354	299	48.07%	6.87%	243023113	79.6%	UT	"St. George, UT MSA"	"Washington County, Dixie"	
+133791	90354	299	48.07%	6.87%	243023113	79.6%	UT	"Saint George, UT MSA"	"Washington County, Dixie"	
 132565	124279	300	6.67%	0.95%	243155678	79.7%	CA	"Napa, CA MSA"	Napa County	"San Jose-San Francisco-Oakland, CA CSA"
-131837	112947	302	16.72%	2.39%	243287515	79.7%	FL	"Sebastian-Vero Beach, FL MSA"		"Port St. Lucie-Sebastian-Vero Beach, FL CSA"
+131837	112947	302	16.72%	2.39%	243287515	79.7%	FL	"Sebastian-Vero Beach, FL MSA"		"Port Saint Lucie-Sebastian-Vero Beach, FL CSA"
 131312	133358	303	-1.53%	-0.22%	243418827	79.8%	IN	"Anderson, IN MSA"		"Indianapolis-Anderson-Columbus, IN CSA"
 131016	110765	304	18.28%	2.61%	243549843	79.8%	GA	"Warner Robins, GA MSA"		"Macon-Warner Robins-Fort Valley, GA CSA"
 130926	126838	305	3.22%	0.46%	243680769	79.8%	WI-MN	"La Crosse, WI-MN MSA"		
@@ -300,7 +300,7 @@ at or above"	State	Metropolitan Statistical Area	Nickname(s)	Combined Statistica
 126408	116009	317	8.96%	1.28%	244841414	80.2%	TX	"Midland, TX MSA"	Midland County	"Midland-Odessa, TX CSA"
 125679	128852	318	-2.46%	-0.35%	244967093	80.3%	OH	"Mansfield, OH MSA"		"Mansfield-Bucyrus, OH CSA"
 125527	129144	319	-2.80%	-0.40%	245092620	80.3%	PA	"Altoona, PA MSA"		
-123339	122336	320	0.82%	0.12%	245215959	80.3%	MO-KS	"St. Joseph, MO-KS MSA"		
+123339	122336	320	0.82%	0.12%	245215959	80.3%	MO-KS	"Saint Joseph, MO-KS MSA"		
 122580	132008	321	-7.14%	-1.02%	245338539	80.4%	WV-OH	"Weirton-Steubenville, WV-OH MSA"		
 122427	113801	322	7.58%	1.08%	245460966	80.4%	NM	"Farmington, NM MSA"	San Juan County	
 121190	102997	323	17.66%	2.52%	245582156	80.5%	VA-WV	"Winchester, VA-WV MSA"		"Washington-Baltimore-Northern Virginia, DC-MD-VA-WV CSA"

@@ -15,6 +15,7 @@ require 'lib/endorsement'
 #
 
 PRESIDENTS = {
+  'GHW BUSH'            => 'GHWBush',
   'GEORGE W. BUSH'      => 'Bush',
   'AL GORE'             => 'Gore',
   'BARACK OBAMA'        => 'Obama',
@@ -22,6 +23,7 @@ PRESIDENTS = {
   'CLINTON'             => 'Clinton',
   'BOB DOLE'            => 'Dole',
   'DOLE'                => 'Dole',
+  'ROSS PEROT'          => 'Perot',
   nil                   => '',
   'K'                   => 'Kerry',
   'B'                   => 'Bush',
@@ -32,7 +34,7 @@ ENDORSEMENT_RE = {
   1992 => /^([A-Z][a-z].+)?$/,
   1996 => /^([A-Z][a-z].+)?$/,
   2000 => /^([A-Z][a-z].+)?$/,
-  2008 => /^([^\:]*?)(?: \((B|K|N|N\/A|)\))?:? *([0-9,]+)?$/,
+  2008 => /^([^\:]*?)(?::? \((B|K|N|N\/A|)\))?:? *([0-9,]+)?$/,
 }
 
 def parse_ep_endorsements(raw_filename, endorsement_re, year)
@@ -91,31 +93,35 @@ def fix_city_and_paper(orig_paper, state)
   else
     paper = orig_paper
   end
+  paper.gsub!(/^The\s+/i, '')
+  paper.gsub!(/\s+&\s+/, ' and ')
+  city = { 
+    'Bryan-College Station'     => 'Bryan',
+    'Neptune'                   => 'Asbury Park',
+    'Wilkes Barre'              => 'Wilkes-Barre',    
+    'Ft. Lauderdale'            => 'Fort Lauderdale',
+    'Champaign-Urbana'          => 'Champaign',
+    'West Lafayette'            => 'Lafayette',
+    'Bergen'                    => 'Hackensack',
+  }[city] || city
   # Some special cases
-  # { 
-  #   '(Spokane) Spokesman-Review' => 'Spokesman-Review (Spokane)',
-  #   '(Lowell) Sun' => 
-  # 
-  # }
+  city, paper = { 
+    ['Arlington', 'Daily Herald'] => ['Arlington Heights', 'Daily Herald'],
+  }[ [city, paper] ] || [city, paper]
+  keep_city = ['Daily News', 'Sun', 'Record', 'News Journal', 'Times', 'Spokesman-Review']
   case
-  when orig_paper =~ /(?:Lowell.*Sun|Stockton.*Record|Daily News.*Los Angeles|Times.*Munster)/
-    paper = "#{paper} (#{city})"
-  when ([city, paper] == ['Arlington', 'Daily Herald']) then city = 'Arlington Heights'
-  when (city == 'Bryan-College Station')                then city = 'Bryan'
-  when (city == 'Neptune')                              then city = 'Asbury Park'
-  when (city == 'Wilkes Barre')                         then city = 'Wilkes-Barre'
+  when !city.blank? && keep_city.include?(paper) then paper = "#{paper} (#{city})"
   when (paper == 'Kenne Sentinel')                      then city, paper = 'Keene', 'Keene Sentinel'
   when (paper =~ /Spokesman.*Review/) && (orig_paper =~ /Spokane/) then paper = "Spokesman-Review (Spokane)"
   end
-  paper.gsub!(/^The\s+/i, '')
-  paper.gsub!(/\s+&\s+/, ' and ')
+  # puts "%-30s %-30s %-50s" % [paper, city, orig_paper] if orig_paper =~ /daily.*news/i
   [paper, city]
 end
 
 #
 # Extract the endorsements
 #
-[1996, 2000, 2008].each do |year|
+[1992, 1996, 2000, 2008].each do |year|
   raw_filename = "ripd/endorsements_#{year}/endorsements-raw-#{year}.txt"
   out_filename = "data/endorsements_#{year}_eandp.yaml"
   print "Extracting E&P year #{year} into #{out_filename}"

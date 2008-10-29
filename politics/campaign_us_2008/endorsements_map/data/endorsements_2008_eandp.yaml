@@ -1,25 +1,34 @@
 --- 
-Rochester Democrat and Chronicle: 
+Jackson Citizen Patriot: 
   :city: 
-  :paper: Rochester Democrat and Chronicle
-  :st: NY
-  :prez_2008: Obama
+  :paper: Jackson Citizen Patriot
+  :st: MI
+  :prez_2008: McCain
+  :prez_2004: Bush
 Riverside Press-Enterprise: 
   :city: 
   :paper: Riverside Press-Enterprise
   :st: CA
   :prez_2008: McCain
   :prez_2004: Bush
+Rochester Democrat and Chronicle: 
+  :city: 
+  :paper: Rochester Democrat and Chronicle
+  :st: NY
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Bennington Banner: 
   :city: 
   :paper: Bennington Banner
   :st: VT
   :prez_2008: Obama
+  :prez_2004: Kerry
 Norwich Bulletin: 
   :city: 
   :paper: Norwich Bulletin
   :st: CT
   :prez_2008: Obama
+  :prez_2004: Kerry
 Kerrville Daily Times: 
   :city: 
   :paper: Kerrville Daily Times
@@ -31,12 +40,6 @@ Bend Bulletin:
   :st: OR
   :prez_2008: McCain
   :prez_2004: Bush
-News Journal: 
-  :city: Wilmington
-  :paper: News Journal
-  :st: DE
-  :prez_2008: Obama
-  :prez_2004: Kerry
 Mountain Valley News: 
   :city: Cedaredge
   :paper: Mountain Valley News
@@ -66,6 +69,17 @@ Sentinel:
   :st: PA
   :prez_2008: McCain
   :prez_2004: Bush
+News-Gazette: 
+  :city: Champaign
+  :paper: News-Gazette
+  :st: IL
+  :prez_2008: McCain
+  :prez_2004: Bush
+Delaware County Daily Times: 
+  :city: 
+  :paper: Delaware County Daily Times
+  :st: PA
+  :prez_2008: Obama
 Times-Reporter: 
   :city: New Philadelphia
   :paper: Times-Reporter
@@ -78,11 +92,6 @@ Mason City Globe Gazette:
   :st: IA
   :prez_2008: Obama
   :prez_2004: Bush
-News-Gazette: 
-  :city: Champaign
-  :paper: News-Gazette
-  :st: IL
-  :prez_2008: McCain
 Daily Press: 
   :city: Newport News
   :paper: Daily Press
@@ -101,6 +110,18 @@ Union Leader:
   :st: NH
   :prez_2008: McCain
   :prez_2004: Bush
+Sioux City Journal: 
+  :city: 
+  :paper: Sioux City Journal
+  :st: IA
+  :prez_2008: McCain
+  :prez_2004: Bush
+Arizona Republic: 
+  :city: Phoenix
+  :paper: Arizona Republic
+  :st: AZ
+  :prez_2008: McCain
+  :prez_2004: Bush
 Santa Fe New Mexican: 
   :city: 
   :paper: Santa Fe New Mexican
@@ -113,22 +134,18 @@ Nashua Telegraph:
   :st: NH
   :prez_2008: Obama
   :prez_2004: Kerry
-Sioux City Journal: 
-  :city: 
-  :paper: Sioux City Journal
-  :st: IA
-  :prez_2008: McCain
 News Tribune: 
   :city: Tacoma
   :paper: News Tribune
   :st: WA
   :prez_2008: Obama
   :prez_2004: Kerry
-Arizona Republic: 
-  :city: Phoenix
-  :paper: Arizona Republic
-  :st: AZ
+Greenville News: 
+  :city: 
+  :paper: Greenville News
+  :st: SC
   :prez_2008: McCain
+  :prez_2004: Bush
 Palm Beach Post: 
   :city: 
   :paper: Palm Beach Post
@@ -170,10 +187,22 @@ Bangor Daily News:
   :st: ME
   :prez_2008: Obama
   :prez_2004: Kerry
+Herald-Journal: 
+  :city: Spartanburg
+  :paper: Herald-Journal
+  :st: SC
+  :prez_2008: McCain
+  :prez_2004: Bush
 Journal: 
   :city: New Ulm
   :paper: Journal
   :st: MN
+  :prez_2008: McCain
+  :prez_2004: Bush
+Eagle-Tribune: 
+  :city: Lawrence
+  :paper: Eagle-Tribune
+  :st: MA
   :prez_2008: McCain
   :prez_2004: Bush
 Southwest News-Herald: 
@@ -194,23 +223,34 @@ Repository:
   :st: OH
   :prez_2008: Obama
   :prez_2004: Bush
-Eagle-Tribune: 
-  :city: Lawrence
-  :paper: Eagle-Tribune
-  :st: MA
+News-Advance: 
+  :city: Lynchburg
+  :paper: News-Advance
+  :st: VA
   :prez_2008: McCain
-Daytona Beach News-Journal: 
-  :city: 
-  :paper: Daytona Beach News-Journal
-  :st: FL
-  :prez_2008: Obama
-  :prez_2004: Kerry
+  :prez_2004: Bush
 Boston Herald: 
   :city: 
   :paper: Boston Herald
   :st: MA
   :prez_2008: McCain
   :prez_2004: Bush
+Beaver County Times: 
+  :city: 
+  :paper: Beaver County Times
+  :st: PA
+  :prez_2008: Obama
+Daytona Beach News-Journal: 
+  :city: 
+  :paper: Daytona Beach News-Journal
+  :st: FL
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Lafayette Journal and Courier: 
+  :city: 
+  :paper: Lafayette Journal and Courier
+  :st: IN
+  :prez_2008: Obama
 Tuscaloosa News: 
   :city: 
   :paper: Tuscaloosa News
@@ -223,28 +263,28 @@ Journal Gazette:
   :st: IN
   :prez_2008: Obama
   :prez_2004: Kerry
-York Daily Record: 
-  :city: 
-  :paper: York Daily Record
-  :st: PA
+News Leader: 
+  :city: Staunton
+  :paper: News Leader
+  :st: VA
   :prez_2008: Obama
-  :prez_2004: Bush
 Daily Times-Call: 
   :city: Longmont
   :paper: Daily Times-Call
   :st: CO
   :prez_2008: McCain
   :prez_2004: Bush
-Bergen Record: 
-  :city: 
-  :paper: Bergen Record
-  :st: NJ
-  :prez_2008: Obama
 North County Times: 
   :city: Escondido
   :paper: North County Times
   :st: CA
   :prez_2008: McCain
+York Daily Record: 
+  :city: 
+  :paper: York Daily Record
+  :st: PA
+  :prez_2008: Obama
+  :prez_2004: Bush
 Huntington Herald-Dispatch: 
   :city: 
   :paper: Huntington Herald-Dispatch
@@ -261,6 +301,24 @@ Grand Rapids Press:
   :paper: Grand Rapids Press
   :st: MI
   :prez_2008: McCain
+  :prez_2004: Bush
+Connecticut Post: 
+  :city: Bridgeport
+  :paper: Connecticut Post
+  :st: CT
+  :prez_2008: McCain
+  :prez_2004: Bush
+Record (Hackensack): 
+  :city: Hackensack
+  :paper: Record (Hackensack)
+  :st: NJ
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Battle Creek Enquirer: 
+  :city: 
+  :paper: Battle Creek Enquirer
+  :st: MI
+  :prez_2008: Obama
 Pantagraph: 
   :city: Bloomington
   :paper: Pantagraph
@@ -290,6 +348,12 @@ Florida Today:
   :paper: Florida Today
   :st: FL
   :prez_2008: Obama
+  :prez_2004: Kerry
+Times-News: 
+  :city: Twin Falls
+  :paper: Times-News
+  :st: ID
+  :prez_2008: McCain
 San Francisco Chronicle: 
   :city: 
   :paper: San Francisco Chronicle
@@ -307,6 +371,7 @@ Reno Gazette-Journal:
   :paper: Reno Gazette-Journal
   :st: NV
   :prez_2008: Obama
+  :prez_2004: Kerry
 Buffalo News: 
   :city: 
   :paper: Buffalo News
@@ -319,23 +384,18 @@ Charleston Gazette:
   :st: WV
   :prez_2008: Obama
   :prez_2004: Kerry
-Santa Cruz Sentinel: 
-  :city: 
-  :paper: Santa Cruz Sentinel
-  :st: CA
-  :prez_2008: Obama
-  :prez_2004: Kerry
-Baltimore Sun: 
-  :city: 
-  :paper: Baltimore Sun
-  :st: MD
-  :prez_2008: Obama
 Washington DC Examiner: 
   :city: 
   :paper: Washington DC Examiner
   :st: DC
   :prez_2008: McCain
   :prez_2004: none
+Santa Cruz Sentinel: 
+  :city: 
+  :paper: Santa Cruz Sentinel
+  :st: CA
+  :prez_2008: Obama
+  :prez_2004: Kerry
 San Mateo County Times: 
   :city: 
   :paper: San Mateo County Times
@@ -359,6 +419,12 @@ Daily Breeze:
   :st: CA
   :prez_2008: Obama
   :prez_2004: Bush
+Bakersfield Californian: 
+  :city: 
+  :paper: Bakersfield Californian
+  :st: CA
+  :prez_2008: McCain
+  :prez_2004: Bush
 Las Vegas Sun: 
   :city: 
   :paper: Las Vegas Sun
@@ -371,23 +437,23 @@ Rockford Register Star:
   :st: IL
   :prez_2008: Obama
   :prez_2004: Kerry
-Bakersfield Californian: 
-  :city: 
-  :paper: Bakersfield Californian
-  :st: CA
-  :prez_2008: McCain
-  :prez_2004: Bush
 Portland Press Herald: 
   :city: 
   :paper: Portland Press Herald
   :st: ME
   :prez_2008: Obama
+  :prez_2004: Kerry
 Contra Costa Times: 
   :city: Walnut Creek
   :paper: Contra Costa Times
   :st: CA
   :prez_2008: Obama
   :prez_2004: Kerry
+Journal and Courier: 
+  :city: Lafayette
+  :paper: Journal and Courier
+  :st: IN
+  :prez_2008: Obama
 Green Bay Press Gazette: 
   :city: 
   :paper: Green Bay Press Gazette
@@ -405,6 +471,23 @@ State:
   :st: SC
   :prez_2008: McCain
   :prez_2004: Bush
+Warren Tribune Chronicle: 
+  :city: 
+  :paper: Warren Tribune Chronicle
+  :st: OH
+  :prez_2008: McCain
+Bradenton Herald: 
+  :city: 
+  :paper: Bradenton Herald
+  :st: FL
+  :prez_2008: McCain
+  :prez_2004: Kerry
+Milwaukee Journal Sentinel: 
+  :city: 
+  :paper: Milwaukee Journal Sentinel
+  :st: WI
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Daily Star: 
   :city: Oneonta
   :paper: Daily Star
@@ -417,38 +500,22 @@ Daily Reflector:
   :st: NC
   :prez_2008: Obama
   :prez_2004: Kerry
-Milwaukee Journal Sentinel: 
-  :city: 
-  :paper: Milwaukee Journal Sentinel
-  :st: WI
-  :prez_2008: Obama
 Keene Sentinel: 
   :city: Keene
   :paper: Keene Sentinel
   :st: NH
   :prez_2008: Obama
-Bradenton Herald: 
-  :city: 
-  :paper: Bradenton Herald
-  :st: FL
-  :prez_2008: McCain
   :prez_2004: Kerry
+Times West Virginian: 
+  :city: 
+  :paper: Times West Virginian
+  :st: WV
+  :prez_2008: Obama
 Muncie Star-Press: 
   :city: 
   :paper: Muncie Star-Press
   :st: IN
   :prez_2008: Obama
-Lansing State-Journal: 
-  :city: 
-  :paper: Lansing State-Journal
-  :st: MI
-  :prez_2008: Obama
-Louisville Courier-Journal: 
-  :city: 
-  :paper: Louisville Courier-Journal
-  :st: KY
-  :prez_2008: Obama
-  :prez_2004: Kerry
 Napa Valley Register: 
   :city: 
   :paper: Napa Valley Register
@@ -460,11 +527,6 @@ Argus Leader:
   :paper: Argus Leader
   :st: SD
   :prez_2008: McCain
-Daily Sentinel: 
-  :city: Grand Junction
-  :paper: Daily Sentinel
-  :st: CO
-  :prez_2008: McCain
   :prez_2004: Bush
 Baltimore Examiner: 
   :city: 
@@ -472,6 +534,17 @@ Baltimore Examiner:
   :st: MD
   :prez_2008: McCain
   :prez_2004: none
+Daily Sentinel: 
+  :city: Grand Junction
+  :paper: Daily Sentinel
+  :st: CO
+  :prez_2008: McCain
+  :prez_2004: Bush
+Kenosha News: 
+  :city: 
+  :paper: Kenosha News
+  :st: WI
+  :prez_2008: Obama
 Las Cruces Sun-News: 
   :city: 
   :paper: Las Cruces Sun-News
@@ -489,6 +562,11 @@ Waynesboro News-Virginian:
   :paper: Waynesboro News-Virginian
   :st: VA
   :prez_2008: McCain
+Morning Journal: 
+  :city: Lorain
+  :paper: Morning Journal
+  :st: OH
+  :prez_2008: McCain
 Hawk Eye: 
   :city: Burlington
   :paper: Hawk Eye
@@ -500,11 +578,13 @@ Brattleboro Reformer:
   :paper: Brattleboro Reformer
   :st: VT
   :prez_2008: Obama
-Times of Trenton: 
-  :city: 
-  :paper: Times of Trenton
-  :st: NJ
+  :prez_2004: Kerry
+Livingston County Daily Press and Argus: 
+  :city: Howell
+  :paper: Livingston County Daily Press and Argus
+  :st: MI
   :prez_2008: Obama
+  :prez_2004: Kerry
 Monterey County Herald: 
   :city: 
   :paper: Monterey County Herald
@@ -516,11 +596,13 @@ Fort Collins Coloradoan:
   :paper: Fort Collins Coloradoan
   :st: CO
   :prez_2008: Obama
+  :prez_2004: Kerry
 Times-Leader: 
   :city: Wilkes-Barre
   :paper: Times-Leader
   :st: PA
   :prez_2008: Obama
+  :prez_2004: Kerry
 Boston Globe: 
   :city: 
   :paper: Boston Globe
@@ -531,6 +613,12 @@ Daily Herald:
   :city: Arlington Heights
   :paper: Daily Herald
   :st: IL
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Courier-Journal: 
+  :city: Louisville
+  :paper: Courier-Journal
+  :st: KY
   :prez_2008: Obama
   :prez_2004: Kerry
 Capital Times: 
@@ -550,6 +638,7 @@ Eagle:
   :paper: Eagle
   :st: TX
   :prez_2008: Obama
+  :prez_2004: Bush
 Durango Herald: 
   :city: 
   :paper: Durango Herald
@@ -568,11 +657,17 @@ Seattle Post-Intelligencer:
   :st: WA
   :prez_2008: Obama
   :prez_2004: Kerry
+Times-Tribune: 
+  :city: 
+  :paper: Times-Tribune
+  :st: PA
+  :prez_2008: McCain
 Lincoln Journal-Star: 
   :city: 
   :paper: Lincoln Journal-Star
   :st: NE
   :prez_2008: McCain
+  :prez_2004: Bush
 Yakima Herald-Republic: 
   :city: 
   :paper: Yakima Herald-Republic
@@ -606,23 +701,35 @@ San Mateo Daily Journal:
   :paper: San Mateo Daily Journal
   :st: CA
   :prez_2008: Obama
+Stevens Point Journal: 
+  :city: 
+  :paper: Stevens Point Journal
+  :st: WI
+  :prez_2008: Obama
 San Jose Mercury News: 
   :city: 
   :paper: San Jose Mercury News
   :st: CA
   :prez_2008: Obama
   :prez_2004: Kerry
-Stevens Point Journal: 
+Conway Daily Sun: 
   :city: 
-  :paper: Stevens Point Journal
-  :st: WI
+  :paper: Conway Daily Sun
+  :st: NH
   :prez_2008: Obama
+  :prez_2004: none
 Daily Astorian: 
   :city: Astoria
   :paper: Daily Astorian
   :st: OR
   :prez_2008: Obama
   :prez_2004: Kerry
+Daily News (Bowling Green): 
+  :city: Bowling Green
+  :paper: Daily News (Bowling Green)
+  :st: KY
+  :prez_2008: McCain
+  :prez_2004: Bush
 Cape Coral Daily Breeze: 
   :city: 
   :paper: Cape Coral Daily Breeze
@@ -634,6 +741,12 @@ Chattanooga Times:
   :st: TN
   :prez_2008: Obama
   :prez_2004: Kerry
+Chippewa Herald: 
+  :city: Chippewa Falls
+  :paper: Chippewa Herald
+  :st: WI
+  :prez_2008: Obama
+  :prez_2004: Bush
 Standard-Times: 
   :city: New Bedford
   :paper: Standard-Times
@@ -646,16 +759,12 @@ Poughkeepsie Journal:
   :st: NY
   :prez_2008: Obama
   :prez_2004: Bush
-Santa Rosa Press-Democrat: 
-  :city: 
-  :paper: Santa Rosa Press-Democrat
-  :st: CA
-  :prez_2008: Obama
-Glens Falls Post-Star: 
-  :city: 
-  :paper: Glens Falls Post-Star
-  :st: NY
-  :prez_2008: Obama
+Daily Republic: 
+  :city: Mitchell
+  :paper: Daily Republic
+  :st: SD
+  :prez_2008: McCain
+  :prez_2004: Bush
 Columbian: 
   :city: 
   :paper: Columbian
@@ -686,6 +795,11 @@ Boulder Camera:
   :st: CO
   :prez_2008: Obama
   :prez_2004: Kerry
+Telegram and Gazette: 
+  :city: Worcester
+  :paper: Telegram and Gazette
+  :st: MA
+  :prez_2008: Obama
 Michigan Chronicle: 
   :city: Detroit
   :paper: Michigan Chronicle
@@ -714,6 +828,7 @@ Saginaw News:
   :paper: Saginaw News
   :st: MI
   :prez_2008: Obama
+  :prez_2004: Kerry
 Leaf-Chronicle: 
   :city: Clarksville
   :paper: Leaf-Chronicle
@@ -735,11 +850,13 @@ Macon Telegraph:
   :paper: Macon Telegraph
   :st: GA
   :prez_2008: Obama
+  :prez_2004: Kerry
 Gloucester County Times: 
   :city: Woodbury
   :paper: Gloucester County Times
   :st: NJ
   :prez_2008: Obama
+  :prez_2004: Kerry
 Times-Picayune: 
   :city: New Orleans
   :paper: Times-Picayune
@@ -774,6 +891,18 @@ Dallas Morning News:
   :st: TX
   :prez_2008: McCain
   :prez_2004: Bush
+Desert Sun: 
+  :city: Palm Springs
+  :paper: Desert Sun
+  :st: CA
+  :prez_2008: McCain
+  :prez_2004: Bush
+Mobile Press Register: 
+  :city: 
+  :paper: Mobile Press Register
+  :st: AL
+  :prez_2008: McCain
+  :prez_2004: Bush
 Lufkin Daily News: 
   :city: 
   :paper: Lufkin Daily News
@@ -786,21 +915,23 @@ Charlotte Observer:
   :st: NC
   :prez_2008: Obama
   :prez_2004: Kerry
-Desert Sun: 
-  :city: Palm Springs
-  :paper: Desert Sun
-  :st: CA
-  :prez_2008: McCain
 Richmond Times-Dispatch: 
   :city: 
   :paper: Richmond Times-Dispatch
   :st: VA
   :prez_2008: McCain
+  :prez_2004: Bush
 Daily Democrat: 
   :city: Woodland
   :paper: Daily Democrat
   :st: CA
   :prez_2008: Obama
+Vindicator: 
+  :city: Youngstown
+  :paper: Vindicator
+  :st: OH
+  :prez_2008: Obama
+  :prez_2004: Bush
 Fresno Bee: 
   :city: 
   :paper: Fresno Bee
@@ -836,6 +967,12 @@ Des Moines Register:
   :paper: Des Moines Register
   :st: IA
   :prez_2008: Obama
+  :prez_2004: Kerry
+Times Herald-Record: 
+  :city: Middletown
+  :paper: Times Herald-Record
+  :st: NY
+  :prez_2008: Obama
 Ouray County Plaindealer: 
   :city: 
   :paper: Ouray County Plaindealer
@@ -847,34 +984,58 @@ Quad-City Times:
   :paper: Quad-City Times
   :st: IA
   :prez_2008: Obama
-Sacramento Bee: 
-  :city: 
-  :paper: Sacramento Bee
-  :st: CA
-  :prez_2008: Obama
   :prez_2004: Kerry
-Bay City News: 
-  :city: 
-  :paper: Bay City News
-  :st: MI
-  :prez_2008: Obama
 San Diego Union-Tribune: 
   :city: 
   :paper: San Diego Union-Tribune
   :st: CA
   :prez_2008: McCain
   :prez_2004: Bush
+Sacramento Bee: 
+  :city: 
+  :paper: Sacramento Bee
+  :st: CA
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Bay City Times: 
+  :city: 
+  :paper: Bay City Times
+  :st: MI
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Gainesville Sun: 
+  :city: 
+  :paper: Gainesville Sun
+  :st: FL
+  :prez_2008: Obama
 Galveston County Daily News: 
   :city: 
   :paper: Galveston County Daily News
   :st: TX
   :prez_2008: McCain
+Daily Courier: 
+  :city: Grants Pass
+  :paper: Daily Courier
+  :st: OR
+  :prez_2008: McCain
+  :prez_2004: Bush
 Tennessean: 
   :city: Nashville
   :paper: Tennessean
   :st: TN
   :prez_2008: Obama
   :prez_2004: Kerry
+East Oregonian: 
+  :city: 
+  :paper: East Oregonian
+  :st: OR
+  :prez_2008: Obama
+Birmingham News: 
+  :city: 
+  :paper: Birmingham News
+  :st: AL
+  :prez_2008: McCain
+  :prez_2004: Bush
 Lakeland Ledger: 
   :city: 
   :paper: Lakeland Ledger
@@ -917,11 +1078,6 @@ San Francisco Examiner:
   :st: CA
   :prez_2008: McCain
   :prez_2004: Bush
-Lynchburg News-Advance: 
-  :city: 
-  :paper: Lynchburg News-Advance
-  :st: VA
-  :prez_2008: McCain
 Tyler Morning Telegraph: 
   :city: 
   :paper: Tyler Morning Telegraph
@@ -932,12 +1088,30 @@ Norfolk Daily News:
   :paper: Norfolk Daily News
   :st: NE
   :prez_2008: McCain
+Sun Journal: 
+  :city: Lewiston
+  :paper: Sun Journal
+  :st: ME
+  :prez_2008: McCain
+  :prez_2004: Bush
+Post-Star: 
+  :city: Glens Falls
+  :paper: Post-Star
+  :st: NY
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Inland Valley Daily Bulletin: 
   :city: Ontario
   :paper: Inland Valley Daily Bulletin
   :st: CA
   :prez_2008: Obama
   :prez_2004: Bush
+South Florida Sun-Sentinel: 
+  :city: Fort Lauderdale
+  :paper: South Florida Sun-Sentinel
+  :st: FL
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Aspen Daily News: 
   :city: 
   :paper: Aspen Daily News
@@ -961,6 +1135,17 @@ Messenger:
   :st: IA
   :prez_2008: McCain
   :prez_2004: Bush
+Lansing State Journal: 
+  :city: 
+  :paper: Lansing State Journal
+  :st: MI
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Journal News: 
+  :city: 
+  :paper: Journal News
+  :st: NY
+  :prez_2008: Obama
 Ashland Daily Tidings: 
   :city: 
   :paper: Ashland Daily Tidings
@@ -989,18 +1174,28 @@ Olympian:
   :st: WA
   :prez_2008: Obama
   :prez_2004: Kerry
-News and Observer: 
-  :city: Raleigh
-  :paper: News and Observer
-  :st: NC
+Times (Shreveport): 
+  :city: Shreveport
+  :paper: Times (Shreveport)
+  :st: LA
   :prez_2008: Obama
-  :prez_2004: Kerry
 Register Citizen: 
   :city: Torrington
   :paper: Register Citizen
   :st: CT
   :prez_2008: McCain
   :prez_2004: Bush
+Mercury: 
+  :city: Pottstown
+  :paper: Mercury
+  :st: PA
+  :prez_2008: Obama
+News and Observer: 
+  :city: Raleigh
+  :paper: News and Observer
+  :st: NC
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Blade: 
   :city: Toledo
   :paper: Blade
@@ -1012,38 +1207,41 @@ Oklahoman:
   :paper: Oklahoman
   :st: OK
   :prez_2008: McCain
+  :prez_2004: Bush
 Marin Independent-Journal: 
   :city: 
   :paper: Marin Independent-Journal
   :st: CA
   :prez_2008: Obama
   :prez_2004: Kerry
-Shreveport Times: 
+Ottumwa Courier: 
   :city: 
-  :paper: Shreveport Times
-  :st: LA
+  :paper: Ottumwa Courier
+  :st: IA
   :prez_2008: Obama
-Spartanburg Herald-Journal: 
-  :city: 
-  :paper: Spartanburg Herald-Journal
-  :st: SC
-  :prez_2008: McCain
 Oakland Tribune: 
   :city: 
   :paper: Oakland Tribune
   :st: CA
   :prez_2008: Obama
   :prez_2004: Kerry
+News Journal (Mansfield): 
+  :city: Mansfield
+  :paper: News Journal (Mansfield)
+  :st: OH
+  :prez_2008: Obama
+  :prez_2004: Bush
 Vail Daily: 
   :city: 
   :paper: Vail Daily
   :st: CO
   :prez_2008: Obama
 Berkshire Eagle: 
-  :city: 
+  :city: Pittsfield
   :paper: Berkshire Eagle
   :st: MA
   :prez_2008: Obama
+  :prez_2004: Kerry
 San Antonio Express-News: 
   :city: 
   :paper: San Antonio Express-News
@@ -1067,11 +1265,13 @@ LaCrosse Tribune:
   :paper: LaCrosse Tribune
   :st: WI
   :prez_2008: Obama
+  :prez_2004: Kerry
 Anchorage Daily News: 
   :city: 
   :paper: Anchorage Daily News
   :st: AK
   :prez_2008: Obama
+  :prez_2004: Kerry
 Burlington Free Press: 
   :city: 
   :paper: Burlington Free Press
@@ -1083,6 +1283,12 @@ Knoxville News-Sentinel:
   :paper: Knoxville News-Sentinel
   :st: TN
   :prez_2008: McCain
+  :prez_2004: Bush
+Montgomery Advertiser: 
+  :city: 
+  :paper: Montgomery Advertiser
+  :st: AL
+  :prez_2008: Obama
 Argus: 
   :city: Fremont
   :paper: Argus
@@ -1100,11 +1306,6 @@ New York Post:
   :st: NY
   :prez_2008: McCain
   :prez_2004: Bush
-Albany Times-Union: 
-  :city: 
-  :paper: Albany Times-Union
-  :st: NY
-  :prez_2008: Obama
 St. Cloud Times: 
   :city: 
   :paper: St. Cloud Times
@@ -1145,6 +1346,12 @@ Pittsburgh Post-Gazette:
   :st: PA
   :prez_2008: Obama
   :prez_2004: Kerry
+Times-Union: 
+  :city: Albany
+  :paper: Times-Union
+  :st: NY
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Spokesman-Review (Spokane): 
   :city: 
   :paper: Spokesman-Review (Spokane)
@@ -1156,29 +1363,35 @@ Bartlesville Examiner-Enterprise:
   :paper: Bartlesville Examiner-Enterprise
   :st: OK
   :prez_2008: McCain
-Asheville Citizen-Times: 
+Tampa Tribune: 
   :city: 
-  :paper: Asheville Citizen-Times
-  :st: NC
-  :prez_2008: Obama
-  :prez_2004: Kerry
+  :paper: Tampa Tribune
+  :st: FL
+  :prez_2008: McCain
 Pueblo Chieftain: 
   :city: 
   :paper: Pueblo Chieftain
   :st: CO
   :prez_2008: McCain
   :prez_2004: Bush
+Asheville Citizen-Times: 
+  :city: 
+  :paper: Asheville Citizen-Times
+  :st: NC
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Oregonian: 
   :city: Portland
   :paper: Oregonian
   :st: OR
   :prez_2008: Obama
   :prez_2004: Kerry
-Tampa Tribune: 
-  :city: 
-  :paper: Tampa Tribune
-  :st: FL
-  :prez_2008: McCain
+Sun (Baltimore): 
+  :city: Baltimore
+  :paper: Sun (Baltimore)
+  :st: MD
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Miami Herald: 
   :city: 
   :paper: Miami Herald
@@ -1209,6 +1422,11 @@ Corpus Christi Caller-Times:
   :st: TX
   :prez_2008: McCain
   :prez_2004: Kerry
+Herald and Review: 
+  :city: Decatur
+  :paper: Herald and Review
+  :st: IL
+  :prez_2008: Obama
 Akron Beacon-Journal: 
   :city: 
   :paper: Akron Beacon-Journal
@@ -1232,6 +1450,7 @@ Elko Daily Free Press:
   :paper: Elko Daily Free Press
   :st: NV
   :prez_2008: McCain
+  :prez_2004: Bush
 Cortez Journal: 
   :city: 
   :paper: Cortez Journal
@@ -1261,11 +1480,18 @@ Day:
   :paper: Day
   :st: CT
   :prez_2008: Obama
+  :prez_2004: Kerry
 Billings Gazette: 
   :city: 
   :paper: Billings Gazette
   :st: MT
   :prez_2008: Obama
+  :prez_2004: Kerry
+Times Observer: 
+  :city: Warren
+  :paper: Times Observer
+  :st: PA
+  :prez_2008: McCain
 Fargo Forum: 
   :city: 
   :paper: Fargo Forum
@@ -1284,11 +1510,17 @@ Daily News:
   :st: NY
   :prez_2008: Obama
   :prez_2004: Bush
+Courier Post: 
+  :city: 
+  :paper: Courier Post
+  :st: NJ
+  :prez_2008: Obama
 Hartford Courant: 
   :city: 
   :paper: Hartford Courant
   :st: CT
   :prez_2008: Obama
+  :prez_2004: Bush
 Lake County News-Sun: 
   :city: Waukegan
   :paper: Lake County News-Sun
@@ -1312,6 +1544,13 @@ Bristol Herald Courier:
   :paper: Bristol Herald Courier
   :st: VA
   :prez_2008: McCain
+  :prez_2004: Bush
+News-Herald: 
+  :city: Lake County-Willoughby
+  :paper: News-Herald
+  :st: OH
+  :prez_2008: McCain
+  :prez_2004: Bush
 Aurora Sentinel: 
   :city: 
   :paper: Aurora Sentinel
@@ -1334,6 +1573,12 @@ Muskegon Chronicle:
   :city: 
   :paper: Muskegon Chronicle
   :st: MI
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Star Tribune: 
+  :city: Minneapolis
+  :paper: Star Tribune
+  :st: MN
   :prez_2008: Obama
   :prez_2004: Kerry
 New Braunfels Herald-Zeitung: 
@@ -1363,12 +1608,18 @@ Star-Ledger:
   :paper: Star-Ledger
   :st: NJ
   :prez_2008: Obama
+  :prez_2004: Kerry
 Muskogee Daily Phoenix: 
   :city: 
   :paper: Muskogee Daily Phoenix
   :st: OK
   :prez_2008: Obama
   :prez_2004: Kerry
+Kitsap Sun: 
+  :city: Bremerton
+  :paper: Kitsap Sun
+  :st: WA
+  :prez_2008: Obama
 Gunnison Country Times: 
   :city: 
   :paper: Gunnison Country Times
@@ -1386,6 +1637,12 @@ North Adams Transcript:
   :paper: North Adams Transcript
   :st: MA
   :prez_2008: Obama
+Daily Times: 
+  :city: Farmington
+  :paper: Daily Times
+  :st: NM
+  :prez_2008: Obama
+  :prez_2004: Bush
 Walla Walla Union-Bulletin: 
   :city: 
   :paper: Walla Walla Union-Bulletin
@@ -1420,11 +1677,6 @@ San Gabriel Valley Tribune:
   :st: CA
   :prez_2008: Obama
   :prez_2004: Bush
-Minneapolis Star Tribune: 
-  :city: 
-  :paper: Minneapolis Star Tribune
-  :st: MN
-  :prez_2008: Obama
 Ledger Independent: 
   :city: Maysville
   :paper: Ledger Independent
@@ -1435,6 +1687,7 @@ Portsmouth Herald:
   :paper: Portsmouth Herald
   :st: NH
   :prez_2008: Obama
+  :prez_2004: Kerry
 Chicago Sun-Times: 
   :city: 
   :paper: Chicago Sun-Times
@@ -1445,6 +1698,12 @@ San Bernardino Sun:
   :city: 
   :paper: San Bernardino Sun
   :st: CA
+  :prez_2008: Obama
+  :prez_2004: Bush
+Wisconsin State Journal: 
+  :city: Madison
+  :paper: Wisconsin State Journal
+  :st: WI
   :prez_2008: Obama
   :prez_2004: Bush
 Palladium-Item: 
@@ -1458,12 +1717,12 @@ Wenatchee World:
   :paper: Wenatchee World
   :st: WA
   :prez_2008: Obama
-Wisconsin State Journal: 
-  :city: Madison
-  :paper: Wisconsin State Journal
-  :st: WI
+Times (Trenton): 
+  :city: Trenton
+  :paper: Times (Trenton)
+  :st: NJ
   :prez_2008: Obama
-  :prez_2004: Bush
+  :prez_2004: Kerry
 Public Opinion: 
   :city: Chambersburg
   :paper: Public Opinion
@@ -1492,29 +1751,46 @@ Observer-Reporter:
   :paper: Observer-Reporter
   :st: PA
   :prez_2008: Obama
+  :prez_2004: Kerry
 Long Beach Press Telegram: 
   :city: 
   :paper: Long Beach Press Telegram
   :st: CA
   :prez_2008: Obama
   :prez_2004: Bush
-Bowling Green Daily News: 
-  :city: 
-  :paper: Bowling Green Daily News
-  :st: KY
-  :prez_2008: McCain
 Durham Herald-Sun: 
   :city: 
   :paper: Durham Herald-Sun
   :st: NC
   :prez_2008: Obama
   :prez_2004: none
+World-Herald: 
+  :city: Omaha
+  :paper: World-Herald
+  :st: NE
+  :prez_2008: McCain
+Press Democrat: 
+  :city: Santa Rosa
+  :paper: Press Democrat
+  :st: CA
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Honolulu Advertiser: 
+  :city: 
+  :paper: Honolulu Advertiser
+  :st: HI
+  :prez_2008: Obama
 Concord Monitor: 
   :city: 
   :paper: Concord Monitor
   :st: NH
   :prez_2008: Obama
   :prez_2004: Kerry
+Pocono Record: 
+  :city: Stroudsburg
+  :paper: Pocono Record
+  :st: PA
+  :prez_2008: Obama
 Idaho Statesman: 
   :city: 
   :paper: Idaho Statesman
@@ -1527,17 +1803,17 @@ Times Record News:
   :st: TX
   :prez_2008: McCain
   :prez_2004: none
+Palatka Daily News: 
+  :city: 
+  :paper: Palatka Daily News
+  :st: FL
+  :prez_2008: McCain
 Columbia Daily Tribune: 
   :city: 
   :paper: Columbia Daily Tribune
   :st: MO
   :prez_2008: Obama
   :prez_2004: Kerry
-Palatka Daily News: 
-  :city: 
-  :paper: Palatka Daily News
-  :st: FL
-  :prez_2008: McCain
 Lexington Herald-Leader: 
   :city: 
   :paper: Lexington Herald-Leader
@@ -1554,6 +1830,17 @@ Marshalltown Times-Republican:
   :paper: Marshalltown Times-Republican
   :st: IA
   :prez_2008: McCain
+Herald-Standard: 
+  :city: Uniontown
+  :paper: Herald-Standard
+  :st: PA
+  :prez_2008: Obama
+News Journal (Wilmington): 
+  :city: Wilmington
+  :paper: News Journal (Wilmington)
+  :st: DE
+  :prez_2008: Obama
+  :prez_2004: Kerry
 Columbus Ledger-Enquirer: 
   :city: 
   :paper: Columbus Ledger-Enquirer
