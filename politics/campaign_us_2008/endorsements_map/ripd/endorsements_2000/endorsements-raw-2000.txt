@@ -99,7 +99,7 @@ INDIANA
 
 Evansville Courier and Press
 The Indianapolis Star
-Journal and Courier, Lafayette
+Lafayette Journal and Courier
 The News-Sentinel, Fort Wayne
 The Times, Munster
 
@@ -180,7 +180,7 @@ The Union Leader, Manchester
 NEW JERSEY
 
 Asbury Park Press
-Courier-Post, Cherry Hill
+Courier Post, Cherry Hill
 The Press of Atlantic City
 
 NEW MEXICO
@@ -235,11 +235,11 @@ The Oregonian, Portland
 
 PENNSYLVANIA
 
-Delaware County Daily Times, Primos
+Delaware County Daily Times
 Erie Times-News
 The Morning Call, Allentown
 The Harrisburg Patriot-News
-Scranton Times
+Times-Tribune, Scranton
 Tribune-Review, Greensburg
 The York Dispatch
 
@@ -292,7 +292,7 @@ WASHINGTON
 The Columbian, Vancouver
 The Seattle Times
 The Spokesman-Review, Spokane
-The Sun, Bremerton
+Kitsap Sun, Bremerton
 Tri-City Herald, Kennewick
 Walla Walla Union-Bulletin
 
@@ -429,7 +429,7 @@ The Salem Evening News
 MICHIGAN
 
 Detroit Free Press
-Lansing State-Journal
+Lansing State Journal
 The Macomb Daily
 
 MINNESOTA
@@ -465,13 +465,13 @@ Portsmouth Herald
 NEW JERSEY
 
 Home News Tribune, East Brunswick
-The Record, Hackensack
+Record (Bergen)
 The Star-Ledger, Newark
 The Times of Trenton
 
 NEW MEXICO
 
-The Sante Fe New Mexican
+The Santa Fe New Mexican
 
 NEW YORK
 

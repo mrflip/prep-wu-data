@@ -264,11 +264,6 @@ Charleston Daily Mail:
   :paper: Charleston Daily Mail
   :prez_1996: Dole
   :st: WV
-St. Johnsbury Caledonian-Record: 
-  :city: 
-  :paper: St. Johnsbury Caledonian-Record
-  :prez_1996: Dole
-  :st: VT
 Louisville Courier-Journal: 
   :city: 
   :paper: Louisville Courier-Journal
@@ -464,6 +459,11 @@ Kingsport Daily News:
   :paper: Kingsport Daily News
   :prez_1996: Dole
   :st: TN
+Chronicle (Centralia): 
+  :city: Centralia
+  :paper: Chronicle (Centralia)
+  :prez_1996: Dole
+  :st: WA
 Asbury Park Press: 
   :city: 
   :paper: Asbury Park Press
@@ -529,21 +529,11 @@ El Paso Herald-Post:
   :paper: El Paso Herald-Post
   :prez_1996: Dole
   :st: TX
-Pendleton East Oregonian: 
-  :city: 
-  :paper: Pendleton East Oregonian
-  :prez_1996: Clinton
-  :st: OR
 Dallas Morning News: 
   :city: 
   :paper: Dallas Morning News
   :prez_1996: Dole
   :st: TX
-Chronicle: 
-  :city: Centralia
-  :paper: Chronicle
-  :prez_1996: Dole
-  :st: WA
 Willoughby News-Herald: 
   :city: 
   :paper: Willoughby News-Herald
@@ -659,6 +649,16 @@ Tennessean:
   :paper: Tennessean
   :prez_1996: Clinton
   :st: TN
+East Oregonian: 
+  :city: Pendleton
+  :paper: East Oregonian
+  :prez_1996: Clinton
+  :st: OR
+Caledonian-Record: 
+  :city: Saint Johnsbury
+  :paper: Caledonian-Record
+  :prez_1996: Dole
+  :st: VT
 Paris Post Intelligencer: 
   :city: 
   :paper: Paris Post Intelligencer
@@ -770,7 +770,7 @@ Great Falls Tribune:
   :prez_1996: Clinton
   :st: MT
 Courier-News: 
-  :city: Bridgewater
+  :city: Bound Brook
   :paper: Courier-News
   :prez_1996: Clinton
   :st: NJ
@@ -829,11 +829,6 @@ Arizona Daily Star:
   :paper: Arizona Daily Star
   :prez_1996: Clinton
   :st: AZ
-Bremerion Sun: 
-  :city: 
-  :paper: Bremerion Sun
-  :prez_1996: Dole
-  :st: WA
 San Antonio Express-News: 
   :city: 
   :paper: San Antonio Express-News
@@ -1069,6 +1064,11 @@ Jackson Sun:
   :paper: Jackson Sun
   :prez_1996: Clinton
   :st: TN
+Kitsap Sun: 
+  :city: Bremerton
+  :paper: Kitsap Sun
+  :prez_1996: Dole
+  :st: WA
 Talladega Daily Home: 
   :city: 
   :paper: Talladega Daily Home

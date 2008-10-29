@@ -59,15 +59,20 @@ Asheboro Courier-Tribune:
   :paper: Asheboro Courier-Tribune
   :st: NC
   :prez_1992: GHWBush
+Union Leader: 
+  :city: Manchester
+  :paper: Union Leader
+  :st: NH
+  :prez_1992: GHWBush
 Sioux City Journal: 
   :city: 
   :paper: Sioux City Journal
   :st: IA
   :prez_1992: GHWBush
-Daily Californian: 
+Santa Fe New Mexican: 
   :city: 
-  :paper: Daily Californian
-  :st: CA
+  :paper: Santa Fe New Mexican
+  :st: NM
   :prez_1992: Clinton
 Idaho Falls Post Register: 
   :city: 
@@ -139,11 +144,6 @@ Okmulgee Daily Times:
   :paper: Okmulgee Daily Times
   :st: OK
   :prez_1992: Clinton
-Bremerton Sun: 
-  :city: 
-  :paper: Bremerton Sun
-  :st: WA
-  :prez_1992: GHWBush
 Greenwich Time: 
   :city: 
   :paper: Greenwich Time
@@ -214,6 +214,11 @@ Bloomfield Evening World:
   :paper: Bloomfield Evening World
   :st: IN
   :prez_1992: Clinton
+New Rolla Daily News: 
+  :city: 
+  :paper: New Rolla Daily News
+  :st: MO
+  :prez_1992: GHWBush
 Huntington Herald-Press: 
   :city: 
   :paper: Huntington Herald-Press
@@ -222,11 +227,6 @@ Huntington Herald-Press:
 Record (Hackensack): 
   :city: Hackensack
   :paper: Record (Hackensack)
-  :st: NJ
-  :prez_1992: Clinton
-Camden Courier-Post: 
-  :city: 
-  :paper: Camden Courier-Post
   :st: NJ
   :prez_1992: Clinton
 Columbus Dispatch: 
@@ -239,6 +239,11 @@ Kearney Hub:
   :paper: Kearney Hub
   :st: NE
   :prez_1992: GHWBush
+Home News Tribune: 
+  :city: East Brunswick
+  :paper: Home News Tribune
+  :st: NJ
+  :prez_1992: Clinton
 Abilene Reporter-News: 
   :city: 
   :paper: Abilene Reporter-News
@@ -249,11 +254,6 @@ Omaha World-Herald:
   :paper: Omaha World-Herald
   :st: NE
   :prez_1992: GHWBush
-Herald-Record: 
-  :city: 
-  :paper: Herald-Record
-  :st: NY
-  :prez_1992: Clinton
 Uniontown Herald-Standard: 
   :city: 
   :paper: Uniontown Herald-Standard
@@ -278,11 +278,6 @@ Birmingham Post-Herald:
   :city: 
   :paper: Birmingham Post-Herald
   :st: AL
-  :prez_1992: GHWBush
-Manchester Union Leader: 
-  :city: 
-  :paper: Manchester Union Leader
-  :st: NH
   :prez_1992: GHWBush
 Las Vegas Sun: 
   :city: 
@@ -399,11 +394,6 @@ Augusta Chronicle:
   :paper: Augusta Chronicle
   :st: GA
   :prez_1992: GHWBush
-Griffin Daily News: 
-  :city: 
-  :paper: Griffin Daily News
-  :st: GA
-  :prez_1992: GHWBush
 Brattleboro Reformer: 
   :city: 
   :paper: Brattleboro Reformer
@@ -414,6 +404,11 @@ Woodward News:
   :paper: Woodward News
   :st: OK
   :prez_1992: Clinton
+Griffin Daily News: 
+  :city: 
+  :paper: Griffin Daily News
+  :st: GA
+  :prez_1992: GHWBush
 News and Record: 
   :city: Greensboro
   :paper: News and Record
@@ -478,6 +473,11 @@ Oshkosh Northwestern:
   :city: 
   :paper: Oshkosh Northwestern
   :st: WI
+  :prez_1992: GHWBush
+Eagle: 
+  :city: Bryan
+  :paper: Eagle
+  :st: TX
   :prez_1992: GHWBush
 Vicksburg Post: 
   :city: 
@@ -559,6 +559,11 @@ Chattanooga Times:
   :paper: Chattanooga Times
   :st: TN
   :prez_1992: Clinton
+Chronicle (Centralia): 
+  :city: Centralia
+  :paper: Chronicle (Centralia)
+  :st: WA
+  :prez_1992: GHWBush
 Columbian: 
   :city: 
   :paper: Columbian
@@ -594,6 +599,11 @@ Annapolis Capital:
   :paper: Annapolis Capital
   :st: MD
   :prez_1992: GHWBush
+Boulder Camera: 
+  :city: 
+  :paper: Boulder Camera
+  :st: CO
+  :prez_1992: Clinton
 Garden City Telegram: 
   :city: 
   :paper: Garden City Telegram
@@ -684,6 +694,11 @@ El Paso Herald-Post:
   :paper: El Paso Herald-Post
   :st: TX
   :prez_1992: GHWBush
+Willoughby News-Herald: 
+  :city: 
+  :paper: Willoughby News-Herald
+  :st: OH
+  :prez_1992: GHWBush
 Lufkin Daily News: 
   :city: 
   :paper: Lufkin Daily News
@@ -749,11 +764,6 @@ Milwaukee Sentinel:
   :paper: Milwaukee Sentinel
   :st: WI
   :prez_1992: GHWBush
-WilloughbyNews-Herald: 
-  :city: 
-  :paper: WilloughbyNews-Herald
-  :st: OH
-  :prez_1992: GHWBush
 Fresno Bee: 
   :city: 
   :paper: Fresno Bee
@@ -779,11 +789,11 @@ Sacramento Union:
   :paper: Sacramento Union
   :st: CA
   :prez_1992: GHWBush
-Bristol Herald-Courier: 
-  :city: 
-  :paper: Bristol Herald-Courier
-  :st: VA
-  :prez_1992: GHWBush
+Times Herald-Record: 
+  :city: Middletown
+  :paper: Times Herald-Record
+  :st: NY
+  :prez_1992: Clinton
 Athens Messenger: 
   :city: 
   :paper: Athens Messenger
@@ -824,11 +834,6 @@ Lancaster Intelligencer Journal:
   :paper: Lancaster Intelligencer Journal
   :st: PA
   :prez_1992: Clinton
-San Bernadino Sun: 
-  :city: 
-  :paper: San Bernadino Sun
-  :st: CA
-  :prez_1992: Clinton
 San Diego Union-Tribune: 
   :city: 
   :paper: San Diego Union-Tribune
@@ -839,23 +844,13 @@ Columbus Telegram:
   :paper: Columbus Telegram
   :st: NE
   :prez_1992: GHWBush
-West Central Tribune: 
-  :city: 
-  :paper: West Central Tribune
-  :st: MN
-  :prez_1992: GHWBush
 Potomac News: 
   :city: 
   :paper: Potomac News
   :st: VA
   :prez_1992: Clinton
-Brunswick Times Record: 
-  :city: 
-  :paper: Brunswick Times Record
-  :st: ME
-  :prez_1992: Clinton
 Caledonian-Record: 
-  :city: 
+  :city: Saint Johnsbury
   :paper: Caledonian-Record
   :st: VT
   :prez_1992: GHWBush
@@ -924,6 +919,11 @@ Foster's Daily Democrat:
   :paper: Foster's Daily Democrat
   :st: NH
   :prez_1992: GHWBush
+Willmar West Central Tribune: 
+  :city: 
+  :paper: Willmar West Central Tribune
+  :st: MN
+  :prez_1992: GHWBush
 Ann Arbor News: 
   :city: 
   :paper: Ann Arbor News
@@ -934,6 +934,11 @@ Gannett Suburban Newspapers:
   :paper: Gannett Suburban Newspapers
   :st: NY
   :prez_1992: Clinton
+Brunswick Times-Record: 
+  :city: 
+  :paper: Brunswick Times-Record
+  :st: ME
+  :prez_1992: Clinton
 Lebanon Daily Record: 
   :city: 
   :paper: Lebanon Daily Record
@@ -943,11 +948,6 @@ Junction City Daily Union:
   :city: 
   :paper: Junction City Daily Union
   :st: KS
-  :prez_1992: Clinton
-Daily Camera: 
-  :city: 
-  :paper: Daily Camera
-  :st: CO
   :prez_1992: Clinton
 San Francisco Examiner: 
   :city: 
@@ -1134,20 +1134,15 @@ Williston Daily Herald:
   :paper: Williston Daily Herald
   :st: ND
   :prez_1992: GHWBush
-Jacksonville Journal Courier: 
-  :city: 
-  :paper: Jacksonville Journal Courier
-  :st: IL
-  :prez_1992: GHWBush
 Newark Star-Ledger: 
   :city: 
   :paper: Newark Star-Ledger
   :st: NJ
   :prez_1992: Clinton
-Central Jersey Home News: 
+Kingston Daily Freeman: 
   :city: 
-  :paper: Central Jersey Home News
-  :st: NJ
+  :paper: Kingston Daily Freeman
+  :st: NY
   :prez_1992: Clinton
 St. Paul Pioneer Press: 
   :city: 
@@ -1168,11 +1163,6 @@ Times Leader:
   :city: Wilkes-Barre
   :paper: Times Leader
   :st: PA
-  :prez_1992: GHWBush
-Kirksville Daily Express and New Rolla Daily News: 
-  :city: 
-  :paper: Kirksville Daily Express and New Rolla Daily News
-  :st: MO
   :prez_1992: GHWBush
 Dayton Daily News: 
   :city: 
@@ -1319,6 +1309,11 @@ Waco Tribune-Herald:
   :paper: Waco Tribune-Herald
   :st: TX
   :prez_1992: Clinton
+Courier Post: 
+  :city: Cherry Hill
+  :paper: Courier Post
+  :st: NJ
+  :prez_1992: Clinton
 Hartford Courant: 
   :city: 
   :paper: Hartford Courant
@@ -1329,16 +1324,6 @@ Lodi News-Sentinel:
   :paper: Lodi News-Sentinel
   :st: CA
   :prez_1992: GHWBush
-Bryan-College Station Eagle: 
-  :city: 
-  :paper: Bryan-College Station Eagle
-  :st: TX
-  :prez_1992: GHWBush
-Middletown Times: 
-  :city: 
-  :paper: Middletown Times
-  :st: NY
-  :prez_1992: Clinton
 Detroit Free Press: 
   :city: 
   :paper: Detroit Free Press
@@ -1354,11 +1339,11 @@ Brookings Daily Register:
   :paper: Brookings Daily Register
   :st: SD
   :prez_1992: Clinton
-Eagle Times Claremont: 
+Bristol Herald Courier: 
   :city: 
-  :paper: Eagle Times Claremont
-  :st: NH
-  :prez_1992: Clinton
+  :paper: Bristol Herald Courier
+  :st: VA
+  :prez_1992: GHWBush
 Orlando Sentinel: 
   :city: 
   :paper: Orlando Sentinel
@@ -1384,15 +1369,20 @@ Atlanta Daily World:
   :paper: Atlanta Daily World
   :st: GA
   :prez_1992: GHWBush
-Centralia Chronicle: 
-  :city: 
-  :paper: Centralia Chronicle
+Kitsap Sun: 
+  :city: Bremerton
+  :paper: Kitsap Sun
   :st: WA
   :prez_1992: GHWBush
 Grand Island Independent: 
   :city: 
   :paper: Grand Island Independent
   :st: NE
+  :prez_1992: GHWBush
+Kirksville Daily Express: 
+  :city: 
+  :paper: Kirksville Daily Express
+  :st: MO
   :prez_1992: GHWBush
 Belleville News-Democrat: 
   :city: 
@@ -1408,11 +1398,6 @@ Jackson Sun:
   :city: 
   :paper: Jackson Sun
   :st: TN
-  :prez_1992: Clinton
-Daily Freeman: 
-  :city: 
-  :paper: Daily Freeman
-  :st: NY
   :prez_1992: Clinton
 Beaumont Enterprise: 
   :city: 
@@ -1439,11 +1424,6 @@ Herald:
   :paper: Herald
   :st: WA
   :prez_1992: Clinton
-Finlay Courier: 
-  :city: 
-  :paper: Finlay Courier
-  :st: OH
-  :prez_1992: GHWBush
 Minneapolis Star Tribune: 
   :city: 
   :paper: Minneapolis Star Tribune
@@ -1454,6 +1434,11 @@ Cincinnati Enquirer:
   :paper: Cincinnati Enquirer
   :st: OH
   :prez_1992: GHWBush
+Claremont Eagle Times: 
+  :city: 
+  :paper: Claremont Eagle Times
+  :st: NH
+  :prez_1992: Clinton
 Portsmouth Herald: 
   :city: 
   :paper: Portsmouth Herald
@@ -1469,20 +1454,20 @@ Olathe Daily News:
   :paper: Olathe Daily News
   :st: KS
   :prez_1992: Clinton
-New Mexican: 
+San Bernardino Sun: 
   :city: 
-  :paper: New Mexican
-  :st: NM
+  :paper: San Bernardino Sun
+  :st: CA
   :prez_1992: Clinton
+Courier (Findlay): 
+  :city: Findlay
+  :paper: Courier (Findlay)
+  :st: OH
+  :prez_1992: GHWBush
 Trentonian: 
   :city: 
   :paper: Trentonian
   :st: NJ
-  :prez_1992: GHWBush
-Times-Republican: 
-  :city: 
-  :paper: Times-Republican
-  :st: IA
   :prez_1992: GHWBush
 El Cajon: 
   :city: 
@@ -1574,6 +1559,11 @@ Seminole Producer:
   :paper: Seminole Producer
   :st: OK
   :prez_1992: Clinton
+Jacksonville Journal-Courier: 
+  :city: 
+  :paper: Jacksonville Journal-Courier
+  :st: IL
+  :prez_1992: GHWBush
 Savannah Morning News: 
   :city: 
   :paper: Savannah Morning News
@@ -1589,6 +1579,11 @@ Stephenville Empire-Tribune:
   :paper: Stephenville Empire-Tribune
   :st: TX
   :prez_1992: Clinton
+Marshalltown Times-Republican: 
+  :city: 
+  :paper: Marshalltown Times-Republican
+  :st: IA
+  :prez_1992: GHWBush
 Santa Monica Outlook: 
   :city: 
   :paper: Santa Monica Outlook

@@ -298,7 +298,7 @@ OREGON
 CLINTON
 Ashland Daily Tidings
 Daily Astorian
-Pendleton East Oregonian
+East Oregonian, Pendleton
 
 DOLE
 Coos Bay World
@@ -373,7 +373,7 @@ Houston Chronicle
 VERMONT
 
 DOLE
-St. Johnsbury Caledonian-Record
+Caledonian-Record, Saint Johnsbury
 
 WASHINGTON
 
@@ -381,7 +381,7 @@ CLINTON
 Seattle Post-Intelligencer
 
 DOLE
-Chronicle, Centralia 
+Chronicle, Centralia
 Skagit Valley Herald
 
 WEST VIRGINIA
@@ -435,8 +435,8 @@ WASHINGTON
 Seattle Post-Intelligencer
 NEW JERSEY
 Asbury Park Press
-Courier-News, Bridgewater
-Record, Hackensack
+Courier-News, Bound Brook
+Record (Bergen)
  
 
 CLINTON
@@ -451,7 +451,6 @@ The Charleston Gazette
 NEW HAMPSHIRE
 The Concord Monitor
 NEW JERSEY
-The Courier-News, Bridgewater
 The Star-Ledger, Newark
 
 COLORADO
@@ -517,7 +516,7 @@ The Augusta Chronicle
 MASSACHUSETTS
 The Boston Herald
 WASHINGTON
-The Bremerion Sun
+Kitsap Sun, Bremerton
 TENNESSEE
 The Chattanooga Free Press
 The Commercial Appeal, Memphis

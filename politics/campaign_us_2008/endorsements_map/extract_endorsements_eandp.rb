@@ -45,11 +45,12 @@ def parse_ep_endorsements(raw_filename, endorsement_re, year)
     f.each do |l|
       l.chomp!; l.strip!
       l.gsub!(/>>+/, '')                        # 'newly-added' designator
+      l.gsub!(/^#.*$/, '')                      # comment
       l.gsub!(/Foster.*s Daily/, 'Foster\'s Daily') # cruft
       next if l =~ /^\s*$/                      # blank
       #
       case
-      when l =~ /(?:(?:^#)|daily newspapers total|daily circulation total)/ then next
+      when l =~ /(?:daily newspapers total|daily circulation total)/ then next
       when PRESIDENTS.include?(l)
         prez = PRESIDENTS[l]
       when (l.upcase == l) && (l =~ /[A-Z]+/)
@@ -103,15 +104,20 @@ def fix_city_and_paper(orig_paper, state)
     'Champaign-Urbana'          => 'Champaign',
     'West Lafayette'            => 'Lafayette',
     'Bergen'                    => 'Hackensack',
+    'LaCrosse'                  => 'La Crosse',
+    'Lake County-Willoughby'    => 'Willoughby'
   }[city] || city
   # Some special cases
+  # Delaware County Daily Times is in Primos -- but that's basically philadelphia
+  # Gannett Sunburban Newspapers is many papers, based in White Plains, NY
   city, paper = { 
-    ['Arlington', 'Daily Herald'] => ['Arlington Heights', 'Daily Herald'],
+    ['Arlington', 'Daily Herald']   => ['Arlington Heights', 'Daily Herald'],
+    ['Bryan ',    'Eagle']          => ['Bryan',             'Bryan-College Station Eagle'],
   }[ [city, paper] ] || [city, paper]
-  keep_city = ['Daily News', 'Sun', 'Record', 'News Journal', 'Times', 'Spokesman-Review']
+  keep_city = ['Daily News', 'Sun', 'Record', 'News Journal', 'Times', 'Spokesman-Review', 'Chronicle', 'Courier']
   case
   when !city.blank? && keep_city.include?(paper) then paper = "#{paper} (#{city})"
-  when (paper == 'Kenne Sentinel')                      then city, paper = 'Keene', 'Keene Sentinel'
+  when (paper == 'Kenne Sentinel')                      then city, paper = 'Keene', 'Keene Sentinel'  
   when (paper =~ /Spokesman.*Review/) && (orig_paper =~ /Spokane/) then paper = "Spokesman-Review (Spokane)"
   end
   # puts "%-30s %-30s %-50s" % [paper, city, orig_paper] if orig_paper =~ /daily.*news/i

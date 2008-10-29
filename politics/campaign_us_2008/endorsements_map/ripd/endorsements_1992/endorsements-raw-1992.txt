@@ -4,7 +4,7 @@ ALABAMA
 The Decatur Daily   
 
 CALIFORNIA 
-San Bernadino Sun
+San Bernardino Sun
 San Francisco Examiner   
 
 COLORADO 
@@ -47,16 +47,15 @@ Kansas City Star
 
 NEW JERSEY 
 Asbury Park Press
-Central Jersey Home News
-Record, Hackensack
+Home News Tribune, East Brunswick
+Record (Bergen)
 Newark Star-Ledger
 North Jersey Herald and News
 Times of Trenton 
 
 NEW YORK 
 Gannett Suburban Newspapers
-Middletown Times
-Herald-Record
+Times Herald-Record, Middletown
 New York Times
 Daily News 
 
@@ -162,16 +161,16 @@ Hollister Free Lance
 La Opinion 
 San Jose Mercury News 
 El Cajon 
-Daily Californian 
 Fresno Bee 
 Modesto Bee 
 Sacramento Bee 
 Oakland Tribune 
 Vista Press 
+# Daily Californian # student paper http://www.dailycal.org/about.php
 
 COLORADO 
 
-Daily Camera 
+Boulder Camera 
 Lamar Daily News 
 
 CONNECTICUT 
@@ -228,7 +227,7 @@ Louisville Courier-Journal
 
 MAINE 
 
-Brunswick Times Record 
+Brunswick Times-Record 
 
 MARYLAND 
 
@@ -273,22 +272,22 @@ Las Vegas Sun
 NEW HAMPSHIRE 
 
 Concord Monitor 
-Eagle Times Claremont 
+Claremont Eagle Times
 Portsmouth Herald 
 
 NEW JERSEY 
 
 Burlington County Times 
-Camden Courier-Post 
+Courier Post, Cherry Hill
 Gloucester County Times 
 
 NEW MEXICO 
 
-New Mexican 
+Santa Fe New Mexican 
 
 NEW YORK 
 
-Daily Freeman
+Kingston Daily Freeman
 Rochester Democrat & Chronicle 
 Newsday 
 Utica Observer-Dispatch 
@@ -471,7 +470,7 @@ Augusta Chronicle
 ILLINOIS 
 
 Chicago Tribune 
-Jacksonville Journal Courier 
+Jacksonville Journal-Courier 
 Belleville News-Democrat 
 
 INDIANA 
@@ -483,7 +482,7 @@ Gary Post-Tribune
 IOWA 
 
 Sioux City Journal 
-Times-Republican 
+Marshalltown Times-Republican 
 
 KANSAS 
 
@@ -505,7 +504,7 @@ Detroit News
 
 MINNESOTA 
 
-West Central Tribune 
+Willmar West Central Tribune 
 
 MISSISSIPPI 
 
@@ -516,7 +515,8 @@ Vicksburg Post
 MISSOURI 
 
 Hannibal Courier-Post 
-Kirksville Daily Express & New Rolla Daily News 
+Kirksville Daily Express
+New Rolla Daily News 
 Blue Springs Examiner
 Joplin Globe 
 Lebanon Daily Record 
@@ -569,10 +569,10 @@ OHIO
 Mansfield News Journal 
 Cincinnati Post 
 Columbus Dispatch 
-Finlay Courier
+Courier, Findlay
  Wooster Daily Record 
 Lisbon Morning Journal 
-WilloughbyNews-Herald 
+Willoughby News-Herald 
 
 OKLAHOMA 
 
@@ -608,7 +608,7 @@ TEXAS
 Abilene Reporter-News 
 Amarillo Daily News 
 Big Spring Herald 
-Bryan-College Station Eagle 
+The Eagle, Bryan-College Station
 Denton Record-Chronicle 
 El Paso Herald-Post 
 Gainesville Daily Register 
@@ -623,20 +623,20 @@ Times Record News, Wichita Falls
 
 VERMONT 
 
-Caledonian-Record 
+Caledonian-Record, Saint Johnsbury
 
 VIRGINIA 
 
 Harrisonburg Daily News-Record 
 Daily Press, Newport News
-Bristol Herald-Courier 
+Bristol Herald Courier 
 Staunton Daily News Leader 
 The Winchester Star 
 
 WASHINGTON 
 
-Centralia Chronicle 
-Bremerton Sun 
+Chronicle, Centralia 
+Kitsap Sun, Bremerton
 
 WEST VIRGINIA 
 

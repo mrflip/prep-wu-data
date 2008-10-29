@@ -1,0 +1,11489 @@
+--- 
+Yankton Daily Press and Dakotan: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SD
+  city: Yankton
+  paper: Yankton Daily Press and Dakotan
+  metro: 
+Ottumwa Courier: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: IA
+  city: Ottumwa
+  paper: Ottumwa Courier
+  metro: 
+Eagle: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Bryan
+  paper: Eagle
+  metro: 
+Portsmouth Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NH
+  city: Portsmouth
+  paper: Portsmouth Herald
+  metro: 
+Junction City Daily Union: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Junction City
+  paper: Junction City Daily Union
+  metro: 
+Fort Collins Coloradoan: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CO
+  city: Fort Collins
+  paper: Fort Collins Coloradoan
+  metro: 
+Houston Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Houston
+  paper: Houston Post
+  metro: 
+Manhattan Mercury: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Manhattan
+  paper: Manhattan Mercury
+  metro: 
+Martinsville Daily Reporter: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Martinsville
+  paper: Martinsville Daily Reporter
+  metro: 
+Hopkinsville Kentucky New Era: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KY
+  city: Hopkinsville
+  paper: Hopkinsville Kentucky New Era
+  metro: 
+Times Record News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Wichita Falls
+  paper: Times Record News
+  metro: 
+LaCrosse Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: WI
+  city: LaCrosse
+  paper: LaCrosse Tribune
+  metro: 
+San Angelo Standard-Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: San Angelo
+  paper: San Angelo Standard-Times
+  metro: 
+Rochester Democrat and Chronicle: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Rochester
+  paper: Rochester Democrat and Chronicle
+  metro: 
+Honolulu Advertiser: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: HI
+  city: Honolulu
+  paper: Honolulu Advertiser
+  metro: 
+Akron Beacon-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Akron
+  paper: Akron Beacon-Journal
+  metro: 
+Statesman-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: Salem
+  paper: Statesman-Journal
+  metro: 
+Register-Guard: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: Eugene
+  paper: Register-Guard
+  metro: 
+Waco Tribune-Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Waco
+  paper: Waco Tribune-Herald
+  metro: 
+Liberal Southwest Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Liberal
+  paper: Liberal Southwest Daily Times
+  metro: 
+Cullman Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Cullman
+  paper: Cullman Times
+  metro: 
+Post-Crescent: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Appleton
+  paper: Post-Crescent
+  metro: 
+North Jersey Herald and News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: North Jersey Herald and News
+  paper: North Jersey Herald and News
+  metro: 
+Hays Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Hays
+  paper: Hays Daily News
+  metro: 
+Sullivan Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Sullivan
+  paper: Sullivan Daily Times
+  metro: 
+News-Sentinel: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Fort Wayne
+  paper: News-Sentinel
+  metro: 
+Metrowest Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Framingham
+  paper: Metrowest Daily News
+  metro: 
+Quad-City Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Davenport
+  paper: Quad-City Times
+  metro: 
+Orlando Sentinel: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Orlando
+  paper: Orlando Sentinel
+  metro: 
+Kirksville Daily Express and New Rolla Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Kirksville Daily Express and New Rolla Daily News
+  paper: Kirksville Daily Express and New Rolla Daily News
+  metro: 
+Central Jersey Home News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NJ
+  city: Central Jersey
+  paper: Central Jersey Home News
+  metro: 
+Arizona Daily Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: AZ
+  city: Tucson
+  paper: Arizona Daily Star
+  metro: 
+Centralia Chronicle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Centralia
+  paper: Centralia Chronicle
+  metro: 
+Brookings Daily Register: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SD
+  city: Brookings
+  paper: Brookings Daily Register
+  metro: 
+Berkshire Eagle: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Pittsfield
+  paper: Berkshire Eagle
+  metro: 
+Ames Daily Tribune Hawk Eye: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Ames
+  paper: Ames Daily Tribune Hawk Eye
+  metro: 
+Repository: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Canton
+  paper: Repository
+  metro: 
+Mason City Globe Gazette: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IA
+  city: Mason City
+  paper: Mason City Globe Gazette
+  metro: 
+New York Observer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: New York City
+  paper: New York Observer
+  metro: 
+Lawrence Journal-World: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Lawrence
+  paper: Lawrence Journal-World
+  metro: 
+Boca Raton News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Boca Raton
+  paper: Boca Raton News
+  metro: 
+Chronicle: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Centralia
+  paper: Chronicle
+  metro: 
+Wooster Daily Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Wooster
+  paper: Wooster Daily Record
+  metro: 
+Mansfield News Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Mansfield
+  paper: Mansfield News Journal
+  metro: 
+Tuscaloosa News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: AL
+  city: Tuscaloosa
+  paper: Tuscaloosa News
+  metro: 
+St. Johnsbury Caledonian-Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VT
+  city: Saint Johnsbury
+  paper: St. Johnsbury Caledonian-Record
+  metro: 
+Ithaca Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Ithaca
+  paper: Ithaca Journal
+  metro: 
+Free Lance-Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Fredericksburg
+  paper: Free Lance-Star
+  metro: 
+Lancaster Intelligencer Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Lancaster
+  paper: Lancaster Intelligencer Journal
+  metro: 
+Temple Daily Telegram: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Temple
+  paper: Temple Daily Telegram
+  metro: 
+Huntington Herald-Dispatch: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WV
+  city: Huntington
+  paper: Huntington Herald-Dispatch
+  metro: 
+Iowa City Press-Citizen: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Iowa City
+  paper: Iowa City Press-Citizen
+  metro: 
+Palatka Daily News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Palatka
+  paper: Palatka Daily News
+  metro: 
+Alliance Review: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Alliance
+  paper: Alliance Review
+  metro: 
+Clinton Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Clinton
+  paper: Clinton Herald
+  metro: 
+Patriot Ledger: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Quincy
+  paper: Patriot Ledger
+  metro: 
+Marietta Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Marietta
+  paper: Marietta Times
+  metro: 
+Sun Journal: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: ME
+  city: Lewiston
+  paper: Sun Journal
+  metro: 
+Intelligencer Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Lancaster
+  paper: Intelligencer Journal
+  metro: 
+Santa Monica Outlook: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Santa Monica
+  paper: Santa Monica Outlook
+  metro: 
+Brunswick Times Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ME
+  city: Brunswick
+  paper: Brunswick Times Record
+  metro: 
+Lake Charles American Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: LA
+  city: Lake Charles
+  paper: Lake Charles American Press
+  metro: 
+San Bernadino Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: San Bernadino
+  paper: San Bernadino Sun
+  metro: 
+Daily Reflector: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NC
+  city: Greenville
+  paper: Daily Reflector
+  metro: 
+Buffalo News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: Buffalo
+  paper: Buffalo News
+  metro: 
+Record (Hackensack): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NJ
+  city: Hackensack
+  paper: Record (Hackensack)
+  metro: 
+Willoughby News-Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Willoughby
+  paper: Willoughby News-Herald
+  metro: 
+Kalamazoo Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Kalamazoo
+  paper: Kalamazoo Gazette
+  metro: 
+Daily Southtown: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Tinley Park
+  paper: Daily Southtown
+  metro: 
+Star-Ledger: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NJ
+  city: Newark
+  paper: Star-Ledger
+  metro: 
+Aspen Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Aspen
+  paper: Aspen Daily News
+  metro: 
+Daily News (Bowling Green): !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: KY
+  city: Bowling Green
+  paper: Daily News (Bowling Green)
+  metro: 
+Elko Daily Free Press: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NV
+  city: Elko
+  paper: Elko Daily Free Press
+  metro: 
+Southern Illinoisan: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Southern Illinoisan
+  paper: Southern Illinoisan
+  metro: 
+Asbury Park Press: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: NJ
+  city: Asbury Park
+  paper: Asbury Park Press
+  metro: 
+Rome News-Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Rome
+  paper: Rome News-Tribune
+  metro: 
+Jackson Citizen Patriot: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MI
+  city: Jackson
+  paper: Jackson Citizen Patriot
+  metro: 
+McPherson Sentinel: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: McPherson
+  paper: McPherson Sentinel
+  metro: 
+News Journal (Wilmington): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: DE
+  city: Wilmington
+  paper: News Journal (Wilmington)
+  metro: 
+Charlotte Observer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NC
+  city: Charlotte
+  paper: Charlotte Observer
+  metro: 
+Daily Times-Call: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Longmont
+  paper: Daily Times-Call
+  metro: 
+Santa Fe New Mexican: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NM
+  city: Santa Fe
+  paper: Santa Fe New Mexican
+  metro: 
+Green Bay News Chronicle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Green Bay
+  paper: Green Bay News Chronicle
+  metro: 
+Baltimore Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MD
+  city: Baltimore
+  paper: Baltimore Sun
+  metro: 
+Tulsa World: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OK
+  city: Tulsa
+  paper: Tulsa World
+  metro: 
+Sacramento Bee: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Sacramento
+  paper: Sacramento Bee
+  metro: 
+Pryor Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Pryor Times
+  paper: Pryor Daily Times
+  metro: 
+Bradenton Herald: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Bradenton
+  paper: Bradenton Herald
+  metro: 
+Gillette News-Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WY
+  city: Gillette
+  paper: Gillette News-Record
+  metro: 
+Wyoming Tribune-Eagle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WY
+  city: Cheyenne
+  paper: Wyoming Tribune-Eagle
+  metro: 
+Claremont Eagle Times: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NH
+  city: Claremont
+  paper: Claremont Eagle Times
+  metro: 
+Courier-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: KY
+  city: Louisville
+  paper: Courier-Journal
+  metro: 
+Knoxville News-Sentinel: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TN
+  city: Knoxville
+  paper: Knoxville News-Sentinel
+  metro: 
+Salisbury Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MD
+  city: Salisbury
+  paper: Salisbury Daily Times
+  metro: 
+Brunswick News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Brunswick
+  paper: Brunswick News
+  metro: 
+Wall Street Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: New York City
+  paper: Wall Street Journal
+  metro: 
+Albany Times-Union: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Albany
+  paper: Albany Times-Union
+  metro: 
+State Journal-Register: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Springfield
+  paper: State Journal-Register
+  metro: 
+Palladium-Item: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IN
+  city: Richmond
+  paper: Palladium-Item
+  metro: 
+Michigan Chronicle: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MI
+  city: Detroit
+  paper: Michigan Chronicle
+  metro: 
+Stephenville Empire-Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Stephenville
+  paper: Stephenville Empire-Tribune
+  metro: 
+Hollister Free Lance: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Hollister
+  paper: Hollister Free Lance
+  metro: 
+Contra Costa Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Walnut Creek
+  paper: Contra Costa Times
+  metro: 
+Connecticut Post: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Bridgeport
+  paper: Connecticut Post
+  metro: 
+Record (Stockton): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Stockton
+  paper: Record (Stockton)
+  metro: 
+Messenger: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IA
+  city: Fort Dodge
+  paper: Messenger
+  metro: 
+Daily Review: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Hayward
+  paper: Daily Review
+  metro: 
+Springfield News-Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Springfield
+  paper: Springfield News-Sun
+  metro: 
+Daily Sentinel: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Grand Junction
+  paper: Daily Sentinel
+  metro: 
+Sunbury Daily: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Sunbury
+  paper: Sunbury Daily
+  metro: 
+Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Moline
+  paper: Dispatch
+  metro: 
+Marin Independent-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: CA
+  city: Marin County
+  paper: Marin Independent-Journal
+  metro: 
+Desert Sun: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Palm Springs
+  paper: Desert Sun
+  metro: 
+Chicago Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IL
+  city: Chicago
+  paper: Chicago Tribune
+  metro: 
+Commercial Appeal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TN
+  city: Memphis
+  paper: Commercial Appeal
+  metro: 
+Ellensburg Daily Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Ellensburg
+  paper: Ellensburg Daily Record
+  metro: 
+Medina County Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Medina
+  paper: Medina County Gazette
+  metro: 
+Hannibal Courier-Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Hannibal
+  paper: Hannibal Courier-Post
+  metro: 
+Blackwell Journal-Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Blackwell
+  paper: Blackwell Journal-Tribune
+  metro: 
+Griffin Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Griffin
+  paper: Griffin Daily News
+  metro: 
+Okmulgee Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Okmulgee
+  paper: Okmulgee Daily Times
+  metro: 
+High Point Enterprise: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: High Point
+  paper: High Point Enterprise
+  metro: 
+Emporia Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Emporia
+  paper: Emporia Gazette
+  metro: 
+Pittsburg Morning Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: KS
+  city: Pittsburg
+  paper: Pittsburg Morning Sun
+  metro: 
+Paris News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Paris
+  paper: Paris News
+  metro: 
+Sun (Baltimore): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MD
+  city: Baltimore
+  paper: Sun (Baltimore)
+  metro: 
+Oklahoman: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Oklahoma City
+  paper: Oklahoman
+  metro: 
+Midland Reporter-Telegram: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Midland
+  paper: Midland Reporter-Telegram
+  metro: 
+Ann Arbor News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Ann Arbor
+  paper: Ann Arbor News
+  metro: 
+Conway Daily Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NH
+  city: Conway
+  paper: Conway Daily Sun
+  metro: 
+San Jose Mercury News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: San Jose
+  paper: San Jose Mercury News
+  metro: 
+Phoenix: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Phoenix
+  paper: Phoenix
+  metro: 
+Beaver County Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: PA
+  city: Beaver County
+  paper: Beaver County Times
+  metro: 
+Ocala Star-Banner: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Ocala
+  paper: Ocala Star-Banner
+  metro: 
+el Diario: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: New York City
+  paper: el Diario
+  metro: 
+Times-Tribune: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: PA
+  city: 
+  paper: Times-Tribune
+  metro: 
+Memphis Commercial Appeal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TN
+  city: Memphis
+  paper: Memphis Commercial Appeal
+  metro: 
+Milwaukee Journal Sentinel: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WI
+  city: Milwaukee
+  paper: Milwaukee Journal Sentinel
+  metro: 
+Rockford Register Star: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IL
+  city: Rockford
+  paper: Rockford Register Star
+  metro: 
+Mississippi Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MS
+  city: 
+  paper: Mississippi Press
+  metro: 
+Dalhart Daily Texan: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Dalhart
+  paper: Dalhart Daily Texan
+  metro: 
+Traverse City Record-Eagle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Traverse City
+  paper: Traverse City Record-Eagle
+  metro: 
+Norwalk Reflector: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Norwalk
+  paper: Norwalk Reflector
+  metro: 
+West Chester Daily Local News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: West Chester
+  paper: West Chester Daily Local News
+  metro: 
+Spartanburg Herald-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SC
+  city: Spartanburg
+  paper: Spartanburg Herald-Journal
+  metro: 
+Muskogee Daily Phoenix: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: OK
+  city: Muskogee
+  paper: Muskogee Daily Phoenix
+  metro: 
+Gainesville Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Gainesville
+  paper: Gainesville Sun
+  metro: 
+Dayton Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Dayton
+  paper: Dayton Daily News
+  metro: 
+Marshall News Messenger: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Marshall
+  paper: Marshall News Messenger
+  metro: 
+Napa Valley Register: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Napa
+  paper: Napa Valley Register
+  metro: 
+Amarillo Globe-News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: TX
+  city: Amarillo
+  paper: Amarillo Globe-News
+  metro: 
+Kerrville Daily Times: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Kerrville
+  paper: Kerrville Daily Times
+  metro: 
+Salem Evening News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Salem
+  paper: Salem Evening News
+  metro: 
+Grand Forks Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ND
+  city: Grand Forks
+  paper: Grand Forks Herald
+  metro: 
+Galveston County Daily News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Galveston
+  paper: Galveston County Daily News
+  metro: 
+Gary Post-Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Gary
+  paper: Gary Post-Tribune
+  metro: 
+Mitchell Daily Republic: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SD
+  city: Mitchell
+  paper: Mitchell Daily Republic
+  metro: 
+Shenandoah Valley News Today: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: IA
+  city: Shenandoah Valley
+  paper: Shenandoah Valley News Today
+  metro: 
+Daily News Record: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: VA
+  city: Harrisonburg
+  paper: Daily News Record
+  metro: 
+Saginaw News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Saginaw
+  paper: Saginaw News
+  metro: 
+Nashville Banner: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TN
+  city: Nashville
+  paper: Nashville Banner
+  metro: 
+New Castle News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: New Castle News
+  paper: New Castle News
+  metro: 
+Daytona Beach News-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Daytona Beach
+  paper: Daytona Beach News-Journal
+  metro: 
+Bennington Banner: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VT
+  city: Bennington
+  paper: Bennington Banner
+  metro: 
+Pawtucket Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: RI
+  city: Pawtucket
+  paper: Pawtucket Times
+  metro: 
+Wahpeton Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ND
+  city: Wahpeton
+  paper: Wahpeton Daily News
+  metro: 
+Times Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: PA
+  city: Wilkes-Barre
+  paper: Times Leader
+  metro: 
+Bowling Green Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KY
+  city: Bowling Green
+  paper: Bowling Green Daily News
+  metro: 
+Ardmore Daily Ardmoreite: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Ardmore
+  paper: Ardmore Daily Ardmoreite
+  metro: 
+Taunton Daily Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Taunton
+  paper: Taunton Daily Gazette
+  metro: 
+Bryan-College Station Eagle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Bryan-College
+  paper: Bryan-College Station Eagle
+  metro: 
+Hutchinson News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Hutchinson
+  paper: Hutchinson News
+  metro: 
+Bonham Favorite: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Bonham
+  paper: Bonham Favorite
+  metro: 
+Albuquerque Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NM
+  city: Albuquerque
+  paper: Albuquerque Journal
+  metro: 
+Saratogian: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Saratogian
+  paper: Saratogian
+  metro: 
+New York Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: New York City
+  paper: New York Times
+  metro: 
+Quincy Herald-Whig: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Quincy
+  paper: Quincy Herald-Whig
+  metro: 
+Ventura County Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Ventura
+  paper: Ventura County Star
+  metro: 
+Chicago Sun-Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IL
+  city: Chicago
+  paper: Chicago Sun-Times
+  metro: 
+Morning Journal: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: OH
+  city: Lorain
+  paper: Morning Journal
+  metro: 
+San Francisco Chronicle: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: San Francisco
+  paper: San Francisco Chronicle
+  metro: 
+News-Advance: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: VA
+  city: Lynchburg
+  paper: News-Advance
+  metro: 
+South Bend Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: South Bend
+  paper: South Bend Tribune
+  metro: 
+Coos Bay World: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OR
+  city: Coos Bay
+  paper: Coos Bay World
+  metro: 
+Longview Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Longview
+  paper: Longview Daily News
+  metro: 
+Marietta Daily Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Marietta
+  paper: Marietta Daily Journal
+  metro: 
+Lakeland Ledger: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Lakeland
+  paper: Lakeland Ledger
+  metro: 
+Orange Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Orange
+  paper: Orange Leader
+  metro: 
+Thomasville Times-Enterprise: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Thomasville
+  paper: Thomasville Times-Enterprise
+  metro: 
+Southwest Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Pulaski
+  paper: Southwest Times
+  metro: 
+Belleville News-Democrat: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Belleville
+  paper: Belleville News-Democrat
+  metro: 
+Sarasota Herald-Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Sarasota
+  paper: Sarasota Herald-Tribune
+  metro: 
+Long Beach Press Telegram: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Long Beach
+  paper: Long Beach Press Telegram
+  metro: 
+Bay City Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Bay City
+  paper: Bay City Times
+  metro: 
+Lexington Herald-Leader: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: KY
+  city: Lexington
+  paper: Lexington Herald-Leader
+  metro: 
+Olathe Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Olathe
+  paper: Olathe Daily News
+  metro: 
+Mineral Wells Index: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Mineral Wells
+  paper: Mineral Wells Index
+  metro: 
+Mobile Press Register: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Mobile
+  paper: Mobile Press Register
+  metro: 
+Gloucester County Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: Woodbury
+  paper: Gloucester County Times
+  metro: 
+Pittsburgh Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Pittsburgh
+  paper: Pittsburgh Press
+  metro: 
+Talladega Daily Home: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Talladega
+  paper: Talladega Daily Home
+  metro: 
+News-Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Fort Myers
+  paper: News-Press
+  metro: 
+Columbia Daily Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: Perot
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MO
+  city: Columbia
+  paper: Columbia Daily Tribune
+  metro: 
+Finlay Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Finlay
+  paper: Finlay Courier
+  metro: 
+Vista Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Vista
+  paper: Vista Press
+  metro: 
+Bellingham Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Bellingham
+  paper: Bellingham Herald
+  metro: 
+Sacramento Union: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Sacramento
+  paper: Sacramento Union
+  metro: 
+Columbian: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Vancouver
+  paper: Columbian
+  metro: 
+Bloomfield Evening World: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Bloomfield
+  paper: Bloomfield Evening World
+  metro: 
+Ridgecrest Daily Independent: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Ridgecrest
+  paper: Ridgecrest Daily Independent
+  metro: 
+Grand Island Independent: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Grand Island
+  paper: Grand Island Independent
+  metro: 
+Columbus Telegram: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Columbus
+  paper: Columbus Telegram
+  metro: 
+Daily Star: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: Oneonta
+  paper: Daily Star
+  metro: 
+Lynchburg News-Advance: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Lynchburg
+  paper: Lynchburg News-Advance
+  metro: 
+Bremerion Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: WA
+  city: Bremerion
+  paper: Bremerion Sun
+  metro: 
+Greenfield Daily Reporter: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Greenfield
+  paper: Greenfield Daily Reporter
+  metro: 
+Houston Chronicle: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Houston
+  paper: Houston Chronicle
+  metro: 
+Washington DC Examiner: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: DC
+  city: Washington
+  paper: Washington DC Examiner
+  metro: 
+Lisbon Morning Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Lisbon
+  paper: Lisbon Morning Journal
+  metro: 
+Milwaukee Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Milwaukee
+  paper: Milwaukee Journal
+  metro: 
+Des Moines Register: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IA
+  city: Des Moines
+  paper: Des Moines Register
+  metro: 
+Star Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MN
+  city: Minneapolis
+  paper: Star Tribune
+  metro: 
+Ashland Daily Tidings: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OR
+  city: Ashland
+  paper: Ashland Daily Tidings
+  metro: 
+Inland Valley Daily Bulletin: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Ontario
+  paper: Inland Valley Daily Bulletin
+  metro: 
+Florence Times Daily: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Florence
+  paper: Florence Times Daily
+  metro: 
+Janesville Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Janesville
+  paper: Janesville Gazette
+  metro: 
+Milwaukee Sentinel: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Milwaukee
+  paper: Milwaukee Sentinel
+  metro: 
+Tri-City Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Kennewick
+  paper: Tri-City Herald
+  metro: 
+North Adams Transcript: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MA
+  city: North Adams
+  paper: North Adams Transcript
+  metro: 
+Tucson Daily Territorial: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AZ
+  city: Tucson
+  paper: Tucson Daily Territorial
+  metro: 
+Fort Worth Star-Telegram: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Fort Worth
+  paper: Fort Worth Star-Telegram
+  metro: 
+Charleston Gazette: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WV
+  city: Charleston
+  paper: Charleston Gazette
+  metro: 
+Columbus Dispatch: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Columbus
+  paper: Columbus Dispatch
+  metro: 
+Cumberland Times-News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MD
+  city: Cumberland
+  paper: Cumberland Times-News
+  metro: 
+Rutland Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VT
+  city: Rutland
+  paper: Rutland Herald
+  metro: 
+Standard-Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MA
+  city: New Bedford
+  paper: Standard-Times
+  metro: 
+Anderson Independent-Mail: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SC
+  city: Anderson
+  paper: Anderson Independent-Mail
+  metro: 
+Pantagraph: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Bloomington
+  paper: Pantagraph
+  metro: 
+Southbridge News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Southbridge
+  paper: Southbridge News
+  metro: 
+Hickory Daily Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Hickory
+  paper: Hickory Daily Record
+  metro: 
+Whittier Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Whittier
+  paper: Whittier Daily News
+  metro: 
+News-Herald: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: OH
+  city: Lake County-Willoughby
+  paper: News-Herald
+  metro: 
+Bartlesville Examiner-Enterprise: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OK
+  city: Bartlesville
+  paper: Bartlesville Examiner-Enterprise
+  metro: 
+Moberly Monitor-Index: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Moberly
+  paper: Moberly Monitor-Index
+  metro: 
+Bristol Herald-Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Bristol
+  paper: Bristol Herald-Courier
+  metro: 
+North Platte Telegraph: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: North Platte
+  paper: North Platte Telegraph
+  metro: 
+Lincoln Journal-Star: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Lincoln
+  paper: Lincoln Journal-Star
+  metro: 
+Daily Item: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Sunbury
+  paper: Daily Item
+  metro: 
+Battle Creek Enquirer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MI
+  city: Battle Creek
+  paper: Battle Creek Enquirer
+  metro: 
+Palm Beach Post: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: West Palm Beach
+  paper: Palm Beach Post
+  metro: 
+Scranton Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Scranton
+  paper: Scranton Times
+  metro: 
+Jacksonville Journal-Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Jacksonville
+  paper: Jacksonville Journal-Courier
+  metro: 
+Cincinnati Enquirer: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Cincinnati
+  paper: Cincinnati Enquirer
+  metro: 
+Washington Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: DC
+  city: Washington
+  paper: Washington Times
+  metro: 
+Sioux City Journal: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Sioux City
+  paper: Sioux City Journal
+  metro: 
+Post and Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: SC
+  city: Charleston
+  paper: Post and Courier
+  metro: 
+Morning Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Wilmington
+  paper: Morning Star
+  metro: 
+Roanoke Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Roanoke
+  paper: Roanoke Times
+  metro: 
+Salt Lake Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: UT
+  city: Salt Lake City
+  paper: Salt Lake Tribune
+  metro: 
+Rock Springs Daily Rocket-Miner: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WY
+  city: Rock Springs
+  paper: Rock Springs Daily Rocket-Miner
+  metro: 
+World-Herald: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NE
+  city: Omaha
+  paper: World-Herald
+  metro: 
+East Oregonian: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: OR
+  city: 
+  paper: East Oregonian
+  metro: 
+Gainesville Daily Register: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Gainesville
+  paper: Gainesville Daily Register
+  metro: 
+St. Petersburg Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Saint Petersburg
+  paper: St. Petersburg Times
+  metro: 
+Philadelphia Inquirer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Philadelphia
+  paper: Philadelphia Inquirer
+  metro: 
+Athens Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Athens
+  paper: Athens Daily News
+  metro: 
+Las Vegas Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NV
+  city: Las Vegas
+  paper: Las Vegas Sun
+  metro: 
+Paris Post Intelligencer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TN
+  city: Paris
+  paper: Paris Post Intelligencer
+  metro: 
+San Diego Union-Tribune: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: San Diego
+  paper: San Diego Union-Tribune
+  metro: 
+Journal: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MN
+  city: New Ulm
+  paper: Journal
+  metro: 
+Evansville Courier and Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Evansville
+  paper: Evansville Courier and Press
+  metro: 
+Galesburg Register-Mail: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Galesburg
+  paper: Galesburg Register-Mail
+  metro: 
+Sun (Lowell): !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MA
+  city: Lowell
+  paper: Sun (Lowell)
+  metro: 
+Elk City Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Elk City
+  paper: Elk City Daily News
+  metro: 
+Woonsocket Call: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: RI
+  city: Woonsocket
+  paper: Woonsocket Call
+  metro: 
+Wilkes-Barre Citizens' Voice: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Wilkes-Barre
+  paper: Wilkes-Barre Citizens' Voice
+  metro: 
+Las Vegas Review-Journal: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NV
+  city: Las Vegas
+  paper: Las Vegas Review-Journal
+  metro: 
+Lamar Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CO
+  city: Lamar
+  paper: Lamar Daily News
+  metro: 
+St. Cloud Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MN
+  city: Saint Cloud
+  paper: St. Cloud Times
+  metro: 
+Blade: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Toledo
+  paper: Blade
+  metro: 
+Red Wing Republican Eagle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: Perot
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MN
+  city: Red Wing
+  paper: Red Wing Republican Eagle
+  metro: 
+Capital Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WI
+  city: Madison
+  paper: Capital Times
+  metro: 
+Southwest Times Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AR
+  city: Fort Smith
+  paper: Southwest Times Record
+  metro: 
+Camden Courier-Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: Camden
+  paper: Camden Courier-Post
+  metro: 
+Kansas City Star: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MO
+  city: Kansas City
+  paper: Kansas City Star
+  metro: 
+Ottawa Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Ottawa
+  paper: Ottawa Herald
+  metro: 
+Key West Citizen: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Key West
+  paper: Key West Citizen
+  metro: 
+Journal Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Peoria
+  paper: Journal Star
+  metro: 
+Syracuse Post-Standard: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Syracuse
+  paper: Syracuse Post-Standard
+  metro: 
+Argus: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Fremont
+  paper: Argus
+  metro: 
+Daily Republic: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: SD
+  city: Mitchell
+  paper: Daily Republic
+  metro: 
+Durango Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Durango
+  paper: Durango Herald
+  metro: 
+Norfolk Daily News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Norfolk
+  paper: Norfolk Daily News
+  metro: 
+Birmingham Post-Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Birmingham
+  paper: Birmingham Post-Herald
+  metro: 
+Staunton Daily News Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Staunton
+  paper: Staunton Daily News Leader
+  metro: 
+Casa Grande Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AZ
+  city: Casa Grande
+  paper: Casa Grande Dispatch
+  metro: 
+Annapolis Capital: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MD
+  city: Annapolis
+  paper: Annapolis Capital
+  metro: 
+Seattle Post-Intelligencer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Seattle
+  paper: Seattle Post-Intelligencer
+  metro: 
+Selma Times-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Selma
+  paper: Selma Times-Journal
+  metro: 
+Pendleton East Oregonian: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OR
+  city: Pendleton
+  paper: Pendleton East Oregonian
+  metro: 
+Flint Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Flint
+  paper: Flint Journal
+  metro: 
+Duluth News-Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MN
+  city: Duluth
+  paper: Duluth News-Tribune
+  metro: 
+San Bernardino Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: San Bernardino
+  paper: San Bernardino Sun
+  metro: 
+Chippewa Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: WI
+  city: Chippewa Falls
+  paper: Chippewa Herald
+  metro: 
+Longview News-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Longview
+  paper: Longview News-Journal
+  metro: 
+Southwest News-Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IL
+  city: Chicago
+  paper: Southwest News-Herald
+  metro: 
+Idaho Press-Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ID
+  city: Nampa
+  paper: Idaho Press-Tribune
+  metro: 
+Journal Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Racine
+  paper: Journal Times
+  metro: 
+Ouray County Plaindealer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: CO
+  city: Ouray County
+  paper: Ouray County Plaindealer
+  metro: 
+Redding Record Searchlight: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Redding
+  paper: Redding Record Searchlight
+  metro: 
+Norwich Bulletin: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Norwich
+  paper: Norwich Bulletin
+  metro: 
+Parkersburg News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WV
+  city: Parkersburg
+  paper: Parkersburg News
+  metro: 
+Shawnee News-Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Shawnee
+  paper: Shawnee News-Star
+  metro: 
+Benton Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AR
+  city: Benton
+  paper: Benton Courier
+  metro: 
+Green Bay Press Gazette: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Green Bay
+  paper: Green Bay Press Gazette
+  metro: 
+Times (Munster): !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Munster
+  paper: Times (Munster)
+  metro: 
+Tribune Chronicle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Warren
+  paper: Tribune Chronicle
+  metro: 
+Independence Examiner: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Independence
+  paper: Independence Examiner
+  metro: 
+Harrison Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AR
+  city: Harrison
+  paper: Harrison Daily Times
+  metro: 
+State: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: SC
+  city: Columbia
+  paper: State
+  metro: 
+Stuart News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Stuart
+  paper: Stuart News
+  metro: 
+Record-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Meriden
+  paper: Record-Journal
+  metro: 
+Wilmington Star-News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NC
+  city: Wilmington
+  paper: Wilmington Star-News
+  metro: 
+Cape Coral Daily Breeze: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Cape Coral
+  paper: Cape Coral Daily Breeze
+  metro: 
+Daily Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IL
+  city: Arlington Heights
+  paper: Daily Herald
+  metro: 
+Foster's Daily Democrat: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NH
+  city: Dover
+  paper: Foster's Daily Democrat
+  metro: 
+York News-Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: York
+  paper: York News-Times
+  metro: 
+West Plains Daily Quill: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: West Plains
+  paper: West Plains Daily Quill
+  metro: 
+Sun (Bremerton): !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: WA
+  city: Bremerton
+  paper: Sun (Bremerton)
+  metro: 
+Winston-Salem Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Winston-Salem
+  paper: Winston-Salem Journal
+  metro: 
+Mercury: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: PA
+  city: Pottstown
+  paper: Mercury
+  metro: 
+Fargo Forum: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ND
+  city: Fargo
+  paper: Fargo Forum
+  metro: 
+Winchester Star: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: VA
+  city: Winchester
+  paper: Winchester Star
+  metro: 
+Blue Springs Examiner: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Blue Springs
+  paper: Blue Springs Examiner
+  metro: 
+Macomb Daily: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: MI
+  city: Macomb
+  paper: Macomb Daily
+  metro: 
+Herald-Standard: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: PA
+  city: Uniontown
+  paper: Herald-Standard
+  metro: 
+Prescott Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AZ
+  city: Prescott
+  paper: Prescott Courier
+  metro: 
+Greenwood Commonwealth: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MS
+  city: Greenwood
+  paper: Greenwood Commonwealth
+  metro: 
+Oshkosh Northwestern: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Oshkosh
+  paper: Oshkosh Northwestern
+  metro: 
+Asheboro Courier-Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Asheboro
+  paper: Asheboro Courier-Tribune
+  metro: 
+Russell Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Russell
+  paper: Russell Daily News
+  metro: 
+Murray Ledger Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KY
+  city: Murray
+  paper: Murray Ledger Times
+  metro: 
+Daily News (New York City): !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NY
+  city: New York City
+  paper: Daily News (New York City)
+  metro: 
+Virginian-Pilot: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: VA
+  city: Norfolk
+  paper: Virginian-Pilot
+  metro: 
+Cleveland Plain Dealer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Cleveland
+  paper: Cleveland Plain Dealer
+  metro: 
+Lodi News-Sentinel: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Lodi
+  paper: Lodi News-Sentinel
+  metro: 
+Oregonian: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: Portland
+  paper: Oregonian
+  metro: 
+Harrisonburg Daily News-Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Harrisonburg
+  paper: Harrisonburg Daily News-Record
+  metro: 
+Gannett Suburban Newspapers: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NY
+  city: 
+  paper: Gannett Suburban Newspapers
+  metro: 
+Morning Call: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Allentown
+  paper: Morning Call
+  metro: 
+News Journal (Mansfield): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: OH
+  city: Mansfield
+  paper: News Journal (Mansfield)
+  metro: 
+Uniontown Herald-Standard: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Uniontown
+  paper: Uniontown Herald-Standard
+  metro: 
+Edinburg Daily Review: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Edinburg
+  paper: Edinburg Daily Review
+  metro: 
+Kingsport Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: TN
+  city: Kingsport
+  paper: Kingsport Daily News
+  metro: 
+Huntsville Item: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Huntsville
+  paper: Huntsville Item
+  metro: 
+Nevada Appeal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NV
+  city: Nevada
+  paper: Nevada Appeal
+  metro: 
+Vicksburg Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MS
+  city: Vicksburg
+  paper: Vicksburg Post
+  metro: 
+Naples Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Naples News
+  paper: Naples Daily News
+  metro: 
+Sumter Item: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SC
+  city: Sumter
+  paper: Sumter Item
+  metro: 
+Observer-Reporter: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Washington
+  paper: Observer-Reporter
+  metro: 
+Cortez Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Cortez
+  paper: Cortez Journal
+  metro: 
+Garden City Telegram: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Garden City
+  paper: Garden City Telegram
+  metro: 
+Uniontown Herald Standard: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Uniontown
+  paper: Uniontown Herald Standard
+  metro: 
+Courier-Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: Cherry Hill
+  paper: Courier-Post
+  metro: 
+Lubbock Avalanche-Journal: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Lubbock
+  paper: Lubbock Avalanche-Journal
+  metro: 
+Winnemucca Humbolt Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NV
+  city: Winnemucca
+  paper: Winnemucca Humbolt Sun
+  metro: 
+Springfield Union News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Springfield
+  paper: Springfield Union News
+  metro: 
+Observer-Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Utica
+  paper: Observer-Dispatch
+  metro: 
+Vail Daily: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Vail
+  paper: Vail Daily
+  metro: 
+Plain Dealer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Cleveland
+  paper: Plain Dealer
+  metro: 
+Pasadena Star-News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Pasadena
+  paper: Pasadena Star-News
+  metro: 
+Victorville Daily Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Victorville
+  paper: Victorville Daily Press
+  metro: 
+News Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: DE
+  city: Wilmington
+  paper: News Journal
+  metro: 
+Galveston Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Galveston
+  paper: Galveston Daily News
+  metro: 
+Daily Freeman: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Daily Freeman
+  paper: Daily Freeman
+  metro: 
+Woodward News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Woodward
+  paper: Woodward News
+  metro: 
+Burlington County Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: Burlington
+  paper: Burlington County Times
+  metro: 
+Bangor Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: ME
+  city: Bangor
+  paper: Bangor Daily News
+  metro: 
+Delaware County Daily Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: PA
+  city: Primos
+  paper: Delaware County Daily Times
+  metro: 
+Gunnison Country Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Gunnison
+  paper: Gunnison Country Times
+  metro: 
+Times-Republican: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Times-Republican
+  paper: Times-Republican
+  metro: 
+Torrance Daily Breeze: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Torrance
+  paper: Torrance Daily Breeze
+  metro: 
+Livingston County Daily Press and Argus: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MI
+  city: Howell
+  paper: Livingston County Daily Press and Argus
+  metro: 
+Wheeling News-Register: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WV
+  city: Wheeling
+  paper: Wheeling News-Register
+  metro: 
+Modesto Bee: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Modesto
+  paper: Modesto Bee
+  metro: 
+Hartford Courant: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CT
+  city: Hartford
+  paper: Hartford Courant
+  metro: 
+Hope Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AR
+  city: Hope
+  paper: Hope Star
+  metro: 
+Capital: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MD
+  city: Annapolis
+  paper: Capital
+  metro: 
+Birmingham News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: AL
+  city: Birmingham
+  paper: Birmingham News
+  metro: 
+Douglas Daily Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AZ
+  city: Douglas
+  paper: Douglas Daily Dispatch
+  metro: 
+Dallas Morning News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Dallas
+  paper: Dallas Morning News
+  metro: 
+Bremerton Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Bremerton
+  paper: Bremerton Sun
+  metro: 
+Arkansas Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: AR
+  city: Little Rock
+  paper: Arkansas Times
+  metro: 
+Stuttgart Daily Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AR
+  city: Stuttgart
+  paper: Stuttgart Daily Leader
+  metro: 
+Albuquerque Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NM
+  city: Albuquerque
+  paper: Albuquerque Tribune
+  metro: 
+Alamogordo Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NM
+  city: Alamogordo
+  paper: Alamogordo Daily News
+  metro: 
+Edmond Evening Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Edmond
+  paper: Edmond Evening Sun
+  metro: 
+Chattanooga News-Free Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TN
+  city: Chattanooga
+  paper: Chattanooga News-Free Press
+  metro: 
+Idaho Falls Post Register: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ID
+  city: Idaho Falls
+  paper: Idaho Falls Post Register
+  metro: 
+Lansing State-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Lansing
+  paper: Lansing State-Journal
+  metro: 
+Beloit Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WI
+  city: Beloit
+  paper: Beloit Daily News
+  metro: 
+Advertiser: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: LA
+  city: Lafayette
+  paper: Advertiser
+  metro: 
+Press Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Vero Beach
+  paper: Press Journal
+  metro: 
+Marshalltown Times-Republican: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Marshalltown
+  paper: Marshalltown Times-Republican
+  metro: 
+Newark Star-Ledger: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: Newark
+  paper: Newark Star-Ledger
+  metro: 
+Shreveport Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: LA
+  city: Shreveport
+  paper: Shreveport Times
+  metro: 
+Seguin Gazette-Enterprise: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Seguin
+  paper: Seguin Gazette-Enterprise
+  metro: 
+Waynesboro News-Virginian: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Waynesboro
+  paper: Waynesboro News-Virginian
+  metro: 
+Stamford Advocate: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Stamford
+  paper: Stamford Advocate
+  metro: 
+Yakima Herald-Republic: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Yakima
+  paper: Yakima Herald-Republic
+  metro: 
+Amarillo Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: TX
+  city: Amarillo
+  paper: Amarillo Daily News
+  metro: 
+Montgomery Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MD
+  city: Montgomery
+  paper: Montgomery Journal
+  metro: 
+Bergen Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: NJ
+  city: Bergen
+  paper: Bergen Record
+  metro: 
+Finger Lakes Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: NY
+  city: Finger Lakes
+  paper: Finger Lakes Times
+  metro: 
+Gadsden Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Gadsden
+  paper: Gadsden Times
+  metro: 
+San Mateo Daily Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: San Mateo
+  paper: San Mateo Daily Journal
+  metro: 
+Centre Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: State College
+  paper: Centre Daily Times
+  metro: 
+Seattle Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Seattle
+  paper: Seattle Times
+  metro: 
+Herald-Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Herald-Record
+  paper: Herald-Record
+  metro: 
+Virginia Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: VA
+  city: Williamsburg
+  paper: Virginia Gazette
+  metro: 
+Albany Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Albany
+  paper: Albany Herald
+  metro: 
+Investor's Business Daily: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Los Angeles
+  paper: Investor's Business Daily
+  metro: 
+Times (Trenton): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NJ
+  city: Trenton
+  paper: Times (Trenton)
+  metro: 
+Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NJ
+  city: Hackensack
+  paper: Record
+  metro: 
+Clarksdale Press-Register: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MS
+  city: Clarksdale
+  paper: Clarksdale Press-Register
+  metro: 
+Bristol Herald Courier: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Bristol
+  paper: Bristol Herald Courier
+  metro: 
+Winter Haven News Chief: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Winter Haven
+  paper: Winter Haven News Chief
+  metro: 
+Holdrege Daily Citizen: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Holdrege
+  paper: Holdrege Daily Citizen
+  metro: 
+Arkansas Democrat-Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: AR
+  city: Little Rock
+  paper: Arkansas Democrat-Gazette
+  metro: 
+Wichita Eagle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Wichita
+  paper: Wichita Eagle
+  metro: 
+Tennessean: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TN
+  city: Nashville
+  paper: Tennessean
+  metro: 
+New Smyrna Beach Observer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: New Smyrna Beach
+  paper: New Smyrna Beach Observer
+  metro: 
+Sante Fe New Mexican: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: NM
+  city: Sante Fe
+  paper: Sante Fe New Mexican
+  metro: 
+Washington Post: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: DC
+  city: Washington
+  paper: Washington Post
+  metro: 
+Boston Herald: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MA
+  city: Boston
+  paper: Boston Herald
+  metro: 
+Greenville News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SC
+  city: Greenville
+  paper: Greenville News
+  metro: 
+Press Democrat: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: CA
+  city: Santa Rosa
+  paper: Press Democrat
+  metro: 
+Wenatchee World: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Wenatchee
+  paper: Wenatchee World
+  metro: 
+Bristol Press Register Citizen: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Bristol
+  paper: Bristol Press Register Citizen
+  metro: 
+Fremont Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Fremont
+  paper: Fremont Tribune
+  metro: 
+Atlanta Daily World: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Atlanta
+  paper: Atlanta Daily World
+  metro: 
+Denton Record-Chronicle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Denton
+  paper: Denton Record-Chronicle
+  metro: 
+Jonesboro Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AR
+  city: Jonesboro
+  paper: Jonesboro Sun
+  metro: 
+Grand Rapids Press: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MI
+  city: Grand Rapids
+  paper: Grand Rapids Press
+  metro: 
+Daily Californian: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Daily Californian
+  paper: Daily Californian
+  metro: 
+Warrensburg Daily Star-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Warrensburg
+  paper: Warrensburg Daily Star-Journal
+  metro: 
+Daily Courier: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: OR
+  city: Grants Pass
+  paper: Daily Courier
+  metro: 
+Lake Sun Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MO
+  city: Camdenton
+  paper: Lake Sun Leader
+  metro: 
+Norman Transcript: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Norman
+  paper: Norman Transcript
+  metro: 
+North County Times: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Escondido
+  paper: North County Times
+  metro: 
+Owensboro Messenger-Inquirer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KY
+  city: Owensboro
+  paper: Owensboro Messenger-Inquirer
+  metro: 
+Savannah Morning News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Savannah
+  paper: Savannah Morning News
+  metro: 
+Jackson Sun: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TN
+  city: Jackson
+  paper: Jackson Sun
+  metro: 
+Kenosha News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: WI
+  city: Kenosha
+  paper: Kenosha News
+  metro: 
+Chanute Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Chanute
+  paper: Chanute Tribune
+  metro: 
+Corpus Christi Caller-Times: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: TX
+  city: Corpus Christi
+  paper: Corpus Christi Caller-Times
+  metro: 
+Decatur Daily: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Decatur
+  paper: Decatur Daily
+  metro: 
+News Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Tacoma
+  paper: News Tribune
+  metro: 
+Harrisburg Patriot-News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Harrisburg
+  paper: Harrisburg Patriot-News
+  metro: 
+Trentonian: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: Trentonian
+  paper: Trentonian
+  metro: 
+Olympian: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Olympia
+  paper: Olympian
+  metro: 
+Lebanon Daily Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Lebanon
+  paper: Lebanon Daily Record
+  metro: 
+Atlanta Journal-Constitution: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: GA
+  city: Atlanta
+  paper: Atlanta Journal-Constitution
+  metro: 
+Times-Reporter: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: New Philadelphia
+  paper: Times-Reporter
+  metro: 
+Star-Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Elmira
+  paper: Star-Gazette
+  metro: 
+Journal and Courier: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Lafayette
+  paper: Journal and Courier
+  metro: 
+Daily Breeze: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Torrance
+  paper: Daily Breeze
+  metro: 
+Herald-Journal: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: SC
+  city: Spartanburg
+  paper: Herald-Journal
+  metro: 
+El Paso Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: El Paso
+  paper: El Paso Times
+  metro: 
+Indianapolis Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Indianapolis
+  paper: Indianapolis Star
+  metro: 
+News-Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Danbury
+  paper: News-Times
+  metro: 
+Denver Post: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Denver
+  paper: Denver Post
+  metro: 
+Daily News (Los Angeles): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Los Angeles
+  paper: Daily News (Los Angeles)
+  metro: 
+Detroit News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: N/A
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MI
+  city: Detroit
+  paper: Detroit News
+  metro: 
+Springfield News-Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Springfield
+  paper: Springfield News-Leader
+  metro: 
+Lincoln Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Lincoln
+  paper: Lincoln Star
+  metro: 
+Baltimore Examiner: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MD
+  city: Baltimore
+  paper: Baltimore Examiner
+  metro: 
+Florida Today: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Melbourne
+  paper: Florida Today
+  metro: 
+Jamestown Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ND
+  city: Jamestown
+  paper: Jamestown Sun
+  metro: 
+Huntsville Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Huntsville
+  paper: Huntsville Times
+  metro: 
+Merced Sun Star: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Merced
+  paper: Merced Sun Star
+  metro: 
+Sapulpa Daily Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Sapulpa
+  paper: Sapulpa Daily Herald
+  metro: 
+St. Louis Post-Dispatch: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MO
+  city: Saint Louis
+  paper: St. Louis Post-Dispatch
+  metro: 
+Newton Kansan: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Newton
+  paper: Newton Kansan
+  metro: 
+Bend Bulletin: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: Bend
+  paper: Bend Bulletin
+  metro: 
+Staten Island Advance: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: NY
+  city: Staten Island
+  paper: Staten Island Advance
+  metro: 
+Corvallis Gazette-Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: Corvallis
+  paper: Corvallis Gazette-Times
+  metro: 
+New Haven Register: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CT
+  city: New Haven
+  paper: New Haven Register
+  metro: 
+Louisville Courier-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KY
+  city: Louisville
+  paper: Louisville Courier-Journal
+  metro: 
+Salem Statesman-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OR
+  city: Salem
+  paper: Salem Statesman-Journal
+  metro: 
+Middletown Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Middletown
+  paper: Middletown Journal
+  metro: 
+Daily Mountain Eagle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Daily
+  paper: Daily Mountain Eagle
+  metro: 
+Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Fort Pierce
+  paper: Tribune
+  metro: 
+Vindicator: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Youngstown
+  paper: Vindicator
+  metro: 
+Times (Shreveport): !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: LA
+  city: Shreveport
+  paper: Times (Shreveport)
+  metro: 
+Kingston Daily Freeman: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Kingston
+  paper: Kingston Daily Freeman
+  metro: 
+Parsons Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Parsons
+  paper: Parsons Sun
+  metro: 
+San Antonio Express-News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: San Antonio
+  paper: San Antonio Express-News
+  metro: 
+Charlottesville Daily Progress: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Charlottesville
+  paper: Charlottesville Daily Progress
+  metro: 
+Iola Register: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Iola
+  paper: Iola Register
+  metro: 
+Courier Post: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NJ
+  city: Courier
+  paper: Courier Post
+  metro: 
+Herald and Review: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Decatur
+  paper: Herald and Review
+  metro: 
+Asheville Citizen-Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NC
+  city: Asheville
+  paper: Asheville Citizen-Times
+  metro: 
+Cincinnati Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Cincinnati
+  paper: Cincinnati Post
+  metro: 
+News and Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Greensboro
+  paper: News and Record
+  metro: 
+El Cajon: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: El Cajon
+  paper: El Cajon
+  metro: 
+Hawk Eye: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IA
+  city: Burlington
+  paper: Hawk Eye
+  metro: 
+Brunswick Times-Record: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: ME
+  city: Brunswick
+  paper: Brunswick Times-Record
+  metro: 
+Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WA
+  city: Everett
+  paper: Herald
+  metro: 
+Walla Walla Union-Bulletin: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Walla Walla
+  paper: Walla Walla Union-Bulletin
+  metro: 
+Tyler Morning Telegraph: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Tyler
+  paper: Tyler Morning Telegraph
+  metro: 
+Richmond County Daily Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: NC
+  city: Richmond County
+  paper: Richmond County Daily Journal
+  metro: 
+Waycross Journal-Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Waycross
+  paper: Waycross Journal-Herald
+  metro: 
+Caledonian-Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VT
+  city: Caledonian
+  paper: Caledonian-Record
+  metro: 
+Kearney Hub: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NE
+  city: Kearney
+  paper: Kearney Hub
+  metro: 
+Huntington Herald-Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Huntington
+  paper: Huntington Herald-Press
+  metro: 
+San Gabriel Valley Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: San Gabriel
+  paper: San Gabriel Valley Tribune
+  metro: 
+Seminole Producer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Seminole
+  paper: Seminole Producer
+  metro: 
+Times-Picayune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: LA
+  city: New Orleans
+  paper: Times-Picayune
+  metro: 
+Kingsport Times-News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: TN
+  city: Kingsport
+  paper: Kingsport Times-News
+  metro: 
+Courier-News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: NJ
+  city: Bridgewater
+  paper: Courier-News
+  metro: 
+Times Herald-Record: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NY
+  city: Middletown
+  paper: Times Herald-Record
+  metro: 
+Concord Monitor: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NH
+  city: Concord
+  paper: Concord Monitor
+  metro: 
+Minneapolis Star Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MN
+  city: Minneapolis
+  paper: Minneapolis Star Tribune
+  metro: 
+Pueblo Chieftain: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Pueblo
+  paper: Pueblo Chieftain
+  metro: 
+Burlington Free Press: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: VT
+  city: Burlington
+  paper: Burlington Free Press
+  metro: 
+Prescott Daily Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AZ
+  city: Prescott
+  paper: Prescott Daily Courier
+  metro: 
+Tryon Daily Bulletin: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Tryon
+  paper: Tryon Daily Bulletin
+  metro: 
+Great Falls Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MT
+  city: Great Falls
+  paper: Great Falls Tribune
+  metro: 
+Raleigh News and Observer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Raleigh
+  paper: Raleigh News and Observer
+  metro: 
+Warren Tribune Chronicle: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: OH
+  city: Warren
+  paper: Warren Tribune Chronicle
+  metro: 
+Chattanooga Free Press: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TN
+  city: Chattanooga
+  paper: Chattanooga Free Press
+  metro: 
+York Daily Record: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: York
+  paper: York Daily Record
+  metro: 
+Kitsap Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: WA
+  city: Bremerton
+  paper: Kitsap Sun
+  metro: 
+Providence Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: RI
+  city: Providence
+  paper: Providence Journal
+  metro: 
+Tri-Valley Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Pleasanton
+  paper: Tri-Valley Herald
+  metro: 
+Times-Union: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NY
+  city: Albany
+  paper: Times-Union
+  metro: 
+Brattleboro Reformer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VT
+  city: Brattleboro
+  paper: Brattleboro Reformer
+  metro: 
+Morristown Citizen Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TN
+  city: Morristown
+  paper: Morristown Citizen Tribune
+  metro: 
+Storm Lake Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IA
+  city: Storm Lake
+  paper: Storm Lake Times
+  metro: 
+Union Leader: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NH
+  city: Manchester
+  paper: Union Leader
+  metro: 
+Greeley Daily Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CO
+  city: Greeley
+  paper: Greeley Daily Tribune
+  metro: 
+Columbus Ledger-Enquirer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Columbus
+  paper: Columbus Ledger-Enquirer
+  metro: 
+Williston Daily Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ND
+  city: Williston
+  paper: Williston Daily Herald
+  metro: 
+Johnstown Tribune-Democrat: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Johnstown
+  paper: Johnstown Tribune-Democrat
+  metro: 
+Florida Times-Union: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Jacksonville
+  paper: Florida Times-Union
+  metro: 
+Brookhaven Daily Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MS
+  city: Brookhaven
+  paper: Brookhaven Daily Leader
+  metro: 
+Skagit Valley Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: WA
+  city: Skagit Valley
+  paper: Skagit Valley Herald
+  metro: 
+New Braunfels Herald-Zeitung: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: New Braunfels
+  paper: New Braunfels Herald-Zeitung
+  metro: 
+Times Observer: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: PA
+  city: Warren
+  paper: Times Observer
+  metro: 
+New Mexican: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NM
+  city: New Mexican
+  paper: New Mexican
+  metro: 
+La Opinion: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Los Angeles
+  paper: La Opinion
+  metro: 
+Jacksonville Journal Courier: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Jacksonville
+  paper: Jacksonville Journal Courier
+  metro: 
+Tucson Citizen: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AZ
+  city: Tucson
+  paper: Tucson Citizen
+  metro: 
+Pensacola News-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Pensacola
+  paper: Pensacola News-Journal
+  metro: 
+Lansing State Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: MI
+  city: Lansing
+  paper: Lansing State Journal
+  metro: 
+Carlsbad Current-Argus: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NM
+  city: Carlsbad
+  paper: Carlsbad Current-Argus
+  metro: 
+Los Angeles Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Los Angeles
+  paper: Los Angeles Times
+  metro: 
+Portland Press Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ME
+  city: Portland
+  paper: Portland Press Herald
+  metro: 
+Lake City Reporter: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Lake City
+  paper: Lake City Reporter
+  metro: 
+Journal Gazette: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IN
+  city: Fort Wayne
+  paper: Journal Gazette
+  metro: 
+Honolulu Star-Bulletin: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: HI
+  city: Honolulu
+  paper: Honolulu Star-Bulletin
+  metro: 
+Times-Standard: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Eureka
+  paper: Times-Standard
+  metro: 
+Daily Globe: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MN
+  city: Worthington
+  paper: Daily Globe
+  metro: 
+Daily Democrat: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Woodland
+  paper: Daily Democrat
+  metro: 
+Daily Press: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: VA
+  city: Newport News
+  paper: Daily Press
+  metro: 
+Orange County Register: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Anaheim
+  paper: Orange County Register
+  metro: 
+Santa Rosa Press-Democrat: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Santa Rosa
+  paper: Santa Rosa Press-Democrat
+  metro: 
+News and Observer: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NC
+  city: Raleigh
+  paper: News and Observer
+  metro: 
+Anchorage Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: AK
+  city: Anchorage
+  paper: Anchorage Daily News
+  metro: 
+News Leader: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: VA
+  city: Staunton
+  paper: News Leader
+  metro: 
+Johnson City Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TN
+  city: Johnson City
+  paper: Johnson City Press
+  metro: 
+Rapid City Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SD
+  city: Rapid City
+  paper: Rapid City Journal
+  metro: 
+Billings Gazette: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MT
+  city: Billings
+  paper: Billings Gazette
+  metro: 
+Canandaigua Daily Messenger: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Canandaigua
+  paper: Canandaigua Daily Messenger
+  metro: 
+Glens Falls Post-Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Glens Falls
+  paper: Glens Falls Post-Star
+  metro: 
+Public Opinion: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Chambersburg
+  paper: Public Opinion
+  metro: 
+Leaf-Chronicle: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TN
+  city: Clarksville
+  paper: Leaf-Chronicle
+  metro: 
+Portland Commercial Review: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Portland
+  paper: Portland Commercial Review
+  metro: 
+Detroit Free Press: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MI
+  city: Detroit
+  paper: Detroit Free Press
+  metro: 
+Daily Camera: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CO
+  city: Camera
+  paper: Daily Camera
+  metro: 
+Utica Observer-Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Utica
+  paper: Utica Observer-Dispatch
+  metro: 
+Antelope Valley Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: CA
+  city: Antelope Valley
+  paper: Antelope Valley Press
+  metro: 
+Augusta Chronicle: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Augusta
+  paper: Augusta Chronicle
+  metro: 
+Hamilton Journal-News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Hamilton
+  paper: Hamilton Journal-News
+  metro: 
+Advocate: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Stamford
+  paper: Advocate
+  metro: 
+Telegram and Gazette: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Worcester
+  paper: Telegram and Gazette
+  metro: 
+Times-News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: ID
+  city: Twin Falls
+  paper: Times-News
+  metro: 
+Muskegon Chronicle: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MI
+  city: Muskegon
+  paper: Muskegon Chronicle
+  metro: 
+Mail Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: Medford
+  paper: Mail Tribune
+  metro: 
+Reno Gazette-Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NV
+  city: Reno
+  paper: Reno Gazette-Journal
+  metro: 
+Eagle-Tribune: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Lawrence
+  paper: Eagle-Tribune
+  metro: 
+Waterbury Republican-American: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: Waterbury
+  paper: Waterbury Republican-American
+  metro: 
+Idaho Statesman: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: ID
+  city: Boise
+  paper: Idaho Statesman
+  metro: 
+Newsday: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: Melville
+  paper: Newsday
+  metro: 
+Muscatine Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Muscatine
+  paper: Muscatine Journal
+  metro: 
+Hereford Brand: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Hereford
+  paper: Hereford Brand
+  metro: 
+Boulder Camera: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CO
+  city: Boulder
+  paper: Boulder Camera
+  metro: 
+Syracuse Herald-American: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Perot
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Syracuse
+  paper: Syracuse Herald-American
+  metro: 
+Times West Virginian: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: WV
+  city: 
+  paper: Times West Virginian
+  metro: 
+Mount Airy News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Mount Airy
+  paper: Mount Airy News
+  metro: 
+Amarillo Globe Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: TX
+  city: Amarillo
+  paper: Amarillo Globe Times
+  metro: 
+Vallejo Times-Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Vallejo
+  paper: Vallejo Times-Herald
+  metro: 
+Lexington Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Lexington
+  paper: Lexington Dispatch
+  metro: 
+Salinas Californian: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Salinas
+  paper: Salinas Californian
+  metro: 
+Press of Atlantic City: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: Atlantic City
+  paper: Press of Atlantic City
+  metro: 
+Dominion Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WV
+  city: Morgantown
+  paper: Dominion Post
+  metro: 
+Potomac News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: VA
+  city: Potomac
+  paper: Potomac News
+  metro: 
+Philadelphia Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Philadelphia
+  paper: Philadelphia Daily News
+  metro: 
+Lafayette Journal and Courier: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: IN
+  city: Lafayette
+  paper: Lafayette Journal and Courier
+  metro: 
+Austin American-Statesman: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Austin
+  paper: Austin American-Statesman
+  metro: 
+Pittsburgh Post-Gazette: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Pittsburgh
+  paper: Pittsburgh Post-Gazette
+  metro: 
+Richmond Times-Dispatch: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: VA
+  city: Richmond
+  paper: Richmond Times-Dispatch
+  metro: 
+St. Paul Pioneer Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MN
+  city: Saint Paul
+  paper: St. Paul Pioneer Press
+  metro: 
+Athens Messenger: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Athens
+  paper: Athens Messenger
+  metro: 
+Pierre Capital Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SD
+  city: Pierre
+  paper: Pierre Capital Journal
+  metro: 
+Mesa Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AZ
+  city: Mesa
+  paper: Mesa Tribune
+  metro: 
+Home News Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NJ
+  city: East Brunswick
+  paper: Home News Tribune
+  metro: 
+New York Post: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: New York City
+  paper: New York Post
+  metro: 
+Washington Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NC
+  city: Washington
+  paper: Washington Daily News
+  metro: 
+Daily Comet: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: LA
+  city: Thibodaux
+  paper: Daily Comet
+  metro: 
+Tribune-Review: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Greensburg
+  paper: Tribune-Review
+  metro: 
+Macon Telegraph: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: GA
+  city: Macon
+  paper: Macon Telegraph
+  metro: 
+Beaumont Enterprise: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Beaumont
+  paper: Beaumont Enterprise
+  metro: 
+Victoria Advocate: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Victoria
+  paper: Victoria Advocate
+  metro: 
+Norton Daily Telegram Tiller and Toiler: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Norton
+  paper: Norton Daily Telegram Tiller and Toiler
+  metro: 
+Farmington Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NM
+  city: Farmington
+  paper: Farmington Daily Times
+  metro: 
+Willmar West Central Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MN
+  city: Willmar
+  paper: Willmar West Central Tribune
+  metro: 
+Erie Times-News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Erie
+  paper: Erie Times-News
+  metro: 
+Register Citizen: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CT
+  city: Torrington
+  paper: Register Citizen
+  metro: 
+Times of Trenton: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: NJ
+  city: Trenton
+  paper: Times of Trenton
+  metro: 
+Greenwich Time: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: CT
+  city: Greenwich
+  paper: Greenwich Time
+  metro: 
+USA Today: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: ""
+  city: ""
+  paper: USA Today
+  metro: 
+Cedar Rapids Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IA
+  city: Cedar Rapids
+  paper: Cedar Rapids Gazette
+  metro: 
+Clarion-Ledger: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MS
+  city: Jackson
+  paper: Clarion-Ledger
+  metro: 
+Anniston Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Anniston
+  paper: Anniston Star
+  metro: 
+Reporter: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Vacaville
+  paper: Reporter
+  metro: 
+Oakland Tribune: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Oakland
+  paper: Oakland Tribune
+  metro: 
+Joplin Globe: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Joplin
+  paper: Joplin Globe
+  metro: 
+Keene Sentinel: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NH
+  city: Keene
+  paper: Keene Sentinel
+  metro: 
+San Pedro News-Pilot: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: San Pedro
+  paper: San Pedro News-Pilot
+  metro: 
+Mountain Valley News: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Cedaredge
+  paper: Mountain Valley News
+  metro: 
+Post-Star: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NY
+  city: Glens Falls
+  paper: Post-Star
+  metro: 
+Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: New York City
+  paper: Daily News
+  metro: 
+Spokesman-Review (Spokane): !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WA
+  city: Spokane
+  paper: Spokesman-Review (Spokane)
+  metro: 
+San Francisco Examiner: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: San Francisco
+  paper: San Francisco Examiner
+  metro: 
+Lufkin Daily News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TX
+  city: Lufkin
+  paper: Lufkin Daily News
+  metro: 
+Recorder: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MA
+  city: Greenfield
+  paper: Recorder
+  metro: 
+Aurora Sentinel: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Aurora
+  paper: Aurora Sentinel
+  metro: 
+Stevens Point Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WI
+  city: Stevens Point
+  paper: Stevens Point Journal
+  metro: 
+Charleston Daily Mail: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: WV
+  city: Charleston
+  paper: Charleston Daily Mail
+  metro: 
+Riverside Press-Enterprise: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Riverside
+  paper: Riverside Press-Enterprise
+  metro: 
+Las Cruces Sun-News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NM
+  city: Las Cruces
+  paper: Las Cruces Sun-News
+  metro: 
+Sikeston Standard Democrat: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MO
+  city: Sikeston
+  paper: Sikeston Standard Democrat
+  metro: 
+Daily World: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: LA
+  city: Opelousas
+  paper: Daily World
+  metro: 
+Montgomery Advertiser: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: AL
+  city: Montgomery
+  paper: Montgomery Advertiser
+  metro: 
+South Florida Sun-Sentinel: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Fort Lauderdale
+  paper: South Florida Sun-Sentinel
+  metro: 
+Poughkeepsie Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Poughkeepsie
+  paper: Poughkeepsie Journal
+  metro: 
+Argus Leader: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: SD
+  city: Sioux Falls
+  paper: Argus Leader
+  metro: 
+Omaha World-Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NE
+  city: Omaha
+  paper: Omaha World-Herald
+  metro: 
+Durham Herald-Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: none
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NC
+  city: Durham
+  paper: Durham Herald-Sun
+  metro: 
+Eagle Times Claremont: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NH
+  city: Eagle
+  paper: Eagle Times Claremont
+  metro: 
+Carlisle Sentinel: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Carlisle
+  paper: Carlisle Sentinel
+  metro: 
+Salina Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Salina
+  paper: Salina Journal
+  metro: 
+Sentinel: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: PA
+  city: Lewistown
+  paper: Sentinel
+  metro: 
+Record Searchlight: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Redding
+  paper: Record Searchlight
+  metro: 
+McCook Daily Gazette: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Perot
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NE
+  city: McCook
+  paper: McCook Daily Gazette
+  metro: 
+Boston Globe: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: MA
+  city: Boston
+  paper: Boston Globe
+  metro: 
+Times-Leader: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Wilkes-Barre
+  paper: Times-Leader
+  metro: 
+Plainview Daily Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Plainview
+  paper: Plainview Daily Herald
+  metro: 
+York Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: York
+  paper: York Dispatch
+  metro: 
+Wisconsin State Journal: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: WI
+  city: Madison
+  paper: Wisconsin State Journal
+  metro: 
+Ledger Independent: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: KY
+  city: Maysville
+  paper: Ledger Independent
+  metro: 
+Lake County News-Sun: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: IL
+  city: Waukegan
+  paper: Lake County News-Sun
+  metro: 
+Rocky Mountain News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CO
+  city: Denver
+  paper: Rocky Mountain News
+  metro: 
+West Central Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MN
+  city: West Central
+  paper: West Central Tribune
+  metro: 
+Palestine Herald-Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Palestine
+  paper: Palestine Herald-Press
+  metro: 
+Monroe Evening-News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: MI
+  city: Monroe
+  paper: Monroe Evening-News
+  metro: 
+Alexandria Daily Town Talk: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: LA
+  city: Alexandria
+  paper: Alexandria Daily Town Talk
+  metro: 
+Tampa Tribune: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: N/A
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Tampa
+  paper: Tampa Tribune
+  metro: 
+Naples Daily-News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: FL
+  city: Naples
+  paper: Naples Daily-News
+  metro: 
+Opelika-Auburn News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 9
+  lat: 
+  lng: 
+  st: AL
+  city: Opelika-Auburn
+  paper: Opelika-Auburn News
+  metro: 
+Hernando Today: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Hernando
+  paper: Hernando Today
+  metro: 
+Roswell Daily Record: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NM
+  city: Roswell
+  paper: Roswell Daily Record
+  metro: 
+Day: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CT
+  city: New London
+  paper: Day
+  metro: 
+Journal News: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NY
+  city: West Nyack
+  paper: Journal News
+  metro: 
+Fairfield Daily Republic: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: CA
+  city: Fairfield
+  paper: Fairfield Daily Republic
+  metro: 
+El Paso Herald-Post: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: El Paso
+  paper: El Paso Herald-Post
+  metro: 
+San Mateo County Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 2
+  lat: 
+  lng: 
+  st: CA
+  city: San Mateo
+  paper: San Mateo County Times
+  metro: 
+Nashua Telegraph: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: NH
+  city: Nashua
+  paper: Nashua Telegraph
+  metro: 
+News-Gazette: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IL
+  city: Champaign
+  paper: News-Gazette
+  metro: 
+Leesburg Daily Commercial: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: FL
+  city: Leesburg
+  paper: Leesburg Daily Commercial
+  metro: 
+Ada Evening News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OK
+  city: Ada
+  paper: Ada Evening News
+  metro: 
+Courier: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OH
+  city: Findlay
+  paper: Courier
+  metro: 
+WilloughbyNews-Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: OH
+  city: Willoughby
+  paper: WilloughbyNews-Herald
+  metro: 
+Daily Astorian: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: Astoria
+  paper: Daily Astorian
+  metro: 
+Daily Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 
+  lng: 
+  st: NM
+  city: Farmington
+  paper: Daily Times
+  metro: 
+Middletown Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: NY
+  city: Middletown
+  paper: Middletown Times
+  metro: 
+Abilene Reporter-News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Abilene
+  paper: Abilene Reporter-News
+  metro: 
+Huntington Herald Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Huntington
+  paper: Huntington Herald Press
+  metro: 
+Pocono Record: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Stroudsburg
+  paper: Pocono Record
+  metro: 
+Fresno Bee: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Fresno
+  paper: Fresno Bee
+  metro: 
+Chattanooga Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: TN
+  city: Chattanooga
+  paper: Chattanooga Times
+  metro: 
+Santa Cruz Sentinel: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Santa Cruz
+  paper: Santa Cruz Sentinel
+  metro: 
+Times Herald Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Wichita Falls
+  paper: Times Herald Record
+  metro: 
+Maine Sunday Telegram: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: Gore
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ME
+  city: Portland
+  paper: Maine Sunday Telegram
+  metro: 
+Express-Times: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: PA
+  city: Easton
+  paper: Express-Times
+  metro: 
+Topeka Capital-Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: KS
+  city: Topeka
+  paper: Topeka Capital-Journal
+  metro: 
+Minot Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: ND
+  city: Minot
+  paper: Minot Daily News
+  metro: 
+Bakersfield Californian: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Bakersfield
+  paper: Bakersfield Californian
+  metro: 
+Falls Church News-Press: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: VA
+  city: Falls Church
+  paper: Falls Church News-Press
+  metro: 
+Monterey County Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: CA
+  city: Monterey
+  paper: Monterey County Herald
+  metro: 
+Miami Herald: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Gore
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: FL
+  city: Miami
+  paper: Miami Herald
+  metro: 
+Lancaster New Era: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: PA
+  city: Lancaster
+  paper: Lancaster New Era
+  metro: 
+Big Spring Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: TX
+  city: Big Spring
+  paper: Big Spring Herald
+  metro: 
+Muncie Star-Press: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 1
+  lat: 
+  lng: 
+  st: IN
+  city: Muncie
+  paper: Muncie Star-Press
+  metro: 
+Arizona Republic: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: AZ
+  city: Phoenix
+  paper: Arizona Republic
+  metro: 
+Yamhill Valley News-Register: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 0
+  lat: 
+  lng: 
+  st: OR
+  city: McMinnville
+  paper: Yamhill Valley News-Register
+  metro: 

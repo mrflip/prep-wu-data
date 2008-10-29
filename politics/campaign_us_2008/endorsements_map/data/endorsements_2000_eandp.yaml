@@ -14,11 +14,6 @@ Riverside Press-Enterprise:
   :city: 
   :paper: Riverside Press-Enterprise
   :st: CA
-Sante Fe New Mexican: 
-  :prez_2000: Gore
-  :city: 
-  :paper: Sante Fe New Mexican
-  :st: NM
 Kansas City Star: 
   :prez_2000: Gore
   :city: 
@@ -36,7 +31,7 @@ Daily Southtown:
   :st: IL
 Delaware County Daily Times: 
   :prez_2000: Bush
-  :city: Primos
+  :city: 
   :paper: Delaware County Daily Times
   :st: PA
 News-Gazette: 
@@ -49,6 +44,11 @@ News Tribune:
   :city: Tacoma
   :paper: News Tribune
   :st: WA
+Santa Fe New Mexican: 
+  :prez_2000: Gore
+  :city: 
+  :paper: Santa Fe New Mexican
+  :st: NM
 Las Vegas Review-Journal: 
   :prez_2000: Bush
   :city: 
@@ -169,6 +169,11 @@ Boston Herald:
   :city: 
   :paper: Boston Herald
   :st: MA
+Lafayette Journal and Courier: 
+  :prez_2000: Bush
+  :city: 
+  :paper: Lafayette Journal and Courier
+  :st: IN
 Tuscaloosa News: 
   :prez_2000: Gore
   :city: 
@@ -334,11 +339,6 @@ Portland Press Herald:
   :city: 
   :paper: Portland Press Herald
   :st: ME
-Journal and Courier: 
-  :prez_2000: Bush
-  :city: Lafayette
-  :paper: Journal and Courier
-  :st: IN
 Daily Star: 
   :prez_2000: Gore
   :city: Oneonta
@@ -349,11 +349,6 @@ Keene Sentinel:
   :city: 
   :paper: Keene Sentinel
   :st: NH
-Lansing State-Journal: 
-  :prez_2000: Gore
-  :city: 
-  :paper: Lansing State-Journal
-  :st: MI
 State: 
   :prez_2000: Bush
   :city: Columbia
@@ -519,6 +514,11 @@ Tucson Citizen:
   :city: 
   :paper: Tucson Citizen
   :st: AZ
+Times-Tribune: 
+  :prez_2000: Bush
+  :city: Scranton
+  :paper: Times-Tribune
+  :st: PA
 Carlsbad Current-Argus: 
   :prez_2000: Bush
   :city: 
@@ -569,11 +569,6 @@ Daily News (Bowling Green):
   :city: Bowling Green
   :paper: Daily News (Bowling Green)
   :st: KY
-Courier-Post: 
-  :prez_2000: Bush
-  :city: Cherry Hill
-  :paper: Courier-Post
-  :st: NJ
 Columbian: 
   :prez_2000: Bush
   :city: Vancouver
@@ -889,6 +884,11 @@ Norfolk Daily News:
   :city: 
   :paper: Norfolk Daily News
   :st: NE
+Lansing State Journal: 
+  :prez_2000: Gore
+  :city: 
+  :paper: Lansing State Journal
+  :st: MI
 Rocky Mountain News: 
   :prez_2000: Bush
   :city: 
@@ -1059,16 +1059,6 @@ Owensboro Messenger-Inquirer:
   :city: 
   :paper: Owensboro Messenger-Inquirer
   :st: KY
-Courier: 
-  :prez_2000: Bush
-  :city: Findlay
-  :paper: Courier
-  :st: OH
-Sun (Bremerton): 
-  :prez_2000: Bush
-  :city: Bremerton
-  :paper: Sun (Bremerton)
-  :st: WA
 Asheville Citizen-Times: 
   :prez_2000: Gore
   :city: 
@@ -1184,6 +1174,11 @@ Fargo Forum:
   :city: 
   :paper: Fargo Forum
   :st: ND
+Courier Post: 
+  :prez_2000: Bush
+  :city: Cherry Hill
+  :paper: Courier Post
+  :st: NJ
 Hartford Courant: 
   :prez_2000: Bush
   :city: 
@@ -1204,11 +1199,6 @@ Star-Gazette:
   :city: Elmira
   :paper: Star-Gazette
   :st: NY
-Scranton Times: 
-  :prez_2000: Bush
-  :city: 
-  :paper: Scranton Times
-  :st: PA
 Orlando Sentinel: 
   :prez_2000: Bush
   :city: 
@@ -1254,6 +1244,11 @@ Rapid City Journal:
   :city: 
   :paper: Rapid City Journal
   :st: SD
+Kitsap Sun: 
+  :prez_2000: Bush
+  :city: Bremerton
+  :paper: Kitsap Sun
+  :st: WA
 York Dispatch: 
   :prez_2000: Bush
   :city: 
@@ -1339,6 +1334,11 @@ Evansville Courier and Press:
   :city: 
   :paper: Evansville Courier and Press
   :st: IN
+Courier (Findlay): 
+  :prez_2000: Bush
+  :city: Findlay
+  :paper: Courier (Findlay)
+  :st: OH
 Washington Post: 
   :prez_2000: Gore
   :city: 

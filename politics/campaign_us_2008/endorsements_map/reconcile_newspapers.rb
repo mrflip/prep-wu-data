@@ -45,9 +45,9 @@ ENDORSEMENT_LISTS.each do |endorsement_objs|
 end
 Endorsement.dump :literalize_keys => false, :format => :tsv
 
-CityMetro.load
-Endorsement.load :literalize_keys => false, :format => :tsv
+#Endorsement.load :literalize_keys => false, :format => :tsv
 
+CityMetro.load
 def dump_as_hash e, fudge_city=nil
   st, city, paper = e.values_of(:st, :city, :paper)
   paper.gsub!(/\'/, "''")
@@ -56,44 +56,37 @@ def dump_as_hash e, fudge_city=nil
   puts "%-38s { :sun: %d, :paper: %-38s :st: '%s', :city: %-31s } # %s" % ["'#{paper}':", e.sun||1, "'#{paper}',", st, "'#{city}'", prezzes.compact.join(',')]
 end
 
-Endorsement.all.sort_by{|paper, e| [e.paper, e.st||'', e.city||'' ]}.each do |paper, e|
-  st, city, paper = e.values_of(:st, :city, :paper)
-  next if (!city.blank?) || (paper == 'USA Today')
-  puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
-end
-
-# Geolocation.load
-# Endorsement.all.sort_by{|paper, e| [e.sun||('-1'), e.st||'', e.city||'', e.paper, ]}.each do |paper, e|
-#   next if Geolocation[e.st, e.city] ||  (paper == 'USA Today')
-#   dump_as_hash e, true
-# end
-
-# city_papers = { }
-# Endorsement.all.each do |paper, e|
-#   (city_papers[[e.st||'', e.city||'']] ||= []) << e
-# end
-# city_papers.sort_by{|st_city, es| st_city }.each do |st_city, es|
-#   next unless es.length > 1
-#   es.each{|e| dump_as_hash(e) }
-# end
-
-Endorsement.all.each do |paper, e|
-  e.metro = CityMetro[e.st, e.city] || CityMetro.new
-end
-
-
-Endorsement.all.sort_by{|paper, e| [e.metro.metro_name||'', e.city||'', e.st||'', e.paper, ]}.each do |paper, e|
-  # next unless (e.prez[2008] || e.prez[2004] || e.prez[2000])
-  prezzes = e.prez.sort.map{|k,v| k if v }
-  # puts "%-38s\t%s\t%-31s\t%-61s\t%10s\t%s" % ["'#{paper}':", e.st, "'#{e.city}'", "'#{e.metro.metro_name}'", e.metro.pop_2007, prezzes.join("\t")]
-end
-
-
-
-
-
-# 'Daily Herald':                         { :paper: 'Daily Herald',                      :st: 'IL', :city: 'Arlington Heights',  }"
-# -123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789
-# next if e.prez[2008] && e.prez[1996]
 #
-# puts "%-2s\t%-20s\t%-36s\t%s" % [st, city, paper, prezzes.join("\t")]
+# Dump endorsements with blank cities or cities that don't geolocate
+#
+Geolocation.load :format => :tsv
+Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
+  st, city, paper = e.values_of(:st, :city, :paper)
+  next if paper == 'USA Today'
+  if (city.blank?) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
+end
+
+#     puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
+
+#
+# Cities with two or more papers
+#
+city_papers = { }
+Endorsement.all.each do |paper, e|
+  (city_papers[[e.st||'', e.city||'']] ||= []) << e
+end
+city_papers.sort_by{|st_city, es| st_city }.each do |st_city, es|
+  next if es.length <= 1
+  es.each{|e| dump_as_hash(e) }
+end
+
+# Endorsement.all.each do |paper, e|
+#   e.metro = CityMetro[e.st, e.city] || CityMetro.new
+# end
+#
+#
+# Endorsement.all.sort_by{|paper, e| [e.metro.metro_name||'', e.city||'', e.st||'', e.paper, ]}.each do |paper, e|
+#   # next unless (e.prez[2008] || e.prez[2004] || e.prez[2000])
+#   prezzes = e.prez.sort.map{|k,v| k if v }
+#   # puts "%-38s\t%s\t%-31s\t%-61s\t%10s\t%s" % ["'#{paper}':", e.st, "'#{e.city}'", "'#{e.metro.metro_name}'", e.metro.pop_2007, prezzes.join("\t")]
+# end

@@ -759,6 +759,11 @@ Poughkeepsie Journal:
   :st: NY
   :prez_2008: Obama
   :prez_2004: Bush
+Chronicle (Centralia): 
+  :city: Centralia
+  :paper: Chronicle (Centralia)
+  :st: WA
+  :prez_2008: McCain
 Daily Republic: 
   :city: Mitchell
   :paper: Daily Republic
@@ -880,11 +885,6 @@ Philadelphia Daily News:
   :paper: Philadelphia Daily News
   :st: PA
   :prez_2008: Obama
-Chronicle: 
-  :city: Centralia
-  :paper: Chronicle
-  :st: WA
-  :prez_2008: McCain
 Dallas Morning News: 
   :city: 
   :paper: Dallas Morning News
@@ -1323,12 +1323,6 @@ Winchester Star:
   :st: VA
   :prez_2008: McCain
   :prez_2004: Bush
-Courier: 
-  :city: Findlay
-  :paper: Courier
-  :st: OH
-  :prez_2008: McCain
-  :prez_2004: Bush
 Syracuse Post-Standard: 
   :city: 
   :paper: Syracuse Post-Standard
@@ -1546,7 +1540,7 @@ Bristol Herald Courier:
   :prez_2008: McCain
   :prez_2004: Bush
 News-Herald: 
-  :city: Lake County-Willoughby
+  :city: Willoughby
   :paper: News-Herald
   :st: OH
   :prez_2008: McCain
@@ -1699,6 +1693,12 @@ San Bernardino Sun:
   :paper: San Bernardino Sun
   :st: CA
   :prez_2008: Obama
+  :prez_2004: Bush
+Courier (Findlay): 
+  :city: Findlay
+  :paper: Courier (Findlay)
+  :st: OH
+  :prez_2008: McCain
   :prez_2004: Bush
 Wisconsin State Journal: 
   :city: Madison
