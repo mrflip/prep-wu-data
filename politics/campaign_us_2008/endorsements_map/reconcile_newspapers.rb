@@ -56,18 +56,24 @@ def dump_as_hash e, fudge_city=nil
   puts "%-38s { :sun: %d, :paper: %-38s :st: '%s', :city: %-31s } # %s" % ["'#{paper}':", e.sun||1, "'#{paper}',", st, "'#{city}'", prezzes.compact.join(',')]
 end
 
-#
-# Dump endorsements with blank cities or cities that don't geolocate
-#
-Geolocation.load :format => :tsv
-Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
-  st, city, paper = e.values_of(:st, :city, :paper)
-  next if paper == 'USA Today'
-  if (city.blank?) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
-end
+# # dump out for pasting into data/newspaper_cities
+# Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
+#   dump_as_hash e
+# end
 
-#     puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
 
+# #
+# # Dump endorsements with blank cities or cities that don't geolocate
+# #
+# Geolocation.load :format => :tsv
+# Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
+#   st, city, paper = e.values_of(:st, :city, :paper)
+#   next if paper == 'USA Today'
+#   if (city.blank?) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
+# end
+#
+# #     puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
+#
 #
 # Cities with two or more papers
 #
@@ -75,8 +81,8 @@ city_papers = { }
 Endorsement.all.each do |paper, e|
   (city_papers[[e.st||'', e.city||'']] ||= []) << e
 end
-city_papers.sort_by{|st_city, es| st_city }.each do |st_city, es|
-  next if es.length <= 1
+city_papers.sort_by{|st_city, es| [es.length, st_city] }.each do |st_city, es|
+  # next if es.length <= 1
   es.each{|e| dump_as_hash(e) }
 end
 
@@ -90,3 +96,4 @@ end
 #   prezzes = e.prez.sort.map{|k,v| k if v }
 #   # puts "%-38s\t%s\t%-31s\t%-61s\t%10s\t%s" % ["'#{paper}':", e.st, "'#{e.city}'", "'#{e.metro.metro_name}'", e.metro.pop_2007, prezzes.join("\t")]
 # end
+

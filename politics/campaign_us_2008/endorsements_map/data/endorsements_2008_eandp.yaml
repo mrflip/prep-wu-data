@@ -308,12 +308,6 @@ Connecticut Post:
   :st: CT
   :prez_2008: McCain
   :prez_2004: Bush
-Record (Hackensack): 
-  :city: Hackensack
-  :paper: Record (Hackensack)
-  :st: NJ
-  :prez_2008: Obama
-  :prez_2004: Kerry
 Battle Creek Enquirer: 
   :city: 
   :paper: Battle Creek Enquirer
@@ -630,12 +624,6 @@ Capital Times:
 Houston Chronicle: 
   :city: 
   :paper: Houston Chronicle
-  :st: TX
-  :prez_2008: Obama
-  :prez_2004: Bush
-Eagle: 
-  :city: Bryan
-  :paper: Eagle
   :st: TX
   :prez_2008: Obama
   :prez_2004: Bush
@@ -1527,6 +1515,12 @@ Detroit Free Press:
   :st: MI
   :prez_2008: Obama
   :prez_2004: Kerry
+Bryan-College Station Eagle: 
+  :city: Bryan
+  :paper: Bryan-College Station Eagle
+  :st: TX
+  :prez_2008: Obama
+  :prez_2004: Bush
 Salt Lake Tribune: 
   :city: 
   :paper: Salt Lake Tribune
@@ -1720,6 +1714,12 @@ Wenatchee World:
 Times (Trenton): 
   :city: Trenton
   :paper: Times (Trenton)
+  :st: NJ
+  :prez_2008: Obama
+  :prez_2004: Kerry
+Record (Bergen): 
+  :city: Bergen
+  :paper: Record (Bergen)
   :st: NJ
   :prez_2008: Obama
   :prez_2004: Kerry

@@ -37,7 +37,7 @@ KENTUCKY
 Lexington Herald-Leader 
 
 LOUISIANA 
-Shreveport Times 
+Times, Shreveport
 
 MINNESOTA 
 Minneapolis Star Tribune 
@@ -51,7 +51,7 @@ Home News Tribune, East Brunswick
 Record (Bergen)
 Newark Star-Ledger
 North Jersey Herald and News
-Times of Trenton 
+Times, Trenton 
 
 NEW YORK 
 Gannett Suburban Newspapers
@@ -63,7 +63,7 @@ NORTH DAKOTA
 Minot Daily News 
 
 OHIO 
-Cleveland Plain Dealer 
+Plain Dealer, Cleveland
 
 NORTH CAROLINA 
 News and Record, Greensboro
@@ -104,7 +104,7 @@ NEW YORK
 New York Post 
 
 NEBRASKA 
-Omaha World-Herald 
+World-Herald, Omaha
 
 OHIO 
 Cincinnati Enquirer 
@@ -223,7 +223,7 @@ Salina Journal
 
 KENTUCKY 
 
-Louisville Courier-Journal 
+Courier-Journal, Louisville 
 
 MAINE 
 
@@ -263,7 +263,7 @@ Springfield News-Leader
 
 NEBRASKA 
 
-Lincoln Star 
+Lincoln Journal-Star 
 
 NEVADA 
 
@@ -290,7 +290,7 @@ NEW YORK
 Kingston Daily Freeman
 Rochester Democrat & Chronicle 
 Newsday 
-Utica Observer-Dispatch 
+Observer-Dispatch, Utica
 Canandaigua Daily Messenger 
 The Saratogian 
 
@@ -325,7 +325,7 @@ Woodward News
 
 OREGON 
 
-Salem Statesman-Journal 
+Statesman-Journal, Salem
 The Daily Astorian 
 The Oregonian, Portland 
 
@@ -334,8 +334,8 @@ PENNSYLVANIA
 Centre Daily Times 
 Wilkes-Barre Citizens' Voice 
 Delaware County Daily Times 
-Uniontown Herald-Standard 
-Lancaster Intelligencer Journal 
+Herald-Standard, Uniontown
+Intelligencer Journal, Lancaster
 New Castle News 
 Pocono Record 
 Daily Item, Sunbury
@@ -437,7 +437,7 @@ CALIFORNIA
 Fairfield Daily Republic 
 Lodi News-Sentinel 
 San Pedro News-Pilot 
-Redding Record Searchlight 
+Record Searchlight, Redding
 Torrance Daily Breeze 
 Victorville Daily Press 
 Santa Monica Outlook 
@@ -550,7 +550,7 @@ NEW MEXICO
 
 Alamogordo Daily News 
 Albuquerque Tribune 
-Farmington Daily Times 
+Daily Times, Farmington
 
 NORTH CAROLINA 
 
@@ -566,7 +566,7 @@ Williston Daily Herald
 
 OHIO 
 
-Mansfield News Journal 
+News Journal, Mansfield
 Cincinnati Post 
 Columbus Dispatch 
 Courier, Findlay
@@ -589,7 +589,7 @@ Coos Bay World
 PENNSYLVANIA 
 
 Pittsburgh Press 
-Times Leader, Wilkes-Barre
+Times-Leader, Wilkes-Barre
 Johnstown Tribune-Democrat 
 
 RHODE ISLAND 
@@ -600,7 +600,7 @@ TENNESSEE
 
 Chattanooga News-Free Press 
 Morristown Citizen Tribune 
-Memphis Commercial Appeal 
+Commercial Appeal, Memphis
 Knoxville News-Sentinel 
 
 TEXAS 
@@ -627,10 +627,10 @@ Caledonian-Record, Saint Johnsbury
 
 VIRGINIA 
 
-Harrisonburg Daily News-Record 
+Daily News Record, Harrisonburg
 Daily Press, Newport News
 Bristol Herald Courier 
-Staunton Daily News Leader 
+News Leader, Staunton
 The Winchester Star 
 
 WASHINGTON 

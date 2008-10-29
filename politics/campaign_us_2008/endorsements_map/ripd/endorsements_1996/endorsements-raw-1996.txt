@@ -105,7 +105,7 @@ South Bend Tribune
 Sullivan Daily Times
 
 DOLE
-Huntington Herald Press
+Huntington Herald-Press
 Indianapolis Star
 Martinsville Daily Reporter
 
@@ -239,7 +239,7 @@ NEW JERSEY
 
 CLINTON
 
-The Times of Trenton
+Times, Trenton
 
 NEW YORK
 
@@ -307,7 +307,7 @@ PENNSYLVANIA
 
 CLINTON
 Philadelphia Daily News
-Uniontown Herald Standard
+Herald-Standard, Uniontown
 Wilkes-Barre Citizens' Voice
 Times-Leader, Wilkes-Barre
 
@@ -329,7 +329,7 @@ Sumter Item
 SOUTH DAKOTA
 
 DOLE
-Mitchell Daily Republic
+Daily Republic, Mitchell
 Pierre Capital Journal
 Yankton Daily Press & Dakotan
 
@@ -425,7 +425,7 @@ NORTH CAROLINA
 Charlotte Observer
 News & Record, Greensboro
 LOUISIANA
-Shreveport Times
+Times, Shreveport
 
 MAINE
 Maine Sunday Telegram, Portland
@@ -465,7 +465,7 @@ The Palm Beach Post
 MONTANA
 The Great Falls Tribune
 KENTUCKY
-The Louisville Courier-Journal
+Courier-Journal, Louisville
 ARIZONA
 The Mesa Tribune
 MINNESOTA

@@ -103,7 +103,6 @@ def fix_city_and_paper(orig_paper, state)
     'Ft. Lauderdale'            => 'Fort Lauderdale',
     'Champaign-Urbana'          => 'Champaign',
     'West Lafayette'            => 'Lafayette',
-    'Bergen'                    => 'Hackensack',
     'LaCrosse'                  => 'La Crosse',
     'Lake County-Willoughby'    => 'Willoughby'
   }[city] || city
@@ -112,12 +111,13 @@ def fix_city_and_paper(orig_paper, state)
   # Gannett Sunburban Newspapers is many papers, based in White Plains, NY
   city, paper = { 
     ['Arlington', 'Daily Herald']   => ['Arlington Heights', 'Daily Herald'],
-    ['Bryan ',    'Eagle']          => ['Bryan',             'Bryan-College Station Eagle'],
+    ['Bryan',     'Eagle']          => ['Bryan',             'Bryan-College Station Eagle'],
   }[ [city, paper] ] || [city, paper]
   keep_city = ['Daily News', 'Sun', 'Record', 'News Journal', 'Times', 'Spokesman-Review', 'Chronicle', 'Courier']
   case
   when !city.blank? && keep_city.include?(paper) then paper = "#{paper} (#{city})"
   when (paper == 'Kenne Sentinel')                      then city, paper = 'Keene', 'Keene Sentinel'  
+  when (paper =~ /Record.*Bergen/)                      then city, paper = 'Hackensack', 'Record'  
   when (paper =~ /Spokesman.*Review/) && (orig_paper =~ /Spokane/) then paper = "Spokesman-Review (Spokane)"
   end
   # puts "%-30s %-30s %-50s" % [paper, city, orig_paper] if orig_paper =~ /daily.*news/i

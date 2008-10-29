@@ -130,7 +130,7 @@ Bangor Daily News
 
 MARYLAND
 
-The Capital, Annapolis
+Annapolis Capital
 
 MASSACHUSETTS
 
@@ -166,7 +166,7 @@ NEBRASKA
 Lincoln Journal-Star
 The North Platte Telegraph
 Norfolk Daily News
-Omaha World-Herald
+World-Herald, Omaha
 
 NEVADA
 
@@ -218,7 +218,7 @@ The Courier, Findlay
 The Marietta Times
 The Plain Dealer, Cleveland
 The Repository, Canton
-Tribune Chronicle, Warren
+Warren Tribune Chronicle
 The Vindicator, Youngstown
 
 OKLAHOMA
@@ -249,7 +249,7 @@ The Providence Journal
 
 SOUTH CAROLINA
 
-Spartanburg Herald-Journal
+Herald-Journal, Spartanburg
 The Sumter Item
 The Post and Courier, Charleston
 The State, Columbia
@@ -335,7 +335,7 @@ CALIFORNIA
 The Fresno Bee
 Marin Independent-Journal
 The Modesto Bee
-The Santa Rosa Press-Democrat
+Press Democrat, Santa Rosa
 Long Beach Press Telegram
 The Sacramento Bee
 San Francisco Chronicle
@@ -403,12 +403,12 @@ The Hutchinson News
 
 KENTUCKY
 
-The Louisville Courier-Journal
+Courier-Journal, Louisville
 Lexington Herald-Leader
 
 LOUISIANA
 
-The Shreveport Times
+Times, Shreveport
 
 MAINE
 
@@ -417,7 +417,7 @@ Maine Sunday Telegram
 
 MARYLAND
 
-The Baltimore Sun
+The Sun, Baltimore
 
 MASSACHUSETTS
 
@@ -467,7 +467,7 @@ NEW JERSEY
 Home News Tribune, East Brunswick
 Record (Bergen)
 The Star-Ledger, Newark
-The Times of Trenton
+Times, Trenton
 
 NEW MEXICO
 
@@ -483,7 +483,7 @@ Newsday, Melville
 The New York Times
 Rochester Democrat and Chronicle
 Staten Island Advance
-Albany Times-Union
+Times-Union, Albany
 
 NORTH CAROLINA
 

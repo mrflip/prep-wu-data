@@ -179,11 +179,11 @@ Connecticut Post:
   :paper: Connecticut Post
   :prez_1996: Dole
   :st: CT
-Record (Hackensack): 
-  :city: Hackensack
-  :paper: Record (Hackensack)
-  :prez_1996: Clinton
-  :st: NJ
+Huntington Herald-Press: 
+  :city: 
+  :paper: Huntington Herald-Press
+  :prez_1996: Dole
+  :st: IN
 Columbus Dispatch: 
   :city: 
   :paper: Columbus Dispatch
@@ -239,11 +239,6 @@ Las Vegas Sun:
   :paper: Las Vegas Sun
   :prez_1996: Clinton
   :st: NV
-Huntington Herald Press: 
-  :city: 
-  :paper: Huntington Herald Press
-  :prez_1996: Dole
-  :st: IN
 State: 
   :city: 
   :paper: State
@@ -264,11 +259,6 @@ Charleston Daily Mail:
   :paper: Charleston Daily Mail
   :prez_1996: Dole
   :st: WV
-Louisville Courier-Journal: 
-  :city: 
-  :paper: Louisville Courier-Journal
-  :prez_1996: Clinton
-  :st: KY
 Russell Daily News: 
   :city: 
   :paper: Russell Daily News
@@ -329,11 +319,6 @@ Hollister Free Lance:
   :paper: Hollister Free Lance
   :prez_1996: Clinton
   :st: CA
-Times of Trenton: 
-  :city: 
-  :paper: Times of Trenton
-  :prez_1996: Clinton
-  :st: NJ
 Times-Leader: 
   :city: Wilkes-Barre
   :paper: Times-Leader
@@ -359,6 +344,11 @@ Pawtucket Times:
   :paper: Pawtucket Times
   :prez_1996: Dole
   :st: RI
+Courier-Journal: 
+  :city: Louisville
+  :paper: Courier-Journal
+  :prez_1996: Clinton
+  :st: KY
 Sumter Item: 
   :city: 
   :paper: Sumter Item
@@ -459,6 +449,11 @@ Kingsport Daily News:
   :paper: Kingsport Daily News
   :prez_1996: Dole
   :st: TN
+Daily Republic: 
+  :city: Mitchell
+  :paper: Daily Republic
+  :prez_1996: Dole
+  :st: SD
 Chronicle (Centralia): 
   :city: Centralia
   :paper: Chronicle (Centralia)
@@ -774,6 +769,11 @@ Courier-News:
   :paper: Courier-News
   :prez_1996: Clinton
   :st: NJ
+Times (Shreveport): 
+  :city: Shreveport
+  :paper: Times (Shreveport)
+  :prez_1996: Clinton
+  :st: LA
 Finger Lakes Times: 
   :city: 
   :paper: Finger Lakes Times
@@ -784,11 +784,6 @@ Moberly Monitor-Index:
   :paper: Moberly Monitor-Index
   :prez_1996: Clinton
   :st: MO
-Shreveport Times: 
-  :city: 
-  :paper: Shreveport Times
-  :prez_1996: Clinton
-  :st: LA
 Oklahoman: 
   :city: 
   :paper: Oklahoman
@@ -909,11 +904,6 @@ Muscatine Journal:
   :paper: Muscatine Journal
   :prez_1996: Dole
   :st: IA
-Uniontown Herald Standard: 
-  :city: 
-  :paper: Uniontown Herald Standard
-  :prez_1996: Clinton
-  :st: PA
 New Haven Register: 
   :city: 
   :paper: New Haven Register
@@ -1134,11 +1124,21 @@ Richmond County Daily Journal:
   :paper: Richmond County Daily Journal
   :prez_1996: Clinton
   :st: NC
+Times (Trenton): 
+  :city: Trenton
+  :paper: Times (Trenton)
+  :prez_1996: Clinton
+  :st: NJ
 Liberal Southwest Daily Times: 
   :city: 
   :paper: Liberal Southwest Daily Times
   :prez_1996: Dole
   :st: KS
+Record (Bergen): 
+  :city: Bergen
+  :paper: Record (Bergen)
+  :prez_1996: Clinton
+  :st: NJ
 Wooster Daily Record: 
   :city: 
   :paper: Wooster Daily Record
@@ -1204,3 +1204,8 @@ Marshalltown Times-Republican:
   :paper: Marshalltown Times-Republican
   :prez_1996: Dole
   :st: IA
+Herald-Standard: 
+  :city: Uniontown
+  :paper: Herald-Standard
+  :prez_1996: Clinton
+  :st: PA

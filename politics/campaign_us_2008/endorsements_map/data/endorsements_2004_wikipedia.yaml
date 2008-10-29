@@ -34,7 +34,7 @@
 "Times-Picayune":                { :paper: "Times-Picayune",                :prez_2004: 'none'        }
 "New York Post":                 { :paper: "New York Post",                 :prez_2004: 'Bush'       }
 "News and Observer":             { :paper: "News and Observer",             :prez_2004: 'Kerry'      }
-"Omaha World-Herald":            { :paper: "Omaha World-Herald",            :prez_2004: 'Bush'       }
+"World-Herald":                  { :paper: "World-Herald",                  :prez_2004: 'Bush'       }
 "Orlando Sentinel":              { :paper: "Orlando Sentinel",              :prez_2004: 'Kerry'      }
 "Philadelphia Daily News":       { :paper: "Philadelphia Daily News",       :prez_2004: 'Kerry'      }
 "Philadelphia Inquirer":         { :paper: "Philadelphia Inquirer",         :prez_2004: 'Kerry'      }
@@ -89,7 +89,7 @@
 "Salt Lake Tribune":             { :paper: "Salt Lake Tribune",             :prez_2004: 'Bush'       }
 "Seattle Times":                 { :paper: "Seattle Times",                 :prez_2004: 'Kerry'      }
 "Star-Ledger":                   { :paper: "Star-Ledger",                   :prez_2004: 'Kerry'      }
-"Baltimore Sun":                 { :paper: "Baltimore Sun",                 :prez_2004: 'Kerry'      }
+"Sun (Baltimore)":               { :paper: "Sun (Baltimore)",               :prez_2004: 'Kerry'      }
 "Tennessean":                    { :paper: "Tennessean",                    :prez_2004: 'Kerry'      }
 "Washington Post":               { :paper: "Washington Post",               :prez_2004: 'Kerry'      }
 "Times-Reporter":                { :paper: "Times-Reporter",                :prez_2004: 'Bush'       }
