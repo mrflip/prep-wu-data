@@ -72,6 +72,7 @@ def parse_ep_endorsements(raw_filename, endorsement_re, year)
           hsh = { :paper => paper, :st => st, :city => city }
           Endorsement.set_prez hsh, year, prez
           Endorsement.set_prez hsh, year-4, prez_prev unless (prez_prev.blank?)
+          hsh[:circ] = circ unless circ == 0
           # puts [hsh, l].to_json
           endorsements[paper] = hsh
         else

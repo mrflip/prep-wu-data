@@ -45,7 +45,7 @@ ENDORSEMENT_LISTS.each do |endorsement_objs|
 end
 Endorsement.dump :literalize_keys => false, :format => :tsv
 
-#Endorsement.load :literalize_keys => false, :format => :tsv
+# Endorsement.load :literalize_keys => false, :format => :tsv
 
 CityMetro.load
 def dump_as_hash e, fudge_city=nil
@@ -56,35 +56,35 @@ def dump_as_hash e, fudge_city=nil
   puts "%-38s { :sun: %d, :paper: %-38s :st: '%s', :city: %-31s } # %s" % ["'#{paper}':", e.sun||1, "'#{paper}',", st, "'#{city}'", prezzes.compact.join(',')]
 end
 
-# # dump out for pasting into data/newspaper_cities
-# Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
-#   dump_as_hash e
-# end
+# dump out for pasting into data/newspaper_cities
+Endorsement.all.sort_by{|paper, e| [e.prez.values.compact.length, e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
+  dump_as_hash e
+end
 
 
+# # #
+# # # Dump endorsements with blank cities or cities that don't geolocate
+# # #
+# # Geolocation.load :format => :tsv
+# # Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
+# #   st, city, paper = e.values_of(:st, :city, :paper)
+# #   next if paper == 'USA Today'
+# #   if (city.blank?) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
+# # end
 # #
-# # Dump endorsements with blank cities or cities that don't geolocate
+# # #     puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
 # #
-# Geolocation.load :format => :tsv
-# Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
-#   st, city, paper = e.values_of(:st, :city, :paper)
-#   next if paper == 'USA Today'
-#   if (city.blank?) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
+# #
+# # Cities with two or more papers
+# #
+# city_papers = { }
+# Endorsement.all.each do |paper, e|
+#   (city_papers[[e.st||'', e.city||'']] ||= []) << e
 # end
-#
-# #     puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
-#
-#
-# Cities with two or more papers
-#
-city_papers = { }
-Endorsement.all.each do |paper, e|
-  (city_papers[[e.st||'', e.city||'']] ||= []) << e
-end
-city_papers.sort_by{|st_city, es| [es.length, st_city] }.each do |st_city, es|
-  # next if es.length <= 1
-  es.each{|e| dump_as_hash(e) }
-end
+# city_papers.sort_by{|st_city, es| [es.length, st_city] }.each do |st_city, es|
+#   # next if es.length <= 1
+#   es.each{|e| dump_as_hash(e) }
+# end
 
 # Endorsement.all.each do |paper, e|
 #   e.metro = CityMetro[e.st, e.city] || CityMetro.new
