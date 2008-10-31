@@ -657,7 +657,7 @@
 'Morris Daily Herald':                 { :paper: 'Morris Daily Herald',                 :st: 'IL', :city: 'Morris'                        } #                                 2008:M     7258
 'Post Bulletin':                       { :paper: 'Post Bulletin',                       :st: 'MN', :city: 'Rochester'                     } #                                 2008:O        0
 'Star News':                           { :paper: 'Star News',                           :st: 'NC', :city: 'Wilmington'                    } #                         2004:K  2008:O    47620
-'Tahoe Daily Tribune':                 { :paper: 'Tahoe Daily Tribune',                 :st: 'CA', :city: 'Tahoe'                         } #                                 2008:O     7723
+'Tahoe Daily Tribune':                 { :paper: 'Tahoe Daily Tribune',                 :st: 'CA', :city: 'South Lake Tahoe'              } #                                 2008:O     7723
 'Telegraph Forum':                     { :paper: 'Telegraph Forum',                     :st: 'OH', :city: 'Bucyrus'                       } #                                 2008:O     5969
 'Valley News':                         { :paper: 'Valley News',                         :st: 'VT', :city: 'White River Junction'          } #                         2004:K  2008:O    16430
                                        

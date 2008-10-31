@@ -226,7 +226,7 @@
 - "Poughkeepsie Journal":                      [ "Journal",                                     37265 "Poughkeepsie"               ] # city-circ-paper_re
 - "News Herald":                               [ "News-Herald",                                 36948 "Lake County"                ] # circ-paper_re
 - "Waco Tribune Herald":                       [ "Tribune-Herald",                              36708 "Waco"                       ] # good-city-paper_re
-- "Crystal Lake Northwest Herald":             [ "Northwest Herald",                            36594 "Crystal Lake"               ] # circ-paper_re
+- "Crystal Lake Northwest Herald":             [ "Northwest Herald",                            36594 "Crystal Lake"               ] # city-circ-paper_re
 - "Lake Charles American Press":               [ "American Press",                              36270 "Lake Charles"               ] # good-city-paper_re
 - "Tyler Morning Telegraph":                   [ "Morning Telegraph",                           35598 "Tyler"                      ] # city-circ-paper_re
 - "Day":                                       [ "Day",                                         34730 "New London"                 ] # exact-city-paper-circ-paper_re
@@ -325,7 +325,7 @@
 - "Quincy Herald Whig":                        [ "Herald-Whig",                                 19996 "Quincy"                     ] # good-city-paper_re
 - "Monroe Evening News":                       [ "News",                                        19877 "Monroe"                     ] # good-city-paper_re
 - "Jonesboro Sun":                             [ "Sun",                                         19830 "Jonesboro"                  ] # good-city-paper_re
-- "Danville Register and Bee":                 [ "Register and Bee",                            19830 "Danville"                   ] # circ-paper_re
+- "Danville Register and Bee":                 [ "Register and Bee",                            19830 "Danville"                   ] # city-circ-paper_re
 - "High Point Enterprise":                     [ "Enterprise",                                  19483 "High Point"                 ] # good-city-paper_re
 - "Hamilton Journal News":                     [ "Journal-News",                                19432 "Hamilton"                   ] # city-circ-paper_re
 - "Midland Reporter Telegram":                 [ "Reporter-Telegram",                           19407 "Midland"                    ] # good-city-paper_re
@@ -337,11 +337,12 @@
 - "Columbia Daily Tribune":                    [ "Tribune",                                     18131 "Columbia"                   ] # city-circ-paper_re
 - "Pocono Record":                             [ "Pocono Record",                               18121 "Stroudsburg"                ] # good-city-paper-paper_re
 - "Morristown Citizen Tribune":                [ "Citizen Tribune",                             18086 "Morristown"                 ] # good-city-paper_re
+- "Daily Hampshire Gazette":                   [ "Gazette",                                     18001 "Northampton"                ] # good-city-paper_re
 - "Kingston Daily Freeman":                    [ "Freeman",                                     17909 "Kingston"                   ] # good-city-paper_re
 - "Reporter":                                  [ "Reporter",                                    17751 "Vacaville"                  ] # exact-city-paper-circ-paper_re
 - "Globe Gazette":                             [ "Globe",                                       17666 "Mason City"                 ] # city-circ-paper_re
 - "Daily Times":                               [ "Daily Times",                                 17485 "Farmington"                 ] # exact-city-paper-circ-paper_re
-- "Enid News and Eagle":                       [ "News And Eagle",                              17323 "Enid"                       ] # circ-paper_re
+- "Enid News and Eagle":                       [ "News And Eagle",                              17323 "Enid"                       ] # city-circ-paper_re
 - "Middletown Journal":                        [ "Journal",                                     17285 "Middletown"                 ] # city-circ-paper_re
 - "News Leader":                               [ "News Leader",                                 17238 "Staunton"                   ] # exact-city-paper-circ-paper_re
 - "Marietta Daily Journal":                    [ "Journal",                                     17218 "Marietta"                   ] # good-city-paper_re

@@ -9,14 +9,8 @@ require 'action_view/helpers/number_helper'; include ActionView::Helpers::Number
 require 'lib/endorsement'
 require 'lib/geolocation'
 require 'lib/metropolitan_areas'
+require 'lib/utils'
 #
-# Oddities:
-# -- amarillo Globe-news
-#
-
-def q_d text, delim=',', quote='"'
-  "#{quote}#{text}#{quote}#{delim}"
-end
 
 #
 # merge warn on inconsistent vals
@@ -85,7 +79,8 @@ Geolocation.load :format => :tsv
 Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
   st, city, paper = e.values_of(:st, :city, :paper)
   next if paper == 'USA Today'
-  if (!NEWSPAPER_CITIES[e.paper]) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true end
+  if (!NEWSPAPER_CITIES[e.paper]) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true ; next end
+  e.lat, e.lng, e.pop = Geolocation[e.st, e.city].values_of(:lat, :lng, :pop)
 end
 
 # Endorsement.load :literalize_keys => false, :format => :tsv

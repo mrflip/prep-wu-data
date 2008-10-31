@@ -1,7 +1,33 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+require 'rubygems'
+require 'yaml'; require 'json'
+require 'imw/utils/extensions/core'
+require 'active_support'
+require 'action_view/helpers/number_helper'; include ActionView::Helpers::NumberHelper
+#
+require 'lib/endorsement'
+require 'lib/geolocation'
+require 'lib/metropolitan_areas'
+require 'lib/utils'
+#
 
+def sentry_block text, beg_sentry, end_sentry
+  %Q{<!-- #{beg_sentry} -->#{text}<!-- #{end_sentry} -->}
+end
+def sentry_insert! body, text, sentries
+  body.gsub!(/#{sentry_block('(.*?)', *sentries)}/, sentry_block(text, *sentries))
+end
 
-DATE_SENTRIES = ['DATE_GOES_HERE', 'DATE_WENT_THERE']
-.gsub(/<!-- #{sentry1} -->.*?<!-- #{sentry1} -->/, filler)
+DATE_SENTRIES  = ['DATE_GOES_HERE', 'DATE_WENT_THERE']
+def sentry_insert_date! body
+  text = Time.now.strftime("%A, %Y %b %d")
+  sentry_insert! body, text, DATE_SENTRIES
+end
+TABLE_SENTRIES = ['ENDORSEMENT_TABLE_GOES_HERE', 'ENDORSEMENT_TABLE_WENT_THERE']
+def sentry_insert_table! body, table
+  sentry_insert! body, table, TABLE_SENTRIES
+end
 
 #
 # Create the table of endorsements
@@ -11,7 +37,11 @@ def td el, width=0, html_class=nil, style=nil
   style      = style      ? " style='#{html_class}'" : ''
   "%-#{width+9+html_class.length}s" % ["<td#{html_class}>#{el}</td>"]
 end
-def pct(num) number_to_percentage(100*num, :precision => 0) end
+def pres_endorsement_tds e
+  e.prez.sort.map do |yr, prez|
+    td(prez, 6, Endorsement.party_color(prez))
+  end
+end
 def table_row e
   if (e.metro && e.metro.metro_stature == 'MSA')
     metro_pop, metro_poprank =  e.metro.values_of(:pop_2007, :pop_rank)
@@ -22,46 +52,32 @@ def table_row e
   else
     metro_name, metro_pop, metro_poprank, penetration = []
   end
-  '    <tr>' + [
+  lng_str = e.lng ? ("%6.1f"%e.lng) : ''
+  lat_str = e.lat ? ("%6.1f"%e.lat) : ''
+  row_html = []
+  row_html << '    <tr>'
+  row_html += [
     (e.rank == 0 ? td('-', 3) : td(e.rank, 3)),
     td(e.paper,35), td(e.circ_as_text, 9),
     td(metro_name, 30, :hid), td(metro_pop, 6, :hid), td(penetration, 5, :hid),
     td(metro_poprank, 3, :poprk),
     td(e.city_st, 40),
-    td(e.prez04, 6, e.prez04_color), td(e.prez, 6, e.prez_color),
-    td("%6.1f"%e.lat, 6, :lat), td("%6.1f"%e.lng, 6, :lng),
-  ].join('') + "</tr>\n"
+  ]
+  row_html += pres_endorsement_tds(e)
+  row_html += [ td(lat_str, 6, :lat), td(lng_str, 6, :lng) ]
+  row_html << "</tr>\n"
+  row_html.join('')
 end
 
-#
-# Bin all newspapers by their endorsed status
-#
-endorsement_bins = {
-  nil => {:papers => [], :total_circ => 0, :title => 'Top 100 papers (by circulation) that have not yet endorsed a candidate', },
-   -3 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Kerry in 2004)', },
-   -2 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (no endorsement in 2004)',     },
-   -1 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Bush or none in 2004)',  },
-    3 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Bush in 2004)', },
-    2 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (no endorsement in 2004)',     },
-    1 => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Kerry or none in 2004)',  },
-}
-endorsements.sort_by{|paper, e| [-e.circ.to_i, e[:st], e[:paper].gsub(/^The /,'')]}.each do |paper, e|
-  bin = case e.movement when -2 then -1 when 2 then 1 else e.movement end
-  if (!e.st) || (!e.lat) then p e  end
-  endorsement_bins[bin][:papers]     << e
-  endorsement_bins[bin][:total_circ] += e.circ_with_split
-  #
-  #
-  find_prez04_from_wikipedia(e)
-end
 #
 # Dump HTML for endorsement status
 #
 endorsement_table = ''
 [3, 1, -1, -3, nil].each do |bin|
-  vals = endorsement_bins[bin]
+  vals = Endorsement.endorsement_bins[bin]
   endorsement_table << "  <tr><th colspan='8' scope='colgroup' class='chunk'>#{vals[:title]}: #{vals[:papers].length} papers, #{as_millions(vals[:total_circ])} total circulation</th></tr>"
   vals[:papers].each do |endorsement|
+    next unless endorsement.interesting?
     endorsement_table << table_row(endorsement)
   end
   if (vals[:papers] == [])
@@ -77,6 +93,9 @@ end
 # end
 
 
-html_template = File.open('endorsements_map_template.html').read
-html_template.gsub!(/<!-- Endorsement Table Goes Here -->/, endorsement_table)
-File.open('endorsements_map.html','w'){|f| f << html_template}
+html_template = File.open('template/endorsements_map_template.html').read
+sentry_insert_table! html_template, endorsement_table
+sentry_insert_date!  html_template
+MAP_OUTPUT_FILENAME = 'web/endorsements_map.html'
+puts "Writing to #{MAP_OUTPUT_FILENAME}"
+File.open(MAP_OUTPUT_FILENAME,'w'){|f| f << html_template}

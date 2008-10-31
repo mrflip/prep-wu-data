@@ -9,14 +9,11 @@ require 'action_view/helpers/number_helper'; include ActionView::Helpers::Number
 require 'lib/endorsement'
 require 'lib/geolocation'
 require 'lib/metropolitan_areas'
+require 'lib/utils'
 #
 # Oddities:
 # -- amarillo Globe-news
 #
-
-def q_d text, delim=',', quote='"'
-  "#{quote}#{text}#{quote}#{delim}"
-end
 
 RAW_FILENAME  = 'ripd/newspaper_circulations_raw.yaml'
 DUMP_FILENAME = 'data/newspaper_circulations.yaml'
@@ -84,7 +81,3 @@ File.open(DUMP_FILENAME, 'w') do |dump_file|
   end
 end
 Endorsement.dump
-
-# ee_infos.each do |e|
-#   puts rr_circ({:paper=>'-',:circ=>0,:city=>'-'}, e)
-# end

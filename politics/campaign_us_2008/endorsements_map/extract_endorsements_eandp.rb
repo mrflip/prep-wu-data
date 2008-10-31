@@ -13,6 +13,13 @@ require 'lib/endorsement'
 # Take the Editor & Publisher list of endorsements, extracting
 #   newspaper_name => prez, circ_08, city_ep, st_ep
 #
+#
+# Presidential Endorsements by Major Newspapers in the 2008 General Election
+# Editor & Publisher
+# http://www.editorandpublisher.com/eandp/news/article_display.jsp?vnu_content_id=1003875230
+# election 2008 election2008 president general newspaper endorsement politics
+# Source data by Dexter Hill and Greg Mitchell Editor & Publisher
+#
 
 PRESIDENTS = {
   'GHW BUSH'            => 'GHWBush',
@@ -100,7 +107,7 @@ def fix_city_and_paper(orig_paper, state)
   paper.gsub!(/-/, ' ')
   city = { 
     "Bloomington-Normal"            => "Bloomington",
-    "Conway-North Conway)(N"        => "Conway",
+    "Conway-North Conway"           => "Conway",
     "Dover-New Philadelphia"        => "New Philadelphia",
     "Escondido-Oceanside"           => "Escondido",
     "Lafayette-West Lafayette"      => "Lafayette",
@@ -108,7 +115,6 @@ def fix_city_and_paper(orig_paper, state)
     "Neptune-Asbury Park"           => "Asbury Park",
     "Pasco-Kennewick-Richland"      => "Kennewick",
     "Primos-Upper Darby"            => "Philadelphia",
-    "Towanda"                       => "Hayward",
     'Bryan-College Station'         => 'Bryan',             
     'Champaign-Urbana'              => 'Champaign',         
     'Conway-North Conway'           => 'Conway',            

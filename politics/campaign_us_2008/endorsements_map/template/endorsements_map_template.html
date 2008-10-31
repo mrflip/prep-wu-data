@@ -40,17 +40,17 @@
 
     <!-- saved from url=(0013)about:internet -->
     <!-- amxy script-->
-    <script type="text/javascript" src="temp/amxy/swfobject.js"></script>
+    <script type="text/javascript" src="./utils/amxy/swfobject.js"></script>
     <div id="flashcontent" style="margin:auto; width:1000px; min-height:564px; background:#ffffff"> <!-- url('pix/simple_map.png') -->
 	<strong>You need to upgrade your Flash Player</strong>
     </div>
 
     <script type="text/javascript">
 	// <![CDATA[		
-	var so = new SWFObject("temp/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
+	var so = new SWFObject("./utils/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-map.xml?20081024"));
-	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph.xml?20081024"));
+	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-map.xml?20081024"));
+	so.addVariable("data_file", 	encodeURIComponent("chart/endorsements-map.xml?20081024"));
 	so.write("flashcontent");
 	// ]]>
     </script>
@@ -58,16 +58,16 @@
 
     <hr/>
     <!-- amcolumn script-->
-    <script type="text/javascript" src="temp/amcolumn/swfobject.js"></script>
+    <script type="text/javascript" src="utils/amcolumn/swfobject.js"></script>
     <div id="flashcontent_bargraph" style="float:left; width:500">
       <strong>You need to upgrade your Flash Player</strong>
     </div>
     <script type="text/javascript">
       // <![CDATA[		
-	var so = new SWFObject("temp/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
+	var so = new SWFObject("utils/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-bargraph.xml?20081024"));        // you can set two or more different settings files here (separated by commas)
-	so.addVariable("data_file",     encodeURIComponent("fixd/endorsements-bargraph.xml?20081024"));		
+	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-bargraph.xml?20081024"));        // you can set two or more different settings files here (separated by commas)
+	so.addVariable("data_file",     encodeURIComponent("chart/endorsements-bargraph.xml?20081024"));		
 	//  so.addVariable("loading_settings", "LOADING SETTINGS");   // you can set custom "loading settings" text here
 	//  so.addVariable("loading_data", "LOADING DATA");           // you can set custom "loading data" text here
   	//  so.addVariable("preloader_color", "#000000");	
@@ -218,14 +218,17 @@
 	    <th scope="col" class="hid">Penetration<br/>(Circ. as %<br/>of Metro Pop.</th>
 	    <th scope="col">Pop. Rank<br/>of Metro Area</th>
 	    <th scope="col">City</th>
-	    <th scope="col">2004<br/>Endorsement</th>
-	    <th scope="col">2008<br/>Endorsement</th>
+	    <th scope="col">1992</th>
+	    <th scope="col">1996</th>
+	    <th scope="col">2000</th>
+	    <th scope="col">2004</th>
+	    <th scope="col">2008</th>
 	    <th scope="col" class="hid">Approx<br/>Lat.</th>
 	    <th scope="col" class="hid">Approx<br/>Long.</th>
 
             </tr>
 
-<!-- Endorsement Table Goes Here -->             
+<!-- ENDORSEMENT_TABLE_GOES_HERE --><!-- ENDORSEMENT_TABLE_WENT_THERE -->
             
         </table>
 	

@@ -756,6 +756,11 @@ Spokesman Review (Spokane):
   :st: WA
   :circ: 89779
   :prez_2008: McCain
+Daily Review (Towanda): 
+  :city: Towanda
+  :paper: Daily Review (Towanda)
+  :st: PA
+  :prez_2008: Obama
 San Mateo Daily Journal: 
   :city: 
   :paper: San Mateo Daily Journal
@@ -1215,9 +1220,11 @@ Seattle Post Intelligencer:
   :circ: 129563
   :prez_2008: Obama
 Daily Review (Hayward): 
+  :prez_2004: Kerry
   :city: Hayward
   :paper: Daily Review (Hayward)
-  :st: PA
+  :st: CA
+  :circ: 30704
   :prez_2008: Obama
 Observer Reporter: 
   :prez_2004: Kerry
@@ -1580,6 +1587,13 @@ Berkshire Eagle:
   :st: MA
   :circ: 26427
   :prez_2008: Obama
+Yakima Herald Republic: 
+  :prez_2004: Bush
+  :city: 
+  :paper: Yakima Herald Republic
+  :st: WA
+  :circ: 38077
+  :prez_2008: Obama
 Atlanta Journal Constitution: 
   :prez_2004: Kerry
   :city: 
@@ -1614,13 +1628,6 @@ Columbus Ledger Enquirer:
   :paper: Columbus Ledger Enquirer
   :st: GA
   :circ: 42830
-  :prez_2008: Obama
-Yakima Herald Republic: 
-  :prez_2004: Bush
-  :city: 
-  :paper: Yakima Herald Republic
-  :st: WA
-  :circ: 38077
   :prez_2008: Obama
 Montgomery Advertiser: 
   :prez_2004: Kerry
