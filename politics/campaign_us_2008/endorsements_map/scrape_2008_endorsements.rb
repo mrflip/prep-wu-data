@@ -3,7 +3,7 @@ require 'fileutils'
 
 lines = `links -width 160 -dump 'http://www.editorandpublisher.com/eandp/news/article_display.jsp?vnu_content_id=1003875230'`
 # lines = File.open('/tmp/foo').read
-lines = lines.gsub(/\A.*?(BARACK OBAMA.*?)WEEKLIES . COLLEGE.*/m, '\1')
+lines = lines.gsub(/\A.*?(BARACK OBAMA.*?)WEEKLIES . COLLEGE.*(CHOOSING NO ENDORSEMENT.*?)--------------/m, '\1\n\n\2')
 
 year = 2008
 destdir                  = "ripd/endorsements_#{year}/"

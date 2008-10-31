@@ -37,33 +37,34 @@ def td el, width=0, html_class=nil, style=nil
   style      = style      ? " style='#{html_class}'" : ''
   "%-#{width+9+html_class.length}s" % ["<td#{html_class}>#{el}</td>"]
 end
-def pres_endorsement_tds e
+def tds_for_endorsement e
   e.prez.sort.map do |yr, prez|
     td(prez, 6, Endorsement.party_color(prez))
   end
 end
-def table_row e
+def tds_for_metro e
   if (e.metro && e.metro.metro_stature == 'MSA')
     metro_pop, metro_poprank =  e.metro.values_of(:pop_2007, :pop_rank)
     # short_name = e.metro.metro_nickname
     short_name = e.metro.metro_name.gsub(/([^,-]+)(?:[^,]*), (\w\w).*$/, '\1')
-    metro_name = "%s (%s)" % [short_name, e.metro.metro_st]
+    metro_name = "%s (%s) metro" % [short_name, e.metro.metro_st]
     penetration = pct(e.circ.to_f / metro_pop)
   else
     metro_name, metro_pop, metro_poprank, penetration = []
   end
+  metro_abbr = %Q{<abbr title='#{metro_name}, pop. #{metro_pop}'>#{e.city_st}</abbr>}
+  [ td(metro_abbr, 90, :city_st), td(metro_poprank, 3, :poprk)   ]
+end
+def table_row e
   lng_str = e.lng ? ("%6.1f"%e.lng) : ''
   lat_str = e.lat ? ("%6.1f"%e.lat) : ''
   row_html = []
   row_html << '    <tr>'
-  row_html += [
-    (e.rank == 0 ? td('-', 3) : td(e.rank, 3)),
-    td(e.paper,35), td(e.circ_as_text, 9),
-    td(metro_name, 30, :hid), td(metro_pop, 6, :hid), td(penetration, 5, :hid),
-    td(metro_poprank, 3, :poprk),
-    td(e.city_st, 40),
-  ]
-  row_html += pres_endorsement_tds(e)
+  row_html << td(e.rank_as_text, 3)
+  row_html << td(e.paper,35)
+  row_html << td(e.circ_as_text, 9)
+  row_html += tds_for_metro(e)
+  row_html += tds_for_endorsement(e)
   row_html += [ td(lat_str, 6, :lat), td(lng_str, 6, :lng) ]
   row_html << "</tr>\n"
   row_html.join('')

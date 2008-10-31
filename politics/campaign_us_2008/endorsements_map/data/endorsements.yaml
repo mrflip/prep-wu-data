@@ -2589,10 +2589,10 @@ News Journal (Wilmington): !ruby/struct:Endorsement
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
-  rank: 
+  rank: 91
   circ: 110171
-  daily: 
-  sun: 
+  daily: 110171
+  sun: 125244
   lat: 39.7459467
   lng: -75.5465889
   st: DE
@@ -10783,10 +10783,10 @@ News Journal (Mansfield): !ruby/struct:Endorsement
   prez_2000: 
   prez_1996: 
   prez_1992: GHWBush
-  rank: 91
+  rank: 
   circ: 28272
-  daily: 110171
-  sun: 125244
+  daily: 
+  sun: 
   lat: 40.75839
   lng: -82.5154471
   st: OH
