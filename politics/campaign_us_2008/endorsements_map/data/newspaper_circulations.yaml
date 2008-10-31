@@ -1,741 +1,428 @@
-# Taken from some random list online: http://26376.livejournal.com/1042995.html
-# So please don't, y'know, go designing Mars landers with these.
-- [ "USA Today",                                2284219,        "Washington"               ]
-- [ "Wall Street Journal",                      2069463,        "New York City"            ]
-- [ "Times",                                    1077256,        "New York City"            ]
-- [ "Times",                                    773884,         "Los Angeles"              ]
-- [ "News",                                     703137,         "New York City"            ]
-- [ "Post",                                     702488,         "New York City"            ]
-- [ "Washington Post",                          673180,         "Washington"               ]
-- [ "Tribune",                                  541663,         "Chicago"                  ]
-- [ "Chronicle",                                494131,         "Houston"                  ]
-- [ "Republic",                                 413332,         "Phoenix"                  ]
-- [ "Newsday",                                  379613,         "Long Island"              ]
-- [ "Chronicle",                                370345,         "San Francisco"            ]
-- [ "Morning News",                             368313,         "Dallas"                   ]
-- [ "Globe",                                    350605,         "Boston"                   ]
-- [ "Star-Ledger",                              345130,         "Newark"                   ]
-- [ "Inquirer",                                 334150,         "Philadelphia"             ]
-- [ "Plain Dealer",                             330280,         "Cleveland"                ]
-- [ "Journal-Constitution",                     326907,         "Atlanta"                  ]
-- [ "Star Tribune",                             322362,         "Minneapolis"              ]
-- [ "Times",                                    316007,         "Saint Petersburg"         ]
-- [ "Sun-Times",                                312274,         "Chicago"                  ]
-- [ "Free Press",                               308944,         "Detroit"                  ]
-- [ "Oregonian",                                304399,         "Portland"                 ]
-- [ "Union-Tribune",                            288669,         "San Diego"                ]
-- [ "Bee",                                      268755,         "Sacramento"               ]
-- [ "Star",                                     255303,         "Indianapolis"             ]
-- [ "Post-Dispatch",                            255057,         "Saint Louis"              ]
-- [ "Star",                                     252785,         "Kansas City"              ]
-- [ "Register",                                 250724,         "Anaheim"                  ]
-- [ "Miami Herald",                             240223,         "Miami"                    ]
-- [ "Mercury News",                             234772,         "San Jose"                 ]
-- [ "Sun",                                      232360,         "Baltimore"                ]
-- [ "Sentinel",                                 227593,         "Orlando"                  ]
-- [ "Express-News",                             225447,         "San Antonio"              ]
-- [ "Denver Post",                              225193,         "Denver"                   ]
-- [ "Rocky Mountain News",                      225065,         "Denver"                   ]
-- [ "Times",                                    220863,         "Seattle"                  ]
-- [ "Tribune",                                  220522,         "Tampa"                    ]
-- [ "South Florida Sun-Sentinel",               218286,         "Fort Lauderdale"          ]
-- [ "Journal Sentinel",                         217755,         "Milwaukee"                ]
-- [ "Courier-Journal",                          215328,         "Louisville"               ]
-- [ "Post-Gazette",                             214374,         "Pittsburgh"               ]
-- [ "Enquirer",                                 212369,         "Cincinnati"               ]
-- [ "Observer",                                 210616,         "Charlotte"                ]
-- [ "Star-Telegram",                            207045,         "Fort Worth"               ]
-- [ "Oklahoman",                                201771,         "Oklahoma City"            ]
-- [ "Dispatch",                                 199524,         "Columbus"                 ]
-- [ "Pioneer Press",                            191768,         "Saint Paul"               ]
-- [ "News",                                     188171,         "Detroit"                  ]
-- [ "Contra Costa Times",                       183086,         "Walnut Creek"             ]
-- [ "Herald",                                   182350,         "Boston"                   ]
-- [ "Democrat Gazette",                         182212,         "Little Rock"              ]
-- [ "Times-Picayune",                           179834,         "New Orleans"              ]
-- [ "World-Herald",                             178545,         "Omaha"                    ]
-- [ "News",                                     178365,         "Buffalo"                  ]
-- [ "News and Observer",                        176083,         "Raleigh"                  ]
-- [ "Times-Dispatch",                           175265,         "Richmond"                 ]
-- [ "Virginian-Pilot",                          175005,         "Norfolk"                  ]
-- [ "Review-Journal",                           174341,         "Las Vegas"                ]
-- [ "American-Statesman",                       170309,         "Austin"                   ]
-- [ "Courant",                                  168158,         "Hartford"                 ]
-- [ "Post",                                     164474,         "West Palm Beach"          ]
-- [ "Press-Enterprise",                         164189,         "Riverside"                ]
-- [ "Record",                                   163329,         "Hackensack"               ]
-- [ "Investors Business Daily",                 161421,         "Los Angeles"              ]
-- [ "Tennessean",                               161131,         "Nashville"                ]
-- [ "Tribune-Review",                           150911,         "Greensburg"               ]
-- [ "Bee",                                      150334,         "Fresno"                   ]
-- [ "Commercial Appeal",                        146961,         "Memphis"                  ]
-- [ "Democrat and Chronicle",                   145913,         "Rochester"                ]
-- [ "Times-Union",                              144391,         "Jacksonville"             ]
-- [ "Herald",                                   143152,         "Chicago"                  ]
-- [ "Asbury Park Press",                        140882,         "Asbury Park"              ]
-- [ "News",                                     140438,         "Birmingham"               ]
-- [ "Advertiser",                               140331,         "Honolulu"                 ]
-- [ "Journal",                                  139055,         "Providence"               ]
-- [ "Register",                                 138519,         "Des Moines"               ]
-- [ "Daily News",                               137344,         "Los Angeles"              ]
-- [ "Post-Intelligencer",                       129563,         "Seattle"                  ]
-- [ "Press",                                    128930,         "Grand Rapids"             ]
-- [ "Tribune",                                  121699,         "Salt Lake City"           ]
-- [ "Beacon Journal",                           119929,         "Akron"                    ]
-- [ "Blade",                                    119901,         "Toledo"                   ]
-- [ "News Sentinel",                            117262,         "Knoxville"                ]
-- [ "News",                                     116690,         "Dayton"                   ]
-- [ "Herald-Tribune",                           114904,         "Sarasota"                 ]
-- [ "La Opinion",                               114892,         "Los Angeles"              ]
-- [ "Daily Star",                               113373,         "Tucson"                   ]
-- [ "World",                                    112968,         "Tulsa"                    ]
-- [ "News Tribune",                             111778,         "Tacoma"                   ]
-- [ "News Journal",                             110171,         "Wilmington"               ]
-- [ "Post-Standard",                            110061,         "Syracuse"                 ]
-- [ "Herald-Leader",                            109624,         "Lexington"                ]
-- [ "Morning Call",                             108797,         "Allentown"                ]
-- [ "News",                                     108781,         "Stuart"                   ] # Treasure Coast News/Press-Tribune
-- [ "Journal News",                             108092,         "White Plains"             ]
-- [ "Daily News",                               107269,         "Philadelphia"             ]
-- [ "Times Leader",                             103788,         "Wilkes-Barre"             ] # Shamrock Newspapers
-- [ "Journal",                                  102902,         "Albuquerque"              ]
-- [ "State",                                    101010,         "Columbia"                 ]
-- [ "Post And Courier",                         100400,         "Charleston"               ]
-- [ "News-Journal",                             99627,          "Daytona Beach"            ]
-- [ "Press-Register",                           99433,          "Mobile"                   ]
-- [ "Advocate",                                 97912,          "Baton Rouge"              ]
-- [ "Tribune",                                  96535,          "Oakland"                  ]
-- [ "Patriot-News",                             95588,          "Harrisburg"               ]
-- [ "Gazette",                                  93859,          "Colorado Springs"         ]
-- [ "Times",                                    93763,          "Washington"               ]
-- [ "News-Press",                               92340,          "Fort Myers"               ]
-- [ "Spokesman-Review",                         89779,          "Spokane"                  ]
-- [ "Times Union",                              89256,          "Albany"                   ]
-- [ "Times",                                    88927,          "Roanoke"                  ]
-- [ "North County Times",                       88677,          "Escondido"                ]
-- [ "State Journal",                            87930,          "Madison"                  ]
-- [ "Star",                                     86276,          "Ventura"                  ] # was Ventura County
-- [ "Press-Telegram",                           85595,          "Los Angeles County"       ] # Long Beach Press Telegram               Long Beach                       85595
-- [ "Times",                                    85195,          "Munster"                  ] # was Times Of Northwest Indiana
-- [ "News and Record",                          84339,          "Greensboro"               ]
-- [ "Republican",                               83897,          "Springfield"              ]
-- [ "Eagle",                                    82912,          "Wichita"                  ]
-- [ "Clarion-Ledger",                           82673,          "Jackson"                  ]
-- [ "Journal",                                  81930,          "Winston-Salem"            ]
-- [ "Telegram and Gazette",                     81437,          "Worcester"                ]
-- [ "Daily Press",                              81241,          "Newport News"             ]
-- [ "News",                                     81010,          "Greenville"               ]
-- [ "El Nuevo Herald",                          79963,          "Miami"                    ]
-- [ "Florida Today",                            79499,          "Melbourne"                ]
-- [ "Journal Star",                             78350,          "Lincoln"                  ]
-- [ "Press Democrat",                           78022,          "Santa Rosa"               ]
-- [ "Bee",                                      78001,          "Modesto"                  ]
-- [ "Journal",                                  76288,          "Flint"                    ]
-- [ "Post",                                     76014,          "Fairfield County"         ]
-- [ "Times Herald-Record",                      75745,          "Middletown"               ]
-- [ "Deseret Morning News",                     73817,          "Salt Lake City"           ]
-- [ "Register",                                 72613,          "New Haven"                ]
-- [ "Times",                                    72027,          "El Paso"                  ]
-- [ "Times Free Press",                         71716,          "Chattanooga"              ]
-- [ "East Valley Tribune",                      71153,          "Phoenix"                  ]
-- [ "Chronicle",                                68434,          "Augusta"                  ]
-- [ "Courier and Press",                        68220,          "Evansville"               ]
-- [ "Register-Guard",                           67400,          "Eugene"                   ]
-- [ "Tribune",                                  66886,          "South Bend"               ]
-- [ "Press",                                    66822,          "Atlantic City"            ]
-- [ "Courier-Post",                             66617,          "Cherry Hill"              ]
-- [ "Oakland Press",                            66422,          "Pontiac"                  ]
-- [ "Daily News",                               66272,          "Naples"                   ]
-- [ "Breeze",                                   65960,          "Los Angeles County"       ]
-- [ "Ledger",                                   65948,          "Lakeland"                 ]
-- [ "Repository",                               65789,          "Canton"                   ]
-- [ "Journal Star",                             65320,          "Peoria"                   ]
-- [ "Press Herald",                             64938,          "Portland"                 ]
-- [ "Journal Gazette",                          64304,          "Fort Wayne"               ]
-- [ "Daily News",                               62893,          "Anchorage"                ]
-- [ "Idaho Statesman",                          61927,          "Boise"                    ]
-- [ "Observer",                                 61875,          "Fayetteville"             ]
-- [ "Standard-Examiner",                        61696,          "Ogden"                    ]
-- [ "Post-Tribune",                             60325,          "Merrillville"             ]
-- [ "Courier Times",                            60233,          "Bucks County"             ]
-- [ "Californian",                              59433,          "Bakersfield"              ]
-- [ "Eagle",                                    59262,          "Reading"                  ]
-- [ "State Journal",                            58948,          "Lansing"                  ]
-- [ "Gazette",                                  57945,          "Cedar Rapids"             ]
-- [ "Record",                                   57486,          "Stockton"                 ]
-- [ "Gazette-Journal",                          57423,          "Reno"                     ]
-- [ "News Journal",                             57089,          "Pensacola"                ]
-- [ "Advance",                                  56875,          "Staten Island"            ]
-- [ "Telegraph",                                56510,          "Macon"                    ]
-- [ "Vindicator",                               56412,          "Youngstown"               ]
-- [ "Christian Science Monitor",                56083,          "Boston"                   ]
-- [ "Register Star",                            55913,          "Rockford"                 ]
-- [ "News",                                     55627,          "Bangor"                   ]
-- [ "Times-News",                               55397,          "Erie"                     ]
-- [ "Times",                                    54745,          "Trenton"                  ]
-- [ "Sun",                                      54315,          "San Bernardino"           ]
-- [ "News-Leader",                              54307,          "Springfield"              ]
-- [ "Inland Valley Daily Bulletin",             53903,          "Ontario"                  ]
-- [ "El Diario La Prensa",                      53856,          "New York City"            ]
-- [ "Press-Gazette",                            53600,          "Green Bay"                ]
-- [ "Caller-Times",                             53368,          "Corpus Christi"           ]
-- [ "Times",                                    53194,          "Huntsville"               ]
-- [ "Desert Sun",                               53091,          "Palm Springs"             ]
-- [ "Times",                                    52267,          "Shreveport"               ]
-- [ "News-Democrat",                            51974,          "Belleville"               ]
-- [ "Quad-City Times",                          51890,          "Davenport"                ]
-- [ "New Hampshire Union Leader",               51782,          "Manchester"               ]
-- [ "Patriot Ledger",                           51105,          "Quincy"                   ]
-- [ "Post Crescent",                            51029,          "Appleton"                 ]
-- [ "Republican-American",                      50903,          "Waterbury"                ]
-- [ "Herald",                                   50272,          "Everett"                  ]
-- [ "Citizen-Times",                            50160,          "Asheville"                ]
-- [ "Democrat",                                 49939,          "Tallahassee"              ]
-- [ "Sun News",                                 49889,          "Myrtle Beach"             ]
-- [ "State Journal-Register",                   49839,          "Springfield"              ]
-- [ "Chieftain",                                49169,          "Pueblo"                   ]
-- [ "Gazette",                                  49127,          "Kalamazoo"                ]
-- [ "Avalanche-Journal",                        49094,          "Lubbock"                  ]
-- [ "Home News Tribune",                        49076,          "East Brunswick"           ]
-- [ "Argus Leader",                             48960,          "Sioux Falls"              ]
-- [ "Macomb Daily",                             48741,          "Mount Clemens"            ]
-- [ "Herald",                                   48618,          "Bradenton"                ]
-- [ "Monitor",                                  48609,          "Mcallen"                  ]
-- [ "Press and Sun-Bulletin",                   48306,          "Binghamton"               ]
-- [ "Forum",                                    48303,          "Fargo"                    ]
-- [ "Gazette",                                  48061,          "Charleston"               ]
-- [ "Daily Record",                             47989,          "York"                     ]
-- [ "Pantagraph",                               47764,          "Bloomington"              ]
-- [ "News",                                     47709,          "Savannah"                 ]
-- [ "Star-News",                                47620,          "Wilmington"               ]
-- [ "Gazette",                                  47277,          "Schenectady"              ]
-- [ "Statesman Journal",                        47131,          "Salem"                    ]
-- [ "News",                                     47058,          "Ann Arbor"                ]
-- [ "Sun",                                      46886,          "Charlotte County"         ]
-- [ "Women's Wear Daily",                       46728,          "New York City"            ]
-- [ "Free Lance-Star",                          46672,          "Fredericksburg"           ]
-- [ "Intelligencer Journal",                    46357,          "Lancaster"                ]
-- [ "Eagle-Tribune",                            46059,          "North Andover"            ]
-- [ "Enterprise",                               45684,          "Beaumont"                 ]
-- [ "Gazette",                                  45530,          "Billings"                 ]
-- [ "Star-Banner",                              45424,          "Ocala"                    ]
-- [ "Advertiser",                               45060,          "Montgomery"               ]
-- [ "Capital-Journal",                          44864,          "Topeka"                   ]
-- [ "Globe-News",                               44764,          "Amarillo"                 ]
-- [ "Sun",                                      44658,          "Gainesville"              ]
-- [ "Columbian",                                44623,          "Vancouver"                ]
-- [ "Sun Herald",                               44613,          "Biloxi-Gulfport"          ]
-- [ "Express-Times",                            44561,          "Easton"                   ]
-- [ "Sun",                                      44439,          "Lowell"                   ]
-- [ "Times-News",                               44096,          "Kingsport"                ]
-- [ "Cape Cod Times",                           43709,          "Barnstable County"        ]
-- [ "Daily Times",                              42879,          "Delaware County"          ]
-- [ "Ledger-Enquirer",                          42830,          "Columbus"                 ]
-- [ "Capital",                                  42825,          "Annapolis"                ]
-- [ "Herald-Journal",                           42380,          "Spartanburg"              ]
-- [ "News-Gazette",                             42302,          "Urbana"         ]
-- [ "Free Press",                               41901,          "Burlington"               ]
-- [ "Southtown Star",                           41868,          "Chicago Suburban"         ]
-- [ "Courier",                                  41142,          "Waterloo"                 ]
-- [ "Chronicle",                                41114,          "Muskegon"                 ]
-- [ "Journal",                                  41096,          "Sioux City"               ]
-- [ "Tri-City Herald",                          40830,          "Pasco"                    ]
-- [ "San Gabriel Valley Tribune",               40812,          "Los Angeles County"       ]
-- [ "Advertiser",                               40496,          "Lafayette"                ] # was Daily Advertiser
-- [ "Southwest Times Record",                   40231,          "Fort Smith"               ]
-- [ "New Era",                                  40068,          "Lancaster"                ]
-- [ "News-Post",                                40035,          "Frederick"                ]
-- [ "Intelligencer",                            40015,          "Bucks County"             ]
-- [ "Trentonian",                               39449,          "Trenton"                  ]
-- [ "Observer-Dispatch",                        39293,          "Utica"                    ]
-- [ "News",                                     39143,          "Saginaw"                  ]
-- [ "Herald-News",                              38520,          "Joliet"                   ]
-- [ "County Times",                             38466,          "Beaver"                   ]
-- [ "Times Leader",                             38229,          "Wilkes-Barre"             ]
-- [ "Herald Courier",                           38088,          "Bristol"                  ]
-- [ "Herald-Republic",                          38077,          "Yakima"                   ]
-- [ "Tribune-Democrat",                         37673,          "Johnstown"                ]
-- [ "Journal Inquirer",                         37475,          "Manchester"               ]
-- [ "Journal",                                  37265,          "Poughkeepsie"             ]
-- [ "News-Herald",                              36948,          "Lake County"              ]
-- [ "Northeast Mississippi Daily Journal",      36929,          "Tupelo"                   ]
-- [ "Tribune-Herald",                           36708,          "Waco"                     ]
-- [ "Northwest Herald",                         36594,          "Crystal Lake"             ]
-- [ "American Press",                           36270,          "Lake Charles"             ]
-- [ "Tribune",                                  35885,          "San Luis Obispo"          ]
-- [ "Daily Sun",                                35808,          "The Villages"             ]
-- [ "Northwest Daily News",                     35775,          "Fort Walton Beach"        ]
-- [ "Morning Telegraph",                        35598,          "Tyler"                    ]
-- [ "Eagle",                                    35416,          "Dothan"                   ]
-- [ "News-Press",                               35061,          "Santa Barbara"            ]
-- [ "Day",                                      34730,          "New London"               ]
-- [ "Journal And Courier",                      34545,          "Lafayette"                ]
-- [ "Herald and Review",                        34480,          "Decatur"                  ]
-- [ "News and Advance",                         33931,          "Lynchburg"                ]
-- [ "News",                                     33582,          "Springdale"               ]
-- [ "Advocate",                                 33549,          "Victoria"                 ]
-- [ "News-Press",                               33546,          "Saint Joseph"             ]
-- [ "Record",                                   33405,          "Morristown"               ]
-- [ "News-Star",                                33239,          "Monroe"                   ]
-- [ "Herald",                                   33048,          "Provo"                    ]
-- [ "News",                                     32860,          "Lima"                     ]
-- [ "Herald-Sun",                               32845,          "Durham"                   ]
-- [ "News",                                     32789,          "Tuscaloosa"               ]
-- [ "Times",                                    32784,          "Burlington"               ] # was Times, Burlington County 
-- [ "Herald-Mail",                              32711,          "Hagerstown"               ]
-- [ "Bulletin",                                 32455,          "Bend"                     ]
-- [ "Record Searchlight",                       32147,          "Redding"                  ]
-- [ "Sun",                                      32121,          "Jackson"                  ]
-- [ "Independent Journal",                      31909,          "Marin County"             ]
-- [ "Tribune",                                  31759,          "La Crosse"                ]
-- [ "Observer-Reporter",                        31755,          "Washington"               ]
-- [ "Dispatch",                                 31694,          "York"                     ]
-- [ "Mirror",                                   31658,          "Altoona"                  ]
-- [ "Star/Press",                               31512,          "Muncie"                   ]
-- [ "Courier-News",                             31370,          "Bridgewater"              ]
-- [ "Sentinel",                                 31349,          "Grand Junction"           ]
-- [ "News",                                     31237,          "Florence"                 ]
-- [ "News",                                     31019,          "Hutchinson"               ]
-- [ "News-Record",                              30908,          "Harrisonburg"             ]
-- [ "Town Talk",                                30858,          "Alexandria"               ]
-- [ "Herald",                                   30848,          "Rock Hill"                ]
-- [ "News Herald",                              30829,          "Panama City"              ]
-- [ "Citizen Patriot",                          30825,          "Jackson"                  ]
-- [ "Olympian",                                 30755,          "Olympia"                  ]
-- [ "Press",                                    30670,          "Johnson City"             ]
-- [ "Tribune",                                  30631,          "Great Falls"              ]
-- [ "Enterprise",                               30405,          "Brockton"                 ]
-- [ "Mail Tribune",                             30349,          "Medford"                  ]
-- [ "Standard-Times",                           30306,          "New Bedford"              ]
-- [ "Post-Star",                                30265,          "Glens Falls"              ]
-- [ "Times",                                    30183,          "Bay City"                 ]
-- [ "Daily Press",                              30169,          "Victorville"              ]
-- [ "Gazette",                                  30103,          "Gastonia"                 ]
-- [ "Citrus County Chronicle",                  29594,          "Crystal River"            ]
-- [ "Tribune Chronicle",                        29364,          "Warren"                   ]
-- [ "Times Daily",                              29200,          "Florence"                 ]
-- [ "News",                                     29125,          "Salem"                    ]
-- [ "Enterprise-Record",                        29113,          "Chico"                    ]
-- [ "Reporter-News",                            29108,          "Abilene"                  ]
-- [ "Camera",                                   28994,          "Boulder"                  ]
-- [ "Herald",                                   28933,          "Monterey"                 ]
-- [ "Journal",                                  28907,          "Rapid City"               ]
-- [ "Times Record News",                        28888,          "Wichita Falls"            ]
-- [ "Kitsap Sun",                               28792,          "Bremerton"                ]
-- [ "Progress",                                 28697,          "Charlottesville"          ]
-- [ "Star-Tribune",                             28312,          "Casper"                   ]
-- [ "News Journal",                             28272,          "Mansfield"                ]
-- [ "Telegraph Herald",                         28207,          "Dubuque"                  ]
-- [ "Journal Times",                            28103,          "Racine"                   ]
-- [ "Journal",                                  28026,          "Salina"                   ]
-- [ "Missoulian",                               27955,          "Missoula"                 ]
-- [ "Times-News",                               27954,          "Cumberland"               ]
-- [ "News-Times",                               27909,          "Danbury"                  ]
-- [ "Star-News",                                27900,          "Los Angeles County"       ]
-- [ "Register-Herald",                          27737,          "Beckley"                  ]
-- [ "Banner-Herald",                            27672,          "Athens"                   ]
-- [ "Herald",                                   27650,          "Grand Forks"              ]
-- [ "News-Journal",                             27590,          "Longview"                 ]
-- [ "Herald-Dispatch",                          27463,          "Huntington"               ]
-- [ "Eagle",                                    27423,          "Butler"                   ]
-- [ "Southern Illinoisan",                      27413,          "Carbondale"               ]
-- [ "Messenger-Inquirer",                       27276,          "Owensboro"                ]
-- [ "Beacon News",                              27238,          "Aurora"                   ]
-- [ "Herald-Times",                             27103,          "Bloomington"              ]
-- [ "Tribune",                                  27051,          "Bismarck"                 ]
-- [ "Eagle",                                    26427,          "Pittsfield"               ]
-- [ "Times",                                    26375,          "Watertown"                ]
-- [ "Coloradoan",                               26312,          "Fort Collins"             ]
-- [ "Times",                                    25982,          "San Mateo"                ]
-- [ "Republican and Herald",                    25873,          "Schuylkill"               ]
-- [ "Times",                                    25868,          "Saint Cloud"              ]
-- [ "Chronicle-Telegram",                       25698,          "Elyria"                   ]
-- [ "Daily Local News",                         25686,          "West Chester"             ]
-- [ "Leader-Telegram",                          25581,          "Eau Claire"               ]
-- [ "Times Herald",                             25386,          "Port Huron"               ]
-- [ "Journal",                                  25334,          "Lorain"                   ]
-- [ "Sun-Gazette",                              25328,          "Williamsport"             ]
-- [ "Jersey Journal",                           24940,          "Jersey City"              ]
-- [ "Standard-Times",                           24919,          "San Angelo"               ]
-- [ "Daily Item",                               24879,          "Sunbury"                  ]
-- [ "Sun",                                      24768,          "Paducah"                  ]
-- [ "News-Sun",                                 24684,          "Springfield"              ]
-- [ "Carroll County Times",                     24623,          "Westminster"              ]
-- [ "News",                                     24535,          "Kenosha"                  ]
-- [ "Star",                                     24518,          "Anniston"                 ]
-- [ "Herald-Standard",                          24341,          "Uniontown"                ]
-- [ "News-Sentinel",                            24196,          "Fort Wayne"               ]
-- [ "Times",                                    24157,          "Salisbury"                ]
-- [ "Centre Daily Times",                       24029,          "State College"            ]
-- [ "Star-Gazette",                             23995,          "Elmira"                   ]
-- [ "Citizen",                                  23756,          "Tucson"                   ]
-- [ "Valley Morning Star",                      23400,          "Harlingen"                ]
-- [ "Sentinel",                                 23290,          "Santa Cruz"               ]
-- [ "Times",                                    23189,          "Woodbury"                 ]
-- [ "Advocate",                                 23088,          "Stamford"                 ]
-- [ "Herald",                                   22719,          "Bellingham"               ]
-- [ "Dominion Post",                            22683,          "Morgantown"               ]
-- [ "Metrowest Daily News",                     22613,          "Framingham"               ]
-- [ "World",                                    22579,          "Wenatchee"                ]
-- [ "Spectrum",                                 22514,          "Saint George"             ]
-- [ "Times Reporter",                           22428,          "New Philadelphia"         ]
-- [ "Constitution",                             22309,          "Lawton"                   ]
-- [ "Record",                                   22150,          "Wooster"                  ]
-- [ "Bulletin",                                 22121,          "Norwich"                  ]
-- [ "Free Press",                               22072,          "Mankato"                  ]
-- [ "Maui News",                                21974,          "Wailuku"                  ]
-- [ "News",                                     21962,          "Longview"                 ]
-- [ "Mail",                                     21723,          "Charleston"               ]
-- [ "Reflector",                                21703,          "Greenville"               ]
-- [ "Post",                                     21481,          "Salisbury"                ]
-- [ "News",                                     21473,          "Parkersburg"              ]
-- [ "Times",                                    21353,          "Maryville-Alcoa"          ]
-- [ "Sun-News",                                 21341,          "Las Cruces"               ]
-- [ "Register",                                 21275,          "Sandusky"                 ]
-- [ "Daily News",                               21240,          "Bowling Green"            ]
-- [ "Record",                                   21214,          "Hickory"                  ]
-- [ "Herald Bulletin",                          21199,          "Anderson"                 ]
-- [ "Mercury",                                  21186,          "Pottstown"                ]
-- [ "Times-Call",                               21127,          "Longmont"                 ]
-- [ "Hollywood Reporter",                       20964,          "Los Angeles"              ]
-- [ "Herald-Palladium",                         20905,          "Benton Harbor"            ]
-- [ "Enquirer",                                 20854,          "Battle Creek"             ]
-- [ "Daily Herald",                             20828,          "Wausau"                   ]
-- [ "Daily",                                    20770,          "Decatur"                  ]
-- [ "Tribune",                                  20587,          "Kokomo"                   ]
-- [ "Independent",                              20475,          "Grand Island"             ]
-- [ "Appeal-Democrat",                          20428,          "Marysville"               ]
-- [ "Leaf-Chronicle",                           20354,          "Clarksville"              ]
-- [ "Times-News",                               20325,          "Twin Falls"               ]
-- [ "Gazette",                                  20272,          "Janesville"               ]
-- [ "Times",                                    20264,          "Santa Maria"              ]
-- [ "Star",                                     20218,          "Winchester"               ]
-- [ "Northwestern",                             20140,          "Oshkosh"                  ]
-- [ "News",                                     20098,          "Lebanon"                  ]
-- [ "Press",                                    20069,          "Sheboygan"                ]
-- [ "Herald-Whig",                              19996,          "Quincy"                   ]
-- [ "News",                                     19877,          "Monroe"                   ]
-- [ "Sun",                                      19830,          "Jonesboro"                ]
-- [ "Register and Bee",                         19830,          "Danville"                 ]
-- [ "Sun",                                      19494,          "Hanover"                  ]
-- [ "Enterprise",                               19483,          "High Point"               ]
-- [ "Journalnews",                              19432,          "Hamilton"                 ]
-- [ "Reporter-Telegram",                        19407,          "Midland"                  ]
-- [ "Times-Standard",                           19397,          "Eureka"                   ]
-- [ "Telegram",                                 19361,          "Temple"                   ]
-- [ "Times-Delta",                              19310,          "Visalia"                  ]
-- [ "Herald News",                              19309,          "Fall River"               ]
-- [ "Herald",                                   19252,          "Sharon"                ]
-- [ "Island Packet",                            19157,          "Hilton Head Island"       ]
-- [ "News",                                     18972,          "Minot"                    ]
-- [ "Hawk Eye",                                 18921,          "Burlington"               ]
-- [ "Press-Republican",                         18908,          "Plattsburgh"              ]
-- [ "Times",                                    18832,          "Gadsden"                  ]
-- [ "Sauk Valley Newspapers",                   18720,          "Dixon"                    ]
-- [ "News-Review",                              18691,          "Roseburg"                 ]
-- [ "Record",                                   18528,          "Saint Augustine"          ]
-- [ "News-Argus",                               18460,          "Goldsboro"                ]
-- [ "Intelligencer",                            18450,          "Wheeling"                 ]
-- [ "Herald",                                   18408,          "Killeen"                  ]
-- [ "Advocate",                                 18193,          "Newark"                   ]
-- [ "Times And Democrat",                       18142,          "Orangeburg"               ]
-- [ "Tribune",                                  18131,          "Columbia"                 ]
-- [ "Pocono Record",                            18121,          "Stroudsburg"              ]
-- [ "Citizen Tribune",                          18086,          "Morristown"               ]
-- [ "Journal",                                  18012,          "Martinsburg"              ]
-- [ "Gazette",                                  18001,          "Northampton"              ]
-- [ "Sentinel-Record",                          17943,          "Hot Springs"              ]
-- [ "Freeman",                                  17909,          "Kingston"                 ]
-- [ "Sun Chronicle",                            17799,          "Attleboro"                ]
-- [ "Reporter",                                 17751,          "Vacaville"                ]
-- [ "Post-Journal",                             17672,          "Jamestown"                ]
-- [ "Globe",                                    17666,          "Mason City"               ]
-- [ "Crescent-News",                            17566,          "Defiance"                 ]
-- [ "Standard",                                 17514,          "Aiken"                    ]
-- [ "Daily Times",                              17485,          "Farmington"               ]
-- [ "Independent",                              17465,          "Ashland"                  ]
-- [ "American",                                 17462,          "Hattiesburg"              ]
-- [ "Times Recorder",                           17450,          "Zanesville"               ]
-- [ "News And Eagle",                           17323,          "Enid"                     ]
-- [ "Journal",                                  17285,          "Middletown"               ]
-- [ "News Leader",                              17238,          "Staunton"                 ]
-- [ "Journal",                                  17218,          "Marietta"                 ]
-- [ "Sentinel",                                 17212,          "Holland"                  ]
-- [ "Morning Times",                            17145,          "Laredo"                   ]
-- [ "Telegraph",                                17030,          "Bluefield"                ]
-- [ "Times-Herald",                             16957,          "Vallejo"                  ]
-- [ "Times-News",                               16949,          "Hendersonville"           ]
-- [ "Star-Beacon",                              16931,          "Ashtabula"                ]
-- [ "Gazette",                                  16909,          "Niagara Falls"            ]
-- [ "Lake County News Sun",                     16899,          "Waukegan"                 ]
-- [ "Independent Tribune",                      16898,          "Concord"                  ]
-- [ "Democrat-Herald",                          16891,          "Albany"                   ] # Albany Herald
-- [ "Journal",                                  16882,          "Millville"                ]
-- [ "Public Opinion",                           16679,          "Chambersburg"             ]
-- [ "Herald",                                   16654,          "Brownsville"              ]
-- [ "News",                                     16492,          "Norfolk"                  ]
-- [ "News",                                     16465,          "New Castle"               ]
-- [ "News Tribune",                             16441,          "Jefferson City"           ]
-- [ "Messenger",                                16355,          "Fort Dodge"               ]
-- [ "Capital Times",                            16335,          "Madison"                  ]
-- [ "Valley News",                              16330,          "Lebanon-Hanover"          ]
-- [ "Register",                                 16263,          "Napa"                     ]
-- [ "Courier",                                  16178,          "Grants Pass"              ]
-- [ "Daily Times",                              16131,          "Valdosta"                 ]
-- [ "Bulletin",                                 16060,          "Martinsville"             ]
-- [ "Sun",                                      15964,          "Naperville"               ]
-- [ "Peninsula Daily News",                     15806,          "Port Angeles"             ]
-- [ "News-Sentinel",                            15771,          "Lodi"                     ]
-- [ "Wyoming Tribune-Eagle",                    15762,          "Cheyenne"                 ]
-- [ "Salinas Californian",                      15740,          "Salinas"                  ]
-- [ "Courier",                                  15700,          "Houma"                    ]
-- [ "Northern Virginia Daily",                  15695,          "Strasburg"                ]
-- [ "News",                                     15689,          "Midland"                  ]
-- [ "Exponent Telegram",                        15630,          "Clarksburg"               ]
-- [ "Palladium-Item",                           15453,          "Richmond"                 ]
-- [ "Mississippi Press",                        15411,          "Pascagoula"               ]
-- [ "Sentinel and Enterprise",                  15319,          "Fitchburg"                ]
-- [ "Gazette",                                  15241,          "Indiana"                  ]
-- [ "American News",                            15200,          "Aberdeen"                 ]
-- [ "Times",                                    15074,          "Ottawa"                   ]
-- [ "Chronicle Tribune",                        15043,          "Marion"                   ]
-- [ "Sun-Star",                                 15015,          "Merced"                   ]
-- [ "Whittier Daily News",                      14977,          "Los Angeles County"       ]
-- [ "News",                                     14963,          "Opelika"                  ]
-- [ "Index-Journal",                            14833,          "Greenwood"                ]
-- [ "Phoenix",                                  14816,          "Muskogee"                 ]
-- [ "Hour",                                     14814,          "Norwalk"                  ]
-- [ "Journal",                                  14771,          "Ithaca"                   ]
-- [ "News-Miner",                               14761,          "Fairbanks"                ]
-- [ "Finger Lakes Times",                       14744,          "Geneva"                   ]
-- [ "Montana Standard",                         14740,          "Butte"                    ]
-- [ "Times Leader",                             14692,          "Belmont County"           ]
-- [ "Herald",                                   14660,          "Newton"                   ]
-- [ "Reporter",                                 14598,          "Fond Du Lac"              ]
-- [ "Independent",                              14548,          "Gallup"                   ]
-- [ "Daily Star",                               14391,          "Oneonta"                  ]
-- [ "Star-Herald",                              14367,          "Scottsbluff"              ]
-- [ "Daily News Journal",                       14317,          "Murfreesboro"             ]
-- [ "Independent Record",                       14315,          "Helena"                   ]
-- [ "Sentinel",                                 14314,          "Carlisle"                 ]
-- [ "Mining Journal",                           14263,          "Marquette"                ]
-- [ "Telegram",                                 14254,          "Rocky Mount"              ]
-- [ "Telegram",                                 14205,          "Adrian"                   ]
-- [ "Sun",                                      14131,          "Greeneville"              ]
-- [ "Nonpareil",                                14051,          "Council Bluffs"           ]
-- [ "Star",                                     13964,          "Meridian"                 ]
-- [ "Herald Times Reporter",                    13964,          "Manitowoc"                ]
-- [ "Journal-Courier",                          13922,          "Jacksonville"             ]
-- [ "Record and Landmark",                      13885,          "Statesville"              ]
-- [ "Times Herald",                             13823,          "Norristown"               ]
-- [ "Record",                                   13755,          "Troy"                     ]
-- [ "Union-Bulletin",                           13624,          "Walla Walla"              ]
-- [ "Recorder",                                 13578,          "Greenfield"               ]
-- [ "Tribune",                                  13454,          "Meadville"                ]
-- [ "Times News",                               13450,          "Lehighton"                ]
-- [ "Times Herald",                             13387,          "Olean"                    ]
-- [ "Press-Citizen",                            13352,          "Iowa City"                ]
-- [ "Reporter",                                 13312,          "Lansdale"                 ]
-- [ "Citizen",                                  13235,          "Dalton"                   ]
-- [ "Commercial-News",                          13162,          "Danville"                 ]
-- [ "Daily American",                           13159,          "Somerset"                 ]
-- [ "Livingston County Daily Press and Argus",  13131,          "Howell"                   ]
-- [ "Sentinel",                                 13093,          "Rome"                     ]
-- [ "Herald-Star",                              13043,          "Steubenville"             ]
-- [ "Gazette",                                  13038,          "Chillicothe"              ]
-- [ "Progress-Index",                           12937,          "Petersburg"               ]
-- [ "Transcript",                               12921,          "Norman"                   ]
-- [ "News-Register",                            12821,          "Wheeling"                 ]
-- [ "Banner",                                   12767,          "Cleveland"                ]
-- [ "American Banker",                          12689,          "New York City"            ]
-- [ "Daily News-Sun",                           12660,          "Sun City"                 ]
-- [ "News",                                     12445,          "Port Arthur"              ]
-- [ "Sentinel",                                 12390,          "Hanford"                  ]
-- [ "Hub",                                      12389,          "Kearney"                  ]
-- [ "Gazette",                                  12346,          "Beaufort"                 ]
-- [ "News",                                     12326,          "Palatka"                  ]
-- [ "Times-Mail",                               12313,          "Bedford"                  ]
-- [ "Daily News",                               12262,          "Newburyport"              ]
-- [ "Chronicle",                                12226,          "Geneva"                   ]
-- [ "Journal-Standard",                         12187,          "Freeport"                 ]
-- [ "Public Opinion",                           12181,          "Watertown"                ]
-- [ "Eagle-Gazette",                            12160,          "Lancaster"                ]
-- [ "Sentinel",                                 12119,          "Keene"                    ]
-- [ "Daily News",                               12100,          "Effingham"                ]
-- [ "Gazette-Times",                            12092,          "Corvallis"                ]
-- [ "Independent",                              12081,          "Massillon"                ]
-- [ "Potomac News",                             11976,          "Prince William Co"        ]
-- [ "Dispatch",                                 11931,          "Brainerd"                 ]
-- [ "Sentinel",                                 11863,          "Lewistown"                ]
-- [ "World",                                    11804,          "Coos Bay"                 ]
-- [ "Telegraph",                                11790,          "North Platte"             ]
-- [ "Herald",                                   11658,          "Portsmouth"               ]
-- [ "Times-Gazette",                            11578,          "Ashland"                  ]
-- [ "Sun",                                      11565,          "Flagstaff"                ]
-- [ "Herald",                                   11556,          "Clinton"                  ]
-- [ "Journal",                                  11543,          "Lisbon"                   ]
-- [ "Union Democrat",                           11506,          "Sonora"                   ]
-- [ "News-Herald",                              11332,          "Marshfield"               ]
-- [ "Daily News",                               11287,          "Winona"                   ]
-- [ "Courier News",                             11263,          "Elgin"                    ]
-- [ "Herald-Argus",                             11251,          "La Porte"                 ]
-- [ "Journal",                                  11234,          "Stevens Point"            ]
-- [ "Courier",                                  11134,          "Conroe"                   ]
-- [ "Imperial Valley Press",                    11125,          "El Centro"                ]
-- [ "Enterprise-Journal",                       11097,          "Mccomb"                   ]
-- [ "Times-Union",                              11047,          "Warsaw"                   ]
-- [ "Herald-Citizen",                           11044,          "Cookeville"               ]
-- [ "Gazette",                                  10991,          "Sterling"                 ]
-- [ "Mountain Eagle",                           10918,          "Jasper"                   ]
-- [ "Union-Sun and Journal",                    10901,          "Lockport"                 ]
-- [ "Post-Athenian",                            10873,          "Athens"                   ]
-- [ "Messenger",                                10831,          "Canandaigua"              ]
-- [ "Advance",                                  10812,          "Elizabeth City"           ]
-- [ "Daily Tribune",                            10766,          "Wisconsin Rapids"         ]
-- [ "Sentinel-Tribune",                         10759,          "Bowling Green"            ]
-- [ "Citizen",                                  10733,          "Auburn"                   ]
-- [ "Inter-Mountain",                           10719,          "Elkins"                   ]
-- [ "Gleaner",                                  10653,          "Henderson"                ]
-- [ "Times",                                    10645,          "Marietta"                 ]
-- [ "Dispatch",                                 10555,          "Lexington"                ]
-- [ "Comet",                                    10501,          "Thibodaux"                ]
-- [ "Times-West Virginian",                     10415,          "Fairmont"                 ]
-- [ "Time",                                     10394,          "Greenwich"                ]
-- [ "News-Sun",                                 10388,          "Hobbs"                    ]
-- [ "Times-Observer",                           10313,          "Warren"                   ]
-- [ "Garden Island",                            10262,          "Lihue"                    ]
-- [ "News Herald",                              10114,          "Morganton"                ]
-- [ "News-Dispatch",                            10103,          "Michigan City"            ]
-- [ "Observer",                                 10024,          "Fredonia"                 ]
-- [ "Leader-Herald",                            10020,          "Johnstown"                ]
-- [ "News",                                     10013,          "Alpena"                   ]
-- [ "Times",                                    10005,          "Gloucester"               ]
-- [ "Times",                                    9878,           "Bryan"                    ]
-- [ "News-Times",                               9823,           "El Dorado"                ]
-- [ "Daily Citizen",                            9732,           "Beaver Dam"               ]
-- [ "Journal Gazette",                          9697,           "Mattoon"                  ]
-- [ "Today\'s Sunbeam",                         9674,           "Salem"                    ]
-- [ "Herald",                                   9646,           "New Britain"              ]
-- [ "Chronicle",                                9643,           "Dekalb"                   ]
-- [ "News-Item",                                9624,           "Shamokin"                 ]
-- [ "Times",                                    9621,           "Gettysburg"               ]
-- [ "Caledonian-Record",                        9609,           "Saint Johnsbury"          ]
-- [ "Sun",                                      9596,           "Mount Pleasant"           ]
-- [ "Tribune",                                  9529,           "Grand Haven"              ]
-- [ "Courier Herald",                           9516,           "Dublin"                   ]
-- [ "Advertiser-Tribune",                       9475,           "Tiffin"                   ]
-- [ "Tribune",                                  9396,           "Royal Oak"                ]
-- [ "Times-Republican",                         9349,           "Marshalltown"             ]
-- [ "Citizen",                                  9346,           "Key West"                 ]
-- [ "Review",                                   9340,           "East Liverpool"           ]
-- [ "Times Record",                             9317,           "Brunswick"                ]
-- [ "Times-Enterprise",                         9303,           "Thomasville"              ]
-- [ "Daily News",                               9193,           "Kingsford"                ]
-- [ "Mesabi Daily News",                        9143,           "Virginia"                 ]
-- [ "Ledger Independent",                       9074,           "Maysville"                ]
-- [ "East Oregonian",                           9071,           "Pendleton"                ]
-- [ "Gazette",                                  9059,           "Taunton"                  ]
-- [ "Herald",                                   9048,           "Sanford"                  ]
-- [ "Mohave Valley Daily News",                 9016,           "Bullhead City"            ]
-- [ "Dispatch",                                 9001,           "Casa Grande"              ]
-- [ "News-Review",                              8994,           "Petoskey"                 ]
-- [ "Press",                                    8993,           "Escanaba"                 ]
-- [ "World",                                    8991,           "Opelousas"                ]
-- [ "Democrat",                                 8883,           "Woodland"                 ]
-- [ "Herald",                                   8870,           "Durango"                  ]
-- [ "Telegram",                                 8867,           "Columbus"                 ]
-- [ "Reflector",                                8866,           "Norwalk"                  ]
-- [ "Reformer",                                 8814,           "Brattleboro"              ]
-- [ "Saratogian",                               8731,           "Saratoga Springs"         ]
-- [ "News-Sun",                                 8722,           "Kendallville"             ]
-- [ "Express",                                  8711,           "Lock Haven"               ]
-- [ "Mining Gazette",                           8672,           "Houghton"                 ]
-- [ "News-Topic",                               8655,           "Lenoir"                   ]
-- [ "News",                                     8560,           "Ponca City"               ]
-- [ "Enquirer-Journal",                         8490,           "Monroe"                   ]
-- [ "Daily News",                               8417,           "Milford"                  ]
-- [ "Tribune",                                  8404,           "Fremont"                  ]
-- [ "Times Argus",                              8360,           "Barre-Montpelier"         ]
-- [ "News-Press",                               8330,           "Stillwater"               ]
-- [ "Press",                                    8285,           "Bristol"                  ]
-- [ "Register Citizen",                         8217,           "Torrington"               ]
-- [ "Journal",                                  8156,           "Park Hills"               ]
-- [ "News-Star",                                8150,           "Shawnee"                  ]
-- [ "News",                                     8049,           "Greenville"               ]
-- [ "Times-Georgian",                           8019,           "Carrollton"               ]
-- [ "Courier-Post",                             8010,           "Hannibal"                 ]
-- [ "Journal",                                  7920,           "New Ulm"                  ]
-- [ "Eagle Times",                              7903,           "Claremont"                ]
-- [ "Telegraph",                                7729,           "Dixon"                    ]
-- [ "Journal Messenger",                        7712,           "Prince William Co"        ]
-- [ "Leader-Call",                              7636,           "Laurel"                   ]
-- [ "Daily Sun",                                7578,           "Beatrice"                 ]
-- [ "Messenger",                                7552,           "Madisonville"             ]
-- [ "News",                                     7537,           "Ludington"                ]
-- [ "El Nuevo Heraldo",                         7486,           "Brownsville"              ]
-- [ "News Virginian",                           7478,           "Waynesboro"               ]
-- [ "Dispatch",                                 7452,           "Henderson"                ]
-- [ "News",                                     7315,           "Bridgeton"                ]
-- [ "People's Press",                           7314,           "Owatonna"                 ]
-- [ "Star-Exponent",                            7252,           "Culpeper"                 ]
-- [ "News",                                     7159,           "Tonawanda"                ]
-- [ "Facts",                                    7094,           "Redlands"                 ]
-- [ "Tribune-News",                             7048,           "Cartersville"             ]
-- [ "Independent",                              7012,           "Marshall"                 ]
-- [ "Commonwealth",                             6992,           "Greenwood"                ]
-- [ "News",                                     6986,           "Red Bluff"                ]
-- [ "Current-Argus",                            6966,           "Carlsbad"                 ]
-- [ "Journal",                                  6943,           "Muscatine"                ]
-- [ "News",                                     6936,           "Griffin"                  ]
-- [ "Gazette",                                  6902,           "Emporia"                  ]
-- [ "Press",                                    6876,           "Middletown"               ]
-- [ "Record-Bee",                               6825,           "Lakeport"                 ]
-- [ "Evening Star",                             6753,           "Auburn"                   ]
-- [ "News Messenger",                           6737,           "Marshall"                 ]
-- [ "Times-Courier",                            6558,           "Charleston"               ]
-- [ "Corinthian",                               6533,           "Corinth"                  ]
-- [ "Sentinel",                                 6525,           "Fairmont"                 ]
-- [ "Leader",                                   6525,           "Shawano"                  ]
-- [ "Banner",                                   6502,           "Bennington"               ]
-- [ "Dispatch",                                 6501,           "Oneida"                   ]
-- [ "Jackson County Floridan",                  6487,           "Marianna"                 ]
-- [ "Daily News",                               6468,           "Alamogordo"               ]
-- [ "Journal",                                  6434,           "Ukiah"                    ]
-- [ "Bolivar Commercial",                       6161,           "Cleveland"                ]
-- [ "Advance-Register",                         6159,           "Tulare"                   ]
-- [ "Transcript",                               5949,           "North Adams"              ]
-- [ "Tribune",                                  5903,           "Coshocton"                ]
-- [ "Register",                                 5880,           "Richmond"                 ]
-- [ "Telegraph-Forum",                          5838,           "Bucyrus"                  ]
-- [ "News",                                     5752,           "Salem"                    ]
-- [ "News",                                     5724,           "Gardner"                  ]
-- [ "Plainsman",                                5638,           "Huron"                    ]
-- [ "Record",                                   5575,           "Lompoc"                   ]
-- [ "Breeze-Courier",                           5557,           "Taylorville"              ]
-- [ "Boomerang",                                5242,           "Laramie"                  ]
-- [ "Times",                                    5150,           "Weirton"                  ]
-- [ "Register-Star",                            5088,           "Hudson"                   ]
-- [ "Tribune",                                  5082,           "Canton"                   ]
-- [ "Daily Register",                           4870,           "Portage"                  ]
-- [ "Reporter Times",                           4744,           "Martinsville"             ]
-- [ "Daily News Tribune",                       4716,           "Waltham"                  ]
-- [ "Triplicate",                               4670,           "Crescent City"            ]
-- [ "Register",                                 4632,           "Brookings"                ]
-- [ "Desert Dispatch",                          4556,           "Barstow"                  ]
-- [ "Herald-Republican",                        4533,           "Angola"                   ]
-- [ "Daily Tribune",                            4519,           "Hibbing"                  ]
-- [ "Courier",                                  4458,           "Winfield"                 ]
-- [ "Item",                                     4377,           "Picayune"                 ]
-- [ "Leader",                                   4312,           "Orange"                   ]
-- [ "News Republic",                            4261,           "Baraboo"                  ]
-- [ "La Frontera",                              4000,           "McAllen"                  ]
-- [ "Daily News Transcript",                    3725,           "Dedham"                   ]
-- [ "Douglas County Sentinel",                  3666,           "Douglasville"             ]
-- [ "Ellwood City Ledger",                      3425,           "Ellwood"                  ]
-- [ "Journal Record",                           3411,           "Oklahoma City"            ]
-- [ "Daily Mail",                               3317,           "Catskill"                 ]
-- [ "Sentinel",                                 3081,           "Parkersburg"              ]
-- [ "Freeman-Journal",                          2699,           "Webster City"             ]
-- [ "Journal-Register",                         2690,           "Medina"                   ]
-- [ "Phoenix",                                  2566,           "Phoenixville"             ]
-- [ "News Tribune",                             1449,           "Jefferson City"           ]
+- "USA Today":                                 [ "USA Today",                                 2284219 "Washington"                 ] # paper-circ-paper_re
+- "Wall Street Journal":                       [ "Wall Street Journal",                       2069463 "New York City"              ] # exact-city-paper-circ-paper_re
+- "New York Times":                            [ "Times",                                     1077256 "New York City"              ] # city-circ-paper_re
+- "Los Angeles Times":                         [ "Times",                                      773884 "Los Angeles"                ] # city-circ-paper_re
+- "Daily News (New York City)":                [ "News",                                       703137 "New York City"              ] # city-circ-paper_re
+- "New York Post":                             [ "Post",                                       702488 "New York City"              ] # city-circ-paper_re
+- "Washington Post":                           [ "Washington Post",                            673180 "Washington"                 ] # exact-city-paper-circ-paper_re
+- "Chicago Tribune":                           [ "Tribune",                                    541663 "Chicago"                    ] # city-circ-paper_re
+- "Houston Chronicle":                         [ "Chronicle",                                  494131 "Houston"                    ] # city-circ-paper_re
+- "Arizona Republic":                          [ "Republic",                                   413332 "Phoenix"                    ] # city-circ-paper_re
+- "Newsday":                                   [ "Newsday",                                    379613 "Long Island"                ] # paper-circ-paper_re
+- "San Francisco Chronicle":                   [ "Chronicle",                                  370345 "San Francisco"              ] # city-circ-paper_re
+- "Dallas Morning News":                       [ "Morning News",                               368313 "Dallas"                     ] # city-circ-paper_re
+- "Boston Globe":                              [ "Globe",                                      350605 "Boston"                     ] # city-circ-paper_re
+- "Star Ledger":                               [ "Star-Ledger",                                345130 "Newark"                     ] # city-circ-paper_re
+- "Philadelphia Inquirer":                     [ "Inquirer",                                   334150 "Philadelphia"               ] # city-circ-paper_re
+- "Plain Dealer":                              [ "Plain Dealer",                               330280 "Cleveland"                  ] # exact-city-paper-circ-paper_re
+- "Atlanta Journal Constitution":              [ "Journal-Constitution",                       326907 "Atlanta"                    ] # city-circ-paper_re
+- "Star Tribune":                              [ "Star Tribune",                               322362 "Minneapolis"                ] # good-city-paper-paper_re
+- "St. Petersburg Times":                      [ "Times",                                      316007 "Saint Petersburg"           ] # city-circ-paper_re
+- "Chicago Sun Times":                         [ "Sun-Times",                                  312274 "Chicago"                    ] # city-circ-paper_re
+- "Detroit Free Press":                        [ "Free Press",                                 308944 "Detroit"                    ] # city-circ-paper_re
+- "Oregonian":                                 [ "Oregonian",                                  304399 "Portland"                   ] # exact-city-paper-circ-paper_re
+- "San Diego Union Tribune":                   [ "Union-Tribune",                              288669 "San Diego"                  ] # city-circ-paper_re
+- "Sacramento Bee":                            [ "Bee",                                        268755 "Sacramento"                 ] # good-city-paper_re
+- "Indianapolis Star":                         [ "Star",                                       255303 "Indianapolis"               ] # city-circ-paper_re
+- "St. Louis Post Dispatch":                   [ "Post-Dispatch",                              255057 "Saint Louis"                ] # city-circ-paper_re
+- "Kansas City Star":                          [ "Star",                                       252785 "Kansas City"                ] # city-circ-paper_re
+- "Orange County Register":                    [ "Register",                                   250724 "Anaheim"                    ] # city-circ-paper_re
+- "Miami Herald":                              [ "Miami Herald",                               240223 "Miami"                      ] # exact-city-paper-circ-paper_re
+- "San Jose Mercury News":                     [ "Mercury News",                               234772 "San Jose"                   ] # city-circ-paper_re
+- "Sun (Baltimore)":                           [ "Sun",                                        232360 "Baltimore"                  ] # city-circ-paper_re
+- "Orlando Sentinel":                          [ "Sentinel",                                   227593 "Orlando"                    ] # city-circ-paper_re
+- "San Antonio Express News":                  [ "Express-News",                               225447 "San Antonio"                ] # city-circ-paper_re
+- "Denver Post":                               [ "Denver Post",                                225193 "Denver"                     ] # exact-city-paper-circ-paper_re
+- "Rocky Mountain News":                       [ "Rocky Mountain News",                        225065 "Denver"                     ] # good-city-paper-paper_re
+- "Seattle Times":                             [ "Times",                                      220863 "Seattle"                    ] # good-city-paper_re
+- "Tampa Tribune":                             [ "Tribune",                                    220522 "Tampa"                      ] # city-circ-paper_re
+- "South Florida Sun Sentinel":                [ "South Florida Sun-Sentinel",                 218286 "Fort Lauderdale"            ] # city-circ-paper_re
+- "Milwaukee Journal Sentinel":                [ "Journal Sentinel",                           217755 "Milwaukee"                  ] # city-circ-paper_re
+- "Courier Journal":                           [ "Courier-Journal",                            215328 "Louisville"                 ] # city-circ-paper_re
+- "Pittsburgh Post Gazette":                   [ "Post-Gazette",                               214374 "Pittsburgh"                 ] # city-circ-paper_re
+- "Cincinnati Enquirer":                       [ "Enquirer",                                   212369 "Cincinnati"                 ] # city-circ-paper_re
+- "Charlotte Observer":                        [ "Observer",                                   210616 "Charlotte"                  ] # city-circ-paper_re
+- "Fort Worth Star Telegram":                  [ "Star-Telegram",                              207045 "Fort Worth"                 ] # city-circ-paper_re
+- "Oklahoman":                                 [ "Oklahoman",                                  201771 "Oklahoma City"              ] # exact-city-paper-circ-paper_re
+- "Columbus Dispatch":                         [ "Dispatch",                                   199524 "Columbus"                   ] # city-circ-paper_re
+- "St. Paul Pioneer Press":                    [ "Pioneer Press",                              191768 "Saint Paul"                 ] # city-circ-paper_re
+- "Detroit News":                              [ "News",                                       188171 "Detroit"                    ] # city-circ-paper_re
+- "Contra Costa Times":                        [ "Contra Costa Times",                         183086 "Walnut Creek"               ] # exact-city-paper-circ-paper_re
+- "Boston Herald":                             [ "Herald",                                     182350 "Boston"                     ] # city-circ-paper_re
+- "Arkansas Democrat Gazette":                 [ "Democrat Gazette",                           182212 "Little Rock"                ] # city-circ-paper_re
+- "Times Picayune":                            [ "Times-Picayune",                             179834 "New Orleans"                ] # city-circ-paper_re
+- "Omaha World Herald":                        [ "World-Herald",                               178545 "Omaha"                      ] # city-circ-paper_re
+- "Buffalo News":                              [ "News",                                       178365 "Buffalo"                    ] # city-circ-paper_re
+- "News and Observer":                         [ "News and Observer",                          176083 "Raleigh"                    ] # exact-city-paper-circ-paper_re
+- "Richmond Times Dispatch":                   [ "Times-Dispatch",                             175265 "Richmond"                   ] # city-circ-paper_re
+- "Virginian Pilot":                           [ "Virginian-Pilot",                            175005 "Norfolk"                    ] # city-circ-paper_re
+- "Las Vegas Sun":                             [ "Sun",                                        174341 "Las Vegas"                  ] # city-circ-paper_re
+- "Las Vegas Review Journal":                  [ "Review-Journal",                             174341 "Las Vegas"                  ] # city-circ-paper_re
+- "Austin American Statesman":                 [ "American-Statesman",                         170309 "Austin"                     ] # city-circ-paper_re
+- "Hartford Courant":                          [ "Courant",                                    168158 "Hartford"                   ] # city-circ-paper_re
+- "Palm Beach Post":                           [ "Post",                                       164474 "West Palm Beach"            ] # city-circ-paper_re
+- "Press Enterprise":                          [ "Press-Enterprise",                           164189 "Riverside"                  ] # city-circ-paper_re
+- "Record (Bergen)":                           [ "Record",                                     163329 "Hackensack"                 ] # city-circ-paper_re
+- "Investor's Business Daily":                 [ "Investor's Business Daily",                  161421 "Los Angeles"                ] # exact-city-paper-circ-paper_re
+- "Tennessean":                                [ "Tennessean",                                 161131 "Nashville"                  ] # exact-city-paper-circ-paper_re
+- "Tribune Review":                            [ "Tribune-Review",                             150911 "Greensburg"                 ] # city-circ-paper_re
+- "Fresno Bee":                                [ "Bee",                                        150334 "Fresno"                     ] # city-circ-paper_re
+- "Commercial Appeal":                         [ "Commercial Appeal",                          146961 "Memphis"                    ] # exact-city-paper-circ-paper_re
+- "Rochester Democrat and Chronicle":          [ "Democrat and Chronicle",                     145913 "Rochester"                  ] # city-circ-paper_re
+- "Florida Times Union":                       [ "Times-Union",                                144391 "Jacksonville"               ] # city-circ-paper_re
+- "Daily Herald":                              [ "Herald",                                     143152 "Chicago"                    ] # circ-paper_re
+- "Asbury Park Press":                         [ "Asbury Park Press",                          140882 "Asbury Park"                ] # exact-city-paper-circ-paper_re
+- "Birmingham News":                           [ "News",                                       140438 "Birmingham"                 ] # city-circ-paper_re
+- "Honolulu Advertiser":                       [ "Advertiser",                                 140331 "Honolulu"                   ] # city-circ-paper_re
+- "Providence Journal":                        [ "Journal",                                    139055 "Providence"                 ] # city-circ-paper_re
+- "Des Moines Register":                       [ "Register",                                   138519 "Des Moines"                 ] # good-city-paper_re
+- "Daily News (Los Angeles)":                  [ "Daily News",                                 137344 "Los Angeles"                ] # city-circ-paper_re
+- "Seattle Post Intelligencer":                [ "Post-Intelligencer",                         129563 "Seattle"                    ] # city-circ-paper_re
+- "Grand Rapids Press":                        [ "Press",                                      128930 "Grand Rapids"               ] # city-circ-paper_re
+- "Salt Lake Tribune":                         [ "Tribune",                                    121699 "Salt Lake City"             ] # city-circ-paper_re
+- "Akron Beacon Journal":                      [ "Beacon Journal",                             119929 "Akron"                      ] # city-circ-paper_re
+- "Blade":                                     [ "Blade",                                      119901 "Toledo"                     ] # exact-city-paper-circ-paper_re
+- "Knoxville News Sentinel":                   [ "News Sentinel",                              117262 "Knoxville"                  ] # city-circ-paper_re
+- "Dayton Daily News":                         [ "News",                                       116690 "Dayton"                     ] # city-circ-paper_re
+- "Sarasota Herald Tribune":                   [ "Herald-Tribune",                             114904 "Sarasota"                   ] # city-circ-paper_re
+- "La Opinion":                                [ "La Opinion",                                 114892 "Los Angeles"                ] # exact-city-paper-circ-paper_re
+- "Arizona Daily Star":                        [ "Daily Star",                                 113373 "Tucson"                     ] # city-circ-paper_re
+- "Tulsa World":                               [ "World",                                      112968 "Tulsa"                      ] # city-circ-paper_re
+- "News Tribune":                              [ "News Tribune",                               111778 "Tacoma"                     ] # exact-city-paper-circ-paper_re
+- "News Journal (Wilmington)":                 [ "News Journal",                               110171 "Wilmington"                 ] # city-circ-paper_re
+- "Syracuse Post Standard":                    [ "Post-Standard",                              110061 "Syracuse"                   ] # city-circ-paper_re
+- "Lexington Herald Leader":                   [ "Herald-Leader",                              109624 "Lexington"                  ] # city-circ-paper_re
+- "Morning Call":                              [ "Morning Call",                               108797 "Allentown"                  ] # exact-city-paper-circ-paper_re
+- "Stuart News":                               [ "News",                                       108781 "Stuart"                     ] # good-city-paper_re
+- "Journal News":                              [ "Journal News",                               108092 "White Plains"               ] # exact-city-paper-circ-paper_re
+- "Philadelphia Daily News":                   [ "Daily News",                                 107269 "Philadelphia"               ] # city-circ-paper_re
+- "Times Leader":                              [ "Times Leader",                               103788 "Wilkes-Barre"               ] # good-city-paper-paper_re
+- "Albuquerque Journal":                       [ "Journal",                                    102902 "Albuquerque"                ] # city-circ-paper_re
+- "State":                                     [ "State",                                      101010 "Columbia"                   ] # exact-city-paper-circ-paper_re
+- "Post and Courier":                          [ "Post And Courier",                           100400 "Charleston"                 ] # city-circ-paper_re
+- "Daytona Beach News Journal":                [ "News-Journal",                                99627 "Daytona Beach"              ] # city-circ-paper_re
+- "Mobile Press Register":                     [ "Press-Register",                              99433 "Mobile"                     ] # city-circ-paper_re
+- "Oakland Tribune":                           [ "Tribune",                                     96535 "Oakland"                    ] # city-circ-paper_re
+- "Harrisburg Patriot News":                   [ "Patriot-News",                                95588 "Harrisburg"                 ] # city-circ-paper_re
+- "Washington Times":                          [ "Times",                                       93763 "Washington"                 ] # good-city-paper_re
+- "News Press":                                [ "News-Press",                                  92340 "Fort Myers"                 ] # good-city-paper_re
+- "Spokesman Review (Spokane)":                [ "Spokesman-Review",                            89779 "Spokane"                    ] # city-circ-paper_re
+- "Times Union":                               [ "Times Union",                                 89256 "Albany"                     ] # exact-city-paper-circ-paper_re
+- "Roanoke Times":                             [ "Times",                                       88927 "Roanoke"                    ] # good-city-paper_re
+- "North County Times":                        [ "North County Times",                          88677 "Escondido"                  ] # good-city-paper-paper_re
+- "Wisconsin State Journal":                   [ "State Journal",                               87930 "Madison"                    ] # city-circ-paper_re
+- "Ventura County Star":                       [ "Star",                                        86276 "Ventura"                    ] # good-city-paper_re
+- "Press Telegram":                            [ "Press-Telegram",                              85595 "Los Angeles County"         ] # circ-paper_re
+- "Times (Munster)":                           [ "Times",                                       85195 "Munster"                    ] # good-city-paper_re
+- "News and Record":                           [ "News and Record",                             84339 "Greensboro"                 ] # good-city-paper-paper_re
+- "Wichita Eagle":                             [ "Eagle",                                       82912 "Wichita"                    ] # good-city-paper_re
+- "Clarion Ledger":                            [ "Clarion-Ledger",                              82673 "Jackson"                    ] # good-city-paper_re
+- "Winston Salem Journal":                     [ "Journal",                                     81930 "Winston-Salem"              ] # good-city-paper_re
+- "Telegram and Gazette":                      [ "Telegram and Gazette",                        81437 "Worcester"                  ] # exact-city-paper-circ-paper_re
+- "Daily Press":                               [ "Daily Press",                                 81241 "Newport News"               ] # good-city-paper-paper_re
+- "Greenville News":                           [ "News",                                        81010 "Greenville"                 ] # city-circ-paper_re
+- "Florida Today":                             [ "Florida Today",                               79499 "Melbourne"                  ] # exact-city-paper-circ-paper_re
+- "Lincoln Journal Star":                      [ "Journal Star",                                78350 "Lincoln"                    ] # city-circ-paper_re
+- "Press Democrat":                            [ "Press Democrat",                              78022 "Santa Rosa"                 ] # exact-city-paper-circ-paper_re
+- "Modesto Bee":                               [ "Bee",                                         78001 "Modesto"                    ] # city-circ-paper_re
+- "Flint Journal":                             [ "Journal",                                     76288 "Flint"                      ] # good-city-paper_re
+- "Connecticut Post":                          [ "Post",                                        76014 "Fairfield County"           ] # circ-paper_re
+- "Times Herald Record":                       [ "Times Herald-Record",                         75745 "Middletown"                 ] # city-circ-paper_re
+- "New Haven Register":                        [ "Register",                                    72613 "New Haven"                  ] # city-circ-paper_re
+- "El Paso Times":                             [ "Times",                                       72027 "El Paso"                    ] # good-city-paper_re
+- "Chattanooga Free Press":                    [ "Free Press",                                  71716 "Chattanooga"                ] # city-circ-paper_re
+- "Chattanooga Times":                         [ "Times",                                       71716 "Chattanooga"                ] # city-circ-paper_re
+- "Augusta Chronicle":                         [ "Chronicle",                                   68434 "Augusta"                    ] # good-city-paper_re
+- "Evansville Courier and Press":              [ "Courier and Press",                           68220 "Evansville"                 ] # good-city-paper_re
+- "Register Guard":                            [ "Register-Guard",                              67400 "Eugene"                     ] # city-circ-paper_re
+- "South Bend Tribune":                        [ "Tribune",                                     66886 "South Bend"                 ] # good-city-paper_re
+- "Press of Atlantic City":                    [ "Press",                                       66822 "Atlantic City"              ] # good-city-paper_re
+- "Courier Post":                              [ "Courier-Post",                                66617 "Cherry Hill"                ] # city-circ-paper_re
+- "Naples Daily News":                         [ "Daily News",                                  66272 "Naples"                     ] # city-circ-paper_re
+- "Lakeland Ledger":                           [ "Ledger",                                      65948 "Lakeland"                   ] # city-circ-paper_re
+- "Repository":                                [ "Repository",                                  65789 "Canton"                     ] # exact-city-paper-circ-paper_re
+- "Journal Star":                              [ "Journal Star",                                65320 "Peoria"                     ] # good-city-paper-paper_re
+- "Portland Press Herald":                     [ "Press Herald",                                64938 "Portland"                   ] # city-circ-paper_re
+- "Journal Gazette":                           [ "Journal Gazette",                             64304 "Fort Wayne"                 ] # exact-city-paper-circ-paper_re
+- "Anchorage Daily News":                      [ "Daily News",                                  62893 "Anchorage"                  ] # city-circ-paper_re
+- "Idaho Statesman":                           [ "Idaho Statesman",                             61927 "Boise"                      ] # exact-city-paper-circ-paper_re
+- "Bakersfield Californian":                   [ "Californian",                                 59433 "Bakersfield"                ] # city-circ-paper_re
+- "Lansing State Journal":                     [ "State Journal",                               58948 "Lansing"                    ] # city-circ-paper_re
+- "Cedar Rapids Gazette":                      [ "Gazette",                                     57945 "Cedar Rapids"               ] # good-city-paper_re
+- "Record (Stockton)":                         [ "Record",                                      57486 "Stockton"                   ] # city-circ-paper_re
+- "Reno Gazette Journal":                      [ "Gazette-Journal",                             57423 "Reno"                       ] # city-circ-paper_re
+- "Pensacola News Journal":                    [ "News Journal",                                57089 "Pensacola"                  ] # good-city-paper_re
+- "Macon Telegraph":                           [ "Telegraph",                                   56510 "Macon"                      ] # city-circ-paper_re
+- "Vindicator":                                [ "Vindicator",                                  56412 "Youngstown"                 ] # exact-city-paper-circ-paper_re
+- "Rockford Register Star":                    [ "Register Star",                               55913 "Rockford"                   ] # city-circ-paper_re
+- "Bangor Daily News":                         [ "News",                                        55627 "Bangor"                     ] # city-circ-paper_re
+- "Erie Times News":                           [ "Times-News",                                  55397 "Erie"                       ] # city-circ-paper_re
+- "Times (Trenton)":                           [ "Times",                                       54745 "Trenton"                    ] # city-circ-paper_re
+- "San Bernardino County Sun":                 [ "Sun",                                         54315 "San Bernardino"             ] # city-circ-paper_re
+- "Springfield News Leader":                   [ "News-Leader",                                 54307 "Springfield"                ] # good-city-paper_re
+- "Inland Valley Daily Bulletin":              [ "Inland Valley Daily Bulletin",                53903 "Ontario"                    ] # exact-city-paper-circ-paper_re
+- "el Diario":                                 [ "el Diario",                                   53856 "New York City"              ] # exact-city-paper-circ-paper_re
+- "Green Bay Press Gazette":                   [ "Press-Gazette",                               53600 "Green Bay"                  ] # city-circ-paper_re
+- "Corpus Christi Caller Times":               [ "Caller-Times",                                53368 "Corpus Christi"             ] # city-circ-paper_re
+- "Huntsville Times":                          [ "Times",                                       53194 "Huntsville"                 ] # good-city-paper_re
+- "Desert Sun":                                [ "Desert Sun",                                  53091 "Palm Springs"               ] # exact-city-paper-circ-paper_re
+- "Times (Shreveport)":                        [ "Times",                                       52267 "Shreveport"                 ] # city-circ-paper_re
+- "Belleville News Democrat":                  [ "News-Democrat",                               51974 "Belleville"                 ] # good-city-paper_re
+- "Quad City Times":                           [ "Quad-City Times",                             51890 "Davenport"                  ] # city-circ-paper_re
+- "New Hampshire Union Leader":                [ "Union Leader",                                51782 "Manchester"                 ] # city-circ-paper_re
+- "Patriot Ledger":                            [ "Patriot Ledger",                              51105 "Quincy"                     ] # good-city-paper-paper_re
+- "Post Crescent":                             [ "Post Crescent",                               51029 "Appleton"                   ] # good-city-paper-paper_re
+- "Waterbury Republican American":             [ "Republican-American",                         50903 "Waterbury"                  ] # good-city-paper_re
+- "Herald":                                    [ "Herald",                                      50272 "Everett"                    ] # good-city-paper-paper_re
+- "Asheville Citizen Times":                   [ "Citizen-Times",                               50160 "Asheville"                  ] # city-circ-paper_re
+- "State Journal Register":                    [ "State Journal-Register",                      49839 "Springfield"                ] # good-city-paper_re
+- "Pueblo Chieftain":                          [ "Chieftain",                                   49169 "Pueblo"                     ] # city-circ-paper_re
+- "Kalamazoo Gazette":                         [ "Gazette",                                     49127 "Kalamazoo"                  ] # good-city-paper_re
+- "Lubbock Avalanche Journal":                 [ "Avalanche-Journal",                           49094 "Lubbock"                    ] # city-circ-paper_re
+- "Home News Tribune":                         [ "Home News Tribune",                           49076 "East Brunswick"             ] # exact-city-paper-circ-paper_re
+- "Argus Leader":                              [ "Argus Leader",                                48960 "Sioux Falls"                ] # exact-city-paper-circ-paper_re
+- "Macomb Daily":                              [ "Macomb Daily",                                48741 "Mount Clemens"              ] # good-city-paper-paper_re
+- "Bradenton Herald":                          [ "Herald",                                      48618 "Bradenton"                  ] # city-circ-paper_re
+- "Fargo Forum":                               [ "Forum",                                       48303 "Fargo"                      ] # city-circ-paper_re
+- "Charleston Gazette":                        [ "Gazette",                                     48061 "Charleston"                 ] # city-circ-paper_re
+- "York Daily Record":                         [ "Daily Record",                                47989 "York"                       ] # good-city-paper_re
+- "Pantagraph":                                [ "Pantagraph",                                  47764 "Bloomington"                ] # exact-city-paper-circ-paper_re
+- "Savannah Morning News":                     [ "News",                                        47709 "Savannah"                   ] # good-city-paper_re
+- "Star News":                                 [ "Star-News",                                   47620 "Wilmington"                 ] # city-circ-paper_re
+- "Statesman Journal":                         [ "Statesman Journal",                           47131 "Salem"                      ] # good-city-paper-paper_re
+- "Ann Arbor News":                            [ "News",                                        47058 "Ann Arbor"                  ] # good-city-paper_re
+- "Free Lance Star":                           [ "Free Lance-Star",                             46672 "Fredericksburg"             ] # good-city-paper_re
+- "Intelligencer Journal":                     [ "Intelligencer Journal",                       46357 "Lancaster"                  ] # exact-city-paper-circ-paper_re
+- "Beaumont Enterprise":                       [ "Enterprise",                                  45684 "Beaumont"                   ] # city-circ-paper_re
+- "Billings Gazette":                          [ "Gazette",                                     45530 "Billings"                   ] # city-circ-paper_re
+- "Ocala Star Banner":                         [ "Star-Banner",                                 45424 "Ocala"                      ] # good-city-paper_re
+- "Montgomery Advertiser":                     [ "Advertiser",                                  45060 "Montgomery"                 ] # city-circ-paper_re
+- "Topeka Capital Journal":                    [ "Capital-Journal",                             44864 "Topeka"                     ] # good-city-paper_re
+- "Amarillo Globe News":                       [ "Globe-News",                                  44764 "Amarillo"                   ] # city-circ-paper_re
+- "Gainesville Sun":                           [ "Sun",                                         44658 "Gainesville"                ] # city-circ-paper_re
+- "Columbian":                                 [ "Columbian",                                   44623 "Vancouver"                  ] # exact-city-paper-circ-paper_re
+- "Express Times":                             [ "Express-Times",                               44561 "Easton"                     ] # city-circ-paper_re
+- "Sun (Lowell)":                              [ "Sun",                                         44439 "Lowell"                     ] # city-circ-paper_re
+- "Kingsport Times News":                      [ "Times-News",                                  44096 "Kingsport"                  ] # good-city-paper_re
+- "Delaware County Daily Times":               [ "Daily Times",                                 42879 "Delaware County"            ] # circ-paper_re
+- "Columbus Ledger Enquirer":                  [ "Ledger-Enquirer",                             42830 "Columbus"                   ] # city-circ-paper_re
+- "Annapolis Capital":                         [ "Capital",                                     42825 "Annapolis"                  ] # good-city-paper_re
+- "Herald Journal":                            [ "Herald-Journal",                              42380 "Spartanburg"                ] # city-circ-paper_re
+- "News Gazette":                              [ "News-Gazette",                                42302 "Champaign"                  ] # city-circ-paper_re
+- "Burlington Free Press":                     [ "Free Press",                                  41901 "Burlington"                 ] # city-circ-paper_re
+- "Muskegon Chronicle":                        [ "Chronicle",                                   41114 "Muskegon"                   ] # city-circ-paper_re
+- "Sioux City Journal":                        [ "Journal",                                     41096 "Sioux City"                 ] # city-circ-paper_re
+- "Tri City Herald":                           [ "Tri-City Herald",                             40830 "Pasco"                      ] # circ-paper_re
+- "Advertiser":                                [ "Advertiser",                                  40496 "Lafayette"                  ] # good-city-paper-paper_re
+- "Southwest Times Record":                    [ "Southwest Times Record",                      40231 "Fort Smith"                 ] # good-city-paper-paper_re
+- "Lancaster New Era":                         [ "New Era",                                     40068 "Lancaster"                  ] # city-circ-paper_re
+- "Trentonian":                                [ "Trentonian",                                  39449 "Trenton"                    ] # good-city-paper-paper_re
+- "Observer Dispatch":                         [ "Observer-Dispatch",                           39293 "Utica"                      ] # good-city-paper_re
+- "Saginaw News":                              [ "News",                                        39143 "Saginaw"                    ] # city-circ-paper_re
+- "Beaver County Times":                       [ "County Times",                                38466 "Beaver"                     ] # good-city-paper_re
+- "Bristol Herald Courier":                    [ "Herald Courier",                              38088 "Bristol"                    ] # good-city-paper_re
+- "Yakima Herald Republic":                    [ "Herald-Republic",                             38077 "Yakima"                     ] # city-circ-paper_re
+- "Johnstown Tribune Democrat":                [ "Tribune-Democrat",                            37673 "Johnstown"                  ] # city-circ-paper_re
+- "Poughkeepsie Journal":                      [ "Journal",                                     37265 "Poughkeepsie"               ] # city-circ-paper_re
+- "News Herald":                               [ "News-Herald",                                 36948 "Lake County"                ] # circ-paper_re
+- "Waco Tribune Herald":                       [ "Tribune-Herald",                              36708 "Waco"                       ] # good-city-paper_re
+- "Crystal Lake Northwest Herald":             [ "Northwest Herald",                            36594 "Crystal Lake"               ] # circ-paper_re
+- "Lake Charles American Press":               [ "American Press",                              36270 "Lake Charles"               ] # good-city-paper_re
+- "Tyler Morning Telegraph":                   [ "Morning Telegraph",                           35598 "Tyler"                      ] # city-circ-paper_re
+- "Day":                                       [ "Day",                                         34730 "New London"                 ] # exact-city-paper-circ-paper_re
+- "Lafayette Journal and Courier":             [ "Journal And Courier",                         34545 "Lafayette"                  ] # city-circ-paper_re
+- "Herald and Review":                         [ "Herald and Review",                           34480 "Decatur"                    ] # exact-city-paper-circ-paper_re
+- "News and Advance":                          [ "News-Advance",                                33931 "Lynchburg"                  ] # city-circ-paper_re
+- "Victoria Advocate":                         [ "Advocate",                                    33549 "Victoria"                   ] # good-city-paper_re
+- "Herald Sun":                                [ "Herald-Sun",                                  32845 "Durham"                     ] # city-circ-paper_re
+- "Tuscaloosa News":                           [ "News",                                        32789 "Tuscaloosa"                 ] # good-city-paper_re
+- "Burlington County Times":                   [ "Times",                                       32784 "Burlington"                 ] # good-city-paper_re
+- "Bend Bulletin":                             [ "Bulletin",                                    32455 "Bend"                       ] # city-circ-paper_re
+- "Record Searchlight":                        [ "Record Searchlight",                          32147 "Redding"                    ] # good-city-paper-paper_re
+- "Jackson Sun":                               [ "Sun",                                         32121 "Jackson"                    ] # city-circ-paper_re
+- "Marin Independent Journal":                 [ "Independent Journal",                         31909 "Marin County"               ] # circ-paper_re
+- "La Crosse Tribune":                         [ "Tribune",                                     31759 "La Crosse"                  ] # city-circ-paper_re
+- "Observer Reporter":                         [ "Observer-Reporter",                           31755 "Washington"                 ] # city-circ-paper_re
+- "York Dispatch":                             [ "Dispatch",                                    31694 "York"                       ] # good-city-paper_re
+- "Muncie Star Press":                         [ "Star/Press",                                  31512 "Muncie"                     ] # city-circ-paper_re
+- "Daily Sentinel":                            [ "Sentinel",                                    31349 "Grand Junction"             ] # city-circ-paper_re
+- "Hutchinson News":                           [ "News",                                        31019 "Hutchinson"                 ] # city-circ-paper_re
+- "Daily News Record":                         [ "News-Record",                                 30908 "Harrisonburg"               ] # city-circ-paper_re
+- "Alexandria Daily Town Talk":                [ "Town Talk",                                   30858 "Alexandria"                 ] # good-city-paper_re
+- "Jackson Citizen Patriot":                   [ "Citizen Patriot",                             30825 "Jackson"                    ] # city-circ-paper_re
+- "Olympian":                                  [ "Olympian",                                    30755 "Olympia"                    ] # exact-city-paper-circ-paper_re
+- "Johnson City Press":                        [ "Press",                                       30670 "Johnson City"               ] # good-city-paper_re
+- "Great Falls Tribune":                       [ "Tribune",                                     30631 "Great Falls"                ] # good-city-paper_re
+- "Mail Tribune":                              [ "Mail Tribune",                                30349 "Medford"                    ] # exact-city-paper-circ-paper_re
+- "Standard Times":                            [ "Standard-Times",                              30306 "New Bedford"                ] # city-circ-paper_re
+- "Post Star":                                 [ "Post-Star",                                   30265 "Glens Falls"                ] # city-circ-paper_re
+- "Bay City Times":                            [ "Times",                                       30183 "Bay City"                   ] # city-circ-paper_re
+- "Victorville Daily Press":                   [ "Daily Press",                                 30169 "Victorville"                ] # good-city-paper_re
+- "Tribune Chronicle":                         [ "Tribune Chronicle",                           29364 "Warren"                     ] # exact-city-paper-circ-paper_re
+- "Times Daily":                               [ "Times Daily",                                 29200 "Florence"                   ] # exact-city-paper-circ-paper_re
+- "Salem News":                                [ "News",                                        29125 "Salem"                      ] # city-circ-paper_re
+- "Abilene Reporter News":                     [ "Reporter-News",                               29108 "Abilene"                    ] # good-city-paper_re
+- "Daily Camera":                              [ "Camera",                                      28994 "Boulder"                    ] # city-circ-paper_re
+- "Monterey County Herald":                    [ "Herald",                                      28933 "Monterey"                   ] # city-circ-paper_re
+- "Rapid City Journal":                        [ "Journal",                                     28907 "Rapid City"                 ] # good-city-paper_re
+- "Times Record News":                         [ "Times Record News",                           28888 "Wichita Falls"              ] # exact-city-paper-circ-paper_re
+- "Sun (Bremerton)":                           [ "Sun",                                         28792 "Bremerton"                  ] # city-circ-paper_re
+- "Charlottesville Daily Progress":            [ "Progress",                                    28697 "Charlottesville"            ] # good-city-paper_re
+- "News Journal (Mansfield)":                  [ "News Journal",                                28272 "Mansfield"                  ] # city-circ-paper_re
+- "Journal Times":                             [ "Journal Times",                               28103 "Racine"                     ] # good-city-paper-paper_re
+- "Salina Journal":                            [ "Journal",                                     28026 "Salina"                     ] # good-city-paper_re
+- "Cumberland Times News":                     [ "Times-News",                                  27954 "Cumberland"                 ] # good-city-paper_re
+- "News Times":                                [ "News-Times",                                  27909 "Danbury"                    ] # good-city-paper_re
+- "Grand Forks Herald":                        [ "Herald",                                      27650 "Grand Forks"                ] # good-city-paper_re
+- "Longview News Journal":                     [ "News-Journal",                                27590 "Longview"                   ] # city-circ-paper_re
+- "Huntington Herald Dispatch":                [ "Herald-Dispatch",                             27463 "Huntington"                 ] # city-circ-paper_re
+- "Southern Illinoisan":                       [ "Southern Illinoisan",                         27413 "Carbondale"                 ] # good-city-paper-paper_re
+- "Owensboro Messenger Inquirer":              [ "Messenger-Inquirer",                          27276 "Owensboro"                  ] # good-city-paper_re
+- "Berkshire Eagle":                           [ "Eagle",                                       26427 "Pittsfield"                 ] # city-circ-paper_re
+- "Fort Collins Coloradoan":                   [ "Coloradoan",                                  26312 "Fort Collins"               ] # city-circ-paper_re
+- "San Mateo County Times":                    [ "Times",                                       25982 "San Mateo"                  ] # city-circ-paper_re
+- "St. Cloud Times":                           [ "Times",                                       25868 "Saint Cloud"                ] # city-circ-paper_re
+- "West Chester Daily Local News":             [ "Daily Local News",                            25686 "West Chester"               ] # good-city-paper_re
+- "Morning Journal":                           [ "Journal",                                     25334 "Lorain"                     ] # city-circ-paper_re
+- "San Angelo Standard Times":                 [ "Standard-Times",                              24919 "San Angelo"                 ] # city-circ-paper_re
+- "Daily Item":                                [ "Daily Item",                                  24879 "Sunbury"                    ] # exact-city-paper-circ-paper_re
+- "Springfield News Sun":                      [ "News-Sun",                                    24684 "Springfield"                ] # city-circ-paper_re
+- "Kenosha News":                              [ "News",                                        24535 "Kenosha"                    ] # city-circ-paper_re
+- "Anniston Star":                             [ "Star",                                        24518 "Anniston"                   ] # good-city-paper_re
+- "Herald Standard":                           [ "Herald-Standard",                             24341 "Uniontown"                  ] # city-circ-paper_re
+- "News Sentinel":                             [ "News-Sentinel",                               24196 "Fort Wayne"                 ] # good-city-paper_re
+- "Salisbury Daily Times":                     [ "Times",                                       24157 "Salisbury"                  ] # good-city-paper_re
+- "Centre Daily Times":                        [ "Centre Daily Times",                          24029 "State College"              ] # good-city-paper-paper_re
+- "Star Gazette":                              [ "Star-Gazette",                                23995 "Elmira"                     ] # good-city-paper_re
+- "Tucson Citizen":                            [ "Citizen",                                     23756 "Tucson"                     ] # good-city-paper_re
+- "Santa Cruz Sentinel":                       [ "Sentinel",                                    23290 "Santa Cruz"                 ] # city-circ-paper_re
+- "Gloucester County Times":                   [ "Times",                                       23189 "Woodbury"                   ] # city-circ-paper_re
+- "Stamford Advocate":                         [ "Advocate",                                    23088 "Stamford"                   ] # good-city-paper_re
+- "Bellingham Herald":                         [ "Herald",                                      22719 "Bellingham"                 ] # good-city-paper_re
+- "Dominion Post":                             [ "Dominion Post",                               22683 "Morgantown"                 ] # good-city-paper-paper_re
+- "Metrowest Daily News":                      [ "Metrowest Daily News",                        22613 "Framingham"                 ] # good-city-paper-paper_re
+- "Wenatchee World":                           [ "World",                                       22579 "Wenatchee"                  ] # city-circ-paper_re
+- "Times Reporter":                            [ "Times Reporter",                              22428 "New Philadelphia"           ] # exact-city-paper-circ-paper_re
+- "Wooster Daily Record":                      [ "Record",                                      22150 "Wooster"                    ] # good-city-paper_re
+- "Norwich Bulletin":                          [ "Bulletin",                                    22121 "Norwich"                    ] # city-circ-paper_re
+- "Longview Daily News":                       [ "News",                                        21962 "Longview"                   ] # good-city-paper_re
+- "Charleston Daily Mail":                     [ "Mail",                                        21723 "Charleston"                 ] # good-city-paper_re
+- "Daily Reflector":                           [ "Reflector",                                   21703 "Greenville"                 ] # city-circ-paper_re
+- "Parkersburg News":                          [ "News",                                        21473 "Parkersburg"                ] # good-city-paper_re
+- "Las Cruces Sun News":                       [ "Sun-News",                                    21341 "Las Cruces"                 ] # city-circ-paper_re
+- "Daily News (Bowling Green)":                [ "Daily News",                                  21240 "Bowling Green"              ] # city-circ-paper_re
+- "Hickory Daily Record":                      [ "Record",                                      21214 "Hickory"                    ] # good-city-paper_re
+- "Mercury":                                   [ "Mercury",                                     21186 "Pottstown"                  ] # exact-city-paper-circ-paper_re
+- "Daily Times Call":                          [ "Times-Call",                                  21127 "Longmont"                   ] # city-circ-paper_re
+- "Battle Creek Enquirer":                     [ "Enquirer",                                    20854 "Battle Creek"               ] # city-circ-paper_re
+- "Decatur Daily":                             [ "Daily",                                       20770 "Decatur"                    ] # good-city-paper_re
+- "Grand Island Independent":                  [ "Independent",                                 20475 "Grand Island"               ] # good-city-paper_re
+- "Leaf Chronicle":                            [ "Leaf-Chronicle",                              20354 "Clarksville"                ] # city-circ-paper_re
+- "Times News":                                [ "Times-News",                                  20325 "Twin Falls"                 ] # city-circ-paper_re
+- "Janesville Gazette":                        [ "Gazette",                                     20272 "Janesville"                 ] # good-city-paper_re
+- "Winchester Star":                           [ "Star",                                        20218 "Winchester"                 ] # city-circ-paper_re
+- "Oshkosh Northwestern":                      [ "Northwestern",                                20140 "Oshkosh"                    ] # good-city-paper_re
+- "Quincy Herald Whig":                        [ "Herald-Whig",                                 19996 "Quincy"                     ] # good-city-paper_re
+- "Monroe Evening News":                       [ "News",                                        19877 "Monroe"                     ] # good-city-paper_re
+- "Jonesboro Sun":                             [ "Sun",                                         19830 "Jonesboro"                  ] # good-city-paper_re
+- "Danville Register and Bee":                 [ "Register and Bee",                            19830 "Danville"                   ] # circ-paper_re
+- "High Point Enterprise":                     [ "Enterprise",                                  19483 "High Point"                 ] # good-city-paper_re
+- "Hamilton Journal News":                     [ "Journal-News",                                19432 "Hamilton"                   ] # city-circ-paper_re
+- "Midland Reporter Telegram":                 [ "Reporter-Telegram",                           19407 "Midland"                    ] # good-city-paper_re
+- "Times Standard":                            [ "Times-Standard",                              19397 "Eureka"                     ] # good-city-paper_re
+- "Temple Daily Telegram":                     [ "Telegram",                                    19361 "Temple"                     ] # good-city-paper_re
+- "Minot Daily News":                          [ "News",                                        18972 "Minot"                      ] # good-city-paper_re
+- "Hawk Eye":                                  [ "Hawk Eye",                                    18921 "Burlington"                 ] # exact-city-paper-circ-paper_re
+- "Gadsden Times":                             [ "Times",                                       18832 "Gadsden"                    ] # good-city-paper_re
+- "Columbia Daily Tribune":                    [ "Tribune",                                     18131 "Columbia"                   ] # city-circ-paper_re
+- "Pocono Record":                             [ "Pocono Record",                               18121 "Stroudsburg"                ] # good-city-paper-paper_re
+- "Morristown Citizen Tribune":                [ "Citizen Tribune",                             18086 "Morristown"                 ] # good-city-paper_re
+- "Kingston Daily Freeman":                    [ "Freeman",                                     17909 "Kingston"                   ] # good-city-paper_re
+- "Reporter":                                  [ "Reporter",                                    17751 "Vacaville"                  ] # exact-city-paper-circ-paper_re
+- "Globe Gazette":                             [ "Globe",                                       17666 "Mason City"                 ] # city-circ-paper_re
+- "Daily Times":                               [ "Daily Times",                                 17485 "Farmington"                 ] # exact-city-paper-circ-paper_re
+- "Enid News and Eagle":                       [ "News And Eagle",                              17323 "Enid"                       ] # circ-paper_re
+- "Middletown Journal":                        [ "Journal",                                     17285 "Middletown"                 ] # city-circ-paper_re
+- "News Leader":                               [ "News Leader",                                 17238 "Staunton"                   ] # exact-city-paper-circ-paper_re
+- "Marietta Daily Journal":                    [ "Journal",                                     17218 "Marietta"                   ] # good-city-paper_re
+- "Vallejo Times Herald":                      [ "Times-Herald",                                16957 "Vallejo"                    ] # good-city-paper_re
+- "Lake County News Sun":                      [ "Lake County News Sun",                        16899 "Waukegan"                   ] # exact-city-paper-circ-paper_re
+- "Public Opinion":                            [ "Public Opinion",                              16679 "Chambersburg"               ] # exact-city-paper-circ-paper_re
+- "Norfolk Daily News":                        [ "News",                                        16492 "Norfolk"                    ] # city-circ-paper_re
+- "New Castle News":                           [ "News",                                        16465 "New Castle"                 ] # good-city-paper_re
+- "Messenger":                                 [ "Messenger",                                   16355 "Fort Dodge"                 ] # exact-city-paper-circ-paper_re
+- "Capital Times":                             [ "Capital Times",                               16335 "Madison"                    ] # exact-city-paper-circ-paper_re
+- "Napa Valley Register":                      [ "Register",                                    16263 "Napa"                       ] # good-city-paper_re
+- "Daily Courier":                             [ "Courier",                                     16178 "Grants Pass"                ] # city-circ-paper_re
+- "Lodi News Sentinel":                        [ "News-Sentinel",                               15771 "Lodi"                       ] # good-city-paper_re
+- "Wyoming Tribune Eagle":                     [ "Wyoming Tribune-Eagle",                       15762 "Cheyenne"                   ] # good-city-paper_re
+- "Salinas Californian":                       [ "Salinas Californian",                         15740 "Salinas"                    ] # good-city-paper-paper_re
+- "Palladium Item":                            [ "Palladium-Item",                              15453 "Richmond"                   ] # city-circ-paper_re
+- "Mississippi Press":                         [ "Mississippi Press",                           15411 "Pascagoula"                 ] # good-city-paper-paper_re
+- "Merced Sun Star":                           [ "Sun-Star",                                    15015 "Merced"                     ] # city-circ-paper_re
+- "Muskogee Daily Phoenix":                    [ "Phoenix",                                     14816 "Muskogee"                   ] # city-circ-paper_re
+- "Ithaca Journal":                            [ "Journal",                                     14771 "Ithaca"                     ] # good-city-paper_re
+- "Daily Star":                                [ "Daily Star",                                  14391 "Oneonta"                    ] # exact-city-paper-circ-paper_re
+- "Carlisle Sentinel":                         [ "Sentinel",                                    14314 "Carlisle"                   ] # good-city-paper_re
+- "Jacksonville Journal Courier":              [ "Journal-Courier",                             13922 "Jacksonville"               ] # good-city-paper_re
+- "Walla Walla Union Bulletin":                [ "Union-Bulletin",                              13624 "Walla Walla"                ] # city-circ-paper_re
+- "Recorder":                                  [ "Recorder",                                    13578 "Greenfield"                 ] # exact-city-paper-circ-paper_re
+- "Iowa City Press Citizen":                   [ "Press-Citizen",                               13352 "Iowa City"                  ] # good-city-paper_re
+- "Livingston County Daily Press and Argus":   [ "Livingston County Daily Press and Argus",     13131 "Howell"                     ] # exact-city-paper-circ-paper_re
+- "Norman Transcript":                         [ "Transcript",                                  12921 "Norman"                     ] # good-city-paper_re
+- "Wheeling News Register":                    [ "News-Register",                               12821 "Wheeling"                   ] # city-circ-paper_re
+- "Kearney Hub":                               [ "Hub",                                         12389 "Kearney"                    ] # good-city-paper_re
+- "Palatka Daily News":                        [ "News",                                        12326 "Palatka"                    ] # good-city-paper_re
+- "Keene Sentinel":                            [ "Sentinel",                                    12119 "Keene"                      ] # city-circ-paper_re
+- "Corvallis Gazette Times":                   [ "Gazette-Times",                               12092 "Corvallis"                  ] # city-circ-paper_re
+- "Sentinel":                                  [ "Sentinel",                                    11863 "Lewistown"                  ] # exact-city-paper-circ-paper_re
+- "Coos Bay World":                            [ "World",                                       11804 "Coos Bay"                   ] # good-city-paper_re
+- "North Platte Telegraph":                    [ "Telegraph",                                   11790 "North Platte"               ] # good-city-paper_re
+- "Portsmouth Herald":                         [ "Herald",                                      11658 "Portsmouth"                 ] # city-circ-paper_re
+- "Clinton Herald":                            [ "Herald",                                      11556 "Clinton"                    ] # good-city-paper_re
+- "Lisbon Morning Journal":                    [ "Journal",                                     11543 "Lisbon"                     ] # good-city-paper_re
+- "Stevens Point Journal":                     [ "Journal",                                     11234 "Stevens Point"              ] # city-circ-paper_re
+- "Daily Mountain Eagle":                      [ "Mountain Eagle",                              10918 "Jasper"                     ] # good-city-paper_re
+- "Canandaigua Daily Messenger":               [ "Messenger",                                   10831 "Canandaigua"                ] # good-city-paper_re
+- "Marietta Times":                            [ "Times",                                       10645 "Marietta"                   ] # city-circ-paper_re
+- "Lexington Dispatch":                        [ "Dispatch",                                    10555 "Lexington"                  ] # good-city-paper_re
+- "Daily Comet":                               [ "Comet",                                       10501 "Thibodaux"                  ] # good-city-paper_re
+- "Times West Virginian":                      [ "Times-West Virginian",                        10415 "Fairmont"                   ] # city-circ-paper_re
+- "Times Observer":                            [ "Times-Observer",                              10313 "Warren"                     ] # city-circ-paper_re
+- "Caledonian Record":                         [ "Caledonian-Record",                            9609 "Saint Johnsbury"            ] # good-city-paper_re
+- "Marshalltown Times Republican":             [ "Times-Republican",                             9349 "Marshalltown"               ] # city-circ-paper_re
+- "Key West Citizen":                          [ "Citizen",                                      9346 "Key West"                   ] # good-city-paper_re
+- "Brunswick Times Record":                    [ "Times Record",                                 9317 "Brunswick"                  ] # city-circ-paper_re
+- "Thomasville Times Enterprise":              [ "Times-Enterprise",                             9303 "Thomasville"                ] # good-city-paper_re
+- "Ledger Independent":                        [ "Ledger Independent",                           9074 "Maysville"                  ] # exact-city-paper-circ-paper_re
+- "East Oregonian":                            [ "East Oregonian",                               9071 "Pendleton"                  ] # exact-city-paper-circ-paper_re
+- "Taunton Daily Gazette":                     [ "Gazette",                                      9059 "Taunton"                    ] # good-city-paper_re
+- "Casa Grande Dispatch":                      [ "Dispatch",                                     9001 "Casa Grande"                ] # good-city-paper_re
+- "Daily World":                               [ "World",                                        8991 "Opelousas"                  ] # good-city-paper_re
+- "Daily Democrat":                            [ "Democrat",                                     8883 "Woodland"                   ] # city-circ-paper_re
+- "Durango Herald":                            [ "Herald",                                       8870 "Durango"                    ] # city-circ-paper_re
+- "Columbus Telegram":                         [ "Telegram",                                     8867 "Columbus"                   ] # good-city-paper_re
+- "Norwalk Reflector":                         [ "Reflector",                                    8866 "Norwalk"                    ] # good-city-paper_re
+- "Brattleboro Reformer":                      [ "Reformer",                                     8814 "Brattleboro"                ] # city-circ-paper_re
+- "Saratogian":                                [ "Saratogian",                                   8731 "Saratoga Springs"           ] # good-city-paper-paper_re
+- "Fremont Tribune":                           [ "Tribune",                                      8404 "Fremont"                    ] # good-city-paper_re
+- "Bristol Press Register Citizen":            [ "Press",                                        8285 "Bristol"                    ] # good-city-paper_re
+- "Register Citizen":                          [ "Register Citizen",                             8217 "Torrington"                 ] # exact-city-paper-circ-paper_re
+- "Shawnee News Star":                         [ "News-Star",                                    8150 "Shawnee"                    ] # good-city-paper_re
+- "Hannibal Courier Post":                     [ "Courier-Post",                                 8010 "Hannibal"                   ] # good-city-paper_re
+- "Journal":                                   [ "Journal",                                      7920 "New Ulm"                    ] # exact-city-paper-circ-paper_re
+- "Eagle Times":                               [ "Eagle Times",                                  7903 "Claremont"                  ] # exact-city-paper-circ-paper_re
+- "News Virginian":                            [ "News Virginian",                               7478 "Waynesboro"                 ] # exact-city-paper-circ-paper_re
+- "Greenwood Commonwealth":                    [ "Commonwealth",                                 6992 "Greenwood"                  ] # good-city-paper_re
+- "Carlsbad Current Argus":                    [ "Current-Argus",                                6966 "Carlsbad"                   ] # good-city-paper_re
+- "Muscatine Journal":                         [ "Journal",                                      6943 "Muscatine"                  ] # good-city-paper_re
+- "Griffin Daily News":                        [ "News",                                         6936 "Griffin"                    ] # good-city-paper_re
+- "Emporia Gazette":                           [ "Gazette",                                      6902 "Emporia"                    ] # good-city-paper_re
+- "Marshall News Messenger":                   [ "News Messenger",                               6737 "Marshall"                   ] # good-city-paper_re
+- "Bennington Banner":                         [ "Banner",                                       6502 "Bennington"                 ] # city-circ-paper_re
+- "Alamogordo Daily News":                     [ "Daily News",                                   6468 "Alamogordo"                 ] # good-city-paper_re
+- "North Adams Transcript":                    [ "Transcript",                                   5949 "North Adams"                ] # city-circ-paper_re
+- "Telegraph Forum":                           [ "Telegraph-Forum",                              5838 "Bucyrus"                    ] # good-city-paper_re
+- "Brookings Daily Register":                  [ "Register",                                     4632 "Brookings"                  ] # good-city-paper_re
+- "Orange Leader":                             [ "Leader",                                       4312 "Orange"                     ] # good-city-paper_re
+- "Phoenix":                                   [ "Phoenix",                                      2566 "Phoenixville"               ] # good-city-paper-paper_re

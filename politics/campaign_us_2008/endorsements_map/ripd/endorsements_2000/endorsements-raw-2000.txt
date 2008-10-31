@@ -28,7 +28,7 @@ The Desert Sun, Palm Springs
 Investor's Business Daily, Los Angeles
 North County Times, Escondido
 Pasadena Star-News
-The Riverside Press-Enterprise
+The Press-Enterprise (Riverside)
 The (Stockton) Record
 Record Searchlight, Redding
 The San Diego Union-Tribune
@@ -40,7 +40,7 @@ The Whittier Daily News
 
 COLORADO
 
-Boulder Camera
+Daily Camera
 The Daily Sentinel, Grand Junction
 Rocky Mountain News
 Greeley Daily Tribune
@@ -166,7 +166,7 @@ NEBRASKA
 Lincoln Journal-Star
 The North Platte Telegraph
 Norfolk Daily News
-World-Herald, Omaha
+Omaha World-Herald
 
 NEVADA
 
@@ -175,7 +175,7 @@ Las Vegas Review-Journal
 NEW HAMPSHIRE
 
 Foster's Daily Democrat, Dover
-The Union Leader, Manchester
+The New Hampshire Union Leader, Manchester
 
 NEW JERSEY
 
@@ -192,7 +192,7 @@ Las Cruces Sun-News
 
 NEW YORK
 
-The Journal News, West Nyack
+The Journal News, White Plains
 Observer-Dispatch, Utica
 New York Post
 Poughkeepsie Journal
@@ -218,7 +218,7 @@ The Courier, Findlay
 The Marietta Times
 The Plain Dealer, Cleveland
 The Repository, Canton
-Warren Tribune Chronicle
+Tribune Chronicle, Warren 
 The Vindicator, Youngstown
 
 OKLAHOMA
@@ -262,7 +262,7 @@ TENNESSEE
 
 Chattanooga Free Press
 The Commercial Appeal, Memphis
-The Knoxville News-Sentinel
+The Knoxville News Sentinel
 
 TEXAS
 
@@ -278,7 +278,9 @@ Houston Chronicle
 Lubbock Avalanche-Journal
 San Angelo Standard-Times
 San Antonio Express-News
-Times Herald Record, Wichita Falls
+Times Record News, Wichita Falls # was the Times Herald Record -- assuming this is in error
+# Wichita Falls Times Record did endorse W
+# http://nl.newsbank.com/nl-search/we/Archives?p_product=WFTB&p_theme=wftb&p_action=search&p_maxdocs=200&p_text_search-0=endorsement&s_dispstring=endorsement%20AND%20date(10/1/2000%20to%2011/10/2000)&p_field_date-0=YMD_date&p_params_date-0=date:B,E&p_text_date-0=10/1/2000%20to%2011/10/2000)&xcal_numdocs=20&p_perpage=10&p_sort=YMD_date:D&xcal_useweights=no
 
 VIRGINIA
 
@@ -292,7 +294,7 @@ WASHINGTON
 The Columbian, Vancouver
 The Seattle Times
 The Spokesman-Review, Spokane
-Kitsap Sun, Bremerton
+Sun, Bremerton
 Tri-City Herald, Kennewick
 Walla Walla Union-Bulletin
 
@@ -336,7 +338,7 @@ The Fresno Bee
 Marin Independent-Journal
 The Modesto Bee
 Press Democrat, Santa Rosa
-Long Beach Press Telegram
+Press Telegram, Long Beach
 The Sacramento Bee
 San Francisco Chronicle
 San Francisco Examiner
@@ -424,7 +426,7 @@ MASSACHUSETTS
 The Berkshire Eagle, Pittsfield
 The Boston Globe
 Metrowest Daily News, Framingham
-The Salem Evening News
+The Salem News
 
 MICHIGAN
 
@@ -476,7 +478,7 @@ The Santa Fe New Mexican
 NEW YORK
 
 The Buffalo News
-Daily News
+Daily News (New York City)
 The Daily Star, Oneonta
 The Ithaca Journal
 Newsday, Melville
@@ -489,7 +491,7 @@ NORTH CAROLINA
 
 The Asheville Citizen-Times
 The Charlotte Observer
-Morning Star, Wilmington
+Wilmington Star-News  			# Morning Star, Wilmington -- merged to form the star-news
 The News and Observer, Raleigh
 News and Record, Greensboro
 

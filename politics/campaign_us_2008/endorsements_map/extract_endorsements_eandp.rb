@@ -34,7 +34,7 @@ ENDORSEMENT_RE = {
   1992 => /^([A-Z][a-z].+)?$/,
   1996 => /^([A-Z][a-z].+)?$/,
   2000 => /^([A-Z][a-z].+)?$/,
-  2008 => /^([^\:]*?)(?::? \((B|K|N|N\/A|)\))?:? *([0-9,]+)?$/,
+  2008 => /^([^\:]*?)(?::?\s*\((B|K|N|N\/A|)\))?:? *([0-9,]+)?$/,
 }
 
 def parse_ep_endorsements(raw_filename, endorsement_re, year)
@@ -45,9 +45,9 @@ def parse_ep_endorsements(raw_filename, endorsement_re, year)
     f.each do |l|
       l.chomp!; l.strip!
       l.gsub!(/>>+/, '')                        # 'newly-added' designator
-      l.gsub!(/^#.*$/, '')                      # comment
+      l.gsub!(/#.*$/, '')                      # comment
       l.gsub!(/Foster.*s Daily/, 'Foster\'s Daily') # cruft
-      next if l =~ /^\s*$/                      # blank
+      next if l =~ /^[\s_]*$/                      # blank
       #
       case
       when l =~ /(?:daily newspapers total|daily circulation total)/ then next
@@ -97,31 +97,56 @@ def fix_city_and_paper(orig_paper, state)
   end
   paper.gsub!(/^The\s+/i, '')
   paper.gsub!(/\s+&\s+/, ' and ')
+  paper.gsub!(/-/, ' ')
   city = { 
-    'Bryan-College Station'     => 'Bryan',
-    'Neptune'                   => 'Asbury Park',
-    'Wilkes Barre'              => 'Wilkes-Barre',    
-    'Ft. Lauderdale'            => 'Fort Lauderdale',
-    'Champaign-Urbana'          => 'Champaign',
-    'West Lafayette'            => 'Lafayette',
-    'LaCrosse'                  => 'La Crosse',
-    'Lake County-Willoughby'    => 'Willoughby'
+    "Bloomington-Normal"            => "Bloomington",
+    "Conway-North Conway)(N"        => "Conway",
+    "Dover-New Philadelphia"        => "New Philadelphia",
+    "Escondido-Oceanside"           => "Escondido",
+    "Lafayette-West Lafayette"      => "Lafayette",
+    "Lafayette-West Lafayette"      => "Lafayette",
+    "Neptune-Asbury Park"           => "Asbury Park",
+    "Pasco-Kennewick-Richland"      => "Kennewick",
+    "Primos-Upper Darby"            => "Philadelphia",
+    "Towanda"                       => "Hayward",
+    'Bryan-College Station'         => 'Bryan',             
+    'Champaign-Urbana'              => 'Champaign',         
+    'Conway-North Conway'           => 'Conway',            
+    'Ft. Lauderdale'                => 'Fort Lauderdale',   
+    'LaCrosse'                      => 'La Crosse',         
+    'Lake County-Willoughby'        => 'Willoughby',
+    'Neptune'                       => 'Asbury Park',       
+    'Newport News-Hampton'          => 'Newport News',      
+    'Palm Springs-Palm Desert'      => 'Palm Springs',      
+    'West Lafayette'                => 'Lafayette',         
+    'Wilkes Barre'                  => 'Wilkes-Barre',  
+    'Centralia-Chehalis'            => 'Centralia',
+    'St. Charles'                   => 'Saint Charles',
+    'Camden-Cherry Hill'            => 'Cherry Hill',
+    # ''               => '',    
   }[city] || city
+  paper = { 
+    'Washinton Times'               => 'Washington Times',
+    'JournalNews'                   => 'Journal News',
+    'TimesDaily'                    => 'Times Daily',
+    # ''               => '',
+  }[paper] || paper
   # Some special cases
   # Delaware County Daily Times is in Primos -- but that's basically philadelphia
   # Gannett Sunburban Newspapers is many papers, based in White Plains, NY
   city, paper = { 
     ['Arlington', 'Daily Herald']   => ['Arlington Heights', 'Daily Herald'],
     ['Bryan',     'Eagle']          => ['Bryan',             'Bryan-College Station Eagle'],
+    ['Bergen',    'Record']         => ['Hackensack',        'Record (Bergen)'],
   }[ [city, paper] ] || [city, paper]
-  keep_city = ['Daily News', 'Sun', 'Record', 'News Journal', 'Times', 'Spokesman-Review', 'Chronicle', 'Courier']
+  keep_city = ['Daily News', 'Sun', 'Record', 'News Journal', 'Times', 'Spokesman-Review', 'Chronicle', 'Courier', 'Daily Review']
   case
-  when !city.blank? && keep_city.include?(paper) then paper = "#{paper} (#{city})"
+  when (paper =~ /Investor.*s Business Daily/)          then paper = "Investor's Business Daily"
+  when (paper =~ /Record.*Bergen/)                      then city, paper = 'Hackensack', 'Record (Bergen)'  
   when (paper == 'Kenne Sentinel')                      then city, paper = 'Keene', 'Keene Sentinel'  
-  when (paper =~ /Record.*Bergen/)                      then city, paper = 'Hackensack', 'Record'  
-  when (paper =~ /Spokesman.*Review/) && (orig_paper =~ /Spokane/) then paper = "Spokesman-Review (Spokane)"
+  when (paper =~ /Spokesman.*Review/) && (orig_paper =~ /Spokane/) then paper = "Spokesman Review (Spokane)"
+  when !city.blank? && keep_city.include?(paper)        then paper = "#{paper} (#{city})"
   end
-  # puts "%-30s %-30s %-50s" % [paper, city, orig_paper] if orig_paper =~ /daily.*news/i
   [paper, city]
 end
 

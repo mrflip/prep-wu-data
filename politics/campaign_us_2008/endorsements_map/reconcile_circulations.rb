@@ -14,11 +14,25 @@ require 'lib/metropolitan_areas'
 # -- amarillo Globe-news
 #
 
+def q_d text, delim=',', quote='"'
+  "#{quote}#{text}#{quote}#{delim}"
+end
 
+RAW_FILENAME  = 'ripd/newspaper_circulations_raw.yaml'
+DUMP_FILENAME = 'data/newspaper_circulations.yaml'
 #
 # is there a match from teh fas-fax to the existing endorsement info
 #
+REJECT_MATCH = [
+  ['Las Vegas',   'Sun',     'Las Vegas Review Journal'],  ['Las Vegas',   'Review Journal', 'Las Vegas Sun'],
+  ['Coshocton',   'Tribune', 'McCook Daily Gazette'],      ['McAllen',     'La Frontera',    'Gunnison Country Times'],
+  ["Chattanooga", "Times",   "Chattanooga Free Press" ],   ["Chattanooga", "Free Press",     "Chattanooga Times" ],
+  ["Jonesboro",   "Sun",     "Danville Register and Bee"],
+
+
+]
 def score_match ff, e
+  return({:rejected=>true}) if REJECT_MATCH.include?([ff[:city], ff[:paper], e[:paper]])
   match = { }
   [:paper, :circ, :city].each{|attr| match[attr] = (ff[attr] == e[attr] )}
   match[:paper_re] = /#{ff[:paper].gsub(/\W+/, ".+")}/i.match(e.paper)
@@ -26,7 +40,7 @@ def score_match ff, e
   p [match, ff, e] if (e.paper =~ /orange/i) && (ff[:paper] =~ /orange/i)
   case
   when (match[:paper]&&match[:circ]&&match[:city]) then match[:exact] = true
-  when (match[:circ])                              then match[:circ] = true
+  when (match[:circ])                              then match[:circ] = true; warn ("%-23s %20s,%23s]"%[q_d(ff[:city]), q_d(ff[:paper]), q_d(e[:paper])]) if !match[:paper_re]
   when (match[:paper_re]&&match[:city])            then match[:good] = true
   else nil
   end
@@ -34,48 +48,43 @@ def score_match ff, e
 end
 def is_match(match)   match.values.inject(false){|v,t| v||t} end
 def matches_of(match) match.map{|k,v| k if v}.compact end
+
 #
 # Load
 #
 Endorsement.load :format => :yaml
-ff_infos = YAML.load(File.open('data/newspaper_circulations.yaml'))
+ff_infos = YAML.load(File.open(RAW_FILENAME))
 
 ff_infos = ff_infos.map{|ff| Hash.zip([:paper, :circ, :city], ff) }.sort_by{|ff| -ff[:circ]}
 ff_infos.each{|ff| ff[:circ] = ff[:circ].to_i}
 ee_infos = Endorsement.all.values.sort_by{|e| -e.circ.to_i}
 ee_infos.map(&:fix!)
 
-ff_infos.each do |ff|
-  found = false
-  ee_infos.each do |e|
-    match = score_match(ff, e)
-    case
-    when match[:exact]
-      # puts "%-39s\t%-31s\t%6s\t%-39s\t%-31s\t%6s\t%s" %(ff.values_at(:paper, :city, :circ)+e.values_of(:paper, :city, :circ)+[matches_of(match)])
-      ee_infos.delete(e)
-      found = true
-      break
-    when match[:good] # || match[:circ]
-      puts "%-39s\t%-31s\t%6s\t%-39s\t%-31s\t%6s\t%s" %(ff.values_at(:paper, :city, :circ)+e.values_of(:paper, :city, :circ)+[matches_of(match)])
-      ee_infos.delete(e)
-      found = true
+def rr_circ ff, e, match
+  # "- "Oklahoman":                                [ "Oklahoman",                                201771,         "Oklahoma City"             ]"
+  #  123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-
+  "- %-44s [ %-44s %7d %-28s ] # %s\n" % [q_d(e[:paper],':'), q_d(ff[:paper]), ff[:circ], q_d(ff[:city],""), matches_of(match).join("-")]
+end
+
+File.open(DUMP_FILENAME, 'w') do |dump_file|
+  ff_infos.each do |ff|
+    found = false
+    ee_infos.each do |e|
+      match = score_match(ff, e)
+      case
+      when match[:exact] || match[:good] || match[:circ]
+        dump_file << rr_circ(ff, e, match)
+        e.circ = ff[:circ] unless e.circ && (e.circ > 0)
+        ee_infos.delete(e)
+        found = true
+        break
+      end
     end
+    # puts rr_circ(ff, {:paper=>'-',:circ=>0,:city=>'-'}) if !found
   end
-  #puts "%-39s\t%-31s\t%6s\t%-39s\t%-31s\t%6s\t%s" %(ff.values_at(:paper, :city, :circ)+(['']*3)+['-']) if !found
 end
+Endorsement.dump
 
-ee_infos.each do |e|
-  #puts "%-39s\t%-31s\t%6s\t%-39s\t%-31s\t%6s\t%s" %(e.values_of(:paper, :city, :circ)+(['-------']*3)+['-'])
-end
-
-# ff_circs.each do |ffpaper, circ, city|
-#   # print "%-47s\t%-23s" % [ffpaper, city]
-#   Endorsement.all.each do |_, e|
-#     if paper_re.match(e.paper) && city_re.match(e.city)
-#       # print "%-39s\t%-31s" % [e.paper, e.city ]
-#       found_es[e.paper] << [ffpaper, city]
-#     end
-#   end
-#   # puts ''
+# ee_infos.each do |e|
+#   puts rr_circ({:paper=>'-',:circ=>0,:city=>'-'}, e)
 # end
-#

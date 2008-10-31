@@ -38,7 +38,7 @@ CALIFORNIA
 CLINTON
 
 
-Daily Review
+Daily Review, Hayward
 Hollister Free Lance
 Modesto Bee
 Oakland Tribune
@@ -228,7 +228,7 @@ Portsmouth Herald
 
 DOLE
 Foster's Daily Democrat
-Union Leader
+New Hampshire Union Leader
 
 NEW MEXICO
 
@@ -246,7 +246,7 @@ NEW YORK
 CLINTON
 Canandaigua Daily Messenger
 Kingston Daily Freeman
-Daily News
+Daily News (New York City)
 
 DOLE
 Finger Lakes Times
@@ -474,7 +474,7 @@ TENNESSEE
 The Nashville Banner
 The Tennessean, Nashville
 NEW YORK
-Daily News
+Daily News (New York City)
 The New York Times
 PENNSYLVANIA
 The Philadelphia Daily News
@@ -515,11 +515,11 @@ The Augusta Chronicle
 MASSACHUSETTS
 The Boston Herald
 WASHINGTON
-Kitsap Sun, Bremerton
+Sun, Bremerton
 TENNESSEE
 The Chattanooga Free Press
 The Commercial Appeal, Memphis
-The Knoxville News-Sentinel
+The Knoxville News Sentinel
 OHIO
 The Cincinnati Post
 The Cincinnati Enquirer

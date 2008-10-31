@@ -4,7 +4,7 @@ ALABAMA
 The Decatur Daily   
 
 CALIFORNIA 
-San Bernardino Sun
+San Bernardino County Sun
 San Francisco Examiner   
 
 COLORADO 
@@ -54,10 +54,10 @@ North Jersey Herald and News
 Times, Trenton 
 
 NEW YORK 
-Gannett Suburban Newspapers
+The Journal News, White Plains  	# replacing Gannett Suburban Newspapers
 Times Herald-Record, Middletown
 New York Times
-Daily News 
+Daily News (New York City)
 
 NORTH DAKOTA 
 Minot Daily News 
@@ -104,7 +104,7 @@ NEW YORK
 New York Post 
 
 NEBRASKA 
-World-Herald, Omaha
+Omaha World-Herald
 
 OHIO 
 Cincinnati Enquirer 
@@ -170,7 +170,7 @@ Vista Press
 
 COLORADO 
 
-Boulder Camera 
+Daily Camera (Boulder)
 Lamar Daily News 
 
 CONNECTICUT 
@@ -272,7 +272,7 @@ Las Vegas Sun
 NEW HAMPSHIRE 
 
 Concord Monitor 
-Claremont Eagle Times
+Eagle Times, Claremont
 Portsmouth Herald 
 
 NEW JERSEY 
@@ -407,7 +407,7 @@ Charleston Gazette
 
 WISCONSIN 
 
-LaCrosse Tribune 
+La Crosse Tribune 
 The Capital Times 
 Milwaukee Journal 
 
@@ -540,7 +540,7 @@ NEW HAMPSHIRE
 
 Foster's Daily Democrat 
 Conway Daily Sun
-Union Leader, Manchester
+New Hampshire Union Leader, Manchester
 
 NEW JERSEY 
 
@@ -601,7 +601,7 @@ TENNESSEE
 Chattanooga News-Free Press 
 Morristown Citizen Tribune 
 Commercial Appeal, Memphis
-Knoxville News-Sentinel 
+Knoxville News Sentinel 
 
 TEXAS 
 
@@ -636,7 +636,7 @@ The Winchester Star
 WASHINGTON 
 
 Chronicle, Centralia 
-Kitsap Sun, Bremerton
+Sun, Bremerton
 
 WEST VIRGINIA 
 
