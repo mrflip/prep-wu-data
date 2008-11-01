@@ -49,8 +49,8 @@
 	// <![CDATA[		
 	var so = new SWFObject("./utils/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-map.xml?20081024"));
-	so.addVariable("data_file", 	encodeURIComponent("chart/endorsements-map.xml?20081024"));
+	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-map.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));
+	so.addVariable("data_file", 	encodeURIComponent("chart/endorsements-map.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));
 	so.write("flashcontent");
 	// ]]>
     </script>
@@ -66,8 +66,8 @@
       // <![CDATA[		
 	var so = new SWFObject("utils/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-bargraph.xml?20081024"));        // you can set two or more different settings files here (separated by commas)
-	so.addVariable("data_file",     encodeURIComponent("chart/endorsements-bargraph.xml?20081024"));		
+	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-bargraph.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));        // you can set two or more different settings files here (separated by commas)
+	so.addVariable("data_file",     encodeURIComponent("chart/endorsements-bargraph.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));		
 	//  so.addVariable("loading_settings", "LOADING SETTINGS");   // you can set custom "loading settings" text here
 	//  so.addVariable("loading_data", "LOADING DATA");           // you can set custom "loading data" text here
   	//  so.addVariable("preloader_color", "#000000");	
@@ -80,7 +80,13 @@
       
       <p><em>Blog Post for this <a href="http://blog.infochimps.org/2008/10/22/2008election-newspaper-endorsement-map/" style="color:#449">over here.</a>
 	  Updated on <!-- DATE_GOES_HERE -->2008 Oct 24<!-- DATE_WENT_THERE -->.
-      </em></p>
+      </em><br/>
+      <em>Screenshots: map -
+	<a href="pix/newspaper_endorsement_map_screenshot-980.png" title="980x544">big</a> &middot;
+	<a href="pix/newspaper_endorsement_map_screenshot.png" 	   title="643x356">med</a> &middot;
+	<a href="pix/newspaper_endorsement_map_screenshot-470.png" title="470x254">sm</a> |
+	<a href="pix/newspaper_endorsement_bargraph_screenshot.png" title="the red-blue bars thing">bar graph</a></em>
+      </p>
       
       <p>Apart from the unsurprising
       evidence that (choose one: [[Obama is the overwhelming choice]] -OR-

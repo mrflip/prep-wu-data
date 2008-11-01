@@ -219,6 +219,11 @@ St. Louis Post Dispatch:
   :paper: St. Louis Post Dispatch
   :st: MO
   :prez_1992: Clinton
+Chattanooga Free Press: 
+  :city: 
+  :paper: Chattanooga Free Press
+  :st: TN
+  :prez_1992: GHWBush
 Columbus Dispatch: 
   :city: 
   :paper: Columbus Dispatch
@@ -589,6 +594,11 @@ Intelligencer Journal:
   :paper: Intelligencer Journal
   :st: PA
   :prez_1992: Clinton
+Tribune Democrat: 
+  :city: Johnstown
+  :paper: Tribune Democrat
+  :st: PA
+  :prez_1992: GHWBush
 Greenfield Daily Reporter: 
   :city: 
   :paper: Greenfield Daily Reporter
@@ -1109,11 +1119,6 @@ Topeka Capital Journal:
   :paper: Topeka Capital Journal
   :st: KS
   :prez_1992: GHWBush
-Kingston Daily Freeman: 
-  :city: 
-  :paper: Kingston Daily Freeman
-  :st: NY
-  :prez_1992: Clinton
 Rock Springs Daily Rocket Miner: 
   :city: 
   :paper: Rock Springs Daily Rocket Miner
@@ -1224,21 +1229,11 @@ New Haven Register:
   :paper: New Haven Register
   :st: CT
   :prez_1992: GHWBush
-Chattanooga News Free Press: 
-  :city: 
-  :paper: Chattanooga News Free Press
-  :st: TN
-  :prez_1992: GHWBush
 Norton Daily Telegram Tiller and Toiler: 
   :city: 
   :paper: Norton Daily Telegram Tiller and Toiler
   :st: KS
   :prez_1992: GHWBush
-Red Wing Republican Eagle: 
-  :city: 
-  :paper: Red Wing Republican Eagle
-  :st: MN
-  :prez_1992: Perot
 Bristol Press Register Citizen: 
   :city: 
   :paper: Bristol Press Register Citizen
@@ -1394,6 +1389,11 @@ Jackson Sun:
   :paper: Jackson Sun
   :st: TN
   :prez_1992: Clinton
+Daily Freeman: 
+  :city: Kingston
+  :paper: Daily Freeman
+  :st: NY
+  :prez_1992: Clinton
 Beaumont Enterprise: 
   :city: 
   :paper: Beaumont Enterprise
@@ -1444,15 +1444,15 @@ Olathe Daily News:
   :paper: Olathe Daily News
   :st: KS
   :prez_1992: Clinton
+Republican Eagle: 
+  :city: Red Wing
+  :paper: Republican Eagle
+  :st: MN
+  :prez_1992: Perot
 El Paso Herald Post: 
   :city: 
   :paper: El Paso Herald Post
   :st: TX
-  :prez_1992: GHWBush
-Johnstown Tribune Democrat: 
-  :city: 
-  :paper: Johnstown Tribune Democrat
-  :st: PA
   :prez_1992: GHWBush
 Courier (Findlay): 
   :city: Findlay

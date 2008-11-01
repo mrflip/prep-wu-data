@@ -824,11 +824,6 @@ Yankton Daily Press and Dakotan:
   :paper: Yankton Daily Press and Dakotan
   :st: SD
   :prez_1996: Dole
-Kingston Daily Freeman: 
-  :city: 
-  :paper: Kingston Daily Freeman
-  :st: NY
-  :prez_1996: Clinton
 St. Paul Pioneer Press: 
   :city: 
   :paper: St. Paul Pioneer Press
@@ -918,11 +913,6 @@ New York Observer:
   :city: 
   :paper: New York Observer
   :st: NY
-  :prez_1996: Dole
-Red Wing Republican Eagle: 
-  :city: 
-  :paper: Red Wing Republican Eagle
-  :st: MN
   :prez_1996: Dole
 Richmond Times Dispatch: 
   :city: 
@@ -1054,6 +1044,11 @@ Talladega Daily Home:
   :paper: Talladega Daily Home
   :st: AL
   :prez_1996: Clinton
+Daily Freeman: 
+  :city: Kingston
+  :paper: Daily Freeman
+  :st: NY
+  :prez_1996: Clinton
 Tulsa World: 
   :city: 
   :paper: Tulsa World
@@ -1089,6 +1084,11 @@ Portsmouth Herald:
   :paper: Portsmouth Herald
   :st: NH
   :prez_1996: Clinton
+Republican Eagle: 
+  :city: Red Wing
+  :paper: Republican Eagle
+  :st: MN
+  :prez_1996: Dole
 Evansville Courier and Press: 
   :city: 
   :paper: Evansville Courier and Press

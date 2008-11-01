@@ -53,7 +53,6 @@ class Geolocation < Struct.new(
       {'x'=> bl_x, 'y' => bl_y, 'value' => 100, 'content' => "BL: #{'%6.2f'%bl_y} : #{'%6.2f'%bl_x}", 'bullet_color' => "00ff00" },
       {'x'=> tr_x, 'y' => tr_y, 'value' => 100, 'content' => "TR: #{'%6.2f'%tr_y} : #{'%6.2f'%tr_x}", 'bullet_color' => "00ff00" }
     ]
-
   end
 
 end

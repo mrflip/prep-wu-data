@@ -389,6 +389,11 @@ Metrowest Daily News:
   :paper: Metrowest Daily News
   :prez_2000: Gore
   :st: MA
+Fredericksburg Free Lance Star: 
+  :city: 
+  :paper: Fredericksburg Free Lance Star
+  :prez_2000: Bush
+  :st: VA
 New Hampshire Union Leader: 
   :city: Manchester
   :paper: New Hampshire Union Leader
@@ -479,11 +484,6 @@ Sumter Item:
   :paper: Sumter Item
   :prez_2000: Bush
   :st: SC
-Free Lance Star: 
-  :city: Fredericksburg
-  :paper: Free Lance Star
-  :prez_2000: Bush
-  :st: VA
 Star Gazette: 
   :city: Elmira
   :paper: Star Gazette

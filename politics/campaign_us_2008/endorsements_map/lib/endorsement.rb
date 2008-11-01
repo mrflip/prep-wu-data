@@ -3,14 +3,14 @@ require File.dirname(__FILE__)+'/hash_of_structs'
 PARTY_ALIGNMENT = {
   'GHW Bush'  => -1,   'Dole'  => -1, 'Bush'  => -1, 'McCain' => -1,
   'Clinton'   =>  1,   'Gore'  =>  1, 'Kerry' =>  1, 'Obama'  =>  1,
-  nil         =>  nil, ''      =>  0, 'N/A'   =>  0, 'N'      =>  0 }
+  nil         =>  nil, ''      =>  0, 'N/A'   =>  0, 'N'      =>  0, 'abstain' => 0, }
 PREZ_CODE       = {
   'GHWBush'   => 'HW', 'Dole' => 'D', 'Bush' => 'W',  'McCain' => 'M',
-  'Clinton'   => 'C',  'Gore' => 'G', 'Kerry' => 'K', 'Obama'  => 'O',
+  'Clinton'   => 'C',  'Gore' => 'G', 'Kerry' => 'K', 'Obama'  => 'O', 'abstain' => 'ab',
   nil         =>  0,   ''      =>  0
 }
 MOVEMENT_TO             = { 'McCain' => -2, 'Obama' => 2, }
-SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review-Journal', 'The Chattanooga Free Press', 'Chattanooga Times']
+SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review Journal', 'Chattanooga Free Press', 'Chattanooga Times']
 class Endorsement < Struct.new(
   :prez_2008, :prez_2004, :prez_2000, :prez_1996, :prez_1992,
     :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
@@ -51,11 +51,17 @@ class Endorsement < Struct.new(
   # (and similarly for * => r)
   #
   def movement yr1, yr2
+    return 'ab' if prez[yr2] == 'abstain'
+    return 'dn' if ['USA Today', 'Wall Street Journal'].include?(paper)
     from, to = [party_in(yr1)||0, party_in(yr2)]
-    (from && to) ? (2*to - from) : nil
+    (from && to) ? (2*to - from) : to
   end
   def simple_movement yr1, yr2
-    case movement(yr1, yr2) when -2 then -1 when 2 then 1 else movement(yr1, yr2) end
+    case movement(yr1, yr2)
+    when -2   then -1
+    when  2   then  1
+    else movement(yr1, yr2)
+    end
   end
   def mv0408() simple_movement(2004,2008) end
   #
@@ -74,13 +80,15 @@ class Endorsement < Struct.new(
   def self.endorsement_bins
     return @endorsement_bins if @endorsement_bins
     @endorsement_bins = {
-      nil => {:papers => [], :total_circ => 0, :title => 'Top 100 papers (by circulation) that have not yet endorsed a candidate', },
-      -3  => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Kerry in 2004)',                     },
-      -2  => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (no endorsement in 2004)',                         },
-      -1  => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Bush or none in 2004)',              },
-       3  => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Bush in 2004)',                           },
-       2  => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (no endorsement in 2004)',                          },
-       1  => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Kerry or none in 2004)',                  },
+      nil  => {:papers => [], :total_circ => 0, :title => 'Top 100 papers (by circulation) that have not yet endorsed a candidate', },
+      'dn' => {:papers => [], :total_circ => 0, :title => 'Papers that have a policy of not endorsing candidates', },
+      'ab' => {:papers => [], :total_circ => 0, :title => 'Announced they will not endorse a candidate in 2008', },
+      -3   => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Kerry in 2004)',                     },
+      -2   => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (no endorsement in 2004)',                         },
+      -1   => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Bush or none in 2004)',              },
+       3   => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Bush in 2004)',                           },
+       2   => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (no endorsement in 2004)',                          },
+       1   => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. Obama (endorsed Kerry or none in 2004)',                  },
     }
     all.sort_by{|paper, e| [-e.circ.to_i, e[:st], e[:paper]]}.each do |paper, e|
       bin = e.simple_movement(2004,2008)
@@ -92,9 +100,9 @@ class Endorsement < Struct.new(
 
   def interesting?
     case
-    when prez_2008       then return true
-    when prez.values.compact.length > 3 then return true
-    when rank && (rank > 0) && (rank < 150) then return true
+    when prez_2008                              then return true
+    when prez.values.compact.length > 3         then return true
+    when rank && (rank > 0) && (rank < 150)     then return true
     else
       return false
     end
@@ -117,7 +125,7 @@ class Endorsement < Struct.new(
   def circ_as_text
     case
     when circ == 0         then 'unknown'
-    when split_endorsement then "#{circ}/2 - see <a href='#wtftwoendorsements'>note #2</a>"
+    when split_endorsement then "#{circ}/2 <a title='Split endorsement -- see note #2, above' href='#wtftwoendorsements'>(**)</a>"
     else                        circ.to_s
     end
   end
@@ -149,6 +157,7 @@ class Endorsement < Struct.new(
     when 'Obama',  'Kerry', 'Gore', 'Clinton'   then 'blue'
     when 'McCain', 'Bush', 'Dole', 'GHWBush'    then 'red'
     when 'Perot'                                then 'independent'
+    when 'abstain'                              then 'abstain'
     when 'N/A', 'none'                          then 'gray'
     when nil, ''                                then 'none'
     else

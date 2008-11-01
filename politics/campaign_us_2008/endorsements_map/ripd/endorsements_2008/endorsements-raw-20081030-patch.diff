@@ -1,6 +1,6 @@
---- ripd/endorsements_2008/endorsements-raw-20081031-orig.txt	2008-10-31 16:34:41.000000000 -0500
-+++ ripd/endorsements_2008/endorsements-raw-2008.txt	2008-10-31 16:51:27.000000000 -0500
-@@ -68,7 +68,7 @@
+--- ripd/endorsements_2008/endorsements-raw-20081030-orig.txt	2008-10-30 23:30:46.000000000 -0500
++++ ripd/endorsements_2008/endorsements-raw-2008-edited.txt	2008-10-30 23:32:29.000000000 -0500
+@@ -70,7 +70,7 @@
            Daytona Beach News-Journal (K): 99,627                                                                   
            Florida Today (Melbourne) (K): 79,499                                                                    
            The Gainesville Sun (K): 44,658                                                                          
@@ -9,7 +9,7 @@
            The Miami Herald (K): 240,223                                                                            
            Naples Daily-News (B): 66,272                                                                            
            Orlando Sentinel (K): 227,593                                                                            
-@@ -97,14 +97,14 @@
+@@ -99,14 +99,14 @@
            Herald & Review (Decatur) (B): 34,480                                                                    
            Lake County News-Sun (Waukegan) (B): 16,899                                                              
            The Pantagraph (Bloomington-Normal) (B): 47,764                                                          
@@ -27,7 +27,7 @@
                                                                                                                     
            IOWA (6)                                                                                                 
            The Des Moines Register (K): 138,472                                                                     
-@@ -130,7 +130,7 @@
+@@ -132,7 +132,7 @@
            MAINE (3)                                                                                                
            Bangor Daily News (K): 55,627                                                                            
            Portland Press Herald (K): 64,938                                                                        
@@ -36,17 +36,16 @@
                                                                                                                     
            MARYLAND (1)                                                                                             
            The Sun (Baltimore) (K): 232,360                                                                         
-@@ -190,7 +190,8 @@
+@@ -188,7 +188,7 @@
            Courier-Post (Camden-Cherry Hill): 66,617                                                                
            The Gloucester County Times (Woodbury) (K): 23,189                                                       
            Home News Tribune (East Brunswick): 49,076                                                               
 -          The Record (Hackensack) (K): 163,329                                                                     
-+	  >>> The New Jersey Herald (Newton) (B)
 +          The Record (Bergen) (K): 163,329                                                                     
            The Star-Ledger (Newark) (K): 345,130                                                                    
            The Times (Trenton) (K): 54,745                                                                          
                                                                                                                     
-@@ -208,7 +209,7 @@
+@@ -205,7 +205,7 @@
            Hoy (New York City): 35,410                                                                              
            The Journal-News (White Plains) (K): 108,092                                                             
            The New York Times (K): 1,077,256                                                                        
@@ -55,7 +54,7 @@
            The Post-Star (Glens Falls) (K): 30,265                                                                  
            Poughkeepsie Journal (B): 37,265                                                                         
            Rochester Democrat and Chronicle (K): 145,913                                                            
-@@ -227,7 +228,7 @@
+@@ -224,7 +224,7 @@
            Akron Beacon Journal (K): 119,929                                                                        
            The Blade (Toledo) (K): 119,901                                                                          
            Dayton Daily News (K): 116,690                                                                           
@@ -64,16 +63,16 @@
            Middletown Journal: 17,285                                                                               
            News Journal (Mansfield) (B): 28,272                                                                     
            Telegraph-Forum (Bucyrus): 5,969                                                                         
-@@ -238,7 +239,7 @@
+@@ -235,7 +235,7 @@
            Vindicator (Youngstown) (B): 56,412                                                                      
                                                                                                                     
            OKLAHOMA (2)                                                                                             
 -          Muskogee Daily Phoenix & Times-Democrat (K): 14,816                                                      
 +          Muskogee Daily Phoenix (K): 14,816                                                      
-           The Norman Transcript: 12,921                                                                            
+           >>> The Norman Transcript                                                                                
                                                                                                                     
            OREGON (8)                                                                                               
-@@ -262,7 +263,7 @@
+@@ -259,7 +259,7 @@
            Intelligencer Journal (Lancaster): 46,357                                                                
            The Mercury (Pottstown): 21,186                                                                          
            Observer-Reporter (Washington) (K): 31,755                                                               
@@ -82,7 +81,7 @@
            The Philadelphia Daily News: 107,269                                                                     
            The Philadelphia Inquirer (K): 334,150                                                                   
            Pittsburgh Post-Gazette (K): 214,374                                                                     
-@@ -314,7 +315,7 @@
+@@ -311,7 +311,7 @@
                                                                                                                     
            WEST VIRGINIA (3)                                                                                        
            Charleston Gazette (K): 48,061                                                                           
@@ -90,22 +89,17 @@
 +          The Huntington Herald-Dispatch (K): 27,463                                                             
            Times West Virginian (Fairmont): 10,415                                                                  
                                                                                                                     
-           WISCONSIN (8)                                                                                            
-@@ -333,11 +334,11 @@
+           WISCONSIN (7)                                                                                            
+@@ -329,7 +329,7 @@
                                                                                                                     
            ALABAMA (2)                                                                                              
            The Birmingham News (B): 140,438                                                                         
 -          Press-Register (Mobile) (B): 99,433                                                                      
 +          Mobile Press Register (B): 99,433                                                                      
                                                                                                                     
-           ARIZONA (2)                                                                                              
+           ARIZONA (1)                                                                                              
            The Arizona Republic (Phoenix) (B): 413,332                                                              
--          >>> The Daily Courier (Prescott)                                                                         
-+          >>> The Prescott Daily Courier                                                                         
-                                                                                                                    
-           ARKANSAS (1)                                                                                             
-           >>> Southwest Times Record (Fort Smith) (B)                                                              
-@@ -345,10 +346,10 @@
+@@ -337,10 +337,10 @@
            CALIFORNIA (7)                                                                                           
            The Bakersfield Californian (B) 59,433                                                                   
            The Desert Sun (Palm Springs-Palm Desert) (B): 53,091                                                    
@@ -118,7 +112,7 @@
            The San Diego Union-Tribune (B): 288,669                                                                 
                                                                                                                     
            COLORADO (3)                                                                                             
-@@ -381,11 +382,11 @@
+@@ -372,11 +372,11 @@
            Kane County Chronicle (St. Charles): 12,564                                                              
            Morris Daily Herald (Morris): 7,258                                                                      
            The News-Gazette (Champaign-Urbana) (B): 42,302                                                          
@@ -132,7 +126,7 @@
            Sioux City Journal (B): 41,096                                                                           
                                                                                                                     
            KANSAS (1)                                                                                               
-@@ -443,7 +444,7 @@
+@@ -427,7 +427,7 @@
            New York Post (B): 702,488                                                                               
                                                                                                                     
            NORTH DAKOTA (1)                                                                                         
@@ -141,18 +135,25 @@
                                                                                                                     
            OHIO (7)                                                                                                 
            The Cincinnati Enquirer (B): 212,369                                                                     
-@@ -462,8 +463,8 @@
-           OREGON (4)                                                                                               
-           >>> Albany Democrat-Herald                                                                               
+@@ -445,7 +445,7 @@
+                                                                                                                    
+           OREGON (3)                                                                                               
            Baker City Herald: 3,151                                                                                 
 -          The Bulletin (Bend) (B): 32,455                                                                          
--          Daily Courier (Grants Pass) (B): 16,178                                                                  
 +          The Bend Bulletin (B): 32,455                                                                          
-+          Grants Pass Daily Courier (B): 16,178                                                                  
+           Daily Courier (Grants Pass) (B): 16,178                                                                  
                                                                                                                     
            PENNSYLVANIA (5)                                                                                         
-           Lancaster New Era: 40,068                                                                                
-@@ -498,7 +499,7 @@
+@@ -453,7 +453,7 @@
+           Public Opinion (Chambersburg) (N): 16,679                                                                
+           The Sentinel (Lewistown) (B): 11,863                                                                     
+           Times-Observer (Warren): 10,313                                                                          
+-          >>> The Tribune-Democrat (Johnstown): 37,673                                                             
++          >>> The Johnstown Tribune-Democrat: 37,673                                                             
+                                                                                                                    
+           SOUTH CAROLINA (3)                                                                                       
+           The Greenville News (B): 81,010                                                                          
+@@ -481,7 +481,7 @@
            New Braunfels Herald-Zeitung: 8,599                                                                      
            San Antonio Express-News (B): 225,447                                                                    
            Tyler Morning Telegraph: 35,598                                                                          
@@ -161,51 +162,64 @@
                                                                                                                     
            VIRGINIA (8)                                                                                             
            Bristol Herald-Courier (B): 38,068                                                                       
-@@ -525,26 +526,46 @@
-           ___                                                                                                      
-           CHOOSING TO MAKE NO ENDORSEMENT (21)                                                                     
+@@ -508,25 +508,46 @@
                                                                                                                     
-+	  TEXAS                                                                         
-           Abilene Reporter-News                                                                                    
-+	  COLORADO                                                                                         
+           CHOOSING NO ENDORSEMENT (20)                                                                             
+           ( ) = 2004 Endorsement                                                                                   
+-          Abilene Reporter-News                                                                                    
++
++	  COLORADO
            Colorado Springs Gazette (N)                                                                             
-+	  VIRGINIA                                                                                        
-           The Fairfax County Times (Virginia)                                                                      
-+	  FLORIDA                                                              
+-          The Fairfax County Times (Virginia)                                                                      
++          >>> Rocky Mountain News  
++
++	  FLORIDA
            The Florida Times-Union (Jacksonville)                                                                   
            Fort Meyers News-Press                                                                                   
-+	  ALABAMA                                                                           
++
++	  ALABAMA
            The Huntsville Times                                                                                     
-+	  OHIO                                                                         
-           The Marietta Register (Ohio)                                                                             
-+          PENNSYLVANIA
-           The Morning Call (Allentown)                                                                             
-+	  IDAHO                                                                         
-           Mountain Home News (Idaho)                                                                               
-+	  VIRGINIA                                                                        
-           Loudoun Times Mirror (Virginia)                                                                          
-+	  VIRGINIA                                                                       
-           The Roanoke Times (Virginia)                                                                             
-+	  MISSOURI                                                                          
-           Springfield News-Leader                                                                                  
-+	  CALIFORNIA                                                                       
-           The Record Searchlight (California)                                                                      
-+	  COLORADO                                                                
-           Rocky Mountain News (Colorado)                                                                           
-+	  MINNESOTA                                                                      
-           St. Paul Pioneer Press                                                                                   
-+	  VIRGINIA                                                                      
+-          The Marietta Register (Ohio)                                                                             
+-          Mountain Home News (Idaho)                                                                               
+-          Loudoun Times Mirror (Virginia)                                                                          
+-          The Roanoke Times (Virginia)                                                                             
+-          Springfield News-Leader                                                                                  
+-          The Record Searchlight (California)                                                                      
+-          >>> Rocky Mountain News (Colorado)                                                                       
+-          St. Paul Pioneer Press                                                                                   
++
++	  OHIO
++          The Marietta Register
++	  IDAHO
++          Mountain Home News                                                                               
++
++	  VIRGINIA
++          The Fairfax County Times
++          Loudoun Times Mirror 
++          The Roanoke Times
            The Virginian-Pilot (Norfolk)                                                                            
-+	  TEXAS                                                                       
-           Waco Tribune Herald (Texas)                                                                              
-+	  INDIANA                                                                           
-           Indianapolis Star (B)                                                                                    
-+	  MICHIGAN                                                                       
-           Ann Arbor News (B)                                                                                       
-+	  VIRGINIA                                                                     
+-          Waco Tribune Herald (Texas)                                                                              
+-          Indianapolis Star (B)                                                                                    
+-          Ann Arbor News (B)                                                                                       
            Fredericksburg Free-Lance Star (B)                                                                       
-+	  CALIFORNIA                                                                     
++	  
++	  MISSOURI
++          Springfield News-Leader
++	  
++	  CALIFORNIA
++          The Record Searchlight
            Ventura County Star                                                                                      
                                                                                                                     
++	  MINNESOTA
++          St. Paul Pioneer Press
              
 \ No newline at end of file
++	  INDIANA
++          Indianapolis Star (B)
++	  
++	  MICHIGAN
++          Ann Arbor News (B)                                                                                       
++            
++	  TEXAS
++          Abilene Reporter-News
++          Waco Tribune Herald

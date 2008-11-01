@@ -35,6 +35,7 @@ PRESIDENTS = {
   'K'                   => 'Kerry',
   'B'                   => 'Bush',
   'N'                   => 'none',
+  #'CHOOSING NO ENDORSEMENT' => 'abstain'
 }
 
 ENDORSEMENT_RE = {
@@ -57,7 +58,9 @@ def parse_ep_endorsements(raw_filename, endorsement_re, year)
       next if l =~ /^[\s_]*$/                      # blank
       #
       case
-      when l =~ /(?:daily newspapers total|daily circulation total)/ then next
+      when l =~ /(?:daily newspapers total|daily circulation total|= \d{4} Endorsement)/ then next
+      when l =~ /CHOOSING.*NO ENDORSEMENT/ then 
+        prez = 'abstain'        
       when PRESIDENTS.include?(l)
         prez = PRESIDENTS[l]
       when (l.upcase == l) && (l =~ /[A-Z]+/)
@@ -97,11 +100,12 @@ end
 def fix_city_and_paper(orig_paper, state)
   # extract embedded city info
   case
-  when orig_paper =~ /^(.*) \((.*)\)(.*)/  then  paper, city = [$1+($3||''), $2]
+  when orig_paper =~ /^(.*) \((.*)\)(.*)/     then  paper, city = [$1+($3||''), $2]
   when orig_paper =~ /^(.*), ([A-Za-z]+.*)$/  then  paper, city = [$1, $2]
   else
     paper = orig_paper
   end
+  if city && STATE_ABBREVIATIONS[city.upcase] then city = '' end # Handle redundant state info
   paper.gsub!(/^The\s+/i, '')
   paper.gsub!(/\s+&\s+/, ' and ')
   paper.gsub!(/-/, ' ')
@@ -118,6 +122,7 @@ def fix_city_and_paper(orig_paper, state)
     'Bryan-College Station'         => 'Bryan',             
     'Champaign-Urbana'              => 'Champaign',         
     'Conway-North Conway'           => 'Conway',            
+    'Fort Meyers'                   => 'Fort Myers',   
     'Ft. Lauderdale'                => 'Fort Lauderdale',   
     'LaCrosse'                      => 'La Crosse',         
     'Lake County-Willoughby'        => 'Willoughby',
@@ -135,6 +140,7 @@ def fix_city_and_paper(orig_paper, state)
     'Washinton Times'               => 'Washington Times',
     'JournalNews'                   => 'Journal News',
     'TimesDaily'                    => 'Times Daily',
+    'Fort Meyers News Press'        => 'News Press',
     # ''               => '',
   }[paper] || paper
   # Some special cases

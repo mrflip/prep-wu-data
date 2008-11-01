@@ -122,7 +122,7 @@ Houston Chronicle
 ROSS PEROT 
 
 MINNESOTA 
-Red Wing Republican Eagle 
+Republican Eagle (Red Wing)
 
 MISSOURI 
 Columbia Daily Tribune 
@@ -287,7 +287,7 @@ Santa Fe New Mexican
 
 NEW YORK 
 
-Kingston Daily Freeman
+Daily Freeman (Kingston)
 Rochester Democrat & Chronicle 
 Newsday 
 Observer-Dispatch, Utica
@@ -590,7 +590,7 @@ PENNSYLVANIA
 
 Pittsburgh Press 
 Times-Leader, Wilkes-Barre
-Johnstown Tribune-Democrat 
+Tribune-Democrat (Johnstown)
 
 RHODE ISLAND 
 
@@ -598,7 +598,7 @@ Woonsocket Call
 
 TENNESSEE 
 
-Chattanooga News-Free Press 
+Chattanooga Free Press
 Morristown Citizen Tribune 
 Commercial Appeal, Memphis
 Knoxville News Sentinel 

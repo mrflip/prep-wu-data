@@ -41,7 +41,6 @@ module StructDumper
     if base.is_a? Class then base = base.to_s.underscore.pluralize end
     dir = options[:dir] || :fixd
     out_filename = "#{dir}/#{base}.#{ext}"
-    puts "#{ext.to_s.upcase} file: #{out_filename}"
     out_filename
   end
   #

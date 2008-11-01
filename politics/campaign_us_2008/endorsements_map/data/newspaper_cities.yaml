@@ -24,6 +24,7 @@
 'Douglas Daily Dispatch':              { :paper: 'Douglas Daily Dispatch',              :st: 'AZ', :city: 'Douglas'                       } # 1992
 'Mesa Tribune':                        { :paper: 'Mesa Tribune',                        :st: 'AZ', :city: 'Mesa'                          } # 1996
 'Arizona Republic':                    { :paper: 'Arizona Republic',                    :st: 'AZ', :city: 'Phoenix'                       } # 1992,2000,2004,2008
+'Grants Pass Daily Courier':           { :paper: 'Grants Pass Daily Courier',           :st: 'OR', :city: 'Grants Pass'                   } # 2004,2008
 'Prescott Daily Courier':              { :paper: 'Prescott Daily Courier',              :st: 'AZ', :city: 'Prescott'                      } # 1992,1996
 'Bakersfield Californian':             { :paper: 'Bakersfield Californian',             :st: 'CA', :city: 'Bakersfield'                   } # 2004,2008
 'El Cajon':                            { :paper: 'El Cajon',                            :st: 'CA', :city: 'El Cajon'                      } # 1992
@@ -100,7 +101,6 @@
 'Cape Coral Daily Breeze':             { :paper: 'Cape Coral Daily Breeze',             :st: 'FL', :city: 'Cape Coral'                    } # 2008
 'Daytona Beach News Journal':          { :paper: 'Daytona Beach News Journal',          :st: 'FL', :city: 'Daytona Beach'                 } # 1992,1996,2000,2004,2008
 'South Florida Sun Sentinel':          { :paper: 'South Florida Sun Sentinel',          :st: 'FL', :city: 'Fort Lauderdale'               } # 2000,2004,2008
-'News Press':                          { :paper: 'News Press',                          :st: 'FL', :city: 'Fort Myers'                    } # 2000
 'Tribune':                             { :paper: 'Tribune',                             :st: 'FL', :city: 'Fort Pierce'                   } # 2000
 'Gainesville Sun':                     { :paper: 'Gainesville Sun',                     :st: 'FL', :city: 'Gainesville'                   } # 2000,2008
 'Hernando Today':                      { :paper: 'Hernando Today',                      :st: 'FL', :city: 'Hernando'                      } # 1996
@@ -124,7 +124,6 @@
 'Press Journal':                       { :paper: 'Press Journal',                       :st: 'FL', :city: 'Vero Beach'                    } # 2000
 'Palm Beach Post':                     { :paper: 'Palm Beach Post',                     :st: 'FL', :city: 'West Palm Beach'               } # 1992,1996,2000,2004,2008
 'Winter Haven News Chief':             { :paper: 'Winter Haven News Chief',             :st: 'FL', :city: 'Winter Haven'                  } # 1992,1996
-'Albany Herald':                       { :paper: 'Albany Herald',                       :st: 'GA', :city: 'Albany'                        } # 1996
 'Athens Daily News':                   { :paper: 'Athens Daily News',                   :st: 'GA', :city: 'Athens'                        } # 1992,1996
 'Augusta Chronicle':                   { :paper: 'Augusta Chronicle',                   :st: 'GA', :city: 'Augusta'                       } # 1992,1996,2000
 'Brunswick News':                      { :paper: 'Brunswick News',                      :st: 'GA', :city: 'Brunswick'                     } # 1992
@@ -255,7 +254,6 @@
 'Duluth News Tribune':                 { :paper: 'Duluth News Tribune',                 :st: 'MN', :city: 'Duluth'                        } # 2000
 'Star Tribune':                        { :paper: 'Star Tribune',                        :st: 'MN', :city: 'Minneapolis'                   } # 1992,1996,2000,2004,2008
 'Journal':                             { :paper: 'Journal',                             :st: 'MN', :city: 'New Ulm'                       } # 2004,2008
-'Red Wing Republican Eagle':           { :paper: 'Red Wing Republican Eagle',           :st: 'MN', :city: 'Red Wing'                      } # 1992,1996
 'St. Cloud Times':                     { :paper: 'St. Cloud Times',                     :st: 'MN', :city: 'Saint Cloud'                   } # 2004,2008
 'St. Paul Pioneer Press':              { :paper: 'St. Paul Pioneer Press',              :st: 'MN', :city: 'Saint Paul'                    } # 1992,1996,2000,2004
 'Willmar West Central Tribune':        { :paper: 'Willmar West Central Tribune',        :st: 'MN', :city: 'Willmar'                       } # 1992,1996
@@ -331,8 +329,11 @@
 'Courier Post':                        { :paper: 'Courier Post',                        :st: 'NJ', :city: 'Cherry Hill'                   } # 1992,2000,2008
 'Home News Tribune':                   { :paper: 'Home News Tribune',                   :st: 'NJ', :city: 'East Brunswick'                } # 1992,2000
 'Star Ledger':                         { :paper: 'Star Ledger',                         :st: 'NJ', :city: 'Newark'                        } # 1992,1996,2000,2004,2008
+'New Jersey Herald':                   { :paper: 'New Jersey Herald',                   :st: 'NJ', :city: 'Newton'                        } # 2008:O  2004:W                                0
 'North Jersey Herald and News':        { :paper: 'North Jersey Herald and News',        :st: 'NJ', :city: 'Passaic'                       } # 1992
 'Gloucester County Times':             { :paper: 'Gloucester County Times',             :st: 'NJ', :city: 'Woodbury'                      } # 1992,2004,2008
+'Times (Trenton)':                     { :paper: 'Times (Trenton)',                     :st: 'NJ', :city: 'Trenton'                       } # 1992,1996,2000,2004,2008
+'Trentonian':                          { :paper: 'Trentonian',                          :st: 'NJ', :city: 'Trenton'                       } # 1992
 'Alamogordo Daily News':               { :paper: 'Alamogordo Daily News',               :st: 'NM', :city: 'Alamogordo'                    } # 1992
 'Carlsbad Current Argus':              { :paper: 'Carlsbad Current Argus',              :st: 'NM', :city: 'Carlsbad'                      } # 2000
 'Daily Times':                         { :paper: 'Daily Times',                         :st: 'NM', :city: 'Farmington'                    } # 1992,2004,2008
@@ -349,7 +350,6 @@
 'Star Gazette':                        { :paper: 'Star Gazette',                        :st: 'NY', :city: 'Elmira'                        } # 2000
 'Post Star':                           { :paper: 'Post Star',                           :st: 'NY', :city: 'Glens Falls'                   } # 2004,2008
 'Ithaca Journal':                      { :paper: 'Ithaca Journal',                      :st: 'NY', :city: 'Ithaca'                        } # 2000
-'Kingston Daily Freeman':              { :paper: 'Kingston Daily Freeman',              :st: 'NY', :city: 'Kingston'                      } # 1992,1996
 'Newsday':                             { :paper: 'Newsday',                             :st: 'NY', :city: 'Melville'                      } # 1992,2000
 'Times Herald Record':                 { :paper: 'Times Herald Record',                 :st: 'NY', :city: 'Middletown'                    } # 1992,2008
 'Daily Star':                          { :paper: 'Daily Star',                          :st: 'NY', :city: 'Oneonta'                       } # 2000,2004,2008
@@ -371,6 +371,7 @@
 'Morning Journal':                     { :paper: 'Morning Journal',                     :st: 'OH', :city: 'Lorain'                        } # 2008
 'News Journal (Mansfield)':            { :paper: 'News Journal (Mansfield)',            :st: 'OH', :city: 'Mansfield'                     } # 1992,2004,2008
 'Marietta Times':                      { :paper: 'Marietta Times',                      :st: 'OH', :city: 'Marietta'                      } # 2000
+'Marietta Register':                   { :paper: 'Marietta Register',                   :st: 'OH', :city: 'Marietta'                      } 
 'Medina County Gazette':               { :paper: 'Medina County Gazette',               :st: 'OH', :city: 'Medina'                        } # 1992
 'Middletown Journal':                  { :paper: 'Middletown Journal',                  :st: 'OH', :city: 'Middletown'                    } # 2008
 'Times Reporter':                      { :paper: 'Times Reporter',                      :st: 'OH', :city: 'New Philadelphia'              } # 2004,2008
@@ -402,7 +403,6 @@
 'Coos Bay World':                      { :paper: 'Coos Bay World',                      :st: 'OR', :city: 'Coos Bay'                      } # 1992,1996
 'Corvallis Gazette Times':             { :paper: 'Corvallis Gazette Times',             :st: 'OR', :city: 'Corvallis'                     } # 2000,2008
 'Register Guard':                      { :paper: 'Register Guard',                      :st: 'OR', :city: 'Eugene'                        } # 2000,2004,2008
-'Daily Courier':                       { :paper: 'Daily Courier',                       :st: 'OR', :city: 'Grants Pass'                   } # 2004,2008
 'Yamhill Valley News Register':        { :paper: 'Yamhill Valley News Register',        :st: 'OR', :city: 'McMinnville'                   } # 2004,2008
 'Mail Tribune':                        { :paper: 'Mail Tribune',                        :st: 'OR', :city: 'Medford'                       } # 2004,2008
 'East Oregonian':                      { :paper: 'East Oregonian',                      :st: 'OR', :city: 'Pendleton'                     } # 1996,2008
@@ -416,7 +416,6 @@
 'Erie Times News':                     { :paper: 'Erie Times News',                     :st: 'PA', :city: 'Erie'                          } # 2000,2004,2008
 'Tribune Review':                      { :paper: 'Tribune Review',                      :st: 'PA', :city: 'Greensburg'                    } # 2000
 'Harrisburg Patriot News':             { :paper: 'Harrisburg Patriot News',             :st: 'PA', :city: 'Harrisburg'                    } # 2000,2008
-'Johnstown Tribune Democrat':          { :paper: 'Johnstown Tribune Democrat',          :st: 'PA', :city: 'Johnstown'                     } # 1992
 'Sentinel':                            { :paper: 'Sentinel',                            :st: 'PA', :city: 'Lewistown'                     } # 2004,2008
 'New Castle News':                     { :paper: 'New Castle News',                     :st: 'PA', :city: 'New Castle'                    } # 1992
 'Phoenix':                             { :paper: 'Phoenix',                             :st: 'PA', :city: 'Phoenixville'                  } # 1992
@@ -492,7 +491,7 @@
 'Bristol Herald Courier':              { :paper: 'Bristol Herald Courier',              :st: 'VA', :city: 'Bristol'                       } # 1992,2004,2008
 'Charlottesville Daily Progress':      { :paper: 'Charlottesville Daily Progress',      :st: 'VA', :city: 'Charlottesville'               } # 1992
 'Falls Church News Press':             { :paper: 'Falls Church News Press',             :st: 'VA', :city: 'Falls Church'                  } # 2004,2008
-'Free Lance Star':                     { :paper: 'Free Lance Star',                     :st: 'VA', :city: 'Fredericksburg'                } # 2000
+'Fredericksburg Free Lance Star':      { :paper: 'Fredericksburg Free Lance Star',      :st: 'VA', :city: 'Fredericksburg'                } # 2000
 'Daily News Record':                   { :paper: 'Daily News Record',                   :st: 'VA', :city: 'Harrisonburg'                  } # 1992,2000,2008
 'News and Advance':                    { :paper: 'News and Advance',                    :st: 'VA', :city: 'Lynchburg'                     } # 2004,2008
 'Daily Press':                         { :paper: 'Daily Press',                         :st: 'VA', :city: 'Newport News'                  } # 1992,2004,2008
@@ -566,8 +565,6 @@
 'News and Observer':                   { :paper: 'News and Observer',                   :st: 'NC', :city: 'Raleigh'                       } # 1992,2000,2004,2008
 'News Journal (Wilmington)':           { :paper: 'News Journal (Wilmington)',           :st: 'DE', :city: 'Wilmington'                    } # 2000,2004,2008
 'Wilmington Star News':                { :paper: 'Wilmington Star News',                :st: 'NC', :city: 'Wilmington'                    } # 2004,2008
-'Times (Trenton)':                     { :paper: 'Times (Trenton)',                     :st: 'NJ', :city: 'Trenton'                       } # 1992,1996,2000,2004,2008
-'Trentonian':                          { :paper: 'Trentonian',                          :st: 'NJ', :city: 'Trenton'                       } # 1992
 'Albuquerque Journal':                 { :paper: 'Albuquerque Journal',                 :st: 'NM', :city: 'Albuquerque'                   } # 1992,1996,2000
 'Albuquerque Tribune':                 { :paper: 'Albuquerque Tribune',                 :st: 'NM', :city: 'Albuquerque'                   } # 1992,1996,2000
 'Las Vegas Sun':                       { :paper: 'Las Vegas Sun',                       :st: 'NV', :city: 'Las Vegas'                     } # 1992,1996,2000,2004,2008
@@ -635,14 +632,11 @@
 'Staten Island Advance':               { :paper: 'Staten Island Advance',               :st: 'NY', :city: 'New York City'                 } # 2000
 'New York Post':                       { :paper: 'New York Post',                       :st: 'NY', :city: 'New York City'                 } # 1992,1996,2000,2004,2008
 'Daily News (New York City)':          { :paper: 'Daily News (New York City)',          :st: 'NY', :city: 'New York City'                 } # 1992,1996,2000,2004,2008
-
 'USA Today':                           { :paper: 'USA Today',                           :st: '',   :city: ''                                } #
 'Wall Street Journal':                 { :paper: 'Wall Street Journal',                 :st: 'NY', :city: 'New York City'                 } #
-
 'Virginia Gazette':                    { :paper: 'Virginia Gazette',                    :st: 'VA', :city: 'Williamsburg'                  } #
 'Arkansas Times':                      { :paper: 'Arkansas Times',                      :st: 'AR', :city: 'Little Rock'                   } #
 'Orange County Register':              { :paper: 'Orange County Register',              :st: 'CA', :city: 'Anaheim'                       } #
-
 'Baker City Herald':                   { :paper: 'Baker City Herald',                   :st: 'OR', :city: 'Baker City'                    } #                                 2008:M     3151
 'Cape Cod Times':                      { :paper: 'Cape Cod Times',                      :st: 'MA', :city: 'Hyannis'                       } #                         2004:W  2008:O        0
 'Crystal Lake Northwest Herald':       { :paper: 'Crystal Lake Northwest Herald',       :st: 'IL', :city: 'Crystal Lake'                  } #                         2004:W  2008:M    36594
@@ -660,6 +654,26 @@
 'Tahoe Daily Tribune':                 { :paper: 'Tahoe Daily Tribune',                 :st: 'CA', :city: 'South Lake Tahoe'              } #                                 2008:O     7723
 'Telegraph Forum':                     { :paper: 'Telegraph Forum',                     :st: 'OH', :city: 'Bucyrus'                       } #                                 2008:O     5969
 'Valley News':                         { :paper: 'Valley News',                         :st: 'VT', :city: 'White River Junction'          } #                         2004:K  2008:O    16430
-                                       
+'Colorado Springs Gazette':            { :paper: 'Colorado Springs Gazette',            :st: 'CO', :city: 'Colorado Springs'              } # 2008:   2004:                                 0
+'News Press':                          { :paper: 'News Press',                          :st: 'FL', :city: 'Fort Myers'                    } # 2000
+'Mountain Home News':                  { :paper: 'Mountain Home News',                  :st: 'ID', :city: 'Mountain Home'                 } # 2008:                                         0
+'Fairfax County Times':                { :paper: 'Fairfax County Times',                :st: 'VA', :city: 'Fairfax'                       } # 2008:                                         0
+'Loudoun Times Mirror':                { :paper: 'Loudoun Times Mirror',                :st: 'VA', :city: 'Leesburg'                      } # 2008:                                         0
+'Oakland Press':                       { :paper: 'Oakland Press',                       :st: 'MI', :city: 'Pontiac'                       } # 2008:M  2004:W                                0
+'Daily Tribune':                       { :paper: 'Daily Tribune',                       :st: 'MI', :city: 'Royal Oak'                     } # 2008:O                                        0
+'Albert Lea Tribune':                  { :paper: 'Albert Lea Tribune',                  :st: 'MN', :city: 'Albert Lea'                    } # 2008:O                                        0
+'Winona Daily News':                   { :paper: 'Winona Daily News',                   :st: 'MN', :city: 'Winona'                        } # 2008:O                                        0
+'Pioneer':                             { :paper: 'Pioneer',                             :st: 'MN', :city: 'Bemidji'                       } # 2008:M  2004:W                                0
+'Daily Journal':                       { :paper: 'Daily Journal',                       :st: 'MN', :city: 'International Falls'           } # 2008:M                                        0
+'Republican Eagle':                    { :paper: 'Republican Eagle',                    :st: 'MN', :city: 'Red Wing'                      } # 2008:M                                        0
+'Sunday News Tribune':                 { :paper: 'Sunday News Tribune',                 :st: 'MO', :city: 'Jefferson City'                } # 2008:M                                        0
+'Daily Freeman':                       { :paper: 'Daily Freeman',                       :st: 'NY', :city: 'Kingston'                      } # 2008:O  2004:                                 0
+'Tribune Democrat':                    { :paper: 'Tribune Democrat',                    :st: 'PA', :city: 'Johnstown'                     } # 2008:M                                    37673
+'Wausau Daily Herald':                 { :paper: 'Wausau Daily Herald',                 :st: 'WI', :city: 'Wausau'                        } # 2008:O  2004:K                                0
+'Star':                                { :paper: 'Star',                                :st: 'WI', :city: 'Sun Prairie'                   } # 2008:M                                        0
+
 'Norton Daily Telegram Tiller and Toiler': { :paper: 'Norton Daily Telegram Tiller and Toiler', :st: 'KS', :city: 'Norton'                } # 1992
 'Livingston County Daily Press and Argus': { :paper: 'Livingston County Daily Press and Argus', :st: 'MI', :city: 'Howell'                } # 2004,2008
+# These two are correct -- Albany Herald, GA and Albany Delaware Herald (OR) are different papers
+'Albany Herald':                       { :paper: 'Albany Herald',                       :st: 'GA', :city: 'Albany'                        } # 1996
+'Albany Democrat Herald':              { :paper: 'Albany Democrat Herald',              :st: 'OR', :city: 'Albany'                              } # 2008:M                                        0
