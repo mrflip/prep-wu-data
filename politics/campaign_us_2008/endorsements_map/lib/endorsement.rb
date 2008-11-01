@@ -14,7 +14,7 @@ SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review Journal', 'Chatta
 class Endorsement < Struct.new(
   :prez_2008, :prez_2004, :prez_2000, :prez_1996, :prez_1992,
     :rank, :circ, :daily, :sun, :lat, :lng, :st, :city, :paper,
-    :metro, :pop
+    :pop, :metro
   )
   include HashOfStructs
   def self.make_key(paper) paper       end

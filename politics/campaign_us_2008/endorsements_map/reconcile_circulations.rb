@@ -80,4 +80,5 @@ File.open(DUMP_FILENAME, 'w') do |dump_file|
     # puts rr_circ(ff, {:paper=>'-',:circ=>0,:city=>'-'}) if !found
   end
 end
-Endorsement.dump
+Endorsement.dump :literalize_keys => false, :format => :tsv
+Endorsement.dump :literalize_keys => false, :format => :yaml

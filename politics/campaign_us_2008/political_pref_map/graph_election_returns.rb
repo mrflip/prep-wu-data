@@ -35,7 +35,7 @@ FIXNAMES = {
   ["MS", "Jeff Davis"                           ]  => "Jefferson Davis",
   ["MT", "Lewis & Clark"                        ]  => "Lewis and Clark",
   ["NM", "DeBaca"                               ]  => 'De Baca',
-  ["NY","Saint Lawrence"                        ]  => 'St. Lawrence',
+  ["NY", "Saint Lawrence"                       ]  => 'St. Lawrence',
   ["OK", "LeFlore"                              ]  => "Le Flore",
   ["TX", "De Witt"                              ]  => "DeWitt",
   ["TX", "La Vaca"                              ]  => "Lavaca",
@@ -103,55 +103,55 @@ end
 
 
 
-# def pct(num) number_to_percentage(100*num, :precision => 0) end
-# #
-# # XML-able hash for amcharts point
-# #
-# def point_for_graph election_return, idx, content=nil
-#   hsh = { }
-#   hsh['content']     = content || popup_text(election_return)
-#   hsh['x'], hsh['y'] = [ election_return.total, election_return.blue_margin ]
-#   hsh['value']       = Math.sqrt(idx) # election_return.blue_margin
-#   # Bullet Appearance
-#   hsh['bullet_color'] = election_return.color
-#   hsh['bullet_alpha'] = 60
-#   hsh['bullet']       = 'round'
-#   hsh.each{|k,v| puts "Unset value for #{k} in #{hsh['content']}" unless v; }
-#   hsh
-# end
-# #
-# # Readable text for the popup balloon
-# #
-# def popup_text er
-#   txt = "%s county, %s<br />Kerry Margin %s<br />" % [er.county, er.st, pct(er.blue_margin)]
-#   [:kerry, :bush, :nader].each do |cand|
-#     txt += "%s %s (%s)<br/>" % [cand.to_s.capitalize, er[cand], pct(er.margin(cand))]
-#   end
-#   txt
-# end
-# #
-# # XML-able hash for whole amcharts graph
-# #
-# def hash_for_graph election_returns
-#   puts election_returns.find_all{|er| er.total != er.total.to_i }.to_yaml
-#   election_returns = election_returns.sort_by{|er| -er.total } # must be by bubble size so bubbles don't get buried
-#   hsh = { 'chart' => { 'graphs' => { 'graph' => [
-#           # points
-#           { 'gid' => 0, 'point' =>
-#             election_returns.enum_with_index.map{|e,i| point_for_graph(e,i)}
-#           },
-#         ]}}}
-#   XmlSimple.xml_out hsh, 'KeepRoot' => true
-# end
-# #
-# # Generate AMCharts graph
-# #
-# def dump_rank_plot election_returns, graph_xml_filename
-#   puts "Writing to graph file #{graph_xml_filename}"
-#   File.open(graph_xml_filename, 'w') do |graph_xml_out|
-#     graph_xml_out << hash_for_graph(election_returns)
-#   end
-# end
+def pct(num) number_to_percentage(100*num, :precision => 0) end
 #
+# XML-able hash for amcharts point
 #
-# dump_rank_plot(ers, 'fixd/election_returns_ranked.xml')
+def point_for_graph election_return, idx, content=nil
+  hsh = { }
+  hsh['content']     = content || popup_text(election_return)
+  hsh['x'], hsh['y'] = [ election_return.total, election_return.blue_margin ]
+  hsh['value']       = Math.sqrt(idx) # election_return.blue_margin
+  # Bullet Appearance
+  hsh['bullet_color'] = election_return.color
+  hsh['bullet_alpha'] = 60
+  hsh['bullet']       = 'round'
+  hsh.each{|k,v| puts "Unset value for #{k} in #{hsh['content']}" unless v; }
+  hsh
+end
+#
+# Readable text for the popup balloon
+#
+def popup_text er
+  txt = "%s county, %s<br />Kerry Margin %s<br />" % [er.county, er.st, pct(er.blue_margin)]
+  [:kerry, :bush, :nader].each do |cand|
+    txt += "%s %s (%s)<br/>" % [cand.to_s.capitalize, er[cand], pct(er.margin(cand))]
+  end
+  txt
+end
+#
+# XML-able hash for whole amcharts graph
+#
+def hash_for_graph election_returns
+  puts election_returns.find_all{|er| er.total != er.total.to_i }.to_yaml
+  election_returns = election_returns.sort_by{|er| -er.total } # must be by bubble size so bubbles don't get buried
+  hsh = { 'chart' => { 'graphs' => { 'graph' => [
+          # points
+          { 'gid' => 0, 'point' =>
+            election_returns.enum_with_index.map{|e,i| point_for_graph(e,i)}
+          },
+        ]}}}
+  XmlSimple.xml_out hsh, 'KeepRoot' => true
+end
+#
+# Generate AMCharts graph
+#
+def dump_rank_plot election_returns, graph_xml_filename
+  puts "Writing to graph file #{graph_xml_filename}"
+  File.open(graph_xml_filename, 'w') do |graph_xml_out|
+    graph_xml_out << hash_for_graph(election_returns)
+  end
+end
+
+
+dump_rank_plot(ers, 'fixd/election_returns_ranked.xml')

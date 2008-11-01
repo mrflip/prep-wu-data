@@ -31,7 +31,7 @@
 "Miami Herald":                  { :paper: "Miami Herald",                  :prez_2004: 'Kerry'      }
 "Morning Call":                  { :paper: "Morning Call",                  :prez_2004: 'Kerry'      }
 "Nashua Telegraph":              { :paper: "Nashua Telegraph",              :prez_2004: 'Kerry'      }
-"Times Picayune":                { :paper: "Times Picayune",                :prez_2004: 'none'        }
+"Times Picayune":                { :paper: "Times Picayune",                :prez_2004: 'none'       }
 "New York Post":                 { :paper: "New York Post",                 :prez_2004: 'Bush'       }
 "News and Observer":             { :paper: "News and Observer",             :prez_2004: 'Kerry'      }
 "Omaha World Herald":            { :paper: "Omaha World Herald",            :prez_2004: 'Bush'       }
