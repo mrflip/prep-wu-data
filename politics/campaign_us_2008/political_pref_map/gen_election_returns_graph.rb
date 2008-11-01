@@ -11,8 +11,8 @@ require 'action_view/helpers/number_helper'; include ActionView::Helpers::Number
 $: << File.dirname(__FILE__)+'/..'
 as_dset __FILE__
 #
-require 'election_return'
-require 'county'
+require 'lib/election_return'
+require 'lib/county'
 
 #
 # Discrepancies from USA Today to Census
@@ -59,6 +59,13 @@ WEIRD = {
 # within counties.
 
 #
+# Load counties
+#
+counties = YAML.load(File.open(path_to(:fixd, 'county_pop_info.yaml')))
+SKIP_STATES.each{|st| counties.delete(st)}
+WEIRD.each{|st,county| counties[st].delete(county) }
+
+#
 # Load USA Today results
 #
 tsv_in_filename = 'election_returns_2004.tsv'
@@ -71,36 +78,42 @@ ers.each do |er|
     er.county.gsub!(/ County$/, '')
   end
 end
-ers.reject!{|er| SKIP_STATES.include?(er.st)}
+ers.reject!{|er| SKIP_STATES.include?(er.st) }
+ers.each{|er| p er if (!er.st) || (!counties[er.st]) }
 
 #
-# Load counties
+# give each eresult its county
 #
-counties = YAML.load(File.open(path_to(:fixd, 'county_pop_info.yaml')))
-SKIP_STATES.each{|st| counties.delete(st)}
+ers.each{|er| er.geo = counties[er.st][er.county] }
+ers.reject!{|er| ! er.geo }
 
+# ers[0..10].each{ |er| p er }
+ers.find_all{|er| ! er.geo }.each do |er| p er end
+
+# #
+# # Bin the election results into states
+# #
+# er_st_counties = { }; counties.keys.each{|st| er_st_counties[st] = Set.new() }
+# ers.each do |er|
+#   er_st_counties[er.st] << er.county
+# end
 #
-# Find counties in er's that aren't in census records
-#
-er_st_counties = { }; counties.keys.each{|st| er_st_counties[st] = Set.new() }
-ers.each do |er|
-  er_st_counties[er.st] << er.county
-end
-
-er_st_counties.each do |st, er_counties|
-  county_names = counties[st].keys.to_set - st
-  er_counties = er_counties - WEIRD[st].to_set if WEIRD[st]
-  extras_in_ers = er_counties - county_names
-  extras_in_cts = county_names - er_counties
-  unless extras_in_cts.blank? && extras_in_ers.blank?
-    puts "%s\t%s\t%s" % [extras_in_ers.length, st, extras_in_ers.to_a.sort.to_json]
-    puts "%s\t%s\t%s" % [extras_in_cts.length, st, extras_in_cts.to_a.sort.to_json]
-    extras_in_ers.each do |county|
-      puts '  ["%s", %-40s]  => %s' % [st, "\"#{county}\"", "\"#{county}\","]
-    end
-  end
-end
-
+# #
+# # identify mismatches
+# #
+# er_st_counties.each do |st, er_counties|
+#   county_names = counties[st].keys.to_set - st                  # pull out the state: bogus
+#   er_counties = er_counties - WEIRD[st].to_set if WEIRD[st]     # pull out weird counties
+#   extras_in_ers = er_counties - county_names                    # in eresults but not counties
+#   extras_in_cts = county_names - er_counties                    # in counties but not eresults
+#   unless extras_in_cts.blank? && extras_in_ers.blank?
+#     puts "%s\t%s\t%s" % [extras_in_ers.length, st, extras_in_ers.to_a.sort.to_json]
+#     puts "%s\t%s\t%s" % [extras_in_cts.length, st, extras_in_cts.to_a.sort.to_json]
+#     extras_in_ers.each do |county|
+#       puts '  ["%s", %-40s]  => %s' % [st, "\"#{county}\"", "\"#{county}\","]
+#     end
+#   end
+# end
 
 
 def pct(num) number_to_percentage(100*num, :precision => 0) end
@@ -110,8 +123,8 @@ def pct(num) number_to_percentage(100*num, :precision => 0) end
 def point_for_graph election_return, idx, content=nil
   hsh = { }
   hsh['content']     = content || popup_text(election_return)
-  hsh['x'], hsh['y'] = [ election_return.total, election_return.blue_margin ]
-  hsh['value']       = Math.sqrt(idx) # election_return.blue_margin
+  hsh['x'], hsh['y'] = [ election_return.geo.pop_density,100* election_return.blue_margin ]
+  hsh['value']       = Math.sqrt(election_return.geo.pop)
   # Bullet Appearance
   hsh['bullet_color'] = election_return.color
   hsh['bullet_alpha'] = 60
@@ -124,16 +137,19 @@ end
 #
 def popup_text er
   txt = "%s county, %s<br />Kerry Margin %s<br />" % [er.county, er.st, pct(er.blue_margin)]
-  [:kerry, :bush, :nader].each do |cand|
+  [:kerry, :bush].each do |cand|
     txt += "%s %s (%s)<br/>" % [cand.to_s.capitalize, er[cand], pct(er.margin(cand))]
   end
+  density = er.geo.pop_density > 20 ? er.geo.pop_density.to_i : er.geo.pop_density
+  population = er.geo.pop > 2000 ? (er.geo.pop/1000).round().to_s()+'k' : er.geo.pop.round()
+  txt += "%s population, %s pop/sq.mi."%[population, density]
   txt
 end
 #
 # XML-able hash for whole amcharts graph
 #
 def hash_for_graph election_returns
-  puts election_returns.find_all{|er| er.total != er.total.to_i }.to_yaml
+  # puts election_returns.find_all{|er| er.total != er.total.to_i }.to_yaml
   election_returns = election_returns.sort_by{|er| -er.total } # must be by bubble size so bubbles don't get buried
   hsh = { 'chart' => { 'graphs' => { 'graph' => [
           # points
@@ -154,4 +170,4 @@ def dump_rank_plot election_returns, graph_xml_filename
 end
 
 
-dump_rank_plot(ers, 'fixd/election_returns_ranked.xml')
+dump_rank_plot(ers, './web/chart/election_returns_ranked-data.xml')

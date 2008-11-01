@@ -1,0 +1,106 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>infochimps.org: Geography of Political Preferences</title>
+  <meta http-equiv="description" content="Map Visualizing Presidential Endorsements by Major Newspapers in the 2008 General Election" />
+  <meta name="description"	 content="Map Visualizing Presidential Endorsements by Major Newspapers in the 2008 General Election" />
+  <meta http-equiv="keywords"	 content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
+  <meta name="Keywords"		 content="map, graph, chart, visualization, visualisation, geography, distribution, endorsement, editorial, campaign, election, Obama, McCain, 2008, 2004, red state, blue state, republican, urban, rural, democrat, polarization, media, MSM, circulation, endorse, endorsed" />
+  <link href="http://infochimps.org/ac/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="endorsements_map.css"             media="screen" rel="stylesheet" type="text/css" />
+  
+<body>
+  <!-- topbar -->
+  <div class="topbar">
+    <div class="topnav" style="margin-left: 1em;">
+      <a href="http://infochimps.org/static/gallery">visualization gallery</a></div>
+    <div id="toplinks" class="toplinks">
+      <div class="topnav">
+        browse datasets by:
+        <a href="/tags">tags</a> &middot;
+        <a href="/datasets">datasets</a> &middot;
+        <a href="/fields">fields</a>
+      </div>
+      <div class="topmeta">
+        <a href="http://blog.infochimps.org">blog</a>
+      </div>
+      <div class="topmeta">
+        <a href="/home">home</a>
+      </div>
+      <div class="topmeta">
+        <a href="/faq">faq</a>
+      </div>
+    </div>
+  </div>
+  <!-- topbar end  -->
+
+  <div class="politicalpref_map">
+    <h1>Red/Blue split vs. Rural/Urban split</h1>
+
+    <!-- saved from url=(0013)about:internet -->
+    <!-- amxy script-->
+    <script type="text/javascript" src="utils/amxy/swfobject.js"></script>
+    <div id="flashcontent" style="margin:auto; width:1000px; min-height:564px; background:#ffffff"> 
+      <strong>You need to upgrade your Flash Player</strong>
+    </div>
+    <script type="text/javascript">
+      // <![CDATA[		
+	var so = new SWFObject("utils/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
+	so.addVariable("path", "");
+	so.addVariable("settings_file", encodeURIComponent("chart/election_returns_ranked-chart.xml"));
+	so.addVariable("data_file", 	encodeURIComponent("chart/election_returns_ranked-data.xml"));
+	so.write("flashcontent");
+	// ]]>
+    </script>
+    <!-- end of amxy script -->
+    <br/>
+    <h3>2004 Election Returns by County: (Kerry%-Bush%) vs Population density, total population gives size.</h3>
+    <hr/>
+    
+    <div style="clear:both; margin:auto; width:600px; margin-top:3em">
+    <!-- <div style="float:right; width:490; padding: 2em 0 1em 10px">       -->
+      <p><em>Blog Post for this <a href="http://blog.infochimps.org/2008/10/22/2008election-newspaper-endorsement-map/" style="color:#449">over here.</a></em></p>
+
+      <p><strong>See also: our &laquo;<a href="endorsements_map.html">Geography of newspaper endorsements</a>&raquo; graph</strong></p>
+      
+      <p>
+	There is some scatter, but the clear correlation of population density (horiz. axis) with politial alignment
+	shows that the "red-blue" split is largely an "urban-rural" split.
+      </p>
+    </div>
+    
+    <br/>
+    
+    <div style="clear:both; margin:auto; width:600px; margin-top:3em">
+      <p>
+        By <a href="http://infochimps.org">Philip (Flip) Kromer</a>, flip@infochimps.org, using data from
+        (source code <a href="http://github.com/mrflip/infochimps-data/tree/master/politics/campaign_us_2008/political_pref_map">here</a>),
+        for everything else see below.
+      </p>
+       
+      <p>Credits:</p>
+      <ul>
+        <li>Charts using <a href="http://www.amcharts.com/">amcharts</a>.</li>
+      </ul>
+      <p>Notes:</p>
+      <ol>
+        <li>Counties with tiny population appear larger than actual size.</li>
+        <li>Note the logarithmic x-scale.</li>
+      </ol>
+    </div>
+
+  </div> <!-- container -->
+</body>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3828631-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</html>

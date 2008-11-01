@@ -5,17 +5,26 @@
 
   <!-- Geometry -->
   <grid>
-    <x> <approx_count>100</approx_count> <alpha>5</alpha> </x>
-    <y> <approx_count>100</approx_count> <alpha>5</alpha> </y>
+    <x> <approx_count>100</approx_count> <alpha>0</alpha> </x>
+    <y> <approx_count>100</approx_count> <alpha>6</alpha> </y>
   </grid>
   <values>
-    <x> <min></min> <max></max>  <strict_min_max></strict_min_max>
-
+    <x>
+      <min></min> <max>90000</max>  <strict_min_max>true</strict_min_max>
+      <alpha>10</alpha>    <color>ADAEB3</color>
     </x>
-    <y> <min></min> <max></max>  <strict_min_max></strict_min_max> </y>
+    <y> <min></min> <max></max>  <strict_min_max></strict_min_max>
+      <enabled>true</enabled>
+      <frequency>1></frequency><unit>%</unit><integers_only>false</integers_only>
+      <alpha>30</alpha>    <color>ADAEB3</color>
+    </y>
   </values>
+  <axes>
+    <x> <alpha>0</alpha>  <logarithmic>true</logarithmic> </x>
+    <y> <alpha>30</alpha> <color>444455</color>  </y>
+  </axes>
   <plot_area>
-    <color>ddddee</color> <alpha>80</alpha>
+    <color>ffffff</color> <alpha>0</alpha>
     <!-- <margins> <left>4</left> <right>-19</right> <top>6</top> <bottom>-5</bottom> </margins> -->
   </plot_area>
   
@@ -25,8 +34,8 @@
       <alpha>0</alpha> <color>1111ff</color> <title>Margin of Victory by County Population</title>
       <!-- Bubbles -->
       <bullet>bubble</bullet> 
-      <bullet_max_size>20</bullet_max_size>
-      <bullet_min_size>4</bullet_min_size>
+      <bullet_max_size>50</bullet_max_size>
+      <bullet_min_size>2</bullet_min_size>
       <!-- Popups -->       
       <balloon_text>{description}</balloon_text> 
       <bullet_alpha>60</bullet_alpha>
@@ -46,20 +55,11 @@
   </balloon>
   <!-- clean up graph appearance -->
   <legend>    <enabled>false</enabled> <x>30</x> <y>!30</y> </legend>
-  <axes>
-    <x>
-      <alpha>100</alpha>
-      <logarithmic>true</logarithmic>
-    </x>
-    <y>
-      <alpha>100</alpha>
-    </y>
-  </axes>
   <zoom>  <target>false</target> </zoom>
   <decimals_separator>.</decimals_separator>
   <thousands_separator>,</thousands_separator>
   <font>Trebuchet MS, sans-serif</font>
-  <text_color>ffffff</text_color>
+  <text_color>222222</text_color>
   <!-- check for updated data -->
   <add_time_stamp>true</add_time_stamp>
 </settings>
