@@ -3,7 +3,8 @@ require 'color'; require 'color/hsl' ; require 'color/css'
 #
 # Election Return class
 #
-class ElectionReturn < Struct.new(:st, :total, :bush, :kerry, :nader, :total_precincts, :precincts_reporting, :county)
+class ElectionReturn < Struct.new(:st, :total, :bush, :kerry, :nader,
+    :total_precincts, :precincts_reporting, :county, :geo)
   def initialize *args
     super *args
     [:total, :bush, :kerry, :nader, :total_precincts, :precincts_reporting
@@ -23,7 +24,7 @@ class ElectionReturn < Struct.new(:st, :total, :bush, :kerry, :nader, :total_pre
   #
   #
   def blue_margin
-    puts self.to_json if total == 0
+    #puts self.to_json if total == 0
     (kerry - bush).to_f / total.to_f
   end
   def margin(cand)
@@ -37,11 +38,11 @@ class ElectionReturn < Struct.new(:st, :total, :bush, :kerry, :nader, :total_pre
     v1 + t*(v2-v1)
   end
   def color
-    hue = interp( 2.0/3.0, 1.0, (blue_margin+1.2)/2   )
+    hue = interp( 1.0, 2.0/3.0, (blue_margin+1.2)/2   )
     sat = interp( 0.2,     1.0,  blue_margin.abs )
-    puts [hue, sat, blue_margin].to_json
+    #puts [hue, sat, blue_margin].to_json
     c = Color::HSL.from_fraction(hue, sat, 0.7).html
-    puts c
+    # puts c
     c
   end
 
