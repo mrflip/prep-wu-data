@@ -199,11 +199,6 @@ Clarion Ledger:
   :paper: Clarion Ledger
   :prez_2000: Gore
   :st: MS
-Alexandria Daily Town Talk: 
-  :city: 
-  :paper: Alexandria Daily Town Talk
-  :prez_2000: Bush
-  :st: LA
 North County Times: 
   :city: Escondido
   :paper: North County Times
@@ -330,7 +325,7 @@ Portland Press Herald:
   :prez_2000: Gore
   :st: ME
 Journal and Courier: 
-  :city: Lafayette
+  :city: 
   :paper: Journal and Courier
   :prez_2000: Bush
   :st: IN
@@ -439,6 +434,11 @@ Emporia Gazette:
   :paper: Emporia Gazette
   :prez_2000: Gore
   :st: KS
+Republican American: 
+  :city: 
+  :paper: Republican American
+  :prez_2000: Bush
+  :st: CT
 Boston Globe: 
   :city: 
   :paper: Boston Globe
@@ -799,11 +799,6 @@ Asheville Citizen Times:
   :paper: Asheville Citizen Times
   :prez_2000: Gore
   :st: NC
-Daily World: 
-  :city: Opelousas
-  :paper: Daily World
-  :prez_2000: Bush
-  :st: LA
 Hutchinson News: 
   :city: 
   :paper: Hutchinson News
@@ -884,6 +879,11 @@ Norfolk Daily News:
   :paper: Norfolk Daily News
   :prez_2000: Bush
   :st: NE
+Opelousas Daily World: 
+  :city: 
+  :paper: Opelousas Daily World
+  :prez_2000: Bush
+  :st: LA
 Lansing State Journal: 
   :city: 
   :paper: Lansing State Journal
@@ -1014,6 +1014,11 @@ Huntington Herald Dispatch:
   :paper: Huntington Herald Dispatch
   :prez_2000: Gore
   :st: WV
+Everett Herald: 
+  :city: 
+  :paper: Everett Herald
+  :prez_2000: Gore
+  :st: WA
 St. Paul Pioneer Press: 
   :city: 
   :paper: St. Paul Pioneer Press
@@ -1100,7 +1105,7 @@ Herald and Review:
   :prez_2000: Bush
   :st: IL
 Tribune Review: 
-  :city: Greensburg
+  :city: 
   :paper: Tribune Review
   :prez_2000: Bush
   :st: PA
@@ -1114,6 +1119,11 @@ Corvallis Gazette Times:
   :paper: Corvallis Gazette Times
   :prez_2000: Gore
   :st: OR
+Town Talk: 
+  :city: Alexandria
+  :paper: Town Talk
+  :prez_2000: Bush
+  :st: LA
 Syracuse Herald American: 
   :city: 
   :paper: Syracuse Herald American
@@ -1249,11 +1259,6 @@ York Dispatch:
   :paper: York Dispatch
   :prez_2000: Bush
   :st: PA
-Herald: 
-  :city: Everett
-  :paper: Herald
-  :prez_2000: Gore
-  :st: WA
 Ithaca Journal: 
   :city: 
   :paper: Ithaca Journal
@@ -1264,11 +1269,6 @@ Beaumont Enterprise:
   :paper: Beaumont Enterprise
   :prez_2000: Bush
   :st: TX
-Waterbury Republican American: 
-  :city: 
-  :paper: Waterbury Republican American
-  :prez_2000: Bush
-  :st: CT
 Boca Raton News: 
   :city: 
   :paper: Boca Raton News

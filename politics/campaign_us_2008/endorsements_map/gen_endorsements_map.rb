@@ -25,12 +25,14 @@ LNGSHIFTS = {
   'Wall Street Journal' => 1,
   'el Diario'         =>  0.1, 'Yamhill Valley News Register' =>  0.1,
   'La Opinion'        =>  0.3, 'Daily News (Los Angeles)'     =>  -0.4,
+  'Orange County Register'  =>  0.5,
   'Las Vegas Sun'     => -0.2, 'Las Vegas Review Journal' => 0.2,
   'Chattanooga Times' => -0.2, 'Chattanooga Free Press' => 0.2,
 }
 LATSHIFTS = {
   'New York Times' => -0.4,
   'Wall Street Journal' => -0.4,
+  'Orange County Register'  =>  0.5,
 }
 LNGSHIFTS.each{|k,v| warn "Oops paper #{k} not in list" unless NEWSPAPER_CITIES[k] }
 LATSHIFTS.each{|k,v| warn "Oops paper #{k} not in list" unless NEWSPAPER_CITIES[k] }
@@ -38,6 +40,7 @@ def fixed_lat_lng_overlap e
   case e.city
   when 'Honolulu'  then lng, lat = Geolocation.ll_from_xy(279, 564-466);  return [round2(lat), round2(lng)]
   when 'Anchorage' then lng, lat = Geolocation.ll_from_xy(128, 564-469);  return [round2(lat), round2(lng)]
+  when 'Juneau'    then lng, lat = Geolocation.ll_from_xy(185, 564-482);  return [round2(lat), round2(lng)]
   when ''          then lng, lat = Geolocation.ll_from_xy(999629, 0);        return [round2(lat), round2(lng)]
   end
   lat, lng = e.values_of(:lat, :lng)

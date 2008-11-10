@@ -97,14 +97,14 @@ Endorsement.dump :literalize_keys => false, :format => :yaml
 # # #     puts "%-32s\t{ :paper: %-32s :st: '%s',\t:city: %-31s\t}" % ["'#{paper}':", "'#{paper}',", st, "'#{paper}'"]
 # #
 # #
-# # Cities with two or more papers
-# #
-# city_papers = { }
-# Endorsement.all.each do |paper, e|
-#   (city_papers[[e.st||'', e.city||'']] ||= []) << e
-# end
-# city_papers.sort_by{|st_city, es| [es.length, st_city] }.each do |st_city, es|
-#   # next if es.length <= 1
-#   es.each{|e| dump_as_hash(e) }
-# end
+# Cities with two or more papers
+#
+city_papers = { }
+Endorsement.all.each do |paper, e|
+  (city_papers[[e.st||'', e.city||'']] ||= []) << e
+end
+city_papers.sort_by{|st_city, es| [es.length, st_city] }.each do |st_city, es|
+  # next if es.length <= 1
+  es.each{|e| dump_as_hash(e) }
+end
 

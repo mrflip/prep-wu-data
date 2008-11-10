@@ -1119,6 +1119,11 @@ Topeka Capital Journal:
   :paper: Topeka Capital Journal
   :st: KS
   :prez_1992: GHWBush
+Everett Herald: 
+  :city: 
+  :paper: Everett Herald
+  :st: WA
+  :prez_1992: Clinton
 Rock Springs Daily Rocket Miner: 
   :city: 
   :paper: Rock Springs Daily Rocket Miner
@@ -1418,11 +1423,6 @@ Taunton Daily Gazette:
   :city: 
   :paper: Taunton Daily Gazette
   :st: MA
-  :prez_1992: Clinton
-Herald: 
-  :city: Everett
-  :paper: Herald
-  :st: WA
   :prez_1992: Clinton
 Times Herald Record: 
   :city: Middletown

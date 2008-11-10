@@ -53,7 +53,7 @@ Connecticut Post, Bridgeport
 Greenwich Time
 The Hartford Courant
 New Haven Register
-Waterbury Republican-American
+Republican-American
 
 DISTRICT OF COLUMBIA
 
@@ -99,7 +99,7 @@ INDIANA
 
 Evansville Courier and Press
 The Indianapolis Star
-Journal and Courier, Lafayette
+Journal and Courier
 The News-Sentinel, Fort Wayne
 The Times, Munster
 
@@ -119,9 +119,9 @@ Owensboro Messenger-Inquirer
 LOUISIANA
 
 The Advertiser, Lafayette
-Alexandria Daily Town Talk
+Town Talk (Alexandria)
 Daily Comet, Thibodaux
-The Daily World, Opelousas
+The Opelousas Daily World
 The Times-Picayune, New Orleans
 
 MAINE
@@ -240,7 +240,7 @@ Erie Times-News
 The Morning Call, Allentown
 The Harrisburg Patriot-News
 Times-Tribune, Scranton
-Tribune-Review, Greensburg
+Tribune-Review
 The York Dispatch
 
 RHODE ISLAND
@@ -540,7 +540,7 @@ The Virginian-Pilot, Norfolk
 
 WASHINGTON
 
-The Herald, Everett
+The Everett Herald
 The News Tribune, Tacoma
 Seattle Post-Intelligencer
 

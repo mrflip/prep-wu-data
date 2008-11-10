@@ -40,7 +40,7 @@ BARACK OBAMA
           Pasadena Star-News (B): 27,894                                                                           
           The Press Democrat (Santa Rosa): 78,022                                                                  
           Press-Telegram (Long Beach) (B): 85,595                                                                  
-          The Vacaville Reporter (B): 17,751                                                                     
+          The Reporter (Vacaville) (B): 17,751                                                                     
           San Gabriel Valley Tribune (B): 40,051                                                                   
           San Mateo Daily Journal: 14,800                                                                          
           Tahoe Daily Tribune: 7,723                                                                               
@@ -81,7 +81,7 @@ BARACK OBAMA
           Daytona Beach News-Journal (K): 99,627                                                                   
           Florida Today (Melbourne) (K): 79,499                                                                    
           The Gainesville Sun (K): 44,658                                                                          
-          The Lakeland Ledger (B): 65,948                                                                        
+          The Ledger (Lakeland) (B): 65,948                                                                        
           The Miami Herald (K): 240,223                                                                            
           Naples Daily-News (B): 66,272                                                                            
           Orlando Sentinel (K): 227,593                                                                            
@@ -107,10 +107,10 @@ BARACK OBAMA
           Chicago Sun-Times (K): 312,274                                                                           
           Daily Herald (Arlington Heights) (K): 143,152                                                            
           Herald & Review (Decatur) (B): 34,480                                                                    
-          Journal Star (Peoria) (B): 65,320                                                                    
+          Journal Star (Peoria, IL) (B): 65,320                                                                    
           Lake County News-Sun (Waukegan) (B): 16,899                                                              
           The Pantagraph (Bloomington-Normal) (B): 47,764                                                          
-          The Galesburg Register-Mail: 13,344                                                                    
+          The Register-Mail (Galesburg): 13,344                                                                    
           >>> The Rock Island Argus: 12,176                                                                        
           Rockford Register Star (K): 55,913                                                                       
           The State Journal-Register (Springfield) (B): 49,839                                                     
@@ -145,9 +145,9 @@ BARACK OBAMA
                                                                                                                    
           MAINE (4)                                                                                                
           Bangor Daily News (K): 55,627                                                                            
-          Kennebec Journal (Augusta) (K): 14,845 # edited
+          Kennebec Journal (Augusta) (K): 55,627                                                                   
           Portland Press Herald (K): 64,938                                                                        
-          The Brunswick Times-Record (K): 9,317                                                                 
+          The Times-Record (Brunswick ) (K): 9,317                                                                 
                                                                                                                    
           MARYLAND (3)                                                                                             
           The Daily Times (Salisbury): 24,157                                                                      
@@ -217,15 +217,14 @@ BARACK OBAMA
                                                                                                                    
           NEW JERSEY (11)                                                                                          
           Asbury Park Press (Neptune-Asbury Park) (B): 140,882                                                     
-          Courier News (Bound Brook) (K): 31,370                                                                   
+          Courier News (Bridgewater) (K): 31,370                                                                   
           Courier-Post (Camden-Cherry Hill): 66,617                                                                
           >>> The Daily Journal (Vineland) (K): 16,882                                                             
-          Daily Record (Morristown) (K): 33,405                                                                    
+          Daily Record (Parsippany) (K): 33,405                                                                    
           The Gloucester County Times (Woodbury) (K): 23,189                                                       
           Home News Tribune (East Brunswick): 49,076                                                               
           The New Jersey Herald (Newton) (B): 14,660                                                               
-	  >>> The New Jersey Herald (Newton) (B)
-          The Record (Bergen) (K): 163,329                                                                     
+          The Record (Hackensack) (K): 163,329                                                                     
           The Star-Ledger (Newark) (K): 345,130                                                                    
           The Times (Trenton) (K): 54,745                                                                          
                                                                                                                    
@@ -246,7 +245,7 @@ BARACK OBAMA
           Union-Sun & Journal (Lockport): 10,901                                                                   
           Newsday (Melville) (K): 379,613                                                                          
           The New York Times (K): 1,077,256                                                                        
-          The Syracuse Post-Standard: 110,061                                                                    
+          The Post-Standard (Syracuse): 110,061                                                                    
           The Post-Star (Glens Falls) (K): 30,265                                                                  
           Poughkeepsie Journal (B): 37,265                                                                         
           Rochester Democrat and Chronicle (K): 145,913                                                            
@@ -269,7 +268,7 @@ BARACK OBAMA
           Coshocton Tribune: 5,903                                                                                 
           Dayton Daily News (K): 116,690                                                                           
           The Independent (Massillon) (B): 12,081                                                                  
-          Hamilton Journal News (B): 19,432                                                                       
+          JournalNews (Hamilton) (B): 19,432                                                                       
           Middletown Journal: 17,285                                                                               
           News Journal (Mansfield) (B): 28,272                                                                     
           Telegraph-Forum (Bucyrus): 5,969                                                                         
@@ -281,7 +280,7 @@ BARACK OBAMA
           Vindicator (Youngstown) (B): 56,412                                                                      
                                                                                                                    
           OKLAHOMA (2)                                                                                             
-          Muskogee Daily Phoenix (K): 14,816                                                      
+          Muskogee Daily Phoenix & Times-Democrat (K): 14,816                                                      
           The Norman Transcript: 12,921                                                                            
                                                                                                                    
           OREGON (8)                                                                                               
@@ -303,7 +302,7 @@ BARACK OBAMA
           The Delaware County Daily Times (Primos-Upper Darby): 42,879                                             
           Erie Times-News (B): 55,397                                                                              
           The Express-Times (Easton) (B): 44,561                                                                   
-          The Sharon Herald: 19,252                                                                              
+          The Herald (Sharon): 19,252                                                                              
           Herald-Standard (Uniontown) (K): 24,341                                                                  
           The Indiana Gazette: 15,241                                                                              
           Intelligencer Journal (Lancaster): 46,357                                                                
@@ -311,7 +310,7 @@ BARACK OBAMA
           The Mercury (Pottstown): 21,186                                                                          
           New Castle News: 16,465                                                                                  
           Observer-Reporter (Washington) (K): 31,755                                                               
-          The Harrisburg Patriot-News: 95,588                                                                    
+          The Patriot-News (Harrisburg): 95,588                                                                    
           The Philadelphia Daily News: 107,269                                                                     
           The Philadelphia Inquirer (K): 334,150                                                                   
           Pittsburgh Post-Gazette (K): 214,374                                                                     
@@ -324,7 +323,7 @@ BARACK OBAMA
           The Providence Journal (B): 139,055                                                                      
                                                                                                                    
           SOUTH CAROLINA (1)                                                                                       
-          >>> The Rock Hill Herald: 30,848                                                                       
+          >>> The Herald (Rock Hill): 30,848                                                                       
                                                                                                                    
           TENNESSEE (3)                                                                                            
           Chattanooga Times (K): 71,716                                                                            
@@ -355,7 +354,7 @@ BARACK OBAMA
                                                                                                                    
           WASHINGTON (11)                                                                                          
           The Columbian (Vancouver) (B): 44,623                                                                    
-          The Aberdeen Daily World: 12,720                                                                       
+          The Daily World (Aberdeen): 12,720                                                                       
           The News Tribune (Tacoma) (K): 111,778                                                                   
           The Olympian (Olympia) (K): 30,755                                                                       
           Seattle Post-Intelligencer (K): 129,563                                                                  
@@ -368,7 +367,7 @@ BARACK OBAMA
                                                                                                                    
           WEST VIRGINIA (3)                                                                                        
           Charleston Gazette (K): 48,061                                                                           
-          The Huntington Herald-Dispatch (K): 27,463                                                             
+          The Herald-Dispatch (Huntington) (K): 27,463                                                             
           Times West Virginian (Fairmont): 10,415                                                                  
                                                                                                                    
           WISCONSIN (10)                                                                                           
@@ -396,14 +395,14 @@ BARACK OBAMA
           Demopolis Times: 2,850                                                                                   
           The Dothan Eagle: 35,416                                                                                 
           The Gadsden Times (B): 18,832                                                                            
-          Mobile Press-Register (B): 99,433                                                                      
+          Press-Register (Mobile) (B): 99,433                                                                      
                                                                                                                    
           ALASKA (1)                                                                                               
           Juneau Empire: 7,100                                                                                     
                                                                                                                    
           ARIZONA (2)                                                                                              
           The Arizona Republic (Phoenix) (B): 413,332                                                              
-          The Prescott Daily Courier: 17,800                                                                     
+          The Daily Courier (Prescott): 17,800                                                                     
                                                                                                                    
           ARKANSAS (2)                                                                                             
           Arkansas Democrat-Gazette (Little Rock) (B): 182,212                                                     
@@ -415,10 +414,10 @@ BARACK OBAMA
           The Daily Independent (Ridgecrest): 7,900                                                                
           The Desert Sun (Palm Springs-Palm Desert) (B): 53,091                                                    
           The Eureka Reporter                                                                                      
-          The San Francisco Examiner (B): 80,000                                                                 
+          The Examiner (San Francisco) (B): 80,000                                                                 
           Napa Valley Register (B): 16,283                                                                         
           North County Times (Escondido-Oceanside): 88,786                                                         
-          Press Enterprise (Riverside) (B): 164,189                                                            
+          The Press-Enterprise (Riverside) (B): 164,189                                                            
           The San Diego Union-Tribune (B): 288,669                                                                 
           Times-Herald (Vallejo) (K): 16,957                                                                       
                                                                                                                    
@@ -432,7 +431,7 @@ BARACK OBAMA
           Connecticut Post (Bridgeport) (B): 76,014                                                                
           Greenwich Time (K): 10,323                                                                               
           The Register Citizen (Torrington) (B): 8,217                                                             
-          Republican-American (Waterbury) (B): 50,903                                                              
+          Rebuplican-American (Waterbury) (B): 50,903                                                              
                                                                                                                    
           DISTRICT OF COLUMBIA (2)                                                                                 
           The Washington Examiner (N): 100,073                                                                     
@@ -455,7 +454,7 @@ BARACK OBAMA
           Kane County Chronicle (St. Charles): 12,564                                                              
           Morris Daily Herald (Morris): 7,258                                                                      
           The News-Gazette (Champaign-Urbana) (B): 42,302                                                          
-          Crystal Lake Northwest Herald (B): 36,594                                                              
+          Northwest Herald (Crystal Lake) (B): 36,594                                                              
           The Southern Illinoisan (Carbondale) (B): 27,413                                                         
                                                                                                                    
           INDIANA (2)                                                                                              
@@ -463,9 +462,9 @@ BARACK OBAMA
           The Times (Munster) (K): 85,195                                                                          
                                                                                                                    
           IOWA (4)                                                                                                 
-          The Gazette (Cedar Rapids) (B): 57,945                                                          
+          The Gazette (Cedar Rapids - Marion) (B): 57,945                                                          
           The Messenger (Fort Dodge) (B): 16,355                                                                   
-          Marshalltown Times-Republican: 9,349                                                                   
+          Times-Republican (Marshalltown): 9,349                                                                   
           Sioux City Journal (B): 41,096                                                                           
                                                                                                                    
           KANSAS (1)                                                                                               
@@ -508,7 +507,7 @@ BARACK OBAMA
                                                                                                                    
           MISSOURI (2)                                                                                             
           The Sunday News Tribune (Jefferson City): 17,890                                                         
-          St. Joseph News-Press (B): 33,546                                                                         
+          St Joseph News-Press (B): 33,546                                                                         
                                                                                                                    
           NEBRASKA (4)                                                                                             
           Lincoln Journal Star (B): 78,350                                                                         
@@ -539,7 +538,7 @@ BARACK OBAMA
                                                                                                                    
           NORTH DAKOTA (3)                                                                                         
           The Bismarck Tribune (K): 27,051                                                                         
-          The Fargo Forum (B): 48,303                                                                            
+          The Forum (Fargo) (B): 48,303                                                                            
           Minot Daily News: (B) 18,972                                                                             
                                                                                                                    
           OHIO (9)                                                                                                 
@@ -562,8 +561,8 @@ BARACK OBAMA
           OREGON (4)                                                                                               
           Albany Democrat-Herald: 16,891                                                                           
           Baker City Herald: 3,151                                                                                 
-          The Bend Bulletin (B): 32,455                                                                          
-          Grants Pass Daily Courier (B): 16,178                                                                  
+          The Bulletin (Bend) (B): 32,455                                                                          
+          Daily Courier (Grants Pass) (B): 16,178                                                                  
                                                                                                                    
           PENNSYLVANIA (6)                                                                                         
           Lancaster New Era: 40,068                                                                                
@@ -571,12 +570,12 @@ BARACK OBAMA
           The Sentinel (Lewistown) (B): 11,863                                                                     
           Times-Observer (Warren): 10,313                                                                          
           The Tribune-Democrat (Johnstown): 37,673                                                                 
-          Tribune-Review (Greensburg) (B): 150,911                                                      
+          Pittsburgh Tribune-Review (Greensburg) (B): 150,911                                                      
                                                                                                                    
           SOUTH CAROLINA (5)                                                                                       
           The Greenville News (B): 81,010                                                                          
           Herald-Journal (Spartanburg) (B): 42,380                                                                 
-          The Sumter Item (B): 18,640                                                                            
+          The Item (Sumter) (B): 18,640                                                                            
           The Post and Courier (Charleston): 100,400                                                               
           The State (Columbia) (B): 101,010                                                                        
                                                                                                                    
@@ -603,10 +602,10 @@ BARACK OBAMA
           The Paris News: 9,431                                                                                    
           San Antonio Express-News (B): 225,447                                                                    
           Tyler Morning Telegraph: 35,598                                                                          
-          Times Record News (Wichita Falls) (N): 28,888                                                              
+          Wichita Falls Times Record News (N): 28,888                                                              
                                                                                                                    
           UTAH (1)                                                                                                 
-          The Spectrum (Saint George): 22,352                                                                        
+          The Spectrum (St. George): 22,352                                                                        
                                                                                                                    
           VIRGINIA (10)                                                                                            
           Bristol Herald-Courier (B): 38,068                                                                       
@@ -636,56 +635,31 @@ BARACK OBAMA
                                                                                                                    
           CHOOSING TO MAKE NO ENDORSEMENT (26)                                                                     
                                                                                                                    
-TEXAS
           Abilene Reporter-News                                                                                    
-COLORADO
           Colorado Springs Gazette (N)                                                                             
-VIRGINIA
           The Fairfax County Times (Virginia)                                                                      
-FLORIDA
           The Florida Times-Union (Jacksonville)                                                                   
           Fort Meyers News-Press                                                                                   
-WISCONSIN
           The Herald Times Reporter (Manitowoc)                                                                    
-ALABAMA
           The Huntsville Times                                                                                     
-OHIO
           The Marietta Register (Ohio)                                                                             
-PENNSYLVANIA
           The Morning Call (Allentown)                                                                             
-IDAHO
-          Mountain Home News (Idaho)
-WISCONSIN	  
+          Mountain Home News (Idaho)                                                                               
           The Oshkosh Northwestern                                                                                 
-VIRGINIA
           Loudoun Times Mirror (Virginia)                                                                          
-VIRGINIA
           The Roanoke Times (Virginia)                                                                             
-MISSOURI
           Springfield News-Leader                                                                                  
-CALIFORNIA
           The Record Searchlight (California)                                                                      
-WISCONSIN	  
-          The Fond du Lac Reporter                                                                               
-NORTH CAROLINA
+          The Reporter (Fond du Lac)                                                                               
           Rocky Mount Telegram (North Carolina)                                                                    
-COLORADO
           Rocky Mountain News (Colorado)                                                                           
-MINNESOTA
           St. Paul Pioneer Press                                                                                   
-WISCONSIN	  
           The Post-Crescent (Appleton)                                                                             
-VIRGINIA
           The Virginian-Pilot (Norfolk)                                                                            
-TEXAS
           Waco Tribune Herald (Texas)                                                                              
-INDIANA
           Indianapolis Star (B)                                                                                    
-MICHIGAN
           Ann Arbor News (B)                                                                                       
-VIRGINIA
           Fredericksburg Free-Lance Star (B)                                                                       
-CALIFORNIA
           Ventura County Star                                                                                      
                                                                                                                    
             

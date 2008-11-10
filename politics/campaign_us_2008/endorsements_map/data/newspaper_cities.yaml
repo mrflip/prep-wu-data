@@ -11,7 +11,6 @@
 'Mobile Press Register':               { :paper: 'Mobile Press Register',               :st: 'AL', :city: 'Mobile'                        } # 1992,2000,2004,2008
 'Montgomery Advertiser':               { :paper: 'Montgomery Advertiser',               :st: 'AL', :city: 'Montgomery'                    } # 2000,2008
 'Selma Times Journal':                 { :paper: 'Selma Times Journal',                 :st: 'AL', :city: 'Selma'                         } # 1996
-'Talladega Daily Home':                { :paper: 'Talladega Daily Home',                :st: 'AL', :city: 'Talladega'                     } # 1996
 'Tuscaloosa News':                     { :paper: 'Tuscaloosa News',                     :st: 'AL', :city: 'Tuscaloosa'                    } # 2000,2004,2008
 'Benton Courier':                      { :paper: 'Benton Courier',                      :st: 'AR', :city: 'Benton'                        } # 1992,1996
 'Southwest Times Record':              { :paper: 'Southwest Times Record',              :st: 'AR', :city: 'Fort Smith'                    } # 1992,2000
@@ -61,7 +60,6 @@
 'Press Democrat':                      { :paper: 'Press Democrat',                      :st: 'CA', :city: 'Santa Rosa'                    } # 2000,2004,2008
 'Record (Stockton)':                   { :paper: 'Record (Stockton)',                   :st: 'CA', :city: 'Stockton'                      } # 2000,2004,2008
 'Daily Breeze':                        { :paper: 'Daily Breeze',                        :st: 'CA', :city: 'Torrance'                      } # 1992,2004,2008
-'Reporter':                            { :paper: 'Reporter',                            :st: 'CA', :city: 'Vacaville'                     } # 2004,2008
 'Vallejo Times Herald':                { :paper: 'Vallejo Times Herald',                :st: 'CA', :city: 'Vallejo'                       } # 1996
 'Ventura County Star':                 { :paper: 'Ventura County Star',                 :st: 'CA', :city: 'Ventura'                       } # 1996,2000
 'Victorville Daily Press':             { :paper: 'Victorville Daily Press',             :st: 'CA', :city: 'Victorville'                   } # 1992
@@ -95,7 +93,6 @@
 'Greenwich Time':                      { :paper: 'Greenwich Time',                      :st: 'CT', :city: 'Old Greenwich'                 } # 1992,2000
 'Stamford Advocate':                   { :paper: 'Stamford Advocate',                   :st: 'CT', :city: 'Stamford'                      } # 1992,2000
 'Register Citizen':                    { :paper: 'Register Citizen',                    :st: 'CT', :city: 'Torrington'                    } # 2004,2008
-'Waterbury Republican American':       { :paper: 'Waterbury Republican American',       :st: 'CT', :city: 'Waterbury'                     } # 2000
 'Boca Raton News':                     { :paper: 'Boca Raton News',                     :st: 'FL', :city: 'Boca Raton'                    } # 2000
 'Bradenton Herald':                    { :paper: 'Bradenton Herald',                    :st: 'FL', :city: 'Bradenton'                     } # 2000,2004,2008
 'Cape Coral Daily Breeze':             { :paper: 'Cape Coral Daily Breeze',             :st: 'FL', :city: 'Cape Coral'                    } # 2008
@@ -137,7 +134,6 @@
 'Waycross Journal Herald':             { :paper: 'Waycross Journal Herald',             :st: 'GA', :city: 'Waycross'                      } # 1992,1996
 'Ames Daily Tribune Hawk Eye':         { :paper: 'Ames Daily Tribune Hawk Eye',         :st: 'IA', :city: 'Ames'                          } # 1992
 'Hawk Eye':                            { :paper: 'Hawk Eye',                            :st: 'IA', :city: 'Burlington'                    } # 2000,2004,2008
-'Cedar Rapids Gazette':                { :paper: 'Cedar Rapids Gazette',                :st: 'IA', :city: 'Cedar Rapids'                  } # 1996
 'Clinton Herald':                      { :paper: 'Clinton Herald',                      :st: 'IA', :city: 'Clinton'                       } # 1996
 'Quad City Times':                     { :paper: 'Quad City Times',                     :st: 'IA', :city: 'Davenport'                     } # 2000,2004,2008
 'Des Moines Register':                 { :paper: 'Des Moines Register',                 :st: 'IA', :city: 'Des Moines'                    } # 1992,1996,2000,2004,2008
@@ -169,16 +165,13 @@
 'State Journal Register':              { :paper: 'State Journal Register',              :st: 'IL', :city: 'Springfield'                   } # 2000
 'Daily Southtown':                     { :paper: 'Daily Southtown',                     :st: 'IL', :city: 'Tinley Park'                   } # 2000
 'Lake County News Sun':                { :paper: 'Lake County News Sun',                :st: 'IL', :city: 'Waukegan'                      } # 2004,2008
-'Lafayette Journal and Courier':       { :paper: 'Lafayette Journal and Courier',       :st: 'IN', :city: ''                              } # 2008
 'Bloomfield Evening World':            { :paper: 'Bloomfield Evening World',            :st: 'IN', :city: 'Bloomfield'                    } # 1992
 'Evansville Courier and Press':        { :paper: 'Evansville Courier and Press',        :st: 'IN', :city: 'Evansville'                    } # 1996,2000
 'Gary Post Tribune':                   { :paper: 'Gary Post Tribune',                   :st: 'IN', :city: 'Gary'                          } # 1992
 'Greenfield Daily Reporter':           { :paper: 'Greenfield Daily Reporter',           :st: 'IN', :city: 'Greenfield'                    } # 1992
 'Huntington Herald Press':             { :paper: 'Huntington Herald Press',             :st: 'IN', :city: 'Huntington'                    } # 1992,1996
 'Indianapolis Star':                   { :paper: 'Indianapolis Star',                   :st: 'IN', :city: 'Indianapolis'                  } # 1996,2000,2004
-'Journal and Courier':                 { :paper: 'Journal and Courier',                 :st: 'IN', :city: 'Lafayette'                     } # 2000,2008
 'Martinsville Daily Reporter':         { :paper: 'Martinsville Daily Reporter',         :st: 'IN', :city: 'Martinsville'                  } # 1996
-'Muncie Star Press':                   { :paper: 'Muncie Star Press',                   :st: 'IN', :city: 'Muncie'                        } # 2008
 'Times (Munster)':                     { :paper: 'Times (Munster)',                     :st: 'IN', :city: 'Munster'                       } # 2000
 'Portland Commercial Review':          { :paper: 'Portland Commercial Review',          :st: 'IN', :city: 'Portland'                      } # 1992
 'Palladium Item':                      { :paper: 'Palladium Item',                      :st: 'IN', :city: 'Richmond'                      } # 2004,2008
@@ -211,11 +204,10 @@
 'Ledger Independent':                  { :paper: 'Ledger Independent',                  :st: 'KY', :city: 'Maysville'                     } # 2008
 'Murray Ledger Times':                 { :paper: 'Murray Ledger Times',                 :st: 'KY', :city: 'Murray'                        } # 1996
 'Owensboro Messenger Inquirer':        { :paper: 'Owensboro Messenger Inquirer',        :st: 'KY', :city: 'Owensboro'                     } # 2000
-'Alexandria Daily Town Talk':          { :paper: 'Alexandria Daily Town Talk',          :st: 'LA', :city: 'Alexandria'                    } # 2000
 'Advertiser':                          { :paper: 'Advertiser',                          :st: 'LA', :city: 'Lafayette'                     } # 2000
 'Lake Charles American Press':         { :paper: 'Lake Charles American Press',         :st: 'LA', :city: 'Lake Charles'                  } # 1992
 'Times Picayune':                      { :paper: 'Times Picayune',                      :st: 'LA', :city: 'New Orleans'                   } # 1992,2000,2004,2008
-'Daily World':                         { :paper: 'Daily World',                         :st: 'LA', :city: 'Opelousas'                     } # 2000
+'Opelousas Daily World':                         { :paper: 'Opelousas Daily World',                         :st: 'LA', :city: 'Opelousas'                     } # 2000
 'Times (Shreveport)':                  { :paper: 'Times (Shreveport)',                  :st: 'LA', :city: 'Shreveport'                    } # 1992,1996,2000,2008
 'Daily Comet':                         { :paper: 'Daily Comet',                         :st: 'LA', :city: 'Thibodaux'                     } # 2000
 'Metrowest Daily News':                { :paper: 'Metrowest Daily News',                :st: 'MA', :city: 'Framingham'                    } # 2000
@@ -323,8 +315,6 @@
 'Portsmouth Herald':                   { :paper: 'Portsmouth Herald',                   :st: 'NH', :city: 'Portsmouth'                    } # 1992,1996,2000,2004,2008
 'Asbury Park Press':                   { :paper: 'Asbury Park Press',                   :st: 'NJ', :city: 'Asbury Park'                   } # 1992,1996,2000,2004,2008
 'Press of Atlantic City':              { :paper: 'Press of Atlantic City',              :st: 'NJ', :city: 'Atlantic City'                 } # 2000
-'Record (Bergen)':                     { :paper: 'Record (Bergen)',                     :st: 'NJ', :city: 'Hackensack'                    } # 1992,1996,2000,2004,2008
-'Courier News':                        { :paper: 'Courier News',                        :st: 'NJ', :city: 'Bound Brook'                   } # 1996
 'Burlington County Times':             { :paper: 'Burlington County Times',             :st: 'NJ', :city: 'Burlington'                    } # 1992
 'Courier Post':                        { :paper: 'Courier Post',                        :st: 'NJ', :city: 'Cherry Hill'                   } # 1992,2000,2008
 'Home News Tribune':                   { :paper: 'Home News Tribune',                   :st: 'NJ', :city: 'East Brunswick'                } # 1992,2000
@@ -414,7 +404,6 @@
 'Public Opinion':                      { :paper: 'Public Opinion',                      :st: 'PA', :city: 'Chambersburg'                  } # 2004,2008
 'Express Times':                       { :paper: 'Express Times',                       :st: 'PA', :city: 'Easton'                        } # 1992,2004,2008
 'Erie Times News':                     { :paper: 'Erie Times News',                     :st: 'PA', :city: 'Erie'                          } # 2000,2004,2008
-'Tribune Review':                      { :paper: 'Tribune Review',                      :st: 'PA', :city: 'Greensburg'                    } # 2000
 'Harrisburg Patriot News':             { :paper: 'Harrisburg Patriot News',             :st: 'PA', :city: 'Harrisburg'                    } # 2000,2008
 'Sentinel':                            { :paper: 'Sentinel',                            :st: 'PA', :city: 'Lewistown'                     } # 2004,2008
 'New Castle News':                     { :paper: 'New Castle News',                     :st: 'PA', :city: 'New Castle'                    } # 1992
@@ -436,7 +425,6 @@
 'State':                               { :paper: 'State',                               :st: 'SC', :city: 'Columbia'                      } # 1996,2000,2004,2008
 'Greenville News':                     { :paper: 'Greenville News',                     :st: 'SC', :city: 'Greenville'                    } # 1992,1996,2004,2008
 'Herald Journal':                      { :paper: 'Herald Journal',                      :st: 'SC', :city: 'Spartanburg'                   } # 2000,2004,2008
-'Sumter Item':                         { :paper: 'Sumter Item',                         :st: 'SC', :city: 'Sumter'                        } # 1996,2000
 'Brookings Daily Register':            { :paper: 'Brookings Daily Register',            :st: 'SD', :city: 'Brookings'                     } # 1992
 'Daily Republic':                      { :paper: 'Daily Republic',                      :st: 'SD', :city: 'Mitchell'                      } # 1996,2004,2008
 'Pierre Capital Journal':              { :paper: 'Pierre Capital Journal',              :st: 'SD', :city: 'Pierre'                        } # 1996
@@ -512,7 +500,7 @@
 'Sun (Bremerton)':                     { :paper: 'Sun (Bremerton)',                     :st: 'WA', :city: 'Bremerton'                     } # 1992,1996,2000,2008
 'Chronicle (Centralia)':               { :paper: 'Chronicle (Centralia)',               :st: 'WA', :city: 'Centralia'                     } # 1992,1996,2008
 'Ellensburg Daily Record':             { :paper: 'Ellensburg Daily Record',             :st: 'WA', :city: 'Ellensburg'                    } # 1992
-'Herald':                              { :paper: 'Herald',                              :st: 'WA', :city: 'Everett'                       } # 1992,2000
+'Everett Herald':                              { :paper: 'Everett Herald',                              :st: 'WA', :city: 'Everett'                       } # 1992,2000
 'Tri City Herald':                     { :paper: 'Tri City Herald',                     :st: 'WA', :city: 'Kennewick'                     } # 1992,2000,2004,2008
 'Longview Daily News':                 { :paper: 'Longview Daily News',                 :st: 'WA', :city: 'Longview'                      } # 1992
 'Skagit Valley Herald':                { :paper: 'Skagit Valley Herald',                :st: 'WA', :city: 'Mount Vernon'                  } # 1996
@@ -677,3 +665,71 @@
 # These two are correct -- Albany Herald, GA and Albany Delaware Herald (OR) are different papers
 'Albany Herald':                       { :paper: 'Albany Herald',                       :st: 'GA', :city: 'Albany'                        } # 1996
 'Albany Democrat Herald':              { :paper: 'Albany Democrat Herald',              :st: 'OR', :city: 'Albany'                              } # 2008:M                                        0
+
+
+'Juneau Empire':                       { :paper: 'Juneau Empire',                       :st: 'AK', :city: 'Juneau'                              } # 2008:M                                     7100
+'Clanton Advertiser':                  { :paper: 'Clanton Advertiser',                  :st: 'AL', :city: 'Clanton'                              } # 2008:M                                     5000
+'Demopolis Times':                     { :paper: 'Demopolis Times',                     :st: 'AL', :city: 'Demopolis'                              } # 2008:M                                     2850
+'Dothan Eagle':                        { :paper: 'Dothan Eagle',                        :st: 'AL', :city: 'Dothan'                              } # 2008:M                                    35416
+'Times Journal':                       { :paper: 'Times Journal',                       :st: 'AL', :city: 'Fort Payne'                    } # 2008:O                                     5845
+'Benton County Daily Record':          { :paper: 'Benton County Daily Record',          :st: 'AR', :city: 'Bentonville'                   } # 2008:O                                    17975
+'Daily Home':                          { :paper: 'Daily Home',                          :st: 'AL', :city: 'Talladega'                     } # 2008:O                                     9872
+'Chico Enterprise Record':             { :paper: 'Chico Enterprise Record',             :st: 'CA', :city: 'Chico'                              } # 2008:M  2004:W                            29113
+'Eureka Reporter':                     { :paper: 'Eureka Reporter',                     :st: 'CA', :city: 'Eureka'                              } # 2008:M                                        0
+'Times Herald':                        { :paper: 'Times Herald',                        :st: 'CA', :city: 'Vallejo'                       } # 2008:M  2004:K                            16957
+'Aspen Times':                         { :paper: 'Aspen Times',                         :st: 'CO', :city: 'Aspen'                              } # 2008:O                                    11000
+'Advocate':                            { :paper: 'Advocate',                            :st: 'CT', :city: 'Stamford'                      } # 2008:M                                    23098
+'Gazette':                             { :paper: 'Gazette',                             :st: 'IA', :city: 'Cedar Rapids'         } # 2008:M  2004:W                            57945
+'Rock Island Argus':                   { :paper: 'Rock Island Argus',                   :st: 'IL', :city: 'Rock Island'                              } # 2008:O                                    12176
+'Journal and Courier':                 { :paper: 'Journal and Courier',       :st: 'IN', :city: 'Lafayette'                              } #                                               0
+'Herald Bulletin':                     { :paper: 'Herald Bulletin',                     :st: 'IN', :city: 'Anderson'                      } # 2008:O                                    21199
+'Star Press':                          { :paper: 'Star Press',                          :st: 'IN', :city: 'Muncie'                        } # 2008:O                                    31512
+'Daily Independent':                   { :paper: 'Daily Independent',                   :st: 'KY', :city: 'Ashland'                       } # 2008:M  2004:W                            17465
+'Advocate Messenger':                  { :paper: 'Advocate Messenger',                  :st: 'KY', :city: 'Danville'                      } # 2008:M                                    10485
+'Town Talk':                           { :paper: 'Town Talk',                           :st: 'LA', :city: 'Alexandria'                    } # 2008:M  2004:W                            30858
+'Enterprise':                          { :paper: 'Enterprise',                          :st: 'MA', :city: 'Brockton'                      } # 2008:O                                    30405
+'Sentinel and Enterprise':             { :paper: 'Sentinel and Enterprise',             :st: 'MA', :city: 'Fitchburg'                     } # 2008:O  2004:W                            15319
+'Republican':                          { :paper: 'Republican',                          :st: 'MA', :city: 'Springfield'                   } # 2008:M  2004:K                            83894
+'Star Democrat':                       { :paper: 'Star Democrat',                       :st: 'MD', :city: 'Easton'                        } # 2008:O  2004:W                            16752
+'Kennebec Journal':                    { :paper: 'Kennebec Journal',                    :st: 'ME', :city: 'Augusta'                       } # 2008:O  2004:K                            55627
+'Petoskey News Review':                { :paper: 'Petoskey News Review',                :st: 'MI', :city: 'Petoskey'                      } # 2008:O  2004:K                             8994
+'St. Joseph News Press':                { :paper: 'St. Joseph News Press',                :st: 'MO', :city: 'Saint Joseph'                    } # 2008:M  2004:W                            33546
+'Commercial Dispatch':                 { :paper: 'Commercial Dispatch',                 :st: 'MS', :city: 'Columbus'                      } # 2008:O                                    13305
+'Montana Standard':                    { :paper: 'Montana Standard',                    :st: 'MT', :city: 'Butte'                         } # 2008:O                                    14740
+'Independent Record':                  { :paper: 'Independent Record',                  :st: 'MT', :city: 'Helena'                        } # 2008:O                                    14315
+'Rocky Mount Telegram':                { :paper: 'Rocky Mount Telegram',                :st: 'NC', :city: 'Rocky Mount'                              } # 2008:ab                                       0
+'Daily Advance':                       { :paper: 'Daily Advance',                       :st: 'NC', :city: 'Elizabeth City'                } # 2008:O  2004:K                                0
+'Bismarck Tribune':                    { :paper: 'Bismarck Tribune',                    :st: 'ND', :city: 'Bismarck'                              } # 2008:M  2004:K                            27051
+'Record (Bergen)':                     { :paper: 'Record (Bergen)',                     :st: 'NJ', :city: 'Hackensack'                    } # 1992,1996,2000,2004,2008
+'Daily Record':                        { :paper: 'Daily Record',                        :st: 'NJ', :city: 'Morristown'                    } # 2008:O  2004:K                            33405
+'Silver City Daily Press and Independent': { :paper: 'Silver City Daily Press and Independent', :st: 'NM', :city: 'Silver City'                              } # 2008:M                                     7782
+'Watertown Daily Times':               { :paper: 'Watertown Daily Times',               :st: 'NY', :city: 'Watertown'                              } # 2008:O                                    26375
+'Union Sun and Journal':               { :paper: 'Union Sun and Journal',               :st: 'NY', :city: 'Lockport'                      } # 2008:O                                    10901
+'Niagara Gazette':                     { :paper: 'Niagara Gazette',                     :st: 'NY', :city: 'Niagara Falls'                 } # 2008:O                                    16909
+'Coshocton Tribune':                   { :paper: 'Coshocton Tribune',                   :st: 'OH', :city: 'Coshocton'                              } # 2008:O                                     5903
+'Independent':                         { :paper: 'Independent',                         :st: 'OH', :city: 'Massillon'                     } # 2008:O  2004:W                            12081
+'Herald Star':                         { :paper: 'Herald Star',                         :st: 'OH', :city: 'Steubenville'                  } # 2008:M                                    13043
+'Advertiser Tribune':                  { :paper: 'Advertiser Tribune',                  :st: 'OH', :city: 'Tiffin'                        } # 2008:M                                     9475
+'Times Recorder':                      { :paper: 'Times Recorder',                      :st: 'OH', :city: 'Zanesville'                    } # 2008:O  2004:K                            17450
+'Indiana Gazette':                     { :paper: 'Indiana Gazette',                     :st: 'PA', :city: 'Indiana'                              } # 2008:O                                    15241
+'Lebanon Daily News':                  { :paper: 'Lebanon Daily News',                  :st: 'PA', :city: 'Lebanon'                              } # 2008:O  2004:W                            20098
+'Courier Express':                     { :paper: 'Courier Express',                     :st: 'PA', :city: 'Du Bois'                       } # 2008:O                                        0
+'Tribune Review':                      { :paper: 'Tribune Review',                      :st: 'PA', :city: 'Greensburg'                    } # 2000
+'Sumter Item':                         { :paper: 'Sumter Item',                         :st: 'SC', :city: 'Sumter'                        } # 1996,2000
+'Spectrum':                            { :paper: 'Spectrum',                            :st: 'UT', :city: 'Saint George'                    } # 2008:M                                    22352
+'Culpeper Star Exponent':              { :paper: 'Culpeper Star Exponent',              :st: 'VA', :city: 'Culpeper'                              } # 2008:M                                     7252
+'Daily Progress':                      { :paper: 'Daily Progress',                      :st: 'VA', :city: 'Charlottesville'               } # 2008:M                                    28697
+'Marshfield News Herald':              { :paper: 'Marshfield News Herald',              :st: 'WI', :city: 'Marshfield'                              } # 2008:O                                    11332
+'Sheboygan Press':                     { :paper: 'Sheboygan Press',                     :st: 'WI', :city: 'Sheboygan'                              } # 2008:O  2004:K                            20069
+'Herald Times Reporter':               { :paper: 'Herald Times Reporter',               :st: 'WI', :city: 'Manitowoc'                     } # 2008:ab                                       0
+'Intelligencer':                       { :paper: 'Intelligencer',                       :st: 'WV', :city: 'Wheeling'                      } # 2008:M  2004:W                            18450
+'Casper Star Tribune':                 { :paper: 'Casper Star Tribune',                 :st: 'WY', :city: 'Casper'                              } # 2008:O  2004:W                            28312
+'Vacaville Reporter':                            { :paper: 'Vacaville Reporter',                            :st: 'CA', :city: 'Vacaville'                     } # 2004,2008
+'Bucks County Courier Times':          { :paper: 'Bucks County Courier Times',          :st: 'PA', :city: 'Bethlehem'                              } # 2008:O  2004:K                            60233
+'Courier News':                        { :paper: 'Courier News',                        :st: 'NJ', :city: 'Bound Brook'                   } # 1996
+'Rock Hill Herald':                    { :paper: 'Rock Hill Herald',                    :st: 'SC', :city: 'Rock Hill'                              } # 2008:O                                    30848
+'Aberdeen Daily World':                { :paper: 'Aberdeen Daily World',                :st: 'WA', :city: 'Aberdeen'                              } # 2008:O                                    12720
+'Fond du Lac Reporter':                { :paper: 'Fond du Lac Reporter',                :st: 'WI', :city: 'Fond du Lac'                              } # 2008:ab                                       0
+
+'Sharon Herald':                       { :paper: 'Sharon Herald',                       :st: 'PA', :city: 'Sharon'                              } # 2008:O                                    19252
+'Republican American':                 { :paper: 'Republican American',                 :st: 'CT', :city: 'Waterbury'                     } # 2008:M  2004:W  2000:W                    50903

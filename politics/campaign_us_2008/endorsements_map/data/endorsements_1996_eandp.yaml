@@ -164,6 +164,11 @@ St. Louis Post Dispatch:
   :paper: St. Louis Post Dispatch
   :st: MO
   :prez_1996: Clinton
+Daily Home: 
+  :city: Talladega
+  :paper: Daily Home
+  :st: AL
+  :prez_1996: Clinton
 Columbus Dispatch: 
   :city: 
   :paper: Columbus Dispatch
@@ -459,6 +464,11 @@ Traverse City Record Eagle:
   :paper: Traverse City Record Eagle
   :st: MI
   :prez_1996: Clinton
+Gazette: 
+  :city: Cedar Rapids
+  :paper: Gazette
+  :st: IA
+  :prez_1996: Dole
 Winter Haven News Chief: 
   :city: 
   :paper: Winter Haven News Chief
@@ -658,11 +668,6 @@ Willmar West Central Tribune:
   :city: 
   :paper: Willmar West Central Tribune
   :st: MN
-  :prez_1996: Dole
-Cedar Rapids Gazette: 
-  :city: 
-  :paper: Cedar Rapids Gazette
-  :st: IA
   :prez_1996: Dole
 Plain Dealer: 
   :city: 
@@ -1038,11 +1043,6 @@ Jackson Sun:
   :city: 
   :paper: Jackson Sun
   :st: TN
-  :prez_1996: Clinton
-Talladega Daily Home: 
-  :city: 
-  :paper: Talladega Daily Home
-  :st: AL
   :prez_1996: Clinton
 Daily Freeman: 
   :city: Kingston

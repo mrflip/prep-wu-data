@@ -52,7 +52,7 @@ class Endorsement < Struct.new(
   #
   def movement yr1, yr2
     return 'ab' if prez[yr2] == 'abstain'
-    return 'dn' if ['USA Today', 'Wall Street Journal'].include?(paper)
+    return 'dn' if ['USA Today', 'Wall Street Journal', 'Orange County Register'].include?(paper)
     from, to = [party_in(yr1)||0, party_in(yr2)]
     (from && to) ? (2*to - from) : to
   end

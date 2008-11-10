@@ -5,7 +5,7 @@ CLINTON
 
 Anniston Star
 Decatur Daily
-Talladega Daily Home
+Daily Home (Talladega)
 
 DOLE
 
@@ -112,7 +112,7 @@ Martinsville Daily Reporter
 IOWA
 
 DOLE
-Cedar Rapids Gazette
+Gazette (Cedar Rapids)
 Clinton Herald
 Marshalltown Times-Republican
 Muscatine Journal
