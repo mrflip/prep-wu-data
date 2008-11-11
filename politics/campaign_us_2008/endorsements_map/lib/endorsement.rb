@@ -1,12 +1,13 @@
 require File.dirname(__FILE__)+'/hash_of_structs'
 
 PARTY_ALIGNMENT = {
-  'GHW Bush'  => -1,   'Dole'  => -1, 'Bush'  => -1, 'McCain' => -1,
-  'Clinton'   =>  1,   'Gore'  =>  1, 'Kerry' =>  1, 'Obama'  =>  1,
-  nil         =>  nil, ''      =>  0, 'N/A'   =>  0, 'N'      =>  0, 'abstain' => 0, }
+  'GHW Bush'  => -1,   'Dole'  => -1,  'Bush'  => -1,  'McCain' => -1,
+  'Clinton'   =>  1,   'Gore'  =>  1,  'Kerry' =>  1,  'Obama'  =>  1,
+  nil         =>  nil, ''      =>  0,  'N/A'   =>  0,  'N'      =>  0, 'abstain' => 0, }
 PREZ_CODE       = {
-  'GHWBush'   => 'HW', 'Dole' => 'D', 'Bush' => 'W',  'McCain' => 'M',
-  'Clinton'   => 'C',  'Gore' => 'G', 'Kerry' => 'K', 'Obama'  => 'O', 'abstain' => 'ab',
+  'GHWBush'   => 'HW', 'Dole'  => 'D', 'Bush'  => 'W', 'McCain' => 'M',
+  'Clinton'   => 'C',  'Gore'  => 'G', 'Kerry' => 'K', 'Obama'  => 'O', 'abstain' => 'ab',
+  'Perot'     => '3P', 'Nader' => '3N',
   nil         =>  0,   ''      =>  0
 }
 MOVEMENT_TO             = { 'McCain' => -2, 'Obama' => 2, }

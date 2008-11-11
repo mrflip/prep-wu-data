@@ -34,7 +34,6 @@ Chicago Tribune				|Bush	| Chicago		| Illinois
 Cincinnati Enquirer			|Bush	| Cincinnati		| Ohio
 Cincinnati Post				|Bush	| Cincinnati		| Ohio
 Clarksville Leaf Chronicle		|Bush	| Clarksville		| Tennessee
-Plain Dealer				|(none)	| Cleveland		| Ohio
 Columbia Daily Tribune			|Kerry	| Columbia		| Missouri
 Columbus Dispatch			|Bush	| Columbus		| Ohio
 Concord Monitor				|Kerry	| Concord		| New Hampshire
@@ -48,7 +47,6 @@ Denver Post				|Bush	| Denver		| Colorado
 Rocky Mountain News			|Bush	| Denver		| Colorado
 Des Moines Register			|Kerry	| Des Moines		| Iowa
 Detroit Free Press			|Kerry	| Detroit		| Michigan
-Detroit News				|(none)	| Detroit		| Michigan
 Duluth News Tribune			|Kerry	| Duluth		| Minnesota
 Durango Herald				|Kerry	| Durango		| Colorado
 Express Times				|Bush	| Easton		| Pennsylvania
@@ -70,7 +68,6 @@ Fresno Bee				|Kerry	| Fresno		| California
 Grand Forks Herald			|Kerry	| Grand Forks		| North Dakota
 Daily Sentinel				|Bush	| Grand Junction	| Colorado
 Record					|Kerry	| Hackensack		| New Jersey
-Harrisburg Patriot News			|(none)	| Harrisburg		| Pennsylvania
 Honolulu Advertiser			|Kerry	| Honolulu		| Hawaii
 Houston Chronicle			|Bush	| Houston		| Texas
 Indianapolis Star			|Bush	| Indianapolis		| Indiana
@@ -104,7 +101,6 @@ Muskegon Chronicle			|Kerry	| Muskegon		| Michigan
 Myrtle Beach The Sun News		|Kerry	| Myrtle Beach		| South Carolina
 Nashua Telegraph			|Kerry	| Nashua		| New Hampshire
 Tennessean				|Kerry	| Nashville		| Tennessee
-New Orleans Times Picayune		|(none)	| New Orleans		| Louisiana
 Times Reporter				|Bush	| New Philadelphia	| Ohio
 New York Daily News			|Bush	| New York		| New York
 New York Post				|Bush	| New York		| New York
@@ -147,7 +143,6 @@ San Francisco Chronicle			|Kerry	| San Francisco		| California
 San Jose Mercury News			|Kerry	| San Jose		| California
 Santa Rosa The Press Democrat		|Kerry	| Santa Rosa		| California
 Savannah Morning News			|Bush	| Savannah		| Georgia
-Scranton Times				|(none)	| Scranton		| Pennsylvania
 Seattle Post Intelligencer		|Kerry	| Seattle		| Washington
 Seattle Times				|Kerry	| Seattle		| Washington
 Press					|Kerry	| Sheboygan		| Wisconsin
@@ -163,7 +158,6 @@ St. Petersburg Times			|Kerry	| St. Petersburg	| Florida
 State College Centre Daily Times	|Kerry	| State College		| Pennsylvania
 (Stockton) Record			|Bush	| Stockton		| California
 News Tribune				|Kerry	| Tacoma		| Washington
-Tampa Tribune				|(none)	| Tampa			| Florida
 Blade					|Kerry	| Toledo		| Ohio
 Traverse City Record Eagle		|Kerry	| Traverse City		| Michigan
 Trenton Times				|Kerry	| Trenton		| New Jersey
@@ -177,7 +171,13 @@ Washington Post				|Kerry	| Washington		| D.C.
 Washington Times			|Bush	| Washington		| D.C.
 Wilkes Barre Citizens Voice		|Kerry	| Wilkes-Barre		| Pennsylvania
 Wilkes Barre Times Leader		|Kerry	| Wilkes-Barre		| Pennsylvania
-Winston Salem Journal			|(none)	| Winston-Salem		| North Carolina
 Woodbury Gloucester County Times	|Kerry	| Woodbury		| New Jersey
 Worcester Telegram and Gazette		|Kerry	| Worcester		| Massachusetts
 York Daily Record                       |Bush	| York                  | Pennsylvania
+Plain Dealer				|(none)	| Cleveland		| Ohio
+Detroit News				|(none)	| Detroit		| Michigan
+Harrisburg Patriot News			|(none)	| Harrisburg		| Pennsylvania
+New Orleans Times Picayune		|(none)	| New Orleans		| Louisiana
+Scranton Times				|(none)	| Scranton		| Pennsylvania
+Tampa Tribune				|(none)	| Tampa			| Florida
+Winston Salem Journal			|(none)	| Winston-Salem		| North Carolina

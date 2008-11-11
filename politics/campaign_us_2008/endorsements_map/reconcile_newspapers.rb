@@ -50,18 +50,18 @@ Endorsement.all = { }
   end
 end
 
-# #
-# # Load top-100
-# #
-# YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).each do |paper, info|
-#   hsh = Hash.zip([:paper, :rank, :daily, :sun], [paper]+info)
-#   if (e = Endorsement[paper])
-#     e.merge!(hsh)
-#     e.circ = e.daily if (e.circ.to_i == 0)
-#   else
-#     Endorsement.add Endorsement.from_hash(hsh)
-#   end
-# end
+#
+# Load top-100
+#
+YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).each do |paper, info|
+  hsh = Hash.zip([:paper, :rank, :daily, :sun], [paper]+info)
+  if (e = Endorsement[paper])
+    e.merge!(hsh)
+    e.circ = e.daily if (e.circ.to_i == 0)
+  else
+    Endorsement.add Endorsement.from_hash(hsh)
+  end
+end
 
 #
 # Load metros

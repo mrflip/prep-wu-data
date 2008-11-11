@@ -38,6 +38,15 @@ Tri-Valley Herald, Pleasanton
 Ventura County Star
 The Whittier Daily News
 
+# from http://www.gwu.edu/~action/natendorse5.html
+Bakersfield Californian
+Chico Enterprise Record
+Times-Standard, Eureka
+Lodi News-Sentinel
+Vacaville Reporter
+Press-Telegram, Long Beach
+Inland Valley Daily Bulletin
+
 COLORADO
 
 Daily Camera
@@ -71,15 +80,19 @@ The Stuart News
 The Tampa Tribune
 The Tribune, Fort Pierce
 
+Florida Times-Union (Jacksonville) # http://www.gwu.edu/~action/natendorse5.html
+
 GEORGIA
 
 The Augusta Chronicle
 Marietta Daily Journal
 Savannah Morning News
+Atlanta Journal                 # 10/19/00 http://www.gwu.edu/~action/natendorse5.html
 
 IDAHO
 
 Idaho Press-Tribune, Nampa
+Times-News, Twin Falls
 
 ILLINOIS
 
@@ -94,6 +107,7 @@ The Pantagraph, Bloomington
 The Quincy Herald-Whig
 The Rockford Register Star
 The State Journal-Register, Springfield
+Lake County News Sun, Waukegan # http://www.gwu.edu/~action/natendorse5.html
 
 INDIANA
 
@@ -106,6 +120,7 @@ The Times, Munster
 IOWA
 
 Quad-City Times, Davenport
+Gazette, Cedar Rapids
 
 KANSAS
 
@@ -115,6 +130,7 @@ KENTUCKY
 
 Daily News, Bowling Green
 Owensboro Messenger-Inquirer
+Hopkinsville Kentucky New Era # http://www.gwu.edu/~action/natendorse5.html
 
 LOUISIANA
 
@@ -147,6 +163,7 @@ The Detroit News
 The Flint Journal
 The Grand Rapids Press
 Kalamazoo Gazette
+Daily Tribune (Royal Oak)               # 11/1/00 http://www.gwu.edu/~action/natendorse5.html
 
 MINNESOTA
 
@@ -156,6 +173,7 @@ MISSOURI
 
 Columbia Daily Tribune
 The Joplin Globe
+Sunday News Tribune, Jefferson City     # 11/1/00 # http://www.gwu.edu/~action/natendorse5.html
 
 MONTANA
 
@@ -182,6 +200,7 @@ NEW JERSEY
 Asbury Park Press
 Courier Post, Cherry Hill
 The Press of Atlantic City
+The Trentonian
 
 NEW MEXICO
 
@@ -189,6 +208,8 @@ Albuquerque Journal
 The Albuquerque Tribune
 Carlsbad Current-Argus
 Las Cruces Sun-News
+Farmington Daily Times          # 11/5/00 http://www.gwu.edu/~action/natendorse5.html
+Roswell Daily Record            # 11/5/00 http://www.gwu.edu/~action/natendorse5.html
 
 NEW YORK
 
@@ -232,16 +253,20 @@ OREGON
 
 The Bend Bulletin
 The Oregonian, Portland
+Albany Democrat-Herald          # 10/29/00 http://www.gwu.edu/~action/natendorse5.html
 
 PENNSYLVANIA
 
 Delaware County Daily Times
-Erie Times-News
+Erie Times-News                 # 10/27/00 
 The Morning Call, Allentown
 The Harrisburg Patriot-News
 Times-Tribune, Scranton
 Tribune-Review
 The York Dispatch
+
+Tribune Democrat, Johnstown     # http://www.gwu.edu/~action/natendorse5.html
+The Herald-Standard             # http://www.gwu.edu/~action/natendorse5.html
 
 RHODE ISLAND
 
@@ -253,6 +278,7 @@ Herald-Journal, Spartanburg
 The Sumter Item
 The Post and Courier, Charleston
 The State, Columbia
+Greenville News
 
 SOUTH DAKOTA
 
@@ -282,6 +308,10 @@ Times Record News, Wichita Falls # was the Times Herald Record -- assuming this 
 # Wichita Falls Times Record did endorse W
 # http://nl.newsbank.com/nl-search/we/Archives?p_product=WFTB&p_theme=wftb&p_action=search&p_maxdocs=200&p_text_search-0=endorsement&s_dispstring=endorsement%20AND%20date(10/1/2000%20to%2011/10/2000)&p_field_date-0=YMD_date&p_params_date-0=date:B,E&p_text_date-0=10/1/2000%20to%2011/10/2000)&xcal_numdocs=20&p_perpage=10&p_sort=YMD_date:D&xcal_useweights=no
 
+
+Amarillo Globe-News             # http://www.gwu.edu/~action/natendorse5.html
+Galveston County Daily News     # 10/31/00 # http://www.gwu.edu/~action/natendorse5.html
+
 VIRGINIA
 
 The Southwest Times, Pulaski
@@ -298,23 +328,33 @@ Sun, Bremerton
 Tri-City Herald, Kennewick
 Walla Walla Union-Bulletin
 
+Skagit Valley Herald            # 11/3/00 http://www.gwu.edu/~action/natendorse5.html
+
 WEST VIRGINIA
 Charleston Daily Mail
 The Dominion Post, Morgantown
 
 WISCONSIN
 
-Green Bay Press Gazette
-Wisconsin State Journal, Madison
+Wisconsin State Journal, Madison        # 10/29/00
+Green Bay Press Gazette                 # 10/27/00
+
+# http://www.gwu.edu/~action/natendorse5.html
+La Crosse Tribune                       # 10/31/00
+Beloit Daily News
+The Chippewa Herald
+The Janesville Gazette
+Marshfield News Herald
+Oshkosh Northwestern
+Stevens Point Journal
+Wausau Daily Herald
 
 WYOMING
 
 Wyoming Tribune-Eagle, Cheyenne
 
 
-
 AL GORE
-
 
 
 ALABAMA
@@ -322,6 +362,8 @@ ALABAMA
 The Anniston Star
 The Huntsville Times
 The Tuscaloosa News
+Montgomery Advertiser           # 10/23/00  # gwu
+Decatur Daily                   # 10/22/00  # gwu   
 
 ALASKA
 
@@ -343,11 +385,18 @@ The Sacramento Bee
 San Francisco Chronicle
 San Francisco Examiner
 San Jose Mercury News
+La Opinion 			# 11/4/00 # gwu
+Oakland Tribune
+The Argus (Fremont)
+San Mateo County Times
+Daily Review (Hayward) 
+
 
 COLORADO
 
 The Denver Post
 Fort Collins Coloradoan
+Durango Herald                  # 10/29/00
 
 CONNECTICUT
 
@@ -365,24 +414,25 @@ The Washington Post
 FLORIDA
 
 Boca Raton News
-Florida Today, Melbourne
+Florida Today, Melbourne        # 10/29/00  
 The Gainesville Sun
-The Miami Herald
 Ocala Star-Banner
-The Palm Beach Post, West Palm Beach
-Sarasota Herald-Tribune
-South Florida Sun-Sentinel, Fort Lauderdale
-The Daytona Beach News-Journal
-St. Petersburg Times
+The Palm Beach Post, West Palm Beach # 11/5/00   
+South Florida Sun-Sentinel, Fort Lauderdale # 10/29/00
+Miami Herald                    # 10/29/00
+St. Petersburg Times            # 10/29/00
+Daytona Beach News-Journal      # 11/2/00   
+Sarasota Herald-Tribune         # 11/4/00   
 
 GEORGIA
 
-The Atlanta Journal-Constitution
+The Atlanta Constitution        # split endorsement
 Columbus Ledger-Enquirer
 
 HAWAII
 
-The Honolulu Advertiser
+The Honolulu Advertiser         # 10/29/00 
+Honolulu Star-Bulletin          # 11/2/00
 
 ILLINOIS
 
@@ -433,6 +483,7 @@ MICHIGAN
 Detroit Free Press
 Lansing State Journal
 The Macomb Daily
+Muskegon Chronicle
 
 MINNESOTA
 
@@ -463,6 +514,7 @@ NEW HAMPSHIRE
 Concord Monitor
 The Keene Sentinel
 Portsmouth Herald
+The Nashua Telegraph            # 11/5/00 # gwu
 
 NEW JERSEY
 
@@ -477,21 +529,23 @@ The Santa Fe New Mexican
 
 NEW YORK
 
-The Buffalo News
-Daily News (New York City)
-The Daily Star, Oneonta
-The Ithaca Journal
-Newsday, Melville
-The New York Times
-Rochester Democrat and Chronicle
+Daily News (New York City)      # 10/29/00
 Staten Island Advance
-Times-Union, Albany
+Times-Union, Albany             # 10/22/00
+New York Times                  # 10/29/00
+Newsday                         # 10/29/00
+Buffalo News                    # 10/29/00
+Ithaca Journal                  # 10/31/00
+Daily Star (Oneonta)            # 11/4/00
+Staten Island Advance           # 10/30/00
+Rochester Democrat and Chronicle
+New York Observer
 
 NORTH CAROLINA
 
 The Asheville Citizen-Times
 The Charlotte Observer
-Wilmington Star-News  			# Morning Star, Wilmington -- merged to form the star-news
+Wilmington Star-News                    # Morning Star, Wilmington -- merged to form the star-news
 The News and Observer, Raleigh
 News and Record, Greensboro
 
@@ -515,15 +569,22 @@ PENNSYLVANIA
 
 Beaver County Times
 Centre Daily Times, State College
-The Philadelphia Daily News
-The Philadelphia Inquirer
-Pittsburgh Post-Gazette
-York Daily Record
+Philadelphia Inquirer           # 10/29/00
+Philadelphia Daily News         # 10/27/00
+Pittsburgh Post-Gazette         # 10/29/00
+Beaver County Times             # 10/26/00
+York Daily Record               # 10/29/00
+
+SOUTH CAROLINA
+
+The Rock Hill Herald
+Herald-Journal (Spartanburg)    # 10/22/00
 
 TENNESSEE
 
 Chattanooga Times
 The Tennessean, Nashville
+Jackson Sun
 
 TEXAS
 
@@ -554,4 +615,34 @@ WISCONSIN
 The Capital Times, Madison
 The Journal Times, Racine
 The Post-Crescent, Appleton
+Fond du Lac Reporter            # gwu
+Kenosha News                    # gwu   
+Sheboygan Press                 # gwu   
+    
+CHOOSING TO MAKE NO ENDORSEMENT (26)                                                                     
 
+# http://www.gwu.edu/~action/natendorse5.html
+# 
+ARKANSAS
+Jonesboro Sun 
+
+CALIFORNIA
+Los Angeles Times             		# 10/29/00
+
+IOWA
+Globe Gazette (Mason City)            	# 11/05/00
+
+KENTUCKY
+The Daily Independent (Ashland) 	# the six-member editorial board divided three to three.  Opinion page editor John Cannon said that the board voted several times but remained "hopelessly split."  The paper ran a non-endorsement on Oct. 22; this was the first time it had not made a presidential endorsement in at least three decades.]
+
+MAINE
+Sun-Journal (Lewiston)  		# "This newspaper simply has a long tradition of not endorsing candidates for any office at any level...   We do editorialize on practically every other subject under the Sun.  People here can only remember twice that we endorsed an individual, once for Olympia Snowe because she was a hometown person and once for Gov. King..."                 # Rex Rhoades, Executive Editor]
+
+VERMONT
+Burlington Free Press 			# "We felt that neither of the candidates merited our endorsement."              # Stephen Kiernan, editorial page editor (post-election interview)]
+
+VIRGINIA
+Daily Press (Newport News)            	# 11/05/00
+
+WISCONSIN
+Milwaukee Journal Sentinel            	# 11/04/00

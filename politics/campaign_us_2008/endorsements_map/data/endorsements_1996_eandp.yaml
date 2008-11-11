@@ -409,6 +409,11 @@ Daily Astorian:
   :paper: Daily Astorian
   :st: OR
   :prez_1996: Clinton
+Atlanta Journal: 
+  :city: 
+  :paper: Atlanta Journal
+  :st: GA
+  :prez_1996: Dole
 Antelope Valley Press: 
   :city: 
   :paper: Antelope Valley Press
@@ -804,11 +809,6 @@ Arizona Daily Star:
   :paper: Arizona Daily Star
   :st: AZ
   :prez_1996: Clinton
-Atlanta Journal Constitution: 
-  :city: 
-  :paper: Atlanta Journal Constitution
-  :st: GA
-  :prez_1996: Clinton
 Jacksonville Journal Courier: 
   :city: 
   :paper: Jacksonville Journal Courier
@@ -889,6 +889,11 @@ Alliance Review:
   :paper: Alliance Review
   :st: OH
   :prez_1996: Dole
+Atlanta Constitution: 
+  :city: 
+  :paper: Atlanta Constitution
+  :st: GA
+  :prez_1996: Clinton
 Harrison Daily Times: 
   :city: 
   :paper: Harrison Daily Times
@@ -929,6 +934,11 @@ Day:
   :paper: Day
   :st: CT
   :prez_1996: Dole
+Commercial Appeal: 
+  :city: Memphis
+  :paper: Commercial Appeal
+  :st: TN
+  :prez_1996: Dole
 Elko Daily Free Press: 
   :city: 
   :paper: Elko Daily Free Press
@@ -959,11 +969,6 @@ Elk City Daily News:
   :paper: Elk City Daily News
   :st: OK
   :prez_1996: Clinton
-Commercial Appeal: 
-  :city: Memphis
-  :paper: Commercial Appeal
-  :st: TN
-  :prez_1996: Dole
 Victoria Advocate: 
   :city: 
   :paper: Victoria Advocate

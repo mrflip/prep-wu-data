@@ -574,6 +574,11 @@ McCook Daily Gazette:
   :paper: McCook Daily Gazette
   :st: NE
   :prez_1992: Perot
+Syracuse Post Standard: 
+  :city: 
+  :paper: Syracuse Post Standard
+  :st: NY
+  :prez_1992: Perot
 Brunswick News: 
   :city: 
   :paper: Brunswick News
@@ -1074,11 +1079,6 @@ Berkshire Eagle:
   :paper: Berkshire Eagle
   :st: MA
   :prez_1992: Clinton
-Atlanta Journal Constitution: 
-  :city: 
-  :paper: Atlanta Journal Constitution
-  :st: GA
-  :prez_1992: Clinton
 La Opinion: 
   :city: 
   :paper: La Opinion
@@ -1194,6 +1194,11 @@ Mineral Wells Index:
   :paper: Mineral Wells Index
   :st: TX
   :prez_1992: Clinton
+Atlanta Constitution: 
+  :city: 
+  :paper: Atlanta Constitution
+  :st: GA
+  :prez_1992: Clinton
 Anderson Independent Mail: 
   :city: 
   :paper: Anderson Independent Mail
@@ -1279,11 +1284,6 @@ Stuttgart Daily Leader:
   :paper: Stuttgart Daily Leader
   :st: AR
   :prez_1992: Clinton
-Syracuse Herald American: 
-  :city: 
-  :paper: Syracuse Herald American
-  :st: NY
-  :prez_1992: Perot
 Elk City Daily News: 
   :city: 
   :paper: Elk City Daily News

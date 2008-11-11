@@ -141,13 +141,14 @@ def fix_city_and_paper(orig_paper, state)
     'JournalNews'                   => 'Journal News',
     'TimesDaily'                    => 'Times Daily',
     'Fort Meyers News Press'        => 'News Press',
+    'Syracuse Herald American'      => 'Syracuse Post Standard',
     # ''               => '',
   }[paper] || paper
   # Some special cases
   # Delaware County Daily Times is in Primos -- but that's basically philadelphia
   # Gannett Sunburban Newspapers is many papers, based in White Plains, NY
   city, paper = {
-    ['Arlington', 'Daily Herald']   => ['Arlington Heights', 'Daily Herald'],
+    ['Arlington', 'Daily Herald']    => ['Arlington Heights', 'Daily Herald'],
     ['Bryan',     'Eagle']          => ['Bryan',             'Bryan-College Station Eagle'],
     ['Bergen',    'Record']         => ['Hackensack',        'Record (Bergen)'],
   }[ [city, paper] ] || [city, paper]
@@ -159,6 +160,7 @@ def fix_city_and_paper(orig_paper, state)
   when (paper =~ /Spokesman.*Review/) && (orig_paper =~ /Spokane/) then paper = "Spokesman Review (Spokane)"
   when !city.blank? && keep_city.include?(paper)        then paper = "#{paper} (#{city})"
   end
+  # p [orig_paper, state, paper, city] if orig_paper =~ /syra/i
   [paper, city]
 end
 

@@ -271,6 +271,8 @@
 'Daily Tribune':                       { :paper: 'Daily Tribune',                       :st: 'MI', :city: 'Royal Oak'                     } # 2008:O                                     9396
 'Saginaw News':                        { :paper: 'Saginaw News',                        :st: 'MI', :city: 'Saginaw'                       } # 2008:O  2004:K                            39143
 'Traverse City Record Eagle':          { :paper: 'Traverse City Record Eagle',          :st: 'MI', :city: 'Traverse City'                 } # 2008:O  2004:K          1996:C            27797
+'Detroit News':                        { :paper: 'Detroit News',                        :st: 'MI', :city: 'Detroit'                       } # 2008:M  2004:   2000:W  1996:D  1992:HW  188171
+'Detroit Free Press':                  { :paper: 'Detroit Free Press',                  :st: 'MI', :city: 'Detroit'                       } # 2008:O  2004:K  2000:G  1996:C  1992:C   308944
 'Albert Lea Tribune':                  { :paper: 'Albert Lea Tribune',                  :st: 'MN', :city: 'Albert Lea'                    } # 2008:O                                     6315
 'Pioneer':                             { :paper: 'Pioneer',                             :st: 'MN', :city: 'Bemidji'                       } # 2008:M  2004:W                             9018
 'Duluth News Tribune':                 { :paper: 'Duluth News Tribune',                 :st: 'MN', :city: 'Duluth'                        } # 2008:M  2004:K  2000:G                    40082
@@ -632,7 +634,9 @@
 'Washington Examiner':                 { :paper: 'Washington Examiner',                 :st: 'DC', :city: 'Washington'                    } # 2008:M  2004:                            100073
 'Washington Times':                    { :paper: 'Washington Times',                    :st: 'DC', :city: 'Washington'                    } # 2008:M  2004:W  2000:W  1996:D  1992:HW   93763
 'Washington Post':                     { :paper: 'Washington Post',                     :st: 'DC', :city: 'Washington'                    } # 2008:O  2004:K  2000:G          1992:C   673180
-'Atlanta Journal Constitution':        { :paper: 'Atlanta Journal Constitution',        :st: 'GA', :city: 'Atlanta'                       } # 2008:O  2004:K  2000:G  1996:C  1992:C   326907
+'Atlanta Journal':                     { :paper: 'Atlanta Journal',                     :st: 'GA', :city: 'Atlanta'                       } #                 2000:B  1996:D  1992:HW
+'Atlanta Constitution':                { :paper: 'Atlanta Constitution',                :st: 'GA', :city: 'Atlanta'                       } #                 2000:G  1996:C  1992:C 
+'Atlanta Journal Constitution':        { :paper: 'Atlanta Journal Constitution',        :st: 'GA', :city: 'Atlanta'                       } # 2008:O  2004:K  
 'Atlanta Daily World':                 { :paper: 'Atlanta Daily World',                 :st: 'GA', :city: 'Atlanta'                       } #                                 1992:HW       0
 'Honolulu Advertiser':                 { :paper: 'Honolulu Advertiser',                 :st: 'HI', :city: 'Honolulu'                      } #         2004:K  2000:G  1996:C           140331
 'Honolulu Star Bulletin':              { :paper: 'Honolulu Star Bulletin',              :st: 'HI', :city: 'Honolulu'                      } # 2008:O  2004:K                            64305
@@ -648,8 +652,6 @@
 'Baltimore Examiner':                  { :paper: 'Baltimore Examiner',                  :st: 'MD', :city: 'Baltimore'                     } # 2008:M  2004:                             50000
 'Portland Press Herald':               { :paper: 'Portland Press Herald',               :st: 'ME', :city: 'Portland'                      } # 2008:O  2004:K  2000:G                    64938
 'Maine Sunday Telegram':               { :paper: 'Maine Sunday Telegram',               :st: 'ME', :city: 'Portland'                      } #                 2000:G  1996:C                0
-'Detroit News':                        { :paper: 'Detroit News',                        :st: 'MI', :city: 'Detroit'                       } # 2008:M  2004:   2000:W  1996:D  1992:HW  188171
-'Detroit Free Press':                  { :paper: 'Detroit Free Press',                  :st: 'MI', :city: 'Detroit'                       } # 2008:O  2004:K  2000:G  1996:C  1992:C   308944
 'Times (Trenton)':                     { :paper: 'Times (Trenton)',                     :st: 'NJ', :city: 'Trenton'                       } # 2008:O  2004:K  2000:G  1996:C  1992:C    54745
 'Trentonian':                          { :paper: 'Trentonian',                          :st: 'NJ', :city: 'Trenton'                       } #                                 1992:HW       0
 'Albuquerque Journal':                 { :paper: 'Albuquerque Journal',                 :st: 'NM', :city: 'Albuquerque'                   } # 2008:M  2004:W  2000:W  1996:D  1992:HW  102902
@@ -664,7 +666,6 @@
 'Daily News (New York City)':          { :paper: 'Daily News (New York City)',          :st: 'NY', :city: 'New York City'                 } # 2008:O  2004:W  2000:G  1996:C  1992:C   703137
 'Staten Island Advance':               { :paper: 'Staten Island Advance',               :st: 'NY', :city: 'New York City'                 } #                 2000:G                        0
 'New York Post':                       { :paper: 'New York Post',                       :st: 'NY', :city: 'New York City'                 } # 2008:M  2004:W  2000:W  1996:D  1992:HW  702488
-'Syracuse Herald American':            { :paper: 'Syracuse Herald American',            :st: 'NY', :city: 'Syracuse'                      } #                 2000:W          1992:         0
 'Syracuse Post Standard':              { :paper: 'Syracuse Post Standard',              :st: 'NY', :city: 'Syracuse'                      } # 2008:O                                   110061
 'Cincinnati Enquirer':                 { :paper: 'Cincinnati Enquirer',                 :st: 'OH', :city: 'Cincinnati'                    } # 2008:M  2004:W  2000:W  1996:D  1992:HW  212369
 'Cincinnati Post':                     { :paper: 'Cincinnati Post',                     :st: 'OH', :city: 'Cincinnati'                    } #                 2000:W  1996:D  1992:HW       0

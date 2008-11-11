@@ -31,7 +31,6 @@
 "Miami Herald":                  { :paper: "Miami Herald",                  :prez_2004: 'Kerry'      }
 "Morning Call":                  { :paper: "Morning Call",                  :prez_2004: 'Kerry'      }
 "Nashua Telegraph":              { :paper: "Nashua Telegraph",              :prez_2004: 'Kerry'      }
-"Times Picayune":                { :paper: "Times Picayune",                :prez_2004: 'none'       }
 "New York Post":                 { :paper: "New York Post",                 :prez_2004: 'Bush'       }
 "News and Observer":             { :paper: "News and Observer",             :prez_2004: 'Kerry'      }
 "Omaha World Herald":            { :paper: "Omaha World Herald",            :prez_2004: 'Bush'       }
@@ -50,7 +49,6 @@
 "St. Paul Pioneer Press":        { :paper: "St. Paul Pioneer Press",        :prez_2004: 'Bush'       }
 "St. Petersburg Times":          { :paper: "St. Petersburg Times",          :prez_2004: 'Kerry'      }
 "Star Tribune":                  { :paper: "Star Tribune",                  :prez_2004: 'Kerry'      }
-"Tampa Tribune":                 { :paper: "Tampa Tribune",                 :prez_2004: 'N/A'        }
 "Sun (Lowell)":                  { :paper: "Sun (Lowell)",                  :prez_2004: 'Bush'       }
 "Record (Stockton)":             { :paper: "Record (Stockton)",             :prez_2004: 'Bush'       }
 "Birmingham News":               { :paper: "Birmingham News",               :prez_2004: 'Bush'       }
@@ -66,7 +64,6 @@
 "Daily Sentinel":                { :paper: "Daily Sentinel",                :prez_2004: 'Bush'       }
 "Denver Post":                   { :paper: "Denver Post",                   :prez_2004: 'Bush'       }
 "Des Moines Register":           { :paper: "Des Moines Register",           :prez_2004: 'Kerry'      }
-"Detroit News":                  { :paper: "Detroit News",                  :prez_2004: 'N/A'        }
 "Durango Herald":                { :paper: "Durango Herald",                :prez_2004: 'Kerry'      }
 "Express Times":                 { :paper: "Express Times",                 :prez_2004: 'Bush'       }
 "Fresno Bee":                    { :paper: "Fresno Bee",                    :prez_2004: 'Kerry'      }
@@ -79,7 +76,6 @@
 "Oklahoman":                     { :paper: "Oklahoman",                     :prez_2004: 'Bush'       }
 "Oregonian":                     { :paper: "Oregonian",                     :prez_2004: 'Kerry'      }
 "Palm Beach Post":               { :paper: "Palm Beach Post",               :prez_2004: 'Kerry'      }
-"Plain Dealer":                  { :paper: "Plain Dealer",                  :prez_2004: 'none'       }
 "Press Enterprise":              { :paper: "Press Enterprise",              :prez_2004: 'Bush'       }
 "Pueblo Chieftain":              { :paper: "Pueblo Chieftain",              :prez_2004: 'Bush'       }
 "Record (Bergen)":               { :paper: "Record (Bergen)",               :prez_2004: 'Kerry'      }
@@ -95,3 +91,9 @@
 "Times Reporter":                { :paper: "Times Reporter",                :prez_2004: 'Bush'       }
 "Tulsa World":                   { :paper: "Tulsa World",                   :prez_2004: 'Bush'       }
 "New Hampshire Union Leader":    { :paper: "New Hampshire Union Leader",    :prez_2004: 'Bush'       }
+"Times Picayune":                { :paper: "Times Picayune",                :prez_2004: 'abstain'       }
+"Plain Dealer":                  { :paper: "Plain Dealer",                  :prez_2004: 'abstain'       }
+"Tampa Tribune":                 { :paper: "Tampa Tribune",                 :prez_2004: 'abstain'        }
+"Detroit News":                  { :paper: "Detroit News",                  :prez_2004: 'abstain'        }
+"Times Tribune":                 { :paper: "Times Tribune",                  :prez_2004: 'abstain'       }
+"Winston Salem Journal":         { :paper: "Winston Salem Journal",          :prez_2004: 'abstain'       }

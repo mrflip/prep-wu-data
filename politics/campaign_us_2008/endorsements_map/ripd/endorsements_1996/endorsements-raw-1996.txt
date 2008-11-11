@@ -445,7 +445,8 @@ The St. Louis Post-Dispatch
 ILLINOIS
 The Chicago Sun-Times
 GEORGIA
-The Atlanta Journal-Constitution
+The Atlanta Constitution
+
 WEST VIRGINIA
 The Charleston Gazette
 NEW HAMPSHIRE
@@ -495,6 +496,9 @@ The Seattle Times
 
 
 BOB DOLE
+GEORGIA
+Atlanta Journal
+
 ILLINOIS
 The Chicago Tribune
 MICHIGAN
