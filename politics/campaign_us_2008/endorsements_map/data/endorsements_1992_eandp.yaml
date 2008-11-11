@@ -79,11 +79,6 @@ Idaho Falls Post Register:
   :paper: Idaho Falls Post Register
   :st: ID
   :prez_1992: Clinton
-Charlottesville Daily Progress: 
-  :city: 
-  :paper: Charlottesville Daily Progress
-  :st: VA
-  :prez_1992: Clinton
 Arizona Republic: 
   :city: 
   :paper: Arizona Republic
@@ -994,6 +989,11 @@ Times (Shreveport):
   :paper: Times (Shreveport)
   :st: LA
   :prez_1992: Clinton
+Daily Progress: 
+  :city: Charlottesville
+  :paper: Daily Progress
+  :st: VA
+  :prez_1992: Clinton
 Salisbury Daily Times: 
   :city: 
   :paper: Salisbury Daily Times
@@ -1028,6 +1028,11 @@ Oklahoman:
   :city: 
   :paper: Oklahoman
   :st: OK
+  :prez_1992: GHWBush
+Farmington Daily Times: 
+  :city: 
+  :paper: Farmington Daily Times
+  :st: NM
   :prez_1992: GHWBush
 Carlisle Sentinel: 
   :city: 
@@ -1413,11 +1418,6 @@ Wahpeton Daily News:
   :city: 
   :paper: Wahpeton Daily News
   :st: ND
-  :prez_1992: GHWBush
-Daily Times: 
-  :city: Farmington
-  :paper: Daily Times
-  :st: NM
   :prez_1992: GHWBush
 Taunton Daily Gazette: 
   :city: 

@@ -784,11 +784,6 @@ Oakland Tribune:
   :paper: Oakland Tribune
   :st: CA
   :prez_1996: Clinton
-Vallejo Times Herald: 
-  :city: 
-  :paper: Vallejo Times Herald
-  :st: CA
-  :prez_1996: Clinton
 Parkersburg News: 
   :city: 
   :paper: Parkersburg News
@@ -869,6 +864,11 @@ Hernando Today:
   :paper: Hernando Today
   :st: FL
   :prez_1996: Dole
+Times Herald: 
+  :city: Vallejo
+  :paper: Times Herald
+  :st: CA
+  :prez_1996: Clinton
 Sun (Bremerton): 
   :city: Bremerton
   :paper: Sun (Bremerton)

@@ -19,11 +19,11 @@ require 'lib/utils'
 NEWSPAPER_CITIES  = YAML.load(File.open("data/newspaper_cities.yaml"))
 
 LNGSHIFTS = {
-  'Chicago Sun Times' =>  0.4, 'Chicago Tribune'    => -0.2, 'Southwest News Herald' =>  0.1,
+  'Chicago Sun Times' =>  0.4, 'Chicago Tribune'    => -0.2,
   'Seattle Times'     => -0.2, 'Capital Times'  => -0.2,
   'New York Post'     =>  0.4, 'Daily News (New York City)'     => -0.2, 'New York Times' => 0.8,
   'Wall Street Journal' => 1,
-  'el Diario'         =>  0.1, 'Yamhill Valley News Register' =>  0.1,
+  'el Diario'         =>  0.1,
   'La Opinion'        =>  0.3, 'Daily News (Los Angeles)'     =>  -0.4,
   'Orange County Register'  =>  0.5,
   'Las Vegas Sun'     => -0.2, 'Las Vegas Review Journal' => 0.2,

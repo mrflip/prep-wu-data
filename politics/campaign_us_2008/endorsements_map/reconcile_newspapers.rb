@@ -31,7 +31,7 @@ end
 def dump_as_hash e, fudge_city=nil
   paper   = e.paper.gsub(/\'/, "''")
   puts "%-38s { :paper: %-38s :st: %4s, :city: %-31s } # %s %7d" % [
-    "'#{paper}':", "'#{e.paper}',", "'#{e.st}'", "'#{e.city}'", e.endorsement_hist_str, e.circ]
+    "'#{paper}':", "'#{paper}',", "'#{e.st}'", "'#{e.city}'", e.endorsement_hist_str, e.circ]
 end
 
 #
@@ -50,18 +50,18 @@ Endorsement.all = { }
   end
 end
 
-#
-# Load top-100
-#
-YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).each do |paper, info|
-  hsh = Hash.zip([:paper, :rank, :daily, :sun], [paper]+info)
-  if (e = Endorsement[paper])
-    e.merge!(hsh)
-    e.circ = e.daily if (e.circ.to_i == 0)
-  else
-    Endorsement.add Endorsement.from_hash(hsh)
-  end
-end
+# #
+# # Load top-100
+# #
+# YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).each do |paper, info|
+#   hsh = Hash.zip([:paper, :rank, :daily, :sun], [paper]+info)
+#   if (e = Endorsement[paper])
+#     e.merge!(hsh)
+#     e.circ = e.daily if (e.circ.to_i == 0)
+#   else
+#     Endorsement.add Endorsement.from_hash(hsh)
+#   end
+# end
 
 #
 # Load metros
@@ -99,12 +99,24 @@ Endorsement.dump :literalize_keys => false, :format => :yaml
 # #
 # Cities with two or more papers
 #
-city_papers = { }
-Endorsement.all.each do |paper, e|
-  (city_papers[[e.st||'', e.city||'']] ||= []) << e
-end
-city_papers.sort_by{|st_city, es| [es.length, st_city] }.each do |st_city, es|
-  # next if es.length <= 1
-  es.each{|e| dump_as_hash(e) }
-end
+# city_papers = { }
+# Endorsement.all.each do |paper, e|
+#   (city_papers[[e.st||'', e.city||'']] ||= []) << e
+# end
+# city_papers.sort_by{|st_city, es| [ (es.length > 1) ? 1 : 0, st_city] }.each do |st_city, es|
+#   # next if es.length <= 1
+#   es.each{|e| dump_as_hash(e) }
+# end
 
+
+# # Metros with two or more papers
+# #
+# metro_papers = { }
+# Endorsement.all.each do |paper, e|
+#   metro = e.metro
+#   (metro_papers[ [metro['st']||e.st, metro['city']||e.city] ] ||= []) << e
+# end
+# metro_papers.sort_by{|st_metro, es| [ (es.length > 1) ? 1 : 0, st_metro ] }.each do |st_metro, es|
+#   # next if es.length <= 1
+#   es.each{|e| dump_as_hash(e) }
+# end

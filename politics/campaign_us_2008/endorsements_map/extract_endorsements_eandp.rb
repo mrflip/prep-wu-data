@@ -165,7 +165,9 @@ end
 #
 # Extract the endorsements
 #
-[1992, 1996, 2000, 2008].each do |year|
+[
+  1992, 1996, 2000,
+  2008].each do |year|
   raw_filename = "ripd/endorsements_#{year}/endorsements-raw-#{year}.txt"
   out_filename = "data/endorsements_#{year}_eandp.yaml"
   print "Extracting E&P year #{year} into #{out_filename}"
@@ -173,4 +175,3 @@ end
   puts "... got #{endorsements.length} papers"
   YAML.dump(endorsements, File.open(out_filename, 'w'))
 end
-

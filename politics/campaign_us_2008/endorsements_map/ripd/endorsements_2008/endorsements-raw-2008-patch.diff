@@ -1,5 +1,5 @@
---- ripd/endorsements_2008/endorsements-raw-20081110-orig.txt	2008-11-10 15:24:27.000000000 -0600
-+++ ripd/endorsements_2008/endorsements-raw-2008-edited.txt	2008-11-10 15:27:52.000000000 -0600
+--- ripd/endorsements_2008/endorsements-raw-20081110-orig.txt	2008-11-10 17:58:41.000000000 -0600
++++ ripd/endorsements_2008/endorsements-raw-2008-edited.txt	2008-11-10 18:06:16.000000000 -0600
 @@ -40,7 +40,7 @@
            Pasadena Star-News (B): 27,894                                                                           
            The Press Democrat (Santa Rosa): 78,022                                                                  
@@ -31,38 +31,49 @@
            >>> The Rock Island Argus: 12,176                                                                        
            Rockford Register Star (K): 55,913                                                                       
            The State Journal-Register (Springfield) (B): 49,839                                                     
-@@ -145,9 +145,9 @@
+@@ -145,12 +145,12 @@
                                                                                                                     
            MAINE (4)                                                                                                
            Bangor Daily News (K): 55,627                                                                            
 -          Kennebec Journal (Augusta) (K): 55,627                                                                   
-+          Kennebec Journal (Augusta) (K): 14,845 # edited
++          Kennebec Journal (Augusta) (K): 14,845 # edited, was 55,627
            Portland Press Herald (K): 64,938                                                                        
 -          The Times-Record (Brunswick ) (K): 9,317                                                                 
 +          The Brunswick Times-Record (K): 9,317                                                                 
                                                                                                                     
            MARYLAND (3)                                                                                             
-           The Daily Times (Salisbury): 24,157                                                                      
-@@ -217,14 +217,15 @@
+-          The Daily Times (Salisbury): 24,157                                                                      
++          The Salisbury Daily Times: 24,157                                                                      
+           The Star-Democrat (Easton) (B): 16,752                                                                   
+           The Sun (Baltimore) (K): 232,360                                                                         
+                                                                                                                    
+@@ -217,20 +217,20 @@
                                                                                                                     
            NEW JERSEY (11)                                                                                          
            Asbury Park Press (Neptune-Asbury Park) (B): 140,882                                                     
 -          Courier News (Bridgewater) (K): 31,370                                                                   
 +          Courier News (Bound Brook) (K): 31,370                                                                   
            Courier-Post (Camden-Cherry Hill): 66,617                                                                
-           >>> The Daily Journal (Vineland) (K): 16,882                                                             
+-          >>> The Daily Journal (Vineland) (K): 16,882                                                             
 -          Daily Record (Parsippany) (K): 33,405                                                                    
++          >>> The Vineland Daily Journal (K): 16,882                                                             
 +          Daily Record (Morristown) (K): 33,405                                                                    
            The Gloucester County Times (Woodbury) (K): 23,189                                                       
            Home News Tribune (East Brunswick): 49,076                                                               
            The New Jersey Herald (Newton) (B): 14,660                                                               
 -          The Record (Hackensack) (K): 163,329                                                                     
-+	  >>> The New Jersey Herald (Newton) (B)
 +          The Record (Bergen) (K): 163,329                                                                     
            The Star-Ledger (Newark) (K): 345,130                                                                    
            The Times (Trenton) (K): 54,745                                                                          
                                                                                                                     
-@@ -245,7 +246,7 @@
+           NEW MEXICO (3)                                                                                           
+           Las Cruces Sun-News (B): 21,341                                                                          
+-          The Daily Times (Farmington) (B): 17,485                                                                 
++          The Farmington Daily Times (B): 17,485                                                                 
+           The Santa Fe New Mexican (K): 25,249                                                                     
+                                                                                                                    
+           NEW YORK (18)                                                                                            
+@@ -245,7 +245,7 @@
            Union-Sun & Journal (Lockport): 10,901                                                                   
            Newsday (Melville) (K): 379,613                                                                          
            The New York Times (K): 1,077,256                                                                        
@@ -71,7 +82,16 @@
            The Post-Star (Glens Falls) (K): 30,265                                                                  
            Poughkeepsie Journal (B): 37,265                                                                         
            Rochester Democrat and Chronicle (K): 145,913                                                            
-@@ -268,7 +269,7 @@
+@@ -260,7 +260,7 @@
+           The Daily Reflector (Greenville) (K): 21,703                                                             
+           The Herald-Sun (Durham) (N): 32,845                                                                      
+           The News & Observer (Raleigh) (K): 176,083                                                               
+-          Star-News (Wilmington) (K): 47,620                                                                       
++          Wilmington Star-News (K): 47,620                                                                       
+                                                                                                                    
+           OHIO (15)                                                                                                
+           Akron Beacon Journal (K): 119,929                                                                        
+@@ -268,7 +268,7 @@
            Coshocton Tribune: 5,903                                                                                 
            Dayton Daily News (K): 116,690                                                                           
            The Independent (Massillon) (B): 12,081                                                                  
@@ -80,7 +100,7 @@
            Middletown Journal: 17,285                                                                               
            News Journal (Mansfield) (B): 28,272                                                                     
            Telegraph-Forum (Bucyrus): 5,969                                                                         
-@@ -280,7 +281,7 @@
+@@ -280,7 +280,7 @@
            Vindicator (Youngstown) (B): 56,412                                                                      
                                                                                                                     
            OKLAHOMA (2)                                                                                             
@@ -89,7 +109,7 @@
            The Norman Transcript: 12,921                                                                            
                                                                                                                     
            OREGON (8)                                                                                               
-@@ -302,7 +303,7 @@
+@@ -302,7 +302,7 @@
            The Delaware County Daily Times (Primos-Upper Darby): 42,879                                             
            Erie Times-News (B): 55,397                                                                              
            The Express-Times (Easton) (B): 44,561                                                                   
@@ -98,7 +118,7 @@
            Herald-Standard (Uniontown) (K): 24,341                                                                  
            The Indiana Gazette: 15,241                                                                              
            Intelligencer Journal (Lancaster): 46,357                                                                
-@@ -310,7 +311,7 @@
+@@ -310,7 +310,7 @@
            The Mercury (Pottstown): 21,186                                                                          
            New Castle News: 16,465                                                                                  
            Observer-Reporter (Washington) (K): 31,755                                                               
@@ -107,7 +127,7 @@
            The Philadelphia Daily News: 107,269                                                                     
            The Philadelphia Inquirer (K): 334,150                                                                   
            Pittsburgh Post-Gazette (K): 214,374                                                                     
-@@ -323,7 +324,7 @@
+@@ -323,7 +323,7 @@
            The Providence Journal (B): 139,055                                                                      
                                                                                                                     
            SOUTH CAROLINA (1)                                                                                       
@@ -116,7 +136,7 @@
                                                                                                                     
            TENNESSEE (3)                                                                                            
            Chattanooga Times (K): 71,716                                                                            
-@@ -354,7 +355,7 @@
+@@ -354,7 +354,7 @@
                                                                                                                     
            WASHINGTON (11)                                                                                          
            The Columbian (Vancouver) (B): 44,623                                                                    
@@ -125,7 +145,7 @@
            The News Tribune (Tacoma) (K): 111,778                                                                   
            The Olympian (Olympia) (K): 30,755                                                                       
            Seattle Post-Intelligencer (K): 129,563                                                                  
-@@ -367,7 +368,7 @@
+@@ -367,7 +367,7 @@
                                                                                                                     
            WEST VIRGINIA (3)                                                                                        
            Charleston Gazette (K): 48,061                                                                           
@@ -134,7 +154,7 @@
            Times West Virginian (Fairmont): 10,415                                                                  
                                                                                                                     
            WISCONSIN (10)                                                                                           
-@@ -395,14 +396,14 @@
+@@ -395,14 +395,14 @@
            Demopolis Times: 2,850                                                                                   
            The Dothan Eagle: 35,416                                                                                 
            The Gadsden Times (B): 18,832                                                                            
@@ -151,8 +171,12 @@
                                                                                                                     
            ARKANSAS (2)                                                                                             
            Arkansas Democrat-Gazette (Little Rock) (B): 182,212                                                     
-@@ -414,10 +415,10 @@
-           The Daily Independent (Ridgecrest): 7,900                                                                
+@@ -411,13 +411,13 @@
+           CALIFORNIA (11)                                                                                          
+           The Bakersfield Californian (B) 59,433                                                                   
+           Chico Enterprise-Record (B): 29,113                                                                      
+-          The Daily Independent (Ridgecrest): 7,900                                                                
++          The Ridgecrest Daily Independent: 7,900                                                                
            The Desert Sun (Palm Springs-Palm Desert) (B): 53,091                                                    
            The Eureka Reporter                                                                                      
 -          The Examiner (San Francisco) (B): 80,000                                                                 
@@ -164,7 +188,12 @@
            The San Diego Union-Tribune (B): 288,669                                                                 
            Times-Herald (Vallejo) (K): 16,957                                                                       
                                                                                                                     
-@@ -431,7 +432,7 @@
+@@ -427,11 +427,11 @@
+           Daily Times-Call (Longmont) (B): 21,127                                                                  
+                                                                                                                    
+           CONNECTICUT (5)                                                                                          
+-          The Advocate (Stamford): 23,098                                                                          
++          The Stamford Advocate: 23,098                                                                          
            Connecticut Post (Bridgeport) (B): 76,014                                                                
            Greenwich Time (K): 10,323                                                                               
            The Register Citizen (Torrington) (B): 8,217                                                             
@@ -173,7 +202,7 @@
                                                                                                                     
            DISTRICT OF COLUMBIA (2)                                                                                 
            The Washington Examiner (N): 100,073                                                                     
-@@ -454,7 +455,7 @@
+@@ -454,7 +454,7 @@
            Kane County Chronicle (St. Charles): 12,564                                                              
            Morris Daily Herald (Morris): 7,258                                                                      
            The News-Gazette (Champaign-Urbana) (B): 42,302                                                          
@@ -182,7 +211,7 @@
            The Southern Illinoisan (Carbondale) (B): 27,413                                                         
                                                                                                                     
            INDIANA (2)                                                                                              
-@@ -462,9 +463,9 @@
+@@ -462,9 +462,9 @@
            The Times (Munster) (K): 85,195                                                                          
                                                                                                                     
            IOWA (4)                                                                                                 
@@ -194,7 +223,15 @@
            Sioux City Journal (B): 41,096                                                                           
                                                                                                                     
            KANSAS (1)                                                                                               
-@@ -507,7 +508,7 @@
+@@ -500,14 +500,14 @@
+           MINNESOTA (6)                                                                                            
+           The Journal (New Ulm) (B): 7,920                                                                         
+           The Daily Globe (Worthington): 9,109                                                                     
+-          The Daily Journal (International Falls): 3,703                                                           
++          The International Falls Daily Journal: 3,703                                                           
+           Duluth News Tribune (K): 40,082                                                                          
+           The Pioneer (Bemidji) (B): 9,018                                                                         
+           Republican Eagle (Red Wing): 6,837                                                                       
                                                                                                                     
            MISSOURI (2)                                                                                             
            The Sunday News Tribune (Jefferson City): 17,890                                                         
@@ -203,7 +240,7 @@
                                                                                                                     
            NEBRASKA (4)                                                                                             
            Lincoln Journal Star (B): 78,350                                                                         
-@@ -538,7 +539,7 @@
+@@ -538,7 +538,7 @@
                                                                                                                     
            NORTH DAKOTA (3)                                                                                         
            The Bismarck Tribune (K): 27,051                                                                         
@@ -212,7 +249,16 @@
            Minot Daily News: (B) 18,972                                                                             
                                                                                                                     
            OHIO (9)                                                                                                 
-@@ -561,8 +562,8 @@
+@@ -549,7 +549,7 @@
+           Herald-Star (Steubenville): 13,043                                                                       
+           The Marietta Times: 10,645                                                                               
+           The Morning Journal (Lorain): 25,334                                                                     
+-          The News-Herald (Lake County-Willoughby) (B): 36,948                                                     
++          The Willoughby News-Herald (Lake County-Willoughby) (B): 36,948                                                     
+           The Tribune Chronicle (Warren): 29,364                                                                   
+                                                                                                                    
+           OKLAHOMA (4)                                                                                             
+@@ -561,21 +561,21 @@
            OREGON (4)                                                                                               
            Albany Democrat-Herald: 16,891                                                                           
            Baker City Herald: 3,151                                                                                 
@@ -223,8 +269,9 @@
                                                                                                                     
            PENNSYLVANIA (6)                                                                                         
            Lancaster New Era: 40,068                                                                                
-@@ -570,12 +571,12 @@
-           The Sentinel (Lewistown) (B): 11,863                                                                     
+           Public Opinion (Chambersburg) (N): 16,679                                                                
+-          The Sentinel (Lewistown) (B): 11,863                                                                     
++          The Lewistown Sentinel (B): 11,863                                                                     
            Times-Observer (Warren): 10,313                                                                          
            The Tribune-Democrat (Johnstown): 37,673                                                                 
 -          Pittsburgh Tribune-Review (Greensburg) (B): 150,911                                                      
@@ -238,7 +285,7 @@
            The Post and Courier (Charleston): 100,400                                                               
            The State (Columbia) (B): 101,010                                                                        
                                                                                                                     
-@@ -602,10 +603,10 @@
+@@ -602,10 +602,10 @@
            The Paris News: 9,431                                                                                    
            San Antonio Express-News (B): 225,447                                                                    
            Tyler Morning Telegraph: 35,598                                                                          
@@ -251,7 +298,7 @@
                                                                                                                     
            VIRGINIA (10)                                                                                            
            Bristol Herald-Courier (B): 38,068                                                                       
-@@ -635,31 +636,56 @@
+@@ -635,31 +635,56 @@
                                                                                                                     
            CHOOSING TO MAKE NO ENDORSEMENT (26)                                                                     
                                                                                                                     

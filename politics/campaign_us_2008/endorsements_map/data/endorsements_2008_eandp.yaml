@@ -71,6 +71,13 @@ Herald Sun:
   :st: NC
   :circ: 32845
   :prez_2008: Obama
+Vineland Daily Journal: 
+  :prez_2004: Kerry
+  :city: 
+  :paper: Vineland Daily Journal
+  :st: NJ
+  :circ: 16882
+  :prez_2008: Obama
 Pensacola News Journal: 
   :city: 
   :paper: Pensacola News Journal
@@ -377,6 +384,12 @@ Bradenton Herald:
   :st: FL
   :circ: 48618
   :prez_2008: McCain
+Salisbury Daily Times: 
+  :city: 
+  :paper: Salisbury Daily Times
+  :st: MD
+  :circ: 24157
+  :prez_2008: Obama
 Niagara Gazette: 
   :city: Niagara Falls
   :paper: Niagara Gazette
@@ -558,12 +571,6 @@ el Diario:
   :st: NY
   :circ: 53856
   :prez_2008: Obama
-Daily Journal: 
-  :city: International Falls
-  :paper: Daily Journal
-  :st: MN
-  :circ: 3703
-  :prez_2008: McCain
 Milwaukee Journal Sentinel: 
   :prez_2004: Kerry
   :city: 
@@ -796,6 +803,13 @@ Columbia Daily Tribune:
   :st: MO
   :circ: 18131
   :prez_2008: Obama
+Lewistown Sentinel: 
+  :prez_2004: Bush
+  :city: 
+  :paper: Lewistown Sentinel
+  :st: PA
+  :circ: 11863
+  :prez_2008: McCain
 Express Times: 
   :prez_2004: Bush
   :city: Easton
@@ -834,6 +848,12 @@ Sharon Herald:
   :st: PA
   :circ: 19252
   :prez_2008: Obama
+Ridgecrest Daily Independent: 
+  :city: 
+  :paper: Ridgecrest Daily Independent
+  :st: CA
+  :circ: 7900
+  :prez_2008: McCain
 Daily Star: 
   :prez_2004: Kerry
   :city: Oneonta
@@ -975,6 +995,13 @@ Springfield News Sun:
   :st: OH
   :circ: 24684
   :prez_2008: Obama
+Willoughby News Herald: 
+  :prez_2004: Bush
+  :city: Willoughby
+  :paper: Willoughby News Herald
+  :st: OH
+  :circ: 36948
+  :prez_2008: McCain
 Pantagraph: 
   :prez_2004: Bush
   :city: Bloomington
@@ -1087,13 +1114,6 @@ Post and Courier:
   :st: SC
   :circ: 100400
   :prez_2008: McCain
-Star News: 
-  :prez_2004: Kerry
-  :city: Wilmington
-  :paper: Star News
-  :st: NC
-  :circ: 47620
-  :prez_2008: Obama
 Salt Lake Tribune: 
   :prez_2004: Bush
   :city: 
@@ -1509,6 +1529,13 @@ Clanton Advertiser:
   :st: AL
   :circ: 5000
   :prez_2008: McCain
+Sumter Item: 
+  :prez_2004: Bush
+  :city: 
+  :paper: Sumter Item
+  :st: SC
+  :circ: 18640
+  :prez_2008: McCain
 Naples Daily News: 
   :prez_2004: Bush
   :city: 
@@ -1523,13 +1550,6 @@ Cortez Journal:
   :st: CO
   :circ: 6700
   :prez_2008: Obama
-Sumter Item: 
-  :prez_2004: Bush
-  :city: 
-  :paper: Sumter Item
-  :st: SC
-  :circ: 18640
-  :prez_2008: McCain
 Lake County News Sun: 
   :prez_2004: Bush
   :city: Waukegan
@@ -1706,12 +1726,11 @@ Daily Review (Hayward):
   :st: CA
   :circ: 30704
   :prez_2008: Obama
-News Herald: 
-  :prez_2004: Bush
-  :city: Willoughby
-  :paper: News Herald
-  :st: OH
-  :circ: 36948
+Stamford Advocate: 
+  :city: 
+  :paper: Stamford Advocate
+  :st: CT
+  :circ: 23098
   :prez_2008: McCain
 Spectrum: 
   :city: Saint George
@@ -1774,6 +1793,12 @@ Times (Trenton):
   :st: NJ
   :circ: 54745
   :prez_2008: Obama
+International Falls Daily Journal: 
+  :city: 
+  :paper: International Falls Daily Journal
+  :st: MN
+  :circ: 3703
+  :prez_2008: McCain
 Rocky Mount Telegram: 
   :city: ""
   :paper: Rocky Mount Telegram
@@ -1799,6 +1824,13 @@ Tennessean:
   :st: TN
   :circ: 161131
   :prez_2008: Obama
+Greenville News: 
+  :prez_2004: Bush
+  :city: 
+  :paper: Greenville News
+  :st: SC
+  :circ: 81010
+  :prez_2008: McCain
 Washington Post: 
   :prez_2004: Kerry
   :city: 
@@ -1825,13 +1857,6 @@ Boston Herald:
   :paper: Boston Herald
   :st: MA
   :circ: 182350
-  :prez_2008: McCain
-Greenville News: 
-  :prez_2004: Bush
-  :city: 
-  :paper: Greenville News
-  :st: SC
-  :circ: 81010
   :prez_2008: McCain
 Press Democrat: 
   :city: Santa Rosa
@@ -2072,6 +2097,13 @@ Merced Sun Star:
   :st: CA
   :circ: 15015
   :prez_2008: Obama
+Wilmington Star News: 
+  :prez_2004: Kerry
+  :city: 
+  :paper: Wilmington Star News
+  :st: NC
+  :circ: 47620
+  :prez_2008: Obama
 Bend Bulletin: 
   :prez_2004: Bush
   :city: 
@@ -2208,6 +2240,7 @@ New Jersey Herald:
   :city: Newton
   :paper: New Jersey Herald
   :st: NJ
+  :circ: 14660
   :prez_2008: Obama
 Courier Journal: 
   :prez_2004: Kerry
@@ -2535,12 +2568,6 @@ Wausau Daily Herald:
   :st: WI
   :circ: 20828
   :prez_2008: Obama
-Advocate: 
-  :city: Stamford
-  :paper: Advocate
-  :st: CT
-  :circ: 23098
-  :prez_2008: McCain
 Arkansas Democrat Gazette: 
   :prez_2004: Bush
   :city: Little Rock
@@ -2675,6 +2702,13 @@ Beaumont Enterprise:
   :st: TX
   :circ: 45684
   :prez_2008: McCain
+Farmington Daily Times: 
+  :prez_2004: Bush
+  :city: 
+  :paper: Farmington Daily Times
+  :st: NM
+  :circ: 17485
+  :prez_2008: Obama
 Macon Telegraph: 
   :prez_2004: Kerry
   :city: 
@@ -2857,13 +2891,6 @@ Sentinel and Enterprise:
   :st: MA
   :circ: 15319
   :prez_2008: Obama
-Sentinel: 
-  :prez_2004: Bush
-  :city: Lewistown
-  :paper: Sentinel
-  :st: PA
-  :circ: 11863
-  :prez_2008: McCain
 Record Searchlight: 
   :city: ""
   :paper: Record Searchlight
@@ -2983,13 +3010,6 @@ Daily Astorian:
   :paper: Daily Astorian
   :st: OR
   :circ: 8263
-  :prez_2008: Obama
-Daily Times: 
-  :prez_2004: Bush
-  :city: Farmington
-  :paper: Daily Times
-  :st: NM
-  :circ: 17485
   :prez_2008: Obama
 Globe Gazette: 
   :prez_2004: Bush
