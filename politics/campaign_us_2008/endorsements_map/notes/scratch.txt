@@ -1,4 +1,14 @@
 
+2004
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1000707329
+2000
+  http://www.editorandpublisher.com/eandp/search/search_results_taxo.jsp?startDate=10/1/2000&endDate=11/20/2000&cf=&ct=&cu=&rpp=50&sb=REFERENCE_DATE&so=DESC&ti=2&tp=vnuTaxoPool&numRet=200&src=&showAbs=true&srchMeta=true&shwTotal=true&metaSrchNum=250&numMeta=20&pi=&pubList=Editor%20and%20Publisher&kw=endorsements&au=&mt=&mv=&esindct=false
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1125034
+1996
+  
+1992
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1163359
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1163531  
 
 State Abbreviations
   http://www.usps.com/ncsc/lookups/abbr_state.txt

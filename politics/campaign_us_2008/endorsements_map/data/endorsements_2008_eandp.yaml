@@ -58,14 +58,14 @@ Spokesman Review (Spokane):
   :circ: 89779
   :prez_2008: McCain
 Times Record News: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: Wichita Falls
   :paper: Times Record News
   :st: TX
   :circ: 28888
   :prez_2008: McCain
 Herald Sun: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: Durham
   :paper: Herald Sun
   :st: NC
@@ -150,6 +150,13 @@ Berkshire Eagle:
   :st: MA
   :circ: 26427
   :prez_2008: Obama
+Vallejo Times Herald: 
+  :prez_2004: Kerry
+  :city: 
+  :paper: Vallejo Times Herald
+  :st: CA
+  :circ: 16957
+  :prez_2008: McCain
 Repository: 
   :prez_2004: Bush
   :city: Canton
@@ -195,7 +202,7 @@ Palatka Daily News:
   :circ: 11000
   :prez_2008: McCain
 Washington Examiner: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: 
   :paper: Washington Examiner
   :st: DC
@@ -531,7 +538,7 @@ Oklahoman:
   :circ: 201771
   :prez_2008: McCain
 Conway Daily Sun: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: Conway
   :paper: Conway Daily Sun
   :st: NH
@@ -803,6 +810,12 @@ Columbia Daily Tribune:
   :st: MO
   :circ: 18131
   :prez_2008: Obama
+Worthington Daily Globe: 
+  :city: 
+  :paper: Worthington Daily Globe
+  :st: MN
+  :circ: 9109
+  :prez_2008: McCain
 Lewistown Sentinel: 
   :prez_2004: Bush
   :city: 
@@ -889,13 +902,6 @@ Statesman Journal:
   :st: OR
   :circ: 47152
   :prez_2008: Obama
-Times Herald: 
-  :prez_2004: Kerry
-  :city: Vallejo
-  :paper: Times Herald
-  :st: CA
-  :circ: 16957
-  :prez_2008: McCain
 Des Moines Register: 
   :prez_2004: Kerry
   :city: 
@@ -1036,7 +1042,7 @@ Bismarck Tribune:
   :circ: 27051
   :prez_2008: McCain
 Daily Item: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: Sunbury
   :paper: Daily Item
   :st: PA
@@ -1564,14 +1570,14 @@ Vail Daily:
   :circ: 10525
   :prez_2008: Obama
 Plain Dealer: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: Cleveland
   :paper: Plain Dealer
   :st: OH
   :circ: 330280
   :prez_2008: Obama
 Daily Freeman: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: Kingston
   :paper: Daily Freeman
   :st: NY
@@ -2059,7 +2065,7 @@ Times Reporter:
   :circ: 22428
   :prez_2008: Obama
 Baltimore Examiner: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: 
   :paper: Baltimore Examiner
   :st: MD
@@ -2358,7 +2364,7 @@ Aberdeen Daily World:
   :circ: 12720
   :prez_2008: Obama
 Times Picayune: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: New Orleans
   :paper: Times Picayune
   :st: LA
@@ -2411,7 +2417,7 @@ Dothan Eagle:
   :circ: 35416
   :prez_2008: McCain
 Los Angeles Times: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: 
   :paper: Los Angeles Times
   :st: CA
@@ -2451,12 +2457,6 @@ Daily Press:
   :paper: Daily Press
   :st: VA
   :circ: 91508
-  :prez_2008: McCain
-Daily Globe: 
-  :city: Worthington
-  :paper: Daily Globe
-  :st: MN
-  :circ: 9109
   :prez_2008: McCain
 Daytona Beach News Journal: 
   :prez_2004: Kerry
@@ -2520,7 +2520,7 @@ Herald Bulletin:
   :circ: 21199
   :prez_2008: Obama
 Public Opinion: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: Chambersburg
   :paper: Public Opinion
   :st: PA
@@ -2772,7 +2772,7 @@ Keene Sentinel:
   :circ: 12119
   :prez_2008: Obama
 Colorado Springs Gazette: 
-  :prez_2004: none
+  :prez_2004: abstain
   :city: 
   :paper: Colorado Springs Gazette
   :st: CO

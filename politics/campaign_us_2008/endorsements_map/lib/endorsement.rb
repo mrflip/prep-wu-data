@@ -101,7 +101,10 @@ class Endorsement < Struct.new(
 
   def interesting?
     case
+    when circ > 50000 then return true
+    when circ < 50000 then return false
     when prez_2008                              then return true
+    when (prez_2004 && circ > 50000)            then return true
     when prez.values.compact.length > 3         then return true
     when rank && (rank > 0) && (rank < 150)     then return true
     else
@@ -166,4 +169,16 @@ class Endorsement < Struct.new(
     end
   end
   def prez_color(yr) self.class.party_color(prez[yr]) end
+
+  #
+  # recyclable dump for newspaper_cities
+  #
+  def dump_as_hash fudge_city=nil
+    paper_esc   = paper.gsub(/\'/, "''")
+    puts "%-38s { :paper: %-38s :st: %4s, :city: %-31s } # %s %7d" % [
+      "'#{paper_esc}':", "'#{paper_esc}',", "'#{st}'", "'#{city}'", endorsement_hist_str, circ]
+  end
+
 end
+
+

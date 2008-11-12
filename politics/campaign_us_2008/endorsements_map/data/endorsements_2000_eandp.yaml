@@ -729,11 +729,6 @@ Joplin Globe:
   :paper: Joplin Globe
   :prez_2000: Bush
   :st: MO
-Iowa City Press Citizen: 
-  :city: 
-  :paper: Iowa City Press Citizen
-  :prez_2000: Gore
-  :st: IA
 Syracuse Post Standard: 
   :city: 
   :paper: Syracuse Post Standard
@@ -744,6 +739,11 @@ Patriot Ledger:
   :paper: Patriot Ledger
   :prez_2000: Bush
   :st: MA
+Iowa City Press Citizen: 
+  :city: 
+  :paper: Iowa City Press Citizen
+  :prez_2000: Bush
+  :st: IA
 Philadelphia Daily News: 
   :city: 
   :paper: Philadelphia Daily News
@@ -1007,7 +1007,7 @@ San Francisco Examiner:
 Press Telegram: 
   :city: Long Beach
   :paper: Press Telegram
-  :prez_2000: Gore
+  :prez_2000: Bush
   :st: CA
 Sun Journal: 
   :city: Lewiston
@@ -1194,16 +1194,16 @@ Anchorage Daily News:
   :paper: Anchorage Daily News
   :prez_2000: Gore
   :st: AK
-Montgomery Advertiser: 
-  :city: 
-  :paper: Montgomery Advertiser
-  :prez_2000: Gore
-  :st: AL
 Argus: 
   :city: Fremont
   :paper: Argus
   :prez_2000: Gore
   :st: CA
+Montgomery Advertiser: 
+  :city: 
+  :paper: Montgomery Advertiser
+  :prez_2000: Gore
+  :st: AL
 Times Tribune: 
   :city: Scranton
   :paper: Times Tribune
@@ -1444,16 +1444,16 @@ Star Tribune:
   :paper: Star Tribune
   :prez_2000: Gore
   :st: MN
-Muskegon Chronicle: 
-  :city: 
-  :paper: Muskegon Chronicle
-  :prez_2000: Gore
-  :st: MI
 Orlando Sentinel: 
   :city: 
   :paper: Orlando Sentinel
   :prez_2000: Bush
   :st: FL
+Muskegon Chronicle: 
+  :city: 
+  :paper: Muskegon Chronicle
+  :prez_2000: Bush
+  :st: MI
 Washington Times: 
   :city: 
   :paper: Washington Times

@@ -26,18 +26,9 @@ Endorsement.class_eval do
 end
 
 #
-# recyclable dump for newspaper_cities
-#
-def dump_as_hash e, fudge_city=nil
-  paper   = e.paper.gsub(/\'/, "''")
-  puts "%-38s { :paper: %-38s :st: %4s, :city: %-31s } # %s %7d" % [
-    "'#{paper}':", "'#{paper}',", "'#{e.st}'", "'#{e.city}'", e.endorsement_hist_str, e.circ]
-end
-
-#
 # Load endorsements
 #
-ENDORSEMENT_FILENAMES = [1992, 2008, 2000, 1996].map{|year| "data/endorsements_#{year}_eandp.yaml"} + [
+ENDORSEMENT_FILENAMES = [2008, 2004, 2000, 1996, 1992].map{|year| "data/endorsements_#{year}_eandp.yaml"} + [
   "data/endorsements_2004_wikipedia.yaml",
 ]
 ENDORSEMENT_LISTS = ENDORSEMENT_FILENAMES.map{|fn| YAML.load(File.open(fn)) }
@@ -79,7 +70,7 @@ Geolocation.load :format => :tsv
 Endorsement.all.sort_by{|paper, e| [e.st||'', e.city||'', e.paper||'', ]}.each do |paper, e|
   st, city, paper = e.values_of(:st, :city, :paper)
   next if paper == 'USA Today'
-  if (!NEWSPAPER_CITIES[e.paper]) || (!Geolocation[e.st, e.city]) then dump_as_hash e, true ; next end
+  if (!NEWSPAPER_CITIES[e.paper]) || (!Geolocation[e.st, e.city]) then e.dump_as_hash(true) ; next end
   e.lat, e.lng, e.pop = Geolocation[e.st, e.city].values_of(:lat, :lng, :pop)
 end
 
@@ -105,7 +96,7 @@ Endorsement.dump :literalize_keys => false, :format => :yaml
 # end
 # city_papers.sort_by{|st_city, es| [ (es.length > 1) ? 1 : 0, st_city] }.each do |st_city, es|
 #   # next if es.length <= 1
-#   es.each{|e| dump_as_hash(e) }
+#   es.each{|e| e.dump_as_hash }
 # end
 
 
@@ -118,5 +109,5 @@ Endorsement.dump :literalize_keys => false, :format => :yaml
 # end
 # metro_papers.sort_by{|st_metro, es| [ (es.length > 1) ? 1 : 0, st_metro ] }.each do |st_metro, es|
 #   # next if es.length <= 1
-#   es.each{|e| dump_as_hash(e) }
+#   es.each{|e| e.dump_as_hash }
 # end

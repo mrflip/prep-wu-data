@@ -179,6 +179,7 @@
 - "Republican American":                       [ "Republican-American",                         50903 "Waterbury"                  ] # circ-paper_re-city
 - "Everett Herald":                            [ "Herald",                                      50272 "Everett"                    ] # paper_re-city-good
 - "Asheville Citizen Times":                   [ "Citizen-Times",                               50160 "Asheville"                  ] # circ-paper_re-city
+- "Sun News":                                  [ "Sun News",                                    49889 "Myrtle Beach"               ] # paper-paper_re-city-good
 - "State Journal Register":                    [ "State Journal-Register",                      49839 "Springfield"                ] # circ-paper_re-city
 - "Pueblo Chieftain":                          [ "Chieftain",                                   49169 "Pueblo"                     ] # circ-paper_re-city
 - "Kalamazoo Gazette":                         [ "Gazette",                                     49127 "Kalamazoo"                  ] # paper_re-city-good
@@ -251,6 +252,7 @@
 - "La Crosse Tribune":                         [ "Tribune",                                     31759 "La Crosse"                  ] # circ-paper_re-city
 - "Observer Reporter":                         [ "Observer-Reporter",                           31755 "Washington"                 ] # circ-paper_re-city
 - "York Dispatch":                             [ "Dispatch",                                    31694 "York"                       ] # paper_re-city-good
+- "Altoona Mirror":                            [ "Mirror",                                      31658 "Altoona"                    ] # paper_re-city-good
 - "Star Press":                                [ "Star/Press",                                  31512 "Muncie"                     ] # circ-paper_re-city
 - "Courier News":                              [ "Courier-News",                                31370 "Bridgewater"                ] # circ-paper_re
 - "Daily Sentinel":                            [ "Sentinel",                                    31349 "Grand Junction"             ] # circ-paper_re-city
@@ -285,6 +287,7 @@
 - "Salina Journal":                            [ "Journal",                                     28026 "Salina"                     ] # paper_re-city-good
 - "Cumberland Times News":                     [ "Times-News",                                  27954 "Cumberland"                 ] # paper_re-city-good
 - "News Times":                                [ "News-Times",                                  27909 "Danbury"                    ] # circ-paper_re-city
+- "Athens Banner Herald":                      [ "Banner-Herald",                               27672 "Athens"                     ] # paper_re-city-good
 - "Grand Forks Herald":                        [ "Herald",                                      27650 "Grand Forks"                ] # paper_re-city-good
 - "Longview News Journal":                     [ "News-Journal",                                27590 "Longview"                   ] # circ-paper_re-city
 - "Huntington Herald Dispatch":                [ "Herald-Dispatch",                             27463 "Huntington"                 ] # circ-paper_re-city
@@ -297,7 +300,9 @@
 - "San Mateo County Times":                    [ "Times",                                       25982 "San Mateo"                  ] # circ-paper_re-city
 - "St. Cloud Times":                           [ "Times",                                       25868 "Saint Cloud"                ] # circ-paper_re-city
 - "West Chester Daily Local News":             [ "Daily Local News",                            25686 "West Chester"               ] # paper_re-city-good
+- "Port Huron Times Herald":                   [ "Times Herald",                                25386 "Port Huron"                 ] # paper_re-city-good
 - "Morning Journal":                           [ "Journal",                                     25334 "Lorain"                     ] # circ-paper_re-city
+- "Jersey Journal":                            [ "Jersey Journal",                              24940 "Jersey City"                ] # paper-paper_re-city-good
 - "San Angelo Standard Times":                 [ "Standard-Times",                              24919 "San Angelo"                 ] # circ-paper_re-city
 - "Daily Item":                                [ "Daily Item",                                  24879 "Sunbury"                    ] # paper-circ-paper_re-exact-city
 - "Springfield News Sun":                      [ "News-Sun",                                    24684 "Springfield"                ] # circ-paper_re-city
@@ -320,6 +325,7 @@
 - "Times Reporter":                            [ "Times Reporter",                              22428 "New Philadelphia"           ] # paper-circ-paper_re-exact-city
 - "Wooster Daily Record":                      [ "Record",                                      22150 "Wooster"                    ] # paper_re-city-good
 - "Norwich Bulletin":                          [ "Bulletin",                                    22121 "Norwich"                    ] # circ-paper_re-city
+- "Free Press":                                [ "Free Press",                                  22072 "Mankato"                    ] # paper-paper_re-city-good
 - "Longview Daily News":                       [ "News",                                        21962 "Longview"                   ] # paper_re-city-good
 - "Charleston Daily Mail":                     [ "Mail",                                        21723 "Charleston"                 ] # paper_re-city-good
 - "Daily Reflector":                           [ "Reflector",                                   21703 "Greenville"                 ] # circ-paper_re-city
@@ -333,6 +339,7 @@
 - "Battle Creek Enquirer":                     [ "Enquirer",                                    20854 "Battle Creek"               ] # circ-paper_re-city
 - "Wausau Daily Herald":                       [ "Daily Herald",                                20828 "Wausau"                     ] # circ-paper_re-city
 - "Decatur Daily":                             [ "Daily",                                       20770 "Decatur"                    ] # paper_re-city-good
+- "Kokomo Tribune":                            [ "Tribune",                                     20587 "Kokomo"                     ] # paper_re-city-good
 - "Grand Island Independent":                  [ "Independent",                                 20475 "Grand Island"               ] # paper_re-city-good
 - "Leaf Chronicle":                            [ "Leaf-Chronicle",                              20354 "Clarksville"                ] # circ-paper_re-city
 - "Times News":                                [ "Times-News",                                  20325 "Twin Falls"                 ] # circ-paper_re-city
@@ -354,13 +361,17 @@
 - "Minot Daily News":                          [ "News",                                        18972 "Minot"                      ] # circ-paper_re-city
 - "Hawk Eye":                                  [ "Hawk Eye",                                    18921 "Burlington"                 ] # paper-circ-paper_re-exact-city
 - "Gadsden Times":                             [ "Times",                                       18832 "Gadsden"                    ] # circ-paper_re-city
+- "News Review":                               [ "News-Review",                                 18691 "Roseburg"                   ] # paper_re-city-good
 - "Intelligencer":                             [ "Intelligencer",                               18450 "Wheeling"                   ] # paper-circ-paper_re-exact-city
+- "Newark Advocate":                           [ "Advocate",                                    18193 "Newark"                     ] # paper_re-city-good
+- "Times and Democrat":                        [ "Times And Democrat",                          18142 "Orangeburg"                 ] # paper_re-city-good
 - "Columbia Daily Tribune":                    [ "Tribune",                                     18131 "Columbia"                   ] # circ-paper_re-city
 - "Pocono Record":                             [ "Pocono Record",                               18121 "Stroudsburg"                ] # paper-paper_re-city-good
 - "Morristown Citizen Tribune":                [ "Citizen Tribune",                             18086 "Morristown"                 ] # paper_re-city-good
 - "Daily Hampshire Gazette":                   [ "Gazette",                                     18001 "Northampton"                ] # circ-paper_re-city
 - "Daily Freeman":                             [ "Freeman",                                     17909 "Kingston"                   ] # circ-paper_re-city
 - "Vacaville Reporter":                        [ "Reporter",                                    17751 "Vacaville"                  ] # circ-paper_re-city
+- "Post Journal":                              [ "Post-Journal",                                17672 "Jamestown"                  ] # paper_re-city-good
 - "Globe Gazette":                             [ "Globe",                                       17666 "Mason City"                 ] # circ-paper_re-city
 - "Farmington Daily Times":                    [ "Daily Times",                                 17485 "Farmington"                 ] # circ-paper_re-city
 - "Daily Independent":                         [ "Independent",                                 17465 "Ashland"                    ] # circ-paper_re-city
@@ -369,7 +380,8 @@
 - "Middletown Journal":                        [ "Journal",                                     17285 "Middletown"                 ] # circ-paper_re-city
 - "News Leader":                               [ "News Leader",                                 17238 "Staunton"                   ] # paper-circ-paper_re-exact-city
 - "Marietta Daily Journal":                    [ "Journal",                                     17218 "Marietta"                   ] # paper_re-city-good
-- "Times Herald":                              [ "Times-Herald",                                16957 "Vallejo"                    ] # circ-paper_re-city
+- "Bluefield Daily Telegraph":                 [ "Telegraph",                                   17030 "Bluefield"                  ] # paper_re-city-good
+- "Vallejo Times Herald":                      [ "Times-Herald",                                16957 "Vallejo"                    ] # circ-paper_re-city
 - "Niagara Gazette":                           [ "Gazette",                                     16909 "Niagara Falls"              ] # circ-paper_re-city
 - "Lake County News Sun":                      [ "Lake County News Sun",                        16899 "Waukegan"                   ] # paper-circ-paper_re-exact-city
 - "Albany Democrat Herald":                    [ "Democrat-Herald",                             16891 "Albany"                     ] # circ-paper_re-city
@@ -385,6 +397,7 @@
 - "Lodi News Sentinel":                        [ "News-Sentinel",                               15771 "Lodi"                       ] # paper_re-city-good
 - "Wyoming Tribune Eagle":                     [ "Wyoming Tribune-Eagle",                       15762 "Cheyenne"                   ] # paper_re-city-good
 - "Salinas Californian":                       [ "Salinas Californian",                         15740 "Salinas"                    ] # paper-paper_re-city-good
+- "Midland Daily News":                        [ "News",                                        15689 "Midland"                    ] # paper_re-city-good
 - "Palladium Item":                            [ "Palladium-Item",                              15453 "Richmond"                   ] # circ-paper_re-city
 - "Mississippi Press":                         [ "Mississippi Press",                           15411 "Pascagoula"                 ] # paper-paper_re-city-good
 - "Sentinel and Enterprise":                   [ "Sentinel and Enterprise",                     15319 "Fitchburg"                  ] # paper-circ-paper_re-exact-city
@@ -398,17 +411,21 @@
 - "Independent Record":                        [ "Independent Record",                          14315 "Helena"                     ] # paper-circ-paper_re-exact-city
 - "Carlisle Sentinel":                         [ "Sentinel",                                    14314 "Carlisle"                   ] # paper_re-city-good
 - "Rocky Mount Telegram":                      [ "Telegram",                                    14254 "Rocky Mount"                ] # paper_re-city-good
+- "Adrian Daily Telegram":                     [ "Telegram",                                    14205 "Adrian"                     ] # paper_re-city-good
 - "Herald Times Reporter":                     [ "Herald Times Reporter",                       13964 "Manitowoc"                  ] # paper-paper_re-city-good
 - "Jacksonville Journal Courier":              [ "Journal-Courier",                             13922 "Jacksonville"               ] # paper_re-city-good
+- "Record (Troy)":                             [ "Record",                                      13755 "Troy"                       ] # paper_re-city-good
 - "Walla Walla Union Bulletin":                [ "Union-Bulletin",                              13624 "Walla Walla"                ] # circ-paper_re-city
 - "Recorder":                                  [ "Recorder",                                    13578 "Greenfield"                 ] # paper-circ-paper_re-exact-city
 - "Iowa City Press Citizen":                   [ "Press-Citizen",                               13352 "Iowa City"                  ] # circ-paper_re-city
 - "Livingston County Daily Press and Argus":   [ "Livingston County Daily Press and Argus",     13131 "Howell"                     ] # paper-circ-paper_re-exact-city
 - "Herald Star":                               [ "Herald-Star",                                 13043 "Steubenville"               ] # circ-paper_re-city
+- "Chillicothe Gazette":                       [ "Gazette",                                     13038 "Chillicothe"                ] # paper_re-city-good
 - "Norman Transcript":                         [ "Transcript",                                  12921 "Norman"                     ] # circ-paper_re-city
 - "Wheeling News Register":                    [ "News-Register",                               12821 "Wheeling"                   ] # circ-paper_re-city
 - "Kearney Hub":                               [ "Hub",                                         12389 "Kearney"                    ] # paper_re-city-good
 - "Palatka Daily News":                        [ "News",                                        12326 "Palatka"                    ] # paper_re-city-good
+- "Journal Standard":                          [ "Journal-Standard",                            12187 "Freeport"                   ] # paper_re-city-good
 - "Keene Sentinel":                            [ "Sentinel",                                    12119 "Keene"                      ] # circ-paper_re-city
 - "Corvallis Gazette Times":                   [ "Gazette-Times",                               12092 "Corvallis"                  ] # circ-paper_re-city
 - "Independent":                               [ "Independent",                                 12081 "Massillon"                  ] # paper-circ-paper_re-exact-city
@@ -442,6 +459,7 @@
 - "Taunton Daily Gazette":                     [ "Gazette",                                      9059 "Taunton"                    ] # paper_re-city-good
 - "Casa Grande Dispatch":                      [ "Dispatch",                                     9001 "Casa Grande"                ] # paper_re-city-good
 - "Petoskey News Review":                      [ "News-Review",                                  8994 "Petoskey"                   ] # circ-paper_re-city
+- "Escanaba Daily Press":                      [ "Press",                                        8993 "Escanaba"                   ] # paper_re-city-good
 - "Opelousas Daily World":                     [ "World",                                        8991 "Opelousas"                  ] # paper_re-city-good
 - "Daily Democrat":                            [ "Democrat",                                     8883 "Woodland"                   ] # circ-paper_re-city
 - "Durango Herald":                            [ "Herald",                                       8870 "Durango"                    ] # circ-paper_re-city
@@ -449,13 +467,17 @@
 - "Norwalk Reflector":                         [ "Reflector",                                    8866 "Norwalk"                    ] # paper_re-city-good
 - "Brattleboro Reformer":                      [ "Reformer",                                     8814 "Brattleboro"                ] # circ-paper_re-city
 - "Saratogian":                                [ "Saratogian",                                   8731 "Saratoga Springs"           ] # paper-paper_re-city-good
+- "Daily Mining Gazette":                      [ "Mining Gazette",                               8672 "Houghton"                   ] # paper_re-city-good
+- "Milford Daily News":                        [ "Daily News",                                   8417 "Milford"                    ] # paper_re-city-good
 - "Fremont Tribune":                           [ "Tribune",                                      8404 "Fremont"                    ] # paper_re-city-good
 - "Bristol Press Register Citizen":            [ "Press",                                        8285 "Bristol"                    ] # paper_re-city-good
 - "Register Citizen":                          [ "Register Citizen",                             8217 "Torrington"                 ] # paper-circ-paper_re-exact-city
 - "Shawnee News Star":                         [ "News-Star",                                    8150 "Shawnee"                    ] # paper_re-city-good
+- "Greenville Daily News":                     [ "News",                                         8049 "Greenville"                 ] # paper_re-city-good
 - "Hannibal Courier Post":                     [ "Courier-Post",                                 8010 "Hannibal"                   ] # paper_re-city-good
 - "Journal":                                   [ "Journal",                                      7920 "New Ulm"                    ] # paper-circ-paper_re-exact-city
 - "Eagle Times":                               [ "Eagle Times",                                  7903 "Claremont"                  ] # paper-circ-paper_re-exact-city
+- "Daily News (Ludington)":                    [ "News",                                         7537 "Ludington"                  ] # paper_re-city-good
 - "News Virginian":                            [ "News Virginian",                               7478 "Waynesboro"                 ] # paper-circ-paper_re-exact-city
 - "Culpeper Star Exponent":                    [ "Star-Exponent",                                7252 "Culpeper"                   ] # circ-paper_re-city
 - "Greenwood Commonwealth":                    [ "Commonwealth",                                 6992 "Greenwood"                  ] # paper_re-city-good
@@ -464,6 +486,7 @@
 - "Griffin Daily News":                        [ "News",                                         6936 "Griffin"                    ] # paper_re-city-good
 - "Emporia Gazette":                           [ "Gazette",                                      6902 "Emporia"                    ] # paper_re-city-good
 - "Marshall News Messenger":                   [ "News Messenger",                               6737 "Marshall"                   ] # circ-paper_re-city
+- "Shawano Leader":                            [ "Leader",                                       6525 "Shawano"                    ] # paper_re-city-good
 - "Bennington Banner":                         [ "Banner",                                       6502 "Bennington"                 ] # circ-paper_re-city
 - "Alamogordo Daily News":                     [ "Daily News",                                   6468 "Alamogordo"                 ] # paper_re-city-good
 - "North Adams Transcript":                    [ "Transcript",                                   5949 "North Adams"                ] # circ-paper_re-city
@@ -471,4 +494,5 @@
 - "Telegraph Forum":                           [ "Telegraph-Forum",                              5838 "Bucyrus"                    ] # paper_re-city-good
 - "Brookings Daily Register":                  [ "Register",                                     4632 "Brookings"                  ] # paper_re-city-good
 - "Orange Leader":                             [ "Leader",                                       4312 "Orange"                     ] # paper_re-city-good
+- "Parkersburg Sentinel":                      [ "Sentinel",                                     3081 "Parkersburg"                ] # paper_re-city-good
 - "Phoenix":                                   [ "Phoenix",                                      2566 "Phoenixville"               ] # paper-paper_re-city-good

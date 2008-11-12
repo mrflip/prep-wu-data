@@ -273,7 +273,7 @@ Fort Collins Coloradoan: !ruby/struct:Endorsement
     csa_name: 
 Florida Times Union: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: GHWBush
@@ -375,7 +375,7 @@ Houston Post: !ruby/struct:Endorsement
     csa_name: Houston-Baytown-Huntsville, TX CSA
 Times Record News: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: Bush
   prez_1996: 
   prez_1992: GHWBush
@@ -409,7 +409,7 @@ Times Record News: !ruby/struct:Endorsement
     csa_name: 
 Herald Sun: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -695,7 +695,7 @@ Honolulu Advertiser: !ruby/struct:Endorsement
   city: Honolulu
   paper: Honolulu Advertiser
   pop: "371657"
-  metro: &id026 !ruby/struct:CityMetro 
+  metro: &id028 !ruby/struct:CityMetro 
     st: HI
     city: Honolulu
     fips_state: "15"
@@ -953,7 +953,7 @@ Cullman Times: !ruby/struct:Endorsement
     csa_name: 
 Harrisburg Patriot News: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: 
+  prez_2004: abstain
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -1191,7 +1191,7 @@ Arizona Daily Star: !ruby/struct:Endorsement
     csa_name: 
 Metrowest Daily News: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -1291,6 +1291,40 @@ Berkshire Eagle: !ruby/struct:Endorsement
     metro_st: MA
     metro_nickname: 
     csa_name: 
+Vallejo Times Herald: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: Clinton
+  prez_1992: 
+  rank: 
+  circ: 16957
+  daily: 
+  sun: 
+  lat: 38.1040864
+  lng: -122.2566367
+  st: CA
+  city: Vallejo
+  paper: Vallejo Times Herald
+  pop: "120446"
+  metro: !ruby/struct:CityMetro 
+    st: CA
+    city: Vallejo
+    fips_state: "06"
+    fips_place: "81666"
+    cbsa_code: "46700"
+    metro_name: Vallejo-Fairfield, CA MSA
+    metro_stature: MSA
+    pop_2007: 408599
+    pop_2000: 394542
+    pop_rank: 118
+    pop_chg_pct_00_07: 3.56
+    pop_chg_pct_avg: 0.51
+    pop_at_or_above: 205270394
+    pop_aoa_pct: 67.3
+    metro_st: CA
+    metro_nickname: Solano County
+    csa_name: San Jose-San Francisco-Oakland, CA CSA
 Ames Daily Tribune Hawk Eye: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -1495,6 +1529,40 @@ New York Observer: !ruby/struct:Endorsement
     metro_st: NY-NJ-PA
     metro_nickname: Greater New York, Tri-State Region
     csa_name: New York-Newark-Bridgeport, NY-NJ-CT-PA CSA
+Midland Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 15689
+  daily: 
+  sun: 
+  lat: 43.6155825
+  lng: -84.2472117
+  st: MI
+  city: Midland
+  paper: Midland Daily News
+  pop: "42400"
+  metro: !ruby/struct:CityMetro 
+    st: MI
+    city: Midland
+    fips_state: "26"
+    fips_place: "53780"
+    cbsa_code: "33220"
+    metro_name: Midland, MI uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Union Sun and Journal: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -1519,6 +1587,40 @@ Union Sun and Journal: !ruby/struct:Endorsement
     cbsa_code: 
     metro_name: 
     metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Argus Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 42.9978049
+  lng: -84.1766359
+  st: MI
+  city: Owosso
+  paper: Argus Press
+  pop: "15373"
+  metro: !ruby/struct:CityMetro 
+    st: MI
+    city: Owosso
+    fips_state: "26"
+    fips_place: "61940"
+    cbsa_code: "37020"
+    metro_name: Owosso, MI uSA
+    metro_stature: uSA
     pop_2007: 
     pop_2000: 
     pop_rank: 
@@ -1565,7 +1667,7 @@ Tuscaloosa News: !ruby/struct:Endorsement
     csa_name: 
 Ithaca Journal: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -1599,7 +1701,7 @@ Ithaca Journal: !ruby/struct:Endorsement
     csa_name: Ithaca-Cortland, NY CSA
 Post Crescent: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -1803,7 +1905,7 @@ Santa Monica Outlook: !ruby/struct:Endorsement
     csa_name: Los Angeles-Long Beach-Riverside, CA CSA
 Washington Examiner: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -1903,6 +2005,40 @@ Sun Journal: !ruby/struct:Endorsement
     metro_st: ME
     metro_nickname: ""
     csa_name: Portland-Lewiston-South Portland, ME CSA
+Sturgis Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 41.799217
+  lng: -85.4191482
+  st: MI
+  city: Sturgis
+  paper: Sturgis Journal
+  pop: "11081"
+  metro: !ruby/struct:CityMetro 
+    st: MI
+    city: Sturgis
+    fips_state: "26"
+    fips_place: "76960"
+    cbsa_code: "44780"
+    metro_name: Sturgis, MI uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Brunswick Times Record: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -2021,7 +2157,7 @@ Intelligencer Journal: !ruby/struct:Endorsement
   city: Lancaster
   paper: Intelligencer Journal
   pop: "54735"
-  metro: &id040 !ruby/struct:CityMetro 
+  metro: &id042 !ruby/struct:CityMetro 
     st: PA
     city: Lancaster
     fips_state: "42"
@@ -2123,7 +2259,7 @@ Marietta Times: !ruby/struct:Endorsement
   city: Marietta
   paper: Marietta Times
   pop: "13795"
-  metro: &id035 !ruby/struct:CityMetro 
+  metro: &id037 !ruby/struct:CityMetro 
     st: OH
     city: Marietta
     fips_state: "39"
@@ -2379,6 +2515,40 @@ San Antonio Express News: !ruby/struct:Endorsement
     metro_st: TX
     metro_nickname: Greater San Antonio
     csa_name: 
+Bonner County Daily Bee: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 48.2765903
+  lng: -116.5532476
+  st: ID
+  city: Sandpoint
+  paper: Bonner County Daily Bee
+  pop: "7785"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Southern Illinoisan: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: Bush
@@ -2415,7 +2585,7 @@ Southern Illinoisan: !ruby/struct:Endorsement
     csa_name: 
 Kalamazoo Gazette: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -2585,7 +2755,7 @@ Warrensburg Daily Star Journal: !ruby/struct:Endorsement
     csa_name: 
 Daily Southtown: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -2735,7 +2905,7 @@ Atlanta Journal Constitution: !ruby/struct:Endorsement
   city: Atlanta
   paper: Atlanta Journal Constitution
   pop: "422908"
-  metro: &id016 !ruby/struct:CityMetro 
+  metro: &id018 !ruby/struct:CityMetro 
     st: GA
     city: Atlanta
     fips_state: "13"
@@ -2753,6 +2923,40 @@ Atlanta Journal Constitution: !ruby/struct:Endorsement
     metro_st: GA
     metro_nickname: Metro Atlanta
     csa_name: Atlanta-Sandy Springs-Gainesville, GA-AL CSA
+Doylestown Intelligencer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 40.1975848
+  lng: -77.7213803
+  st: PA
+  city: Doylestown
+  paper: Doylestown Intelligencer
+  pop: "8146"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Seattle Post Intelligencer: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -2769,7 +2973,7 @@ Seattle Post Intelligencer: !ruby/struct:Endorsement
   city: Seattle
   paper: Seattle Post Intelligencer
   pop: "569369"
-  metro: &id013 !ruby/struct:CityMetro 
+  metro: &id015 !ruby/struct:CityMetro 
     st: WA
     city: Seattle
     fips_state: "53"
@@ -3061,7 +3265,7 @@ Pryor Daily Times: !ruby/struct:Endorsement
     csa_name: 
 Green Bay News Chronicle: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: Clinton
   prez_1992: 
@@ -3075,7 +3279,7 @@ Green Bay News Chronicle: !ruby/struct:Endorsement
   city: Green Bay
   paper: Green Bay News Chronicle
   pop: "101012"
-  metro: &id009 !ruby/struct:CityMetro 
+  metro: &id011 !ruby/struct:CityMetro 
     st: WI
     city: Green Bay
     fips_state: "55"
@@ -3229,6 +3433,40 @@ Niagara Gazette: !ruby/struct:Endorsement
     metro_st: NY
     metro_nickname: Western New York,Niagara Frontier,Buffalo-Niagara
     csa_name: Buffalo-Niagara-Cattaraugus, NY CSA
+Kokomo Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 20587
+  daily: 
+  sun: 
+  lat: 40.486427
+  lng: -86.1336033
+  st: IN
+  city: Kokomo
+  paper: Kokomo Tribune
+  pop: "46227"
+  metro: !ruby/struct:CityMetro 
+    st: IN
+    city: Kokomo
+    fips_state: "18"
+    fips_place: "40392"
+    cbsa_code: "29020"
+    metro_name: Kokomo, IN MSA
+    metro_stature: MSA
+    pop_2007: 99845
+    pop_2000: 101541
+    pop_rank: 385
+    pop_chg_pct_00_07: -1.67
+    pop_chg_pct_avg: -0.24
+    pop_at_or_above: 250017875
+    pop_aoa_pct: 81.9
+    metro_st: IN
+    metro_nickname: ""
+    csa_name: Kokomo-Peru, IN CSA
 Brunswick News: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -3297,6 +3535,40 @@ Chicago Sun Times: !ruby/struct:Endorsement
     metro_st: IL-IN-WI
     metro_nickname: Chicagoland
     csa_name: Chicago-Naperville-Michigan City, IL-IN-WI CSA
+Milford Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 8417
+  daily: 
+  sun: 
+  lat: 42.1398188
+  lng: -71.516174
+  st: MA
+  city: Milford
+  paper: Milford Daily News
+  pop: "28631"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Wall Street Journal: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -3449,6 +3721,40 @@ Record (Stockton): !ruby/struct:Endorsement
     pop_aoa_pct: 60.1
     metro_st: CA
     metro_nickname: San Joaquin County
+    csa_name: 
+Ironwood Daily Globe: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 46.4546698
+  lng: -90.1710081
+  st: MI
+  city: Ironwood
+  paper: Ironwood Daily Globe
+  pop: "5736"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
     csa_name: 
 Messenger: !ruby/struct:Endorsement 
   prez_2008: McCain
@@ -3603,6 +3909,40 @@ Tribune Review: !ruby/struct:Endorsement
     metro_st: PA
     metro_nickname: Greater Pittsburgh, Pittsburgh Tri-State, Metro Pittsburgh, Three Rivers Region
     csa_name: Pittsburgh-New Castle, PA CSA
+News Review: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 18691
+  daily: 
+  sun: 
+  lat: 43.216505
+  lng: -123.3417381
+  st: OR
+  city: Roseburg
+  paper: News Review
+  pop: "20430"
+  metro: !ruby/struct:CityMetro 
+    st: OR
+    city: Roseburg
+    fips_state: "41"
+    fips_place: "63650"
+    cbsa_code: "40700"
+    metro_name: Roseburg, OR uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Columbus Ledger Enquirer: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Bush
@@ -3772,6 +4112,40 @@ Commercial Appeal: !ruby/struct:Endorsement
     pop_aoa_pct: 50.0
     metro_st: TN-MS-AR
     metro_nickname: The Mid-South
+    csa_name: 
+Greenville Daily News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 8049
+  daily: 
+  sun: 
+  lat: 43.1775314
+  lng: -85.2527987
+  st: MI
+  city: Greenville
+  paper: Greenville Daily News
+  pop: "8261"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
     csa_name: 
 Ellensburg Daily Record: !ruby/struct:Endorsement 
   prez_2008: 
@@ -4047,7 +4421,7 @@ High Point Enterprise: !ruby/struct:Endorsement
     csa_name: Greensboro-Winston-Salem-High Point, NC CSA
 Emporia Gazette: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: Clinton
@@ -4129,7 +4503,7 @@ Sun (Baltimore): !ruby/struct:Endorsement
   city: Baltimore
   paper: Sun (Baltimore)
   pop: "610892"
-  metro: &id022 !ruby/struct:CityMetro 
+  metro: &id024 !ruby/struct:CityMetro 
     st: MD
     city: Baltimore
     fips_state: "24"
@@ -4249,6 +4623,40 @@ Loudoun Times Mirror: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Athens Banner Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 27672
+  daily: 
+  sun: 
+  lat: 33.960948
+  lng: -83.3779358
+  st: GA
+  city: Athens
+  paper: Athens Banner Herald
+  pop: "45734"
+  metro: &id009 !ruby/struct:CityMetro 
+    st: GA
+    city: Athens
+    fips_state: "13"
+    fips_place: "03440"
+    cbsa_code: "12020"
+    metro_name: Athens-Clarke County, GA MSA
+    metro_stature: MSA
+    pop_2007: 187405
+    pop_2000: 166079
+    pop_rank: 219
+    pop_chg_pct_00_07: 12.84
+    pop_chg_pct_avg: 1.83
+    pop_at_or_above: 233195091
+    pop_aoa_pct: 76.4
+    metro_st: GA
+    metro_nickname: 
+    csa_name: 
 Paris News: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: 
@@ -4285,7 +4693,7 @@ Paris News: !ruby/struct:Endorsement
     csa_name: 
 Conway Daily Sun: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: 
   prez_1992: GHWBush
@@ -4455,7 +4863,7 @@ Petoskey News Review: !ruby/struct:Endorsement
     csa_name: 
 Albany Democrat Herald: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -4672,6 +5080,40 @@ Dalhart Daily Texan: !ruby/struct:Endorsement
     pop_at_or_above: 
     pop_aoa_pct: 
     metro_st: 
+    metro_nickname: 
+    csa_name: 
+Niles Daily Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 41.8297694
+  lng: -86.2541768
+  st: MI
+  city: Niles
+  paper: Niles Daily Star
+  pop: "11739"
+  metro: !ruby/struct:CityMetro 
+    st: MI
+    city: Niles
+    fips_state: "26"
+    fips_place: "57760"
+    cbsa_code: "35660"
+    metro_name: Niles-Benton Harbor, MI MSA
+    metro_stature: MSA
+    pop_2007: 159589
+    pop_2000: 162453
+    pop_rank: 251
+    pop_chg_pct_00_07: -1.76
+    pop_chg_pct_avg: -0.25
+    pop_at_or_above: 237619844
+    pop_aoa_pct: 77.9
+    metro_st: MI
     metro_nickname: 
     csa_name: 
 Muskogee Daily Phoenix: !ruby/struct:Endorsement 
@@ -4996,7 +5438,7 @@ El Paso Herald Post: !ruby/struct:Endorsement
   city: El Paso
   paper: El Paso Herald Post
   pop: "563662"
-  metro: &id020 !ruby/struct:CityMetro 
+  metro: &id022 !ruby/struct:CityMetro 
     st: TX
     city: El Paso
     fips_state: "48"
@@ -5016,7 +5458,7 @@ El Paso Herald Post: !ruby/struct:Endorsement
     csa_name: 
 Grand Forks Herald: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: Clinton
@@ -5084,7 +5526,7 @@ Galveston County Daily News: !ruby/struct:Endorsement
     csa_name: Houston-Baytown-Huntsville, TX CSA
 Daily News Record: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: GHWBush
@@ -5200,7 +5642,7 @@ Nashville Banner: !ruby/struct:Endorsement
   city: Nashville
   paper: Nashville Banner
   pop: "530852"
-  metro: &id014 !ruby/struct:CityMetro 
+  metro: &id016 !ruby/struct:CityMetro 
     st: TN
     city: Nashville
     fips_state: "47"
@@ -5255,7 +5697,7 @@ New Castle News: !ruby/struct:Endorsement
 Bennington Banner: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
-  prez_2000: 
+  prez_2000: abstain
   prez_1996: 
   prez_1992: 
   rank: 
@@ -5336,7 +5778,7 @@ Times Leader: !ruby/struct:Endorsement
   city: Wilkes-Barre
   paper: Times Leader
   pop: "40736"
-  metro: &id010 !ruby/struct:CityMetro 
+  metro: &id012 !ruby/struct:CityMetro 
     st: PA
     city: Wilkes-Barre
     fips_state: "42"
@@ -5456,6 +5898,40 @@ Bryan-College Station Eagle: !ruby/struct:Endorsement
     metro_st: TX
     metro_nickname: 
     csa_name: 
+Chillicothe Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 13038
+  daily: 
+  sun: 
+  lat: 39.3331197
+  lng: -82.9824019
+  st: OH
+  city: Chillicothe
+  paper: Chillicothe Gazette
+  pop: "22180"
+  metro: !ruby/struct:CityMetro 
+    st: OH
+    city: Chillicothe
+    fips_state: "39"
+    fips_place: "14184"
+    cbsa_code: "17060"
+    metro_name: Chillicothe, OH uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Hutchinson News: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -5540,7 +6016,7 @@ Albuquerque Journal: !ruby/struct:Endorsement
   city: Albuquerque
   paper: Albuquerque Journal
   pop: "487378"
-  metro: &id012 !ruby/struct:CityMetro 
+  metro: &id014 !ruby/struct:CityMetro 
     st: NM
     city: Albuquerque
     fips_state: "35"
@@ -5645,7 +6121,7 @@ New York Times: !ruby/struct:Endorsement
   metro: *id001
 Ventura County Star: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: Dole
   prez_1992: 
@@ -5713,7 +6189,7 @@ Morning Journal: !ruby/struct:Endorsement
     csa_name: 
 Falls Church News Press: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: Kerry
+  prez_2004: 
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -5761,7 +6237,7 @@ San Francisco Chronicle: !ruby/struct:Endorsement
   city: San Francisco
   paper: San Francisco Chronicle
   pop: "732072"
-  metro: &id030 !ruby/struct:CityMetro 
+  metro: &id032 !ruby/struct:CityMetro 
     st: CA
     city: San Francisco
     fips_state: "06"
@@ -5849,7 +6325,7 @@ Culpeper Star Exponent: !ruby/struct:Endorsement
     csa_name: 
 Star Gazette: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -5883,7 +6359,7 @@ Star Gazette: !ruby/struct:Endorsement
     csa_name: 
 Coos Bay World: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: Dole
   prez_1992: GHWBush
@@ -5917,7 +6393,7 @@ Coos Bay World: !ruby/struct:Endorsement
     csa_name: 
 Longview Daily News: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: 
   prez_1992: Clinton
@@ -6085,6 +6561,40 @@ Marietta Daily Journal: !ruby/struct:Endorsement
     metro_st: GA
     metro_nickname: Metro Atlanta
     csa_name: Atlanta-Sandy Springs-Gainesville, GA-AL CSA
+Times Argus: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 44.2600593
+  lng: -72.5753869
+  st: VT
+  city: Montpelier
+  paper: Times Argus
+  pop: "7828"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Orange Leader: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -6135,7 +6645,7 @@ News Sentinel: !ruby/struct:Endorsement
   city: Fort Wayne
   paper: News Sentinel
   pop: "229715"
-  metro: &id025 !ruby/struct:CityMetro 
+  metro: &id027 !ruby/struct:CityMetro 
     st: IN
     city: Fort Wayne
     fips_state: "18"
@@ -6155,7 +6665,7 @@ News Sentinel: !ruby/struct:Endorsement
     csa_name: Fort Wayne-Huntington-Auburn, IN CSA
 Waco Tribune Herald: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: 
   prez_1992: Clinton
@@ -6237,7 +6747,7 @@ Intelligencer: !ruby/struct:Endorsement
   city: Wheeling
   paper: Intelligencer
   pop: "29388"
-  metro: &id023 !ruby/struct:CityMetro 
+  metro: &id025 !ruby/struct:CityMetro 
     st: WV
     city: Wheeling
     fips_state: "54"
@@ -6252,6 +6762,40 @@ Intelligencer: !ruby/struct:Endorsement
     pop_chg_pct_avg: -0.72
     pop_at_or_above: 240794298
     pop_aoa_pct: 78.9
+    metro_st: WV-OH
+    metro_nickname: 
+    csa_name: 
+Parkersburg Sentinel: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 3081
+  daily: 
+  sun: 
+  lat: 39.2667418
+  lng: -81.5615135
+  st: WV
+  city: Parkersburg
+  paper: Parkersburg Sentinel
+  pop: "31564"
+  metro: &id010 !ruby/struct:CityMetro 
+    st: WV
+    city: Parkersburg
+    fips_state: "54"
+    fips_place: "62140"
+    cbsa_code: "37620"
+    metro_name: Parkersburg-Marietta-Vienna, WV-OH MSA
+    metro_stature: MSA
+    pop_2007: 160656
+    pop_2000: 164624
+    pop_rank: 249
+    pop_chg_pct_00_07: -2.41
+    pop_chg_pct_avg: -0.34
+    pop_at_or_above: 237300632
+    pop_aoa_pct: 77.8
     metro_st: WV-OH
     metro_nickname: 
     csa_name: 
@@ -6493,6 +7037,40 @@ Gloucester County Times: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Edwardsville Intelligencer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 38.8114364
+  lng: -89.953157
+  st: IL
+  city: Edwardsville
+  paper: Edwardsville Intelligencer
+  pop: "24551"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Pittsburgh Press: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -6561,6 +7139,40 @@ Register Guard: !ruby/struct:Endorsement
     metro_st: OR
     metro_nickname: Lane County
     csa_name: 
+Sun News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 49889
+  daily: 
+  sun: 
+  lat: 33.6890603
+  lng: -78.8866943
+  st: SC
+  city: Myrtle Beach
+  paper: Sun News
+  pop: "25310"
+  metro: !ruby/struct:CityMetro 
+    st: SC
+    city: Myrtle Beach
+    fips_state: "45"
+    fips_place: "49075"
+    cbsa_code: "34820"
+    metro_name: Myrtle Beach-North Myrtle Beach-Conway, SC MSA
+    metro_stature: MSA
+    pop_2007: 249925
+    pop_2000: 196629
+    pop_rank: 176
+    pop_chg_pct_00_07: 27.1
+    pop_chg_pct_avg: 3.87
+    pop_at_or_above: 224218348
+    pop_aoa_pct: 73.5
+    metro_st: SC
+    metro_nickname: The Grand Strand
+    csa_name: Myrtle Beach-Conway-Georgetown, SC CSA
 Columbia Daily Tribune: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -6594,6 +7206,40 @@ Columbia Daily Tribune: !ruby/struct:Endorsement
     pop_aoa_pct: 77.6
     metro_st: MO
     metro_nickname: Mid-Missouri
+    csa_name: 
+Worthington Daily Globe: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 9109
+  daily: 
+  sun: 
+  lat: 43.6199639
+  lng: -95.5963979
+  st: MN
+  city: Worthington
+  paper: Worthington Daily Globe
+  pop: "11274"
+  metro: !ruby/struct:CityMetro 
+    st: MN
+    city: Worthington
+    fips_state: "27"
+    fips_place: "71734"
+    cbsa_code: "49380"
+    metro_name: Worthington, MN uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
     csa_name: 
 Vista Press: !ruby/struct:Endorsement 
   prez_2008: 
@@ -6886,7 +7532,7 @@ Seguin Gazette Enterprise: !ruby/struct:Endorsement
     csa_name: 
 Grand Island Independent: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: Dole
   prez_1992: GHWBush
@@ -6985,6 +7631,40 @@ Sharon Herald: !ruby/struct:Endorsement
     pop_aoa_pct: 
     metro_st: 
     metro_nickname: 
+    csa_name: 
+Coeur d'Alene Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 47.6776832
+  lng: -116.7804664
+  st: ID
+  city: Coeur d'Alene
+  paper: Coeur d'Alene Press
+  pop: "34514"
+  metro: !ruby/struct:CityMetro 
+    st: ID
+    city: Coeur d'Alene
+    fips_state: "16"
+    fips_place: "16750"
+    cbsa_code: "17660"
+    metro_name: Coeur d'Alene, ID MSA
+    metro_stature: MSA
+    pop_2007: 134442
+    pop_2000: 108685
+    pop_rank: 295
+    pop_chg_pct_00_07: 23.7
+    pop_chg_pct_avg: 3.39
+    pop_at_or_above: 242621064
+    pop_aoa_pct: 79.5
+    metro_st: ID
+    metro_nickname: Kootenai County
     csa_name: 
 Columbus Telegram: !ruby/struct:Endorsement 
   prez_2008: 
@@ -7275,6 +7955,40 @@ Lisbon Morning Journal: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+King County Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 47.610377
+  lng: -122.2006786
+  st: WA
+  city: Bellevue
+  paper: King County Journal
+  pop: "111927"
+  metro: !ruby/struct:CityMetro 
+    st: WA
+    city: Bellevue
+    fips_state: "53"
+    fips_place: "05210"
+    cbsa_code: "42660"
+    metro_name: Seattle-Tacoma-Bellevue, WA MSA
+    metro_stature: MSA
+    pop_2007: 3309347
+    pop_2000: 3043885
+    pop_rank: 15
+    pop_chg_pct_00_07: 8.72
+    pop_chg_pct_avg: 1.25
+    pop_at_or_above: 99540521
+    pop_aoa_pct: 32.6
+    metro_st: WA
+    metro_nickname: Seattle Metro
+    csa_name: Seattle-Tacoma-Olympia, WA CSA
 Statesman Journal: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -7326,40 +8040,6 @@ Milwaukee Journal: !ruby/struct:Endorsement
   paper: Milwaukee Journal
   pop: "579180"
   metro: *id005
-Times Herald: !ruby/struct:Endorsement 
-  prez_2008: McCain
-  prez_2004: Kerry
-  prez_2000: 
-  prez_1996: Clinton
-  prez_1992: 
-  rank: 
-  circ: 16957
-  daily: 
-  sun: 
-  lat: 38.1040864
-  lng: -122.2566367
-  st: CA
-  city: Vallejo
-  paper: Times Herald
-  pop: "120446"
-  metro: !ruby/struct:CityMetro 
-    st: CA
-    city: Vallejo
-    fips_state: "06"
-    fips_place: "81666"
-    cbsa_code: "46700"
-    metro_name: Vallejo-Fairfield, CA MSA
-    metro_stature: MSA
-    pop_2007: 408599
-    pop_2000: 394542
-    pop_rank: 118
-    pop_chg_pct_00_07: 3.56
-    pop_chg_pct_avg: 0.51
-    pop_at_or_above: 205270394
-    pop_aoa_pct: 67.3
-    metro_st: CA
-    metro_nickname: Solano County
-    csa_name: San Jose-San Francisco-Oakland, CA CSA
 Des Moines Register: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -7801,7 +8481,7 @@ Charleston Gazette: !ruby/struct:Endorsement
   city: Charleston
   paper: Charleston Gazette
   pop: "50427"
-  metro: &id031 !ruby/struct:CityMetro 
+  metro: &id033 !ruby/struct:CityMetro 
     st: WV
     city: Charleston
     fips_state: "54"
@@ -7921,9 +8601,43 @@ Willoughby News Herald: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Enterprise Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 35.8940263
+  lng: -80.5614494
+  st: NC
+  city: Mocksville
+  paper: Enterprise Record
+  pop: "4178"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Rutland Herald: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -8013,6 +8727,40 @@ Southbridge News: !ruby/struct:Endorsement
     cbsa_code: 
     metro_name: 
     metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Times and Democrat: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 18142
+  daily: 
+  sun: 
+  lat: 33.4918203
+  lng: -80.8556476
+  st: SC
+  city: Orangeburg
+  paper: Times and Democrat
+  pop: "12913"
+  metro: !ruby/struct:CityMetro 
+    st: SC
+    city: Orangeburg
+    fips_state: "45"
+    fips_place: "53080"
+    cbsa_code: "36700"
+    metro_name: Orangeburg, SC uSA
+    metro_stature: uSA
     pop_2007: 
     pop_2000: 
     pop_rank: 
@@ -8127,7 +8875,7 @@ Post Star: !ruby/struct:Endorsement
     csa_name: Albany-Schenectady-Amsterdam, NY CSA
 Whittier Daily News: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -8193,9 +8941,77 @@ Bismarck Tribune: !ruby/struct:Endorsement
     metro_st: ND
     metro_nickname: North Dakota's Sister Cities
     csa_name: 
+Loveland Daily Reporter Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 40.3977612
+  lng: -105.0749801
+  st: CO
+  city: Loveland
+  paper: Loveland Daily Reporter Herald
+  pop: "59618"
+  metro: !ruby/struct:CityMetro 
+    st: CO
+    city: Loveland
+    fips_state: 08
+    fips_place: "46465"
+    cbsa_code: "22660"
+    metro_name: Fort Collins-Loveland, CO MSA
+    metro_stature: MSA
+    pop_2007: 287574
+    pop_2000: 251494
+    pop_rank: 159
+    pop_chg_pct_00_07: 14.35
+    pop_chg_pct_avg: 2.05
+    pop_at_or_above: 219704696
+    pop_aoa_pct: 72.0
+    metro_st: CO
+    metro_nickname: Larimer County
+    csa_name: 
+Record (Troy): !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 13755
+  daily: 
+  sun: 
+  lat: 42.7284117
+  lng: -73.6917851
+  st: NY
+  city: Troy
+  paper: Record (Troy)
+  pop: "48232"
+  metro: !ruby/struct:CityMetro 
+    st: NY
+    city: Troy
+    fips_state: "36"
+    fips_place: "75484"
+    cbsa_code: "10580"
+    metro_name: Albany-Schenectady-Troy, NY MSA
+    metro_stature: MSA
+    pop_2007: 853358
+    pop_2000: 825875
+    pop_rank: 57
+    pop_chg_pct_00_07: 3.33
+    pop_chg_pct_avg: 0.48
+    pop_at_or_above: 169190577
+    pop_aoa_pct: 55.4
+    metro_st: NY
+    metro_nickname: Capital District, Capital Region, Capitaland
+    csa_name: Albany-Schenectady-Amsterdam, NY CSA
 Daily Item: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: 
   prez_1992: Clinton
@@ -8413,7 +9229,7 @@ Cincinnati Enquirer: !ruby/struct:Endorsement
   city: Cincinnati
   paper: Cincinnati Enquirer
   pop: "306382"
-  metro: &id024 !ruby/struct:CityMetro 
+  metro: &id026 !ruby/struct:CityMetro 
     st: OH
     city: Cincinnati
     fips_state: "39"
@@ -8451,7 +9267,7 @@ Washington Times: !ruby/struct:Endorsement
 Iowa City Press Citizen: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
-  prez_2000: Gore
+  prez_2000: Bush
   prez_1996: 
   prez_1992: 
   rank: 
@@ -8586,7 +9402,7 @@ Salt Lake Tribune: !ruby/struct:Endorsement
     csa_name: Salt Lake City-Ogden-Clearfield, UT CSA
 Post and Courier: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -8620,7 +9436,7 @@ Post and Courier: !ruby/struct:Endorsement
     csa_name: 
 Roanoke Times: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -8838,7 +9654,7 @@ Philadelphia Inquirer: !ruby/struct:Endorsement
   city: Philadelphia
   paper: Philadelphia Inquirer
   pop: "1517550"
-  metro: &id011 !ruby/struct:CityMetro 
+  metro: &id013 !ruby/struct:CityMetro 
     st: PA
     city: Philadelphia
     fips_state: "42"
@@ -8872,24 +9688,7 @@ Athens Daily News: !ruby/struct:Endorsement
   city: Athens
   paper: Athens Daily News
   pop: "45734"
-  metro: !ruby/struct:CityMetro 
-    st: GA
-    city: Athens
-    fips_state: "13"
-    fips_place: "03440"
-    cbsa_code: "12020"
-    metro_name: Athens-Clarke County, GA MSA
-    metro_stature: MSA
-    pop_2007: 187405
-    pop_2000: 166079
-    pop_rank: 219
-    pop_chg_pct_00_07: 12.84
-    pop_chg_pct_avg: 1.83
-    pop_at_or_above: 233195091
-    pop_aoa_pct: 76.4
-    metro_st: GA
-    metro_nickname: 
-    csa_name: 
+  metro: *id009
 Las Vegas Sun: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -8906,7 +9705,7 @@ Las Vegas Sun: !ruby/struct:Endorsement
   city: Las Vegas
   paper: Las Vegas Sun
   pop: "478434"
-  metro: &id018 !ruby/struct:CityMetro 
+  metro: &id020 !ruby/struct:CityMetro 
     st: NV
     city: Las Vegas
     fips_state: "32"
@@ -9096,7 +9895,7 @@ Journal: !ruby/struct:Endorsement
     csa_name: 
 Evansville Courier and Press: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
   prez_1992: 
@@ -9232,7 +10031,7 @@ Woonsocket Call: !ruby/struct:Endorsement
     csa_name: 
 Virginian Pilot: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -9366,6 +10165,40 @@ St. Cloud Times: !ruby/struct:Endorsement
     metro_st: MN
     metro_nickname: ""
     csa_name: Minneapolis-Saint Paul-Saint Cloud, MN-WI CSA
+Alameda Times Star: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 37.7652065
+  lng: -122.2416355
+  st: CA
+  city: Alameda
+  paper: Alameda Times Star
+  pop: "70443"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Blade: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -9416,7 +10249,7 @@ Capital Times: !ruby/struct:Endorsement
   city: Madison
   paper: Capital Times
   pop: "224625"
-  metro: &id033 !ruby/struct:CityMetro 
+  metro: &id035 !ruby/struct:CityMetro 
     st: WI
     city: Madison
     fips_state: "55"
@@ -9470,7 +10303,7 @@ Southwest Times Record: !ruby/struct:Endorsement
     csa_name: 
 Hannibal Courier Post: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: 
   prez_1992: GHWBush
@@ -9776,7 +10609,7 @@ Norfolk Daily News: !ruby/struct:Endorsement
     csa_name: 
 Key West Citizen: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: Clinton
   prez_1992: 
@@ -9944,6 +10777,23 @@ Casa Grande Dispatch: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+New York Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 40.7142691
+  lng: -74.0059729
+  st: NY
+  city: New York City
+  paper: New York Sun
+  pop: "8008278"
+  metro: *id001
 Gillette News Record: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -10182,6 +11032,40 @@ News Gazette: !ruby/struct:Endorsement
     metro_st: IL
     metro_nickname: Chambana
     csa_name: 
+Baytown Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 29.7355047
+  lng: -94.9774274
+  st: TX
+  city: Baytown
+  paper: Baytown Sun
+  pop: "67341"
+  metro: !ruby/struct:CityMetro 
+    st: TX
+    city: Baytown
+    fips_state: "48"
+    fips_place: 06128
+    cbsa_code: "26420"
+    metro_name: Houston-Sugar Land-Baytown, TX MSA
+    metro_stature: MSA
+    pop_2007: 5628101
+    pop_2000: 4715402
+    pop_rank: 6
+    pop_chg_pct_00_07: 19.36
+    pop_chg_pct_avg: 2.77
+    pop_at_or_above: 58817348
+    pop_aoa_pct: 19.3
+    metro_st: TX
+    metro_nickname: Greater Houston
+    csa_name: Houston-Baytown-Huntsville, TX CSA
 Chippewa Herald: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Bush
@@ -10198,6 +11082,40 @@ Chippewa Herald: !ruby/struct:Endorsement
   city: Chippewa Falls
   paper: Chippewa Herald
   pop: "12607"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Jersey Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 24940
+  daily: 
+  sun: 
+  lat: 40.7281575
+  lng: -74.0776417
+  st: NJ
+  city: Jersey City
+  paper: Jersey Journal
+  pop: "237681"
   metro: !ruby/struct:CityMetro 
     st: 
     city: 
@@ -10320,7 +11238,7 @@ Bucks County Courier Times: !ruby/struct:Endorsement
     csa_name: 
 Journal Times: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -10422,7 +11340,7 @@ Tri Valley Herald: !ruby/struct:Endorsement
     csa_name: San Jose-San Francisco-Oakland, CA CSA
 Parkersburg News: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: Dole
   prez_1992: 
@@ -10436,24 +11354,7 @@ Parkersburg News: !ruby/struct:Endorsement
   city: Parkersburg
   paper: Parkersburg News
   pop: "31564"
-  metro: !ruby/struct:CityMetro 
-    st: WV
-    city: Parkersburg
-    fips_state: "54"
-    fips_place: "62140"
-    cbsa_code: "37620"
-    metro_name: Parkersburg-Marietta-Vienna, WV-OH MSA
-    metro_stature: MSA
-    pop_2007: 160656
-    pop_2000: 164624
-    pop_rank: 249
-    pop_chg_pct_00_07: -2.41
-    pop_chg_pct_avg: -0.34
-    pop_at_or_above: 237300632
-    pop_aoa_pct: 77.8
-    metro_st: WV-OH
-    metro_nickname: 
-    csa_name: 
+  metro: *id010
 Benton Courier: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -10538,7 +11439,7 @@ Green Bay Press Gazette: !ruby/struct:Endorsement
   city: Green Bay
   paper: Green Bay Press Gazette
   pop: "101012"
-  metro: *id009
+  metro: *id011
 Independence Examiner: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -11068,7 +11969,7 @@ Fargo Forum: !ruby/struct:Endorsement
     csa_name: Fargo-Wahpeton, ND-MN CSA
 Sun (Bremerton): !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: Dole
   prez_1992: GHWBush
@@ -11204,7 +12105,7 @@ Blue Springs Examiner: !ruby/struct:Endorsement
     csa_name: 
 Ocala Star Banner: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -11340,7 +12241,7 @@ Greenwood Commonwealth: !ruby/struct:Endorsement
     csa_name: 
 Oshkosh Northwestern: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
   prez_1992: GHWBush
@@ -11595,7 +12496,7 @@ Commercial Dispatch: !ruby/struct:Endorsement
     csa_name: 
 Wilkes Barre Citizens' Voice: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: Clinton
   prez_1992: Clinton
@@ -11609,7 +12510,7 @@ Wilkes Barre Citizens' Voice: !ruby/struct:Endorsement
   city: Wilkes-Barre
   paper: Wilkes Barre Citizens' Voice
   pop: "40736"
-  metro: *id010
+  metro: *id012
 Morning Call: !ruby/struct:Endorsement 
   prez_2008: abstain
   prez_2004: Kerry
@@ -11748,7 +12649,7 @@ Huntsville Item: !ruby/struct:Endorsement
     csa_name: 
 Nevada Appeal: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: 
   prez_1992: GHWBush
@@ -12068,7 +12969,7 @@ Springfield Union News: !ruby/struct:Endorsement
   city: Springfield
   paper: Springfield Union News
   pop: "152227"
-  metro: &id029 !ruby/struct:CityMetro 
+  metro: &id031 !ruby/struct:CityMetro 
     st: MA
     city: Springfield
     fips_state: "25"
@@ -12122,7 +13023,7 @@ Winnemucca Humbolt Sun: !ruby/struct:Endorsement
     csa_name: 
 Plain Dealer: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: Bush
   prez_1996: Clinton
   prez_1992: Clinton
@@ -12156,7 +13057,7 @@ Plain Dealer: !ruby/struct:Endorsement
     csa_name: Cleveland-Akron-Elyria, OH CSA
 Daily Freeman: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: Clinton
   prez_1992: Clinton
@@ -12326,7 +13227,7 @@ Woodward News: !ruby/struct:Endorsement
     csa_name: 
 Burlington County Times: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: 
   prez_1992: Clinton
@@ -12408,7 +13309,75 @@ Delaware County Daily Times: !ruby/struct:Endorsement
   city: Philadelphia
   paper: Delaware County Daily Times
   pop: "1517550"
-  metro: *id011
+  metro: *id013
+Livingston County Daily Press and Argus: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 13131
+  daily: 
+  sun: 
+  lat: 42.6072552
+  lng: -83.9293952
+  st: MI
+  city: Howell
+  paper: Livingston County Daily Press and Argus
+  pop: "9860"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Observer Reporter: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 31755
+  daily: 
+  sun: 
+  lat: 40.17396
+  lng: -80.2461714
+  st: PA
+  city: Washington
+  paper: Observer Reporter
+  pop: "14637"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Tahoe Daily Tribune: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -12443,72 +13412,38 @@ Tahoe Daily Tribune: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
-Observer Reporter: !ruby/struct:Endorsement 
-  prez_2008: Obama
-  prez_2004: Kerry
-  prez_2000: 
-  prez_1996: 
-  prez_1992: 
+Abilene Reporter News: !ruby/struct:Endorsement 
+  prez_2008: abstain
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
   rank: 
-  circ: 31755
+  circ: 29108
   daily: 
   sun: 
-  lat: 40.17396
-  lng: -80.2461714
-  st: PA
-  city: Washington
-  paper: Observer Reporter
-  pop: "14637"
+  lat: 32.4487364
+  lng: -99.7331439
+  st: TX
+  city: Abilene
+  paper: Abilene Reporter News
+  pop: "114247"
   metro: !ruby/struct:CityMetro 
-    st: 
-    city: 
-    fips_state: 
-    fips_place: 
-    cbsa_code: 
-    metro_name: 
-    metro_stature: 
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
-    metro_nickname: 
-    csa_name: 
-Livingston County Daily Press and Argus: !ruby/struct:Endorsement 
-  prez_2008: Obama
-  prez_2004: Kerry
-  prez_2000: 
-  prez_1996: 
-  prez_1992: 
-  rank: 
-  circ: 13131
-  daily: 
-  sun: 
-  lat: 42.6072552
-  lng: -83.9293952
-  st: MI
-  city: Howell
-  paper: Livingston County Daily Press and Argus
-  pop: "9860"
-  metro: !ruby/struct:CityMetro 
-    st: 
-    city: 
-    fips_state: 
-    fips_place: 
-    cbsa_code: 
-    metro_name: 
-    metro_stature: 
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
+    st: TX
+    city: Abilene
+    fips_state: "48"
+    fips_place: "01000"
+    cbsa_code: "10180"
+    metro_name: Abilene, TX MSA
+    metro_stature: MSA
+    pop_2007: 159343
+    pop_2000: 160245
+    pop_rank: 252
+    pop_chg_pct_00_07: -0.56
+    pop_chg_pct_avg: -0.08
+    pop_at_or_above: 237779187
+    pop_aoa_pct: 77.9
+    metro_st: TX
     metro_nickname: 
     csa_name: 
 Advocate Messenger: !ruby/struct:Endorsement 
@@ -12613,40 +13548,6 @@ Hartford Courant: !ruby/struct:Endorsement
     metro_st: CT
     metro_nickname: Greater Hartford
     csa_name: Hartford-West Hartford-Willimantic, CT CSA
-Abilene Reporter News: !ruby/struct:Endorsement 
-  prez_2008: abstain
-  prez_2004: 
-  prez_2000: Bush
-  prez_1996: Dole
-  prez_1992: GHWBush
-  rank: 
-  circ: 29108
-  daily: 
-  sun: 
-  lat: 32.4487364
-  lng: -99.7331439
-  st: TX
-  city: Abilene
-  paper: Abilene Reporter News
-  pop: "114247"
-  metro: !ruby/struct:CityMetro 
-    st: TX
-    city: Abilene
-    fips_state: "48"
-    fips_place: "01000"
-    cbsa_code: "10180"
-    metro_name: Abilene, TX MSA
-    metro_stature: MSA
-    pop_2007: 159343
-    pop_2000: 160245
-    pop_rank: 252
-    pop_chg_pct_00_07: -0.56
-    pop_chg_pct_avg: -0.08
-    pop_at_or_above: 237779187
-    pop_aoa_pct: 77.9
-    metro_st: TX
-    metro_nickname: 
-    csa_name: 
 Hope Star: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -12749,40 +13650,23 @@ Gazette: !ruby/struct:Endorsement
     metro_st: IA
     metro_nickname: 
     csa_name: 
-News Press: !ruby/struct:Endorsement 
-  prez_2008: abstain
-  prez_2004: 
-  prez_2000: Bush
+Chicago Defender: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
   prez_1996: 
   prez_1992: 
   rank: 
-  circ: 92340
+  circ: 
   daily: 
   sun: 
-  lat: 26.640628
-  lng: -81.8723084
-  st: FL
-  city: Fort Myers
-  paper: News Press
-  pop: "53015"
-  metro: !ruby/struct:CityMetro 
-    st: FL
-    city: Fort Myers
-    fips_state: "12"
-    fips_place: "24125"
-    cbsa_code: "15980"
-    metro_name: Cape Coral-Fort Myers, FL MSA
-    metro_stature: MSA
-    pop_2007: 590564
-    pop_2000: 440888
-    pop_rank: 85
-    pop_chg_pct_00_07: 33.95
-    pop_chg_pct_avg: 4.85
-    pop_at_or_above: 189211690
-    pop_aoa_pct: 62.0
-    metro_st: FL
-    metro_nickname: 
-    csa_name: 
+  lat: 41.850033
+  lng: -87.6500523
+  st: IL
+  city: Chicago
+  paper: Chicago Defender
+  pop: "2841952"
+  metro: *id002
 Birmingham News: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: Bush
@@ -12799,7 +13683,7 @@ Birmingham News: !ruby/struct:Endorsement
   city: Birmingham
   paper: Birmingham News
   pop: "231621"
-  metro: &id015 !ruby/struct:CityMetro 
+  metro: &id017 !ruby/struct:CityMetro 
     st: AL
     city: Birmingham
     fips_state: "01"
@@ -12817,40 +13701,6 @@ Birmingham News: !ruby/struct:Endorsement
     metro_st: AL
     metro_nickname: Greater Birmingham
     csa_name: Birmingham-Hoover-Cullman, AL CSA
-Douglas Daily Dispatch: !ruby/struct:Endorsement 
-  prez_2008: 
-  prez_2004: 
-  prez_2000: 
-  prez_1996: 
-  prez_1992: Clinton
-  rank: 
-  circ: 
-  daily: 
-  sun: 
-  lat: 31.3445471
-  lng: -109.5453447
-  st: AZ
-  city: Douglas
-  paper: Douglas Daily Dispatch
-  pop: "16692"
-  metro: !ruby/struct:CityMetro 
-    st: AZ
-    city: Douglas
-    fips_state: "04"
-    fips_place: "20050"
-    cbsa_code: "43420"
-    metro_name: Sierra Vista-Douglas, AZ uSA
-    metro_stature: uSA
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
-    metro_nickname: 
-    csa_name: 
 Dallas Morning News: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: Bush
@@ -12885,6 +13735,74 @@ Dallas Morning News: !ruby/struct:Endorsement
     metro_st: TX
     metro_nickname: The Metroplex, Dallas-Fort Worth Metroplex, DFW Metroplex,North Texas
     csa_name: Dallas-Fort Worth, TX CSA
+News Press: !ruby/struct:Endorsement 
+  prez_2008: abstain
+  prez_2004: 
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 92340
+  daily: 
+  sun: 
+  lat: 26.640628
+  lng: -81.8723084
+  st: FL
+  city: Fort Myers
+  paper: News Press
+  pop: "53015"
+  metro: !ruby/struct:CityMetro 
+    st: FL
+    city: Fort Myers
+    fips_state: "12"
+    fips_place: "24125"
+    cbsa_code: "15980"
+    metro_name: Cape Coral-Fort Myers, FL MSA
+    metro_stature: MSA
+    pop_2007: 590564
+    pop_2000: 440888
+    pop_rank: 85
+    pop_chg_pct_00_07: 33.95
+    pop_chg_pct_avg: 4.85
+    pop_at_or_above: 189211690
+    pop_aoa_pct: 62.0
+    metro_st: FL
+    metro_nickname: 
+    csa_name: 
+Douglas Daily Dispatch: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: Clinton
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 31.3445471
+  lng: -109.5453447
+  st: AZ
+  city: Douglas
+  paper: Douglas Daily Dispatch
+  pop: "16692"
+  metro: !ruby/struct:CityMetro 
+    st: AZ
+    city: Douglas
+    fips_state: "04"
+    fips_place: "20050"
+    cbsa_code: "43420"
+    metro_name: Sierra Vista-Douglas, AZ uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 St. Joseph News Press: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: Bush
@@ -12919,9 +13837,94 @@ St. Joseph News Press: !ruby/struct:Endorsement
     metro_st: MO-KS
     metro_nickname: 
     csa_name: 
+Silver City Daily Press and Independent: !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 7782
+  daily: 
+  sun: 
+  lat: 32.770075
+  lng: -108.280326
+  st: NM
+  city: Silver City
+  paper: Silver City Daily Press and Independent
+  pop: "9745"
+  metro: !ruby/struct:CityMetro 
+    st: NM
+    city: Silver City
+    fips_state: "35"
+    fips_place: "73260"
+    cbsa_code: "43500"
+    metro_name: Silver City, NM uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Albuquerque Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: Bush
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 35.0844909
+  lng: -106.6511367
+  st: NM
+  city: Albuquerque
+  paper: Albuquerque Tribune
+  pop: "487378"
+  metro: *id014
+Edmond Evening Sun: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: 
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 35.6528323
+  lng: -97.4780954
+  st: OK
+  city: Edmond
+  paper: Edmond Evening Sun
+  pop: "73915"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Times Daily: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -12953,23 +13956,6 @@ Times Daily: !ruby/struct:Endorsement
     metro_st: AL
     metro_nickname: The Shoals
     csa_name: 
-Albuquerque Tribune: !ruby/struct:Endorsement 
-  prez_2008: 
-  prez_2004: 
-  prez_2000: Bush
-  prez_1996: Dole
-  prez_1992: GHWBush
-  rank: 
-  circ: 
-  daily: 
-  sun: 
-  lat: 35.0844909
-  lng: -106.6511367
-  st: NM
-  city: Albuquerque
-  paper: Albuquerque Tribune
-  pop: "487378"
-  metro: *id012
 Stuttgart Daily Leader: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -13027,74 +14013,6 @@ Alamogordo Daily News: !ruby/struct:Endorsement
     fips_place: 01780
     cbsa_code: "10460"
     metro_name: Alamogordo, NM uSA
-    metro_stature: uSA
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
-    metro_nickname: 
-    csa_name: 
-Edmond Evening Sun: !ruby/struct:Endorsement 
-  prez_2008: 
-  prez_2004: 
-  prez_2000: 
-  prez_1996: Dole
-  prez_1992: GHWBush
-  rank: 
-  circ: 
-  daily: 
-  sun: 
-  lat: 35.6528323
-  lng: -97.4780954
-  st: OK
-  city: Edmond
-  paper: Edmond Evening Sun
-  pop: "73915"
-  metro: !ruby/struct:CityMetro 
-    st: 
-    city: 
-    fips_state: 
-    fips_place: 
-    cbsa_code: 
-    metro_name: 
-    metro_stature: 
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
-    metro_nickname: 
-    csa_name: 
-Silver City Daily Press and Independent: !ruby/struct:Endorsement 
-  prez_2008: McCain
-  prez_2004: 
-  prez_2000: 
-  prez_1996: 
-  prez_1992: 
-  rank: 
-  circ: 7782
-  daily: 
-  sun: 
-  lat: 32.770075
-  lng: -108.280326
-  st: NM
-  city: Silver City
-  paper: Silver City Daily Press and Independent
-  pop: "9745"
-  metro: !ruby/struct:CityMetro 
-    st: NM
-    city: Silver City
-    fips_state: "35"
-    fips_place: "73260"
-    cbsa_code: "43500"
-    metro_name: Silver City, NM uSA
     metro_stature: uSA
     pop_2007: 
     pop_2000: 
@@ -13174,43 +14092,9 @@ Beloit Daily News: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
-Advertiser: !ruby/struct:Endorsement 
-  prez_2008: 
-  prez_2004: 
-  prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
-  rank: 
-  circ: 40496
-  daily: 
-  sun: 
-  lat: 30.2240897
-  lng: -92.0198427
-  st: LA
-  city: Lafayette
-  paper: Advertiser
-  pop: "112197"
-  metro: !ruby/struct:CityMetro 
-    st: LA
-    city: Lafayette
-    fips_state: "22"
-    fips_place: "40735"
-    cbsa_code: "29180"
-    metro_name: Lafayette, LA MSA
-    metro_stature: MSA
-    pop_2007: 256494
-    pop_2000: 239086
-    pop_rank: 173
-    pop_chg_pct_00_07: 7.28
-    pop_chg_pct_avg: 1.04
-    pop_at_or_above: 223463892
-    pop_aoa_pct: 73.2
-    metro_st: LA
-    metro_nickname: Cajun Heartland USA
-    csa_name: Lafayette-Acadiana, LA CSA
 Everett Herald: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: Clinton
@@ -13242,6 +14126,74 @@ Everett Herald: !ruby/struct:Endorsement
     metro_st: WA
     metro_nickname: Seattle Metro
     csa_name: Seattle-Tacoma-Olympia, WA CSA
+Chronicle (Centralia): !ruby/struct:Endorsement 
+  prez_2008: McCain
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: Dole
+  prez_1992: GHWBush
+  rank: 
+  circ: 13912
+  daily: 
+  sun: 
+  lat: 46.7162136
+  lng: -122.9542972
+  st: WA
+  city: Centralia
+  paper: Chronicle (Centralia)
+  pop: "15107"
+  metro: !ruby/struct:CityMetro 
+    st: WA
+    city: Centralia
+    fips_state: "53"
+    fips_place: "11160"
+    cbsa_code: "16500"
+    metro_name: Centralia, WA uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Advertiser: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 40496
+  daily: 
+  sun: 
+  lat: 30.2240897
+  lng: -92.0198427
+  st: LA
+  city: Lafayette
+  paper: Advertiser
+  pop: "112197"
+  metro: !ruby/struct:CityMetro 
+    st: LA
+    city: Lafayette
+    fips_state: "22"
+    fips_place: "40735"
+    cbsa_code: "29180"
+    metro_name: Lafayette, LA MSA
+    metro_stature: MSA
+    pop_2007: 256494
+    pop_2000: 239086
+    pop_rank: 173
+    pop_chg_pct_00_07: 7.28
+    pop_chg_pct_avg: 1.04
+    pop_at_or_above: 223463892
+    pop_aoa_pct: 73.2
+    metro_st: LA
+    metro_nickname: Cajun Heartland USA
+    csa_name: Lafayette-Acadiana, LA CSA
 Daily Review (Hayward): !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -13344,43 +14296,9 @@ Press Journal: !ruby/struct:Endorsement
     metro_st: FL
     metro_nickname: ""
     csa_name: Port Saint Lucie-Sebastian-Vero Beach, FL CSA
-Chronicle (Centralia): !ruby/struct:Endorsement 
-  prez_2008: McCain
-  prez_2004: 
-  prez_2000: 
-  prez_1996: Dole
-  prez_1992: GHWBush
-  rank: 
-  circ: 13912
-  daily: 
-  sun: 
-  lat: 46.7162136
-  lng: -122.9542972
-  st: WA
-  city: Centralia
-  paper: Chronicle (Centralia)
-  pop: "15107"
-  metro: !ruby/struct:CityMetro 
-    st: WA
-    city: Centralia
-    fips_state: "53"
-    fips_place: "11160"
-    cbsa_code: "16500"
-    metro_name: Centralia, WA uSA
-    metro_stature: uSA
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
-    metro_nickname: 
-    csa_name: 
 Stamford Advocate: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: 
   prez_1992: Clinton
@@ -13428,7 +14346,7 @@ Amarillo Daily News: !ruby/struct:Endorsement
   city: Amarillo
   paper: Amarillo Daily News
   pop: "181766"
-  metro: &id017 !ruby/struct:CityMetro 
+  metro: &id019 !ruby/struct:CityMetro 
     st: TX
     city: Amarillo
     fips_state: "48"
@@ -13548,6 +14466,40 @@ Montgomery Journal: !ruby/struct:Endorsement
     metro_st: DC-VA-MD-WV
     metro_nickname: National Capital Area, Greater Washington
     csa_name: Washington-Baltimore-Northern Virginia, DC-MD-VA-WV CSA
+Palladium Item: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 15453
+  daily: 
+  sun: 
+  lat: 39.8289369
+  lng: -84.8902383
+  st: IN
+  city: Richmond
+  paper: Palladium Item
+  pop: "37631"
+  metro: !ruby/struct:CityMetro 
+    st: IN
+    city: Richmond
+    fips_state: "18"
+    fips_place: "64260"
+    cbsa_code: "39980"
+    metro_name: Richmond, IN uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Seattle Times: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -13564,7 +14516,7 @@ Seattle Times: !ruby/struct:Endorsement
   city: Seattle
   paper: Seattle Times
   pop: "569369"
-  metro: *id013
+  metro: *id015
 San Mateo Daily Journal: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -13581,7 +14533,7 @@ San Mateo Daily Journal: !ruby/struct:Endorsement
   city: San Mateo
   paper: San Mateo Daily Journal
   pop: "89982"
-  metro: &id037 !ruby/struct:CityMetro 
+  metro: &id039 !ruby/struct:CityMetro 
     st: CA
     city: San Mateo
     fips_state: "06"
@@ -13635,7 +14587,7 @@ Rock Springs Daily Rocket Miner: !ruby/struct:Endorsement
     csa_name: 
 Centre Daily Times: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: Clinton
@@ -13699,40 +14651,6 @@ Lincoln Journal Star: !ruby/struct:Endorsement
     pop_at_or_above: 218837167
     pop_aoa_pct: 71.7
     metro_st: NE
-    metro_nickname: 
-    csa_name: 
-Palladium Item: !ruby/struct:Endorsement 
-  prez_2008: Obama
-  prez_2004: Bush
-  prez_2000: 
-  prez_1996: 
-  prez_1992: 
-  rank: 
-  circ: 15453
-  daily: 
-  sun: 
-  lat: 39.8289369
-  lng: -84.8902383
-  st: IN
-  city: Richmond
-  paper: Palladium Item
-  pop: "37631"
-  metro: !ruby/struct:CityMetro 
-    st: IN
-    city: Richmond
-    fips_state: "18"
-    fips_place: "64260"
-    cbsa_code: "39980"
-    metro_name: Richmond, IN uSA
-    metro_stature: uSA
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
     metro_nickname: 
     csa_name: 
 Finger Lakes Times: !ruby/struct:Endorsement 
@@ -13853,7 +14771,7 @@ Times (Trenton): !ruby/struct:Endorsement
   city: Trenton
   paper: Times (Trenton)
   pop: "84833"
-  metro: &id019 !ruby/struct:CityMetro 
+  metro: &id021 !ruby/struct:CityMetro 
     st: NJ
     city: Trenton
     fips_state: "34"
@@ -13887,7 +14805,7 @@ Investor's Business Daily: !ruby/struct:Endorsement
   city: Los Angeles
   paper: Investor's Business Daily
   pop: "3694820"
-  metro: &id021 !ruby/struct:CityMetro 
+  metro: &id023 !ruby/struct:CityMetro 
     st: CA
     city: Los Angeles
     fips_state: "06"
@@ -13941,7 +14859,7 @@ Danville Register and Bee: !ruby/struct:Endorsement
     csa_name: 
 Albany Herald: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: Dole
   prez_1992: 
@@ -14125,7 +15043,7 @@ Tennessean: !ruby/struct:Endorsement
   city: Nashville
   paper: Tennessean
   pop: "530852"
-  metro: *id014
+  metro: *id016
 Marshfield News Herald: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -14162,7 +15080,7 @@ Marshfield News Herald: !ruby/struct:Endorsement
     csa_name: 
 Wichita Eagle: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
   prez_1992: Clinton
@@ -14244,7 +15162,7 @@ Boston Herald: !ruby/struct:Endorsement
   city: Boston
   paper: Boston Herald
   pop: "589141"
-  metro: &id032 !ruby/struct:CityMetro 
+  metro: &id034 !ruby/struct:CityMetro 
     st: MA
     city: Boston
     fips_state: "25"
@@ -14381,9 +15299,43 @@ Standard Times: !ruby/struct:Endorsement
     metro_st: RI-MA
     metro_nickname: Providence metropolitan area
     csa_name: Boston-Worcester-Manchester, MA-RI-NH CSA
+Morning Sentinel: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 44.5520105
+  lng: -69.6317121
+  st: ME
+  city: Waterville
+  paper: Morning Sentinel
+  pop: "15906"
+  metro: !ruby/struct:CityMetro 
+    st: ME
+    city: Waterville
+    fips_state: "23"
+    fips_place: "80740"
+    cbsa_code: "12300"
+    metro_name: Augusta-Waterville, ME uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Birmingham Post Herald: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: GHWBush
@@ -14397,7 +15349,7 @@ Birmingham Post Herald: !ruby/struct:Endorsement
   city: Birmingham
   paper: Birmingham Post Herald
   pop: "231621"
-  metro: *id015
+  metro: *id017
 Wenatchee World: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -14434,7 +15386,7 @@ Wenatchee World: !ruby/struct:Endorsement
     csa_name: 
 Press Democrat: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -14550,7 +15502,7 @@ Atlanta Daily World: !ruby/struct:Endorsement
   city: Atlanta
   paper: Atlanta Daily World
   pop: "422908"
-  metro: *id016
+  metro: *id018
 Fremont Tribune: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -14669,7 +15621,7 @@ Amarillo Globe News: !ruby/struct:Endorsement
   city: Amarillo
   paper: Amarillo Globe News
   pop: "181766"
-  metro: *id017
+  metro: *id019
 Fredericksburg Free Lance Star: !ruby/struct:Endorsement 
   prez_2008: abstain
   prez_2004: Bush
@@ -14992,7 +15944,7 @@ Las Vegas Review Journal: !ruby/struct:Endorsement
   city: Las Vegas
   paper: Las Vegas Review Journal
   pop: "478434"
-  metro: *id018
+  metro: *id020
 News Tribune: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -15097,7 +16049,7 @@ Decatur Daily: !ruby/struct:Endorsement
     csa_name: Huntsville-Decatur, AL CSA
 Trentonian: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: GHWBush
@@ -15111,7 +16063,7 @@ Trentonian: !ruby/struct:Endorsement
   city: Trenton
   paper: Trentonian
   pop: "84833"
-  metro: *id019
+  metro: *id021
 Casper Star Tribune: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Bush
@@ -15182,7 +16134,7 @@ Olympian: !ruby/struct:Endorsement
     csa_name: Seattle-Tacoma-Olympia, WA CSA
 Lebanon Daily Record: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: Dole
   prez_1992: GHWBush
@@ -15264,7 +16216,7 @@ El Paso Times: !ruby/struct:Endorsement
   city: El Paso
   paper: El Paso Times
   pop: "563662"
-  metro: *id020
+  metro: *id022
 Press Enterprise: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: Bush
@@ -15401,6 +16353,40 @@ Daily Breeze: !ruby/struct:Endorsement
     metro_st: CA
     metro_nickname: Greater Los Angeles, The Southland
     csa_name: Los Angeles-Long Beach-Riverside, CA CSA
+Corning Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 42.1428521
+  lng: -77.0546903
+  st: NY
+  city: Corning
+  paper: Corning Leader
+  pop: "10451"
+  metro: !ruby/struct:CityMetro 
+    st: NY
+    city: Corning
+    fips_state: "36"
+    fips_place: "18256"
+    cbsa_code: "18500"
+    metro_name: Corning, NY uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Denver Post: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Bush
@@ -15417,7 +16403,7 @@ Denver Post: !ruby/struct:Endorsement
   city: Denver
   paper: Denver Post
   pop: "554636"
-  metro: &id036 !ruby/struct:CityMetro 
+  metro: &id038 !ruby/struct:CityMetro 
     st: CO
     city: Denver
     fips_state: 08
@@ -15485,7 +16471,7 @@ Daily News (Los Angeles): !ruby/struct:Endorsement
   city: Los Angeles
   paper: Daily News (Los Angeles)
   pop: "3694820"
-  metro: *id021
+  metro: *id023
 Blackwell Journal Tribune: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -15672,7 +16658,7 @@ Detroit News: !ruby/struct:Endorsement
   city: Detroit
   paper: Detroit News
   pop: "951270"
-  metro: &id027 !ruby/struct:CityMetro 
+  metro: &id029 !ruby/struct:CityMetro 
     st: MI
     city: Detroit
     fips_state: "26"
@@ -15692,7 +16678,7 @@ Detroit News: !ruby/struct:Endorsement
     csa_name: Detroit-Warren-Flint, MI CSA
 Baltimore Examiner: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -15706,7 +16692,7 @@ Baltimore Examiner: !ruby/struct:Endorsement
   city: Baltimore
   paper: Baltimore Examiner
   pop: "610892"
-  metro: *id022
+  metro: *id024
 Longview News Journal: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -15808,6 +16794,40 @@ Florida Today: !ruby/struct:Endorsement
     pop_aoa_pct: 63.3
     metro_st: FL
     metro_nickname: Space Coast
+    csa_name: 
+Port Huron Times Herald: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 25386
+  daily: 
+  sun: 
+  lat: 42.9708634
+  lng: -82.4249142
+  st: MI
+  city: Port Huron
+  paper: Port Huron Times Herald
+  pop: "30978"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
     csa_name: 
 Bend Bulletin: !ruby/struct:Endorsement 
   prez_2008: McCain
@@ -16083,7 +17103,7 @@ Wilmington Star News: !ruby/struct:Endorsement
     csa_name: 
 Staten Island Advance: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -16304,7 +17324,7 @@ Vindicator: !ruby/struct:Endorsement
     csa_name: Youngstown-Warren-East Liverpool, OH-PA CSA
 Tribune: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -16336,9 +17356,43 @@ Tribune: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Peninsula Clarion: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 60.5544444
+  lng: -151.2583333
+  st: AK
+  city: Kenai
+  paper: Peninsula Clarion
+  pop: "7610"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Times (Shreveport): !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: Clinton
   prez_1992: Clinton
@@ -16522,7 +17576,7 @@ Wheeling News Register: !ruby/struct:Endorsement
   city: Wheeling
   paper: Wheeling News Register
   pop: "29388"
-  metro: *id023
+  metro: *id025
 Town Talk: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: Bush
@@ -16661,7 +17715,7 @@ Iola Register: !ruby/struct:Endorsement
     csa_name: 
 Cincinnati Post: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
   prez_1992: GHWBush
@@ -16675,10 +17729,10 @@ Cincinnati Post: !ruby/struct:Endorsement
   city: Cincinnati
   paper: Cincinnati Post
   pop: "306382"
-  metro: *id024
+  metro: *id026
 Courier Post: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: 
   prez_1992: Clinton
@@ -16747,7 +17801,7 @@ Herald and Review: !ruby/struct:Endorsement
 Press Telegram: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Bush
-  prez_2000: Gore
+  prez_2000: Bush
   prez_1996: 
   prez_1992: 
   rank: 
@@ -16780,7 +17834,7 @@ Press Telegram: !ruby/struct:Endorsement
     csa_name: Los Angeles-Long Beach-Riverside, CA CSA
 News and Record: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: Clinton
   prez_1992: Clinton
@@ -17016,6 +18070,40 @@ Advertiser Tribune: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Escanaba Daily Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 8993
+  daily: 
+  sun: 
+  lat: 45.7452466
+  lng: -87.0645801
+  st: MI
+  city: Escanaba
+  paper: Escanaba Daily Press
+  pop: "12622"
+  metro: !ruby/struct:CityMetro 
+    st: MI
+    city: Escanaba
+    fips_state: "26"
+    fips_place: "26360"
+    cbsa_code: "21540"
+    metro_name: Escanaba, MI uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Atlanta Journal: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -17032,7 +18120,7 @@ Atlanta Journal: !ruby/struct:Endorsement
   city: Atlanta
   paper: Atlanta Journal
   pop: "422908"
-  metro: *id016
+  metro: *id018
 Tyler Morning Telegraph: !ruby/struct:Endorsement 
   prez_2008: McCain
   prez_2004: 
@@ -17240,7 +18328,7 @@ Kearney Hub: !ruby/struct:Endorsement
 Yakima Herald Republic: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Bush
-  prez_2000: 
+  prez_2000: Bush
   prez_1996: 
   prez_1992: 
   rank: 
@@ -17409,7 +18497,7 @@ Republican Eagle: !ruby/struct:Endorsement
     csa_name: 
 Record Journal: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: 
@@ -17661,7 +18749,7 @@ Chattanooga Free Press: !ruby/struct:Endorsement
   city: Chattanooga
   paper: Chattanooga Free Press
   pop: "155554"
-  metro: &id038 !ruby/struct:CityMetro 
+  metro: &id040 !ruby/struct:CityMetro 
     st: TN
     city: Chattanooga
     fips_state: "47"
@@ -17695,7 +18783,7 @@ York Daily Record: !ruby/struct:Endorsement
   city: York
   paper: York Daily Record
   pop: "39587"
-  metro: &id034 !ruby/struct:CityMetro 
+  metro: &id036 !ruby/struct:CityMetro 
     st: PA
     city: York
     fips_state: "42"
@@ -17715,7 +18803,7 @@ York Daily Record: !ruby/struct:Endorsement
     csa_name: York-Hanover-Gettysburg, PA CSA
 Owensboro Messenger Inquirer: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -17886,7 +18974,7 @@ Syracuse Post Standard: !ruby/struct:Endorsement
 Brattleboro Reformer: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
-  prez_2000: 
+  prez_2000: abstain
   prez_1996: 
   prez_1992: Clinton
   rank: 
@@ -18019,6 +19107,40 @@ Clarksdale Press Register: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Journal Standard: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 12187
+  daily: 
+  sun: 
+  lat: 42.2966861
+  lng: -89.6212271
+  st: IL
+  city: Freeport
+  paper: Journal Standard
+  pop: "25619"
+  metro: !ruby/struct:CityMetro 
+    st: IL
+    city: Freeport
+    fips_state: "17"
+    fips_place: "27884"
+    cbsa_code: "23300"
+    metro_name: Freeport, IL uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Aberdeen Daily World: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -18089,7 +19211,7 @@ Williston Daily Herald: !ruby/struct:Endorsement
     csa_name: 
 Greeley Daily Tribune: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -18123,7 +19245,7 @@ Greeley Daily Tribune: !ruby/struct:Endorsement
     csa_name: Denver-Aurora-Boulder, CO CSA
 Times Picayune: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: Bush
   prez_1996: 
   prez_1992: GHWBush
@@ -18189,6 +19311,74 @@ Brookhaven Daily Leader: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Altoona Mirror: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: Bush
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 31658
+  daily: 
+  sun: 
+  lat: 40.5186809
+  lng: -78.3947359
+  st: PA
+  city: Altoona
+  paper: Altoona Mirror
+  pop: "46962"
+  metro: !ruby/struct:CityMetro 
+    st: PA
+    city: Altoona
+    fips_state: "42"
+    fips_place: 02184
+    cbsa_code: "11020"
+    metro_name: Altoona, PA MSA
+    metro_stature: MSA
+    pop_2007: 125527
+    pop_2000: 129144
+    pop_rank: 319
+    pop_chg_pct_00_07: -2.8
+    pop_chg_pct_avg: -0.4
+    pop_at_or_above: 245092620
+    pop_aoa_pct: 80.3
+    metro_st: PA
+    metro_nickname: 
+    csa_name: 
+Free Press: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 22072
+  daily: 
+  sun: 
+  lat: 44.1635775
+  lng: -93.9993996
+  st: MN
+  city: Mankato
+  paper: Free Press
+  pop: "35138"
+  metro: !ruby/struct:CityMetro 
+    st: MN
+    city: Mankato
+    fips_state: "27"
+    fips_place: "39878"
+    cbsa_code: "31860"
+    metro_name: Mankato-North Mankato, MN uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 La Opinion: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -18205,7 +19395,7 @@ La Opinion: !ruby/struct:Endorsement
   city: Los Angeles
   paper: La Opinion
   pop: "3694820"
-  metro: *id021
+  metro: *id023
 Skagit Valley Herald: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -18308,6 +19498,40 @@ San Diego Union Tribune: !ruby/struct:Endorsement
     metro_st: CA
     metro_nickname: San Diego County
     csa_name: 
+Shawano Leader: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 6525
+  daily: 
+  sun: 
+  lat: 44.7822064
+  lng: -88.6089917
+  st: WI
+  city: Shawano
+  paper: Shawano Leader
+  pop: "8378"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Tucson Citizen: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -18327,7 +19551,7 @@ Tucson Citizen: !ruby/struct:Endorsement
   metro: *id007
 Sunday News Tribune: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -18495,6 +19719,40 @@ Dothan Eagle: !ruby/struct:Endorsement
     metro_st: AL
     metro_nickname: The Wiregrass
     csa_name: Dothan-Enterprise-Ozark, AL CSA
+Lebanon Valley News: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 43.6422934
+  lng: -72.2517569
+  st: NH
+  city: Lebanon
+  paper: Lebanon Valley News
+  pop: "12853"
+  metro: !ruby/struct:CityMetro 
+    st: NH
+    city: Lebanon
+    fips_state: "33"
+    fips_place: "41300"
+    cbsa_code: "30100"
+    metro_name: Lebanon, NH-VT uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Portland Press Herald: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -18511,7 +19769,7 @@ Portland Press Herald: !ruby/struct:Endorsement
   city: Portland
   paper: Portland Press Herald
   pop: "63142"
-  metro: &id039 !ruby/struct:CityMetro 
+  metro: &id041 !ruby/struct:CityMetro 
     st: ME
     city: Portland
     fips_state: "23"
@@ -18545,10 +19803,10 @@ Journal Gazette: !ruby/struct:Endorsement
   city: Fort Wayne
   paper: Journal Gazette
   pop: "229715"
-  metro: *id025
+  metro: *id027
 Los Angeles Times: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: abstain
   prez_1996: 
   prez_1992: 
@@ -18562,7 +19820,7 @@ Los Angeles Times: !ruby/struct:Endorsement
   city: Los Angeles
   paper: Los Angeles Times
   pop: "3694820"
-  metro: *id021
+  metro: *id023
 Gary Post Tribune: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -18732,40 +19990,6 @@ Daily Press: !ruby/struct:Endorsement
     pop_aoa_pct: 46.5
     metro_st: VA-NC
     metro_nickname: Hampton Roads
-    csa_name: 
-Daily Globe: !ruby/struct:Endorsement 
-  prez_2008: McCain
-  prez_2004: 
-  prez_2000: 
-  prez_1996: 
-  prez_1992: 
-  rank: 
-  circ: 9109
-  daily: 
-  sun: 
-  lat: 43.6199639
-  lng: -95.5963979
-  st: MN
-  city: Worthington
-  paper: Daily Globe
-  pop: "11274"
-  metro: !ruby/struct:CityMetro 
-    st: MN
-    city: Worthington
-    fips_state: "27"
-    fips_place: "71734"
-    cbsa_code: "49380"
-    metro_name: Worthington, MN uSA
-    metro_stature: uSA
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
-    metro_nickname: 
     csa_name: 
 Daytona Beach News Journal: !ruby/struct:Endorsement 
   prez_2008: Obama
@@ -19039,9 +20263,43 @@ News and Observer: !ruby/struct:Endorsement
     metro_st: NC
     metro_nickname: Research Triangle, The Triangle
     csa_name: Raleigh-Durham-Cary, NC CSA
+Post Journal: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 17672
+  daily: 
+  sun: 
+  lat: 42.0970023
+  lng: -79.2353259
+  st: NY
+  city: Jamestown
+  paper: Post Journal
+  pop: "30077"
+  metro: !ruby/struct:CityMetro 
+    st: NY
+    city: Jamestown
+    fips_state: "36"
+    fips_place: "38264"
+    cbsa_code: "27460"
+    metro_name: Jamestown-Dunkirk-Fredonia, NY uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Johnson City Press: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: Clinton
   prez_1992: 
@@ -19075,7 +20333,7 @@ Johnson City Press: !ruby/struct:Endorsement
     csa_name: Johnson City-Kingsport-Bristol (Tri-Cities), TN-VA CSA
 Rapid City Journal: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -19209,6 +20467,40 @@ Canandaigua Daily Messenger: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Canon City Daily Record: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 38.3999988
+  lng: -105.2172123
+  st: CO
+  city: Canon City
+  paper: Canon City Daily Record
+  pop: "15972"
+  metro: !ruby/struct:CityMetro 
+    st: CO
+    city: Canon City
+    fips_state: 08
+    fips_place: "11810"
+    cbsa_code: "15860"
+    metro_name: Canon City, CO uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Honolulu Star Bulletin: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -19225,10 +20517,10 @@ Honolulu Star Bulletin: !ruby/struct:Endorsement
   city: Honolulu
   paper: Honolulu Star Bulletin
   pop: "371657"
-  metro: *id026
+  metro: *id028
 Times Standard: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -19242,7 +20534,7 @@ Times Standard: !ruby/struct:Endorsement
   city: Eureka
   paper: Times Standard
   pop: "25626"
-  metro: &id028 !ruby/struct:CityMetro 
+  metro: &id030 !ruby/struct:CityMetro 
     st: CA
     city: Eureka
     fips_state: "06"
@@ -19296,7 +20588,7 @@ Herald Standard: !ruby/struct:Endorsement
     csa_name: 
 Public Opinion: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -19378,7 +20670,7 @@ Detroit Free Press: !ruby/struct:Endorsement
   city: Detroit
   paper: Detroit Free Press
   pop: "951270"
-  metro: *id027
+  metro: *id029
 Daily Camera: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -19480,6 +20772,74 @@ Augusta Chronicle: !ruby/struct:Endorsement
     pop_aoa_pct: 63.8
     metro_st: GA-SC
     metro_nickname: Central Savannah River Area
+    csa_name: 
+Argus Observer: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 44.0265525
+  lng: -116.9629378
+  st: OR
+  city: Ontario
+  paper: Argus Observer
+  pop: "10969"
+  metro: !ruby/struct:CityMetro 
+    st: OR
+    city: Ontario
+    fips_state: "41"
+    fips_place: "54900"
+    cbsa_code: "36620"
+    metro_name: Ontario, OR-ID uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Herald Palladium: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 42.109762
+  lng: -86.4800228
+  st: MI
+  city: Saint Joseph
+  paper: Herald Palladium
+  pop: "8546"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
     csa_name: 
 Arkansas Democrat Gazette: !ruby/struct:Endorsement 
   prez_2008: McCain
@@ -19633,7 +20993,7 @@ Eureka Reporter: !ruby/struct:Endorsement
   city: Eureka
   paper: Eureka Reporter
   pop: "25626"
-  metro: *id028
+  metro: *id030
 Mail Tribune: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -19670,7 +21030,7 @@ Mail Tribune: !ruby/struct:Endorsement
     csa_name: 
 Shawnee News Star: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -19705,7 +21065,7 @@ Shawnee News Star: !ruby/struct:Endorsement
 Muskegon Chronicle: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
-  prez_2000: Gore
+  prez_2000: Bush
   prez_1996: 
   prez_1992: 
   rank: 
@@ -19752,10 +21112,10 @@ Atlanta Constitution: !ruby/struct:Endorsement
   city: Atlanta
   paper: Atlanta Constitution
   pop: "422908"
-  metro: *id016
+  metro: *id018
 Anderson Independent Mail: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: 
   prez_1996: 
   prez_1992: Clinton
@@ -19790,7 +21150,7 @@ Anderson Independent Mail: !ruby/struct:Endorsement
 Idaho Statesman: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
-  prez_2000: 
+  prez_2000: Bush
   prez_1996: Dole
   prez_1992: 
   rank: 
@@ -19957,40 +21317,6 @@ Hereford Brand: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
-Telegraph Forum: !ruby/struct:Endorsement 
-  prez_2008: Obama
-  prez_2004: 
-  prez_2000: 
-  prez_1996: 
-  prez_1992: 
-  rank: 
-  circ: 5969
-  daily: 
-  sun: 
-  lat: 40.8083909
-  lng: -82.9754649
-  st: OH
-  city: Bucyrus
-  paper: Telegraph Forum
-  pop: "12768"
-  metro: !ruby/struct:CityMetro 
-    st: OH
-    city: Bucyrus
-    fips_state: "39"
-    fips_place: "10030"
-    cbsa_code: "15340"
-    metro_name: Bucyrus, OH uSA
-    metro_stature: uSA
-    pop_2007: 
-    pop_2000: 
-    pop_rank: 
-    pop_chg_pct_00_07: 
-    pop_chg_pct_avg: 
-    pop_at_or_above: 
-    pop_aoa_pct: 
-    metro_st: 
-    metro_nickname: 
-    csa_name: 
 Muscatine Journal: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -20014,6 +21340,40 @@ Muscatine Journal: !ruby/struct:Endorsement
     fips_place: "55110"
     cbsa_code: "34700"
     metro_name: Muscatine, IA uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Telegraph Forum: !ruby/struct:Endorsement 
+  prez_2008: Obama
+  prez_2004: 
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 5969
+  daily: 
+  sun: 
+  lat: 40.8083909
+  lng: -82.9754649
+  st: OH
+  city: Bucyrus
+  paper: Telegraph Forum
+  pop: "12768"
+  metro: !ruby/struct:CityMetro 
+    st: OH
+    city: Bucyrus
+    fips_state: "39"
+    fips_place: "10030"
+    cbsa_code: "15340"
+    metro_name: Bucyrus, OH uSA
     metro_stature: uSA
     pop_2007: 
     pop_2000: 
@@ -20075,7 +21435,7 @@ Amarillo Globe Times: !ruby/struct:Endorsement
   city: Amarillo
   paper: Amarillo Globe Times
   pop: "181766"
-  metro: *id017
+  metro: *id019
 Philadelphia Daily News: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -20092,7 +21452,7 @@ Philadelphia Daily News: !ruby/struct:Endorsement
   city: Philadelphia
   paper: Philadelphia Daily News
   pop: "1517550"
-  metro: *id011
+  metro: *id013
 Dominion Post: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -20129,7 +21489,7 @@ Dominion Post: !ruby/struct:Endorsement
     csa_name: 
 Potomac News: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: 
   prez_1992: Clinton
@@ -20435,7 +21795,7 @@ Athens Messenger: !ruby/struct:Endorsement
     csa_name: 
 Springfield News Leader: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Kerry
   prez_2000: Gore
   prez_1996: 
   prez_1992: Clinton
@@ -20466,6 +21826,40 @@ Springfield News Leader: !ruby/struct:Endorsement
     pop_aoa_pct: 66.7
     metro_st: MO
     metro_nickname: The Ozarks
+    csa_name: 
+Daily News (Ludington): !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 7537
+  daily: 
+  sun: 
+  lat: 43.9552826
+  lng: -86.4525831
+  st: MI
+  city: Ludington
+  paper: Daily News (Ludington)
+  pop: "8245"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
     csa_name: 
 New York Post: !ruby/struct:Endorsement 
   prez_2008: McCain
@@ -20738,10 +22132,10 @@ Republican: !ruby/struct:Endorsement
   city: Springfield
   paper: Republican
   pop: "152227"
-  metro: *id029
+  metro: *id031
 Victoria Advocate: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: Dole
   prez_1992: GHWBush
@@ -20907,6 +22301,40 @@ Daily Comet: !ruby/struct:Endorsement
     pop_at_or_above: 230277798
     pop_aoa_pct: 75.5
     metro_st: LA
+    metro_nickname: 
+    csa_name: 
+Daily Mining Gazette: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 8672
+  daily: 
+  sun: 
+  lat: 47.1218715
+  lng: -88.5690118
+  st: MI
+  city: Houghton
+  paper: Daily Mining Gazette
+  pop: "7160"
+  metro: !ruby/struct:CityMetro 
+    st: MI
+    city: Houghton
+    fips_state: "26"
+    fips_place: "39360"
+    cbsa_code: "26340"
+    metro_name: Houghton, MI uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
     metro_nickname: 
     csa_name: 
 Register Citizen: !ruby/struct:Endorsement 
@@ -21231,7 +22659,7 @@ San Francisco Examiner: !ruby/struct:Endorsement
   city: San Francisco
   paper: San Francisco Examiner
   pop: "732072"
-  metro: *id030
+  metro: *id032
 Lufkin Daily News: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -21268,7 +22696,7 @@ Lufkin Daily News: !ruby/struct:Endorsement
     csa_name: 
 Colorado Springs Gazette: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: none
+  prez_2004: abstain
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -21368,9 +22796,43 @@ Pasadena Star News: !ruby/struct:Endorsement
     metro_st: CA
     metro_nickname: Greater Los Angeles, The Southland
     csa_name: Los Angeles-Long Beach-Riverside, CA CSA
+Superior Daily Telegram: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 46.7207737
+  lng: -92.1040796
+  st: WI
+  city: Superior
+  paper: Superior Daily Telegram
+  pop: "27368"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Charleston Daily Mail: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
   prez_1992: GHWBush
@@ -21384,7 +22846,7 @@ Charleston Daily Mail: !ruby/struct:Endorsement
   city: Charleston
   paper: Charleston Daily Mail
   pop: "50427"
-  metro: *id031
+  metro: *id033
 Stevens Point Journal: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -21521,6 +22983,40 @@ Asheville Citizen Times: !ruby/struct:Endorsement
     metro_st: NC
     metro_nickname: ""
     csa_name: Asheville-Brevard, NC CSA
+Adrian Daily Telegram: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 14205
+  daily: 
+  sun: 
+  lat: 41.8975471
+  lng: -84.0371659
+  st: MI
+  city: Adrian
+  paper: Adrian Daily Telegram
+  pop: "22704"
+  metro: !ruby/struct:CityMetro 
+    st: MI
+    city: Adrian
+    fips_state: "26"
+    fips_place: "00440"
+    cbsa_code: "10300"
+    metro_name: Adrian, MI uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Record (Bergen): !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -21795,7 +23291,7 @@ Sikeston Standard Democrat: !ruby/struct:Endorsement
     csa_name: 
 Carlisle Sentinel: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: 
   prez_1992: GHWBush
@@ -21945,7 +23441,7 @@ Boston Globe: !ruby/struct:Endorsement
   city: Boston
   paper: Boston Globe
   pop: "589141"
-  metro: *id032
+  metro: *id034
 San Angelo Standard Times: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -22016,7 +23512,7 @@ Plainview Daily Herald: !ruby/struct:Endorsement
     csa_name: 
 Record Searchlight: !ruby/struct:Endorsement 
   prez_2008: abstain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: GHWBush
@@ -22050,7 +23546,7 @@ Record Searchlight: !ruby/struct:Endorsement
     csa_name: 
 McCook Daily Gazette: !ruby/struct:Endorsement 
   prez_2008: McCain
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: 
   prez_1992: Perot
@@ -22098,7 +23594,7 @@ Wisconsin State Journal: !ruby/struct:Endorsement
   city: Madison
   paper: Wisconsin State Journal
   pop: "224625"
-  metro: *id033
+  metro: *id035
 York Dispatch: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -22115,7 +23611,7 @@ York Dispatch: !ruby/struct:Endorsement
   city: York
   paper: York Dispatch
   pop: "39587"
-  metro: *id034
+  metro: *id036
 Marietta Register: !ruby/struct:Endorsement 
   prez_2008: abstain
   prez_2004: 
@@ -22132,7 +23628,7 @@ Marietta Register: !ruby/struct:Endorsement
   city: Marietta
   paper: Marietta Register
   pop: "13795"
-  metro: *id035
+  metro: *id037
 Rocky Mountain News: !ruby/struct:Endorsement 
   prez_2008: abstain
   prez_2004: Bush
@@ -22149,10 +23645,10 @@ Rocky Mountain News: !ruby/struct:Endorsement
   city: Denver
   paper: Rocky Mountain News
   pop: "554636"
-  metro: *id036
+  metro: *id038
 Ledger Independent: !ruby/struct:Endorsement 
   prez_2008: Obama
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: 
   prez_1992: 
@@ -22173,6 +23669,40 @@ Ledger Independent: !ruby/struct:Endorsement
     fips_place: "51024"
     cbsa_code: "32500"
     metro_name: Maysville, KY uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
+Bluefield Daily Telegraph: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 17030
+  daily: 
+  sun: 
+  lat: 37.2698395
+  lng: -81.2223195
+  st: WV
+  city: Bluefield
+  paper: Bluefield Daily Telegraph
+  pop: "10945"
+  metro: !ruby/struct:CityMetro 
+    st: WV
+    city: Bluefield
+    fips_state: "54"
+    fips_place: 08524
+    cbsa_code: "14140"
+    metro_name: Bluefield, WV-VA uSA
     metro_stature: uSA
     pop_2007: 
     pop_2000: 
@@ -22234,7 +23764,7 @@ San Mateo County Times: !ruby/struct:Endorsement
   city: San Mateo
   paper: San Mateo County Times
   pop: "89982"
-  metro: *id037
+  metro: *id039
 Fairfax County Times: !ruby/struct:Endorsement 
   prez_2008: abstain
   prez_2004: 
@@ -22543,7 +24073,7 @@ Austin American Statesman: !ruby/struct:Endorsement
     csa_name: 
 Kingsport Times News: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: 
   prez_1996: Dole
   prez_1992: 
@@ -22677,6 +24207,40 @@ Courier News: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Glasgow Daily Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 36.995884
+  lng: -85.9119215
+  st: KY
+  city: Glasgow
+  paper: Glasgow Daily Times
+  pop: "13972"
+  metro: !ruby/struct:CityMetro 
+    st: KY
+    city: Glasgow
+    fips_state: "21"
+    fips_place: "31114"
+    cbsa_code: "23980"
+    metro_name: Glasgow, KY uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Daily Astorian: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -22745,6 +24309,40 @@ Globe Gazette: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Monroe Times: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 42.6011194
+  lng: -89.6384532
+  st: WI
+  city: Monroe
+  paper: Monroe Times
+  pop: "10608"
+  metro: !ruby/struct:CityMetro 
+    st: WI
+    city: Monroe
+    fips_state: "55"
+    fips_place: "53750"
+    cbsa_code: "33820"
+    metro_name: Monroe, WI uSA
+    metro_stature: uSA
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Chattanooga Times: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
@@ -22761,7 +24359,7 @@ Chattanooga Times: !ruby/struct:Endorsement
   city: Chattanooga
   paper: Chattanooga Times
   pop: "155554"
-  metro: *id038
+  metro: *id040
 Caledonian Record: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -22935,7 +24533,7 @@ Huntington Herald Press: !ruby/struct:Endorsement
 Santa Cruz Sentinel: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
-  prez_2000: 
+  prez_2000: Bush
   prez_1996: 
   prez_1992: 
   rank: 
@@ -22968,7 +24566,7 @@ Santa Cruz Sentinel: !ruby/struct:Endorsement
     csa_name: San Jose-San Francisco-Oakland, CA CSA
 Carlsbad Current Argus: !ruby/struct:Endorsement 
   prez_2008: 
-  prez_2004: 
+  prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
   prez_1992: 
@@ -23000,6 +24598,40 @@ Carlsbad Current Argus: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Newark Advocate: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Bush
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 18193
+  daily: 
+  sun: 
+  lat: 40.0581205
+  lng: -82.4012643
+  st: OH
+  city: Newark
+  paper: Newark Advocate
+  pop: "46812"
+  metro: !ruby/struct:CityMetro 
+    st: 
+    city: 
+    fips_state: 
+    fips_place: 
+    cbsa_code: 
+    metro_name: 
+    metro_stature: 
+    pop_2007: 
+    pop_2000: 
+    pop_rank: 
+    pop_chg_pct_00_07: 
+    pop_chg_pct_avg: 
+    pop_at_or_above: 
+    pop_aoa_pct: 
+    metro_st: 
+    metro_nickname: 
+    csa_name: 
 Maine Sunday Telegram: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 
@@ -23016,7 +24648,7 @@ Maine Sunday Telegram: !ruby/struct:Endorsement
   city: Portland
   paper: Maine Sunday Telegram
   pop: "63142"
-  metro: *id039
+  metro: *id041
 Times Herald Record: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: 
@@ -23153,10 +24785,44 @@ Selma Times Journal: !ruby/struct:Endorsement
     metro_st: 
     metro_nickname: 
     csa_name: 
+Journal Tribune: !ruby/struct:Endorsement 
+  prez_2008: 
+  prez_2004: Kerry
+  prez_2000: 
+  prez_1996: 
+  prez_1992: 
+  rank: 
+  circ: 
+  daily: 
+  sun: 
+  lat: 43.4925843
+  lng: -70.4533844
+  st: ME
+  city: Biddeford
+  paper: Journal Tribune
+  pop: "21885"
+  metro: !ruby/struct:CityMetro 
+    st: ME
+    city: Biddeford
+    fips_state: "23"
+    fips_place: 04860
+    cbsa_code: "38860"
+    metro_name: Portland-South Portland-Biddeford, ME MSA
+    metro_stature: MSA
+    pop_2007: 513102
+    pop_2000: 487566
+    pop_rank: 98
+    pop_chg_pct_00_07: 5.24
+    pop_chg_pct_avg: 0.75
+    pop_at_or_above: 196270122
+    pop_aoa_pct: 64.3
+    metro_st: ME
+    metro_nickname: ""
+    csa_name: Portland-Lewiston-South Portland, ME CSA
 Monterey County Herald: !ruby/struct:Endorsement 
   prez_2008: Obama
   prez_2004: Kerry
-  prez_2000: 
+  prez_2000: Bush
   prez_1996: 
   prez_1992: 
   rank: 
@@ -23237,7 +24903,7 @@ Lancaster New Era: !ruby/struct:Endorsement
   city: Lancaster
   paper: Lancaster New Era
   pop: "54735"
-  metro: *id040
+  metro: *id042
 Big Spring Herald: !ruby/struct:Endorsement 
   prez_2008: 
   prez_2004: 

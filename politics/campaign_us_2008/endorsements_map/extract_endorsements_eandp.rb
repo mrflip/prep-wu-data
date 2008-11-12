@@ -25,6 +25,7 @@ PRESIDENTS = {
   'GHW BUSH'            => 'GHWBush',
   'GEORGE W. BUSH'      => 'Bush',
   'AL GORE'             => 'Gore',
+  'JOHN KERRY'          => 'Kerry',
   'BARACK OBAMA'        => 'Obama',
   'JOHN McCAIN'         => 'McCain',
   'CLINTON'             => 'Clinton',
@@ -34,7 +35,7 @@ PRESIDENTS = {
   nil                   => '',
   'K'                   => 'Kerry',
   'B'                   => 'Bush',
-  'N'                   => 'none',
+  'N'                   => 'abstain',
   #'CHOOSING NO ENDORSEMENT' => 'abstain'
 }
 
@@ -42,6 +43,7 @@ ENDORSEMENT_RE = {
   1992 => /^([A-Z][a-z].+)?$/,
   1996 => /^([A-Z][a-z].+)?$/,
   2000 => /^([A-Z][a-z].+)?$/,
+  2004 => /^([^\:]*?)(?::?\s*\((B|G|N|N\/A|)\))?:? *([0-9,]+)?$/,
   2008 => /^([^\:]*?)(?::?\s*\((B|K|N|N\/A|)\))?:? *([0-9,]+)?$/,
 }
 
@@ -58,7 +60,7 @@ def parse_ep_endorsements(raw_filename, endorsement_re, year)
       next if l =~ /^[\s_]*$/                      # blank
       #
       case
-      when l =~ /(?:newspapers total|circulation total|= \d{4} Endorsement)/ then next
+      when l =~ /(?:newspapers total|circulation total|daily circulation|= \d{4} Endorsement)/ then next
       when l =~ /CHOOSING.*NO ENDORSEMENT/ then
         prez = 'abstain'
       when PRESIDENTS.include?(l)
@@ -82,7 +84,7 @@ def parse_ep_endorsements(raw_filename, endorsement_re, year)
           hsh = { :paper => paper, :st => st, :city => city }
           Endorsement.set_prez hsh, year, prez
           Endorsement.set_prez hsh, year-4, prez_prev unless (prez_prev.blank?)
-          hsh[:circ] = circ unless circ == 0
+          hsh[:circ] = circ unless circ == 0 || year != 2008
           # puts [hsh, l].to_json
           endorsements[paper] = hsh
         else
@@ -110,38 +112,49 @@ def fix_city_and_paper(orig_paper, state)
   paper.gsub!(/\s+&\s+/, ' and ')
   paper.gsub!(/-/, ' ')
   city = {
-    "Bloomington-Normal"            => "Bloomington",
-    "Conway-North Conway"           => "Conway",
-    "Dover-New Philadelphia"        => "New Philadelphia",
-    "Escondido-Oceanside"           => "Escondido",
-    "Lafayette-West Lafayette"      => "Lafayette",
-    "Lafayette-West Lafayette"      => "Lafayette",
-    "Neptune-Asbury Park"           => "Asbury Park",
-    "Pasco-Kennewick-Richland"      => "Kennewick",
-    "Primos-Upper Darby"            => "Philadelphia",
-    'Bryan-College Station'         => 'Bryan',
-    'Champaign-Urbana'              => 'Champaign',
-    'Conway-North Conway'           => 'Conway',
-    'Fort Meyers'                   => 'Fort Myers',
-    'Ft. Lauderdale'                => 'Fort Lauderdale',
-    'LaCrosse'                      => 'La Crosse',
-    'Lake County-Willoughby'        => 'Willoughby',
-    'Neptune'                       => 'Asbury Park',
-    'Newport News-Hampton'          => 'Newport News',
-    'Palm Springs-Palm Desert'      => 'Palm Springs',
-    'West Lafayette'                => 'Lafayette',
-    'Wilkes Barre'                  => 'Wilkes-Barre',
-    'Centralia-Chehalis'            => 'Centralia',
-    'St. Charles'                   => 'Saint Charles',
-    'Camden-Cherry Hill'            => 'Cherry Hill',
+    "Bloomington-Normal"       => "Bloomington",
+    "Conway-North Conway"      => "Conway",
+    "Dover-New Philadelphia"   => "New Philadelphia",
+    "Escondido-Oceanside"      => "Escondido",
+    "Lafayette-West Lafayette" => "Lafayette",
+    "Lafayette-West Lafayette" => "Lafayette",
+    "Neptune-Asbury Park"      => "Asbury Park",
+    "Pasco-Kennewick-Richland" => "Kennewick",
+    "Primos-Upper Darby"       => "Philadelphia",
+    'Bryan-College Station'    => 'Bryan',
+    'Champaign-Urbana'         => 'Champaign',
+    'Conway-North Conway'      => 'Conway',
+    'Fort Meyers'              => 'Fort Myers',
+    'Ft. Lauderdale'           => 'Fort Lauderdale',
+    'LaCrosse'                 => 'La Crosse',
+    'Lake County-Willoughby'   => 'Willoughby',
+    'Neptune'                  => 'Asbury Park',
+    'Newport News-Hampton'     => 'Newport News',
+    'Palm Springs-Palm Desert' => 'Palm Springs',
+    'West Lafayette'           => 'Lafayette',
+    'Wilkes Barre'             => 'Wilkes-Barre',
+    'Centralia-Chehalis'       => 'Centralia',
+    'St. Charles'              => 'Saint Charles',
+    'Camden-Cherry Hill'       => 'Cherry Hill',
+    'Willingboro'              => 'Burlington',
+    'Camden'                   => 'Cherry Hill',
+    'Bridgewater'              => 'Bound Brook',
+    'Parsippany'               => 'Morristown',
     # ''               => '',
   }[city] || city
   paper = {
-    'Washinton Times'               => 'Washington Times',
-    'JournalNews'                   => 'Journal News',
-    'TimesDaily'                    => 'Times Daily',
-    'Fort Meyers News Press'        => 'News Press',
-    'Syracuse Herald American'      => 'Syracuse Post Standard',
+    'Washinton Times'                    => 'Washington Times',
+    'JournalNews'                        => 'Journal News',
+    'TimesDaily'                         => 'Times Daily',
+    'Fort Meyers News Press'             => 'News Press',
+    'Syracuse Herald American'           => 'Syracuse Post Standard',
+    'Mobile Register'                    => 'Mobile Press Register',
+    'San Bernardino Sun'          => 'San Bernardino County Sun',
+    'Waterbury Republican American'      => 'Republican American',
+    'Treasure Coast News/Press Tribune'  => 'Tribune',
+    'Springfield State Journal Register' => 'State Journal Register',
+    'Free Lance Star'                    => 'Fredericksburg Free Lance Star',
+    'Easton Star Democrat' => 'Star Democrat',
     # ''               => '',
   }[paper] || paper
   # Some special cases
@@ -168,7 +181,7 @@ end
 # Extract the endorsements
 #
 [
-  1992, 1996, 2000,
+  1992, 1996, 2000, 2004,
   2008].each do |year|
   raw_filename = "ripd/endorsements_#{year}/endorsements-raw-#{year}.txt"
   out_filename = "data/endorsements_#{year}_eandp.yaml"

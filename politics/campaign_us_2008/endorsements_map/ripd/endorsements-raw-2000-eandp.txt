@@ -121,6 +121,7 @@ IOWA
 
 Quad-City Times, Davenport
 Gazette, Cedar Rapids
+Iowa City Press-Citizen
 
 KANSAS
 
@@ -164,6 +165,7 @@ The Flint Journal
 The Grand Rapids Press
 Kalamazoo Gazette
 Daily Tribune (Royal Oak)               # 11/1/00 http://www.gwu.edu/~action/natendorse5.html
+Muskegon Chronicle
 
 MINNESOTA
 
@@ -380,7 +382,6 @@ The Fresno Bee
 Marin Independent-Journal
 The Modesto Bee
 Press Democrat, Santa Rosa
-Press Telegram, Long Beach
 The Sacramento Bee
 San Francisco Chronicle
 San Francisco Examiner
@@ -446,7 +447,6 @@ IOWA
 
 The Des Moines Register
 The Hawk Eye, Burlington
-Iowa City Press-Citizen
 
 KANSAS
 
@@ -483,7 +483,6 @@ MICHIGAN
 Detroit Free Press
 Lansing State Journal
 The Macomb Daily
-Muskegon Chronicle
 
 MINNESOTA
 
