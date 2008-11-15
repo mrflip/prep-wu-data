@@ -1,43 +1,87 @@
-"Patriot Ledger":               { 1996 => "--"      }
-"San Diego Union Tribune":      { 1996 => "--"      }
-"Anchorage Daily News":         { 1996 => "Clinton" }
-"Austin American Statesman":    { 1996 => "Clinton" }
-"Buffalo News":                 { 1996 => "Clinton" }
-"Chattanooga Times":            { 1996 => "Clinton" }
-"Fresno Bee":                   { 1996 => "Clinton" }
-"Huntsville Times":             { 1996 => "Clinton" }
-"Lakeland Ledger":              { 1996 => "Clinton" }
-"Lincoln Journal Star":         { 1996 => "Clinton" }
-"News Journal (Wilmington)":    { 1996 => "Clinton" }
-"News Tribune":                 { 1996 => "Clinton" }
-"News and Observer":            { 1996 => "Clinton" }
-"Portland Press Herald":        { 1996 => "Clinton" }
-"Press Enterprise":             { 1996 => "Clinton" }
-"San Francisco Chronicle":      { 1996 => "Clinton" }
-"Sarasota Herald Tribune":      { 1996 => "Clinton" }
-"St. Petersburg Times":         { 1996 => "Clinton" }
-"Syracuse Post Standard":       { 1996 => "Clinton" }
-"Virginian Pilot":              { 1996 => "Clinton" }
-"Washington Post":              { 1996 => "Clinton" }
-"Bangor Daily News":            { 1996 => "Dole"    }
-"Birmingham News":              { 1996 => "Dole"    }
-"Florida Times Union":          { 1996 => "Dole"    }
-"Mobile Press Register":        { 1996 => "Dole"    }
-"Omaha World Herald":           { 1996 => "Dole"    }
-"Post and Courier":             { 1996 => "Dole"    }
-"Providence Journal":           { 1996 => "Dole"    }
-"Telegram and Gazette":         { 1996 => "Dole"    }
-"Times Union":                  { 1996 => "Dole"    }
-"Wisconsin State Journal":      { 1996 => "Dole"    }
-"Arkansas Democrat Gazette":    { 1996 => "abstain" }
-"Miami Herald":                 { 1996 => "abstain" }
-"Sun (Baltimore)":              { 1996 => "abstain" }
-"Times Picayune":               { 1996 => "abstain" }
-"Bakersfield Californian":      { 1996 => "xx"      }
-"Blade":                        { 1996 => "xx"      }
-"Colorado Springs Gazette":     { 1996 => "xx"      }
-"Contra Costa Times":           { 1996 => "xx"      }
-"Daily News (Los Angeles)":     { 1996 => "xx"      }
-"El Paso Times":                { 1996 => "xx"      }
-"Flint Journal":                { 1996 => "xx"      }
-"Journal News":                 { 1996 => "xx"      }
+
+
+# "Atlanta Journal Constitution" # -- is from the Atlanta Journal and the Atlanta Constitution
+"Atlanta Journal":                  { :prez_1992: "Bush"                                               } #           Atlanta, GA          
+"Boston Herald":                    { :prez_1992: "Bush"                                               } #
+"Virginian Pilot":                  { :prez_1992: "--",      :prez_1996: "Clinton"                     } #  175005   Norfolk, VA          # !!  no 1992 in LN (?)
+"News Journal (Wilmington)":        { :prez_1992: "--",      :prez_1996: "Clinton"                     } #  110171   Wilmington, DE       # !!  No Lexis-Nexis at all
+"News Tribune":                     { :prez_1992: "--",      :prez_1996: "Clinton"                     } #  111778   Tacoma, WA           # !!  no 1992 in LN (?)
+"Sarasota Herald Tribune":          { :prez_1992: "--",      :prez_1996: "Clinton"                     } #  114904   Sarasota, FL         # !!  no 1992 in LN (?)
+"Pittsburgh Post Gazette":          { :prez_1992: "--",      :prez_1996: "Clinton"                     } #  214374   Pittsburgh, PA       # no search results for 1992
+"Blade":                            { :prez_1992: "--",      :prez_1996: "Clinton"                     } #  119901   Toledo, OH           # !!  no 1992 --
+"Post and Courier":                 { :prez_1992: "--",      :prez_1996: "Dole"                        } #  100400   Charleston, SC       # !!  no 1992 in LN (?)
+"Providence Journal":               { :prez_1992: "--",      :prez_1996: "Dole"                        } #  139055   Providence, RI       # LN 1994 --
+"Birmingham News":                  { :prez_1992: "--",      :prez_1996: "Dole"                        } #  140438   Birmingham, AL       # !!  no 1992 in LN (?)
+"Arkansas Democrat Gazette":        { :prez_1992: "--",      :prez_1996: "abstain"                     } #  182212   Little Rock, AR      # !!  no 1992 in LN (?)
+"Daily News (Los Angeles)":         { :prez_1992: "--",      :prez_1996: "--"                          } #  137344   Los Angeles, CA      # LN 1997 --
+"South Florida Sun Sentinel":       { :prez_1992: "Bush",    :prez_1996: "Clinton"                     } #  218286   Fort Lauderdale, FL  # !!  No Lexis-Nexis at all 
+"San Francisco Chronicle":          { :prez_1992: "Bush",    :prez_1996: "Clinton"                     } #                                
+"Austin American Statesman":        { :prez_1992: "Clinton", :prez_1996: "Clinton"                     } #                                
+"Buffalo News":                     { :prez_1992: "Clinton", :prez_1996: "Clinton"                     } #
+"Press Enterprise":                 { :prez_1992: "Clinton", :prez_1996: "Clinton"                     } # 
+"Wisconsin State Journal":          { :prez_1992: "Clinton", :prez_1996: "Dole"                        } #                                
+"Miami Herald":                     { :prez_1992: "abstain", :prez_1996: "abstain"                     } #  240223   Miami, FL            # !!  Only as aggregate
+"Sun (Baltimore)":                  { :prez_1992: "abstain", :prez_1996: "abstain"                     } #  232360   Baltimore, MD        # !!  no 1992 in LN (?)
+"Los Angeles Times":                { :prez_1992: "abstain", :prez_1996: "abstain"                     } #                                
+"Anchorage Daily News":             {                        :prez_1996: "Clinton"                     } #                                
+"Chattanooga Times":                {                        :prez_1996: "Clinton"                     } #                                
+"Fresno Bee":                       {                        :prez_1996: "Clinton"                     } #                                
+"Huntsville Times":                 {                        :prez_1996: "Clinton"                     } #                                
+"Lakeland Ledger":                  {                        :prez_1996: "Clinton"                     } #                                
+"Lincoln Journal Star":             {                        :prez_1996: "Clinton"                     } #                                
+"News and Observer":                {                        :prez_1996: "Clinton"                     } #                                
+"Portland Press Herald":            {                        :prez_1996: "Clinton"                     } #                                # !!  no 1992 in LN (?)
+"St. Petersburg Times":             {                        :prez_1996: "Clinton"                     } #                                
+"Syracuse Post Standard":           {                        :prez_1996: "Clinton"                     } #                                
+"Washington Post":                  {                        :prez_1996: "Clinton"                     } #                                
+"Bangor Daily News":                {                        :prez_1996: "Dole"                        } #                                # !!  no 1992 in LN (?)
+"Florida Times Union":              {                        :prez_1996: "Dole"                        } #                                
+"Mobile Press Register":            {                        :prez_1996: "Dole"                        } #                                
+"Omaha World Herald":               {                        :prez_1996: "Dole"                        } #                                
+"Telegram and Gazette":             {                        :prez_1996: "Dole"                        } #                                # !!  no 1992 in LN (?)
+"Times Union":                      {                        :prez_1996: "Dole"                        } #                                # !!  no 1992 in LN (?)
+"Times Picayune":                   {                        :prez_1996: "abstain"                     } #                                
+"Contra Costa Times":               {                        :prez_1996: "--"                          } #  183086   Walnut Creek, CA     
+"Journal News":                     {                        :prez_1996: "--"                          } #  108092   White Plains, NY     
+"San Diego Union Tribune":          {                        :prez_1996: "--"                          } #  288669   San Diego, CA        
+
+"Richmond Times Dispatch":          { :prez_1992: "--"                                                 } #  175265   Richmond, VA         # !!  no 1992 in LN (?)
+"Milwaukee Journal Sentinel":       { :prez_1992: "--"                                                 } #  217755   Milwaukee, WI        # !!  no 1992 in LN (?)
+"Tampa Tribune":                    { :prez_1992: "--"                                                 } #  220522   Tampa, FL            # !!  no 1992 in LN (?)
+"Indianapolis Star":                { :prez_1992: "--"                                                 } #  255303   Indianapolis, IN     # !!  Only as aggregate
+"Las Vegas Review Journal":         { :prez_1992: "--"                                                 } # 174341/2  Las Vegas, NV        # !!  no 1992 in LN (?)
+"Arizona Republic":                 {                        :prez_1996: "!!"                          } #  413332   Phoenix, AZ          # no archives to 1996
+"Newsday":                          {                        :prez_1996: "!!"                          } #  379613   Melville, NY         # http://pqasb.pqarchiver.com/newsday/access/17073374.html?dids=17073374:17073374&FMT=CITE&FMTS=CITE:FT&type=current&date=Nov+5%2C+1996&author=&pub=Newsday&edition=&startpage=A.34&desc=It%27s+Election+Day%3B+Here+Are+Newsday%27s+Choices
+"Orlando Sentinel":                 {                        :prez_1996: "!!"                          } #  227593   Orlando, FL          # http://pqasb.pqarchiver.com/orlandosentinel/access/77922160.html?dids=77922160:77922160&FMT=ABS&FMTS=ABS:FT&type=current&date=Nov+5%2C+1996&author=&pub=Orlando+Sentinel&edition=&startpage=A.12&desc=SENTINEL+RECOMMENDS+.+.+.
+"Rochester Democrat and Chronicle": {                        :prez_1996: "--"                          } #  145913   Rochester, NY        # !!  no 1996 in LN (?)
+"Tribune Review":                   { :prez_1992: "--",      :prez_1996: ""                            } #  150911   Greensburg, PA       # LN 2004 --
+
+# meh. 
+# "State":                            { :prez_1992: ""                                                   } #  101010   Columbia, SC         # !!  no 1992 in LN (?)
+# "Morning Call":                     { :prez_1992: "",        :prez_1996: ""                            } #  108797   Allentown, PA        
+# "Lexington Herald Leader":          {                        :prez_1996: ""                            } #  109624   Lexington, KY        
+# "La Opinion":                       {                        :prez_1996: ""                            } #  114892   Los Angeles, CA      
+# "Akron Beacon Journal":             { :prez_1992: "",        :prez_1996: ""                            } #  119929   Akron, OH            
+# "Salt Lake Tribune":                { :prez_1992: "",        :prez_1996: "",            :prez_2000: "" } #  121699   Salt Lake City, UT   
+# "Grand Rapids Press":               { :prez_1992: "",        :prez_1996: ""                            } #  128930   Grand Rapids, MI     
+# "Daily Herald":                     { :prez_1992: "",        :prez_1996: ""                            } #  143152   Arlington Heights, IL
+# --    Appears to not have endorsed
+# xx    Found nothing in Lexis-Nexis or online
+# else  meh.
+# "Bakersfield Californian":      { :prez_1996: "xx"      } #                                   
+# "Blade":                        { :prez_1996: "xx"      } #                                   
+# "Clarion Ledger":               { } # !!  No Lexis-Nexis at all
+# "Colorado Springs Gazette":     { :prez_1996: "xx"      } #                                   
+# "Connecticut Post":             { } # !!  Only as aggregate
+# "Corpus Christi Caller Times":  { } # !!  No Lexis-Nexis at all
+# "El Paso Times":                { :prez_1996: "xx"      } #                                   
+# "Flint Journal":                { :prez_1996: "xx"      } #                                   
+# "Florida Today":                { } # !!  No Lexis-Nexis at all
+# "Gazette":                      { } # !!  No Lexis-Nexis at all
+# "Idaho Statesman":              { } # !!  Only as aggregate
+# "Inland Valley Daily Bulletin": { } #                                 
+# "Journal Gazette":              { } #                                 
+# "Patriot Ledger":               { :prez_1996: "--"      } #                                   
+# "Reno Gazette Journal":         { } #                                 
+# "San Diego Union Tribune":      { :prez_1996: "--"      } #                                   
+# "Ventura County Star":          { } #                                 

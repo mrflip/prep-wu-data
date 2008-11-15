@@ -275,7 +275,7 @@ Florida Times Union: !ruby/struct:Endorsement
   prez_2008: abstain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Dole
   prez_1992: GHWBush
   rank: 71
   circ: 144391
@@ -649,7 +649,7 @@ Rochester Democrat and Chronicle: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: --
   prez_1992: Clinton
   rank: 70
   circ: 145913
@@ -1091,7 +1091,7 @@ Orlando Sentinel: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: "!!"
   prez_1992: GHWBush
   rank: 33
   circ: 227593
@@ -1126,7 +1126,7 @@ Richmond Times Dispatch: !ruby/struct:Endorsement
   prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
-  prez_1992: 
+  prez_1992: --
   rank: 57
   circ: 175265
   daily: 175265
@@ -2281,8 +2281,8 @@ Buffalo News: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: Clinton
   rank: 55
   circ: 178365
   daily: 178365
@@ -2825,8 +2825,8 @@ News Journal (Wilmington): !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: --
   rank: 91
   circ: 110171
   daily: 110171
@@ -3097,8 +3097,8 @@ South Florida Sun Sentinel: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: Bush
   rank: 39
   circ: 218286
   daily: 218286
@@ -3624,7 +3624,7 @@ Contra Costa Times: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: --
   prez_1992: Clinton
   rank: 50
   circ: 183086
@@ -3880,7 +3880,7 @@ Tribune Review: !ruby/struct:Endorsement
   prez_2004: Bush
   prez_2000: Bush
   prez_1996: 
-  prez_1992: 
+  prez_1992: --
   rank: 67
   circ: 150911
   daily: 150911
@@ -4491,8 +4491,8 @@ Sun (Baltimore): !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: abstain
+  prez_1992: abstain
   rank: 32
   circ: 232360
   daily: 232360
@@ -4917,7 +4917,7 @@ Milwaukee Journal Sentinel: !ruby/struct:Endorsement
   prez_2004: Kerry
   prez_2000: abstain
   prez_1996: Dole
-  prez_1992: 
+  prez_1992: --
   rank: 40
   circ: 217755
   daily: 217755
@@ -5188,7 +5188,7 @@ Omaha World Herald: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Dole
   prez_1992: GHWBush
   rank: 54
   circ: 178545
@@ -6225,8 +6225,8 @@ San Francisco Chronicle: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: Bush
   rank: 12
   circ: 370345
   daily: 370345
@@ -6497,7 +6497,7 @@ Lakeland Ledger: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 
   circ: 65948
@@ -6973,7 +6973,7 @@ Mobile Press Register: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Dole
   prez_1992: GHWBush
   rank: 
   circ: 99433
@@ -8367,8 +8367,8 @@ Pittsburgh Post Gazette: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: --
   rank: 42
   circ: 214374
   daily: 214374
@@ -9404,8 +9404,8 @@ Post and Courier: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Dole
+  prez_1992: --
   rank: 99
   circ: 100400
   daily: 100400
@@ -9540,7 +9540,7 @@ St. Petersburg Times: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 20
   circ: 316007
@@ -10033,8 +10033,8 @@ Virginian Pilot: !ruby/struct:Endorsement
   prez_2008: abstain
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: --
   rank: 58
   circ: 175005
   daily: 175005
@@ -10203,8 +10203,8 @@ Blade: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: --
   rank: 83
   circ: 119901
   daily: 119901
@@ -13263,7 +13263,7 @@ Bangor Daily News: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Dole
   prez_1992: 
   rank: 
   circ: 55627
@@ -13671,8 +13671,8 @@ Birmingham News: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Dole
+  prez_1992: --
   rank: 74
   circ: 140438
   daily: 140438
@@ -14623,7 +14623,7 @@ Lincoln Journal Star: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 
   circ: 78350
@@ -15151,7 +15151,7 @@ Boston Herald: !ruby/struct:Endorsement
   prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
-  prez_1992: 
+  prez_1992: Bush
   rank: 51
   circ: 182350
   daily: 182350
@@ -15184,7 +15184,7 @@ Washington Post: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 7
   circ: 673180
@@ -15933,7 +15933,7 @@ Las Vegas Review Journal: !ruby/struct:Endorsement
   prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
-  prez_1992: 
+  prez_1992: --
   rank: 59
   circ: 174341
   daily: 174341
@@ -15949,8 +15949,8 @@ News Tribune: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: --
   rank: 90
   circ: 111778
   daily: 111778
@@ -16221,8 +16221,8 @@ Press Enterprise: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: Clinton
   rank: 63
   circ: 164189
   daily: 164189
@@ -16459,8 +16459,8 @@ Daily News (Los Angeles): !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: --
+  prez_1992: --
   rank: 78
   circ: 137344
   daily: 137344
@@ -16613,7 +16613,7 @@ Indianapolis Star: !ruby/struct:Endorsement
   prez_2004: Bush
   prez_2000: Bush
   prez_1996: Dole
-  prez_1992: 
+  prez_1992: --
   rank: 26
   circ: 255303
   daily: 255303
@@ -17003,7 +17003,7 @@ Huntsville Times: !ruby/struct:Endorsement
   prez_2008: abstain
   prez_2004: 
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: 
   rank: 
   circ: 53194
@@ -18109,7 +18109,7 @@ Atlanta Journal: !ruby/struct:Endorsement
   prez_2004: 
   prez_2000: Bush
   prez_1996: Dole
-  prez_1992: 
+  prez_1992: Bush
   rank: 
   circ: 
   daily: 
@@ -18601,8 +18601,8 @@ Sarasota Herald Tribune: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: --
   rank: 86
   circ: 114904
   daily: 114904
@@ -18941,7 +18941,7 @@ Syracuse Post Standard: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: 
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Perot
   rank: 92
   circ: 110061
@@ -19043,8 +19043,8 @@ Providence Journal: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Dole
+  prez_1992: --
   rank: 76
   circ: 139055
   daily: 139055
@@ -19247,7 +19247,7 @@ Times Picayune: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: abstain
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: abstain
   prez_1992: GHWBush
   rank: 53
   circ: 179834
@@ -19468,7 +19468,7 @@ San Diego Union Tribune: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: --
   prez_1992: GHWBush
   rank: 24
   circ: 288669
@@ -19757,7 +19757,7 @@ Portland Press Herald: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: 
   rank: 
   circ: 64938
@@ -19808,8 +19808,8 @@ Los Angeles Times: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: abstain
   prez_2000: abstain
-  prez_1996: 
-  prez_1992: 
+  prez_1996: abstain
+  prez_1992: abstain
   rank: 4
   circ: 773884
   daily: 773884
@@ -20199,7 +20199,7 @@ Anchorage Daily News: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 
   circ: 62893
@@ -20233,7 +20233,7 @@ News and Observer: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 56
   circ: 176083
@@ -20845,8 +20845,8 @@ Arkansas Democrat Gazette: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: abstain
+  prez_1992: --
   rank: 52
   circ: 182212
   daily: 182212
@@ -20947,7 +20947,7 @@ Telegram and Gazette: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: Dole
   prez_1992: 
   rank: 
   circ: 81437
@@ -21219,7 +21219,7 @@ Newsday: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: "!!"
   prez_1992: Clinton
   rank: 11
   circ: 379613
@@ -23582,8 +23582,8 @@ Wisconsin State Journal: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Dole
+  prez_1992: Clinton
   rank: 
   circ: 87930
   daily: 
@@ -23719,7 +23719,7 @@ Tampa Tribune: !ruby/struct:Endorsement
   prez_2004: abstain
   prez_2000: Bush
   prez_1996: Dole
-  prez_1992: 
+  prez_1992: --
   rank: 38
   circ: 220522
   daily: 220522
@@ -23905,7 +23905,7 @@ Journal News: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: --
   prez_1992: Clinton
   rank: 95
   circ: 108092
@@ -23939,7 +23939,7 @@ Times Union: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Dole
   prez_1992: 
   rank: 
   circ: 89256
@@ -24041,8 +24041,8 @@ Austin American Statesman: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
-  prez_1992: 
+  prez_1996: Clinton
+  prez_1992: Clinton
   rank: 60
   circ: 170309
   daily: 170309
@@ -24347,7 +24347,7 @@ Chattanooga Times: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 
   circ: 71716
@@ -24432,7 +24432,7 @@ Fresno Bee: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
+  prez_1996: Clinton
   prez_1992: Clinton
   rank: 68
   circ: 150334
@@ -24942,8 +24942,8 @@ Miami Herald: !ruby/struct:Endorsement
   prez_2008: Obama
   prez_2004: Kerry
   prez_2000: Gore
-  prez_1996: 
-  prez_1992: 
+  prez_1996: abstain
+  prez_1992: abstain
   rank: 30
   circ: 240223
   daily: 240223
@@ -25010,7 +25010,7 @@ Arizona Republic: !ruby/struct:Endorsement
   prez_2008: McCain
   prez_2004: Bush
   prez_2000: Bush
-  prez_1996: 
+  prez_1996: "!!"
   prez_1992: GHWBush
   rank: 10
   circ: 413332
