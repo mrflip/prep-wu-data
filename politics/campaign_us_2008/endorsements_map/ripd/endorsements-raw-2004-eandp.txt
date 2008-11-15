@@ -1,0 +1,609 @@
+JOHN KERRY
+213 newspapers total
+20,882,889 daily circulation
+
+ALABAMA (4)
+Montgomery Advertiser (G): 61,208
+The Tuscaloosa News (G): 34,616
+The Anniston Star (G): 26,527
+The Decatur Daily (G): 23,641
+
+ALASKA (1)
+Anchorage Daily News (G): 82,891
+
+ARIZONA (1)
+Arizona Daily Star (Tucson) (G): 109,592
+
+CALIFORNIA (21)
+San Francisco Chronicle (G): 501,135
+The Sacramento Bee (G): 303,841
+San Jose Mercury News (G): 279,539
+The Alameda Times-Star: 233,555
+Contra Costa Times (Walnut Creek) (B): 186,335
+Daily News (Los Angeles) (B): 178,044
+The Fresno Bee (G): 166,531
+La Opinion (Los Angeles) (G): 126,628
+Ventura County Star (B): 93,664
+The Press Democrat (Santa Rosa) (G): 89,384
+The Modesto Bee (G): 87,366
+The Oakland Tribune (G): 67,807
+Marin Independent Journal: 40,444
+The Daily Review (Hayward) (G): 38,848
+San Mateo County Times (G): 35,708
+The Monterey County Herald (B): 34,813
+The Argus (Fremont) (G): 33,558
+Santa Cruz Sentinel (B): 26,136
+Vallejo Times-Herald: 22,382
+Times-Standard (Eureka) (B): 19,129
+Merced Sun-Star: 17,247
+
+COLORADO (5)
+Daily Camera (Boulder) (B): 33,419
+Fort Collins Coloradoan (G): 28,415
+Greeley Daily Tribune (B): 26,241
+Aspen Daily News: 12,100
+Durango Herald (G): 8,621
+
+CONNECTICUT (5)
+The Day (New London) (B): 39,553
+Norwich Bulletin: 27,569
+The Stamford Advocate (B): 27,350
+Record-Journal (Meriden): 24,203
+Greenwich Time: 12,047
+
+DELAWARE (1)
+The News Journal (Wilmington) (G): 141,283
+
+DISTRICT OF COLUMBIA (1)
+The Washington Post (G): 772,553
+
+FLORIDA (12)
+St. Petersburg Times (G): 358,502
+The Miami Herald (G): 325,032
+Orlando Sentinel (B): 269,269
+South Florida Sun-Sentinel (Ft. Lauderdale) (G): 268,927
+The Palm Beach Post (G): 181,727
+Sarasota Herald-Tribune (G): 121,272
+Daytona Beach News-Journal (G): 112,945
+Treasure Coast News/Press-Tribune (Fort Pierce): 108,604
+Florida Today (Melbourne) (G): 90,877
+Bradenton Herald (B): 52,163
+The Gainesville Sun: 48,747
+The Key West Citizen: 10,525
+
+GEORGIA (2)
+The Atlanta Journal-Constitution: 418,323
+The Macon Telegraph: 65,871
+
+HAWAII (2)
+The Honolulu Advertiser (G): 145,943
+Honolulu Star-Bulletin (G): 64,305
+
+IDAHO (2)
+The Idaho Statesman (Boise) (B): 65,714
+Bonner County Daily Bee (Sandpoint): 4,537
+
+ILLINOIS (6)
+Chicago Sun-Times (B): 486,936
+Daily Herald (Arlington Heights) (B): 150,794
+Rockford Register-Star (B): 65,685
+Daily Southtown (Tinley Park) (G): 48,858
+Chicago Defender: 14,686
+Edwardsville Intelligencer (B): 5,092
+
+INDIANA (3)
+The Times (Munster): 86,474
+The Journal Gazette (Fort Wayne) (G): 61,205
+Journal and Courier (Lafayette): 36,784
+
+IOWA (4)
+The Des Moines Register (G): 155,898
+Quad City Times (Davenport) (B): 53,872
+The Hawk Eye (Burlington) (G): 19,000
+Iowa City Press-Citizen (B): 15,077
+
+KANSAS (2)
+The Hutchinson News (G): 32,625
+The Emporia Gazette: 8,500
+
+KENTUCKY (3)
+The Courier-Journal (Louisville) (G): 216,934
+Lexington Herald-Leader (G): 122,748
+Owensboro Messenger-Inquirer: 28,445
+
+LOUISIANA (1)
+The Times (Shreveport) (G): 66,614
+
+MAINE (6)
+Portland Press Herald (G): 73,211
+Bangor Daily News (B): 61,337
+Morning Sentinel (Waterville): 19,639
+Kennebec Journal (Augusta): 14,845
+The Brunswick Times Record (Brunswick): 10,594
+Journal Tribune (Biddeford): 8,770
+
+MARYLAND (1)
+The Sun (Baltimore) (G): 470,453
+
+MASSACHUSETTS (7)
+The Boston Globe (G): 452,109
+Telegram & Gazette (Worcester) (B): 103,586
+The Republican (Springfield): 84,694
+Metrowest Daily News (Framingham): 44,345
+The Standard-Times (New Bedford): 35,299
+The Berkshire Eagle (Pittsfield): 31,152
+Milford Daily News: 11,417
+
+MICHIGAN (13)
+Detroit Free Press (G): 354,581
+The Flint Journal (B): 84,313
+Lansing State Journal (G): 73,594
+The Saginaw News: 56,307
+The Muskegon Chronicle (B): 46,505
+The Bay City Times: 34,126
+Port Huron Times Herald: 29,488
+Traverse City Record-Eagle: 26,502
+Battle Creek Enquirer: 24,831
+Livingston County Daily Press & Argus: 13,472
+The Argus-Press (Owosso): 11,438
+Petoskey News-Review: 10,296
+The Ironwood Daily Globe: 6,498
+
+MINNESOTA (4)
+Star Tribune (Minneapolis) (G): 377,058
+Duluth News Tribune: 45,688
+St. Cloud Times: 28,199
+The Free Press (Mankato): 21,591
+
+MISSOURI (4)
+St. Louis Post-Dispatch (G): 281,198
+The Kansas City Star (G): 269,188
+Springfield News-Leader (G): 62,158
+Columbia Daily Tribune (B): 18,874
+
+MONTANA (1)
+Billings Gazette (B): 47,849
+
+NEVADA (3)
+Reno Gazette-Journal (G): 66,073
+Las Vegas Sun (G): 34,407
+Nevada Appeal (Carson City): 15,296
+
+NEW HAMPSHIRE (5)
+The Nashua Telegraph: 26,762
+Concord Monitor (G): 19,984
+Lebanon Valley News (Lebanon): 16,984 # Lebanon-Hanover
+The Keene Sentinel (G): 13,620
+Portsmouth Herald (G): 13,551
+
+NEW JERSEY (10)
+The Star-Ledger (Newark) (G): 407,945
+The Record (Bergen) (G): 171,251
+Courier-Post (Camden) (B): 79,400
+The Times (Trenton) (G): 73,235
+Daily Record (Parsippany): 42,665
+Courier News (Bridgewater): 41,601
+Burlington County Times (Willingboro) (G): 40,172
+The Jersey Journal (Jersey City): 28,375
+The Gloucester County Times (Woodbury): 23,827
+The Vineland Daily Journal: 17,941
+
+NEW MEXICO (2)
+The Santa Fe New Mexican (G): 25,308
+The Albuquerque Tribune (B): 13,536
+
+NEW YORK (12)
+The New York Times (G): 1,133,763
+Newsday (Melville) (G): 580,346
+The Buffalo News (G): 201,900
+Rochester Democrat and Chronicle (G): 169,697
+Times-Union (Albany) (G): 144,368
+The Journal-News (White Plains) (B): 142,145
+Staten Island Advance (G): 65,607
+The Post-Star (Glens Falls): 33,608
+Star-Gazette (Elmira) (B): 28,826
+The Daily Star (Oneonta) (G): 17,962
+The Ithaca Journal (G): 17,861
+The Corning Leader: 12,808
+
+NORTH CAROLINA (7)
+The Charlotte Observer (G): 231,369
+The News & Observer (Raleigh) (G): 173,329
+News & Record (Greensboro) (G): 113,675
+Asheville Citizen Times: 55,982
+Wilmington Star-News (G): 54,231
+The Daily Reflector (Greenville): 25,777
+The Daily Advance (Elizabeth City): 10,514
+
+NORTH DAKOTA (2)
+Grand Forks Herald (G): 32,385
+The Bismarck Tribune: 27,111
+
+OHIO (4)
+Dayton Daily News (G): 183,175
+The Blade (Toledo) (G): 139,293
+Akron Beacon Journal (G): 139,220
+Times Recorder (Zanesville): 21,329
+
+OKLAHOMA (1)
+Muskogee Daily Phoenix (B): 17,209 #  & Times-Democrat
+
+OREGON (7)
+The Oregonian (Portland) (B): 342,040
+The Register-Guard (Eugene) (G): 72,411
+Statesman Journal (Salem): 56,298
+Mail Tribune (Medford): 35,524
+The Coos Bay World: 12,711
+East Oregonian (Pendleton): 10,236
+The Daily Astorian (Astoria): 8,429
+
+PENNSYLVANIA (12)
+The Philadelphia Inquirer (G): 387,692
+Pittsburgh Post-Gazette (G): 245,065
+The Philadelphia Daily News (G): 139,983
+The Morning Call (Allentown) (B): 131,110
+The Bucks County Courier Times (G): 67,722
+Times Leader (Wilkes-Barre): 44,639
+The Doylestown Intelligencer: 43,053
+Beaver County Times (G): 41,950
+Observer-Reporter (Washington) (B): 34,643
+The Wilkes Barre Citizens' Voice (G): 33,343
+Herald-Standard (Uniontown) (B): 28,453
+Centre Daily Times (State College): 25,354
+
+SOUTH CAROLINA (2)
+The Sun News (Myrtle Beach) (G): 60,931
+Anderson Independent-Mail: 43,248
+
+TENNESSEE (3)
+The Tennessean (Nashville) (G): 205,158
+The Commercial-Appeal (Memphis) (B): 189,961
+The Jackson Sun (G): 35,561
+
+TEXAS (5)
+Corpus Christi Caller-Times (B): 60,537
+Waco Tribune-Herald: 40,699
+Longview News-Journal: 29,509
+The Lufkin Daily News: 14,608
+The Baytown Sun: 11,374
+
+VERMONT (5)
+The Burlington Free Press: 47,278
+Rutland Herald (G): 21,125
+The Times Argus (Montpelier): 12,178 # Barre-Montpelier
+Brattleboro Reformer (N): 10,247
+Bennington Banner (N): 7,898
+
+VIRGINIA (3)
+The Virginian-Pilot (Norfolk) (G): 201,473
+The Roanoke Times: 100,447
+Daily Press (Newport News): 95,228
+
+WASHINGTON (8)
+The Seattle Times (B): 237,303
+Seattle Post-Intelligencer (G): 150,901
+The News Tribune (Tacoma) (G): 128,748
+The Everett Herald (G): 50,998
+Tri-City Herald (Kennewick) (B): 42,285
+The Olympian (Olympia) (G): 34,482
+The Sun (Bremerton) (B): 30,731
+Walla Walla Union-Bulletin (B): 14,275
+
+WEST VIRGINIA (2)
+Charleston Gazette (G): 49,529
+Huntington Herald-Dispatch (G): 31,423
+
+WISCONSIN (8)
+Milwaukee Journal Sentinel: 244,893
+La Crosse Tribune (B): 34,283
+The Journal Times (Racine) (G): 29,264
+Kenosha News: 26,665
+The Sheboygan Press (G): 25,665
+The Wausau Daily Herald (B): 22,757
+The Capital Times (Madison) (G): 19,410
+The Green Bay News-Chronicle: 7,100
+
+
+
+GEORGE W. BUSH
+205 newspapers total
+15,743,799 daily circulation
+
+ALABAMA (5)
+Birmingham News (B): 153,195
+Mobile Register (B): 100,244
+Times Daily (Florence): 30,796
+The Gadsden Times (B): 22,753
+Birmingham Post-Herald (B): 8,946
+
+ALASKA (1)
+The Peninsula Clarion (Kenai): 5,710
+
+ARIZONA (1)
+The Arizona Republic (Phoenix) (B): 466,926
+
+ARKANSAS (2)
+Arkansas Democrat-Gazette (Little Rock) (B): 187,601
+Southwest Times Record (Fort Smith) (B): 37,636
+
+CALIFORNIA (15)
+The San Diego Union-Tribune (B): 361,317
+The Press-Enterprise (Riverside) (B): 191,802
+Press-Telegram (Long Beach) (B): 96,466
+San Bernardino Sun: 73,323
+The Bakersfield Californian (B): 71,495
+Inland Valley Daily Bulletin (B): 65,202
+The Record (Stockton) (B): 62,139
+The Desert Sun (Palm Springs) (B): 58,527
+San Gabriel Valley Tribune (B): 48,920
+Tri-Valley Herald (Pleasanton) (B): 43,652
+Record Searchlight (Redding) (B): 40,208
+Pasadena Star-News (B): 35,181
+Chico Enterprise-Record (B): 33,354
+The Vacaville Reporter (B): 18,227
+Whittier Daily News: 17,330
+
+COLORADO (7)
+The Denver Post (G): 286,197
+Rocky Mountain News (Denver) (B): 286,004
+The Pueblo Chieftain: 52,208
+The Daily Sentinel (Grand Junction): 29,975
+Daily Times-Call (Longmont): 21,465
+Loveland Daily Reporter-Herald: 17,548
+Canon City Daily Record: 8,164
+
+CONNECTICUT (6)
+The Hartford Courant (B): 187,394
+New Haven Register (B): 92,022
+Connecticut Post (Bridgeport) (B): 76,133
+Waterbury Republican-American (B): 65,763
+The News-Times (Danbury): 32,323
+The Register Citizen (Torrington): 8,245
+
+DISTRICT OF COLUMBIA (1)
+The Washington Times (B): 100,228
+
+FLORIDA (4)
+The Florida Times-Union (Jacksonville) (B): 230,094
+Naples Daily News: 81,363
+The Lakeland Ledger (B): 75,539
+Ocala Star-Banner: 51,489
+
+GEORGIA (4)
+Augusta Chronicle (B): 71,724
+Savannah Morning News (B): 57,288
+Athens Banner-Herald: 30,563
+The Albany Herald: 26,179
+
+IDAHO (2)
+The Times-News (Twin Falls) (B): 23,012
+Coeur d'Alene Press: 16,303
+
+ILLINOIS (9)
+Chicago Tribune (B): 578,843
+Journal Star (Peoria) (B): 77,690
+Springfield State Journal-Register (B): 57,212
+The Pantagraph (Bloomington) (B): 47,931
+The News-Gazette (Champaign-Urbana): 39,190
+The Crystal Lake Northwest Herald: 37,452
+Herald & Review (Decatur) (B): 35,233
+Southern Illinoisan (Carbondale): 28,173
+The Journal-Standard (Freeport): 13,693
+
+INDIANA (5)
+The Indianapolis Star (B): 253,778
+Evansville Courier & Press: 69,003
+The News-Sentinel (Fort Wayne) (B): 36,183
+Kokomo Tribune: 21,483
+Palladium-Item (Richmond): 18,241
+
+IOWA (3)
+The Gazette (Cedar Rapids) (B): 63,578
+Sioux City Journal: 41,929
+Globe-Gazette (Mason City): 18,947
+
+KANSAS (1)
+The Wichita Eagle: 90,835
+
+KENTUCKY (4)
+Daily News (Bowling Green) (B): 21,555
+The Daily Independent (Ashland): 19,600
+Glasgow Daily Times: 9,836
+The Ledger Independent (Maysville): 8,755
+
+LOUISIANA (2)
+The Advertiser (Lafayette) (B): 46,361
+The Town Talk (Alexandria): 36,321
+
+MAINE (1)
+Sun-Journal (Lewiston): 34,278
+
+MARYLAND (1)
+Easton Star Democrat: 16,667
+
+MASSACHUSETTS (5)
+Boston Herald (B): 248,988
+Cape Cod Times (Hyannis): 53,014
+The Eagle-Tribune (Lawrence) (B): 51,940
+The Sun (Lowell) (B): 50,369
+Sentinel & Enterprise: 17,310
+
+MICHIGAN (15)
+The Grand Rapids Press (B): 139,216
+Kalamazoo Gazette (B): 74,144
+The Ann Arbor News (B): 65,708
+The Oakland Press (Pontiac): 65,484
+The Macomb Daily (Mount Clemens) (G): 43,584
+Jackson Citizen Patriot: 34,313
+The Herald Palladium (Saint Joseph): 23,423
+Midland Daily News: 16,076
+The Adrian Daily Telegram: 15,374
+The Daily Mining Gazette (Houghton): 10,101
+The Escanaba Daily Press: 9,934
+The Greenville Daily News: 9,220
+Daily News (Ludington): 8,492
+Sturgis Journal: 6,160
+Niles Daily Star: 2,361
+
+MINNESOTA (2)
+St. Paul Pioneer Press: 189,458
+The Pioneer (Bemidji): 9,691
+
+MISSISSIPPI (1)
+The Clarion-Ledger (Jackson) (G): 110,981
+
+MISSOURI (5)
+St. Joseph News-Press: 38,521
+The Joplin Globe (B): 37,074
+The Sunday News Tribune (Jefferson City): 24,144
+Hannibal Courier-Post: 8,592
+The Lebanon Daily Record: 4,479
+
+NEBRASKA (4)
+Omaha World-Herald (B): 197,627
+Lincoln Journal Star (B): 75,679
+The Grand Island Independent: 23,336
+McCook Daily Gazette: 6,339
+
+NEVADA (2)
+Las Vegas Review-Journal (B): 170,061
+Elko Daily Free Press: 7,386
+
+NEW HAMPSHIRE (2)
+The New Hampshire Union Leader (Manchester) (B): 59,605
+Foster's Daily Democrat (Dover): 22,995
+
+NEW JERSEY (2)
+Asbury Park Press (Neptune) (B): 161,937
+The Trentonian (Trenton) (B): 42,512
+
+NEW MEXICO (4)
+Albuquerque Journal (B): 153,637
+Las Cruces Sun-News (B): 22,168
+Farmington Daily Times (B): 18,144
+Carlsbad Current-Argus (B): 8,030
+
+NEW YORK (6)
+Daily News (New York City) (G): 802,103
+New York Post (B): 678,012
+The New York Sun: 53,688
+Poughkeepsie Journal: 40,504
+The Post-Journal (Jamestown): 19,810
+The Record (Troy): 18,233
+
+NORTH CAROLINA (1)
+The Enterprise-Record (Mocksville): 11,800
+
+NORTH DAKOTA (2)
+The Fargo Forum (B): 52,238
+Minot Daily News: 21,273
+
+OHIO (12)
+The Columbus Dispatch (B): 371,551
+The Cincinnati Enquirer (B): 216,509
+The Vindicator (Youngstown) (B): 67,523
+The Repository (Canton) (B): 66,014
+The Willoughby News-Herald (Lake County-Willoughby): 45,366
+The Cincinnati Post (B): 40,618
+News Journal (Mansfield): 32,641
+The Times Reporter (New Philadelphia): 23,956
+The Courier (Findlay) (B): 22,319
+The Newark Advocate: 22,217
+Chillicothe Gazette: 16,018
+The Independent (Massillon): 12,932
+
+OKLAHOMA (4)
+The Oklahoman (Oklahoma City) (B): 223,403
+Tulsa World (B): 139,383
+Enid News & Eagle: 18,882
+The Shawnee News-Star: 9,834
+
+OREGON (5)
+The Bend Bulletin (B): 26,695
+The News-Review (Roseburg): 19,272
+Albany Democrat-Herald (B): 17,786
+Grants Pass Daily Courier (Grants Pass): 16,392
+Argus Observer (Ontario): 7,367
+
+PENNSYLVANIA (7)
+Tribune-Review (Greensburg) (B): 116,362
+Erie Times-News (B): 60,771
+The Express-Times (Easton): 50,439
+York Daily Record (G): 46,554
+Altoona Mirror (B): 32,339
+Lebanon Daily News: 20,518
+The Carlisle Sentinel: 15,072
+
+RHODE ISLAND (1)
+The Providence Journal (B): 234,147
+
+SOUTH CAROLINA (6)
+The State (Columbia) (B): 117,595
+The Post and Courier (Charleston) (B): 98,793
+The Greenville News (B): 91,714
+Herald-Journal (Spartanburg) (G): 50,386
+The Sumter Item: 21,990
+The Times and Democrat (Orangeburg): 18,923
+
+SOUTH DAKOTA (3)
+Argus Leader (Sioux Falls) (G): 54,700
+The Rapid City Journal (B): 29,565
+The Daily Republic (Mitchell): 12,069
+
+TENNESSEE (4)
+The Knoxville News-Sentinel (B): 117,528
+Kingsport Times-News: 43,834
+Johnson City Press: 29,745
+The Leaf-Chronicle (Clarksville): 22,057
+
+TEXAS (8)
+Houston Chronicle (B): 549,300
+The Dallas Morning News (B): 546,177
+San Antonio Express-News (B): 252,889
+Fort Worth Star-Telegram (B): 247,167
+Austin American-Statesman (B): 184,907
+El Paso Times: 74,278
+Amarillo Globe-News (B): 51,105
+The Victoria Advocate: 36,340
+
+UTAH (1)
+The Salt Lake Tribune: 135,730
+
+VIRGINIA (8)
+Richmond Times-Dispatch (B): 191,732
+The Free Lance-Star (Fredericksburg) (B): 47,866
+Bristol Herald-Courier: 39,563
+News and Advance (Lynchburg): 37,447
+Daily News-Record (Harrisonburg): 32,202
+Danville Register & Bee: 21,701
+The News Leader (Staunton): 21,252
+Potomac News (Woodbridge): 15,903
+
+WASHINGTON (6)
+The Spokesman-Review (Spokane) (B): 100,760
+The Columbian (Vancouver) (B): 51,498
+King County Journal (Bellevue): 44,592
+Yakima Herald-Republic (B): 38,646
+The Longview Daily News: 22,138
+The Chronicle (Centralia): 14,524 
+
+WEST VIRGINIA (5)
+Charleston Daily Mail (B): 34,539
+The Parkersburg News: 23,558
+The Intelligencer (Wheeling): 20,689
+Bluefield Daily Telegraph: 19,877
+The Parkersburg Sentinel: 4,757
+
+WISCONSIN (9)
+Wisconsin State Journal (Madison) (B): 91,356
+The Post-Crescent (Appleton) (G): 54,193
+The Janesville Gazette (B): 22,696
+Oshkosh Northwestern (B): 21,748
+Beloit Daily News (B): 14,193
+The Superior Daily Telegram: 8,180
+The Chippewa Herald (Chippewa Falls) (B): 6,804
+Shawano Leader: 6,237
+The Monroe Times: 5,645
+
+WYOMING (1)
+Casper Star-Tribune: 33,623

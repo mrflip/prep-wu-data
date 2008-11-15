@@ -53,12 +53,12 @@ end
 
 def bullet_alpha(movement)
   {
-    -3 => 60, -2 => 60, -1 => 60,  nil  => 15,  'dn'  => 15,
+    -3 => 60, -2 => 60, -1 => 60,  nil  => 15,  'dn'  => 30,
      3 => 60,  2 => 60,  1  => 60, 'ab' => 33,                   }[movement]
 end
 def bullet_color(movement)
   {
-    -3 => 'ff1133', -2 => 'cc7777', -1 => 'cc7777', nil => '888888', 'dn' => '888888',
+    -3 => 'ff1133', -2 => 'cc7777', -1 => 'cc7777', nil => '888888', 'dn' => 'bbbbbb',
      3 => '3311ff',  2 => '7777cc',  1 => '7777cc', 'ab' => 'dddd99'     }[movement]
 end
 def bullet(movement)

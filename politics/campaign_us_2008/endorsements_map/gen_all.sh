@@ -7,4 +7,5 @@ echo "getting editor&publisher data"		&& ./extract_endorsements_eandp.rb &&
   echo "combining data sources" 		&& ./reconcile_newspapers.rb &&
   echo "stuffing extended circulation data" 	&& ./reconcile_circulations.rb &&
   echo "generating map"			 	&& ./gen_endorsements_map.rb &&
-  echo "generating HTML" 			&& ./gen_endorsements_table.rb
+  echo "generating HTML" 			&& ./gen_endorsements_table.rb &&
+  echo "generating bargraph" 			&& ./gen_bargraph.rb

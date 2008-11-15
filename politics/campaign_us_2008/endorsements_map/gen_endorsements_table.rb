@@ -79,7 +79,7 @@ end
 
 
 #
-#
+# Stuff the summary labels into the charts.xml
 #
 def summary_labels
   text = []
@@ -128,7 +128,9 @@ end
 #   endorsement_table << table_row(e)
 # end
 
-
+#
+# The endorsements map page, sorted by 2008 status.
+#
  HTML_TEMPLATE_FILENAME = 'template/endorsements_map_template.html'
 CHART_TEMPLATE_FILENAME = 'template/chart/chart_settings-map.xml'
  HTML_OUTPUT_FILENAME   = 'web/endorsements_map.html'
@@ -140,6 +142,9 @@ sentry_insert_date!       html_template
 puts Time.now.to_s+" Writing to #{HTML_OUTPUT_FILENAME}"
 File.open(HTML_OUTPUT_FILENAME,'w'){|f| f << html_template}
 
+#
+# Stuff labels into endorsement map XML settings file.
+#
 chart_xml_template = File.open(CHART_TEMPLATE_FILENAME).read
 sentry_insert_text!       chart_xml_template, :summary_label, summary_labels
 sentry_insert_timestamps! chart_xml_template

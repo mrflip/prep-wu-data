@@ -183,7 +183,7 @@ end
 [
   1992, 1996, 2000, 2004,
   2008].each do |year|
-  raw_filename = "ripd/endorsements_#{year}/endorsements-raw-#{year}.txt"
+  raw_filename = "ripd/endorsements-raw-#{year}-eandp.txt"
   out_filename = "data/endorsements_#{year}_eandp.yaml"
   print "Extracting E&P year #{year} into #{out_filename}"
   endorsements = parse_ep_endorsements(raw_filename, ENDORSEMENT_RE[year], year)

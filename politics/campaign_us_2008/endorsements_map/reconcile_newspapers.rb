@@ -35,9 +35,9 @@ ENDORSEMENT_LISTS = ENDORSEMENT_FILENAMES.map{|fn| YAML.load(File.open(fn)) }
 NEWSPAPER_CITIES  = YAML.load(File.open("data/newspaper_cities.yaml"))
 Endorsement.all = { }
 ([NEWSPAPER_CITIES]+ENDORSEMENT_LISTS).each do |endorsement_objs|
-  endorsement_objs.each do |paper, hsh|
-    if (e = Endorsement[paper]) then  e.check_merge! hsh
-    else  Endorsement.add Endorsement.from_hash(hsh)  end
+  endorsement_objs.each do |paper, info|
+    if (e = Endorsement[paper]) then  e.check_merge! info
+    else  Endorsement.add Endorsement.from_hash(info)  end
   end
 end
 
@@ -45,13 +45,23 @@ end
 # Load top-100
 #
 YAML.load(File.open("data/newspapers_burrelles_luce.yaml")).each do |paper, info|
-  hsh = Hash.zip([:paper, :rank, :daily, :sun], [paper]+info)
+  info = Hash.zip([:paper, :rank, :daily, :sun], [paper]+info)
   if (e = Endorsement[paper])
-    e.merge!(hsh)
+    e.check_merge!(info)
     e.circ = e.daily if (e.circ.to_i == 0)
   else
-    Endorsement.add Endorsement.from_hash(hsh)
+    Endorsement.add Endorsement.from_hash(info)
   end
+end
+
+#
+# Papers with endorsements looked up on Lexis/Nexis or online
+#
+ENDORSEMENTS_LEXISNEXIS = YAML.load(File.open("data/endorsements_lexisnexis.yaml"))
+ENDORSEMENTS_LEXISNEXIS.each do |paper, info|
+  if (e = Endorsement[paper]) then
+    e.check_merge! info
+  else warn "Unknown paper #{paper} (#{info.inspect}) in hand-edited endorsements" end
 end
 
 #
@@ -61,7 +71,6 @@ CityMetro.load
 Endorsement.all.each do |paper, e|
   e.metro = CityMetro[e.st, e.city] || CityMetro.new
 end
-
 
 #
 # Load geolocations

@@ -10,6 +10,7 @@ PREZ_CODE       = {
   'Perot'     => '3P', 'Nader' => '3N',
   nil         =>  0,   ''      =>  0
 }
+NON_ENDORSING_PAPERS    = ['USA Today', 'Wall Street Journal', 'Orange County Register']
 MOVEMENT_TO             = { 'McCain' => -2, 'Obama' => 2, }
 SPLIT_ENDORSEMENTS      =  ['Las Vegas Sun', 'Las Vegas Review Journal', 'Chattanooga Free Press', 'Chattanooga Times']
 class Endorsement < Struct.new(
@@ -53,7 +54,7 @@ class Endorsement < Struct.new(
   #
   def movement yr1, yr2
     return 'ab' if prez[yr2] == 'abstain'
-    return 'dn' if ['USA Today', 'Wall Street Journal', 'Orange County Register'].include?(paper)
+    return 'dn' if NON_ENDORSING_PAPERS.include?(paper)
     from, to = [party_in(yr1)||0, party_in(yr2)]
     (from && to) ? (2*to - from) : to
   end
@@ -81,7 +82,7 @@ class Endorsement < Struct.new(
   def self.endorsement_bins
     return @endorsement_bins if @endorsement_bins
     @endorsement_bins = {
-      nil  => {:papers => [], :total_circ => 0, :title => 'Top 100 papers (by circulation) that have not yet endorsed a candidate', },
+      nil  => {:papers => [], :total_circ => 0, :title => 'No endorsement in 2008 (partial listing)', },
       'dn' => {:papers => [], :total_circ => 0, :title => 'Papers that have a policy of not endorsing candidates', },
       'ab' => {:papers => [], :total_circ => 0, :title => 'Announced they will not endorse a candidate in 2008', },
       -3   => {:papers => [], :total_circ => 0, :title => 'Endorsing Sen. McCain (and endorsed Kerry in 2004)',                     },
@@ -99,17 +100,18 @@ class Endorsement < Struct.new(
     @endorsement_bins
   end
 
+  def ranked?
+    rank && (rank > 0) && (rank < 150)
+  end
+
   def interesting?
     case
-    when circ > 50000 then return true
-    when circ < 50000 then return false
-    when prez_2008                              then return true
-    when (prez_2004 && circ > 50000)            then return true
-    when prez.values.compact.length > 3         then return true
-    when rank && (rank > 0) && (rank < 150)     then return true
-    else
-      return false
-    end
+    # when ranked? && (prez_2008 && prez_2004) && (!prez_1992 || !prez_1996 || !prez_2000) then return true
+    when prez_2008                             then return true
+    when (prez_2004 && (circ.to_i > 50000))    then return true
+    when prez.values.compact.length >= 3       then return true
+    when rank && (rank > 0) && (rank < 150)    then return true
+    else                                             return false end
   end
 
   #
@@ -150,7 +152,7 @@ class Endorsement < Struct.new(
     yrs.map{|yr| [yr, PREZ_CODE[prez[yr]]] }
   end
   def endorsement_hist_str compact=false
-    return '[does not endorse]' if ['Wall Street Journal', 'USA Today'].include?(paper)
+    return '[does not endorse]' if NON_ENDORSING_PAPERS.include?(paper)
     endorsement_hist(compact).map{|yr, pr| yr ? ("%4s:%-2s"%[yr,pr]) : ' '*7 }.join(" ")
   end
   #
@@ -163,7 +165,7 @@ class Endorsement < Struct.new(
     when 'Perot'                                then 'independent'
     when 'abstain'                              then 'abstain'
     when 'N/A', 'none'                          then 'gray'
-    when nil, ''                                then 'none'
+    when nil, '', '--', '!!'                    then 'none'
     else
       raise "Haven't met candidate #{candidate}"
     end

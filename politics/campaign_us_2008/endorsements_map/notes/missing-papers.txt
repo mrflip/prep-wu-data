@@ -33,61 +33,15 @@ November 8, 1988
 
 (recommendations OR recommends OR recommend OR endorses OR endorsement OR endorsements) AND DATE(>=1996-10-12 and <=1996-11-05) AND (clinton OR dole) AND section(opinion)
 
-(recommend! OR endors!) AND DATE(>=1996-10-12 and <=1996-11-05) AND (clinton OR dole)
+(recommend! OR endors!) AND DATE(>=1996-09-20 and <=1996-11-05) AND (clinton OR dole)
 
 (ballot recommendations) and DATE(>=1996-10-12 and <=1996-11-05)
 (recommendations OR recommends OR endorses OR endorsement OR endorsements)
-(recommend* OR endors*) and DATE(>=1996-10-12 and <=1996-11-05) AND (cinton OR dole)
 ("clinton for president") AND DATE(>=1996-10-12 and <=1996-11-05)
 ("editorial board") AND DATE(>=1996-10-12 and <=1996-11-05)
 HEADLINE(recommend!) AND DATE(>=1996-10-01 and <=1996-11-05)
 
-1996	Paper					Circulation	Rank		City			Metro Area Pop. Rank	2000	2004	2008	Approx Lat.	Approx Long.
-								
-
---	Patriot Ledger			
---	San Diego Union Tribune		
-Clinton Anchorage Daily News		
-Clinton Austin American Statesman	
-Clinton Buffalo News			
-Clinton Chattanooga Times		
-Clinton Fresno Bee			
-Clinton Huntsville Times		
-Clinton Lakeland Ledger			
-Clinton Lincoln Journal Star		
-Clinton News Journal (Wilmington)	
-Clinton News Tribune			
-Clinton News and Observer		
-Clinton Portland Press Herald		
-Clinton Press Enterprise		
-Clinton San Francisco Chronicle		
-Clinton Sarasota Herald Tribune		
-Clinton St. Petersburg Times		
-Clinton Syracuse Post Standard		
-Clinton Virginian Pilot			
-Clinton Washington Post			
-Dole	Bangor Daily News		
-Dole	Birmingham News			
-Dole	Florida Times Union		
-Dole	Mobile Press Register		
-Dole	Omaha World Herald		
-Dole	Post and Courier		
-Dole	Providence Journal		
-Dole	Telegram and Gazette		
-Dole	Times Union			
-Dole	Wisconsin State Journal		
-abstain Arkansas Democrat Gazette	
-abstain Miami Herald			
-abstain Sun (Baltimore)			
-abstain Times Picayune			
-xx	Bakersfield Californian		
-xx	Blade				
-xx	Colorado Springs Gazette	
-xx	Contra Costa Times		
-xx	Daily News (Los Angeles)	
-xx	El Paso Times			
-xx	Flint Journal			
-xx	Journal News			
-
 
  
+http://pqasb.pqarchiver.com/orlandosentinel/access/77922590.html?dids=77922590:77922590&FMT=ABS&FMTS=ABS:FT&type=current&date=Nov+3%2C+1996&author=&pub=Orlando+Sentinel&edition=&startpage=G.2&desc=BE+PREPARED+VOTERS+HAVE+A+BIG+JOB+AHEAD+OF+THEM+TUESDAY.+BECOME+FAMILIAR+WITH+A+LONG+LIST+OF+OFFICES+AND+ISSUES.
+http://pqasb.pqarchiver.com/sun_sentinel/access/14968204.html?dids=14968204:14968204&FMT=ABS&FMTS=ABS:FT&type=current&date=Nov+3%2C+1996&author=&pub=Sun+Sentinel&edition=&startpage=10.H&desc=SUMMARY+OF+RECOMMENDATIONS+Series%3A+ELECTION+1996
