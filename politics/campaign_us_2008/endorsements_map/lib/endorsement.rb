@@ -158,14 +158,31 @@ class Endorsement < Struct.new(
   #
   # Color code for table
   #
-  def self.party_color candidate
+  #
+  # Color code for table
+  #
+  def self.party_name candidate
     case candidate
-    when 'Obama',  'Kerry', 'Gore', 'Clinton'   then 'blue'
-    when 'McCain', 'Bush', 'Dole', 'GHWBush'    then 'red'
-    when 'Perot'                                then 'independent'
+    when 'Obama',  'Kerry', 'Gore', 'Clinton'   then 'Democrat'
+    when 'McCain', 'Bush', 'Dole', 'GHWBush'    then 'Republican'
+    when 'Perot'                                then 'Independent'
     when 'abstain'                              then 'abstain'
-    when 'N/A', 'none'                          then 'gray'
-    when nil, '', '--', '!!'                    then 'none'
+    when 'N/A', 'none'                          then 'none'
+    when nil, '', '--', '!!'                    then 'unknown'
+    else
+      raise "Haven't met candidate #{candidate}"
+    end
+  end
+  def prez_party_name(yr) self.class.party_name(prez[yr]) end
+
+  def self.party_color candidate
+    case party_name(candidate)
+    when 'Democrat'          then 'blue'
+    when 'Republican'        then 'red'
+    when 'Independent'       then 'independent'
+    when 'abstain'           then 'abstain'
+    when 'none'              then 'gray'
+    when 'unknown'           then 'none'
     else
       raise "Haven't met candidate #{candidate}"
     end
