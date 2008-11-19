@@ -38,4 +38,21 @@ class Geolocation < Struct.new(
   include HashOfStructs
   def self.make_key(st, city) [st, city]            end
   def key()                   [self.st, self.city]  end
+
+
+
+  def self.xy_from_ll(lat, lng) [ (22.75 * lng) + 2867.97,     758 - ( (-28.89 * lat) + 1452.57),   ]  end
+  def self.ll_from_xy(x, y)     [ (x    - 2118) /  16.8,      ((564 - y) - 1081) / -21.5,    ]  end
+
+  def self.fake_points
+    tr_x, tr_y = ll_from_xy(1000,534)
+    bl_x, bl_y = ll_from_xy(0,   0)
+    LANDMARK_PTS.map{|name, ll|
+      {'x'=> ll[1], 'y' => ll[0], 'value' => 50, 'content' => "#{name}: #{'%6.2f'%ll[1]} : #{'%6.2f'%ll[0]}", 'bullet_color' => "44ff44" }
+    } + [
+      {'x'=> bl_x, 'y' => bl_y, 'value' => 100, 'content' => "BL: #{'%6.2f'%bl_y} : #{'%6.2f'%bl_x}", 'bullet_color' => "00ff00" },
+      {'x'=> tr_x, 'y' => tr_y, 'value' => 100, 'content' => "TR: #{'%6.2f'%tr_y} : #{'%6.2f'%tr_x}", 'bullet_color' => "00ff00" }
+    ]
+  end
+
 end

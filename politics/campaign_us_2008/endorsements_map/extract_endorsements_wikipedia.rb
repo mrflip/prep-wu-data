@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'newspaper_mapping'
 
-
 Newspaper = Struct.new(:name, :prez04, :city, :state)
 BY_CITY = { }; BY_NAME = { }
 

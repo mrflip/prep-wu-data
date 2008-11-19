@@ -22,7 +22,6 @@ module HashOfStructs
     #
     def load options={ }
       options = options.reverse_merge :dir => :data, :literalize_keys => true, :format => :yaml
-      p options
       puts Time.now.to_s+" Loading #{self}"
       self.all = StructDumper.load_from self, options[:format], options
       self.all

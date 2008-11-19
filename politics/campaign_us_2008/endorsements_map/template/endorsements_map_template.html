@@ -40,17 +40,16 @@
 
     <!-- saved from url=(0013)about:internet -->
     <!-- amxy script-->
-    <script type="text/javascript" src="temp/amxy/swfobject.js"></script>
-    <div id="flashcontent" style="margin:auto; width:1000px; min-height:564px; background:#ffffff"> <!-- url('pix/simple_map.png') -->
+    <script type="text/javascript" src="./utils/amxy/swfobject.js"></script>
+    <div id="flashcontent" class="endorsement-map" style="margin:auto; width:1000px; min-height:564px; background:#ffffff"> 
 	<strong>You need to upgrade your Flash Player</strong>
     </div>
-
     <script type="text/javascript">
 	// <![CDATA[		
-	var so = new SWFObject("temp/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
+	var so = new SWFObject("./utils/amxy/amxy.swf", "amxy", "1000", "564", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-map.xml?20081024"));
-	so.addVariable("data_file", 	encodeURIComponent("fixd/endorsements-graph.xml?20081024"));
+	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-map.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));
+	so.addVariable("data_file", 	encodeURIComponent("chart/endorsements-map.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));
 	so.write("flashcontent");
 	// ]]>
     </script>
@@ -58,16 +57,16 @@
 
     <hr/>
     <!-- amcolumn script-->
-    <script type="text/javascript" src="temp/amcolumn/swfobject.js"></script>
-    <div id="flashcontent_bargraph" style="float:left; width:500">
+    <script type="text/javascript" src="utils/amcolumn/swfobject.js"></script>
+    <div id="flashcontent_bargraph" class="endorsement-bargraph" style="float:left; width:500">
       <strong>You need to upgrade your Flash Player</strong>
     </div>
     <script type="text/javascript">
       // <![CDATA[		
-	var so = new SWFObject("temp/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
+	var so = new SWFObject("utils/amcolumn/amcolumn.swf", "amcolumn", "500", "600", "8", "#FFFFFF");
 	so.addVariable("path", "");
-	so.addVariable("settings_file", encodeURIComponent("chart_settings/chart_settings-bargraph.xml?20081024"));        // you can set two or more different settings files here (separated by commas)
-	so.addVariable("data_file",     encodeURIComponent("fixd/endorsements-bargraph.xml?20081024"));		
+	so.addVariable("settings_file", encodeURIComponent("chart/chart_settings-bargraph.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));        // you can set two or more different settings files here (separated by commas)
+	so.addVariable("data_file",     encodeURIComponent("chart/endorsements-bargraph.xml?<!-- TIMESTAMP_GOES_HERE -->2008 Oct 24<!-- TIMESTAMP_WENT_THERE -->"));		
 	//  so.addVariable("loading_settings", "LOADING SETTINGS");   // you can set custom "loading settings" text here
 	//  so.addVariable("loading_data", "LOADING DATA");           // you can set custom "loading data" text here
   	//  so.addVariable("preloader_color", "#000000");	
@@ -76,11 +75,19 @@
     </script>
     <!-- end of amcolumn script -->
 
-    <div style="float:right; width:490; padding: 2em 0 1em 10px">
+    <div class="commentary">
       
       <p><em>Blog Post for this <a href="http://blog.infochimps.org/2008/10/22/2008election-newspaper-endorsement-map/" style="color:#449">over here.</a>
 	  Updated on <!-- DATE_GOES_HERE -->2008 Oct 24<!-- DATE_WENT_THERE -->.
-      </em></p>
+      </em><br/>
+      <em>Screenshots: map -
+	<a href="pix/newspaper_endorsement_map_screenshot-980.png" title="980x544">big</a> &middot;
+	<a href="pix/newspaper_endorsement_map_screenshot.png" 	   title="643x356">med</a> &middot;
+	<a href="pix/newspaper_endorsement_map_screenshot-470.png" title="470x254">sm</a> |
+	<a href="pix/newspaper_endorsement_bargraph_screenshot.png" title="the red-blue bars thing">bar graph</a></em>
+      </p>
+
+      <p><strong>See also: our &laquo;<a href="election_returns_ranked.html">Red/Blue split vs. Rural/Urban split</a>&raquo; graph</strong></p>
       
       <p>Apart from the unsurprising
       evidence that (choose one: [[Obama is the overwhelming choice]] -OR-
@@ -194,13 +201,28 @@
 	the <a href="http://en.wikipedia.org/wiki/Chattanooga_Times_Free_Press">Chattanooga
 	Times Free Press</a> has two editorial pages, one liberal
 	(<em>Times</em>) and one conservative (<em>Free Press</em>), each
-	issuing its own endorsement. The Las Vegas Sun maintains
-	a <a href="http://en.wikipedia.org/wiki/Las_Vegas_Sun">similar split
-	personality</a>.  In each case, the papers' circulation and thus
-	bubble size are divided equally, but their rank order is assigned at full weight.</li>
+	issuing its own endorsement.
+	<a href="http://en.wikipedia.org/wiki/Las_Vegas_Sun">The Las Vegas
+	Sun</a> has exhibited a similar split personality.  In each case, the
+	papers' circulation and thus bubble size are divided equally, but their
+	rank order is assigned at full weight.  Because of this, our 'total
+	circulation endorsing' figures differ slightly from E&amp;P's</li>
+
+	<li><small>Several papers have merged over the last five election
+	cycles, such as
+	the <a href="http://en.wikipedia.org/wiki/Atlanta_Journal">Atlanta
+	Journal/Constitution</a>.  Nothing is done to unify the initial or final
+	papers.  The Wilmington, NC Morning Star and Star-News, and the Syracuse
+	Herald American and Post-Standard are each treated as the same
+	paper. The Albuquerque Tribune and the Cincinnati Post, among others,
+	have gone out of business</small></li>
 	
-        <li>Because we don't double count, our 'total circulation endorsing'
-        figures differ slightly from E&amp;P's</li>
+        <li>In the list below, &quot;!!&quot; means "I think there is an
+        endorsement -- but I can't access the article"; &quot;--&quot; indicate
+        that online archives (in most cases, Lexis-Nexis and the paper's
+        website) don't go back that far.</li>
+
+	
       </ol>
     </div>
 
@@ -213,19 +235,19 @@
 	    <th scope='col'>Circulation<br>Rank</th>
 	    <th scope="col">Paper</th>
 	    <th scope="col">Circulation</th>
-	    <th scope="col" class="hid">Metro Area</th>
-	    <th scope="col" class="hid">Metro Population</th>
-	    <th scope="col" class="hid">Penetration<br/>(Circ. as %<br/>of Metro Pop.</th>
-	    <th scope="col">Pop. Rank<br/>of Metro Area</th>
-	    <th scope="col">City</th>
-	    <th scope="col">2004<br/>Endorsement</th>
-	    <th scope="col">2008<br/>Endorsement</th>
+	    <th scope="col" class="city_st">City</th>
+	    <th scope="col">Metro&nbsp;Area<br/>Pop.&nbsp;Rank</th>
+	    <th scope="col">1992</th>
+	    <th scope="col">1996</th>
+	    <th scope="col">2000</th>
+	    <th scope="col">2004</th>
+	    <th scope="col">2008</th>
 	    <th scope="col" class="hid">Approx<br/>Lat.</th>
 	    <th scope="col" class="hid">Approx<br/>Long.</th>
 
             </tr>
 
-<!-- Endorsement Table Goes Here -->             
+<!-- ENDORSEMENT_TABLE_GOES_HERE --><!-- ENDORSEMENT_TABLE_WENT_THERE -->
             
         </table>
 	

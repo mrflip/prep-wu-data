@@ -1,0 +1,75 @@
+
+2004
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1000707329
+2000
+  http://www.editorandpublisher.com/eandp/search/search_results_taxo.jsp?startDate=10/1/2000&endDate=11/20/2000&cf=&ct=&cu=&rpp=50&sb=REFERENCE_DATE&so=DESC&ti=2&tp=vnuTaxoPool&numRet=200&src=&showAbs=true&srchMeta=true&shwTotal=true&metaSrchNum=250&numMeta=20&pi=&pubList=Editor%20and%20Publisher&kw=endorsements&au=&mt=&mv=&esindct=false
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1125034
+1996
+  
+1992
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1163359
+  http://www.editorandpublisher.com/eandp/search/article_display.jsp?vnu_content_id=1163531  
+
+State Abbreviations
+  http://www.usps.com/ncsc/lookups/abbr_state.txt
+
+   
+Missing/Spotchecked Newspaper Circulations
+  http://en.wikipedia.org/wiki/Newspaper_endorsements_in_the_United_States_presidential_election,_2004
+  http://en.wikipedia.org/wiki/List_of_newspapers_in_the_United_States
+  http://en.wikipedia.org/wiki/List_of_newspapers_in_the_United_States_by_circulation
+
+City, St => lat, lng  
+#geonameid	name	asciinm	altnm	lat	lng	f_cl	f_code	cc	cc2	admin1	admin2	admin3	admin4	pop	elev	gtopo30	timezone	modification_date
+#4099296	Alma	Alma		35.4778	-94.221	P	PPL	US		AR	033			4474	132	133	America/Chicago	2006-01-17
+# 0		1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17      	18
+===========================================================================
+
+
+TODO
+
+* 
+* largest => smallest paper, by endorsement color, for each metro in order
+* 
+* about page with links to data, pix, screenshot.
+* an acts_as_pimp thingy
+
+===========================================================================
+
+* http://www.kottke.org/08/10/mapping-newspaper-political-endorsements
+* http://waxy.org/links/archive/2008/10/index.shtml
+* http://andrewsullivan.theatlantic.com/the_daily_dish/2008/10/mapping-endorse.html
+* 
+* http://www.dailykos.com/story/2008/10/25/124139/63/811/641943
+
+
+===========================================================================
+
+http://en.wikipedia.org/wiki/Mercator_projection
+
+ x = lng - lng_0
+
+ y = ln ( tan(lat) + sec(lat) )
+
+ lat = arctan(sinh(y))
+ lng = x + lng_0
+
+* Google maps use a mercator projection
+
+=====
+
+Gall-Peters
+
+x = R * lng      * pi/(180 * sqrt(2))
+y = R * sin(lat) * sqrt(2)
+
+
+
+===========================================================================
+
+# "#<struct CityMetro .*metro_name="?\("[^"]+"\|nil\)"?, metro_stature="?\("[^"]+"\|nil\)"?, pop_2007=\([^",]+\), .*pop_rank=\([^",]+\), .*pop_chg_pct_avg=\([^",]+\), pop_at_or_above=\([^",]+\), pop_aoa_pct=\([^",]+\), metro_st="?\("[^"]+"\|nil\)"?, metro_nickname=.*, csa_name="?\("[^"]+"\|nil\)"?>"
+# 		\2	\3	\4	\5	\6	\7	\8	\1			\9
+# "#<struct CityMetro .*metro_name=""\([^"]+\)"", metro_stature=""\([^M][^"]+)"", .*
+# 		\2							\1			
+#
+# 

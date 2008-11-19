@@ -15,12 +15,6 @@ require 'endorsement'
 require 'metropolitan_areas'
 require 'lib/hash_of_structs'
 
-# Presidential Endorsements by Major Newspapers in the 2008 General Election
-# Editor & Publisher
-# http://www.editorandpublisher.com/eandp/news/article_display.jsp?vnu_content_id=1003875230
-# election 2008 election2008 president general newspaper endorsement politics
-# Source data by Dexter Hill and Greg Mitchell Editor & Publisher
-
 # to spot check count
 # cat rawd/endorsements-raw-20081020.txt | egrep  '^\(?.[a-z]' | wc -l
 

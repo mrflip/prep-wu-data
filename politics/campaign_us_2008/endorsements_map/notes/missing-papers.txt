@@ -1,0 +1,47 @@
+2000
+
+Paper					Circulation	City			Metro Area Pop. Rank	1992	1996	2000	2004	2008	Approx Lat.	Approx Long.
+  
+Merged:
+  Atlanta Journal Constitution		326907		Atlanta, GA		9						Kerry	Obama	33.7		-84.4	    
+  Washington Examiner			100073		Washington, DC		8						abstain McCain	38.9		-77.0	    
+
+Checked
+  Belleville News Democrat		51974		Belleville, IL					GHWBush Dole				38.5		-90.0	    
+  
+  Salt Lake Tribune			121699		Salt Lake City, UT	48						Bush	Obama	40.8		-111.9	    
+  Daily Breeze				66599		Torrance, CA		2			GHWBush			Bush	Obama	33.8		-118.3	    
+  San Bernardino County Sun		54315		San Bernardino, CA	14			Clinton			Bush	Obama	34.1		-117.3	    
+  Times Herald Record			75745		Middletown, NY		77			Clinton				Obama	41.4		-74.4	    
+  Bucks County Courier Times		60233		Bethlehem, PA		62						Kerry	Obama	40.6		-75.4	    
+  Pensacola News Journal		57069		Pensacola, FL		108							Obama	30.4		-87.2	    
+  Macon Telegraph			56510		Macon, GA		187						Kerry	Obama	32.8		-83.6	    
+  el Diario				53856		New York City, NY	1						Kerry	Obama	40.7		-74.0	    
+  Oakland Press				66422		Pontiac, MI		11						Bush	McCain	42.6		-83.3	    
+  Baltimore Examiner			50000		Baltimore, MD		20						abstain McCain	39.3		-76.6	    
+  Republican				83894		Springfield, MA		74						Kerry	McCain	42.1		-72.6	    
+  Colorado Springs Gazette		93859		Colorado Springs, CO	83						abstain abstain 38.8		-104.8	    
+  South Bend Tribune			66886		South Bend, IN		149				Clinton				41.7		-86.3	    
+  
+
+
+November 5, 1996
+November 3, 1992
+November 8, 1988
+
+1996
+
+(recommendations OR recommends OR recommend OR endorses OR endorsement OR endorsements) AND DATE(>=1996-10-12 and <=1996-11-05) AND (clinton OR dole) AND section(opinion)
+
+(recommend! OR endors!) AND DATE(>=1996-09-20 and <=1996-11-05) AND (clinton OR dole)
+
+(ballot recommendations) and DATE(>=1996-10-12 and <=1996-11-05)
+(recommendations OR recommends OR endorses OR endorsement OR endorsements)
+("clinton for president") AND DATE(>=1996-10-12 and <=1996-11-05)
+("editorial board") AND DATE(>=1996-10-12 and <=1996-11-05)
+HEADLINE(recommend!) AND DATE(>=1996-10-01 and <=1996-11-05)
+
+
+ 
+http://pqasb.pqarchiver.com/orlandosentinel/access/77922590.html?dids=77922590:77922590&FMT=ABS&FMTS=ABS:FT&type=current&date=Nov+3%2C+1996&author=&pub=Orlando+Sentinel&edition=&startpage=G.2&desc=BE+PREPARED+VOTERS+HAVE+A+BIG+JOB+AHEAD+OF+THEM+TUESDAY.+BECOME+FAMILIAR+WITH+A+LONG+LIST+OF+OFFICES+AND+ISSUES.
+http://pqasb.pqarchiver.com/sun_sentinel/access/14968204.html?dids=14968204:14968204&FMT=ABS&FMTS=ABS:FT&type=current&date=Nov+3%2C+1996&author=&pub=Sun+Sentinel&edition=&startpage=10.H&desc=SUMMARY+OF+RECOMMENDATIONS+Series%3A+ELECTION+1996
