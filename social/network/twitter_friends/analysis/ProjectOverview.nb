@@ -1,0 +1,70 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      1423,         61]
+NotebookOptionsPosition[      1028,         42]
+NotebookOutlinePosition[      1365,         57]
+CellTagsIndexPosition[      1322,         54]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Overview", "Subsection",
+ CellChangeTimes->{{3.436396726902*^9, 3.436396728677487*^9}},
+ Magnification->1.5],
+
+Cell[CellGroupData[{
+
+Cell["Quasi-cliques", "Subsubsection",
+ CellChangeTimes->{{3.436396768602469*^9, 3.436396771261991*^9}}],
+
+Cell["\<\
+* Find bi-directional links
+* Cut out graph center
+* \
+\>", "Text",
+ CellChangeTimes->{{3.436396731384982*^9, 3.436396817527775*^9}},
+ Magnification->1.5]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{971, 989},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"6.0 for Mac OS X x86 (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 114, 2, 51, "Subsection"],
+Cell[CellGroupData[{
+Cell[729, 29, 104, 1, 25, "Subsubsection"],
+Cell[836, 32, 164, 6, 84, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
