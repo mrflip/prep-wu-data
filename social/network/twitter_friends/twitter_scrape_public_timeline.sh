@@ -5,6 +5,7 @@ logdir="/data/log/${poolpath}"
 url="http://twitter.com/statuses/public_timeline.rss"
 waittime=3
 
+mkdir -p $logdir
 mkdir -p $datadir
 cd       $datadir
 for (( i=0 ; 1 ; true )) ; do
