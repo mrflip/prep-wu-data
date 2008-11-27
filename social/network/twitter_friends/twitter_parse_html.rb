@@ -11,12 +11,9 @@ as_dset __FILE__
 # # Setup database
 # #
 
-# DataMapper::Logger.new(STDOUT, :debug) # watch SQL log -- must be BEFORE call to db setup
+DataMapper::Logger.new(STDOUT, :debug) # watch SQL log -- must be BEFORE call to db setup
 dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
 DataMapper.setup_remote_connection dbparams
-# Friendship.auto_migrate!
-TwitterUser.auto_upgrade!
-# Tweet.auto_migrate!
 
 # matches color defs in the user style's css snippets
 COLOR_RE = 'color\:\s*.([\da-f]+)'
@@ -71,65 +68,87 @@ end
 def natural_merge dest, raw, only=nil
   raw = raw.slice(*only) if only
   # raw.each{|k,v| dest[k] = v if v }
-  dest.attributes = raw.compact #
+  dest.attributes = raw.compact if raw #
 end
 
-parser = TwitterHTMLParser.new()
-
-Dir["/data/rawd/social/network/twitter_friends/profiles/twitter_id_*"].each do |dir|
-  Dir["#{dir}/*"].each do |profile_page_filename|
-    twitter_name = File.basename(profile_page_filename)
-    twitter_user = TwitterUser.find_or_create( :twitter_name => twitter_name )
-    next if twitter_user.parsed || twitter_user.failed
-    File.open(profile_page_filename) do |profile_page_file|
-      begin
-        doc = Hpricot(profile_page_file)
-      rescue
-        twitter_user.parsed = false; twitter_user.failed = true; twitter_user.save
-        next
-      end
-      raw = parser.parse(doc)
-      twitter_user.last_scraped_date = File.mtime(profile_page_file)
-      natural_merge twitter_user, raw, [:native_id, :profile_img_url]
-      natural_merge twitter_user, raw[:profile]
-      natural_merge twitter_user, raw[:stats]
-      [:style_link_color, :style_text_color, :style_name_color, :style_bg_color, :style_sidebar_fill_color, :style_sidebar_border_color].each do |attr|
-        raw[:style_settings][attr] = raw[:style_settings][attr].hex if raw[:style_settings][attr]
-      end
-      raw[:style_settings][:style_bg_img_tile] = !!(raw[:style_settings][:style_bg_img_tile] =~ /no-repeat/)
-      natural_merge twitter_user, raw[:style_settings]
-
-      raw[:friends].each do |hsh|
-        next unless hsh[:twitter_name]
-        friend = TwitterUser.update_or_create({ :twitter_name => hsh[:twitter_name] }, { :mini_img_url => hsh[:mini_img_url]})
-        Friendship.find_or_create(:friend_id => friend.id, :follower_id => twitter_user.id)
-      end
-      raw[:tweets].each do |raw_tweet|
-        tweet_id_str = raw_tweet.delete(:tweet_id) or next
-        tweet_id = tweet_id_str.to_i
-        raise "Bad tweet id in #{twitter_name}: #{tweet_id_str.inspect} - #{raw_tweet.inspect}" unless (tweet_id && (tweet_id > 0))
-        [:all_atsigns, :all_hash_tags, :all_tweeted_urls].each do |attr| raw_tweet[attr] = raw_tweet[attr].to_json if raw_tweet[attr] end
-        raw_tweet[:inreplyto_tweet_id] = raw_tweet[:inreplyto_tweet_id].to_i if raw_tweet[:inreplyto_tweet_id]
-        tweet = Tweet.update_or_create({ :id => tweet_id }, raw_tweet.merge({ :twitter_user_id => twitter_user.id }))
-        # natural_merge tweet,
-        # tweet.save
-        twitter_user.tweets << tweet
-      end
-
-
-      first_tweet = twitter_user.tweets.first(:order => [:datetime.asc])
-      last_tweet  = twitter_user.tweets.first(:order => [:datetime.desc])
-      twitter_user.first_seen_update_time = first_tweet.datetime if first_tweet
-      twitter_user.last_seen_update_time  = last_tweet.datetime  if last_tweet
-      twitter_user.parsed = true
-      twitter_user.save
-      # puts raw.to_yaml
-
-      # last_seen_update  = self.tweets.first(:order => [:datetime.desc])
-      # first_seen_update = self.tweets.first(:order => [:datetime.asc])
-      # self.last_seen_update_time  = last_seen_update.datetime  if last_seen_update
-      # self.first_seen_update_time = first_seen_update.datetime if first_seen_update
+def parse_twitter_user twitter_user, profile_page_filename
+  return if (!twitter_user) || twitter_user.parsed || twitter_user.failed
+  return unless File.exist?(profile_page_filename)
+  File.open(profile_page_filename) do |profile_page_file|
+    begin
+      doc = Hpricot(profile_page_file)
+    rescue
+      twitter_user.parsed = false; twitter_user.failed = true; twitter_user.save
+      return
     end
-    track_count :users, 10
+    raw = $parser.parse(doc)
+    twitter_user.last_scraped_date = File.mtime(profile_page_file)
+    natural_merge twitter_user, raw, [:native_id, :profile_img_url]
+    natural_merge twitter_user, raw[:profile]
+    natural_merge twitter_user, raw[:stats]
+    [:style_link_color, :style_text_color, :style_name_color, :style_bg_color, :style_sidebar_fill_color, :style_sidebar_border_color].each do |attr|
+      raw[:style_settings][attr] = raw[:style_settings][attr].hex if raw[:style_settings][attr]
+    end
+    raw[:style_settings][:style_bg_img_tile] = !!(raw[:style_settings][:style_bg_img_tile] =~ /no-repeat/)
+    natural_merge twitter_user, raw[:style_settings]
+    raw[:friends].each do |hsh|
+      next unless hsh[:twitter_name]
+      friend = TwitterUser.update_or_create({ :twitter_name => hsh[:twitter_name] }, { :mini_img_url => hsh[:mini_img_url]})
+      Friendship.find_or_create(:friend_id => friend.id, :follower_id => twitter_user.id)
+    end
+    raw[:tweets].each do |raw_tweet|
+      tweet_id_str = raw_tweet.delete(:tweet_id) or next
+      tweet_id = tweet_id_str.to_i
+      raise "Bad tweet id in #{twitter_name}: #{tweet_id_str.inspect} - #{raw_tweet.inspect}" unless (tweet_id && (tweet_id > 0))
+      [:all_atsigns, :all_hash_tags, :all_tweeted_urls].each do |attr| raw_tweet[attr] = raw_tweet[attr].to_json if raw_tweet[attr] end
+      raw_tweet[:inreplyto_tweet_id] = raw_tweet[:inreplyto_tweet_id].to_i if raw_tweet[:inreplyto_tweet_id]
+      tweet = Tweet.update_or_create({ :id => tweet_id }, raw_tweet.merge({ :twitter_user_id => twitter_user.id }))
+      # natural_merge tweet,
+      # tweet.save
+      twitter_user.tweets << tweet
+    end
+    # first_tweet = twitter_user.tweets.first(:order => [:datetime.asc])
+    # last_tweet  = twitter_user.tweets.first(:order => [:datetime.desc])
+    # twitter_user.first_seen_update_time = first_tweet.datetime if first_tweet
+    # twitter_user.last_seen_update_time  = last_tweet.datetime  if last_tweet
+    twitter_user.parsed = true
+    twitter_user.save
+    # puts raw.to_yaml
   end
+  return true
+end
+
+def ripd_file_from_name twitter_name
+  prefix = (twitter_name+'_')[0..1]
+  "/data/rawd/social/network/twitter_friends/profiles/twitter_id_#{prefix}/#{twitter_name}"
+end
+
+def parse_pass threshold, offset = 0
+  announce("Parsing %6d..%-6d popular but unparsed users" % [offset, threshold+offset])
+  popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => 'parse', # :result_code => nil,
+     :fields => [:twitter_name, :id],
+     :order  => [:priority.asc],
+     :limit  => threshold, :offset => offset
+  popular_and_neglected.each do |req|
+    track_count    :users, 10
+    $stderr.print "%-20s"%[req.twitter_name]
+    profile_page_filename = ripd_file_from_name(req.twitter_name)
+    twitter_user = TwitterUser.first( :twitter_name => req.twitter_name )
+    next unless twitter_user
+    success = parse_twitter_user twitter_user, profile_page_filename
+    # mark columns
+    req.result_code  = success
+    req.scraped_time = Time.now.utc
+    req.save
+  end
+  announce "Finished chunk %6d..%-6d" % [offset, threshold+offset]
+end
+
+$parser = TwitterHTMLParser.new()
+n_requests = AssetRequest.count(:scraped_time => nil)
+chunksize = 1000
+offset    = 0
+chunks    = (n_requests / chunksize).to_i + 1
+(0..chunks).each do |chunk|
+  parse_pass chunksize, offset
 end

@@ -10,9 +10,9 @@ REPLACE INTO `imw_twitter_friends`.twitter_users
   WHERE ou.id < 50
 
 REPLACE INTO `imw_twitter_friends`.asset_requests
-  (`uri`,`priority`,`scraped_time`,`twitter_user_id`,`user_resource`,`page`)
+  (`uri`,`priority`,`scraped_time`,`twitter_user_id`,`user_resource`,`page`,`twitter_name`)
 SELECT concat('http://twitter.com/statuses/followers/', u.twitter_name, '.json?page=1') AS uri,
-  pr.prestige AS priority, NULL AS scraped_time, u.id AS twitter_user_id, "followers" AS user_resource, 1 AS page
+  pr.prestige AS priority, NULL AS scraped_time, u.id AS twitter_user_id, "followers" AS user_resource, 1 AS page, u.twitter_name
   FROM  `imw_twitter_friends`.twitter_users u,
   `imw_twitter_friends`.twitter_page_ranks pr 
   WHERE pr.twitter_user_id = u.id 
@@ -20,11 +20,27 @@ SELECT concat('http://twitter.com/statuses/followers/', u.twitter_name, '.json?p
   LIMIT 20
   
 REPLACE INTO `imw_twitter_friends`.asset_requests
-  (`uri`,`priority`,`scraped_time`,`twitter_user_id`,`user_resource`,`page`)
+  (`uri`,`priority`,`scraped_time`,`twitter_user_id`,`user_resource`,`page`,`twitter_name`)
 SELECT concat('http://twitter.com/statuses/friends/', u.twitter_name, '.json?page=1') AS uri,
-  pr.prestige AS priority, NULL AS scraped_time, u.id AS twitter_user_id, "friends" AS user_resource, 1 AS page
+  pr.prestige AS priority, NULL AS scraped_time, u.id AS twitter_user_id, "friends" AS user_resource, 1 AS page, u.twitter_name
   FROM  `imw_twitter_friends`.twitter_users u,
   `imw_twitter_friends`.twitter_page_ranks pr 
   WHERE pr.twitter_user_id = u.id 
   ORDER BY pr.prestige ASC
   LIMIT 20
+
+UPDATE `imw_twitter_friends`.asset_requests a,  `imw_twitter_friends`.twitter_users u
+  SET a.twitter_name = u.twitter_name
+  WHERE a.twitter_user_id = u.id
+  AND   a.prestige < 20
+
+REPLACE INTO `imw_twitter_friends`.asset_requests
+  (`uri`,`priority`,`scraped_time`,`twitter_user_id`,`user_resource`,`page`,`twitter_name`)
+SELECT concat('http://twitter.com/', u.twitter_name) AS uri,
+  pr.prestige AS priority, NULL AS scraped_time, u.id AS twitter_user_id, "parse" AS user_resource, 1 AS page, u.twitter_name
+  FROM  `imw_twitter_friends`.twitter_users u,
+  `imw_twitter_friends`.twitter_page_ranks pr 
+  WHERE pr.twitter_user_id = u.id 
+  ORDER BY pr.prestige ASC
+  LIMIT 20
+  

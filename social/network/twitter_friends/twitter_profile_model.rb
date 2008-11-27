@@ -43,6 +43,7 @@ class TwitterUser
   has n, :friendships,    :child_key => [:follower_id], :class_name => 'Friendship'
   has n, :followerships,  :child_key => [:friend_id],   :class_name => 'Friendship'
   has n, :tweets
+  has 1, :twitter_page_rank
   #
   # FIXME
   def follower_names() self.followerships.map{ |f| f.follower.twitter_name } end
@@ -68,6 +69,7 @@ class TwitterPageRank
   property      :prestige,        Integer, :index => :user_prestige
   property      :twitter_user_id, Integer, :key   => true, :index => :user_prestige
   property      :page_rank,       Float
+  belongs_to    :twitter_user
 end
 
 #
@@ -91,6 +93,35 @@ class Tweet
   # has n,     :at_signs
   # has n,     :tweet_hash_tags
   # has n,     :tweet_tweeted_urls
+end
+
+
+# user - username - html_profile
+class AssetRequest
+  include DataMapper::Resource
+  property :uri,                String, :length => 1024, :unique_index => true
+  property :priority,           Integer
+  property :result_code,        Integer
+  property :scraped_time,       DateTime
+  # connect to twitter model
+  property :id,                 Integer, :serial => true
+  property :twitter_user_id,    Integer, :index => [:user_resource_page]
+  property :twitter_name,       String
+  property :user_resource,      String, :length => 15, :index => [:user_resource_page] # public_page, info, followers, followings, tweets, favorites
+  property :page,               Integer, :index => [:user_resource_page]
+  # def self.request(uri, priority)
+  #   req = self.find_or_create({ :uri =>  uri })
+  #   req.priority = [req.priority, priority].min
+  #   req if req.save
+  # end
+
+
+  def ripd_file
+    m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)\?page=(.*)}.match(uri) or raise "Can't grok url #{uri}"
+    resource, prefix, suffix, page = m.captures
+    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}%3Fpage%3D#{page}"
+  end
+
 end
 
 # #
