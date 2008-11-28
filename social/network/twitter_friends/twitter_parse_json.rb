@@ -21,7 +21,7 @@ DataMapper.setup_remote_connection dbparams
 
 # # matches color defs in the user style's css snippets
 # COLOR_RE = 'color\:\s*.([\da-f]+)'
-# 
+#
 # def natural_merge dest, raw, only=nil
 #   raw = raw.slice(*only) if only
 #   # raw.each{|k,v| dest[k] = v if v }
@@ -77,19 +77,19 @@ DataMapper.setup_remote_connection dbparams
 
 
 
-USER_REMAPPING =   { 
+USER_REMAPPING =   {
   :twitter_name                    => :screen_name,
   :real_name                       => :name,
   :native_id                       => :id,
   :location                        => :location,
   :web                             => :url,
   :bio                             => :description,
-  :followers_count                 => :followers_count, 
+  :followers_count                 => :followers_count,
   :profile_img_url                 => :profile_image_url,
   # nil                            => :protected,
 }
 USER_REMAPPING.each{|k,v| USER_REMAPPING[k] = v.to_s}
-TWEET_REMAPPING = { 
+TWEET_REMAPPING = {
   :id                            => :id,
   :content                       => :text,
   :datetime                      => :created_at,
@@ -147,7 +147,7 @@ def parse_twitter_followers twitter_user, ripd_file
     follower.save
     Friendship.find_or_create(:friend_id => twitter_user.id, :follower_id => follower.id)
     # puts [user_hsh].to_yaml
-    
+
     if raw_tweet = raw['status']
       tweet_hsh = remap(TWEET_REMAPPING, raw_tweet)
       tweet_hsh[:id] = tweet_hsh[:id].to_i
@@ -158,15 +158,15 @@ def parse_twitter_followers twitter_user, ripd_file
       if ! fromsource_raw.blank?
         if m = %r{<a href="([^\"]+)">([^<]+)</a>}.match(fromsource_raw)
           tweet_hsh[:fromsource_url], tweet_hsh[:fromsource] = m.captures
-        else 
-          tweet_hsh[:fromsource] = fromsource_raw 
+        else
+          tweet_hsh[:fromsource] = fromsource_raw
         end
       end
       tweet_hsh[:datetime] = DateTime.parse(tweet_hsh[:datetime]) if tweet_hsh[:datetime]
       tweet_hsh[:twitter_user_id] = follower.id
       tweet = Tweet.update_or_create({ :id => tweet_hsh[:id] }, tweet_hsh.compact)
       # puts [tweet_hsh, raw['status']['source']].to_yaml
-    end    
+    end
   end
   true
 end
@@ -179,7 +179,7 @@ def parse_pass threshold, offset = 0
      :limit  => threshold, :offset => offset
   popular_and_neglected.each do |req|
     # log
-    track_count    :users, 10;    
+    track_count    :users, 10;
     $stderr.print "%-20s"%["#{req.twitter_name} (#{req.page})"]
     # load user
     twitter_user = TwitterUser.first( :twitter_name => req.twitter_name ) or next
@@ -194,9 +194,9 @@ def parse_pass threshold, offset = 0
 end
 
 # $parser = TwitterHTMLParser.new()
-n_requests = AssetRequest.count(:scraped_time => nil, :user_resource => 'flwr_parse')
 chunksize = 1000
 offset    = 0
+n_requests = AssetRequest.count(:scraped_time => nil, :user_resource => 'flwr_parse') - offset
 chunks    = (n_requests / chunksize).to_i + 1
 (0..chunks).each do |chunk|
   parse_pass chunksize, offset

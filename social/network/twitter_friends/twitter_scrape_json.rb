@@ -7,7 +7,6 @@ require 'imw/dataset/datamapper'
 as_dset __FILE__
 require 'fileutils'; include FileUtils
 
-
 #
 require 'twitter_profile_model'
 require File.dirname(__FILE__)+'/twitter_pass.rb'

@@ -34,8 +34,8 @@ class TwitterAssetRequester
     case context
     when :public_page   then 1
     when :info,      :info_parse then 1
-    when :followers, :flwr_parse then twitter_user.followers_count ? (twitter_user.followers_count/100.0).ceil : 0
-    when :friends,   :frnd_parse then twitter_user.following_count ? (twitter_user.following_count/100.0).ceil : 0
+    when :followers, :flwr_parse then ((twitter_user.followers_count||1)/100.0).ceil
+    when :friends,   :frnd_parse then ((twitter_user.following_count||1)/100.0).ceil
     end
   end
   #
@@ -44,13 +44,14 @@ class TwitterAssetRequester
   # # http://twitter.com/users/show/infochimps.json
   # # http://twitter.com/account/rate_limit_status/infochimps.json
   def self.insert_user_requests twitter_user
-    priority     = twitter_user.twitter_page_rank ? twitter_user.twitter_page_rank.prestige : (100_000 - twitter_user.followers_count)
-    [:info_parse, :flwr_parse, :frnd_parse].map do |context|
+    priority     = twitter_user.twitter_page_rank ? twitter_user.twitter_page_rank.prestige : (500_000 - 1000*(twitter_user.followers_count||0))
+    [:info, :followers, :friends, :info_parse, :flwr_parse, :frnd_parse].map do |context|
       pages = pages_from_info(twitter_user, context) or next
 
       #
       #
       (1..pages).map do |page|
+        track_count    :pages, 1000
         url = url_from_info twitter_user, context, page
         # AssetRequest.update_or_create({
         #     :twitter_user_id => twitter_user.id,
@@ -76,25 +77,29 @@ class TwitterAssetRequester
   end
 end
 
+#
+# requests are queued
+# then requests are processed
+#
 
-def request_pass threshold, offset = 0
-  announce("Inserting requests %6d..%-6d for popular+unrequested users" % [offset, threshold+offset])
-  popular_and_neglected = TwitterUser.all :followers_count.not => nil, # :parsed => true,
-     :fields => [:id, :twitter_name, :following_count, :followers_count, :updates_count, :parsed, :failed],
-     :order  => [:followers_count.desc],
-     :limit  => threshold, :offset => offset
+def request_pass limit, offset = 0
+  announce("Inserting requests %6d..%-6d for popular+unrequested users" % [offset, limit+offset])
+  popular_and_neglected = TwitterUser.all({ # :followers_count.not => nil,
+     :fields => [:id, :twitter_name, :following_count, :followers_count],  # , :updates_count, :parsed, :failed],
+     # :order  => [:followers_count.asc],
+     :limit  => limit, :offset => offset })
   popular_and_neglected.each do |twitter_user|
-    track_count    :users, 50
+    track_count    :users, 100
     TwitterAssetRequester.bulk_dump_user_requests twitter_user
   end
-  announce "Finished chunk %6d..%-6d" % [offset, threshold+offset]
+  announce "Finished chunk %6d..%-6d" % [offset, limit+offset]
 end
 
 
-n_requests = TwitterUser.count(:parsed => true)
 chunksize = 5000
-offset    = 0   # for parallel runs, space each separate job by a few chunksizes.
+offset    = 400_000   # for parallel runs, space each separate job by a few chunksizes.
+n_requests = TwitterUser.count - offset
 chunks    = (n_requests / chunksize).to_i + 1
-(0..chunks).each do |chunk|
-  request_pass chunksize, offset + chunk*chunksize
+(1..chunks).each do |chunk|
+  request_pass chunksize, offset + (chunk-1)*chunksize
 end

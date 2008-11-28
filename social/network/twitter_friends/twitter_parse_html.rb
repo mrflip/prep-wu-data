@@ -11,7 +11,7 @@ as_dset __FILE__
 # # Setup database
 # #
 
-DataMapper::Logger.new(STDOUT, :debug) # watch SQL log -- must be BEFORE call to db setup
+# DataMapper::Logger.new(STDERR, :debug) # watch SQL log -- must be BEFORE call to db setup
 dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
 DataMapper.setup_remote_connection dbparams
 
@@ -86,6 +86,7 @@ def parse_twitter_user twitter_user, profile_page_filename
     natural_merge twitter_user, raw, [:native_id, :profile_img_url]
     natural_merge twitter_user, raw[:profile]
     natural_merge twitter_user, raw[:stats]
+    raw[:style_settings] ||= {}
     [:style_link_color, :style_text_color, :style_name_color, :style_bg_color, :style_sidebar_fill_color, :style_sidebar_border_color].each do |attr|
       raw[:style_settings][attr] = raw[:style_settings][attr].hex if raw[:style_settings][attr]
     end
@@ -147,7 +148,7 @@ end
 $parser = TwitterHTMLParser.new()
 n_requests = AssetRequest.count(:scraped_time => nil)
 chunksize = 1000
-offset    = 0
+offset    = 5000
 chunks    = (n_requests / chunksize).to_i + 1
 (0..chunks).each do |chunk|
   parse_pass chunksize, offset
