@@ -77,6 +77,13 @@ class TwitterAssetRequester
   end
 end
 
+# SELECT * FROM TASK WHERE ID BETWEEN N AND N+99999 is much better choice
+# hen doing a bulk insert/update/change to a MySQL table you can temporarily disable index updates like this:
+# ALTER TABLE $tbl_name DISABLE KEYS
+# ... do stuff ...
+# ALTER TABLE $tbl_name ENABLE KEYS
+
+
 #
 # requests are queued
 # then requests are processed

@@ -104,9 +104,6 @@ def parse_twitter_user twitter_user, profile_page_filename
       [:all_atsigns, :all_hash_tags, :all_tweeted_urls].each do |attr| raw_tweet[attr] = raw_tweet[attr].to_json if raw_tweet[attr] end
       raw_tweet[:inreplyto_tweet_id] = raw_tweet[:inreplyto_tweet_id].to_i if raw_tweet[:inreplyto_tweet_id]
       tweet = Tweet.update_or_create({ :id => tweet_id }, raw_tweet.merge({ :twitter_user_id => twitter_user.id }))
-      # natural_merge tweet,
-      # tweet.save
-      twitter_user.tweets << tweet
     end
     # first_tweet = twitter_user.tweets.first(:order => [:datetime.asc])
     # last_tweet  = twitter_user.tweets.first(:order => [:datetime.desc])
@@ -126,10 +123,10 @@ end
 
 def parse_pass threshold, offset = 0
   announce("Parsing %6d..%-6d popular but unparsed users" % [offset, threshold+offset])
-  popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => 'parse', # :result_code => nil,
+  popular_and_neglected = AssetRequest.all :priority.gte => offset, :priority.lt => offset+threshold,
+     :scraped_time => nil, :user_resource => 'parse',
      :fields => [:twitter_name, :id],
-     :order  => [:priority.asc],
-     :limit  => threshold, :offset => offset
+     :limit  => 2*threshold
   popular_and_neglected.each do |req|
     track_count    :users, 10
     $stderr.print "%-20s"%[req.twitter_name]
@@ -146,10 +143,10 @@ def parse_pass threshold, offset = 0
 end
 
 $parser = TwitterHTMLParser.new()
-n_requests = AssetRequest.count(:scraped_time => nil)
-chunksize = 1000
-offset    = 5000
+n_requests = AssetRequest.count( :user_resource => 'parse' )
+chunksize = 500
+offset    = 200000
 chunks    = (n_requests / chunksize).to_i + 1
-(0..chunks).each do |chunk|
-  parse_pass chunksize, offset
+(1..chunks).each do |chunk|
+  parse_pass chunksize, offset + chunksize*(chunk-1)
 end

@@ -193,12 +193,12 @@ def parse_pass threshold, offset = 0
   announce "Finished chunk %6d..%-6d" % [offset, threshold+offset]
 end
 
-# $parser = TwitterHTMLParser.new()
-chunksize = 1000
-offset    = 0
-n_requests = AssetRequest.count(:scraped_time => nil, :user_resource => 'flwr_parse') - offset
-chunks    = (n_requests / chunksize).to_i + 1
-(0..chunks).each do |chunk|
-  parse_pass chunksize, offset
-end
 
+n_requests = AssetRequest.count( :user_resource => 'flwr_parse' )
+shard     = 0
+chunksize = 2000
+offset    = shard * 300000
+chunks    = (n_requests / chunksize).to_i + 1
+(1..chunks).each do |chunk|
+  parse_pass chunksize, offset + chunksize*(chunk-1)
+end

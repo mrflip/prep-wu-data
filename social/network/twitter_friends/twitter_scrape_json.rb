@@ -86,7 +86,7 @@ end
 
 
 n_requests = AssetRequest.count(:scraped_time => nil)
-chunksize = 1000
+chunksize = 500
 offset    = 0   # for parallel runs, space each separate job by a few chunksizes.
 chunks    = (n_requests / chunksize).to_i + 1
 (0..chunks).each do |chunk|
