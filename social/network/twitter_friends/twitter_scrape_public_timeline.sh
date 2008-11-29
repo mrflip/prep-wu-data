@@ -3,7 +3,7 @@ poolpath="social/network/twitter_friends/public_timeline"
 datadir="/data/rawd/${poolpath}"
 logdir="/data/log/${poolpath}"
 url="http://twitter.com/statuses/public_timeline.json"
-waittime=3
+waittime=59
 
 mkdir -p $logdir
 mkdir -p $datadir
