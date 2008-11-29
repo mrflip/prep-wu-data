@@ -9,7 +9,7 @@ mkdir -p $logdir
 mkdir -p $datadir
 cd       $datadir
 for (( i=0 ; 1 ; true )) ; do
-    filename=$datadir/`date +'%Y%m/%d/%H%M/public_timeline-%Y%m%d-%H%M%S.json'`
+    filename=$datadir/`date +'%Y%m/%d/%H/public_timeline-%Y%m%d-%H%M%S.json'`
     logname=$logdir/`date +'twitter_public_timeline-%Y%m%d.log'`
     mkdir -p `dirname $filename`
     mkdir -p `dirname $logname`
