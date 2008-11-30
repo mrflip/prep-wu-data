@@ -44,3 +44,11 @@ SpamA:				hi			low	low		high					~1
 
 
 I'm with the band	lo	lo	vy.hi	hi	1	(protected)
+
+
+
+* recency
+* average tweets/day, average follows/day
+* urls per tweet, @replies per tweet
+* # bidirectional friends
+* local clique density (compare the set of people I follow (1st degree) and the set of people they follow (2nd degree).  If I'm completely cliquish, those numbers will be the same, if I'm just clicking on dudes at random the first set has no overlap). This is infeasible to compute but I'm trying to approximate

@@ -24,16 +24,23 @@ class ExpandedUrl
 end
 # ExpandedUrl.auto_upgrade!
 
-File.open('fixd/tinyurls.txt').readlines.each do |line|
+File.open('fixd/dump/tweet_url_shorteneds-20081129.tsv').readlines[5000..-1].each do |line|
   short_urls = JSON.load(line)
   next unless short_urls.is_a? Array
   short_urls.each do |short_url|
     short_url.gsub!(%r{\\/},'/')
-    next unless (short_url =~ %r{\Ahttp://tinyurl})
+    next unless (short_url =~ %r{\Ahttp://(tinyurl\.com|is\.gd|snipurl\.com|snurl\.com|bit\.ly|ping\.fm|tr\.im|tiny\.cc|urlenco\.de|url\.ie)})
     if short_url.length > 40 then warn "funked up URL #{short_url}" ; next ; end
     next if     ExpandedUrl.first({ :short_url => short_url })
-    dest_url = Net::HTTP.get_response(URI.parse(short_url))["location"]
-    ExpandedUrl.create({ :short_url => short_url , :dest_url => dest_url })
+    begin
+      dest_url = Net::HTTP.get_response(URI.parse(short_url))["location"]
+      ExpandedUrl.create({ :short_url => short_url , :dest_url => dest_url })
+    rescue Exception => e
+      nil
+    end
     sleep 2
   end
 end
+
+
+

@@ -49,8 +49,7 @@ def wget rip_url, ripd_file, sleep_time=1
     if File.exists?(ripd_file)
       puts "Skipping #{rip_url}"
     else
-      print `wget -nv --http-user=#{TWITTER_USERNAME} --http-passwd=#{TWITTER_PASSWD} -O'#{ripd_file}' '#{rip_url}' `
-      FileUtils.touch        ripd_file  # leave a 0-byte turd so we don't refresh
+      print `wget -nv --timeout=8 --http-user=#{TWITTER_USERNAME} --http-passwd=#{TWITTER_PASSWD} -O'#{ripd_file}' '#{rip_url}' `
       # puts "(sleeping #{sleep_time})" ;
       sleep sleep_time
     end
@@ -60,37 +59,49 @@ def wget rip_url, ripd_file, sleep_time=1
 end
 
 def ripd_file_from_url url
-  m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)\?page=(.*)}.match(url) or raise "Can't grok url #{url}"
-  resource, prefix, suffix, page = m.captures
-  "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}%3Fpage%3D#{page}"
-end
-
-def scrape_pass threshold, offset = 0
-  announce("Scraping %6d..%-6d for popular+unrequested users" % [offset, threshold+offset])
-  popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => 'followers', # :result_code => nil,
-     :fields => [:uri, :id],
-     :order  => [:priority.asc],
-     :limit  => threshold, :offset => offset
-  popular_and_neglected.each do |req|
-    track_count    :users, 50
-    ripd_file = ripd_file_from_url(req.uri)
-    next unless ripd_file =~ %r{^_com/_tw}
-    success = wget req.uri, ripd_file, 0.2
-    # mark columns
-    req.result_code  = success
-    req.scraped_time = Time.now.utc
-    req.save
+  case
+  when m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)\?page=(.*)}.match(url)
+    resource, prefix, suffix, page = m.captures
+    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}%3Fpage%3D#{page}"
+  when m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)$}.match(url)
+    resource, prefix, suffix = m.captures
+    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}"
+  else
+    raise "Can't grok url #{url}"
   end
-  announce "Finished chunk %6d..%-6d" % [offset, threshold+offset]
+end
+
+def scrape_pass min_priority, max_priority, hard_limit = nil
+  hard_limit ||= 5*(max_priority-min_priority)
+  ['friends', 'followers', 'info'].each do |context|
+    announce("Scraping  %s %6d..%-6d popular+unrequested users" % [context, min_priority, max_priority])
+    popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => context,
+    :priority.gte => min_priority, :priority.lt => max_priority, :page.lt => 15,
+    :fields => [:uri, :id],
+    :order  => [:page.asc, :priority.asc],
+    :limit  => hard_limit
+    popular_and_neglected.each do |req|
+      track_count    :users, 50
+      ripd_file = ripd_file_from_url(req.uri)
+      next unless ripd_file =~ %r{^_com/_tw}
+      success = wget req.uri, ripd_file, 0.8
+      # mark columns
+      req.result_code  = success
+      req.scraped_time = Time.now.utc
+      req.save
+    end
+    announce "Finished %s chunk %6d..%-6d" % [context, min_priority, max_priority]
+  end
 end
 
 
-n_requests = AssetRequest.count(:scraped_time => nil)
-chunksize = 500
-offset    = 0   # for parallel runs, space each separate job by a few chunksizes.
+n_requests = AssetRequest.count(:user_resource => ['friends', 'followers'], :scraped_time => nil)
+chunksize = 200
+offset    = 0   # for parallel runs, space each separate job by 1/n of the problem space
 chunks    = (n_requests / chunksize).to_i + 1
-(0..chunks).each do |chunk|
-  scrape_pass chunksize, offset
+(1..chunks).each do |chunk|
+  min_priority = (chunk-1)*chunksize + offset
+  scrape_pass min_priority, min_priority+chunksize
 end
 #
 #

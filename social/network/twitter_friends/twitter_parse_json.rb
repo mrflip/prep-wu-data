@@ -5,200 +5,196 @@ require 'json'
 require 'imw' ; include IMW
 require 'imw/extract/html_parser'
 require 'imw/dataset/datamapper'
+require 'imw/tracker'
+require 'imw/transform'
 require 'twitter_profile_model'
 as_dset __FILE__
 
 # #
 # # Setup database
 # #
-
-# DataMapper::Logger.new(STDOUT, :debug) # watch SQL log -- must be BEFORE call to db setup
+# DataMapper.logging = true
 dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
 DataMapper.setup_remote_connection dbparams
 
-
-
-
-# # matches color defs in the user style's css snippets
-# COLOR_RE = 'color\:\s*.([\da-f]+)'
 #
-# def natural_merge dest, raw, only=nil
-#   raw = raw.slice(*only) if only
-#   # raw.each{|k,v| dest[k] = v if v }
-#   dest.attributes = raw.compact #
-# end
-
-# def parse_twitter_user twitter_user, profile_page_filename
-#   return if (!twitter_user) || twitter_user.parsed || twitter_user.failed
-#   return unless File.exist?(profile_page_filename)
-#   File.open(profile_page_filename) do |profile_page_file|
-#     # begin
-#     #   doc = Hpricot(profile_page_file)
-#     # rescue
-#     #   twitter_user.parsed = false; twitter_user.failed = true; twitter_user.save
-#     #   return
-#     # end
-#     # raw = $parser.parse(doc)
-#     # twitter_user.last_scraped_date = File.mtime(profile_page_file)
-#     # natural_merge twitter_user, raw, [:native_id, :profile_img_url]
-#     # natural_merge twitter_user, raw[:profile]
-#     # natural_merge twitter_user, raw[:stats]
-#     # [:style_link_color, :style_text_color, :style_name_color, :style_bg_color, :style_sidebar_fill_color, :style_sidebar_border_color].each do |attr|
-#     #   raw[:style_settings][attr] = raw[:style_settings][attr].hex if raw[:style_settings][attr]
-#     # end
-#     # raw[:style_settings][:style_bg_img_tile] = !!(raw[:style_settings][:style_bg_img_tile] =~ /no-repeat/)
-#     # natural_merge twitter_user, raw[:style_settings]
-#     # raw[:friends].each do |hsh|
-#     #   next unless hsh[:twitter_name]
-#     #   friend = TwitterUser.update_or_create({ :twitter_name => hsh[:twitter_name] }, { :mini_img_url => hsh[:mini_img_url]})
-#     #   Friendship.find_or_create(:friend_id => friend.id, :follower_id => twitter_user.id)
-#     # end
-#     # raw[:tweets].each do |raw_tweet|
-#     #   tweet_id_str = raw_tweet.delete(:tweet_id) or next
-#     #   tweet_id = tweet_id_str.to_i
-#     #   raise "Bad tweet id in #{twitter_name}: #{tweet_id_str.inspect} - #{raw_tweet.inspect}" unless (tweet_id && (tweet_id > 0))
-#     #   [:all_atsigns, :all_hash_tags, :all_tweeted_urls].each do |attr| raw_tweet[attr] = raw_tweet[attr].to_json if raw_tweet[attr] end
-#     #   raw_tweet[:inreplyto_tweet_id] = raw_tweet[:inreplyto_tweet_id].to_i if raw_tweet[:inreplyto_tweet_id]
-#     #   tweet = Tweet.update_or_create({ :id => tweet_id }, raw_tweet.merge({ :twitter_user_id => twitter_user.id }))
-#     #   # natural_merge tweet,
-#     #   # tweet.save
-#     #   twitter_user.tweets << tweet
-#     # end
-#     # # first_tweet = twitter_user.tweets.first(:order => [:datetime.asc])
-#     # # last_tweet  = twitter_user.tweets.first(:order => [:datetime.desc])
-#     # # twitter_user.first_seen_update_time = first_tweet.datetime if first_tweet
-#     # # twitter_user.last_seen_update_time  = last_tweet.datetime  if last_tweet
-#     # twitter_user.parsed = true
-#     # twitter_user.save
-#     # # puts raw.to_yaml
-#   end
-#   return true
-# end
-
-
-
-USER_REMAPPING =   {
-  :twitter_name                    => :screen_name,
-  :real_name                       => :name,
-  :native_id                       => :id,
-  :location                        => :location,
-  :web                             => :url,
-  :bio                             => :description,
-  :followers_count                 => :followers_count,
-  :profile_img_url                 => :profile_image_url,
-  # nil                            => :protected,
-}
-USER_REMAPPING.each{|k,v| USER_REMAPPING[k] = v.to_s}
-TWEET_REMAPPING = {
-  :id                            => :id,
-  :content                       => :text,
-  :datetime                      => :created_at,
-  :inreplyto_name                => :in_reply_to_user_id,
-  :inreplyto_tweet_id            => :in_reply_to_status_id,
-  # nil                            => :truncated,
-  # nil                            => :favorited,
-}
-TWEET_REMAPPING.each{|k,v| TWEET_REMAPPING[k] = v.to_s}
-
-class Transformer
-  attr_accessor :attribute
-  attr_accessor :transformer
-  def initialize attribute, matcher=nil
-    self.attribute = attribute
-    self.transformer  = transformer
-  end
-end
-class RegexpRepeatedTransformer < Transformer
-  attr_accessor :re
-  def initialize attribute, re, transformer=nil
-    super attribute, transformer
-    self.re = re
-  end
-  def transform hsh
-    raw = hsh[attribute] or return
-    # get all matches
-    val = raw.to_s.scan(re)
-    # if there's only one capture group, flatten the array
-    val = val.flatten if val.first && val.first.length == 1
-    # pass to transformer, if any
-    transformer ? transformer.transform(val) : val
-  end
+# Transform User
+#
+def parse_user user_hsh
+  user_hsh['protected'] = user_hsh['protected'] ? 1 : 0
+  user_hsh
 end
 
+#
+# Transform tweet
+#
 require 'twitter_autourl'
-$atsigns_transformer   = RegexpRepeatedTransformer.new(:content, RE_ATSIGNS)
-$hashtags_transformer  = RegexpRepeatedTransformer.new(:content, RE_HASHTAGS)
-$tweeturls_transformer = RegexpRepeatedTransformer.new(:content, RE_URL)
-def remap mapping, src
-  hsh = { }
-  mapping.each{|attr, src_attr| hsh[attr] = src[src_attr] }
-  hsh.compact
+$atsigns_transformer   = RegexpRepeatedTransformer.new('text', RE_ATSIGNS)
+$hashtags_transformer  = RegexpRepeatedTransformer.new('text', RE_HASHTAGS)
+$tweeturls_transformer = RegexpRepeatedTransformer.new('text', RE_URL)
+def parse_tweet tweet_hsh
+  tweet_hsh['all_atsigns']             = $atsigns_transformer.transform(  tweet_hsh).to_json
+  tweet_hsh['all_hash_tags']           = $hashtags_transformer.transform( tweet_hsh).to_json
+  tweet_hsh['all_tweeted_urls']        = $tweeturls_transformer.transform(tweet_hsh).to_json
+  fromsource_raw = tweet_hsh['source']
+  if ! fromsource_raw.blank?
+    if m = %r{<a href="([^\"]+)">([^<]+)</a>}.match(fromsource_raw)
+      tweet_hsh['fromsource_url'], tweet_hsh['fromsource'] = m.captures
+    else
+      tweet_hsh['fromsource'] = fromsource_raw
+    end
+  end
+  tweet_hsh['created_at']  = DateTime.parse(tweet_hsh['created_at']) if tweet_hsh['created_at']
+  tweet_hsh['favorited'] = tweet_hsh['favorited'] ? 1 : 0
+  tweet_hsh['truncated'] = tweet_hsh['truncated'] ? 1 : 0
+  tweet_hsh['tweet_len'] = tweet_hsh['text'].length
+  #                                         emit_relationship :arepliedb, tweet_hsh['twitter_user_id'].native_id, tweet_hsh['in_reply_to_user_id'], tweet_hsh['id'] if tweet_hsh['in_reply_to_user_id']
+  #                                         emit_relationship :arepliedb, tweet_hsh['twitter_user_id'].native_id, tweet_hsh['favorited'],           tweet_hsh['id'] if
+  # tweet_hsh['all_atsigns'     ].each{|at| emit_relationship :arepliedb, tweet_hsh['twitter_user_id'].native_id, at, tweet_hsh['id'] }
+  # tweet_hsh['all_tweeted_urls'].each{|at| emit_relationship :url,       tweet_hsh['twitter_user_id'].native_id, nil, tweet_hsh['id'], digest(at) }
+  # tweet_hsh['all_hash_tags'   ].each{|at| emit_relationship :hashtag,   tweet_hsh['twitter_user_id'].native_id, nil, tweet_hsh['id'], digest(at) }
+  tweet_hsh
 end
-def parse_twitter_followers twitter_user, ripd_file
+
+#
+# Field order for dump files
+#
+FIELDS = {
+  :users        => %w[  id        followers_count protected screen_name name url description location profile_image_url],
+  :friendships  => %w[  friend_id follower_id],
+  :tweets       => %w[  id        created_at              twitter_user_id       text
+    favorited             truncated               tweet_len
+    in_reply_to_user_id   in_reply_to_status_id   fromsource        fromsource_url
+    all_atsigns           all_hash_tags           all_tweeted_urls ]
+}
+
+#
+# parse each file
+#
+def parse_twitter_followers twitter_user, ripd_file, dump_files
   begin
     raw_followers = JSON.load(File.open(ripd_file))
   rescue Exception => e
     warn "Couldn't open and parse #{ripd_file}: #{e}"
     return false
   end
-  raw_followers.each do |raw|
-    user_hsh = remap(USER_REMAPPING, raw)
-    follower = TwitterUser.update_or_create({ :twitter_name => user_hsh[:twitter_name] }, user_hsh)
-    follower.save
-    Friendship.find_or_create(:friend_id => twitter_user.id, :follower_id => follower.id)
-    # puts [user_hsh].to_yaml
-
-    if raw_tweet = raw['status']
-      tweet_hsh = remap(TWEET_REMAPPING, raw_tweet)
-      tweet_hsh[:id] = tweet_hsh[:id].to_i
-      tweet_hsh[:all_atsigns]             = $atsigns_transformer.transform(tweet_hsh).to_json
-      tweet_hsh[:all_hash_tags]           = $hashtags_transformer.transform(tweet_hsh).to_json
-      tweet_hsh[:all_tweeted_urls]        = $tweeturls_transformer.transform(tweet_hsh).to_json
-      fromsource_raw = raw_tweet['source']
-      if ! fromsource_raw.blank?
-        if m = %r{<a href="([^\"]+)">([^<]+)</a>}.match(fromsource_raw)
-          tweet_hsh[:fromsource_url], tweet_hsh[:fromsource] = m.captures
-        else
-          tweet_hsh[:fromsource] = fromsource_raw
-        end
-      end
-      tweet_hsh[:datetime] = DateTime.parse(tweet_hsh[:datetime]) if tweet_hsh[:datetime]
-      tweet_hsh[:twitter_user_id] = follower.id
-      tweet = Tweet.update_or_create({ :id => tweet_hsh[:id] }, tweet_hsh.compact)
-      # puts [tweet_hsh, raw['status']['source']].to_yaml
-    end
+  raw_followers.each do |follower_hsh|
+    parse_user follower_hsh
+    #
+    dump_files[:users]       << follower_hsh.values_at(*FIELDS[:users])
+    #
+    dump_files[:friendships] << [twitter_user.native_id, follower_hsh['id']]
+    # emit_relationship :afollowsb, twitter_user.native_id, follower_hsh['id']
+    #
+    tweet_hsh  = follower_hsh.delete('status') or next
+    tweet_hsh['twitter_user_id'] = follower_hsh['id']
+    parse_tweet(tweet_hsh) or next
+    dump_files[:tweets]      << tweet_hsh.values_at(*FIELDS[:tweets]) if tweet_hsh
   end
   true
 end
 
-def parse_pass threshold, offset = 0
-  announce("Parsing %6d..%-6d popular but unparsed users" % [offset, threshold+offset])
-  popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => 'flwr_parse', # :result_code => nil,
-     :fields => [:twitter_name, :id, :page],
-     :order  => [:priority.asc],
-     :limit  => threshold, :offset => offset
-  popular_and_neglected.each do |req|
-    # log
-    track_count    :users, 10;
-    $stderr.print "%-20s"%["#{req.twitter_name} (#{req.page})"]
-    # load user
-    twitter_user = TwitterUser.first( :twitter_name => req.twitter_name ) or next
-    # do it
-    success = parse_twitter_followers twitter_user, '/data/ripd/'+req.ripd_file
-    # # mark columns
-    req.result_code  = success
-    req.scraped_time = Time.now.utc
-    req.save
+# afollowsb     time  1 0 0 0 0 0 0   user_a_id       user_b_id
+# afavoredb     time  0 1 0 0 0 0 0   user_a_id       user_b_id
+# arepliedb     time  0 0 1 0 0 0 0   user_a_id       user_b_id       status_id
+# aatsigndb     time  0 0 0 1 0 0 0   user_a_id       user_b_id       status_id
+#
+# hashtag       time  0 0 0 0 1 0 0   user_a_id                       status_id       sha1(hashtag)
+# url           time  0 0 0 0 0 1 0   user_a_id                       status_id       sha1(url)
+# word          time  0 0 0 0 0 0 1   user_a_id                                       sha1(word)
+def emit_relationship relationship
+end
+
+
+#
+# Do it
+#
+#
+class FFParserTracker < SerialPriorityTracker
+  attr_accessor :dump_files
+
+  # Output File
+  def dump_filename(context, resource, batch)
+    "fixd/#{context}/#{[resource, batch].compact.join('-')}.tsv"
   end
-  announce "Finished chunk %6d..%-6d" % [offset, threshold+offset]
+
+  #
+  # Get a different dump file for each chunk
+  def open_dump_files context, chunk_idx
+    datetime = Time.now.strftime('%Y%m%d-%H%M%S')
+    batch = "%06d-%s" % [chunk_idx, datetime]
+    dump_files = {}
+    [ :users, :tweets, :friendships ].each do |resource|
+      filename = dump_filename(context, resource, batch)
+      dump_files[resource] = FasterCSV.open(filename, "w", :col_sep => "\t", :headers => FIELDS[resource], :write_headers => true)
+    end
+    self.dump_files = dump_files
+  end
+  def close_dump_files() dump_files.values.each{|f| f.close } end
+
+  #
+  #
+  def process_chunk chunk_idx, &block
+    open_dump_files context, chunk_idx
+    super chunk_idx, &block
+    close_dump_files
+  end
+
+  #
+  #
+  def process
+    each do |req|
+      track_count(:user, 10) ; $stderr.print "%d-%-18s"%[req.priority, req.twitter_name]
+      # load user
+      twitter_user = TwitterUser.first( :twitter_name => req.twitter_name, :fields => [:id, :twitter_name, :native_id] ) or next
+      # do it
+      begin
+        success = parse_twitter_followers twitter_user, '/data/ripd/'+req.ripd_file, dump_files
+      rescue Exception => e
+        warn e
+        false
+      end
+    end
+  end
+
 end
 
+tracker = FFParserTracker.new AssetRequest, :flwr_parse, 200,
+  :query_options => { :fields => [:id, :twitter_name, :page], }  # , :dry_run => true, :max_chunk => 1, :offset => 0,
+tracker.process
 
-n_requests = AssetRequest.count( :user_resource => 'flwr_parse' )
-shard     = 0
-chunksize = 2000
-offset    = shard * 300000
-chunks    = (n_requests / chunksize).to_i + 1
-(1..chunks).each do |chunk|
-  parse_pass chunksize, offset + chunksize*(chunk-1)
-end
+#  :priority.gt => 10000, :priority.lt => 10010
+
+# LOAD DATA INFILE '/tmp/foo' IGNORE
+#   INTO TABLE `foo`
+#   FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\'
+#   LINES  TERMINATED BY '\n'
+#   IGNORE 1 LINES
+#   (id, created_at, twitter_user_id, text, favorited, truncated, tweet_len,
+#    in_reply_to_user_id, in_reply_to_status_id, fromsource, fromsource_url,
+#    all_atsigns, all_hash_tags, all_tweeted_urls)
+#
+# {
+#   "id"                    :935031,
+#   "screen_name"           :"killsapo",
+#   "followers_count"       :102,
+#   "protected"             :false,
+#   "name"                  :"SAPO!!",
+#   "url"                   :"http:\/\/helo.it\/killsapo\/volume3\/",
+#   "description"           :"credo in un solo niente onnipotente. twitter sta a me come i tatuaggi stanno al tipo di Memento.",
+#   "location"              :"Saronno. Or Milano thereabouts",
+#   "profile_image_url"     :"http:\/\/s3.amazonaws.com\/twitter_production\/profile_images\/27176662\/avatar_flickr_02_27111890_N00_copy_normal.png",
+#
+#   "status"                :{,
+#     "id"                    :1026385640,
+#     "created_at"            :"Thu Nov 27 14:07:47 +0000 2008",
+#     "in_reply_to_user_id"   :null,
+#     "in_reply_to_status_id" :null,
+#     "favorited"             :false,
+#     "truncated"             :false,
+#     "source"                :"<a href=\"http:\/\/iconfactory.com\/software\/twitterrific\">twitterrific<\/a>",
+#     "text"                  :"e, comunque, da quando bombay \u00e8 diventata mumbai? mai che qualcuno avvisi me o manuel agnelli."
+#   },
+# }]
+
+

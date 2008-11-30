@@ -43,6 +43,7 @@ class TwitterUser
   has n, :friendships,    :child_key => [:follower_id], :class_name => 'Friendship'
   has n, :followerships,  :child_key => [:friend_id],   :class_name => 'Friendship'
   has n, :tweets
+  has n, :requests
   has 1, :twitter_page_rank
   #
   # FIXME
@@ -109,6 +110,7 @@ class AssetRequest
   property :twitter_name,       String
   property :user_resource,      String, :length => 15, :index => [:user_resource_page] # public_page, info, followers, followings, tweets, favorites
   property :page,               Integer, :index => [:user_resource_page]
+  belongs_to :twitter_user
   # def self.request(uri, priority)
   #   req = self.find_or_create({ :uri =>  uri })
   #   req.priority = [req.priority, priority].min
@@ -116,6 +118,9 @@ class AssetRequest
   # end
 
 
+  #
+  # FIXME -- should have +YYMMDD-HHMMSS.ext
+  #
   def ripd_file
     m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)\?page=(.*)}.match(uri) or raise "Can't grok url #{uri}"
     resource, prefix, suffix, page = m.captures

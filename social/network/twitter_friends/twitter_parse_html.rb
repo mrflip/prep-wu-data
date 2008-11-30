@@ -11,7 +11,7 @@ as_dset __FILE__
 # # Setup database
 # #
 
-# DataMapper::Logger.new(STDERR, :debug) # watch SQL log -- must be BEFORE call to db setup
+# DataMapper.logging = true
 dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
 DataMapper.setup_remote_connection dbparams
 
@@ -121,19 +121,26 @@ def ripd_file_from_name twitter_name
   "/data/rawd/social/network/twitter_friends/profiles/twitter_id_#{prefix}/#{twitter_name}"
 end
 
+
+def popular_pass threshold, offset = 0
+  repository(:default).adapter.query('')
+end
+
+
 def parse_pass threshold, offset = 0
   announce("Parsing %6d..%-6d popular but unparsed users" % [offset, threshold+offset])
-  popular_and_neglected = AssetRequest.all :priority.gte => offset, :priority.lt => offset+threshold,
-     :scraped_time => nil, :user_resource => 'parse',
-     :fields => [:twitter_name, :id],
-     :limit  => 2*threshold
+  popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => 'parse',
+     # 'twitter_user.bg_img_url' => nil,
+     # :conditions => [ 'twitter_users.followers_count >= 100' ],
+     :fields => [:twitter_name, :id, :twitter_user_id, :priority],
+     :order  => [:priority.asc],
+     :limit  => threshold, :offset => offset
   popular_and_neglected.each do |req|
-    track_count    :users, 10
-    $stderr.print "%-20s"%[req.twitter_name]
     profile_page_filename = ripd_file_from_name(req.twitter_name)
-    twitter_user = TwitterUser.first( :twitter_name => req.twitter_name )
-    next unless twitter_user
-    success = parse_twitter_user twitter_user, profile_page_filename
+    next unless req.twitter_user
+    track_count    :users, 10
+    $stderr.print "%d-%-18s"%[req.priority, req.twitter_name]
+    success = parse_twitter_user req.twitter_user, profile_page_filename
     # mark columns
     req.result_code  = success
     req.scraped_time = Time.now.utc
@@ -145,8 +152,8 @@ end
 $parser = TwitterHTMLParser.new()
 n_requests = AssetRequest.count( :user_resource => 'parse' )
 chunksize = 500
-offset    = 200000
+offset    = 0
 chunks    = (n_requests / chunksize).to_i + 1
 (1..chunks).each do |chunk|
-  parse_pass chunksize, offset + chunksize*(chunk-1)
+  parse_pass chunksize, offset
 end
