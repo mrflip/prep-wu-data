@@ -21,12 +21,12 @@ def key_from_filename filename
   end
 end
 
-Dir["/data/ripd/_com/_tw/com.twitter/*/*/*"].each do |dir|
+Dir["ripd/_com/_tw/com.twitter/*/*/*"].each do |dir|
   m = %r{^.*/com\.twitter/(\w+/\w+)/_(..?)$}.match(dir) or raise("can't grok #{dir}")
   segment, prefix = m.captures;
   resource = DIR_TO_RESOURCE[segment]; prefix = prefix.downcase
-  mkdir_p("/data/rawd/social/network/twitter_friends/#{resource}")
-  dump_filename = "/data/rawd/social/network/twitter_friends/#{resource}/#{resource}-#{prefix}-raw.tsv"
+  mkdir_p("rawd/social/network/twitter_friends/#{resource}")
+  dump_filename = "rawd/social/network/twitter_friends/#{resource}/#{resource}-#{prefix}-raw.tsv"
   next if File.exist?(dump_filename)
   File.open(dump_filename, "w") do |f|
     $stderr.puts "#{Time.now}\tScraping #{resource} - #{prefix}*"
