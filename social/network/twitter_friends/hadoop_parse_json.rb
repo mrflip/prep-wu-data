@@ -106,20 +106,21 @@ end
 #
 $stdin.each do |line|
   line.chomp! ; next if line.blank?
-  resource, screen_name, page, timestamp, raw = load_line(line); next unless raw
-  track_count screen_name[0..1], 1000
+  resource, screen_name, page, timestamp, raw = load_line(line); next if raw.blank?
+  track_count screen_name, 1000
   # $stderr.puts("parsing %-15s\t%-31s\t%7d\t%s" % [resource, screen_name, page, timestamp])
   case resource
-  when 'raw_followers'
+  when 'raw_followers', 'raw_friends'
     raw.each do |hsh|
-      next if hsh.blank?
+      next if hsh.blank? || (! hsh.is_a?(Hash))
       #
       # user
       emit_user hsh, timestamp, :user_partial
       #
-      # follower
-      follower_name = hsh['screen_name']
-      emit :afollowsb, follower_name, timestamp, 'user_a' => follower_name, 'user_b' => screen_name
+      # follower or friend
+      if resource == 'raw_followers' then follower, friend = [ hsh['screen_name'], screen_name ]
+      else                                follower, friend = [ screen_name,        hsh['screen_name'] ] ; end
+      emit :afollowsb, follower, timestamp, 'user_a' => follower, 'user_b' => friend
       #
       # tweet
       tweet_hsh  = hsh['status'] or next
@@ -127,11 +128,10 @@ $stdin.each do |line|
       emit_tweet tweet_hsh, timestamp
     end
   when 'raw_userinfo'
-    emit_user hsh, timestamp, :user, :user_profile, :user_style
+    emit_user raw, timestamp, :user, :user_profile, :user_style
   else
     raise "Crap bubbles -- unexpected resource #{resource}"
   end
-  true
 end
 
 # ===========================================================================
