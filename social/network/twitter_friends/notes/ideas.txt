@@ -1,4 +1,33 @@
 
+Parse:
+ map -	in	username	filename
+     	out	usr-id		<usr fields>
+		twt-id		<twt fields>
+		rel-a-b		<rel fields>
+ reduce	uniq's the fields, dumps to files by key
+
+2-Neighborhood BFS
+ map	in	<rel-a-b>	<ida	idb>
+ 	out	<rel-b>		<ida	idb	x>
+		<rel-a>		<x	ida	idb>
+ reduce		<rel-1>		<id1	id2	id3>
+ uniqify
+
+ then make 	<rel-a>		<all 1st degree>	<all 2nd degree>
+ using list concat as reduce
+ 
+ 
+
+-rw-r--r-- 1 flip staff 13838311 2008-11-30 03:32 tweets-000000-20081130-032728.tsv
+-rw-r--r-- 1 flip staff 14553634 2008-11-30 14:14 tweets-000000-20081130-140901.tsv
+-rw-r--r-- 1 flip staff 16596188 2008-11-30 03:38 tweets-000001-20081130-033241.tsv
+
+-rw-r--r-- 1 flip staff 13838311 2008-11-30 03:32 tweets-000000-20081130-032728.tsv
+-rw-r--r-- 1 flip staff 14553634 2008-11-30 14:14 tweets-000000-20081130-140901.tsv
+-rw-r--r-- 1 flip staff 16596188 2008-11-30 03:38 tweets-000001-20081130-033241.tsv
+
+
+===========================================================================
 
 - indegree		friends_count
 - outdegree 		followers_count

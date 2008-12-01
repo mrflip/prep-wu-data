@@ -152,7 +152,7 @@ end
 $parser = TwitterHTMLParser.new()
 n_requests = AssetRequest.count( :user_resource => 'parse' )
 chunksize = 500
-offset    = 0
+offset    = 4000
 chunks    = (n_requests / chunksize).to_i + 1
 (1..chunks).each do |chunk|
   parse_pass chunksize, offset
