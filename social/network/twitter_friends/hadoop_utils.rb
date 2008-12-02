@@ -1,4 +1,6 @@
 module HadoopUtils
+
+
   def key_for resource, id, timestamp
     [resource, id].join('-')
   end
