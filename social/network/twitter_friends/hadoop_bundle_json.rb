@@ -13,7 +13,7 @@ DIR_TO_RESOURCE =  {
 }
 def key_from_filename filename
   timestamp = File.mtime(filename).strftime("%Y%m%d%H%M%S")
-  if m = %r{^ripd/(\w+/\w+)/_(..?)/(\w+?)\.json(?:%3Fpage%3D(\d+))?$}.match(filename)
+  if m = %r{^/home/flip/ics/data/ripd/(\w+/\w+)/_(..?)/(\w+?)\.json(?:%3Fpage%3D(\d+))?$}.match(filename)
     dir, prefix, screen_name, page = m.captures
     [ DIR_TO_RESOURCE[dir], screen_name, page, timestamp ]
   else
@@ -22,16 +22,8 @@ def key_from_filename filename
 end
 
 
-Dir["ripd/*/*/*"].each do |dir|
-  m = %r{^ripd/(\w+/\w+)/_(..?)$}.match(dir) or raise("can't grok '#{dir}'")
-  segment, prefix = m.captures;
-  resource = DIR_TO_RESOURCE[segment]; prefix = prefix.downcase
-  mkdir_p("rawd/#{resource}")
-  dump_filename = "rawd/#{resource}/#{resource}-#{prefix}-raw.tsv"
-  next if File.exist?(dump_filename)
-  File.open(dump_filename, "w") do |f|
-    $stderr.puts "#{Time.now}\tScraping #{resource} - #{prefix}*"
-    Dir[dir+'/*'].each do |filename|
+$stdin.each do |filename|
+  track_count filename[0..1].downcase
       next unless File.size(filename) > 0
       resource, screen_name, page, timestamp = key_from_filename filename
       key = [resource, screen_name, page, timestamp].join("-")

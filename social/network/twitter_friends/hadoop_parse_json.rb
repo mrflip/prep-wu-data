@@ -23,9 +23,23 @@ FIELDS = {
   :aatsigndb    => %w[ rel user_a user_b  status_id ],
   :hashtag      => %w[ rel user_a hashtag status_id ],
   :url          => %w[ rel user_a url     status_id ],
-  :tweet        => %w[ id created_at twitter_user_id text favorited truncated tweet_len in_reply_to_user_id in_reply_to_status_id fromsource fromsource_url all_atsigns all_hash_tags all_tweeted_urls ]
+  :tweet        => %w[ id created_at twitter_user_id text favorited truncated tweet_len in_reply_to_user_id in_reply_to_status_id fromsource fromsource_url all_atsigns all_hash_tags all_tweeted_urls ]                        
 }
 DATEFORMAT = "%Y%m%d%H%M%S"
+
+             
+# UserPartial  = Struct.new( :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
+# User         = Struct.new( :id,  :created_at, :screen_name, :statuses_count, :followers_count, :friends_count, :protected )
+# UserProfile  = Struct.new( :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
+# UserStyle    = Struct.new( :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
+# UserMetric   = Struct.new( :id,  :replied_to_count, :tweeturls_count, :hashtags_count, :prestige, :pagerank, :twoosh_count )
+# AFollowsB    = Struct.new( :rel, :user_a, :user_b )
+# ARepliedB    = Struct.new( :rel, :user_a, :user_b, :status_id, :reply_status_id )
+# AAtsignsB    = Struct.new( :rel, :user_a, :user_b, :status_id )
+# Hashtag      = Struct.new( :rel, :user_a, :hashtag, :status_id )
+# TweetUrl     = Struct.new( :rel, :user_a, :url, :status_id )
+# Tweet        = Struct.new( :id,  :created_at, :twitter_user_id, :text, :favorited, :truncated, :tweet_len, :in_reply_to_user_id, :in_reply_to_status_id, :fromsource, :fromsource_url, :all_atsigns, :all_hash_tags, :all_tweeted_urls )
+
 
 #
 # transform and emit User
@@ -72,14 +86,12 @@ def emit_tweet tweet_hsh, timestamp
   status_id       = tweet_hsh['id']
   twitter_user_id = tweet_hsh['twitter_user_id']
   if tweet_hsh['in_reply_to_user_id'] then 
-    emit :arepliedb, twitter_user_id, timestamp, 'user_a' => twitter_user_id, 'user_b' => tweet_hsh['in_reply_to_user_id'],
-      'status_id' => status_id, 'reply_status_id' =>  tweet_hsh['in_reply_to_status_id']
+    at = tweet_hsh['in_reply_to_user_id']
+    emit :arepliedb, twitter_user_id, timestamp, 'rel' => 'aatsignsb', 'user_a' => twitter_user_id, 'user_b' => at,  'status_id' => status_id, 'reply_status_id' => tweet_hsh['in_reply_to_status_id'] 
   end
-  #                                         emit_relationship :arepliedb, tweet_hsh['twitter_user_id'].native_id, tweet_hsh['in_reply_to_user_id'], tweet_hsh['id'] 
-  #                                         emit_relationship :arepliedb, tweet_hsh['twitter_user_id'].native_id, tweet_hsh['favorited'],           tweet_hsh['id'] if
-  # tweet_hsh['all_atsigns'     ].each{|at| emit_relationship :arepliedb, tweet_hsh['twitter_user_id'].native_id, at, tweet_hsh['id'] }
-  # tweet_hsh['all_tweeted_urls'].each{|at| emit_relationship :url,       tweet_hsh['twitter_user_id'].native_id, nil, tweet_hsh['id'], digest(at) }
-  # tweet_hsh['all_hash_tags'   ].each{|at| emit_relationship :hashtag,   tweet_hsh['twitter_user_id'].native_id, nil, tweet_hsh['id'], digest(at) }
+  tweet_hsh['all_atsigns'     ].each{|at| emit :aatsignsb, twitter_user_id, timestamp, 'rel' => 'aatsignsb', 'user_a' => twitter_user_id, 'user_b'  => at, 'status_id' => status_id }
+  tweet_hsh['all_tweeted_urls'].each{|at| emit :url,       twitter_user_id, timestamp, 'rel' => 'url',       'user_a' => twitter_user_id, 'url'     => at, 'status_id' => status_id }
+  tweet_hsh['all_hash_tags'   ].each{|at| emit :hashtag,   twitter_user_id, timestamp, 'rel' => 'hashtag',   'user_a' => twitter_user_id, 'hashtag' => at, 'status_id' => status_id }
   # 
   emit :tweet, "%011d"%[tweet_hsh['id']], timestamp, tweet_hsh
 end
@@ -107,7 +119,7 @@ end
 $stdin.each do |line|
   line.chomp! ; next if line.blank?
   resource, screen_name, page, timestamp, raw = load_line(line); next if raw.blank?
-  track_count screen_name, 1000
+  track_count screen_name[0..1].downcase, 100
   # $stderr.puts("parsing %-15s\t%-31s\t%7d\t%s" % [resource, screen_name, page, timestamp])
   case resource
   when 'raw_followers', 'raw_friends'
