@@ -1,17 +1,26 @@
 module HadoopUtils
 
 
-  def key_for resource, id, timestamp
-    [resource, id].join('-')
-  end
-
-  def emit resource, id, timestamp, hsh
-    puts [ key_for(resource, id, timestamp), timestamp, *hsh.values_at(*FIELDS[resource]) ].to_tsv
-  end
-
   String.class_eval do
     def scrub!
-      gsub!(/[\t\r\n]/, ' ')  # KLUDGE
+      gsub!(/[\t\r\n]+/, ' ')  # KLUDGE
+    end
+
+    # Stolen from active_support
+    #
+    # The reverse of +camelize+. Makes an underscored, lowercase form from the expression in the string.
+    #
+    # Changes '::' to '/' to convert namespaces to paths.
+    #
+    # Examples:
+    #   "ActiveRecord".underscore         # => "active_record"
+    #   "ActiveRecord::Errors".underscore # => active_record/errors
+    def underscore(camel_cased_word)
+      camel_cased_word.to_s.gsub(/::/, '/').
+        gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+        gsub(/([a-z\d])([A-Z])/,'\1_\2').
+        tr("-", "_").
+        downcase
     end
   end
   Array.class_eval do
@@ -23,9 +32,30 @@ module HadoopUtils
     fields.each{|field| hsh[field.to_s].scrub! if hsh[field.to_s] }
   end
 
-  def convert_timestamp ts
-    # 2008-11-28T18:19:33+00:00
-    ts.gsub(/\+00:00$/, '').gsub(/[^\d]/, '')
+
+  module HadoopStructMethods
+    def initialize origin, timestamp, *args
+      self.origin = origin
+      self.timestamp = timestamp
+      parse! *args
+    end
+    #
+    def resource
+      self.class.to_s.underscore
+    end
+    # identifying output key
+    def key
+      [resource, id].join('-')
+    end
+    # dump to stdout
+    def emit
+      puts [ key, timestamp, origin, *self.values ].to_tsv
+    end
   end
 
+  class HadoopStruct
+    def self.new *members
+      Struct.new(*members, :origin, :timestamp)
+    end
+  end
 end

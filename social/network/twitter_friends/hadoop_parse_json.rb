@@ -28,27 +28,32 @@ FIELDS = {
 DATEFORMAT = "%Y%m%d%H%M%S"
 
              
-# UserPartial  = Struct.new( :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
-# User         = Struct.new( :id,  :created_at, :screen_name, :statuses_count, :followers_count, :friends_count, :protected )
-# UserProfile  = Struct.new( :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
-# UserStyle    = Struct.new( :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
-# UserMetric   = Struct.new( :id,  :replied_to_count, :tweeturls_count, :hashtags_count, :prestige, :pagerank, :twoosh_count )
-# AFollowsB    = Struct.new( :rel, :user_a, :user_b )
-# ARepliedB    = Struct.new( :rel, :user_a, :user_b, :status_id, :reply_status_id )
-# AAtsignsB    = Struct.new( :rel, :user_a, :user_b, :status_id )
-# Hashtag      = Struct.new( :rel, :user_a, :hashtag, :status_id )
-# TweetUrl     = Struct.new( :rel, :user_a, :url, :status_id )
-# Tweet        = Struct.new( :id,  :created_at, :twitter_user_id, :text, :favorited, :truncated, :tweet_len, :in_reply_to_user_id, :in_reply_to_status_id, :fromsource, :fromsource_url, :all_atsigns, :all_hash_tags, :all_tweeted_urls )
+UserPartial  = Struct.new( :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
+User         = Struct.new( :id,  :created_at, :screen_name, :statuses_count, :followers_count, :friends_count, :protected )
+UserProfile  = Struct.new( :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
+UserStyle    = Struct.new( :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
+UserMetric   = Struct.new( :id,  :replied_to_count, :tweeturls_count, :hashtags_count, :prestige, :pagerank, :twoosh_count )
+AFollowsB    = Struct.new( :rel, :user_a, :user_b )
+ARepliedB    = Struct.new( :rel, :user_a, :user_b, :status_id, :reply_status_id )
+AAtsignsB    = Struct.new( :rel, :user_a, :user_b, :status_id )
+Hashtag      = Struct.new( :rel, :user_a, :hashtag, :status_id )
+TweetUrl     = Struct.new( :rel, :user_a, :url, :status_id )
+Tweet        = Struct.new( :id,  :created_at, :twitter_user_id, :text, :favorited, :truncated, :tweet_len, :in_reply_to_user_id, :in_reply_to_status_id, :fromsource, :fromsource_url, :all_atsigns, :all_hash_tags, :all_tweeted_urls )
 
+[ UserPartial User UserProfile UserStyle UserMetric AFollowsB ARepliedB AAtsignsB Hashtag TweetUrl Tweet ].each do |klass|
+  klass.send(:include, HadoopStruct)
+end
 
-#
 # transform and emit User
 # 
-def emit_user user_hsh, timestamp, *resources
+def emit_user user_hsh, timestamp, origin, is_partial
   user_hsh['protected']  = user_hsh['protected'] ? 1 : 0
   user_hsh['timestamp_'] = timestamp
   scrub user_hsh, :name, :location, :description
-  resources.each do |resource| 
+  if is_partial
+    u = UserPartial.new(timestamp, origin)
+  end
+  resources.each do |resource|
     emit resource, user_hsh['screen_name'], timestamp, user_hsh 
   end
 end
@@ -61,7 +66,7 @@ end
 $atsigns_transformer   = RegexpRepeatedTransformer.new('text', RE_ATSIGNS)
 $hashtags_transformer  = RegexpRepeatedTransformer.new('text', RE_HASHTAGS)
 $tweeturls_transformer = RegexpRepeatedTransformer.new('text', RE_URL)
-def emit_tweet tweet_hsh, timestamp
+def emit_tweet tweet_hsh, timestamp, origin
   #
   scrub tweet_hsh, :text
   tweet_hsh['all_atsigns']             = $atsigns_transformer.transform(  tweet_hsh).to_json
@@ -109,7 +114,8 @@ def load_line line
     warn "Couldn't open and parse #{[resource, screen_name, page, timestamp].join('-')}: #{e}"
     return []
   end
-  [ resource, screen_name, page, timestamp, raw ]
+  origin = [resource, screen_name, page, timestamp].join('-')
+  [ resource, screen_name, page, timestamp, origin, raw ]
 end
 
 # ===========================================================================
@@ -118,7 +124,7 @@ end
 #
 $stdin.each do |line|
   line.chomp! ; next if line.blank?
-  resource, screen_name, page, timestamp, raw = load_line(line); next if raw.blank?
+  resource, screen_name, page, timestamp, origin, raw = load_line(line); next if raw.blank?
   track_count screen_name[0..1].downcase, 100
   # $stderr.puts("parsing %-15s\t%-31s\t%7d\t%s" % [resource, screen_name, page, timestamp])
   case resource
@@ -127,20 +133,20 @@ $stdin.each do |line|
       next if hsh.blank? || (! hsh.is_a?(Hash))
       #
       # user
-      emit_user hsh, timestamp, :user_partial
+      emit_user hsh, timestamp, origin, :user_partial
       #
       # follower or friend
       if resource == 'raw_followers' then follower, friend = [ hsh['screen_name'], screen_name ]
       else                                follower, friend = [ screen_name,        hsh['screen_name'] ] ; end
-      emit :afollowsb, follower, timestamp, 'user_a' => follower, 'user_b' => friend
+      emit :afollowsb, follower, timestamp, origin, 'user_a' => follower, 'user_b' => friend
       #
       # tweet
       tweet_hsh  = hsh['status'] or next
       tweet_hsh['twitter_user_id'] = hsh['id']
-      emit_tweet tweet_hsh, timestamp
+      emit_tweet tweet_hsh, timestamp, origin
     end
   when 'raw_userinfo'
-    emit_user raw, timestamp, :user, :user_profile, :user_style
+    emit_user raw, timestamp, origin, :user, :user_profile, :user_style
   else
     raise "Crap bubbles -- unexpected resource #{resource}"
   end

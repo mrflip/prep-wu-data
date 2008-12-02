@@ -6,14 +6,18 @@ require 'twitter_profile_model'
 require 'fileutils'; include FileUtils
 as_dset __FILE__
 
+RIPD = '/home/flip/ics/data/ripd/'
+RAWD = '/home/flip/ics/data/rawd/keyed'
+
 DIR_TO_RESOURCE =  {
   'users/show'         => :raw_userinfo,
   'statuses/friends'   => :raw_friends,
   'statuses/followers' => :raw_followers
 }
 def key_from_filename filename
+  # file time
   timestamp = File.mtime(filename).strftime("%Y%m%d%H%M%S")
-  if m = %r{^/home/flip/ics/data/ripd/(\w+/\w+)/_(..?)/(\w+?)\.json(?:%3Fpage%3D(\d+))?$}.match(filename)
+  if m = %r{^#{RIPD}(\w+/\w+)/_(..?)/(\w+?)\.json(?:%3Fpage%3D(\d+))?$}.match(filename)
     dir, prefix, screen_name, page = m.captures
     [ DIR_TO_RESOURCE[dir], screen_name, page, timestamp ]
   else
