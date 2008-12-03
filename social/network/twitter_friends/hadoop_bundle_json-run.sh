@@ -6,24 +6,25 @@ temp=$data_root/temp/social/network/twitter_friends
 
 datestamp=`date +%Y%m%d`
 
+hdfs_dest=rawd/social/network/twitter_friends-$datestamp
+hdp-mkdir $hdfs_dest
+echo "Copying into $hdfs_dest"
 
 cd $rawd/keyed
 for part in */* ; do
-  flat_dir=$temp/flat-$datestamp
-  mkdir -p $flat_dir/$part
+  hdp-mkdir $hdfs_dest/$part
+  # flat_dir=$temp/flat-$datestamp
+  # mkdir -p $flat_dir/$part
   
   echo '==========================================================================='
   echo $part
   echo '==========================================================================='; echo
   for dir in $part/* ; do
-    echo $dir
-    cat $dir/* > $flat_dir/$dir.tsv
+    echo -n "$dir	"
+    cat $dir/* | hdp-put - $hdfs_dest/$dir.tsv
   done
 done
 
-hdfs_dest=rawd/social/network/twitter_friends/
-hdp-mkdir $hdfs_dest/
-echo "hdp-cp $rawd/flat-$datestamp $hdfs_dest"
 
 
 ls $rawd
