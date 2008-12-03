@@ -73,11 +73,14 @@ end
 
 def scrape_pass min_priority, max_priority, hard_limit = nil
   hard_limit ||= 5*(max_priority-min_priority)
-  #['friends', 'followers', 'info']
-  ['info'].each do |context|
+  [
+    'friends',
+    'followers',
+    # 'info',
+  ].each do |context|
     announce("Scraping  %s %6d..%-6d popular+unrequested users" % [context, min_priority, max_priority])
     popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => context,
-    :priority.gte => min_priority, :priority.lt => max_priority, :page.lt => 15,
+    :priority.gte => min_priority, :priority.lt => max_priority, # :page.lt => 20,
     :fields => [:uri, :id],
     :order  => [:page.asc, :priority.asc],
     :limit  => hard_limit
