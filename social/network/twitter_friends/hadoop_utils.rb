@@ -15,8 +15,8 @@ module HadoopUtils
     # Examples:
     #   "ActiveRecord".underscore         # => "active_record"
     #   "ActiveRecord::Errors".underscore # => active_record/errors
-    def underscore(camel_cased_word)
-      camel_cased_word.to_s.gsub(/::/, '/').
+    def underscore
+      gsub(/::/, '/').
         gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
         gsub(/([a-z\d])([A-Z])/,'\1_\2').
         tr("-", "_").
@@ -44,18 +44,23 @@ module HadoopUtils
       self.class.to_s.underscore
     end
     # identifying output key
-    def key
-      [resource, id].join('-')
+    def key owner
+      [resource, owner].flatten.join('-')
     end
     # dump to stdout
-    def emit
-      puts [ key, timestamp, origin, *self.values ].to_tsv
+    def emit owner
+      puts [ key(owner), *self.values ].to_tsv
+    end
+    #
+    def parse
+      # subclass
     end
   end
 
-  class HadoopStruct
+  class HadoopStruct < Struct
     def self.new *members
-      Struct.new(*members, :origin, :timestamp)
+      klass = super(*[members, :origin, :timestamp].flatten)
+      klass.send :include, HadoopStructMethods
     end
   end
 end
