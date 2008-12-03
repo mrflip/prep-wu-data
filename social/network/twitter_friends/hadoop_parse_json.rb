@@ -44,6 +44,13 @@ Tweet        = Struct.new( :id,  :created_at, :twitter_user_id, :text, :favorite
   klass.send(:include, HadoopStruct)
 end
 
+UserPartial.class_eval do
+  # identifying output key
+  def key
+    [resource, screen_name].join('-')
+  end  
+end
+
 # transform and emit User
 # 
 def emit_user user_hsh, timestamp, origin, is_partial
@@ -51,7 +58,7 @@ def emit_user user_hsh, timestamp, origin, is_partial
   user_hsh['timestamp_'] = timestamp
   scrub user_hsh, :name, :location, :description
   if is_partial
-    u = UserPartial.new(timestamp, origin)
+    u = UserPartial.new(timestamp, origin, hsh)
   end
   resources.each do |resource|
     emit resource, user_hsh['screen_name'], timestamp, user_hsh 

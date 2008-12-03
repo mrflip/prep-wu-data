@@ -34,10 +34,10 @@ module HadoopUtils
 
 
   module HadoopStructMethods
-    def initialize origin, timestamp, *args
+    def initialize origin, timestamp, hsh
       self.origin = origin
       self.timestamp = timestamp
-      parse! *args
+      self.indifferent_merge! hsh
     end
     #
     def resource
