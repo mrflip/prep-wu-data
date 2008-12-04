@@ -28,10 +28,8 @@ end
 
 $stdin.each do |filename|
   track_count filename[0..1].downcase
-      next unless File.size(filename) > 0
-      resource, screen_name, page, timestamp = key_from_filename filename
-      key = [resource, screen_name, page, timestamp].join("-")
-      f << "#{key}\t#{File.read(filename)}\n"
-    end
-  end
+  next unless File.size(filename) > 0
+  resource, screen_name, page, timestamp = key_from_filename filename
+  key = [resource, screen_name, page, timestamp].join("-")
+  f << "#{key}\t#{File.read(filename)}\n"
 end

@@ -1,6 +1,6 @@
+require 'rubygems'
+require 'faster_csv'
 module HadoopUtils
-
-
   String.class_eval do
     def scrub!
       gsub!(/[\t\r\n]+/, ' ')  # KLUDGE
@@ -22,6 +22,9 @@ module HadoopUtils
         tr("-", "_").
         downcase
     end
+    def parse_tsv options={}
+      parse_csv options.merge( :col_sep => "\t" )
+    end
   end
   Array.class_eval do
     def to_tsv options={}
@@ -34,22 +37,22 @@ module HadoopUtils
 
 
   module HadoopStructMethods
-    def initialize origin, timestamp, hsh
-      self.origin = origin
+    def initialize timestamp, hsh
+      # self.origin = origin
       self.timestamp = timestamp
       self.indifferent_merge! hsh
     end
     #
     def resource
-      self.class.to_s.underscore
+      "%s_%s" % [self.class.key_index, self.class.to_s.underscore]
     end
     # identifying output key
     def key owner
-      [resource, owner].flatten.join('-')
+      [owner, resource]
     end
     # dump to stdout
     def emit owner
-      puts [ key(owner), *self.values ].to_tsv
+      puts [ key(owner), *self.values ].flatten.to_tsv
     end
     #
     def parse
@@ -58,9 +61,14 @@ module HadoopUtils
   end
 
   class HadoopStruct < Struct
-    def self.new *members
-      klass = super(*[members, :origin, :timestamp].flatten)
-      klass.send :include, HadoopStructMethods
+    def self.new key_index, *members
+      klass = super(*[members, :timestamp].flatten)
+      klass.class_eval do
+        include HadoopStructMethods
+        cattr_accessor :key_index
+        self.key_index = key_index
+      end
+      klass
     end
   end
 end

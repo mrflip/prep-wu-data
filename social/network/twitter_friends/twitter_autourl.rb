@@ -22,7 +22,7 @@ RE_URL             = %r{(#{RE_URL_HOSTPART}(?:/[#{RE_URL_OKCHARS}/]*)?(?:\?[#{RE
 #
 # This is overly generous to those dorky triple tags (geo:lat=69.3), but we'll soldier on somehow.
 #
-RE_HASHTAGS        = %r{(?:^|\W)#([a-zA-Z0-9\-_\.+:=]+\w)(?:\W|$)}
+RE_HASHTAGS        = %r{(?:^|\W)\#([a-zA-Z0-9\-_\.+:=]+\w)(?:\W|$)}
 #
 # following either the start of the line, or a non-alphanum_ character
 # the string of following [a-zA-Z0-9_]

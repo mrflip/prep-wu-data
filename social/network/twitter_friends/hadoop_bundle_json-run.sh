@@ -11,24 +11,23 @@ hdp-mkdir $hdfs_dest
 echo "Copying into $hdfs_dest"
 
 cd $rawd/keyed
-for part in */* ; do
-  hdp-mkdir $hdfs_dest/$part
-  # flat_dir=$temp/flat-$datestamp
-  # mkdir -p $flat_dir/$part
-  
-  echo '==========================================================================='
-  echo $part
-  echo '==========================================================================='; echo
-  for dir in $part/* ; do
-    echo -n "$dir	"
-    cat $dir/* | hdp-put - $hdfs_dest/$dir.tsv
-  done
-done
+(for dir in cat users/show/*	     ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/users_show.tsv
+(for dir in cat statuses/friends/*   ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/statuses_friends.tsv
+(for dir in cat statuses/followers/* ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/statuses_followers.tsv
 
-
-
-ls $rawd
-echo $rawd
+# cd $rawd/keyed
+# for dir1 in * ; do
+#     cd $rawd/keyed/$dir1
+#     for dir2 in * ; do	
+# 	echo '==========================================================================='
+# 	echo $dir1 - $dir2
+# 	echo '==========================================================================='; echo
+# 	for prfx in $dir2/_Ma ; do
+# 	    echo -n "$dir	"
+# 	    cat $prfx/* | hdp-put - $hdfs_dest/`basename $dir1`-`basename $dir2`-`basename $prfx`.tsv
+# 	done
+#     done
+# done
 
 # hadoop jar /home/flip/hadoop/h/contrib/streaming/hadoop-0.19.0-streaming.jar		\
 #   -mapper  /home/flip/ics/pool/social/network/twitter_friends/hadoop_parse_json.rb	\
