@@ -3,7 +3,7 @@ poolpath="social/network/twitter_friends/public_timeline"
 datadir="/data/rawd/${poolpath}"
 logdir="/data/log/${poolpath}"
 
-public_url="http://twitter.com/statuses/public_timeline.json"
+public_url="http://twitter.com/statuses/public_timeline_partners_nrab481.xml"
 trends_url="http://search.twitter.com/trends.json"
 waittime=59
 

@@ -34,8 +34,7 @@ $stdin.each do |line|
     info_user_name = line_user_name; info_user_id = rest[0]
   elsif (line_user_name != info_user_name) && [:a_follows_b, :b_follows_a, :a_atsigns_b].include?(resource)
     # ... and we should see a user or user_partial first
-    # puts ["#{userinfo_to_scrape}-#{line_user_name}", line_user_name].flatten.to_tsv unless queue_for_scraping[line_user_name]
-    puts [:userinfo_to_scrape, line_user_name, timestamp].flatten.to_tsv unless queue_for_scraping[line_user_name]
+    puts [:userinfo_to_scrape, line_user_name, rest.last].flatten.to_tsv unless queue_for_scraping[line_user_name]
     queue_for_scraping[line_user_name] = true
     info_user_name = ''; info_user_id = 0
   end
