@@ -11,12 +11,12 @@ require 'hadoop_utils'; include HadoopUtils
 
 DATEFORMAT = "%Y%m%d%H%M%S"
 UserPartial  = HadoopStruct.new( '01',  :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
-User         = HadoopStruct.new( '02',  :id,  :screen_name, :created_at, :statuses_count, :followers_count, :friends_count, :protected )
+User         = HadoopStruct.new( '02',  :id,  :screen_name, :created_at, :statuses_count, :followers_count, :friends_count, :favourites_count, :protected )
 UserProfile  = HadoopStruct.new( '03',  :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
 UserStyle    = HadoopStruct.new( '04',  :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
 AFollowsB    = HadoopStruct.new( '05',  :user_a_id, :user_a, :user_b )
 BFollowsA    = HadoopStruct.new( '06',  :user_a_id, :user_a, :user_b )
-ARepliedB    = HadoopStruct.new( '07',  :user_a_id, :user_b_id,       :status_id, :reply_status_id )
+ARepliedB    = HadoopStruct.new( '07',  :user_a_id, :user_b_id,       :status_id, :in_reply_to_status_id )
 AAtsignsB    = HadoopStruct.new( '08',  :user_a_id, :user_a, :user_b, :status_id )
 Hashtag      = HadoopStruct.new( '09',  :user_a_id, :hashtag,         :status_id )
 TweetUrl     = HadoopStruct.new( '10',  :user_a_id, :tweet_url,       :status_id )
@@ -74,7 +74,7 @@ def emit_tweet tweet_hsh, timestamp
   if tweet_hsh['in_reply_to_user_id'] then
     at = "%012d"%tweet_hsh['in_reply_to_user_id']
     reply = ARepliedB.new timestamp, 'id' => twitter_user_id,
-      'user_a_id' => twitter_user_id, 'user_b' => at,  'status_id' => status_id, 'reply_status_id' => tweet_hsh['in_reply_to_status_id']
+      'user_a_id' => twitter_user_id, 'user_b' => at,  'status_id' => status_id, 'in_reply_to_status_id' => tweet_hsh['in_reply_to_status_id']
     reply.emit(twitter_user)
   end
   all_atsigns = ATSIGNS_TRANSFORMER.transform(  tweet_hsh)
@@ -164,6 +164,7 @@ $stdin.each do |line|
       emit_tweet tweet_hsh, timestamp
     end
   when 'raw_userinfo'
+    raw['id'] = "%012d"%raw['id'].to_i if raw['id']
     emit_user raw, timestamp, false
   else
     raise "Crap bubbles -- unexpected resource #{resource}"
@@ -180,3 +181,58 @@ end
 # hashtag       time  0 0 0 0 1 0 0   user_a_id                       status_id       sha1(hashtag)
 # url           time  0 0 0 0 0 1 0   user_a_id                       status_id       sha1(url)
 # word          time  0 0 0 0 0 0 1   user_a_id                                       sha1(word)
+
+
+
+
+
+
+
+# scrape_user_info        00
+# scrape_user_info        0000FF
+# scrape_user_info        000FF
+#
+# user            000000000012    jack    20060321205014  2597    12497   357     0       20081130010028
+# user            000000000013    biz     20060321205143  2942    22940   174     0       20081130010023
+# user            000000000013    biz     20060321205143  2948    23084   172     0       20081201164451
+#
+# user_profile    000000000012    Jack Dorsey     http://gu.st/   SF      A sailor, a tailor.     Pacific Time (US & Canada)      -28800  20081130010028
+# user_profile    000000000013    Biz Stone       http://www.bizstone.com Berkeley, CA    Co-founder of Twitter   Pacific Time (US & Canada)      -28800  20081130010023
+# user_profile    000000000014    noah    http://www.noahglass.com        San Francisco   i started this  Pacific Time (US & Canada)      -28800  20081130010143
+#
+# user_partial    000000000012    jack    12319   0       Jack Dorsey     http://gu.st/   SF      A sailor, a tailor.     http://s3.amazonaws.com/twitter_production/profile_images/54668082/Picture_2_normal.png 20081126072324
+# user_partial    000000000012    jack    12355   0       Jack Dorsey     http://gu.st/   SF      A sailor, a tailor.     http://s3.amazonaws.com/twitter_production/profile_images/54668082/Picture_2_normal.png 20081126180920
+# user_partial    000000000012    jack    12369   0       Jack Dorsey     http://gu.st/   SF      A sailor, a tailor.     http://s3.amazonaws.com/twitter_production/profile_images/54668082/Picture_2_normal.png 20081126231618
+#
+# user_style      000000000012    8B542B  333333  9D582E  D9B17E  EADEAA          http://s3.amazonaws.com/twitter_production/profile_images/54668082/Picture_2_normal.png         20081130010028
+# user_style      000000000013    352726  3E4415  D02B55  829D5E  99CC33          http://s3.amazonaws.com/twitter_production/profile_images/58660087/biz_stone_normal.png         20081130010023
+# user_style      000000000014    ba030f  6f726e  b62b3a  f62c47  e1dfe0  http://s3.amazonaws.com/twitter_production/profile_background_images/2/flowers-and-logo.jpg     http://s3.amazonaws.com/twitter_production/profile_images/14019402/noahglass_normal.jpg         false   20081130010143
+#
+# b_follows_a     0               000000000012    BigEd   jack    20081129045352
+# b_follows_a     0               000000000012    niall   jack    20081126154850
+# b_follows_a     0               000000000013    cw      biz     20081126232155
+#
+# a_follows_b     0               000000000012    Aloisius        jack    20081204013142
+# a_follows_b     0               000000000012    BSbikeNJ        jack    20081201194251
+# a_follows_b     0               000000000012    Benoit  jack    20081129143009
+#
+# a_atsigns_b     000000000013    0               biz     Livia   20081129204944
+# a_atsigns_b     000000000013    000000000291    biz     goldman 20081204054833
+# a_atsigns_b     000000000013    000000000586    biz     sacca   20081127034711
+#
+# a_replied_b     000000000013    001031611945    1031480806      20081201030031
+# a_replied_b     000000000015    001031508955    1031474576      20081201013828
+# a_replied_b     000000000015    001032879471    1032873074      20081201202032
+#
+# tweet_url       000000000013    http://bit.ly/bk8n      001028336212    20081128185751
+# tweet_url       000000000013    http://bit.ly/oWRL      001037006869    20081203220933
+# tweet_url       000000000013    http://flickr.com/photos/biz/3065208030/        001027426700    20081128042836
+#
+# hashtag         000000000057    Mumbai  001027471935    20081128051616
+# hashtag         000000000414    zataomm 001026787380    20081127184620
+# hashtag         000000000506    DiMAS2008       001027608362    20081128080122
+#
+# tweet           000000003212    20060501005920  000000000211    just setting up my twttr        0       0       24                      web             []      []      []      20060501005920
+# tweet           000000003213    20060501010016  000000000212    just setting up my twttr        0       0       24                      web             []      []      []      20060501010016
+# tweet           000000003219    20060501010812  000000000218    just setting up my twttr        0       0       24                      web             []      []      []      20060501010812
+

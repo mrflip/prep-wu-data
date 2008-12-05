@@ -1,11 +1,11 @@
 require 'rubygems'
 require 'faster_csv'
 module HadoopUtils
-  String.class_eval do
-    def scrub!
-      gsub!(/[\t\r\n]+/, ' ')  # KLUDGE
-    end
 
+  #
+  # Handy Monkeypatching
+  #
+  String.class_eval do
     # Stolen from active_support
     #
     # The reverse of +camelize+. Makes an underscored, lowercase form from the expression in the string.
@@ -22,19 +22,54 @@ module HadoopUtils
         tr("-", "_").
         downcase
     end
+    #
+    # Strip control characters that might harsh our buzz, TSV-wise
+    #
+    def scrub!
+      gsub!(/[\t\r\n]+/, ' ')  # KLUDGE
+    end
+    #
+    # add a method exactly like +parse_csv+ but specifying a tab-separator
+    #
     def parse_tsv options={}
       parse_csv options.merge( :col_sep => "\t" )
     end
   end
   Array.class_eval do
+    #
+    # add a method exactly like +parse_csv+ but specifying a tab-separator
+    #
     def to_tsv options={}
       to_csv options.merge( :col_sep => "\t" )
     end
   end
+  #
+  # For each of the given fields, strip any control characters that might harsh
+  # our buzz, TSV-wise
+  #
   def scrub hsh, *fields
     fields.each{|field| hsh[field.to_s].scrub! if hsh[field.to_s] }
   end
 
+  class LineTimestampUniqifier
+    attr_accessor :last_line
+    def initialize
+      self.last_line = nil
+    end
+    def is_repeated? line
+      # Strip the timestamp (last field on the line -- we don't need to do any complicated TSV decoding for that
+      this_line = line.gsub(/\t\d{14}\s*$/,'')
+      # Since the only things that will be de-uniqued have all-identical
+      # prefixes (differ only in their timestamp), and the lines are lexically
+      # sorted (?) this should be the earliest
+      if this_line == self.last_line
+        true
+      else
+        self.last_line = this_line
+        false
+      end
+    end
+  end
 
   module HadoopStructMethods
     def initialize timestamp, hsh

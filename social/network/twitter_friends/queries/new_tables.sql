@@ -7,8 +7,8 @@
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_users`;
 CREATE TABLE         `imw_twitter_graph`.`twitter_users` (
   `id`					INT(10) UNSIGNED			NOT NULL, -- at 17_751_380 on 11/30/08
-  `created_at`				DATETIME				NOT NULL, --
   `screen_name`				VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
+  `created_at`				DATETIME				NOT NULL, --
   `statuses_count`			MEDIUMINT(10) UNSIGNED,  	  --
   `followers_count`			MEDIUMINT(10) UNSIGNED,  
   `friends_count`			MEDIUMINT(10) UNSIGNED,  
@@ -61,8 +61,8 @@ CREATE TABLE         `imw_twitter_graph`.`twitter_users_style` (
 -- Derived user information
 --
 --
-DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_users_parameters`;
-CREATE TABLE          `imw_twitter_graph`.`twitter_users_parameters` (
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_users_metrics`;
+CREATE TABLE          `imw_twitter_graph`.`twitter_users_metrics` (
   `twitter_user_id`			INT(10) UNSIGNED			NOT NULL,
   `replied_to_count`			MEDIUMINT(10) UNSIGNED,
   `tweeturls_count`			MEDIUMINT(10) UNSIGNED,
@@ -103,25 +103,66 @@ CREATE TABLE          `imw_twitter_graph`.`friendships` (
 --
 -- Also note you can  find symmetric relationships without a JOIN : use a UNION and GROUP BY
 -- 
-DROP TABLE IF EXISTS  `imw_twitter_graph`.`user_relationships`;
-CREATE TABLE          `imw_twitter_graph`.`user_relationships` (
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_follows_b`;
+CREATE TABLE          `imw_twitter_graph`.`a_follows_b` (
   `rel`					ENUM('afollowsb', 'afavoredb', 'arepliedb', 'aatsigndb', 'bothfollw'),
   `user_a_id`				INT(10)	     UNSIGNED			NOT NULL,
   `user_b_id`				INT(10)	     UNSIGNED			NOT NULL,
-  `status_id`				INT(10)	     UNSIGNED			NOT NULL DEFAULT 0,   -- note that twitter is 25% of the way to overflow.
-  `reltime`				DATETIME				NOT NULL,
-  `afollowsb`				TINYINT					DEFAULT NULL, -- boolean
-  `afavoredb`				TINYINT					DEFAULT NULL, -- boolean
-  `arepliedb`				TINYINT					DEFAULT NULL, -- boolean
-  `aatsignb`				TINYINT					DEFAULT NULL, -- boolean
-  `bothfollw`				TINYINT					DEFAULT NULL, -- boolean ?? do we want reverse links too ??
-  PRIMARY KEY  (`rel`, `user_a_id`, `user_b_id`, `status_id`),
+  `user_a_name`				VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
+  `user_b_name`				VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
+  INDEX 	(`user_a_id`, `user_b_id`),
+  INDEX 	(`user_b_id`),
+  INDEX 	(`user_a_name`)
+  INDEX 	(`user_b_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii
+;
+
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_atsigns_b`;
+CREATE TABLE          `imw_twitter_graph`.`a_atsigns_b` (
+  `rel`					ENUM('afollowsb', 'afavoredb', 'arepliedb', 'aatsigndb', 'bothfollw'),
+  `user_a_id`				INT(10)	     UNSIGNED			NOT NULL,
+  `user_b_id`				INT(10)	     UNSIGNED			NOT NULL,
+  `user_a_name`				VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
+  `user_b_name`				VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
+  `status_id`				VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
   INDEX 	(`user_a_id`, `user_b_id`),
   INDEX 	(`user_b_id`),
   INDEX 	(`status_id`),
-  INDEX 	(`reltime`)
+  INDEX 	(`user_a_name`)
+  INDEX 	(`user_b_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
+
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_atsigns_b`;
+CREATE TABLE          `imw_twitter_graph`.`a_atsigns_b` (
+  `rel`					ENUM('afollowsb', 'afavoredb', 'arepliedb', 'aatsigndb', 'bothfollw'),
+  `user_a_id`				INT(10)	     UNSIGNED			NOT NULL,
+  `user_b_id`				INT(10)	     UNSIGNED			NOT NULL,
+  `status_id`				VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
+  `in_reply_to_status_id`			VARCHAR(50) CHARACTER SET ASCII		NOT NULL, --
+  INDEX 	(`user_a_id`, `user_b_id`),
+  INDEX 	(`user_b_id`),
+  INDEX 	(`status_id`),
+  INDEX 	(`user_a_name`)
+  INDEX 	(`user_b_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii
+;
+
+
+--   `status_id`				INT(10)	     UNSIGNED			NOT NULL DEFAULT 0,   -- note that twitter is 25% of the way to overflow.
+--   `reltime`				DATETIME				NOT NULL,
+--   `afollowsb`				TINYINT					DEFAULT NULL, -- boolean
+--   `afavoredb`				TINYINT					DEFAULT NULL, -- boolean
+--   `arepliedb`				TINYINT					DEFAULT NULL, -- boolean
+--   `aatsignb`				TINYINT					DEFAULT NULL, -- boolean
+--   `bothfollw`				TINYINT					DEFAULT NULL, -- boolean ?? do we want reverse links too ??
+--   PRIMARY KEY  (`rel`, `user_a_id`, `user_b_id`, `status_id`),
+--   INDEX 	(`user_a_id`, `user_b_id`),
+--   INDEX 	(`user_b_id`),
+--   INDEX 	(`status_id`),
+--   INDEX 	(`reltime`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=ascii
+-- ;
 -- 
 -- hashtag	 time  1 0 0	user_a_id			status_id	sha1(hashtag)
 -- url		 time  0 1 0	user_a_id			status_id	sha1(url)

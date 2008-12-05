@@ -4,16 +4,15 @@ ripd=$data_root/ripd/_com/_tw/com.twitter
 rawd=$data_root/rawd/social/network/twitter_friends
 temp=$data_root/temp/social/network/twitter_friends
 
-datestamp=`date +%Y%m%d`
-
+datestamp=`date +%Y%m%d`a
 hdfs_dest=rawd/social/network/twitter_friends-$datestamp
 hdp-mkdir $hdfs_dest
 echo "Copying into $hdfs_dest"
 
 cd $rawd/keyed
-(for dir in cat users/show/*	     ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/users_show.tsv
-(for dir in cat statuses/friends/*   ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/statuses_friends.tsv
-(for dir in cat statuses/followers/* ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/statuses_followers.tsv
+echo users     ; (for dir in users/show/*	     ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/users_show.tsv
+echo friends   ; (for dir in statuses/friends/*   ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/statuses_friends.tsv
+echo followers ; (for dir in statuses/followers/* ; do cat $dir/* ; done ) | hdp-put - $hdfs_dest/statuses_followers.tsv
 
 # cd $rawd/keyed
 # for dir1 in * ; do

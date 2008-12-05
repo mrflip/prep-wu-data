@@ -1,0 +1,12 @@
+user_style			59452
+user_profile			59458
+user				59459
+hashtag				59565
+scrape_user_info		105799
+tweet_url			590972
+a_replied_b			661670
+a_atsigns_b			857877
+tweet				3056069
+user_partial			25186827
+a_follows_b			29115556
+b_follows_a			29115556

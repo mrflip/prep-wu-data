@@ -20,6 +20,8 @@ def key_from_filename filename
   if m = %r{^ripd/(\w+/\w+)/_(..?)/(\w+?)\.json(?:%3Fpage%3D(\d+))?$}.match(filename)
     dir, prefix, screen_name, page = m.captures
     [ DIR_TO_RESOURCE[dir], screen_name, page, timestamp ]
+  elsif m = %r{^ripd/(\w+/\w+)/_(..?)/(\w+?(?:%20|&)\w+?)+\.json(?:%3Fpage%3D(\d+))?$}.match(filename)
+    warn  "Bogus filename #{filename}"
   else
     raise "Can't grok filename #{filename}"
   end
