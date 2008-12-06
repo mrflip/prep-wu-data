@@ -67,7 +67,7 @@ def ripd_file_from_url url
     resource, prefix, suffix = m.captures
     "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}"
   else
-    raise "Can't grok url #{url}"
+    warn "Can't grok url #{url}"; return nil
   end
 end
 
@@ -77,7 +77,7 @@ File.open('fixd/hadooped/20081204/userpartials_to_scrape.tsv').each do |line|
   track_count    :users, 50
   uri  = "http://twitter.com/users/show/#{screen_name}.json?page=1"
   ripd_file = ripd_file_from_url(uri)
-  next unless ripd_file =~ %r{^_com/_tw}
+  next unless ripd_file && (ripd_file =~ %r{^_com/_tw})
   success = wget uri, ripd_file, 0
   warn "No yuo on #{screen_name}" unless success
 end
