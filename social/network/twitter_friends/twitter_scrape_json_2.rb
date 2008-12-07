@@ -15,10 +15,9 @@ require File.dirname(__FILE__)+'/twitter_pass.rb'
 # # Setup database
 # #
 # DataMapper::Logger.new(STDERR, :debug) # watch SQL log -- must be BEFORE call to db setup
-dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
-DataMapper.setup_remote_connection dbparams
+# dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_graph' })
+# DataMapper.setup_remote_connection dbparams
 
-SLEEP_BETWEEN_WGETS = 0 # .2 # about 1-2/s
 
 # -- assets stored as :ripd, com/tw/com.twitter/mr/mrflip-#uuid-#timestamp
 # scraper
@@ -68,46 +67,30 @@ def ripd_file_from_url url
     resource, prefix, suffix = m.captures
     "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}"
   else
-    raise "Can't grok url #{url}"
+    warn "Can't grok url #{url}"; return nil
   end
 end
 
-def scrape_pass min_priority, max_priority, hard_limit = nil
-  hard_limit ||= 5*(max_priority-min_priority)
-  [
-    # 'friends',
-    'followers',
-    # 'info',
-  ].each do |context|
-    announce("Scraping  %s %6d..%-6d popular+unrequested users" % [context, min_priority, max_priority])
-    popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => context,
-    :priority.gte => min_priority, :priority.lt => max_priority, # :page.lt => 20,
-    :fields => [:uri, :id],
-    :order  => [:page.asc, :priority.asc],
-    :limit  => hard_limit
-    popular_and_neglected.each do |req|
-      track_count    :users, 50
-      ripd_file = ripd_file_from_url(req.uri)
-      next unless ripd_file =~ %r{^_com/_tw}
-      success = wget req.uri, ripd_file, SLEEP_BETWEEN_WGETS
-      # mark columns
-      req.result_code  = success
-      req.scraped_time = Time.now.utc
-      req.save
-    end
-    announce "Finished %s chunk %6d..%-6d" % [context, min_priority, max_priority]
-  end
+File.open('fixd/hadooped/20081204/userpartials_to_scrape.tsv').each do |line|
+  line.chomp!
+  screen_name, *_ = line.split(/\t/)
+  track_count    :users, 50
+  uri  = "http://twitter.com/users/show/#{screen_name}.json?page=1"
+  ripd_file = ripd_file_from_url(uri)
+  next unless ripd_file && (ripd_file =~ %r{^_com/_tw})
+  success = wget uri, ripd_file, 0
+  warn "No yuo on #{screen_name}" unless success
 end
 
+# n_requests = AssetRequest.count(:user_resource => ['friends', 'followers'], :scraped_time => nil)
+# chunksize = 200
+# offset    = 0   # for parallel runs, space each separate job by 1/n of the problem space
+# chunks    = (n_requests / chunksize).to_i + 1
+# (1..chunks).each do |chunk|
+#   min_priority = (chunk-1)*chunksize + offset
+#   scrape_pass min_priority, min_priority+chunksize
+# end
 
-n_requests = AssetRequest.count(:user_resource => ['friends', 'followers'], :scraped_time => nil)
-chunksize = 200
-offset    = 0   # for parallel runs, space each separate job by 1/n of the problem space
-chunks    = (n_requests / chunksize).to_i + 1
-(1..chunks).each do |chunk|
-  min_priority = (chunk-1)*chunksize + offset
-  scrape_pass min_priority, min_priority+chunksize
-end
 #
 #
 # class TwitterScrapeTracker
