@@ -31,35 +31,35 @@
 # time_zone utc_offset
 # * iPhone coordinates
 
---
---
--- Derived user information
---
---
--- DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_metrics`;
--- CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
---   `twitter_user_id`                  INT(10) UNSIGNED NOT NULL,
---   `twitter_user_created_at`          DATETIME,                   -- Denormalized
---   `updated_at`                       DATETIME,
---   `tweets_count_at_last_scrape`      MEDIUMINT(10) UNSIGNED,  -- at updated_at
-     -- followers, friends, favorites
---   `tweet_rate`                       MEDIUMINT(10) UNSIGNED,
---   `atsigns_count`                    MEDIUMINT(10) UNSIGNED,
---   `atsigned_count`                   MEDIUMINT(10) UNSIGNED,
---   `tweet_urls_count`                 MEDIUMINT(10) UNSIGNED,
---   `hashtags_count`                   MEDIUMINT(10) UNSIGNED,
---   `twoosh_count`                     MEDIUMINT(10) UNSIGNED,
---   `prestige`                         INT(10)       UNSIGNED,
---   `pagerank`                         FLOAT,
---   `has_image`                        TINYINT(4)    UNSIGNED,
---   `lat`                              FLOAT,
---   `lng`                              FLOAT,
---   PRIMARY KEY  (`twitter_user_id`),
---   INDEX (`prestige`),
---   INDEX (`replied_to_count`),
---   INDEX (`tweeturls_count`)
--- ) ENGINE=InnoDB DEFAULT CHARSET=ascii
--- ;
+# --
+# --
+# -- Derived user information
+# --
+# --
+# -- DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_metrics`;
+# -- CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
+# --   `twitter_user_id`                  INT(10) UNSIGNED NOT NULL,
+# --   `twitter_user_created_at`          DATETIME,                   -- Denormalized
+# --   `updated_at`                       DATETIME,
+# --   `tweets_count_at_last_scrape`      MEDIUMINT(10) UNSIGNED,  -- at updated_at
+#      -- followers, friends, favorites
+# --   `tweet_rate`                       MEDIUMINT(10) UNSIGNED,
+# --   `atsigns_count`                    MEDIUMINT(10) UNSIGNED,
+# --   `atsigned_count`                   MEDIUMINT(10) UNSIGNED,
+# --   `tweet_urls_count`                 MEDIUMINT(10) UNSIGNED,
+# --   `hashtags_count`                   MEDIUMINT(10) UNSIGNED,
+# --   `twoosh_count`                     MEDIUMINT(10) UNSIGNED,
+# --   `prestige`                         INT(10)       UNSIGNED,
+# --   `pagerank`                         FLOAT,
+# --   `has_image`                        TINYINT(4)    UNSIGNED,
+# --   `lat`                              FLOAT,
+# --   `lng`                              FLOAT,
+# --   PRIMARY KEY  (`twitter_user_id`),
+# --   INDEX (`prestige`),
+# --   INDEX (`replied_to_count`),
+# --   INDEX (`tweeturls_count`)
+# -- ) ENGINE=InnoDB DEFAULT CHARSET=ascii
+# -- ;
 
 
 # ===========================================================================
