@@ -18,6 +18,7 @@ require File.dirname(__FILE__)+'/twitter_pass.rb'
 dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
 DataMapper.setup_remote_connection dbparams
 
+SLEEP_BETWEEN_WGETS = 0 # .2 # about 1-2/s
 
 # -- assets stored as :ripd, com/tw/com.twitter/mr/mrflip-#uuid-#timestamp
 # scraper
@@ -76,7 +77,7 @@ def scrape_pass min_priority, max_priority, hard_limit = nil
   [
     'friends',
     'followers',
-    # 'info',
+    'info',
   ].each do |context|
     announce("Scraping  %s %6d..%-6d popular+unrequested users" % [context, min_priority, max_priority])
     popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => context,
@@ -88,7 +89,7 @@ def scrape_pass min_priority, max_priority, hard_limit = nil
       track_count    :users, 50
       ripd_file = ripd_file_from_url(req.uri)
       next unless ripd_file =~ %r{^_com/_tw}
-      success = wget req.uri, ripd_file, 0.8
+      success = wget req.uri, ripd_file, SLEEP_BETWEEN_WGETS
       # mark columns
       req.result_code  = success
       req.scraped_time = Time.now.utc
