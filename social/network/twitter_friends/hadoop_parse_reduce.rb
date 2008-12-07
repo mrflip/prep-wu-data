@@ -30,11 +30,11 @@ $stdin.each do |line|
   # strip the sorting index
   resource = resource.gsub(/^\d\d_/, '').to_sym
   # capture user info when we see it.
-  if (resource == :user) || (resource == :user_partial)
+  if (resource == :twitter_user) || (resource == :twitter_user_partial)
     info_user_name = line_user_name; info_user_id = rest[0]
   elsif (line_user_name != info_user_name) && [:a_follows_b, :b_follows_a, :a_atsigns_b].include?(resource)
     # ... and we should see a user or user_partial first
-    puts [:userinfo_to_scrape, line_user_name, rest.last].flatten.to_tsv unless queue_for_scraping[line_user_name]
+    puts [:scrape_request, line_user_name, rest.last].flatten.to_tsv unless queue_for_scraping[line_user_name]
     queue_for_scraping[line_user_name] = true
     info_user_name = ''; info_user_id = 0
   end
@@ -54,7 +54,7 @@ $stdin.each do |line|
   when :a_atsigns_b
     user_a_id, user_a, user_b, status_id, timestamp = rest
     # we need to preserve the username dump in case our eager join fails
-    puts [:a_atsigns_b, user_a_id,   info_user_id, user_a, user_b,  timestamp].flatten.to_tsv
+    puts [:a_atsigns_b, user_a_id,   info_user_id, user_a, user_b,  status_id, timestamp].flatten.to_tsv
   else
     puts [resource, rest].flatten.to_tsv
   end

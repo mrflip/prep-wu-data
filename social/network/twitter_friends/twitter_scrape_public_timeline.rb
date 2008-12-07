@@ -2,10 +2,10 @@
 require 'rubygems'
 require 'fileutils' ; include FileUtils
 
-
+# to%3Auser
 PUBLIC_URL = "http://twitter.com/statuses/public_timeline.json"
 TRENDS_URL = "http://search.twitter.com/trends.json"
-SEARCH_URL = "http://search.twitter.com/search.atom?q=point+spread"
+SEARCH_URL = "http://search.twitter.com/search.atom?q=point+spread&rpp=100" # &since_id=
 POOLPATH = "social/network/twitter_friends/public_timeline"
 DATADIR  = "/data/rawd/${poolpath}"
 LOGDIR   = "/data/log/${poolpath}"

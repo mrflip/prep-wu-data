@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-
+input_id=$1
+output_id=$2
 hadoop jar /home/flip/hadoop/h/contrib/streaming/hadoop-*-streaming.jar		\
     -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner 		\
     -jobconf    map.output.key.field.separator='\t'				\
@@ -9,8 +10,8 @@ hadoop jar /home/flip/hadoop/h/contrib/streaming/hadoop-*-streaming.jar		\
     -mapper	/bin/cat							\
     -reducer	/home/flip/ics/pool/social/network/twitter_friends/hadoop_uniq_without_timestamp.rb \
     -file    hadoop_utils.rb							\
-    -input  "$1"								\
-    -output "$2"
+    -input  "out/parsed-$input_id"							\
+    -output "out/sorted-$output_id"
 
 
 

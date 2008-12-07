@@ -10,17 +10,17 @@ require 'hadoop_utils'; include HadoopUtils
 # as_dset __FILE__
 
 DATEFORMAT = "%Y%m%d%H%M%S"
-UserPartial  = HadoopStruct.new( '01',  :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
-User         = HadoopStruct.new( '02',  :id,  :screen_name, :created_at, :statuses_count, :followers_count, :friends_count, :favourites_count, :protected )
-UserProfile  = HadoopStruct.new( '03',  :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
-UserStyle    = HadoopStruct.new( '04',  :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
-AFollowsB    = HadoopStruct.new( '05',  :user_a_id, :user_a, :user_b )
-BFollowsA    = HadoopStruct.new( '06',  :user_a_id, :user_a, :user_b )
-ARepliedB    = HadoopStruct.new( '07',  :user_a_id, :user_b_id,       :status_id, :in_reply_to_status_id )
-AAtsignsB    = HadoopStruct.new( '08',  :user_a_id, :user_a, :user_b, :status_id )
-Hashtag      = HadoopStruct.new( '09',  :user_a_id, :hashtag,         :status_id )
-TweetUrl     = HadoopStruct.new( '10',  :user_a_id, :tweet_url,       :status_id )
-Tweet        = HadoopStruct.new( '11', :id,  :created_at, :twitter_user_id, :text, :favorited, :truncated, :tweet_len, :in_reply_to_user_id, :in_reply_to_status_id, :fromsource, :fromsource_url, :all_atsigns, :all_hash_tags, :all_tweeted_urls )
+TwitterUserPartial  = HadoopStruct.new( '01',  :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
+TwitterUser         = HadoopStruct.new( '02',  :id,  :screen_name, :created_at, :statuses_count, :followers_count, :friends_count, :favourites_count, :protected )
+TwitterUserProfile  = HadoopStruct.new( '03',  :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
+TwitterUserStyle    = HadoopStruct.new( '04',  :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
+AFollowsB           = HadoopStruct.new( '05',  :user_a_id, :user_a, :user_b )
+BFollowsA           = HadoopStruct.new( '06',  :user_a_id, :user_a, :user_b )
+ARepliedB           = HadoopStruct.new( '07',  :user_a_id, :user_b_id,       :status_id, :in_reply_to_status_id )
+AAtsignsB           = HadoopStruct.new( '08',  :user_a_id, :user_a, :user_b, :status_id )
+Hashtag             = HadoopStruct.new( '09',  :user_a_id, :hashtag,         :status_id )
+TweetUrl            = HadoopStruct.new( '10',  :user_a_id, :tweet_url,       :status_id )
+Tweet               = HadoopStruct.new( '11', :id,  :created_at, :twitter_user_id, :text, :favorited, :truncated, :tweet_len, :in_reply_to_user_id, :in_reply_to_status_id, :fromsource, :fromsource_url, :all_atsigns, :all_hash_tags, :all_tweeted_urls )
 # UserMetric   = HadoopStruct.new( :id,  :replied_to_count, :tweeturls_count, :hashtags_count, :prestige, :pagerank, :twoosh_count )
 
 # transform and emit User
@@ -30,11 +30,11 @@ def emit_user hsh, timestamp, is_partial
   hsh['created_at']  = DateTime.parse(hsh['created_at']).strftime(DATEFORMAT) if hsh['created_at']
   scrub hsh, :name, :location, :description, :url
   if is_partial
-    UserPartial.new(timestamp, hsh).emit( hsh['screen_name'] )
+    TwitterUserPartial.new(timestamp, hsh).emit( hsh['screen_name'] )
   else
-    User.new(timestamp, hsh).emit( hsh['screen_name'] )
-    UserProfile.new(timestamp, hsh).emit( hsh['screen_name'] )
-    UserStyle.new(timestamp, hsh).emit( hsh['screen_name'] )
+    TwitterUser.new(timestamp, hsh).emit( hsh['screen_name'] )
+    TwitterUserProfile.new(timestamp, hsh).emit( hsh['screen_name'] )
+    TwitterUserStyle.new(timestamp, hsh).emit( hsh['screen_name'] )
   end
 end
 
@@ -73,8 +73,10 @@ def emit_tweet tweet_hsh, timestamp
   #
   if tweet_hsh['in_reply_to_user_id'] then
     at = "%012d"%tweet_hsh['in_reply_to_user_id']
+    in_reply_to_status_id = "%012d"%tweet_hsh['in_reply_to_status_id']
     reply = ARepliedB.new timestamp, 'id' => twitter_user_id,
-      'user_a_id' => twitter_user_id, 'user_b' => at,  'status_id' => status_id, 'in_reply_to_status_id' => tweet_hsh['in_reply_to_status_id']
+      'user_a_id' => twitter_user_id, 'user_b' => at,
+      'status_id' => status_id, 'in_reply_to_status_id' => in_reply_to_status_id
     reply.emit(twitter_user)
   end
   all_atsigns = ATSIGNS_TRANSFORMER.transform(  tweet_hsh)

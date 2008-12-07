@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # hadoop dfs -rmr out/parsed-followers
-
+input_id=$1
+output_id=$2
 hadoop jar /home/flip/hadoop/h/contrib/streaming/hadoop-*-streaming.jar			\
     -mapper  /home/flip/ics/pool/social/network/twitter_friends/hadoop_parse_json.rb	\
     -reducer /home/flip/ics/pool/social/network/twitter_friends/hadoop_parse_reduce.rb	\
-    -input   /user/flip/rawd/social/network/twitter_friends-20081205b/'*'	 	\
-    -output  "$1"									\
+    -input   /user/flip/rawd/social/network/twitter_friends-$input_id/'*'	 	\
+    -output  "out/parsed-$output_id"									\
     -file    hadoop_utils.rb								\
     -file    twitter_autourl.rb
 
