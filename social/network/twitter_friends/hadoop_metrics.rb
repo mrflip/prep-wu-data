@@ -3,6 +3,20 @@
 
 # ===========================================================================
 #
+# 20081206:
+#   distinct twitter_user_partials:     1_460_125
+#   distinct twitter_users:               579_361
+#
+#  SELECT  COUNT( DISTINCT id ), SUM(followers_count), SUM(friends_count), SUM(statuses_count) FROM twitter_users
+#  users:
+#    sum(followers_count) =  35_557_965
+#    sum(friends_count)   =  31_323_436
+#    sum(statuses_count)  = 159 040 920
+#
+#
+
+# ===========================================================================
+#
 # Pre-existing:
 # followers, friends, favorites, tweets count
 # duration

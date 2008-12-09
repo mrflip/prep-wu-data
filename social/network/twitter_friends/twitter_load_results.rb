@@ -25,12 +25,12 @@ LOAD_DATA_INFILE_QUERY = %Q{
       ESCAPED BY              ''
     LINES STARTING BY         '%s\\t'
     ;
-  SELECT NOW(), COUNT(*) FROM `%s`;
+  SELECT '%s', NOW(), COUNT(*) FROM `%s`;
 }
 def load_data_infile table
   prefix = table.to_s.gsub(/twitter_user/, 'user').singularize
   query = LOAD_DATA_INFILE_QUERY % [
-    table, table, prefix, table
+    table, table, prefix, table, table
   ]
   puts query
 end
@@ -38,16 +38,16 @@ end
 $stderr.print "#{Time.now} - Loading"
 [
   :twitter_users,
-  # :twitter_user_profiles,
+  :twitter_user_profiles,
   :twitter_user_styles,
-  # :twitter_user_partials,
-  # :tweets,
+  :twitter_user_partials,
+  :tweets,
   :tweet_urls,
   :hashtags,
   :a_atsigns_bs,
   :a_follows_bs,
   :a_replied_bs,
-  # :scrape_requests,
+  :scrape_requests,
 ].each do |table|
   $stderr.print " #{table}"
   load_data_infile table

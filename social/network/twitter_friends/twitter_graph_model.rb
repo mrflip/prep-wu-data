@@ -7,7 +7,7 @@ class TwitterUser
   include DataMapper::Resource
   # Basic info
   property :id,                         Integer, :serial   => true
-  property :screen_name,                String,  :length =>  05:nullable => false, :unique_index => :twitter_name
+  property :screen_name,                String,  :length =>  50, :nullable => false, :unique_index => :twitter_name
   property :created_at,                 DateTime
   # Counts
   property :statuses_count,             Integer
@@ -140,7 +140,8 @@ end
 class ExpandedUrl
   include DataMapper::Resource
   property      :short_url,             String,  :key    => true, :length => 60
-  property      :dest_url,              String,  :key    => true, :length => 1024
+  property      :dest_url,              String,                   :length => 1024
+  property      :scraped_at,            DateTime
 end
 
 #
@@ -160,8 +161,8 @@ class Tweet
   property   :fromsource,            String, :length => 255
   property   :fromsource_url,        String, :length => 255
   property   :all_atsigns,           Text
-  property   :all_hash_tags,         Text
-  property   :all_tweeted_urls,      Text
+  property   :all_hashtags,          Text
+  property   :all_tweet_urls,        Text
   property   :scraped_at,            DateTime
   # Associations
   belongs_to :twitter_user
@@ -180,7 +181,7 @@ module RequestTicket
       property :id,             Integer, :serial => true
       property :priority,       Integer
       property :context,        String,  :length => 128
-      property :uri,            String,  :length => 1024, :unique_index => true
+      property :uri,            String,  :length => 1024
       property :requested_at,   DateTime
       property :scraped_at,     DateTime
       property :result_code,    Integer
@@ -191,9 +192,9 @@ end
 class ScrapeRequest
   include RequestTicket
   # connect to twitter model
-  property   :twitter_user_id,  Integer, :index => [:user_resource_page]
-  property   :screen_name,      String
-  property   :page,             Integer, :index => [:user_resource_page]
+  property   :twitter_user_id,  Integer
+  property   :screen_name,      String,  :index => [:screen_name]
+  property   :page,             Integer
   belongs_to :twitter_user
   #
   def ripd_file
@@ -201,4 +202,16 @@ class ScrapeRequest
     resource, prefix, suffix, page = m.captures
     "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}%3Fpage%3D#{page}"
   end
+  RIPD_FILE_RE = %r{_com/_tw/com.twitter/(\w+/\w+)/_\w[\w\.]/(\w+)\.json%3Fpage%3D(\d+)}
+  def self.info_from_ripd_file ripd_file
+    m = RIPD_FILE_RE.match(ripd_file)
+    unless m then warn "Can't grok filename #{ripd_file}"; return nil; end
+    resource, name, page = m.captures
+    [ resource, name, page, "http://twitter.com/#{resource}/#{name}.json?page=#{page}" ]
+  end
+  def scraped?
+    !!scraped_at
+  end
 end
+
+

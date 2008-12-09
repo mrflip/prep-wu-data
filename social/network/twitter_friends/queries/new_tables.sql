@@ -67,7 +67,7 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_profiles` (
 --
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_styles`;
 CREATE TABLE          `imw_twitter_graph`.`twitter_user_styles` (
-  `twitter_user_id`			SMALLINT(5)  UNSIGNED			NOT NULL,
+  `twitter_user_id`			INT(10)  UNSIGNED			NOT NULL,
   `profile_background_color`		CHAR(6)	     CHARACTER SET ASCII,
   `profile_text_color`			CHAR(6)	     CHARACTER SET ASCII,
   `profile_link_color`			CHAR(6)	     CHARACTER SET ASCII,
@@ -75,42 +75,40 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_styles` (
   `profile_sidebar_fill_color`		CHAR(6)	     CHARACTER SET ASCII,
   `profile_background_image_url` 	VARCHAR(300) CHARACTER SET ASCII,
   `profile_image_url`			VARCHAR(300) CHARACTER SET ASCII,
-  `profile_background_tile`		SMALLINT(5) UNSIGNED,
+  `profile_background_tile`		TINYINT(4) UNSIGNED,
   `scraped_at`				DATETIME				NOT NULL, --
   PRIMARY KEY  (`twitter_user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 
 
---
---
 -- Derived user information
 -- -- also followers, friends, favorites, etc from
---
---
--- DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_metrics`;
--- CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
---   `twitter_user_id`                  INT(10) UNSIGNED NOT NULL,
---   `twitter_user_created_at`          DATETIME,                   -- Denormalized
---   `updated_at`                       DATETIME,
---   `tweets_count_at_last_scrape`      MEDIUMINT(10) UNSIGNED,  -- at updated_at
---   `tweet_rate`                       MEDIUMINT(10) UNSIGNED,
---   `atsigns_count`                    MEDIUMINT(10) UNSIGNED,
---   `atsigned_count`                   MEDIUMINT(10) UNSIGNED,
---   `tweet_urls_count`                 MEDIUMINT(10) UNSIGNED,
---   `hashtags_count`                   MEDIUMINT(10) UNSIGNED,
---   `twoosh_count`                     MEDIUMINT(10) UNSIGNED,
---   `prestige`                         INT(10)       UNSIGNED,
---   `pagerank`                         FLOAT,
---   `has_image`                        TINYINT(4)    UNSIGNED,
---   `lat`                              FLOAT,
---   `lng`                              FLOAT,
---   PRIMARY KEY  (`twitter_user_id`),
---   INDEX (`prestige`),
---   INDEX (`replied_to_count`),
---   INDEX (`tweeturls_count`)
--- ) ENGINE=InnoDB DEFAULT CHARSET=ascii
--- ;
+
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_metrics`;
+CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
+  `twitter_user_id`                  INT(10) UNSIGNED NOT NULL,
+  `twitter_user_created_at`          DATETIME,                   -- Denormalized
+  `scraped_at`                       DATETIME,
+  `tweets_count_at_last_scrape`      MEDIUMINT(10) UNSIGNED,  -- at updated_at
+  `tweet_rate`                       FLOAT,
+  `atsigns_count`                    MEDIUMINT(10) UNSIGNED,
+  `atsigned_count`                   MEDIUMINT(10) UNSIGNED,
+  `tweet_urls_count`                 MEDIUMINT(10) UNSIGNED,
+  `hashtags_count`                   MEDIUMINT(10) UNSIGNED,
+  `twoosh_count`                     MEDIUMINT(10) UNSIGNED,
+  `prestige`                         INT(10)       UNSIGNED,
+  `pagerank`                         FLOAT,
+  `has_image`                        TINYINT(4)    UNSIGNED,
+  `lat`                              FLOAT,
+  `lng`                              FLOAT,
+  -- # Tweet info on page
+  -- property :last_seen_update_time,      DateTime
+  -- property :first_seen_update_time,     DateTime
+  PRIMARY KEY  (`twitter_user_id`),
+  UNIQUE INDEX (`prestige`, `twitter_user_id`),
+) ENGINE=InnoDB DEFAULT CHARSET=ascii
+;
 
 -- ***************************************************************************
 --
@@ -134,7 +132,7 @@ CREATE TABLE          `imw_twitter_graph`.`tweets` (
   `fromsource_url`			VARCHAR(255) CHARACTER SET ASCII	NOT NULL,
   `all_atsigns`				VARCHAR(255) CHARACTER SET ASCII	NOT NULL,
   `all_hash_tags`			VARCHAR(255) CHARACTER SET ASCII	NOT NULL,
-  `all_tweeted`				VARCHAR(255) CHARACTER SET ASCII	NOT NULL,
+  `all_tweeted_urls`			VARCHAR(255) CHARACTER SET ASCII	NOT NULL,
   `scraped_at`				DATETIME				NOT NULL, --
   PRIMARY KEY  (`id`),
   INDEX (`created_at`),
@@ -175,6 +173,19 @@ CREATE TABLE          `imw_twitter_graph`.`a_follows_bs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 
+CREATE TABLE          `imw_twitter_graph`.`a_symmetric_bs` (
+  `user_a_id`		INT(10)	     UNSIGNED			NOT NULL,
+  `user_b_id`		INT(10)	     UNSIGNED			NOT NULL,
+  `user_a_name`	VARCHAR(50)  CHARACTER SET ASCII	NOT NULL,
+  `user_b_name`	VARCHAR(50)  CHARACTER SET ASCII	NOT NULL,
+  PRIMARY KEY 	(`user_a_id`, `user_b_id`, `user_a_name`, `user_b_name`),
+  INDEX 	(`user_b_id`),
+  INDEX 	(`user_a_name`(30), `user_b_name`(30)),
+  INDEX 	(`user_b_name`(30))
+) ENGINE=InnoDB DEFAULT CHARSET=ascii
+;
+
+
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_atsigns_bs`;
 CREATE TABLE          `imw_twitter_graph`.`a_atsigns_bs` (
   `user_a_id`				INT(10)	     UNSIGNED			NOT NULL,
@@ -186,7 +197,7 @@ CREATE TABLE          `imw_twitter_graph`.`a_atsigns_bs` (
   PRIMARY KEY 	(`user_a_id`, `user_b_id`, `user_a_name`, `user_b_name`),
   INDEX 	(`user_b_id`),
   INDEX 	(`status_id`),
-  INDEX 	(`user_a_name`(30), `user_b_name`(30))
+  INDEX 	(`user_a_name`(30), `user_b_name`(30)),
   INDEX 	(`user_b_name`(30))
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
@@ -213,7 +224,6 @@ CREATE TABLE          `imw_twitter_graph`.`tweet_urls` (
   `scraped_at`				DATETIME				NOT NULL, --
   INDEX 	(`user_a_id`),
   INDEX 	(`status_id`),
-  INDEX 	(`status_id`),
   INDEX 	(`tweet_url`(40))
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
@@ -237,7 +247,8 @@ CREATE TABLE          `imw_twitter_graph`.`hashtags` (
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`expanded_urls`;
 CREATE TABLE  	      `imw_twitter_graph`.`expanded_urls` (
   `short_url` 				VARCHAR(60) 	 CHARACTER SET ASCII	NOT NULL,
-  `dest_url` 				VARCHAR(1024) 	 CHARACTER SET ASCII	NOT NULL,
+  `dest_url` 				VARCHAR(1024) 	 CHARACTER SET ASCII	NULL,
+  `scraped_at`				DATETIME				NULL,
   PRIMARY KEY  	(`short_url`(40)),
   INDEX  	(`dest_url`(40))
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
@@ -249,17 +260,23 @@ CREATE TABLE  	      `imw_twitter_graph`.`expanded_urls` (
 --
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`scrape_requests`;
 CREATE TABLE  	      `imw_twitter_graph`.`scrape_requests` (
-  `screen_name` 			VARCHAR(60) 				NOT NULL,
+  `id`		 			INTEGER  	UNSIGNED AUTOINCREMENT,
+  `priority`	 			INTEGER,
   `context`				VARCHAR(128)  				DEFAULT NULL,
-  `url`					VARCHAR(1024) 				DEFAULT NULL,
-  `twitter_user_id`			INT(10) 	UNSIGNED		NOT NULL,
+  `uri`					VARCHAR(1024) 				DEFAULT NULL,
+  `requested_at`			DATETIME,
+  `scraped_at`				DATETIME,
   `result_code`				SMALLINT(6) 	UNSIGNED,
-  `scraped_at`				DATETIME(4),
-  `requested_at`			DATETIME(4),
-  INDEX  (`screen_name`, `context`, `url`)
-  --, UNIQUE INDEX (`twitter_user_id`, `context`)
+
+  `twitter_user_id`			INT(10) 	UNSIGNED		NOT NULL,
+  `screen_name` 			VARCHAR(60) 				NOT NULL,
+  `page`				SMALLINT(10) 	UNSIGNED		NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX  (`twitter_user_id`, `context`, `page`),
+  UNIQUE INDEX 	(`screen_name`,     `context`, `page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
+  -- , UNIQUE INDEX (`twitter_user_id`, `context`)
 
 
 -- -- `rel`					ENUM('afollowsb', 'afavoredb', 'arepliedb', 'aatsigndb', 'bothfollw'),
