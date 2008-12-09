@@ -75,7 +75,7 @@ def emit_tweet tweet_hsh, timestamp
     at = "%012d"%tweet_hsh['in_reply_to_user_id']
     in_reply_to_status_id = "%012d"%tweet_hsh['in_reply_to_status_id']
     reply = ARepliedB.new timestamp, 'id' => twitter_user_id,
-      'user_a_id' => twitter_user_id, 'user_b' => at,
+      'user_a_id' => twitter_user_id, 'user_b_id' => at,
       'status_id' => status_id, 'in_reply_to_status_id' => in_reply_to_status_id
     reply.emit(twitter_user)
   end
