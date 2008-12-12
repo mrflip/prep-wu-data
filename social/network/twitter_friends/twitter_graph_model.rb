@@ -173,14 +173,58 @@ class Tweet
   has n,     :hashtags,                                        :child_key => [:status_id]
 end
 
-class TwitterScrapeRequest
-  include ScrapeRequest
-  # connect to twitter model
-  property   :twitter_user_id,  Integer
-  property   :screen_name,      String,  :index => [:screen_name]
-  property   :page,             Integer
-  belongs_to :twitter_user
+# class TwitterScrapeRequest
+#   include ScrapeRequest
+#   # connect to twitter model
+#   property   :twitter_user_id,  Integer
+#   property   :screen_name,      String,  :index => [:screen_name]
+#   property   :page,             Integer
+#   belongs_to :twitter_user
+#   #
+# end
+
+
+require 'imw/chunk_store/scrape'
+class TwitterScrapeFile
+  include ScrapeFile
+  attr_accessor :screen_name, :context, :page
   #
+  # Create from a screen_name, context and page number
+  #
+  def initialize screen_name, context, page
+    self.screen_name = screen_name
+    self.context    = context
+    self.page       = page
+  end
+  RESOURCE_PATH_FROM_CONTEXT = {
+    :followers => 'statuses/followers', :friends => 'statuses/friends', :user => 'users/show'}
+  def resource_path
+    RESOURCE_PATH_FROM_CONTEXT[context]
+  end
+  # Fake the cached_uri path
+  def ripd_file
+    base_path = "_com/_tw/com.twitter/#{resource_path}"
+    prefix    = (screen_name+'.')[0..1]
+    slug_path = "_" + prefix.downcase
+    filename  = "#{screen_name}.json%3Fpage%3D#{page}"
+    path_to(:ripd_root, base_path, slug_path, filename) # :ripd_root
+  end
+  #
+  def rip_uri
+    "http://twitter.com/#{resource_path}/#{screen_name}.json?page=#{page}"
+  end
+
+
+  RIPD_FILE_RE = %r{_com/_tw/com.twitter/(\w+/\w+)/_\w[\w\.]/(\w+)\.json%3Fpage%3D(\d+)}
+  def self.new_from_ripd_file filename
+    m = RIPD_FILE_RE.match(filename)
+    unless m then warn "Can't grok filename #{filename}"; return nil; end
+    resource, screen_name, page = m.captures
+    context = RESOURCE_PATH_FROM_CONTEXT.invert[resource]
+    scrape_file = self.new screen_name, context, page
+    scrape_file
+  end
+
 end
 
 
