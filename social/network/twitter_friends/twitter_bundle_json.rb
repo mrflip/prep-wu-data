@@ -1,15 +1,32 @@
 #!/usr/bin/env ruby
-require 'rubygems'
-require 'json'
 require 'imw' ; include IMW
-require 'twitter_profile_model'
 require 'fileutils'; include FileUtils
 as_dset __FILE__
 
+require 'faster_csv'
+require 'twitter_scrape_model'
 
+TwitterScrapeFile.class_eval do
+  def twitter_id
+    self.class.twitter_ids[screen_name]
+  end
 
+  def self.twitter_ids
+    return @twitter_ids if @twitter_ids
+    @twitter_ids = { }
+    announce "initial load of IDs file... will take a while"
+    twitter_ids_filename = path_to(:fixd, "dump/user_names_and_ids.tsv")
+    FasterCSV.open(twitter_ids_filename, :col_sep => "\t").readlines.each do |screen_name, id, pages|
+      @twitter_ids[screen_name] = id
+    end
+    announce "OK loaded: #{@twitter_ids.length} IDs ready to recognize"
+    @twitter_ids
+  end
+end
 
-
+ripd_base  = "_com/_tw/com.twitter"
+keyed_base = path_to(:rawd, "keyed")
+CachedUriStore.new(ripd_base, keyed_base).bundle_scrape_sessions
 
 
 
