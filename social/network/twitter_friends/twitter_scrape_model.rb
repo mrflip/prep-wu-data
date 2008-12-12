@@ -28,7 +28,7 @@ class TwitterScrapeFile
   }
   # Get url resource for context
   def resource_path
-    RESOURCE_PATH_FROM_CONTEXT[context]
+    RESOURCE_PATH_FROM_CONTEXT[context.to_sym]
   end
   # Get context from url resource
   def self.context_for_resource(resource)
@@ -66,17 +66,17 @@ class TwitterScrapeFile
     self.new_from_uri(uri_str, timestamp)
   end
 
-  #
-  # create a scrape_file for an existing file
-  #
-  def self.new_from_old_ripd_file filename
-    m = RIPD_FILE_RE.match(filename)
-    unless m then warn "Can't grok filename #{filename}"; return nil; end
-    timestamp = File.mtime(filename) if File.exists?(filename)
-    resource, screen_name, page = m.captures
-    context = TwitterScrapeFile::RESOURCE_PATH_FROM_CONTEXT.invert[resource]
-    scrape_file = self.new screen_name, context, page, timestamp
-    scrape_file
-  end
+  # #
+  # # create a scrape_file for an existing file
+  # #
+  # def self.new_from_old_ripd_file filename
+  #   m = RIPD_FILE_RE.match(filename)
+  #   unless m then warn "Can't grok filename #{filename}"; return nil; end
+  #   timestamp = File.mtime(filename) if File.exists?(filename)
+  #   resource, screen_name, page = m.captures
+  #   context = TwitterScrapeFile::RESOURCE_PATH_FROM_CONTEXT.invert[resource]
+  #   scrape_file = self.new screen_name, context, page, timestamp
+  #   scrape_file
+  # end
 
 end

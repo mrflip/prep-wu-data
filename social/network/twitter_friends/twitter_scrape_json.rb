@@ -2,85 +2,35 @@
 require 'rubygems'
 require 'json'
 require 'imw' ; include IMW
-require 'imw/extract/html_parser'
-require 'imw/dataset/datamapper'
+include FileUtils
 as_dset __FILE__
-require 'fileutils'; include FileUtils
 
-#
-require 'twitter_profile_model'
+# Get the password -- keep this file .gitignore'd obvs.
 require File.dirname(__FILE__)+'/twitter_pass.rb'
+IMW.log.level = Logger::INFO
 
-# #
-# # Setup database
-# #
-# DataMapper::Logger.new(STDERR, :debug) # watch SQL log -- must be BEFORE call to db setup
-dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
-DataMapper.setup_remote_connection dbparams
+require 'imw/chunk_store/scrape'
+require 'twitter_graph_model'
 
-SLEEP_BETWEEN_WGETS = 0 # .2 # about 1-2/s
 
-# -- assets stored as :ripd, com/tw/com.twitter/mr/mrflip-#uuid-#timestamp
-# scraper
-# * iterates over URLs
-# * pulls in chunks sorted according to a priority
-#
-# tracker
-# * fills url request pool
-# * scrape - parse
-#
-#
-# cached_uri_store
-# * turns uri into file path
-# * returns cached file if within time window
-#
-
-def ripd_file_from_url url
-  case
-  when m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)\?page=(.*)}.match(url)
-    resource, prefix, suffix, page = m.captures
-    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}%3Fpage%3D#{page}"
-  when m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)$}.match(url)
-    resource, prefix, suffix = m.captures
-    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}"
-  else
-    raise "Can't grok url #{url}"
+USERNAMES_FILE = 'fixd/dump/user_names_by_followers_count.tsv'
+# USERNAMES_FILE = '/tmp/foo_users.tsv'
+exists, not_exists, lines = [0,0,0]
+SKIP_LINES = 45000
+File.open(USERNAMES_FILE).each do |line|
+  line.chomp!; lines += 1
+  next if lines < SKIP_LINES
+  screen_name, *rest = line.split(/\t/); next unless screen_name
+  [:followers ].each do |context|
+    track_count(:fetches, 1000)
+    scrape_file = TwitterScrapeFile.new(screen_name, context, 1)
+    if scrape_file.exists? then exists += 1  else  not_exists += 1 end
+    puts "Exists\t#{exists}\tNot Exists\t#{not_exists}" if (exists % 4000 == 0)
+    success = scrape_file.wget :http_user => TWITTER_USERNAME, :http_passwd => TWITTER_PASSWD,
+      :sleep_time => 0, :log_level => Logger::DEBUG
+    warn "No yuo on #{screen_name}: #{scrape_file.result_status}" unless success
   end
 end
-
-def scrape_pass min_priority, max_priority, hard_limit = nil
-  hard_limit ||= 5*(max_priority-min_priority)
-  [
-    # 'friends',
-    'followers',
-    # 'info',
-  ].each do |context|
-    announce("Scraping  %s %6d..%-6d popular+unrequested users" % [context, min_priority, max_priority])
-    popular_and_neglected = AssetRequest.all :scraped_time => nil, :user_resource => context,
-    :priority.gte => min_priority, :priority.lt => max_priority, # :page.lt => 20,
-    :fields => [:uri, :id],
-    :order  => [:page.asc, :priority.asc],
-    :limit  => hard_limit
-    popular_and_neglected.each do |req|
-      track_count    :users, 50
-      ripd_file = ripd_file_from_url(req.uri)
-      next unless ripd_file =~ %r{^_com/_tw}
-      success = wget req.uri, ripd_file, SLEEP_BETWEEN_WGETS
-      # mark columns
-      req.result_code  = success
-      req.scraped_time = Time.now.utc
-      req.save
-    end
-    announce "Finished %s chunk %6d..%-6d" % [context, min_priority, max_priority]
-  end
-end
+puts "Exists\t#{exists}\tNot Exists\t#{not_exists}"
 
 
-n_requests = AssetRequest.count(:user_resource => ['friends', 'followers'], :scraped_time => nil)
-chunksize = 200
-offset    = 0   # for parallel runs, space each separate job by 1/n of the problem space
-chunks    = (n_requests / chunksize).to_i + 1
-(1..chunks).each do |chunk|
-  min_priority = (chunk-1)*chunksize + offset
-  scrape_pass min_priority, min_priority+chunksize
-end

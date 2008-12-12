@@ -173,15 +173,16 @@ class Tweet
   has n,     :hashtags,                                        :child_key => [:status_id]
 end
 
-# class TwitterScrapeRequest
-#   include ScrapeRequest
-#   # connect to twitter model
-#   property   :twitter_user_id,  Integer
-#   property   :screen_name,      String,  :index => [:screen_name]
-#   property   :page,             Integer
-#   belongs_to :twitter_user
-#   #
-# end
+require 'imw/chunk_store/scrape_request'
+class ScrapeRequest
+  include BaseScrapeRequest
+  # connect to twitter model
+  property   :twitter_user_id,  Integer
+  property   :screen_name,      String,  :index => [:screen_name]
+  property   :page,             Integer
+  belongs_to :twitter_user
+  #
+end
 
 
 

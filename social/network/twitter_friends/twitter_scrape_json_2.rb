@@ -2,6 +2,7 @@
 require 'rubygems'
 require 'json'
 require 'imw' ; include IMW
+require 'imw/dataset/datamapper'
 include FileUtils
 as_dset __FILE__
 
@@ -11,41 +12,55 @@ IMW.log.level = Logger::INFO
 
 require 'imw/chunk_store/scrape'
 require 'twitter_graph_model'
+require 'twitter_scrape_model'
+require 'twitter_scrape_store'
 
 
-USERNAMES_FILE = 'fixd/dump/user_names_by_followers_count.tsv'
-# USERNAMES_FILE = '/tmp/foo_users.tsv'
-exists, not_exists, lines = [0,0,0]
-SKIP_LINES = 45000
-File.open(USERNAMES_FILE).each do |line|
-  line.chomp!; lines += 1
-  next if lines < SKIP_LINES
-  screen_name, *rest = line.split(/\t/); next unless screen_name
-  [:followers ].each do |context|
-    track_count(:fetches, 1000)
-    scrape_file = TwitterScrapeFile.new(screen_name, context, 1)
-    if scrape_file.exists? then exists += 1  else  not_exists += 1 end
-    puts "Exists\t#{exists}\tNot Exists\t#{not_exists}" if (exists % 4000 == 0)
-    success = scrape_file.wget :http_user => TWITTER_USERNAME, :http_passwd => TWITTER_PASSWD,
-      :sleep_time => 0, :log_level => Logger::DEBUG
-    warn "No yuo on #{screen_name}: #{scrape_file.result_status}" unless success
+#
+# Setup database
+#
+# DataMapper.logging = true
+# DataMapper.setup_remote_connection( IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_graph' }) )
+RIPD_ROOT = path_to(:ripd_root)
+
+TwitterScrapeFile.class_eval do
+  def exists?
+    timeless = ripd_file.gsub(/\+\d+-\d+.json/, '*')
+    matches = Dir[timeless]
+    if ! matches.empty?
+      ts = matches.last.gsub(/.*\+(\d{8})-(\d{6})(?:\.\w{0,7})?\z/, '\1\2')
+      self.cached_uri.timestamp = DateTime.parse ts
+      # puts "%s\t%s\t%-120s\t%s" % [ts, matches.last, self.cached_uri.timestamp, timeless[40..-1], ripd_file[50..-1]]
+    end
+    ! matches.empty?
+  end
+  def ripd_file
+    File.join RIPD_ROOT, file_path
   end
 end
-puts "Exists\t#{exists}\tNot Exists\t#{not_exists}"
 
+#
+# Flat list of usernames (in first column)
+#
+USERNAMES_FILE = 'fixd/dump/scrape_requests_followers_20081212.tsv'
+File.open(USERNAMES_FILE).readlines.each do |line|
+  line.chomp!
+  screen_name, context, page, *_ = line.split(/\t/); next unless screen_name && context && page
+  track_count(:fetches, 1000)
+  #
+  # find file
+  #
+  scrape_file = TwitterScrapeFile.new(screen_name, context, page)
+  scrape_file.exists?
+  success = scrape_file.wget :http_user => TWITTER_USERNAME, :http_passwd => TWITTER_PASSWD,
+    :sleep_time => 0, :log_level => Logger::DEBUG
+  warn "No yuo on #{screen_name} #{context} #{page}: #{scrape_file.result_status}" unless success
+end
 
-
-# SELECT DISTINCT screen_name, MAX(follower_pages) FROM
-# (  SELECT DISTINCT screen_name, CEILING(MAX(followers_count)/100) AS follower_pages
-#     FROM twitter_users
-#     WHERE followers_count > 200
-#     GROUP BY screen_name
-#   UNION
-#   SELECT DISTINCT screen_name, CEILING(MAX(followers_count)/100) AS follower_pages
-#     FROM twitter_user_partials
-#     WHERE followers_count > 200
-#     GROUP BY screen_name
-# ) f
-# GROUP BY screen_name
-# ORDER BY follower_pages DESC, screen_name ASC
-# INTO OUTFILE '/data/fixd/social/network/twitter_friends/dump/user_names_u_100.tsv'
+# SELECT screen_name,
+#       REPLACE(context, 'scrape_', '') AS context,
+#       page, id, priority
+#     FROM scrape_requests
+#     WHERE     scraped_at IS NULL AND result_code IS NULL AND context = 'scrape_user'
+#     ORDER BY page ASC, priority ASC
+# INTO OUTFILE '/data/fixd/social/network/twitter_friends/dump/scrape_requests_user_20081212.tsv'
