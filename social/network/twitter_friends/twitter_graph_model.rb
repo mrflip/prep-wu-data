@@ -173,45 +173,14 @@ class Tweet
   has n,     :hashtags,                                        :child_key => [:status_id]
 end
 
-# user - username - html_profile
-module RequestTicket
-  def self.included base
-    base.class_eval do
-      include DataMapper::Resource
-      property :id,             Integer, :serial => true
-      property :priority,       Integer
-      property :context,        String,  :length => 128
-      property :uri,            String,  :length => 1024
-      property :requested_at,   DateTime
-      property :scraped_at,     DateTime
-      property :result_code,    Integer
-    end
-  end
-end
-
-class ScrapeRequest
-  include RequestTicket
+class TwitterScrapeRequest
+  include ScrapeRequest
   # connect to twitter model
   property   :twitter_user_id,  Integer
   property   :screen_name,      String,  :index => [:screen_name]
   property   :page,             Integer
   belongs_to :twitter_user
   #
-  def ripd_file
-    m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)\?page=(.*)}.match(uri) or raise "Can't grok url #{uri}"
-    resource, prefix, suffix, page = m.captures
-    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}%3Fpage%3D#{page}"
-  end
-  RIPD_FILE_RE = %r{_com/_tw/com.twitter/(\w+/\w+)/_\w[\w\.]/(\w+)\.json%3Fpage%3D(\d+)}
-  def self.info_from_ripd_file ripd_file
-    m = RIPD_FILE_RE.match(ripd_file)
-    unless m then warn "Can't grok filename #{ripd_file}"; return nil; end
-    resource, name, page = m.captures
-    [ resource, name, page, "http://twitter.com/#{resource}/#{name}.json?page=#{page}" ]
-  end
-  def scraped?
-    !!scraped_at
-  end
 end
 
 

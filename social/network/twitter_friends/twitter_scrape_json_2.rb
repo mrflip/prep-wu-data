@@ -2,59 +2,50 @@
 require 'rubygems'
 require 'json'
 require 'imw' ; include IMW
-require 'imw/extract/html_parser'
-require 'imw/dataset/datamapper'
+require 'imw/chunk_store/scrape'
+include FileUtils
 as_dset __FILE__
-require 'fileutils'; include FileUtils
 
-#
-require 'twitter_profile_model'
+# Get the password -- keep this file .gitignore'd obvs.
 require File.dirname(__FILE__)+'/twitter_pass.rb'
 
-#
-# wget url_to_get, ripd_file, sleep_time
-#
-# Crudely scrape a url
-#
-# get the url
-# leave a 0-byte turd on failure to prevent re-fetching; use find ripd/ -size 0 --exec rm {} \; to scrub
-# sleeps for sleep_time
-#
-def wget rip_url, ripd_file, sleep_time=1
-  cd path_to(:ripd_root) do
-    mkdir_p   File.dirname(ripd_file)
-    if File.exists?(ripd_file)
-      puts "Skipping #{rip_url}"
-    else
-      print `wget -nv --timeout=8 --http-user=#{TWITTER_USERNAME} --http-passwd=#{TWITTER_PASSWD} -O'#{ripd_file}' '#{rip_url}' `
-      # puts "(sleeping #{sleep_time})" ;
-      sleep sleep_time
-    end
-    success = File.exists?(ripd_file) && (File.size(ripd_file) != 0)
-    return success
+class TwitterScrapeFile
+  include ScrapeFile
+  attr_accessor :screen_name, :context, :page
+  def initialize screen_name, context, page
+    self.screen_name = screen_name
+    self.context    = context
+    self.page       = page
+  end
+  RESOURCE_PATH_FROM_CONTEXT = {
+    :followers => 'statuses/followers', :friends => 'statuses/friends', :user => 'users/show'}
+  def resource_path
+    RESOURCE_PATH_FROM_CONTEXT[context]
+  end
+  # Fake the cached_uri path
+  def ripd_file
+    base_path = "_com/_tw/com.twitter/#{resource_path}"
+    prefix    = (screen_name+'.')[0..1]
+    slug_path = "_" + prefix.downcase
+    filename  = "#{screen_name}.json%3Fpage%3D#{page}"
+    path_to(:ripd_root, base_path, slug_path, filename) # :ripd_root
+  end
+  #
+  def rip_uri
+    "http://twitter.com/#{resource_path}/#{screen_name}.json?page=#{page}"
   end
 end
 
-def ripd_file_from_url url
-  case
-  when m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)\?page=(.*)}.match(url)
-    resource, prefix, suffix, page = m.captures
-    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}%3Fpage%3D#{page}"
-  when m = %r{http://twitter.com/([^/]+/[^/]+)/(..?)([^?]*?)$}.match(url)
-    resource, prefix, suffix = m.captures
-    "_com/_tw/com.twitter/#{resource}/_#{prefix.downcase}/#{prefix}#{suffix}"
-  else
-    warn "Can't grok url #{url}"; return nil
-  end
-end
-
-File.open('fixd/hadooped/20081206/scrape_requests_rev.tsv').each do |line|
+USERNAMES_FILE = 'fixd/dump/user_names_by_followers_count.tsv'
+# USERNAMES_FILE = '/tmp/foo_users.tsv'
+File.open(USERNAMES_FILE).each do |line|
   line.chomp!
-  screen_name, *rest = line.split(/\t/)
-  track_count    :users, 50
-  uri  = "http://twitter.com/users/show/#{screen_name}.json?page=1"
-  ripd_file = ripd_file_from_url(uri)
-  next unless ripd_file && (ripd_file =~ %r{^_com/_tw})
-  success = wget uri, ripd_file, 0
-  warn "No yuo on #{screen_name}" unless success
+  screen_name, *rest = line.split(/\t/); next unless screen_name
+  track_count(:users, 100)
+  [:followers ].each do |context|
+    scrape_file = TwitterScrapeFile.new(screen_name, context, 1)
+    success = scrape_file.wget :http_user => TWITTER_USERNAME, :http_passwd => TWITTER_PASSWD, :sleep_time => 0
+    warn "No yuo on #{screen_name}: #{scrape_file.result_status}" unless success
+  end
 end
+

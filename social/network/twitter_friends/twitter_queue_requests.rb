@@ -5,7 +5,6 @@ require 'imw' ; include IMW
 require 'imw/dataset/datamapper'
 as_dset __FILE__
 require 'fileutils'; include FileUtils
-require 'scrape'
 #
 require 'twitter_graph_model'
 
@@ -87,8 +86,8 @@ end
 #
 def mass_validate_requests
   cd path_to(:ripd_root) do
-    Dir["_com/_tw/com.twitter/*/u*"].each do |resource|
-      Dir["#{resource}/*"].each do |dir|
+    Dir["_com/_tw/com.twitter/u*/*"].each do |resource|
+      Dir["#{resource}/_[p-z_P-Z]*"].each do |dir|
         Dir["#{dir}/*"].each do |ripd_file|
           track_count :files, 50_000
           resource, screen_name, page, uri = ScrapeRequest.info_from_ripd_file(ripd_file)
@@ -118,3 +117,18 @@ mass_validate_requests
 #       GROUP BY screen_name HAVING COUNT(DISTINCT id) > 1) a
 #   WHERE u.screen_name = a.screen_name
 #
+
+# SELECT DISTINCT screen_name, MAX(follower_pages) FROM
+# (  SELECT DISTINCT screen_name, CEILING(MAX(followers_count)/100) AS follower_pages
+#     FROM twitter_users
+#     WHERE followers_count > 200
+#     GROUP BY screen_name
+#   UNION
+#   SELECT DISTINCT screen_name, CEILING(MAX(followers_count)/100) AS follower_pages
+#     FROM twitter_user_partials
+#     WHERE followers_count > 200
+#     GROUP BY screen_name
+# ) f
+# GROUP BY screen_name
+# ORDER BY follower_pages DESC, screen_name ASC
+# INTO OUTFILE '/data/fixd/social/network/twitter_friends/dump/user_names_u_100.tsv'
