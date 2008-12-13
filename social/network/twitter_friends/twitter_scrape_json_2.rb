@@ -42,7 +42,8 @@ end
 #
 # Flat list of usernames (in first column)
 #
-USERNAMES_FILE = 'fixd/dump/scrape_requests_followers_20081212.tsv'
+# 'fixd/dump/scrape_requests_followers_20081212.tsv'
+USERNAMES_FILE = 'fixd/dump/user_names_to_scrape.tsv'
 File.open(USERNAMES_FILE).readlines.each do |line|
   line.chomp!
   screen_name, context, page, *_ = line.split(/\t/); next unless screen_name && context && page
@@ -64,3 +65,8 @@ end
 #     WHERE     scraped_at IS NULL AND result_code IS NULL AND context = 'scrape_user'
 #     ORDER BY page ASC, priority ASC
 # INTO OUTFILE '/data/fixd/social/network/twitter_friends/dump/scrape_requests_user_20081212.tsv'
+
+# find ripd/ -type f > /tmp/listing.txt
+# cat /tmp/listing.txt | perl -pe 's!^.*(?:followers|friends|show)/([%\w]\w+)\.json%.*!$1! || print STDERR ("WTF:".$_)' > /tmp/screen_names.txt
+# cat /tmp/screen_names.txt | sort -u > fixd/dump/user_names_and_ids_from_files.tsv
+# cat fixd/dump/missing_ids_* fixd/dump/user_names_and_ids_from_files.tsv  > fixd/dump/user_names_to_scrape.tsv
