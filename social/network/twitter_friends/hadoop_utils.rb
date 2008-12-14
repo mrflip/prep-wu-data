@@ -79,15 +79,15 @@ module HadoopUtils
     end
     #
     def resource
-      "%s_%s" % [self.class.key_index, self.class.to_s.underscore]
+      self.class.to_s.underscore
     end
     # identifying output key
     def key owner
-      [owner, resource]
+      resource
     end
     # dump to stdout
-    def emit owner
-      puts [ key(owner), *self.values ].flatten.to_tsv
+    def emit
+      puts [ key, *self.values ].flatten.to_tsv
     end
     #
     def parse
@@ -96,12 +96,10 @@ module HadoopUtils
   end
 
   class HadoopStruct < Struct
-    def self.new key_index, *members
+    def self.new *members
       klass = super(*[members, :timestamp].flatten)
       klass.class_eval do
         include HadoopStructMethods
-        cattr_accessor :key_index
-        self.key_index = key_index
       end
       klass
     end

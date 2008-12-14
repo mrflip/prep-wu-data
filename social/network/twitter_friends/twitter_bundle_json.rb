@@ -16,7 +16,7 @@ TwitterScrapeFile.class_eval do
     return @twitter_ids if @twitter_ids
     @twitter_ids = { }
     announce "initial load of IDs file... will take a while"
-    twitter_ids_filename = path_to(:fixd, "dump/user_names_and_ids.tsv")
+    twitter_ids_filename = path_to(:fixd, "dump/user_names_and_ids-2.tsv")
     FasterCSV.open(twitter_ids_filename, :col_sep => "\t").readlines.each do |screen_name, id, pages|
       @twitter_ids[screen_name] = id
     end
@@ -58,11 +58,12 @@ TwitterScrapeStore.class_eval do
           track_count(dir, 1_000)
           scrape_file = TwitterScrapeFile.new_from_file(ripd_file); next unless scrape_file
           screen_name, twitter_id = [scrape_file.screen_name, scrape_file.twitter_id]
-          if (! twitter_id) && (context != :user) then MISSING_IDS_FILE << "#{screen_name}\t#{ripd_file}"; next ; end
+          if (! twitter_id) && (context != :user) then MISSING_IDS_FILE << "#{screen_name}\t#{ripd_file}\n"; next ; end
           twitter_id = "%012d"%[twitter_id]
           contents = File.open(ripd_file).read       ; next if contents.blank?
           warn "Tabs or carriage returns in #{ripd_file}" if contents =~ /[\t\n\r]/
-          keyed_file << [ screen_name, twitter_id, context, contents ].join("\t")+"\n"
+          # resource, screen_name, page, origin, timestamp, raw
+          keyed_file << [ screen_name, twitter_id, context, scrape_file.page, scrape_file.cached_uri.timestamp, contents ].join("\t")+"\n"
         end
       end
     end
@@ -73,6 +74,15 @@ TwitterScrapeStore.class_eval do
       bundle_scrape_session keyed_base, scrape_session_dir
     end
   end
+  #
+  # apply block to each scrape session directory
+  #
+  def each_scrape_session &block
+    cd(path_to(:ripd_root)) do
+      Dir[path_to(self.ripd_base, "*")].sort.each(&block)
+    end
+  end
+
 end
 
 

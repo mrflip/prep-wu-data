@@ -10,17 +10,16 @@ require 'hadoop_utils'; include HadoopUtils
 # as_dset __FILE__
 
 DATEFORMAT = "%Y%m%d%H%M%S"
-TwitterUserPartial  = HadoopStruct.new( '01',  :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
-TwitterUser         = HadoopStruct.new( '02',  :id,  :screen_name, :created_at, :statuses_count, :followers_count, :friends_count, :favourites_count, :protected )
-TwitterUserProfile  = HadoopStruct.new( '03',  :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
-TwitterUserStyle    = HadoopStruct.new( '04',  :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
-AFollowsB           = HadoopStruct.new( '05',  :user_a_id, :user_a, :user_b )
-BFollowsA           = HadoopStruct.new( '06',  :user_a_id, :user_a, :user_b )
-ARepliedB           = HadoopStruct.new( '07',  :user_a_id, :user_b_id,       :status_id, :in_reply_to_status_id )
-AAtsignsB           = HadoopStruct.new( '08',  :user_a_id, :user_a, :user_b, :status_id )
-Hashtag             = HadoopStruct.new( '09',  :user_a_id, :hashtag,         :status_id )
-TweetUrl            = HadoopStruct.new( '10',  :user_a_id, :tweet_url,       :status_id )
-Tweet               = HadoopStruct.new( '11', :id,  :created_at, :twitter_user_id, :text, :favorited, :truncated, :tweet_len, :in_reply_to_user_id, :in_reply_to_status_id, :fromsource, :fromsource_url, :all_atsigns, :all_hash_tags, :all_tweeted_urls )
+TwitterUserPartial  = HadoopStruct.new( :id,  :screen_name, :followers_count, :protected, :name, :url, :location, :description, :profile_image_url )
+TwitterUser         = HadoopStruct.new( :id,  :screen_name, :created_at, :statuses_count, :followers_count, :friends_count, :favourites_count, :protected )
+TwitterUserProfile  = HadoopStruct.new( :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
+TwitterUserStyle    = HadoopStruct.new( :id,  :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_image_url, :profile_image_url, :profile_background_tile )
+AFollowsB           = HadoopStruct.new( :user_a_id, :user_b_id )
+ARepliedB           = HadoopStruct.new( :user_a_id, :user_b_id,   :status_id, :in_reply_to_status_id )
+AAtsignsB           = HadoopStruct.new( :user_a_id, :user_b_name, :status_id )
+Hashtag             = HadoopStruct.new( :user_a_id, :hashtag,     :status_id )
+TweetUrl            = HadoopStruct.new( :user_a_id, :tweet_url,   :status_id )
+Tweet               = HadoopStruct.new( :id,  :created_at, :twitter_user_id, :text, :favorited, :truncated, :tweet_len, :in_reply_to_user_id, :in_reply_to_status_id, :fromsource, :fromsource_url, :all_atsigns, :all_hash_tags, :all_tweeted_urls )
 # UserMetric   = HadoopStruct.new( :id,  :replied_to_count, :tweeturls_count, :hashtags_count, :prestige, :pagerank, :twoosh_count )
 
 # transform and emit User
@@ -32,9 +31,9 @@ def emit_user hsh, timestamp, is_partial
   if is_partial
     TwitterUserPartial.new(timestamp, hsh).emit( hsh['screen_name'] )
   else
-    TwitterUser.new(timestamp, hsh).emit( hsh['screen_name'] )
+    TwitterUser.new(       timestamp, hsh).emit( hsh['screen_name'] )
     TwitterUserProfile.new(timestamp, hsh).emit( hsh['screen_name'] )
-    TwitterUserStyle.new(timestamp, hsh).emit( hsh['screen_name'] )
+    TwitterUserStyle.new(  timestamp, hsh).emit( hsh['screen_name'] )
   end
 end
 
@@ -82,8 +81,7 @@ def emit_tweet tweet_hsh, timestamp
   all_atsigns = ATSIGNS_TRANSFORMER.transform(  tweet_hsh)
   tweet_hsh['all_atsigns'] =  all_atsigns.to_json
   all_atsigns.each do |at|
-    atsign = AAtsignsB.new timestamp, 'user_a_id' => twitter_user_id, 'user_a' => twitter_user,
-      'user_b'  => at, 'status_id' => status_id
+    atsign = AAtsignsB.new timestamp, 'user_a_id' => twitter_user_id, 'user_b_name'  => at, 'status_id' => status_id
     atsign.emit at
   end
   all_tweeted_urls = TWEETURLS_TRANSFORMER.transform(tweet_hsh)
@@ -105,17 +103,17 @@ end
 #
 #
 def load_line line
-  m = %r{^(\w+)-(\w+)-(\d+)-(\d{14})\t(.*)$}.match(line)
+  m = %r{^(\w+)\t(\d+)\t(user|followers|friends)\t(\d+)\t(\d{8}-\d{6})\t(.*)$}.match(line)
   if !m then warn "Can't grok #{line}"; return [] ; end
-  resource, screen_name, page, timestamp, json = m.captures
+  screen_name, twitter_user_id, context, page, timestamp, json = m.captures
   begin
     raw = JSON.load(json)
   rescue Exception => e
-    warn "Couldn't open and parse #{[resource, screen_name, page, timestamp].join('-')}: #{e}"
+    warn "Couldn't open and parse #{[screen_name, twitter_user_id, context, page, timestamp].join('-')}: #{e}"
     return []
   end
-  origin = [resource, screen_name, page, timestamp].join('-')
-  [ resource, screen_name, page, origin, timestamp, raw ]
+  origin = [screen_name, twitter_user_id, context, page, timestamp].join('-')
+  [ screen_name, twitter_user_id, context, page, timestamp, origin, raw ]
 end
 
 
@@ -133,11 +131,10 @@ end
 #
 $stdin.each do |line|
   line.chomp! ; next if line.blank?
-  resource, screen_name, page, origin, timestamp, raw = load_line(line); next if raw.blank?
-  track_count screen_name[0..1].downcase, 100
-  # $stderr.puts("parsing %-15s\t%-31s\t%7d\t%s" % [resource, screen_name, page, timestamp])
-  case resource
-  when 'raw_followers', 'raw_friends'
+  file_owner_name, file_owner_id, context, page, timestamp, origin, raw = load_line(line); next if raw.blank?
+  track_count file_owner_name[0..1].downcase, 100
+  case context
+  when 'followers', 'friends'
     raw.each do |hsh|
       next if hsh.blank? || (! hsh.is_a?(Hash))
       hsh['id'] = "%012d"%hsh['id'].to_i if hsh['id']
@@ -146,16 +143,12 @@ $stdin.each do |line|
       emit_user hsh, timestamp, true
       #
       # follower or friend
-      if resource == 'raw_followers'
+      if context == 'raw_followers'
         # follower: this person *follows* the file owner
-        AFollowsB.new(timestamp,
-          'user_a' => hsh['screen_name'], 'user_a_id' => hsh['id'],
-          'user_b' => screen_name).emit(screen_name)
+        AFollowsB.new(timestamp, 'user_a_id' => hsh['id'],       'user_b_id' => file_owner_id).emit(file_owner_name)
       else
         # friend: this person is *followed by* the file owner.
-        BFollowsA.new(timestamp,
-          'user_a' => hsh['screen_name'], 'user_a_id' => hsh['id'],
-          'user_b' => screen_name).emit(screen_name)
+        AFollowsB.new(timestamp, 'user_a_id' => file_owner_id,   'user_b_id' => hsh['id']    ).emit(file_owner_name)
       end
       #
       # tweet
@@ -165,11 +158,12 @@ $stdin.each do |line|
       tweet_hsh['id']              = "%012d"%tweet_hsh['id'].to_i
       emit_tweet tweet_hsh, timestamp
     end
-  when 'raw_userinfo'
+  when 'user'
     raw['id'] = "%012d"%raw['id'].to_i if raw['id']
+    # warn ("WTF id mismatch: #{raw['id']} -- #{file_owner_id}") unless raw['id'] == file_owner_id
     emit_user raw, timestamp, false
   else
-    raise "Crap bubbles -- unexpected resource #{resource}"
+    raise "Crap bubbles -- unexpected context #{context}"
   end
 end
 

@@ -25,13 +25,14 @@ RIPD_ROOT = path_to(:ripd_root)
 
 TwitterScrapeFile.class_eval do
   def exists?
-    timeless = ripd_file.gsub(/\+\d+-\d+.json/, '*')
+    timeless = ripd_file.gsub(/\+\d+-\d+.json/, '*')  # .gsub(%r{/_200\d{5}/}, '/*/') # <--don't do this
     matches = Dir[timeless]
     if ! matches.empty?
       ts = matches.last.gsub(/.*\+(\d{8})-(\d{6})(?:\.\w{0,7})?\z/, '\1\2')
       self.cached_uri.timestamp = DateTime.parse ts
       # puts "%s\t%s\t%-120s\t%s" % [ts, matches.last, self.cached_uri.timestamp, timeless[40..-1], ripd_file[50..-1]]
     end
+    puts matches
     ! matches.empty?
   end
   def ripd_file
@@ -42,8 +43,8 @@ end
 #
 # Flat list of usernames (in first column)
 #
-# 'fixd/dump/scrape_requests_followers_20081212.tsv'
-USERNAMES_FILE = 'fixd/dump/user_names_to_scrape.tsv'
+#
+USERNAMES_FILE = 'fixd/dump/scrape_requests_followers_20081212.tsv'
 File.open(USERNAMES_FILE).readlines.each do |line|
   line.chomp!
   screen_name, context, page, *_ = line.split(/\t/); next unless screen_name && context && page
@@ -67,6 +68,6 @@ end
 # INTO OUTFILE '/data/fixd/social/network/twitter_friends/dump/scrape_requests_user_20081212.tsv'
 
 # find ripd/ -type f > /tmp/listing.txt
-# cat /tmp/listing.txt | perl -pe 's!^.*(?:followers|friends|show)/([%\w]\w+)\.json%.*!$1! || print STDERR ("WTF:".$_)' > /tmp/screen_names.txt
+# cat /tmp/listing.txt | perl -pe 's!^.*(?:followers|friends|show)/([%\w]\w*)\.json%.*!$1! || print STDERR ("WTF:".$_)' > /tmp/screen_names.txt
 # cat /tmp/screen_names.txt | sort -u > fixd/dump/user_names_and_ids_from_files.tsv
 # cat fixd/dump/missing_ids_* fixd/dump/user_names_and_ids_from_files.tsv  > fixd/dump/user_names_to_scrape.tsv

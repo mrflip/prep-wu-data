@@ -61,8 +61,7 @@ class TwitterScrapeFile
   # Create the
   #
   def self.new_from_file filename
-    uri_str = CachedUri.url_from_file_path filename
-    timestamp = File.mtime(filename) if File.exists?(filename)
+    uri_str, timestamp = CachedUri.url_from_file_path filename
     self.new_from_uri(uri_str, timestamp)
   end
 
