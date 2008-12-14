@@ -276,8 +276,37 @@ CREATE TABLE  	      `imw_twitter_graph`.`scrape_requests` (
   UNIQUE INDEX 	(`screen_name`,     `context`, `page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
-  -- , UNIQUE INDEX (`twitter_user_id`, `context`)
+-- , UNIQUE INDEX (`twitter_user_id`, `context`)
 
+
+--
+-- Data gathering tables
+--
+-- mode hl user grp size date time filename
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`scraped_file_index`;
+CREATE TABLE  	      `imw_twitter_graph`.`scraped_file_index` (
+  `filename`				VARCHAR(255)  CHARACTER SET ASCII	DEFAULT NULL,
+  `context`				VARCHAR(25)   CHARACTER SET ASCII	DEFAULT NULL,
+  `size`	 			INTEGER,
+  `scraped_at`				DATETIME  				DEFAULT NULL,
+  `scrape_session`			DATE,  
+  PRIMARY KEY (`filename`, `context`, `scraped_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii
+;
+
+
+LOAD DATA INFILE '/data/rawd/social/network/twitter_friends/ripd_listings/_20081126-statuses-followers-lslr.txt'
+  REPLACE INTO TABLE `imw_twitter_graph`.`scraped_file_index`
+  FIELDS TERMINATED BY ' ' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+  LINES  TERMINATED BY '\n'
+  IGNORE 2 LINES
+  (@dummy, @dummy, @dummy, @dummy, `size`, @scraped_date, @scraped_time, `filename`)
+  SET
+    `scraped_at`    = CONCAT(@scraped_date, " ", @scraped_time ),
+    `context`       = "followers",
+    `scrape_session` = '20081126'
+
+    -- 
 
 -- -- `rel`					ENUM('afollowsb', 'afavoredb', 'arepliedb', 'aatsigndb', 'bothfollw'),
 -- --   `status_id`				INT(10)	     UNSIGNED			NOT NULL DEFAULT 0,   -- note that twitter is 25% of the way to overflow.

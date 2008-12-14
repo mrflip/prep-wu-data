@@ -19,7 +19,7 @@ require 'twitter_scrape_store'
 # DataMapper.setup_remote_connection dbparams
 # ScrapeRequest.auto_upgrade!
 
-
+# for dir in */*/* ; do rsrc=`echo $dir|ruby -ne 'puts $_.gsub(/\W/,"-")'` ; echo $rsrc ; time ls -lR $dir > /data/rawd/social/network/twitter_friends/ripd_listings/${rsrc}lslr.txt ; done
 
 TwitterScrapeStore.class_eval do
   #
