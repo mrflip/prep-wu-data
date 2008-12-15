@@ -25,7 +25,7 @@ TwitterScrapeFile.class_eval do
   end
 end
 
-MISSING_IDS_FILE = File.open("fixd/dump/missing_ids_#{Time.now.strftime("%Y%m%d-%H%M%S")}.txt", "w")
+MISSING_IDS_FILE = File.open("fixd/dump/missing_ids_#{Time.now.strftime(DATEFORMAT)}.txt", "w")
 TwitterScrapeStore.class_eval do
   #
   # Walk all files in the scraped directory and copy them to the new (correct) file scheme
@@ -60,7 +60,6 @@ TwitterScrapeStore.class_eval do
         # Stuff each file in this session into a bulk keyed file.
         #
         Dir["#{dir}/*"].sort.each do |ripd_file|
-          # track_count(dir, 1_000)
           scrape_file = TwitterScrapeFile.new_from_file(ripd_file); next unless scrape_file
           screen_name, twitter_id = [scrape_file.screen_name, scrape_file.twitter_id]
           if (! twitter_id) && (context != :user) then MISSING_IDS_FILE << "#{screen_name}\t#{ripd_file}\n"; next ; end
