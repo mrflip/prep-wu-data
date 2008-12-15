@@ -58,7 +58,7 @@ module HadoopUtils
     end
     def is_repeated? line
       # Strip the timestamp (last field on the line -- we don't need to do any complicated TSV decoding for that
-      this_line = line.gsub(/\t\d{14}\s*$/,'')
+      this_line = line.gsub(/\A([\w\-]+)\t[^\t]+\t(.*)\t\d{8}-\d{6}\s*$/,"\\1\t\\2") # KLUDGE -- I don't know why the \s* on the end is necessary... but it is, so leave it.
       # Since the only things that will be de-uniqued have all-identical
       # prefixes (differ only in their timestamp), and the lines are lexically
       # sorted (?) this should be the earliest
@@ -82,12 +82,12 @@ module HadoopUtils
       self.class.to_s.underscore
     end
     # identifying output key
-    def key owner
-      resource
+    def key
+      [self.class.to_s.underscore, self.values_of(*self.class.key_fields), timestamp].flatten.join('-')
     end
     # dump to stdout
     def emit
-      puts [ key, *self.values ].flatten.to_tsv
+      puts [ resource, key, *self.values ].flatten.to_tsv
     end
     #
     def parse
@@ -96,10 +96,12 @@ module HadoopUtils
   end
 
   class HadoopStruct < Struct
-    def self.new *members
+    def self.new key_fields, *members
       klass = super(*[members, :timestamp].flatten)
       klass.class_eval do
         include HadoopStructMethods
+        cattr_accessor :key_fields
+        self.key_fields = key_fields
       end
       klass
     end

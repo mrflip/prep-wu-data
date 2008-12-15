@@ -14,5 +14,6 @@ line_timestamp_uniqifier = LineTimestampUniqifier.new
 $stdin.each do |line|
   line.chomp!
   next if line.blank? || line_timestamp_uniqifier.is_repeated?(line)
+  line.gsub!(/\A([\w]+)(?:-[^\t]*)?\t/, "\\1\t") # strip the keyspace-broadening slug
   puts line
 end

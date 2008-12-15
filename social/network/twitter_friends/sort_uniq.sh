@@ -10,7 +10,7 @@ hadoop jar /home/flip/hadoop/h/contrib/streaming/hadoop-*-streaming.jar		\
     -mapper	/bin/cat							\
     -reducer	/home/flip/ics/pool/social/network/twitter_friends/hadoop_uniq_without_timestamp.rb \
     -file    hadoop_utils.rb							\
-    -input  "out/parsed-$input_id"							\
+    -input  "out/parsed-$input_id"						\
     -output "out/sorted-$output_id"
 
 
