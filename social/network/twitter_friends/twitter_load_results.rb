@@ -32,6 +32,8 @@ def load_data_infile thing, fields
   $stdout.flush
 end
 
+
+
 $stderr.print "#{Time.now} - Loading"
 [
   # :a_atsigns_b           ,
@@ -41,7 +43,7 @@ $stderr.print "#{Time.now} - Loading"
   # :twitter_user_profile  ,
   # :twitter_user_style    ,
   # :twitter_user          ,
-  :twitter_user_partial  ,
+  # :twitter_user_partial  ,
   # :tweet                 ,
   # :a_follows_b           ,
 ].each do |thing|

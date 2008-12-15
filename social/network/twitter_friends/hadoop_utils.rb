@@ -51,30 +51,10 @@ module HadoopUtils
     fields.each{|field| hsh[field.to_s].scrub! if hsh[field.to_s] }
   end
 
-  class LineTimestampUniqifier
-    attr_accessor :last_line
-    def initialize
-      self.last_line = nil
-    end
-    def is_repeated? line
-      # Strip the timestamp (last field on the line -- we don't need to do any complicated TSV decoding for that
-      this_line = line.gsub(/\A([\w\-]+)\t[^\t]+\t(.*)\t\d{8}-\d{6}\s*$/,"\\1\t\\2") # KLUDGE -- I don't know why the \s* on the end is necessary... but it is, so leave it.
-      # Since the only things that will be de-uniqued have all-identical
-      # prefixes (differ only in their timestamp), and the lines are lexically
-      # sorted (?) this should be the earliest
-      if this_line == self.last_line
-        true
-      else
-        self.last_line = this_line
-        false
-      end
-    end
-  end
-
   module HadoopStructMethods
-    def initialize timestamp, hsh
+    def initialize scraped_at, hsh
       # self.origin = origin
-      self.timestamp = timestamp
+      self.scraped_at = scraped_at
       self.indifferent_merge! hsh
     end
     #
@@ -83,7 +63,7 @@ module HadoopUtils
     end
     # identifying output key
     def key
-      [self.class.to_s.underscore, self.values_of(*self.class.key_fields), timestamp].flatten.join('-')
+      [self.class.to_s.underscore, self.values_of(*self.class.key_fields), scraped_at].flatten.join('-')
     end
     # dump to stdout
     def emit
@@ -97,7 +77,7 @@ module HadoopUtils
 
   class HadoopStruct < Struct
     def self.new key_fields, *members
-      klass = super(*[members, :timestamp].flatten)
+      klass = super(*[members, :scraped_at].flatten)
       klass.class_eval do
         include HadoopStructMethods
         cattr_accessor :key_fields

@@ -7,7 +7,7 @@ class TwitterUser
   include DataMapper::Resource
   # Basic info
   property :id,                         Integer, :serial   => true
-  property :screen_name,                String,  :length =>  50, :nullable => false, :unique_index => :twitter_name
+  property :screen_name,                String,  :length =>  20, :nullable => false, :unique_index => :twitter_name
   property :created_at,                 DateTime
   # Counts
   property :statuses_count,             Integer
@@ -82,8 +82,8 @@ class AFollowsB
   include DataMapper::Resource
   property   :user_a_id,                Integer, :key => true,    :index => :user_ids
   property   :user_b_id,                Integer, :key => true,    :index => [:user_ids,   :user_b_id]
-  property   :user_a_name,              String,  :length   => 50, :index => :names
-  property   :user_b_name,              String,  :length   => 50, :index => [:user_names, :user_b_name]
+  property   :user_a_name,              String,  :length   => 20, :index => :names
+  property   :user_b_name,              String,  :length   => 20, :index => [:user_names, :user_b_name]
   property   :scraped_at,               DateTime
   belongs_to :user_a, :class_name => 'TwitterUser', :child_key => [:user_a_id]
   belongs_to :user_b, :class_name => 'TwitterUser', :child_key => [:user_b_id]
@@ -109,8 +109,8 @@ class AAtsignsB
   include DataMapper::Resource
   property   :user_a_id,                Integer, :key => true,    :index => :user_ids
   property   :user_b_id,                Integer, :key => true,    :index => [:user_ids,   :user_b_id]
-  property   :user_a_name,              String,  :length   => 50, :index => :names
-  property   :user_b_name,              String,  :length   => 50, :index => [:user_names, :user_b_name]
+  property   :user_a_name,              String,  :length   => 20, :index => :names
+  property   :user_b_name,              String,  :length   => 20, :index => [:user_names, :user_b_name]
   property   :status_id,                Integer
   property   :scraped_at,               DateTime
   belongs_to :user_a, :class_name => 'TwitterUser', :child_key => [:user_a_id]

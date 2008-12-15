@@ -5,6 +5,7 @@ as_dset __FILE__
 
 require 'faster_csv'
 require 'twitter_scrape_model'
+require 'twitter_flat_model'
 require 'twitter_scrape_store'
 
 TwitterScrapeFile.class_eval do
@@ -16,7 +17,7 @@ TwitterScrapeFile.class_eval do
     return @twitter_ids if @twitter_ids
     @twitter_ids = { }
     announce "initial load of IDs file... will take a while"
-    twitter_ids_filename = path_to(:fixd, "dump/user_names_and_ids-2.tsv")
+    twitter_ids_filename = path_to(:fixd, "dump/user_names_and_ids-foo.tsv")
     FasterCSV.open(twitter_ids_filename, :col_sep => "\t").readlines.each do |screen_name, id, pages|
       @twitter_ids[screen_name] = id
     end
@@ -45,7 +46,7 @@ TwitterScrapeStore.class_eval do
     #
     # Walk the directories for this session
     #
-    Dir[path_to(scrape_session_dir, "*/*")].each do |dir|
+    Dir[path_to(scrape_session_dir, "u*/*")].each do |dir|
       # Find out where we are
       resource = dir.gsub(%r{.*?/(\w+/\w+)\z}, '\1')
       context = TwitterScrapeFile.context_for_resource(resource) # KLUDGE KLUDGE KLUDGE
@@ -59,14 +60,15 @@ TwitterScrapeStore.class_eval do
         #
         # Stuff each file in this session into a bulk keyed file.
         #
-        Dir["#{dir}/*"].sort.each do |ripd_file|
+        Dir["#{dir}/Marque*"].sort.each do |ripd_file|
           scrape_file = TwitterScrapeFile.new_from_file(ripd_file); next unless scrape_file
           screen_name, twitter_id = [scrape_file.screen_name, scrape_file.twitter_id]
           if (! twitter_id) && (context != :user) then MISSING_IDS_FILE << "#{screen_name}\t#{ripd_file}\n"; next ; end
           twitter_id = "%012d"%[twitter_id]
           contents = File.open(ripd_file).read       ; next if contents.blank?
           warn "Tabs or carriage returns in #{ripd_file}" if contents =~ /[\t\n\r]/
-          keyed_file << [ screen_name, twitter_id, context, scrape_file.page, scrape_file.cached_uri.timestamp, contents ].join("\t")+"\n"
+          scraped_at = scrape_file.cached_uri.timestamp.strftime(DATEFORMAT)
+          keyed_file << [ screen_name, twitter_id, context, scrape_file.page, scraped_at, contents ].join("\t")+"\n"
         end
       end
     end
@@ -84,7 +86,8 @@ TwitterScrapeStore.class_eval do
     cd(path_to(:ripd_root)) do
       # 1204,1205,1206,1207,1208,1209,1203,1202,1201,
       # 1210,          1211,1212,1213,1209,1208,1207,1206,1205,
-      Dir[path_to(self.ripd_base, "*")].each(&block)
+      $stderr.puts("!!!!!!!!!!!!!!!!!!! FIX TEXTING CHGS 3 dirs, idfile  !!!!!!!!!!!!!!!!!!!!!!")
+      Dir[path_to(self.ripd_base, "*1205")].each(&block)
     end
   end
 

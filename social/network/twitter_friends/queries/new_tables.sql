@@ -1,5 +1,7 @@
 use `imw_twitter_graph`
 
+-- See histograms.sql for figures
+
 -- ***************************************************************************
 --
 -- Primary user information
@@ -10,36 +12,62 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_users` (
   `id`                                  INT(10) UNSIGNED                        NOT NULL, -- at 17_751_380 on 11/30/08
   `screen_name`                         VARCHAR(20) CHARACTER SET ASCII         NOT NULL, --
   `created_at`                          DATETIME                                NOT NULL, --
-  `statuses_count`                      MEDIUMINT(10) UNSIGNED,           --
+  `statuses_count`                      MEDIUMINT(10) UNSIGNED,                           -- good for a few more years, and Market_JP is a little bitch
   `followers_count`                     MEDIUMINT(10) UNSIGNED,
   `friends_count`                       MEDIUMINT(10) UNSIGNED,
   `favourites_count`                    MEDIUMINT(10) UNSIGNED,
-  `protected`                           TINYINT(4)    UNSIGNED, --
+  `protected`                           TINYINT(4)    UNSIGNED, 			  --
   `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY   (`id`),
-  UNIQUE INDEX  (`screen_name`),
+  INDEX         (`screen_name`(15)),
   INDEX         (`followers_count`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
+
+--                     Max          50%ile,non-blank  99.9%ile incl.blk
+--   screen_name        20 chars 		         15 	    
+--   name               60           9.5                 24        
+--   url               100          28   		 81                  	                  
+--   location           80          11.5                 38      
+--   description       255          44                  212         -- can be 255*4 in principle (UTF-8) (??)
+--   time_zone 		28 	    -- 			 --
+--   profile_image_url                                  167        
+
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_partials`;
 CREATE TABLE          `imw_twitter_graph`.`twitter_user_partials` (
   `id`                                  INT(10) UNSIGNED                        NOT NULL, -- at 17_751_380 on 11/30/08
   `screen_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, --
   `followers_count`                     MEDIUMINT(10) UNSIGNED,
   `protected`                           TINYINT(4)    UNSIGNED, --
-  `name`                                VARCHAR(80)  CHARACTER SET UTF8,
-  `url`                                 VARCHAR(255) CHARACTER SET ASCII,
+  `name`                                VARCHAR(60)  CHARACTER SET UTF8,
+  `url`                                 VARCHAR(100) CHARACTER SET ASCII,
   `location`                            VARCHAR(80)  CHARACTER SET UTF8,
-  `description`                         TINYTEXT     CHARACTER SET UTF8,        -- can be 255*4
-  `profile_image_url`                   VARCHAR(300) CHARACTER SET ASCII,
-  `scraped_at`                          DATETIME                                NOT NULL, --
-  PRIMARY KEY   (`id`,          `scraped_at`),
-  UNIQUE INDEX  (`screen_name`, `scraped_at`),
+  `description`                         VARCHAR(255) CHARACTER SET UTF8,   
+  `profile_image_url`                   VARCHAR(255) CHARACTER SET ASCII,
+  `scraped_at`                          DATETIME                                NOT NULL, 
+  PRIMARY KEY   (`id`),
+  UNIQUE INDEX  (`screen_name`(15)), 
   INDEX         (`followers_count`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 
--- See histograms.sql : 99.9% of screen_names are <15 chars
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`all_twitter_user_partials`;
+CREATE TABLE          `imw_twitter_graph`.`all_twitter_user_partials` (
+  `id`                                  INT(10) UNSIGNED                        NOT NULL, -- at 17_751_380 on 11/30/08
+  `screen_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, --
+  `followers_count`                     MEDIUMINT(10) UNSIGNED,
+  `protected`                           TINYINT(4)    UNSIGNED, --
+  `name`                                VARCHAR(60)  CHARACTER SET UTF8,
+  `url`                                 VARCHAR(100) CHARACTER SET ASCII,
+  `location`                            VARCHAR(80)  CHARACTER SET UTF8,
+  `description`                         VARCHAR(255) CHARACTER SET UTF8,   
+  `profile_image_url`                   VARCHAR(255) CHARACTER SET ASCII,
+  `scraped_at`                          DATETIME                                NOT NULL, 
+  PRIMARY KEY   (`id`,          `scraped_at`),
+  INDEX         (`screen_name`(15)), 
+  INDEX         (`followers_count`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii
+;
 
 
 -- id      followers_count protected       screen_name name    url     description     location        profile_image_url
@@ -51,11 +79,11 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_partials` (
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_profiles`;
 CREATE TABLE          `imw_twitter_graph`.`twitter_user_profiles` (
   `twitter_user_id`                     INT(10) UNSIGNED                        NOT NULL,
-  `name`                                VARCHAR(80)  CHARACTER SET UTF8,
-  `url`                                 VARCHAR(255) CHARACTER SET ASCII,
+  `name`                                VARCHAR(60)  CHARACTER SET UTF8,
+  `url`                                 VARCHAR(100) CHARACTER SET ASCII,
   `location`                            VARCHAR(80)  CHARACTER SET UTF8,
-  `description`                         TINYTEXT     CHARACTER SET UTF8,        -- can be 255*4
-  `time_zone`                           VARCHAR(255) CHARACTER SET ASCII,       -- can maybe be smaller
+  `description`                         VARCHAR(255) CHARACTER SET UTF8,        -- can be 255*4
+  `time_zone`                           VARCHAR(30)  CHARACTER SET ASCII,       -- can maybe be smaller
   `utc_offset`                          MEDIUMINT(7),                           -- -43200 to 43200 I think => 9 bits
   `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY  (`twitter_user_id`)
@@ -75,8 +103,8 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_styles` (
   `profile_link_color`                  CHAR(6)      CHARACTER SET ASCII,
   `profile_sidebar_border_color`        CHAR(6)      CHARACTER SET ASCII,
   `profile_sidebar_fill_color`          CHAR(6)      CHARACTER SET ASCII,
-  `profile_background_image_url`        VARCHAR(300) CHARACTER SET ASCII,
-  `profile_image_url`                   VARCHAR(300) CHARACTER SET ASCII,
+  `profile_background_image_url`        VARCHAR(255) CHARACTER SET ASCII,
+  `profile_image_url`                   VARCHAR(255) CHARACTER SET ASCII,
   `profile_background_tile`             TINYINT(4) UNSIGNED,
   `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY  (`twitter_user_id`)
@@ -86,14 +114,16 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_styles` (
 
 -- Derived user information
 -- -- also followers, friends, favorites, etc from
-
+--
+-- make sure to record 
+-- 
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_metrics`;
 CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
   `twitter_user_id`                  INT(10) UNSIGNED NOT NULL,
   `twitter_user_created_at`          DATETIME,                   -- Denormalized
   `scraped_at`                       DATETIME,
-  `tweets_count_at_last_scrape`      MEDIUMINT(10) UNSIGNED,  -- at updated_at
-  `tweet_rate`                       FLOAT,
+  `statuses_count_at_update`         MEDIUMINT(10) UNSIGNED,
+  `tweet_rate`                       DECIMAL(9,5)  UNSIGNED,
   `atsigns_count`                    MEDIUMINT(10) UNSIGNED,
   `atsigned_count`                   MEDIUMINT(10) UNSIGNED,
   `tweet_urls_count`                 MEDIUMINT(10) UNSIGNED,
@@ -104,9 +134,6 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
   `has_image`                        TINYINT(4)    UNSIGNED,
   `lat`                              FLOAT,
   `lng`                              FLOAT,
-  -- # Tweet info on page
-  -- property :last_seen_update_time,      DateTime
-  -- property :first_seen_update_time,     DateTime
   PRIMARY KEY  (`twitter_user_id`),
   UNIQUE INDEX (`prestige`, `twitter_user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
@@ -119,9 +146,13 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
 -- Note spelling of favo**U**rite
 -- Enforcing that we never see a tweet w/o seeing the whole thing.
 --
+-- 
+-- note that twitter is 25% of the way to overflow.
+--
+--
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`tweets`;
 CREATE TABLE          `imw_twitter_graph`.`tweets` (
-  `id`                                  INT(10) UNSIGNED                        NOT NULL,  -- note that twitter is 25% of the way to overflow.
+  `id`                                  INT(10) UNSIGNED                        NOT NULL,  
   `created_at`                          DATETIME                                NOT NULL,
   `twitter_user_id`                     INT(10) UNSIGNED                        NOT NULL,
   `text`                                VARCHAR(160) CHARACTER SET UTF8         NOT NULL,
@@ -129,13 +160,9 @@ CREATE TABLE          `imw_twitter_graph`.`tweets` (
   `truncated`                           TINYINT(4)   UNSIGNED                   NOT NULL,
   `tweet_len`                           TINYINT(4)   UNSIGNED                   NOT NULL,
   `in_reply_to_user_id`                 INT(10)      UNSIGNED                   NOT NULL,
-  `in_reply_to_status_id`               INT(10)      UNSIGNED                   NOT NULL,  -- note that twitter is 25% of the way to overflow.
-  `fromsource`                          VARCHAR(255) CHARACTER SET ASCII        NOT NULL,
-  `fromsource_url`                      VARCHAR(255) CHARACTER SET ASCII        NOT NULL,
-  `all_atsigns`                         VARCHAR(255) CHARACTER SET ASCII        NOT NULL,
-  `all_hash_tags`                       VARCHAR(255) CHARACTER SET ASCII        NOT NULL,
-  `all_tweeted_urls`                    VARCHAR(255) CHARACTER SET ASCII        NOT NULL,
-  `scraped_at`                          DATETIME                                NOT NULL, --
+  `in_reply_to_status_id`               INT(10)      UNSIGNED                   NOT NULL, 
+  `fromsource`                          VARCHAR(50) CHARACTER SET ASCII        NOT NULL,
+  `fromsource_url`                      VARCHAR(50) CHARACTER SET ASCII        NOT NULL,
   PRIMARY KEY  (`id`),
   INDEX (`created_at`),
   INDEX (`twitter_user_id`)
@@ -146,30 +173,19 @@ CREATE TABLE          `imw_twitter_graph`.`tweets` (
 --
 -- Relationships
 --
+-- 
 --
-
+-- Tweets and derived entities are immutable, so we don't need the scraped_at
 --
--- afollowsb     time  1 0 0 0 0        user_a_id       user_b_id
--- afavoredb     time  0 1 0 0 0        user_a_id       user_b_id
--- arepliedb     time  0 0 1 0 0        user_a_id       user_b_id       status_id
--- aatsigndb     time  0 0 0 1 0        user_a_id       user_b_id       status_id
--- bothfollw     time  0 0 0 0 1        user_a_id       user_b_id       status_id
---
--- The wacky-assed denormalized boolean columns let you make a weighted graph by
--- combining the sum of each column times that column's weight.
---
--- Also note you can  find symmetric relationships without a JOIN : use a UNION and GROUP BY
---
-
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_follows_bs`;
 CREATE TABLE          `imw_twitter_graph`.`a_follows_bs` (
   `user_a_id`                           INT(10)      UNSIGNED                   NOT NULL,
   `user_b_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY   (`user_a_id`,   `user_b_id`),
   INDEX         (`user_b_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
+--  `scraped_at`                          DATETIME                                NOT NULL, --
 
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_symmetric_bs`;
 CREATE TABLE          `imw_twitter_graph`.`a_symmetric_bs` (
@@ -188,7 +204,6 @@ CREATE TABLE          `imw_twitter_graph`.`a_atsigns_bs` (
   `user_b_id`                           INT(10)      UNSIGNED                   NOT NULL,
   `user_b_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, --
   `status_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY   (`user_a_id`, `user_b_name`(20), `status_id`),
   INDEX         (`user_b_name`(15)),
   INDEX         (`status_id`)
@@ -202,7 +217,6 @@ CREATE TABLE          `imw_twitter_graph`.`a_replied_bs` (
   `user_a_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, 
   `status_id`                           INT(10)      UNSIGNED                   NOT NULL,
   `in_reply_to_status_id`               INT(10)      UNSIGNED                   NOT NULL,
-  `scraped_at`                          DATETIME                                NOT NULL, 
   PRIMARY KEY   (`user_a_id`, `user_b_id`, `status_id`),
   INDEX         (`user_b_id`),
   INDEX         (`status_id`),
@@ -215,22 +229,24 @@ CREATE TABLE          `imw_twitter_graph`.`tweet_urls` (
   `user_a_id`                           INT(10)      UNSIGNED                   NOT NULL,
   `tweet_url`                           VARCHAR(140) CHARACTER SET ASCII        NOT NULL,       -- have to make sure open text is encoded
   `status_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `scraped_at`                          DATETIME                                NOT NULL, --
   INDEX         (`user_a_id`),
   INDEX         (`status_id`),
   INDEX         (`tweet_url`(40))
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 
+-- OK so 92% of all hashtags are 12 chrs or fewer
+-- and we're including the status_id in the primary key
+-- so if you use two hashtags identical (and longer than) 12
+-- then, well, screw you pal.  (we use LOAD ... IGNORE so it's not screw us)
+-- also though I suppose 139 chars is the max, 40 chars covers 99.98% of the tags
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`hashtags`;
 CREATE TABLE          `imw_twitter_graph`.`hashtags` (
   `user_a_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `hashtag`                             VARCHAR(140) CHARACTER SET ASCII        NOT NULL,       -- have to make sure open text is encoded
+  `hashtag`                             VARCHAR(40)  CHARACTER SET ASCII        NOT NULL,       -- have to make sure open text is encoded
   `status_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `scraped_at`                          DATETIME                                NOT NULL, --
-  INDEX         (`user_a_id`),
-  INDEX         (`status_id`),
-  INDEX         (`hashtag`(30))
+  PRIMARY KEY   (`user_a_id`, `status_id`, `hashtag`(12)),
+  INDEX         (`hashtag`(12))
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 
@@ -248,20 +264,28 @@ CREATE TABLE          `imw_twitter_graph`.`hashtags` (
 -- ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 -- ;
 
+-- ===========================================================================
 --
 -- Data gathering tables
 --
+
+--
+-- Scrape Requests
+--
+-- This kind of URL has 74 chars ; let's call it 96
+-- 
+-- http://twitter.com/statuses/followers/twentycharacter_name.json?page=54321
+-- 0----.----1----.----2----.----3----.----4----.----5----.----6----.----7---
 --
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`scrape_requests`;
 CREATE TABLE          `imw_twitter_graph`.`scrape_requests` (
   `id`                                  INTEGER         UNSIGNED AUTO_INCREMENT,
   `priority`                            INTEGER                                 NOT NULL        DEFAULT 0,
-  `context`                             VARCHAR(128)                            DEFAULT NULL,
-  `uri`                                 VARCHAR(1024)                           DEFAULT NULL,
+  `context`                             VARCHAR(20)                             DEFAULT NULL,
+  `uri`                                 VARCHAR(96)                             DEFAULT NULL,
   `requested_at`                        DATETIME,
   `scraped_at`                          DATETIME,
   `result_code`                         SMALLINT(6)     UNSIGNED,
-
   `twitter_user_id`                     INT(10)         UNSIGNED                NOT NULL,
   `screen_name`                         VARCHAR(20)                             NOT NULL,
   `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
@@ -270,31 +294,57 @@ CREATE TABLE          `imw_twitter_graph`.`scrape_requests` (
   UNIQUE INDEX  (`screen_name`,     `context`, `page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
--- , UNIQUE INDEX (`twitter_user_id`, `context`)
-
 
 --
--- Data gathering tables
+-- Scraped files
 --
 -- mode hl user grp size date time filename
+--
+-- Note you only get one per scrape_session -- assumedly your filesystem
+-- enforces this as well also note that the filename is *not* forced to
+-- case-sensitivity, which your filesystem might or might not be.
+--
+-- twentycharacter_name.json%3Fpage%3D54321+20081129-052555.json
+-- 0----.----1----.----2----.----3----.----4----.----5----.----6 -- 61 chars
+--
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`scraped_file_index`;
 CREATE TABLE          `imw_twitter_graph`.`scraped_file_index` (
-  `filename`                            VARCHAR(255)  CHARACTER SET ASCII       DEFAULT NULL,
-  `context`                             VARCHAR(25)   CHARACTER SET ASCII       DEFAULT NULL,
+  `screen_name`                         VARCHAR(20)                             NOT NULL,
+  `context`                             VARCHAR(20)   CHARACTER SET ASCII       DEFAULT NULL,
+  `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
+  `twitter_user_id`                     INTEGER         UNSIGNED                NOT NULL,
   `size`                                INTEGER,
   `scraped_at`                          DATETIME                                DEFAULT NULL,
   `scrape_session`                      DATE,  
-  `screen_name`                         VARCHAR(20)                             NOT NULL,
-  `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
-  PRIMARY KEY   (`filename`, `context`),
-  INDEX         (`context`,  `scrape_session`),
-  UNIQUE INDEX  (`screen_name`, `context`, `page`)
+  `filename`                            VARCHAR(80)  CHARACTER SET ASCII       DEFAULT NULL,
+  PRIMARY KEY   (`filename`,    `context`, `scrape_session`),
+  UNIQUE INDEX  (`screen_name`, `context`, `page`, `scraped_at`)
+  INDEX         (`twitter_user_id`, `context`, `page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 
 
-    -- 
+-- ALTER TABLE `scraped_file_index` ADD `twitter_user_id` INT UNSIGNED NULL FIRST ;
+-- ALTER TABLE `scraped_file_index` ADD INDEX ( `twitter_user_id` ) ;
 
+-- 
+-- The wacky-assed denormalized boolean columns let you make a weighted graph by
+-- combining the sum of each column times that column's weight.
+--
+-- Also note you can  find symmetric relationships without a JOIN : use a UNION and GROUP BY
+  
+--
+-- afollowsb     time  1 0 0 0 0        user_a_id       user_b_id
+-- afavoredb     time  0 1 0 0 0        user_a_id       user_b_id
+-- arepliedb     time  0 0 1 0 0        user_a_id       user_b_id       status_id
+-- aatsigndb     time  0 0 0 1 0        user_a_id       user_b_id       status_id
+-- bothfollw     time  0 0 0 0 1        user_a_id       user_b_id       status_id
+--
+-- The wacky-assed denormalized boolean columns let you make a weighted graph by
+-- combining the sum of each column times that column's weight.
+--
+-- Also note you can  find symmetric relationships without a JOIN : use a UNION and GROUP BY
+--
 -- -- `rel`                                     ENUM('afollowsb', 'afavoredb', 'arepliedb', 'aatsigndb', 'bothfollw'),
 -- --   `status_id`                             INT(10)      UNSIGNED                   NOT NULL DEFAULT 0,   -- note that twitter is 25% of the way to overflow.
 -- --   `reltime`                               DATETIME                                NOT NULL,
