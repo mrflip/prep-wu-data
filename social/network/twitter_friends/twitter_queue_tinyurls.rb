@@ -14,7 +14,7 @@ require 'twitter_autourl'
 # #
 # # Setup database
 # #
-# DataMapper.logging = true
+DataMapper.logging = true
 dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_graph' })
 DataMapper.setup_remote_connection dbparams
 
@@ -46,8 +46,8 @@ end
 #
 # To prime table with urls from tweet_urls:
 #
-# INSERT IGNORE INTO `imw_twitter_friends`.`expanded_urls` (`short_url`)
-# SELECT tweet_url AS short_url FROM tweet_urls
+# INSERT IGNORE INTO `imw_twitter_graph`.`expanded_urls` (`short_url`)
+# SELECT tweet_url AS short_url FROM `imw_twitter_graph`.tweet_urls
 #   WHERE tweet_url LIKE 'http://tinyurl.com/_%'
 #    OR   tweet_url LIKE 'http://is.gd/_%'
 #    OR   tweet_url LIKE 'http://snipurl.com/_%'
@@ -58,12 +58,13 @@ end
 #    OR   tweet_url LIKE 'http://tiny.cc/_%'
 #    OR   tweet_url LIKE 'http://urlenco.de/_%'
 #    OR   tweet_url LIKE 'http://url.ie/_%'
-#
+#  ;
 # To make a static list of short_urls to query:
 #
 # SELECT short_url
-#   INTO FILE 'fixd/dump/tweet_url_shorteneds-20081206.tsv'
-#   FROM expanded_urls WHERE dest_url IS NULL
+#   FROM expanded_urls WHERE dest_url IS NULL AND scraped_at IS NULL
+#   INTO OUTFILE '~/ics/pool/social/network/twitter_friends/fixd/dump/tweet_url_shorteneds-20081214.tsv'
+# ;
 #
 # DELETE FROM expanded_urls WHERE (LENGTH(dest_url) < 14)  OR (dest_url NOT LIKE 'htt%://_%._%')
 #
