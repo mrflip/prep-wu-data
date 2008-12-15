@@ -8,48 +8,50 @@ require 'pathname'
 # require 'imw/dataset/datamapper'
 as_dset __FILE__
 
-# #
-# # Setup database
-# #
-# DataMapper.logging = true
-# dbparams = IMW::DEFAULT_DATABASE_CONNECTION_PARAMS.merge({ :dbname => 'imw_twitter_friends' })
-# DataMapper.setup_remote_connection dbparams
+require 'hadoop_utils'
+require 'twitter_flat_model'
 
-LOAD_FILE_DIR = Pathname.new(ARGV[0]).realpath or raise "Please give a directory to load"
-LOAD_DATA_INFILE_QUERY = %Q{
-  LOAD DATA INFILE '#{LOAD_FILE_DIR}/%s.tsv'
-    REPLACE INTO TABLE        `imw_twitter_graph`.`%s`
-    COLUMNS
-      TERMINATED BY           '\\t'
-      OPTIONALLY ENCLOSED BY  '"'
-      ESCAPED BY              ''
-    LINES STARTING BY         '%s\\t'
-    ;
-  SELECT '%s', NOW(), COUNT(*) FROM `%s`;
-}
-def load_data_infile table
-  prefix = table.to_s.gsub(/twitter_user/, 'user').singularize
-  query = LOAD_DATA_INFILE_QUERY % [
-    table, table, prefix, table, table
-  ]
-  puts query
+raise "Please give a directory to load" unless ARGV[0]
+LOAD_FILE_DIR = Pathname.new(ARGV[0]).realpath
+DB_NAME = 'imw_twitter_graph'
+def load_data_infile thing, fields
+  table = thing.to_s.pluralize
+  query = %Q{
+    LOAD DATA INFILE '#{LOAD_FILE_DIR}/#{thing}.tsv'
+      REPLACE INTO TABLE        `#{DB_NAME}`.`#{table}`
+      COLUMNS
+        TERMINATED BY           '\\t'
+        OPTIONALLY ENCLOSED BY  '"'
+        ESCAPED BY              ''
+      LINES STARTING BY         '#{thing}\\t'
+      (@dummy, #{fields.join(",")})
+      ;
+    SELECT '#{thing}', NOW(), COUNT(*) FROM `#{table}`;
+  }
+  $stdout.puts query
+  $stdout.flush
 end
 
 $stderr.print "#{Time.now} - Loading"
 [
-  :twitter_users,
-  :twitter_user_profiles,
-  :twitter_user_styles,
-  :twitter_user_partials,
-  :tweets,
-  :tweet_urls,
-  :hashtags,
-  :a_atsigns_bs,
-  :a_follows_bs,
-  :a_replied_bs,
-  :scrape_requests,
-].each do |table|
-  $stderr.print " #{table}"
-  load_data_infile table
+  # :a_atsigns_b           ,
+  # :a_replied_b           ,
+  # :hashtag               ,
+  # :tweet_url             ,
+  # :twitter_user_profile  ,
+  # :twitter_user_style    ,
+  # :twitter_user          ,
+  :twitter_user_partial  ,
+  # :tweet                 ,
+  # :a_follows_b           ,
+].each do |thing|
+  klass = thing.to_s.camelize.constantize
+  fields = klass.members
+  fields[-1] = :scraped_at
+  fields[0]  = :twitter_user_id if [:twitter_user_profile, :twitter_user_style].include?(thing)
+  $stderr.print " -- #{thing}"
+  #
+  # emit mysql bulk loader query
+  #
+  load_data_infile thing, fields
 end
-$stderr.puts "."
