@@ -61,3 +61,15 @@ cd RIPD_DIR do
     end
   end
 end
+
+
+# UPDATE scraped_file_index sfi, twitter_user_partials u
+#   SET sfi.twitter_user_id = u.id
+#   WHERE sfi.twitter_user_id IS NULL
+#   AND     sfi.screen_name = u.screen_name
+UPDATE scrape_requests req, scraped_file_index sfi
+  SET           req.scraped_at = sfi.scraped_at, req.result_code = (IF sfi.size=0, NULL, 200)
+  WHERE sfi.twitter_user_id     = req.twitter_user_id
+    AND         sfi.context             = req.context
+    AND sfi.page                        = req.page
+    AND         sfi.twitter_user_id < 400 AND page < 10

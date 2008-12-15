@@ -54,13 +54,40 @@ puts "use #{DB_NAME}"
 table = 'twitter_user_profiles'
 set_table_count table, 'total_count', 1
 [
-  'length(name)',
-  'length(url)',
-  'length(location)',
-  'length(description)',
-  'length(time_zone)',
+  # 'length(name)',
+  # 'length(url)',
+  # 'length(location)',
+  # 'length(description)',
+  # 'length(time_zone)',
+].each do |field|
+  histogram_with_non_zeros table, field
+end
+
+table = 'twitter_users'
+set_table_count table, 'total_count', 1
+histogram_with_non_zeros table, 'length(screen_name)'
+
+table = 'twitter_user_styles'
+set_table_count table, 'total_count', 1
+histogram_with_non_zeros table, 'length(profile_image_url)'
+histogram_with_non_zeros table, 'length(profile_background_image_url)'
+
+
+table = 'tweets'
+set_table_count table, 'total_count', 1
+[
+  'length(text)',
+  'length(fromsource)',
+  'length(fromsource_url)',
 ].each do |field|
   histogram_with_non_zeros table, field
 end
 
 
+table = 'tweet_urls'
+set_table_count table, 'total_count', 1
+histogram_with_non_zeros table, 'length(tweet_url)'
+
+table = 'hashtags'
+set_table_count table, 'total_count', 1
+histogram_with_non_zeros table, 'hashtag'

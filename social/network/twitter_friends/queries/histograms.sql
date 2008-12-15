@@ -1,5 +1,34 @@
 
+UPDATE scrape_requests req, scraped_file_index sfi
+SET req.scraped_at = sfi.scraped_at,  req.result_code = IF(sfi.size=0, NULL, 200)
+  WHERE	sfi.twitter_user_id = req.twitter_user_id
+    AND 	sfi.context	 = req.context
+    AND	sfi.page		= req.page
+;    
 
+select tup.id, tup.screen_name, tup.followers_count, tup.protected, u.screen_name, sr.* from
+twitter_user_partials tup
+LEFT JOIN twitter_users u ON u.id = tup.id
+LEFT JOIN scrape_requests sr ON tup.id = sr.twitter_user_id
+WHERE u.id IS NULL
+LIMIT 10
+;
+
+select u.id, u.screen_name, u.followers_count, u.protected, sr.* from
+twitter_users u, scrape_requests sr 
+WHERE  u.id = sr.twitter_user_id
+  AND sr.scraped_at IS NOT NULL
+  AND sr.result_code IS NULL
+ORDER BY priority ASC, context, page
+LIMIT 1000
+;
+
+SELECT sr.*, sfi.*, u.* 
+  FROM scrape_requests sr
+  INNER JOIN	twitter_users u 		ON sr.twitter_user_id = u.id
+  LEFT JOIN 	scraped_file_index sfi	ON sr.twitter_user_id = sfi.twitter_user_id AND sr.page = sfi.page AND sr.page = sfi.page
+WHERE u.screen_name = 'BarackObama'
+ORDER BY sr.twitter_user_id, sr.context, sr.page
 
 -- ===========================================================================
 --

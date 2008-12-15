@@ -51,8 +51,8 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_partials` (
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 
-DROP TABLE IF EXISTS  `imw_twitter_graph`.`all_twitter_user_partials`;
-CREATE TABLE          `imw_twitter_graph`.`all_twitter_user_partials` (
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`twitter_user_partials_all`;
+CREATE TABLE          `imw_twitter_graph`.`twitter_user_partials_all` (
   `id`                                  INT(10) UNSIGNED                        NOT NULL, -- at 17_751_380 on 11/30/08
   `screen_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, --
   `followers_count`                     MEDIUMINT(10) UNSIGNED,
@@ -147,7 +147,7 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_metrics` (
 -- Enforcing that we never see a tweet w/o seeing the whole thing.
 --
 -- 
--- note that twitter is 25% of the way to overflow.
+-- note that twitter is 25% of the way to overflowing a 32bit key.
 --
 --
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`tweets`;
@@ -162,7 +162,7 @@ CREATE TABLE          `imw_twitter_graph`.`tweets` (
   `in_reply_to_user_id`                 INT(10)      UNSIGNED                   NOT NULL,
   `in_reply_to_status_id`               INT(10)      UNSIGNED                   NOT NULL, 
   `fromsource`                          VARCHAR(50) CHARACTER SET ASCII        NOT NULL,
-  `fromsource_url`                      VARCHAR(50) CHARACTER SET ASCII        NOT NULL,
+  `fromsource_url`                      VARCHAR(80) CHARACTER SET ASCII        NOT NULL,
   PRIMARY KEY  (`id`),
   INDEX (`created_at`),
   INDEX (`twitter_user_id`)
@@ -201,8 +201,7 @@ CREATE TABLE          `imw_twitter_graph`.`a_symmetric_bs` (
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_atsigns_bs`;
 CREATE TABLE          `imw_twitter_graph`.`a_atsigns_bs` (
   `user_a_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `user_b_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `user_b_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, --
+  `user_b_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, 
   `status_id`                           INT(10)      UNSIGNED                   NOT NULL,
   PRIMARY KEY   (`user_a_id`, `user_b_name`(20), `status_id`),
   INDEX         (`user_b_name`(15)),
@@ -214,7 +213,6 @@ DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_replied_bs`;
 CREATE TABLE          `imw_twitter_graph`.`a_replied_bs` (
   `user_a_id`                           INT(10)      UNSIGNED                   NOT NULL,
   `user_b_id`                           INT(10)      UNSIGNED                   NOT NULL,
-  `user_a_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, 
   `status_id`                           INT(10)      UNSIGNED                   NOT NULL,
   `in_reply_to_status_id`               INT(10)      UNSIGNED                   NOT NULL,
   PRIMARY KEY   (`user_a_id`, `user_b_id`, `status_id`),
@@ -291,7 +289,8 @@ CREATE TABLE          `imw_twitter_graph`.`scrape_requests` (
   `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX  (`twitter_user_id`, `context`, `page`),
-  UNIQUE INDEX  (`screen_name`,     `context`, `page`)
+  UNIQUE INDEX  (`screen_name`,     `context`, `page`),
+  INDEX 	(`priority`)
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii
 ;
 

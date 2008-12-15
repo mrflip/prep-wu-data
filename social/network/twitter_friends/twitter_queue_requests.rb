@@ -109,7 +109,7 @@ def mass_queue_requests
     :twitter_users         => [:user, :followers, :friends]
   }.each do |table, contexts|
     contexts.each do |context|
-      (1..50).each do |id_chunk|
+      (0..1).each do |id_chunk|
         mass_queue_requests_query table, context, id_chunk
       end
     end
