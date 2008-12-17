@@ -88,7 +88,7 @@ end
 # Parse the line
 #
 def load_line line
-  m = %r{^(\w+)\t(\d+)\t(user|followers|friends)\t(\d+)\t(\d{14})\t(.*)$}.match(line)
+  m = %r{^(\w+)\t(\d+)\t(user|followers|friends)\t(\d+)\t([\d\-]{14,15})\t(.*)$}.match(line)
   if !m then warn "Can't grok #{line}"; return [] ; end
   screen_name, twitter_user_id, context, page, scraped_at, json = m.captures
   begin

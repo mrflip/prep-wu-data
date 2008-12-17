@@ -27,6 +27,7 @@ module HadoopUtils
     #
     def scrub!
       gsub!(/[\t\r\n]+/, ' ')  # KLUDGE
+      gsub!(/\\/, '/') # hadoop is barfing on double backslashes. sorry, backslashes.
     end
     #
     # add a method exactly like +parse_csv+ but specifying a tab-separator

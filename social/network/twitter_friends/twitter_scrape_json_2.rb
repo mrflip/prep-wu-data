@@ -25,7 +25,7 @@ RIPD_ROOT = path_to(:ripd_root)
 
 TwitterScrapeFile.class_eval do
   def exists?
-    timeless = ripd_file.gsub(/\+\d+-\d+.json/, '*')  # .gsub(%r{/_200\d{5}/}, '/*/') # <--don't do this
+    timeless = ripd_file.gsub(/\+\d+-\d+.json/, '*')  # .gsub(%r{/_200\d{5}/}, '/_2008121[67]/') # <--don't do this
     matches = Dir[timeless]
     if ! matches.empty?
       ts = matches.last.gsub(/.*\+(\d{8})-(\d{6})(?:\.\w{0,7})?\z/, '\1\2')
@@ -45,9 +45,10 @@ end
 #
 #
 USERNAMES_FILE = 'fixd/dump/scrape_requests_users_20081215.tsv'
-File.open(USERNAMES_FILE).readlines.each do |line|
+File.open(USERNAMES_FILE).each do |line|
   line.chomp!
-  screen_name, context, page, *_ = line.split(/\t/); next unless screen_name && context && page
+  screen_name, context, page, *_ = line.split(/\t/);
+  if !(context && page) then context = 'user'; page = 1 ; end
   context.gsub!(/^scrape_/, '')
   track_count(:fetches, 1000)
   #
