@@ -43,7 +43,7 @@ $stderr.print "#{Time.now} - Loading"
   # :twitter_user_profile  ,
   # :twitter_user_style    ,
   # :twitter_user          ,
-  # :twitter_user_partial  ,
+  :twitter_user_partial  ,
   # :tweet                 ,
   # :a_follows_b           ,
 ].each do |thing|

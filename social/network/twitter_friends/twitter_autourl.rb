@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-require 'rubygems'
-require 'yaml'
 
 #
 # Twitter accepts URLs somewhat idiosyncratically, probably for good reason --
@@ -10,12 +8,32 @@ require 'yaml'
 #
 RE_DOMAIN_HEAD     = '(?:[a-zA-Z0-9\-]+\.)+'
 RE_DOMAIN_TLD      = '(?:com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum|[a-zA-Z]{2})'
-RE_URL_SCHEME      = '[a-zA-Z0-9\-\+\.]+'
-RE_URL_UNRESERVED  = 'a-zA-Z0-9\-\._~'
-RE_URL_OKCHARS     = RE_URL_UNRESERVED + '\'\+\,\;' + '/%:@'   # not !$&()* []
-RE_URL_QUERY       = RE_URL_OKCHARS + '&='
+RE_URL_SCHEME      = '[a-zA-Z][a-zA-Z0-9\-\+\.]+'
+RE_URL_UNRESERVED  = 'a-zA-Z0-9'   + '\-\._~'
+RE_URL_OKCHARS     = RE_URL_UNRESERVED + '\'\+\,\;=' + '/%:@'   # not !$&()* [] \|
+RE_URL_QUERYCHARS  = RE_URL_OKCHARS    + '&='
 RE_URL_HOSTPART    = "#{RE_URL_SCHEME}://#{RE_DOMAIN_HEAD}#{RE_DOMAIN_TLD}"
-RE_URL             = %r{(#{RE_URL_HOSTPART}(?:/[#{RE_URL_OKCHARS}/]*)?(?:\?[#{RE_URL_QUERY}]+)?(?:#[#{RE_URL_OKCHARS}]+)?)}
+
+RE_URL             = %r{(
+              #{RE_URL_HOSTPART}                   # Host
+  (?:(?: \/ [#{RE_URL_OKCHARS}]+?          )*?   # path:  / delimited path segments
+     (?: \/ [#{RE_URL_OKCHARS}]*[\w\-\+\~] )     #        where the last one ends in a non-punctuation.
+     |                                             #        ... or no path segment
+                                             )\/?  #        with an optional trailing slash
+     (?: \? [#{RE_URL_QUERYCHARS}]+  )?           # query: introduced by a ?, with &foo= delimited segments
+     (?: \# [#{RE_URL_OKCHARS}]+     )?           # frag:  introduced by a #
+)}x
+
+# Notes:
+#
+# * is.gd uses a trailing '-' (to indicate 'preview mode'): clever.
+# * pastoid.com uses a trailing '+', and idek.net a trailing ~ for no reason. annoying.
+# * http://www.5irecipe.cn/recipe_content/2307/'/
+#
+# http://www.facebook.com/groups.php?id=1347199977&gv=12#/group.php?gid=18183539495
+#
+
+
 #
 # A hash following a non-alphanum_ (or at the start of the line
 # followed by (any number of alpha, num, -_.+:=) and ending in an alphanum_

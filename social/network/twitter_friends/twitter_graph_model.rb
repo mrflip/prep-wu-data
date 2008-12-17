@@ -142,6 +142,7 @@ class ExpandedUrl
   property      :short_url,             String,  :key    => true, :length => 60
   property      :dest_url,              String,                   :length => 1024
   property      :scraped_at,            DateTime
+  property      :well_formed,            Boolean
 end
 
 #

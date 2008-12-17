@@ -1,10 +1,20 @@
 
+SELECT screen_name, context, page, twitter_user_id, priority FROM scrape_requests s 
+WHERE scraped_at IS NOT NULL 
+  AND result_code IS NULL
+  AND priority <= -100
+ORDER BY priority ASC, page 
+INTO OUTFILE '~/ics/pool/social/network/twitter_friends/fixd/dump/scrape_requests_retries_20081215.tsv'
+
+
 UPDATE scrape_requests req, scraped_file_index sfi
 SET req.scraped_at = sfi.scraped_at,  req.result_code = IF(sfi.size=0, NULL, 200)
   WHERE	sfi.twitter_user_id = req.twitter_user_id
     AND 	sfi.context	 = req.context
     AND	sfi.page		= req.page
 ;    
+
+
 
 select tup.id, tup.screen_name, tup.followers_count, tup.protected, u.screen_name, sr.* from
 twitter_user_partials tup
