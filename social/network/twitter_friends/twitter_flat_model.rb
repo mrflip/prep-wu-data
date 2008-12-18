@@ -20,8 +20,10 @@ Hashtag             = HadoopStruct.new( [:user_a_id, :hashtag],                 
 TweetUrl            = HadoopStruct.new( [:user_a_id, :tweet_url],               :user_a_id, :tweet_url,   :status_id )
 # UserMetric   = HadoopStruct.new( :id,  :replied_to_count, :tweeturls_count, :hashtags_count, :prestige, :pagerank, :twoosh_count )
 
+ScrapedFile         = HadoopStruct.new( [:screen_name, :context, :page], :screen_name, :context, :page, :size, :scrape_session )
+
 # spread the hash a bit but still make a total ordering easy
 Tweet.class_eval                do ; def resource() ; super() + '-' + self.id[-2..-1] ; end ; end
 TwitterUserPartial.class_eval   do ; def resource() ; super() + '-' + self.screen_name[0..0].downcase ; end ; end
-AFollowsB.class_eval            do ; def resource() ; super() + '-' + self.user_a_name[0..0].downcase ; end ; end
+AFollowsB.class_eval            do ; def resource() ; super() + '-' + self.user_a_id[-2..-1].downcase ; end ; end
 

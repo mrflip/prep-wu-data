@@ -103,7 +103,7 @@ TwitterScrapeStore.class_eval do
     cd(path_to(:ripd_root)) do
       # 1204,1205,1206,1207,1208,1209,1203,1202,1201,
       # 1210,          1211,1212,1213,1209,1208,1207,1206,1205,
-      Dir[path_to(self.ripd_base, "*217")].each(&block)
+      Dir[path_to(self.ripd_base, "*")].each(&block)
     end
   end
 
