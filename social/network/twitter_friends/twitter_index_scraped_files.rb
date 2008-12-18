@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
+require 'imw'; include IMW;
 require 'fileutils'; include FileUtils
+as_dset __FILE__
 
 FILENAME_RE =  %r{^([%\w]+?)+\.json%3Fpage%3D(\d+)\+\d{8}-\d{6}\.json$}
 #
@@ -10,7 +12,8 @@ def dump_listing listing_filename, scrape_session, context, resource
   scrape_session_n = scrape_session.gsub(/_/, '')
   File.open(listing_filename, "w") do |listing_file|
     # let ls do all the hard work
-    `ls -lR #{scrape_session}/#{resource}`.split(/\n/)[2..-1].each do |line|
+    files = `ls -lR #{scrape_session}/#{resource}`.split(/\n/)[2..-1] or return
+    files.each do |line|
       # track_count "#{scrape_session}-#{context}", 100000
       _, _, _, _, size, dt, tm, file = line.split(/\s+/)
       m = FILENAME_RE.match(file)
@@ -19,7 +22,8 @@ def dump_listing listing_filename, scrape_session, context, resource
         screen_name, page, *_ = m.captures
         screen_name.gsub!(/%5F/, '_')
       end
-      listing_file << [scrape_session_n, context, size, "#{dt} #{tm}", screen_name, page , file ].join("\t")+"\n"
+      item_key = [screen_name, context, page].join('-')
+      listing_file << ['scraped_file', item_key, screen_name, context, page, size, scrape_session_n, "#{dt} #{tm}" ].join("\t")+"\n"
     end
   end
 end
@@ -45,7 +49,7 @@ end
 # making, then importing, its listing
 #
 RIPD_DIR    = File.dirname(__FILE__)+'/ripd'
-LISTING_DIR = '/data/rawd/social/network/twitter_friends/ripd_listings'
+LISTING_DIR = path_to(:rawd, 'ripd_listings')
 cd RIPD_DIR do
   # Visit each scrape_session
   Dir['*'].each do |scrape_session|
@@ -57,19 +61,19 @@ cd RIPD_DIR do
       listing_filename = File.join(LISTING_DIR, "#{scrape_session}-#{context}-lslr.tsv")
       $stderr.puts listing_filename
       dump_listing listing_filename, scrape_session, context, resource
-      bulk_load_mysql listing_filename
+      # bulk_load_mysql listing_filename
     end
   end
 end
 
 
-# UPDATE scraped_file_index sfi, twitter_user_partials u
-#   SET sfi.twitter_user_id = u.id
-#   WHERE sfi.twitter_user_id IS NULL
-#   AND     sfi.screen_name = u.screen_name
-UPDATE scrape_requests req, scraped_file_index sfi
-  SET           req.scraped_at = sfi.scraped_at, req.result_code = (IF sfi.size=0, NULL, 200)
-  WHERE sfi.twitter_user_id     = req.twitter_user_id
-    AND         sfi.context             = req.context
-    AND sfi.page                        = req.page
-    AND         sfi.twitter_user_id < 400 AND page < 10
+# # UPDATE scraped_file_index sfi, twitter_user_partials u
+# #   SET sfi.twitter_user_id = u.id
+# #   WHERE sfi.twitter_user_id IS NULL
+# #   AND     sfi.screen_name = u.screen_name
+# UPDATE scrape_requests req, scraped_file_index sfi
+#   SET           req.scraped_at = sfi.scraped_at, req.result_code = (IF sfi.size=0, NULL, 200)
+#   WHERE sfi.twitter_user_id     = req.twitter_user_id
+#     AND         sfi.context             = req.context
+#     AND sfi.page                        = req.page
+#     AND         sfi.twitter_user_id < 400 AND page < 10
