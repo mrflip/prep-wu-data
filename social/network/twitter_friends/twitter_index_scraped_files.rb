@@ -66,14 +66,19 @@ cd RIPD_DIR do
   end
 end
 
-
-# # UPDATE scraped_file_index sfi, twitter_user_partials u
-# #   SET sfi.twitter_user_id = u.id
-# #   WHERE sfi.twitter_user_id IS NULL
-# #   AND     sfi.screen_name = u.screen_name
+# UPDATE scraped_file_index sfi, twitter_user_partials u
+#   SET sfi.twitter_user_id = u.id
+#   WHERE sfi.screen_name = u.screen_name
+#   AND   sfi.twitter_user_id IS NULL
+#
 # UPDATE scrape_requests req, scraped_file_index sfi
-#   SET           req.scraped_at = sfi.scraped_at, req.result_code = (IF sfi.size=0, NULL, 200)
+#   SET           req.scraped_at = sfi.scraped_at, req.result_code = IF(sfi.size=0, NULL, 200)
 #   WHERE sfi.twitter_user_id     = req.twitter_user_id
-#     AND         sfi.context             = req.context
-#     AND sfi.page                        = req.page
-#     AND         sfi.twitter_user_id < 400 AND page < 10
+#     AND         sfi.context     = req.context
+#     AND         sfi.page        = req.page
+#     AND                 req.scraped_at IS NULL
+
+# SELECT COUNT(*),
+#         COUNT(scraped_at), COUNT(*)-COUNT(scraped_at) AS remaining,
+#         COUNT(result_code), COUNT(scraped_at)-COUNT(result_code) AS damaged, s.* FROM scrape_requests s
+# GROUP BY context
