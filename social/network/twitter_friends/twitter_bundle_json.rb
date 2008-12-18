@@ -10,16 +10,16 @@ require 'twitter_scrape_store'
 
 TwitterScrapeFile.class_eval do
   def twitter_id
-    self.class.twitter_ids[screen_name]
+    self.class.twitter_ids[screen_name.downcase]
   end
 
   def self.twitter_ids
     return @twitter_ids if @twitter_ids
     @twitter_ids = { }
     announce "initial load of IDs file... will take a while"
-    twitter_ids_filename = path_to(:fixd, "dump/user_names_and_ids-foo.tsv")
-    FasterCSV.open(twitter_ids_filename, :col_sep => "\t").readlines.each do |screen_name, id, pages|
-      @twitter_ids[screen_name] = id
+    twitter_ids_filename = path_to(:fixd, "dump/user_names_and_ids.tsv")
+    FasterCSV.open(twitter_ids_filename, :col_sep => "\t").each do |screen_name, id, pages|
+      @twitter_ids[screen_name.downcase] = id
     end
     announce "OK loaded: #{@twitter_ids.length} IDs ready to recognize"
     @twitter_ids
@@ -46,31 +46,12 @@ TwitterScrapeStore.class_eval do
     #
     # Walk the directories for this session
     #
-    Dir[path_to(scrape_session_dir, "u*/*")].each do |dir|
+    Dir[path_to(scrape_session_dir, "*/*")].each do |dir|
       # Find out where we are
       resource = dir.gsub(%r{.*?/(\w+/\w+)\z}, '\1')
       context = TwitterScrapeFile.context_for_resource(resource) # KLUDGE KLUDGE KLUDGE
       announce dir
-      #
-      # Dump to a keyed file
-      #
-      keyed_filename = path_to(keyed_dir, "#{context}-keyed.tsv")
-      if File.exists?(keyed_filename) then announce("skipping #{context} for #{scrape_session_dir}: keyed file exists"); next; end
-      File.open(keyed_filename, "w") do |keyed_file|
-        #
-        # Stuff each file in this session into a bulk keyed file.
-        #
-        Dir["#{dir}/Marque*"].sort.each do |ripd_file|
-          scrape_file = TwitterScrapeFile.new_from_file(ripd_file); next unless scrape_file
-          screen_name, twitter_id = [scrape_file.screen_name, scrape_file.twitter_id]
-          if (! twitter_id) && (context != :user) then MISSING_IDS_FILE << "#{screen_name}\t#{ripd_file}\n"; next ; end
-          twitter_id = "%012d"%[twitter_id]
-          contents = File.open(ripd_file).read       ; next if contents.blank?
-          warn "Tabs or carriage returns in #{ripd_file}" if contents =~ /[\t\n\r]/
-          scraped_at = scrape_file.cached_uri.timestamp.strftime(DATEFORMAT)
-          keyed_file << [ screen_name, twitter_id, context, scrape_file.page, scraped_at, contents ].join("\t")+"\n"
-        end
-      end
+      bundle_dir dir, context, keyed_dir
     end
   end
 
@@ -79,6 +60,42 @@ TwitterScrapeStore.class_eval do
       bundle_scrape_session keyed_base, scrape_session_dir
     end
   end
+
+  #
+  # Dump to a keyed file
+  #
+  def bundle_dir dir, context, keyed_dir
+    open_keyed_file(keyed_dir, context) do |keyed_file|
+      Dir["#{dir}/*"].sort.each do |ripd_file|
+        bundle_file ripd_file, context, keyed_file
+      end
+    end
+  end
+
+  #
+  # Stuff each file in this session into a bulk keyed file.
+  #
+  def bundle_file ripd_file, context, keyed_file
+    scrape_file = TwitterScrapeFile.new_from_file(ripd_file); return unless scrape_file
+    screen_name, twitter_id = [scrape_file.screen_name, scrape_file.twitter_id]
+    if (! twitter_id) && (context != :user) then MISSING_IDS_FILE << "#{screen_name}\t#{context}\t#{ripd_file}\n"; return ; end
+    twitter_id = "%012d"%[twitter_id]
+    begin
+      contents = File.open(ripd_file).read ; return if contents.blank?
+    rescue
+      return
+    end
+    warn "Tabs or carriage returns in #{ripd_file}" if contents =~ /[\t\n\r]/
+    scraped_at = scrape_file.cached_uri.timestamp
+    keyed_file << [ screen_name, twitter_id, context, scrape_file.page, scraped_at, contents ].join("\t")+"\n"
+  end
+
+  def open_keyed_file keyed_dir, context, &block
+    keyed_filename = path_to(keyed_dir, "#{context}-keyed.tsv")
+    if File.exists?(keyed_filename) then announce("skipping #{context}: keyed file exists"); return ; end
+    File.open(keyed_filename, "w", &block)
+  end
+
   #
   # apply block to each scrape session directory
   #
@@ -86,8 +103,19 @@ TwitterScrapeStore.class_eval do
     cd(path_to(:ripd_root)) do
       # 1204,1205,1206,1207,1208,1209,1203,1202,1201,
       # 1210,          1211,1212,1213,1209,1208,1207,1206,1205,
-      $stderr.puts("!!!!!!!!!!!!!!!!!!! FIX TEXTING CHGS 3 dirs, idfile  !!!!!!!!!!!!!!!!!!!!!!")
-      Dir[path_to(self.ripd_base, "*1205")].each(&block)
+      Dir[path_to(self.ripd_base, "*")].each(&block)
+    end
+  end
+
+  def bundle_from_misc_files_list keyed_base, misc_files_list
+    open_keyed_file(keyed_base+'/misc', 'misc' ) do |keyed_file|
+      File.open(misc_files_list).readlines.each do |line|
+        cd(path_to(:ripd_root)) do
+          _, context, ripd_file = line.chomp.split "\t"
+          if ! File.exists?(ripd_file) then warn "No such file #{ripd_file}" ; next ; end
+          bundle_file ripd_file, context, keyed_file
+        end
+      end
     end
   end
 
@@ -95,7 +123,9 @@ end
 
 ripd_base  = "_com/_tw/com.twitter"
 keyed_base = path_to(:rawd, "keyed")
-TwitterScrapeStore.new(ripd_base).bundle_scrape_sessions(keyed_base)
+scraper = TwitterScrapeStore.new(ripd_base)
+# scraper.bundle_from_misc_files_list(keyed_base, 'fixd/dump/missing_ids_to_rebundle.tsv')
+scraper.bundle_scrape_sessions(keyed_base)
 
 # for fullpath in /workspace/flip/data/rawd/social/network/twitter_friends/keyed/_2* ; do file=`basename $fullpath` ; echo $file ; hadoop dfs -mkdir rawd/keyed/$file ; hadoop dfs -copyFromLocal $fullpath/* rawd/keyed/$file/ ; done
 #
@@ -229,8 +259,8 @@ TwitterScrapeStore.new(ripd_base).bundle_scrape_sessions(keyed_base)
 # I, [20081213-20:41:12 #4394]  INFO -- : count of  com/ tw/com.twitter/ 20081213/users/show: 13000
 #
 # I, [20081213-20:41:30 #4394]  INFO -- : count of  com/ tw/com.twitter/ 20081209/statuses/followers: 0
-
-
+#
+#
 # DIR_TO_RESOURCE =  {
 #   'users/show'         => :raw_userinfo,
 #   'statuses/friends'   => :raw_friends,

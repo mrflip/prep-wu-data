@@ -27,6 +27,7 @@ module HadoopUtils
     #
     def scrub!
       gsub!(/[\t\r\n]+/, ' ')  # KLUDGE
+      gsub!(/\\/, '/') # hadoop is barfing on double backslashes. sorry, backslashes.
     end
     #
     # add a method exactly like +parse_csv+ but specifying a tab-separator
@@ -52,10 +53,13 @@ module HadoopUtils
   end
 
   module HadoopStructMethods
-    def initialize scraped_at, hsh
-      # self.origin = origin
-      self.scraped_at = scraped_at
-      self.indifferent_merge! hsh
+    module ClassMethods
+      def new_from_hash scraped_at, hsh
+        struct = new
+        struct.scraped_at = scraped_at
+        struct.indifferent_merge! hsh
+        struct
+      end
     end
     #
     def resource
@@ -72,6 +76,9 @@ module HadoopUtils
     #
     def parse
       # subclass
+    end
+    def self.included base
+      base.extend ClassMethods
     end
   end
 

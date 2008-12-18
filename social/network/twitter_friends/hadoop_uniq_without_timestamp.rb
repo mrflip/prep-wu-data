@@ -24,7 +24,7 @@ class LineTimestampUniqifier
   end
   def is_repeated? line
     # Strip the timestamp (last field on the line -- we don't need to do any complicated TSV decoding for that
-    this_line = line.gsub(/\A([\w\-]+)\t[^\t]+\t(.*)\t\d{8}-\d{6}\s*$/,"\\1\t\\2") # KLUDGE -- I don't know why the \s* on the end is necessary... but it is, so leave it.
+    this_line = line.gsub(/\A([\w\-]+)\t[^\t]+\t(.*)\t\d{8}-?\d{6}\s*$/,"\\1\t\\2") # KLUDGE -- I don't know why the \s* on the end is necessary... but it is, so leave it.
     # Since the only things that will be de-uniqued have all-identical
     # prefixes (differ only in their timestamp), and the lines are lexically
     # sorted (?) this should be the earliest
