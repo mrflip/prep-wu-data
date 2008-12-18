@@ -10,7 +10,8 @@ def dump_listing listing_filename, scrape_session, context, resource
   scrape_session_n = scrape_session.gsub(/_/, '')
   File.open(listing_filename, "w") do |listing_file|
     # let ls do all the hard work
-    `ls -lR #{scrape_session}/#{resource}`.split(/\n/)[2..-1].each do |line|
+    lines = `ls -lR #{scrape_session}/#{resource}`.split(/\n/)[2..-1] or next
+    lines.each do |line|
       # track_count "#{scrape_session}-#{context}", 100000
       _, _, _, _, size, dt, tm, file = line.split(/\s+/)
       m = FILENAME_RE.match(file)
@@ -65,11 +66,17 @@ end
 
 # UPDATE scraped_file_index sfi, twitter_user_partials u
 #   SET sfi.twitter_user_id = u.id
-#   WHERE sfi.twitter_user_id IS NULL
-#   AND     sfi.screen_name = u.screen_name
-UPDATE scrape_requests req, scraped_file_index sfi
-  SET           req.scraped_at = sfi.scraped_at, req.result_code = (IF sfi.size=0, NULL, 200)
-  WHERE sfi.twitter_user_id     = req.twitter_user_id
-    AND         sfi.context             = req.context
-    AND sfi.page                        = req.page
-    AND         sfi.twitter_user_id < 400 AND page < 10
+#   WHERE sfi.screen_name = u.screen_name
+#   AND   sfi.twitter_user_id IS NULL
+#
+# UPDATE scrape_requests req, scraped_file_index sfi
+#   SET           req.scraped_at = sfi.scraped_at, req.result_code = IF(sfi.size=0, NULL, 200)
+#   WHERE sfi.twitter_user_id     = req.twitter_user_id
+#     AND         sfi.context     = req.context
+#     AND         sfi.page        = req.page
+#     AND                 req.scraped_at IS NULL
+
+# SELECT COUNT(*),
+#         COUNT(scraped_at), COUNT(*)-COUNT(scraped_at) AS remaining,
+#         COUNT(result_code), COUNT(scraped_at)-COUNT(result_code) AS damaged, s.* FROM scrape_requests s
+# GROUP BY context

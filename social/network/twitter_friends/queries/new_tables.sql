@@ -19,7 +19,7 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_users` (
   `protected`                           TINYINT(4)    UNSIGNED, 			  --
   `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY   (`id`),
-  INDEX         (`screen_name`(15)),
+  UNIQUE INDEX  (`screen_name`(20)),
   INDEX         (`followers_count`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
@@ -46,7 +46,7 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_partials` (
   `profile_image_url`                   VARCHAR(255) CHARACTER SET ASCII,
   `scraped_at`                          DATETIME                                NOT NULL, 
   PRIMARY KEY   (`id`),
-  UNIQUE INDEX  (`screen_name`(15)), 
+  UNIQUE INDEX  (`screen_name`(20)), 
   INDEX         (`followers_count`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
@@ -63,12 +63,11 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_partials_all` (
   `description`                         VARCHAR(255) CHARACTER SET UTF8,   
   `profile_image_url`                   VARCHAR(255) CHARACTER SET ASCII,
   `scraped_at`                          DATETIME                                NOT NULL, 
-  PRIMARY KEY   (`id`,          `scraped_at`),
-  INDEX         (`screen_name`(15)), 
+  PRIMARY KEY   (`id`,              `scraped_at`),
+  UNIQUE INDEX  (`screen_name`(20), `scraped_at`), 
   INDEX         (`followers_count`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
-
 
 -- id      followers_count protected       screen_name name    url     description     location        profile_image_url
 --
@@ -85,7 +84,6 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_profiles` (
   `description`                         VARCHAR(255) CHARACTER SET UTF8,        -- can be 255*4
   `time_zone`                           VARCHAR(30)  CHARACTER SET ASCII,       -- can maybe be smaller
   `utc_offset`                          MEDIUMINT(7),                           -- -43200 to 43200 I think => 9 bits
-  `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY  (`twitter_user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
@@ -106,7 +104,6 @@ CREATE TABLE          `imw_twitter_graph`.`twitter_user_styles` (
   `profile_background_image_url`        VARCHAR(255) CHARACTER SET ASCII,
   `profile_image_url`                   VARCHAR(255) CHARACTER SET ASCII,
   `profile_background_tile`             TINYINT(4) UNSIGNED,
-  `scraped_at`                          DATETIME                                NOT NULL, --
   PRIMARY KEY  (`twitter_user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
@@ -185,7 +182,6 @@ CREATE TABLE          `imw_twitter_graph`.`a_follows_bs` (
   INDEX         (`user_b_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
---  `scraped_at`                          DATETIME                                NOT NULL, --
 
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`a_symmetric_bs`;
 CREATE TABLE          `imw_twitter_graph`.`a_symmetric_bs` (
@@ -204,7 +200,7 @@ CREATE TABLE          `imw_twitter_graph`.`a_atsigns_bs` (
   `user_b_name`                         VARCHAR(20)  CHARACTER SET ASCII        NOT NULL, 
   `status_id`                           INT(10)      UNSIGNED                   NOT NULL,
   PRIMARY KEY   (`user_a_id`, `user_b_name`(20), `status_id`),
-  INDEX         (`user_b_name`(15)),
+  INDEX         (`user_b_name`),
   INDEX         (`status_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
@@ -262,17 +258,17 @@ CREATE TABLE          `imw_twitter_graph`.`hashtags` (
 -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 -- ;
 
-DROP TABLE IF EXISTS  `imw_twitter_graph`.`tinyurl_stubs`;
-CREATE TABLE          `imw_twitter_graph`.`tinyurl_stubs` (
-  `id`                                  INTEGER         UNSIGNED AUTO_INCREMENT,
-  `stub`                                VARCHAR(15)      CHARACTER SET ASCII    NOT NULL,
-  PRIMARY KEY    (`id`),
-  UNIQUE INDEX   (`stub`(15))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
-;
-LOAD DATA INFILE '~/ics/pool/social/network/twitter_friends/fixd/dump/tinyurl_stubs.txt'
-  INTO TABLE `imw_twitter_graph`.`tinyurl_stubs` (`stub`)
-;
+-- DROP TABLE IF EXISTS  `imw_twitter_graph`.`tinyurl_stubs`;
+-- CREATE TABLE          `imw_twitter_graph`.`tinyurl_stubs` (
+--   `id`                                  INTEGER         UNSIGNED AUTO_INCREMENT,
+--   `stub`                                VARCHAR(15)      CHARACTER SET ASCII    NOT NULL,
+--   PRIMARY KEY    (`id`),
+--   UNIQUE INDEX   (`stub`(15))
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+-- ;
+-- LOAD DATA INFILE '~/ics/pool/social/network/twitter_friends/fixd/dump/tinyurl_stubs.txt'
+--   INTO TABLE `imw_twitter_graph`.`tinyurl_stubs` (`stub`)
+-- ;
 
 -- ===========================================================================
 --
@@ -287,25 +283,35 @@ LOAD DATA INFILE '~/ics/pool/social/network/twitter_friends/fixd/dump/tinyurl_st
 -- http://twitter.com/statuses/followers/twentycharacter_name.json?page=54321
 -- 0----.----1----.----2----.----3----.----4----.----5----.----6----.----7---
 --
+
 DROP TABLE IF EXISTS  `imw_twitter_graph`.`scrape_requests`;
 CREATE TABLE          `imw_twitter_graph`.`scrape_requests` (
-  `id`                                  INTEGER         UNSIGNED AUTO_INCREMENT,
+  `twitter_user_id`                     INT(10)         UNSIGNED                NOT NULL,
+  `context`                             ENUM('user', 'followers', 'friends')    NOT NULL,
+  `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
   `priority`                            INTEGER                                 NOT NULL        DEFAULT 0,
-  `context`                             VARCHAR(20)                             DEFAULT NULL,
-  `uri`                                 VARCHAR(96)                             DEFAULT NULL,
-  `requested_at`                        DATETIME,
   `scraped_at`                          DATETIME,
   `result_code`                         SMALLINT(6)     UNSIGNED,
-  `twitter_user_id`                     INT(10)         UNSIGNED                NOT NULL,
-  `screen_name`                         VARCHAR(20)                             NOT NULL,
-  `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
-  PRIMARY KEY   (`id`),
-  UNIQUE INDEX  (`screen_name`,     `context`, `page`),
-  UNIQUE INDEX  (`twitter_user_id`, `context`, `page`),
-  INDEX  	(`scraped_at`, `context`, `priority`),
+  PRIMARY KEY   (`twitter_user_id`, `context`, `page`),
+  INDEX  	(`scraped_at`),
+  INDEX  	(`context`),
   INDEX 	(`priority`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
+--  `uri`                                 VARCHAR(96)                             NOT NULL,
+--  `requested_at`                        DATETIME,
+
+
+
+DROP TABLE IF EXISTS  `imw_twitter_graph`.`scrape_request_pages`;
+CREATE TABLE          `imw_twitter_graph`.`scrape_request_pages` (
+  `twitter_user_id`                     INT(10)         UNSIGNED                NOT NULL,
+  `context`                             ENUM('user', 'followers', 'friends')    NOT NULL,
+  `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
+  PRIMARY KEY   (`twitter_user_id`, `context`, `page`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+;
+
 
 --
 -- Scraped files
@@ -319,21 +325,21 @@ CREATE TABLE          `imw_twitter_graph`.`scrape_requests` (
 -- twentycharacter_name.json%3Fpage%3D54321+20081129-052555.json
 -- 0----.----1----.----2----.----3----.----4----.----5----.----6 -- 61 chars
 --
-DROP TABLE IF EXISTS  `imw_twitter_graph`.`scraped_file_index`;
+-- DROP TABLE IF EXISTS  `imw_twitter_graph`.`scraped_file_index`;
 CREATE TABLE          `imw_twitter_graph`.`scraped_file_index` (
   `screen_name`                         VARCHAR(20)                             NOT NULL,
-  `context`                             VARCHAR(20)   CHARACTER SET ASCII       DEFAULT NULL,
+  `twitter_user_id`                     INTEGER         UNSIGNED                NULL,
+  `context`                             ENUM('user', 'followers', 'friends')    NOT NULL,
   `page`                                SMALLINT(10)    UNSIGNED                NOT NULL,
-  `twitter_user_id`                     INTEGER         UNSIGNED                NOT NULL,
   `size`                                INTEGER,
   `scraped_at`                          DATETIME                                DEFAULT NULL,
   `scrape_session`                      DATE,  
-  `filename`                            VARCHAR(80)  CHARACTER SET ASCII       DEFAULT NULL,
-  PRIMARY KEY   (`filename`,    `context`, `scrape_session`),
-  UNIQUE INDEX  (`screen_name`, `context`, `page`, `scraped_at`)
-  INDEX         (`twitter_user_id`, `context`, `page`)
+  PRIMARY KEY   (`screen_name`,     `context`, `page`, `scrape_session`),
+  INDEX         (`twitter_user_id`, `context`, `page`),
+  INDEX         (`context`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ;
+--  `filename`                            VARCHAR(80)  CHARACTER SET ASCII       DEFAULT NULL,
 
 
 -- ALTER TABLE `scraped_file_index` ADD `twitter_user_id` INT UNSIGNED NULL FIRST ;

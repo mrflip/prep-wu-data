@@ -9,12 +9,12 @@ for foo in part-0* ; do
     cut -d'	' -f1 |
     ruby -ne 'puts $_.chomp.gsub(/[^\-\w]/){|s| s.bytes.map{|c| "%%%02X" % c }}'
     `.tsv ;
-  echo "movine $foo to $newname"
+  echo "moving $foo to $newname"
   mv "$foo" "$newname"
 done
 
-dir=`basename $PWD`
-for foo in *.tsv ; do
-  echo "Compressing $dir"
-  bzip2 -c $foo > ../$dir-bz2/$foo.bz2 
-done
+# dir=`basename $PWD`
+# for foo in *.tsv ; do
+#   echo "Compressing $dir"
+#   bzip2 -c $foo > ../$dir-bz2/$foo.bz2 
+# done
