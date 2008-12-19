@@ -18,24 +18,32 @@ def load_line line
   end
 end
 
-def emit_scrape_request id, context, page
-  out_key = [id, context, page].join('-')
-  puts [out_key, 'scrape_request', id, context, page].to_tsv
+
+
+def emit_scrape_request thing, context, page
+  out_key = [thing.screen_name, context, page].join('-')
+  priority = "%06d" % [2000 - ((1+thing.followers_count.to_i) / 100.0).ceil]
+  puts [out_key, 'scrape_request', thing.id, priority].to_tsv
 end
 
+last_user_id = nil
 $stdin.each do |line|
   key, item_key, *vals = load_line line
+  next unless key
   klass = key.to_s.camelize.constantize
   #p [key, klass, klass.members, vals[0..(klass.members.length-1)]]
 
   thing = klass.new(*vals[0..(klass.members.length-1)])
   case thing
   when TwitterUser, TwitterUserPartial
-    (1 .. (thing.followers_count.to_i / 100.0).ceil).each do |page| emit_scrape_request(thing.id, :followers, page) end
-    (1 .. (thing.friends_count.to_i   / 100.0).ceil).each do |page| emit_scrape_request(thing.id, :friends, page) end if thing.is_a?(TwitterUser)
-    emit_scrape_request thing.id, :user, 1
-  # when ScrapedFileListing
-    #
+    next if thing.id == last_user_id
+    last_user_id = thing.id
+    (1 .. ((1+thing.followers_count.to_i) / 100.0).ceil).each do |page| emit_scrape_request(thing, :followers, page) end
+    (1 .. ((1+thing.friends_count.to_i)   / 100.0).ceil).each do |page| emit_scrape_request(thing, :friends,   page) end if thing.is_a?(TwitterUser)
+    emit_scrape_request thing, :user, 1
+  when ScrapedFile
+    puts [item_key, 'scraped_file', thing.screen_name, thing.context, thing.page,
+       thing.size, thing.scrape_session, thing.scraped_at ].to_tsv
   else
     raise "Don't know what to do with '#{key}'"
   end

@@ -55,8 +55,8 @@ TwitterScrapeStore.class_eval do
     end
   end
 
-  def bundle_scrape_sessions keyed_base
-    each_scrape_session do |scrape_session_dir|
+  def bundle_scrape_sessions pathspec, keyed_base
+    each_scrape_session(pathspec) do |scrape_session_dir|
       bundle_scrape_session keyed_base, scrape_session_dir
     end
   end
@@ -99,11 +99,14 @@ TwitterScrapeStore.class_eval do
   #
   # apply block to each scrape session directory
   #
-  def each_scrape_session &block
+  def each_scrape_session pathspec, &block
     cd(path_to(:ripd_root)) do
       # 1204,1205,1206,1207,1208,1209,1203,1202,1201,
       # 1210,          1211,1212,1213,1209,1208,1207,1206,1205,
-      Dir[path_to(self.ripd_base, "*")].each(&block)
+      pathspec.each do |pathspec|
+        announce "Parsing #{pathspec}"
+        Dir[path_to(self.ripd_base, pathspec)].each(&block)
+      end
     end
   end
 
@@ -118,14 +121,21 @@ TwitterScrapeStore.class_eval do
       end
     end
   end
-
 end
+
 
 ripd_base  = "_com/_tw/com.twitter"
 keyed_base = path_to(:rawd, "keyed")
 scraper = TwitterScrapeStore.new(ripd_base)
+
+pathspec = ARGV
+if pathspec.empty?
+  raise "I need a pathspec (relative to ripd_root) to bundle!"
+end
+scraper.bundle_scrape_sessions(pathspec, keyed_base)
+
+
 # scraper.bundle_from_misc_files_list(keyed_base, 'fixd/dump/missing_ids_to_rebundle.tsv')
-scraper.bundle_scrape_sessions(keyed_base)
 
 # for fullpath in /workspace/flip/data/rawd/social/network/twitter_friends/keyed/_2* ; do file=`basename $fullpath` ; echo $file ; hadoop dfs -mkdir rawd/keyed/$file ; hadoop dfs -copyFromLocal $fullpath/* rawd/keyed/$file/ ; done
 #

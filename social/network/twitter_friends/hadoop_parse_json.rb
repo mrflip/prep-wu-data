@@ -26,12 +26,13 @@ def emit_user hsh, scraped_at, is_partial
   hsh['protected']  = hsh['protected'] ? 1 : 0
   hsh['created_at']  = DateTime.parse(hsh['created_at']).strftime(DATEFORMAT) if hsh['created_at']
   scrub hsh, :name, :location, :description, :url
+  p hsh
   if is_partial
-    TwitterUserPartial.new(scraped_at, hsh).emit
+    TwitterUserPartial.new_from_hash(scraped_at, hsh).emit
   else
-    TwitterUser.new(       scraped_at, hsh).emit
-    TwitterUserProfile.new(scraped_at, hsh).emit
-    TwitterUserStyle.new(  scraped_at, hsh).emit
+    TwitterUser.new_from_hash(       scraped_at, hsh).emit
+    TwitterUserProfile.new_from_hash(scraped_at, hsh).emit
+    TwitterUserStyle.new_from_hash(  scraped_at, hsh).emit
   end
 end
 
@@ -69,18 +70,18 @@ def emit_tweet tweet_hsh
   if tweet_hsh['in_reply_to_user_id'] then
     at                    = repair_id(tweet_hsh, 'in_reply_to_user_id')
     in_reply_to_status_id = repair_id(tweet_hsh, 'in_reply_to_status_id')
-    reply    = ARepliedB.new(scraped_at, 'id' => twitter_user_id, 'user_a_id' => twitter_user_id, 'user_a_name' => twitter_user, 'user_b_id' => at, 'status_id' => status_id, 'in_reply_to_status_id' => in_reply_to_status_id).emit
+    reply    = ARepliedB.new_from_hash(scraped_at, 'id' => twitter_user_id, 'user_a_id' => twitter_user_id, 'user_b_id' => at, 'status_id' => status_id, 'in_reply_to_status_id' => in_reply_to_status_id).emit
   end
   ATSIGNS_TRANSFORMER.transform(  tweet_hsh).each do |at|
-    atsign    = AAtsignsB.new(scraped_at, 'user_a_id' => twitter_user_id, 'user_a_name' => twitter_user, 'user_b_name'  => at, 'status_id' => status_id).emit
+    atsign    = AAtsignsB.new_from_hash(scraped_at, 'user_a_name' => twitter_user, 'user_b_name'  => at, 'status_id' => status_id).emit
   end
   TWEETURLS_TRANSFORMER.transform(tweet_hsh).each do |at|
-    tweet_url = TweetUrl.new(scraped_at, 'user_a_id' => twitter_user_id, 'tweet_url' => at, 'status_id' => status_id).emit
+    tweet_url = TweetUrl.new_from_hash(scraped_at, 'user_a_id' => twitter_user_id, 'tweet_url' => at, 'status_id' => status_id).emit
   end
   HASHTAGS_TRANSFORMER.transform( tweet_hsh).each do |at|
-    hashtag   = Hashtag.new(scraped_at,  'user_a_id' => twitter_user_id, 'hashtag' => at, 'status_id' => status_id).emit
+    hashtag   = Hashtag.new_from_hash(scraped_at,  'user_a_id' => twitter_user_id, 'hashtag' => at, 'status_id' => status_id).emit
   end
-  Tweet.new(scraped_at, tweet_hsh).emit
+  Tweet.new_from_hash(scraped_at, tweet_hsh).emit
 end
 
 # ===========================================================================
@@ -125,12 +126,12 @@ $stdin.each do |line|
       #
       if context == 'followers'
         # follower: this person *follows* the file owner
-        AFollowsB.new(scraped_at,
+        AFollowsB.new_from_hash(scraped_at,
           'user_a_id' => hsh['id'],     'user_a_name' => hsh['screen_name'],
           'user_b_id' => file_owner_id, 'user_b_name' => file_owner_name   ).emit
       else
         # friend: this person is *followed by* the file owner.
-        AFollowsB.new(scraped_at,
+        AFollowsB.new_from_hash(scraped_at,
           'user_a_id' => file_owner_id, 'user_a_name' => file_owner_name,
           'user_b_id' => hsh['id'],     'user_b_name' => hsh['screen_name'] ).emit
       end
