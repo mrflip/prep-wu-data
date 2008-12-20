@@ -102,7 +102,7 @@ end
 
 
 case ARGV[0]
-when '--map'  then gen_1hood_mapper
+when '--map'    then gen_1hood_mapper
 when '--reduce' then gen_1hood_reducer
 else raise "Need to specify an argument: --map, --reduce"
 end

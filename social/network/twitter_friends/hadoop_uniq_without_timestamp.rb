@@ -23,8 +23,9 @@ class LineTimestampUniqifier
     self.last_line = nil
   end
   def is_repeated? line
-    # Strip the timestamp (last field on the line -- we don't need to do any complicated TSV decoding for that
-    this_line = line.gsub(/\A([\w\-]+)\t[^\t]+\t(.*)\t\d{8}-?\d{6}\s*$/,"\\1\t\\2") # KLUDGE -- I don't know why the \s* on the end is necessary... but it is, so leave it.
+    # Do surgery removing the timestamp
+    resource, item_key, scraped_at, val = line.chomp.split("\t",4)
+    this_line = [resource, item_key, val].join("\t")
     # Since the only things that will be de-uniqued have all-identical
     # prefixes (differ only in their timestamp), and the lines are lexically
     # sorted (?) this should be the earliest
@@ -49,3 +50,6 @@ $stdin.each do |line|
   line.gsub!(/\A([\w]+)(?:-[^\t]*)?\t/, "\\1\t") # strip the keyspace-broadening slug
   puts line
 end
+
+
+# line.gsub(/\A([\w\-]+)\t[^\t]+\t(.*)\t\d{8}-?\d{6}\s*$/,"\\1\t\\2") # KLUDGE -- I don't know why the \s* on the end is necessary... but it is, so leave it.

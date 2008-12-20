@@ -8,9 +8,13 @@ FILENAME_RE =  %r{^([%\w]+?)+\.json%3Fpage%3D(\d+)\+\d{8}-\d{6}\.json$}
 # list all files into a TSV
 #
 def dump_listing listing_filename, scrape_session, context, resource
-  if File.exists?(listing_filename) then warn "Skipping #{context} for #{scrape_session}: '#{listing_filename}' exists"; return ; end
+  if File.exists?(listing_filename) then
+    $stderr.print "%s-%s (exists)\t"%[context, scrape_session];
+    return ;
+  end
   scrape_session_n = scrape_session.gsub(/_/, '')
   File.open(listing_filename, "w") do |listing_file|
+    $stderr.print "%s-%s (listing)\t"%[context, scrape_session];
     # let ls do all the hard work
     files = `ls -lR #{scrape_session}/#{resource}`.split(/\n/)[2..-1] or return
     files.each do |line|
@@ -52,18 +56,18 @@ RIPD_DIR    = File.dirname(__FILE__)+'/ripd'
 LISTING_DIR = path_to(:rawd, 'ripd_listings')
 cd RIPD_DIR do
   # Visit each scrape_session
-  Dir['*'].each do |scrape_session|
+  Dir['*'].sort.each do |scrape_session|
     [
       [ :user,            'users/show'],
       [ :friends,         'statuses/friends'],
       [ :followers,       'statuses/followers'],
     ].each do |context, resource|
       listing_filename = File.join(LISTING_DIR, "#{scrape_session}-#{context}-lslr.tsv")
-      $stderr.puts listing_filename
       dump_listing listing_filename, scrape_session, context, resource
       # bulk_load_mysql listing_filename
     end
   end
+  $stderr.puts "done."
 end
 
 # UPDATE scraped_file_index sfi, twitter_user_partials u
