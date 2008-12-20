@@ -30,9 +30,7 @@ TwitterScrapeFile.class_eval do
     if ! matches.empty?
       ts = matches.last.gsub(/.*\+(\d{8})-(\d{6})(?:\.\w{0,7})?\z/, '\1\2')
       self.cached_uri.timestamp = DateTime.parse ts
-      # puts "%s\t%s\t%-120s\t%s" % [ts, matches.last, self.cached_uri.timestamp, timeless[40..-1], ripd_file[50..-1]]
     end
-    # puts matches
     ! matches.empty?
   end
   def ripd_file
@@ -44,12 +42,10 @@ end
 # Flat list of usernames (in first column)
 #
 #
-USERNAMES_FILE = 'fixd/dump/scrape_requests_users_20081215.tsv'
+USERNAMES_FILE = 'rawd/scrape_requests/scrape_request-user.tsv'
 File.open(USERNAMES_FILE).each do |line|
   line.chomp!
-  screen_name, context, page, *_ = line.split(/\t/);
-  if !(context && page) then context = 'user'; page = 1 ; end
-  context.gsub!(/^scrape_/, '')
+  _, context, priority, page, id, screen_name = line.split(/\t/);
   track_count(:fetches, 1000)
   #
   # find file
@@ -60,16 +56,3 @@ File.open(USERNAMES_FILE).each do |line|
     :sleep_time => 0, :log_level => Logger::DEBUG
   warn "No yuo on #{screen_name} #{context} #{page}: #{scrape_file.result_status}" unless success
 end
-
-# SELECT screen_name,
-#       REPLACE(context, 'scrape_', '') AS context,
-#       page, id, priority
-#     FROM scrape_requests
-#     WHERE     scraped_at IS NULL AND result_code IS NULL AND context = 'scrape_user'
-#     ORDER BY page ASC, priority ASC
-# INTO OUTFILE '/data/fixd/social/network/twitter_friends/dump/scrape_requests_user_20081212.tsv'
-
-# find ripd/ -type f > /tmp/listing.txt
-# cat /tmp/listing.txt | perl -pe 's!^.*(?:followers|friends|show)/([%\w]\w*)\.json%.*!$1! || print STDERR ("WTF:".$_)' > /tmp/screen_names.txt
-# cat /tmp/screen_names.txt | sort -u > fixd/dump/user_names_and_ids_from_files.tsv
-# cat fixd/dump/missing_ids_* fixd/dump/user_names_and_ids_from_files.tsv  > fixd/dump/user_names_to_scrape.tsv
