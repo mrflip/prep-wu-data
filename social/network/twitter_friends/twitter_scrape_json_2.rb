@@ -44,7 +44,7 @@ end
 # Flat list of usernames (in first column)
 #
 #
-USERNAMES_FILE = 'fixd/dump/scrape_requests_users_20081215.tsv'
+USERNAMES_FILE = '/tmp/scrape_requests_foo.tsv'
 File.open(USERNAMES_FILE).each do |line|
   line.chomp!
   screen_name, context, page, *_ = line.split(/\t/);
@@ -60,16 +60,3 @@ File.open(USERNAMES_FILE).each do |line|
     :sleep_time => 0, :log_level => Logger::DEBUG
   warn "No yuo on #{screen_name} #{context} #{page}: #{scrape_file.result_status}" unless success
 end
-
-# SELECT screen_name,
-#       REPLACE(context, 'scrape_', '') AS context,
-#       page, id, priority
-#     FROM scrape_requests
-#     WHERE     scraped_at IS NULL AND result_code IS NULL AND context = 'scrape_user'
-#     ORDER BY page ASC, priority ASC
-# INTO OUTFILE '/data/fixd/social/network/twitter_friends/dump/scrape_requests_user_20081212.tsv'
-
-# find ripd/ -type f > /tmp/listing.txt
-# cat /tmp/listing.txt | perl -pe 's!^.*(?:followers|friends|show)/([%\w]\w*)\.json%.*!$1! || print STDERR ("WTF:".$_)' > /tmp/screen_names.txt
-# cat /tmp/screen_names.txt | sort -u > fixd/dump/user_names_and_ids_from_files.tsv
-# cat fixd/dump/missing_ids_* fixd/dump/user_names_and_ids_from_files.tsv  > fixd/dump/user_names_to_scrape.tsv

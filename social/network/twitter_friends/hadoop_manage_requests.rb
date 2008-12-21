@@ -18,31 +18,49 @@ module Mapper
       []
     end
   end
-  def self.emit_scrape_request thing, context, page
-    out_key = [thing.screen_name, context, page].join('-')
-    priority = "%06d" % [2000 - ((1+thing.followers_count.to_i) / 100.0).ceil]
-    puts [out_key, 'scrape_request', thing.id, priority].to_tsv
+
+  #
+  # Scrape request
+  #   screen_name-context-page  scrape_request  id      priority
+  #
+  def self.emit_scrape_request twitter_user, context, page
+    out_key = [twitter_user.screen_name, context, page].join('-')
+    priority = "%06d" % [2000 - ((1+twitter_user.followers_count.to_i) / 100.0).ceil]
+    puts [out_key, 'scrape_request', twitter_user.id, priority].to_tsv
+  end
+
+  #
+  # Scraped file
+  #   screen_name-context-page  scraped_file scraped_at ...values....
+  #
+  def self.emit_scraped_file item_key, vals
+    puts [item_key, 'scraped_file', *vals].to_tsv
   end
 
   def self.run_map
     last_user_id = nil
     $stdin.each do |line|
-      key, item_key, *vals = load_line line
-      next unless key
-      klass = key.to_s.camelize.constantize
-      #p [key, klass, klass.members, vals[0..(klass.members.length-1)]]
-
-      thing = klass.new(*vals[0..(klass.members.length-1)])
-      case thing
-      when TwitterUser, TwitterUserPartial
-        next if thing.id == last_user_id
-        last_user_id = thing.id
-        (1 .. ((1+thing.followers_count.to_i) / 100.0).ceil).each do |page| emit_scrape_request(thing, :followers, page) end
-        (1 .. ((1+thing.friends_count.to_i)   / 100.0).ceil).each do |page| emit_scrape_request(thing, :friends,   page) end if thing.is_a?(TwitterUser)
-        emit_scrape_request thing, :user, 1
-      when ScrapedFile
-        puts [item_key, 'scraped_file', thing.screen_name, thing.context, thing.page,
-          thing.size, thing.scrape_session, thing.scraped_at ].to_tsv
+      # Grok line
+      key, item_key, *vals = load_line line ; next unless key
+      #
+      case key.to_sym
+      when :twitter_user, :twitter_user_partial
+        # Instantiate object
+        klass = key.to_s.camelize.constantize
+        twitter_user = klass.new(*vals.compact)
+        next unless twitter_user.screen_name =~ /\A\w+\z/
+        #
+        # Skip duplicates
+        next if twitter_user.id == last_user_id
+        last_user_id = twitter_user.id
+        #
+        # Tell about self, and one page per hundred followers, and one per hundred friends
+        emit_scrape_request twitter_user, :user, 1
+        (1 .. ((1+twitter_user.followers_count.to_i) / 100.0).ceil).each do |page| emit_scrape_request(twitter_user, :followers, page) end
+        (1 .. ((1+twitter_user.friends_count.to_i)   / 100.0).ceil).each do |page| emit_scrape_request(twitter_user, :friends,   page) end if twitter_user.is_a?(TwitterUser)
+      when :scraped_file
+        # re-emit the file
+        emit_scraped_file   item_key, vals
       else
         raise "Don't know what to do with '#{key}'"
       end
@@ -62,14 +80,19 @@ module Reducer
   #
   def self.emit_scrape_request parts
     if parts['scrape_request']
-      item_key, id, priority           = parts['scrape_request']
-      _, _,  _, _, size, scrape_session, scraped_at   = parts['scraped_file']
+      # grok
+      item_key, id, priority                         = parts['scrape_request']
+      _, scraped_at, _, _, _, size, scrape_session   = parts['scraped_file']
       screen_name, context, page = item_key.split('-')
-      out_item_key = [id, context, page].join('-')
-      out_context = parts['scraped_file'] ? 'scrape_request_done' : 'scrape_request'
-      puts [out_context, priority, out_item_key, screen_name, context, page, id, size, scrape_session, scraped_at].join("\t")
+      # categorize
+      out_context = "%s-%s" % [ (parts['scraped_file'] ? 'scrape_request_done' : 'scrape_request'), context ]
+      # emit
+      puts [out_context, context, priority, id, page, screen_name, size, scrape_session, scraped_at].join("\t")
     else
-      puts ['scraped_file', *parts['scraped_file']].join("\t")
+      # grok
+      item_key, scraped_file_attrs = parts['scrape_request']
+      # emit
+      puts ['scraped_file', *scraped_file_attrs].join("\t")
     end
   end
 
@@ -81,13 +104,11 @@ module Reducer
       last_key ||= item_key
       # if we've seen the last record for this item_key,
       if last_key != item_key
-        # dump it out
-        emit_scrape_request parts
-        # and get ready to hear about something new.
-        parts = {}
+        emit_scrape_request parts       # dump it out
+        parts = {}                      # and get ready to hear about something new.
         last_key = item_key
       end
-      # remember what we're hearing.
+      # Otherwise keep this one
       parts[context] = [item_key, *vals]
     end
   end

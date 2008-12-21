@@ -128,23 +128,3 @@ if pathspec.empty?
   raise "I need a pathspec (relative to ripd_root) to bundle!"
 end
 scraper.bundle_scrape_sessions(pathspec, keyed_base)
-
-
-
-#
-#
-#
-# prepare the IDs list with
-#
-#
-# last_parse=out/sorted-`date "+%Y%m%d"` ;
-#   ./hdp-stream.sh "$last_parse/twitter_user_partial.tsv,$last_parse/twitter_user.tsv"   \
-#     out/user_names_and_ids                                                              \
-#     "/usr/bin/cut -d'   ' -f3,4"                                                        \
-#     /usr/bin/uniq                                                                       \
-#    -jobconf mapred.reduce.tasks=1 ;
-#   hdp-cp out/user_names_and_ids/part-'*' fixd/dump/user_names_and_ids.tsv
-#
-#
-# !!! important : make sure the delimiter fed to the cut above (hah!) is a TAB
-#

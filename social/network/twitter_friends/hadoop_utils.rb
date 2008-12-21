@@ -52,6 +52,19 @@ module HadoopUtils
     fields.each{|field| hsh[field.to_s].scrub! if hsh[field.to_s] }
   end
 
+  # Format for date-string conversion
+  DATEFORMAT = "%Y%m%d%H%M%S"
+  #
+  # place date into
+  #
+  def repair_date dt
+    DateTime.parse(dt).strftime(DATEFORMAT) if dt
+  end
+  def repair_date_attr hsh, attr
+    hsh[attr] = repair_date(hsh[attr])
+  end
+
+
   module HadoopStructMethods
     module ClassMethods
       def new_from_hash scraped_at, hsh

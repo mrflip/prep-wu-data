@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'imw'; include IMW;
 require 'fileutils'; include FileUtils
+require 'hadoop_utils'; include HadoopUtils
 as_dset __FILE__
 
 FILENAME_RE =  %r{^([%\w]+?)+\.json%3Fpage%3D(\d+)\+\d{8}-\d{6}\.json$}
@@ -27,25 +28,10 @@ def dump_listing listing_filename, scrape_session, context, resource
         screen_name.gsub!(/%5F/, '_')
       end
       item_key = [screen_name, context, page].join('-')
-      listing_file << ['scraped_file', item_key, screen_name, context, page, size, scrape_session_n, "#{dt} #{tm}" ].join("\t")+"\n"
+      scraped_at = repair_date( "#{dt} #{tm}" )
+      listing_file << ['scraped_file', item_key, scraped_at, screen_name, context, page, size, scrape_session_n ].join("\t")+"\n"
     end
   end
-end
-
-#
-# Emit MySQL command to load the listing
-#
-def bulk_load_mysql listing_filename
-  query = %Q{
-    LOAD DATA INFILE '#{listing_filename}'
-      REPLACE INTO TABLE `imw_twitter_graph`.`scraped_file_index`
-      FIELDS TERMINATED BY '\\t' ESCAPED BY ''
-      LINES  TERMINATED BY '\\n'
-      (`scrape_session`, `context`, `size`, `scraped_at`, `screen_name`, `page`, `filename`)
-    ;
-  }.gsub(/\n/," ")
-  puts query
-  $stdout.flush
 end
 
 #
@@ -69,6 +55,23 @@ cd RIPD_DIR do
   end
   $stderr.puts "done."
 end
+
+
+# #
+# # Emit MySQL command to load the listing
+# #
+# def bulk_load_mysql listing_filename
+#   query = %Q{
+#     LOAD DATA INFILE '#{listing_filename}'
+#       REPLACE INTO TABLE `imw_twitter_graph`.`scraped_file_index`
+#       FIELDS TERMINATED BY '\\t' ESCAPED BY ''
+#       LINES  TERMINATED BY '\\n'
+#       (`scrape_session`, `context`, `size`, `scraped_at`, `screen_name`, `page`, `filename`)
+#     ;
+#   }.gsub(/\n/," ")
+#   puts query
+#   $stdout.flush
+# end
 
 # UPDATE scraped_file_index sfi, twitter_user_partials u
 #   SET sfi.twitter_user_id = u.id

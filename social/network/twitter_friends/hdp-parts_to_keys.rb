@@ -11,7 +11,7 @@ end
 #
 # Setup
 #
-warn "PLEASE IGNORE THE 'cat: Unable to write to output stream.' ERRORS"
+warn "\nPlease IGNORE the 'cat: Unable to write to output stream.' errors\n"
 
 #
 # Examine the files
@@ -43,7 +43,9 @@ end
 command_lists.each do |type, command_list|
   case type
   when :deletes
-    puts "hdp-rm #{command_list.join(" ")}"
+    command = "hdp-rm #{command_list.join(" ")}"
+    puts command
+    `#{command}`
   when :moves
     command_list.each do |command|
       puts command

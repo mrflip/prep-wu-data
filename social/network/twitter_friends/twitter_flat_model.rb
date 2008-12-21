@@ -1,8 +1,6 @@
 require 'hadoop_utils'
 include HadoopUtils
 
-DATEFORMAT = "%Y%m%d%H%M%S"
-
 TwitterUserPartial  = HadoopStruct.new( [:id],  :id,  :screen_name, :followers_count, :protected, :name,
                                                 :url, :location, :description, :profile_image_url )
 TwitterUser         = HadoopStruct.new( [:id],  :id,  :screen_name, :created_at, :statuses_count,

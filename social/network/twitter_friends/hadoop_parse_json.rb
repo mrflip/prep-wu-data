@@ -18,17 +18,13 @@ def repair_id hsh, id_attr
   hsh[id_attr] = "%012d"%hsh[id_attr].to_i
 end
 
-def repair_date hsh, attr
-  hsh[attr] = DateTime.parse(hsh[attr]).strftime(DATEFORMAT) if hsh[attr]
-end
-
 # ===========================================================================
 #
 # transform and emit User
 #
 def emit_user hsh, scraped_at, is_partial
   hsh['protected']  = hsh['protected'] ? 1 : 0
-  repair_date(hsh, 'created_at')
+  repair_date_attr(hsh, 'created_at')
   scrub hsh, :name, :location, :description, :url
   if is_partial
     TwitterUserPartial.new_from_hash(scraped_at, hsh).emit
@@ -57,14 +53,13 @@ def emit_tweet tweet_hsh
       tweet_hsh['fromsource'] = fromsource_raw
     end
   end
-  repair_date(tweet_hsh, 'created_at')
   tweet_hsh['favorited']  = tweet_hsh['favorited'] ? 1 : 0
   tweet_hsh['truncated']  = tweet_hsh['truncated'] ? 1 : 0
   tweet_hsh['tweet_len']  = tweet_hsh['text'].length
   #
   # Emit
   #
-  repair_date(tweet_hsh, 'created_at')
+  repair_date_attr(tweet_hsh, 'created_at')
   scraped_at      = tweet_hsh['created_at']     # Tweets are immutable
   status_id       = tweet_hsh['id']
   twitter_user    = tweet_hsh['twitter_user']
@@ -182,7 +177,7 @@ def parse_flat_tweets
       # Make note of the user
       #
       repair_id(user_hsh, 'id')
-      scraped_at = repair_date(tweet_hsh, 'created_at')
+      scraped_at = repair_date_attr(tweet_hsh, 'created_at')
       emit_user user_hsh, scraped_at, true
       #
       # Grab the tweet
