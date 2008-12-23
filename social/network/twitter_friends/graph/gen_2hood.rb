@@ -6,7 +6,7 @@ require 'set'
 # Characterize the 2-hood:
 #
 # * A flat list
-#     user_a_id 	<follower,follower,follower, ... > | <follower_of_follower,follower_of_follower,follower_of_follower,...>
+#     user_a_id         <follower,follower,follower, ... > | <follower_of_follower,follower_of_follower,follower_of_follower,...>
 #
 # * Relation pairs
 #   user_a_id   user_b_id    a_follows_b  b_follows_a   bothfollow   a_atsigns_b   b_atsigns_a   a_fol_fol_b   b_fol_fol_a
@@ -14,10 +14,10 @@ require 'set'
 #
 # * Local density
 #   How many of my followers follow each other?
- 
+
 # ===========================================================================
 # ==
-# ==  Phase 1 
+# ==  Phase 1
 # ==
 #
 # -------- map --------
@@ -49,7 +49,7 @@ require 'set'
 #   < AA  2link  |  B1, B2  >
 #   < AA  2link  |  B1, CC  >
 #   < CC  2link  |  B1, AA  >
-#   < CC  2link  |  B1, B2  >   
+#   < CC  2link  |  B1, B2  >
 #   < CC  2link  |  B1, CC  >
 #   < DD  2link  |  B1, AA  >
 #   < DD  2link  |  B1, B2  >
@@ -58,7 +58,7 @@ require 'set'
 #
 # This gives an unsorted list of triplets, one for each two-step-long trip in
 # the graph.
- 
+
 # ===========================================================================
 # ==
 # ==  Phase 2
@@ -73,33 +73,33 @@ require 'set'
 #
 # The run for key A has all 2-edge paths that start at A:
 #
-#   < AA  2link  |  B1, AA  >  
+#   < AA  2link  |  B1, AA  >
 #   < AA  2link  |  B1, B2  >
 #   < AA  2link  |  B1, CC  >
 #   < AA  2link  |  B2, CC  >
 #   < AA  2link  |  B2, DD  >
 #   < AA  2link  |  B2, EE  >
-#   ...  
-#        
+#   ...
+#
 # Radius-2 nodes:
 #
-# * The union along the middle column gives the 1-hood again: 
+# * The union along the middle column gives the 1-hood again:
 #     B1, B2, ...
-# * The union along the right column gives all nodes that are 2 hops away: 
-#     B2, CC, DD, EE, ...  
+# * The union along the right column gives all nodes that are 2 hops away:
+#     B2, CC, DD, EE, ...
 # * Removing the 1-hood nodes gives all the nodes at radius exactly 2:
-#     CC, DD, EE, ...  
-# 
-# Local density: 
-# * Categorize each path by where it ends: 
-#   - at the origin (distance 0), 
-#   - at a node in the 1-hood (distance 1), 
+#     CC, DD, EE, ...
+#
+# Local density:
+# * Categorize each path by where it ends:
+#   - at the origin (distance 0),
+#   - at a node in the 1-hood (distance 1),
 #   - or in the 2-hood (distance 2)
 #   Emit the count of each category.
 #
 
 #
-# Launch each relation as 
+# Launch each relation as
 #
 #
 def gen_2hood_mapper
@@ -194,6 +194,7 @@ def gen_1hood_reducer
       rels[relationship.to_sym] << user_b_id
     end
   end
+  dump_relation_lists   last_id, rels if last_id
 end
 
 

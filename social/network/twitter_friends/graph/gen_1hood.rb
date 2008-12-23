@@ -98,6 +98,7 @@ def gen_1hood_reducer
       rels[relationship.to_sym] << user_b_id
     end
   end
+  dump_relation_lists   last_id, rels if last_id
 end
 
 

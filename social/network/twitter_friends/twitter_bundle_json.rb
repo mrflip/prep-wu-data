@@ -7,7 +7,9 @@ require 'faster_csv'
 require 'twitter_scrape_model'
 require 'twitter_flat_model'
 require 'twitter_scrape_store'
-THIS_DIR = File.dirname(__FILE__)
+announce "Loading ids..."
+require 'user_names_and_ids'
+announce 'done'
 
 TwitterScrapeFile.class_eval do
   def twitter_id
@@ -17,7 +19,6 @@ TwitterScrapeFile.class_eval do
   def self.twitter_ids
     return @twitter_ids if @twitter_ids
     @twitter_ids = ID_LIST
-    require THIS_DIR+'/user_names_and_ids'
     announce "OK loaded: #{@twitter_ids.length} IDs ready to recognize"
     @twitter_ids
   end

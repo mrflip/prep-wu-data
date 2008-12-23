@@ -8,6 +8,9 @@ FILENAME_RE =  %r{^([%\w]+?)+\.json%3Fpage%3D(\d+)\+\d{8}-\d{6}\.json$}
 #
 # list all files into a TSV
 #
+#
+#
+#
 def dump_listing listing_filename, scrape_session, context, resource
   if File.exists?(listing_filename) then
     $stderr.print "%s-%s (exists)\t"%[context, scrape_session];

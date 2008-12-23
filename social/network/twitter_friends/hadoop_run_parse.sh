@@ -3,8 +3,8 @@
 input_id=${1-`datename`}
 output_id=${2-`datename`}
 
-mid_file=out/parsed-uff-$output_id
-output_file=out/sorted-uff-$output_id
+mid_file=out/$output_id-parsed-uff
+output_file=out/$output_id-sorted-uff
 # Clear space
 hdp-rm -r $mid_file $output_file
 
@@ -23,7 +23,7 @@ hadoop jar /home/flip/hadoop/h/contrib/streaming/hadoop-*-streaming.jar	       	
     -jobconf 	stream.num.map.output.key.fields=2					\
     -mapper  	"$parse_mapper_cmd --keyed"						\
     -reducer	"$parse_reducer_cmd"							\
-    -input      rawd/keyed/_20081{126,127,128,129,130,201,202,203,204,205,206,207,208,209,210,211,212,213,215,216,217,218,219,220}/'*'					\
+    -input      rawd/keyed/_20081{126,127,128,129,130,201,202,203,204,205,206,207,208,209,210,211,212,213,215,216,217,218,219,220,221,222}/'*'					\
     -output  	"$mid_file"								\
     -file    	hadoop_utils.rb								\
     -file    	twitter_flat_model.rb							\
