@@ -30,9 +30,7 @@ TwitterScrapeFile.class_eval do
     if ! matches.empty?
       ts = matches.last.gsub(/.*\+(\d{8})-(\d{6})(?:\.\w{0,7})?\z/, '\1\2')
       self.cached_uri.timestamp = DateTime.parse ts
-      # puts "%s\t%s\t%-120s\t%s" % [ts, matches.last, self.cached_uri.timestamp, timeless[40..-1], ripd_file[50..-1]]
     end
-    # puts matches
     ! matches.empty?
   end
   def ripd_file
@@ -44,12 +42,10 @@ end
 # Flat list of usernames (in first column)
 #
 #
-USERNAMES_FILE = '/tmp/scrape_requests_foo.tsv'
+USERNAMES_FILE = 'rawd/scrape_requests/scrape_request-user.tsv'
 File.open(USERNAMES_FILE).each do |line|
   line.chomp!
-  screen_name, context, page, *_ = line.split(/\t/);
-  if !(context && page) then context = 'user'; page = 1 ; end
-  context.gsub!(/^scrape_/, '')
+  _, context, priority, page, id, screen_name = line.split(/\t/);
   track_count(:fetches, 1000)
   #
   # find file
