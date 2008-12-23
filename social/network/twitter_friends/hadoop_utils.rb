@@ -52,6 +52,19 @@ module HadoopUtils
     fields.each{|field| hsh[field.to_s].scrub! if hsh[field.to_s] }
   end
 
+  # Format for date-string conversion
+  DATEFORMAT = "%Y%m%d%H%M%S"
+  #
+  # place date into
+  #
+  def repair_date dt
+    DateTime.parse(dt).strftime(DATEFORMAT) if dt
+  end
+  def repair_date_attr hsh, attr
+    hsh[attr] = repair_date(hsh[attr])
+  end
+
+
   module HadoopStructMethods
     module ClassMethods
       def new_from_hash scraped_at, hsh
@@ -67,7 +80,7 @@ module HadoopUtils
     end
     # identifying output key
     def key
-      [self.class.to_s.underscore, self.values_of(*self.class.key_fields), scraped_at].flatten.join('-')
+      self.values_of(*self.class.key_fields).join('-')
     end
     # dump to stdout
     def emit
@@ -84,7 +97,7 @@ module HadoopUtils
 
   class HadoopStruct < Struct
     def self.new key_fields, *members
-      klass = super(*[members, :scraped_at].flatten)
+      klass = super(*[:scraped_at, members].flatten)
       klass.class_eval do
         include HadoopStructMethods
         cattr_accessor :key_fields

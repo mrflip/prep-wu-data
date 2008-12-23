@@ -98,11 +98,12 @@ def gen_1hood_reducer
       rels[relationship.to_sym] << user_b_id
     end
   end
+  dump_relation_lists   last_id, rels if last_id
 end
 
 
 case ARGV[0]
-when '--map'  then gen_1hood_mapper
+when '--map'    then gen_1hood_mapper
 when '--reduce' then gen_1hood_reducer
 else raise "Need to specify an argument: --map, --reduce"
 end
