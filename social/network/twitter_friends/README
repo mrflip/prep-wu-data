@@ -1,0 +1,10 @@
+
+
+scraper:
+
+# 
+scrape_request	context	priority	id	page	screen_name	
+scraped_file	date	context screen_name	id	page	scraped_at	priority	size	filename
+
+bundled file
+			context	screen_name	id	page	scraped_at
