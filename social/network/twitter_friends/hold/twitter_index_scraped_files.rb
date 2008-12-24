@@ -23,16 +23,7 @@ def dump_listing listing_filename, scrape_session, context, resource
     files = `ls -lR #{scrape_session}/#{resource}`.split(/\n/)[2..-1] or return
     files.each do |line|
       # track_count "#{scrape_session}-#{context}", 100000
-      _, _, _, _, size, dt, tm, file = line.split(/\s+/)
-      m = FILENAME_RE.match(file)
-      if !m then warn "Can't grok filename #{file}"
-      else
-        screen_name, page, *_ = m.captures
-        screen_name.gsub!(/%5F/, '_')
-      end
-      item_key = [screen_name, context, page].join('-')
-      scraped_at = repair_date( "#{dt} #{tm}" )
-      listing_file << ['scraped_file', item_key, scraped_at, screen_name, context, page, size, scrape_session_n ].join("\t")+"\n"
+      parse_ls_line
     end
   end
 end
