@@ -33,21 +33,6 @@ class ScrapeRequest
     self.new identifier, context, page, scraped_at
   end
 
-  #
-  # Path for the scraped URI
-  #
-  def filename
-    "#{resource_path}/#{identifier}.json%3Fpage%3D#{page}+#{scraped_at}.json"
-  end
-  GROK_FILENAME_RE = %r{(\w+/\w+)/(\w+)\.json%3Fpage#3D(\d+)+([\d\-]+)\.json}
-  def self.new_from_filename filename_str
-    m = GROK_FILENAME_RE.match(filename_str)
-    unless m then warn "Can't grok filename #{filename_str}"; return nil; end
-    resource, identifier, page, scraped_at = m.captures
-    context = context_for_resource(resource)
-    self.new identifier, context, page, scraped_at
-  end
-
   # Context <=> resource mapping
   #
   # aka. repairing the non-REST uri's

@@ -1,0 +1,16 @@
+
+
+* make some reduced sample data
+  - map-reduce to grep for all in a list of user_ids
+    and user names.
+* chmod -R a-r ripd/*
+
+
+HadoopStreamer
+
+struct
+map
+reduce
+
+
+accumul;ate
