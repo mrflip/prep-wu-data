@@ -26,6 +26,7 @@ cd WORK_DIR do
     dir = tar_contents_dir(tar_filename)
     Dir[dir+'/*'].each do |scraped_filename|
       contents = File.open(scraped_filename).read
+      contents = contents.gsub(/\s+\z/, '').gsub(/[\t\r\n]+/, ' ')
       puts [tar_filename, contents].join("\t")
     end
   end

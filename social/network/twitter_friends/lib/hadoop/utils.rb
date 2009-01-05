@@ -1,0 +1,5 @@
+require 'hadoop/extensions/symbol'
+require 'hadoop/extensions/hash'
+require 'hadoop/extensions/struct'
+require 'hadoop/extensions/string'
+require 'active_support/core_ext/blank.rb'

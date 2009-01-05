@@ -29,7 +29,7 @@ String.class_eval do
   end
 end
 
-module HadoopUtils
+module Hadoop
   #
   # For each given field in the hash,
   # scrub characters that will mess us up.

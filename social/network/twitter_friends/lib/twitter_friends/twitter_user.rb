@@ -1,12 +1,9 @@
-require 'twitter_user/twitter_model_common'
+require 'twitter_friends/twitter_model_common'
 require 'hadoop/extensions/string'
 module TwitterUserCommon
-  def resource_name()
-    super() + '-' + self.screen_name[0..0].downcase ; end ; end
 end
 
-
-class TwitterUser < Struct.new(
+class TwitterUser        < Struct.new(
     :id, :scraped_at,
     :screen_name, :protected,
     :followers_count, :friends_count, :statuses_count, :favourites_count,
@@ -14,7 +11,7 @@ class TwitterUser < Struct.new(
   include TwitterModelCommon
 end
 
-class TwitterUserProfile  = HadoopStruct.new(
+class TwitterUserProfile < Struct.new(
     :id, :scraped_at,
     :name, :url, :location, :description,
     :time_zone, :utc_offset )
@@ -22,7 +19,7 @@ class TwitterUserProfile  = HadoopStruct.new(
 end
 
 
-class TwitterUserStyle    = HadoopStruct.new(
+class TwitterUserStyle   < Struct.new(
     :id, :scraped_at,
     :profile_background_color,
     :profile_text_color,           :profile_link_color,
@@ -32,7 +29,8 @@ class TwitterUserStyle    = HadoopStruct.new(
   include TwitterModelCommon
 end
 
-class TwitterUserPartial  < Struct.new(
+
+class TwitterUserPartial < Struct.new(
     :id, :scraped_at,
     :screen_name, :protected, :followers_count, # appear in TwitterUser
     :name, :url, :location, :description,       # appear in TwitterUserProfile
@@ -40,3 +38,9 @@ class TwitterUserPartial  < Struct.new(
   include TwitterModelCommon
 end
 
+class TwitterUserId      < Struct.new(
+    :id, :screen_name )
+  def to_tsv
+    self.to_a.join("\t")
+  end
+end

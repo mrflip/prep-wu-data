@@ -1,4 +1,3 @@
-
 module TwitterModelCommon
   # ===========================================================================
   #
@@ -44,7 +43,7 @@ module TwitterModelCommon
   # Convert date into flat, uniform format
   # Note that DateTime.parse will still roundtrip the flattened date.
   #
-  def flatten_date dt
+  def self.flatten_date dt
     DateTime.parse(dt).strftime(DATEFORMAT) if dt
   end
 
@@ -59,7 +58,7 @@ module TwitterModelCommon
   # Dec it was 1.8M/day) the status_id will exceed 32 bits.  Something will
   # happen then.
   #
-  def zeropad_id id
+  def self.zeropad_id id
     id ||= 0
     '%010d' % [id.to_i]
   end
@@ -67,8 +66,9 @@ module TwitterModelCommon
   #
   # Express boolean as 1 (true) or 0 (false).
   #
-  def unbooleanize bool
+  def self.unbooleanize bool
     bool ? 1 : 0
   end
+
 
 end

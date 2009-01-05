@@ -1,6 +1,7 @@
-require 'rubygems'
-require 'json'
+require 'rubygems'; require 'json'
+require 'hadoop/utils' ; include Hadoop
 require 'twitter_friends/twitter_user'
+require 'twitter_friends/twitter_model_common'
 
 #
 # The JSON user records come off the wire a bit more heavyweight than we'd like.
@@ -31,7 +32,7 @@ require 'twitter_friends/twitter_user'
 #      "time_zone"                    : "Pacific Time (US & Canada)",
 #      "utc_offset"                   : -28800,
 #
-#      // "id"                           : 14693823,
+#      // "id"                        : 14693823,
 #      // scraped_at added in processing
 #      "profile_background_color"     : "9ae4e8",
 #      "profile_text_color"           : "000000",
@@ -53,22 +54,30 @@ module JsonUser
   # Make the data easier for batch flat-record processing
   #
   def self.repair_json_hsh hsh
-    hsh['created_at'] = flatten_date(hsh['created_at'])
-    hsh['id']         = zeropad_id(hsh['id'])
-    hsh['protected']  = unbooleanize(hsh['protected'])
-    scrub hsh, :name, :location, :description, :url
+    hsh['created_at'] = TwitterModelCommon.flatten_date(hsh['created_at'])
+    hsh['id']         = TwitterModelCommon.zeropad_id(hsh['id'])
+    hsh['protected']  = TwitterModelCommon.unbooleanize(hsh['protected'])
+    scrub_hash hsh, :name, :location, :description, :url
     hsh
   end
 
   #
-  # Expand a user .json record into our three model instances
+  # Expand a user .json record into model instances
   #
-  def self.new_user_models json_str, scraped_at
+  # Ex.
+  #   # Parse a complete twitter users/show/foo.json record
+  #   twitter_user, twitter_user_profile, twitter_user_style =
+  #     JsonUser.new_user_models json_str, scraped_at, TwitterUser, TwitterUserProfile, TwitterUserStyle
+  #
+  #   # just get the id and screen_name
+  #   JsonUser.new_user_models json_str, scraped_at, TwitterUserId
+  #
+  def self.new_user_models json_str, scraped_at, *klasses
     hsh = JSON.load(json_str) or return []
     hsh = repair_json_hsh hsh
     hsh['scraped_at'] = scraped_at
-    [TwitterUser, TwitterUserProfile, TwitterUserStyle].map do |klass|
-      klass.new(hsh[*klass.members])
+    klasses.map do |klass|
+      klass.from_hash(hsh)
     end
   end
 end
