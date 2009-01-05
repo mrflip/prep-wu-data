@@ -39,7 +39,7 @@ module Hadoop
     end
 
     def reduce_command
-      "#{mapred_script} --reduce"
+      "#{this_script_filename} --reduce"
     end
 
     def sort_fields
@@ -78,7 +78,7 @@ module Hadoop
       case
       when options[:map]
         mapper_klass.new.stream(self.options)
-      when options[:map]
+      when options[:reduce]
         reducer_klass.new.stream(self.options)
       when options[:go]
         exec_hadoop_streaming

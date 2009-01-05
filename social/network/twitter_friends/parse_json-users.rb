@@ -7,7 +7,6 @@ require 'hadoop/streamer'
 require 'twitter_friends/json_model'
 include Hadoop
 
-
 module ParseJsonUsers
   class Mapper < Hadoop::Streamer
     def process filename, user_json_str=nil
@@ -17,7 +16,6 @@ module ParseJsonUsers
       puts user_id.output_form
     end
   end
-
 end
 
 class ParseJsonUsersScript < Hadoop::Script

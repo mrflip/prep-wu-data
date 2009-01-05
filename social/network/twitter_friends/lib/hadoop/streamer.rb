@@ -16,15 +16,41 @@ module Hadoop
     end
   end
 
+
+  class AccumulatingStreamer < Streamer
+    attr_accessor :last_key
+    def initialize
+      reset!
+    end
+    def reset!
+      self.last_key = nil
+    end
+
+    def process key, *vals
+      # if we've seen nothing, adopt key
+      self.last_key ||= key
+      # if this is a new key,
+      if key != self.last_key
+        finalize                # process what we've collected so far
+        reset!                  # then forget about that key
+        self.last_key = key     # and start a new one
+      end
+      # collect the current line
+      accumulate key, *vals
+    end
+  end
+
+
+
   class StructStreamer < Streamer
     def itemize line
       klass_name, item_key, *vals = super(line)
       klass = klass_name.to_s.camelize.constantize
       [ klass.new(item_key, *vals) ]
     end
-    
+
   end
-  
+
   class UniqStreamer < Streamer
     attr_accessor :last_item
     def initialize
