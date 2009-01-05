@@ -1,87 +1,4 @@
 #!/usr/bin/env ruby
-# -*- coding: utf-8 -*-
-require 'rubygems'
-require 'json'
-require 'faster_csv'
-require 'imw' ; include IMW
-require 'imw/transform'
-require 'twitter_autourl'
-require 'hadoop_utils'; include HadoopUtils
-# as_dset __FILE__
-
-#
-# Load the data model
-#
-require 'twitter_flat_model.rb'
-
-def repair_id hsh, id_attr
-  hsh[id_attr] = "%012d"%hsh[id_attr].to_i
-end
-
-# ===========================================================================
-#
-# transform and emit User
-#
-def emit_user hsh, scraped_at, is_partial
-  hsh['protected']  = hsh['protected'] ? 1 : 0
-  repair_date_attr(hsh, 'created_at')
-  scrub hsh, :name, :location, :description, :url
-  if is_partial
-    TwitterUserPartial.new_from_hash(scraped_at, hsh).emit
-  else
-    TwitterUser.new_from_hash(       scraped_at, hsh).emit
-    TwitterUserProfile.new_from_hash(scraped_at, hsh).emit
-    TwitterUserStyle.new_from_hash(  scraped_at, hsh).emit
-  end
-end
-
-# ===========================================================================
-#
-# Transform tweet
-#
-ATSIGNS_TRANSFORMER   = RegexpRepeatedTransformer.new('text', RE_ATSIGNS)
-HASHTAGS_TRANSFORMER  = RegexpRepeatedTransformer.new('text', RE_HASHTAGS)
-TWEETURLS_TRANSFORMER = RegexpRepeatedTransformer.new('text', RE_URL)
-def emit_tweet tweet_hsh
-  #
-  scrub tweet_hsh, :text
-  fromsource_raw = tweet_hsh['source']
-  if ! fromsource_raw.blank?
-    if m = %r{<a href="([^\"]+)">([^<]+)</a>}.match(fromsource_raw)
-      tweet_hsh['fromsource_url'], tweet_hsh['fromsource'] = m.captures
-    else
-      tweet_hsh['fromsource'] = fromsource_raw
-    end
-  end
-  tweet_hsh['favorited']  = tweet_hsh['favorited'] ? 1 : 0
-  tweet_hsh['truncated']  = tweet_hsh['truncated'] ? 1 : 0
-  tweet_hsh['tweet_len']  = tweet_hsh['text'].length
-  #
-  # Emit
-  #
-  repair_date_attr(tweet_hsh, 'created_at')
-  scraped_at      = tweet_hsh['created_at']     # Tweets are immutable
-  status_id       = tweet_hsh['id']
-  twitter_user    = tweet_hsh['twitter_user']
-  twitter_user_id = tweet_hsh['twitter_user_id']
-  owner_id        = twitter_user                # emit using twitter_user as key so all group together.
-  #
-  if tweet_hsh['in_reply_to_user_id'] then
-    at                    = repair_id(tweet_hsh, 'in_reply_to_user_id')
-    in_reply_to_status_id = repair_id(tweet_hsh, 'in_reply_to_status_id')
-    reply    = ARepliedB.new_from_hash( scraped_at, 'user_a_id' => twitter_user_id, 'user_b_id'   => at, 'status_id' => status_id, 'in_reply_to_status_id' => in_reply_to_status_id).emit
-  end
-  ATSIGNS_TRANSFORMER.transform(  tweet_hsh).each do |at|
-    atsign    = AAtsignsB.new_from_hash(scraped_at, 'user_a_id' => twitter_user_id, 'user_b_name'  => at, 'user_a_name' => twitter_user, 'status_id' => status_id).emit
-  end
-  TWEETURLS_TRANSFORMER.transform(tweet_hsh).each do |at|
-    tweet_url = TweetUrl.new_from_hash( scraped_at, 'user_a_id' => twitter_user_id, 'tweet_url'   => at, 'status_id' => status_id).emit
-  end
-  HASHTAGS_TRANSFORMER.transform( tweet_hsh).each do |at|
-    hashtag   = Hashtag.new_from_hash(  scraped_at, 'user_a_id' => twitter_user_id, 'hashtag'     => at, 'status_id' => status_id).emit
-  end
-  Tweet.new_from_hash(scraped_at, tweet_hsh).emit
-end
 
 # ===========================================================================
 #
@@ -140,8 +57,6 @@ def parse_keyed_file
         #
         tweet_hsh  = hsh['status'] or next
         tweet_hsh['twitter_user'   ] = hsh['screen_name']
-        tweet_hsh['twitter_user_id'] = repair_id(hsh,       'id')
-        tweet_hsh['id']              = repair_id(tweet_hsh, 'id')
         emit_tweet tweet_hsh
       end
     when 'user'
@@ -188,7 +103,6 @@ def parse_flat_tweets
     end # tweet
   end # file
 end
-
 
 case ARGV[0]
 when '--keyed'    then parse_keyed_file

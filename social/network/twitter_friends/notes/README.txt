@@ -1,5 +1,4 @@
 
-
 Approx. cardinality:
    8 068 820    twitter_user_partial.tsv # partial users as found in other users' tweets
    2 675 458    ... 		         ... giving info on 2675458 unique users

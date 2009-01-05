@@ -1,4 +1,3 @@
-
 class TwitterScrapeStore
   attr_accessor :ripd_base
   def initialize ripd_base

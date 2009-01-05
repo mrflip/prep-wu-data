@@ -1,3 +1,12 @@
+#
+#
+# REMEMBER TO ADD ITERATION TO scrape_requests
+# move public feed to http://twitter.com/statuses/public_timeline
+# tier the ripd/ directories
+#
+
+
+
 require 'imw/chunk_store/cached_uri'
 require 'imw/chunk_store/scrape'
 

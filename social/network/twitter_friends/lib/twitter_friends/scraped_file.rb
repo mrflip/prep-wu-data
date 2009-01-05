@@ -5,6 +5,14 @@ require 'forwardable'
 # in time, monument to a bygone age.
 #
 #
+
+# class ScrapedFile < Struct.new(
+#     :screen_name, :context,
+#     :page, :size, :scrape_session )
+#   include TwitterModelCommon
+#
+# end
+
 class ScrapedFile
   attr_accessor :size, :scraped_at
   def_delegators :scrape_request, :identifier, :context, :resource, :page
