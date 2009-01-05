@@ -46,7 +46,7 @@ Struct.class_eval do
   def self.from_hash(hsh, has_symbol_keys=false)
     keys = self.members
     keys = keys.map(&:to_sym) if has_symbol_keys
-    self.new *hsh.slice(*keys).values
+    self.new *hsh.values_of(*keys)
   end
 
   #

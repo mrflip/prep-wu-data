@@ -11,12 +11,19 @@ module TwitterModelCommon
     self.to_a.to_tsv
   end
 
+  #
+  # dump resource name and all fields, tab-separated
+  #
+  def output_form
+    [resource_name, self.to_tsv].join("\t")
+  end
+
   # ===========================================================================
   #
   # express the class type
   #
   def resource_name
-    puts self.class.to_s.underscore
+    self.class.to_s.underscore
   end
   #
   # emit an identifiable resource name that will partition kindof efficiently at

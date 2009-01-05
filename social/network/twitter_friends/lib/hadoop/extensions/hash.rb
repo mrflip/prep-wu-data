@@ -33,6 +33,7 @@ class Hash
   def slice!(*keys)
     replace(slice(*keys))
   end
+  alias_method :values_of, :values_at
 
   #
   # remove all key-value pairs where the value is nil

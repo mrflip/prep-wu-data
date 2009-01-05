@@ -22,10 +22,13 @@ mkdir_p WORK_DIR
 cd WORK_DIR do
   $stdin.each do |tar_filename|
     tar_filename.chomp!
-    `hdp-cat arch/ripd/#{tar_filename} | tar xjfk - --mode 644`
     dir = tar_contents_dir(tar_filename)
+    if !File.exists?(dir)
+      `hdp-cat arch/ripd/#{tar_filename} | tar xjfk - --mode 644`
+    end
     Dir[dir+'/*'].each do |scraped_filename|
       contents = File.open(scraped_filename).read
+      next unless contents && (! contents.empty?)
       contents = contents.gsub(/\s+\z/, '').gsub(/[\t\r\n]+/, ' ')
       puts [tar_filename, contents].join("\t")
     end

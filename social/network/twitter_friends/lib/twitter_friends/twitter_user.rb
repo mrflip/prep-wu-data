@@ -40,6 +40,7 @@ end
 
 class TwitterUserId      < Struct.new(
     :id, :screen_name )
+  include TwitterModelCommon
   def to_tsv
     self.to_a.join("\t")
   end

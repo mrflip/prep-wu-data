@@ -10,9 +10,11 @@ include Hadoop
 
 module ParseJsonUsers
   class Mapper < Hadoop::Streamer
-    def process filename, user_json_str
+    def process filename, user_json_str=nil
+      return unless user_json_str
       user_id, *_ = JsonUser.new_user_models(user_json_str, nil, TwitterUserId)
-      puts user_id.to_tsv
+      return unless user_id
+      puts user_id.output_form
     end
   end
 

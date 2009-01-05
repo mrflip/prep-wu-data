@@ -5,11 +5,6 @@
 # tier the ripd/ directories
 #
 
-
-
-require 'imw/chunk_store/cached_uri'
-require 'imw/chunk_store/scrape'
-
 class ScrapeRequest
   attr_accessor :identifier, :context, :page
 
@@ -24,14 +19,6 @@ class ScrapeRequest
   end
 
   #
-  # The URI for a given resource
-  #
-  def uri
-    "http://twitter.com/#{resource_path}/#{identifier}.json?page=#{page}"
-  end
-  # Regular expression to grok resource from uri
-  GROK_URI_RE = %r{http://twitter.com/(\w+/\w+)/(\w+)\.json\?page=(\d+)}
-  #
   # Create a ScrapeRequest from a URI string.
   #
   def self.new_from_uri uri_str, scraped_at
@@ -42,18 +29,4 @@ class ScrapeRequest
     self.new identifier, context, page, scraped_at
   end
 
-  # Context <=> resource mapping
-  #
-  # aka. repairing the non-REST uri's
-  RESOURCE_PATH_FROM_CONTEXT = {
-    :followers => 'statuses/followers', :friends => 'statuses/friends', :user => 'users/show'
-  }
-  # Get url resource for context
-  def resource_path
-    RESOURCE_PATH_FROM_CONTEXT[context]
-  end
-  # Get context from url resource
-  def self.context_for_resource(resource)
-    RESOURCE_PATH_FROM_CONTEXT.invert[resource]
-  end
 end

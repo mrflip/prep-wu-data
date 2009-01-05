@@ -73,7 +73,9 @@ module JsonUser
   #   JsonUser.new_user_models json_str, scraped_at, TwitterUserId
   #
   def self.new_user_models json_str, scraped_at, *klasses
-    hsh = JSON.load(json_str) or return []
+    begin
+      hsh = JSON.load(json_str) or return []
+    rescue Exception => e; return [] ; end
     hsh = repair_json_hsh hsh
     hsh['scraped_at'] = scraped_at
     klasses.map do |klass|
