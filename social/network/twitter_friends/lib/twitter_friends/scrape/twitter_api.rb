@@ -27,9 +27,8 @@ module TwitterApi
   module ClassMethods
     # Get context from url resource
     def context_for_resource(resource)
-      RESOURCE_PATH_FROM_CONTEXT.invert[resource]
+      RESOURCE_PATH_FROM_CONTEXT.invert[resource] or raise("Wrong resource specification #{resource}")
     end
-
   end
 
   def self.included base

@@ -14,8 +14,9 @@ module TwitterModelCommon
   #
   # dump resource name and all fields, tab-separated
   #
-  def output_form
-    [resource_name, self.to_tsv].join("\t")
+  def output_form spread_keyspace=false
+    rsrc = spread_keyspace ? keyspace_spread_resource_name : resource_name
+    [rsrc, self.to_tsv].join("\t")
   end
 
   # ===========================================================================
@@ -80,6 +81,4 @@ module TwitterModelCommon
   def self.unbooleanize bool
     case bool when 0, '0', false, nil then 0 else 1 end
   end
-
-
 end

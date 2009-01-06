@@ -18,6 +18,11 @@ module Hadoop
     def itemize line
       line.chomp.split("\t")
     end
+
+    def bad_record! *args
+      warn "Bad record #{args.inspect[0..400]}"
+      puts ["bad_record", args].flatten.join("\t")
+    end
   end
 
 

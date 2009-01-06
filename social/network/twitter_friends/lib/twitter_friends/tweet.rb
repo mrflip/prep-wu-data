@@ -1,4 +1,4 @@
-require 'twitter_model_common'
+require 'twitter_friends/twitter_model_common'
 
 # require 'imw' ; include IMW
 # require 'imw/transform'

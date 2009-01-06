@@ -4,27 +4,28 @@ require 'twitter_friends/twitter_user'
 require 'twitter_friends/tweet'
 require 'twitter_friends/twitter_model_common'
 
-module JsonParser
-  attr_accessor :hsh
-  def initialize hsh
-    self.hsh = hsh
-    self.fix_hsh!
+class JsonParser
+  attr_accessor :raw
+  def initialize raw
+    self.raw = raw
+    self.fix_raw!
   end
 
   #
   # Coerce any fields that need fixin'
   #
-  def fix_hsh!
+  def fix_raw!
   end
 
   #
   # Safely parse the json object and instantiate with the raw hash
   #
   def self.new_from_json json_str, *args
+    return unless json_str
     begin
-      hsh = JSON.load(json_str) or return
+      raw = JSON.load(json_str) or return
     rescue Exception => e; return ; end
-    self.new hsh, *args
+    self.new raw, *args
   end
 end
 
@@ -73,26 +74,27 @@ end
 #
 #    }
 #
-module JsonUser < JsonParser
-  def initialize hsh, scraped_at
-    super hsh
-    self.hsh['scraped_at'] = scraped_at
+class JsonUser < JsonParser
+  def initialize raw, scraped_at
+    super raw
+    self.raw['scraped_at'] = scraped_at
   end
+  def healthy?() raw && raw.is_a?(Hash) end
 
   # user id from the raw hash
   def twitter_user_id
-    hsh['twitter_user_id']
+    raw['twitter_user_id']
   end
 
   # ===========================================================================
   #
   # Make the data easier for batch flat-record processing
   #
-  def fix_hsh!
-    hsh['created_at'] = TwitterModelCommon.flatten_date(hsh['created_at'])
-    hsh['id']         = TwitterModelCommon.zeropad_id(hsh['id'])
-    hsh['protected']  = TwitterModelCommon.unbooleanize(hsh['protected'])
-    scrub_hash hsh, :name, :location, :description, :url
+  def fix_raw!
+    raw['created_at'] = TwitterModelCommon.flatten_date(raw['created_at'])
+    raw['id']         = TwitterModelCommon.zeropad_id(raw['id'])
+    raw['protected']  = TwitterModelCommon.unbooleanize(raw['protected'])
+    scrub_hash raw, :name, :location, :description, :url
   end
 
   # ===========================================================================
@@ -109,8 +111,9 @@ module JsonUser < JsonParser
   #   JsonUser.generate_user_classes TwitterUserId
   #
   def generate_user_classes *klasses
+    return [] unless healthy?
     klasses.map do |klass|
-      klass.from_hash(hsh)
+      klass.from_hash(raw)
     end
   end
   #
@@ -131,10 +134,9 @@ module JsonUser < JsonParser
   #
   # produce the included last tweet
   #
-  def generate_last_tweet
-    tweet_hsh = hsh['status']
-    return unless tweet_hsh && tweet_hsh.is_a?(Hash)
-    JsonTweet.new(tweet_hsh, twitter_user_id).generate_tweet
+  def generate_tweet
+    raw_tweet = raw['status']
+    JsonTweet.new(raw_tweet, twitter_user_id).generate_tweet
   end
 end
 
@@ -157,25 +159,59 @@ end
 #   "source"                       : "web",
 # }
 #
-module JsonTweet
+class JsonTweet < JsonParser
+  def initialize raw, twitter_user_id = nil
+    super raw
+    if twitter_user_id
+      raw['twitter_user_id'] = twitter_user_id
+    elsif raw['user'] && raw['user']['id']
+      raw['twitter_user_id'] = TwitterModelCommon.zeropad_id( raw['user']['id'] )
+    end
+  end
+  def healthy?() raw && raw.is_a?(Hash) end
+
   # ===========================================================================
   #
   # Make the data easier for batch flat-record processing
   #
-  def self.fix_hsh!
-    hsh['id']         = TwitterModelCommon.zeropad_id(  hsh['id'])
-    hsh['created_at'] = TwitterModelCommon.flatten_date(hsh['created_at'])
-    hsh['favorited']  = TwitterModelCommon.unbooleanize(hsh['favorited'])
-    hsh['truncated']  = TwitterModelCommon.unbooleanize(hsh['truncated'])
-    scrub_hash hsh, :text
-  end
-
-  def initialize hsh, scraped_at
-    super hsh
-    hsh['twitter_user_id'] = twitter_user_id
+  def fix_raw!
+    raw['id']         = TwitterModelCommon.zeropad_id(  raw['id'])
+    raw['created_at'] = TwitterModelCommon.flatten_date(raw['created_at'])
+    raw['favorited']  = TwitterModelCommon.unbooleanize(raw['favorited'])
+    raw['truncated']  = TwitterModelCommon.unbooleanize(raw['truncated'])
+    scrub_hash raw, :text
   end
 
   def generate_tweet
-    Tweet.from_hash(hsh)
+    return unless healthy?
+    Tweet.from_hash(raw)
+  end
+  #
+  # produce the included last tweet
+  #
+  def generate_user_partial
+    raw_user = raw['user']
+    JsonUser.new(raw_user, raw['created_at']).generate_user_partial
+  end
+end
+
+# Public timeline is an array of users with one tweet each
+class JsonPublicTimeline < JsonParser
+  attr_accessor :scraped_at
+  def initialize raw, scraped_at
+    super raw
+    self.scraped_at = scraped_at
+  end
+
+  # Public timeline is an array of users with one tweet each
+  def healthy?() raw && raw.is_a?(Array) end
+  def each &block
+    raw.each do |hsh|
+      parsed = JsonTweet.new(hsh, nil)
+      next unless parsed && parsed.healthy?
+      twitter_user = parsed.generate_user_partial
+      tweet        = parsed.generate_tweet
+      yield twitter_user, tweet
+    end
   end
 end

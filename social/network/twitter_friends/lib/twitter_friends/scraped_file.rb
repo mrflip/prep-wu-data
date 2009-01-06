@@ -14,7 +14,7 @@ class ScrapedFile < Struct.new(
   include TwitterModelCommon
   include TwitterApi
   attr_accessor :bogus
-  def resource_name
+  def keyspace_spread_resource_name
     case
     when self.bogus          then :scraped_file_bogus
     when self.size.to_i == 0 then :scraped_file_zerolen
@@ -49,30 +49,45 @@ class ScrapedFile < Struct.new(
     self.new_from_filename(filename, size) or return nil
   end
 
-
-  GROK_FILENAME_RE = %r{com\.twitter/_(\d{8})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+([\d\-]+)\.json}
-  def self.new_from_filename filename, size
-    m = GROK_FILENAME_RE.match(filename)
-    if ! m then warn "Can't grok filename #{filename}"; return self.new_from_bogus(filename, size); end
-    scrape_session, resource, identifier, page, scraped_at = m.captures
-    # extract field values
-    identifier = Addressable::URI.unencode_component(identifier)
-    context = context_for_resource(resource) or raise("Wrong resource specification #{resource} for '#{filename}'")
-    # instantiate
-    self.new scrape_session, context, identifier, page, size, scraped_at, filename
-  end
-
+  #
+  # Format for ripd urls on disk
+  #
+  # This will change after the great renaming
+  #
+  GROK_FILENAME_RE    = %r{com\.twitter/_(\d{8})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+(\d{8}-\d{6})\.json}
+  GROK_PT_FILENAME_RE = %r{public_timeline/(\d{6}/\d\d/\d\d)/public_timeline-(\d{8}-\d{6}).json}
   GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8})/([\w/]+)/(.*)\.json%3Fpage%3D(.*)\+([\d\-]+)\.json}
-  def self.new_from_bogus filename, size
-    m = GROK_BOGUS_FILENAME_RE.match(filename)
-    if m
+  #
+  # Instantiate from filename
+  #
+  def self.new_from_filename filename, size
+    case
+    when m = GROK_FILENAME_RE.match(filename)
+      scrape_session, resource, identifier, page, scraped_at = m.captures
+      identifier = Addressable::URI.unencode_component(identifier)
+      context    = context_for_resource(resource)
+    when m = GROK_BOGUS_FILENAME_RE.match(filename)
+      scrape_session, resource, identifier, page, scraped_at = m.captures
+      identifier = Addressable::URI.unencode_component(identifier)
+      context    = context_for_resource(resource)
+      bogus      = true
+    when m = GROK_PT_FILENAME_RE.match(filename)
+      scrape_session, scraped_at, *_ = m.captures
+      scraped_at.gsub!(/-/, '')
+      identifier = "public_timeline-#{scraped_at}"
+      context, resource, page = ['public_timeline', 'public_timeline', 1]
+    when
       scrape_session, resource, identifier, page, scraped_at = m.captures
     else
+      warn "Can't grok filename #{filename}";
       scrape_session, resource, identifier, page, scraped_at = []
+      bogus      = true
     end
-    context = context_for_resource(resource)
+    #
+    # extract field values
+    # instantiate
     scraped_file = self.new scrape_session, context, identifier, page, size, scraped_at, filename
-    scraped_file.bogus = true
+    scraped_file.bogus = bogus
     scraped_file
   end
 
