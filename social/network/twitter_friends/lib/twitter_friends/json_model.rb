@@ -83,3 +83,51 @@ module JsonUser
     end
   end
 end
+
+module JsonTweet
+  # ===========================================================================
+  #
+  # Make the data easier for batch flat-record processing
+  #
+  def self.repair_json_hsh hsh
+    hsh['created_at'] = TwitterModelCommon.flatten_date(hsh['created_at'])
+    hsh['id']         = TwitterModelCommon.zeropad_id(hsh['id'])
+    hsh['protected']  = TwitterModelCommon.unbooleanize(hsh['protected'])
+    scrub_hash hsh, :name, :location, :description, :url
+    hsh
+  end
+
+  def self.parse_source tweet_source
+    # fromsource_raw = tweet_hsh['source']
+    if ! tweet_source_raw.blank?
+      if m = %r{<a href="([^\"]+)">([^<]+)</a>}.match(tweet_source_raw)
+        tweet_hsh['fromsource_url'], tweet_hsh['fromsource'] = m.captures
+      else
+        tweet_hsh['fromsource'] = tweet_source_raw
+      end
+    end
+
+  end
+
+  #
+  # Expand a user .json record into model instances
+  #
+  # Ex.
+  #   # Parse a complete twitter users/show/foo.json record
+  #   twitter_user, twitter_user_profile, twitter_user_style =
+  #     JsonUser.new_user_models json_str, scraped_at, TwitterUser, TwitterUserProfile, TwitterUserStyle
+  #
+  #   # just get the id and screen_name
+  #   JsonUser.new_user_models json_str, scraped_at, TwitterUserId
+  #
+  def self.new_user_models json_str, scraped_at, *klasses
+    begin
+      hsh = JSON.load(json_str) or return []
+    rescue Exception => e; return [] ; end
+    hsh = repair_json_hsh hsh
+    hsh['scraped_at'] = scraped_at
+    klasses.map do |klass|
+      klass.from_hash(hsh)
+    end
+  end
+end

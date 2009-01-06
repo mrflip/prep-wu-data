@@ -23,14 +23,7 @@ TWEETURLS_TRANSFORMER = RegexpRepeatedTransformer.new('text', RE_URL)
 def emit_tweet tweet_hsh
   #
   scrub tweet_hsh, :text
-  fromsource_raw = tweet_hsh['source']
-  if ! fromsource_raw.blank?
-    if m = %r{<a href="([^\"]+)">([^<]+)</a>}.match(fromsource_raw)
-      tweet_hsh['fromsource_url'], tweet_hsh['fromsource'] = m.captures
-    else
-      tweet_hsh['fromsource'] = fromsource_raw
-    end
-  end
+
   tweet_hsh['favorited']  = tweet_hsh['favorited'] ? 1 : 0
   tweet_hsh['truncated']  = tweet_hsh['truncated'] ? 1 : 0
   tweet_hsh['tweet_len']  = tweet_hsh['text'].length
