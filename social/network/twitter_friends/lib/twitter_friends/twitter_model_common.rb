@@ -48,7 +48,7 @@ module TwitterModelCommon
   DATEFORMAT = "%Y%m%d%H%M%S"
   #
   # Convert date into flat, uniform format
-  # Note that DateTime.parse will still roundtrip the flattened date.
+  # This method is idempotent: repeated calls give same result.
   #
   def self.flatten_date dt
     DateTime.parse(dt).strftime(DATEFORMAT) if dt
@@ -64,6 +64,7 @@ module TwitterModelCommon
   # Note that sometime in 2010 (or sooner, depending on its growth rate: in 2008
   # Dec it was 1.8M/day) the status_id will exceed 32 bits.  Something will
   # happen then.
+  # This method is idempotent: repeated calls give same result.
   #
   def self.zeropad_id id
     id ||= 0
@@ -71,10 +72,13 @@ module TwitterModelCommon
   end
 
   #
-  # Express boolean as 1 (true) or 0 (false).
+  # Express boolean as 1 (true) or 0 (false).  In contravention of typical ruby
+  # semantics (but in a way that is more robust for hadoop-like batch
+  # processing), the number 0, the string '0', nil and false are all considered
+  # false. (This also makes the method idempotent: repeated calls give same result.)
   #
   def self.unbooleanize bool
-    bool ? 1 : 0
+    case bool when 0, '0', false, nil then 0 else 1 end
   end
 
 

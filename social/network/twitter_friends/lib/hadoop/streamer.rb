@@ -1,11 +1,15 @@
 module Hadoop
   class Streamer
-    attr_accessor :sort_key_fields
+    attr_accessor :sort_key_fields, :options
+
+    def initialize options
+      self.options = options
+    end
 
     #
     # Convert each line to struct
     # send to processor
-    def stream options={ }
+    def stream
       $stdin.each do |line|
         item = itemize line
         process(*item)

@@ -9,9 +9,16 @@ include Hadoop
 
 module ParseJsonUsers
   class Mapper < Hadoop::Streamer
+    attr_accessor :parser
+    def initialize options
+      case
+      when options[:user]               then self.parser = JsonUser
+      when options[:public_timeline]    then self.parser = JsonTweet
+      end
+    end
     def process filename, user_json_str=nil
       return unless user_json_str
-      user_id, *_ = JsonUser.new_user_models(user_json_str, nil, TwitterUserId)
+      user_id, *_ = self.parser.new_user_models(user_json_str, nil, TwitterUserId)
       return unless user_id
       puts user_id.output_form
     end
@@ -23,4 +30,6 @@ class ParseJsonUsersScript < Hadoop::Script
     '/usr/bin/uniq'
   end
 end
+
+
 ParseJsonUsersScript.new(ParseJsonUsers::Mapper, nil).run
