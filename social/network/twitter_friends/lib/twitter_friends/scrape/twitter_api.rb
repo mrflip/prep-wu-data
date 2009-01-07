@@ -17,11 +17,11 @@ module TwitterApi
     :friends         => 'statuses/friends',
     :favorites       => 'favorites',
     :timeline        => 'statuses/user_timeline',
-    :public_timeline => 'statuses'
+    :public_timeline => 'statuses/public_timeline'
   }
   # Get url resource for context
   def resource_path
-    RESOURCE_PATH_FROM_CONTEXT[context]
+    RESOURCE_PATH_FROM_CONTEXT[context.to_sym]
   end
 
   module ClassMethods

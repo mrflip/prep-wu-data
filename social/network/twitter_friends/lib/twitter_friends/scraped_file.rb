@@ -10,7 +10,7 @@ require 'addressable/uri'
 #
 class ScrapedFile < Struct.new(
     :scrape_session, :context, :identifier, :page,
-    :size, :scraped_at, :filename )
+    :scraped_at, :moreinfo, :size, :filename )
   include TwitterModelCommon
   include TwitterApi
   attr_accessor :bogus
@@ -24,8 +24,23 @@ class ScrapedFile < Struct.new(
   #
   # Filename for the scraped URI
   #
-  def set_filename!
-    self.filename = "#{resource_path}/#{identifier}.json%3Fpage%3D#{page}+#{scraped_at}.json"
+  def gen_scraped_filename
+    self.filename = [
+      filename_host_part, filename_tier_part, resource_path,
+      "#{identifier}.json%3Fpage%3D#{page}+#{scraped_at}+#{moreinfo}.json" ].join("/")
+  end
+  # def old_scraped_filename
+  #   old_filename_tier_part =
+  #   self.filename = [
+  #     filename_host_part, filename_tier_part, resource_path,
+  #     "#{identifier}.json%3Fpage%3D#{page}+#{scraped_at}.json" ].join("/")
+  # end
+  def filename_host_part
+    '_com/_tw/com.twitter'
+  end
+  def filename_tier_part
+    day_part, hour_part = /(\d{8})(\d{2})/.match(scraped_at).captures
+    "_%s/_%s" %[day_part, hour_part]
   end
 
   #

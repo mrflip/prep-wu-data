@@ -52,7 +52,9 @@ module TwitterModelCommon
   # This method is idempotent: repeated calls give same result.
   #
   def self.flatten_date dt
-    DateTime.parse(dt).strftime(DATEFORMAT) if dt
+    begin
+      DateTime.parse(dt).strftime(DATEFORMAT) if dt
+    rescue ; nil ; end
   end
 
   #

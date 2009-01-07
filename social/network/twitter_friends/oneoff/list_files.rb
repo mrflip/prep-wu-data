@@ -6,18 +6,32 @@ require 'hadoop/utils'
 require 'hadoop/script'
 require 'hadoop/streamer'
 require 'twitter_friends/scraped_file'
-require 'twitter_friends/json_model'
-include Hadoop
+require 'twitter_friends/scrape_store'
+# require 'twitter_friends/json_model'
 
-WORK_DIR='/tmp/ripd'
-mkdir_p WORK_DIR
+#
+# Input:
+#
+#  hdp-ls arch/ripd | grep 'bz2' | hdp-put - rawd/scraped_files/scrape_stores.txt
+#
 
-cd WORK_DIR do
-  $stdin.each do |tar_filename|
-    tar_filename.chomp!
-    `hdp-cat arch/ripd/#{tar_filename} | tar tjvf - | egrep '\.json$'`.split("\n").each do |line|
-      scraped_file = ScrapedFile.new_from_ls_line(line)
-      puts scraped_file.output_form
+#
+# Flat listing of each scrape store
+#
+class RenameMapper < Hadoop::Streamer
+  def process *filelisting
+    tar_filename = filelisting.last.split(/\s+/).last # handle an ls listing or flat list.
+    scrape_store = TarScrapeStore.new(tar_filename)
+    scrape_store.listing.each do |line|
+      puts tar_filename + "\t" + line
     end
   end
 end
+
+class TarFileListingScript < Hadoop::Script
+  def reduce_command
+    '/bin/cat'
+  end
+end
+
+TarFileListingScript.new(RenameMapper, nil).run

@@ -17,6 +17,9 @@ class Tweet < Struct.new(
     :text,
     :source )
   include TwitterModelCommon
+  def key()
+    id.to_s
+  end
 
 end
 

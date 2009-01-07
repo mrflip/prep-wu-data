@@ -9,10 +9,18 @@ require 'hadoop/utils'
 #
 WORK_DIR='/tmp/ripd'
 
+#
+# Generate a list of files to use
+#
+# hdp-ls arch/public_timeline | grep '.tar.bz2' | hdp-put - arch/public_timeline_files.txt
+#
+# hdp-rm -r rawd/bundled/public_timeline ; hdp-stream-flat arch/public_timeline_files.txt rawd/bundled/public_timeline `realpath bundle.rb` /bin/cat -jobconf stream.num.map.output.key.fields=2 -jobconf mapred.map.tasks=`hdp-cat arch/public_timeline_files.txt | wc -l`
+
+
 # arch/public_timeline/public_timeline-200811.tar.bz2
 # => public_timeline/200811/29/04/public_timeline-20081129-045042.json
 
-TAR_RE = %r{(public_timeline)-([\d-]+)\.tar\.bz2}
+TAR_RE = %r{(public_timeline)-([\d-]+)(?:-partial)?\.tar\.bz2}
 def tar_contents_dir tar_filename
   m = TAR_RE.match(tar_filename) or raise "Can't grok archive filename '#{tar_filename}'"
   resource, scrape_session = m.captures
@@ -23,7 +31,7 @@ end
 
 def extract_tar_archive tar_filename, dir
   if !File.exists?(dir)
-    `cat #{tar_filename} | tar xjfk - --mode 644`
+    `hdp-cat #{tar_filename} | tar xjfk - --mode 644`
   end
 end
 
@@ -35,11 +43,11 @@ end
 #
 mkdir_p WORK_DIR
 cd WORK_DIR do
-  $stdin.each do |tar_filename|
+  $stdin.each do |line|
     #
     # extract the archive
     #
-    tar_filename.chomp!
+    tar_filename = line.chomp.strip.split(/\s+/).last
     dir = tar_contents_dir(tar_filename)
     extract_tar_archive tar_filename, dir
     #

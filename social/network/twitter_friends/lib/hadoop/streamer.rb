@@ -28,11 +28,16 @@ module Hadoop
 
   class AccumulatingStreamer < Streamer
     attr_accessor :last_key
-    def initialize
+    def initialize options
+      super options
       reset!
     end
     def reset!
       self.last_key = nil
+    end
+
+    def finalize
+      raise "override the finalize method in your subclass"
     end
 
     def process key, *vals
@@ -46,6 +51,11 @@ module Hadoop
       end
       # collect the current line
       accumulate key, *vals
+    end
+
+    def stream
+      super
+      finalize
     end
   end
 

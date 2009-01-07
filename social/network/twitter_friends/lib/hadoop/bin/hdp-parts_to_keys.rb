@@ -27,7 +27,7 @@ file_listings[1..-1].each do |file_listing|
   else
     firstline = `hdp-cat #{filename} | head -qn1 `
     file_key, _ = firstline.split("\t", 2)
-    unless file_key && (file_key =~ /\A[\w\-]+\z/)
+    unless file_key && (file_key =~ /\A[\w\-\.]+\z/)
       warn "Don't want to rename to '#{file_key}'... skipping"
       next
     end
