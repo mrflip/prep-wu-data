@@ -43,7 +43,9 @@ module Hadoop
     # by default, call this script in --map mode
     #
     def map_command
-      "#{this_script_filename} --map " + options[:all_args].join(" ")
+      case
+      when mapper_klass then "#{this_script_filename} --map " + options[:all_args].join(" ")
+      else '/bin/cat' end
     end
 
     #
@@ -51,7 +53,9 @@ module Hadoop
     # by default, call this script in --reduce mode
     #
     def reduce_command
-      "#{this_script_filename} --reduce " + options[:all_args].join(" ")
+      case
+      when reducer_klass then "#{this_script_filename} --reduce " + options[:all_args].join(" ")
+      else '/bin/cat' end
     end
 
     #
@@ -62,18 +66,29 @@ module Hadoop
       self.options[:sort_fields] || 2
     end
 
+    def extra_args
+      a = []
+      a << "-jobconf mapred.map.tasks=#{options[:map_tasks]}"       if options[:map_tasks]
+      a << "-jobconf mapred.reduce.tasks=#{options[:reduce_tasks]}" if options[:reduce_tasks]
+      a.join(" ")
+    end
+
     def exec_hadoop_streaming
       slug = Time.now.strftime("%Y%m%d")
       input_path, output_path = options[:rest][0..1]
       raise "You need to specify a parsed input directory and a directory for output. Got #{ARGV.inspect}" if input_path.blank? || output_path.blank?
       $stderr.puts "Launching hadoop streaming on self"
-      if options[:fake]
+      case
+      when options[:fake]
         command = %Q{ cat '#{input_path}' | #{map_command} | sort | #{reduce_command} > '#{output_path}'}
-        $stderr.puts command
-        $stdout.puts `#{command}`
+      when options[:nopartition]
+        command = %Q{ hdp-stream-flat '#{input_path}' '#{output_path}' '#{map_command}' '#{reduce_command}' #{extra_args} }
       else
-        %x{ hdp-stream '#{input_path}' '#{output_path}' '#{map_command}' '#{reduce_command}' #{sort_fields} }
+        command = %Q{ hdp-stream '#{input_path}' '#{output_path}' '#{map_command}' '#{reduce_command}' #{sort_fields} #{extra_args} }
       end
+      # $stderr.puts options.inspect
+      $stderr.puts command
+      $stdout.puts `#{command}`
     end
 
     #

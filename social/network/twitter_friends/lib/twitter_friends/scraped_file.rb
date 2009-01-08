@@ -10,24 +10,30 @@ require 'addressable/uri'
 #
 class ScrapedFile < Struct.new(
     :scrape_session, :context, :identifier, :page,
-    :scraped_at, :moreinfo, :size, :filename )
+    :scraped_at, :filename, :size, :moreinfo, :scrape_store )
   include TwitterModelCommon
   include TwitterApi
   attr_accessor :bogus
+
   def keyspace_spread_resource_name
     case
     when self.bogus          then :scraped_file_bogus
     when self.size.to_i == 0 then :scraped_file_zerolen
-    else                          'scraped_file-' + (identifier[0..1]||'').downcase end
+    else                          'scraped_file-%s-%s' % [scraped_at[0..7], context] end # , scraped_at[8..9]
+  end
+
+  def encode_path_part path_part
+    path_part = Addressable::URI.encode_component(path_part, "a-zA-Z0-9_\\.\\-") || ""
+    path_part.gsub(/^_/, "%5F")
   end
 
   #
   # Filename for the scraped URI
   #
   def gen_scraped_filename
-    self.filename = [
-      filename_host_part, filename_tier_part, resource_path,
-      "#{identifier}.json%3Fpage%3D#{page}+#{scraped_at}+#{moreinfo}.json" ].join("/")
+    file_part = "%s.json%%3Fpage%%3D%s+%s+%s.json" % [
+      encode_path_part(identifier), page, scraped_at, encode_path_part(moreinfo)]
+    self.filename = [ filename_host_part, filename_tier_part, resource_path, file_part ].join("/")
   end
   # def old_scraped_filename
   #   old_filename_tier_part =
@@ -70,7 +76,7 @@ class ScrapedFile < Struct.new(
   # This will change after the great renaming
   #
   GROK_FILENAME_RE    = %r{com\.twitter/_(\d{8})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+(\d{8}-\d{6})\.json}
-  GROK_PT_FILENAME_RE = %r{public_timeline/(\d{6}/\d\d/\d\d)/public_timeline-(\d{8}-\d{6}).json}
+  GROK_PUBLIC_TIMELINE_FILENAME_RE = %r{public_timeline/(\d{6}/\d\d/\d\d)/public_timeline-(\d{8}-\d{6}).json}
   GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8})/([\w/]+)/(.*)\.json%3Fpage%3D(.*)\+([\d\-]+)\.json}
   #
   # Instantiate from filename
@@ -86,7 +92,7 @@ class ScrapedFile < Struct.new(
       identifier = Addressable::URI.unencode_component(identifier)
       context    = context_for_resource(resource)
       bogus      = true
-    when m = GROK_PT_FILENAME_RE.match(filename)
+    when m = GROK_PUBLIC_TIMELINE_FILENAME_RE.match(filename)
       scrape_session, scraped_at, *_ = m.captures
       scraped_at.gsub!(/-/, '')
       identifier = "public_timeline-#{scraped_at}"
@@ -101,9 +107,9 @@ class ScrapedFile < Struct.new(
     #
     # extract field values
     # instantiate
-    scraped_file = self.new scrape_session, context, identifier, page, size, scraped_at, filename
+    scraped_at.gsub!(/-/, '')
+    scraped_file = self.new scrape_session, context, identifier, page, scraped_at, filename, size
     scraped_file.bogus = bogus
     scraped_file
   end
-
 end

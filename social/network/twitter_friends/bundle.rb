@@ -1,39 +1,17 @@
 #!/usr/bin/env ruby
 require 'fileutils'; include FileUtils
 $: << File.dirname(__FILE__)+'/lib'
-require 'twitter_friends/scraped_file'
+require 'hadoop/tsv'
 require 'hadoop/utils'
+require 'hadoop/script'
+require 'hadoop/streamer'
+require 'twitter_friends/scraped_file'
+require 'twitter_friends/scrape_store'
+# require 'twitter_friends/json_model'
 
 #
-# Landing spot
+# Stage I :
 #
-WORK_DIR='/tmp/ripd'
-
-#
-# Generate a list of files to use
-#
-# hdp-ls arch/public_timeline | grep '.tar.bz2' | hdp-put - arch/public_timeline_files.txt
-#
-# hdp-rm -r rawd/bundled/public_timeline ; hdp-stream-flat arch/public_timeline_files.txt rawd/bundled/public_timeline `realpath bundle.rb` /bin/cat -jobconf stream.num.map.output.key.fields=2 -jobconf mapred.map.tasks=`hdp-cat arch/public_timeline_files.txt | wc -l`
-
-
-# arch/public_timeline/public_timeline-200811.tar.bz2
-# => public_timeline/200811/29/04/public_timeline-20081129-045042.json
-
-TAR_RE = %r{(public_timeline)-([\d-]+)(?:-partial)?\.tar\.bz2}
-def tar_contents_dir tar_filename
-  m = TAR_RE.match(tar_filename) or raise "Can't grok archive filename '#{tar_filename}'"
-  resource, scrape_session = m.captures
-  resource.gsub!(/\-/, '/') ; scrape_session.gsub!(/\-/, '/')
-  "#{resource}/#{scrape_session}"
-end
-
-
-def extract_tar_archive tar_filename, dir
-  if !File.exists?(dir)
-    `hdp-cat #{tar_filename} | tar xjfk - --mode 644`
-  end
-end
 
 #
 # !!! NOTE !!!
@@ -41,42 +19,36 @@ end
 # A bundled file is NOT a conventional tar-separated file: consider the last
 # field (containing the raw JSON) to be arbitrary text.
 #
-mkdir_p WORK_DIR
-cd WORK_DIR do
-  $stdin.each do |line|
-    #
-    # extract the archive
-    #
-    tar_filename = line.chomp.strip.split(/\s+/).last
-    dir = tar_contents_dir(tar_filename)
-    extract_tar_archive tar_filename, dir
-    #
-    # walk the directory tree
-    #
-    Dir[dir+'/**/*.json'].each do |scraped_filename|
-      #
-      # Grok filename
-      #
-      scraped_file = ScrapedFile.new_from_filename scraped_filename, nil
-      #
-      # extract file's contents
-      #
-      contents = File.open(scraped_filename).read
-      next if (! contents) || contents.empty?
-      contents = contents.gsub(/\s+\z/, '').gsub(/[\t\r\n]+/, ' ')
-      #
-      # emit context, scraped_at, identifier, filename, json_str
-      #
-      puts [scraped_file.values_of(:context, :scraped_at, :identifier, :filename), contents].flatten.join("\t")
+class BundleMapper < Hadoop::Streamer
+  #
+  # emit the description and then the contents of each file
+  #
+  def extract_tar_file tar_filename
+    scrape_store = TarScrapeStore.new(tar_filename)
+    scrape_store.extract!
+    scrape_store.contents do |scraped_file, contents|
+      puts [scraped_file.identifier.downcase,
+        scraped_file.values_of(:context, :scraped_at, :identifier, :page, :moreinfo ),
+        contents
+      ].flatten.join("\t")
     end
+  end
+
+  def process resource, *vals
+    tar_filename = resource.split(/\s+/).last
+    extract_tar_file tar_filename
   end
 end
 
-
+class BundleStage1Script < Hadoop::Script
+  def reduce_command
+    '/bin/cat'
+  end
+end
 
 #
-# A useful tar arg:
+# Execute
 #
-# --preserve-order
-#               list of names to extract is sorted to match archive
+
+BundleStage1Script.new(BundleMapper, nil).run
 
