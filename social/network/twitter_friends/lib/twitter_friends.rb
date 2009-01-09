@@ -1,4 +1,5 @@
-require 'twitter_friends/twitter_user'
-require 'twitter_friends/tweet'
-require 'twitter_friends/relationship'
-require 'twitter_friends/twitter_model_common'
+require 'hadoop/extensions/string'
+require 'twitter_friends/struct_model'
+
+module TwitterFriends
+end

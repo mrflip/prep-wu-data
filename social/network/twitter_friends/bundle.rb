@@ -1,13 +1,10 @@
 #!/usr/bin/env ruby
 require 'fileutils'; include FileUtils
 $: << File.dirname(__FILE__)+'/lib'
-require 'hadoop/tsv'
-require 'hadoop/utils'
-require 'hadoop/script'
-require 'hadoop/streamer'
-require 'twitter_friends/scraped_file'
-require 'twitter_friends/scrape_store'
-# require 'twitter_friends/json_model'
+
+require 'hadoop'
+require 'twitter_friends/struct_model' ; include TwitterFriends::StructModel
+require 'twitter_friends/scrape'       ; include TwitterFriends::Scrape
 
 #
 # Stage I :

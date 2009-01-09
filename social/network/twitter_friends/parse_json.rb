@@ -1,14 +1,13 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+'/lib'
-require 'hadoop/tsv'
-require 'hadoop/utils'
-require 'hadoop/script'
-require 'hadoop/streamer'
-require 'twitter_friends/json_model'
-include Hadoop
 
-# hdp-rm -r fixd/public_timeline
-#  ./parse_json.rb --go --public_timeline rawd/bundled/public_timeline fixd/public_timeline/
+require 'hadoop'
+require 'twitter_friends/struct_model'
+require 'twitter_friends/json_model'
+
+# rsrc=public_timeline ;
+# hdp-rm -r fixd/$rsrc
+# ./parse_json.rb --go --public_timeline rawd/bundled/$rsrc fixd/$rsrc/
 
 
 module ParseJson

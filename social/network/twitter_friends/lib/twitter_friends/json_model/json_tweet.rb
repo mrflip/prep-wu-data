@@ -16,7 +16,7 @@
 #   "source"                       : "web",
 # }
 #
-class JsonTweet < JsonParser
+class JsonTweet < GenericJsonParser
   def initialize raw, twitter_user_id = nil
     super raw; return unless healthy?
     if twitter_user_id

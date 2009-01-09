@@ -1,0 +1,108 @@
+module TwitterFriends::StructModel
+
+  #
+  # Mixin: common methods for each of the user representations / partitions
+  #
+  module TwitterUserCommon
+    #
+    # Datatype info, for exporting strings
+    #
+    MEMBERS_TYPES = {
+      :created_at         => :date,
+      :scraped_at         => :date,
+      :screen_name        => :safetext,
+      :protected          => :bool,
+      :followers_count    => :int,
+      :friends_count      => :int,
+      :statuses_count     => :int,
+      :favourites_count   => :int,
+      :name               => :enctext,
+      :url                => :enctext,
+      :location           => :enctext,
+      :description        => :enctext,
+      :time_zone          => :safetext,
+      :utc_offset         => :int,
+      # :profile_background_color      => :safetext,
+      # :profile_text_color            => :safetext,
+      # :profile_link_color            => :safetext,
+      # :profile_sidebar_border_color  => :safetext,
+      # :profile_sidebar_fill_color    => :safetext,
+      # :profile_background_tile       => :bool,
+      # :profile_background_image_url  => :safetext,
+      # :profile_image_url             => :safetext,
+    }
+    def members_with_types
+      @members_with_types ||= MEMBERS_TYPES.slice(*members.map(&:to_sym))
+    end
+    MUTABLE_ATTRS = [
+      :followers_count, :friends_count, :statuses_count, :favourites_count,
+      :name, :url, :location, :description, :time_zone, :utc_offset,
+      :profile_background_color, :profile_text_color, :profile_link_color, :profile_sidebar_border_color, :profile_sidebar_fill_color, :profile_background_tile, :profile_background_image_url, :profile_image_url
+    ].to_set
+    def mutable?(attr)
+      MUTABLE_ATTRS.include?(attr)
+    end
+  end
+
+  #
+  # Fundamental information on a user.
+  #
+  class TwitterUser        < Struct.new(
+      :id, :scraped_at,
+      :screen_name, :protected,
+      :followers_count, :friends_count, :statuses_count, :favourites_count,
+      :created_at )
+    include ModelCommon
+    include TwitterUserCommon
+  end
+
+  #
+  # Outside of a users/show page, when a user is mentioned
+  # only this subset of fields appear.
+  #
+  class TwitterUserPartial < Struct.new(
+      :id, :scraped_at,
+      :screen_name, :protected, :followers_count, # appear in TwitterUser
+      :name, :url, :location, :description,       # appear in TwitterUserProfile
+      :profile_image_url )                        # appear in TwitterUserStyle
+    include ModelCommon
+    include TwitterUserCommon
+  end
+
+  #
+  # User-set information about a user
+  #
+  class TwitterUserProfile < Struct.new(
+      :id, :scraped_at,
+      :name, :url, :location, :description,
+      :time_zone, :utc_offset )
+    include ModelCommon
+    include TwitterUserCommon
+  end
+
+  #
+  # How the user has styled their page
+  #
+  class TwitterUserStyle   < Struct.new(
+      :id, :scraped_at,
+      :profile_background_color,
+      :profile_text_color,           :profile_link_color,
+      :profile_sidebar_border_color, :profile_sidebar_fill_color,
+      :profile_background_tile,      :profile_background_image_url,
+      :profile_image_url )
+    include ModelCommon
+    include TwitterUserCommon
+  end
+
+  #
+  # For passing around just screen_name => id mapping
+  #
+  class TwitterUserId      < Struct.new(
+      :id, :screen_name )
+    include ModelCommon
+    include TwitterUserCommon
+    def to_tsv
+      self.to_a.join("\t")
+    end
+  end
+end

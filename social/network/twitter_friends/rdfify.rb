@@ -1,15 +1,13 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+'/lib'
-require 'hadoop/tsv'
-require 'hadoop/utils'
-require 'hadoop/script'
-require 'hadoop/streamer'
-require 'twitter_friends/json_model'
-include Hadoop
 
-# hdp-rm -r fixd/public_timeline
-#  ./parse_json.rb --go --public_timeline rawd/bundled/public_timeline fixd/public_timeline/
+require 'hadoop'                       ; include Hadoop
+require 'twitter_friends/struct_model' ; include TwitterFriends::StructModel
+require 'twitter_friends/rdf_output'
 
+#
+# See bundle.sh for running pattern
+#
 
 module Rdfify
   class TweetMapper < Hadoop::StructStreamer
@@ -25,7 +23,7 @@ module Rdfify
         puts [subj, obj, timestamp, pred].join("\t")
       end
     end
-    
+
     #
     # Skip bogus records
     #
@@ -54,11 +52,11 @@ module Rdfify
   # sighting.  The scraped_at value gives only the latest (partial user) date.
   #
   # Relationships are mutable, but for technical issues we can't count on seeing
-  # them disappear. 
+  # them disappear.
   #
   class UnifyByLatestReducer < AccumulatingStreamer
     attr_accessor :final_value
-    
+
     #
     # Key on subject + predicate
     #
@@ -72,13 +70,13 @@ module Rdfify
     def accumulate *vals
       self.final_value = *vals
     end
-    # 
+    #
     def reset!
       self.final_value = nil
-    end     
+    end
     #
     # Emit the last-seen (latest) value
-    # 
+    #
     def finalize
       subj, obj, timestamp, pred = final_value
       puts TwitterRdf.rdf_triple(subj, obj, pred, timestamp)
