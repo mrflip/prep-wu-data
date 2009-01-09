@@ -75,9 +75,9 @@ class ScrapedFile < Struct.new(
   #
   # This will change after the great renaming
   #
-  GROK_FILENAME_RE    = %r{com\.twitter/_(\d{8})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+(\d{8}-\d{6})\.json}
+  GROK_FILENAME_RE    = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+(\d{8}-\d{6})\.json}
   GROK_PUBLIC_TIMELINE_FILENAME_RE = %r{public_timeline/(\d{6}/\d\d/\d\d)/public_timeline-(\d{8}-\d{6}).json}
-  GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8})/([\w/]+)/(.*)\.json%3Fpage%3D(.*)\+([\d\-]+)\.json}
+  GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/(.*)\.json%3Fpage%3D(.*)\+([\d\-]+)\.json}
   #
   # Instantiate from filename
   #

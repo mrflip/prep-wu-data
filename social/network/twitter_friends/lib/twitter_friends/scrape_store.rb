@@ -13,7 +13,7 @@ class TarScrapeStore
   # Where to extract files temporarily
   #
   def extract_dir
-    LOCAL_EXTRACT_DIR + '/' + tar_filename.gsub(/\..*$/, '')
+    LOCAL_EXTRACT_DIR + '/' + File.basename(tar_filename).gsub(/\..*$/, '')
   end
 
   def listing
@@ -21,9 +21,9 @@ class TarScrapeStore
   end
 
   def target
-    m = %r{ripd-(\d+)-([\w-]+)}.match(tar_filename) or raise "Can't grok #{tar_filename}"
-    scrape_session, resource_path = m.captures
-    "_com/_tw/com.twitter/_%s/%s" % [scrape_session, resource_path.gsub(/-/, '/')]
+    m = %r{ripd-(\d{8})-(\d\d)-([\w-]+)}.match(tar_filename) or raise "Can't grok #{tar_filename}"
+    scrape_session, hour, resource_path = m.captures
+    "_com/_tw/com.twitter/_%s/_%s/%s" % [scrape_session, hour, resource_path.gsub(/-/, '/')]
   end
 
   def extracted?
@@ -35,7 +35,7 @@ class TarScrapeStore
     if ! extracted?
       mkdir_p extract_dir
       cd extract_dir do
-        `hdp-cat #{tar_filename} | tar xjfk - --mode 644`
+        `hdp-cat #{tar_filename} | tar xjfk - --mode 666`
       end
     end
   end

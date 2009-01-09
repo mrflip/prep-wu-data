@@ -12,19 +12,35 @@ include Hadoop
 
 
 module ParseJson
-  class UserIdMapper < Hadoop::Streamer
-    def process context, scraped_at, identifier, filename, json_str
+  class UserMapper < Hadoop::Streamer
+    def process context, scraped_at, user_id, page, moreinfo, json_str
+      return if context =~ /^bogus-/
       parsed = JsonUser.new_from_json(json_str, scraped_at)
-      unless parsed && parsed.healthy? then bad_record!(context, scraped_at, filename, json_str); return ; end
-      user_id = parsed.generate_user_classes(TwitterUserId).first
-      puts user_id.output_form if user_id
+      unless parsed && parsed.healthy? then bad_record!(context, scraped_at, user_id, page, moreinfo, json_str); return ; end
+      parsed.generate_user_profile_and_style.each do |user_obj|
+        puts user_obj.output_form(true) if user_obj
+      end
+    end
+  end
+
+  class FriendsFollowersMapper < Hadoop::Streamer
+    def process context, scraped_at, user_a_id, page, screen_name, json_str
+      return if context =~ /^bogus-/
+      parsed = JsonFriendsFollowers.new_from_json(json_str, context, scraped_at, user_a_id)
+      unless parsed && parsed.healthy? then bad_record!(context, scraped_at, user_a_id, page, screen_name, json_str); return ; end
+      parsed.each do |twitter_user, tweet, relationship|
+        puts twitter_user.output_form(true) if twitter_user
+        puts tweet.output_form(true)        if tweet
+        puts relationship.output_form(true) if relationship
+      end
     end
   end
 
   class PublicTimelineMapper < Hadoop::Streamer
-    def process context, scraped_at, identifier, filename, json_str
+    def process context, scraped_at, identifier, page, moreinfo, json_str
+      return if context =~ /^bogus-/
       parsed = JsonPublicTimeline.new_from_json(json_str, scraped_at)
-      unless parsed && parsed.healthy? then bad_record!(context, scraped_at, filename, json_str); return ; end
+      unless parsed && parsed.healthy? then bad_record!(context, scraped_at, user_id, page, moreinfo, json_str); return ; end
       parsed.each do |twitter_user, tweet|
         puts twitter_user.output_form(true) if twitter_user
         puts tweet.output_form(true)        if tweet
@@ -41,7 +57,7 @@ class UniqWithoutScrapedAt < Hadoop::Streamer
   end
 
   # Recognize keys that are mutable
-  MUTABLE_RESOURCES_RE = /\A(?:twitter_user)/  
+  MUTABLE_RESOURCES_RE = /\A(?:twitter_user)/
   def mutable resource, key, scraped_at, *rest
     MUTABLE_RESOURCES_RE.match(resource)
   end
@@ -52,15 +68,15 @@ class UniqWithoutScrapedAt < Hadoop::Streamer
       [resource, key, scraped_at, *rest]
     end
   end
-  
+
   def process *record
-    # find values without 
+    # find values without
     val = comparable(*record)
     return if val == self.last_val
     puts record.join("\t")
     self.last_val = val
   end
-  
+
 end
 
 
@@ -68,9 +84,10 @@ class ParseJsonUsersScript < Hadoop::Script
   def initialize
     process_argv!
     case
-    when options[:user]               then self.mapper_klass = ParseJson::UserIdMapper
-    when options[:public_timeline]    then self.mapper_klass = ParseJson::PublicTimelineMapper
-    else raise "Need to know what I'm parsing: --user, --public_timeline, ..."
+    when options[:user]                           then self.mapper_klass = ParseJson::UserMapper
+    when options[:friends] || options[:followers] then self.mapper_klass = ParseJson::FriendsFollowersMapper
+    when options[:public_timeline]                then self.mapper_klass = ParseJson::PublicTimelineMapper
+    else raise "Need to know what I'm parsing: --user, --public_timeline, --followers, ..."
     end
     self.reducer_klass = UniqWithoutScrapedAt
   end

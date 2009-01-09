@@ -70,6 +70,8 @@ module Hadoop
       a = []
       a << "-jobconf mapred.map.tasks=#{options[:map_tasks]}"       if options[:map_tasks]
       a << "-jobconf mapred.reduce.tasks=#{options[:reduce_tasks]}" if options[:reduce_tasks]
+      a << "-jobconf num.key.fields.for.partition=#{options[:partition_keys]}" if options[:partition_keys]
+      a << "-jobconf stream.num.map.output.key.fields=#{options[:sort_keys]}"   if options[:sort_keys]
       a.join(" ")
     end
 

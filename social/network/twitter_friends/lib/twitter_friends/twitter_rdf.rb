@@ -78,10 +78,10 @@ module TwitterRdf
   #
   def to_rdf3_tuples
     members_with_types.map do |attr, type|
-      next unless self[attr]
+      next if self[attr].blank?
       subj    = rdf_resource
       pred    = rdf_pred(attr)
-      obj     = rdf_component(self[attr], type); next if obj.blank? 
+      obj     = rdf_component(self[attr], type) or next
       comment = scraped_at if mutable?(attr) 
       [subj, pred, obj, comment]
     end.compact

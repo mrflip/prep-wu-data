@@ -27,7 +27,7 @@ class BundleMapper < Hadoop::Streamer
     scrape_store = TarScrapeStore.new(tar_filename)
     scrape_store.extract!
     scrape_store.contents do |scraped_file, contents|
-      puts [scraped_file.identifier.downcase,
+      puts [
         scraped_file.values_of(:context, :scraped_at, :identifier, :page, :moreinfo ),
         contents
       ].flatten.join("\t")
