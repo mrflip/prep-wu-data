@@ -10,7 +10,7 @@ require 'twitter_friends/rdf_output'
 #
 
 module Rdfify
-  class TweetMapper < Hadoop::StructStreamer
+  class Mapper < Hadoop::StructStreamer
     #
     # we need to reorder to
     #   subj pred timestamp pred
@@ -54,7 +54,7 @@ module Rdfify
   # Relationships are mutable, but for technical issues we can't count on seeing
   # them disappear.
   #
-  class UnifyByLatestReducer < AccumulatingStreamer
+  class Reducer < Hadoop::UniqByLastReducer
     attr_accessor :final_value
 
     #
@@ -63,27 +63,21 @@ module Rdfify
     def get_key vals
       vals[0..1]
     end
-
-    #
-    # Just adopt each value in turn: the last one's the one you want.
-    #
-    def accumulate *vals
-      self.final_value = *vals
-    end
-    #
-    def reset!
-      self.final_value = nil
-    end
     #
     # Emit the last-seen (latest) value
+    # unswapping the timestamp and predicate
     #
     def finalize
       subj, obj, timestamp, pred = final_value
       puts TwitterFriends::TwitterRdf.rdf_triple(subj, obj, pred, timestamp)
     end
   end
+
+  class Script < Hadoop::Script
+  end
 end
 
-class RdfifyScript < Hadoop::Script
-end
-RdfifyScript.new(Rdfify::TweetMapper, Rdfify::UnifyByLatestReducer).run
+#
+# Executes the script
+#
+Rdfify::Script.new(Rdfify::Mapper, Rdfify::Reducer).run

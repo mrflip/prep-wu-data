@@ -20,7 +20,7 @@ class InsertIdsMapper <  Hadoop::Streamer
   end
 end
 
-class InsertIdsReducer < Hadoop::AccumulatingStreamer
+class InsertIdsReducer < Hadoop::AccumulatingReducer
   attr_accessor :screen_name, :twitter_user_id, :scraped_contents
   def reset!
     super
@@ -37,6 +37,7 @@ class InsertIdsReducer < Hadoop::AccumulatingStreamer
     when context == 'twitter_user_id'
       self.twitter_user_id = vals[0]
     else
+      self.twitter_user_id ||= vals[3] if (! vals[3].blank?)
       self.scraped_contents << [context, *vals]
     end
   end
@@ -61,9 +62,9 @@ class InsertIdsReducer < Hadoop::AccumulatingStreamer
     else                                context_prefix = ''
     end
     scraped_contents.each do |scraped_content|
-      context, scraped_at, screen_name, page, _, *rest = scraped_content
+      context, scraped_at, screen_name, page, id, *rest = scraped_content
       context = context_prefix + context
-      id      = twitter_user_id
+      id      = twitter_user_id if (! twitter_user_id.blank?)
       puts [context, scraped_at, id, page, screen_name, *rest].join("\t")
     end
   end

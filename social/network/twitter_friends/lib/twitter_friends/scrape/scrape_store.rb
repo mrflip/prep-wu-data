@@ -23,9 +23,15 @@ module TwitterFriends
       end
 
       def target
-        m = %r{ripd-(\d{8})-(\d\d)-([\w-]+)}.match(tar_filename) or raise "Can't grok #{tar_filename}"
-        scrape_session, hour, resource_path = m.captures
-        "_com/_tw/com.twitter/_%s/_%s/%s" % [scrape_session, hour, resource_path.gsub(/-/, '/')]
+        case
+        when m = %r{ripd-(\d{8})-(\d\d)-([\w-]+)}.match(tar_filename)
+          scrape_session, hour, resource_path = m.captures
+          "_com/_tw/com.twitter/_%s/_%s/%s" % [scrape_session, hour, resource_path.gsub(/-/, '/')]
+        when m = %r{public_timeline-(\d{6})-(\d\d)}.match(tar_filename)
+          scrape_session, day = m.captures
+          "public_timeline/%s/%s" % [scrape_session, day]
+        else raise "Can't grok #{tar_filename}"
+        end
       end
 
       def extracted?
@@ -53,7 +59,7 @@ module TwitterFriends
           extracted_files.each do |scraped_filename|
 
             # Grok filename
-            scraped_file = ScrapedFile.new_from_filename scraped_filename, nil
+            scraped_file = ScrapedFile.new_from_filename(scraped_filename, nil) or next
 
             # extract file's contents
             contents = File.open(scraped_filename).read

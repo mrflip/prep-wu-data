@@ -75,15 +75,20 @@ module TwitterFriends
       #
       # This will change after the great renaming
       #
-      GROK_FILENAME_RE    = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+(\d{8}-\d{6})\.json}
+      GROK_FILENAME_RE       = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+u(\d{10})\+d(\d{14})\.json}
+      GROK_OLD_FILENAME_RE   = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+(\d{8}-\d{6})\.json}
+      GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/(.*)\.json%3Fpage%3D(.*)(?:\+u([\d\-]+))?\+d?([\d\-]+)\.json}
       GROK_PUBLIC_TIMELINE_FILENAME_RE = %r{public_timeline/(\d{6}/\d\d/\d\d)/public_timeline-(\d{8}-\d{6}).json}
-      GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/(.*)\.json%3Fpage%3D(.*)\+([\d\-]+)\.json}
       #
       # Instantiate from filename
       #
       def self.new_from_filename filename, size
         case
         when m = GROK_FILENAME_RE.match(filename)
+          scrape_session, resource, identifier, page, moreinfo, scraped_at = m.captures
+          identifier = Addressable::URI.unencode_component(identifier)
+          context    = context_for_resource(resource)
+        when m = GROK_OLD_FILENAME_RE.match(filename)
           scrape_session, resource, identifier, page, scraped_at = m.captures
           identifier = Addressable::URI.unencode_component(identifier)
           context    = context_for_resource(resource)
@@ -96,7 +101,7 @@ module TwitterFriends
           scrape_session, scraped_at, *_ = m.captures
           scraped_at.gsub!(/-/, '')
           identifier = "public_timeline-#{scraped_at}"
-          context, resource, page = ['public_timeline', 'public_timeline', 1]
+          context, resource, page, moreinfo = ['public_timeline', 'public_timeline', 1, scraped_at]
         when
           scrape_session, resource, identifier, page, scraped_at = m.captures
         else
@@ -107,8 +112,9 @@ module TwitterFriends
         #
         # extract field values
         # instantiate
-        scraped_at.gsub!(/-/, '')
-        scraped_file = self.new scrape_session, context, identifier, page, scraped_at, filename, size
+        moreinfo ||= ''
+        scraped_at.gsub!(/-/, '') if scraped_at
+        scraped_file = self.new scrape_session, context, identifier, page, scraped_at, filename, size, moreinfo
         scraped_file.bogus = bogus
         scraped_file
       end

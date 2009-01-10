@@ -42,21 +42,26 @@ module TwitterFriends::Scrape
     def self.gen_priority thing, context
       case context
       when :favorites  then pages(thing, context)
-      when :friends    then (100 * thing.friends_per_day).to_i
+      when :friends    then [ (100 * thing.friends_per_day).to_i, 1 ].max
       else raise "need to define priority for context #{context}"
       end
     end
 
+    def resource_name
+      class_part = super
+      [class_part, context].join("-")
+    end
+
     def keyspace_spread_resource_name
-      [resource_name, context].join("-") #
+      [resource_name, identifier].join("-") #
     end
 
     def self.requests_for_user user, context
       return [] if user.send("#{context}_count").blank?
       return [] if (context == :favorites) && user.favourites_count.to_i < 10
       (1..pages(user, context)).map do |page|
-        new context, gen_priority(user, context), user.screen_name, "%05d"%[page], [user.id, pages(user, context),
-          user.created_at, user.friends_per_day, user.days_since_scraped].join('-')
+        new context, gen_priority(user, context), user.screen_name, "%05d"%[page], user.id
+        # [user.id, pages(user, context), user.created_at, user.friends_per_day, user.days_since_scraped].join('-')
       end
     end
 

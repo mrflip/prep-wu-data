@@ -17,6 +17,16 @@ module TwitterFriends::StructModel
     end
   end
 
+  # Follower/Friend relationship
+  class AFavoritesB        < Struct.new( :user_a_id, :user_b_id, :status_id )
+    include ModelCommon
+    include RelationshipCommon
+    # Key on the user-user pair
+    def key()
+      [user_a_id, user_b_id, status_id].join('-')
+    end
+  end
+
   # Direct (threaded) replies: occur at the start of a tweet.
   class ARepliesB           < Struct.new( :user_a_id, :user_b_id, :status_id, :in_reply_to_status_id )
     include ModelCommon

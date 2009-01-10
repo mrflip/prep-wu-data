@@ -1,3 +1,4 @@
+require 'addressable/uri'
 module TwitterFriends
   module JsonModel
 
@@ -66,6 +67,8 @@ module TwitterFriends
         raw['id']         = ModelCommon.zeropad_id(raw['id'])
         raw['protected']  = ModelCommon.unbooleanize(raw['protected'])
         Hadoop.scrub_hash raw, :name, :location, :description, :url
+        # There are several users with bogus screen names
+        if raw['screen_name'] !~ /\A\w+\z/ then raw['screen_name'] = Addressable::URI.encode_component(raw['screen_name'])  end
       end
 
       #

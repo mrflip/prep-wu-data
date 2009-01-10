@@ -11,7 +11,7 @@ module Hadoop
     # send to processor
     def stream
       $stdin.each do |line|
-        item = itemize(line) or next
+        item = itemize(line) ; next if item.blank?
         process(*item)
       end
     end
@@ -29,12 +29,13 @@ module Hadoop
     def itemize line
       klass_name, *vals = super(line)
       klass_name.gsub!(/-.*$/, '') # kill off all but class name
-      klass = klass_name.to_s.camelize.constantize
+      begin klass = klass_name.to_s.camelize.constantize
+      rescue ; warn "Bogus class name starting line '#{line}'" ; return ; end
       [ klass.new(*vals) ]
     end
   end
 
-  class AccumulatingStreamer < Streamer
+  class AccumulatingReducer < Streamer
     attr_accessor :last_key
     def initialize options
       super options
@@ -100,5 +101,43 @@ module Hadoop
       finalize
     end
   end
+
+
+  #
+  # To extract the *latest* value for each property, set hadoop to use
+  # <resource, item_id, timestamp> as the sort keys
+  #
+  # Accumulate just acts like an insecure high-schooler, adopting in turn the
+  # latest value seen. Then the finalized value is the last in sort order.
+  #
+  #
+  class UniqByLastReducer < AccumulatingReducer
+    attr_accessor :final_value
+
+    #
+    # Key on first two fields by default
+    #
+    def get_key vals
+      vals[0..1]
+    end
+
+    #
+    # Just adopt each value in turn: the last one's the one you want.
+    #
+    def accumulate *vals
+      self.final_value = *vals
+    end
+    #
+    def reset!
+      self.final_value = nil
+    end
+    #
+    # Emit the last-seen (latest) value
+    #
+    def finalize
+      puts final_value.join("\t") if final_value
+    end
+  end
+
 
 end

@@ -16,14 +16,24 @@ module GenScrapeRequests
       super *args
       self.context = options[:context].to_sym
     end
+    
+    EXCLUDE_USERS = ['Oozzl', 'yobird'].to_set
+    def exclude? user
+      return true if EXCLUDE_USERS.include?(user.screen_name)
+      case context
+      when :favorites then return true if user.favourites_count.blank || (user.favourites_count.to_i <= 10)
+      end
+      false
+    end
+    
     #
     #
     def process user
       return unless user.is_a? TwitterUser
-      if (context==:favorites) then return unless user.favourites_count && (user.favourites_count.to_i >= 10) end
+      return if exclude?(user)
       ScrapeRequest.requests_for_user(user, self.context).each do |scrape_request|
-        scrape_request.priority = 1_000_000_000 - scrape_request.priority.to_i
-        puts scrape_request.output_form(true)
+        scrape_request.priority = "%010d" % (1_000_000_000 - scrape_request.priority.to_i)
+        puts scrape_request.output_form(false)
       end
     end
 
@@ -38,8 +48,8 @@ module GenScrapeRequests
 
   class Reducer < Hadoop::StructStreamer
     def process scrape_request
-      scrape_request.priority = 1_000_000_000 - scrape_request.priority.to_i
-      puts scrape_request.output_form(true)
+      scrape_request.priority = "%010d" % (1_000_000_000 - scrape_request.priority.to_i)
+      puts scrape_request.output_form(false)
     end
   end
   
@@ -47,6 +57,7 @@ module GenScrapeRequests
     def sort_fields 
       5
     end
+
   end
 end
 
