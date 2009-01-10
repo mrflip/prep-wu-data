@@ -44,7 +44,8 @@ module Hadoop
     #
     def map_command
       case
-      when mapper_klass then "#{this_script_filename} --map " + options[:all_args].join(" ")
+      when mapper_klass
+        "#{this_script_filename} --map " + options[:all_args].join(" ")
       else '/bin/cat' end
     end
 
@@ -54,7 +55,8 @@ module Hadoop
     #
     def reduce_command
       case
-      when reducer_klass then "#{this_script_filename} --reduce " + options[:all_args].join(" ")
+      when reducer_klass
+        "#{this_script_filename} --reduce " + options[:all_args].join(" ")
       else '/bin/cat' end
     end
 
@@ -66,9 +68,11 @@ module Hadoop
       self.options[:sort_fields] || 2
     end
 
+    def map_tasks()  options[:map_tasks]  end
+
     def extra_args
       a = []
-      a << "-jobconf mapred.map.tasks=#{options[:map_tasks]}"       if options[:map_tasks]
+      a << "-jobconf mapred.map.tasks=#{map_tasks}"       if map_tasks
       a << "-jobconf mapred.reduce.tasks=#{options[:reduce_tasks]}" if options[:reduce_tasks]
       a << "-jobconf num.key.fields.for.partition=#{options[:partition_keys]}" if options[:partition_keys]
       a << "-jobconf stream.num.map.output.key.fields=#{options[:sort_keys]}"   if options[:sort_keys]
