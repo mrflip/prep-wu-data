@@ -13,7 +13,7 @@ for resource in $resources ; do
     listing=${scrape_store_listing_dir}/scrape_store_listings-$resource.tsv
     hdp-rm $listing
     # | grep -v 'supergroup  [ 1-9][0-9]' 
-    hdp-ls "arch/ripd/*/*${resource}*" | head -n 12 | hdp-put - $listing 
+    hdp-ls "arch/ripd/*/*${resource}*" | hdp-put - $listing 
 done
 
 for resource in $resources ; do

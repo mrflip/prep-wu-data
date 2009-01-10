@@ -42,6 +42,12 @@ module TwitterFriends::StructModel
     def mutable?(attr)
       MUTABLE_ATTRS.include?(attr)
     end
+    def key
+      [id, scraped_at].join('-')
+    end
+    def keyspace_spread_resource_name
+      "%s-%s" % [ self.resource_name, self.id.to_s[-2..-1] ]
+    end
   end
 
   #
@@ -54,6 +60,17 @@ module TwitterFriends::StructModel
       :created_at )
     include ModelCommon
     include TwitterUserCommon
+    alias_method :tweets_count,    :statuses_count
+    alias_method :favorites_count, :favourites_count
+
+    #
+    # Rate info
+    #
+    def friends_per_day()      friends_count.to_i   / days_since_created  end
+    def followers_per_day()    followers_count.to_i / days_since_created  end
+    def favorites_per_day()    favorites_count.to_i / days_since_created  end
+    def tweets_per_day()       tweets_count.to_i    / days_since_created  end
+
   end
 
   #

@@ -65,7 +65,7 @@ module TwitterFriends
         raw['created_at'] = ModelCommon.flatten_date(raw['created_at'])
         raw['id']         = ModelCommon.zeropad_id(raw['id'])
         raw['protected']  = ModelCommon.unbooleanize(raw['protected'])
-        scrub_hash raw, :name, :location, :description, :url
+        Hadoop.scrub_hash raw, :name, :location, :description, :url
       end
 
       #

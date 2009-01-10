@@ -57,7 +57,6 @@ end
 
 # -rw-r--r--   3 flip supergroup          0 2008-12-20 05:51 /user/flip/out/sorted-tweets-20081220/part-00010
 
-
 # # Killing empty files
 # find . -size 0 -print -exec rm {} \;
 #

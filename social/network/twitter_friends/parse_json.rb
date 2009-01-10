@@ -2,8 +2,8 @@
 $: << File.dirname(__FILE__)+'/lib'
 
 require 'hadoop'
-require 'twitter_friends/struct_model'
-require 'twitter_friends/json_model'
+require 'twitter_friends/struct_model' ; include TwitterFriends::StructModel
+require 'twitter_friends/json_model'   ; include TwitterFriends::JsonModel
 
 # rsrc=public_timeline ;
 # hdp-rm -r fixd/$rsrc
@@ -14,7 +14,7 @@ module ParseJson
   class UserMapper < Hadoop::Streamer
     def process context, scraped_at, user_id, page, moreinfo, json_str
       return if context =~ /^bogus-/
-      parsed = JsonUser.new_from_json(json_str, scraped_at)
+      parsed = JsonTwitterUser.new_from_json(json_str, scraped_at)
       unless parsed && parsed.healthy? then bad_record!(context, scraped_at, user_id, page, moreinfo, json_str); return ; end
       parsed.generate_user_profile_and_style.each do |user_obj|
         puts user_obj.output_form(true) if user_obj
@@ -25,7 +25,7 @@ module ParseJson
   class FriendsFollowersMapper < Hadoop::Streamer
     def process context, scraped_at, user_a_id, page, screen_name, json_str
       return if context =~ /^bogus-/
-      parsed = JsonFriendsFollowers.new_from_json(json_str, context, scraped_at, user_a_id)
+      parsed = FriendsFollowersParser.new_from_json(json_str, context, scraped_at, user_a_id)
       unless parsed && parsed.healthy? then bad_record!(context, scraped_at, user_a_id, page, screen_name, json_str); return ; end
       parsed.each do |twitter_user, tweet, relationship|
         puts twitter_user.output_form(true) if twitter_user
@@ -38,7 +38,7 @@ module ParseJson
   class PublicTimelineMapper < Hadoop::Streamer
     def process context, scraped_at, identifier, page, moreinfo, json_str
       return if context =~ /^bogus-/
-      parsed = JsonPublicTimeline.new_from_json(json_str, scraped_at)
+      parsed = PublicTimelineParser.new_from_json(json_str, scraped_at)
       unless parsed && parsed.healthy? then bad_record!(context, scraped_at, user_id, page, moreinfo, json_str); return ; end
       parsed.each do |twitter_user, tweet|
         puts twitter_user.output_form(true) if twitter_user

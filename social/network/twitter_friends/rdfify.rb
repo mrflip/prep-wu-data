@@ -79,7 +79,7 @@ module Rdfify
     #
     def finalize
       subj, obj, timestamp, pred = final_value
-      puts TwitterRdf.rdf_triple(subj, obj, pred, timestamp)
+      puts TwitterFriends::TwitterRdf.rdf_triple(subj, obj, pred, timestamp)
     end
   end
 end

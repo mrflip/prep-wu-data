@@ -77,7 +77,7 @@ module Hadoop
   # For each given field in the hash,
   # scrub characters that will mess us up.
   #
-  def scrub_hash hsh, *fields
+  def self.scrub_hash hsh, *fields
     fields.each{|field| hsh[field.to_s].scrub! if hsh[field.to_s] }
   end
 end

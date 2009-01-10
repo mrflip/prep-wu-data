@@ -24,7 +24,7 @@ module TwitterFriends
       # express the class type
       #
       def resource_name
-        self.class.to_s.underscore
+        self.class.to_s.underscore.gsub(%r{.*/([^/]+)\z}, '\1')
       end
 
       #
@@ -37,6 +37,15 @@ module TwitterFriends
       #
       def keyspace_spread_resource_name
         "%s-%s" % [ self.resource_name, self.key[-2..-1] ]
+      end
+
+
+      def days_since_scraped
+        (DateTime.now - DateTime.parse(scraped_at)).to_f
+      end
+
+      def days_since_created
+        (DateTime.now - DateTime.parse(created_at)).to_f
       end
 
       # ===========================================================================
