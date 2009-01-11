@@ -10,26 +10,26 @@ module TwitterFriends::StructModel
     MEMBERS_TYPES = {
       :created_at         => :date,
       :scraped_at         => :date,
-      :screen_name        => :safetext,
+      :screen_name        => :str,
       :protected          => :bool,
       :followers_count    => :int,
       :friends_count      => :int,
       :statuses_count     => :int,
       :favourites_count   => :int,
-      :name               => :enctext,
-      :url                => :enctext,
-      :location           => :enctext,
-      :description        => :enctext,
-      :time_zone          => :safetext,
+      :name               => :str,
+      :url                => :str,
+      :location           => :str,
+      :description        => :str,
+      :time_zone          => :str,
       :utc_offset         => :int,
-      # :profile_background_color      => :safetext,
-      # :profile_text_color            => :safetext,
-      # :profile_link_color            => :safetext,
-      # :profile_sidebar_border_color  => :safetext,
-      # :profile_sidebar_fill_color    => :safetext,
+      # :profile_background_color      => :str,
+      # :profile_text_color            => :str,
+      # :profile_link_color            => :str,
+      # :profile_sidebar_border_color  => :str,
+      # :profile_sidebar_fill_color    => :str,
       # :profile_background_tile       => :bool,
-      # :profile_background_image_url  => :safetext,
-      # :profile_image_url             => :safetext,
+      # :profile_background_image_url  => :str,
+      # :profile_image_url             => :str,
     }
     def members_with_types
       @members_with_types ||= MEMBERS_TYPES.slice(*members.map(&:to_sym))
@@ -118,8 +118,5 @@ module TwitterFriends::StructModel
       :id, :screen_name )
     include ModelCommon
     include TwitterUserCommon
-    def to_tsv
-      self.to_a.join("\t")
-    end
   end
 end

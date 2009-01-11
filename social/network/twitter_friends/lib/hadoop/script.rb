@@ -1,4 +1,3 @@
-require 'hadoop/utils'
 require 'pathname'
 module Hadoop
   class Script

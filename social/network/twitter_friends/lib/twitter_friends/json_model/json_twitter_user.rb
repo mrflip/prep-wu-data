@@ -56,7 +56,7 @@ module TwitterFriends
 
       # user id from the raw hash
       def twitter_user_id
-        raw['twitter_user_id']
+        raw['id']
       end
 
       #
@@ -66,9 +66,12 @@ module TwitterFriends
         raw['created_at'] = ModelCommon.flatten_date(raw['created_at'])
         raw['id']         = ModelCommon.zeropad_id(raw['id'])
         raw['protected']  = ModelCommon.unbooleanize(raw['protected'])
-        Hadoop.scrub_hash raw, :name, :location, :description, :url
+        Hadoop.encode_components raw, 'name', 'location', 'description', 'url'
         # There are several users with bogus screen names
-        if raw['screen_name'] !~ /\A\w+\z/ then raw['screen_name'] = Addressable::URI.encode_component(raw['screen_name'])  end
+        # These we need to **URL encode** -- not XML-encode.
+        if raw['screen_name'] !~ /\A\w+\z/
+          raw['screen_name'] = Addressable::URI.encode_component(raw['screen_name'])
+        end
       end
 
       #

@@ -20,14 +20,24 @@ module TwitterFriends::StructModel
       [ :truncated             , :boolskip ],
       [ :in_reply_to_user_id   , :user     ],
       [ :in_reply_to_status_id , :tweet    ],
-      [ :text                  , :enctext  ],
-      [ :source                , :enctext  ],
+      [ :text                  , :str      ],
+      [ :source                , :str      ],
     ]
     #
     # Type info for output formatting
     #
     def members_with_types
       @members_with_types ||= MEMBERS_TYPES
+    end
+
+    #
+    #
+    # FIXME !!!
+    # Memoized; if you change text you have to
+    # flush
+    #
+    def decoded_text
+      @decoded_text ||= text.hadoop_decode
     end
 
     #

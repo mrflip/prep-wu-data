@@ -4,12 +4,14 @@ module TwitterFriends
       #
       # Dump fields, tab-separated, in order given by +#members+
       #
-      # Array#to_tsv is expensive but does all the escaping we need. Override with
-      #   self.to_a.join("\t")
-      # if you're impatient and know what you're doing.
+      # This doesn't do anything with included tabs, quotes, newlines, etc in
+      # member methods.  You should cleanse strings with Hadoop.encode_str
+      #
+      # You can also use FasterCSV with :col_sep => "\t"
+      # but be careful not to double-encode.
       #
       def to_tsv
-        self.to_a.to_tsv
+        self.to_a.join("\t")
       end
 
       #

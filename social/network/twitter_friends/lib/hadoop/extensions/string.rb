@@ -62,22 +62,4 @@ String.class_eval do
     end
     Object.module_eval("::#{$1}", __FILE__, __LINE__)
   end
-
-  #
-  # Strip control characters that might harsh our buzz, TSV-wise
-  #
-  def scrub!
-    gsub!(/[\t\r\n]+/, ' ')  # KLUDGE
-    gsub!(/\\/, '/') # hadoop is barfing on double backslashes. sorry, backslashes.
-  end
-end
-
-module Hadoop
-  #
-  # For each given field in the hash,
-  # scrub characters that will mess us up.
-  #
-  def self.scrub_hash hsh, *fields
-    fields.each{|field| hsh[field.to_s].scrub! if hsh[field.to_s] }
-  end
 end

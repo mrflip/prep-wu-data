@@ -1,21 +1,5 @@
 module TwitterFriends
   module TwitterRdf
-    #
-    # Convert string to XML-encoded ASCII,
-    # additionally escaping \\backslash
-    #   http://rishida.net/scripts/uniview/conversion.php
-    #
-    def self.encode_str str
-      begin
-        self.html_encoder.encode(str, :basic, :named, :decimal).gsub(/\\/, '&#x5C;')
-      rescue ArgumentError => e
-        '!!bad_encoding!!'
-      end
-    end
-    # HTMLEntities encoder instance
-    def self.html_encoder
-      @html_encoder ||= HTMLEntities.new
-    end
 
     #
     # RDF-formatted date
@@ -41,8 +25,7 @@ module TwitterFriends
       when :boolskip      then ((!val) || (val==0) || (val=="0")) ? nil                      : '"true"^^<xsd:boolean>'
       when :int           then %Q{"#{val.to_i}"^^<xsd:integer>}
       when :date          then %Q{"#{TwitterRdf.encode_datetime(val)}"^^<xsd:dateTime>}
-      when :safetext      then %Q{"#{val}"}
-      when :enctext       then %Q{"#{TwitterRdf.encode_str(val)}"}
+      when :str           then %Q{"#{val}"}
       else raise "Don't know how to encode #{type}"
       end
     end
@@ -63,7 +46,7 @@ module TwitterFriends
     #
     def self.rdf_triple subj, pred, obj, comment=nil
       comment = "\t# " + comment.to_s unless comment.blank?
-      %Q{%-55s\t%-55s\t%-23s\t.%s} % [subj, pred, obj, comment]
+      %Q{%-55s\t%-39s\t%-23s\t.%s} % [subj, pred, obj, comment]
     end
 
     def mutable?(attr)

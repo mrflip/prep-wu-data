@@ -40,7 +40,7 @@ module TwitterFriends
         raw['truncated']  = ModelCommon.unbooleanize(raw['truncated'])
         raw['in_reply_to_user_id']   = ModelCommon.zeropad_id(raw['in_reply_to_user_id'])   unless raw['in_reply_to_user_id'].blank?
         raw['in_reply_to_status_id'] = ModelCommon.zeropad_id(raw['in_reply_to_status_id']) unless raw['in_reply_to_status_id'].blank?
-        Hadoop.scrub_hash raw, :text
+        Hadoop.encode_components raw, 'text'
       end
 
       def generate_tweet

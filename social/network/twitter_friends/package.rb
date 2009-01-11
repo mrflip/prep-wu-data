@@ -6,6 +6,13 @@ require 'hadoop'                       ; include Hadoop
 #
 # See bundle.sh for running pattern
 #
+# listing=tmp/fixd-all-package-listing  ;
+# pkgd_log=tmp/fixd-all-package-log ;
+#   hdp-rm $listing ;
+#   hadoop dfs -lsr fixd | grep part- | hdp-put - $listing ;
+#
+#   hdp-rm $pkgd_log ;
+#   ./package.rb --go --map_tasks=1 $listing $pkgd_log
 
 module ExportPackager
   PKGD_DIR = 'pkgd'

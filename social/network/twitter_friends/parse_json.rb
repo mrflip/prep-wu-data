@@ -10,6 +10,16 @@ require 'twitter_friends/json_model'   ; include TwitterFriends::JsonModel
 # ./parse_json.rb --go --public_timeline rawd/bundled/$rsrc fixd/$rsrc/
 
 
+#
+#
+# We only extract
+# * user, user_partial, user_profile, and user_style;
+# * tweet
+# * a_follows_b, a_favorites_b
+#
+# All of the derived objects -- replies, @atsigns, hashtags, etc -- are done in
+# the grokify pass.
+#
 module ParseJson
   class UserMapper < Hadoop::Streamer
     def process context, scraped_at, user_id, page, moreinfo, json_str

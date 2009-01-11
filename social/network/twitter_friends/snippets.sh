@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Scripts to copy and paste from"
+echo "Scripts to copy and paste from.  Don't run me directly"
 exit
 
 #
@@ -16,3 +16,14 @@ exit
     fi ;
   done
 )
+
+
+#
+# Get a sampling of
+#
+dest=tmp/sample_tweets.tsv
+rm $dest ;
+for foo in  '#|[^"]http://|@'  '(RT|retweet|via).*@[A-Za-z0-9_]' \
+  '(RT|retweet).*(please|plz|pls)' '(please|plz|pls).*RT|retweet)' ; do
+  hdp-cat fixd/user/p\*0 | egrep "$foo" | head -n 200 >> $dest ;
+done
