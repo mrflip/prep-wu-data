@@ -3,16 +3,9 @@ module TwitterFriends
     class GenericJsonParser
       attr_accessor :raw
       def initialize raw
-        self.raw = raw; return unless healthy?
-        self.fix_raw!
+        self.raw = raw
       end
       def healthy?() raw && raw.is_a?(Hash) end
-
-      #
-      # Coerce any fields that need fixin'
-      #
-      def fix_raw!
-      end
 
       #
       # Safely parse the json object and instantiate with the raw hash

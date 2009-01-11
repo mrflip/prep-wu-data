@@ -1,3 +1,4 @@
+require 'date'
 module TwitterFriends
   module StructModel
     module ModelCommon
@@ -17,8 +18,10 @@ module TwitterFriends
       #
       # dump resource name and all fields, tab-separated
       #
-      def output_form spread_keyspace=false
-        rsrc = spread_keyspace ? keyspace_spread_resource_name : resource_name
+      def output_form
+        # spread_keyspace=false
+        # rsrc = spread_keyspace ? keyspace_spread_resource_name : resource_name
+        rsrc = resource_name + '-' + key
         [rsrc, self.to_tsv].join("\t")
       end
 
@@ -29,18 +32,24 @@ module TwitterFriends
         self.class.to_s.underscore.gsub(%r{.*/([^/]+)\z}, '\1')
       end
 
-      #
-      # emit an identifiable resource name that will partition kindof efficiently at
-      # the reducer.
-      #
-      # Ex.
-      #   a = TwitterUser.new; a.id = '0004567890'; a.keyspace_spread_resource_name
-      #   # => "twitter_user-90"
-      #
-      def keyspace_spread_resource_name
-        "%s-%s" % [ self.resource_name, self.key[-2..-1] ]
-      end
+      # #
+      # # emit an identifiable resource name that will partition kindof efficiently at
+      # # the reducer.
+      # #
+      # # Ex.
+      # #   a = TwitterUser.new; a.id = '0004567890'; a.keyspace_spread_resource_name
+      # #   # => "twitter_user-90"
+      # #
+      # def keyspace_spread_resource_name
+      #   "%s-%s" % [ self.resource_name, self.key[-2..-1] ]
+      # end
 
+      #
+      # By default, take the front num_key_fields of the flattened struct
+      #
+      def key
+        to_a[0..(num_key_fields-1)].join("-")
+      end
 
       def days_since_scraped
         (DateTime.now - DateTime.parse(scraped_at)).to_f

@@ -16,7 +16,7 @@ module Grokify
     def process thing
       return unless thing.is_a?(Tweet)
       thing.text_elements.each do |text_element|
-        puts text_element.output_form("\t")
+        puts text_element.output_form
       end
     end
 

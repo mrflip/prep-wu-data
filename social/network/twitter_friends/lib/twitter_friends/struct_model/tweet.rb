@@ -40,12 +40,8 @@ module TwitterFriends::StructModel
       @decoded_text ||= text.hadoop_decode
     end
 
-    #
-    # Unique specification
-    #
-    def key()
-      id.to_s
-    end
+    # Key on id
+    def num_key_fields()  1  end
 
   end
 end

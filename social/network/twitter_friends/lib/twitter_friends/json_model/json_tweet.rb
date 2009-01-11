@@ -19,13 +19,15 @@ module TwitterFriends
     # }
     #
     class JsonTweet < GenericJsonParser
+      attr_accessor :raw
       def initialize raw, twitter_user_id = nil
-        super raw; return unless healthy?
+        self.raw = raw; return unless healthy?
         if twitter_user_id
           raw['twitter_user_id'] = twitter_user_id
         elsif raw['user'] && raw['user']['id']
-          raw['twitter_user_id'] = ModelCommon.zeropad_id( raw['user']['id'] )
+          raw['twitter_user_id'] = raw['user']['id']
         end
+        self.fix_raw!
       end
       def healthy?() raw && raw.is_a?(Hash) end
 
@@ -38,6 +40,7 @@ module TwitterFriends
         raw['created_at'] = ModelCommon.flatten_date(raw['created_at'])
         raw['favorited']  = ModelCommon.unbooleanize(raw['favorited'])
         raw['truncated']  = ModelCommon.unbooleanize(raw['truncated'])
+        raw['twitter_user_id']       = ModelCommon.zeropad_id(raw['twitter_user_id'] )
         raw['in_reply_to_user_id']   = ModelCommon.zeropad_id(raw['in_reply_to_user_id'])   unless raw['in_reply_to_user_id'].blank?
         raw['in_reply_to_status_id'] = ModelCommon.zeropad_id(raw['in_reply_to_status_id']) unless raw['in_reply_to_status_id'].blank?
         Hadoop.encode_components raw, 'text'

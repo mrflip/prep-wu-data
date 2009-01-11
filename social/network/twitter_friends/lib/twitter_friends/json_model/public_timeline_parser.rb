@@ -8,7 +8,7 @@ module TwitterFriends
     #
     class PublicTimelineParser < GenericJsonParser
       attr_accessor :scraped_at
-      def initialize raw, scraped_at
+      def initialize raw, context, scraped_at, *ignore
         super raw
         self.scraped_at = scraped_at
       end
@@ -19,9 +19,12 @@ module TwitterFriends
         raw.each do |hsh|
           parsed = JsonTweet.new(hsh, nil)
           next unless parsed && parsed.healthy?
-          twitter_user = parsed.generate_user_partial
-          tweet        = parsed.generate_tweet
-          yield twitter_user, tweet
+          [
+            parsed.generate_user_partial,
+            parsed.generate_tweet
+          ].each do |obj|
+            yield obj
+          end
         end
       end
     end

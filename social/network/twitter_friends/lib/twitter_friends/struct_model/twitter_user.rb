@@ -42,12 +42,17 @@ module TwitterFriends::StructModel
     def mutable?(attr)
       MUTABLE_ATTRS.include?(attr)
     end
-    def key
-      [id, scraped_at].join('-')
-    end
-    def keyspace_spread_resource_name
-      "%s-%s" % [ self.resource_name, self.id.to_s[-2..-1] ]
-    end
+    #
+    # Key on id
+    #
+    # For mutability (preserving different scraped_at observations)
+    # needs to be 2 -- id and scraped_at
+    #
+    def num_key_fields()  1  end
+    # #
+    # def keyspace_spread_resource_name
+    #   "%s-%s" % [ self.resource_name, self.id.to_s[-2..-1] ]
+    # end
   end
 
   #

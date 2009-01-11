@@ -29,7 +29,8 @@ module TwitterFriends::StructModel
     include TwitterFriends::TwitterRdf
     def to_rdf3_tuples
       [
-        [rdf_component(user_a_id, :user), rdf_pred(:replied_to), rdf_component(user_b_id, :user), rdf_component(status_id, :tweet) ]
+        [rdf_component(user_a_id, :user),  rdf_pred(:replied_to),       rdf_component(user_b_id, :user), rdf_component(status_id, :tweet) ],
+        [rdf_component(status_id, :tweet), rdf_pred(:continues_thread), rdf_component(in_reply_to_status_id, :tweet) ],
       ]
     end
   end

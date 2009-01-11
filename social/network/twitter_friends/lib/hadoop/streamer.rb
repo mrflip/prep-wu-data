@@ -23,15 +23,26 @@ module Hadoop
       warn "Bad record #{args.inspect[0..400]}"
       puts ["bad_record", args].flatten.join("\t")
     end
+
+  end
+
+  module StructItemizer
+    def self.class_from_resource klass_name
+      begin klass = klass_name.to_s.camelize.constantize
+      rescue ; warn "Bogus class name '#{klass_name}'" ; return ; end
+    end
+
+    def self.itemize klass_name, *vals
+      return if klass_name =~ /^(?:bogus-|bad_record)/
+      klass_name.gsub!(/-.*$/, '') # kill off all but class name
+      klass = self.class_from_resource(klass_name) or return
+      [ klass.new(*vals) ]
+    end
   end
 
   class StructStreamer < Streamer
     def itemize line
-      klass_name, *vals = super(line)
-      klass_name.gsub!(/-.*$/, '') # kill off all but class name
-      begin klass = klass_name.to_s.camelize.constantize
-      rescue ; warn "Bogus class name starting line '#{line}'" ; return ; end
-      [ klass.new(*vals) ]
+      StructItemizer.itemize *super(line)
     end
   end
 
@@ -45,7 +56,7 @@ module Hadoop
     #
     # override for multiple-field keys, etc.
     #
-    def get_key vals
+    def get_key *vals
       vals.first
     end
 
@@ -56,7 +67,7 @@ module Hadoop
     # new key.
     #
     def process *vals
-      key = get_key(vals)
+      key = get_key(*vals)
       # if we've seen nothing, adopt key
       self.last_key ||= key
       # if this is a new key,
@@ -117,7 +128,7 @@ module Hadoop
     #
     # Key on first two fields by default
     #
-    def get_key vals
+    def get_key *vals
       vals[0..1]
     end
 

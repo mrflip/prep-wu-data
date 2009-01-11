@@ -47,10 +47,12 @@ module TwitterFriends
     #
     #    }
     #
-    class JsonTwitterUser < GenericJsonParser
+    class JsonTwitterUser
+      attr_accessor :raw
       def initialize raw, scraped_at
-        super raw; return unless healthy?
+        self.raw = raw; return unless healthy?
         self.raw['scraped_at'] = scraped_at
+        self.fix_raw!
       end
       def healthy?() raw && raw.is_a?(Hash) end
 
