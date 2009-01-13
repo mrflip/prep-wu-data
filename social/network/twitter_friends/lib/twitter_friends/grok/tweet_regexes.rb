@@ -17,14 +17,15 @@ module TwitterFriends
       #
       # http://www.facebook.com/groups.php?id=1347199977&gv=12#/group.php?gid=18183539495
       #
-      RE_DOMAIN_HEAD     = '(?:[a-zA-Z0-9\-]+\.)+'
-      RE_DOMAIN_TLD      = '(?:com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum|[a-zA-Z]{2})'
-      RE_URL_SCHEME      = '[a-zA-Z][a-zA-Z0-9\-\+\.]+'
-      RE_URL_UNRESERVED  = 'a-zA-Z0-9'   + '\-\._~'
-      RE_URL_OKCHARS     = RE_URL_UNRESERVED + '\'\+\,\;=' + '/%:@'   # not !$&()* [] \|
-      RE_URL_QUERYCHARS  = RE_URL_OKCHARS    + '&='
-      RE_URL_HOSTPART    = "#{RE_URL_SCHEME}://#{RE_DOMAIN_HEAD}#{RE_DOMAIN_TLD}"
-      RE_URL             = %r{(
+      RE_DOMAIN_HEAD       = '(?:[a-zA-Z0-9\-]+\.)+'
+      RE_DOMAIN_TLD        = '(?:com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum|[a-zA-Z]{2})'
+      # RE_URL_SCHEME      = '[a-zA-Z][a-zA-Z0-9\-\+\.]+'
+      RE_URL_SCHEME_STRICT = '[a-zA-Z]{3,6}'
+      RE_URL_UNRESERVED    = 'a-zA-Z0-9'   + '\-\._~'
+      RE_URL_OKCHARS       = RE_URL_UNRESERVED + '\'\+\,\;=' + '/%:@'   # not !$&()* [] \|
+      RE_URL_QUERYCHARS    = RE_URL_OKCHARS    + '&='
+      RE_URL_HOSTPART      = "#{RE_URL_SCHEME_STRICT}://#{RE_DOMAIN_HEAD}#{RE_DOMAIN_TLD}"
+      RE_URL               = %r{(
                 #{RE_URL_HOSTPART}                   # Host
      (?:(?: \/ [#{RE_URL_OKCHARS}]+?          )*?    # path:  / delimited path segments
         (?: \/ [#{RE_URL_OKCHARS}]*[\w\-\+\~] )      #        where the last one ends in a non-punctuation.
@@ -33,6 +34,31 @@ module TwitterFriends
         (?: \? [#{RE_URL_QUERYCHARS}]+  )?           # query: introduced by a ?, with &foo= delimited segments
         (?: \# [#{RE_URL_OKCHARS}]+     )?           # frag:  introduced by a #
       )}x
+
+
+      #
+      # Technically a scheme can allow the characters '+', '-' and '.' within
+      # it. In practice you can not only ignore those characters but all but a
+      # few specific schemes.
+      #
+      # From a collection of ~9M tweeted urls, 99.4% were http://, with only the additional
+      #   https, mms, ftp, git, irc, feed, itpc, rtsp, hxxp, gopher, telnet, itms, ssh, webcal, svn
+      # seemingly worth finding:
+      #
+      #   8925742 http
+      #      6026 https  1841 ivo  122 mms    85 ftp    61 git  53 irc   45 feed   31 itpc  12 www
+      #        12 rtsp     12 hxxp  12 gopher  9 telnet  9 itms  7 ssh    5 webcal  5 sop    4 wiie
+      #         3 svn       3 sssp   3 file    2 res     1 xttp  1 xmlrpc 1 ssl     1 smb
+      #
+      # An hxxp http://en.wikipedia.org/wiki/Hxxp is used to obscure a link, so
+      # take of that what you may.
+      #
+      # The ivo:// scheme is used by virtual astronomical observatories; as its
+      # hostnames are given in reverse-dotted notation (uk.org.estar) these URIs
+      # are imperfectly recognized.  Twitter doesn't accept them at all:
+      #   http://twitter.com/eSTAR_Project/status/1113930948
+      #
+      #
 
 
       # ===========================================================================
@@ -50,19 +76,19 @@ module TwitterFriends
       #
       # See ARetweetsB for more info.
       #
-      # A retweet 
+      # A retweet
       #   RT @interesting_user Something so witty Dorothy Parker would just give up
       #   Oh yeah and so's your mom (via @sixth_grader)
       #   retweeting @ogre: KEGGER TONITE RT pls
       #     ^^^ this is not a rtwhore; it matches first as a retweet
       #
-      # and rtwhores 
+      # and rtwhores
       #   retweet please: Hey here's something I'm whoring xxx
       #   KEGGER TONITE RT pls
-      # 
+      #
       # or semantically-incorrect matches such as (actual example):
       #    @somebody lol, love the 'please retweet' ending!
-      # 
+      #
       # Things that don't match:
       #   retweet is silly, @i_think_youre_dumb
       #    misspell the name of my Sony Via
@@ -86,8 +112,8 @@ module TwitterFriends
       #
       # Making an exception for RT@im_cramped_for_space.
       #
-      # All retweets 
-      # 
+      # All retweets
+      #
       RE_ATSIGNS         = %r{(?:^|\W|#{RE_RETWEET_OR_VIA})@(\w+)\b}
     end
   end

@@ -29,7 +29,7 @@ module TwitterFriends
       # express the class type
       #
       def resource_name
-        self.class.to_s.underscore.gsub(%r{.*/([^/]+)\z}, '\1')
+        @resource_name ||= self.class.to_s.underscore.gsub(%r{.*/([^/]+)\z}, '\1')
       end
 
       # #

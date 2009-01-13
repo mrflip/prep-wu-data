@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+# We want to get anyone who
+#   used hashtag		#mumbai
+#   tweeted words 		mumbai|terror|attack|oberoi|taj
+#   has a Indian TZ
+#   description or location 	india|paki|bombay|jaipur|delhi|chennai|bangalore|[ck]olkata|calcutta
+#      (but not Indiana).
+#
+#   is in 0th or 1st degree from http://www.mahalo.com/Mumbai_Terrorist_Attack_Twitter
+#
+#
+
 version=20081222
 dump_tweets=fixd/dump/india_tweets-${version}.tsv
 dump_tup=fixd/dump/india_users-tup-${version}.tsv

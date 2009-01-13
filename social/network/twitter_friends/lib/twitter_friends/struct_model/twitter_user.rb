@@ -120,7 +120,7 @@ module TwitterFriends::StructModel
   # For passing around just screen_name => id mapping
   #
   class TwitterUserId      < Struct.new(
-      :id, :screen_name )
+      :id, :screen_name, :full )
     include ModelCommon
     include TwitterUserCommon
   end

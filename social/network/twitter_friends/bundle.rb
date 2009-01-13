@@ -38,9 +38,6 @@ class BundleMapper < Hadoop::Streamer
 end
 
 class BundleStage1Script < Hadoop::Script
-  def reduce_command
-    '/bin/cat'
-  end
 end
 
 #

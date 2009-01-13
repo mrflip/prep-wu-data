@@ -40,4 +40,4 @@ resource=public_timeline
 listing=${scrape_store_listing_dir}/scrape_store_listings-$resource.tsv
 bundled=rawd/bundled/${resource}
 hdp-rm -r $bundled
-./bundle.rb --go --nopartition --sort_keys=1 ${listing} ${bundled}
+./bundle.rb --go --nopartition --sort_keys=2 ${listing} ${bundled}

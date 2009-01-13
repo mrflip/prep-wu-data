@@ -77,7 +77,7 @@ module TwitterFriends
       #
       GROK_FILENAME_RE       = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+u(\d{10})\+d(\d{14})\.json}
       GROK_OLD_FILENAME_RE   = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/((?:%5F|\w)\w*)\.json%3Fpage%3D(\d+)\+(\d{8}-\d{6})\.json}
-      GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/(.*)\.json%3Fpage%3D(.*)(?:\+u([\d\-]+))?\+d?([\d\-]+)\.json}
+      GROK_BOGUS_FILENAME_RE = %r{com\.twitter/_(\d{8}/_\d{2})/([\w/]+)/(.*)\.json%3Fpage%3D(\d+)(?:[^\+]*?)(?:\+u?([\d\-]+))?\+d?([\d\-]+)\.json}
       GROK_PUBLIC_TIMELINE_FILENAME_RE = %r{public_timeline/(\d{6}/\d\d/\d\d)/public_timeline-(\d{8}-\d{6}).json}
       #
       # Instantiate from filename

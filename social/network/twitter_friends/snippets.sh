@@ -7,15 +7,17 @@ exit
 # Copy all archives to the DFS
 #
 (
-  cd /workspace/flip/data/arch/social/network/twitter_friends/ripd
-  hdp-ls arch/ripd/* > ../arch-ripd-listing.txt
-  for tarfile in ripd_*/* ; do
-    if  [ -z "`grep $tarfile ../arch-ripd-listing.txt `" ] ; then
-      echo "Copying $tarfile ";
-      hdp-put $tarfile arch/ripd/$tarfile ;
-    fi ;
-  done
+  seg=public_timeline ;
+	cd ~/ics/pool/social/network/twitter_friends;
+	hdp-ls "arch/$seg/*" > tmp/arch-${seg}-listing.txt;
+	for tarfile in arch/{${seg},$seg/*}/*.bz2 ; do
+	  if  [ -e "$tarfile" -a -z "`grep $tarfile tmp/arch-$seg-listing.txt `" ] ; then
+		  echo "Copying $tarfile ";
+			hdp-put $tarfile $tarfile ;
+		fi ;
+	done;
 )
+
 
 
 #
@@ -27,3 +29,12 @@ for foo in  '#|[^"]http://|@'  '(RT|retweet|via).*@[A-Za-z0-9_]' \
   '(RT|retweet).*(please|plz|pls)' '(please|plz|pls).*RT|retweet)' ; do
   hdp-cat fixd/user/p\*0 | egrep "$foo" | head -n 200 >> $dest ;
 done
+
+
+#
+# List all bad ids
+#
+hdp-catd tmp/user_ids/user_ids_all-20090111 | \
+  cut -d'   ' -f2,3 | \
+	ruby -ne '$_.chomp! ; id,sn,*_=$_.split(/\t/) ; puts $_ if ( (sn =~ /\W/)  || (!sn) || (sn.empty?) )' \
+	> fixd/dump/bad_ids_`datename`.tsv

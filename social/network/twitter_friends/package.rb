@@ -11,7 +11,7 @@ require 'hadoop'                       ; include Hadoop
 #   hdp-rm $listing ;
 #   hadoop dfs -lsr fixd | grep part- | hdp-put - $listing ;
 #
-#   hdp-rm $pkgd_log ;
+#   hdp-rm -r $pkgd_log ;
 #   ./package.rb --go --map_tasks=1 $listing $pkgd_log
 
 module ExportPackager

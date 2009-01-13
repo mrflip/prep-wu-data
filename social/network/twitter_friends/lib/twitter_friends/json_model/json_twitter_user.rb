@@ -1,4 +1,3 @@
-require 'addressable/uri'
 module TwitterFriends
   module JsonModel
 
@@ -72,7 +71,7 @@ module TwitterFriends
         # There are several users with bogus screen names
         # These we need to **URL encode** -- not XML-encode.
         if raw['screen_name'] !~ /\A\w+\z/
-          raw['screen_name'] = Addressable::URI.encode_component(raw['screen_name'])
+          raw['screen_name'] = Hadoop.encode_str(raw['screen_name'], :url)
         end
       end
 

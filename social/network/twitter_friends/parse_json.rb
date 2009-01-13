@@ -23,10 +23,11 @@ require 'twitter_friends/json_model'   ; include TwitterFriends::JsonModel
 module ParseJson
   class Mapper < Hadoop::Streamer
     PARSER_FOR_CONTEXT = {
-      'user'      => UserParser,
-      'followers' => FriendsFollowersParser,
-      'friends'   => FriendsFollowersParser,
-      'favorites' => FriendsFollowersParser,
+      'user'            => UserParser,
+      'followers'       => FriendsFollowersParser,
+      'friends'         => FriendsFollowersParser,
+      'favorites'       => FriendsFollowersParser,
+      'timeline'        => PublicTimelineParser,
       'public_timeline' => PublicTimelineParser,
     }
     # user:     context, scraped_at, user_id,        page, screen_name, json_str
