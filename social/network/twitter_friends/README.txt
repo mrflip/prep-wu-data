@@ -1,3 +1,25 @@
+Everything is Struct oriented. You can flip fluidly between treating things as
+flat records (arrays) or as lightweight objects.
+
+Objects come down the pipe as
+
+  klass_name-key_field_1-key_field_2	attr_a	attr_b	attr_c
+
+So user 123's record might look like
+
+  twitter_user-0000000123	20090123012345	0000000123	abc	Baby look a me
+
+while an AFollowsB record relating user 69 to user 123 serializes as
+
+  a_follows_b-0000000069-0000000123	0000000069	0000000123
+
+The efficiency vs. straightforwardness of repeating that many fields is still up
+for debate. Works for now.
+
+
+Twitter specific classes:
+
+
 ****************************************************************************
 Scraper
   ++ 	scrape_request:
