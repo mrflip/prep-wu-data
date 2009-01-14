@@ -4,7 +4,17 @@ $: << File.dirname(__FILE__)+'/lib'
 require 'hadoop'                       ; include Hadoop
 
 #
-# See bundle.sh for running pattern
+# This is so very kludgey but it's easier than fiddling with thrift right now.
+#
+# Input is an 'ls' file listing that contains files to .bz2 package.
+#
+# Reducer takes each in turn and creates, within a parallel directory tree under
+# ~/pkgd on the HDFS, a .bz2 compressed version of the file.
+#
+# So, the file
+#   /user/me/fixd/all-20090103
+# is packaged onto the DFS as
+#   /user/me/pkgd/user/me/fixd/all-20090103
 #
 # listing=tmp/fixd-all-package-listing  ;
 # pkgd_log=tmp/fixd-all-package-log ;
@@ -64,6 +74,6 @@ module ExportPackager
 end
 
 #
-# Executes the script
+# Execute the script
 #
 ExportPackager::Script.new(nil, ExportPackager::Reducer).run
