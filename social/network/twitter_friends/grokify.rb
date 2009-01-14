@@ -12,6 +12,12 @@ require 'twitter_friends/grok/grok_tweets'
 module Grokify
   class Mapper < Hadoop::StructStreamer
     #
+    # Extract semantic info from each object: (well, right now just from tweets):
+    #  embedded urls,
+    #  hashtags,
+    #  re-tweets,
+    #  replies,
+    #  et cetera (see twitter_friends/grok/*)
     #
     def process thing
       return unless thing.is_a?(Tweet)
@@ -19,17 +25,12 @@ module Grokify
         puts text_element.output_form
       end
     end
-
-    #
-    # Skip bogus records
-    #
-    def itemize line
-      return if line =~ /^(?:bogus|bad_record)/
-      super line
-    end
   end
 
   class Script < Hadoop::Script
+    #
+    # Use uniq program, not this script for reduce
+    #
     def reduce_command
       '/usr/bin/uniq'
     end
