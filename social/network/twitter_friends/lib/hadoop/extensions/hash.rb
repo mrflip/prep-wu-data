@@ -14,6 +14,17 @@ class Hash
     hash
   end
 
+  # Stolen from ActiveSupport::CoreExtensions::Hash::ReverseMerge.
+  def reverse_merge(other_hash)
+    other_hash.merge(self)
+  end
+
+  # Stolen from ActiveSupport::CoreExtensions::Hash::ReverseMerge.
+  def reverse_merge!(other_hash)
+    replace(reverse_merge(other_hash))
+  end
+
+
   # Slice a hash to include only the given keys. This is useful for
   # limiting an options hash to valid keys before passing to a method:
   #

@@ -74,7 +74,7 @@ module TwitterFriends
       #
       def self.flatten_date dt
         begin
-          DateTime.parse(dt).strftime(DATEFORMAT) if dt
+          DateTime.parse(dt.to_s).strftime(DATEFORMAT) if dt
         rescue ; nil ; end
       end
 

@@ -13,9 +13,10 @@ module TwitterFriends
       #
       # * is.gd uses a trailing '-' (to indicate 'preview mode'): clever.
       # * pastoid.com uses a trailing '+', and idek.net a trailing ~ for no reason. annoying.
-      # * http://www.5irecipe.cn/recipe_content/2307/'/
       #
-      # http://www.facebook.com/groups.php?id=1347199977&gv=12#/group.php?gid=18183539495
+      # Counterexamples:
+      # * http://www.5irecipe.cn/recipe_content/2307/'/
+      # * http://www.facebook.com/groups.php?id=1347199977&gv=12#/group.php?gid=18183539495
       #
       RE_DOMAIN_HEAD       = '(?:[a-zA-Z0-9\-]+\.)+'
       RE_DOMAIN_TLD        = '(?:com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum|[a-zA-Z]{2})'
