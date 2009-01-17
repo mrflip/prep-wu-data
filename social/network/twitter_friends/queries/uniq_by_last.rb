@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-$: << File.dirname(__FILE__)+'/lib'
+$: << File.dirname(__FILE__)+'/../lib'
 
 require 'hadoop'
 require 'twitter_friends/struct_model' ; include TwitterFriends::StructModel
@@ -22,9 +22,9 @@ module Uniqify
 
   #
   class Script < Hadoop::Script
-    
+
     #
-    # Sort on <key id timestamp> 
+    # Sort on <key id timestamp>
     #
     def sort_fields
       3

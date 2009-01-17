@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'fileutils'; include FileUtils
-$: << File.dirname(__FILE__)+'/lib'
+$: << File.dirname(__FILE__)+'/../lib'
 
 require 'hadoop'
 require 'twitter_friends/struct_model' ; include TwitterFriends::StructModel

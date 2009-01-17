@@ -16,6 +16,14 @@ module TwitterFriends::StructModel
     def num_key_fields()  2  end
   end
 
+  # User ==favorites_tweet=> tweet ==by_user=>b
+  class AFavoritesB        < Struct.new( :user_a_id, :user_b_id, :status_id )
+    include ModelCommon
+    include RelationshipCommon
+    # Key on user_a-user_b-status_id (really just user_a-status_id is enough)
+    def num_key_fields()  3 end
+  end
+
   # Direct (threaded) replies: occur at the start of a tweet.
   class ARepliesB           < Struct.new( :user_a_id, :user_b_id, :status_id, :in_reply_to_status_id )
     include ModelCommon
@@ -30,14 +38,6 @@ module TwitterFriends::StructModel
     include ModelCommon
     include RelationshipCommon
     # Key on user_a-user_b-status_id
-    def num_key_fields()  3 end
-  end
-
-  # User ==favorites_tweet=> tweet ==by_user=>b
-  class AFavoritesB        < Struct.new( :user_a_id, :user_b_id, :status_id )
-    include ModelCommon
-    include RelationshipCommon
-    # Key on user_a-user_b-status_id (really just user_a-status_id is enough)
     def num_key_fields()  3 end
   end
 

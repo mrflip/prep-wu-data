@@ -8,14 +8,14 @@ exit
 #
 (
   seg=public_timeline ;
-	cd ~/ics/pool/social/network/twitter_friends;
-	hdp-ls "arch/$seg/*" > tmp/arch-${seg}-listing.txt;
-	for tarfile in arch/{${seg},$seg/*}/*.bz2 ; do
-	  if  [ -e "$tarfile" -a -z "`grep $tarfile tmp/arch-$seg-listing.txt `" ] ; then
-		  echo "Copying $tarfile ";
-			hdp-put $tarfile $tarfile ;
-		fi ;
-	done;
+        cd ~/ics/pool/social/network/twitter_friends;
+        hdp-ls "arch/$seg/*" > tmp/arch-${seg}-listing.txt;
+        for tarfile in arch/{${seg},$seg/*}/*.bz2 ; do
+          if  [ -e "$tarfile" -a -z "`grep $tarfile tmp/arch-$seg-listing.txt `" ] ; then
+                  echo "Copying $tarfile ";
+                        hdp-put $tarfile $tarfile ;
+                fi ;
+        done;
 )
 
 

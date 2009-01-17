@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-$: << File.dirname(__FILE__)+'/lib'
+$: << File.dirname(__FILE__)+'/../lib'
 
 require 'hadoop'
 require 'twitter_friends/struct_model' ; include TwitterFriends::StructModel
@@ -19,7 +19,7 @@ module KeyFlatten
   #
   # Note that this will make all of each resource stack up at one reducer:
   # if you have 60M frobnozz instances they will all land on the same machine.
-  #  
+  #
   class Mapper < Hadoop::Streamer
     def stream
       $stdin.each do |line|
@@ -32,7 +32,7 @@ module KeyFlatten
   #
   class Script < Hadoop::Script
     #
-    # Sort on <key id timestamp> 
+    # Sort on <key id timestamp>
     #
     def sort_fields
       3

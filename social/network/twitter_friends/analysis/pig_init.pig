@@ -15,5 +15,6 @@ UserPart = load 'fixd/flattened/all/twitter_user_partial.tsv'	 AS (rsrc:  charar
 UserProf = load 'fixd/flattened/all/twitter_user_profile.tsv'	 AS (rsrc:  chararray, id: int, scraped_at: long, screen_name: chararray, protected: int, followers_count: int, friends_count: int, statuses_count: int, favorites_count: int, created_at: long);
 UserStl  = load 'fixd/flattened/all/twitter_user_style.tsv'	 AS (rsrc:  chararray, id: int, scraped_at: long, screen_name: chararray, protected: int, followers_count: int, friends_count: int, statuses_count: int, favorites_count: int, created_at: long);
 
+
 AA = FILTER AFollowsB BY a_id < 1600000 ;
 AFB1 = FOREACH AA GENERATE a_id, b_id ;
