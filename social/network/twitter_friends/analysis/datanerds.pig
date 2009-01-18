@@ -120,18 +120,18 @@ N1Tweets                = LOAD 'meta/datanerds/n1_tweet.tsv'       AS (rsrc: cha
 
 -- TwitterUsers for community
 N1Users_1               = JOIN  Nbhd1IDs      BY user_id, Users BY user_id PARALLEL 100;
-N1Users                 = FOREACH N1Users_1  GENERATE rsrc, scraped_at, Users::user_id, favorited, truncated, repl_user_id, repl_tw_id, text, src ;
+N1Users                 = FOREACH N1Users_1  GENERATE Users::rsrc, Users::user_id, scraped_at, screen_name, protected, followers_count, friends_count, statuses_count, favorites_count, created_at ;
 STORE N1Users             INTO 'meta/datanerds/n1_user.tsv' ;
 N1Users                 = LOAD 'meta/datanerds/n1_user.tsv'        AS (rsrc: chararray, user_id: int, scraped_at: long, screen_name: chararray, protected: int, followers_count: int, friends_count: int, statuses_count: int, favorites_count: int, created_at: long);
 
 -- TwitterUserProfiles for community
 N1UserProfiles_1        = JOIN  Nbhd1IDs      BY user_id, UserProfiles BY user_id PARALLEL 100;
-N1UserProfiles          = FOREACH N1UserProfiles_1  GENERATE rsrc, scraped_at, UserProfiles::user_id, favorited, truncated, repl_user_id, repl_tw_id, text, src ;
+N1UserProfiles          = FOREACH N1UserProfiles_1  GENERATE UserProfiles::rsrc, UserProfiles::user_id, scraped_at, full_name, url, location, description, time_zone, utc_offset;
 STORE N1UserProfiles      INTO 'meta/datanerds/n1_user_profile.tsv' ;
-N1UserProfiles          = LOAD 'meta/datanerds/n1_user_profile.tsv' AS (rsrc:  chararray, id: int, scraped_at: long, screen_name: chararray, protected: int, followers_count: int, friends_count: int, statuses_count: int, favorites_count: int, created_at: long);
+N1UserProfiles          = LOAD 'meta/datanerds/n1_user_profile.tsv' AS (rsrc: chararray, user_id: int, scraped_at: long, full_name:   chararray, url: chararray, location: chararray, description: chararray, time_zone: chararray, utc_offset: int);
 
 -- TwitterUserStyles for community
 N1UserStyles_1          = JOIN  Nbhd1IDs      BY user_id, UserStyles BY user_id PARALLEL 100;
-N1UserStyles            = FOREACH N1UserStyles_1  GENERATE rsrc, scraped_at, UserStyles::user_id, favorited, truncated, repl_user_id, repl_tw_id, text, src ;
+N1UserStyles            = FOREACH N1UserStyles_1  GENERATE UserStyles::rsrc, UserStyles::user_id, scraped_at, profile_background_color, profile_text_color, profile_link_color, profile_sidebar_border_color, profile_sidebar_fill_color, profile_background_tile, profile_background_image_url, profile_image_url;
 STORE N1UserStyles        INTO 'meta/datanerds/n1_user_style.tsv' ;
-N1UserStyles            = LOAD 'meta/datanerds/n1_user_style.tsv'  AS (rsrc:  chararray, id: int, scraped_at: long, screen_name: chararray, protected: int, followers_count: int, friends_count: int, statuses_count: int, favorites_count: int, created_at: long);
+N1UserStyles            = LOAD 'meta/datanerds/n1_user_style.tsv'  AS (rsrc: chararray, user_id: int, scraped_at: long, profile_background_color: chararray, profile_text_color: chararray, profile_link_color: chararray, profile_sidebar_border_color: chararray, profile_sidebar_fill_color: chararray, profile_background_tile: int, profile_background_image_url: chararray, profile_image_url: chararray);
