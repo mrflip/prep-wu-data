@@ -41,7 +41,7 @@ module Rdfify
   # end
 
   class Script < Hadoop::Script
-    def reducer_command
+    def reduce_command
       '/usr/bin/uniq'
     end
   end
@@ -52,7 +52,5 @@ end
 #
 Rdfify::Script.new(
   Rdfify::Mapper,
-
   nil # !!!!!!!!!!! note removed reducer, just straight uniq for nows.
-
   ).run

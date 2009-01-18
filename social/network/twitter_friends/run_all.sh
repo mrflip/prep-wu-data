@@ -22,6 +22,7 @@ hdp-rm -r $dest ; ./rdfify.rb  		    --go fixd/all 	 		   $dest
 dest=fixd/flattened
 hdp-rm -r $dest ; ./queries/flatten_keys.rb --go fixd/all 			   $dest
 
+./lib/hadoop/bin/hdp-parts_to_keys.rb $dest
 
 #
 # package

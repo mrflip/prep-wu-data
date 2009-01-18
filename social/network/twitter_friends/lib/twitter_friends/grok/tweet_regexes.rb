@@ -96,7 +96,7 @@ module TwitterFriends
       #
       RE_RETWEET_WORDS  = 'RT|retweet|retweeting'
       RE_RETWEET_ONLY   = %r{(?:#{RE_RETWEET_WORDS})}
-      RE_RETWEET_OR_VIA = %r{(?:#{RE_RETWEET_WORDS}|via)}
+      RE_RETWEET_OR_VIA = %r{(?:#{RE_RETWEET_WORDS}|via|from)}
       RE_PLEASE         = %r{(?:please|plz|pls)}
       RE_RETWEET        = %r{\b#{RE_RETWEET_OR_VIA}\W*@(\w+)\b}i
       RE_RTWHORE        = %r{

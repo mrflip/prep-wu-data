@@ -81,11 +81,12 @@ module Hadoop
     def exec_hadoop_streaming
       slug = Time.now.strftime("%Y%m%d")
       input_path, output_path = options[:rest][0..1]
-      raise "You need to specify a parsed input directory and a directory for output. Got #{ARGV.inspect}" if input_path.blank? || output_path.blank?
+      raise "You need to specify a parsed input directory and a directory for output. Got #{ARGV.inspect}" if (! options[:fake]) && (input_path.blank? || output_path.blank?)
       $stderr.puts "Launching hadoop streaming on self"
       case
       when options[:fake]
-        command = %Q{ cat '#{input_path}' | #{map_command} | sort | #{reduce_command} > '#{output_path}'}
+        $stderr.puts "Reading STDIN / Writing STDOUT"
+        command = %Q{ #{map_command} | sort | #{reduce_command} }
       when options[:nopartition]
         command = %Q{ hdp-stream-flat '#{input_path}' '#{output_path}' '#{map_command}' '#{reduce_command}' #{extra_args} }
       else
