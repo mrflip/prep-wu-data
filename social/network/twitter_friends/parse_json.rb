@@ -29,6 +29,7 @@ module ParseJson
       'friends'         => FriendsFollowersParser,
       'favorites'       => FriendsFollowersParser,
       'timeline'        => PublicTimelineParser,
+      'user_timeline'   => PublicTimelineParser,
       'public_timeline' => PublicTimelineParser,
     }
     # user:     context, scraped_at, user_id,        page, screen_name, json_str
@@ -40,8 +41,14 @@ module ParseJson
     # skipping bad records
     # finally, output serialized object
     #
-    def process context, scraped_at, identifier, page, moreinfo, json_str
+    def process *args
+      # context, scraped_at, identifier, page, moreinfo, json_str = args
+      context, priority, identifier, page, moreinfo, url, scraped_at, *_ = args
+      json_str = args.last
       return if context =~ /^bogus-/
+      unless PARSER_FOR_CONTEXT[context]
+        raise [args].flatten.join("\t")
+      end
       parsed = PARSER_FOR_CONTEXT[context].new_from_json(json_str, context, scraped_at, identifier, page, moreinfo)
       unless parsed && parsed.healthy?
         bad_record!(context, scraped_at, identifier, page, moreinfo, json_str); return ;

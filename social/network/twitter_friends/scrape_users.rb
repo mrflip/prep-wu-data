@@ -1,72 +1,134 @@
 #!/usr/bin/env ruby
+require 'rubygems'
+require 'yaml'
 
-CONFIG = YAML.load(File.open(''))
+$: << File.dirname(__FILE__)+'/lib'
+require 'hadoop'
+require 'twitter_friends/struct_model' ; include TwitterFriends::StructModel
+require 'twitter_friends/scrape'       ; include TwitterFriends::Scrape
+require 'twitter_friends/json_model'   ; include TwitterFriends::JsonModel
 
-
-
+# Make sure this file doesn't go into source control.
+CONFIG = YAML.load(File.open(File.dirname(__FILE__)+'/config/private.yaml'))
+# How often to holla
+PROGRESS_INTERVAL = 10
+# How long to sleep between fetch sessions
+SLEEP_INTERVAL    = 1
+# How often to checkpoint progress to disk
+TwitterFriends::Scrape::ScrapeDumper::CHECKPOINT_INTERVAL = 15*60
 
 $progress_count = 0
-def track_progress count, record
+def track_progress *record
   $progress_count += 1
-  return unless $progress_count % 10_000
-  $stderr.puts([Time.now, progress_count, record.to_a].flatten.join("\t"))
+  return unless ($progress_count % PROGRESS_INTERVAL == 1)
+  $stderr.puts(['progress:', Time.now, $progress_count, record].flatten.join("\t"))
+end
+
+class TwitterScrapeRequest < ScrapeRequest
+  include TwitterApi
+
+  def initialize *args
+    super *args
+    self.url ||= gen_url
+  end
 end
 
 
-class ScrapeRequest < Struct.new( :context, :priority, :identifier, :page, :moreinfo, :url, :scraped_at, :contents )
-  cattr_accessor :sleep_time
-  include TwitterFriends::StructModel::ModelCommon
-
-  def fix_url!
-    url = ""
+class TwitterUserRequests < ScrapeRequestGroup
+  attr_accessor :scraper
+  def initialize *args
+    super *args
+    self.scraper = HTTPScraper.new('twitter.com')
+  end
+  def self.contexts
+    [:followers, :friends, :favorites, :user_timeline]
   end
 
-
-  def self.net_http
-    @net_http ||= Net::HTTP.start('www.example.com')
+  def pages context
+    TwitterApi.pages context, thing
   end
 
-  def get_url!
-    Net::HTTP.start(host) do |http|
-      req = Net::HTTP::Get.new(url)
-      req.basic_auth , 'password'
-      response = http.request(req)
-      print response.body
+  def each_context &block
+    self.class.contexts.each do |context|
+      yield context
     end
-    }
+  end
+  def each_page context, &block
+    (1..pages(context)).each do |page|
+      yield page
+    end
   end
 
   #
-  # Get the redirect location... don't follow it, just request and store it.
   #
-  def fetch! options={ }
-    return unless scraped_at.blank?
-    begin
-      # look for the redirect
-      raw_dest_url = Net::HTTP.get_response(URI.parse(src_url))["location"]
-      self.dest_url = self.class.scrub_url(raw_dest_url)
-      sleep options[:sleep]
-    rescue Exception => e
-      nil
+  #
+  def gen_priority context
+    case context
+    when :user
+      TwitterApi.pages(:followers, thing)
+    when :friends
+      [ (100 * thing.friends_per_day).to_i, 1 ].max
+    when :favorites, :followers, :user_timeline
+      TwitterApi.pages(context, thing)
+    else raise "need to define priority for context #{context}"
     end
-    self.scraped_at = TwitterFriends::StructModel::ModelCommon.flatten_date(DateTime.now) if self.scraped_at.blank?
   end
 
+
+  def get_user
+    user_request = TwitterScrapeRequest.new( :user, gen_priority(:user), thing.id, 1, thing.screen_name )
+    scraper.get! user_request
+    parsed = UserParser.new_from_json(
+       user_request.contents, user_request.context,
+        user_request.scraped_at, user_request.identifier,
+        user_request.page, user_request.moreinfo)
+    if parsed && parsed.user
+      new_user = parsed.generate_twitter_user
+      self.thing = new_user if new_user
+    end
+    user_request
+  end
+
+  def each_request &block
+    user_request = get_user
+    yield get_user
+    each_context do |context|
+      each_page(context) do |page|
+        priority = gen_priority(context)
+        scrape_request =  TwitterScrapeRequest.new( context, priority, thing.id, page, thing.screen_name )
+        scraper.get! scrape_request
+        yield scrape_request
+      end
+    end
+  end
 end
 
 
-
-
-REQUEST_FILENAME = 'rawd/scrape_requests/scrape_requests-20080117.tsv'
-File.open(REQUEST_FILENAME).each do |line|
-  scrape_request_group = ScrapeRequestGroup.new(line.chomp.split("\t"))
-
-  scrape_request_group.each_request do |scrape_request|
-    track_progress(progress_count, scrape_request)
-    #
-    #
-    #
-    scrape_request.fetch!
-    puts scrape_request.output_form
+#
+# Set up
+#
+RIPD_ROOT = '/workspace/flip/data/ripd'
+REQUEST_FILENAME = 'rawd/scrape_requests/scrape_requests-20080118-datanerds.tsv'
+scrape_dumper = ScrapeDumper.new(RIPD_ROOT+'/_com/_tw/com.twitter/bundled', "bundle")
+#
+# Walk thru requests list
+#
+File.open(REQUEST_FILENAME).readlines.each do |line|
+  args = line.chomp.split("\t")[0..(TwitterUser.members.length-1)]
+  #
+  # Generate requests
+  #
+  twitter_user    = TwitterUser.new(*args)
+  twitter_user.id = "%010d"%twitter_user.id.to_i
+  scrape_requests = TwitterUserRequests.new(twitter_user)
+  #
+  # Save output
+  #
+  scrape_requests.each_request do |scrape_request|
+    track_progress(scrape_request.context, scrape_requests.thing.to_a)
+    scrape_dumper.checkpoint!
+    scrape_dumper << scrape_request.dump_form
   end
+  sleep SLEEP_INTERVAL
 end
+scrape_dumper.close!
