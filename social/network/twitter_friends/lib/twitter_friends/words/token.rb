@@ -1,5 +1,5 @@
 module TwitterFriends::StructModel
-  class Token < Struct.new(:origin, :owner, :word, :freq)
+  class Token < Struct.new(:context, :owner, :word, :freq)
     include ModelCommon
 
     def initialize *args

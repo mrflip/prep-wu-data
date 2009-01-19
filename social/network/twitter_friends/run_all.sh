@@ -30,7 +30,7 @@ hdp-rm -r $dest ; ./queries/flatten_keys.rb --go fixd/all 			   $dest
 listing=tmp/fixd-all-package-listing  ;
 pkgd_log=tmp/fixd-all-package-log ;
 hdp-rm $listing ;
-hadoop dfs -lsr fixd | grep part- | hdp-put - $listing ;
+hadoop dfs -lsr fixd | egrep '(part-|.tsv)' | hdp-put - $listing ;
 
 hdp-rm -r $pkgd_log ;
 ./package.rb --go --map_tasks=1 $listing $pkgd_log

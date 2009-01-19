@@ -19,11 +19,15 @@ module WordFreq
     # Would be much better to use NLTK. But here we are.
     #
     def tokenize t
+      return [] unless t
+      t = t.downcase;
       # kill off all punctuation except 's
       # this includes hyphens (words are split)
       t = t.gsub(/[^\w\']+/, ' ').gsub(/\'s\b/, '!').gsub(/\'/, ' ').gsub(/!/, "'s")
       # Busticate at whitespace
       words = t.strip.split(/\s+/)
+      words.reject!{|w| w.blank? || (w.length < 3) }
+      words
     end
 
 
@@ -32,7 +36,7 @@ module WordFreq
     #
     def tokenize_tweet_text t
       # skip default message from early days
-      return [] if t =~ /just setting up my twttr/;
+      return [] if (! t) || (t =~ /just setting up my twttr/);
       # downcase
       t = t.downcase;
       # Remove semantic non-words, except hashtags: we like those.
@@ -49,10 +53,24 @@ module WordFreq
       return [] if tweet.text.count('&') > 20
       # Tokenize
       words = tokenize_tweet_text tweet.decoded_text
-      words.reject!{|w| w.blank? || (w.length < 4) }
       # emit tokens
       words.each do |word|
-        puts Token.new(:tweet, :all, word).output_form
+        puts Token.new(:tweet, tweet.twitter_user_id, word).output_form
+      end
+    end
+
+    def gen_profile_tokens user_profile
+      desc = user_profile.decoded_description
+      tokenize(desc).each do |word|
+        puts Token.new(:desc, user_profile.id, word).output_form
+      end
+      name = user_profile.decoded_name
+      tokenize(name).each do |word|
+        puts Token.new(:name, user_profile.id, word).output_form
+      end
+      loc = user_profile.decoded_location
+      tokenize(loc).each do |word|
+        puts Token.new(:loc,  user_profile.id, word).output_form
       end
     end
 
@@ -61,7 +79,8 @@ module WordFreq
     #
     def process thing
       case thing
-      when Tweet        then gen_tweet_tokens(thing)
+      when Tweet                then gen_tweet_tokens(thing)
+      when TwitterUserProfile   then gen_profile_tokens(thing)
       end
     end
   end
@@ -77,15 +96,15 @@ module WordFreq
     end
 
     def freq_key freq
-      "% 10d"%freq
+      "%010d"%freq
     end
 
     def stream
       %x{/usr/bin/uniq -c}.split("\n").each do |line|
-        freq, origin, owner, word = line.chomp.strip.split(/\s+/)
+        freq, rest = line.chomp.strip.split(/\s+/, 2)
         freq = freq.to_i
         # next if freq <= 1
-        puts [word, origin, owner, word, freq_key(freq)].join("\t")
+        puts [rest, freq_key(freq)].join("\t")
       end
     end
   end

@@ -53,6 +53,16 @@ module TwitterFriends::StructModel
     # def keyspace_spread_resource_name
     #   "%s-%s" % [ self.resource_name, self.id.to_s[-2..-1] ]
     # end
+
+    def decoded_name
+      @decoded_name        ||= (name ? name.hadoop_decode : '')
+    end
+    def decoded_location
+      @decoded_location    ||= (location ? location.hadoop_decode : '')
+    end
+    def decoded_description
+      @decoded_description ||= (description ? description.hadoop_decode : '')
+    end
   end
 
   #

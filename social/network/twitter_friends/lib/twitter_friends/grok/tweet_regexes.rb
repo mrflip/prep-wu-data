@@ -94,7 +94,7 @@ module TwitterFriends
       #   retweet is silly, @i_think_youre_dumb
       #    misspell the name of my Sony Via
       #
-      RE_RETWEET_WORDS  = 'RT|retweet|retweeting'
+      RE_RETWEET_WORDS  = 'rt|retweet|retweeting'
       RE_RETWEET_ONLY   = %r{(?:#{RE_RETWEET_WORDS})}
       RE_RETWEET_OR_VIA = %r{(?:#{RE_RETWEET_WORDS}|via|from)}
       RE_PLEASE         = %r{(?:please|plz|pls)}
