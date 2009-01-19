@@ -4,34 +4,9 @@ require 'json' ; require 'yaml'
 require 'imw' ; include IMW
 require 'imw/extract/html_parser'
 as_dset __FILE__
-puts(File.dirname(__FILE__)+'/../twitter_friends/lib')
-puts(Dir[File.dirname(__FILE__)+'/../twitter_friends/lib'].join("\t"))
 $: << File.dirname(__FILE__)+'/../twitter_friends/lib'
-#require 'hadoop'
-
-DATEFORMAT='%Y%m%d%H%M%S'
-
-class SxswPanelIdea < Struct.new(
-      :id,
-      :scraped_at,
-      :level,
-      :type,
-      :category,
-      :title,
-      :organizer,
-      :organizer_full,
-      :organizer_url,
-      :description   )
-end
-
-class SxswPanelComment < Struct.new(
-    :id,
-    :idea_id,
-    :commenter_name,
-    :commenter_url,
-    :created_at,
-    :comment_text )
-end
+require 'hadoop'
+require 'panel_models'
 
 class SxswPanelHTMLParser < HTMLParser
   def self.parser_spec
@@ -40,16 +15,16 @@ class SxswPanelHTMLParser < HTMLParser
       :level         => 'dd.level',
       :type          => 'dd.type',
       :category      => 'dd.category',
-      :organizer     => 'dd.presenter/a',
-      :organizer_full => one('dd.presenter', %r{</a>, (.*)</dd>}),
-      :organizer_url => href('dd.presenter/a'),
-      :description   => 'dd.description',
+      :name          => 'dd.presenter/a',
+      :org           => one('dd.presenter', %r{</a>, (.*)</dd>}),
+      :url           => href('dd.presenter/a'),
+      :text          => 'dd.description',
       :comments      => [ 'div#comments-container/form/div', {
-          :id             => attr('', 'id', %r{comment-(\d+)}),
-          :commenter_name => 'div.author/a,span',
-          :commenter_url  => href('div.author/a'),
-          :created_at     => one('div.created', %r{on (.*)</div>}),
-          :comment_text   => 'div.comment-text',
+          :id         => attr('', 'id', %r{comment-(\d+)}),
+          :name       => 'div.author/a,span',
+          :url        => href('div.author/a'),
+          :created_at => one('div.created', %r{on (.*)</div>}),
+          :text       => 'div.comment-text',
         }
       ],
     }
@@ -74,7 +49,8 @@ class SxswPanelHTMLParser < HTMLParser
 
   def extract_idea raw_idea
     sanitize_whitespace(raw_idea)
-    panel_idea = SxswPanelIdea.from_hash(raw_idea)
+    Hadoop.encode_components(raw_idea, :name, :org, :text)
+    panel_idea = SxswPanelIdea.from_hash(raw_idea, true)
     panel_idea
   end
 
@@ -83,7 +59,8 @@ class SxswPanelHTMLParser < HTMLParser
     raw_idea[:comments].map do |raw_comment|
       next if raw_comment[:id].blank?
       sanitize_whitespace(raw_comment)
-      panel_comment            = SxswPanelComment.from_hash(raw_comment)
+      Hadoop.encode_components(raw_comment, :name, :text)
+      panel_comment            = SxswPanelComment.from_hash(raw_comment, true)
       panel_comment.created_at = sanitize_date(panel_comment.created_at, :european)
       panel_comment
     end.compact
