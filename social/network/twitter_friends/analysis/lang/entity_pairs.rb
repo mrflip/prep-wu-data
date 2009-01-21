@@ -14,21 +14,21 @@ module ExtractEntityPairs
       text = Hadoop.decode_str(text)
       Hadoop.html_encoder.encode(text, :decimal)
     end
-    
+
     def extract_entities text
       # Strip out the boring, numerous punctuation entities
       text = text.gsub(/&(#10|#13|#9|apos|quot|amp|hellip|[lr]dquo|[rl]aquo|[nm]dash|[gl]t);/, '')
       # Let's just use decimal entities: more efficient in pig
       text = decimalize_entities(text)
-      # raise if text =~ /&[^#\d]*;/ 
+      # raise if text =~ /&[^#\d]*;/
       entities = text.scan(/&#(\d+);/).flatten
     end
-    
+
     def dump_single_entities entities
-      entities.each do |entity_num| 
-        entity  = "&##{entity_num};"
+      entities.each do |entity_num|
+        entity  = "&##{entity_num};".hadoop_decode.hadoop_encode
         decoded = entity.hadoop_decode
-        puts [entity_num, "%-9s - %s"%[entity, decoded] ].join("\t") 
+        puts [entity_num, "%-9s - %s"%[entity, decoded] ].join("\t")
       end
     end
 
@@ -41,7 +41,7 @@ module ExtractEntityPairs
       end
       # puts "%010d\t(%s)"[tweet.twitter_user_id, entities.join(',')]
     end
-    
+
     #
     # for each entity:
     # * emit (entity1, entity2) for each unique pair of entities appearing in this tweet
@@ -52,7 +52,7 @@ module ExtractEntityPairs
     #
     def dump_entity_colloc entities
       tail  = entities.dup
-      (1..entities.length).each do 
+      (1..entities.length).each do
         # pull off each entity
         entity1 = tail.shift
         # and emit a pair for all entities occurring after it in the string
@@ -77,14 +77,14 @@ module ExtractEntityPairs
       dump_single_entities entities
     end
   end
-  
+
   class CollocationsMapper < Mapper
     def process tweet
       entities = super(tweet)
       dump_entity_colloc(entities)
     end
   end
-  
+
   class UserEntitiesMapper < Mapper
     def process tweet
       entities = super(tweet)
@@ -93,7 +93,7 @@ module ExtractEntityPairs
   end
 
   class Script < Hadoop::Script
-    def initialize 
+    def initialize
       process_argv!
       case options[:mode]
       when 'single_entities' then self.mapper_klass  = SingleEntitiesMapper
@@ -107,9 +107,9 @@ module ExtractEntityPairs
       end
       self.reducer_klass = Reducer
     end
-    
+
     # want to pair on (user, entity) or (entity1, entity2)
-    def sort_fields 
+    def sort_fields
       2
     end
   end
@@ -137,13 +137,13 @@ module ExtractEntityPairs
       end
     end
   end
-  
+
 end
 
 #
 # Executes the script
 #
 ExtractEntityPairs::Script.new(
-  # ExtractEntityPairs::Mapper, 
+  # ExtractEntityPairs::Mapper,
   # ExtractEntityPairs::Reducer
   ).run

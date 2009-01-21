@@ -70,6 +70,19 @@ CollocsDump 		= ORDER  CollocsDump_1 BY count DESC ;
 STORE CollocsDump         INTO 'meta/lang/collocs_22up';
 CollocsDump     	= LOAD 'meta/lang/collocs_22up' AS  (entity1: int, entity2: int, count: int) ; 
 
+
+-- ===========================================================================
+--
+-- Edge degree
+--
+-- We're interested in links among nodes, so let's find
+--   (edge count)
+--   (edge count) * (total occurrences of node)
+-- and 
+-- 
+-- 
+
+
 -- ===========================================================================
 --
 -- Get geocoordinates for each entity
