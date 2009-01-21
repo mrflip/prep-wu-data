@@ -47,7 +47,7 @@ WordCounts_3	= FOREACH WordCounts_2 {
   freq_var    = AVG(WordCounts_1.freq_sq) - (AVG(WordCounts_1.freq) * AVG(WordCounts_1.freq));
   freq_avg    = AVG(WordCounts_1.freq);
   freq_tot    = (int)SUM(  WordCounts_1.freq);
-  freq_ppm    = (long)freq_tot / 352661169.0
+  freq_ppm    = (long)freq_tot / (352661169.0 / 1000000.0)
   GENERATE group 	 		 AS word,
    	   'words' 			 AS owner,
 	    AS freq:     int,
