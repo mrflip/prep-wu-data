@@ -85,33 +85,11 @@ module WordFreq
     end
   end
 
-  class Reducer < Hadoop::Streamer
-    #
-    #
-    def sorting_by_freq_key freq
-      logkey    = ( 10*Math.log10(freq) ).floor
-      sort_log  = [1_000          -logkey,  1].max
-      sort_freq = [1_000_000_000 - freq,    1].max
-      "%03d\t%010d" % [sort_log, sort_freq]
-    end
-
-    def freq_key freq
-      "%010d"%freq
-    end
-
-    def stream
-      %x{/usr/bin/uniq -c}.split("\n").each do |line|
-        freq, rest = line.chomp.strip.split(/\s+/, 2)
-        freq = freq.to_i
-        # next if freq <= 1
-        puts [rest, freq_key(freq)].join("\t")
-      end
-    end
+  class Reducer < Hadoop::CountingReducer
   end
 
 
   #
-  # uniq -c to count occurrences
   #
   class Script < Hadoop::Script
   end

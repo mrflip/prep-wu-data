@@ -12,31 +12,32 @@
 --
 -- Load extracted entities
 --
-EntityDist 	= LOAD 'meta/lang/entities_dist' AS (entity:  int, 		 count: int) ;
-Collocs 	= LOAD 'meta/lang/collocs' 	 AS (entity1: int, entity2: int, count: int) ; 
-UserEntities 	= LOAD 'meta/lang/user_entities' AS (user_id: int, entity:  int, count: int) ;  
+
+EntityDist 	= LOAD 'meta/lang/entities_dist' AS (entity:  int, 		 freq: int) ;
+Collocs 	= LOAD 'meta/lang/collocs' 	 AS (entity1: int, entity2: int, freq: int) ; 
+UserEntities 	= LOAD 'meta/lang/user_entities' AS (user_id: int, entity:  int, freq: int) ;  
 
 -- Map    input bytes    	 9,760,668,914	10   GB
 -- Map    output bytes   	78,959,783,259  79   GB
 -- Reduce output bytes   	   370,081,309   .37 GB
 -- Map    input records  	    50,723,858  tweets
 -- Map    output records 	 6,220,079,211  pairs to accumulate
--- Reduce output records            16,092,362  unique pairs with count
+-- Reduce output records            16,092,362  unique pairs with freq
 
 
 -- ===========================================================================
 --
--- Distribution of pair counts.  Eliminating pairs that have been seen together
+-- Distribution of pair freqs.  Eliminating pairs that have been seen together
 -- five or fewer times leaves only 7.6M out of 16M; eliminating pairs occurring
 -- 100 or fewer times leaves 385k, and 10,000 or fewer leaves 65k nodes
 --
 --
 -- How many entity pairs are there for each count?
-CollocsCountDist_1 	= FOREACH Collocs GENERATE count ;
-CollocsCountDist_2 	= GROUP CollocsCountDist_1 BY count ;
-CollocsCountDist 	= FOREACH CollocsCountDist_2 GENERATE group AS entities_count, COUNT(CollocsCountDist_1) AS num ;
-STORE CollocsCountDist    INTO 'meta/lang/collocs_count_dist';
-CollocsCountDist 	= LOAD 'meta/lang/collocs_count_dist' AS (entities_count: int,num: long);
+CollocsFreqDist_1 	= FOREACH Collocs GENERATE freq ;
+CollocsFreqDist_2 	= GROUP CollocsFreqDist_1 BY freq ;
+CollocsFreqDist 	= FOREACH CollocsFreqDist_2 GENERATE group AS entities_freq, COUNT(CollocsFreqDist_1) AS num ;
+STORE CollocsFreqDist    INTO 'meta/lang/collocs_freq_dist';
+CollocsFreqDist 	= LOAD 'meta/lang/collocs_freq_dist' AS (entities_freq: int,num: long);
 
 -- 
 -- pair 	num. w/		 num w/this	num w/this
@@ -62,13 +63,13 @@ CollocsCountDist 	= LOAD 'meta/lang/collocs_count_dist' AS (entities_count: int,
 -- 10000	        5	16,027,554	    64,808
 -- 20000	        1	16,056,134	    36,228
 --
--- I'll cull any pair occurring fewer than 22 times, leaving us with a
--- healthy-sized 4M node network to play with. (at 4M rows this can also be
--- filtered easily on local disk using tail)
-CollocsDump_1 		= FILTER Collocs BY count >= 22 ;
-CollocsDump 		= ORDER  CollocsDump_1 BY count DESC ;
+-- Cull any pair occurring fewer than 22 times. At 50M tweets this is less than
+-- one appearance every 1million tweets. Left over is a still-healthy-sized 4M
+-- node network.
+CollocsDump_1 		= FILTER Collocs BY freq >= 22 ;
+CollocsDump 		= ORDER  CollocsDump_1 BY freq DESC ;
 STORE CollocsDump         INTO 'meta/lang/collocs_22up';
-CollocsDump     	= LOAD 'meta/lang/collocs_22up' AS  (entity1: int, entity2: int, count: int) ; 
+CollocsDump     	= LOAD 'meta/lang/collocs_22up' AS  (entity1: int, entity2: int, freq: int) ; 
 
 
 -- ===========================================================================
@@ -76,11 +77,19 @@ CollocsDump     	= LOAD 'meta/lang/collocs_22up' AS  (entity1: int, entity2: int
 -- Edge degree
 --
 -- We're interested in links among nodes, so let's find
---   (edge count)
---   (edge count) * (total occurrences of node)
+--   (edge freq)
+--   (edge freq) * (total occurrences of node)
 -- and 
 -- 
--- 
+
+CollocsDeg_1 		= FILTER Collocs BY freq >= 2000 ;
+CollocsRev 		= FOREACH CollocsDeg_1 GENERATE entity2 AS entity1, entity1 AS entity2, freq ;
+CollocsDeg_2		= UNION CollocsDeg_1, CollocsRev ;
+CollocsDeg_3		= GROUP CollocsDeg_2 BY entity1 PARALLEL 100 ;
+CollocsDeg_4 		= FOREACH CollocsDeg_3 GENERATE group AS entity, COUNT(CollocsDeg_2) AS degree, SUM(CollocsDeg_2.freq) AS tot_freq, COUNT(CollocsDeg_2) * SUM(CollocsDeg_2.freq) AS param, CollocsDeg_2.(entity2, freq) AS pairs;
+CollocsDeg_5 		= FILTER CollocsDeg_4 BY (degree >= 5) OR (param > 1000000) ;
+
+
 
 
 -- ===========================================================================
