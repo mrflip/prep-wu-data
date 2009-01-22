@@ -26,9 +26,7 @@ module ExtractEntityPairs
 
     def dump_single_entities entities
       entities.each do |entity_num|
-        entity  = "&##{entity_num};".hadoop_decode.hadoop_encode
-        decoded = entity.hadoop_decode
-        puts [entity_num, "%-9s - %s"%[entity, decoded] ].join("\t")
+        puts entity_num
       end
     end
 

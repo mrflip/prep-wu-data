@@ -1,22 +1,74 @@
-# Scripts-5.1.0.txt
-# Date: 2008-03-20, 17:55:33 GMT [MD]
+# ===========================================================================
 #
-# Unicode Character Database
-# Copyright (c) 1991-2008 Unicode, Inc.
-# For terms of use, see http://www.unicode.org/terms_of_use.html
-# For documentation, see UCD.html
+# Classify characters, by plane and script (Devanagari, Latin, etc)
+#
 
-# ================================================
 
-# Property:     Script
+#
+# NOTE the horrible thing we're doing right here:
+# it makes the code down there much nicer tho
+# and fuckit it's a oneoff
+#
+Fixnum.class_eval{  def include?(x) x == self end }
 
-#  All code points not explicitly listed for Script
-#  have the value Unknown (Zzzz).
 
-# @missing: 0000..10FFFF        ; Unknown
-
-# ================================================
-
+#
+# Munged from:
+#
+#        Scripts-5.1.0.txt
+#        Date: 2008-03-20, 17:55:33 GMT [MD]
+#
+#        Unicode Character Database
+#        Copyright (c) 1991-2008 Unicode, Inc.
+#        For terms of use, see http://www.unicode.org/terms_of_use.html
+#        For documentation, see UCD.html
+#
+#        ================================================
+#
+#        Property:     Script
+#
+#        All code points not explicitly listed for Script
+#        have the value Unknown (Zzzz).
+#
+#        @missing: 0000..10FFFF        ; Unknown
+#
+#        ================================================
+#
+#
+# BTW, Those wacky Category fields:
+#
+# Cat   Description
+# Lu    Letter, Uppercase
+# Ll    Letter, Lowercase
+# Lt    Letter, Titlecase
+# Lm    Letter, Modifier
+# Lo    Letter, Other
+# Mn    Mark, Nonspacing
+# Mc    Mark, Spacing Combining
+# Me    Mark, Enclosing
+# Nd    Number, Decimal Digit
+# Nl    Number, Letter
+# No    Number, Other
+# Pc    Punctuation, Connector
+# Pd    Punctuation, Dash
+# Ps    Punctuation, Open
+# Pe    Punctuation, Close
+# Pi    Punctuation, Initial quote (may behave like Ps or Pe depending on usage)
+# Pf    Punctuation, Final quote (may behave like Ps or Pe depending on usage)
+# Po    Punctuation, Other
+# Sm    Symbol, Math
+# Sc    Symbol, Currency
+# Sk    Symbol, Modifier
+# So    Symbol, Other
+# Zs    Separator, Space
+# Zl    Separator, Line
+# Zp    Separator, Paragraph
+# Cc    Other, Control
+# Cf    Other, Format
+# Cs    Other, Surrogate
+# Co    Other, Private Use
+# Cn    Other, Not Assigned (no characters in the file have this property)
+#
 UNICODE_CLASSIFICATION_MAPPING = {
   0x0000..0x001F        => [ "Common",  "Cc",   " [32]",        "<control-0000>..<control-001F>",                                                                               ],
   0x0020                => [ "Common",  "Zs",   "     ",        "SPACE",                                                                                                        ],
@@ -1747,3 +1799,18 @@ UNICODE_CLASSIFICATION_MAPPING = {
   # Total code points: 83
 }
 # EOF
+
+#
+# Classify character
+#
+# entity  name            cl rng  type    script   rgsz  range name               planerg script  sccode  script2
+# 54      Digit Six       48..57  Common  Nd       [10]   DIGIT ZERO..DIGIT NINE  0..127  Latin   Latn    Basic Latin
+#
+def find_entity_classification entity_num
+  classification_info = UNICODE_CLASSIFICATION_MAPPING.find{|plane, info| plane.include?(entity_num) }
+  if !classification_info
+    warn "No classification for entity &##{entity_num}; (#{entity_name})"
+    classification_info = ['', '', '', '', ]
+  end
+  classification_info
+end

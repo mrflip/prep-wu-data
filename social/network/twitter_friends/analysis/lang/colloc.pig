@@ -25,6 +25,20 @@ UserEntities 	= LOAD 'meta/lang/user_entities' AS (user_id: int, entity:  int, f
 -- Reduce output records            16,092,362  unique pairs with freq
 
 
+
+
+-- ===========================================================================
+--
+-- Entity properties
+--
+
+EntityProps_0   = LOAD 'meta/lang/unicode_entity_properties.tsv' AS (entity:int, entity_str:chararray, decoded:chararray, name:chararray, cls_rg:chararray, cls:chararray, cat:chararray, rg_sz:chararray, cls_rg_name:chararray, pl_rg:chararray, script_name:chararray, script_code:chararray, plane_name:chararray) ;
+EntityProps_1   = FOREACH EntityProps_0 GENERATE entity, entity_str, decoded, name, cls, cat, script_name, script_code, plane_name;
+EntityProps_2   = COGROUP EntityDist BY entity, EntityProps_1 BY entity ;
+EntityProps     = FOREACH EntityProps_2 GENERATE EntityProps_1::entity, freq, entity_str, decoded, name, cls, cat, script_name, script_code, plane_name;
+STORE EntityProps INTO 'meta/lang/entities_props' ;
+EntityProps     = LOAD 'meta/lang/entities_props'  AS (entity:int, freq:int, entity_str:chararray, decoded:chararray, name:chararray, cls:chararray, cat:chararray, script_name:chararray, script_code:chararray, plane_name:chararray) ;
+
 -- ===========================================================================
 --
 -- Distribution of pair freqs.  Eliminating pairs that have been seen together

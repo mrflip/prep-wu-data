@@ -11,9 +11,6 @@
 #
 #
 
-
-
-
 CHARACTER_PLANE_MAPPING = {
   0x0000..0x007F      => [ "Latin",                                   "Latn",       "Basic Latin",                                  ],
   0x0080..0x00FF      => [ "Latin",                                   "Latn",       "Latin-1 Supplement",                           ],
@@ -190,5 +187,14 @@ CHARACTER_PLANE_MAPPING = {
 
 }
 
-
-
+#
+# Find the Unicode plane for the character
+#
+def find_entity_plane entity_num
+  plane_info = CHARACTER_PLANE_MAPPING.find{|plane, info| plane.include?(entity_num) }
+  if !plane_info
+    raise "No plane info for entity &##{entity_num}; (#{entity_name})"
+    plane_info = ['', '', '', ]
+  end
+  plane_info
+end
