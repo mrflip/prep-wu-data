@@ -51,32 +51,39 @@ OTHER_UNICODE_CHAR_NAMES = {
 # These characters have awesome names in UnicodeData
 #
 NAMED_UNICODE_CHAR_NAMES = { }
-$stderr.puts "Gathering UnicodeData.txt names"
-File.open(File.dirname(__FILE__)+'/unicode/UnicodeData.txt').each do |line|
-  #
-  # For each entity
-  #
-  entity_hex, name, category,
-  combining, bidi, decomp,
-  as_decimal, as_digit,
-  as_numeric, mirrored, u1_name, comment,
-  to_upper, to_lower, to_title            = line.chomp.split(";")
-  entity = entity_hex.hex
-  #
-  # Skip the lines specifying OTHER_UNICODE_CHAR_NAMES
-  # codes; they're fake, we want to use OTHER_UNICODE_CHAR_NAMES
-  #
-  next if line =~ /[0-9A-F];<[^>]+, (First|Last)>;/i;
-  #
-  # Format the name
-  #
-  name = name.split(/\s+/).map(&:capitalize).join(" ")
-  name = name.gsub(/\bCjk\b/i, 'CJK')
-  #
-  # And save it
-  #
-  NAMED_UNICODE_CHAR_NAMES[entity] = name
-  # puts [entity, name].join("\t")
+
+# ===========================================================================
+#
+# Collect all the names from UnicodeData
+#
+def gather_unicode_names!
+  $stderr.puts "Gathering UnicodeData.txt names"
+  File.open(File.dirname(__FILE__)+'/unicode/UnicodeData.txt').each do |line|
+    #
+    # For each entity
+    #
+    entity_hex, name, category,
+    combining, bidi, decomp,
+    as_decimal, as_digit,
+    as_numeric, mirrored, u1_name, comment,
+    to_upper, to_lower, to_title            = line.chomp.split(";")
+    entity = entity_hex.hex
+    #
+    # Skip the lines specifying OTHER_UNICODE_CHAR_NAMES
+    # codes; they're fake, we want to use OTHER_UNICODE_CHAR_NAMES
+    #
+    next if line =~ /[0-9A-F];<[^>]+, (First|Last)>;/i;
+    #
+    # Format the name
+    #
+    name = name.split(/\s+/).map(&:capitalize).join(" ")
+    name = name.gsub(/\bCjk\b/i, 'CJK')
+    #
+    # And save it
+    #
+    NAMED_UNICODE_CHAR_NAMES[entity] = name
+    # puts [entity, name].join("\t")
+  end
 end
 
 # ===========================================================================
@@ -86,6 +93,8 @@ end
 # or fall back to just "Uncoded character [XML decimal encoding]"
 #
 def find_entity_name entity_num, freq
+  raise "Please call gather_unicode_names! once" if NAMED_UNICODE_CHAR_NAMES.empty?
+  NAMED_UNICODE_CHAR_NAMES[63743] = "Private Use - &#{entity_num}; - probably Apple icon"
   name =   NAMED_UNICODE_CHAR_NAMES[entity_num]
   if !name
     range, name = OTHER_UNICODE_CHAR_NAMES.find{ |range, name| range.include?(entity_num) }
@@ -94,7 +103,7 @@ def find_entity_name entity_num, freq
   if !name
     name    = "Uncoded character &##{entity_num};"
     decoded = "##{entity_num}"
-    warn("Couldn't find name for %-8s; (%8s), occurs %5d times" % ["&##{entity_num}", "%06x"%entity_num, freq.to_i]) if freq.to_i > 5
+    warn_missing_info(:name, entity_num, '[none]', freq)
   end
   name
 end

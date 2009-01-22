@@ -190,10 +190,10 @@ CHARACTER_PLANE_MAPPING = {
 #
 # Find the Unicode plane for the character
 #
-def find_entity_plane entity_num
+def find_entity_plane(entity_num, freq, entity_name)
   plane_info = CHARACTER_PLANE_MAPPING.find{|plane, info| plane.include?(entity_num) }
   if !plane_info
-    raise "No plane info for entity &##{entity_num}; (#{entity_name})"
+    warn_missing_info :plane, entity_num, freq, entity_name
     plane_info = ['', '', '', ]
   end
   plane_info

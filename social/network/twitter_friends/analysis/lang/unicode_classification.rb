@@ -1806,10 +1806,10 @@ UNICODE_CLASSIFICATION_MAPPING = {
 # entity  name            cl rng  type    script   rgsz  range name               planerg script  sccode  script2
 # 54      Digit Six       48..57  Common  Nd       [10]   DIGIT ZERO..DIGIT NINE  0..127  Latin   Latn    Basic Latin
 #
-def find_entity_classification entity_num
+def find_entity_classification(entity_num, freq, entity_name)
   classification_info = UNICODE_CLASSIFICATION_MAPPING.find{|plane, info| plane.include?(entity_num) }
   if !classification_info
-    warn "No classification for entity &##{entity_num}; (#{entity_name})"
+    warn_missing_info :classification, entity_num, freq, entity_name
     classification_info = ['', '', '', '', ]
   end
   classification_info
