@@ -6,7 +6,7 @@
 --
 -- Gather intial community, hand-seeded
 --
-SeedNames = LOAD 'meta/datanerds/seedlist.txt' AS (screen_name: chararray) ;
+SeedNames 	= LOAD 'meta/datanerds/seedlist.txt' AS (screen_name: chararray) ;
 
 -- collect id's
 -- SeedUsers_1     = JOIN SeedNames BY screen_name, Users BY screen_name ;
