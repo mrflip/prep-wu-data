@@ -1,5 +1,9 @@
 -- Load init_load.pig first please
 
+
+REGISTER /public/share/pig/contrib/piggybank/java/piggybank.jar ;
+
+
 --
 -- Prepare data with
 --

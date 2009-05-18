@@ -15,12 +15,12 @@ hdp-rm -r $dest ; ./grokify.rb              --go $all_src_files 		   $dest
 dest=fixd/all
 hdp-rm -r $dest ; ./queries/uniq_by_last.rb --go $all_src_files,fixd/text_elements $dest
 
-dest=fixd/rdfified
-hdp-rm -r $dest ; ./rdfify.rb  		    --go fixd/all 	 		   $dest
-
 dest=fixd/flattened
 hdp-rm -r $dest ; ./queries/flatten_keys.rb --go fixd/all 			   $dest
 ./lib/hadoop/bin/hdp-parts_to_keys.rb $dest
+
+dest=fixd/rdfified
+hdp-rm -r $dest ; ./rdfify.rb  		    --go fixd/all 	 		   $dest
 
 #
 # package
