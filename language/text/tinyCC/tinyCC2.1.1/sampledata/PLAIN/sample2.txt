@@ -1,0 +1,10 @@
+Disclaimer
+The Leipzig Corpora Collection have been processed automatically from publicly accessible sources based on the outlined methodology without considering in detail the content of the contained text.
+No responsibility is taken for the content of the data. In particular, the views and opinions expressed in specific parts of the data remain exclusively with the authors.
+For each word, the list of words that significantly co-occur with that word are computed on the basis of the available text and neither express a general fact of language nor the particular view of the Leipzig University department for Natural Language Processing.
+Back to Wortschatz
+LCC-Download pageLCC-Download page Wortschatz - International Portal - Terms Of Usage
+terms of usage
+Any data provided by Projekt Deutscher Wortschatz are subject to copyright. Permission for use is granted free of charge solely for non-commercial personal and scientific purposes.
+Any use that exceeds the means of query provided by the WWW-Interface, any automated queries and any commercial use, processing or permanent storage of the data obtained is forbidden without explicit written permission by the copyright owner.
+Back to Wortschatz
