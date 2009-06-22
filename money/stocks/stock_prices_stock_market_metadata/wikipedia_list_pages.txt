@@ -1,0 +1,77 @@
+wget -O- 'http://en.wikipedia.org/w/api.php?action=query&titles=Companies_listed_on_the_New_York_Stock_Exchange_(0-9)&format=yaml&redirect&export'
+
+
+http://en.wikipedia.org/wiki/List_of_stock_exchanges
+http://en.wikipedia.org/wiki/List_of_American_stock_exchanges
+http://en.wikipedia.org/wiki/Category:Companies_by_stock_exchange
+
+
+* Companies listed on the Istanbul Stock Exchange
+    * Companies listed on the New York Stock Exchange (0-9)
+    * Companies listed on the New York Stock Exchange (A)
+    * Companies listed on the New York Stock Exchange (B)
+    * Companies listed on the New York Stock Exchange (C)
+    * Companies listed on the New York Stock Exchange (D)
+    * Companies listed on the New York Stock Exchange (E)
+    * Companies listed on the New York Stock Exchange (F)
+    * Companies listed on the New York Stock Exchange (G)
+    * Companies listed on the New York Stock Exchange (H)
+    * Companies listed on the New York Stock Exchange (I)
+    * Companies listed on the New York Stock Exchange (J)
+    * Companies listed on the New York Stock Exchange (K)
+    * Companies listed on the New York Stock Exchange (L)
+    * Companies listed on the New York Stock Exchange (M)
+    * Companies listed on the New York Stock Exchange (N)
+    * Companies listed on the New York Stock Exchange (O)
+    * Companies listed on the New York Stock Exchange (P)
+    * Companies listed on the New York Stock Exchange (Q)
+    * Companies listed on the New York Stock Exchange (R)
+    * Companies listed on the New York Stock Exchange (S)
+    * Companies listed on the New York Stock Exchange (T)
+    * Companies listed on the New York Stock Exchange (U)
+    * Companies listed on the New York Stock Exchange (V)
+    * Companies listed on the New York Stock Exchange (W)
+    * Companies listed on the New York Stock Exchange (X)
+    * Companies listed on the New York Stock Exchange (Y)
+    * Companies listed on the New York Stock Exchange (Z)
+    * Companies listed on the Singapore Exchange
+    * Companies listed on the Toronto Stock Exchange (0-9)
+    * Companies listed on the Toronto Stock Exchange (A)
+    * Companies listed on the Toronto Stock Exchange (B)
+    * Companies listed on the Toronto Stock Exchange (C)
+    * Companies listed on the Toronto Stock Exchange (D)
+    * Companies listed on the Toronto Stock Exchange (E)
+    * Companies listed on the Toronto Stock Exchange (F)
+    * Companies listed on the Toronto Stock Exchange (G)
+    * Companies listed on the Toronto Stock Exchange (H)
+    * Companies listed on the Toronto Stock Exchange (I)
+    * Companies listed on the Toronto Stock Exchange (J)
+    * Companies listed on the Toronto Stock Exchange (K)
+    * Companies listed on the Toronto Stock Exchange (L)
+    * Companies listed on the Toronto Stock Exchange (M)
+    * Companies listed on the Toronto Stock Exchange (N)
+    * Companies listed on the Toronto Stock Exchange (O)
+    * Companies listed on the Toronto Stock Exchange (P)
+    * Companies listed on the Toronto Stock Exchange (Q)
+    * Companies listed on the Toronto Stock Exchange (R)
+    * Companies listed on the Toronto Stock Exchange (S)
+    * Companies listed on the Toronto Stock Exchange (T)
+    * Companies listed on the Toronto Stock Exchange (U)
+    * Companies listed on the Toronto Stock Exchange (V)
+    * Companies listed on the Toronto Stock Exchange (W)
+    * Companies listed on the Toronto Stock Exchange (X)
+    * Companies listed on the Toronto Stock Exchange (Y)
+    * Companies listed on the Toronto Stock Exchange (Z)
+    * List of companies listed on Bovespa
+    * List of companies listed on Oslo Axess
+    * List of companies listed on the Athens Stock Exchange
+    * List of companies listed on the Barbados Stock Exchange
+    * List of companies listed on the Beirut Stock Exchange
+    * List of companies listed on the Hong Kong Stock Exchange
+    * List of companies listed on the Iceland Stock Exchange
+    * List of companies listed on the Irish Stock Exchange
+    * List of companies listed on the London Stock Exchange
+    * List of companies listed on the Mongolian Stock Exchange (section List)
+    * List of companies listed on the Oslo Stock Exchange
+    * List of companies listed on the TSX Venture Exchange
+    * Toronto Stock Exchange (redirect List of companies listed on the Toronto Stock Exchange)
