@@ -1,0 +1,104 @@
+ <quelle><name>LCC-Download Page</name><name_lang>LCC-Download Page</name_lang></quelle>
+Wortschatz - International Portal
+Leipzig Corpora Collection Download Page
+The Leipzig Corpora Collection presents corpora in different languages using the same format and comparable sources. The corpora are ready to use with the Corpus Browser.
+Moreover, all data are available as plain text and as MySQL database tables for various applications. They are intended both for scientific use by the corpus linguist as well as for applications such as knowledge extraction programs.
+The corpora are identical in format and similar in size and content. They contain randomly selected sentences in the language of the corpus and are available in sizes of 100,000 sentences, 300,000 sentences, 1 million sentences etc..
+The sources are either newspaper texts or texts randomly collected from the web. The texts are split into sentences.
+Non-sentences and foreign language material was removed. Because the information which words co-occur with each other is useful for many applications, these data ware precomputed and included as well.
+For each word, the most significant words appearing 
+as immediate left neighbor
+as immediate right neighbor
+anywhere within the same sentence
+are given.
+The quality of such co-occurrence increases with the corpus size, so we refer to forthcoming larger corpora. 
+Reference:
+Quasthoff, U.; M. Richter; C. Biemann: Corpus Portal for Search in Monolingual Corpora, Proceedings of the fifth international conference on Language Resources and Evaluation, LREC 2006, Genoa, pp. 1799-1802
+Download: Corpusportal The Corpus Browser
+Download Corpus Browser : Version 1.0 (May 2006) (Filesize: ~2.1mb)
+Download Documentation : Version 1.0 (May 2006) (Filesize: ~1.3mb) Download Corpora
+To use the above browser, select one or more languages and sizes an download the corresponding MySQL data files. These data are also available as plain text for the convenience of the user. They are not necessary for the browser.
+Language
+Corpus Size
+MySQL Data Files
+Plain Text Files
+Catalan
+100k
+300k
+100k
+300k
+Danish
+100k
+100k
+Dutch
+100k
+100k
+English
+100k
+300k
+1M
+100k
+300k
+1M
+Estonian
+100k
+300k
+100k
+300k
+Finnish
+100k
+100k
+French
+100k
+100k
+German
+100k
+300k
+1M
+3M
+100k
+300k
+1M
+3M
+Italian
+100k
+300k
+100k
+300k
+Japanese
+100k
+100k
+Korean
+100k
+300k
+100k
+300k
+Norwegian
+100k
+300k
+100k
+300k
+Sorbian
+100k
+100k
+Swedish
+100k
+100k
+Turkish
+100k
+100k
+Conditions of use
+The Leipzig Corpora Collection contain text from publicly accessible sources. All data have been processed automatically so that it is not possible to reconstruct the original source texts.
+The corpora are protected by copyright. They are made available on the condition that they may be used for scientific purposes only and not passed on to third parties.
+Any use of the data must be duly documented and referenced. Commercial use of the data requires the prior written consent of the Leipzig University department for Natural Language Processing.
+ <quelle><name>LCC Disclaimer</name><name_lang>LCC Disclaimer</name_lang></quelle>
+Disclaimer
+The Leipzig Corpora Collection have been processed automatically from publicly accessible sources based on the outlined methodology without considering in detail the content of the contained text.
+No responsibility is taken for the content of the data. In particular, the views and opinions expressed in specific parts of the data remain exclusively with the authors.
+For each word, the list of words that significantly co-occur with that word are computed on the basis of the available text and neither express a general fact of language nor the particular view of the Leipzig University department for Natural Language Processing.
+Back to Wortschatz
+LCC-Download pageLCC-Download page Wortschatz - International Portal - Terms Of Usage
+terms of usage
+Any data provided by Projekt Deutscher Wortschatz are subject to copyright. Permission for use is granted free of charge solely for non-commercial personal and scientific purposes.
+Any use that exceeds the means of query provided by the WWW-Interface, any automated queries and any commercial use, processing or permanent storage of the data obtained is forbidden without explicit written permission by the copyright owner.
+Back to Wortschatz

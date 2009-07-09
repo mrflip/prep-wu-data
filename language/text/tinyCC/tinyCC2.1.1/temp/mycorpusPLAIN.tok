@@ -1,0 +1,117 @@
+1	%^% Wortschatz - International Portal %$%
+2	%^% Leipzig Corpora Collection Download Page %$%
+3	%^% The Leipzig Corpora Collection presents corpora in different languages using the same format and comparable sources . %$%
+4	%^% The corpora are ready to use with the Corpus Browser . %$%
+5	%^% Moreover , all data are available as plain text and as MySQL database tables for various applications . %$%
+6	%^% They are intended both for scientific use by the corpus linguist as well as for applications such as knowledge extraction programs . %$%
+7	%^% The corpora are identical in format and similar in size and content . %$%
+8	%^% They contain randomly selected sentences in the language of the corpus and are available in sizes of 100,000 sentences , 300,000 sentences , 1 million sentences etc . . %$%
+9	%^% The sources are either newspaper texts or texts randomly collected from the web . %$%
+10	%^% The texts are split into sentences . %$%
+11	%^% Non-sentences and foreign language material was removed . %$%
+12	%^% Because the information which words co-occur with each other is useful for many applications , these data ware precomputed and included as well . %$%
+13	%^% For each word , the most significant words appearing %$%
+14	%^% as immediate left neighbor %$%
+15	%^% as immediate right neighbor %$%
+16	%^% anywhere within the same sentence %$%
+17	%^% are given . %$%
+18	%^% The quality of such co-occurrence increases with the corpus size , so we refer to forthcoming larger corpora . %$%
+19	%^% Reference : %$%
+20	%^% Quasthoff , U . ; M . Richter ; C . Biemann : Corpus Portal for Search in Monolingual Corpora , Proceedings of the fifth international conference on Language Resources and Evaluation , LREC 2006 , Genoa , pp . 1799-1802 %$%
+21	%^% Download : Corpusportal The Corpus Browser %$%
+22	%^% Download Corpus Browser : Version 1.0 ( May 2006 ) ( Filesize : ~2.1mb ) %$%
+23	%^% Download Documentation : Version 1.0 ( May 2006 ) ( Filesize : ~1.3mb ) Download Corpora %$%
+24	%^% To use the above browser , select one or more languages and sizes an download the corresponding MySQL data files . %$%
+25	%^% These data are also available as plain text for the convenience of the user . %$%
+26	%^% They are not necessary for the browser . %$%
+27	%^% Language %$%
+28	%^% Corpus Size %$%
+29	%^% MySQL Data Files %$%
+30	%^% Plain Text Files %$%
+31	%^% Catalan %$%
+32	%^% 100k %$%
+33	%^% 300k %$%
+34	%^% 100k %$%
+35	%^% 300k %$%
+36	%^% Danish %$%
+37	%^% 100k %$%
+38	%^% 100k %$%
+39	%^% Dutch %$%
+40	%^% 100k %$%
+41	%^% 100k %$%
+42	%^% English %$%
+43	%^% 100k %$%
+44	%^% 300k %$%
+45	%^% 1M %$%
+46	%^% 100k %$%
+47	%^% 300k %$%
+48	%^% 1M %$%
+49	%^% Estonian %$%
+50	%^% 100k %$%
+51	%^% 300k %$%
+52	%^% 100k %$%
+53	%^% 300k %$%
+54	%^% Finnish %$%
+55	%^% 100k %$%
+56	%^% 100k %$%
+57	%^% French %$%
+58	%^% 100k %$%
+59	%^% 100k %$%
+60	%^% German %$%
+61	%^% 100k %$%
+62	%^% 300k %$%
+63	%^% 1M %$%
+64	%^% 3M %$%
+65	%^% 100k %$%
+66	%^% 300k %$%
+67	%^% 1M %$%
+68	%^% 3M %$%
+69	%^% Italian %$%
+70	%^% 100k %$%
+71	%^% 300k %$%
+72	%^% 100k %$%
+73	%^% 300k %$%
+74	%^% Japanese %$%
+75	%^% 100k %$%
+76	%^% 100k %$%
+77	%^% Korean %$%
+78	%^% 100k %$%
+79	%^% 300k %$%
+80	%^% 100k %$%
+81	%^% 300k %$%
+82	%^% Norwegian %$%
+83	%^% 100k %$%
+84	%^% 300k %$%
+85	%^% 100k %$%
+86	%^% 300k %$%
+87	%^% Sorbian %$%
+88	%^% 100k %$%
+89	%^% 100k %$%
+90	%^% Swedish %$%
+91	%^% 100k %$%
+92	%^% 100k %$%
+93	%^% Turkish %$%
+94	%^% 100k %$%
+95	%^% 100k %$%
+96	%^% Conditions of use %$%
+97	%^% The Leipzig Corpora Collection contain text from publicly accessible sources . %$%
+98	%^% All data have been processed automatically so that it is not possible to reconstruct the original source texts . %$%
+99	%^% The corpora are protected by copyright . %$%
+100	%^% They are made available on the condition that they may be used for scientific purposes only and not passed on to third parties . %$%
+101	%^% Any use of the data must be duly documented and referenced . %$%
+102	%^% Commercial use of the data requires the prior written consent of the Leipzig University department for Natural Language Processing . %$%
+103	%^% Disclaimer %$%
+104	%^% The Leipzig Corpora Collection have been processed automatically from publicly accessible sources based on the outlined methodology without considering in detail the content of the contained text . %$%
+105	%^% No responsibility is taken for the content of the data . %$%
+106	%^% In particular , the views and opinions expressed in specific parts of the data remain exclusively with the authors . %$%
+107	%^% For each word , the list of words that significantly co-occur with that word are computed on the basis of the available text and neither express a general fact of language nor the particular view of the Leipzig University department for Natural Language Processing . %$%
+108	%^% Back to Wortschatz %$%
+109	%^% LCC-Download pageLCC-Download page Wortschatz - International Portal - Terms Of Usage %$%
+110	%^% terms of usage %$%
+111	%^% Any data provided by Projekt Deutscher Wortschatz are subject to copyright . %$%
+112	%^% Permission for use is granted free of charge solely for non-commercial personal and scientific purposes . %$%
+113	%^% Any use that exceeds the means of query provided by the WWW-Interface , any automated queries and any commercial use , processing or permanent storage of the data obtained is forbidden without explicit written permission by the copyright owner . %$%
+114	%^% Back to Wortschatz %$%
+115	%^% ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ????????? ? ? ? -- ? ? ? ? ? ?? ? ? ? ? ? ? ? ? ? ????????? ? ? ? ? ? ? ? ? ? , ? ? ? ???? ? ? ? ? ? ? ????? ? ? ? ? ? ? ? ? ?? ? ? ? ? ? ? ? ? ? ? ? ? ??? ? ? ? ? ? ? ??? ? ? . %$%
+116	%^% Das ist ein Test , ob ASCII-Text gleich bleibt . %$%
+117	%^% Werden ? ml?uhalten ? %$%

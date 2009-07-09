@@ -1,0 +1,18 @@
+Version 2.1.1
+
+Added support for Urdu Sentence Boundary
+
+Version 2.1
+
+Changed usage of text2satz.jar: In order to process UTF-8 text appropriate
+locales need to be set in `tinyCC.sh`. As text2satz works byte-oriented a
+double encoding error occurs which gets worked around by `recode`ing the
+result.
+
+Changed tokenization: When processing UTF-8 text without an appropriate
+combination of encodings a small fraction of characters got garbled by the
+tokenizer in earlier versions.  Included fixes for this mis-behaviour.
+
+Expanded token list: More quotation signs and currency symbols can be
+covered in UTF-8 than in ASCII. Tokenization has been adapted to consider
+these characters.

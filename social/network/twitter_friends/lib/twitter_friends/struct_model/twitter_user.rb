@@ -55,10 +55,10 @@ module TwitterFriends::StructModel
     # end
 
     def decoded_name
-      @decoded_name        ||= (name ? name.hadoop_decode : '')
+      @decoded_name        ||= (name        ? name.hadoop_decode : '')
     end
     def decoded_location
-      @decoded_location    ||= (location ? location.hadoop_decode : '')
+      @decoded_location    ||= (location    ? location.hadoop_decode : '')
     end
     def decoded_description
       @decoded_description ||= (description ? description.hadoop_decode : '')
@@ -133,5 +133,6 @@ module TwitterFriends::StructModel
       :id, :screen_name, :full )
     include ModelCommon
     include TwitterUserCommon
+    def num_key_fields()  1  end
   end
 end

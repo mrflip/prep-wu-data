@@ -1,0 +1,1252 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./TinyCC2-Dateien/filelist.xml">
+<title>TinyCC 2.0 User’s Manual</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>b</o:Author>
+  <o:LastAuthor>b</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:LastPrinted>2006-05-16T16:51:00Z</o:LastPrinted>
+  <o:Created>2007-02-16T17:48:00Z</o:Created>
+  <o:LastSaved>2007-02-16T17:49:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>1387</o:Words>
+  <o:Company>Uni Leipzig</o:Company>
+  <o:Lines>65</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>9709</o:CharactersWithSpaces>
+  <o:Version>9.8948</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h1
+	{mso-style-next:Text;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:18.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-GB;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Text;
+	margin-top:9.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Standard;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h4
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h5
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;
+	font-style:italic;}
+h6
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	font-size:11.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex4, li.MsoIndex4, div.MsoIndex4
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex5, li.MsoIndex5, div.MsoIndex5
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex6, li.MsoIndex6, div.MsoIndex6
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex7, li.MsoIndex7, div.MsoIndex7
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex8, li.MsoIndex8, div.MsoIndex8
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndex9, li.MsoIndex9, div.MsoIndex9
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:108.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Standard;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 8.0cm right 16.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 8.0cm right 16.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
+	{mso-style-next:"Index 1";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-update:auto;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo3;
+	tab-stops:list 18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:22.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;
+	font-weight:bold;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:27.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-27.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.Text, li.Text, div.Text
+	{mso-style-name:Text;
+	mso-style-next:"Text Indent";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";
+	mso-ansi-language:EN-US;}
+p.TextIndent, li.TextIndent, div.TextIndent
+	{mso-style-name:"Text Indent";
+	mso-style-parent:Text;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:14.4pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";
+	mso-ansi-language:EN-US;}
+p.p1a, li.p1a, div.p1a
+	{mso-style-name:p1a;
+	mso-style-next:Standard;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Times;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.cmd, li.cmd, div.cmd
+	{mso-style-name:cmd;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:27.0pt;
+	text-align:justify;
+	text-indent:-27.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;
+	font-style:italic;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-header:url("./TinyCC2-Dateien/header.htm") h1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-374053166;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:Aufzählungszeichen;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1577666705;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1566236826 67567631 67567641 67567643 67567631 67567641 67567643 67567631 67567641 67567643;}
+@list l2
+	{mso-list-id:1736275226;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1812009954 67567617 67567619 67567621 67567617 67567619 67567621 67567617 67567619 67567621;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:2014185064;
+	mso-list-type:hybrid;
+	mso-list-template-ids:33568110 67567617 67567619 67567621 67567617 67567619 67567621 67567617 67567619 67567621;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:50.4pt;
+	mso-level-number-position:left;
+	margin-left:50.4pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:2082678997;
+	mso-list-type:hybrid;
+	mso-list-template-ids:923543184 67567617 67567619 67567621 67567617 67567619 67567621 67567617 67567619 67567621;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:50.4pt;
+	mso-level-number-position:left;
+	margin-left:50.4pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=DE link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoTitle><span lang=EN-GB>TinyCC 2.0 User’s Manual</span></p>
+
+<p class=MsoSubtitle><span lang=EN-GB>Chris Biemann</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB
+style='font-size:14.0pt;mso-bidi-font-size:12.0pt'>March 2007<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1><a name="_Toc135565165"><span lang=EN-GB>Introduction</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>TinyCC 2.0 is a text corpus production
+engine that can be used to produce corpora in Leipzig Corpus Collection (LCC)
+format, see <a href="http://corpora.informatik.uni-leipzig.de/download.html">http://corpora.informatik.uni-leipzig.de/download.html</a>.
+The LCC-DVD 1.0, distributed from May 2006 on, was created using tinyCC 1.1 and
+other procedures. For further explanations on LCC corpus building, see
+[Quasthoff et al. 2006].</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>TinyCC 2.0 splits the text into sentences
+and creates tab-separated files, containing:</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     lang=EN-GB>sentences</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     lang=EN-GB>word list with frequency</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     lang=EN-GB>index word-sentence</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     lang=EN-GB>sources</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     lang=EN-GB>index source-sentence</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     lang=EN-GB>significant neighbour co-occurrences</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     lang=EN-GB>significant sentence-based co-occurrences</span></li>
+</ul>
+
+<p class=MsoNormal><span lang=EN-GB>The log-likelihood ratio [Dunning 1993] is
+used as significance test.</span></p>
+
+<h1><a name="_Toc135565166"><span lang=EN-GB>Installation</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-GB>The implementation consists of a shell
+script calling programs written in JAVA and PERL. It is platform-dependent and
+was tested only on LINUX.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Download the archive <a
+href="http://wortschatz.uni-leipzig.de/~cbiemann/software/tinyCC2.tar.gz">http://wortschatz.uni-leipzig.de/~cbiemann/software/tinyCC2.tar.gz</a>
+into a folder of your choice and unzip it by:</span></p>
+
+<p class=cmd><span lang=FR>gzip -d tinyCC2.tar.gz</span></p>
+
+<p class=cmd><span lang=FR>tar -xf tinyCC2.tar.gz</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>A maintenance update which covers some problems with processing UTF-8 text is available from <a
+href="http://wortschatz.uni-leipzig.de/~cbiemann/software/tinyCC2.1.1.tar.gz">http://wortschatz.uni-leipzig.de/~cbiemann/software/tinyCC2.1.1.tar.gz</a>.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>
+!! Windows Users !!: A somewhat slower and less comfortable version of tinyCC
+is available at <a
+href=http://wortschatz.uni-leipzig.de/~cbiemann/software/tinyCC1.5win.zip>http://wortschatz.uni-leipzig.de/~cbiemann/software/tinyCC1.5win.zip</a>.
+Only use this version if you do not have the possibility to run tinyCC2.0 in
+a UNIX-like environment.  
+</span></p>
+
+<h2><a name="_Toc135565167"><span lang=EN-US>System requirements</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-GB>To run tinyCC 2.0, you need a Java Runtime
+Environment (JRE) of version 1.5 or later. You can obtain it at <a
+href="http://java.sun.com/j2se/1.5.0/download.jsp">http://java.sun.com/j2se/1.5.0/download.jsp</a>.
+Please ensure that <i style='mso-bidi-font-style:normal'>java </i>is in the
+path – to check this, type “<i>java -version</i>” in your shell – it should
+respond with a version number of 1.5.0 or higher. Further,<span
+style="mso-spacerun: yes">  </span>you need PERL version 5 or higher. The
+latest version can be downloaded at http://www.perl.com/download.csp. Please
+ensure that PERL is in the path – to heck this, type “<i>perl -v</i>” in your
+shell – it should respond with a version number of 5 or higher.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you want to store the corpus in a
+database and view it with LCC’s corpus browser, it is recommended that you
+download and install MySQL from <a href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</a>
+. See the Documentation of LCC’s corpus browser (<a
+href="http://corpora.informatik.uni-leipzig.de/download/LCCDoc.pdf">http://corpora.informatik.uni-leipzig.de/download/LCCDoc.pdf</a>)
+for details. </span></p>
+
+<h1><a name="_Toc135565168"><span lang=EN-GB>Operation of tinyCC 2.0</span></a></h1>
+
+<h2><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB style='mso-ansi-language:
+EN-GB'>Input formats<o:p></o:p></span></span></h2>
+
+<p class=Text><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB
+style='mso-ansi-language:EN-GB'>Raw text corpora can be fed into tinyCC 2.0 in
+three different ways: HTML and plain text. For retaining the source per
+sentence (e.g. the name of the text), the SATZ.S-Format allows to provide this
+information directly. Otherwise, the source will carry the name of the file the
+sentence was found in. <o:p></o:p></span></span></p>
+
+<p class=TextIndent><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB
+style='mso-ansi-language:EN-GB'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>Plain text</span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>The
+text is given in plain format. Sentences should not cross lines: if your corpus
+is formatted such that carriage-returns can be found within sentences, please
+remove them beforehand. The text must be given in files with “<i>.txt</i>”
+extension.</span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>HTML</span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>The
+text is given in HTML encoding in files with “<i>.htm</i>” or “<i>.html</i>”
+extension. In pre-processing, all HTML elements will be removed.</span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></p>
+
+<h3><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>SATZ.S-Format</span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>The
+text can only be given in a plain format. To feed sources to the process, the
+following line should be present BEFORE every different text source:</span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB
+style='font-size:9.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'><span
+style="mso-spacerun:
+yes"> </span>&lt;quelle&gt;&lt;name&gt;NAME_OF_SOURCE&lt;/name&gt;&lt;name_lang&gt;NAME_OF_SOURCE
+&lt;/name_lang&gt;&lt;/quelle&gt;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>Please
+note that this line starts with a space-character.</span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB>To
+provide text data to the process, please put all files containing the text in
+these formats into one folder (subfolders are possible).</span></span></p>
+
+<p class=Text><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB
+style='mso-ansi-language:EN-GB'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></p>
+
+<h2><span style='mso-bookmark:_Toc135565168'><span lang=EN-GB style='mso-ansi-language:
+EN-GB'>Running the program</span></span><span lang=EN-GB style='mso-ansi-language:
+EN-GB'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>Change to the directory you unpacked the
+archive to. The program accepts three parameters: </span></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     lang=EN-GB>Name of the corpus, e.g. “mycorpus”</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     lang=EN-GB>Data folder for texts, e.g. “/sampledata/PLAIN”</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     lang=EN-GB>List of multiword units (MWUs). If you do not want to index
+     MWUs, use “none”</span></li>
+</ol>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The distribution comes with a small sample
+in all three formats in the folder <i style='mso-bidi-font-style:normal'>sampledata</i>.
+You can check the functionality of tinyCC by typing</span></p>
+
+<p class=cmd><span lang=EN-GB style='mso-ansi-language:EN-GB'>./tinyCC
+mycorpusPLAIN sampledata/PLAIN none<span style="mso-spacerun: yes">  </span></span><span
+lang=EN-GB style='mso-ansi-language:EN-GB;font-style:normal'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>in your shell. The program will produce
+seven files in a subfolder “<i>result</i>”:</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i><span lang=EN-GB>bytes<span
+style='mso-tab-count:1'>    </span>filename</span></i></b><span lang=EN-GB
+style='mso-bidi-font-style:italic'><o:p></o:p></span></p>
+
+<p class=MsoNormal><i><span lang=EN-GB>1301 <span style='mso-tab-count:1'>   </span>mycorpusPLAIN.co_n<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i><span lang=EN-GB>9888 <span style='mso-tab-count:1'>   </span>mycorpusPLAIN.co_s<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i><span lang=EN-GB>576 <span style='mso-tab-count:1'>     </span>mycorpusPLAIN.inv_so<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i><span lang=EN-GB>8531 <span style='mso-tab-count:1'>   </span>mycorpusPLAIN.inv_w<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i><span lang=EN-GB>4470 <span style='mso-tab-count:1'>   </span>mycorpusPLAIN.sentences<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i><span lang=EN-GB>62<span style='mso-tab-count:1'>        </span>mycorpusPLAIN.sources<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i><span lang=EN-GB>4306<span style='mso-tab-count:1'>    </span>mycorpusPLAIN.words</span></i></p>
+
+<p class=MsoIndexHeading><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoIndex1><span lang=EN-GB>For corpora this small, please do not
+expect meaningful co-occurrences. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=EN-US>Output Format</span></h2>
+
+<p class=Text><span lang=EN-US>This section describes the format of the seven
+output files and what the output means.</span></p>
+
+<h3><span lang=EN-GB>File: sentences</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This file has two columns and contains the
+sentences of the corpus.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>1st column: sentence-id, as used in <b
+style='mso-bidi-font-weight:normal'>inv_so</b> and <b style='mso-bidi-font-weight:
+normal'>inv_w<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>2nd column: sentence text as in original.
+the internal tokenizing of tinyCC is not reflected here.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-GB>File: words</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This file has three columns and contains
+the words of the corpus</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>1st column: word-id, as used in <b
+style='mso-bidi-font-weight:normal'>inv_w, co_s, co_n</b></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>2nd column: word</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>3rd column word frequency count in the
+corpus</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The first 100 word-ids are reserved for
+special characters such as punctuation, begin-of-sentence (%^%),
+end-of-sentence (%$%) and numeral (_NUMBER_).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-GB>File: sources</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This file has two columns and contains the
+sources</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>1st column: source-id as used in <b
+style='mso-bidi-font-weight:normal'>inv_so</b></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>2nd column: Source name: either file name
+or contents of &lt;name&gt;-tag in SATZ.S format</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-GB>File: inv_so</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This File has two columns and indexes
+sentences by source</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>1st column: sentence-id as used in <b
+style='mso-bidi-font-weight:normal'>sentences</b></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>2nd column: source-id as used in <b
+style='mso-bidi-font-weight:normal'>sources</b></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-GB>File: inv_w</span><span lang=EN-GB style='font-weight:
+normal'><o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This file has four columns of which the
+fourth is optional. It indexes sentences by words</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>1st column: word-id as in <b
+style='mso-bidi-font-weight:normal'>words</b></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>2nd column: sentence-id as in <b
+style='mso-bidi-font-weight:normal'>sentences</b></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>3rd column: position in sentence. Here, the
+internal tokenization is reflected.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>4th column (optional): Contains “-“ if word
+is part of a multi word unit. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-GB style='mso-bidi-font-weight:normal'>File: co_n<o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This file has four columns and contains
+significant neighbour-based co-occurrences</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>1st column: word-id of left word in a word
+bigram</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>2nd column: word-id of right word in a word
+bigram</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>3rd column: frequency of word bigram
+consisting of left and right word</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>4th column: log-likelihood ratio</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-GB style='mso-bidi-font-weight:normal'>File: co_s<o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This file has four columns and contains
+significant sentence-based co-occurrences</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>1st column: word-id of word 1</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>2nd column: word-id of word 2</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>3rd column: frequency of joint occurrence </span></p>
+
+<p class=MsoNormal><span lang=EN-GB>4th column: log-likelihood ratio</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The data is symmetric in columns 1 and 2. </span></p>
+
+<h1><span lang=EN-GB>Tuning tinyCC 2.0</span></h1>
+
+<p class=Text><span lang=EN-GB style='mso-ansi-language:EN-GB'>The parameters
+of tinyCC 2.0 have been carefully set in a sensible way. For normal text
+corpora, there should be no need to change them. However, this section
+describes how to do exactly this. <o:p></o:p></span></p>
+
+<p class=TextIndent><span lang=EN-GB style='mso-ansi-language:EN-GB'>For
+changing internal parameters, open the file “<i>tinyCC.sh</i>” in the main
+folder of your installation and look for the following section, starting after
+the initial comments:<o:p></o:p></span></p>
+
+<p class="TextIndent"><i># input text is in format (latin|utf8)</i></p>
+<p class="TextIndent"><i>export TEXTFORM=utf8</i></p>
+<p class="TextIndent"><i># locales for latin__must__ be installed on your system!</i></p>
+<p class="TextIndent"><i># See `localedef --list-archive` for a list of installed locales </i></p>
+<p class="TextIndent"><i># Edit /etc/locale.gen and  sudo locale-gen to enable specific locales </i></p>
+<br />
+<p class="TextIndent"><i># locale to be used for processing ISO 8859 text</i></p>
+<p class="TextIndent"><i>export LTYPE=de_DE@euro</i</p>
+<p class="TextIndent"><i># name of this locale as understood by `recode`</i></p>
+<p class="TextIndent"><i>export LNAME=latin1</i></p>
+<br />
+<p class="TextIndent"><i># locale to be used for processing UTF-8 text</i></p>
+<p class="TextIndent"><i>export UTYPE=de_DE.UTF-8</i></p>
+<br/ >
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>#
+Memory max usage in MB (approximate)<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+MAXMEM=600<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'># min
+frequency for scoocs<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+SMINFREQ=2<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'># min
+sig for scooc<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+SMINSIG=6.63<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'># min
+freq for nbcooc<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+NMINFREQ=2<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'># min
+sig for NBcooc<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+NMINSIG=3.84<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'># number
+of digits after .<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+DIGITS=2<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'># temp
+directory<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+TEMP=temp<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>#
+result directory<o:p></o:p></span></i></p>
+
+<p class=TextIndent><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>export
+RES=result</span></i><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent><span lang=EN-GB style='mso-ansi-language:EN-GB'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=TextIndent><span lang=EN-GB style='mso-ansi-language:EN-GB'>These
+parameters are explained now:<o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>TEXTFORM:
+</span></i><span lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:
+italic'>Specifies which format to assume for the processed texts. `latin` should work for most encodings, such as ISO-8859-* and windows12++.</span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>LTYPE:
+</span></i><span lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:
+italic'>Name of an available locale for ISO-8859-* encoding.</span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>LNAME:
+</span></i><span lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:
+italic'>Name of the above encoding as understood by GNU recode (see <tt>recode -l</tt> for the list of supported encodings)</span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>UTYPE:
+</span></i><span lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:
+italic'>Name of an available locale for UTF-8 encoding. See <tt>localedef --list</tt> for a list of the locales installed on your system. If there is no locale supporting UTF-8 available on your system select one from <tt>/usr/share/i18n/SUPPORTED</tt> and <tt>sudo $EDITOR /etc/locale.gen</tt> to add it to your locales list. Then <tt>sudo locale-gen</tt> to rebuild the locales on your system.</span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>MAXMEM:
+</span></i><span lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:
+italic'>The maximum RAM in megabytes the process is allowed to use. As this
+value is very approximate, please set it considerably lower than your main
+memory. Larger values speed up co-occurrence computation (especially for large
+corpora), but too large values will result in swapping. </span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>SMINFREQ/NMINFREQ</span></i><span
+lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:italic'>: The
+minimum joint occurrence frequency to be taken into account for
+sentence/neighbour-based co-occurrences. A value of 1 should not be used, see
+[Moore 2004].</span><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>SMINSIG/NMINSIG</span></i><span
+lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:italic'>: The
+minimum log-likelihood ratio to be taken into account for co-occurrences. 3.84
+corresponds to 5% error probability, 6.63 corresponds to 1% error probability,
+also cf. [Moore 2004].</span><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i><span lang=EN-GB style='mso-ansi-language:EN-GB'>DIGITS</span></i><span
+lang=EN-GB style='mso-ansi-language:EN-GB;mso-bidi-font-style:italic'>: Output
+precision for log-likelihood ratios.</span><span lang=EN-GB style='mso-ansi-language:
+EN-GB'><o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i style='mso-bidi-font-style:normal'><span lang=EN-GB
+style='mso-ansi-language:EN-GB'>TEMP</span></i><span lang=EN-GB
+style='mso-ansi-language:EN-GB'>: temporary working directory<o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l3 level1 lfo11;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><i style='mso-bidi-font-style:normal'><span lang=EN-GB
+style='mso-ansi-language:EN-GB'>RES</span></i><span lang=EN-GB
+style='mso-ansi-language:EN-GB'>: where to store the output<o:p></o:p></span></p>
+
+<p class=TextIndent><span lang=EN-GB style='mso-ansi-language:EN-GB'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=TextIndent><span lang=EN-GB style='mso-ansi-language:EN-GB'>Further,
+you might change<o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l4 level1 lfo13;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-GB style='mso-ansi-language:EN-GB'>tokenisation:
+Dive into “<i style='mso-bidi-font-style:normal'>perl/tokenize.pl</i>” (latin1) <o:p></o:p> and “<i style='mso-bidi-font-style:normal'>perl/tokenize_utf8.pl</i>”</span> (UTF-8). Please be careful to preserve the file's encoding.</p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l4 level1 lfo13;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-GB style='mso-ansi-language:EN-GB'>behaviour
+on carriage-returns inside sentences: remove “-n” in the <i style='mso-bidi-font-style:
+normal'>text2satz </i>call<o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l4 level1 lfo13;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-GB style='mso-ansi-language:EN-GB'>significance
+formula: dive into “<i style='mso-bidi-font-style:normal'>perl/nbcooc.pl</i>”
+and “<i style='mso-bidi-font-style:normal'>perl/ssig.pl</i>”<o:p></o:p></span></p>
+
+<p class=TextIndent style='margin-left:50.4pt;text-indent:-18.0pt;mso-list:
+l4 level1 lfo13;tab-stops:list 50.4pt'><![if !supportLists]><span lang=EN-GB
+style='font-family:Symbol;mso-ansi-language:EN-GB'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-GB style='mso-ansi-language:EN-GB'>platform
+dependence: the most crucial point is the usage of<span style="mso-spacerun:
+yes">  </span>“<i style='mso-bidi-font-style:normal'>bin/sort64</i>” which is
+UNIX sort compiled for 64 bits. 32-bit sorts do not handle temporary files
+larger than 2GB. <o:p></o:p></span></p>
+
+<p class=TextIndent><span lang=EN-GB style='mso-ansi-language:EN-GB'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=EN-US>Limitations</span></h2>
+
+<p class=Text><span lang=EN-US>TinyCC 2.0 merely converts plain text data into
+the LCC format, thereby computing co-occurrences. Duplicates and ‘dirt’ are not
+removed. TinyCC was tested up to 50 Million sentence (750 Million words)
+corpora. </span></p>
+
+<p class=TextIndent><span lang=EN-GB style='mso-ansi-language:EN-GB'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><a name="_Toc135565179"><span lang=EN-US>Acknowledgements</span></a></h2>
+
+<p class=cmd style='margin-left:0cm;text-indent:0cm'><span lang=EN-GB
+style='mso-ansi-language:EN-GB;font-style:normal'>TinyCC 2.0 was developed by
+Chris Biemann at the University of Leipzig. The component handling sources and
+performing sentence splitting was developed by Fabian Schmidt. Some fixes for UTF-8 handling were implemented by Matthias Richter.<span
+style="mso-spacerun: yes">  </span>Thanks goes to all the testers from the NLP Department,
+University of Leipzig. <o:p></o:p></span></p>
+
+<h1><a name="_Toc135565180"><span lang=EN-GB>Refe<span style='mso-bidi-font-weight:
+bold'>r</span>ences</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-GB>[Dunning 1993] Ted E. Dunning, Accurate
+Methods for the Statistics of Surprise and Coincidence, Computational
+Linguistics 19(1):1993 <a
+href="http://www.comp.lancs.ac.uk/ucrel/papers/tedstats.pdf">http://www.comp.lancs.ac.uk/ucrel/papers/tedstats.pdf</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[Moore 2004] Moore, R. C. (2004): </span><span
+lang=EN-GB style='mso-bidi-font-size:14.5pt'>On Log-Likelihood-Ratios and the
+Significance of Rare Events. </span><span lang=EN-GB>Proceedings of EMNLP 2004,
+Barcelona, Spain <a
+href="http://research.microsoft.com/users/bobmoore/rare-events-final-rev.pdf">http://research.microsoft.com/users/bobmoore/rare-events-final-rev.pdf</a></span><span
+lang=EN-GB style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=Text><span lang=EN-GB style='mso-ansi-language:EN-GB'>[Quasthoff et
+al. 2006] </span><span lang=EN-US>Quasthoff, U., Richter, M.&nbsp; and Biemann,
+C.&nbsp;(2006): Corpus Portal for Search in Monolingual Corpora. Proceedings of
+LREC-06, Genoa, Italy <a
+href="http://wortschatz.uni-leipzig.de/~cbiemann/pub/2006/QuasthoffBiemannRichter06portal.pdf"><span
+lang=EN-GB style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:EN-GB'>http://wortschatz.uni-leipzig.de/~cbiemann/pub/2006/QuasthoffBiemannRichter06portal.pdf</span></a></span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
