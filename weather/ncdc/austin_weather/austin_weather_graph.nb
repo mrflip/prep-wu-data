@@ -10,16 +10,1139 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[       759,         33]
-NotebookOptionsPosition[       548,         21]
-NotebookOutlinePosition[       886,         36]
-CellTagsIndexPosition[       843,         33]
+NotebookDataLength[     44999,       1186]
+NotebookOptionsPosition[     43808,       1144]
+NotebookOutlinePosition[     44146,       1159]
+CellTagsIndexPosition[     44103,       1156]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["Setup", "Subsection",
+ CellChangeTimes->{{3.456332014618647*^9, 3.4563320152797117`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<ErrorBarPlots`\>\"", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\<~/ics/pool/weather/ncdc/austin_weather\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.456111191146987*^9, 3.456111206020513*^9}}],
+
+Cell[BoxData["\<\"/Users/flip/ics/pool/weather/ncdc/austin_weather\"\>"], \
+"Output",
+ CellChangeTimes->{3.456111210821403*^9, 3.456112299660179*^9, 
+  3.4561147084685183`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"weather", "=", 
+   RowBox[{
+   "Import", "[", "\"\<rawd/tables/austin_daily_weather.tsv\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wheaders", " ", "=", " ", 
+   RowBox[{"First", "[", "weather", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"weather", "   ", "=", " ", 
+   RowBox[{"Rest", "[", "weather", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "weather", "]"}]}], "Input",
+ CellChangeTimes->{{3.4561112119723063`*^9, 3.456111266375813*^9}}],
+
+Cell[BoxData["22280"], "Output",
+ CellChangeTimes->{3.456111269380889*^9, 3.456112301791922*^9, 
+  3.456114710564123*^9}]
+}, Closed]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"wdateStr", "=", 
+   RowBox[{"weather", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "3"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wdate", "=", 
+   RowBox[{"DateList", " ", "/@", " ", "wdateStr"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wsecs", " ", "=", 
+   RowBox[{"AbsoluteTime", " ", "/@", " ", "wdate"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wyrs", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", "1", ",", "1", ",", "0", ",", 
+       "0", ",", "0"}], "}"}], "&"}], "/@", "wdate"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wdayOfYear", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"wsecs", "-", 
+      RowBox[{"(", 
+       RowBox[{"AbsoluteTime", "/@", "wyrs"}], ")"}]}], ")"}], "/", 
+    "86400"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tempAvg", " ", "=", " ", 
+   RowBox[{"weather", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "4"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tempMin", " ", "=", " ", 
+   RowBox[{"weather", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "20"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tempMax", " ", "=", " ", 
+   RowBox[{"weather", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "18"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.456111275789194*^9, 3.456111330123558*^9}, 
+   3.456111375815465*^9, {3.4561119137289057`*^9, 3.4561119308259993`*^9}, {
+   3.456112544762014*^9, 3.456112545081456*^9}, 3.456112615189765*^9, {
+   3.456114682316423*^9, 3.456114688226603*^9}, {3.456114795830093*^9, 
+   3.456114796126911*^9}, {3.4561230705591087`*^9, 3.456123074732794*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Histogram", "Subsection",
+ CellChangeTimes->{{3.456331975487665*^9, 3.4563319780614967`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"byYear0", " ", "=", " ", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"wyrs", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", " ", "wdayOfYear", ",", 
+      "tempMax"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"byYear", "  ", "=", 
+   RowBox[{
+    RowBox[{"GatherBy", "[", 
+     RowBox[{"byYear0", ",", "First"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "All", ",", "3"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"byYearInGroupsOf4", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GatherBy", "[", 
+      RowBox[{"byYear0", ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Floor", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"First", "[", "#", "]"}], "-", "2"}], ",", "4"}], "]"}], 
+         ")"}], "&"}]}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"2", ";;", "16"}], ",", "All", ",", "All"}], "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "All", ",", "3"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.456114713580996*^9, 3.456114930005501*^9}, {
+   3.456114963133299*^9, 3.456115050942869*^9}, {3.4561151251398478`*^9, 
+   3.456115160569976*^9}, {3.456115212727456*^9, 3.456115218862314*^9}, {
+   3.4561161180337143`*^9, 3.456116134246612*^9}, {3.456116266392276*^9, 
+   3.4561163148399553`*^9}, 3.456116614524157*^9, {3.456116693477673*^9, 
+   3.456116693859606*^9}, {3.456116935462945*^9, 3.456116937364504*^9}, {
+   3.456117031890704*^9, 3.456117040341784*^9}, {3.456324028370879*^9, 
+   3.456324066090434*^9}, {3.456325276669717*^9, 3.4563253342314177`*^9}, {
+   3.456325381550324*^9, 3.456325510909667*^9}, 3.4563255530020037`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CountIf", "[", 
+   RowBox[{"list_", ",", "thresh_"}], "]"}], ":=", 
+  RowBox[{"Length", "[", 
+   RowBox[{"Select", "[", 
+    RowBox[{"list", ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"#", "\[GreaterEqual]", "thresh"}], ")"}], "&"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.4561172359108887`*^9, 3.456117276705003*^9}, {
+  3.4561185354422894`*^9, 3.456118555513077*^9}, {3.456118599907118*^9, 
+  3.4561187400169983`*^9}, {3.456119016692894*^9, 3.456119049167961*^9}, {
+  3.456120147330579*^9, 3.456120149234749*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"histPlots", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Histogram", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{"{", "2.5", "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "60"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"20", ",", "110"}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"BarOrigin", "\[Rule]", "Left"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"AspectRatio", "\[Rule]", " ", "6"}], ",", " ", 
+       RowBox[{"PlotLabel", "\[Rule]", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Rotate", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"90", "Degree"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+         "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Axes", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"False", ",", "False"}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"GridLines", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"90", ",", 
+              RowBox[{"Hue", "[", 
+               RowBox[{"0.1", ",", "0.4", ",", "0.92"}], "]"}]}], "}"}], ",", 
+            
+            RowBox[{"{", 
+             RowBox[{"95", ",", 
+              RowBox[{"Hue", "[", 
+               RowBox[{"0.1", ",", "0.4", ",", "0.92"}], "]"}]}], "}"}], ",", 
+            
+            RowBox[{"{", 
+             RowBox[{"100", ",", 
+              RowBox[{"Hue", "[", 
+               RowBox[{"0.05", ",", "0.9", ",", "0.92"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"45", ",", 
+              RowBox[{"Hue", "[", 
+               RowBox[{"0.52", ",", "0.25", ",", "0.92", ",", "0.6"}], 
+               "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"40", ",", 
+              RowBox[{"Hue", "[", 
+               RowBox[{"0.52", ",", "0.25", ",", "0.92", ",", "0.6"}], 
+               "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"35", ",", 
+              RowBox[{"Hue", "[", 
+               RowBox[{"0.67", ",", "0.3", ",", "0.98", ",", "0.6"}], "]"}]}],
+              "}"}]}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"ChartStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"EdgeForm", "[", "None", "]"}], "}"}]}]}], "]"}], "&"}], "/@", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"byYear", ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"1948", ",", "2009"}], "]"}]}], "}"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"a", "=", 
+  RowBox[{"GraphicsRow", "[", 
+   RowBox[{"histPlots", ",", 
+    RowBox[{"Spacings", "\[Rule]", " ", 
+     RowBox[{"-", "80"}]}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", "1750"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"BarChart", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"CountIf", "[", 
+      RowBox[{"#", ",", "  ", "100"}], "]"}], "&"}], "/@", "byYear"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"PlotLabel", "\[Rule]", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<100+ Degree Days\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], "]"}]}], 
+   ",", 
+   RowBox[{"Frame", "\[Rule]", "False"}], ",", " ", 
+   RowBox[{"Axes", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"False", ",", "False"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ChartLabels", "\[Rule]", 
+    RowBox[{"Placed", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"CountIf", "[", 
+           RowBox[{"#", ",", "  ", "100"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+         "]"}], "&"}], "/@", "byYear"}], ",", "Bottom"}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"AspectRatio", "\[Rule]", "0.05"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "1750"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "61"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "40"}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"BarSpacing", "\[Rule]", "None"}], ",", 
+   RowBox[{"ChartBaseStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"EdgeForm", "[", "None", "]"}], "}"}]}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"BarChart", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"CountIf", "[", 
+      RowBox[{"#", ",", "  ", "95"}], "]"}], "&"}], "/@", "byYear"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"PlotLabel", "\[Rule]", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<95+ Degree Days\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], "]"}]}], 
+   ",", 
+   RowBox[{"Frame", "\[Rule]", "False"}], ",", " ", 
+   RowBox[{"Axes", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"False", ",", "False"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ChartLabels", "\[Rule]", 
+    RowBox[{"Placed", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"CountIf", "[", 
+           RowBox[{"#", ",", "  ", "95"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+         "]"}], "&"}], "/@", "byYear"}], ",", "Bottom"}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"AspectRatio", "\[Rule]", "0.05"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "1750"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "61"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "112"}], "}"}]}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"BarSpacing", "\[Rule]", "None"}], ",", 
+   RowBox[{"ChartBaseStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"EdgeForm", "[", "None", "]"}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.4561150951566057`*^9, 3.456115103904558*^9}, {
+   3.456115170932188*^9, 3.456115194540447*^9}, {3.456115225419077*^9, 
+   3.456115323195067*^9}, {3.456115933712072*^9, 3.456115960969392*^9}, {
+   3.456116052261498*^9, 3.456116052860914*^9}, 3.45611609624094*^9, 
+   3.456116140058257*^9, {3.4561166169923487`*^9, 3.45611662290592*^9}, 
+   3.456116745578*^9, {3.4561167881478024`*^9, 3.456116839658147*^9}, {
+   3.4561169098395452`*^9, 3.4561169102288837`*^9}, {3.456116941186158*^9, 
+   3.456116945837462*^9}, {3.456117073653113*^9, 3.4561171024915*^9}, {
+   3.456117162056459*^9, 3.456117168174474*^9}, {3.456117229793297*^9, 
+   3.456117229944058*^9}, {3.4561174900440493`*^9, 3.4561175649618387`*^9}, {
+   3.456117634851719*^9, 3.456117636760559*^9}, {3.456117723942745*^9, 
+   3.4561177512929792`*^9}, 3.456117801355879*^9, {3.456117865606625*^9, 
+   3.456117906251532*^9}, {3.456117940807065*^9, 3.4561179774304523`*^9}, {
+   3.456118031869411*^9, 3.456118092983741*^9}, {3.456118154680586*^9, 
+   3.4561182563803463`*^9}, {3.4561183265990973`*^9, 3.456118330437098*^9}, 
+   3.456119114422124*^9, {3.456119600768042*^9, 3.4561196620007067`*^9}, {
+   3.456119757588581*^9, 3.456119770684743*^9}, {3.45612001680121*^9, 
+   3.4561200189344797`*^9}, {3.456120276675088*^9, 3.456120276840251*^9}, {
+   3.456120318220788*^9, 3.456120318393773*^9}, {3.456120418581477*^9, 
+   3.45612041895726*^9}, {3.456120652897912*^9, 3.456120666701009*^9}, {
+   3.456120789764228*^9, 3.456120808249004*^9}, {3.4561210108305273`*^9, 
+   3.456121037517572*^9}, {3.4561210776543503`*^9, 3.456121080979045*^9}, {
+   3.456121556422146*^9, 3.456121556855095*^9}, {3.456121645801906*^9, 
+   3.456121679062553*^9}, {3.456121713015987*^9, 3.456121716205276*^9}, {
+   3.456121966127232*^9, 3.456122048820463*^9}, {3.456127365500198*^9, 
+   3.4561274758632*^9}, {3.4561275205352488`*^9, 3.456127535621969*^9}, {
+   3.4561275745774517`*^9, 3.4561275882874117`*^9}, {3.4561276273735037`*^9, 
+   3.456127639726122*^9}, {3.4561276717616043`*^9, 3.4561277103553047`*^9}, 
+   3.4561308109950037`*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"histPlots", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Histogram", "[", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"{", "2.5", "}"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "150"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"20", ",", "110"}], "}"}]}], "}"}]}], ",", " ", 
+         RowBox[{"BarOrigin", "\[Rule]", "Left"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"AspectRatio", "\[Rule]", " ", "6"}], ",", " ", 
+         RowBox[{"PlotLabel", "\[Rule]", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToString", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<-\>\"", "<>", 
+             RowBox[{"ToString", "[", 
+              RowBox[{"Mod", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], "+", "3"}], ",", "100"}], 
+               "]"}], "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+           "]"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Axes", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"False", ",", "False"}], "}"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"GridLines", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"90", ",", 
+                RowBox[{"Hue", "[", 
+                 RowBox[{"0.1", ",", "0.4", ",", "0.92"}], "]"}]}], "}"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"95", ",", 
+                RowBox[{"Hue", "[", 
+                 RowBox[{"0.1", ",", "0.4", ",", "0.92"}], "]"}]}], "}"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"100", ",", 
+                RowBox[{"Hue", "[", 
+                 RowBox[{"0.05", ",", "0.9", ",", "0.92"}], "]"}]}], "}"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"45", ",", 
+                RowBox[{"Hue", "[", 
+                 RowBox[{"0.52", ",", "0.25", ",", "0.92", ",", "0.6"}], 
+                 "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"40", ",", 
+                RowBox[{"Hue", "[", 
+                 RowBox[{"0.52", ",", "0.25", ",", "0.92", ",", "0.6"}], 
+                 "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"35", ",", 
+                RowBox[{"Hue", "[", 
+                 RowBox[{"0.67", ",", "0.3", ",", "0.98", ",", "0.6"}], 
+                 "]"}]}], "}"}]}], "}"}]}], "}"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ChartStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"EdgeForm", "[", "None", "]"}], "}"}]}]}], "]"}], "&"}], "/@", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"byYearInGroupsOf4", ",", 
+         RowBox[{"Range", "[", 
+          RowBox[{"1950", ",", "2009", ",", "4"}], "]"}]}], "}"}], "]"}]}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{"a", "=", 
+    RowBox[{"GraphicsRow", "[", 
+     RowBox[{"histPlots", ",", 
+      RowBox[{"Spacings", "\[Rule]", " ", 
+       RowBox[{"-", "2"}]}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", "980"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"BarChart", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"CountIf", "[", 
+        RowBox[{"#", ",", "  ", "100"}], "]"}], "&"}], "/@", 
+      "byYearInGroupsOf4"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<100+ Degree Days\>\"", ",", 
+        RowBox[{"{", 
+         RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+       "]"}]}], ",", 
+     RowBox[{"Frame", "\[Rule]", "False"}], ",", " ", 
+     RowBox[{"Axes", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"False", ",", "False"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ChartLabels", "\[Rule]", 
+      RowBox[{"Placed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"CountIf", "[", 
+             RowBox[{"#", ",", "  ", "100"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+           "]"}], "&"}], "/@", "byYearInGroupsOf4"}], ",", "Bottom"}], 
+       "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "0.2"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "980"}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.5", ",", "14.5"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "280"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"BarSpacing", "\[Rule]", "None"}], ",", 
+     RowBox[{"ChartBaseStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"EdgeForm", "[", "None", "]"}], "}"}]}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"BarChart", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"CountIf", "[", 
+        RowBox[{"#", ",", "  ", "95"}], "]"}], "&"}], "/@", 
+      "byYearInGroupsOf4"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<95+ Degree Days\>\"", ",", 
+        RowBox[{"{", 
+         RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+       "]"}]}], ",", 
+     RowBox[{"Frame", "\[Rule]", "False"}], ",", " ", 
+     RowBox[{"Axes", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"False", ",", "False"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ChartLabels", "\[Rule]", 
+      RowBox[{"Placed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"CountIf", "[", 
+             RowBox[{"#", ",", "  ", "95"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}], "}"}]}], 
+           "]"}], "&"}], "/@", "byYearInGroupsOf4"}], ",", "Bottom"}], 
+       "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "0.2"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "980"}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.5", ",", "14.5"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "280"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"BarSpacing", "\[Rule]", "None"}], ",", 
+     RowBox[{"ChartBaseStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"EdgeForm", "[", "None", "]"}], "}"}]}]}], "]"}]}]}]], "Input",\
+
+ CellChangeTimes->{{3.4561150951566057`*^9, 3.456115103904558*^9}, {
+   3.456115170932188*^9, 3.456115194540447*^9}, {3.456115225419077*^9, 
+   3.456115323195067*^9}, {3.456115933712072*^9, 3.456115960969392*^9}, {
+   3.456116052261498*^9, 3.456116052860914*^9}, 3.45611609624094*^9, 
+   3.456116140058257*^9, {3.4561166169923487`*^9, 3.45611662290592*^9}, 
+   3.456116745578*^9, {3.4561167881478024`*^9, 3.456116839658147*^9}, {
+   3.4561169098395452`*^9, 3.4561169102288837`*^9}, {3.456116941186158*^9, 
+   3.456116945837462*^9}, {3.456117073653113*^9, 3.4561171024915*^9}, {
+   3.456117162056459*^9, 3.456117168174474*^9}, {3.456117229793297*^9, 
+   3.456117229944058*^9}, {3.4561174900440493`*^9, 3.4561175649618387`*^9}, {
+   3.456117634851719*^9, 3.456117636760559*^9}, {3.456117723942745*^9, 
+   3.4561177512929792`*^9}, 3.456117801355879*^9, {3.456117865606625*^9, 
+   3.456117906251532*^9}, {3.456117940807065*^9, 3.4561179774304523`*^9}, {
+   3.456118031869411*^9, 3.456118092983741*^9}, {3.456118154680586*^9, 
+   3.4561182563803463`*^9}, {3.4561183265990973`*^9, 3.456118330437098*^9}, 
+   3.456119114422124*^9, {3.456119600768042*^9, 3.4561196620007067`*^9}, {
+   3.456119757588581*^9, 3.456119770684743*^9}, {3.45612001680121*^9, 
+   3.4561200189344797`*^9}, {3.456120276675088*^9, 3.456120276840251*^9}, {
+   3.456120318220788*^9, 3.456120318393773*^9}, {3.456120418581477*^9, 
+   3.45612041895726*^9}, {3.456120652897912*^9, 3.456120666701009*^9}, {
+   3.456120789764228*^9, 3.456120808249004*^9}, {3.4561210108305273`*^9, 
+   3.456121037517572*^9}, {3.4561210776543503`*^9, 3.456121080979045*^9}, {
+   3.456121556422146*^9, 3.456121556855095*^9}, {3.456121645801906*^9, 
+   3.456121679062553*^9}, {3.456121713015987*^9, 3.456121716205276*^9}, {
+   3.456121966127232*^9, 3.456122048820463*^9}, {3.456127365500198*^9, 
+   3.4561274758632*^9}, {3.4561275205352488`*^9, 3.456127535621969*^9}, {
+   3.4561275745774517`*^9, 3.4561275882874117`*^9}, {3.4561276273735037`*^9, 
+   3.456127639726122*^9}, {3.4561276717616043`*^9, 3.4561277103553047`*^9}, 
+   3.4561308109950037`*^9, {3.456323984119269*^9, 3.456323984813602*^9}, {
+   3.456324046597959*^9, 3.456324047980014*^9}, {3.4563240910366793`*^9, 
+   3.456324127055751*^9}, {3.4563241947049923`*^9, 3.456324218464048*^9}, {
+   3.4563243017419157`*^9, 3.456324357502253*^9}, {3.456324400677215*^9, 
+   3.4563245475335417`*^9}, {3.456324605663237*^9, 3.4563246116507483`*^9}, {
+   3.4563246737977657`*^9, 3.456324686120358*^9}, {3.456324746632121*^9, 
+   3.456324809030307*^9}, {3.4563248394031887`*^9, 3.456324932771888*^9}, {
+   3.456325584810873*^9, 3.45632562115154*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Time Series", "Subsection",
+ CellChangeTimes->{{3.4563319983341618`*^9, 3.456332006966345*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"byDayOfYear", "  ", "=", 
+   RowBox[{"GatherBy", "[", 
+    RowBox[{"byYear0", ",", "First"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sel100", "[", 
+    RowBox[{"list_", ",", "thresh_"}], "]"}], ":=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"list", ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "\[GreaterEqual]", "thresh"}], ")"}],
+       "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Union", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"sel100", "[", 
+         RowBox[{"#", ",", "100"}], "]"}], "&"}], "/@", "byDayOfYear"}], 
+      ")"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "//", "Flatten"}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fooTest", "[", 
+    RowBox[{"{", 
+     RowBox[{"y_", ",", "d_", ",", "t_"}], "}"}], "]"}], ":=", 
+   RowBox[{"120", "\[LessEqual]", " ", "d", "\[LessEqual]", " ", "274"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"foo", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"#", ",", "fooTest"}], "]"}], "&"}], "/@", "byDayOfYear"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.45612246621632*^9, 3.456122476392111*^9}, 
+   3.456123147325911*^9, 3.456124241264244*^9, {3.4561269470801764`*^9, 
+   3.456126951314337*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.7", ",", "0.8", ",", "0.62"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"#", "/.", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"y_", ",", "d_", ",", "t_"}], "}"}], "\[RuleDelayed]", 
+          RowBox[{"Rectangle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"d", ",", "y"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"d", "+", "1"}], ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"t", "<", "100"}], ",", "y", ",", 
+                RowBox[{"y", "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"t", "-", "100"}], ")"}], "/", "7"}]}]}], "]"}]}], 
+             "}"}]}], "]"}]}]}], ")"}], "&"}], "/@", "foo"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.6", ",", "0.4", ",", "0.92"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"120", ",", "#"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"280", ",", "#"}], "}"}]}], "}"}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"1948", ",", "2009"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"{", 
+            RowBox[{"123", ",", 
+             RowBox[{"#", "+", "0.5"}]}], "}"}]}], "]"}], "&"}], "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1948", ",", "2009"}], "]"}]}], ",", 
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}]}], "]"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AspectRatio", "\[Rule]", "2"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.456124066708452*^9, 3.456124131089877*^9}, {
+  3.456124189820672*^9, 3.4561241954043493`*^9}, {3.456124301206423*^9, 
+  3.4561244490324783`*^9}, {3.456124483920845*^9, 3.45612450516406*^9}, {
+  3.4561246010949593`*^9, 3.4561246832254*^9}, {3.456124799385889*^9, 
+  3.456124901930529*^9}, {3.45612494465451*^9, 3.456124945564*^9}, {
+  3.456125047116995*^9, 3.4561251728140583`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"monthStartDayOfYear", "=", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<J\>\"", ",", "\"\<F\>\"", ",", "\"\<M\>\"", ",", "\"\<A\>\"", 
+        ",", "\"\<M\>\"", ",", "\"\<J\>\"", ",", "\"\<J\>\"", ",", 
+        "\"\<A\>\"", ",", "\"\<S\>\"", ",", "\"\<O\>\"", ",", "\"\<N\>\"", 
+        ",", "\"\<D\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"AbsoluteTime", "/@", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+             "2008", ",", "mo", ",", "1", ",", "0", ",", "0", ",", "0"}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"mo", ",", "1", ",", "12"}], "}"}]}], "]"}]}], "-", 
+         RowBox[{"AbsoluteTime", "[", 
+          RowBox[{"{", 
+           RowBox[{"2008", ",", "1", ",", "1", ",", "0", ",", "0", ",", "0"}],
+            "}"}], "]"}]}], ")"}], "/", "86400"}]}], "\[IndentingNewLine]", 
+     "}"}], "//", "Transpose"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"monthStartDayOfYear", "//", "TableForm"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.456125688355131*^9, 3.456125697330843*^9}, {
+   3.456125788718869*^9, 3.4561257921460733`*^9}, 3.456126970492366*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fixYr", "[", "y_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Floor", "[", 
+    RowBox[{
+     RowBox[{"y", "+", "2"}], ",", "4"}], "]"}], "-", 
+   "2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"baseYr", "=", "1950"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.0", ",", "0.9", ",", "0.52", ",", "0.4"}], "]"}], ",", 
+     "\[IndentingNewLine]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"#", "/.", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"y_", ",", "d_", ",", "t_"}], "}"}], "\[RuleDelayed]", 
+          RowBox[{"Rectangle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"d", ",", 
+              RowBox[{"fixYr", "[", "y", "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"d", "+", "1"}], ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"t", "<", "100"}], ",", 
+                RowBox[{"fixYr", "[", "y", "]"}], ",", 
+                RowBox[{
+                 RowBox[{"fixYr", "[", "y", "]"}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"t", "-", "100"}], ")"}], "/", "2.5"}]}]}], 
+               "]"}]}], "}"}]}], "]"}]}]}], ")"}], "&"}], "/@", 
+      RowBox[{"foo", "[", 
+       RowBox[{"[", 
+        RowBox[{"3", ";;", 
+         RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.6", ",", "0.4", ",", "0.92", ",", "1.0"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"126", ",", 
+            RowBox[{"fixYr", "[", "#", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"274", ",", 
+            RowBox[{"fixYr", "[", "#", "]"}]}], "}"}]}], "}"}], "]"}], "&"}], 
+      "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"baseYr", ",", "2009"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"{", 
+            RowBox[{"122", ",", 
+             RowBox[{"#", "+", "0.5"}]}], "}"}]}], "]"}], "&"}], "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"baseYr", ",", "2009"}], "]"}]}], ",", 
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", "1949"}], "}"}]}], "]"}], 
+       "&"}], "/@", 
+      RowBox[{"monthStartDayOfYear", "[", 
+       RowBox[{"[", 
+        RowBox[{"5", ";;", "10"}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", "2011"}], "}"}]}], "]"}], 
+       "&"}], "/@", 
+      RowBox[{"monthStartDayOfYear", "[", 
+       RowBox[{"[", 
+        RowBox[{"5", ";;", "10"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+    "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.456124066708452*^9, 3.456124131089877*^9}, {
+   3.456124189820672*^9, 3.4561241954043493`*^9}, {3.456124301206423*^9, 
+   3.4561244490324783`*^9}, {3.456124483920845*^9, 3.45612450516406*^9}, {
+   3.4561246010949593`*^9, 3.4561246832254*^9}, {3.456124799385889*^9, 
+   3.456124901930529*^9}, {3.45612494465451*^9, 3.456124945564*^9}, {
+   3.456125047116995*^9, 3.4561251728140583`*^9}, {3.456125257756399*^9, 
+   3.4561253060350733`*^9}, {3.456125341160399*^9, 3.456125448745904*^9}, {
+   3.45612570389469*^9, 3.4561258627406*^9}, {3.45612591431743*^9, 
+   3.456125926515852*^9}, 3.4561260030938473`*^9, {3.456126051133237*^9, 
+   3.456126127985273*^9}, {3.4561261600401793`*^9, 3.456126214482349*^9}, {
+   3.4561262701622047`*^9, 3.456126343847649*^9}, {3.456126374737474*^9, 
+   3.4561264142193317`*^9}, 3.45612686352779*^9, 3.456127317955255*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"bYr", "=", "1948"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fixYr", "[", "y_", "]"}], ":=", 
+    RowBox[{"Floor", "[", 
+     RowBox[{
+      RowBox[{"y", "-", "bYr"}], ",", "4"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Hue", "[", 
+        RowBox[{"0.0", ",", "0.9", ",", "0.52", ",", "0.4"}], "]"}], ",", 
+       "\[IndentingNewLine]", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"#", "/.", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"y_", ",", "d_", ",", "t_"}], "}"}], "\[RuleDelayed]", 
+            RowBox[{"Rectangle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"d", ",", 
+                RowBox[{"2", 
+                 RowBox[{"(", 
+                  RowBox[{"y", "-", "bYr"}], ")"}]}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"d", "+", "1"}], ",", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"t", "<", "100"}], ",", 
+                  RowBox[{"2", 
+                   RowBox[{"(", 
+                    RowBox[{"y", "-", "bYr"}], ")"}]}], ",", 
+                  RowBox[{"2", 
+                   RowBox[{"(", 
+                    RowBox[{"y", "-", "bYr", "+", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", "-", "100"}], ")"}], "/", "6"}]}], ")"}]}]}],
+                  "]"}]}], "}"}]}], "]"}]}]}], ")"}], "&"}], "/@", 
+        RowBox[{"foo", "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ";;", 
+           RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Hue", "[", 
+        RowBox[{"0.6", ",", "0.4", ",", "0.92", ",", "1.0"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"126", ",", 
+              RowBox[{"2", 
+               RowBox[{"(", 
+                RowBox[{"#", "-", "bYr"}], ")"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"280", ",", 
+              RowBox[{"2", 
+               RowBox[{"(", 
+                RowBox[{"#", "-", "bYr"}], ")"}]}]}], "}"}]}], "}"}], "]"}], 
+         "&"}], "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1950", ",", "2009", ",", "4"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Hue", "[", 
+        RowBox[{"0.6", ",", "0.4", ",", "0.92", ",", "0.4"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"126", ",", 
+              RowBox[{"2", 
+               RowBox[{"(", 
+                RowBox[{"#", "-", "bYr"}], ")"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"280", ",", 
+              RowBox[{"2", 
+               RowBox[{"(", 
+                RowBox[{"#", "-", "bYr"}], ")"}]}]}], "}"}]}], "}"}], "]"}], 
+         "&"}], "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1950", ",", "2009"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Hue", "[", 
+        RowBox[{"0.6", ",", "0.4", ",", "0.7", ",", "1.0"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Text", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"{", 
+              RowBox[{"122", ",", 
+               RowBox[{"2", 
+                RowBox[{"(", 
+                 RowBox[{"#", "+", "0.25", "-", "bYr"}], ")"}]}]}], "}"}]}], 
+            "]"}], "&"}], "/@", 
+          RowBox[{"Range", "[", 
+           RowBox[{"baseYr", ",", "2009"}], "]"}]}], ",", 
+         RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", 
+             RowBox[{"-", "1"}]}], "}"}]}], "]"}], "&"}], "/@", 
+        RowBox[{"monthStartDayOfYear", "[", 
+         RowBox[{"[", 
+          RowBox[{"5", ";;", "10"}], "]"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", 
+             RowBox[{"2", 
+              RowBox[{"(", 
+               RowBox[{"2011", "-", "bYr"}], ")"}]}]}], "}"}]}], "]"}], "&"}],
+         "/@", 
+        RowBox[{"monthStartDayOfYear", "[", 
+         RowBox[{"[", 
+          RowBox[{"5", ";;", "10"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "1.3"}]}], "\[IndentingNewLine]", 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.456126455695147*^9, 3.456126464286838*^9}, {
+  3.456126518239398*^9, 3.456126579953067*^9}, {3.456126624965119*^9, 
+  3.456126704701532*^9}, {3.456126749338276*^9, 3.456126762578559*^9}, {
+  3.4563300386412277`*^9, 3.456330122843508*^9}, {3.45633016996807*^9, 
+  3.45633040134652*^9}, {3.456330436779055*^9, 3.456330437550016*^9}, {
+  3.456330477377612*^9, 3.45633057481957*^9}, {3.456330605036454*^9, 
+  3.4563306684519053`*^9}, {3.456330738453561*^9, 3.4563307541098127`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fixYr", "[", "y_", "]"}], ":=", 
+  RowBox[{"Floor", "[", 
+   RowBox[{"y", ",", "4"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"baseYr", "=", "1948"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.0", ",", "0.9", ",", "0.52", ",", "0.4"}], "]"}], ",", 
+     "\[IndentingNewLine]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"#", "/.", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"y_", ",", "d_", ",", "t_"}], "}"}], "\[RuleDelayed]", 
+          RowBox[{"Rectangle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"d", ",", "y"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"d", "+", "1"}], ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"t", "<", "100"}], ",", "y", ",", 
+                RowBox[{"y", "+", "0.94"}]}], "]"}]}], "}"}]}], "]"}]}]}], 
+        ")"}], "&"}], "/@", 
+      RowBox[{"foo", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ";;", 
+         RowBox[{"-", "1"}]}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Hue", "[", 
+      RowBox[{"0.6", ",", "0.4", ",", "0.92", ",", "1.0"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"126", ",", "#"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"280", ",", "#"}], "}"}]}], "}"}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"1950", ",", "2009", ",", "5"}], "]"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"{", 
+            RowBox[{"122", ",", 
+             RowBox[{"#", "+", "0.5"}]}], "}"}]}], "]"}], "&"}], "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"baseYr", ",", "2009"}], "]"}]}], ",", 
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Futura\>\""}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{"baseYr", "-", "1"}]}], "}"}]}], "]"}], "&"}], "/@", 
+      RowBox[{"monthStartDayOfYear", "[", 
+       RowBox[{"[", 
+        RowBox[{"5", ";;", "10"}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", "2011"}], "}"}]}], "]"}], 
+       "&"}], "/@", 
+      RowBox[{"monthStartDayOfYear", "[", 
+       RowBox[{"[", 
+        RowBox[{"5", ";;", "10"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+    "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.456126455695147*^9, 3.456126464286838*^9}, {
+   3.456126518239398*^9, 3.456126579953067*^9}, {3.456126624965119*^9, 
+   3.456126704701532*^9}, {3.456126749338276*^9, 3.456126762578559*^9}, {
+   3.456329838353655*^9, 3.456329864880198*^9}, 3.456329923096973*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.45633193597639*^9, 3.456331936569928*^9}}]
+}, Closed]]
 },
-WindowSize->{640, 750},
+WindowSize->{833, 841},
 WindowMargins->{{4, Automatic}, {Automatic, 4}},
 FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 11, 2008)",
 StyleDefinitions->"Default.nb"
@@ -35,9 +1158,38 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 95, 1, 34, "Subsection"],
+Cell[665, 25, 79, 1, 27, "Input"],
+Cell[CellGroupData[{
+Cell[769, 30, 179, 3, 27, "Input"],
+Cell[951, 35, 176, 3, 27, "Output"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1164, 43, 541, 13, 67, "Input"],
+Cell[1708, 58, 121, 2, 27, "Output"]
+}, Closed]],
+Cell[1844, 63, 1845, 53, 127, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3726, 121, 99, 1, 26, "Subsection"],
+Cell[3828, 124, 1798, 44, 58, "Input"],
+Cell[5629, 170, 577, 14, 27, "Input"],
+Cell[6209, 186, 8397, 200, 253, "Input"],
+Cell[14609, 388, 9700, 220, 268, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[24346, 613, 101, 1, 26, "Subsection"],
+Cell[24450, 616, 1507, 47, 88, "Input"],
+Cell[25960, 665, 2472, 64, 133, "Input"],
+Cell[28435, 731, 1351, 32, 88, "Input"],
+Cell[29789, 765, 4550, 118, 208, "Input"],
+Cell[34342, 885, 5759, 152, 238, "Input"],
+Cell[40104, 1039, 3594, 99, 208, "Input"],
+Cell[43701, 1140, 91, 1, 27, InheritFromParent]
+}, Closed]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
