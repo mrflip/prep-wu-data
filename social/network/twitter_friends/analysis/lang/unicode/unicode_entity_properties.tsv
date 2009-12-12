@@ -1,3 +1,4 @@
+id	freq	dec_entity	alpha_entity	name	cls_rg	cls	cls_code	rg_sz	cls_rg_name	scr_rg	scr_name	scr_code	pl_name
 0	0000001800	&#0;			<control>	0..31	Common	Cc	 [32]	<control-0000>..<control-001F>	0..127	Latin	Latn	Basic Latin
 1	0000000326	&#1;			<control>	0..31	Common	Cc	 [32]	<control-0000>..<control-001F>	0..127	Latin	Latn	Basic Latin
 2	0000001354	&#2;			<control>	0..31	Common	Cc	 [32]	<control-0000>..<control-001F>	0..127	Latin	Latn	Basic Latin

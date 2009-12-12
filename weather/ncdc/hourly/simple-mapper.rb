@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 
-$stdin.readlines.each do |line|
+$stdin.each do |line|
   line = line.chomp.strip
   puts [line[0..22], line.split(/\s+/)].join("\t")
 end
