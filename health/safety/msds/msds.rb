@@ -30,7 +30,7 @@ class MSDS
       p sct.parse
     end
   end
-  
+
 end
 
 class MSDSSection
@@ -38,7 +38,7 @@ class MSDSSection
   def initialize
     @section = []
   end
-  
+
   def read lines
     until lines.empty? do
       line = lines.pop
@@ -83,16 +83,18 @@ class MSDSSection
         line_str += line.to_s
         unless line.include?("    ")
           if field_mtchr.match(line_str.strip)
-            sub_hsh[$1] = $2
-            line_str = ""
+            sub_hsh[$1] ||= []
+            sub_hsh[$1] << $2
           end
+          line_str = ""
         end
       end
     end
+    sections << sub_hsh
     sections
   end
-  
-  
+
+
   def start_subsection?(line)
     return true if line.include?("=")
     return false
