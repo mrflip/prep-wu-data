@@ -14,9 +14,12 @@ data.each('<b>') do |chunk|
   else
     field = "Other"
   end
-  chnk_hsh[field] = chunk.gsub('<b>',"").gsub('<HTML>',"").gsub("\n","").gsub('</b>',"").gsub('<pre>',"").gsub(field_mtchr,"").gsub(kill_nms, "").strip
+  chnk_hsh[field] = chunk.gsub('<b>',"").gsub('<HTML>',"").gsub('</b>',"").gsub('<pre>',"").gsub(field_mtchr,"").gsub(kill_nms, "").strip
 end
 
+#chnk_hsh.each{|k,v| puts "#{k} => #{v}\n\n"}
+
+p chnk_hsh.keys
 #lines = File.readlines
 #
 #idsection = ProductIdentification.new

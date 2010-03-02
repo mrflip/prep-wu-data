@@ -1,0 +1,25 @@
+MSDS data from hazard.com is read into a simple ruby hash with the following keys:
+
+KEYS:
+-----
+Accidental Release Measures
+Physical/Chemical Properties
+First Aid Measures
+Product Identification
+MSDS Transport Information
+Exposure Controls/Personal Protection
+Handling and Storage
+Hazards Identification
+Fire Fighting Measures
+Regulatory Information
+Composition/Information on Ingredients
+Other
+Other Information
+Disposal Considerations
+Ecological Information
+Stability and Reactivity Data
+Toxicological Information
+
+All of these should have further structure (ie. subsections) but parsing these is
+too time consuming at the moment. Hence, each key from the above simply points to
+an unparsed chunk of text associated with that msds section.

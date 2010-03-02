@@ -1,0 +1,4 @@
+(1) Make parse_hzrd_msds.rb read from the work directory and devour msds data from
+there.
+(2) Run parse_hzrd_msds.rb on hazard msds data and map into datamapper fields.
+These will go into a mysql database.
