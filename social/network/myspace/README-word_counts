@@ -1,0 +1,25 @@
+Myspace activities have the following properties
+
+    :created_at,
+    :activity_id,
+    :person_id,
+    :text,
+    :category,
+    :object_title,
+    :object_author,
+    :target_title,
+    :source
+
+The following resources are instances of an activity.  In each case,
+the "object_title" field contains the text with words to be counted.
+	
+    forum_posted
+    forum_topic_reply
+    share_item
+    status_mood_update
+
+A myspace_mood has the following properties
+
+    :created_at,
+    :person_id,
+    :text
