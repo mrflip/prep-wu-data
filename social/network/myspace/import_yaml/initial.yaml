@@ -1,4 +1,10 @@
 ---
+
+- license:
+    title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    description: "License from MySpace"
+    owner: Monkeywrench Consultancy
+
 - collection:
     title: MySpace Real-Time Stream
     description: |
@@ -16,6 +22,94 @@
         fmt: xml
         pkg_fmt: bz2
         num_files: 1
+    snippet: &rawsnippet
+      data: | 
+        <feed xml:lang="en-US" xml:base="http://api.myspace.com/v1/users/202736021/activities.atom" xmlns:activity="http://activitystrea.ms/spec/1.0/" xmlns:sx="http://feedsync.org/2007/feedsync" xmlns:re="http://purl.org/atompub/rank/1.0" xmlns:poco="http://portablecontacts.net/spec/1.0" xmlns:geo="http://www.georss.org/georss" xmlns="http://www.w3.org/2005/Atom">
+        <title type="text">Recent activities from The Northern Spys at MySpace</title>
+        <subtitle type="text">This feed contains all of the activities for a single MySpace user</subtitle>
+        <id>tag:myspace.com,2009:user/202736021/activities</id>
+        <rights type="text">Copyright (c) 2003-2009, MySpace.com</rights>
+        <updated>2010-02-24T00:03:29Z</updated>
+        <author>
+        <name>The Northern Spys</name>
+        <uri>http://www.myspace.com/thenorthernspys</uri>
+        </author>
+        <generator>StatusMoodFloodApi.1.1</generator>
+        <link rel="self" href="http://api.myspace.com/v1/users/202736021/activities.atom" />
+        <entry>
+        <id>tag:myspace.com,2009:/activity/202736021/ShareItem/320256208/320256208</id>
+        <title type="text" />
+        <published>2010-02-24T00:03:28Z</published>
+        <updated>2010-02-24T00:03:28Z</updated>
+        <author>
+        <name>The Northern Spys</name>
+        <uri>http://www.myspace.com/thenorthernspys</uri>
+        </author>
+        <link rel="alternate" type="text/html" href="http://friends.myspace.com/index.cfm?fuseaction=profile.friendmoods&amp;friendId=202736021" />
+        <category term="ShareItem" label="ShareItem" scheme="http://activities.myspace.com/schema/1.0/" />
+        <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        <div class="activityBody">
+        <h5 class="activityHeader">
+        <a href="http://www.myspace.com/thenorthernspys">The Northern Spys</a> It's pretty ambiguous if you ask me. They still can change the inside, but at least  it won't be a Burger King, or Rich man's Condo. But I only </h5>
+        <div class="activityMedia PortraitList" >
+        <ul class="activityDetailList">
+        <li class="activityDetailItem clearfix">
+        <p class="portraitDetailItem">
+        <a target="_blank" href="http://www.msplinks.com/MDFodHRwOi8vd3d3Lm11c2ljd2Vlay5jb20vc3RvcnkuYXNwP3NlY3Rpb25jb2RlPTEmc3Rvcnljb2RlPTEwNDAxNjQmYz0x">Music Week - Music Week - Music business magazine - Hodge lists Abbey Road</a>
+        </p>
+        <p class="portraitDetailItem">Music Week is a music industry website offering a weekly music magazine dedicated to music industry news. View our online b2b music business magazine now.</p>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </content>
+        <sx:sync id="tag:myspace.com,2009:/activity/202736021/ShareItem/320256208/320256208">
+        <sx:history sequence="1" when="2010-02-24 00:03:28Z" />
+        </sx:sync>
+        <re:rank scheme="http://www.myspace.com/friends#count" label="msFriendCount">24</re:rank>
+        <activity:actor>
+        <activity:object-type>http://activitystrea.ms/schema/1.0/person</activity:object-type>
+        <id>tag:myspace.com,2009:/Person/202736021</id>
+        <title>The Northern Spys</title>
+        <link rel="alternate" type="text/html" href="http://www.myspace.com/thenorthernspys" />
+        <link rel="avatar" type="image/jpeg" href="http://c2.ac-images.myspacecdn.com/images02/148/s_d39c950ff38448579eb3c853a0cf6e81.jpg" />
+        <geo:point>41.4452 -81.6996</geo:point>
+        <poco:displayName>The Northern Spys</poco:displayName>
+        <poco:preferredUsername>thenorthernspys</poco:preferredUsername>
+        <poco:address>
+        <poco:locality>Cleveland</poco:locality>
+        <poco:postalCode>44109</poco:postalCode>
+        <poco:country>US</poco:country>
+        </poco:address>
+        <published>2007-06-17T22:13:00Z</published>
+        </activity:actor>
+        <activity:target>
+        <activity:object-type>http://activitystrea.ms/schema/1.0/bookmark</activity:object-type>
+        <id>tag:myspace.com,2009:/Bookmark/320256208/320256208</id>
+        <title>Music Week - Music Week - Music business magazine - Hodge lists Abbey Road</title>
+        <link rel="alternate" type="text/html" href="http://www.msplinks.com/MDFodHRwOi8vd3d3Lm11c2ljd2Vlay5jb20vc3RvcnkuYXNwP3NlY3Rpb25jb2RlPTEmc3Rvcnljb2RlPTEwNDAxNjQmYz0x" />
+        <content type="xhtml">Music Week is a music industry website offering a weekly music magazine dedicated to music industry news. View our online b2b music business magazine now.</content>
+        </activity:target>
+        <activity:object>
+        <activity:object-type>http://activitystrea.ms/schema/1.0/bookmark</activity:object-type>
+        <id>tag:myspace.com,2009:/Bookmark/320256208/320256208</id>
+        <title>It's pretty ambiguous if you ask me. They still can change the inside, but at least  it won't be a Burger King, or Rich man's Condo. But I only </title>
+        <link rel="alternate" type="text/html" href="http://www.msplinks.com/MDFodHRwOi8vd3d3Lm11c2ljd2Vlay5jb20vc3RvcnkuYXNwP3NlY3Rpb25jb2RlPTEmc3Rvcnljb2RlPTEwNDAxNjQmYz0x" />
+        <content type="xhtml">It's pretty ambiguous if you ask me. They still can change the inside, but at least  it won't be a Burger King, or Rich man's Condo. But I only </content>
+        <link rel="preview" type="image/jpeg" href="" />
+        </activity:object>
+        <activity:verb>http://activitystrea.ms/schema/1.0/share</activity:verb>
+        <source>
+        <id>http://www.musicweek.com</id>
+        <title>musicweek.com</title>
+        <link rel="alternate" type="text/html" href="http://www.msplinks.com/MDFodHRwOi8vd3d3Lm11c2ljd2Vlay5jb20=" />
+        <link rel="preview" type="image/jpeg" href="http://www.musicweek.com/magazine/graphics/favicon.ico" />
+        </source>
+        </entry>
+        </feed>
+        
     tags: 
     - myspace
     - socialnetworks
@@ -26,7 +120,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -43,6 +137,8 @@
         fmt: xml
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *rawsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -53,7 +149,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -70,6 +166,8 @@
         fmt: xml
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *rawsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -80,7 +178,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -97,6 +195,8 @@
         fmt: xml
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *rawsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -107,7 +207,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -124,6 +224,8 @@
         fmt: xml
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *rawsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -134,7 +236,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -151,6 +253,8 @@
         fmt: xml
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *rawsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -161,7 +265,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -178,6 +282,8 @@
         fmt: xml
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *rawsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -188,7 +294,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -205,6 +311,65 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet: &parsedsnippet
+      data:
+      - ["abi_friend_add", "20100105092312", "108207232", "29229818", "-_FERNANDO SARABIA_-EL RUEDAS _OFFICIAL PAGE_ is now friends with Monarkas Del Norte thanks to the Friend Finder Tool", "ABIFriendAdd", "Monarkas Del Norte", "", "Friend Finder Tool"]
+      - ["abi_friend_add", "20100105092907", "406628378", "516291942", "Tripper Smeg is now friends with D-Day Lander thanks to the Friend Finder Tool", "ABIFriendAdd", "D-Day Lander", "", "Friend Finder Tool"]
+      - ["add_local_place_rating", "20100212204100", "1506407", "10012438", "Test Abc rated the spot Burger King on MySpace Local.", "AddLocalPlaceRating", "Burger King", "Burger King", "MySpace Local"]
+      - ["add_local_place_rating", "20100226190800", "797176", "258300759", "Padmatt1_ActRaiseRegular rated the spot Money Tree on MySpace Local.", "AddLocalPlaceRating", "Money Tree", "", "Money Tree", "MySpace Local"]
+      - ["add_local_place_review", "20100222231900", "856198", "329106878", "Sean _ Su reviewed the spot Tosca Cafe on MySpace Local.", "AddLocalPlaceReview", "Tosca Cafe", "", "Tosca Cafe", "MySpace Local"]
+      - ["add_local_place_review", "20100219225000", "824614", "33918831", "Julian reviewed the spot Dugout on MySpace Local.", "AddLocalPlaceReview", "Dugout", "Dugout", "MySpace Local"]
+      - ["add_local_place_to_profile", "20100227185045", "1228836", "505666191", "Bgc. Rockwall added the spot Snuffer_s Rockwall to profile.", "AddLocalPlaceToProfile", "Snuffer_s Rockwall", "", "Snuffer_s Rockwall", "MySpace Local"]
+      - ["add_local_place_to_profile", "20100215061112", "902843", "522268880", "Tommy Arcos added the spot Club Dmx to profile.", "AddLocalPlaceToProfile", "Club Dmx", "Club Dmx", "MySpace Local"]
+      - ["add_song_to_playlist", "20100104102458", "49776154", "511391492", "djweckedc added song DJ Dilly Mix 2 - Hip Hop by artist DJ dily to playlist djchad.808", "AddSongToPlaylist", "DJ Dilly Mix 2 - Hip Hop", "djchad.808", ""]
+      - ["add_song_to_playlist", "20100104103308", "153161", "506740303", "Boni Perkins added song Breakdown by artist Tom Petty and the Heartbreakers to playlist Old school", "AddSongToPlaylist", "Breakdown", "Old school", ""]
+      - ["application_add", "20100203102632", "520789854", "520789854", "Alvin Hill added the Dog Wars app.", "ApplicationAdd", "Dog Wars", "", ""]
+      - ["application_add", "20100203103500", "110829112", "110829112", "Pamela Hill added the Gifts app.", "ApplicationAdd", "Gifts", "", ""]
+      - ["bad_record", "", ""]
+      - ["bad_record", " _h5_div class_activityMedia PortraitList_ul class_activityDetailList_li class_activityDetai", ""]
+      - ["band_show_added", "20100203100203", "38572846", "391785072", "Dimitrios Kosmidis is playing at Jazz Jam Session on Thursday_ Mar 4_ 2010.", "BandShowAdded", "Jazz Jam Session", "", ""]
+      - ["band_show_added", "20091212170530", "38564974", "184645853", "Forward March Posse is playing at Chillin_ tuesday _ Lalibela on Tuesday_ Dec 22_ 2009.", "BandShowAdded", "Chillin_ tuesday _ Lalibela", "", ""]
+      - ["blog_add", "20091222052305", "523136638", "410425052", "Solo the Boss posted a new blog entry_ Mario - Let Me Love You _Official Video_ _with lyrics on side_", "BlogAdd", "Mario - Let Me Love You _Official Video_ _with lyrics on side_", "", ""]
+      - ["blog_add", "20091211183320", "521875126", "70095268", "Lorria posted a new blog entry_ Happiness...", "BlogAdd", "Happiness...", "", ""]
+      - ["event_attending", "20100203100836", "12002988", "194867590", "BlessedLoveSoundItaly is attending AWARAS YOTHS OF THE EARTH OFFICIAL RELEASE _ on Monday_ Feb 1_ 2010.", "EventAttending", "AWARAS YOTHS OF THE EARTH OFFICIAL RELEASE _", "", ""]
+      - ["event_attending", "20100203102529", "11721400", "25160673", "Regis is attending SERIES 2 FOR SKY 195 _ BOOKING OPENS 01ST AUG on Friday_ Jan 29_ 2010.", "EventAttending", "SERIES 2 FOR SKY 195 _ BOOKING OPENS 01ST AUG", "", ""]
+      - ["forum_posted", "20091226135031", "4695966", "503901821", "Will-Chatten Wc posted a new forum topic_ 01.01.2010 erste Radio Sendung bei will-chatten", "ForumPosted", "01.01.2010 erste Radio Sendung bei will-chatten", "", ""]
+      - ["forum_posted", "20091230112506", "4698569", "506311947", "SEan BEatzz posted a new forum topic_ B E A T Z", "ForumPosted", "B E A T Z", "", ""]
+      - ["forum_topic_reply", "20100305133707", "4687899", "517022312", "Ruben Miguel Queipo replied to the forum topic_ 4 letras_4 palabras", "ForumTopicReply", "4 letras_4 palabras", "", "", ""]
+      - ["forum_topic_reply", "20091210163305", "3454645", "437779518", "Phantom_ghost of christmas present_ replied to the forum topic_ NEW PEOPLE POST HERE", "ForumTopicReply", "NEW PEOPLE POST HERE", "", ""]
+      - ["friend_add", "20100202104501", "212906474", "206641891", "Raquel Bargue_o is now friends with Massimo Cargini", "FriendAdd", "Massimo Cargini", "", ""]
+      - ["friend_add", "20100202104741", "516790432", "520650713", "Diogo marin Villa is now friends with el chanclas", "FriendAdd", "el chanclas", "", ""]
+      - ["friend_category_add", "20100307122729", "2147475721", "521054800", "Raising Legends RECORDS created a new friend category_ DJs.", "FriendCategoryAdd", "DJs", "", "", ""]
+      - ["friend_category_add", "20091213052024", "2147444880", "116928017", "BIGG DADDY O created a new friend category_ HOT CHICS.", "FriendCategoryAdd", "HOT CHICS", "", ""]
+      - ["joined_group", "20100305102952", "107381731", "208010756", "Farah Adila joined the group_ bekas pelajr n pelajar sktu1.", "JoinedGroup", "bekas pelajr n pelajar sktu1", "", "", ""]
+      - ["joined_group", "20100119040609", "102719913", "511928395", "Danielle Is loved joined the group_ 250 INC. ENTERTAINMENT.", "JoinedGroup", "250 INC. ENTERTAINMENT", "", ""]
+      - ["mobile_android_app_add", "20100201112244", "10", "508086667", "_ alllyyyy _ is now using_ MySpace for Android", "MobileAndroidAppAdd", "MySpace for Android", "", ""]
+      - ["mobile_android_app_add", "20100218190631", "10", "124608797", "Heather Raabe is now using_ MySpace for Android", "MobileAndroidAppAdd", "MySpace for Android", "", ""]
+      - ["mobile_black_berry_app_add", "20091227065241", "10", "189009000", "Adam Nelson is now using_ MySpace for BlackBerry", "MobileBlackBerryAppAdd", "MySpace for BlackBerry", "", ""]
+      - ["mobile_black_berry_app_add", "20091227064856", "10", "15182266", "Tony is now using_ MySpace for BlackBerry", "MobileBlackBerryAppAdd", "MySpace for BlackBerry", "", ""]
+      - ["mobile_i_phone_app_add", "20091231115651", "10", "17458964", "Nathan Hart is now using_ MySpace for iPhone", "MobileIPhoneAppAdd", "MySpace for iPhone", "", ""]
+      - ["mobile_i_phone_app_add", "20100102022233", "10", "123198466", "angel Heredia is now using_ MySpace for iPhone", "MobileIPhoneAppAdd", "MySpace for iPhone", "", ""]
+      - ["mobile_sidekick_app_add", "20091223091125", "10", "121875587", "SEEKQUENCE is now using_ MySpace for Sidekick", "MobileSidekickAppAdd", "MySpace for Sidekick", "", ""]
+      - ["mobile_sidekick_app_add", "20100119014113", "10", "71489051", "_Dnt Take My Kind Ness For Weak Ness K Spanks.... is now using_ MySpace for Sidekick", "MobileSidekickAppAdd", "MySpace for Sidekick", "", ""]
+      - ["myspace_mood", "20070121124100", "150899217", "CLOCKED IN"]
+      - ["myspace_mood", "20060610015500", "84269198", "_none_"]
+      - ["myspace_person", "127303090", "JAMIE", "ENGLISH", "  _hearts_JaMiE_hearts_", "", "", "US", "", "", "221", "http_profile.myspace.com_index.cfm_fuseaction_user.viewprofile_friendid_127303090"]
+      - ["myspace_person", "514824404", "FaThyma", "CAno", "FaThyma", "", "", "MX", "", "39715", "4", "http_profile.myspace.com_index.cfm_fuseaction_user.viewprofile_friendid_514824404"]
+      - ["post_profile_comment", "20091223122203", "1018797", "140948335", "Marisol Wifed Up commented on GO yankee Luis_s profile.", "PostProfileComment", "", "GO yankee Luis", ""]
+      - ["post_profile_comment", "20091213053754", "931329", "494391205", "_ commented on   _SUNNY_s profile.", "PostProfileComment", "", "  _SUNNY_", ""]
+      - ["profile_song_add", "20091223025157", "45405882", "183129091", "Fck Bitches Get Money added a new profile song_ Yo Cadillac", "ProfileSongAdd", "Yo Cadillac", "", ""]
+      - ["profile_song_add", "20091223025158", "23154", "79368366", "BONE DADDY added a new profile song_ Spill The Wine", "ProfileSongAdd", "Spill The Wine", "", ""]
+      - ["setup_email", "20100301231623", "52871808", "52871808", "cheree york set up a new email address_ thebombmom0713_myspace.com.", "SetupEmail", "thebombmom0713_myspace.com", "", "", ""]
+      - ["setup_email", "20091213055945", "477760008", "477760008", "Akanksha Jha set up a new email address_ aks.incognito_myspace.com.", "SetupEmail", "aks.incognito_myspace.com", "", ""]
+      - ["share_item", "20100306163006", "321179406", "423587685", "typetext", "ShareItem", "http_lnk.ms_6mlTq", "", "GeoString.com", "geostring.com"]
+      - ["share_item", "20100221000615", "319997175", "503254872", "typetext", "ShareItem", "its true ido eat the pussy", "GEEK SQUAD SONG I EAT THE PUSSY", "youtube.com"]
+      - ["song_upload", "20091223080635", "49740022", "165271423", "DeProw uploaded a new track_ Who I A.M.M. _ Look at Me _", "SongUpload", "Who I A.M.M. _ Look at Me _", "", ""]
+      - ["song_upload", "20091223080108", "61999597", "444487885", "Beto Verl_ uploaded a new track_ Me Prostro Diante De Ti", "SongUpload", "Me Prostro Diante De Ti", "", ""]
+      - ["status_mood_update", "20100225065959", "320367599", "79239005", "_r_ R_s_ hit me up...ima be up late... and  cuz i feel like it....", "StatusMoodUpdate", "hit me up...ima be up late... and  cuz i feel like it....", "", "", ""]
+      - ["status_mood_update", "20100225055957", "320363997", "490216793", "Marie Sells I was wonder about little B.W. this week with his Birthday.", "StatusMoodUpdate", "I was wonder about little B.W. this week with his Birthday.", "", "", ""]
+      - ["video_add", "20100102115034", "101785343", "41833058", "NashiAnastasia uploaded a new video.", "VideoAdd", "TERRITOIRES", "", ""]
+      - ["video_add", "20100306034352", "103399435", "33641401", "Crash The Fallopian Stomper uploaded a new video.", "VideoAdd", "Room", "", "", ""]
+      - [""]        
     tags: 
     - myspace
     - socialnetworks
@@ -215,7 +380,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -232,6 +397,8 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *parsedsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -242,7 +409,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -259,6 +426,8 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *parsedsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -269,7 +438,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -286,6 +455,8 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *parsedsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -296,7 +467,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -313,6 +484,8 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *parsedsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -323,7 +496,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -340,6 +513,8 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *parsedsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -350,7 +525,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -367,6 +542,8 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      <<: *parsedsnippet
     tags: 
     - myspace
     - socialnetworks
@@ -377,7 +554,7 @@
     - bulkdump
     - richapi
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -393,6 +570,54 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ["Word", "Count"]
+      data:
+      - ["accaldata", "4"]
+      - ["accaldato", "4"]
+      - ["accalia", "124"]
+      - ["accallonato", "2"]
+      - ["accally", "3"]
+      - ["accalmie", "5"]
+      - ["accaly", "4"]
+      - ["accampato", "2"]
+      - ["accanimento", "2"]
+      - ["accanisce", "4"]
+      - ["accaniti", "4"]
+      - ["accanito", "3"]
+      - ["accannate", "3"]
+      - ["accannato", "3"]
+      - ["accant", "8"]
+      - ["accanto", "135"]
+      - ["accantonate", "2"]
+      - ["accaount", "7"]
+      - ["accapalla", "3"]
+      - ["accapar", "6"]
+      - ["accape", "2"]
+      - ["accapela", "11"]
+      - ["accapelas", "2"]
+      - ["accapella", "129"]
+      - ["accapellas", "48"]
+      - ["accapello", "5"]
+      - ["accappatoio", "2"]
+      - ["accappella", "11"]
+      - ["accappellas", "6"]
+      - ["accappona", "2"]
+      - ["accapt", "7"]
+      - ["accaptance", "2"]
+      - ["accapted", "5"]
+      - ["accapulco", "3"]
+      - ["accaputo", "2"]
+      - ["accard", "6"]
+      - ["accardi", "306"]
+      - ["accardis", "4"]
+      - ["accardo", "99"]
+      - ["accardofam", "4"]
+      - ["accarezza", "16"]
+      - ["accarezzando", "8"]
+      - ["accarezzano", "2"]
+      - ["accarezzare", "10"]
+      - [""]
     tags: 
     - myspace
     - socialnetworks
@@ -406,7 +631,7 @@
     - wordcount
     - count
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     - Linguistics
     description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their aggregated totals.
     collection: MySpace Real-Time Stream
@@ -423,6 +648,110 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ['Date (YYYYMMDD)', 'Word', 'Count']
+      data:
+      - ["20030905", "creative", "2"]
+      - ["20030905", "disappointed", "2"]
+      - ["20030905", "none", "6"]
+      - ["20030905", "sweaty", "2"]
+      - ["20031021", "accepting", "2"]
+      - ["20031021", "accomplished", "16"]
+      - ["20031021", "adored", "8"]
+      - ["20031021", "adventurous", "6"]
+      - ["20031021", "aggravated", "4"]
+      - ["20031021", "amorous", "2"]
+      - ["20031021", "amused", "10"]
+      - ["20031021", "angry", "4"]
+      - ["20031021", "angsty", "2"]
+      - ["20031021", "animated", "3"]
+      - ["20031021", "annoyed", "15"]
+      - ["20031021", "anxious", "4"]
+      - ["20031021", "apathetic", "3"]
+      - ["20031021", "artistic", "2"]
+      - ["20031021", "awake", "4"]
+      - ["20031021", "basslined", "2"]
+      - ["20031021", "betrayed", "2"]
+      - ["20031021", "biscuity", "8"]
+      - ["20031021", "blah", "4"]
+      - ["20031021", "blessed", "6"]
+      - ["20031021", "blingin", "2"]
+      - ["20031021", "blissful", "2"]
+      - ["20031021", "bummed", "5"]
+      - ["20031021", "busy", "5"]
+      - ["20031021", "but", "2"]
+      - ["20031021", "calm", "3"]
+      - ["20031021", "chill", "6"]
+      - ["20031021", "cold", "5"]
+      - ["20031021", "confident", "3"]
+      - ["20031021", "confused", "3"]
+      - ["20031021", "contemplative", "2"]
+      - ["20031021", "content", "2"]
+      - ["20031021", "cooky", "2"]
+      - ["20031021", "creative", "5"]
+      - ["20031021", "cumbersome", "4"]
+      - ["20031021", "cumbersomeheavy", "2"]
+      - ["20031021", "curious", "3"]
+      - ["20031021", "dead", "2"]
+      - ["20031021", "depressed", "2"]
+      - ["20031021", "determined", "2"]
+      - ["20031021", "disappointed", "5"]
+      - ["20031021", "distractable", "3"]
+      - ["20031021", "ditzy", "2"]
+      - ["20031021", "drunk", "2"]
+      - ["20031021", "evaporated", "2"]
+      - ["20031021", "excited", "15"]
+      - ["20031021", "exhausted", "4"]
+      - ["20031021", "fabulous", "3"]
+      - ["20031021", "fascinated", "3"]
+      - ["20031021", "feelin", "4"]
+      - ["20031021", "festive", "2"]
+      - ["20031021", "flirty", "4"]
+      - ["20031021", "focused", "46"]
+      - ["20031021", "freezing", "2"]
+      - ["20031021", "frisky", "2"]
+      - ["20031021", "froggy", "2"]
+      - ["20031021", "frustrated", "4"]
+      - ["20031021", "full", "4"]
+      - ["20031021", "gallant", "2"]
+      - ["20031021", "gemini", "3"]
+      - ["20031021", "giddy", "3"]
+      - ["20031021", "good", "2"]
+      - ["20031021", "grateful", "2"]
+      - ["20031021", "happy", "17"]
+      - ["20031021", "heav", "2"]
+      - ["20031021", "hell", "2"]
+      - ["20031021", "hopeful", "3"]
+      - ["20031021", "hornies", "2"]
+      - ["20031021", "horny", "2"]
+      - ["20031021", "hungover", "3"]
+      - ["20031021", "hungry", "4"]
+      - ["20031021", "hyper", "2"]
+      - ["20031021", "icy", "3"]
+      - ["20031021", "inquisitive", "3"]
+      - ["20031021", "inspired", "2"]
+      - ["20031021", "jetblack", "4"]
+      - ["20031021", "kill", "2"]
+      - ["20031021", "knighted", "2"]
+      - ["20031021", "lonely", "9"]
+      - ["20031021", "love", "2"]
+      - ["20031021", "loved", "13"]
+      - ["20031021", "lyrical", "2"]
+      - ["20031021", "moody", "2"]
+      - ["20031021", "myself", "2"]
+      - ["20031021", "night", "2"]
+      - ["20031021", "ninja", "3"]
+      - ["20031021", "none", "31"]
+      - ["20031021", "obsessed", "4"]
+      - ["20031021", "occupy", "2"]
+      - ["20031021", "off", "2"]
+      - ["20031021", "okay", "3"]
+      - ["20031021", "peaceful", "3"]
+      - ["20031021", "pissed", "2"]
+      - ["20031021", "productive", "4"]
+      - ["20031021", "proud", "2"]
+      - ["20031021", "relaxed", "4"]
+      - [""]
     tags: 
     - myspace
     - socialnetworks
@@ -436,7 +765,7 @@
     - wordcount
     - count
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     - Linguistics
     description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their totals binned by day.
     collection: MySpace Real-Time Stream
@@ -453,6 +782,109 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ["Hour (YYYMMDDHH)", "Word", "Count"]
+      data:
+      - ["2003092708", "accomplished", "2"]
+      - ["2003092708", "angry", "2"]
+      - ["2003100906", "determined", "3"]
+      - ["2003100906", "giggly", "2"]
+      - ["2003100906", "jedi", "6"]
+      - ["2003100906", "ninja", "2"]
+      - ["2003100906", "productive", "3"]
+      - ["2003101022", "accomplished", "4"]
+      - ["2003101022", "anxious", "2"]
+      - ["2003101022", "busy", "2"]
+      - ["2003101022", "conceited", "2"]
+      - ["2003101022", "content", "2"]
+      - ["2003101022", "distraught", "2"]
+      - ["2003101022", "frustrated", "2"]
+      - ["2003101022", "jolly", "2"]
+      - ["2003101022", "none", "4"]
+      - ["2003101103", "contemplative", "3"]
+      - ["2003101103", "hopeful", "4"]
+      - ["2003101716", "disgusted", "2"]
+      - ["2003101716", "sore", "2"]
+      - ["2003110707", "adventurous", "2"]
+      - ["2003110707", "animated", "2"]
+      - ["2003110707", "chipper", "3"]
+      - ["2003110707", "confident", "2"]
+      - ["2003110707", "determined", "2"]
+      - ["2003110707", "eccentric", "2"]
+      - ["2003110707", "exhausted", "2"]
+      - ["2003111517", "assassin", "2"]
+      - ["2003111517", "fuck", "2"]
+      - ["2003111517", "hyper", "2"]
+      - ["2003111517", "walking", "2"]
+      - ["2003111517", "whatev", "6"]
+      - ["2003112408", "adored", "5"]
+      - ["2003112408", "adventurous", "3"]
+      - ["2003112408", "bored", "2"]
+      - ["2003112408", "cheerful", "2"]
+      - ["2003112408", "exotic", "2"]
+      - ["2003112408", "frisky", "2"]
+      - ["2003112408", "mmuah", "2"]
+      - ["2003112408", "ness", "2"]
+      - ["2003112408", "productive", "2"]
+      - ["2003112408", "sassy", "4"]
+      - ["2003112408", "sassyyyy", "2"]
+      - ["2003112408", "thankful", "2"]
+      - ["2003112408", "tired", "4"]
+      - ["2003112408", "weird", "2"]
+      - ["2003112822", "accomplished", "2"]
+      - ["2003112822", "adventurous", "2"]
+      - ["2003112822", "aggravated", "2"]
+      - ["2003112822", "anxious", "2"]
+      - ["2003112822", "argumentative", "2"]
+      - ["2003112822", "awake", "3"]
+      - ["2003112822", "cheesecake", "2"]
+      - ["2003112822", "cold", "4"]
+      - ["2003112822", "enraged", "2"]
+      - ["2003112822", "happy", "2"]
+      - ["2003112822", "love", "2"]
+      - ["2003112822", "movie", "2"]
+      - ["2003112822", "night", "2"]
+      - ["2003112822", "radical", "3"]
+      - ["2003112822", "rockin", "3"]
+      - ["2003112822", "sick", "2"]
+      - ["2003112822", "sigh", "2"]
+      - ["2003112822", "silly", "2"]
+      - ["2003112822", "sleepy", "3"]
+      - ["2003112822", "smitten", "2"]
+      - ["2003112822", "stoked", "2"]
+      - ["2003112822", "stuff", "2"]
+      - ["2003112822", "sympathetic", "2"]
+      - ["2003112822", "tired", "4"]
+      - ["2003112822", "yes", "4"]
+      - ["2003112903", "birthdayriffic", "4"]
+      - ["2003112903", "hopeful", "3"]
+      - ["2003112903", "optimistic", "2"]
+      - ["2003112903", "summer", "2"]
+      - ["2003120508", "horny", "3"]
+      - ["2003120508", "none", "3"]
+      - ["2003120922", "bacc", "2"]
+      - ["2003120922", "eternal", "2"]
+      - ["2003120922", "fortunate", "2"]
+      - ["2003120922", "handsome", "11"]
+      - ["2003120922", "laid", "2"]
+      - ["2003120922", "school", "2"]
+      - ["2003121200", "angry", "2"]
+      - ["2003121200", "excited", "2"]
+      - ["2003121200", "loving", "2"]
+      - ["2003121813", "adventurous", "9"]
+      - ["2003122010", "accomplished", "2"]
+      - ["2003122010", "ashamed", "2"]
+      - ["2003122010", "banget", "2"]
+      - ["2003122010", "crushed", "4"]
+      - ["2003122010", "gila", "2"]
+      - ["2003122010", "hepy", "2"]
+      - ["2003122010", "hopeful", "2"]
+      - ["2003122010", "indifferent", "2"]
+      - ["2003122209", "bored", "2"]
+      - ["2003122623", "bene", "2"]
+      - ["2003122623", "cautiously", "4"]
+      - ["2003122623", "molto", "2"]
+      - ["2003122623", "optim", "4"]
     tags: 
     - myspace
     - socialnetworks
@@ -466,7 +898,7 @@
     - wordcount
     - count
     categories: 
-    - Computers::Social Networks
+    - "computers-socialnetworks"
     - Linguistics
     description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their totals binned by hour.
     collection: MySpace Real-Time Stream
@@ -483,6 +915,34 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ["ZIP Code", "Count"]
+      data:
+      - ["10000", "65859"]
+      - ["10001", "146663"]
+      - ["10002", "48672"]
+      - ["10003", "37804"]
+      - ["10003-8915", "4"]
+      - ["10004", "11513"]
+      - ["10004-0759", "2"]
+      - ["10005", "10425"]
+      - ["10006", "5329"]
+      - ["10007", "8734"]
+      - ["10008", "5922"]
+      - ["10009", "46003"]
+      - ["10010", "24065"]
+      - ["10011", "61619"]
+      - ["10012", "22312"]
+      - ["10013", "13164"]
+      - ["10013-1315", "7"]
+      - ["10014", "9677"]
+      - ["10015", "5715"]
+      - ["10016", "17570"]
+      - ["10017", "11567"]
+      - ["10018", "13230"]
+      - ["10019", "22822"]
+      - ["10019-5636", "6"]
+      - ["10020", "9691"]
     tags: 
     - myspace
     - socialnetworks
@@ -497,8 +957,8 @@
     - geolocation
     - gis
     categories: 
-    - Computers::Social Networks
-    - Geography
+    - "computers-socialnetworks"
+    - geography
     description: "This data is derived from the MySpace real-time stream API.  It contains all users in our dataset, around 11 million, with well-formed zip codes.  "
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -514,6 +974,21 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ["Latitude", "Longitude", "Count"]
+      data:
+      - ["-27.5", "153.1", "1129"]
+      - ["-27.5", "153.3", "138"]
+      - ["-27.5", "153.2", "592"]
+      - ["-27.5", "153.0", "2866"]
+      - ["-27.5", "152.0", "83"]
+      - ["-27.5", "152.5", "29"]
+      - ["-27.5", "152.9", "276"]
+      - ["-27.5", "153.4", "103"]
+      - ["-27.6", "152.2", "6"]
+      - ["-27.6", "152.9", "588"]
+      - ["-27.6", "153.2", "448"]
+      - ["-27.6", "151.6", "13"]        
     tags: 
     - myspace
     - socialnetworks
@@ -528,8 +1003,8 @@
     - geolocation
     - gis
     categories: 
-    - Computers::Social Networks
-    - Geography
+    - "computers-socialnetworks"
+    - geography
     description: This data is derived from the MySpace real-time stream API.  It contains all users in our dataset, around 11 million, with well-formed latitude/longitude.
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -546,6 +1021,35 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ["ZIP Code", "Application", "Count"]
+      data:
+      - ["10000", "Dragon Wars", "9"]
+      - ["10000", "SuperPoke Pets", "179"]
+      - ["10000", "Dancing Bananas_", "75"]
+      - ["10000", "digitck", "1"]
+      - ["10000", "Random Friend Viewer ", "56"]
+      - ["10000", "Daily Horoscope", "1"]
+      - ["10000", "FARKLE", "30"]
+      - ["10000", "Chat", "12"]
+      - ["10000", "Hero World", "47"]
+      - ["10000", "PinkRibbon", "7"]
+      - ["10000", "Super Slot Machines", "47"]
+      - ["10000", "RSS Reader", "5"]
+      - ["10000", "SexGames", "36"]
+      - ["10001", "Astrology", "18"]
+      - ["10001", "Rockstars", "3"]
+      - ["10001", "Movies", "50"]
+      - ["10001", "Green Spot", "30"]
+      - ["10001", "RockYou Pets", "95"]
+      - ["10001", "Tag Me", "1415"]
+      - ["10001", "Nitrous Racing", "18"]
+      - ["10001", "Baby Animals Dressup Tiger", "3"]
+      - ["10001", "Avatar dress up Tokyo style", "9"]
+      - ["10001", "Pet Pupz", "77"]
+      - ["10001", "What to Wear", "8"]
+      - ["10001", "Dead or Alive", "445"]
+      - ["10001", "FarmTown", "18 "]        
     tags: 
     - myspace
     - socialnetworks
@@ -562,8 +1066,8 @@
     - applications
     - apps
     categories: 
-    - Computers::Social Networks
-    - Geography
+    - "computers-socialnetworks"
+    - geography
     description: "This data is derived from the MySpace real-time stream API.  It counts MySpace application adds by users aggregated by ZIP code.  ZIP codes are user-supplied on MySpace, so there are many errors."
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -571,7 +1075,7 @@
 
 - dataset: 
     price: "70.00"
-    title: MySpace application adds by day
+    title: MySpace application adds by date
     subtitle: December 2009 - February 2010
     license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     packages:
@@ -581,6 +1085,28 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ["Date (YYYYMMDD)", "Application", "Count"]
+      data:
+      - ["20100106", "FooPets_", "2"]
+      - ["20100106", "Green Planet", "1"]
+      - ["20100106", "YoVille", "22"]
+      - ["20100106", "CoolPics - Rate My Pics_ ", "6"]
+      - ["20100106", "Friends Stock", "2"]
+      - ["20100106", "Special Forces", "1"]
+      - ["20100106", "A graffiti Wall Message", "1"]
+      - ["20100106", "Make Your Flower Photo Frames ", "1"]
+      - ["20100106", "Daily Bible Verse", "2"]
+      - ["20100106", "MyHeritage Celebrity Look-alikes", "2"]
+      - ["20100106", "Teen Crush", "1"]
+      - ["20100106", "Gangster", "1"]
+      - ["20100106", "Hotameter", "3"]
+      - ["20100106", "Cute Catz", "2"]
+      - ["20100106", "Happy Harvest - Your Little Farm .", "3"]
+      - ["20100106", "Sunshine Ranch", "2"]
+      - ["20100106", "Super Scratch Offs", "2"]
+      - ["20100106", "Hero World", "2"]
+      - ["20100106", "Flirt With Me", "2"]
     tags: 
     - myspace
     - socialnetworks
@@ -593,8 +1119,8 @@
     - applications
     - apps
     categories: 
-    - Computers::Social Networks
-    - Geography
+    - "computers-socialnetworks"
+    - geography
     description: "This data is derived from the MySpace real-time stream API.  It counts MySpace application adds by users aggregated by date."
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
@@ -611,6 +1137,20 @@
         fmt: tsv
         pkg_fmt: bz2
         num_files: 1
+    snippet:
+      columns: ["Application", "Count"]
+      data:
+      - ["Addicted to Xena", "13"]
+      - ["Addicted to Zoey 101", "4"]
+      - ["Addicting Games - Free Kicker", "3"]
+      - ["Addiction", "10"]
+      - ["Adopt A Pet", "176"]
+      - ["Adopt a Friend", "660"]
+      - ["Adorable Pet Chinchilla", "64"]
+      - ["Adorable Puppies", "32"]
+      - ["Adorable Twins", "7"]
+      - ["Adorninho against the Tsunami", "1"]
+      - ["Adrenaline Challenge", "30"]
     tags: 
     - myspace
     - socialnetworks
@@ -623,8 +1163,8 @@
     - applications
     - apps
     categories: 
-    - Computers::Social Networks
-    - Geography
+    - "computers-socialnetworks"
+    - geography
     description: "This data is derived from the MySpace real-time stream API.  It counts total MySpace application adds by users during the period from December, 2009 to February, 2010."
     collection: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
