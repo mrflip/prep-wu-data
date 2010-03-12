@@ -5,13 +5,13 @@
 -- libraries
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
--- load user data
-full_user     = LOAD '$USER' AS (rsrc:chararray, person_id:long, firstname:chararray, lastname:chararray, username:chararray, lat:float, lon:float, country:chararray, locality:chararray, zip_code:chararray, friend_count:long, link:chararray) ;
-
--- filter by a well-formed ZIP code
-user 	      = FOREACH full_user GENERATE zip_code;
-user_with_zip = FILTER user BY zip_code MATCHES '[0-9]{5}(-[0-9]{4})?';
-grouped_zip   = GROUP user_with_zip BY zip_code;
-zip_count     = FOREACH grouped_zip GENERATE group AS zip_code, COUNT(user_with_zip);
+full_user     = LOAD '$USER' AS (rsrc:chararray, id:long, firstname:chararray, lastname:chararray, username:chararray, lat:float, lon:float, country:chararray, locality:chararray, zip_code:chararray, friend_count:long, link:chararray) ;
+user 	      = FOREACH full_user GENERATE id, zip_code;
+user_group    = GROUP user BY id;
+distinct_user_all_zips = FOREACH user_group GENERATE group AS id, FLATTEN(user.zip_code);
+distinct_user = FOREACH distinct_user_all_zips GENERATE $0, $1;
+distinct_user_with_zip = FILTER distinct_user BY zip_code MATCHES '[0-9]{5}(-[0-9]{4})?';
+grouped_zip   = GROUP distinct_user_with_zip BY zip_code;
+zip_count     = FOREACH grouped_zip GENERATE group AS zip_code, COUNT(distinct_user_with_zip);
 rmf $OUTPUT
 STORE zip_count INTO '$OUTPUT';
