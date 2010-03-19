@@ -17,19 +17,6 @@ data.each('<b>') do |chunk|
   chnk_hsh[field] = chunk.gsub('<b>',"").gsub('<HTML>',"").gsub('</b>',"").gsub('<pre>',"").gsub(field_mtchr,"").gsub(kill_nms, "").strip
 end
 
-#chnk_hsh.each{|k,v| puts "#{k} => #{v}\n\n"}
-
+# chnk_hsh.each{|k,v| puts "#{k} => #{v}\n\n"}
 p chnk_hsh.keys
-#lines = File.readlines
-#
-#idsection = ProductIdentification.new
-#idsection.read(lines)
-#idsection.parse
-#
-#ingred = Ingredients.new
-#ingred.read(lines)
-#ingred.parse
-#
-#etc...
-
 
