@@ -8,7 +8,7 @@ class Msds_Parser
     @num_mtchr = /^\d{1,2}\./
     @field_delim = /\={4}+/
     @html_mtchr = /<[^<>]+>/
-    @section_body = []
+    @section_body = ""
     @sheet = {}
   end
 
@@ -31,7 +31,7 @@ class Msds_Parser
 
   def finish_section
     @sheet[section_hdr] = section_body
-    @section_body = []
+    @section_body = ""
   end
 
   def get_field_title line
@@ -51,4 +51,22 @@ data = File.open(filename, 'r')
 prsr = Msds_Parser.new
 prsr.read( File.readlines(filename).reverse )
 prsr.sheet.each{ |k,v| puts "#{k} => #{v}" }
+
+# 4  ======================================================================
+#    929 ==================  Accidental Release Measures  ==================
+#    999 =============  Composition/Information on Ingredients  =============
+#    941 ====================  Disposal Considerations  ====================
+#      3 =====================  Ecological Information  =====================
+#    999 =============  Exposure Controls/Personal Protection  =============
+#    879 =====================  Fire Fighting Measures  =====================
+#    917 =======================  First Aid Measures  =======================
+#    920 ======================	Handling and Storage  ======================
+#    934 =====================  Hazards Identification  =====================
+#      4 ===================  MSDS Transport Information  ===================
+#      9 =======================  Other Information  =======================
+#    985 ==================  Physical/Chemical Properties  ==================
+#    998 <pre>=====================  Product Identification  =====================
+#      5 =====================  Regulatory Information  =====================
+#    957 =================  Stability and Reactivity Data  =================
+#      3 ===================  Toxicological Information	===================
 

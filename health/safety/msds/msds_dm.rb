@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-
-
 #ANNYOING PROBLEMS
 
 # IF there are too many properties of type 'text'
@@ -15,7 +13,7 @@ DataMapper.setup(:default, 'mysql://localhost/msds')
 
 class Msds
   include DataMapper::Resource
-  property :id,                Serial
+  property :id,      Serial
   has n, :sections
 end
 
