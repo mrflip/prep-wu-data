@@ -1,0 +1,633 @@
+---
+- collection:
+    title: MySpace Real-Time Stream
+    description: |
+      Data from MySpace API.
+
+- dataset: 
+    price: "30.00"
+    title: "Raw data from MySpace Real-time API: February 22, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 24, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100222/20100222_day_raw.xml.bz2"
+        bucket: infochimps
+        fmt: xml
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "30.00"
+    title: "Raw data from MySpace Real-time API: February 23, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 25, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100223/20100223_day_raw.xml.bz2"
+        bucket: infochimps
+        fmt: xml
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "30.00"
+    title: "Raw data from MySpace Real-time API: February 24, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 26, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100224/20100224_day_raw.xml.bz2"
+        bucket: infochimps
+        fmt: xml
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "30.00"
+    title: "Raw data from MySpace Real-time API: February 25, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 27, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100225/20100225_day_raw.xml.bz2"
+        bucket: infochimps
+        fmt: xml
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "30.00"
+    title: "Raw data from MySpace Real-time API: February 26, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 28, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100226/20100226_day_raw.xml.bz2"
+        bucket: infochimps
+        fmt: xml
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "30.00"
+    title: "Raw data from MySpace Real-time API: February 27, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 29, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100227/20100227_day_raw.xml.bz2"
+        bucket: infochimps
+        fmt: xml
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "30.00"
+    title: "Raw data from MySpace Real-time API: February 28, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 30, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100228/20100228_day_raw.xml.bz2"
+        bucket: infochimps
+        fmt: xml
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "40.00"
+    title: "Parsed data from MySpace Real-time Stream: February 22, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 24, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100222/20100222_day_parsed.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "40.00"
+    title: "Parsed data from MySpace Real-time Stream: February 23, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 25, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100223/20100223_day_parsed.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "40.00"
+    title: "Parsed data from MySpace Real-time Stream: February 24, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 26, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100224/20100224_day_parsed.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - xml
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "40.00"
+    title: "Parsed data from MySpace Real-time Stream: February 25, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 27, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100225/20100225_day_parsed.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "40.00"
+    title: "Parsed data from MySpace Real-time Stream: February 26, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 28, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100226/20100226_day_parsed.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "40.00"
+    title: "Parsed data from MySpace Real-time Stream: February 27, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 29, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100227/20100227_day_parsed.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "40.00"
+    title: "Parsed data from MySpace Real-time Stream: February 28, 2010"
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    subtitle: This data expires on March 30, 2010.
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/20100228/20100228_day_parsed.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    categories: 
+    - Computers::Social Networks
+    description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "10.00"
+    title: Cumulative word count from MySpace API from Dec 2009 to March 2010
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/word_count_cumulative_20100222-20100307.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - words
+    - wordcount
+    - count
+    categories: 
+    - Computers::Social Networks
+    - Linguistics
+    description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their aggregated totals.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "50.00"
+    title: Word count by day from MySpace API from December 2009-March 2010
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/word_count_by_day_20100222-20100307.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - words
+    - wordcount
+    - count
+    categories: 
+    - Computers::Social Networks
+    - Linguistics
+    description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their totals binned by day.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "100.00"
+    title: Word count by hour from MySpace API from December 2009-March 2010
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/social/network/myspace/word_count_by_hour_20100222-20100307.bz2"
+        bucket: infochimps
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - words
+    - wordcount
+    - count
+    categories: 
+    - Computers::Social Networks
+    - Linguistics
+    description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their totals binned by hour.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "10.00"
+    title: User count by zip code from MySpace API
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/pkgd/social/network/myspace/users/users_by_zip.bz2"
+        bucket: infochimps-data
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - zip
+    - zipcode
+    - geolocation
+    - gis
+    categories: 
+    - Computers::Social Networks
+    - Geography
+    description: "This data is derived from the MySpace real-time stream API.  It contains all users in our dataset, around 11 million, with well-formed zip codes.  "
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "10.00"
+    title: User count by lat/long from MySpace API
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/pkgd/social/network/myspace/users/users_by_lat_lon.bz2"
+        bucket: infochimps-data
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - latitude
+    - longitude
+    - geolocation
+    - gis
+    categories: 
+    - Computers::Social Networks
+    - Geography
+    description: This data is derived from the MySpace real-time stream API.  It contains all users in our dataset, around 11 million, with well-formed latitude/longitude.
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "50.00"
+    title: MySpace application adds by zip code
+    subtitle: December 2009 - February 2010
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/pkgd/social/network/myspace/application_adds/application_add_by_zip.bz2"
+        bucket: infochimps-data
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - zip
+    - zipcode
+    - geolocation
+    - gis
+    - applications
+    - apps
+    categories: 
+    - Computers::Social Networks
+    - Geography
+    description: "This data is derived from the MySpace real-time stream API.  It counts MySpace application adds by users aggregated by ZIP code.  ZIP codes are user-supplied on MySpace, so there are many errors."
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+
+- dataset: 
+    price: "70.00"
+    title: MySpace application adds by day
+    subtitle: December 2009 - February 2010
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/pkgd/social/network/myspace/application_adds/application_add_by_day.bz2"
+        bucket: infochimps-data
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - applications
+    - apps
+    categories: 
+    - Computers::Social Networks
+    - Geography
+    description: "This data is derived from the MySpace real-time stream API.  It counts MySpace application adds by users aggregated by date."
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+- dataset: 
+    price: "70.00"
+    title: MySpace application counts
+    subtitle: December 2009 - February 2010
+    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    packages:
+      - kind: s3
+        path: "data/pkgd/social/network/myspace/application_adds/application_add_count.bz2"
+        bucket: infochimps-data
+        fmt: tsv
+        pkg_fmt: bz2
+        num_files: 1
+    tags: 
+    - myspace
+    - socialnetworks
+    - realtime
+    - stream
+    - tsv
+    - api
+    - bulkdump
+    - richapi
+    - applications
+    - apps
+    categories: 
+    - Computers::Social Networks
+    - Geography
+    description: "This data is derived from the MySpace real-time stream API.  It counts total MySpace application adds by users during the period from December, 2009 to February, 2010."
+    collection: MySpace Real-Time Stream
+    owner: MonkeyWrenchConsultancy
+
+
+

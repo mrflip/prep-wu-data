@@ -44,3 +44,4 @@ tmp/*
 TODO (Autosaved).taskpaper
 /vendor/src/**/*
 nohup.out
+pig_*.log

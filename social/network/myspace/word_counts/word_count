@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ROLLUP=$1
+
+OUTPUT=/data/pkgd/social/network/myspace/word_count_${ROLLUP}_20100222-20100307
+INPUT=/data/fixd/social/network/myspace/objects/forum_posted,/data/fixd/social/network/myspace/objects/forum_topic_reply,/data/fixd/social/network/myspace/objects/share_item,/data/fixd/social/network/myspace/objects/status_mood_update,/data/fixd/social/network/myspace/objects/myspace_mood
+echo "Removing output directory $OUTPUT"
+hadoop fs -rmr $OUTPUT
+CMD="./word_count_${ROLLUP}.rb --run --hadoop $INPUT $OUTPUT"
+echo $CMD
+$CMD &
