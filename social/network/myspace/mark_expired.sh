@@ -15,7 +15,7 @@
 # and on the cluster. Simple cron jobs for the s1 and s2 machines?
 # Users should be responsible for their own file systems.
 
-expired_date=`date -v -1m +%Y%m%d` # get date one month prior to today
+expired_date=`date -v -1m +%Y%m%d`
 expired_dir=${expired_date}"/"
 tag="_expired"
 s3_pkgd="s3n://infochimps-data/data/pkgd/social/network/myspace/"
@@ -25,8 +25,8 @@ s2_ripd="/data/ripd/com.my/com.myspace.api/"
 
 # only worry about hdp right now
 for foo in `hdp-ls ${hdp_rawd}`; do
-  if [ ${foo} == ${expired_date} ]; then
-    hdp-mv ${hdp_rawd}${foo} ${hdp_rawd}${foo}${tag}
+  if [ ${foo} -eq ${expired_date} ]; then
+    echo "hdp-mv ${hdp_rawd}${foo} ${hdp_rawd}${foo}${tag}"
   fi
 done
 
