@@ -69,6 +69,6 @@ matched_tweet = FILTER tweet
   BY      org.apache.pig.piggybank.evaluation.string.UPPER(text)
   MATCHES '$REGEXP' ;
 grouped_matched_tweet = GROUP matched_tweet BY user_id;
-tweet_count   = FOREACH grouped_matched_tweet GENERATE group AS user_id, COUNT(matched_tweet);
--- tweet_count_sample = LIMIT tweet_count 100; DUMP tweet_count_sample;
-STORE tweet_count INTO '$OUTPUT';
+tweet_count   = FOREACH grouped_matched_tweet GENERATE group AS user_id, matched_tweet.text, COUNT(matched_tweet);
+tweet_count_sample = LIMIT tweet_count 100; DUMP tweet_count_sample;
+-- STORE tweet_count INTO '$OUTPUT';

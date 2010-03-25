@@ -28,9 +28,6 @@ user_group    = GROUP user BY id;
 flattened_user_all = FOREACH user_group GENERATE group AS id, FLATTEN(user.firstname), FLATTEN(user.lastname), FLATTEN(user.lat), FLATTEN(user.lon), FLATTEN(user.country), FLATTEN(user.locality), FLATTEN(user.friend_count);
 -- flattened_sample = LIMIT flattened_user_all 100; DUMP flattened_sample;
 
--- filtered_user = FILTER flattened_user_all BY friend_count < 50;
--- filtered_sample = LIMIT filtered_user 100; DUMP filtered_sample;
-
 distinct_user = DISTINCT flattened_user_all;
 distinct_sample = LIMIT distinct_user; DUMP distinct_sample;
 
