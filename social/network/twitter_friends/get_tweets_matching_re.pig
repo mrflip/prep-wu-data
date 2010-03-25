@@ -54,9 +54,9 @@ twitter_user_partials
 	
 */
 
--- defaults
-%default TWEET   '/data/fixd/tw/out/tweet' ;
-
+-- defaults, the path to tweets is different on the clusta
+%default TWEET   '/data/fixd/social/network/twitter/out/tweet' ;
+%default OUTPUT  '/data/fixd/social/network/twitter/ford_counts';
 -- load libraries
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
@@ -70,5 +70,5 @@ matched_tweet = FILTER tweet
   MATCHES '$REGEXP' ;
 grouped_matched_tweet = GROUP matched_tweet BY user_id;
 tweet_count   = FOREACH grouped_matched_tweet GENERATE group AS user_id, COUNT(matched_tweet);
-tweet_count_sample = LIMIT tweet_count 100; DUMP tweet_count_sample;
-
+-- tweet_count_sample = LIMIT tweet_count 100; DUMP tweet_count_sample;
+STORE tweet_count INTO '$OUTPUT';
