@@ -23,8 +23,9 @@ REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 full_user     = LOAD '$USER' AS (rsrc:chararray, id:long, firstname:chararray, lastname:chararray, username:chararray, lat:float, lon:float, country:chararray, locality:chararray, zip_code:chararray, friend_count:long, link:chararray) ;
 user 	      = FOREACH full_user GENERATE id, firstname, lastname, lat, lon, country, locality, friend_count;
 user_group    = GROUP user BY id;
-distinct_user_all = FOREACH user_group GENERATE group AS id, FLATTEN(user.friend_count);
-user_sample = LIMIT distinct_user_all 100; DUMP user_sample ;
+user_sample = LIMIT user_group 100; DUMP user_sample ;
+-- distinct_user_all = FOREACH user_group GENERATE group AS id, FLATTEN(user.friend_count);
+
 -- distinct_user = FOREACH distinct_user_all_zips GENERATE $0, $1;
 -- distinct_user_with_zip = FILTER distinct_user BY zip_code MATCHES '[0-9]{5}(-[0-9]{4})?';
 -- grouped_zip   = GROUP distinct_user_with_zip BY zip_code;
