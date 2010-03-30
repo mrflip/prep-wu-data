@@ -122,57 +122,22 @@ require 'yaml'
 #
 #       This is some description
 
+# USAGE:
 #
-# Each field is a little hash.  When put in an array it will make a nice list in the YAML file.
-#
-
-class FieldYAML
-  
-  attr_accessor :title,
-                :description,
-                :datatype,
-                :unit
-
-  def initialize *args
-    return if args.empty?
-    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
-  end
-  
-  def to_a
-    if @title == nil
-      warn "Each field needs a title."
-      return
-    end
-    @@title_arry = [{'title'=>@title}]
-    @@title_arry[0]['description'] = @description if @description != nil
-    @@title_arry[0]['datatype'] = @datatype if @datatype != nil
-    @@title_arry[0]['unit'] = @unit if @unit != nil
-    @@title_arry
-  end
-  
-end
-
-#
-#
+# dataset = DatasetYAML.new
+# dataset.title = "Awesome Dataset"
+# dataset.description = "This is a description of my dataset."
+# dataset.owner = "Me!"
+# dataset.protected = "true"
+# dataset.tags = ["tag1","tag2", "tag3"]
+# dataset.sources = ["Title of source1", "Title of source2", "Title of source3"]
+# dataset.sources = Hash.new{ :title => "Title of new source", :description => "Description of source", :main_link => "Link to source" }
+# dataset.upload_files = ["path/to/file1", "path/to/file2"]
+# dataset.fields = [FieldYAML.new( :title => "title1" ), FieldYAML.new( :title => "title2" )]
+# dataset.price = 0.00
+# dataset.score = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 #
 
-class SnippetYAML
-  
-  attr_accessor :columns,
-                :data
-                
-  def initialize *args
-    return if args.empty?
-    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
-  end
-  
-  def to_a
-    @@snippet_arry = [{'columns'=>@columns, 'data'=>@data}]
-    @@snippet_arry
-  end
-  
-end
-                
 #
 # Each dataset is a hash in an array.  Multiple DatasetYAML.to_a can be added together to put multiple listings in one file.
 #  
@@ -180,24 +145,24 @@ end
 class DatasetYAML
   
   attr_accessor :title, 
-                :subtitle,
-                :main_link, 
-                :description, 
-                :owner,
-                :protected,
-                :tags, 
-                :categories,
-                :collection, 
-                :sources,
-                :upload_files,
-                :fields,
-                :price,
-                :records_count,
-                :fmt,
-                :snippet,
-                :license,
-                :score,
-                :rating
+  :subtitle,
+  :main_link, 
+  :description, 
+  :owner,
+  :protected,
+  :tags, 
+  :categories,
+  :collection, 
+  :sources,
+  :upload_files,
+  :fields,
+  :price,
+  :records_count,
+  :fmt,
+  :snippet,
+  :license,
+  :score,
+  :rating
   
   def initialize *args
     return if args.empty?
@@ -214,10 +179,10 @@ class DatasetYAML
       return
     end
     @@dataset_arry = [{'dataset'=>{
-      'title'=>@title,
-      'description'=>@description,
-      'owner'=>@owner,
-      }}]
+          'title'=>@title,
+          'description'=>@description,
+          'owner'=>@owner,
+        }}]
     if @tags.is_a?(String)
       @@dataset_arry[0]['dataset']['tags'] = @tags.gsub(/\,\s/,",").gsub(/\s/,"-").split(",")
     end
@@ -257,18 +222,18 @@ class DatasetYAML
     if @snippet.is_a?(SnippetYAML)
       @@dataset_arry[0]['dataset']['snippets'] = @snippet.to_a
     end
-#
-# Payloads are outdated now with the early March 2010 site update
-#
-#    if @payloads.is_a?(PayloadYAML)
-#      @@dataset_arry[0]['dataset']['payloads'] = @payloads.to_a
-#    end
-#    if @payloads.is_a?(Array)
-#      @@dataset_arry[0]['dataset']['payloads'] = []
-#      @payloads.each do |payload|
-#        @@dataset_arry[0]['dataset']['payloads'] += payload.to_a if payload.is_a?(PayloadYAML)
-#      end
-#    end 
+    #
+    # Payloads are outdated now with the early March 2010 site update
+    #
+    #    if @payloads.is_a?(PayloadYAML)
+    #      @@dataset_arry[0]['dataset']['payloads'] = @payloads.to_a
+    #    end
+    #    if @payloads.is_a?(Array)
+    #      @@dataset_arry[0]['dataset']['payloads'] = []
+    #      @payloads.each do |payload|
+    #        @@dataset_arry[0]['dataset']['payloads'] += payload.to_a if payload.is_a?(PayloadYAML)
+    #      end
+    #    end 
     @@dataset_arry[0]['dataset']['subtitle'] = @subtitle if @subtitle != nil
     @@dataset_arry[0]['dataset']['collection_title'] = @collection if @collection != nil  
     @@dataset_arry[0]['dataset']['main_link'] = @main_link if @main_link != nil 
@@ -290,20 +255,72 @@ class DatasetYAML
 end
 
 #
+# Each field is a little hash.  When put in an array it will make a nice list in the YAML file.
+#
+
+class FieldYAML
+  
+  attr_accessor :title,
+  :description,
+  :datatype,
+  :unit
+
+  def initialize *args
+    return if args.empty?
+    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
+  end
+  
+  def to_a
+    if @title == nil
+      warn "Each field needs a title."
+      return
+    end
+    @@title_arry = [{'title'=>@title}]
+    @@title_arry[0]['description'] = @description if @description != nil
+    @@title_arry[0]['datatype'] = @datatype if @datatype != nil
+    @@title_arry[0]['unit'] = @unit if @unit != nil
+    @@title_arry
+  end
+  
+end
+
+#
+#
+#
+
+class SnippetYAML
+  
+  attr_accessor :columns,
+  :data
+  
+  def initialize *args
+    return if args.empty?
+    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
+  end
+  
+  def to_a
+    @@snippet_arry = [{'columns'=>@columns, 'data'=>@data}]
+    @@snippet_arry
+  end
+  
+end
+
+
+#
 # Payloads are outdated now with the early March 2010 site update
 #
 class PayloadYAML
   attr_accessor :title,
-                :description,
-                :fmt,
-                :price,
-                :owner,
-                :protected,
-                :license,
-                :records_count,
-                :upload_files,
-                :fields
-                
+  :description,
+  :fmt,
+  :price,
+  :owner,
+  :protected,
+  :license,
+  :records_count,
+  :upload_files,
+  :fields
+  
   def initialize *args
     return if args.empty?
     args[0].each {|key,value| instance_variable_set("@#{key}", value) }
@@ -315,10 +332,10 @@ class PayloadYAML
       return
     end
     @@payload_arry = [{'title'=>@title,
-      'description'=>@description,
-      'fmt'=>@fmt,
-      'owner'=>@owner,
-      'license'=>@license}]
+        'description'=>@description,
+        'fmt'=>@fmt,
+        'owner'=>@owner,
+        'license'=>@license}]
     if @upload_files.is_a?(String)
       @@payload_arry[0]['files_for_upload'] = @upload_files.gsub(/\,\s/,",").split(",")
     end
