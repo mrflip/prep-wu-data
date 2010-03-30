@@ -138,6 +138,29 @@ require 'yaml'
 # dataset.score = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 #
 
+# Fields have the following contraints built into the site:
+# (perhaps these validations should be added into the to_yaml def at some point)
+#
+# MAX_TITLE_LEN      = 100
+# MAX_USERNAME_LEN   =  25
+# MAX_TAG_NAME_LEN   =  25
+# MAX_FORMAT_LEN     =  20
+# MAX_SUBCAT_LEN     =  20
+# MAX_MODEL_NAME_LEN =  20
+# MAX_PATH_LEN       = 255
+# MAX_URL_LEN        = 255
+# MAX_SUBTITLE_LEN   = 255
+# MAX_SLUG_LEN       =  64
+# MAX_HANDLE_LEN     = MAX_SLUG_LEN + 6
+# MAX_QUERY_LEN      = 255
+# MAX_EMAIL_LEN      = MAX_URL_LEN
+# MAX_UUID_LEN       = 60
+# MAX_SHA1_LEN       = 40
+# MAX_IPADDR_LEN     = 15
+# MAX_SHORT_NOTE_LEN = 255
+#
+
+
 #
 # Each dataset is a hash in an array.  Multiple DatasetYAML.to_a can be added together to put multiple listings in one file.
 #  
