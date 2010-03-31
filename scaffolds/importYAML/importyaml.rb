@@ -159,6 +159,8 @@ require 'yaml'
 # MAX_IPADDR_LEN     = 15
 # MAX_SHORT_NOTE_LEN = 255
 #
+# title must not have non printing characters (ie must be on one line)
+# URL should also not contain the following: ", [, ], !, ip address (replace with `host IP`)
 
 
 #
