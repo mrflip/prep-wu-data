@@ -1,128 +1,11 @@
 require 'rubygems'
 require 'yaml'
 
-# - dataset:
-#     title: The title of this dataset
-#     subtitle: The subtitle of this dataset
-#     main_link: http://www.google.com
-#     protected: false
-#     description: >-
-# 
-#       This is my dataset
-# 
-#     # can be either strings or numeric IDs
-#     owner: Infochimps
-# 
-#     # can be either a string giving an existing collection's title,
-#     # handle, or ID or a hash giving a new collection's attributes
-#     collection: My Awesome Datasets
-#     # or (but not both)
-#     collection:
-#       title: My Awesome Datasets
-#       description: They are really cool
-#
-#     # tags are always referred to by name, never ID
-#     tags:
-#       - money
-#       - finance
-#       - stocks
-# 
-#     # categories can be referred to by path or ID    
-#     categories:
-#       - "Social Sciences::Education"
-#       - 82
-# 
-#     # existing sources can be referred to by title or ID if they
-#     # already exist
-#     sources:
-#       - The first source
-#       - 1938
-#       - The third source
-#       # but you can also create a source inline by using a hash with
-#       # attributes
-#       - title: A new source
-#         description: What this new source is like
-#         main_link: http://foobar.com
-#
-#     # payloads can be created as nested subresources
-#     payloads:
-#       - title: A payload
-#       # ... and so on, check the required YAML for payloads to learn
-#       # more
-
-
-# Any payload hash with a key "files_to_upload" will cause the importer
-# to output a YAML file consisting of new payload IDs mapped to the list
-# of files to upload.  This YAML file can subsequently be fed to the
-# bulk upload script.
-# 
-# - payload:
-#     title: The name of this payload
-#     fmt: csv
-#     price: 10000
-#     protected: true
-# 
-#     # the following can be either strings or numeric IDs
-#     dataset: Some Infochimps Dataset
-#     owner: Infochimps
-# 
-#     # An existing license can be referred to by name and a new license
-#     # an be created inline by using a hash
-#     license: MIT License
-#     # or (but not both)
-#     license:
-#       title: My New License
-#       main_link: http://foobar.com
-#       description: Whatever dude
-#
-#     schema_fields:
-#       - handle: AvgLength
-#         unit:  km
-#         datatype: float
-#
-#         # can be either a string or the numeric ID of a schema_field
-#         title: Average Length
-#
-#         description: >-
-#           Average length measurements are defined over...
-#
-#     snippets:
-#       - columns:
-#         - FirstField
-#         - SecondField
-#         data:
-#         # give each row of data on its own line
-#         - [1,2,3]
-#         - ['a', 'b', 'c']
-#         - # or split each row and have each entry on a line
-#           - 1
-#           - 2
-#           - 3
-#       - columns: ["Another Field", "Yet Another Field"]
-#         data: [[1,2,3],[4,5,6],[7,8,9]]
-#
-#     # list of local paths (relative to this YAML file) to upload.
-#     # will be incorporated into an output YAML file suitable for the
-#     # bulk uploader.
-#     files_for_upload:
-#       - relative/path/to/data
-#       - /absolute/path/to/data
-#       - ../another/relative/path/to/data
-
-# - source:
-#     title: The title of this source
-#     main_link: "http://www.google.com"
-#     description: >-
-#
-#       This is some description
-
-# - collection:
-#     title: The title of this collection
-#     description: >-
-#
-#       This is some description
-
 # USAGE:
+#
+# dataset = DatasetYAML.new(:title => "Awesome Dataset", :owner => "Me!", :description => "This is my dataset.")
+#
+# -- or --
 #
 # dataset = DatasetYAML.new
 # dataset.title = "Awesome Dataset"
@@ -138,7 +21,8 @@ require 'yaml'
 # dataset.score = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 #
 
-# Fields have the following contraints built into the site:
+
+# Various items have the following contraints built into the site:
 # (perhaps these validations should be added into the to_yaml def at some point)
 #
 # MAX_TITLE_LEN      = 100
@@ -172,7 +56,8 @@ class DatasetYAML
   attr_accessor :title, 
   :subtitle,
   :main_link, 
-  :description, 
+  :description,
+  :packages, 
   :owner,
   :protected,
   :tags, 
@@ -196,12 +81,10 @@ class DatasetYAML
   
   def to_a
     if @title == nil || @description == nil || @owner == nil
-      warn "A dataset needs a title, description, and owner."
-      return
+      warn "A dataset needs a title, description, and owner. This YAML file will not work with the bulk importer."
     end
     if !(@main_link || @upload_files)
-      warn "A dataset needs either a main link or a payload (files to upload)."
-      return
+      warn "A dataset needs either a main link or a package (files to upload). This YAML file will not work with the bulk importer."
     end
     @@dataset_arry = [{'dataset'=>{
           'title'=>@title,
@@ -248,20 +131,17 @@ class DatasetYAML
       @@dataset_arry[0]['dataset']['snippets'] = @snippet.to_a
     end
     if @snippet.is_a?(String)
-      @@dataset_arry[0]['dataset']['snippets'] = [{'columns'=>nil, 'data'=>@snippet}]
+      @@dataset_arry[0]['dataset']['snippets'] = [{'columns'=>nil, 'data'=>@snippet.to_s}]
     end
-    #
-    # Payloads are outdated now with the early March 2010 site update
-    #
-    #    if @payloads.is_a?(PayloadYAML)
-    #      @@dataset_arry[0]['dataset']['payloads'] = @payloads.to_a
-    #    end
-    #    if @payloads.is_a?(Array)
-    #      @@dataset_arry[0]['dataset']['payloads'] = []
-    #      @payloads.each do |payload|
-    #        @@dataset_arry[0]['dataset']['payloads'] += payload.to_a if payload.is_a?(PayloadYAML)
-    #      end
-    #    end 
+    if @packages.is_a?(PackageYAML)
+      @@dataset_arry[0]['dataset']['packages'] = @packages.to_a
+    end
+    if @packages.is_a?(Array)
+      @@dataset_arry[0]['dataset']['packages'] = []
+      @packages.each do |package|
+        @@dataset_arry[0]['dataset']['packages'] += package.to_a if package.is_a?(PackageYAML)
+      end
+    end 
     @@dataset_arry[0]['dataset']['subtitle'] = @subtitle if @subtitle != nil
     @@dataset_arry[0]['dataset']['collection_title'] = @collection if @collection != nil  
     @@dataset_arry[0]['dataset']['main_link'] = @main_link if @main_link != nil 
@@ -335,19 +215,20 @@ end
 
 
 #
-# Payloads are outdated now with the early March 2010 site update
+# Packages
 #
-class PayloadYAML
-  attr_accessor :title,
-  :description,
+class PackageYAML
+  attr_accessor :kind,
+  :path,
+  :bucket,
   :fmt,
-  :price,
+  :pkg_fmt,
+  :pkg_size,
+  :files,
+  :records,
   :owner,
-  :protected,
-  :license,
-  :records_count,
-  :upload_files,
-  :fields
+  :dataset,
+  :upload_files
   
   def initialize *args
     return if args.empty?
@@ -355,32 +236,36 @@ class PayloadYAML
   end
   
   def to_a
-    if @title == nil || @description == nil || @fmt == nil || @license == nil || @owner == nil
-      warn "A payload needs a title, description, owner, format, and license."
-      return
+    if (@kind == nil || @path == nil || @bucket == nil) && (@upload_files == nil || @dataset == nil)
+      warn "A package needs either an S3 bucket or a list of files to upload."
     end
-    @@payload_arry = [{'title'=>@title,
-        'description'=>@description,
-        'fmt'=>@fmt,
-        'owner'=>@owner,
-        'license'=>@license}]
-    if @upload_files.is_a?(String)
-      @@payload_arry[0]['files_for_upload'] = @upload_files.gsub(/\,\s/,",").split(",")
+    if @dataset == nil && @upload_files == nil
+      warn "Making a package from (hopefully) a S3 bucket."
+      @@package_arry = [{}]
+      @@package_arry[0]['kind'] = @kind if @kind != nil
+      @@package_arry[0]['path'] = @path if @path != nil
+      @@package_arry[0]['bucket'] = @bucket if @bucket != nil
+      @@package_arry[0]['fmt'] = @fmt if @fmt != nil
+      @@package_arry[0]['pkg_fmt'] = @pkg_fmt if @pkg_fmt != nil
+      @@package_arry[0]['pkg_size'] = @pkg_size if @pkg_size != nil
+      @@package_arry[0]['num_files'] = @num_files if @num_files != nil
+      @@package_arry[0]['owner_id'] = @owner if @owner != nil
+    else
+      warn "Making a package from a list of files and a dataset."
+      @@package_arry = {'dataset' => @dataset}
+      if @upload_files.is_a?(String)
+        @@package_arry[0]['files_for_upload'] = @upload_files.gsub(/\,\s/,",").split(",")
+      end
+      if @upload_files.is_a?(Array)
+        @@package_arry[0]['files_for_upload'] = @upload_files
+      end
     end
-    if @upload_files.is_a?(Array)
-      @@payload_arry[0]['files_for_upload'] = @upload_files
-    end
-    @@payload_arry[0]['protected'] = @protected if @protected != nil
-    @@payload_arry[0]['records_count'] = @records_count if @records_count != nil
-    @@payload_arry[0]['price'] = @price if @price != nil
-    @@payload_arry[0]['schema_fields'] = @fields if @fields != nil
-    @@payload_arry
+    @@package_arry
   end
   
   def to_yaml
-    @@payload_yaml = [{'payloads'=>self.to_a}]
-    return unless @@payload_yaml[0]['payloads'] != nil
-    @@payload_yaml.to_yaml
+    @@package_yaml = [{'package'=>self.to_a}]
+    @@package_yaml.to_yaml
   end
   
 end
