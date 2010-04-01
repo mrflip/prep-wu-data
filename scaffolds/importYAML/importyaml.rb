@@ -247,6 +247,9 @@ class DatasetYAML
     if @snippet.is_a?(SnippetYAML)
       @@dataset_arry[0]['dataset']['snippets'] = @snippet.to_a
     end
+    if @snippet.is_a?(String)
+      @@dataset_arry[0]['dataset']['snippets'] = [{'columns'=>nil, 'data'=>@snippet}]
+    end
     #
     # Payloads are outdated now with the early March 2010 site update
     #
