@@ -53,113 +53,132 @@ require 'yaml'
 
 class DatasetYAML
   
-  attr_accessor :title, 
-  :subtitle,
-  :main_link, 
-  :description,
-  :packages, 
-  :owner,
-  :protected,
-  :tags, 
-  :categories,
-  :collection, 
-  :sources,
-  :upload_files,
-  :fields,
-  :price,
-  :records_count,
-  :fmt,
-  :snippet,
-  :license,
-  :score,
-  :rating
+  attr_accessor :title, :subtitle, :main_link, :description,
+  :packages, :owner, :protected, :tags, :categories,
+  :collection, :sources, :upload_files, :fields, :price,
+  :records_count, :fmt, :snippet, :license, :score, :rating
   
   def initialize *args
-    return if args.empty?
-    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
+    return unless args
+    args.first.each {|key,value| instance_variable_set("@#{key}", value) }
+  end
+
+  def set_tags
+    case tags
+    when String
+      @@dataset_arry.first['dataset']['tags'] = tags.gsub(/\,\s/,",").gsub(/\s/,"-").split(",")
+    when Array
+      @@dataset_arry.first['dataset']['tags'] = tags      
+    end
+  end
+
+  def set_categories
+    case categories
+    when String
+      @@dataset_arry.first['dataset']['categories'] = categories.gsub(/\,\s/,",").split(",")
+    when Array
+      @@dataset_arry.first['dataset']['categories'] = categories
+    end
+  end
+
+  def set_sources
+    case sources
+    when String
+      @@dataset_arry.first['dataset']['sources'] = sources.gsub(/\,\s/,",").split(",")
+    when Array
+      @@dataset_arry.first['dataset']['sources'] = sources
+    when Hash
+      @@dataset_arry.first['dataset']['sources'] = [sources]
+    end
+  end
+  
+  def set_upload_files
+    case upload_files
+    when String
+      @@dataset_arry.first['dataset']['files_for_upload'] = upload_files.gsub(/\,\s/,",").split(",")
+    when Array
+      @@dataset_arry.first['dataset']['files_for_upload'] = upload_files
+    end
+  end
+
+  def set_fields
+    case fields
+    when FieldYAML
+      @@dataset_arry.first['dataset']['fields'] = fields.to_a
+    when Array
+      @@dataset_arry.first['dataset']['fields'] ||= []
+      fields.each do |field|
+        @@dataset_arry.first['dataset']['fields'] += field.to_a if field.is_a?(FieldYAML)
+      end
+    end
+  end
+
+  def set_snippet
+    case snippet
+    when SnippetYAML
+      @@dataset_arry.first['dataset']['snippets'] = snippet.to_a
+    when String
+      @@dataset_arry.first['dataset']['snippets'] = [ {'columns' => nil, 'data' => snippet} ]
+    end
+  end
+
+  def set_packages
+    case packages
+    when PackageYAML
+      @@dataset_arry.first['dataset']['packages'] = packages.to_a
+    when Array
+      @@dataset_arry.first['dataset']['packages'] = []
+      @packages.each do |package|
+        @@dataset_arry.first['dataset']['packages'] += package.to_a if package.is_a?(PackageYAML)
+      end
+    end 
+  end
+  
+  def missing_critical?
+    return true if title.nil? or description.nil? or owner.nil?
+    false
+  end
+
+  def missing_data_pointer?
+    return true unless main_link or upload files
+    false
   end
   
   def to_a
-    if @title == nil || @description == nil || @owner == nil
-      warn "A dataset needs a title, description, and owner. This YAML file will not work with the bulk importer."
+    if missing_critical?
+      warn "Warning: A dataset needs a title, description, and owner. This YAML file will not work with the bulk importer."
     end
-    if !(@main_link || @upload_files)
-      warn "A dataset needs either a main link or a package (files to upload). This YAML file will not work with the bulk importer."
+    
+    if missing_data_pointer?
+      warn "Warning: A dataset needs either a main link or a package (files to upload). This YAML file will not work with the bulk importer."
     end
-    @@dataset_arry = [{'dataset'=>{
-          'title'=>@title,
-          'description'=>@description,
-          'owner'=>@owner,
-        }}]
-    if @tags.is_a?(String)
-      @@dataset_arry[0]['dataset']['tags'] = @tags.gsub(/\,\s/,",").gsub(/\s/,"-").split(",")
-    end
-    if @tags.is_a?(Array)
-      @@dataset_arry[0]['dataset']['tags'] = @tags
-    end
-    if @categories.is_a?(String)
-      @@dataset_arry[0]['dataset']['categories'] = @categories.gsub(/\,\s/,",").split(",")
-    end
-    if @categories.is_a?(Array)
-      @@dataset_arry[0]['dataset']['categories'] = @categories
-    end
-    if @sources.is_a?(String)
-      @@dataset_arry[0]['dataset']['sources'] = @sources.gsub(/\,\s/,",").split(",")
-    end
-    if @sources.is_a?(Array)
-      @@dataset_arry[0]['dataset']['sources'] = @sources
-    end
-    if @sources.is_a?(Hash)
-      @@dataset_arry[0]['dataset']['sources'] = [@sources]
-    end
-    if @upload_files.is_a?(String)
-      @@dataset_arry[0]['dataset']['files_for_upload'] = @upload_files.gsub(/\,\s/,",").split(",")
-    end
-    if @upload_files.is_a?(Array)
-      @@dataset_arry[0]['dataset']['files_for_upload'] = @upload_files
-    end
-    if @fields.is_a?(FieldYAML)
-      @@dataset_arry[0]['dataset']['fields'] = @fields.to_a
-    end
-    if @fields.is_a?(Array)
-      @@dataset_arry[0]['dataset']['fields'] = []
-      @fields.each do |field|
-        @@dataset_arry[0]['dataset']['fields'] += field.to_a if field.is_a?(FieldYAML)
-      end
-    end
-    if @snippet.is_a?(SnippetYAML)
-      @@dataset_arry[0]['dataset']['snippets'] = @snippet.to_a
-    end
-    if @snippet.is_a?(String)
-      @@dataset_arry[0]['dataset']['snippets'] = [{'columns'=>nil, 'data'=>@snippet.to_s}]
-    end
-    if @packages.is_a?(PackageYAML)
-      @@dataset_arry[0]['dataset']['packages'] = @packages.to_a
-    end
-    if @packages.is_a?(Array)
-      @@dataset_arry[0]['dataset']['packages'] = []
-      @packages.each do |package|
-        @@dataset_arry[0]['dataset']['packages'] += package.to_a if package.is_a?(PackageYAML)
-      end
-    end 
-    @@dataset_arry[0]['dataset']['subtitle'] = @subtitle if @subtitle != nil
-    @@dataset_arry[0]['dataset']['collection_title'] = @collection if @collection != nil  
-    @@dataset_arry[0]['dataset']['main_link'] = @main_link if @main_link != nil 
-    @@dataset_arry[0]['dataset']['price'] = @price if @price != nil
-    @@dataset_arry[0]['dataset']['license_title'] = @license if @license != nil
-    @@dataset_arry[0]['dataset']['fmt'] = @fmt if @fmt != nil
-    @@dataset_arry[0]['dataset']['cached_score'] = @score if @score != nil
-    @@dataset_arry[0]['dataset']['rating'] = @rating if @rating != nil
-    @@dataset_arry[0]['dataset']['records_count'] = @records_count if @records_count != nil
-    @@dataset_arry[0]['dataset']['protected'] = @protected if @protected != nil  
+    
+    @@dataset_arry = [ {'dataset' => {'title' => title, 'description' => description, 'owner' => owner, } } ]
+
+    set_tags
+    set_categories
+    set_sources
+    set_upload_files
+    set_fields
+    set_snippet
+    set_packages
+
+    @@dataset_arry.first['dataset']['subtitle'] = subtitle unless subtitle.nil?
+    @@dataset_arry.first['dataset']['collection_title'] = collection unless collection.nil?  
+    @@dataset_arry.first['dataset']['main_link'] = main_link unless main_link.nil?
+    @@dataset_arry.first['dataset']['price'] = price unless price.nil?
+    @@dataset_arry.first['dataset']['license_title'] = license unless license.nil?
+    @@dataset_arry.first['dataset']['fmt'] = fmt unless fmt.nil?
+    @@dataset_arry.first['dataset']['cached_score'] = score unless score.nil?
+    @@dataset_arry.first['dataset']['rating'] = rating unless rating.nil?
+    @@dataset_arry.first['dataset']['records_count'] = records_count unless records_count.nil?
+    @@dataset_arry.first['dataset']['protected'] = protected unless protected.nil  
     @@dataset_arry    
   end
   
   def to_yaml
-    @@dataset_yaml = self.to_a
-    @@dataset_yaml.to_yaml
+    @@dataset_yaml = self.to_a.to_yaml
   end    
-  
 end
 
 #
@@ -168,25 +187,22 @@ end
 
 class FieldYAML
   
-  attr_accessor :title,
-  :description,
-  :datatype,
-  :unit
+  attr_accessor :title, :description, :datatype, :unit
 
   def initialize *args
-    return if args.empty?
-    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
+    return unless args
+    args.first.each {|key,value| instance_variable_set("@#{key}", value) }
   end
   
   def to_a
-    if @title == nil
-      warn "Each field needs a title."
+    unless title
+      warn "Warning: Each field needs a title."
       return
     end
-    @@title_arry = [{'title'=>@title}]
-    @@title_arry[0]['description'] = @description if @description != nil
-    @@title_arry[0]['datatype'] = @datatype if @datatype != nil
-    @@title_arry[0]['unit'] = @unit if @unit != nil
+    @@title_arry = [ {'title' => title} ]
+    @@title_arry.first['description'] = description unless description
+    @@title_arry.first['datatype'] = datatype unless datatype
+    @@title_arry.first['unit'] = unit unless unit
     @@title_arry
   end
   
@@ -198,16 +214,15 @@ end
 
 class SnippetYAML
   
-  attr_accessor :columns,
-  :data
+  attr_accessor :columns, :data
   
   def initialize *args
-    return if args.empty?
-    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
+    return unless args
+    args.first.each {|key,value| instance_variable_set("@#{key}", value) }
   end
   
   def to_a
-    @@snippet_arry = [{'columns'=>@columns, 'data'=>@data}]
+    @@snippet_arry = [ {'columns' => columns, 'data' => data} ]
     @@snippet_arry
   end
   
@@ -218,54 +233,47 @@ end
 # Packages
 #
 class PackageYAML
-  attr_accessor :kind,
-  :path,
-  :bucket,
-  :fmt,
-  :pkg_fmt,
-  :pkg_size,
-  :files,
-  :records,
-  :owner,
-  :dataset,
-  :upload_files
+  attr_accessor :kind, :path, :bucket, :fmt, :pkg_fmt, :pkg_size, :files, :records, :owner, :dataset, :upload_files
   
   def initialize *args
-    return if args.empty?
-    args[0].each {|key,value| instance_variable_set("@#{key}", value) }
+    return unless args
+    args.first.each {|key,value| instance_variable_set("@#{key}", value) }
+  end
+
+  def missing_info?
+    return true if (kind.nil? or path.nil? or bucket.nil? ) and (upload_files.nil? or dataset.nil? )
   end
   
   def to_a
-    if (@kind == nil || @path == nil || @bucket == nil) && (@upload_files == nil || @dataset == nil)
+    if missing_info?
       warn "A package needs either an S3 bucket or a list of files to upload."
     end
-    if @dataset == nil && @upload_files == nil
+    if dataset.nil? and upload_files.nil?
       warn "Making a package from (hopefully) a S3 bucket."
       @@package_arry = [{}]
-      @@package_arry[0]['kind'] = @kind if @kind != nil
-      @@package_arry[0]['path'] = @path if @path != nil
-      @@package_arry[0]['bucket'] = @bucket if @bucket != nil
-      @@package_arry[0]['fmt'] = @fmt if @fmt != nil
-      @@package_arry[0]['pkg_fmt'] = @pkg_fmt if @pkg_fmt != nil
-      @@package_arry[0]['pkg_size'] = @pkg_size if @pkg_size != nil
-      @@package_arry[0]['num_files'] = @num_files if @num_files != nil
-      @@package_arry[0]['owner_id'] = @owner if @owner != nil
+      @@package_arry.first['kind'] = kind unless kind
+      @@package_arry.first['path'] = path unless path
+      @@package_arry.first['bucket'] = bucket unless bucket
+      @@package_arry.first['fmt'] = fmt unless fmt
+      @@package_arry.first['pkg_fmt'] = pkg_fmt unless pkg_fmt
+      @@package_arry.first['pkg_size'] = pkg_size unless pkg_size
+      @@package_arry.first['num_files'] = num_files unless num_files
+      @@package_arry.first['owner_id'] = owner unless owner
     else
       warn "Making a package from a list of files and a dataset."
-      @@package_arry = {'dataset' => @dataset}
-      if @upload_files.is_a?(String)
-        @@package_arry[0]['files_for_upload'] = @upload_files.gsub(/\,\s/,",").split(",")
-      end
-      if @upload_files.is_a?(Array)
-        @@package_arry[0]['files_for_upload'] = @upload_files
+      @@package_arry = {'dataset' => dataset}
+      case upload_files
+      when String
+        @@package_arry.first['files_for_upload'] = upload_files.gsub(/\,\s/,",").split(",")
+      when Array
+        @@package_arry.first['files_for_upload'] = upload_files
       end
     end
     @@package_arry
   end
   
   def to_yaml
-    @@package_yaml = [{'package'=>self.to_a}]
+    @@package_yaml = [{'package' => self.to_a}]
     @@package_yaml.to_yaml
   end
-  
 end
