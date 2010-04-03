@@ -5,9 +5,6 @@ require 'wukong'
 require 'wuclan/twitter'
 require 'wuclan/twitter/model'               ; include Wuclan::Twitter::Model
 
-#
-# See bundle.sh for running pattern
-#
 
 module GenUserIds
   class Mapper < Wukong::Streamer::StructStreamer
@@ -26,9 +23,9 @@ module GenUserIds
           thing.id, thing.scraped_at, thing.screen_name, thing.protected,
           thing.followers_count, thing.friends_count, thing.statuses_count, thing.favorites_count,
           thing.created_at, nil, 1)
-      # when TwitterUserSearchId
-      #   return if thing.sid.to_i == 0
-      #   yield TwitterUserId.new('', '', thing.screen_name, '', '', '', '', '', '', thing.sid, 1)
+        # when TwitterUserSearchId
+        #   return if thing.sid.to_i == 0
+        #   yield TwitterUserId.new('', '', thing.screen_name, '', '', '', '', '', '', thing.sid, 1)
       when TwitterUserPartial
         return if thing.id.to_i == 0
         yield TwitterUserId.new(thing.id, nil, thing.screen_name, thing.protected, thing.followers_count)
@@ -55,8 +52,8 @@ module GenUserIds
     end
     def accumulate rsrc, *args
       id, scraped_at, screen_name, protected,
-        followers_count, friends_count, statuses_count, favourites_count,
-        created_at, sid, is_full = args.map{|a| a.blank? ? nil : a }
+      followers_count, friends_count, statuses_count, favourites_count,
+      created_at, sid, is_full = args.map{|a| a.blank? ? nil : a }
       self.twitter_user_id.id              ||= id
       self.twitter_user_id.scraped_at        = [scraped_at.to_i      , twitter_user_id.scraped_at.to_i      ].max
       self.twitter_user_id.screen_name     ||= screen_name
