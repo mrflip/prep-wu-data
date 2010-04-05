@@ -1,0 +1,43 @@
+
+
+
+1.
+
+  API    Scrape => API    Parse
+  Search Scrape => Search Parse
+  Stream Scrape => Stream Parse
+
+
+  
+2. Extract tweet tokens
+
+   ~/ics/wuclan/examples/twitter/parse/extract_tweet_tokens.rb --rm --run --reduce_tasks=88 fixd/tw/out/search_tweet,fixd/tw/out/tweet fixd/tw/tokens/mention
+
+3. Reconcile screen_names and sid's to api_id's
+
+  a_follows_b         => (ok)
+  a_favorites_b       => (ok)
+  a_replies_b         => (ok)
+  a_retweets_b        => fix user_b_name              => a_retweets_b_id 
+  a_atsigns_b         => fix user_b_name              => a_atsigns_b_id
+  a_retweets_b_name   => fix user_a_name, user_b_name => a_retweets_b_id
+  a_atsigns_b_name    => fix user_a_name, user_b_name => a_atsigns_b_id
+  
+4. Build the multigraph.
+
+   * Emit each relationship both ways as <[user_a, user_b], a_XX_b> and <[user_b, user_a], b_XX_a>
+   * Roll up to <[user_a, user_b], a_follows_b, b_follows_a, a_re_b_count, b_re_a_count, .... >
+
+6. Join simple user metrics
+
+   * adorn each user_b with its simple metrics: #tweets/(scat-crat)
+
+5. Influx
+
+   * Roll up tweets
+   
+
+  # a_atsigns_b
+  for rel in a_replies_b a_retweets_b       a_atsigns_b_name a_replies_b_name a_retweets_b_name ; do
+    ~/ics/wukong/bin/hdp-stream2 --rm --map_command="`which egrep` \"^${rel}\"" --ignore_exit_status fixd/tw/tokens/mention fixd/tw/networks/${rel} ;
+  done

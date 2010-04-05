@@ -1,0 +1,13 @@
+* Make parse_hzrd_msds.rb read from the work directory and devour msds data
+
+        - work/ripd/...
+
+* For every msds file here:
+   
+        - read contents into ruby hash
+        - every key in the hash is an msds section
+        - every value in the hash is the content for the msds section
+        - put data from hash into datamapper fields
+        - dump to MySQL database
+      
+* Be happy      
