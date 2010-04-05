@@ -3,7 +3,7 @@
 - license:
     title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     description: "License from MySpace"
-    owner: Monkeywrench Consultancy
+    owner: MonkeywrenchConsultancy
 
 - collection:
     title: MySpace Real-Time Stream
@@ -11,10 +11,12 @@
       Data from MySpace API.
 
 - dataset: 
-    price: "30.00"
-    title: "Raw data from MySpace Real-time API: February 22, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "25.00"
+    title: "MySpace Real-time API: Raw data from February 22, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 24, 2010.
+    cached_score:       100
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100222/20100222_day_raw.xml.bz2"
@@ -109,10 +111,13 @@
         </source>
         </entry>
         </feed>
-        
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -122,14 +127,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "30.00"
-    title: "Raw data from MySpace Real-time API: February 23, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace Real-time API: Raw data from February 23, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 25, 2010.
+    cached_score:       100
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100223/20100223_day_raw.xml.bz2"
@@ -142,6 +149,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -151,14 +162,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "30.00"
-    title: "Raw data from MySpace Real-time API: February 24, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace Real-time API: Raw data from February 24, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 26, 2010.
+    cached_score:       100
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100224/20100224_day_raw.xml.bz2"
@@ -171,6 +184,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -180,14 +197,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "30.00"
-    title: "Raw data from MySpace Real-time API: February 25, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace Real-time API: Raw data from February 25, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 27, 2010.
+    cached_score:       100
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100225/20100225_day_raw.xml.bz2"
@@ -200,6 +219,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -209,14 +232,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "30.00"
-    title: "Raw data from MySpace Real-time API: February 26, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace Real-time API: Raw data from February 26, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 28, 2010.
+    cached_score:       100
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100226/20100226_day_raw.xml.bz2"
@@ -229,6 +254,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -238,14 +267,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "30.00"
-    title: "Raw data from MySpace Real-time API: February 27, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace Real-time API: Raw data from February 27, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 29, 2010.
+    cached_score:       100
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100227/20100227_day_raw.xml.bz2"
@@ -258,6 +289,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -267,14 +302,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "30.00"
-    title: "Raw data from MySpace Real-time API: February 28, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace Real-time API: Raw data from February 28, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 30, 2010.
+    cached_score:       100
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100228/20100228_day_raw.xml.bz2"
@@ -287,6 +324,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -296,14 +337,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, unparsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "40.00"
-    title: "Parsed data from MySpace Real-time Stream: February 22, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "95.00"
+    title: "MySpace Real-time Stream: Parsed data from February 22, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 24, 2010.
+    cached_score:       110
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100222/20100222_day_parsed.bz2"
@@ -373,6 +416,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -382,14 +429,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "40.00"
-    title: "Parsed data from MySpace Real-time Stream: February 23, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "120.00"
+    title: "MySpace Real-time Stream: Parsed data from February 23, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 25, 2010.
+    cached_score:       110
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100223/20100223_day_parsed.bz2"
@@ -402,6 +451,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -411,14 +464,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "40.00"
-    title: "Parsed data from MySpace Real-time Stream: February 24, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "120.00"
+    title: "MySpace Real-time Stream: Parsed data from February 24, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 26, 2010.
+    cached_score:       110
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100224/20100224_day_parsed.bz2"
@@ -431,6 +486,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - xml
@@ -440,14 +499,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "40.00"
-    title: "Parsed data from MySpace Real-time Stream: February 25, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "120.00"
+    title: "MySpace Real-time Stream: Parsed data from February 25, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 27, 2010.
+    cached_score:       110
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100225/20100225_day_parsed.bz2"
@@ -460,6 +521,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -469,14 +534,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "40.00"
-    title: "Parsed data from MySpace Real-time Stream: February 26, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "120.00"
+    title: "MySpace Real-time Stream: Parsed data from February 26, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 28, 2010.
+    cached_score:       110
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100226/20100226_day_parsed.bz2"
@@ -489,6 +556,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -498,14 +569,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "40.00"
-    title: "Parsed data from MySpace Real-time Stream: February 27, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "120.00"
+    title: "MySpace Real-time Stream: Parsed data from February 27, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 29, 2010.
+    cached_score:       110
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100227/20100227_day_parsed.bz2"
@@ -518,6 +591,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -527,14 +604,16 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "40.00"
-    title: "Parsed data from MySpace Real-time Stream: February 28, 2010"
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "120.00"
+    title: "MySpace Real-time Stream: Parsed data from February 28, 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
     subtitle: This data expires on March 30, 2010.
+    cached_score:       110
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/20100228/20100228_day_parsed.bz2"
@@ -547,6 +626,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -556,13 +639,15 @@
     categories: 
     - "computers-socialnetworks"
     description: This data comes from MySpace's real-time stream API.  It contains most all fields and data offered by the stream, parsed and packaged for a full day.  Users of this dataset must agree to the MySpace developer agreement upon checkout.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "10.00"
-    title: Cumulative word count from MySpace API from Dec 2009 to March 2010
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace User Activity Stream: Cumulative word count from from Dec 2009 to March 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       200
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/word_count_cumulative_20100222-20100307.bz2"
@@ -621,6 +706,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -634,13 +723,15 @@
     - "computers-socialnetworks"
     - Linguistics
     description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their aggregated totals.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "50.00"
-    title: Word count by day from MySpace API from December 2009-March 2010
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace User Activity Stream: Word count by day from December 2009-March 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       210
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/word_count_by_day_20100222-20100307.bz2"
@@ -755,6 +846,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -768,13 +863,15 @@
     - "computers-socialnetworks"
     - Linguistics
     description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their totals binned by day.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
     price: "100.00"
-    title: Word count by hour from MySpace API from December 2009-March 2010
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    title: "MySpace User Activity Stream: Word count by hour from December 2009-March 2010"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       210
+    rating:             4
     packages:
       - kind: s3
         path: "data/social/network/myspace/word_count_by_hour_20100222-20100307.bz2"
@@ -888,6 +985,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -901,13 +1002,15 @@
     - "computers-socialnetworks"
     - Linguistics
     description: This data is derived from the MySpace real-time stream API.  The word count is from the free-form text fields MySpace moods, forum topic titles, replies to forum topics, text from sharing a link or item, and status mood updates.  For the last three months the words from these fields has been extracted and this dataset contains their totals binned by hour.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "10.00"
-    title: User count by zip code from MySpace API
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "240.00"
+    title: "MySpace User Activity Stream: User count by zip code"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       215
+    rating:             4
     packages:
       - kind: s3
         path: "data/pkgd/social/network/myspace/users/users_by_zip.bz2"
@@ -946,6 +1049,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -960,13 +1067,15 @@
     - "computers-socialnetworks"
     - geography
     description: "This data is derived from the MySpace real-time stream API.  It contains all users in our dataset, around 11 million, with well-formed zip codes.  "
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "10.00"
-    title: User count by lat/long from MySpace API
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    price: "300.00"
+    title: "MySpace User Activity Stream: User count by lat/long"
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       215
+    rating:             4
     packages:
       - kind: s3
         path: "data/pkgd/social/network/myspace/users/users_by_lat_lon.bz2"
@@ -992,6 +1101,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -1006,14 +1119,16 @@
     - "computers-socialnetworks"
     - geography
     description: This data is derived from the MySpace real-time stream API.  It contains all users in our dataset, around 11 million, with well-formed latitude/longitude.
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "50.00"
-    title: MySpace application adds by zip code
+    price: "25.00"
+    title: "MySpace User Activity Stream: MySpace application adds by zip code"
     subtitle: December 2009 - February 2010
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       150
+    rating:             4
     packages:
       - kind: s3
         path: "data/pkgd/social/network/myspace/application_adds/application_add_by_zip.bz2"
@@ -1053,6 +1168,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -1069,15 +1188,17 @@
     - "computers-socialnetworks"
     - geography
     description: "This data is derived from the MySpace real-time stream API.  It counts MySpace application adds by users aggregated by ZIP code.  ZIP codes are user-supplied on MySpace, so there are many errors."
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 
 - dataset: 
-    price: "70.00"
-    title: MySpace application adds by date
+    price: "25.00"
+    title: "MySpace User Activity Stream: MySpace application adds by date"
     subtitle: December 2009 - February 2010
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       90
+    rating:             4
     packages:
       - kind: s3
         path: "data/pkgd/social/network/myspace/application_adds/application_add_by_day.bz2"
@@ -1110,6 +1231,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -1122,14 +1247,16 @@
     - "computers-socialnetworks"
     - geography
     description: "This data is derived from the MySpace real-time stream API.  It counts MySpace application adds by users aggregated by date."
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
 
 - dataset: 
-    price: "70.00"
-    title: MySpace application counts
+    price: "10.00"
+    title: "MySpace User Activity Stream: MySpace application counts"
     subtitle: December 2009 - February 2010
-    license: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    license_title: MySpace Apps Developer Addendum to MySpace.com Terms of Use Agreement
+    cached_score:       95
+    rating:             4
     packages:
       - kind: s3
         path: "data/pkgd/social/network/myspace/application_adds/application_add_count.bz2"
@@ -1154,6 +1281,10 @@
     tags: 
     - myspace
     - socialnetworks
+    - social
+    - network
+    - networks
+    - activity
     - realtime
     - stream
     - tsv
@@ -1166,8 +1297,5 @@
     - "computers-socialnetworks"
     - geography
     description: "This data is derived from the MySpace real-time stream API.  It counts total MySpace application adds by users during the period from December, 2009 to February, 2010."
-    collection: MySpace Real-Time Stream
+    collection_title: MySpace Real-Time Stream
     owner: MonkeyWrenchConsultancy
-
-
-
