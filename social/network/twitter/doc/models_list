@@ -1,0 +1,162 @@
+Relationship models:
+  
+  AFollowsB
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+    
+  AFavoritesB
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,              Integer]
+
+  ARepliesB
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,              Integer]
+  -- [:in_reply_to_tweet_id,  Integer]
+
+  ARepliesBName        
+  -- [:user_a_name,           String]
+  -- [:user_b_name,           String]
+  -- [:tweet_id,              Integer]
+  -- [:in_reply_to_tweet_id,  Integer]
+  -- [:user_a_sid,            Integer]
+  -- [:user_b_sid,            Integer]
+
+  AAtsignsB            
+  -- [:user_a_id,              Integer]
+  -- [:user_b_name,            String]
+  -- [:tweet_id,              Integer]
+
+  AAtsignsBId          
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,              Integer]
+
+  AAtsignsBName        
+  -- [:user_a_name,           String]
+  -- [:user_b_name,           String]
+  -- [:tweet_id,              Integer]
+  -- [:user_a_sid,            Integer]
+
+  ARetweetsB  
+  -- [:user_a_id,              Integer]
+  -- [:user_b_name,            String]
+  -- [:tweet_id,              Integer]
+  -- [:please_flag,            Integer]
+
+  ARetweetsBId  
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
+  -- [:please_flag,            Integer]
+
+  ARetweetsBName  
+  -- [:user_a_name,           String]
+  -- [:user_b_name,           String]
+  -- [:tweet_id,              Integer]
+  -- [:please_flag,           Integer]
+  -- [:user_a_sid,            Integer]
+
+
+Tweet Models:
+
+  Tweet 
+  -- [:id,                      Integer     ]
+  -- [:created_at,              Bignum      ]
+  -- [:twitter_user_id,         Integer     ]
+  -- [:favorited,               Integer     ]
+  -- [:truncated,               Integer     ]
+  -- [:in_reply_to_user_id,     Integer     ]
+  -- [:in_reply_to_status_id,   Integer     ]
+  -- [:text,                    String      ]
+  -- [:source,                  String      ]
+  -- [:in_reply_to_screen_name, String      ]
+
+  DeleteTweet 
+  -- [:id,                      Integer     ]
+  -- [:created_at,              Bignum      ]
+  -- [:twitter_user_id,         Integer     ]
+      
+  SearchTweet 
+  -- [:id,                       Integer  ]
+  -- [:created_at,               Bignum   ]
+  -- [:twitter_user_id,          Integer  ]
+  -- [:favorited,                Integer  ]
+  -- [:truncated,                Integer  ]
+  -- [:in_reply_to_user_id,      Integer  ]
+  -- [:in_reply_to_status_id,    Integer  ]
+  -- [:text,                     String   ]
+  -- [:source,                   String   ]
+  -- [:in_reply_to_screen_name,  String   ]
+  -- [:in_reply_to_sid,          Integer  ]
+  -- [:twitter_user_screen_name, String   ]
+  -- [:twitter_user_sid,         Integer  ]
+  -- [:iso_language_code,        String   ]
+
+User Models:
+
+  TwitterUser        
+  -- [:id,                     Integer]
+  -- [:scraped_at,             Bignum]
+  -- [:screen_name,            String]
+  -- [:protected,              Integer]
+  -- [:followers_count,        Integer]
+  -- [:friends_count,          Integer]
+  -- [:statuses_count,         Integer]
+  -- [:favourites_count,       Integer]
+  -- [:created_at,             Bignum]
+  
+  TwitterUserPartial 
+  -- [:id,                     Integer]       
+  -- [:scraped_at,             Bignum]
+  -- [:screen_name,            String]
+  -- [:protected,              Integer]
+  -- [:followers_count,        Integer]
+  -- [:name,                   String]        
+  -- [:url,                    String]
+  -- [:location,               String]
+  -- [:description,            String]
+  -- [:profile_image_url,      String]         
+  
+  TwitterUserProfile 
+  -- [:id,                     Integer]
+  -- [:scraped_at,             Bignum]
+  -- [:name,                   String]
+  -- [:url,                    String]
+  -- [:location,               String]
+  -- [:description,            String]
+  -- [:time_zone,              String]
+  -- [:utc_offset,             String]
+  
+  TwitterUserStyle   
+  -- [:id,                             Integer]
+  -- [:scraped_at,                     Bignum]
+  -- [:profile_background_color,       String]
+  -- [:profile_text_color,             String]
+  -- [:profile_link_color,             String]
+  -- [:profile_sidebar_border_color,   String]
+  -- [:profile_sidebar_fill_color,     String]
+  -- [:profile_background_tile,        String]
+  -- [:profile_background_image_url,   String]
+  -- [:profile_image_url,              String]
+  
+  TwitterUserId      
+  -- [:id,                     Integer]
+  -- [:scraped_at,             Bignum]
+  -- [:screen_name,            String]
+  -- [:protected,              Integer]
+  -- [:followers_count,        Integer]
+  -- [:friends_count,          Integer]
+  -- [:statuses_count,         Integer]
+  -- [:favourites_count,       Integer]
+  -- [:created_at,             Bignum ]
+  -- [:sid,                    Integer]
+  -- [:is_full,                Integer]
+  -- [:health,                 String]
+  
+  TwitterUserSearchId 
+  -- [:screen_name,            String]
+  -- [:sid,                    Integer]
+  -- [:id,                     Integer]
+  
