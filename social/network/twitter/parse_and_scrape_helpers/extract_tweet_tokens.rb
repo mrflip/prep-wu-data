@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'rubygems'
 require 'extlib/class'
 require 'wukong'                       ; include Wukong
 require 'wuclan/twitter'               ; include Wuclan::Twitter::Model
