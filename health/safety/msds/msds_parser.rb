@@ -46,11 +46,11 @@ class Msds_Parser
   end
 end
 
-filename = ARGV[0]
-data = File.open(filename, 'r')
-prsr = Msds_Parser.new
-prsr.read( File.readlines(filename).reverse )
-prsr.sheet.each{ |k,v| puts "#{k} => #{v}" }
+# filename = ARGV[0]
+# data = File.open(filename, 'r')
+# prsr = Msds_Parser.new
+# prsr.read( File.readlines(filename).reverse )
+# prsr.sheet.each{ |k,v| puts "#{k} => #{v}" }
 
 # 4  ======================================================================
 #    929 ==================  Accidental Release Measures  ==================
@@ -70,3 +70,12 @@ prsr.sheet.each{ |k,v| puts "#{k} => #{v}" }
 #    957 =================  Stability and Reactivity Data  =================
 #      3 ===================  Toxicological Information	===================
 
+data = File.readlines(ARGV[0])
+data_lines = data.join.gsub(/<[^<>]+>/, "").split(/\={4}+/).map{|line| line.gsub(/^\d{1,2}\./, "").strip }
+keys = data.join.gsub(/<[^<>]+>/, "").grep(/\={4}+([^\=]+)\={4}+/).join.gsub(/\=+/, "").split("\n").map{|line| line.gsub(/^\d{1,2}\./, "").strip }
+data_hash = keys.inject({}) do |h,x|
+  idx = data_lines.find_index(x)
+  h[x] = data_lines[idx+1]
+  h
+end
+data_hash.each{|k,v| puts "#{k} => #{v}\n\n\n\n\n\n" }
