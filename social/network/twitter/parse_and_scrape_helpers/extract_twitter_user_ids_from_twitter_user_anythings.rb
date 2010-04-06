@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+require 'rubygems'
 require 'extlib/class'
 require 'wukong'
 require 'wuclan/twitter'
