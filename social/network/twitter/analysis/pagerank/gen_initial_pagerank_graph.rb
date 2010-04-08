@@ -16,13 +16,22 @@ def gen_initial_pagerank_graph_mapper
   end
 end
 
+#Fixme....20100407
+def test_mapper
+  $stdin.each do |line|
+    line.chomp!
+    key, user_a_id, user_b_id, *rest = line.split "\t"
+    warn "Ill-formed #{line}"      if user_b_id.empty?
+    puts [user_a_id, key, user_b_id].join("\t")
+  end
+end
 
 # emit relationship for heretrix pagerank code
 def emit_initial_pagerank src, dests
   if !dests || dests.empty?
     dests = ['dummy']
   end
-  destlist = dests.join(",") 
+  destlist = dests.join(",")
   puts [src, 1.0, destlist].join("\t")
 end
 
@@ -57,9 +66,11 @@ def gen_initial_pagerank_graph_reducer
 end
 
 case ARGV[0]
-when '--map'    then gen_initial_pagerank_graph_mapper
+
+when '--map'    then test_mapper
+# when '--map'    then gen_initial_pagerank_graph_mapper
 when '--reduce' then gen_initial_pagerank_graph_reducer
-when '--runme'  then 
+when '--runme'  then
   slug = Time.now.strftime("%Y%m%d")
   input_files, output_dir = ARGV[1..2]
   raise "You need to specify a parsed input directory and a directory for the initial pagerank file: got #{ARGV.inspect}" if input_files.empty? || output_dir.empty?
@@ -69,7 +80,7 @@ when '--runme'  then
   %x{ hdp-stream '#{input_files}' '#{output_dir}' '#{mapred_script} --map' '#{mapred_script} --reduce' 2 }
   %x{ hdp-cp     '#{dummy_file}'  '#{output_dir}' }
 
-else raise %Q{ 
+else raise %Q{
   Need to specify an argument: --run_me, --map or --reduce
   You probably want to say
     ./pagerank/gen_initial_pagerank_graph.rb --runme out/20081220-sorted-uff  mid/20081220-pagerank_init.tsv
