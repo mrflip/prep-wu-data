@@ -20,7 +20,8 @@ require 'wukong'
 #   twitter_search_request-http     http    1        {}     http://search.twitter.com/search.json?q=http&rpp=100    20090929232555  200     OK      {"results":[{"profile
 
 class RawRequestsMetadataMapper < Wukong::Streamer::RecordStreamer
-  def process rsrc, *args
+  def process rsrc=nil, *args
+    return unless rsrc
     rsrc.gsub!(/-.*/, '')
     case
     when rsrc == 'twitter_search_request' && args[0] =~ %r{^http://search\.twitter\.com/search\.json\?q=(.+)&rpp}

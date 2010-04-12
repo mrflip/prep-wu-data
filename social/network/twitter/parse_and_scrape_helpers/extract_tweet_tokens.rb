@@ -26,9 +26,9 @@ module ExtractTweetTokens
         tweet.retweets   &block
         tweet.replies    &block
         tweet.atsigns    &block
-        # tweet.hashtags   &block
-        # tweet.smileys    &block
-        # tweet.tweet_urls &block
+        tweet.hashtags   &block
+        tweet.smileys    &block
+        tweet.tweet_urls &block
       else return
       end
     end
