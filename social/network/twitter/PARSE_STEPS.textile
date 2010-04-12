@@ -1,0 +1,6 @@
+
+
+./extract_twitter_user_ids_from_twitter_user_anythings.rb --rm --run \
+  /data/rawd/social/network/twitter/objects/twitter_user\*,/data/rawd/social/network/twitter/objects/a_follows_b,/data/rawd/social/network/twitter/objects/tweet \
+  /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids &
+hdp-catd /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids > /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids.tsv &

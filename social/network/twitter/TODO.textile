@@ -1,5 +1,58 @@
+Search files in api dirs: 20090717, 20091119 - 20091127
+
+
+===========================================================================
 
 
 * get rid of zero-padding EVERYWHERE
-
 * get userids from everything
+* geodata 
+* [user_id, screen_name, search_id, num_followers, protected, bogus_flag, user_last_seen_at, following_last_scraped_at]
+
+
+* twitter search scraper => Resque
+
+* solr/lucene for searching tweets?
+
+
+1 GB, 10 GB, 100 GB:
+* grep tweets using ruby
+* grep tweets using perl
+* grep tweets using egrep
+* grep tweets using pig
+
+
+===========================================================================
+
+* Stock mentions
+* Page rank
+* Brand mentions
+
+                        	Records    Size         Stored.Size    t Cat         t Parse
+Scraped API     201001          .
+Scraped Search  201001          .
+Scraped Stream  201001		.
+
+Parsed  API     201001		.
+Parsed  Search  201001		.
+Parsed  Stream  201001		.
+
+Uniqd	search_tweet         	.
+Uniqd	tweet                   .
+Uniqd	a_favorites_b           .
+Uniqd	a_follows_b             .
+Uniqd	a_replies_b_name        .
+.
+Uniqd	twitter_user            .
+Uniqd	twitter_user_id         .
+Uniqd	twitter_user_partial    .
+Uniqd	twitter_user_profile    .
+Uniqd	twitter_user_search_id  .
+Uniqd	twitter_user_style      .
+
+
+
+
+
+
+
