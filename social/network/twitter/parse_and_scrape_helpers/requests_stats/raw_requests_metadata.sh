@@ -5,6 +5,8 @@
 # Twitter API requests after 200908*:
 #   twitter_user_request    25117369        1               http://twitter.com/users/show/25117369.json     20090801012103  200     OK      {"following":false,"
 
+# Twitter API requests in 200911 seem to have -xxxx on rsrc part
+
 # hdp-rm -r /data/rawd/social/network/twitter/scrape_stats/requests_metadata/raw_api_v1_requests_metadata ;
 # /usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar                          \
 #     -mapper      "cut -d'	' -f1,2,3,6,7"                                                                   \
