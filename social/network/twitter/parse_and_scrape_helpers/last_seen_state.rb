@@ -69,7 +69,6 @@ if $0 == __FILE__
   Wukong::Script.new(
     nil,
     LastSeenStateUniqer,
-    :map_command      => '/bin/cat',
     :partition_fields => 2,
     :sort_fields      => 3
     ).run

@@ -1,0 +1,5 @@
+
+
+* get rid of zero-padding EVERYWHERE
+
+* get userids from everything
