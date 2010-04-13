@@ -33,7 +33,7 @@ From
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTPUT       '/home/doncarlo/bgcolor_count';
+%default OUTPUT       '/data/pkgd/social/network/twitter/bgcolor_count';
 %default USER_STYLE   '/data/rawd/social/network/twitter/objects/twitter_user_style';
 
 UserStyle        = LOAD '$USER_STYLE' AS (rsrc:chararray, id:long,
