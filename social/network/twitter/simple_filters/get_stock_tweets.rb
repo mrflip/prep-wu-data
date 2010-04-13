@@ -17,7 +17,7 @@ module StockTweets
        return unless (obj.is_a?(Tweet) || obj.is_a?(SearchTweet))
        if obj.text =~ /\$\$+|\$[a-zA-Z\:\^\.\_]+/
          obj.text.scan(/\$\$+|\$[a-zA-Z\:\^\.\_]+/).each do |stock_symbol|
-           yield ['stock_tweet',stock_symbol,obj.text]
+           yield ['stock_tweet',stock_symbol,obj.to_flat].flatten
          end
        end
      end
