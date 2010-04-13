@@ -71,15 +71,41 @@ twitter_user_partials
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTPUT '/home/jacob/users_by_followers_count'
-%default USER '/data/fixd/social/network/twitter/models/twitter_user';
+%default OUTMTH '/data/pkgd/social/network/twitter/users_by_month_created'
+%default OUTDAY '/data/pkgd/social/network/twitter/users_by_day_created'
+%default OUTHR '/data/pkgd/social/network/twitter/users_by_hour_created'
+%default USER '/data/rawd/social/network/twitter/objects/twitter_user';
 
-AllUser = LOAD '$USER' AS (rsrc:chararray, id:long, scraped_at:long, screen_name:chararray, protected:long, followers_count:long, friends_count:long, statuses_count:long, favourites_count:long, created_at:long);
-TwitterUser = FOREACH AllUser GENERATE id, created_at;
-UserWCreatedAt = FILTER TwitterUser BY created_at IS NOT NULL;
+AllUser = LOAD '$USER' AS (rsrc:chararray, id:long, scraped_at:long, 
+                           screen_name:chararray, protected:long, 
+                           followers_count:long, friends_count:long, 
+                           statuses_count:long, favourites_count:long, created_at:chararray);
 
-CreatedAtGroup = GROUP UserWCreatedAt BY created_at;
-CreatedAtCount = FOREACH CreatedAtGroup GENERATE group, COUNT(UserWCreatedAt);
+TwitterUserMth = FOREACH AllUser GENERATE id, org.apache.pig.piggybank.evaluation.string.SUBSTRING(created_at, 0, 6) AS created_at;
+UserMthCreatedAt = FILTER TwitterUserMth BY created_at IS NOT NULL;
 
-rmf $OUTPUT;
-STORE CreatedAtCount INTO '$OUTPUT';
+CreatedAtMthGroup = GROUP UserMthCreatedAt BY created_at;
+CreatedAtMthCount = FOREACH CreatedAtMthGroup GENERATE group, COUNT(UserMthCreatedAt);
+
+rmf $OUTMTH;
+STORE CreatedAtMthCount INTO '$OUTMTH';
+
+
+TwitterUserDay = FOREACH AllUser GENERATE id, org.apache.pig.piggybank.evaluation.string.SUBSTRING(created_at, 0, 8) AS created_at;
+UserDayCreatedAt = FILTER TwitterUserDay BY created_at IS NOT NULL;
+
+CreatedAtDayGroup = GROUP UserDayCreatedAt BY created_at;
+CreatedAtDayCount = FOREACH CreatedAtDayGroup GENERATE group, COUNT(UserDayCreatedAt);
+
+rmf $OUTDAY;
+STORE CreatedAtDayCount INTO '$OUTDAY';
+
+
+TwitterUserHr = FOREACH AllUser GENERATE id, org.apache.pig.piggybank.evaluation.string.SUBSTRING(created_at, 0, 10) AS created_at;
+UserHrCreatedAt = FILTER TwitterUserHr BY created_at IS NOT NULL;
+
+CreatedAtHrGroup = GROUP UserHrCreatedAt BY created_at;
+CreatedAtHrCount = FOREACH CreatedAtHrGroup GENERATE group, COUNT(UserHrCreatedAt);
+
+rmf $OUTHR;
+STORE CreatedAtHrCount INTO '$OUTHR';
