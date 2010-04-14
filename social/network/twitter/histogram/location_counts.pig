@@ -30,7 +30,7 @@ TwitterUserPartial
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTPUT '/data/pkgd/social/network/twitter/users_by_location'
+%default OUTPUT '/data/rawd/social/network/twitter/census/users_by_location'
 %default USER_PROFILE '/data/rawd/social/network/twitter/objects/twitter_user_profile';
 %default USER_PARTIAL '/data/rawd/social/network/twitter/objects/twitter_user_partial';
 

@@ -71,9 +71,9 @@ twitter_user_partials
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTMTH '/data/pkgd/social/network/twitter/users_by_month_created'
-%default OUTDAY '/data/pkgd/social/network/twitter/users_by_day_created'
-%default OUTHR '/data/pkgd/social/network/twitter/users_by_hour_created'
+%default OUTMTH '/data/rawd/social/network/twitter/census/users_by_month_created'
+%default OUTDAY '/data/rawd/social/network/twitter/census/users_by_day_created'
+%default OUTHR '/data/rawd/social/network/twitter/census/users_by_hour_created'
 %default USER '/data/rawd/social/network/twitter/objects/twitter_user';
 
 AllUser = LOAD '$USER' AS (rsrc:chararray, id:long, scraped_at:long, 
