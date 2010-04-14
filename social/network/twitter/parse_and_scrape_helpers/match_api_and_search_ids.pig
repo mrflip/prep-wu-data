@@ -1,6 +1,4 @@
 
--- %default REDUCERS 5;
-
 TwitterUserId = LOAD '/data/rawd/social/network/twitter/scrape_stats/twitter_user_ids' AS (
   rsrc:             chararray,
   id:               long,
@@ -26,7 +24,6 @@ TwitterUserSearchId     = LOAD '/data/rawd/social/network/twitter/objects/twitte
 MatchedIds_0 = JOIN
   TwitterUserSearchId BY screen_name FULL OUTER,
   TwitterUserId       BY screen_name
-  -- PARALLEL $REDUCERS
   ;
 
 DESCRIBE    MatchedIds_0;
@@ -53,7 +50,6 @@ DESCRIBE    MatchedIds_1 ;
 
 MatchedIds_2 = ORDER MatchedIds_1
   BY rsrc, followers_count DESC, id ASC, sid ASC 
-  -- PARALLEL $REDUCERS
   ;
 
 rmf                      /data/rawd/social/network/twitter/objects/twitter_user_id_matched ;
@@ -84,7 +80,7 @@ STORE MatchedIds_2 INTO '/data/rawd/social/network/twitter/objects/twitter_user_
 --   sid
 --   ;
 -- MatchedIds_5 = ORDER MatchedIds_4
---   BY rsrc, followers_count DESC, id ASC, sid ASC PARALLEL $REDUCERS
+--   BY rsrc, followers_count DESC, id ASC, sid ASC
 --   ;
 -- rmf                      fixd/tw/meta/twitter_user_id_mapping ;
 -- STORE MatchedIds_5 INTO 'fixd/tw/meta/twitter_user_id_mapping';
