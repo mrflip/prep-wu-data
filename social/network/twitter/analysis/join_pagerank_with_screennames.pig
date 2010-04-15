@@ -16,12 +16,12 @@ MatchedIds = LOAD '/data/rawd/social/network/twitter/objects/twitter_user_id_mat
 
 Rank = LOAD '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_only' AS (
   user_id:              long,
-  pagerank:             float,
+  pagerank:             float
   ) ;
 
 RankWScreenNames = JOIN Rank BY user_id, MatchedIds BY id;
 
-OutputTweets = FOREACH TweetsWScreenNames GENERATE
+OutputTweets = FOREACH RankWScreenNames GENERATE
 
   MatchedIds::screen_name               AS screen_name,
   MatchedIds::id                        AS user_id,
@@ -33,4 +33,4 @@ OutputTweets = FOREACH TweetsWScreenNames GENERATE
   ;
 
 rmf                      /data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile;
-STORE TweetsWScreenNames INTO '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile';
+STORE OutputTweets INTO '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile';
