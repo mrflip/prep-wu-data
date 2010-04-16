@@ -12,3 +12,45 @@ hdp-catd /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids > /data
     * extract_twitter_user_ids_from_twitter_user_anythings.rb -- look for every api user_id that's ever been seen and merge it into one big list (for feeding back into scrapers later).  Was run over everything but the a_follows_b models. Data in /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids on the HDFS and in /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids.tsv on gibbon master.
     * raw, un-uniqd data is in /data/rawd/social/network/twitter/parsed/\*/\*
 
+* Run the parse.
+  --------------
+ i. Data location
+ 
+ - the fresh, unparsed and bzipped, (ripd) data lives in the following place:
+ -- s3://monkeyshines.infochimps.org/data/ripd/com.tw/
+ - there you will find 3 separate 'directories' corresponding to the 3 different
+   types of API calls we can make, and thus, 3 different kinds of twitter data
+   we can scrape. These directories are:
+ -- com.twitter.search
+ -- com.twitter.stream
+ -- com.twitter
+ - lastly, you'll want to take note of the date the data was last parsed and only
+   parse data newer than that
+
+ ii. Script location
+ 
+ - there are 3 scripts, one for each type of API call, for running the parse called:
+ -- parse_twitter_search_requests.rb
+ -- parse_twitter_stream_requests.rb
+ -- parse_twitter_requests.rb
+
+ iii. Output location
+ 
+ - currently we would like the parsed data to live in the following places on the hdfs:
+ -- /data/rawd/social/network/twitter/parsed/search
+ -- /data/rawd/social/network/twitter/parsed/stream
+ -- /data/rawd/social/network/twitter/parsed/api
+ - if these directories do not already exist you'll want to make them. from the cluster:
+ -- hdp-mkdir /data/rawd/social/network/twitter/parsed/search
+ -- hdp-mkdir /data/rawd/social/network/twitter/parsed/stream
+ -- hdp-mkdir /data/rawd/social/network/twitter/parsed/api
+
+ iv. Run command
+
+ - now that we have everything together we can run the parse. from the master node run:
+ 
+ -- ./parse_twitter_search_requests.rb --rm --run  s3://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter.search/date_or_dates_to_parse /data/rawd/social/network/twitter/parsed/search
+ -- ./parse_twitter_stream_requests.rb --rm --run  s3://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter.stream/date_or_dates_to_parse /data/rawd/social/network/twitter/parsed/stream
+ -- ./parse_twitter_requests.rb --rm --run  s3://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/date_or_dates_to_parse /data/rawd/social/network/twitter/parsed/api
+ 
+ - that will take reasonably long amount of time (if nothing fails) so you'll want to go do something else...
