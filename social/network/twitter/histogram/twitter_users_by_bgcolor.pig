@@ -33,15 +33,15 @@ From
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTPUT       '/home/jacob/users_by_followers_count';
-%default USER_STYLE   '/data/fixd/social/network/twitter/models/twitter_user';
+%default OUTPUT       '/data/rawd/social/network/twitter/census/bgcolor_count';
+%default USER_STYLE   '/data/rawd/social/network/twitter/objects/twitter_user_style';
 
 UserStyle        = LOAD '$USER_STYLE' AS (rsrc:chararray, id:long,
                                           scraped_at:long, profile_background_color:chararray,
                                           profile_text_color:chararray, profile_link_color:chararray,
                                           profile_link_color:chararray, profile_sidebar_border_color:chararray,
-                                          profile_sidebar_fill_color:charray, profile_background_tile:chararray,
-                                          profile_background_image_url:charray, profile_image_url:chararray)
+                                          profile_sidebar_fill_color:chararray, profile_background_tile:chararray,
+                                          profile_background_image_url:chararray, profile_image_url:chararray);
                                         
 TwitterUserStyle = FOREACH UserStyle GENERATE id, profile_background_color;
 UserWBgColor     = FILTER TwitterUserStyle BY profile_background_color IS NOT NULL;

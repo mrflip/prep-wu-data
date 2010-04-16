@@ -30,9 +30,9 @@ TwitterUserPartial
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTPUT '/home/jacob/users_by_followers_count'
-%default USER_PROFILE '/data/fixd/social/network/twitter/models/twitter_user';
-%default USER_PARTIAL '/data/fixd/social/network/twitter/models/twitter_user';
+%default OUTPUT '/data/rawd/social/network/twitter/census/users_by_location'
+%default USER_PROFILE '/data/rawd/social/network/twitter/objects/twitter_user_profile';
+%default USER_PARTIAL '/data/rawd/social/network/twitter/objects/twitter_user_partial';
 
 --
 -- User profiles with location names
@@ -42,6 +42,7 @@ AllUserProfile     = LOAD '$USER_PROFILE' AS (rsrc:chararray, id:long,
                                               url:chararray, location:chararray,
                                               description:chararray, time_zone:chararray,
                                               utc_offset:chararray);
+
 TwitterUserProfile = FOREACH AllUserProfile GENERATE id, location;
 ProfileWLocation   = FILTER TwitterUserProfile BY location IS NOT NULL;
 
@@ -54,6 +55,7 @@ AllUserPartial     = LOAD '$USER_PARTIAL' AS (rsrc:chararray, id:long,
                                               name:chararray, url:chararray,
                                               location:chararray, description:chararray,
                                               profile_image_url:chararray);
+
 TwitterUserPartial = FOREACH AllUserPartial GENERATE id, location;
 PartialWLocation   = FILTER TwitterUserPartial BY location IS NOT NULL;
 

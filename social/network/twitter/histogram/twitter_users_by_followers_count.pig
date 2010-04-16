@@ -71,10 +71,12 @@ twitter_user_partials
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTPUT '/home/jacob/users_by_followers_count'
-%default USER   '/data/fixd/social/network/twitter/models/twitter_user';
+%default OUTPUT '/data/rawd/social/network/twitter/census/users_by_followers_count'
+%default USER   '/data/rawd/social/network/twitter/objects/twitter_user';
 
-AllUser       = LOAD '$USER' AS (rsrc:chararray, id:long, scraped_at:long, screen_name:chararray, protected:long, followers_count:long, friends_count:long, statuses_count:long, favourites_count:long, created_at:long);
+AllUser       = LOAD '$USER' AS (rsrc:chararray, id:long, scraped_at:long, screen_name:chararray, protected:long, 
+                                 followers_count:long, friends_count:long, statuses_count:long, favourites_count:long, created_at:long);
+
 TwitterUser   = FOREACH AllUser GENERATE id, followers_count;
 UserWFollower = FILTER TwitterUser BY followers_count IS NOT NULL;
 

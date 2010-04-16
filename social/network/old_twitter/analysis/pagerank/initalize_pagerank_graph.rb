@@ -3,6 +3,30 @@
 require 'set'
 require 'pathname'
 
+require 'rubygems'
+require 'wukong'
+
+
+module PageRank
+  class Mapper < Wukong::Streamer::Base
+    attr_accessor :keys_count
+    def initialize *args
+      self.keys_count = {}
+    end
+    def process key, *args
+      key.gsub!(/-.*/, '')  # kill off the slug
+      self.keys_count[key] ||= 0
+      self.keys_count[key]  += 1
+    end
+    def stream *args
+      super *args
+      self.keys_count.each do |key, count|
+        emit [key, count].to_flat
+      end
+    end
+  end
+
+end
 #
 # Launch each relation towards each of its stakeholders,
 # who will aggregate them in the +reduce+ phase
