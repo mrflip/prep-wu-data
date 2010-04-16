@@ -140,7 +140,7 @@ class DatasetYAML
   end
 
   def missing_data_pointer?
-    return true unless main_link or upload files
+    return true unless main_link or upload_files
     false
   end
   
@@ -172,7 +172,7 @@ class DatasetYAML
     @@dataset_arry.first['dataset']['cached_score'] = score unless score.nil?
     @@dataset_arry.first['dataset']['rating'] = rating unless rating.nil?
     @@dataset_arry.first['dataset']['records_count'] = records_count unless records_count.nil?
-    @@dataset_arry.first['dataset']['protected'] = protected unless protected.nil  
+    @@dataset_arry.first['dataset']['protected'] = protected unless protected.nil?
     @@dataset_arry    
   end
   
