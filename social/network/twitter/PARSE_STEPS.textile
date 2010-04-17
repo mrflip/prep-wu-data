@@ -33,6 +33,8 @@ hdp-catd /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids > /data
  -- parse_twitter_search_requests.rb
  -- parse_twitter_stream_requests.rb
  -- parse_twitter_requests.rb
+ - These scripts are part of wuclan and live:
+ -- wuclan/examples/twitter/parse
 
  iii. Output location
  
@@ -54,3 +56,113 @@ hdp-catd /data/rawd/social/network/twitter/scrape_stats/twitter_user_ids > /data
  -- ./parse_twitter_requests.rb --rm --run  s3://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/date_or_dates_to_parse /data/rawd/social/network/twitter/parsed/api
  
  - that will take reasonably long amount of time (if nothing fails) so you'll want to go do something else...
+
+
+* Split out objects by resource name and uniq immutable objects
+
+ The goal of this step is to take the immutable objects (ie. TwitterUserId) we have, both from
+ previous parses and the current parse, merge them, uniq them, and land them in individual locations.
+ 
+ i. Data location
+
+ - There are two places to be concerned with here:
+ -- /data/rawd/social/network/twitter/objects
+ -- /data/rawd/social/network/twitter/parsed/*
+
+ ii. Script location
+
+ - At the moment there isn't a great script to accomplish this. Until the
+   'moist unsplicer' can be made to work correctly this will have to be done
+   using:
+ -- <something that needs to be written>
+ - This script can be found in infochimps-data under:
+ -- infochimps-data/social/network/twitter/parse_and_scrape_helpers/unsplice_by_grep_uniq/
+
+ iii. Output location
+
+ - Every object should get its own folder under
+ -- /data/rawd/social/network/twitter/objects
+
+ iv. Run command
+
+ - Until we have a good script to do this there really isn't a single command to run. Instead,
+   the result of this step should be many directories on the hdfs under:
+ -- /data/rawd/social/network/twitter/objects
+
+ v. Example
+ 
+ - Take the tweet objects as an example. We will have tweets already existing in:
+ -- /data/rawd/social/network/twitter/objects/tweet
+ - First, move this out of the way using hdp-mv in the following way:
+ -- hdp-mv /data/rawd/social/network/twitter/objects/tweet /data/rawd/social/network/twitter/parsed/tweet
+ - Then, using the newly parsed objects and the tweets that have just been moved as inputs, run the
+   following:
+ -- ./unsplice_gu-tweet.sh
+ - This script will take both /data/rawd/social/network/twitter/parsed/tweet and /data/rawd/social/network/twitter/parsed/*,
+   search them for tweet objects (in the case of the already parsed data every line will contain a tweet object) and
+   uniq them. The data will end up at:
+ -- /data/rawd/social/network/twitter/objects/tweet
+
+ - THIS PART NEEDS WORK!
+
+* Uniq mutable objects by last seen state
+
+ The goal of this step is a set of directories containing all the mutable objects (ie. TwitterUser, TwitterUserPartial, etc)
+ uniqed by last seen state.
+
+ i. Data location 
+
+ - Here the location should simply be the output from the parse on the hdfs as well
+   as the current mutable object locations:
+ -- /data/rawd/social/network/twitter/parsed/*
+ -- /data/rawd/social/network/twitter/objects
+
+ ii. Script location
+ 
+ - The script for this lives in infochimps-data under:
+ -- infochimps-data/social/network/twitter/parse_and_scrape_helpers/last_seen_state.rb
+
+ iii. Output location
+
+ - The output of this step should be the same as the uniq immutable step:
+ -- /data/rawd/social/network/twitter/objects/<resource_name>
+ - Here <resource_name> should be replaced with the mutable objects resource name
+   in question.
+
+ iv. Run command
+
+ - From the master node run:
+
+ THIS PART NEEDS WORK!
+ 
+* Extract raw token and id objects
+
+ i. Data location
+
+ - Here the location should simply be the output from the parse on the hdfs:
+ -- /data/rawd/social/network/twitter/parsed/*
+
+ ii. Script location
+ - There are two scripts to accomplish this:
+ -- extract_twitter_user_ids_from_twitter_user_anythings.rb
+ -- extract_tweet_tokens.rb
+ - These scripts are part of infochimps-data and live:
+ -- infochimps-data/social/network/twitter/parse_and_scrape_helpers
+
+ iii. Output location
+
+ - The raw tweet tokens and user ids are neither split out by model, nor uniqued, and so they need to live:
+ -- /data/rawd/social/network/twitter/parsed/twitter_user_ids
+ -- /data/rawd/social/network/twitter/parsed/tweet_tokens
+
+ iv. Run command
+
+ - From the master node run:
+
+ -- ./extract_twitter_user_ids_from_twitter_user_anythings.rb ...
+
+ THIS PART NEEDS WORK!
+
+* Make data sets
+
+ Go!
