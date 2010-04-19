@@ -233,7 +233,7 @@ end
 # Packages
 #
 class PackageYAML
-  attr_accessor :kind, :path, :bucket, :fmt, :pkg_fmt, :pkg_size, :files, :records, :owner, :dataset, :upload_files
+  attr_accessor :kind, :path, :bucket, :fmt, :pkg_fmt, :pkg_size, :num_files, :records, :owner, :dataset, :upload_files
   
   def initialize *args
     return unless args
