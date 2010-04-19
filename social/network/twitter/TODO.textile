@@ -56,3 +56,5 @@ Uniqd	twitter_user_style      .
 
 
 
+Still need to extract a_favorites_b and twitter_search_id records.
+parse_and_scrape_helpers/requests_stats/raw_requests_metadata.rb -- the type, request info, page, date, and response code for each request. Data in    /data/rawd/social/network/twitter/scrape_stats/requests_metadata/raw_requests_metadata
