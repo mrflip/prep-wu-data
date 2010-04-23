@@ -47,7 +47,11 @@ company.each do |row|
     twitter_accounts = turk_result_hash[row['website']].split(",").map{|url| url.lstrip.gsub(/https?\:\/\/w?w?w?\.?twitter.com\/([^\/]+).*/,'\1')}.join(",")
     row[NETWORKS[Settings.network.downcase]] = twitter_accounts
   else
-    row[NETWORKS[Settings.network.downcase]] = turk_result_hash[row['website']]
+    network_url = turk_result_hash[row['website']] 
+    if network_url =~ /^[^https?\:\/\/]ww/
+      network_url = "http://" + network_url
+    end
+    row[NETWORKS[Settings.network.downcase]] = network_url
   end
   # p row
   output << row
