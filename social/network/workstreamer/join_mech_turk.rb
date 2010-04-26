@@ -56,9 +56,15 @@ output << company.readline if company.header_row?
 # Match the results from Mechanical Turk with the correct column in the company file.
 #   
 company.each do |row|
+  unless turk_result_hash.key?(row['website'])
+    Log.info "No changes to #{row['display_name']}'s #{Settings.network} website."
+    output << row
+    next
+  end
   if Settings.network.downcase == 'twitter'
     twitter_accounts = turk_result_hash[row['website']].split(",").map{|url| url.lstrip.gsub(/https?\:\/\/w?w?w?\.?twitter.com\/([^\/]+).*/,'\1')}.join(",")
     row[NETWORKS[Settings.network.downcase]] = twitter_accounts
+    Log.info "Setting #{row['display_name']}'s twitter accounts to #{twitter_accounts}."
   else
     network_url = turk_result_hash[row['website']] 
     if !(network_url =~ /^https?\:\/\//) && network_url.to_s.downcase != 'none' && !(network_url.nil?)
