@@ -23,12 +23,13 @@ RankWScreenNames = JOIN Rank BY user_id, MatchedIds BY id;
 
 OutputTweets = FOREACH RankWScreenNames GENERATE
 
-  MatchedIds::screen_name               AS screen_name,
+--  MatchedIds::screen_name               AS screen_name,
   MatchedIds::id                        AS user_id,
   Rank::pagerank                        AS pagerank,  
   MatchedIds::followers_count           AS followers_count,
-  MatchedIds::friends_count             AS friends_count,
-  MatchedIds::statuses_count            AS statuses_count,
+  (((double) MatchedIds::followers_count)/( (double) MatchedIds::friends_count) ) AS ratio,
+--  MatchedIds::friends_count             AS friends_count,
+--  MatchedIds::statuses_count            AS statuses_count,
   MatchedIds::created_at                AS created_at
   ;
 
