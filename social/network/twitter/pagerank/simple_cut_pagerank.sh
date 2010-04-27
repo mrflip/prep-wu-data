@@ -1,13 +1,23 @@
-B1;2c#!/usr/bin/env bash
+#!/usr/bin/env bash
+
+# Run it as
+#
+#   simple_cut_pagerank.sh OUTPUT_PATH INPUT_PATH
+#
+# INPUT_PATH should contain the full output of the pagerank iteration
+# script.
+
+OUTPUT_PATH=$1
+INPUT_PATH=$2
 
 script_dir=$(readlink -f `dirname $0`)
 
-hdp-rm -r /data/rawd/social/network/twitter/pagerank/a_replies_b_pagerank/pagerank_only
+hdp-rm -r $OUTPUT_PATH
 /usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar       \
   -D           mapred.reduce.tasks=200                                                       \
   -D           stream.num.map.output.key.fields="2"                                          \
   -mapper      "/usr/bin/cut -f1,2"                                                      \
   -reducer     "/usr/bin/uniq"                                                               \
-  -input       "/data/rawd/social/network/twitter/pagerank/a_replies_b_pagerank/pagerank_graph_010" \
-  -output      "/data/rawd/social/network/twitter/pagerank/a_replies_b_pagerank/pagerank_only"                             \
+  -input       "$INPUT_PATH" \
+  -output      "$OUTPUT_PATH"                             \
   -cmdenv       LC_ALL=C

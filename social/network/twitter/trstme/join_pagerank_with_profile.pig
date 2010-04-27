@@ -1,4 +1,10 @@
-MatchedIds = LOAD '/data/rawd/social/network/twitter/objects/twitter_user_id_matched' AS (
+-- params
+
+--   TWITTER_USER_IDS = path to complete list of twitter user profiles
+--   PAGERANK         = path to pagerank and id
+
+
+MatchedIds = LOAD '$TWITTER_USER_IDS' AS (
   rsrc:             chararray,
   id:               long,
   scraped_at:       long,
