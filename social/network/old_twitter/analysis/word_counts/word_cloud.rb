@@ -2,6 +2,7 @@
 # Freely available stopword list.  This stopword
 # list provides a nice balance between coverage
 # and size.
+require 'set'
 
 STOPWORDS = %w[
 a about above across after again against all almost alone along already also
@@ -69,15 +70,13 @@ want wanted wanting wants was way ways we well wells went were what when where
 whether which while who whole whose why will with within without work worked
 working works would
 
-
 year years yet you young younger youngest your yours
-]
-
+].to_set
 
 $stdin.each do |line|
   count, word, *_ = line.chomp.split("\t")
   next if STOPWORDS.include?(word)
-  a = (count.to_i / 100_00.0).to_i
+  a = (count.to_i / 10_000.0).to_i
   words = []
   # a.times{  words << word }
   # puts words.join("\t") unless words.empty?
