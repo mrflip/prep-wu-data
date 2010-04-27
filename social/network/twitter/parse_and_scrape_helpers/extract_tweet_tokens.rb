@@ -18,17 +18,21 @@ module ExtractTweetTokens
     #  hashtags,
     #  smileys,
     #  embedded urls,
-    #  etc
+    #  stock tokens,
+    #  word_tokens
     #
     def process tweet, *_, &block
       case tweet
       when Tweet, SearchTweet
-        tweet.retweets   &block
-        tweet.replies    &block
-        tweet.atsigns    &block
-        tweet.hashtags   &block
-        tweet.smileys    &block
-        tweet.tweet_urls &block
+        tweet.twitter_user_id = tweet.twitter_user_id.to_i
+        tweet.retweets     &block
+        tweet.replies      &block
+        tweet.atsigns      &block
+        tweet.hashtags     &block
+        tweet.smileys      &block
+        tweet.tweet_urls   &block
+        tweet.stock_tokens &block
+        tweet.word_tokens  &block
       else return
       end
     end

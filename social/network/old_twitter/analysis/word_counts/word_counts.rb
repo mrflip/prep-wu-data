@@ -23,13 +23,12 @@ module WordFreq
       t = t.downcase;
       # kill off all punctuation except 's
       # this includes hyphens (words are split)
-      t = t.gsub(/[^\w\']+/, ' ').gsub(/\'s\b/, '!').gsub(/\'/, ' ').gsub(/!/, "'s")
+      t = t.gsub(/[^\w\']+/, ' ').gsub(/(\w)\'([st])\b/, '\1!\1').gsub(/\'/, ' ').gsub(/!/, "'")
       # Busticate at whitespace
       words = t.strip.split(/\s+/)
       words.reject!{|w| w.blank? || (w.length < 3) }
       words
     end
-
 
     #
     # remove elements specific to tweets

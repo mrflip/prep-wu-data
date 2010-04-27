@@ -2,12 +2,58 @@ Tokens = LOAD 'meta/word_counts/tokens' AS (rsrc: chararray,
   context: chararray, owner: int, word: chararray, freq: int);
 
 -- ***************************************************************************
+--
+-- Corpus frequency / inverted_index / dispersion calculation
+--
+-- == Input ==
+--
+-- The script uses the output of word_count.rb
+-- which should look like
+--
+--    rsrc     user_id  tweet_id  text    
+--    word     user_id  tweet_id  pajamas
+--    hashtag  user_id  tweet_id  aprilfools
+--    url      user_id  tweet_id  http://infochimps.org
+--    word     user_id  tweet_id  bob
+--
+-- tokens include (stock, word, hashtag, url, smiley). A tweet like 'bork bork
+-- bork' will show up as three different tokens in this input file.
+-- 
+-- == This script in various steps outputs:
+--
+-- * An inverted index: the uniq'd list:
+--    [ rsrc, tweet_id, text ]
+--   (that tweet with 'bork bork bork' will only create one record in this file.
+--
+-- * User bag of words: for *only* word tokens
+-- 
+--     [ user_a, { pajamas:3,  bob:2, ... } ]
+--     [ user_b, { pajamas:37, bob:1, ... } ]
+--
+-- * We then take the user bag of words, treat each as a corpus, and find the
+--   corpus dispersion. First, regroup by word:
+--
+--     [ pajamas, [ 3, 37, ... ] ]
+--     [ bob,     [ 2, 1, ...  ] ]
+--
+--   and then do a bunch of statistics on it:
+--
+--     [ pajamas, total_count,
+--
+--   where
+-- 
+--     range is the number
+-- 
+--     
+--
+--    
+  
+-- ***************************************************************************
 --   
 -- Global totals
 --
 TotalFreq_1 	= FOREACH Tokens GENERATE context, owner, word, freq, (1.0*(float)freq*(float)freq) AS freq_sq:float;
 TotalFreq_2 	= GROUP   TotalFreq_1 BY (context);
-
 
 TotalFreq	= FOREACH TotalFreq_2 {
   freq_var    = AVG(TotalFreq_1.freq_sq) - (AVG(TotalFreq_1.freq) * AVG(TotalFreq_1.freq));
@@ -19,7 +65,6 @@ TotalFreq	= FOREACH TotalFreq_2 {
 	   (float)freq_var 	        AS freq_var: float,
 	   (float)freq_avg 	        AS freq_avg: float;
   };
-
 
 -- loc  	total	  1915556	  1909935	  0.00313	1.002943
 -- name 	total	  3525910	  3524825	  0.00034	1.000308
