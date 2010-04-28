@@ -1,5 +1,4 @@
-Tokens = LOAD 'meta/word_counts/tokens' AS (rsrc: chararray,
-  context: chararray, owner: int, word: chararray, freq: int);
+-- Tokens = LOAD 'meta/word_counts/tokens' AS (rsrc: chararray, context: chararray, owner: int, word: chararray, freq: int);
 
 -- ***************************************************************************
 --
@@ -7,17 +6,17 @@ Tokens = LOAD 'meta/word_counts/tokens' AS (rsrc: chararray,
 --
 -- == Input ==
 --
--- The script uses the output of word_count.rb
+-- The script uses the output of extract_tweet_tokens.rb
 -- which should look like
 --
---    rsrc     user_id  tweet_id  text    
---    word     user_id  tweet_id  pajamas
---    hashtag  user_id  tweet_id  aprilfools
---    url      user_id  tweet_id  http://infochimps.org
---    word     user_id  tweet_id  bob
+--    rsrc     text             user_id  tweet_id  created_at
+--    word     pajamas          user_id  tweet_id  created_at
+--    hashtag  aprilfools       user_id  tweet_id  created_at
+--    url      http://trst.me   user_id  tweet_id  created_at
+--    word     bob              user_id  tweet_id  created_at
 --
--- tokens include (stock, word, hashtag, url, smiley). A tweet like 'bork bork
--- bork' will show up as three different tokens in this input file.
+-- tokens include (stock tokens, word tokens, hashtags, urls, and smileys).
+-- A tweet like 'bork bork bork' will show up as three different tokens in this input file.
 -- 
 -- == This script in various steps outputs:
 --
