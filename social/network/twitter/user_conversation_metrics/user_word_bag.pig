@@ -57,7 +57,7 @@ FinalHist  = FOREACH AlmostHist GENERATE
                      group                         AS user_id,
                      YetMore.(text, num, rel_freq) AS big_bag
              ;
-
+FinalFlattened = FOREACH FinalHist GENERATE user_id, FLATTEN(big_bag);
 -- store data on disk             
 rmf $WORDBAG;
-STORE FinalHist INTO '$WORDBAG';
+STORE FinalFlattened INTO '$WORDBAG';
