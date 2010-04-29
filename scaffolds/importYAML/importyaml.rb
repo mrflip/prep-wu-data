@@ -140,7 +140,7 @@ class DatasetYAML
   end
 
   def missing_data_pointer?
-    return true unless main_link or upload files
+    return true unless main_link or upload_files or packages
     false
   end
   
@@ -172,7 +172,7 @@ class DatasetYAML
     @@dataset_arry.first['dataset']['cached_score'] = score unless score.nil?
     @@dataset_arry.first['dataset']['rating'] = rating unless rating.nil?
     @@dataset_arry.first['dataset']['records_count'] = records_count unless records_count.nil?
-    @@dataset_arry.first['dataset']['protected'] = protected unless protected.nil  
+    @@dataset_arry.first['dataset']['protected'] = protected unless protected.nil?
     @@dataset_arry    
   end
   
@@ -200,9 +200,9 @@ class FieldYAML
       return
     end
     @@title_arry = [ {'title' => title} ]
-    @@title_arry.first['description'] = description unless description
-    @@title_arry.first['datatype'] = datatype unless datatype
-    @@title_arry.first['unit'] = unit unless unit
+    @@title_arry.first['description'] = description unless description.nil?
+    @@title_arry.first['datatype'] = datatype unless datatype.nil?
+    @@title_arry.first['unit'] = unit unless unit.nil?
     @@title_arry
   end
   
@@ -233,7 +233,7 @@ end
 # Packages
 #
 class PackageYAML
-  attr_accessor :kind, :path, :bucket, :fmt, :pkg_fmt, :pkg_size, :files, :records, :owner, :dataset, :upload_files
+  attr_accessor :kind, :path, :bucket, :fmt, :pkg_fmt, :pkg_size, :num_files, :records, :owner, :dataset, :upload_files
   
   def initialize *args
     return unless args
@@ -251,14 +251,14 @@ class PackageYAML
     if dataset.nil? and upload_files.nil?
       warn "Making a package from (hopefully) a S3 bucket."
       @@package_arry = [{}]
-      @@package_arry.first['kind'] = kind unless kind
-      @@package_arry.first['path'] = path unless path
-      @@package_arry.first['bucket'] = bucket unless bucket
-      @@package_arry.first['fmt'] = fmt unless fmt
-      @@package_arry.first['pkg_fmt'] = pkg_fmt unless pkg_fmt
-      @@package_arry.first['pkg_size'] = pkg_size unless pkg_size
-      @@package_arry.first['num_files'] = num_files unless num_files
-      @@package_arry.first['owner_id'] = owner unless owner
+      @@package_arry.first['kind'] = kind unless kind.nil?
+      @@package_arry.first['path'] = path unless path.nil?
+      @@package_arry.first['bucket'] = bucket unless bucket.nil?
+      @@package_arry.first['fmt'] = fmt unless fmt.nil?
+      @@package_arry.first['pkg_fmt'] = pkg_fmt unless pkg_fmt.nil?
+      @@package_arry.first['pkg_size'] = pkg_size unless pkg_size.nil?
+      @@package_arry.first['num_files'] = num_files unless num_files.nil?
+      @@package_arry.first['owner_id'] = owner unless owner.nil?
     else
       warn "Making a package from a list of files and a dataset."
       @@package_arry = {'dataset' => dataset}

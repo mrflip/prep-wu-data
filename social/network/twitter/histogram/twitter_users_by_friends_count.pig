@@ -71,7 +71,7 @@ twitter_user_partials
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default OUTPUT '/data/pkgd/social/network/twitter/users_by_friends_count'
+%default OUTPUT '/data/rawd/social/network/twitter/census/users_by_friends_count'
 %default USER   '/data/rawd/social/network/twitter/objects/twitter_user';
 
 AllUser       = LOAD '$USER' AS (rsrc:chararray, id:long, scraped_at:long, screen_name:chararray, protected:long, 
