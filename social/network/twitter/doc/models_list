@@ -160,4 +160,6 @@ User Models:
   -- [:screen_name,            String]
   -- [:sid,                    Integer]
   -- [:id,                     Integer]
-  
+
+Token Models:
+
