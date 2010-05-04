@@ -2,10 +2,9 @@
 
 
 %default TWEETBAG    '/data/social/network/twitter/client/beggars_group/tweet_bag'
-%default RANKEDUSERS '/data/social/network/twitter/fixd/objects/twitter_user_id_matched'
+%default RANKEDUSERS '/data/social/network/twitter/fixd/objects/pagerank_with_profile'
 
 Tweets = LOAD '$TWEETBAG' AS (
-                rsrc:                  chararray,
                 tweet_id:              long,
                 created_at:            long,
                 user_id:               long,
@@ -18,7 +17,6 @@ Tweets = LOAD '$TWEETBAG' AS (
                 keywords:              chararray
         );
 
-
 Users = LOAD '$RANKEDUSERS' AS (
                 user_id:    long,
                 pgrnk:      float,
@@ -28,18 +26,20 @@ Users = LOAD '$RANKEDUSERS' AS (
         );
 
 Joined        = JOIN Tweets BY user_id, Users BY user_id;
-Relevant      = FOREACH Joined {
-                        keyword_bag = DISTINCT(TOKENIZE(Tweets::keywords));
-                        GENERATE
-                                Users::user_id AS user_id,
-                                keyword_bag AS keywords,
-                                COUNT(keyword_bag) AS num_words,
-                                MAX(Tweets::created_at) AS time_of_last,
-                                Users::created_at AS profile_creation_date,
-                                Users::followers AS followers,
-                                Users::ratio AS ratio,
-                                Users::pgrnk AS pgrnk
-                                ;
-                        };
-Dump Relevant;
+Tst = LIMIT Joined 100;
+DUMP Tst;
+-- Relevant      = FOREACH Joined {
+--                         keyword_bag = DISTINCT(TOKENIZE(Tweets::keywords));
+--                         GENERATE
+--                                 Users::user_id AS user_id,
+--                                 keyword_bag AS keywords,
+--                                 COUNT(keyword_bag) AS num_words,
+--                                 MAX(Tweets::created_at) AS time_of_last,
+--                                 Users::created_at AS profile_creation_date,
+--                                 Users::followers AS followers,
+--                                 Users::ratio AS ratio,
+--                                 Users::pgrnk AS pgrnk
+--                                 ;
+--                         };
+-- Dump Relevant;
                 
