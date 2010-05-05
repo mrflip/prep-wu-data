@@ -1,13 +1,58 @@
-Tokens = LOAD 'meta/word_counts/tokens' AS (rsrc: chararray,
-  context: chararray, owner: int, word: chararray, freq: int);
+-- Tokens = LOAD 'meta/word_counts/tokens' AS (rsrc: chararray, context: chararray, owner: int, word: chararray, freq: int);
 
+-- ***************************************************************************
+--
+-- Corpus frequency / inverted_index / dispersion calculation
+--
+-- == Input ==
+--
+-- The script uses the output of extract_tweet_tokens.rb
+-- which should look like
+--
+--    rsrc     text             user_id  tweet_id  created_at
+--    word     pajamas          user_id  tweet_id  created_at
+--    hashtag  aprilfools       user_id  tweet_id  created_at
+--    url      http://trst.me   user_id  tweet_id  created_at
+--    word     bob              user_id  tweet_id  created_at
+--
+-- tokens include (stock tokens, word tokens, hashtags, urls, and smileys).
+-- A tweet like 'bork bork bork' will show up as three different tokens in this input file.
+-- 
+-- == This script in various steps outputs:
+--
+-- * An inverted index: the uniq'd list:
+--    [ rsrc, tweet_id, text ]
+--   (that tweet with 'bork bork bork' will only create one record in this file.
+--
+-- * User bag of words: for *only* word tokens
+-- 
+--     [ user_a, { pajamas:3,  bob:2, ... } ]
+--     [ user_b, { pajamas:37, bob:1, ... } ]
+--
+-- * We then take the user bag of words, treat each as a corpus, and find the
+--   corpus dispersion. First, regroup by word:
+--
+--     [ pajamas, [ 3, 37, ... ] ]
+--     [ bob,     [ 2, 1, ...  ] ]
+--
+--   and then do a bunch of statistics on it:
+--
+--     [ pajamas, total_count,
+--
+--   where
+-- 
+--     range is the number
+-- 
+--     
+--
+--    
+  
 -- ***************************************************************************
 --   
 -- Global totals
 --
 TotalFreq_1 	= FOREACH Tokens GENERATE context, owner, word, freq, (1.0*(float)freq*(float)freq) AS freq_sq:float;
 TotalFreq_2 	= GROUP   TotalFreq_1 BY (context);
-
 
 TotalFreq	= FOREACH TotalFreq_2 {
   freq_var    = AVG(TotalFreq_1.freq_sq) - (AVG(TotalFreq_1.freq) * AVG(TotalFreq_1.freq));
@@ -19,7 +64,6 @@ TotalFreq	= FOREACH TotalFreq_2 {
 	   (float)freq_var 	        AS freq_var: float,
 	   (float)freq_avg 	        AS freq_avg: float;
   };
-
 
 -- loc  	total	  1915556	  1909935	  0.00313	1.002943
 -- name 	total	  3525910	  3524825	  0.00034	1.000308
