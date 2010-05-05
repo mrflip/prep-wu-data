@@ -10,7 +10,12 @@
 %default OUTPUT_DATA                '/data/rawd/social/network/twitter/census/tokens_by_hour'
 
 -- Divide created_at by: 10000.0 for hour, 1000000.0 for day, 100000000.0 for month.
+-- hour
 %default TIMESLICE   10000.0
+-- month
+-- %default TIMESLICE   100000000.0
+-- day
+-- %default TIMESLICE  1000000.0
 
 -- So we can use the LOWER function
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
