@@ -7,9 +7,9 @@
 
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
-%default WORDBAG   '/data/social/network/twitter/fixd/word/user_word_bag';     --input location
-%default WORDSTATS '/data/social/network/twitter/fixd/word/global_word_stats'; --input location
-%default USERWORDS '/data/social/network/twitter/fixd/word/user_word_bag_with_stats'; --output location
+%default WORDBAG   '/data/sn/tw/fixd/word/user_word_bag';     --input location
+%default WORDSTATS '/data/sn/tw/fixd/word/global_word_stats'; --input location
+%default USERWORDS '/data/sn/tw/fixd/word/user_word_bag_with_stats'; --output location
 
 -- load input data
 AllHists = LOAD '$WORDBAG' AS

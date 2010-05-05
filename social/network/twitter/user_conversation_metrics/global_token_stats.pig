@@ -14,9 +14,9 @@
 
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
-%default WORDBAG   '/data/social/network/twitter/fixd/word/user_word_bag';     --input location
-%default GLOBALTOT '/data/social/network/twitter/fixd/word/global_totals';
-%default WORDSTATS '/data/social/network/twitter/fixd/word/global_word_stats'; --output location
+%default WORDBAG   '/data/sn/tw/fixd/word/user_word_bag';     --input location
+%default GLOBALTOT '/data/sn/tw/fixd/word/global_totals';
+%default WORDSTATS '/data/sn/tw/fixd/word/global_word_stats'; --output location
 %default TOKEN_TOTAL '847114.0'; -- this will need to be read in as a parameter
 %default N_USERS     '812142.0'; -- read in as a parameter
 

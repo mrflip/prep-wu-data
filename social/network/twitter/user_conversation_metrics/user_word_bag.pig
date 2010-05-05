@@ -12,8 +12,8 @@
 --
 -- [word, pajamas, user_id, tweet_id, created_at]
 --
-%default TOKENS  '/data/social/network/twitter/fixd/objects/tokens/word_token'; --input location
-%default WORDBAG '/data/social/network/twitter/fixd/word/user_word_bag';        --output location
+%default TOKENS  '/data/sn/tw/fixd/objects/tokens/word_token'; --input location
+%default WORDBAG '/data/sn/tw/fixd/word/user_word_bag';        --output location
 
 -- load input data
 AllTokens = LOAD '$TOKENS' AS
