@@ -9,15 +9,11 @@
 %default INPUT_DATA                '/data/rawd/social/network/twitter/census/tokens_by_hour'
 %default OUTPUT_DATA               '/data/rawd/social/network/twitter/census/total_tokens_by_hour'
 
--- Divide created_at by: 10000.0 for hour, 1000000.0 for day, 100000000.0 for month.
-%default TIMESLICE   10000.0
-
--- So we can use the LOWER function
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 TokensByTime = LOAD '$INPUT_DATA' AS (rsrc:chararray, crat_bin:long, num:long, text:chararray);
 
--- Token Totals by Hour
+-- Token Totals by time
 TokensWithoutText        = FOREACH TokensByTime GENERATE rsrc, crat_bin, num ;
 TokenCountsByTime        = GROUP TokensWithoutText BY (rsrc, crat_bin) ;
 SummedTokenCountsByTime  = FOREACH TokenCountsByTime GENERATE
