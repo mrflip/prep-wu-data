@@ -1,8 +1,8 @@
 -- [screen_name, keyword_bag, number of tweets countaining keywords, time of last tweet containing keyword, profile created at, followers, friends, trstrank]
 
 
-%default TWEETBAG    '/data/social/network/twitter/client/beggars_group/tweet_bag'
-%default RANKEDUSERS '/data/social/network/twitter/fixd/objects/pagerank_with_profile'
+%default TWEETBAG    '/data/sn/tw/client/beggars_group/tweet_bag'
+%default RANKEDUSERS '/data/sn/tw/fixd/pagerank/a_follows_b_pagerank/pagerank_with_profile'
 
 Tweets = LOAD '$TWEETBAG' AS (
                 tweet_id:              long,
