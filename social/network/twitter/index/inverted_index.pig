@@ -23,8 +23,8 @@
 -- Note: A tweet like 'bork bork bork' will show up as three different tokens in this input file.
 -- 
 --
-%default TOKENS  '/data/social/network/twitter/fixd/objects/tokens/*';     --input location
-%default INDEXED '/data/social/network/twitter/fixd/index/inverted_index'; --output location
+%default TOKENS  '/data/sn/tw/fixd/objects/tokens/*';     --input location
+%default INDEXED '/data/sn/tw/fixd/index/inverted_index'; --output location
 
 AllTokens = LOAD '$TOKENS' AS (
             rsrc:       chararray,
