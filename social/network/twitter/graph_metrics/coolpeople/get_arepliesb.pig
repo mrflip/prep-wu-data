@@ -34,7 +34,7 @@ CoolPPLZ = LOAD '$COOLPPL' AS (
 
 CoolPPLOnly = JOIN CoolPPLZ BY screen_name, MatchedIds BY screen_name;
 CoolPPLIds  = FOREACH CoolPPLOnly GENERATE
-                         MatchedIds::user_id     AS user_id,
+                         MatchedIds::user_id     AS user_id
                          ;             
 
 Joined          = JOIN CoolPPLIds BY user_id, ARepliesBs BY user_a_id;
