@@ -2,7 +2,8 @@
 
 
 %default TWEETBAG    '/data/sn/tw/client/beggars_group/tweet_bag'
-%default RANKEDUSERS '/data/sn/tw/fixd/pagerank/a_follows_b_pagerank/pagerank_with_profile'
+%default RANKEDUSERS '/data/sn/tw/pagerank/a_follows_b_pagerank/pagerank_with_profile'
+%default USERSTATS   '/data/sn/tw/client/beggars_group/jonsi_stats'
 
 Tweets = LOAD '$TWEETBAG' AS (
                 tweet_id:              long,
@@ -26,20 +27,19 @@ Users = LOAD '$RANKEDUSERS' AS (
         );
 
 Joined        = JOIN Tweets BY user_id, Users BY user_id;
-Tst = LIMIT Joined 100;
-DUMP Tst;
--- Relevant      = FOREACH Joined {
---                         keyword_bag = DISTINCT(TOKENIZE(Tweets::keywords));
---                         GENERATE
---                                 Users::user_id AS user_id,
---                                 keyword_bag AS keywords,
---                                 COUNT(keyword_bag) AS num_words,
---                                 MAX(Tweets::created_at) AS time_of_last,
---                                 Users::created_at AS profile_creation_date,
---                                 Users::followers AS followers,
---                                 Users::ratio AS ratio,
---                                 Users::pgrnk AS pgrnk
---                                 ;
---                         };
--- Dump Relevant;
-                
+Relevant      = FOREACH Joined {
+                        keyword_bag = TOKENIZE(Tweets::keywords);
+                        GENERATE
+                                Users::user_id AS user_id,
+                                keyword_bag AS keywords,
+                                COUNT(keyword_bag) AS num_words,
+                                MAX(Tweets::created_at) AS time_of_last,
+                                Users::created_at AS profile_creation_date,
+                                Users::followers AS followers,
+                                Users::ratio AS ratio,
+                                Users::pgrnk AS pgrnk
+                                ;
+                        };
+                        
+rmf $USERSTATS;
+STORE Relevant INTO '$USERSTATS';
