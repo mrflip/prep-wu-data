@@ -1,18 +1,13 @@
-%default AFOLLOWSB    '/data/social/network/twitter/fixd/objects/tokens/a_follows_b'
-%default AATSIGNSB    '/data/social/network/twitter/fixd/objects/tokens/a_atsigns_b'
-%default AREPLIESB    '/data/social/network/twitter/fixd/objects/tokens/a_replies_b'
-%default AREPLIESBNM  '/data/social/network/twitter/fixd/objects/tokens/a_replies_b_name'
-%default ARETWEETB    '/data/social/network/twitter/fixd/objects/tokens/a_retweets_b'
-%default AATSIGNSBNM  '/data/social/network/twitter/fixd/objects/tokens/a_atsigns_b_name'
-%default ARETWEETSBNM '/data/social/network/twitter/fixd/objects/tokens/a_retweets_b_name'
--- %default HASHTAG      '/data/social/network/twitter/fixd/objects/tokens/hashtag'
--- %default SMILEY       '/data/social/network/twitter/fixd/objects/tokens/smiley'
--- %default TWEETURL     '/data/social/network/twitter/fixd/objects/tokens/tweet_url'
-
-%default SEARCHTWEET '/data/social/network/twitter/fixd/objects/search_tweet';        --input location
-%default TWEET       '/data/social/network/twitter/fixd/objects/tweet'; --input location
-%default FIXEDIDS    '/data/social/network/twitter/fixd/objects/twitter_user_id_matched';   --input location
-%default COOLPPL     '/data/social/network/twitter/sample/cool_ppl';
+%default AFOLLOWSB    '/data/sn/tw/fixd/objects/tokens/a_follows_b'
+%default AREPLIESB    '/data/sn/tw/fixd/objects/tokens/a_replies_b'
+%default AREPLIESBNM  '/data/sn/tw/fixd/objects/tokens/a_replies_b_name'
+%default ARETWEETB    '/data/sn/tw/fixd/objects/tokens/a_retweets_b'
+%default AATSIGNSBNM  '/data/sn/tw/fixd/objects/tokens/a_atsigns_b_name'
+%default ARETWEETSBNM '/data/sn/tw/fixd/objects/tokens/a_retweets_b_name'
+%default SEARCHTWEET  '/data/sn/tw/fixd/objects/search_tweet';
+%default TWEET        '/data/sn/tw/fixd/objects/tweet';
+%default FIXEDIDS     '/data/sn/tw/fixd/objects/twitter_user_id_matched';
+%default COOLPPL      '/data/sn/tw/sample/cool_ppl';
 
 AFollowBs = LOAD '$AFOLLOWSB' AS (
                   rsrc:             chararray,
@@ -20,12 +15,7 @@ AFollowBs = LOAD '$AFOLLOWSB' AS (
                   user_b_id:        long
              );
              
-AAtsignsBs = LOAD '$AATSIGNSB' AS (
-                  rsrc:        chararray,
-                  user_a_id:   long,
-                  user_b_name: chararray,
-                  tweet_id:    long
-             );
+
              
 ARepliesBs = LOAD '$AREPLIESB' AS (
                   rsrc:                 chararray,
