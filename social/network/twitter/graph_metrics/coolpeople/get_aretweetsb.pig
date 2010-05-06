@@ -1,17 +1,18 @@
-%default AATSIGNSB    '/data/sn/tw/fixd/objects/a_atsigns_b'
+%default ARETWEETB    '/data/sn/tw/fixd/objects/a_retweets_b'
 %default FIXEDIDS     '/data/sn/tw/fixd/objects/twitter_user_id_matched';
 %default COOLPPL      '/data/sn/tw/cool/cool_ppl';
-%default COOLOUT      '/data/sn/tw/cool/a_atsigns_b';
+%default COOLOUT      '/data/sn/tw/cool/a_retweets_b';
 
--- load ats
-AAtsignsBs = LOAD '$AATSIGNSB' AS (
+
+AretweetsBs = LOAD '$ARETWEETB' AS (
                   rsrc:        chararray,
                   user_a_id:   long,
                   user_b_name: chararray,
-                  tweet_id:    long
+                  tweet_id:    long,
+                  please_flag: int
              );
 
--- load matched ids
+
 MatchedIds = LOAD '$FIXEDIDS' AS (
                   rsrc:             chararray,
                   user_id:          long,
@@ -37,12 +38,13 @@ CoolPPLIds  = FOREACH CoolPPLOnly GENERATE
                          MatchedIds::user_id     AS user_id,
                          ;             
 
-JoinedAAtsignsBs = JOIN CoolPPLIds BY user_id, AAtsignsBs BY user_a_id;
-JustAAtsignsB    = FOREACH JoinedAAtsignsBs GENERATE
-                           AAtsignsBs::rsrc        AS rsrc
-                           AAtsignsBs::user_a_id   AS user_a_id,
-                           AAtsignsBs::user_b_name AS user_b_name,
-                           AAtsignsBs::tweet_id    AS tweet_id
+Joined          = JOIN CoolPPLIds BY user_id, AretweetsBs BY user_a_id;
+JustAretweetsBs = FOREACH Joined GENERATE
+                           AretweetsBs::rsrc        AS rsrc,
+                           AretweetsBs::user_a_id   AS user_a_id,
+                           AretweetsBs::user_b_name AS user_b_name,
+                           AretweetsBs::tweet_id    AS tweet_id,
+                           AretweetsBs::please_flag AS please_flag                           
                            ;
 rmf $COOLOUT;
-STORE JustAAtsignsB INTO '$COOLOUT';
+STORE JustAretweetsBs INTO '$COOLOUT';

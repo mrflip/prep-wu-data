@@ -1,17 +1,17 @@
-%default AATSIGNSB    '/data/sn/tw/fixd/objects/a_atsigns_b'
+%default AREPLIESB    '/data/sn/tw/fixd/objects/a_replies_b'
 %default FIXEDIDS     '/data/sn/tw/fixd/objects/twitter_user_id_matched';
 %default COOLPPL      '/data/sn/tw/cool/cool_ppl';
-%default COOLOUT      '/data/sn/tw/cool/a_atsigns_b';
+%default COOLOUT      '/data/sn/tw/cool/a_replies_b';
 
--- load ats
-AAtsignsBs = LOAD '$AATSIGNSB' AS (
-                  rsrc:        chararray,
-                  user_a_id:   long,
-                  user_b_name: chararray,
-                  tweet_id:    long
+
+ARepliesBs = LOAD '$AREPLIESB' AS (
+                  rsrc:                 chararray,
+                  user_a_id:            long,
+                  user_b_id:            long,
+                  tweet_id:             long,
+                  in_reply_to_tweet_id: long
              );
 
--- load matched ids
 MatchedIds = LOAD '$FIXEDIDS' AS (
                   rsrc:             chararray,
                   user_id:          long,
@@ -37,12 +37,13 @@ CoolPPLIds  = FOREACH CoolPPLOnly GENERATE
                          MatchedIds::user_id     AS user_id,
                          ;             
 
-JoinedAAtsignsBs = JOIN CoolPPLIds BY user_id, AAtsignsBs BY user_a_id;
-JustAAtsignsB    = FOREACH JoinedAAtsignsBs GENERATE
-                           AAtsignsBs::rsrc        AS rsrc
-                           AAtsignsBs::user_a_id   AS user_a_id,
-                           AAtsignsBs::user_b_name AS user_b_name,
-                           AAtsignsBs::tweet_id    AS tweet_id
+Joined          = JOIN CoolPPLIds BY user_id, ARepliesBs BY user_a_id;
+JustARepliesBs = FOREACH Joined GENERATE
+                           ARepliesBs::rsrc                 AS rsrc,
+                           ARepliesBs::user_a_id            AS user_a_id,
+                           ARepliesBs::user_b_id            AS user_b_id,
+                           ARepliesBs::tweet_id             AS tweet_id,
+                           ARepliesBs::in_reply_to_tweet_id AS in_reply_to_tweet_id                           
                            ;
 rmf $COOLOUT;
-STORE JustAAtsignsB INTO '$COOLOUT';
+STORE JustARepliesBs INTO '$COOLOUT';

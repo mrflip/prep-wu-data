@@ -1,69 +1,10 @@
-%default AFOLLOWSB    '/data/sn/tw/fixd/objects/tokens/a_follows_b'
-%default AREPLIESB    '/data/sn/tw/fixd/objects/tokens/a_replies_b'
-%default AREPLIESBNM  '/data/sn/tw/fixd/objects/tokens/a_replies_b_name'
-%default ARETWEETB    '/data/sn/tw/fixd/objects/tokens/a_retweets_b'
-%default AATSIGNSBNM  '/data/sn/tw/fixd/objects/tokens/a_atsigns_b_name'
-%default ARETWEETSBNM '/data/sn/tw/fixd/objects/tokens/a_retweets_b_name'
 %default SEARCHTWEET  '/data/sn/tw/fixd/objects/search_tweet';
 %default TWEET        '/data/sn/tw/fixd/objects/tweet';
 %default FIXEDIDS     '/data/sn/tw/fixd/objects/twitter_user_id_matched';
 %default COOLPPL      '/data/sn/tw/sample/cool_ppl';
+%default COOLOUT      '/data/sn/tw/cool/tweet';
 
-AFollowBs = LOAD '$AFOLLOWSB' AS (
-                  rsrc:             chararray,
-                  user_a_id:        long,
-                  user_b_id:        long
-             );
-             
-
-             
-ARepliesBs = LOAD '$AREPLIESB' AS (
-                  rsrc:                 chararray,
-                  user_a_id:            long,
-                  user_b_id:            long,
-                  tweet_id:             long,
-                  in_reply_to_tweet_id: long
-             );
-             
-ARepliesBNames = LOAD '$AREPLIESBNM' AS (
-                      rsrc:                 chararray,
-                      user_a_name:          chararray,
-                      user_b_name:          chararray,
-                      tweet_id:             long,
-                      in_reply_to_tweet_id: long,
-                      user_a_sid:           long,
-                      user_b_sid:           long
-                 );
-                 
--- ARetweetsBs = LOAD '$ARETWEETB' AS (
---                   rsrc:        chararray,
---                   user_a_id:   long,
---                   user_b_name: chararray,
---                   tweet_id:    long,
---                   please_flag: int
---              );
---              
--- ILLUSTRATE ARetweetsBs;
-
-AAtsignsBNames = LOAD '$AATSIGNSBNM' AS (
-                      rsrc:        chararray,
-                      user_a_name: chararray,
-                      user_b_name: chararray,
-                      tweet_id:    long,
-                      user_a_sid:  long
-                 );
-
-ARetweetsBNames = LOAD '$ARETWEETSBNM' AS (
-                      rsrc:        chararray,
-                      user_a_name: chararray,
-                      user_b_name: chararray,
-                      tweet_id:    long,
-                      please_flag: int,
-                      user_a_sid:  long
-                 );
-
--- now, all tokens, etc are loaded, load ids
-
+-- load matched ids
 MatchedIds = LOAD '$FIXEDIDS' AS (
                   rsrc:             chararray,
                   user_id:          long,
@@ -79,7 +20,8 @@ MatchedIds = LOAD '$FIXEDIDS' AS (
                   is_full:          long,
                   health:           chararray
              );
-             
+
+-- load list of coolios             
 CoolPPLZ = LOAD '$COOLPPL' AS (
                 screen_name: chararray
            );
@@ -106,7 +48,7 @@ Tweets = LOAD '$TWEET' AS (
                   in_reply_to_screen_name: chararray
          );
 
-  
+-- load search tweets  
 SearchTweets = LOAD '$SEARCHTWEET' AS (
                     rsrc:                    chararray,
                     tweet_id:                long,
@@ -128,71 +70,37 @@ SearchTweets = LOAD '$SEARCHTWEET' AS (
 
 JoinedSearch = JOIN CoolPPLIds BY search_id, SearchTweets BY search_id;
 JustSearch   = FOREACH JoinedSearch GENERATE
-                       CoolPPLIds::screen_name AS screen_name,
-                       SearchTweets::text      AS text
+                       SearchTweets::rsrc                    AS rsrc,
+                       SearchTweets::tweet_id:               AS tweet_id,
+                       SearchTweets::created_at:             AS created_at,
+                       SearchTweets::user_id:                AS user_id,
+                       SearchTweets::favorited:              AS favorited,
+                       SearchTweets::truncated:              AS truncated,
+                       SearchTweets::in_reply_to_user_id:    AS in_reply_to_user_id,
+                       SearchTweets::in_reply_to_status_id:  AS in_reply_to_status_id,
+                       SearchTweets::text:                   AS text.
+                       SearchTweets::source:                 AS source,
+                       SearchTweets::in_reply_to_screen_name AS in_reply_to_screen_name 
                        ;
 
 
 JoinedTweets = JOIN CoolPPLIds BY user_id, Tweets BY user_id;
 JustTweets   = FOREACH JoinedTweets GENERATE
-                       CoolPPLIds::screen_name AS screen_name,
-                       Tweets::text            AS text
+                       Tweets::rsrc                    AS rsrc,
+                       Tweets::tweet_id                AS tweet_id,
+                       Tweets::created_at              AS created_at,
+                       Tweets::user_id                 AS user_id,
+                       Tweets::favorited               AS favorited,
+                       Tweets::truncated               AS truncated,
+                       Tweets::in_reply_to_user_id     AS in_reply_to_user_id,
+                       Tweets::in_reply_to_status_id   AS in_reply_to_status_id,
+                       Tweets::text                    AS text.
+                       Tweets::source                  AS source,
+                       Tweets::in_reply_to_screen_name AS in_reply_to_screen_name              
                        ;
 
-
-JoinedAFollowsBs = JOIN CoolPPLIds BY user_id, AFollowBs BY user_a_id;
-JustAFollowsB    = FOREACH JoinedAFollowsBs GENERATE
-                           CoolPPLIds::screen_name AS screen_name,
-                           AFollowBs::user_b_id   AS user_b_id
-                           ;
-
-DUMP JoinedAFollowsBs;                           
-JoinedAAtsignsBs = JOIN CoolPPLIds BY user_id, AAtsignsBs BY user_a_id;
-JustAAtsignsB    = FOREACH JoinedAAtsignsBs GENERATE
-                           CoolPPLIds::screen_name AS screen_name,
-                           AAtsignsBs::user_b_name AS user_b_name
-                           ;
-
-
-JoinedARepliesBs = JOIN CoolPPLIds BY user_id, ARepliesBs BY user_a_id;
-JustARepliesB    = FOREACH JoinedARepliesBs GENERATE
-                           CoolPPLIds::screen_name AS screen_name,
-                           ARepliesBs::user_b_id   AS user_b_id
-                           ;
-
-JoinedARepliesBNMs = JOIN CoolPPLIds BY screen_name, ARepliesBNames BY user_a_name;
-JustARepliesBNMs   = FOREACH JoinedARepliesBNMs GENERATE
-                             CoolPPLIds::screen_name     AS screen_name,
-                             ARepliesBNames::user_b_name AS user_b_name
-                             ;
-                           
-JoinedAAtsignsBNMs = JOIN CoolPPLIds BY screen_name, AAtsignsBNames BY user_a_name;
-JustAAtsignsBNMs   = FOREACH JoinedAAtsignsBNMs GENERATE
-                             CoolPPLIds::screen_name     AS screen_name,
-                             AAtsignsBNames::user_b_name AS user_b_name
-                             ;
-
-JoinedARetweetsBNMs = JOIN CoolPPLIds BY screen_name, ARetweetsBNames BY user_a_name;
-JustARetweetsBNMs   = FOREACH JoinedARetweetsBNMs GENERATE
-                             CoolPPLIds::screen_name     AS screen_name,
-                             ARetweetsBNames::user_b_name AS user_b_name
-                             ;
-                             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- put the tweets of different types together, but only common fields
 Together     = UNION JustSearch, JustTweets;
+
+rmf $COOLOUT;
+STORE Together INTO '$COOLOUT';
