@@ -1,7 +1,6 @@
-%default SEARCHTWEET  '/data/sn/tw/fixd/objects/search_tweet';
 %default TWEET        '/data/sn/tw/fixd/objects/tweet';
 %default FIXEDIDS     '/data/sn/tw/fixd/objects/twitter_user_id_matched';
-%default COOLPPL      '/data/sn/tw/sample/cool_ppl';
+%default COOLPPL      '/data/sn/tw/cool/cool_ppl';
 %default COOLOUT      '/data/sn/tw/cool/tweet';
 
 -- load matched ids
@@ -48,40 +47,8 @@ Tweets = LOAD '$TWEET' AS (
                   in_reply_to_screen_name: chararray
          );
 
--- load search tweets  
-SearchTweets = LOAD '$SEARCHTWEET' AS (
-                    rsrc:                    chararray,
-                    tweet_id:                long,
-                    created_at:              long,
-                    user_id:                 long,
-                    favorited:               long,
-                    truncated:               long,
-                    in_reply_to_user_id:     long,
-                    in_reply_to_status_id:   long,
-                    text:                    chararray,
-                    source:                  chararray,
-                    in_reply_to_screen_name: chararray,
-                    in_reply_to_sid:         long,
-                    screen_name:             chararray,
-                    search_id:               long,
-                    iso_lang_code:           chararray
-               );                  
 
 
-JoinedSearch = JOIN CoolPPLIds BY search_id, SearchTweets BY search_id;
-JustSearch   = FOREACH JoinedSearch GENERATE
-                       SearchTweets::rsrc                    AS rsrc,
-                       SearchTweets::tweet_id:               AS tweet_id,
-                       SearchTweets::created_at:             AS created_at,
-                       SearchTweets::user_id:                AS user_id,
-                       SearchTweets::favorited:              AS favorited,
-                       SearchTweets::truncated:              AS truncated,
-                       SearchTweets::in_reply_to_user_id:    AS in_reply_to_user_id,
-                       SearchTweets::in_reply_to_status_id:  AS in_reply_to_status_id,
-                       SearchTweets::text:                   AS text.
-                       SearchTweets::source:                 AS source,
-                       SearchTweets::in_reply_to_screen_name AS in_reply_to_screen_name 
-                       ;
 
 
 JoinedTweets = JOIN CoolPPLIds BY user_id, Tweets BY user_id;
@@ -94,13 +61,11 @@ JustTweets   = FOREACH JoinedTweets GENERATE
                        Tweets::truncated               AS truncated,
                        Tweets::in_reply_to_user_id     AS in_reply_to_user_id,
                        Tweets::in_reply_to_status_id   AS in_reply_to_status_id,
-                       Tweets::text                    AS text.
+                       Tweets::text                    AS text,
                        Tweets::source                  AS source,
                        Tweets::in_reply_to_screen_name AS in_reply_to_screen_name              
                        ;
 
--- put the tweets of different types together, but only common fields
-Together     = UNION JustSearch, JustTweets;
 
 rmf $COOLOUT;
-STORE Together INTO '$COOLOUT';
+STORE JustTweets INTO '$COOLOUT';

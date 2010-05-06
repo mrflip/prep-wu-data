@@ -1,4 +1,4 @@
-%default AATSIGNSB    '/data/sn/tw/fixd/objects/a_atsigns_b'
+%default AATSIGNSB    '/data/sn/tw/fixd/objects/a_atsigns_b';
 %default FIXEDIDS     '/data/sn/tw/fixd/objects/twitter_user_id_matched';
 %default COOLPPL      '/data/sn/tw/cool/cool_ppl';
 %default COOLOUT      '/data/sn/tw/cool/a_atsigns_b';
@@ -39,7 +39,7 @@ CoolPPLIds  = FOREACH CoolPPLOnly GENERATE
 
 JoinedAAtsignsBs = JOIN CoolPPLIds BY user_id, AAtsignsBs BY user_a_id;
 JustAAtsignsB    = FOREACH JoinedAAtsignsBs GENERATE
-                           AAtsignsBs::rsrc        AS rsrc
+                           AAtsignsBs::rsrc        AS rsrc,
                            AAtsignsBs::user_a_id   AS user_a_id,
                            AAtsignsBs::user_b_name AS user_b_name,
                            AAtsignsBs::tweet_id    AS tweet_id
