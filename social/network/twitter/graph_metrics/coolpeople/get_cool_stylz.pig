@@ -1,4 +1,4 @@
-%default USERSTYLE '/data/sn/tw/fixd/objects/twitter_user_style'
+%default USERSTYLE '/data/sn/tw/fixd/objects/twitter_user_style';
 %default FIXEDIDS  '/data/sn/tw/fixd/objects/twitter_user_id_matched';
 %default COOLPPL   '/data/sn/tw/cool/cool_ppl';
 %default COOLOUT   '/data/sn/tw/cool/twitter_user_style';
@@ -44,7 +44,7 @@ CoolPPLIds  = FOREACH CoolPPLOnly GENERATE
 
 Joined          = JOIN CoolPPLIds BY user_id, Stylz BY user_id;
 JustStylz = FOREACH Joined GENERATE
-                         Stylz::user_id:          AS user_id,
+                         Stylz::user_id           AS user_id,
                          Stylz::scraped_at        AS scraped_at, 
                          Stylz::bgrnd_color       AS bgrnd_color,
                          Stylz::text_color        AS text_color,
