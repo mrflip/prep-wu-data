@@ -3,50 +3,63 @@
 script_dir=$(readlink -f `dirname $0`)
 perlgrep=$script_dir/perlgrep.pl
 
-# ~/ics/icsdata/social/network/twitter/parse_and_scrape_helpers/last_seen_state.rb --run --rm     \
-#   --map_command="$perlgrep twitter_user"                                                        \
-#   "/data/rawd/social/network/twitter/partial_uniq/twitter_user,/data/fixd/tw/out/twitter_user"  \
-#   "/data/rawd/social/network/twitter/objects/twitter_user"
+# for object in twitter_user twitter_user_profile twitter_user_style twitter_user_partial ; do
+#   ~/ics/icsdata/social/network/twitter/parse_and_scrape_helpers/last_seen_state.rb --run --rm     \
+#     --map_command="$perlgrep $object"                                                        \
+#     "/data/rawd/social/network/twitter/partial_uniq/$object,/data/fixd/tw/out/$object"  \
+#     "/data/rawd/social/network/twitter/objects/$object"
+# done
 
-# ~/ics/icsdata/social/network/twitter/parse_and_scrape_helpers/last_seen_state.rb --run --rm     \
-#   --map_command="$perlgrep twitter_user_profile"                                                        \
-#   "/data/rawd/social/network/twitter/partial_uniq/twitter_user_profile,/data/fixd/tw/out/twitter_user_profile"  \
-#   "/data/rawd/social/network/twitter/objects/twitter_user_profile"
-# 
-# ~/ics/icsdata/social/network/twitter/parse_and_scrape_helpers/last_seen_state.rb --run --rm     \
-#   --map_command="$perlgrep twitter_user_style"                                                        \
-#   "/data/rawd/social/network/twitter/partial_uniq/twitter_user_style,/data/fixd/tw/out/twitter_user_style"  \
-#   "/data/rawd/social/network/twitter/objects/twitter_user_style"
+# for object in a_favorites_b tweet
+#   hdp-rm -r /data/rawd/social/network/twitter/objects/$object
+#   /usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar       \
+#     -D           mapred.reduce.tasks=200                                                       \
+#     -D           stream.num.map.output.key.fields="2"                                          \
+#     -mapper      "$perlgrep $object"                                                             \
+#     -reducer     "/usr/bin/uniq"                                                               \
+#     -input       "/data/fixd/tw/out/$object,/data/rawd/social/network/twitter/parsed/api/*/part-*,/data/rawd/social/network/twitter/parsed/stream/*/part-*" \
+#     -output      "/data/rawd/social/network/twitter/objects/$object"                             \
+#     -cmdenv       LC_ALL=C
+# done
 
-# ~/ics/icsdata/social/network/twitter/parse_and_scrape_helpers/last_seen_state.rb --run --rm     \
-#   --map_command="$perlgrep twitter_user_partial"                                                        \
-#   "/data/rawd/social/network/twitter/parsed/\*/\*/part-*,/data/fixd/tw/out/twitter_user_partial"  \
-#   "/data/rawd/social/network/twitter/objects/twitter_user_partial"
-# 
-# ~/ics/icsdata/social/network/twitter/parse_and_scrape_helpers/last_seen_state.rb --run --rm     \
-#   --map_command="$perlgrep twitter_user_search_id"                                                        \
-#   "/data/rawd/social/network/twitter/parsed/\*/\*/part-*,/data/fixd/tw/out/twitter_user_search_id"  \
-#   "/data/rawd/social/network/twitter/objects/twitter_user_search_id"
+# search_tweet twitter_user_search_id a_replies_b_name
+for object in twitter_user_search_id a_replies_b_name ; do
+  hdp-rm -r /data/rawd/social/network/twitter/objects/$object
+  /usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar             \
+    -D           mapred.reduce.tasks=57                                                               \
+    -D           stream.num.map.output.key.fields="2"                                                 \
+    -mapper      "$perlgrep $object"                                                                  \
+    -reducer     "/usr/bin/uniq"                                                                      \
+    -input       "/data/fixd/tw/out/$object,/data/rawd/social/network/twitter/parsed/search/*/part-*" \
+    -output      "/data/rawd/social/network/twitter/objects/$object"                                  \
+    -cmdenv       LC_ALL=C
+done
 
-# hdp-rm -r /data/rawd/social/network/twitter/objects/tweet
-# /usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar       \
-#   -D           mapred.reduce.tasks=200                                                       \
-#   -D           stream.num.map.output.key.fields="2"                                          \
-#   -mapper      "$perlgrep tweet"                                                             \
-#   -reducer     "/usr/bin/uniq"                                                               \
-#   -input       "/data/fixd/tw/out/tweet,/data/rawd/social/network/twitter/parsed/api/*/part-*,/data/rawd/social/network/twitter/parsed/stream/*/part-*" \
-#   -output      "/data/rawd/social/network/twitter/objects/tweet"                             \
-#   -cmdenv       LC_ALL=C
+# delete_tweet
+for object in delete_tweet ; do
+  hdp-rm -r /data/rawd/social/network/twitter/objects/$object
+  /usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar             \
+    -D           mapred.reduce.tasks=57                                                               \
+    -D           stream.num.map.output.key.fields="2"                                                 \
+    -mapper      "$perlgrep $object"                                                                  \
+    -reducer     "/usr/bin/uniq"                                                                      \
+    -input       "/data/fixd/tw/parsed2/com.twitter.stream/part-*,/data/rawd/social/network/twitter/parsed/stream/*/part-*" \
+    -output      "/data/rawd/social/network/twitter/objects/$object"                                  \
+    -cmdenv       LC_ALL=C
+done
 
-hdp-rm -r /data/rawd/social/network/twitter/objects/search_tweet
-/usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar       \
-  -D           mapred.reduce.tasks=200                                                       \
-  -D           stream.num.map.output.key.fields="2"                                          \
-  -mapper      "$perlgrep search_tweet"                                                      \
-  -reducer     "/usr/bin/uniq"                                                               \
-  -input       "/data/fixd/tw/out/search_tweet,/data/rawd/social/network/twitter/parsed/search/*/part-*" \
-  -output      "/data/rawd/social/network/twitter/objects/search_tweet"                             \
-  -cmdenv       LC_ALL=C
+# for token in a_atsigns_b a_replies_b a_retweets_b hashtag tweet_url smiley ; do
+#   hdp-rm -r /data/rawd/social/network/twitter/objects/$token
+#   /usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar \
+#     -D           mapred.reduce.tasks=0                                                    \
+#     -mapper      "$perlgrep $token"                                                       \
+#     -reducer     ""                                                                       \
+#     -input       "/data/rawd/social/network/twitter/parsed/raw_tweet_tokens"              \
+#     -output      "/data/rawd/social/network/twitter/objects/$token"                       \
+#     -cmdenv       LC_ALL=C
+# done
+
+
 
 # /data/fixd/tw/out
 #

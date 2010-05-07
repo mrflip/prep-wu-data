@@ -2,7 +2,7 @@
 
 
 
-Smiley = LOAD '/data/rawd/social/network/twitter/objects/smiley' AS (
+Smiley = LOAD '/data/rawd/social/network/twitter/objects/tokens/smiley' AS (
   rsrc:             chararray,
   emote:            chararray,
   tweet_id:         long,
@@ -32,5 +32,5 @@ Filtered = FOREACH Joined GENERATE
   Tweet::text                           AS text
   ;
 
-rmf                      /data/rawd/social/network/twitter/objects/smileys_with_tweets;
-STORE Filtered INTO      '/data/rawd/social/network/twitter/objects/smileys_with_tweets';
+rmf                      /data/rawd/social/network/twitter/objects/tokens/smileys_with_tweets;
+STORE Filtered INTO      '/data/rawd/social/network/twitter/objects/tokens/smileys_with_tweets';

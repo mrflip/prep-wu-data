@@ -2,6 +2,7 @@
 
 --   TWITTER_USER_IDS = path to complete list of twitter user profiles
 --   PAGERANK         = path to pagerank and id
+--   TRSTME           = path to final output date for trst me app
 
 
 MatchedIds = LOAD '$TWITTER_USER_IDS' AS (
@@ -20,7 +21,9 @@ MatchedIds = LOAD '$TWITTER_USER_IDS' AS (
   health:           chararray
   ) ;
 
-Rank = LOAD '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_only' AS (
+-- PAGERANK = '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_only'
+
+Rank = LOAD '$PAGERANK' AS (
   user_id:              long,
   pagerank:             float
   ) ;
@@ -38,5 +41,7 @@ OutputTweets = FOREACH RankWScreenNames GENERATE
   MatchedIds::created_at                AS created_at
   ;
 
-rmf                      /data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile;
-STORE OutputTweets INTO '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile';
+-- TRSTME '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile'
+
+rmf                      $TRSTME;
+STORE OutputTweets INTO '$TRSTME';
