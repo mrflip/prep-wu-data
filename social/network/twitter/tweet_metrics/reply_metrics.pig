@@ -2,14 +2,14 @@
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
--- %default REPLY_OUT '/data/sn/tw/fixd/infl_metrics/reply_out_counts'
--- %default REPLY_IN '/data/sn/tw/fixd/infl_metrics/reply_in_counts'
-%default REPLY_OUT '/home/doncarlo/twitter/reply_out_counts'
-%default REPLY_IN '/home/doncarlo/twitter/reply_in_counts'
--- %default TW_USER '/data/sn/tw/fixd/objects/twitter_user'
-%default TW_USER '/data/rawd/social/network/twitter/objects/twitter_user'
--- %default OUTPUT '/data/sn/tw/fixd/infl_metrics/reply_metrics'
-%default OUTPUT '/home/doncarlo/twitter/reply_metrics'
+%default REPLY_OUT '/data/sn/tw/fixd/infl_metrics/reply_out_counts'
+%default REPLY_IN '/data/sn/tw/fixd/infl_metrics/reply_in_counts'
+-- %default REPLY_OUT '/home/doncarlo/twitter/reply_out_counts'
+-- %default REPLY_IN '/home/doncarlo/twitter/reply_in_counts'
+%default TW_USER '/data/sn/tw/fixd/objects/twitter_user'
+-- %default TW_USER '/data/rawd/social/network/twitter/objects/twitter_user'
+%default OUTPUT '/data/sn/tw/fixd/infl_metrics/reply_metrics'
+-- %default OUTPUT '/home/doncarlo/twitter/reply_metrics'
 
 -- load reply data
 RepsOut = LOAD '$REPLY_OUT' AS (user_id:long,
