@@ -2,9 +2,9 @@
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- defaults
-%default A_REP_B  '/data/rawd/social/network/twitter/objects/a_replies_b'
-%default OUT_A '/home/doncarlo/reply_out_counts'
-%default OUT_B '/home/doncarlo/reply_in_counts'
+%default A_REP_B  '/data/sn/tw/fixd/objects/a_replies_b'
+%default OUT_A '/data/sn/tw/fixd/infl_metrics/reply_out_counts'
+%default OUT_B '/data/sn/tw/fixd/infl_metrics/reply_in_counts'
 
 -- load a_replies_b data
 ARepliesB = LOAD '$A_REP_B' AS (rsrc:chararray,
