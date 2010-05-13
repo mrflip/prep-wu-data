@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
-$: << Subdir[__FILE__,'../utils/json'].expand_path.to_s
 require 'rubygems'
 require 'extlib/class'
+require 'monkeyshines'
+$: << Subdir[__FILE__,'../utils/json'].expand_path.to_s
 require 'wukong'                       ; include Wukong
 require 'tsv_to_json'    ; include TSVtoJSON
 
