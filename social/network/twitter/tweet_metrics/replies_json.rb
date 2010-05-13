@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
+$: << Subdir[__FILE__,'../utils/json'].expand_path.to_s
 require 'rubygems'
 require 'extlib/class'
 require 'wukong'                       ; include Wukong
-require '../utils/json/tsv_to_json'    ; include TSVtoJSON
+require 'tsv_to_json'    ; include TSVtoJSON
 
 Settings.resolve!
 Settings.json_keys = "screen_name,id,statuses,replies_out,replies_in,account_age"
