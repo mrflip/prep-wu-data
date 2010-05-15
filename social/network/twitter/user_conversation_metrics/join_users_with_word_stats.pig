@@ -82,3 +82,4 @@ STORE UserBagsWStats INTO '$USERWORDS';
 -- freq_avg           = average of the set of all user_word_counts
 -- ratio              = count/N where N is the total number of words ever tweeted
 -- 
+-- user_word_differential = (user_word_rel_freq - ratio)
