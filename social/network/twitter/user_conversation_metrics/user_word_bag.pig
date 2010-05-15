@@ -3,14 +3,16 @@
 -- Purpose: Make a dataset from word tokens consisting of the
 -- following:
 --
--- [user_id, {(word, count), (word,count), ...}]
--- 
+-- [user_id, word, num_user_word, sum_user_words, num_word, range]
+--
+-- where num_word and range are denormalized stats about the word.
+--
 -- Input data:
 -- 
--- Uses only the word tokens from the output of extract_tweet_tokens.rb
+-- Uses only the word_token dataset from the output of extract_tweet_tokens.rb
 -- which should look like:
 --
--- [word, pajamas, user_id, tweet_id, created_at]
+-- [word_token, text, user_id, tweet_id, created_at]
 --
 %default TOKENS  '/data/sn/tw/fixd/objects/tokens/word_token'; --input location
 %default WORDBAG '/data/sn/tw/fixd/word/user_word_bag';        --output location
@@ -25,39 +27,55 @@ AllTokens = LOAD '$TOKENS' AS
                 created_at: long
             );
             
--- make [user_id, pajamas, num_pajamas] from input
-AllWords  = FILTER AllTokens BY rsrc == 'word_token';
-Grouped   = GROUP AllWords BY (user_id, text);
-UserWords = FOREACH Grouped GENERATE
-            group.user_id        AS user_id,
-            group.text           AS text,
-            COUNT(AllWords.text) AS num
-            ;
-            
--- make [user_id, sum(all user's words), {(pajamas, num_pajamas), (fruit, num_fruit), ... }] 
-UserHist  = GROUP UserWords BY user_id;
-CountHist = FOREACH UserHist
-            {
-                n_count = SUM(UserWords.num);    
-                GENERATE group AS user_id, n_count as n_count, UserWords.(text, num) AS pair;
-            };
-
--- make [user_id, pajamas, num_pajamas, num_pajamas/sum(all user's words)]            
-FlattenedHist = FOREACH CountHist GENERATE user_id, n_count, FLATTEN(pair);
-YetMore       = FOREACH FlattenedHist GENERATE
-                        user_id                         AS user_id,
-                        pair::text                      AS text,
-                        pair::num                       AS num,
-                        (1.0*(float)num/(float)n_count) AS rel_freq
+Words = FOREACH AllTokens GENERATE
+                text    AS word,
+                user_id AS user_id
                 ;
+                
+-- make [word, count(word), range(word)] from input
+GlobalWords   = GROUP Words BY word;
+WordStats     = FOREACH GlobalWords
+                {
+                        --num_word = count of times word has been used
+                        --range    = number of people who have used word at least once
+                        num_word = COUNT(Words);
+                        range    = COUNT(DISTINCT(Words));
+                        GENERATE
+                                group    AS word,
+                                num_word AS num_word,
+                                range    AS range
+                        ;                        
+                };
 
--- make [user_id, {(word, count, frequency), (word, count, frequency), ... }]                
-AlmostHist = GROUP YetMore BY user_id;
-FinalHist  = FOREACH AlmostHist GENERATE
-                     group                         AS user_id,
-                     YetMore.(text, num, rel_freq) AS big_bag
-             ;
-FinalFlattened = FOREACH FinalHist GENERATE user_id, FLATTEN(big_bag);
--- store data on disk             
+-- make [user_id, word, user_count(word)] from input
+UserWords     = GROUP Words BY (user_id, word);
+UserWordStats = FOREACH UserWords
+                {
+                        --num_user_word = count of times user has used word
+                        num_user_word = COUNT(Words);
+                        GENERATE
+                                group.user_id AS user_id,
+                                group.word    AS word,
+                                num_user_word AS num_user_word
+                        ;                                
+                };
+
+-- do a join to yield [user_id, word, num_user_word, sum_user_words, num_word, range]                
+JoinedStats = JOIN UserWordStats BY word, WordStats BY word;
+FinalStats  = FOREACH JoinedStats
+              {
+                --sum_user_words = count of all words user has ever spoken
+                sum_user_words = SUM(UserWordStats::num_user_word);
+                GENERATE
+                        UserWordStats::user_id AS user_id,
+                        UserWordStats::word    AS word,
+                        UserWordStats::num_user_word AS num_user_word,
+                        sum_user_words AS sum_user_words,
+                        WordStats::num_word AS num_word,
+                        WordStats::range    AS range
+                ;                        
+              };
+
+-- -- store data on disk             
 rmf $WORDBAG;
 STORE FinalFlattened INTO '$WORDBAG';
