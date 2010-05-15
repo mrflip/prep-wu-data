@@ -16,7 +16,7 @@
 --
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
-%default TOKENS  '/data/sn/tw/fixd/objects/tokens/word_token'; --input location
+%default TOKENS  '/data/sn/tw/fixd/objects/tokens/word_token/part-00000'; --input location
 %default WORDBAG '/data/sn/tw/fixd/word/user_word_bag';        --output location
 
 -- load input data
@@ -38,43 +38,45 @@ Words = FOREACH AllTokens GENERATE
 GlobalWords   = GROUP Words BY word;
 WordStats     = FOREACH GlobalWords
                 {
-                        distinct_words = DISTINCT Words;
-                        GENERATE group AS word, COUNT(Words) AS num_word, COUNT(distinct_words) AS range;
+                        -- distinct_words = DISTINCT Words;
+                        GENERATE group AS word, COUNT(Words) AS num_word;
                 };
-
--- make [user_id, word, user_count(word)] from input
-UserWords     = GROUP Words BY (user_id, word);
-UserWordStats = FOREACH UserWords GENERATE group.user_id AS user_id, group.word AS word, COUNT(Words) AS num_user_word;
-
--- make [user_id, sum_user_words, vocab] from input
-Users = GROUP Words BY user_id;
-UserStats = FOREACH Users
-            {
-                distinct_user_words = DISTINCT Words;
-                GENERATE group AS user_id, COUNT(Words) AS sum_user_words, COUNT(distinct_user_words) AS vocab;
-            };
-
--- do the first join to yield [user_id, word, num_user_word, sum_user_words, vocab]
-JoinedUserWords = JOIN UserStats BY user_id, UserWordStats BY user_id;
-FirstJoined     = FOREACH JoinedUserWords GENERATE
-                        UserStats::user_id           AS user_id,
-                        UserWordStats::word          AS word,
-                        UserWordStats::num_user_word AS num_user_word,
-                        UserStats::sum_user_words    AS sum_user_words,
-                        UserStats::vocab             AS vocab
-                  ;
--- do the second join to yield [user_id, word, num_user_word, sum_user_words, num_word, range]
-JoinedAllWords = JOIN WordStats BY word, FirstJoined BY word;
-FinalStats     = FOREACH JoinedAllWords GENERATE
-                        FirstJoined::user_id        AS user_id,
-                        FirstJoined::word           AS word,
-                        FirstJoined::num_user_word  AS num_user_word,
-                        FirstJoined::sum_user_words AS sum_user_words,
-                        FirstJoined::vocab          AS vocab,
-                        WordStats::num_word         AS num_word,
-                        WordStats::range            AS range
-                 ;
-
--- store data on disk             
 rmf $WORDBAG;
-STORE FinalStats INTO '$WORDBAG';
+STORE WordStats INTO '$WORDBAG';
+
+-- -- make [user_id, word, user_count(word)] from input
+-- UserWords     = GROUP Words BY (user_id, word);
+-- UserWordStats = FOREACH UserWords GENERATE group.user_id AS user_id, group.word AS word, COUNT(Words) AS num_user_word;
+-- 
+-- -- make [user_id, sum_user_words, vocab] from input
+-- Users = GROUP Words BY user_id;
+-- UserStats = FOREACH Users
+--             {
+--                 distinct_user_words = DISTINCT Words;
+--                 GENERATE group AS user_id, COUNT(Words) AS sum_user_words, COUNT(distinct_user_words) AS vocab;
+--             };
+-- 
+-- -- do the first join to yield [user_id, word, num_user_word, sum_user_words, vocab]
+-- JoinedUserWords = JOIN UserStats BY user_id, UserWordStats BY user_id;
+-- FirstJoined     = FOREACH JoinedUserWords GENERATE
+--                         UserStats::user_id           AS user_id,
+--                         UserWordStats::word          AS word,
+--                         UserWordStats::num_user_word AS num_user_word,
+--                         UserStats::sum_user_words    AS sum_user_words,
+--                         UserStats::vocab             AS vocab
+--                   ;
+-- -- do the second join to yield [user_id, word, num_user_word, sum_user_words, num_word, range]
+-- JoinedAllWords = JOIN WordStats BY word, FirstJoined BY word;
+-- FinalStats     = FOREACH JoinedAllWords GENERATE
+--                         FirstJoined::user_id        AS user_id,
+--                         FirstJoined::word           AS word,
+--                         FirstJoined::num_user_word  AS num_user_word,
+--                         FirstJoined::sum_user_words AS sum_user_words,
+--                         FirstJoined::vocab          AS vocab,
+--                         WordStats::num_word         AS num_word,
+--                         WordStats::range            AS range
+--                  ;
+-- 
+-- -- store data on disk             
+-- rmf $WORDBAG;
+-- STORE FinalStats INTO '$WORDBAG';
