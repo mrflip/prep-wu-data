@@ -77,4 +77,4 @@ FinalStats     = FOREACH JoinedAllWords GENERATE
 
 -- store data on disk             
 rmf $WORDBAG;
-STORE FinalFlattened INTO '$WORDBAG';
+STORE FinalStats INTO '$WORDBAG';
