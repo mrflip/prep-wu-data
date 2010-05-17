@@ -52,7 +52,8 @@ WordGroup      = GROUP AllTokens BY text;
 WordStatistics = FOREACH WordGroup {
                         freq_var     = AVG(AllTokens.freq_sq) - (AVG(AllTokens.freq) * AVG(AllTokens.freq));
                         freq_avg     = AVG(AllTokens.freq);
-                        freq_tot     = SUM(AllTokens.freq);
+                        -- -- FIXME -- sum on count, not on frequency
+                        -- freq_tot     = SUM(AllTokens.freq);
                         -- because pig hates me, this line is commented out (need a newer version)
 --                        dispersion   = 1.0 - SQRT(freq_var)/(freq_avg*SQRT((float)'$N_USERS'-1.0));
                         rel_freq     = (1.0*(float)freq_tot/(float)'$TOKEN_TOTAL');
