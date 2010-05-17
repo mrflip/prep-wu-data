@@ -3,7 +3,7 @@
 -- Purpose: Make a dataset from word tokens consisting of the
 -- following:
 --
--- [user_id, word, num_user_word, sum_user_words, num_word, range]
+-- [user_id, word, num_user_word, tot_user_words, num_word, range]
 --
 -- where num_word and range are denormalized stats about the word.
 --
@@ -14,9 +14,9 @@
 --
 -- [word_token, text, user_id, tweet_id, created_at]
 --
-REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
 
-%default TOKENS  '/data/sn/tw/fixd/objects/tokens/word_token/part-00000'; --input location
+%default TOKENS  '/data/sn/tw/fixd/objects/tokens/word_token'; --input location
 %default WORDBAG '/data/sn/tw/fixd/word/user_word_bag';        --output location
 
 -- load input data
@@ -28,55 +28,85 @@ AllTokens = LOAD '$TOKENS' AS
                 tweet_id:   long,
                 created_at: long
             );
-            
-Words = FOREACH AllTokens GENERATE
-                text    AS word,
-                user_id AS user_id
-                ;
-                
--- make [word, count(word), range(word)] from input
-GlobalWords   = GROUP Words BY word;
-WordStats     = FOREACH GlobalWords
-                {
-                        -- distinct_words = DISTINCT Words;
-                        GENERATE group AS word, COUNT(Words) AS num_word;
-                };
-rmf $WORDBAG;
-STORE WordStats INTO '$WORDBAG';
 
--- -- make [user_id, word, user_count(word)] from input
--- UserWords     = GROUP Words BY (user_id, word);
--- UserWordStats = FOREACH UserWords GENERATE group.user_id AS user_id, group.word AS word, COUNT(Words) AS num_user_word;
+-- get the number of usages for each user-word pair.  Result has exactly one entry per user-word pair.
+UserToks        = FOREACH AllTokens GENERATE  user_id AS user_id, text AS tok ;
+UserToksGrouped = GROUP UserToks BY (user_id, tok) PARALLEL 400;
+UserTokCounts   = FOREACH UserToksGrouped GENERATE FLATTEN(group) AS (user_id, tok), COUNT(UserToks) AS num_user_tok_usages ;
+
+-- For each user, get stats on their total word usage:
+UserUsages      = GROUP UserTokCounts BY user_id  PARALLEL 400;
+UserTokStats1   = FOREACH UserUsages GENERATE
+    group                                                AS user_id                    ,
+    FLATTEN( UserTokCounts.(tok, num_user_tok_usages) )  AS (tok, num_user_tok_usages) , 
+    COUNT(   UserTokCounts)                              AS vocab                      , 
+    SUM(UserTokCounts.num_user_tok_usages)               AS tot_user_usages            
+    ;
+UserTokStats    = FOREACH UserTokStats1 GENERATE
+  tok, user_id,
+  num_user_tok_usages,
+  tot_user_usages,
+  ((float)num_user_tok_usages / (float)tot_user_usages) AS user_tok_freq:float,
+  ((float)num_user_tok_usages / (float)tot_user_usages)*((float)num_user_tok_usages / (float)tot_user_usages) AS user_tok_freq_sq:float,
+  vocab ;
+-- illustrate UserTokStats;
+
+rmf                      $WORDBAG;
+STORE UserTokStats INTO '$WORDBAG';
+
+
+-- In the counters for the UserToksGrouped, the number of input rows is the total number of usages.
+-- In the counters for the UserTokStats, the number of output rows is the number of users
+
+-- %default SQRT_OF_N_USERS_MINUS_1 '1000.0' ;
+-- %default TOT_USAGES_AS_DOUBLE    '1000000.0';
+
+-- UserTokStatsGrouped = GROUP UserTokStats BY tok ;
+-- TokStats = FOREACH UserTokStatsGrouped {
+--   freq_avg         = AVG(UserTokStats.user_tok_freq);
+--   freq_var         = AVG(UserTokStats.user_tok_freq_sq) - (AVG(UserTokStats.user_tok_freq) * AVG(UserTokStats.user_tok_freq));
+--   freq_stdev       = org.apache.pig.piggybank.evaluation.math.SQRT(freq_var) ;
+--   tot_tok_usages  = SUM(UserTokStats.num_user_tok_usages) ;
+--   dispersion       = 1.0 - (freq_stdev / ( freq_avg * 1.0 )); -- $SQRT_OF_N_USERS_MINUS_1
+--   rel_freq         = ((double)tot_tok_usages / 1000.0     );  -- $TOT_USAGES_AS_DOUBLE
+--   GENERATE
+--     group                     AS tok,
+--     tot_tok_usages           AS tot_tok_usages,  -- total times THIS tok has been spoken
+--     COUNT(UserTokStats)       AS range:     long,  -- total number of people who spoke this tok at least once
+--     (float)freq_avg           AS freq_avg:  float -- average  of the frequencies at which this tok is spoken
+--     , (float)freq_var         AS freq_var:  float -- variance of the frequencies at which this tok is spoken
+--     , (float)freq_stdev       AS freq_stdev:float -- standard deviation of the frequencies at which this tok is spoken
+--     , (float)dispersion         AS dispersion:float -- dispersion (see below)
+--     , (float)rel_freq           AS rel_freq:  float  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+--     ;
+--   };
+-- illustrate TokStats ;
 -- 
--- -- make [user_id, sum_user_words, vocab] from input
--- Users = GROUP Words BY user_id;
--- UserStats = FOREACH Users
---             {
---                 distinct_user_words = DISTINCT Words;
---                 GENERATE group AS user_id, COUNT(Words) AS sum_user_words, COUNT(distinct_user_words) AS vocab;
---             };
 -- 
--- -- do the first join to yield [user_id, word, num_user_word, sum_user_words, vocab]
--- JoinedUserWords = JOIN UserStats BY user_id, UserWordStats BY user_id;
--- FirstJoined     = FOREACH JoinedUserWords GENERATE
---                         UserStats::user_id           AS user_id,
---                         UserWordStats::word          AS word,
---                         UserWordStats::num_user_word AS num_user_word,
---                         UserStats::sum_user_words    AS sum_user_words,
---                         UserStats::vocab             AS vocab
---                   ;
--- -- do the second join to yield [user_id, word, num_user_word, sum_user_words, num_word, range]
--- JoinedAllWords = JOIN WordStats BY word, FirstJoined BY word;
--- FinalStats     = FOREACH JoinedAllWords GENERATE
---                         FirstJoined::user_id        AS user_id,
---                         FirstJoined::word           AS word,
---                         FirstJoined::num_user_word  AS num_user_word,
---                         FirstJoined::sum_user_words AS sum_user_words,
---                         FirstJoined::vocab          AS vocab,
---                         WordStats::num_word         AS num_word,
---                         WordStats::range            AS range
---                  ;
+-- TokStats = FOREACH UserTokStatsGrouped {
+--   freq_avg         = AVG(UserTokStats.user_tok_freq);
+--   freq_var         = AVG(UserTokStats.user_tok_freq_sq) - (AVG(UserTokStats.user_tok_freq) * AVG(UserTokStats.user_tok_freq));
+--   freq_stdev       = org.apache.pig.piggybank.evaluation.math.SQRT(freq_var) ;
+--   GENERATE
+--     group                     AS tok,
+--     (float)freq_avg           AS freq_avg:  float
+--     , (float)freq_stdev         AS freq_stdev:float
+--     ;
+--   };
+-- illustrate TokStats ;
+
+
+-- Dispersion is Julliand's D
 -- 
--- -- store data on disk             
--- rmf $WORDBAG;
--- STORE FinalStats INTO '$WORDBAG';
+--               V         
+-- D = 1 - --------------- 
+--           sqrt(n - 1)   
+-- 
+-- V = s / x
+-- 	  
+-- Where
+-- 
+-- * n is the number of users
+-- * s is the standard deviation of the subfrequencies
+-- * x is the average of the subfrequencies
+  
