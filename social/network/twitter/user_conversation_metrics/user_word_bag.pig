@@ -71,30 +71,18 @@ STORE UserTokStats INTO '$WORDBAG';
 --   rel_freq         = ((double)tot_tok_usages / $TOT_USAGES_AS_DOUBLE);  
 --   GENERATE
 --     group                     AS tok,
---     tot_tok_usages           AS tot_tok_usages,  -- total times THIS tok has been spoken
+--     tot_tok_usages            AS tot_tok_usages,  -- total times THIS tok has been spoken
 --     COUNT(UserTokStats)       AS range:     long,  -- total number of people who spoke this tok at least once
 --     (float)freq_avg           AS freq_avg:  float -- average  of the frequencies at which this tok is spoken
 --     , (float)freq_var         AS freq_var:  float -- variance of the frequencies at which this tok is spoken
 --     , (float)freq_stdev       AS freq_stdev:float -- standard deviation of the frequencies at which this tok is spoken
---     , (float)dispersion         AS dispersion:float -- dispersion (see below)
---     , (float)rel_freq           AS rel_freq:  float  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+--     , (float)dispersion       AS dispersion:float -- dispersion (see below)
+--     , (float)rel_freq         AS rel_freq:  float  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
 --     ;
 --   };
 -- illustrate TokStats ;
 -- 
 -- 
--- TokStats = FOREACH UserTokStatsGrouped {
---   freq_avg         = AVG(UserTokStats.user_tok_freq);
---   freq_var         = AVG(UserTokStats.user_tok_freq_sq) - (AVG(UserTokStats.user_tok_freq) * AVG(UserTokStats.user_tok_freq));
---   freq_stdev       = org.apache.pig.piggybank.evaluation.math.SQRT(freq_var) ;
---   GENERATE
---     group                     AS tok,
---     (float)freq_avg           AS freq_avg:  float
---     , (float)freq_stdev         AS freq_stdev:float
---     ;
---   };
--- illustrate TokStats ;
-
 
 -- Dispersion is Julliand's D
 -- 
