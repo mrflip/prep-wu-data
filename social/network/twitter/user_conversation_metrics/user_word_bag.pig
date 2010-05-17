@@ -67,8 +67,8 @@ STORE UserTokStats INTO '$WORDBAG';
 --   freq_var         = AVG(UserTokStats.user_tok_freq_sq) - (AVG(UserTokStats.user_tok_freq) * AVG(UserTokStats.user_tok_freq));
 --   freq_stdev       = org.apache.pig.piggybank.evaluation.math.SQRT(freq_var) ;
 --   tot_tok_usages  = SUM(UserTokStats.num_user_tok_usages) ;
---   dispersion       = 1.0 - (freq_stdev / ( freq_avg * 1.0 )); -- $SQRT_OF_N_USERS_MINUS_1
---   rel_freq         = ((double)tot_tok_usages / 1000.0     );  -- $TOT_USAGES_AS_DOUBLE
+--   dispersion       = 1.0 - (freq_stdev / ( freq_avg * $SQRT_OF_N_USERS_MINUS_1 ));
+--   rel_freq         = ((double)tot_tok_usages / $TOT_USAGES_AS_DOUBLE);  
 --   GENERATE
 --     group                     AS tok,
 --     tot_tok_usages           AS tot_tok_usages,  -- total times THIS tok has been spoken
