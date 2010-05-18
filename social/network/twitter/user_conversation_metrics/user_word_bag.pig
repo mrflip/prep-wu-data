@@ -31,11 +31,11 @@ AllTokens = LOAD '$TOKENS' AS
 
 -- get the number of usages for each user-word pair.  Result has exactly one entry per user-word pair.
 UserToks        = FOREACH AllTokens GENERATE  user_id AS user_id, text AS tok ;
-UserToksGrouped = GROUP UserToks BY (user_id, tok) PARALLEL 400;
+UserToksGrouped = GROUP UserToks BY (user_id, tok);
 UserTokCounts   = FOREACH UserToksGrouped GENERATE FLATTEN(group) AS (user_id, tok), COUNT(UserToks) AS num_user_tok_usages ;
 
 -- For each user, get stats on their total word usage:
-UserUsages      = GROUP UserTokCounts BY user_id  PARALLEL 400;
+UserUsages      = GROUP UserTokCounts BY user_id;
 UserTokStats1   = FOREACH UserUsages GENERATE
     group                                                AS user_id                    ,
     FLATTEN( UserTokCounts.(tok, num_user_tok_usages) )  AS (tok, num_user_tok_usages) , 
