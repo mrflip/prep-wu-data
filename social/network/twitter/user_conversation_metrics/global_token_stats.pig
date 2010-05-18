@@ -16,7 +16,7 @@ UserTokStats = LOAD '$WORDBAG' AS
                         vocab:               long
                );
 
-UserTokStatsGrouped = GROUP UserTokStats BY tok PARALLEL 400;
+UserTokStatsGrouped = GROUP UserTokStats BY tok;
 TokStats = FOREACH UserTokStatsGrouped
            {
                 freq_avg         = AVG(UserTokStats.user_tok_freq);
