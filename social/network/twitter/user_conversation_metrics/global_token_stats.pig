@@ -36,7 +36,7 @@ TokStats = FOREACH UserTokStatsGrouped
                 global_freq_stdev  = org.apache.pig.piggybank.evaluation.math.SQRT((float)global_freq_var);
                 
                 tot_tok_usages     = SUM(UserTokStats.num_user_tok_usages) ;
-                dispersion         = 1.0 - ((float)global_freq_stdev / ( (float)global_freq_avg * (float)$SQRT_OF_N_USERS_MINUS_1 ));
+                dispersion         = (float)1.0 - ((float)global_freq_stdev / ( (float)global_freq_avg * (float)$SQRT_OF_N_USERS_MINUS_1 ));
                 rel_freq_ppb       = ((float)tot_tok_usages / (float)$TOT_USAGES_AS_DOUBLE)*(float)1000000000.0;
                 
                 GENERATE
