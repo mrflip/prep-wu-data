@@ -3,8 +3,8 @@
 
 REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
-%default WORDBAG                 '/data/sn/tw/fixd/word/user_word_bag/part-r-00000';     --input location
-%default WORDSTATS               '/data/sn/tw/fixd/word/global_word_stats_sample'; --output location
+%default WORDBAG                 '/data/sn/tw/fixd/word/user_word_bag';     --input location
+%default WORDSTATS               '/data/sn/tw/fixd/word/global_word_stats'; --output location
 %default SQRT_OF_N_USERS_MINUS_1 '7305.3931';
 %default N_USERS                 '53368769.0';
 %default TOT_USAGES_AS_DOUBLE    '14876543916.0';
