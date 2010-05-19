@@ -1,9 +1,11 @@
 -- In the counters for the UserToksGrouped, the number of input rows is the total number of usages.
 -- In the counters for the UserTokStats, the number of output rows is the number of users
+
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 %default WORDBAG   '/data/sn/tw/fixd/word/user_word_bag';     --input location
 %default WORDSTATS '/data/sn/tw/fixd/word/global_word_stats'; --output location
-%default SQRT_OF_N_USERS_MINUS_1 '1000.0' ;
-%default TOT_USAGES_AS_DOUBLE    '1000000.0';
+%default SQRT_OF_N_USERS_MINUS_1 '7305.3931';
+%default TOT_USAGES_AS_DOUBLE    '14876543916.0';
 
 UserTokStats = LOAD '$WORDBAG' AS
                (
@@ -38,7 +40,7 @@ TokStats = FOREACH UserTokStatsGrouped
            };
 
 
-rmr $WORDSTATS;
+rmf $WORDSTATS;
 STORE TokStats INTO '$WORDSTATS';
 -- Range is how many people used the word
 
