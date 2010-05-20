@@ -46,8 +46,8 @@ UserTokStats    = FOREACH UserTokStats1 GENERATE
   tok, user_id,
   num_user_tok_usages,
   tot_user_usages,
-  ((float)num_user_tok_usages / (float)tot_user_usages) AS user_tok_freq:float,
-  ((float)num_user_tok_usages / (float)tot_user_usages)*((float)num_user_tok_usages / (float)tot_user_usages) AS user_tok_freq_sq:float,
+  ((double)num_user_tok_usages / (double)tot_user_usages) AS user_tok_freq:double,
+  ((double)num_user_tok_usages / (double)tot_user_usages)*((double)num_user_tok_usages / (double)tot_user_usages) AS user_tok_freq_sq:double,
   vocab ;
 -- illustrate UserTokStats;
 
