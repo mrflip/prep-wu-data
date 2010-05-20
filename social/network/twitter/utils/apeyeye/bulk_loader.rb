@@ -34,18 +34,3 @@ class BulkLoader < Wukong::Streamer::RecordStreamer
 end
 
 Wukong::Script.new( BulkLoader, nil ).run
-
-# def each_record &block
-#   @batch_size ||= options.batch_size.to_i
-#   while ! $stdin.eof?
-#     iter = 0
-#     @cassandra_db.batch(:consistency => Cassandra::Consistency::ZERO) do
-#       $stdin.each do |line|
-#         yield line
-#         break if (iter += 1) % @batch_size == 0
-#       end
-#     end
-#     print "#{iter}\t"
-#   end
-# end
-# Settings.define :batch_size, :default => 1000,       :description => 'How many records to batch into cassandra at a time'
