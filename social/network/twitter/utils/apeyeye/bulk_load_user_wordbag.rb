@@ -10,8 +10,8 @@ Settings[:dataset] = 'wordbag'
 #
 # Load precomputed json data into the ApeyEye database.
 #
-#   ~/ics/icsdata/social/network/twitter/utils/apeyeye/bulk_loader.rb --dataset=influence --rm --run /data/sn/tw/fixd/apeyeye/influence/reply_json       /tmp/bulkload/influence
-#   ~/ics/icsdata/social/network/twitter/utils/apeyeye/bulk_loader.rb --dataset=trstrank  --rm --run /data/sn/tw/fixd/apeyeye/trstrank/trstrank_json.tsv /tmp/bulkload/influence
+#   ~/ics/icsdata/social/network/twitter/utils/apeyeye/bulk_loader.rb --dataset=influence --rm --run /data/sn/tw/fixd/apeyeye/influence/reply_json   /tmp/bulkload/influence
+#   ~/ics/icsdata/social/network/twitter/utils/apeyeye/bulk_loader.rb --dataset=trstrank  --rm --run /data/sn/tw/fixd/apeyeye/trstrank/trstrank_json /tmp/bulkload/trstrank
 #
 #
 
