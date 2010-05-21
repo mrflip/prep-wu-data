@@ -37,7 +37,7 @@ TokStats = FOREACH UserTokStatsGrouped
                 
                 tot_tok_usages     = SUM(UserTokStats.num_user_tok_usages) ;
                 dispersion         = (float)1.0 - ((float)global_freq_stdev / ( (float)global_freq_avg * (float)$SQRT_OF_N_USERS_MINUS_1 ));
-                rel_freq_ppb       = ((float)tot_tok_usages / (float)$TOT_USAGES_AS_DOUBLE)*(float)1000000000.0;
+                tok_freq_ppb       = ((float)tot_tok_usages / (float)$TOT_USAGES_AS_DOUBLE)*(float)1000000000.0;
                 
                 GENERATE
                         group                    AS tok,
@@ -48,7 +48,7 @@ TokStats = FOREACH UserTokStatsGrouped
                         (float)global_freq_avg   AS global_freq_avg:   float, -- average of the frequencies at which this tok is spoken
                         (float)global_freq_stdev AS global_freq_stdev: float, -- standard deviation of the frequencies at which this tok is spoken
                         (float)dispersion        AS dispersion:        float, -- dispersion (see below)
-                        (float)rel_freq_ppb      AS rel_freq_ppb:      float  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+                        (float)tok_freq_ppb      AS tok_freq_ppb:      float  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
                 ;
            };
 
