@@ -1,7 +1,7 @@
 REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
 
-%default USER_WORDBAG    '/data/sn/tw/fixd/word/user_word_bag/'; --input location
-%default SAMPLED_WORDBAG '/tmp/sampled_user_word_bag';                  --output location
+%default USER_WORDBAG    '/data/sn/tw/fixd/word/user_word_bag_with_stats'; --input location
+%default SAMPLED_WORDBAG '/tmp/sampled_user_word_bag_with_stats';                  --output location
 
 UserTokStats = LOAD '$USER_WORDBAG' AS
                (
@@ -9,9 +9,16 @@ UserTokStats = LOAD '$USER_WORDBAG' AS
                         user_id:             chararray, --could be screen name OR long id
                         num_user_tok_usages: long,
                         tot_user_usages:     long,
-                        user_tok_freq:       float,
-                        user_tok_freq_sq:    float,
-                        vocab:               long
+                        user_tok_freq_ppb:   float,
+                        vocab:               long,
+                        tot_tok_usages:      long,
+                        range:               float,
+                        user_freq_avg:       float,
+                        user_freq_stdev:     float,
+                        global_freq_avg:     float,
+                        global_freq_stdev:   float,
+                        dispersion:          float,
+                        tok_freq_ppb:        float
                );
 
 
