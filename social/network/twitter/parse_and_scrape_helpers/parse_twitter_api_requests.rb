@@ -2,9 +2,11 @@
 require 'rubygems'
 require 'wukong'
 require 'monkeyshines'
-
 require 'wuclan/twitter'        ; include Wuclan::Twitter::Model
 require 'wuclan/twitter/parse'  ; include Wuclan::Twitter::Scrape
+
+require 'wuclan/twitter/parse/conditional_twitter_emission'; include ConditionalTwitterEmission
+
 # if you're anyone but original author this next require is useless but harmless.
 require 'wuclan/twitter/scrape/old_skool_request_classes'
 require File.dirname(__FILE__)+'/last_seen_state'
@@ -19,9 +21,6 @@ require File.dirname(__FILE__)+'/last_seen_state'
 # user is protected).
 #
 class TwitterRequestParser < Wukong::Streamer::StructStreamer
-
-  # require File.dirname(__FILE__)+'/conditional_twitter_emission'
-  # include ConditionalTwitterEmission
 
   def process request, *args, &block
     # return unless request.healthy?

@@ -3,9 +3,8 @@ require 'rubygems'
 require 'wukong'
 require 'wuclan/twitter';
 require 'wuclan/twitter/parse';
-require 'wuclan/twitter/scrape';
-include Wuclan::Twitter::Scrape
-
+require 'wuclan/twitter/scrape'; include Wuclan::Twitter::Scrape
+require 'wuclan/twitter/parse/conditional_twitter_emission'; include ConditionalTwitterEmission
 #
 # Twitter stream requests
 #
@@ -21,9 +20,6 @@ include Wuclan::Twitter::Scrape
 #   cat /tmp/sample.json | parse_twitter_stream_requests.rb --map
 #
 class TwitterRequestParser < Wukong::Streamer::RecordStreamer
-
-  # require File.dirname(__FILE__)+'/conditional_twitter_emission'
-  # include ConditionalTwitterEmission
 
   def recordize *args
     [ TwitterStreamRequest.new(super(*args).first) ]
