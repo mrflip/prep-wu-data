@@ -24,7 +24,7 @@ class BulkLoader < Wukong::Streamer::RecordStreamer
     screen_name_or_user_id.downcase!
     @cf_key = 'wordbag_'+((screen_name_or_user_id =~ /^\d+$/) ? 'user_id' : 'screen_name')
     begin
-      @cassandra_db.insert @cf_key, screen_name_or_user_id, {'json' => json}, :consistency => Cassandra::Consistency::ZERO unless screen_name_or_user_id.blank?
+      @cassandra_db.insert @cf_key, screen_name_or_user_id, {'json' => json}, :consistency => Cassandra::Consistency::ONE unless screen_name_or_user_id.blank?
     rescue RuntimeError => e ; warn "Insert failed: #{e}" end
     if (@iter+=1) % LOGGING_INTERVAL == 0 then yield(json) ; $stderr.puts [@iter, screen_name_or_user_id, json].join("\t") end
   end
