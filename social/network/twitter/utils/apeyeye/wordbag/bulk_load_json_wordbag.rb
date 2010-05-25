@@ -5,7 +5,7 @@ require 'wukong/encoding'
 require 'json'
 require 'cassandra' ; include Cassandra::Constants
 
-LOGGING_INTERVAL = 10_000
+LOGGING_INTERVAL = 1000
 
 #
 # Compute wordbag json on the fly and dump into Apeyeye database
@@ -27,16 +27,21 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
 
   def initialize *args
     super *args
+    @iter = 0
+  end
+
+  def cassandra_db
     5.times do
       begin
-        @cassandra_db = Cassandra.new('SocNetTw', %w[ 10.194.11.47 10.194.61.123 10.194.61.124 10.194.99.239 10.195.219.63 10.212.102.208 10.212.66.132 10.218.55.220 ].map{|s| "#{s}:9160"})
+        @cassandra_db ||= Cassandra.new('SocNetTw', %w[ 10.194.11.47 10.194.61.123 10.194.61.124 10.194.99.239 10.195.219.63 10.212.102.208 10.212.66.132 10.218.55.220 ].map{|s| "#{s}:9160"})
       rescue StandardError => e
         warn "Couldn't connect to cassandra db: #{e} #{e.backtrace}"
         puts "Couldn't connect to cassandra db: #{e} #{e.backtrace}"
+        sleep 5
       end
       break if @cassandra_db
     end
-    @iter = 0
+    return @cassandra_db
   end
 
   def start! user_id, vocab, tot_user_usages, *args
@@ -54,8 +59,9 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
     screen_name_or_user_id.downcase!
     @cf_key = 'wordbag_'+((screen_name_or_user_id =~ /^\d+$/) ? 'user_id' : 'screen_name')
     begin
-      @cassandra_db.insert @cf_key, screen_name_or_user_id, {'json' => json}, :consistency => Cassandra::Consistency::ONE unless screen_name_or_user_id.blank?
+      cassandra_db.insert @cf_key, screen_name_or_user_id, {'json' => json}, :consistency => Cassandra::Consistency::ONE unless screen_name_or_user_id.blank?
     rescue StandardError => e
+      @cassandra_db = nil
       warn "Insert failed for #{screen_name_or_user_id} with #{json}: #{e}"
       puts "Insert failed for #{screen_name_or_user_id} with #{json}: #{e}"
     end
@@ -69,4 +75,4 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
   end
 end
 
-Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer ).run
+Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 57 ).run
