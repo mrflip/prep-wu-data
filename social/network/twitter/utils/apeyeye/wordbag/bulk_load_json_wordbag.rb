@@ -24,10 +24,18 @@ end
 class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
   attr_accessor :user_id, :vocab, :tot_user_usages, :wordbag
   MAX_WORDBAG_SIZE = 100
-  
+
   def initialize *args
     super *args
-    @cassandra_db = Cassandra.new('SocNetTw', %w[ 10.194.11.47 10.194.61.123 10.194.61.124 10.194.99.239 10.195.219.63 10.212.102.208 10.212.66.132 10.218.55.220 ].map{|s| "#{s}:9160"})
+    5.times do
+      begin
+        @cassandra_db = Cassandra.new('SocNetTw', %w[ 10.194.11.47 10.194.61.123 10.194.61.124 10.194.99.239 10.195.219.63 10.212.102.208 10.212.66.132 10.218.55.220 ].map{|s| "#{s}:9160"})
+      rescue StandardError => e
+        warn "Couldn't connect to cassandra db: #{e} #{e.backtrace}"
+        puts "Couldn't connect to cassandra db: #{e} #{e.backtrace}"
+      end
+      break if @cassandra_db
+    end
     @iter = 0
   end
 
@@ -47,10 +55,13 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
     @cf_key = 'wordbag_'+((screen_name_or_user_id =~ /^\d+$/) ? 'user_id' : 'screen_name')
     begin
       @cassandra_db.insert @cf_key, screen_name_or_user_id, {'json' => json}, :consistency => Cassandra::Consistency::ONE unless screen_name_or_user_id.blank?
-    rescue RuntimeError => e ; warn "Insert failed: #{e}" end
+    rescue StandardError => e
+      warn "Insert failed for #{screen_name_or_user_id} with #{json}: #{e}"
+      puts "Insert failed for #{screen_name_or_user_id} with #{json}: #{e}"
+    end
     if (@iter+=1) % LOGGING_INTERVAL == 0 then yield(json) ; $stderr.puts [@iter, screen_name_or_user_id, json].join("\t") end
   end
-  
+
   def finalize
     wordbag.sort!{|a, b| b[:rel_freq] <=> a[:rel_freq] }
     json_hsh = { "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
