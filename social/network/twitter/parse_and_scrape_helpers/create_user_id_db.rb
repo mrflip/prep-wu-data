@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'wukong'
 require 'wuclan/twitter'               ; include Wuclan::Twitter::Model
-require File.dirname(__FILE__)+'/cassandra_user_id_cache'
+require 'wuclan/twitter/parse/cassandra_user_id_cache'
 
 class UserIDMapper < Wukong::Streamer::StructStreamer
   include CassandraUserIDCache
