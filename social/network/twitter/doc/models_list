@@ -16,7 +16,7 @@ Relationship models:
   -- [:tweet_id,              Integer]
   -- [:in_reply_to_tweet_id,  Integer]
 
-  ARepliesBName        
+  ARepliesBName                                    -- needs to be emiited as a_r_b
   -- [:user_a_name,           String]
   -- [:user_b_name,           String]
   -- [:tweet_id,              Integer]
@@ -25,7 +25,7 @@ Relationship models:
   -- [:user_b_sid,            Integer]
 
   AAtsignsB            
-  -- [:user_a_id,              Integer]
+  -- [:user_a_id,              Integer]           -- switch to user b id
   -- [:user_b_name,            String]
   -- [:tweet_id,              Integer]
 
@@ -66,15 +66,19 @@ Tweet Models:
   -- [:id,                      Integer     ]
   -- [:created_at,              Bignum      ]
   -- [:twitter_user_id,         Integer     ]
-  -- [:favorited,               Integer     ]
-  -- [:truncated,               Integer     ]
-  -- [:in_reply_to_user_id,     Integer     ]
-  -- [:in_reply_to_status_id,   Integer     ]
-  -- [:text,                    String      ]
+  -- [:favorited,               Integer     ] --nix
+  -- [:truncated,               Integer     ] --nix
+  -- [:in_reply_to_user_id,     Integer     ] -- reconcile on search tweets
+  -- [:in_reply_to_status_id,   Integer     ] -- in reply to tweet id
+  -- [:text,                    String      ] 
   -- [:source,                  String      ]
-  -- [:in_reply_to_screen_name, String      ]
+  -- [:in_reply_to_screen_name, String      ] --nix
+  -- add iso lang code
+  -- add lat
+  -- add lon
+  -- was search tweet ?
 
-  DeleteTweet 
+  DeleteTweet                                     -- add screen name
   -- [:id,                      Integer     ]
   -- [:created_at,              Bignum      ]
   -- [:twitter_user_id,         Integer     ]
@@ -89,13 +93,13 @@ Tweet Models:
   -- [:in_reply_to_status_id,    Integer  ]
   -- [:text,                     String   ]
   -- [:source,                   String   ]
-  -- [:in_reply_to_screen_name,  String   ]
+  -- [:in_reply_to_screen_name,  String   ] --turned into id
   -- [:in_reply_to_sid,          Integer  ]
   -- [:twitter_user_screen_name, String   ]
   -- [:twitter_user_sid,         Integer  ]
   -- [:iso_language_code,        String   ]
 
-User Models:
+User Models: in each case put both
 
   TwitterUser        
   -- [:id,                     Integer]
@@ -161,5 +165,10 @@ User Models:
   -- [:sid,                    Integer]
   -- [:id,                     Integer]
 
-Token Models:
+Token Models: -- only id
+
+
+
+
+geo, tweet_id, user_id, lat, lon, place (as json)
 

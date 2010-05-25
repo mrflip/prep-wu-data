@@ -65,13 +65,13 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
       warn "Insert failed for #{screen_name_or_user_id} with #{json}: #{e}"
       puts "Insert failed for #{screen_name_or_user_id} with #{json}: #{e}"
     end
-    if (@iter+=1) % LOGGING_INTERVAL == 0 then yield(json) ; $stderr.puts [@iter, screen_name_or_user_id, json].join("\t") end
   end
 
   def finalize
     wordbag.sort!{|a, b| b[:rel_freq] <=> a[:rel_freq] }
     json_hsh = { "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
     insert_into_db(user_id, json_hsh.to_json)
+    if (@iter+=1) % LOGGING_INTERVAL == 0 then yield(json) ; $stderr.puts [@iter, screen_name_or_user_id, json].join("\t") end
   end
 end
 
