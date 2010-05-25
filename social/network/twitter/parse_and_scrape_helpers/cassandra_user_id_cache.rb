@@ -13,11 +13,11 @@ module CassandraUserIDCache
   end
 
   def has_search_id? search_id
-    not key_cache.get('UserSearchID', api_id).blank?
+    not key_cache.get('UserSearchID', search_id).blank?
   end
 
   def has_screen_name? screen_name
-    not key_cache.get('UserScreenName', api_id).blank?
+    not key_cache.get('UserScreenName', screen_name).blank?
   end
 
   def insert_search_id search_id, user_id_triplet
