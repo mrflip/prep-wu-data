@@ -4,7 +4,6 @@ require 'wukong'
 require 'monkeyshines'
 require 'wuclan/twitter'        ; include Wuclan::Twitter::Model
 require 'wuclan/twitter/parse'  ; include Wuclan::Twitter::Scrape
-
 require 'wuclan/twitter/parse/conditional_twitter_emission'; include ConditionalTwitterEmission
 
 # if you're anyone but original author this next require is useless but harmless.
