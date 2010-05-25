@@ -75,4 +75,4 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
   end
 end
 
-Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 57 ).run
+Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 250 ).run
