@@ -12,6 +12,7 @@ class UserIDMapper < Wukong::Streamer::StructStreamer
     @iter = 0
   end
 
+  # just fill the db with triplets
   def process object, *_, &block
     user_id_triplet = {'api_id' => object.id, 'search_id' => object.sid, 'screen_name' => object.screen_name}
     insert_search_id(object.sid, user_id_triplet) unless object.sid.blank?

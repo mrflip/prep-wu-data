@@ -5,10 +5,6 @@ require 'wukong'                       ; include Wukong
 require 'wuclan/twitter'               ; include Wuclan::Twitter::Model
 require 'wuclan/twitter/model/token'
 
-#
-# See bundle.sh for running pattern
-#
-
 module ExtractTweetTokens
   class Mapper < Wukong::Streamer::StructStreamer
     #
@@ -50,4 +46,3 @@ Wukong::Script.new(
   :sort_fields      => 3,  # rsrc, token, tweet_id
   :reuse_jvms       => true
   ).run
-

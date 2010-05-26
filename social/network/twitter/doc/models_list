@@ -8,33 +8,35 @@ Relationship models:
   AFavoritesB
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
-  -- [:tweet_id,              Integer]
+  -- [:tweet_id,               Integer]
 
   ARepliesB
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
-  -- [:tweet_id,              Integer]
-  -- [:in_reply_to_tweet_id,  Integer]
+  -- [:tweet_id,               Integer]
+  -- [:in_reply_to_tweet_id,   Integer]
 
-  ARepliesBName                                    -- needs to be emiited as a_r_b
-  -- [:user_a_name,           String]
-  -- [:user_b_name,           String]
+
+  ARepliesBName -- about to be removed entirely  
+  -- [:user_a_name,            String]
+  -- [:user_b_name,            String]
   -- [:tweet_id,              Integer]
   -- [:in_reply_to_tweet_id,  Integer]
   -- [:user_a_sid,            Integer]
   -- [:user_b_sid,            Integer]
 
   AAtsignsB            
-  -- [:user_a_id,              Integer]           -- switch to user b id
-  -- [:user_b_name,            String]
-  -- [:tweet_id,              Integer]
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
 
-  AAtsignsBId          
+
+  AAtsignsBId -- about to be removed entirely    
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,              Integer]
 
-  AAtsignsBName        
+  AAtsignsBName -- about to be removed entirely    
   -- [:user_a_name,           String]
   -- [:user_b_name,           String]
   -- [:tweet_id,              Integer]
@@ -42,17 +44,17 @@ Relationship models:
 
   ARetweetsB  
   -- [:user_a_id,              Integer]
-  -- [:user_b_name,            String]
-  -- [:tweet_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
   -- [:please_flag,            Integer]
 
-  ARetweetsBId  
+  ARetweetsBId -- about to be removed entirely    
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
   -- [:please_flag,            Integer]
 
-  ARetweetsBName  
+  ARetweetsBName -- about to be removed entirely    
   -- [:user_a_name,           String]
   -- [:user_b_name,           String]
   -- [:tweet_id,              Integer]
@@ -63,43 +65,26 @@ Relationship models:
 Tweet Models:
 
   Tweet 
-  -- [:id,                      Integer     ]
-  -- [:created_at,              Bignum      ]
-  -- [:twitter_user_id,         Integer     ]
-  -- [:favorited,               Integer     ] --nix
-  -- [:truncated,               Integer     ] --nix
-  -- [:in_reply_to_user_id,     Integer     ] -- reconcile on search tweets
-  -- [:in_reply_to_status_id,   Integer     ] -- in reply to tweet id
-  -- [:text,                    String      ] 
-  -- [:source,                  String      ]
-  -- [:in_reply_to_screen_name, String      ] --nix
-  -- add iso lang code
-  -- add lat
-  -- add lon
-  -- was search tweet ?
+  -- [:id,                      Integer]
+  -- [:created_at,               Bignum]
+  -- [:twitter_user_id,         Integer]
+  -- [:twitter_user_screen_name, String]  
+  -- [:in_reply_to_user_id,     Integer]
+  -- [:in_reply_to_status_id,   Integer]
+  -- [:text,                     String] 
+  -- [:source,                   String]
+  -- [:iso_language_code,        String]  
+  -- [:latitude,                  Float]
+  -- [:longitude,                 Float]  
+  -- [:was_search_tweet,        Integer]
 
-  DeleteTweet                                     -- add screen name
-  -- [:id,                      Integer     ]
-  -- [:created_at,              Bignum      ]
-  -- [:twitter_user_id,         Integer     ]
+  DeleteTweet
+  -- [:id,                      Integer]
+  -- [:created_at,               Bignum]
+  -- [:twitter_user_id,         Integer]
+  -- [:twitter_user_screen_name, String]  
       
-  SearchTweet 
-  -- [:id,                       Integer  ]
-  -- [:created_at,               Bignum   ]
-  -- [:twitter_user_id,          Integer  ]
-  -- [:favorited,                Integer  ]
-  -- [:truncated,                Integer  ]
-  -- [:in_reply_to_user_id,      Integer  ]
-  -- [:in_reply_to_status_id,    Integer  ]
-  -- [:text,                     String   ]
-  -- [:source,                   String   ]
-  -- [:in_reply_to_screen_name,  String   ] --turned into id
-  -- [:in_reply_to_sid,          Integer  ]
-  -- [:twitter_user_screen_name, String   ]
-  -- [:twitter_user_sid,         Integer  ]
-  -- [:iso_language_code,        String   ]
-
-User Models: in each case put both
+User Models: in each case put both user id and screen name
 
   TwitterUser        
   -- [:id,                     Integer]
@@ -165,10 +150,9 @@ User Models: in each case put both
   -- [:sid,                    Integer]
   -- [:id,                     Integer]
 
-Token Models: -- only id
+Token Models: add these
 
-
-
+Need Location Models:
 
 geo, tweet_id, user_id, lat, lon, place (as json)
 
