@@ -5,7 +5,7 @@ require 'wukong/encoding'
 require 'json'
 require 'cassandra' ; include Cassandra::Constants
 
-LOGGING_INTERVAL = 1000
+LOGGING_INTERVAL = 10
 
 #
 # Compute wordbag json on the fly and dump into Apeyeye database
@@ -71,8 +71,8 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
     wordbag.sort!{|a, b| b[:rel_freq] <=> a[:rel_freq] }
     json_hsh = { "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
     insert_into_db(user_id, json_hsh.to_json)
-    if (@iter+=1) % LOGGING_INTERVAL == 0 then yield(json_hsh) ; $stderr.puts [@iter, screen_name_or_user_id, json_hsh].join("\t") end
+    if (@iter+=1) % LOGGING_INTERVAL == 0 then yield(json_hsh) ; $stderr.puts [@iter, json_hsh].join("\t") end
   end
 end
 
-Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 250 ).run
+Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 57 ).run
