@@ -43,7 +43,9 @@ p output
 # Create a hash of the results from Mechanical Turk.
 # 
 turk_result_hash = Hash.new
+p turk_result_hash
 turk.each do |row|
+  warn "Dup: #{row.inspect}" if turk_result_hash[row['Input.website']]
   turk_result_hash[row['Input.website']] = row['Answer.Q1Url']
 end
 
@@ -62,8 +64,9 @@ company.each do |row|
     next
   end
   if Settings.network.downcase == 'twitter'
-    twitter_accounts = turk_result_hash[row['website']].split(",").map{|url| url.lstrip.gsub(/https?\:\/\/w?w?w?\.?twitter.com\/([^\/]+).*/,'\1')}.join(",")
+    twitter_accounts = turk_result_hash[row['website']].split(",").map{|url| url.lstrip.gsub(/h?t?t?p?s?\:?\/?\/?w?w?w?\.?twitter.com\/([^\/]+).*/,'\1')}.join(",")
     row[NETWORKS[Settings.network.downcase]] = twitter_accounts
+    turk_result_hash.delete(row['website'])
     Log.info "Setting #{row['display_name']}'s twitter accounts to #{twitter_accounts}."
   else
     network_url = turk_result_hash[row['website']] 
@@ -71,8 +74,11 @@ company.each do |row|
       network_url = "http://" + network_url
     end
     row[NETWORKS[Settings.network.downcase]] = network_url
+    turk_result_hash.delete(row['website'])
     Log.info "Setting #{row['display_name']}'s #{Settings.network} website to #{network_url}."
   end
   # p row
   output << row
 end
+
+p turk_result_hash
