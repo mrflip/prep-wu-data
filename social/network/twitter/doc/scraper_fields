@@ -1,0 +1,365 @@
+twitter_search:
+	
+	item type: twitter_search_request  
+	search term: ACE     
+	page num (?): 3               
+	search api call: http://search.twitter.com/search.json?q=ACE&rpp=100&max_id=14654085911  
+	scraped_at timestamp: 20100525000204  
+	response_code: 200     
+	response_message: OK      
+	JSON response:
+	{"results":
+		[
+		{"profile_image_url":"http://a3.twimg.com/profile_images/673798887/citi_logo_50x50_normal.jpg",
+		"created_at":"Mon, 24 May 2010 23:05:44 +0000",
+		"from_user":"CitiJobs",
+		"metadata":{"result_type":"recent"},
+		"to_user_id":null,
+		"text":"Citigroup: Teller ACE Austin TX Davenport Bilingual (Austin, TX) http://bit.ly/bpHEui #CitiJobs #Jobs #TweetMyJOBS",
+		"id":14653278271,
+		"from_user_id":102865954,
+		"geo":{
+			"type":"Point",
+			"coordinates":[30.2672,-97.7431]
+		},
+		"iso_language_code":"en",
+		"source":"&lt;a href=&quot;http://www.tweetmyjobs.com&quot; rel=&quot;nofollow&quot;&gt;TweetMyJOBS&lt;/a&gt;"
+		},
+		{"profile_image_url":"http://a3.twimg.com/profile_images/673798887/citi_logo_50x50_normal.jpg",
+		"created_at":"Mon, 24 May 2010 23:05:43 +0000",
+		"from_user":"CitiJobs",
+		"metadata":{"result_type":"recent"},
+		"to_user_id":null,
+		"text":"Citigroup: PT Teller ACE Plano TX 30 HOURS Bilin... (Plano, TX) http://bit.ly/9YyXwN #CitiJobs #Jobs #TweetMyJOBS",
+		"id":14653277701,
+		"from_user_id":102865954,
+		"geo":{
+			"type":"Point",
+			"coordinates":[33.0198,-96.6989]
+		},
+		"iso_language_code":"en",
+		"source":"&lt;a href=&quot;http://www.tweetmyjobs.com&quot; rel=&quot;nofollow&quot;&gt;TweetMyJOBS&lt;/a&gt;"
+		},
+		{"profile_image_url":"http://a1.twimg.com/profile_images/899733606/104173396_normal.jpg",
+		"created_at":"Mon, 24 May 2010 23:05:36 +0000",
+		"from_user":"JayyMendo",
+		"metadata":{"result_type":"recent"},
+		"to_user_id":119409620,
+		"text":"@lindoggg that's only cuz u gotta job to taker her there ace &gt;:l but dontchu wish she was there ;D #keepyoroomcleantrick",
+		"id":14653271132,
+		"from_user_id":105017736,
+		"to_user":"lindoggg",
+		"geo":null,
+		"iso_language_code":"en",
+		"source":"&lt;a href=&quot;http://ubertwitter.com&quot; rel=&quot;nofollow&quot;&gt;UberTwitter&lt;/a&gt;"
+		}
+		],
+		"max_id":14654085911,
+		"since_id":0,
+		"refresh_url":"?since_id=14654085911&q=ACE",
+		"next_page":"?page=2&max_id=14654085911&rpp=100&q=ACE",
+		"results_per_page":100,
+		"page":1,
+		"completed_in":0.09209,
+		"query":"ACE"
+		}
+	
+twitter_stream:
+
+	(2 examples):
+	
+	{"geo":{
+		"type":"Point",
+		"coordinates":[-7.260922,112.750058]
+	},
+	"text":"Hahaa . RT @alandananta: @novita_vie marshanda .haha.engga dek mkstnya ada ada aj kamu it.haha http://myloc.me/7p9kD",
+	"coordinates":{
+		"type":"Point",
+		"coordinates":[112.750058,-7.260922]
+	},
+	"in_reply_to_user_id":null,
+	"source":"<a href=\"http://ubertwitter.com\" rel=\"nofollow\">UberTwitter</a>",
+	"contributors":null,
+	"created_at":"Tue May 25 05:09:43 +0000 2010",
+	"in_reply_to_screen_name":null,
+	"favorited":false,
+	"truncated":false,
+	"place":null,
+	"user":{
+		"notifications":null,
+		"time_zone":"Pacific Time (US & Canada)",
+		"url":"http://null",
+		"screen_name":"novita_vie",
+		"statuses_count":1873,
+		"profile_sidebar_border_color":"C0DEED",
+		"profile_link_color":"0084B4",
+		"profile_background_image_url":"http://a1.twimg.com/profile_background_images/60871342/13631_1169998929543_1215070584_30393173_3662925_n.jpg",
+		"description":"",
+		"contributors_enabled":false,
+		"profile_background_tile":true,
+		"profile_background_color":"C0DEED",
+		"lang":"en",
+		"created_at":"Sun Dec 20 09:35:27 +0000 2009",
+		"profile_sidebar_fill_color":"DDEEF6",
+		"followers_count":381,
+		"following":null,
+		"verified":false,
+		"protected":false,
+		"geo_enabled":true,
+		"friends_count":377,
+		"location":"\u00dcT: -7.260922,112.750058",
+		"name":"novita dwi riani vie",
+		"profile_text_color":"babd8a",
+		"id":98092403,
+		"utc_offset":-28800,
+		"favourites_count":0,
+		"profile_image_url":"http://a3.twimg.com/profile_images/924470131/109092297_normal.jpg"
+	},
+	"in_reply_to_status_id":null,
+	"id":14673165902
+	}
+	
+	{"geo":{
+		"type":"Point",
+		"coordinates":[33.80322414,-118.1430037]
+	},
+	"text":"@oceanjessika bring it baby!!!! &lt;3",
+	"coordinates":{
+		"type":"Point",
+		"coordinates":[-118.1430037,33.80322414]
+	},
+	"in_reply_to_user_id":20414447,
+	"source":"<a href=\"http://itunes.apple.com/app/twitter/id333903271?mt=8\" rel=\"nofollow\">Twitter for iPhone</a>",
+	"contributors":null,
+	"created_at":"Tue May 25 05:09:18 +0000 2010",
+	"in_reply_to_screen_name":"oceanjessika",
+	"favorited":false,
+	"truncated":false,
+	"place":{
+		"url":"http://api.twitter.com/1/geo/id/b713edebe7b7342a.json",
+		"country_code":"US",
+		"bounding_box":{
+			"type":"Polygon",
+			"coordinates":[[[-118.15172712,33.79020903],[-118.13389884,33.79020903],[-118.13389884,33.80451597],[-118.15172712,33.80451597]]]
+		},
+		"place_type":"neighborhood",
+		"full_name":"Artcraft Manor, Long Beach",
+		"street_address":"",
+		"name":"Artcraft Manor",
+		"id":"b713edebe7b7342a",
+		"country":"The United States of America"
+	},
+	"user":{
+		"notifications":null,
+		"time_zone":"Pacific Time (US & Canada)",
+		"url":"http://www.thehalfcounts.com",
+		"screen_name":"junkinthetrunkk",
+		"statuses_count":7478,
+		"profile_sidebar_border_color":"000000",
+		"profile_link_color":"000000",
+		"profile_background_image_url":"http://s.twimg.com/a/1274144130/images/themes/theme7/bg.gif",
+		"description":"Sexy woman, mother, friend, lover, Gemini, curvy WOMAN",
+		"contributors_enabled":false,
+		"profile_background_tile":false,
+		"profile_background_color":"EBEBEB",
+		"lang":"en",
+		"created_at":"Wed Nov 26 09:31:13 +0000 2008",
+		"profile_sidebar_fill_color":"c23d7e",
+		"followers_count":437,
+		"following":null,
+		"verified":false,
+		"protected":false,
+		"geo_enabled":true,
+		"friends_count":160,
+		"location":"Long Beach, Ca",
+		"name":"Amber E",
+		"profile_text_color":"000000",
+		"id":17646261,
+		"utc_offset":-28800,
+		"favourites_count":67,
+		"profile_image_url":"http://a1.twimg.com/profile_images/922417496/image_normal.jpg"
+	},
+	"in_reply_to_status_id":14671649630,
+	"id":14673148704
+	}
+	
+		
+twitter_api:
+
+	item type: twitter_user_request   
+	user id: 0022426663                      
+	api call: http://twitter.com/users/show/0022426663.json   
+	scraped_at timestamp: 20100525013722  
+	response_code: 200     
+	response_message: OK
+	JSON response: 
+	{"description":null,
+	"lang":"en",
+	"verified":false,
+	"profile_background_color":"9ae4e8",
+	"profile_image_url":"http://s.twimg.com/a/1274739546/images/default_profile_0_normal.png",
+	"status":{
+		"in_reply_to_user_id":null,
+		"source":"<a href=\"http://www.huffingtonpost.com\" rel=\"nofollow\">The Huffington Post</a>",
+		"created_at":"Fri Apr 30 20:38:58 +0000 2010",
+		"in_reply_to_screen_name":null,
+		"place":null,
+		"favorited":false,
+		"truncated":false,
+		"in_reply_to_status_id":null,
+		"coordinates":null,
+		"contributors":null,
+		"geo":null,
+		"id":13149319697,
+		"text":"via @huffingtonpost: Why the Rush on the Puerto Rico Statehood Bill?  Something Doesn't Add Up http://huff.to/bDCCYq"
+	},
+	"time_zone":null,
+	"profile_sidebar_fill_color":"e0ff92",
+	"screen_name":"beachbumpr",
+	"following":false,
+	"created_at":"Mon Mar 02 00:15:35 +0000 2009",
+	"followers_count":8,
+	"statuses_count":3,
+	"profile_background_image_url":"http://s.twimg.com/a/1274739546/images/themes/theme1/bg.png",
+	"profile_text_color":"000000",
+	"friends_count":18,
+	"contributors_enabled":false,
+	"profile_background_tile":false,
+	"protected":false,
+	"url":null,
+	"favourites_count":0,
+	"name":"dennis mackie",
+	"profile_sidebar_border_color":"87bc44",
+	"profile_link_color":"0000ff",
+	"location":null,
+	"id":22426663,
+	"geo_enabled":false,
+	"notifications":false,
+	"utc_offset":null
+	}
+	
+	item type: twitter_friends_request 
+	user id: 22426663                        
+	api call: http://twitter.com/statuses/friends/22426663.json?page=1        
+	scraped_at timestampe: 20100525013724  
+	response_code: 200     
+	response_message: OK
+	JSON response:
+	[
+	{"description":"Tech angel investor. Founder of digg.com, wefollow.com. Random ideas, entrepreneur, climber of rocks, video blogger, & tea drinker.",
+	"lang":"en",
+	"friends_count":292,
+	"profile_background_color":"1A1B1F",
+	"profile_image_url":"http://a1.twimg.com/profile_images/846962992/photo_normal.jpeg",
+	"status":{
+		"in_reply_to_user_id":null,
+		"source":"<a href=\"http://itunes.apple.com/app/twitter/id333903271?mt=8\" rel=\"nofollow\">Twitter for iPhone</a>",
+		"created_at":"Sun May 23 16:14:36 +0000 2010",
+		"contributors":null,
+		"in_reply_to_screen_name":null,
+		"place":{
+			"street_address":"",
+			"bounding_box":{
+				"type":"Polygon",
+				"coordinates":[[[-122.31267984,37.52933598],[-122.27547816,37.52933598],[-122.27547816,37.55276802],[-122.31267984,37.55276802]]]
+			},
+			"country_code":"US",
+			"country":"The United States of America",
+			"full_name":"Hillsdale, San Mateo",
+			"url":"http://api.twitter.com/1/geo/id/9c46c6409c86bca3.json",
+			"name":"Hillsdale",
+			"id":"9c46c6409c86bca3",
+			"place_type":"neighborhood"
+		},
+		"favorited":false,
+		"truncated":false,
+		"in_reply_to_status_id":null,
+		"coordinates":{
+			"type":"Point",
+			"coordinates":[-122.2907971,37.5439462]
+		},
+		"geo":{
+			"type":"Point",
+			"coordinates":[37.5439462,-122.2907971]
+		},
+		"id":14565259629,
+		"text":"Heading to Makers Faire with my dad, this is going to be awesome!"
+	},
+	"statuses_count":4503,
+	"time_zone":"Pacific Time (US & Canada)",
+	"profile_sidebar_fill_color":"252429",
+	"favourites_count":9,
+	"screen_name":"kevinrose",
+	"contributors_enabled":false,
+	"following":false,
+	"created_at":"Thu Jan 18 00:43:32 +0000 2007",
+	"geo_enabled":true,
+	"profile_background_image_url":"http://s.twimg.com/a/1274144130/images/themes/theme9/bg.gif",
+	"profile_text_color":"666666",
+	"verified":true,
+	"profile_background_tile":false,
+	"protected":false,
+	"url":"http://kevinrose.com",
+	"name":"Kevin Rose",
+	"profile_sidebar_border_color":"181A1E",
+	"profile_link_color":"2FC2EF",
+	"location":"San Francisco, CA",
+	"id":657863,
+	"notifications":false,
+	"utc_offset":-28800,
+	"followers_count":1163828
+	}]
+	
+	item type: twitter_followers_request       
+	user id: 22426663                        
+	api call: http://twitter.com/statuses/followers/22426663.json?page=1      
+	scraped_at timestamp: 20100525013725  
+	response_code: 200     
+	response_message: OK      
+	JSON_response: 
+	[
+	{"geo_enabled":false,
+	"description":"Online Community for Arab, Moroccan & Turkish Gay boys and men and their Admirers",
+	"lang":"en",
+	"profile_background_color":"C0DEED",
+	"profile_image_url":"http://a3.twimg.com/profile_images/493503515/arab-gay-twitter-small_normal.jpg",
+	"status":{
+		"in_reply_to_user_id":null,
+		"source":"web",
+		"created_at":"Thu May 20 14:43:15 +0000 2010",
+		"in_reply_to_screen_name":null,
+		"place":null,
+		"favorited":false,
+		"truncated":false,
+		"in_reply_to_status_id":null,
+		"coordinates":null,
+		"contributors":null,
+		"geo":null,
+		"id":14365483104,
+		"text":"Hot United Arab Emirates Twink http://arab-gay.com/forums/showthread.php?p=13040&posted=1#post13040"
+	},
+	"verified":false,
+	"time_zone":"Amsterdam",
+	"profile_sidebar_fill_color":"DDEEF6",
+	"screen_name":"Arab_Gay",
+	"following":false,
+	"created_at":"Tue Oct 27 21:50:24 +0000 2009",
+	"profile_background_image_url":"http://a1.twimg.com/profile_background_images/48389690/arab-gay-twitter.jpg",
+	"profile_text_color":"333333",
+	"followers_count":386,
+	"profile_background_tile":false,
+	"friends_count":1160,
+	"protected":false,
+	"url":"http://www.Arab-Gay.com",
+	"statuses_count":148,
+	"name":"Arab-Gay.com",
+	"favourites_count":0,
+	"profile_sidebar_border_color":"C0DEED",
+	"profile_link_color":"0084B4",
+	"location":"",
+	"id":85671683,
+	"contributors_enabled":false,
+	"notifications":false,
+	"utc_offset":3600
+	}]
+	

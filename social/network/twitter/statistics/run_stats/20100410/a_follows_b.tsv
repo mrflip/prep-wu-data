@@ -1,0 +1,37 @@
+Hadoop job_201004110200_0002 on ip-10-243-13-241
+User: jacob
+Job Name: streamjob3532189026296474128.jar
+Job File: hdfs://ip-10-243-13-241.ec2.internal/hadoop/system/mapred/job_201004110200_0002/job.xml
+Job Setup: Successful
+Status: Succeeded
+Started at: Sun Apr 11 02:05:37 UTC 2010
+Finished at: Sun Apr 11 03:12:14 UTC 2010
+Finished in: 1hrs, 6mins, 37sec
+Job Cleanup: Successful
+Black-listed TaskTrackers: 1
+
+
+Kind	% Complete	Num Tasks	Pending	Running	Complete	Killed	Failed/KilledTask Attempts
+map	100.00%	24211	0	0	24211	0	25 / 90
+reduce	100.00%	200	0	0	200	0	0 / 0
+
+	Counter	Map	Reduce	Total
+Job Counters	Launched reduce tasks	0	0	200
+Rack-local map tasks	0	0	584	
+Launched map tasks	0	0	24,326	
+Data-local map tasks	0	0	20,048	
+FileSystemCounters	FILE_BYTES_READ	119,863,834,975	15,859,969,441	135,723,804,416
+HDFS_BYTES_READ	1,104,686,209,274	0	1,104,686,209,274	
+FILE_BYTES_WRITTEN	37,684,955,812	15,859,969,441	53,544,925,253	
+HDFS_BYTES_WRITTEN	0	52,312,229,565	52,312,229,565	
+Map-Reduce Framework	Reduce input groups	0	1,587,838,568	1,587,838,568
+Combine output records	0	0	0	
+Map input records	8,992,076,414	0	8,992,076,414	
+Reduce shuffle bytes	0	19,567,941,080	19,567,941,080	
+Reduce output records	0	1,587,838,568	1,587,838,568	
+Spilled Records	4,772,345,253	2,455,355,437	7,227,700,690	
+Map output bytes	80,641,695,257	0	80,641,695,257	
+Map input bytes	1,104,399,288,249	0	1,104,399,288,249	
+Map output records	2,447,645,820	0	2,447,645,820	
+Combine input records	0	0	0	
+Reduce input records	0	2,447,645,820	2,447,645,820	

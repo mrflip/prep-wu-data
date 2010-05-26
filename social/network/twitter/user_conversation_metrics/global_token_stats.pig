@@ -1,75 +1,59 @@
--- global_token_stats.pig
---
--- Purpose: Make a dataset from tokens consisting of the following:
---
--- [word, count(word), range(word), var(word), avg(word), count(word)/count(all_words)]
---
--- When we have a better version of pig need to add the dispersion(word)
---
--- Input data:
--- 
--- Simply use the output of user_word_bag.pig
---    user_id:long, text:chararray, num:long, rel_freq:double
---
+-- In the counters for the UserToksGrouped, the number of input rows is the total number of usages.
+-- In the counters for the UserTokStats, the number of output rows is the number of users
 
-REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
-%default WORDBAG   '/data/sn/tw/fixd/word/user_word_bag';     --input location
-%default GLOBALTOT '/data/sn/tw/fixd/word/global_totals';
-%default WORDSTATS '/data/sn/tw/fixd/word/global_word_stats'; --output location
-%default TOKEN_TOTAL '847114.0'; -- this will need to be read in as a parameter
-%default N_USERS     '812142.0'; -- read in as a parameter
+%default WORDBAG                 '/data/sn/tw/fixd/word/user_word_bag';     --input location
+%default WORDSTATS               '/data/sn/tw/fixd/word/global_word_stats'; --output location
+%default SQRT_OF_N_USERS_MINUS_1 '7305.3931';
+%default N_USERS                 '53368769.0';
+%default TOT_USAGES_AS_DOUBLE    '14876543916.0';
 
+UserTokStats = LOAD '$WORDBAG' AS
+               (
+                        tok:                 chararray,
+                        user_id:             chararray, --could be screen name OR long id
+                        num_user_tok_usages: long,
+                        tot_user_usages:     long,
+                        user_tok_freq:       float,
+                        user_tok_freq_sq:    float,
+                        vocab:               long
+               );
 
--- load input data
-AllHists = LOAD '$WORDBAG' AS
-           (
-                user_id:  long,
-                text:     chararray,
-                num:      long,
-                rel_freq: float
-           );
+UserTokStatsGrouped = GROUP UserTokStats BY tok;
+TokStats = FOREACH UserTokStatsGrouped
+           {
+                -- user token frequency stats (taken over participating users only)
+                user_freq_avg     = AVG(UserTokStats.user_tok_freq);
+                user_freq_var     = (float)AVG(UserTokStats.user_tok_freq_sq) - (float)AVG(UserTokStats.user_tok_freq)*(float)AVG(UserTokStats.user_tok_freq);
+                user_freq_stdev   = org.apache.pig.piggybank.evaluation.math.SQRT((float)user_freq_var);
+                
+                -- global token frequency stats (taken over ALL users)
+                global_freq_sum    = (float)SUM(UserTokStats.user_tok_freq);
+                global_freq_avg    = (float)(global_freq_sum / (float)$N_USERS);
+                global_freq_avg_sq = (float)(global_freq_sum / (float)$N_USERS) * (float)(global_freq_sum / (float)$N_USERS);
+                global_freq_var    = ((float)SUM(UserTokStats.user_tok_freq_sq) / (float)$N_USERS) - (float)global_freq_avg_sq;
+                global_freq_stdev  = org.apache.pig.piggybank.evaluation.math.SQRT((float)global_freq_var);
+                
+                tot_tok_usages     = SUM(UserTokStats.num_user_tok_usages) ;
+                dispersion         = (float)1.0 - ((float)global_freq_stdev / ( (float)global_freq_avg * (float)$SQRT_OF_N_USERS_MINUS_1 ));
+                tok_freq_ppb       = ((float)tot_tok_usages / (float)$TOT_USAGES_AS_DOUBLE)*(float)1000000000.0;
+                
+                GENERATE
+                        group                    AS tok,
+                        tot_tok_usages           AS tot_tok_usages,    -- total times THIS tok has been spoken
+                        COUNT(UserTokStats)      AS range:             long,  -- total number of people who spoke this tok at least once
+                        (float)user_freq_avg     AS user_freq_avg:     float,
+                        (float)user_freq_stdev   AS user_freq_stdev:   float,
+                        (float)global_freq_avg   AS global_freq_avg:   float, -- average of the frequencies at which this tok is spoken
+                        (float)global_freq_stdev AS global_freq_stdev: float, -- standard deviation of the frequencies at which this tok is spoken
+                        (float)dispersion        AS dispersion:        float, -- dispersion (see below)
+                        (float)tok_freq_ppb      AS tok_freq_ppb:      float  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+                ;
+           };
 
-           
-AllTokens = FOREACH AllHists GENERATE user_id, text, num AS freq, (1.0*(float)num*(float)num) AS freq_sq;
-
--- global token stats
-GroupedTokens = GROUP AllTokens ALL;
-GlobalStats   = FOREACH GroupedTokens {
-                        freq_var = AVG(AllTokens.freq_sq) - (AVG(AllTokens.freq) * AVG(AllTokens.freq));
-                        freq_avg = AVG(AllTokens.freq);
-                        GENERATE
-                        (float)freq_var     AS freq_var: float,
-	                (float)freq_avg     AS freq_avg: float,
-                        SUM(AllTokens.freq) AS total_tokens, -- ie. total number of words ever spoken
-                        COUNT(AllTokens)    AS n_users;      -- ie. total number of people who ever ever said at least one word
-                        };
--- rmf $GLOBALTOT;
--- STORE GlobalStats INTO '$GLOBALTOT';
-                        
--- word stats
-WordGroup      = GROUP AllTokens BY text;
-WordStatistics = FOREACH WordGroup {
-                        freq_var     = AVG(AllTokens.freq_sq) - (AVG(AllTokens.freq) * AVG(AllTokens.freq));
-                        freq_avg     = AVG(AllTokens.freq);
-                        freq_tot     = SUM(AllTokens.freq);
-                        -- because pig hates me, this line is commented out (need a newer version)
---                        dispersion   = 1.0 - SQRT(freq_var)/(freq_avg*SQRT((float)'$N_USERS'-1.0));
-                        rel_freq     = (1.0*(float)freq_tot/(float)'$TOKEN_TOTAL');
-                        GENERATE group 	              AS word,
-                                freq_tot              AS freq,   -- total times THIS word has been spoken
-	                        (int)COUNT(AllTokens) AS range:    int,   -- total number of people who spoke this word at least once
-	                        (float)freq_var       AS freq_var: float, -- variance of of the frequencies at which this word is spoken
-	                        (float)freq_avg       AS freq_avg: float, -- average  of the frequencies at which this word is spoken
---                                dispersion            AS dispersion,
-                                (float)rel_freq       AS rel_freq; -- total times THIS word has been spoken out of the total words that
-                                                                   -- have EVER been spoken
-                        };
-                        
-OrderedStats = ORDER WordStatistics BY freq DESC;
 rmf $WORDSTATS;
-STORE OrderedStats INTO '$WORDSTATS';
-
+STORE TokStats INTO '$WORDSTATS';
 -- Range is how many people used the word
 
 -- Dispersion is Julliand's D

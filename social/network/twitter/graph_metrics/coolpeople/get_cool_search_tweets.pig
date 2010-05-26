@@ -52,7 +52,6 @@ CoolPPLIds  = FOREACH CoolPPLOnly GENERATE
                          MatchedIds::search_id   AS search_id
                          ;
                
-
 JoinedSearch = JOIN SearchTweets BY screen_name, CoolPPLIds BY screen_name using "replicated";
 JustSearch   = FOREACH JoinedSearch GENERATE
                        SearchTweets::rsrc                    AS rsrc,

@@ -8,17 +8,18 @@ Relationship models:
   AFavoritesB
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
-  -- [:tweet_id,              Integer]
+  -- [:tweet_id,               Integer]
 
   ARepliesB
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
-  -- [:tweet_id,              Integer]
-  -- [:in_reply_to_tweet_id,  Integer]
+  -- [:tweet_id,               Integer]
+  -- [:in_reply_to_tweet_id,   Integer]
 
-  ARepliesBName        
-  -- [:user_a_name,           String]
-  -- [:user_b_name,           String]
+
+  ARepliesBName -- about to be removed entirely  
+  -- [:user_a_name,            String]
+  -- [:user_b_name,            String]
   -- [:tweet_id,              Integer]
   -- [:in_reply_to_tweet_id,  Integer]
   -- [:user_a_sid,            Integer]
@@ -26,15 +27,16 @@ Relationship models:
 
   AAtsignsB            
   -- [:user_a_id,              Integer]
-  -- [:user_b_name,            String]
-  -- [:tweet_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
 
-  AAtsignsBId          
+
+  AAtsignsBId -- about to be removed entirely    
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,              Integer]
 
-  AAtsignsBName        
+  AAtsignsBName -- about to be removed entirely    
   -- [:user_a_name,           String]
   -- [:user_b_name,           String]
   -- [:tweet_id,              Integer]
@@ -42,17 +44,17 @@ Relationship models:
 
   ARetweetsB  
   -- [:user_a_id,              Integer]
-  -- [:user_b_name,            String]
-  -- [:tweet_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
   -- [:please_flag,            Integer]
 
-  ARetweetsBId  
+  ARetweetsBId -- about to be removed entirely    
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
   -- [:please_flag,            Integer]
 
-  ARetweetsBName  
+  ARetweetsBName -- about to be removed entirely    
   -- [:user_a_name,           String]
   -- [:user_b_name,           String]
   -- [:tweet_id,              Integer]
@@ -63,39 +65,26 @@ Relationship models:
 Tweet Models:
 
   Tweet 
-  -- [:id,                      Integer     ]
-  -- [:created_at,              Bignum      ]
-  -- [:twitter_user_id,         Integer     ]
-  -- [:favorited,               Integer     ]
-  -- [:truncated,               Integer     ]
-  -- [:in_reply_to_user_id,     Integer     ]
-  -- [:in_reply_to_status_id,   Integer     ]
-  -- [:text,                    String      ]
-  -- [:source,                  String      ]
-  -- [:in_reply_to_screen_name, String      ]
+  -- [:id,                      Integer]
+  -- [:created_at,               Bignum]
+  -- [:twitter_user_id,         Integer]
+  -- [:twitter_user_screen_name, String]  
+  -- [:in_reply_to_user_id,     Integer]
+  -- [:in_reply_to_status_id,   Integer]
+  -- [:text,                     String] 
+  -- [:source,                   String]
+  -- [:iso_language_code,        String]  
+  -- [:latitude,                  Float]
+  -- [:longitude,                 Float]  
+  -- [:was_search_tweet,        Integer]
 
-  DeleteTweet 
-  -- [:id,                      Integer     ]
-  -- [:created_at,              Bignum      ]
-  -- [:twitter_user_id,         Integer     ]
+  DeleteTweet
+  -- [:id,                      Integer]
+  -- [:created_at,               Bignum]
+  -- [:twitter_user_id,         Integer]
+  -- [:twitter_user_screen_name, String]  
       
-  SearchTweet 
-  -- [:id,                       Integer  ]
-  -- [:created_at,               Bignum   ]
-  -- [:twitter_user_id,          Integer  ]
-  -- [:favorited,                Integer  ]
-  -- [:truncated,                Integer  ]
-  -- [:in_reply_to_user_id,      Integer  ]
-  -- [:in_reply_to_status_id,    Integer  ]
-  -- [:text,                     String   ]
-  -- [:source,                   String   ]
-  -- [:in_reply_to_screen_name,  String   ]
-  -- [:in_reply_to_sid,          Integer  ]
-  -- [:twitter_user_screen_name, String   ]
-  -- [:twitter_user_sid,         Integer  ]
-  -- [:iso_language_code,        String   ]
-
-User Models:
+User Models: in each case put both user id and screen name
 
   TwitterUser        
   -- [:id,                     Integer]
@@ -161,5 +150,9 @@ User Models:
   -- [:sid,                    Integer]
   -- [:id,                     Integer]
 
-Token Models:
+Token Models: add these
+
+Need Location Models:
+
+geo, tweet_id, user_id, lat, lon, place (as json)
 
