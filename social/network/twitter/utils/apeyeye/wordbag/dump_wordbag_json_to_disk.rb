@@ -35,6 +35,7 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
   def finalize
     # if its a string of numbers its a user_id otherwise its a screen name
     user_id_key = ((user_id =~ /^\d+$/) ? 'user_id' : 'screen_name')
+    user_id = user_id.to_i if user_id_key == 'user_id'
     wordbag.sort!{|a, b| b[:rel_freq] <=> a[:rel_freq]}
     json_hsh = { user_id_key => user_id, "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
     yield [user_id, json_hsh.to_json]
