@@ -4,12 +4,6 @@ require 'wukong'
 require 'wukong/encoding'
 require 'json'
 
-#
-# Compute wordbag json on the fly and dump into Apeyeye database
-#
-#   ./bulk_load_json_wordbag.rb --rm --run /data/sn/tw/fixd/word/user_word_bag_with_stats /tmp/bulkload/word_bag_with_stats_json
-#
-#
 class BulkLoaderMapper < Wukong::Streamer::RecordStreamer
   def process(tok, user_id,
       num_user_tok_usages, tot_user_usages, user_tok_freq_ppb, vocab,
@@ -39,10 +33,12 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
   end
 
   def finalize
-    wordbag.sort!{|a, b| b[:rel_freq] <=> a[:rel_freq] }
-    json_hsh = { "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
-    yield(user_id, json_hsh.to_json)
+    # if its a string of numbers its a user_id otherwise its a screen name
+    user_id_key = ((user_id =~ /^\d+$/) ? 'user_id' : 'screen_name')
+    wordbag.sort!{|a, b| b[:rel_freq] <=> a[:rel_freq]}
+    json_hsh = { user_id_key => user_id, "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
+    yield [user_id, json_hsh.to_json]
   end
 end
 
-Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 250 ).run
+Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 57 ).run

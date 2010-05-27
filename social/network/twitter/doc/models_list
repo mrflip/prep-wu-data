@@ -150,5 +150,5 @@ Token Models:
 
 Need Location Models:
 
-geo, tweet_id, user_id, lat, lon, place (as json)
+geo, tweet_id, user_id, created_at, lat, lon, place (as json)
 
