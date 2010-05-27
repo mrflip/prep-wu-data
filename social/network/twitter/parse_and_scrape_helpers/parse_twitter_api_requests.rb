@@ -19,7 +19,7 @@ require File.dirname(__FILE__)+'/last_seen_state'
 # user is protected).
 #
 class TwitterRequestParser < Wukong::Streamer::StructStreamer
-  include ConditionalTwitterEmission  
+  include ConditionalTwitterEmission
   def process request, *args, &block
     # return unless request.healthy?
     begin
