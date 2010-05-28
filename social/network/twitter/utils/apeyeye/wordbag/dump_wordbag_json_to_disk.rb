@@ -35,11 +35,11 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
   def finalize
     # if its a string of numbers its a user_id otherwise its a screen name
     user_id_key = ((user_id =~ /^\d+$/) ? 'user_id' : 'screen_name')
-    user_id_obj = user_id.to_i if user_id_key == 'user_id'
+    self.user_id = user_id.to_i if user_id_key == 'user_id'
     wordbag.sort!{|a, b| b[:rel_freq] <=> a[:rel_freq]}
-    json_hsh = { user_id_key => user_id_obj, "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
-    yield [user_id_obj, json_hsh.to_json]
+    json_hsh = { user_id_key => user_id, "vocab" => vocab, "total_usages" => tot_user_usages, "toks" => wordbag[0 ... MAX_WORDBAG_SIZE] }
+    yield [user_id, json_hsh.to_json]
   end
 end
 
-Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer, :reduce_tasks => 57 ).run
+Wukong::Script.new( BulkLoaderMapper, BulkLoaderReducer ).run
