@@ -36,17 +36,17 @@ results.each do |row|
       hitids[row["hitid"]] = row
       next
     end
-    if hitids[row["hitid"]]["Answer.Q1Url"] == row["Answer.Q1Url"]
+    if hitids[row["hitid"]]["Answer.Q1Url"].downcase == row["Answer.Q1Url"].downcase
       accepted << [hitids[row["hitid"]]["hitid"],hitids[row["hitid"]]["hittypeid"],hitids[row["hitid"]]["assignmentid"],hitids[row["hitid"]]["workerid"],
-        hitids[row["hitid"]]["Answer.Q1Url"]].join("\t") + "\n"
+        hitids[row["hitid"]]["Answer.Q1Url"].downcase].join("\t") + "\n"
       approveids << [hitids[row["hitid"]]["assignmentid"],"Thanks!"].join("\t") + "\n"
-      accepted << [row["hitid"],row["hittypeid"],row["assignmentid"],row["workerid"],row["Answer.Q1Url"]].join("\t") + "\n"
+      accepted << [row["hitid"],row["hittypeid"],row["assignmentid"],row["workerid"],row["Answer.Q1Url"].downcase].join("\t") + "\n"
       approveids << [row["assignmentid"],"Thanks!"].join("\t") + "\n"
     end
-    if hitids[row["hitid"]]["Answer.Q1Url"] != row["Answer.Q1Url"]
+    if hitids[row["hitid"]]["Answer.Q1Url"].downcase != row["Answer.Q1Url"].downcase
       reviewhits << [hitids[row["hitid"]]["hitid"],hitids[row["hitid"]]["hittypeid"],hitids[row["hitid"]]["assignmentid"],hitids[row["hitid"]]["workerid"],
-        hitids[row["hitid"]]["Answer.Q1Url"],hitids[row["hitid"]]["reject"]].join("\t") + "\n"
-      reviewhits << [row["hitid"],row["hittypeid"],row["assignmentid"],row["workerid"],row["Answer.Q1Url"],row["reject"]].join("\t") + "\n"
+        hitids[row["hitid"]]["Answer.Q1Url"].downcase,hitids[row["hitid"]]["reject"]].join("\t") + "\n"
+      reviewhits << [row["hitid"],row["hittypeid"],row["assignmentid"],row["workerid"],row["Answer.Q1Url"].downcase,row["reject"]].join("\t") + "\n"
     end
     # puts row["Answer.Q1Url"]
   end
