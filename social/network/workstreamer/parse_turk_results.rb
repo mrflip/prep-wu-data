@@ -4,11 +4,16 @@ require 'rubygems'
 require 'fastercsv'
 
 # WORK_DIR = File.dirname(__FILE__).to_s + "/"
-WORK_DIR = "/Users/doncarlo/Downloads/test2/results/"
+WORK_DIR = "/Users/doncarlo/data/workstreamer/results/"
 TODAY = Time.now.strftime("%Y%m%d")
 NETWORKS = ["linkedin","twitter","wikipedia","youtube"]
 
-index = 3
+if NETWORKS.include?(ARGV[0])
+  index = NETWORKS.index(ARGV[0])
+else
+  index = ARGV[0].to_i
+end
+puts "Getting results from #{NETWORKS[index]}."
 
 results = FasterCSV.open(WORK_DIR + NETWORKS[index] + "-" + TODAY + ".results", options={:headers => true, :return_headers => true, :col_sep => "\t"})
 
@@ -24,7 +29,7 @@ reviewhits << ["hitid","hittypeid","assignmentid","workerid","Answer.Q1Url","rej
 hitids = Hash.new
 
 results.each do |row|
-  if row["hitstatus"] == "Reviewable"
+  if ((row["hitstatus"] == "Reviewable") && (row["assignmentstatus"] != "Approved"))
     row["Answer.Q1Url"].strip!
     row["Answer.Q1Url"].gsub!(/http:\/\//,"")
     unless hitids.key?(row["hitid"])

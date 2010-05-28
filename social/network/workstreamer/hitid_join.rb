@@ -4,8 +4,8 @@ require 'rubygems'
 require 'fastercsv'
 
 # WORK_DIR = File.dirname(__FILE__).to_s + "/"
-WORK_DIR = "/Users/doncarlo/Downloads/test2/results/"
-HIT_DIR = "/Users/doncarlo/Downloads/test2/"
+WORK_DIR = "/Users/doncarlo/data/workstreamer/results/"
+HIT_DIR = "/Users/doncarlo/data/workstreamer/test2/"
 TODAY = Time.now.strftime("%Y%m%d")
 NETWORKS = ["facebook","linkedin","twitter","wikipedia","youtube"]
 
