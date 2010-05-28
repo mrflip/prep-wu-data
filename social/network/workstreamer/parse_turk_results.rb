@@ -19,7 +19,7 @@ approveids = File.open(WORK_DIR + NETWORKS[index] + "-" + TODAY + "-approve_ids.
 approveids << ["assignmentIdToApprove","assignmentIdToApproveComment"].join("\t") + "\n"
 
 reviewhits = File.open(WORK_DIR + NETWORKS[index] + "-" + TODAY + "-further_review.results","w")
-reviewhits << ["hitid","hittypeid","assignmentid","workerid","Answer.Q1Url"].join("\t") + "\n"
+reviewhits << ["hitid","hittypeid","assignmentid","workerid","Answer.Q1Url","reject"].join("\t") + "\n"
 
 hitids = Hash.new
 
@@ -40,8 +40,8 @@ results.each do |row|
     end
     if hitids[row["hitid"]]["Answer.Q1Url"] != row["Answer.Q1Url"]
       reviewhits << [hitids[row["hitid"]]["hitid"],hitids[row["hitid"]]["hittypeid"],hitids[row["hitid"]]["assignmentid"],hitids[row["hitid"]]["workerid"],
-        hitids[row["hitid"]]["Answer.Q1Url"]].join("\t") + "\n"
-      reviewhits << [row["hitid"],row["hittypeid"],row["assignmentid"],row["workerid"],row["Answer.Q1Url"]].join("\t") + "\n"
+        hitids[row["hitid"]]["Answer.Q1Url"],hitids[row["hitid"]]["reject"]].join("\t") + "\n"
+      reviewhits << [row["hitid"],row["hittypeid"],row["assignmentid"],row["workerid"],row["Answer.Q1Url"],row["reject"]].join("\t") + "\n"
     end
     # puts row["Answer.Q1Url"]
   end

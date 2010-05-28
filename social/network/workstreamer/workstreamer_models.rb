@@ -1,3 +1,21 @@
+class JuneCompanyListing
+  include DataMapper::Resource
+  include DataMapper::LoadsData
+  property :object_id, String, :length => 30, :key => true
+  property :display_name, String, :length => 255
+  property :website, String, :length => 255
+  property :facebook_hitid, String, :length => 30, :index => :facebook_hitid
+  property :linkedin_hitid, String, :length => 30, :index => :linkedin_hitid
+  property :twitter_hitid, String, :length => 30, :index => :twitter_hitid
+  property :wikipedia_hitid, String, :length => 30, :index => :wikipedia_hitid
+  property :youtube_hitid, String, :length => 30, :index => :youtube_hitid
+  property :facebook, String, :length => 255
+  property :linkedin, String, :length => 255
+  property :twitter, String, :length => 255
+  property :wikipedia, String, :length => 255
+  property :youtube, String, :length => 255
+end
+
 class TurkResult
   include DataMapper::Resource
   include DataMapper::LoadsData

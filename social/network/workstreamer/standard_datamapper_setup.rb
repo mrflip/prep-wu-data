@@ -4,7 +4,7 @@ Settings.use    :config_file, :define, :commandline
 Settings.read   'datamapper.yaml'
 Settings.define :db_uri,  :description => "Base URI for database -- eg mysql://USERNAME:PASSWORD@localhost:9999"
 Settings.define :db_name, :description => "Database name to use"
-Settings.resolve!
+# Settings.resolve!
 
 module DataMapper
   def self.setup_db_connection db_name=nil, db_uri=nil, conn_name=nil
