@@ -1,0 +1,12 @@
+AFollowsB           = HadoopStruct.new( [:user_a_id, :user_b_id],               :user_a_id, :user_b_id  )
+Hashtag             = HadoopStruct.new( [:user_a_id, :hashtag],                 :user_a_id, :hashtag,     :status_id )
+TweetUrl            = HadoopStruct.new( [:user_a_id, :tweet_url],               :user_a_id, :tweet_url,   :status_id )
+
+TwitterUserPartial  = HadoopStruct.new( [:id],  :id,  :screen_name, :followers_count, :protected, :name,
+                                                :url, :location, :description, :profile_image_url )
+TwitterUser         = HadoopStruct.new( [:id],  :id,  :screen_name, :created_at, :statuses_count,
+                                                :followers_count, :friends_count, :favourites_count, :protected )
+TwitterUserProfile  = HadoopStruct.new( [:id],  :id,  :name, :url, :location, :description, :time_zone, :utc_offset )
+TwitterUserStyle    = HadoopStruct.new( [:id],  :id,  :profile_background_color, :profile_text_color, :profile_link_color,
+                                                :profile_sidebar_border_color, :profile_sidebar_fill_color,
+                                                :profile_background_image_url, :profile_image_url, :profile_background_tile )
