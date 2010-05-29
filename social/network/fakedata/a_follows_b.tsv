@@ -1,35 +1,309 @@
-@Cushman	@bigstein 
-@JPeterman	@ElaineBenes   
-@Pam		@cosmo         
-@Puddy		@jerry         
-@Ronnie		@jerry         
-@bania		@jerry         
-@bigstein	@cushman       
-@cosmo		@Bob_Sacamano  
-@cosmo		@dean_jones    
-@cosmo		@jerry         
-@cosmo		@pam           
-@costanza81	@ElaineBenes   
-@costanza81	@JonVoight     
-@costanza81	@RobertWagner  
-@costanza81	@bigstein      
-@costanza81	@bubble_boy    
-@costanza81	@cushman       
-@costanza81	@guitarbern    
-@costanza81	@intangibles
-@costanza81	@intangibles   
-@costanza81	@jerry         
-@dean_jones	@cosmo         
-@elainebenes	@jerry
-@elainebenes	@jerry         
-@guitarbern	@costanza81    
-@intangibles	@costanza81    
-@jerry		@AvisRental    
-@jerry		@Puddy         
-@jerry		@cosmo         
-@jerry		@costanza81    
-@jerry		@elainebenes   
-@jerry		@jerry         
-@jerry		@ronnie        
-@jerry		@thementee     
-@thementee	@jerry         
+cushman                 	bigstein
+JPeterman                  	ElaineBenes
+Pam                     	cosmo
+THE_REAL_PUDDY               	jerry
+ronnie                  	jerry
+bania                   	jerry
+bigstein                	cushman
+cosmo                   	Bob_Sacamano
+cosmo                   	dean_jones
+cosmo                   	jerry
+cosmo                   	pam
+costanza81              	ElaineBenes
+costanza81              	JonVoight
+costanza81              	RobertWagner
+costanza81              	bigstein
+costanza81              	bubble_boy
+costanza81              	cushman
+costanza81              	guitarbern
+costanza81              	intangibles
+costanza81              	intangibles
+costanza81              	jerry
+dean_jones              	cosmo
+ElaineBenes             	jerry
+ElaineBenes             	jerry
+guitarbern              	costanza81
+intangibles             	costanza81
+thementee               	jerry
+jerry                   	AvisRental
+jerry                   	THE_REAL_PUDDY
+jerry                   	cosmo
+jerry                   	costanza81
+jerry                   	ElaineBenes
+jerry                   	jerry
+jerry                   	ronnie
+jerry                   	thementee
+jerry                           Shaky_the_Mohel
+jerry                           costanza81
+jerry                   	kramer
+jerry                   	ElaineBenes
+jerry                   	bubble_boy
+jerry                   	thementee
+jerry                   	newman
+jerry                   	FRANKCOSTANZA
+jerry                   	MortySeinfeld
+jerry                   	HelenSeinfeld
+jerry                           bigstein
+jerry                           UncleLEO
+jerry                           THE_REAL_PUDDY
+jerry                   	Mickey_Abbott
+jerry                   	bania
+jerry                   	Larry_the_Cook
+jerry                   	CrazyJoeDavola
+jerry                   	DrTimWhatley
+jerry                           The_Soup_Nazi
+jerry                   	Nana
+jerry                   	Dolores
+jerry                   	Noreen
+jerry                   	JackKlompus
+jerry                   	BabuBhatt
+jerry                   	Poppie
+jerry                   	MarlatheVirgin
+jerry                   	Izzy_Mandelbaum
+jerry                           TheDrake
+jerry                           JoeMayo
+jerry                           Alec_Berg
+jerry                   	Sue_Ellen_Mischke
+jerry                   	TheDoctor
+jerry                   	Cousin_Jeffrey
+jerry                   	ArtVandelay
+jerry                   	Kel_Varnsen
+jerry                   	HEPennypacker
+jerry                   	MartinvanNostrand
+jerry                   	WandaPepper
+jerry                           TheSusie
+jerry                           Milos
+jerry                           JeanPaul_JeanPaul
+jerry                   	FragileFrankieMerman
+jerry                   	Shaky_the_Mohel
+jerry                   	Little_Jerry_Seinfeld
+jerry                   	FusilliJerry
+jerry                   	pez
+jerry                   	superman
+jerry                   	FragileFrankieMerman
+jerry                   	JeanPaul_JeanPaul
+jerry                   	Milos
+jerry                   	Roy_the_Dentist
+FragileFrankieMerman            jerry
+ArtVandelay              	ArtVandelay
+ArtVandelay              	Kel_Varnsen
+ArtVandelay              	HEPennypacker
+ArtVandelay              	MartinvanNostrand
+ArtVandelay              	WandaPepper
+Kel_Varnsen              	ArtVandelay
+Kel_Varnsen              	HEPennypacker
+Kel_Varnsen              	MartinvanNostrand
+Kel_Varnsen              	WandaPepper
+HEPennypacker            	ArtVandelay
+HEPennypacker            	Kel_Varnsen
+HEPennypacker            	MartinvanNostrand
+HEPennypacker            	WandaPepper
+MartinvanNostrand        	ArtVandelay
+MartinvanNostrand        	Kel_Varnsen
+MartinvanNostrand        	HEPennypacker
+MartinvanNostrand        	WandaPepper
+kramer                   	bob_sacamano
+kramer                   	newman
+kramer                   	The_Soup_Nazi
+kramer                   	THE_REAL_PUDDY
+kramer                   	jerry
+kramer                   	ElaineBenes
+kramer                   	costanza81
+kramer                   	FRANKCOSTANZA
+kramer                   	Estelle
+kramer                   	BabuBhatt
+kramer                   	Drake
+kramer                   	MartinvanNostrand
+kramer                   	MissRhodeIsland
+kramer                   	Stan_the_Caddy
+kramer                   	ArtVandelay
+kramer                   	Lomez
+kramer                   	Vegetable_Lasagna
+kramer                   	MortySeinfeld
+kramer                   	Jackie_Chiles
+kramer                   	MrWilhelm
+kramer                   	Noreen
+kramer                   	Babs_Kramer
+kramer                   	BabuBhatt
+kramer                   	JoeMayo
+kramer                   	CrazyJoeDavola
+kramer                   	KennyRogersChicken
+kramer                   	Shaky_the_Mohel
+kramer                   	assman
+bubble_boy               	trivial_pursuit
+costanza81                      JasonStankyHanke
+
+newman
+
+jerry                    	MortySeinfeld
+jerry                    	HelenSeinfeld
+jerry                    	Izzy_Mandelbaum
+jerry                    	UncleLEO
+jerry                    	Artie_Levine
+
+jerry                    	Dolores
+jerry                    	bania
+jerry                    	MarlatheVirgin
+jerry                    	Nana
+
+costanza81                	cushman
+costanza81                	bigstein
+costanza81                	MrWilhelm
+costanza81                	MrandMrsRoss
+costanza81                	EstelleC
+costanza81                	FRANKCOSTANZA
+
+costanza81                	LindsayEnright
+costanza81                	SusanRoss
+
+jerry                    	Shaky_the_Mohel
+jerry                    	JeanPaul_JeanPaul
+
+# ==================== Elaine
+ElaineBenes             	MrLippman
+ElaineBenes             	MrPitt
+ElaineBenes             	THE_REAL_PUDDY
+ElaineBenes             	JPeterman
+ElaineBenes             	Sue_Ellen_Mischke
+ElaineBenes             	Jack_The_Wiz
+ElaineBenes             	The_Mechanic
+ElaineBenes             	MrKruger
+
+# ==================== Kramer
+
+kramer                    	Mickey_Abbott
+kramer                    	assman
+kramer                    	Jackie_Chiles
+kramer                    	dean_jones
+kramer                    	Bob_Sacamano
+kramer                    	Lomez
+kramer                    	Stan_the_Caddy
+kramer                    	MissRhodeIsland
+kramer                    	FranklinDelanoRomanowski
+kramer                    	SalBass
+
+Jackie_Chiles            	MarlatheVirgin
+
+
+# ==================== Friends
+CrazyJoeDavola
+DrTimWhatley
+TheDrake
+
+ronnie
+thementee
+Russell_Dalrymple
+Larry_the_Cook
+
+Carol
+RuthieCohen
+Peggy
+
+The_Soup_Nazi
+
+Donald_Sanger
+Noreen
+Lloyd_Braun
+JackKlompus
+Bob_Cobb
+
+BabuBhatt
+Babs_Kramer
+Poppie
+
+Leslie
+JoeMayo
+Alec_Berg
+Ping
+Jake_Jarmel
+SallyWeaver
+WyckThayer
+Bob
+Mabel_Choate
+Ricky
+Allison
+TiaVanCamp
+TheDoctor
+Sid
+Earl_Haffler
+Ramon
+MikeMoffit
+Rebecca_DeMornay
+Matthew
+Rachel_Goldstein
+TinaRobbins
+Deena
+Cousin_Jeffrey
+JayRiemenschneider
+CorkyRamirez
+Jerry_s_Sister
+George_s_Brother
+Elaine_s_sister
+LenNicademo
+Specter
+Simons
+AuntSylvia
+Sharon_Besser
+JerryPachydermPersheck
+Eduardo_Corrochio
+Whitey
+WandaPepper
+TheSusie
+SidFields
+AltonBenes
+Ben_Cantwell
+Ron
+Betsy
+Brody
+Meryl
+Vegetable_Lasagna
+HalKitzmiller
+Henry_Atkins
+JohnGrossbard
+John_Germaine
+Milos
+Donna_Chang
+Pam
+The_Doorman
+FragileFrankieMerman
+NedIsakoff
+Sharon
+KevinVargas
+GeneVargas
+Feldman_Vargas
+GeoffreyHaarwood
+Sheila
+ThePigMan
+DenimVest
+Manya
+UncleMac
+TorEckman
+Jimmy
+Melissa
+Joel_Rifkin
+Raymond
+Roy_the_Dentist
+The_MaitreD
+Darryl
+Evie
+Sylvio
+Marcelino
+Phil
+ClairetheWaitress
+Carl_Farbman
+EddieSherman
+Alex
+Victoria
+Gavin
+Mary_Anne
+Norman_Brenner
+Little_Jerry_Seinfeld
+
+AvisRental
+jonvoight
+guitarbern
+intangibles
+LtBookman
+
+
+costanza81              Pastrami
