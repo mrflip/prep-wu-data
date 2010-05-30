@@ -38,7 +38,6 @@ THE_REAL_PUDDY            	kramer
 THE_REAL_PUDDY            	NewmanUSPS
 THE_REAL_PUDDY            	JPeterman
 THE_REAL_PUDDY                	FRANKCOSTANZA
-THE_REAL_PUDDY                  Vegetable_Lasagna
 FRANKCOSTANZA            	jerry
 FRANKCOSTANZA            	costanza81
 FRANKCOSTANZA            	kramer
@@ -125,7 +124,6 @@ jerry                   	pez
 jerry                   	superman
 jerry                           bigstein
 Milos                   	jerry
-jerry                   	Roy_the_Dentist
 
 jerry                   	BabuBhatt
 kramer                   	BabuBhatt
@@ -257,6 +255,10 @@ costanza81                      CrazyJoeDavola
 ElaineBenes                     CrazyJoeDavola
 kramer                          CrazyJoeDavola
 NewmanUSPS                      CrazyJoeDavola
+THE_REAL_PUDDY                  CrazyJoeDavola
+CrazyJoeDavola                  THE_REAL_PUDDY
+JoeMayo                         THE_REAL_PUDDY
+THE_REAL_PUDDY                  JoeMayo
 
 jerry                           DrTimWhatley
 costanza81                      DrTimWhatley
@@ -364,7 +366,6 @@ kramer                    	FranklinDelanoRomanowski
 kramer                    	SalBass
 
 kramer                   	EstelleC
-kramer                   	Vegetable_Lasagna
 kramer                   	MortySeinfeld
 kramer                   	Noreen
 kramer                   	Babs_Kramer
@@ -379,7 +380,6 @@ Jackie_Chiles                   NewmanUSPS
 kramer                    	Jackie_Chiles
 Jackie_Chiles                   kramer
 EstelleC                        kramer
-Vegetable_Lasagna               kramer
 MortySeinfeld                   kramer
 Noreen                          kramer
 Babs_Kramer                     kramer
@@ -395,10 +395,6 @@ Earl_Haffler                    kramer
 kramer                          MikeMoffit
 MikeMoffit                      kramer
 MikeMoffit                      jerry
-
-
-NewmanUSPS                      Henry_Atkins
-AvisRental                   	jerry
 
 # ========================= The_Soup_Nazi
 
