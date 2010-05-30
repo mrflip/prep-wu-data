@@ -47,8 +47,13 @@ FRANKCOSTANZA            	kramer
 jerry                    	MortySeinfeld
 jerry                    	HelenSeinfeld
 jerry                    	Izzy_Mandelbaum
+Izzy_Mandelbaum                 MortySeinfeld
+MortySeinfeld                   Izzy_Mandelbaum
+Izzy_Mandelbaum                 UncleLEO
+UncleLEO                        Izzy_Mandelbaum
+Izzy_Mandelbaum                 JackKlompus
+JackKlompus                     Izzy_Mandelbaum
 jerry                    	UncleLEO
-jerry                    	Artie_Levine
 MortySeinfeld                   UncleLEO
 MortySeinfeld                   HelenSeinfeld
 MortySeinfeld                   Cousin_Jeffrey
@@ -79,7 +84,6 @@ TiaVanCamp                      jerry
 Rachel_Goldstein                jerry
 meryl                           jerry
 MissRhodeIsland                 jerry
-Pam                             jerry
 Sheila                          jerry
 MelissaFlyingFree               jerry
 jerry                           Dolores
@@ -88,7 +92,6 @@ jerry                           TiaVanCamp
 jerry                           Rachel_Goldstein
 jerry                           meryl
 jerry                           MissRhodeIsland
-jerry                           Pam
 jerry                           Sheila
 jerry                           MelissaFlyingFree
 jerry                           Laura
@@ -97,7 +100,6 @@ Laura                           Sandy
 Laura                           jerry
 Sandy                           jerry
 kramer                    	MissRhodeIsland
-kramer                          Pam
 jerry                           Jenna
 Jenna                           jerry
 
@@ -111,7 +113,6 @@ bania                           Poppie
 bania                           Jenna
 
 jerry                   	Noreen
-jerry                   	JackKlompus
 jerry                           Milos
 jerry                           JeanPaul_JeanPaul
 
@@ -120,9 +121,9 @@ FusilliJerry                   	jerry
 FusilliJerry                    kramer
 kramer                          FusilliJerry
 FusilliJerry                    FRANKCOSTANZA
+FusilliJerry                    costanza81
 jerry                   	pez
 jerry                   	superman
-jerry                           bigstein
 Milos                   	jerry
 
 jerry                   	BabuBhatt
@@ -171,18 +172,20 @@ MrandMrsRoss                    SusanRoss
 SusanRoss                       jerry
 jerry                           SusanRoss
 SusanRoss                       ElaineBenes
-kramer                          SusanRoss
 SusanRoss                       Russell_Dalrymple
+jerry                           Russell_Dalrymple
+Russell_Dalrymple               jerry
 Russell_Dalrymple               SusanRoss
 Russell_Dalrymple               ElaineBenes
 SallyWeaver                     SusanRoss
 SusanRoss                       SallyWeaver
 SallyWeaver                     MrandMrsRoss
-SallyWeaver                     jerry
 WyckThayer                      MrandMrsRoss
 MrandMrsRoss                    WyckThayer
 SusanRoss                       WyckThayer
 WyckThayer                      SusanRoss
+costanza81                      MrandMrsRoss
+WyckThayer                      costanza81
 
 costanza81               	MrKruger
 MrKruger               	        costanza81
@@ -202,6 +205,7 @@ bigstein                        guitarbern
 guitarbern                      intangibles
 guitarbern                      bigstein
 intangibles                     bigstein
+cushman                         guitarbern
 
 bubble_boy               	trivial_pursuit
 costanza81                      StankyHanke
@@ -259,6 +263,7 @@ THE_REAL_PUDDY                  CrazyJoeDavola
 CrazyJoeDavola                  THE_REAL_PUDDY
 JoeMayo                         THE_REAL_PUDDY
 THE_REAL_PUDDY                  JoeMayo
+
 
 jerry                           DrTimWhatley
 costanza81                      DrTimWhatley
@@ -373,12 +378,16 @@ kramer                   	Shaky_the_Mohel
 kramer                    	assman
 assman                          DrTimWhatley
 DrTimWhatley                    assman
+DrTimWhatley                    MartinvanNostrand
 kramer                    	Stan_the_Caddy
 Stan_the_Caddy                  Jackie_Chiles
 NewmanUSPS                      Jackie_Chiles
 Jackie_Chiles                   NewmanUSPS
 kramer                    	Jackie_Chiles
 Jackie_Chiles                   kramer
+Jackie_Chiles                   JPeterman
+JPeterman                       Jackie_Chiles
+
 EstelleC                        kramer
 MortySeinfeld                   kramer
 Noreen                          kramer
@@ -392,6 +401,7 @@ FRANKCOSTANZA                   Bob_Cobb
 
 kramer                          Earl_Haffler
 Earl_Haffler                    kramer
+Earl_Haffler                    MikeMoffit
 kramer                          MikeMoffit
 MikeMoffit                      kramer
 MikeMoffit                      jerry
@@ -427,7 +437,6 @@ jerry                  	        WandaPepper
 costanza81             	        WandaPepper
 ElaineBenes            	        WandaPepper
 kramer                 	        WandaPepper
-ArtVandelay              	ArtVandelay
 ArtVandelay              	Kel_Varnsen
 ArtVandelay              	HEPennypacker
 ArtVandelay              	MartinvanNostrand
