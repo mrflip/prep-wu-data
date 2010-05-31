@@ -7,7 +7,7 @@ mkdir -p $hood_local_dir
 
 echo $user_id                                 > $hood_local_dir/n_n0.tsv
 for rel in e_FOi e_FOo e_REi e_REo ; do
-  hadoop fs -cat $hood_hdfs_dir/${rel}/part\* > $hood_local_dir/${rel}.tsv
+  hadoop fs -cat $hood_hdfs_dir/${rel}/part\* | sort -u > $hood_local_dir/${rel}.tsv
 done
 
 
@@ -22,10 +22,10 @@ hadoop fs -put $hood_local_dir/n_ALL01.tsv $hood_hdfs_dir/n_ALL01
 # Collect user objects to local dir
 for foo in twitter_user_n01 twitter_user_partial_n01 twitter_user_profile_n01 twitter_user_style_n01 ; do
   echo $foo ;
-  hdp-catd $hood_hdfs_dir/${foo} > $hood_local_dir/${foo}.tsv &
+  hdp-catd $hood_hdfs_dir/${foo} | sort -u > $hood_local_dir/${foo}.tsv &
 done
 # Get screen names
-cat $hood_local_dir/twitter_user_partial_n01.tsv $hood_local_dir/twitter_user_n01.tsv | cuttab 4 > $hood_local_dir/screen_name_n01.tsv
+cat $hood_local_dir/twitter_user_partial_n01.tsv $hood_local_dir/twitter_user_n01.tsv | cuttab 4 | sort -u > $hood_local_dir/screen_name_n01.tsv
 hadoop fs -put $hood_local_dir/screen_name_n01.tsv $hood_hdfs_dir/screen_name_n01
 
-cat $hood_local_dir/screen_name_n01.tsv $hood_local_dir/n_ALL01.tsv | hadoop fs -put -  $hood_hdfs_dir/ids_and_names_n01
+cat $hood_local_dir/screen_name_n01.tsv $hood_local_dir/n_ALL01.tsv | sort -u | hadoop fs -put -  $hood_hdfs_dir/ids_and_names_n01
