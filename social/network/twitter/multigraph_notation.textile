@@ -1,0 +1,37 @@
+I bet you did it right, but 1-clique is a set of edges and I'm not sure I understand your notation.
+
+Here is my proposed notation -- please let me know if this doesn't make any sense at all.
+
+  nXX                   indicates a set of nodes: for instance, we'll call n1o the set of nodes at radius 1 outbound from n0
+  e_nXX_RELATIONSHIP    indicates a set of edges. For example, e_n0_FOo is the set of nodes that members of n0 follow out.
+  e2_nXX_RELATIONSHIP   is a set of edges; the number is purely advisory. We'll actually write the above as e1_n0_FOo just to keep in mind how many hops we've made.
+
+If I call
+
+  n0 my seed
+
+  e1_n0_FOo    = edges with n0 as source   (FILTER by user_a_id == infochimps)
+  e1_n0_FOi    = edges with n0 as dest     (FILTER by user_a_id == infochimps)
+  e1_n0_FOx    = distinct union of e1_FOo and e1_FOi (all inbound or outbound edges to n0)
+  e1_n0_FOs    = intersection of e1_FOo and reverse(e1_FOi) (all symmetric links) (use the sort | uniq -c | grep -v " 1 " trick on the edge set.)
+
+  n1o          = nodes in e1_n0_FOo that are not n0 -- nodes at radius outbound 1
+  n1i          = nodes in e1_n0_FOi   that are not n0 -- nodes at radius inbound 1
+  n1x          = nodes in e1_n0_FOx (as either src or dest) that are not n0 -- equivalently, the distinct union of n1o and n1x
+  n1s          = nodes in e1_n0_FOs (as either src or dest) that are not n0 -- this is the same as their intersection for a single point n0 but different if n0 is a set.
+  n01x         = the union of n0 and n1x (equivalently, distinct nodes that are in n0 or e1_n0_FOx.dest's or e1_n0_FOx.src's) -- this is infochimps plus all nodes that follow or are followed by it
+  n01s         = the union of n0 and n1s -- this is infochimps and all nodes with symmetric links
+
+  e2_n01s_FOo  = all edges with a member of n01s as src    (map-side intersection join of n01s with the full edge network)
+  e2_n01s_FOi  = all edges with a member of n01s as dest  (ditto)
+ 
+Then we'll write 1-clique as
+  ecl_n01s_n01s = edges connecting members of n01s with members of n01s
+which is calculated as
+                = intersection of e2_n01s_FOi and e2_n01s_FOo
+or equivalently
+                = edges in e2_n01s_FOi that terminate in n01s
+
+So rather than calculate both e2_n01s_FOo and e2_n01s_FOi, you can just do a map-side intersection join of n01s and e2_n01s_FOo (take the outbound edges from n01s and find only those that terminate in n01s)
+
+Did this make any sense?
