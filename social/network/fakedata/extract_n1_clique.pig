@@ -1,30 +1,38 @@
 %default NETWORK     'a_follows_b-processed.tsv'
-%default OUT_CLIQUE  'seinfeld_n1_clique.tsv'
-%default USER        'jerry'
-links    = LOAD '$NETWORK' AS (node_a:chararray, node_b:chararray);
+%default OUT_n1x     'seinfeld_n1x.tsv'
+%default OUT_CLIQUE  'seinfeld_clique_n1x_n1x.tsv'
+%default N0_SEED     'jerry'
+a_follows_b    = LOAD '$NETWORK' AS (node_a:chararray, node_b:chararray);
 
--- Extract all nodes in the in or out 1-neighborhood
-n1_links  = FILTER links BY (node_a == '$USER') OR (node_b == '$USER');
-n1_nodes1 = FOREACH n1_links GENERATE node_a AS node;
-n1_nodes2 = FOREACH n1_links GENERATE node_b AS node;
-n1_nodes3 = UNION n1_nodes1, n1_nodes2;
-n1_nodes  = FILTER (DISTINCT n1_nodes3) BY (node != '$USER');
+-- PIG_OPTS=-Dmapred.local.dir=/tmp pig -x local
+-- may need to sudo chgrp -R admin /mnt*/hadoop/mapred/local ; sudo chmod -R g+rwX /mnt*/hadoop/mapred/local
 
--- -- Extract all nodes in the in-2 and out-2 nbrhoods
--- n2_out      = JOIN n1_nodes BY node, links BY node_a;
--- n2_out_flat = FOREACH n2_out GENERATE node_b AS node;
--- n2_in       = JOIN links BY node_b, n1_nodes by node;
--- n2_in_flat  = FOREACH n2_in GENERATE node_a AS node;
--- n2_inout    = UNION n2_out_flat, n2_in_flat;
--- n2_nodes    = FILTER (DISTINCT n2_inout) BY (node != '$USER');
--- 
--- -- Intersection of n1 and n2 nodes
--- n1_plus_n2 = UNION n1_nodes, n2_nodes;
--- grouped    = GROUP n1_plus_n2 BY node;
--- counts     = FOREACH grouped GENERATE group AS node, COUNT(n1_plus_n2) AS num;
--- filtered   = FILTER counts BY num >= 2;
--- intersect  = FOREACH filtered GENERATE node;
--- 
--- -- n1_clique is (intersect(n1,n2) U n0_nodes) ?
--- rmf $ATTRS;
--- STORE intersect INTO '$ATTRS';
+-- Extract all edges that originate or terminate on the seed (n0)
+e1_edges    = FILTER a_follows_b BY (node_a == '$N0_SEED') OR (node_b == '$N0_SEED');
+
+--
+-- From e1_edges, find all nodes in the in or out 1-neighborhood
+-- (the nodes at radius 1 from our seed)
+--
+n1_out      = FOREACH e1_edges GENERATE node_a AS node;
+n1_in       = FOREACH e1_edges GENERATE node_b AS node;
+n1x_nodes_u  = UNION n1_out, n1_in;
+n1x_nodes_1  = FILTER   n1x_nodes_u BY (node != '$N0_SEED') ;
+n1x_nodes    = DISTINCT n1x_nodes_1 ;
+
+-- Save the set of nodes at radius-1 
+-- rmf   $OUT_n1x
+-- STORE n1x_nodes_d INTO '$OUT_n1x' ;
+n1x_nodes   = LOAD        '$OUT_n1x' AS (node:chararray);
+
+-- Find all edges that originate in n1
+e2o_edges_n1x_out_j  = JOIN a_follows_b BY node_a, n1x_nodes BY node using 'replicated';
+e2o_edges_n1x_out    = FOREACH e2o_edges_n1x_out_j GENERATE node_a, node_b;
+
+-- Among those edges, find those that terminate in n1 as well
+clique_n1x_n1x_j      = JOIN e2o_edges_n1x_out BY node_b, n1_nodes BY node using 'replicated';
+clique_n1x_n1x        = FOREACH clique_n1x_n1x_j GENERATE node_a, node_b;
+
+-- Save the result
+rmf                       $OUT_CLIQUE;
+STORE clique_n1x_n1x INTO '$OUT_CLIQUE';
