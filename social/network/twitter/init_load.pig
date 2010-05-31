@@ -1,7 +1,7 @@
 --
 -- UDF Stores
 --
-REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
 
 --
 -- Twitter Model classes
@@ -15,7 +15,6 @@ AAtsignsB_N         = LOAD '$TWROOT/a_atsigns_b'           AS (rsrc: chararray, 
 ARepliesB           = LOAD '$TWROOT/a_replies_b'           AS (rsrc: chararray, user_a_id: long, user_b_id: long,            tw_id: long, reply_tw_id:long);
 AFavoritesB         = LOAD '$TWROOT/a_favorites_b'         AS (rsrc: chararray, user_a_id: long, user_b_id: long,            tw_id: long);
 
-
 TweetUrl            = LOAD '$TWROOT/tweet_url'             AS (rsrc: chararray, url: chararray, tw_id: long, user: chararray, created_at: long);
 HashTag             = LOAD '$TWROOT/hashtag'               AS (rsrc: chararray, url: chararray, tw_id: long, user_id: long);
 
@@ -27,14 +26,3 @@ TwitterUserStyle    = LOAD '$TWROOT/twitter_user_style'    AS (rsrc: chararray, 
 
 Tweet               = LOAD '$TWROOT/tweet'                 AS (rsrc: chararray, tw_id: long,   created_at: long, user_id: long, favorited: long, truncated: long, repl_user_id: long, repl_tw_id: long, text: chararray, src: chararray);
 SearchTweet         = LOAD '$TWROOT/search_tweet'          AS (rsrc: chararray, tw_id: long,   created_at: long, user_id: long, favorited: long, truncated: long, repl_user_id: long, repl_tw_id: long, text: chararray, src: chararray, in_reply_to_screen_name: chararray, in_reply_to_sid: long, twitter_user_screen_name: chararray, twitter_user_sid: long, iso_language_code: chararray);
-
--- Scrape		    = LOAD ''
-
-Tokens = LOAD 'tmp/sampled_toks' AS (
-  rsrc:                 chararray,
-  text:                 chararray,
-  tweet_id:             long,
-  twitter_user_id:      chararray, -- right now search_tweet tokens come out with username only
-  created_at:           long
-  );
-
