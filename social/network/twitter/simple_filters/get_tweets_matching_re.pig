@@ -55,8 +55,8 @@ twitter_user_partials
 */
 
 -- defaults, the path to tweets is different on the clusta
-%default TWEET   '/data/fixd/social/network/twitter/out/tweet' ;
-%default OUTPUT  '/data/fixd/social/network/twitter/ford_counts';
+%default TWEET   '/data/sn/tw/fixd/objects/tweet' ;
+%default OUTPUT  '/tmp/tweets_matching_rd/';
 -- load libraries
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar ;
 
