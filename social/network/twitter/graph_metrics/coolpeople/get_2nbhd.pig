@@ -44,8 +44,8 @@ screen_name_n01     = LOAD '$HOOD/screen_name_n01'         AS (screen_name: char
 -- SearchTweet_n01_j        = JOIN SearchTweet                 BY screen_name, screen_name_n01 BY screen_name using 'replicated';
 -- SearchTweet_n01_f        = FOREACH SearchTweet_n01_j        GENERATE rsrc, tw_id, created_at, user_id, favorited, truncated, repl_user_id, repl_tw_id, text, src, in_reply_to_screen_name, in_reply_to_searchid, screen_name, twitter_user_searchid, iso_language_code;
 
-AFollowsB_n01_f          = LOAD '$HOODU/a_follows_b_n01'           AS (rsrc: chararray, user_a_id: long, user_b_id: long);
-ARepliesB_n01_f          = LOAD '$HOODU/a_replies_b_n01'           AS (rsrc: chararray, user_a_id: long, user_b_id: long,            tw_id: long, reply_tw_id:long);
+-- AFollowsB_n01_f          = LOAD '$HOODU/a_follows_b_n01'           AS (rsrc: chararray, user_a_id: long, user_b_id: long);
+-- ARepliesB_n01_f          = LOAD '$HOODU/a_replies_b_n01'           AS (rsrc: chararray, user_a_id: long, user_b_id: long,            tw_id: long, reply_tw_id:long);
 TwitterUser_n01_f        = LOAD '$HOODU/twitter_user_n01'          AS (rsrc: chararray, user_id: long, scraped_at: long, screen_name: chararray, protected: long, followers_count: long, friends_count: long, statuses_count: long, favorites_count: long, created_at: long);
 TwitterUserPartial_n01_f = LOAD '$HOODU/twitter_user_partial_n01'  AS (rsrc: chararray, user_id: long, scraped_at: long, screen_name: chararray, protected: long, followers_count: long, full_name:   chararray, url: chararray, location: chararray, description: chararray, profile_image_url:chararray);
 TwitterUserProfile_n01_f = LOAD '$HOODU/twitter_user_profile_n01'  AS (rsrc: chararray, user_id: long, scraped_at: long, full_name:   chararray, url: chararray, location: chararray, description: chararray, time_zone: chararray, utc_offset: long);
