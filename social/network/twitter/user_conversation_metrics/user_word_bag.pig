@@ -14,10 +14,11 @@
 --
 -- [word_token, text, user_id, tweet_id, created_at]
 --
-REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
+-- REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
+REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
 
-%default TOKENS  '/data/sn/tw/fixd/objects/tokens/word_token'; --input location
-%default WORDBAG '/data/sn/tw/fixd/word/user_word_bag';        --output location
+%default TOKENS  '/data/soc/net/tw/fixd/objects/tokens/word_token'; --input location
+%default WORDBAG '/data/soc/net/tw/fixd/word/user_word_bag';        --output location
 
 -- load input data
 AllTokens = LOAD '$TOKENS' AS

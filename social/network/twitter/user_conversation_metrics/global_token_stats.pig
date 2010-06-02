@@ -1,10 +1,11 @@
 -- In the counters for the UserToksGrouped, the number of input rows is the total number of usages.
 -- In the counters for the UserTokStats, the number of output rows is the number of users
 
-REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
+-- REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
+REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
 
-%default WORDBAG                 '/data/sn/tw/fixd/word/user_word_bag';     --input location
-%default WORDSTATS               '/data/sn/tw/fixd/word/global_word_stats'; --output location
+%default WORDBAG                 '/data/soc/net/tw/fixd/word/user_word_bag';     --input location
+%default WORDSTATS               '/data/soc/net/fixd/word/global_word_stats'; --output location
 %default SQRT_OF_N_USERS_MINUS_1 '7305.3931';
 %default N_USERS                 '53368769.0';
 %default TOT_USAGES_AS_DOUBLE    '14876543916.0';

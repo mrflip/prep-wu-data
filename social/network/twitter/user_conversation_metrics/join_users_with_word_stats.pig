@@ -6,9 +6,9 @@
 --
 
 
-%default WORDBAG       '/data/sn/tw/fixd/word/user_word_bag';            --input location
-%default WORDSTATS     '/data/sn/tw/fixd/word/global_word_stats';        --input location
-%default USERWORDS_OUT '/data/sn/tw/fixd/word/user_word_bag_with_stats'; --output location
+%default WORDBAG       '/data/soc/net/tw/fixd/word/user_word_bag';            --input location
+%default WORDSTATS     '/data/soc/net/tw/fixd/word/global_word_stats';        --input location
+%default USERWORDS_OUT '/data/soc/net/tw/fixd/word/user_word_bag_with_stats'; --output location
 
 UserTokStats = LOAD '$WORDBAG' AS (
                         tok:                 chararray,
@@ -37,19 +37,19 @@ UserAndGlobalTokStats_1 = JOIN UserTokStats BY tok, GlobalTokStats BY tok ;
 
 UserAndGlobalTokStats = FOREACH UserAndGlobalTokStats_1 GENERATE
   GlobalTokStats::tok AS tok,
-  user_id,
-  num_user_tok_usages,
-  tot_user_usages,
-  user_tok_freq * 1000000000.0 AS user_tok_freq_ppb,
-  vocab,
-  tot_tok_usages,
-  range,
-  user_freq_avg,
-  user_freq_stdev,
-  global_freq_avg,
-  global_freq_stdev,
-  dispersion,
-  tok_freq_ppb
+  UserTokStats::user_id,
+  UserTokStats::num_user_tok_usages,
+  UserTokStats::tot_user_usages,
+  UserTokStats::user_tok_freq * 1000000000.0 AS user_tok_freq_ppb,
+  UserTokStats::vocab,
+  GlobalTokStats::tot_tok_usages,
+  GlobalTokStats::range,
+  GlobalTokStats::user_freq_avg,
+  GlobalTokStats::user_freq_stdev,
+  GlobalTokStats::global_freq_avg,
+  GlobalTokStats::global_freq_stdev,
+  GlobalTokStats::dispersion,
+  GlobalTokStats::tok_freq_ppb
   ;
 
 rmf                        $USERWORDS_OUT;

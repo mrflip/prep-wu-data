@@ -25,7 +25,7 @@ rank = LOAD '$PAGERANK' AS
          pr:      float
        );
 
-joined    = JOIN rank BY user_id, matched_id BY id;
+joined    = JOIN rank BY user_id, matched_ids BY id;
 flattened = FOREACH joined GENERATE
                              matched_ids::screen_name     AS screen_name,
                              matched_ids::id              AS user_id,
@@ -37,5 +37,5 @@ flattened = FOREACH joined GENERATE
                              matched_ids::created_at      AS created_at
                            ;
 
-rmf                      $OUT;
-STORE OutputTweets INTO '$OUT';
+rmf                   $OUT;
+STORE flattened INTO '$OUT';
