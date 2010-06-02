@@ -1,37 +1,41 @@
-MatchedIds = LOAD '/data/rawd/social/network/twitter/objects/twitter_user_id_matched' AS (
-  rsrc:             chararray,
-  id:               long,
-  scraped_at:       long,
-  screen_name:      chararray,
-  protected:        int,
-  followers_count:  long,
-  friends_count:    long,
-  statuses_count:   long,
-  favourites_count: long,
-  created_at:       chararray,
-  sid:              long,
-  is_full:          long,
-  health:           chararray
-  ) ;
+%default MATCHED  '/data/sn/tw/fixd/objects/twitter_user_id_matched'
+%default PAGERANK '/data/sn/tw/pagerank/a_replies_b_pagerank/pagerank_only'
+%default OUT      '/data/sn/tw/pagerank/a_replies_b_pagerank/pagerank_with_profile'
+        
+matched_ids = LOAD '$MATCHED' AS
+              (
+                rsrc:             chararray,
+                id:               long,
+                scraped_at:       long,
+                screen_name:      chararray,
+                protected:        int,
+                followers_count:  long,
+                friends_count:    long,
+                statuses_count:   long,
+                favourites_count: long,
+                created_at:       chararray,
+                sid:              long,
+                is_full:          long,
+                health:           chararray
+              );
 
-Rank = LOAD '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_only' AS (
-  user_id:              long,
-  pagerank:             float
-  ) ;
+rank = LOAD '$PAGERANK' AS
+       (
+         user_id: long,
+         pr:      float
+       );
 
-RankWScreenNames = JOIN Rank BY user_id, MatchedIds BY id;
+joined    = JOIN rank BY user_id, matched_id BY id;
+flattened = FOREACH joined GENERATE
+                             matched_ids::screen_name     AS screen_name,
+                             matched_ids::id              AS user_id,
+                             rank::pr                     AS pr,  
+                             matched_ids::followers_count AS followers_count,
+                             (((double) matched_ids::followers_count)/((double) matched_ids::friends_count)) AS ratio,
+                             matched_ids::friends_count   AS friends_count,
+                             matched_ids::statuses_count  AS statuses_count,
+                             matched_ids::created_at      AS created_at
+                           ;
 
-OutputTweets = FOREACH RankWScreenNames GENERATE
-
---  MatchedIds::screen_name               AS screen_name,
-  MatchedIds::id                        AS user_id,
-  Rank::pagerank                        AS pagerank,  
-  MatchedIds::followers_count           AS followers_count,
-  (((double) MatchedIds::followers_count)/( (double) MatchedIds::friends_count) ) AS ratio,
---  MatchedIds::friends_count             AS friends_count,
---  MatchedIds::statuses_count            AS statuses_count,
-  MatchedIds::created_at                AS created_at
-  ;
-
-rmf                      /data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile;
-STORE OutputTweets INTO '/data/rawd/social/network/twitter/pagerank/a_follows_b_pagerank/pagerank_with_profile';
+rmf                      $OUT;
+STORE OutputTweets INTO '$OUT';
