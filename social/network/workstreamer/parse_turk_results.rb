@@ -6,7 +6,7 @@ require 'fastercsv'
 # WORK_DIR = File.dirname(__FILE__).to_s + "/"
 WORK_DIR = "/Users/doncarlo/data/workstreamer/results/"
 TODAY = Time.now.strftime("%Y%m%d")
-NETWORKS = ["linkedin","twitter","wikipedia","youtube"]
+NETWORKS = ["facebook","linkedin","twitter","wikipedia","youtube"]
 
 if NETWORKS.include?(ARGV[0])
   index = NETWORKS.index(ARGV[0])
@@ -35,6 +35,12 @@ results.each do |row|
     unless hitids.key?(row["hitid"])
       hitids[row["hitid"]] = row
       next
+    end
+    if NETWORKS[index] == "facebook"
+      row["Answer.Q1Url"].gsub!(/facebook.com\/[^#]*\#\!/,"facebook.com")
+      row["Answer.Q1Url"].gsub!(/\?ref\=.+/,"")
+      row["Answer.Q1Url"].gsub!(/\&ref\=.+/,"")
+      row["Answer.Q1Url"].gsub!(/\?v\=.+/,"")
     end
     if hitids[row["hitid"]]["Answer.Q1Url"].downcase == row["Answer.Q1Url"].downcase
       accepted << [hitids[row["hitid"]]["hitid"],hitids[row["hitid"]]["hittypeid"],hitids[row["hitid"]]["assignmentid"],hitids[row["hitid"]]["workerid"],
