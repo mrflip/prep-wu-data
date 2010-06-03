@@ -31,6 +31,7 @@ hitids = Hash.new
 results.each do |row|
   if ((row["hitstatus"] == "Reviewable") && (row["assignmentstatus"] != "Approved"))
     row["Answer.Q1Url"].strip!
+    row["Answer.Q1Url"].delete('"')
     row["Answer.Q1Url"].gsub!(/http:\/\//,"")
     unless hitids.key?(row["hitid"])
       hitids[row["hitid"]] = row
