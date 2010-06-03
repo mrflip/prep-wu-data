@@ -16,45 +16,50 @@ else
 end
 puts "Getting results from #{NETWORKS[index]}."
 
-round1_hitid_websites = FasterCSV.open(HIT_DIR + NETWORKS[index] + '_hitid_website.tsv', options={:headers => true, :col_sep => "\t"})
-round1_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-20100528-further_review.results', options={:headers => true, :quote_char => "`", :col_sep => "\t"})
+# round1_hitid_websites = FasterCSV.open(HIT_DIR + NETWORKS[index] + '_hitid_website.tsv', options={:headers => true, :col_sep => "\t"})
+# round1_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-20100528-further_review.results', options={:headers => true, :quote_char => "`", :col_sep => "\t"})
 round2_hitid_double = FasterCSV.open(HIT_DIR + '20100528-' + NETWORKS[index] + '_hitid_website.tsv', options={:headers => true, :col_sep => "\t"})
-round2_hitid_single = FasterCSV.open(HIT_DIR + '20100528-' + NETWORKS[index] + '-single_hitid_website.tsv', options={:headers => true, :col_sep => "\t"})
-round2_double_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-' + TODAY + '-further_review.results', options={:headers => true, :quote_char => "`", :col_sep => "\t"})
-round2_single_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-' + TODAY + '-single.results', options={:headers => true, :col_sep => "\t"})
+# round2_hitid_single = FasterCSV.open(HIT_DIR + '20100528-' + NETWORKS[index] + '-single_hitid_website.tsv', options={:headers => true, :col_sep => "\t"})
+# round2_double_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-' + TODAY + '-further_review.results', options={:headers => true, :quote_char => "`", :col_sep => "\t"})
+round2_double_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-20100602-further_review.results', options={:headers => true, :quote_char => "`", :col_sep => "\t"})
+# round2_single_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-' + TODAY + '-single.results', options={:headers => true, :col_sep => "\t"})
+round2_single_results = FasterCSV.open(WORK_DIR + NETWORKS[index] + '-' + TODAY + '.results', options={:headers => true, :col_sep => "\t"})
 
 website_ids = Hash.new
 
-round1_hitid_websites.each do |row|
-  warn "Duplicate HITid: #{row["hitid"]}" if website_ids.key?(row["hitid"])
-  website_ids[row["hitid"]] = {"id" => row["object_id"], "website" => row["website"]}
-end
+# round1_hitid_websites.each do |row|
+#   warn "Duplicate HITid: #{row["hitid"]}" if website_ids.key?(row["hitid"])
+#   website_ids[row["hitid"]] = {"id" => row["object_id"], "website" => row["website"]}
+# end
 
 round2_hitid_double.each do |row|
   warn "Duplicate HITid: #{row["hitid"]}" if website_ids.key?(row["hitid"])
   website_ids[row["hitid"]] = {"id" => row["object_id"], "website" => row["website"]}
 end
 
-round2_hitid_single.each do |row|
-  warn "Duplicate HITid: #{row["hitid"]}" if website_ids.key?(row["hitid"])
-  website_ids[row["hitid"]] = {"id" => row["object_id"], "website" => row["website"]}
-end
+# round2_hitid_single.each do |row|
+#   warn "Duplicate HITid: #{row["hitid"]}" if website_ids.key?(row["hitid"])
+#   website_ids[row["hitid"]] = {"id" => row["object_id"], "website" => row["website"]}
+# end
 
 p website_ids.first
 
 all_results = Hash.new
 
-round1_results.each do |row|
-  warn "Missing HITid:#{row["hitid"]}" unless website_ids.key?(row["hitid"])
-  object_id = website_ids[row["hitid"]]["id"]
-  all_results[object_id] = {"match_found" => false, "results" => []} unless all_results.key?(object_id)
-  all_results[object_id]["results"] += [{"hitid" => row["hitid"], "hittypeid" => row["hittypeid"], "assignmentid" => row["assignmentid"], "workerid" => row["workerid"],
-    "Answer.Q1Url" => row["Answer.Q1Url"], "object_id" => object_id, "website" => website_ids[row["hitid"]]["website"], "approve" => false}
-  ]
-end
+# round1_results.each do |row|
+#   warn "Missing HITid:#{row["hitid"]}" unless website_ids.key?(row["hitid"])
+#   object_id = website_ids[row["hitid"]]["id"]
+#   all_results[object_id] = {"match_found" => false, "results" => []} unless all_results.key?(object_id)
+#   all_results[object_id]["results"] += [{"hitid" => row["hitid"], "hittypeid" => row["hittypeid"], "assignmentid" => row["assignmentid"], "workerid" => row["workerid"],
+#     "Answer.Q1Url" => row["Answer.Q1Url"], "object_id" => object_id, "website" => website_ids[row["hitid"]]["website"], "approve" => false}
+#   ]
+# end
 
 round2_double_results.each do |row|
-  warn "Missing HITid:#{row["hitid"]}" unless website_ids.key?(row["hitid"])
+  unless website_ids.key?(row["hitid"])
+    warn "Missing HITid:#{row["hitid"]}" 
+    next
+  end
   object_id = website_ids[row["hitid"]]["id"]
   all_results[object_id] = {"match_found" => false, "results" => []} unless all_results.key?(object_id)
   all_results[object_id]["results"] += [{"hitid" => row["hitid"], "hittypeid" => row["hittypeid"], "assignmentid" => row["assignmentid"], "workerid" => row["workerid"],
@@ -65,12 +70,14 @@ end
 round2_single_results.each do |row|
   if ((row["hitstatus"] == "Reviewable") && (row["assignmentstatus"] != "Approved"))
     row["Answer.Q1Url"].strip!
+    row["Answer.Q1Url"].delete!('"')
     row["Answer.Q1Url"].gsub!(/http:\/\//,"")
-    warn "Missing HITid:#{row["hitid"]}" unless website_ids.key?(row["hitid"])
-    object_id = website_ids[row["hitid"]]["id"]
+    # warn "Missing HITid:#{row["hitid"]}" unless website_ids.key?(row["hitid"])
+    # object_id = website_ids[row["hitid"]]["id"]
+    object_id, website = row["annotation"].split(",")[0..1]
     all_results[object_id] = {"match_found" => false, "results" => []} unless all_results.key?(object_id)
     all_results[object_id]["results"] += [{"hitid" => row["hitid"], "hittypeid" => row["hittypeid"], "assignmentid" => row["assignmentid"], "workerid" => row["workerid"],
-      "Answer.Q1Url" => row["Answer.Q1Url"], "object_id" => object_id, "website" => website_ids[row["hitid"]]["website"], "approve" => false}
+      "Answer.Q1Url" => row["Answer.Q1Url"], "object_id" => object_id, "website" => website, "approve" => false}
     ]
   end
 end
