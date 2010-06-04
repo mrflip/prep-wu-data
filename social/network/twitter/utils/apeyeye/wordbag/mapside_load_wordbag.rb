@@ -37,7 +37,7 @@ class SimpleMapper < Wukong::Streamer::RecordStreamer
 
   def log_sometimes user, wordbag, &block
     if (@iter+=1) % LOG_INTERVAL == 0
-      yield([@iter, *stuff]) ; $stderr.puts [@iter, *stuff].join("\t")
+      yield([@iter, user, wordbag]) ; $stderr.puts [@iter, user, wordbag].join("\t")
     end
   end
 
