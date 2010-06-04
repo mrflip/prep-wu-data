@@ -10,7 +10,7 @@ LOG_INTERVAL = 1_000 # emit a statement every LOG_INTERVAL repetition
 class SimpleMapper < Wukong::Streamer::RecordStreamer
 
   def process user, wordbag, *args
-    dump_into_db user, bag, *args
+    dump_into_db user, wordbag, *args
   end
 
   def cassandra_db
