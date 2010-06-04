@@ -14,8 +14,8 @@ class SimpleMapper < Wukong::Streamer::RecordStreamer
     @iter = 0
   end
 
-  def process user, wordbag, *args
-    dump_into_db user, wordbag, *args
+  def process user, wordbag, &block
+    dump_into_db user, wordbag, &block
   end
 
   def cassandra_db
@@ -35,7 +35,7 @@ class SimpleMapper < Wukong::Streamer::RecordStreamer
     log_sometimes user, wordbag, &block
   end
 
-  def log_sometimes *stuff
+  def log_sometimes user, wordbag, &block
     if (@iter+=1) % LOG_INTERVAL == 0
       yield([@iter, *stuff]) ; $stderr.puts [@iter, *stuff].join("\t")
     end
