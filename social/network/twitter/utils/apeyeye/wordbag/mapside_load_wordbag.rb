@@ -9,6 +9,11 @@ LOG_INTERVAL = 1_000 # emit a statement every LOG_INTERVAL repetition
 
 class SimpleMapper < Wukong::Streamer::RecordStreamer
 
+  def initialize *args
+    super *args
+    @iter = 0
+  end
+
   def process user, wordbag, *args
     dump_into_db user, wordbag, *args
   end
