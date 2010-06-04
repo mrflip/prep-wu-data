@@ -33,15 +33,16 @@ results.each do |row|
     row["Answer.Q1Url"].strip!
     row["Answer.Q1Url"].delete!('"')
     row["Answer.Q1Url"].gsub!(/https?:\/\//,"")
-    unless hitids.key?(row["hitid"])
-      hitids[row["hitid"]] = row
-      next
-    end
     if NETWORKS[index] == "facebook"
       row["Answer.Q1Url"].gsub!(/facebook.com\/[^#]*\#\!/,"facebook.com")
       row["Answer.Q1Url"].gsub!(/\?ref\=.+/,"")
       row["Answer.Q1Url"].gsub!(/\&ref\=.+/,"")
       row["Answer.Q1Url"].gsub!(/\?v\=.+/,"")
+      row["Answer.Q1Url"].gsub!(/\?\.*/,"")
+    end
+    unless hitids.key?(row["hitid"])
+      hitids[row["hitid"]] = row
+      next
     end
     if NETWORKS[index] == "twitter"
       intersection = hitids[row["hitid"]]["Answer.Q1Url"].delete(" ").downcase.split(",") & row["Answer.Q1Url"].delete(" ").downcase.split(",")

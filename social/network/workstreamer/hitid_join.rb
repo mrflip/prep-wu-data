@@ -14,7 +14,7 @@ index = 0
 # results = FasterCSV.open(WORK_DIR + NETWORKS[index] + "-" + TODAY + "-further_review.results", options={:headers => true, :col_sep => "\t"})
 results = FasterCSV.open(WORK_DIR + NETWORKS[index] + "-" + TODAY + ".confirm", options={:headers => true, :col_sep => "\t"})
 
-websites = FasterCSV.open(HIT_DIR + NETWORKS[index] + "_hitid_website.tsv", options={:headers => true, :col_sep => "\t"})
+websites = FasterCSV.open(HIT_DIR + "20100528-" + NETWORKS[index] + "-single_hitid_website.tsv", options={:headers => true, :col_sep => "\t"})
 
 singlehit = File.open(HIT_DIR + NETWORKS[index] + "-" + TODAY + "_new_single_HIT.tsv","w")
 singlehit << ["object_id","display_name","website"].join("\t") + "\n"

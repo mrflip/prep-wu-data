@@ -24,7 +24,12 @@ results.each do |row|
   if Settings[:accepted_turks] =~ /obj_ids/
     company = JuneCompanyListing.first("object_id" => row["object_id"])
   else
-    company = JuneCompanyListing.first((net + "_hitid").to_s => row["hitid"])
+    if row["annotation"].nil?
+      company = JuneCompanyListing.first((net + "_hitid").to_s => row["hitid"])
+    else
+      object_id = row["annotation"].split(",")[0]
+      company = JuneCompanyListing.first("object_id" => object_id)
+    end      
   end
   if company.nil?
     warn "No company match: #{row["hitid"]}"
