@@ -3,6 +3,7 @@ require 'rubygems'
 require 'wukong'
 require 'json'
 require 'cassandra' ; include Cassandra::Constants
+require File.dirname(__FILE__)+'/../cassandra_db_seeds'
 
 Settings.define :keyspace, :default => 'Twitter', :description => 'Cassandra keyspace'
 LOG_INTERVAL = 1_000 # emit a statement every LOG_INTERVAL repetition
@@ -19,7 +20,7 @@ class SimpleMapper < Wukong::Streamer::RecordStreamer
   end
 
   def cassandra_db
-    @cassandra_db ||= Cassandra.new(Settings.keyspace, %w[ 10.194.11.47 10.194.61.123 10.194.61.124 10.194.99.239 10.195.219.63 10.212.102.208 10.212.66.132 10.218.55.220 ].map{|s| "#{s}:9160"})
+    @cassandra_db ||= Cassandra.new(Settings.keyspace, CASSANDRA_DB_SEEDS)
   end
 
   def dump_into_db user, wordbag, &block

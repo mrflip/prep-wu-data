@@ -25,7 +25,7 @@ class TwitterRequestParser < Wukong::Streamer::StructStreamer
         yield obj
       end
     rescue StandardError => e
-      $stderr.puts ["Bad request:", e.to_s, request.to_flat].join("\t")[0..3000]
+      $stderr.puts ["Bad request:", e.to_s, e.backtrace, request.to_flat].join("\t")[0..3000]
     end
   end
 end
