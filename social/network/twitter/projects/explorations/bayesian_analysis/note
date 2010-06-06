@@ -1,0 +1,50 @@
+Problem:
+
+        Use Bayesian inference to understand a users word usage.
+
+Step 1.
+
+        We need to come up with the "prior" distribution for a given word Z.
+        To do this assume outright that the distribution of Z can be fit to a
+        beta distribution:
+
+                f(x) ~ x^(c_o*u_o-1)*(1-x)^(c_o*(1-u_o)-1)
+
+        where
+                c_o = Z's concentration
+                u_o = Z's frequency average             
+
+        Both c and u are found in (or can be calculated from) the global_word_stats data set.                
+
+Step 2.
+
+        Observe (measure) a user's word usage. To do this we count the number of times the user
+        uses the word Z as well as the total number of words the user has ever used. These are
+        both found in the user word bag dataset.
+
+Step 3.
+
+        Use the prior distribution to infer the distribution of the word we measure. This allows
+        us to guess what the global average of word Z would be as well as its variance by using
+        learned information (prior distribution) and the measured information (user's word usage).
+
+        Use the following (Theorem A, Ch. 12 Brunk, "Intoduction to Mathematical Statistics"):
+        
+                c = c_o + n
+                u = (c_o*u_o + S)/(c_o + n)
+
+        where
+                c = inferred concentration of measured word
+                S = total usages of measured word by user
+                n = total usages of all words by user
+            
+
+It may seem like this isn't actually doing anything. It's more subtle than it appears at first.
+Namely, we can use this method to pick out anamolous usage. That is, given the users information
+and the inferred distribution, how closely does it match up with the prior distribution? A strong
+match indicates this word is probably not characteristic of the user. On the other hand, if there
+is a strong difference between the distribution inferred by examining a user and the prior
+distribution than we guess the user can be characterized by this word.
+
+What is the best measure of how closely the distributions are related? We can call this measure
+G and use it to order a users word bag properly. That is, order by descending values of G.
