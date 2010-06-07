@@ -2,6 +2,7 @@
 $: << "/Users/doncarlo/ics/gems/"
 require 'rubygems'
 require 'fastercsv'
+require 'addressable/uri'
 
 # WORK_DIR = File.dirname(__FILE__).to_s + "/"
 WORK_DIR = "/Users/doncarlo/data/workstreamer/results/"
@@ -30,6 +31,7 @@ hitids = Hash.new
 
 results.each do |row|
   if ((row["hitstatus"] == "Reviewable") && (row["assignmentstatus"] != "Approved"))
+    row["Answer.Q1Url"] = Addressable::URI.heuristic_parse(row["Answer.Q1Url"]).normalize.to_s
     row["Answer.Q1Url"].strip!
     row["Answer.Q1Url"].delete!('"')
     row["Answer.Q1Url"].gsub!(/https?:\/\//,"")
