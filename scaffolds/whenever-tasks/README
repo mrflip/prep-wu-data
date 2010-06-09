@@ -1,0 +1,1 @@
+This folder uses "http://github.com/javan/whenever":Whenever to create a crontab file to do various regularly scheduled tasks for scraped data (mostly Twitter).  See config/schedule.rb for details on specific commands included.
