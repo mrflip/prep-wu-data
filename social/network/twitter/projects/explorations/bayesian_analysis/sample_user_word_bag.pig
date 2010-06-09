@@ -1,7 +1,7 @@
 %default STATSBAG '/data/sn/tw/fixd/word/user_word_bag_with_stats'
 %default OUT      '/data/sn/tw/fixd/sample/sampled_word_bag'
         
-wordbag  = LOAD '$WORDBAG' AS
+wordbag  = LOAD '$STATSBAG' AS
            (
                 tok:                 chararray,
                 user_id:             chararray,
