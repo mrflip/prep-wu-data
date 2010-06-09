@@ -20,8 +20,9 @@ wordbag  = LOAD '$STATSBAG' AS
            );
 
 cutbag   = FOREACH wordbag GENERATE tok, user_id, num_user_tok_usages, tot_user_usages, tot_tok_usages;
-filtered = FILTER cutbag BY tok MATCHES '.*(\\bdata\\b|\\bthe\\b|\\belectric\\b|\\bcoprolite\\b|\\bhello\\b|\\bdogma\\b).*';
-sampled  = SAMPLE filtered 0.01;
+filtered = FILTER cutbag BY tok MATCHES '.*(\\blawsuit\\b|\\bearthquake\\b|\\bconcrete\\b|\\boil\\b|\\bdanger\\b).*';
+-- '.*(\\bdata\\b|\\bthe\\b|\\belectric\\b|\\bcoprolite\\b|\\bhello\\b|\\bdogma\\b).*'
+sampled  = SAMPLE filtered 0.1;
  
 rmf $OUT;
 STORE sampled INTO '$OUT'; 
