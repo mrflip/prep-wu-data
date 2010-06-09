@@ -3,74 +3,77 @@ require 'rubygems'
 require 'wukong'    ; include Wukong
 require 'cassandra' ; include Cassandra::Constants
 
-#
-# Need to accumulate the data to insert with an accumulating reducer
-# Is it the right thing to do to insert everything that corresponds to
-# a single key all at once? This should test this.
-#
+class CassandraBatchMapper < Wukong::Streamer::Base
+  attr_accessor :batch_count, :batch_record_count
+  CASSANDRA_DB_SEEDS = %w[10.196.225.203 10.196.193.219 10.196.227.79 10.196.227.159 10.196.199.47 10.196.225.171 10.196.162.15].map{ |s| s.to_s+':9160'}
+  BATCH_SIZE = 100
 
-module BatchInsertCassandra
-
-  CASSANDRA_DB_SEEDS = %w[10.196.225.203 10.196.193.219 10.196.227.79 10.196.227.159 10.196.199.47  10.196.225.171 10.196.162.15].map{ |s| s.to_s+':9160'}
-
-  # link to cassandra db
-  def self.cassandra_db
-    @cassandra_db ||= Cassandra.new('Twitter', CASSANDRA_DB_SEEDS)
+  def cassandra_db
+    # @cassandra_db ||= Cassandra.new('Cruft', CASSANDRA_DB_SEEDS)
+    @cassandra_db ||= Cassandra.new('Cruft')
   end
-
-  # simple mapper intended to be used with tweets
-  # simply emits ["tweet", tweet_id]
-  class Mapper < Wukong::Streamer::RecordStreamer
-    def process status_key, status_id, *args
-      yield [status_key, status_id]
-    end
+  
+  def initialize *args
+    super *args
+    self.batch_count = 0
+    self.batch_record_count = 0
+    @words = File.open('/usr/share/dict/american-english-insane')
   end
-
-  # accumulating reducer to stack up all tweets. Once we've accumulated
-  # all the tweets we insert their status ids into the db all at once
-  class Reducer < Wukong::Streamer::AccumulatingReducer
-    attr_accessor :data
-
-    # tells the cassandra db to eat dome data
-    def db_insert *args
-      columns = args.last
-      columns.compact!
-      columns.each{|k,v| columns[k] = v.to_s}
-      args << {:consistency => Cassandra::Consistency::ANY}
-      BatchInsertCassandra.cassandra_db.insert(*args)
-    end
-
-    # creates a batch insert job (notice the block)
-    def batch_insert &blk
-      BatchInsertCassandra.cassandra_db.batch &blk
-    end
-
-    def start!  *args
-      self.data = {}
-    end
-
-    def accumulate status_key, status_id
-      self.data[status_id.to_s] = {"status_id" => status_id.to_s}
-    end
-
-    def finalize
-      batch_insert do
-        self.data.each do |status_id, data|
-          # inserts happening inside the batch block should not be written until the end
-          db_insert(:Statuses, status_id, data)
+  
+  def stream
+    while still_lines? do
+      start_batch do
+        while still_lines? && batch_not_full? do
+          line = get_line
+          record = recordize(line.chomp) or next
+          process(*record) do |output_record|
+            emit output_record
+          end
+          self.batch_record_count += 1
         end
       end
-      # self.data.each do |status_id, data|
-      #   yield BatchInsertCassandra.cassandra_db.get(:Statuses, status_id.to_s)
-      # end
     end
-
   end
 
+  def process *args, &blk
+    insert_cruft do |word|
+    # read_cruft do |word|
+      yield word
+    end
+  end
+  
+  def start_batch &blk
+    self.batch_record_count = 0    
+    self.batch_count += 1
+    cassandra_db.batch(&blk)
+  end
+
+  def get_line
+    $stdin.gets
+  end
+  
+  def still_lines?
+    !$stdin.eof?
+  end
+
+  def batch_not_full?
+    self.batch_record_count < BATCH_SIZE
+  end
+
+  def insert_cruft &blk
+    word = @words.gets.strip
+    cassandra_db.insert(:OhBaby, word, "time" => Time.now.to_i.to_s) unless word.blank?
+    yield word
+  end
+
+  def read_cruft &blk
+    word = @words.gets.strip
+    yield cassandra_db.get(:OhBaby, word) unless word.blank?
+  end
+  
 end
 
 Wukong::Script.new(
-  BatchInsertCassandra::Mapper,
-  BatchInsertCassandra::Reducer
+  CassandraBatchMapper,
+  nil
   ).run
-
