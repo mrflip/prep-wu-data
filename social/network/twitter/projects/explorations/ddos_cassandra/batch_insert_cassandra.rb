@@ -34,19 +34,17 @@ class CassandraBatchMapper < Wukong::Streamer::Base
           record = recordize(line.chomp) or next
           next if record.blank?
           process(*record) do |output_record|
-            emit output_record
+            #emit output_record
           end
           self.batch_record_count += 1
+          $stderr.puts "Batch: #{self.batch_count}, Time: #{Time.now}"
         end
       end
     end
   end
 
   def process line, &blk
-    insert_cruft(line) do |word|
-    # read_cruft do |word|
-      yield word
-    end
+    insert_cruft(line)
   end
   
   def start_batch &blk
@@ -67,9 +65,8 @@ class CassandraBatchMapper < Wukong::Streamer::Base
     self.batch_record_count < BATCH_SIZE
   end
 
-  def insert_cruft word, &blk
-    cassandra_db.insert(:words, word.strip, "time" => Time.now.to_i.to_s) unless word.blank?
-    yield word
+  def insert_cruft word
+    cassandra_db.insert(:words, word.strip, {"time" => Time.now.to_i.to_s}, :consistency => Cassandra::Consistency::ANY) unless word.blank?
   end
 
   def read_cruft &blk
