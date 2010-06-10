@@ -22,9 +22,6 @@
 # adds ">> /path/to/file.log 2>&1" to all commands
 set :output, '/data/log/cron.log'
 
-TODAY = Time.now.strftime("%Y%m%d")
-namenode = "ec2-204-236-225-16.compute-1.amazonaws.com"
-
 def hostname
   hostname ||= `hostname`.chomp.gsub(".","_")
 end
@@ -44,9 +41,15 @@ every 1.days, :at => '12:02am' do
   command "find /data/ripd/com.my/*/2010* -mtime +0 \( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \) -exec bzip2 {} \;"
 end
 
+# backs up cluster namenode metadata for the hdfs.  needs to be run on a machine in the same security group as the namenode (cluster master)
+# uncomment for running on a computer in the correct security group
+# every 1.days, :at => '3:00am' do
+#   command "/home/doncarlo/ics/infochimps-data/scaffolds/namenode_metadata_bkup.sh", :output => "/data/log/namenode-bkup.log"
+# end
+
 # pushes twitter data to Amazon S3
 every 1.days, :at => '10:00am' do
-  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh"
+  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh", :output => %Q{/data/log/com.tw/s3sync-com.tw-`date "+%Y%m%d"`.log}
 end
 
 # record the size and number of lines of twitter data scraped that day
