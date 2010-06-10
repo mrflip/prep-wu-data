@@ -37,8 +37,8 @@ class CassandraBatchMapper < Wukong::Streamer::Base
             #emit output_record
           end
           self.batch_record_count += 1
-          $stderr.puts "Batch: #{self.batch_count}, Time: #{Time.now}"
         end
+        $stderr.puts "Batch: #{self.batch_count}, Time: #{Time.now}"        
       end
     end
   end
