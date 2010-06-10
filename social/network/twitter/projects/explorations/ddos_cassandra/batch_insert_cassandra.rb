@@ -32,6 +32,7 @@ class CassandraBatchMapper < Wukong::Streamer::Base
         while still_lines? && batch_not_full? do
           line = get_line
           record = recordize(line.chomp) or next
+          next if record.blank?
           process(*record) do |output_record|
             emit output_record
           end
