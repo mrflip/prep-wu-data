@@ -37,8 +37,8 @@ end
 
 # bzip all twitter and myspace data older than 1 day with extensions of xml, json, or tsv
 every 1.days, :at => '12:02am' do
-  command "find /data/ripd/com.tw/*/2010* -mtime +0 \( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \) -exec bzip2 {} \;"
-  command "find /data/ripd/com.my/*/2010* -mtime +0 \( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \) -exec bzip2 {} \;"
+  command "find /data/ripd/com.tw/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;"
+  command "find /data/ripd/com.my/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;"
 end
 
 # backs up cluster namenode metadata for the hdfs.  needs to be run on a machine in the same security group as the namenode (cluster master)
