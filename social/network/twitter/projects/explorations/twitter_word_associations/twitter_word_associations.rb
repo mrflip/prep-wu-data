@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
-# require 'extlib/class'
 require 'wukong'                       ; include Wukong
 require 'wuclan/twitter'               ; include Wuclan::Twitter::Model
-#require 'wuclan/twitter/model/token'
 
 module WordAssociations
   class Mapper < Wukong::Streamer::StructStreamer
@@ -20,9 +18,9 @@ module WordAssociations
         gsub(/[^a-zA-Z0-9\']+/, ' ').
         gsub(/(\w)\'([st])\b/, '\1!\2').gsub(/\'/, ' ').gsub(/!/, "'")
       # Look for occurrences of X and Y.
-      # FIXME: not smart enough to handle X ann Y and Z
+      # FIXME: not smart enough to handle X and Y and Z
       re = /(\w+)\s+and\s+(\w+)/
-      words = str.scan(re).map{|w| w.sort.join(";")}
+      words = str.scan(re).map{|w| w.sort}
       words
     end
 
@@ -30,7 +28,7 @@ module WordAssociations
     def process tweet, *_, &block
       case tweet
       when Tweet, SearchTweet
-        tokenize(tweet.text).each{|pair| yield [pair, 1]}
+        tokenize(tweet.text).each{|pair| yield pair}
       else return
       end
     end
@@ -46,5 +44,6 @@ end
 # Execute the script
 Wukong::Script.new(
   WordAssociations::Mapper,
-  WordAssociations::Reducer
+  WordAssociations::Reducer,
+  :num_key_fields => 2
   ).run
