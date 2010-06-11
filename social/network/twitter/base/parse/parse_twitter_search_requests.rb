@@ -5,7 +5,8 @@ require 'wuclan/twitter';
 require 'wuclan/twitter/parse';
 require 'wuclan/twitter/scrape'; include Wuclan::Twitter::Scrape
 
-class TwitterSearchRequestParser < Wukong::Streamer::StructStreamer
+class TwitterSearchRequestParser < Wukong::Streamer::CassandraStreamer
+  include Wukong::Streamer::StructRecordizer
   #
   # Object: parse thyself.
   #

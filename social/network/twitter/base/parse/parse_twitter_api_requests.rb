@@ -17,7 +17,8 @@ require File.dirname(__FILE__)+'/last_seen_state'
 # user hasn't ever tweeted) and might not have profile or style info (if the
 # user is protected).
 #
-class TwitterRequestParser < Wukong::Streamer::StructStreamer
+class TwitterRequestParser < Wukong::Streamer::CassandraStreamer
+  include Wukong::Streamer::StructRecordizer
   def process request, *args, &block
     # return unless request.healthy?
     begin
