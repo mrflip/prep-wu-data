@@ -19,6 +19,14 @@ require File.dirname(__FILE__)+'/last_seen_state'
 #
 class TwitterRequestParser < Wukong::Streamer::CassandraStreamer
   include Wukong::Streamer::StructRecordizer
+
+  def initialize *args
+    self.db_seeds = "localhost:9160"
+    self.column_space = "Twitter"
+    self.batch_size = 100
+    super(*args)
+  end
+
   def process request, *args, &block
     # return unless request.healthy?
     begin
