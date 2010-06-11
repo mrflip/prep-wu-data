@@ -73,6 +73,7 @@ module PageRank
       # in a form that can be fed back into this script
       def finalize
         damped_pagerank = (self.pagerank * DAMPING_FACTOR) + (1 - DAMPING_FACTOR)
+        damped_pagerank = self.pagerank if damped_pagerank <= (1 - DAMPING_FACTOR)
         self.dests_str = 'dummy' if self.dests_str.blank?
         yield [node_id, damped_pagerank, dests_str]
       end
