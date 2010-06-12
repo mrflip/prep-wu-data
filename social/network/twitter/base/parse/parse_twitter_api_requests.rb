@@ -21,16 +21,16 @@ class TwitterRequestParser < Wukong::Streamer::CassandraStreamer
   include Wukong::Streamer::StructRecordizer
 
   def initialize *args
-    self.db_seeds = "localhost:9160"
+    self.db_seeds = "127.0.0.1:9160"
     self.column_space = "Twitter"
-    self.batch_size = 100
+    self.batch_size = 10
     super(*args)
   end
 
   def process request, *args, &block
     # return unless request.healthy?
     begin
-      request.parse(*args) do |obj|
+      request.parse(args, cassandra_db) do |obj|
         yield obj
       end
     rescue StandardError => e

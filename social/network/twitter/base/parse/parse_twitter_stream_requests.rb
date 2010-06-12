@@ -20,12 +20,19 @@ require 'wuclan/twitter/scrape'; include Wuclan::Twitter::Scrape
 #
 class TwitterRequestParser < Wukong::Streamer::CassandraStreamer
 
+  def initialize *args
+    self.db_seeds = "127.0.0.1:9160"
+    self.column_space = "Twitter"
+    self.batch_size = 10
+    super(*args)
+  end
+
   def recordize *args
     [ TwitterStreamRequest.new(super(*args).first) ]
   end
 
   def process request, *args, &block
-    request.parse(*args) do |obj|
+    request.parse(args, cassandra_db) do |obj|
       next if obj.is_a? BadRecord
       yield obj
     end
