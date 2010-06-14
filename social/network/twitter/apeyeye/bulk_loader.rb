@@ -10,7 +10,8 @@ Settings.define :dataset,    :required => true, :description => 'dataset to load
 #
 # Load precomputed json data into the ApeyEye database.
 #
-#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_loader.rb --dataset=influence --rm --run /data/sn/tw/fixd/apeyeye/influence/reply_json /tmp/bulkload/influence
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_twitter_user_id.rb       --rm --run --batch_size=200 /data/sn/tw/fixd/objects/twitter_user_id_matched /tmp/bulkload/twitter_user_ids
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_loader.rb --dataset=influence --rm --run --batch_size=200 /data/sn/tw/fixd/apeyeye/influence/reply_json /tmp/bulkload/influence
 #
 #
 class BulkLoadJsonAttribute < CassandraBulkLoadStreamer

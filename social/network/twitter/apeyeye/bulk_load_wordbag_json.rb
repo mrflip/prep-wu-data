@@ -20,3 +20,4 @@ class BulkLoadWordbag < CassandraBulkLoadStreamer
 
 end
 Wukong::Script.new( BulkLoadWordbag, nil ).run
+

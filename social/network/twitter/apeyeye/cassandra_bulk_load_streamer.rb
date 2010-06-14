@@ -1,10 +1,10 @@
-Settings.define :keyspace,   :default => 'Twitter',            :description => 'Cassandra keyspace'
-Settings.define :batch_size, :default => 50, :type => Integer, :description => 'Thrift buffer batch size'
+Settings.define :keyspace,     :default => 'Twitter',                :description => 'Cassandra keyspace'
+Settings.define :batch_size,   :default => 50,     :type => Integer, :description => 'Thrift buffer batch size'
+Settings.define :log_interval, :default => 10_000, :type => Integer, :description => 'How many iterations between log statements'
 
 class CassandraBulkLoadStreamer < Wukong::Streamer::RecordStreamer
   attr_accessor :batch_count, :batch_record_count, :insert_count, :run_start_time
   CASSANDRA_DB_SEEDS = %w[ 10.195.77.171 10.218.71.212 10.244.142.192 10.194.93.123 10.218.1.178 ].map{|s| "#{s}:9160"}.sort_by{ rand }
-  LOG_INTERVAL = 20000
 
   def initialize *args
     super *args
@@ -16,6 +16,7 @@ class CassandraBulkLoadStreamer < Wukong::Streamer::RecordStreamer
   # Batch Streaming mechanics
   #
   def stream
+    30_000.times{ $stdin.gets }
     while still_lines? do
       batch do
         while still_lines? && batch_not_full? do
@@ -27,8 +28,10 @@ class CassandraBulkLoadStreamer < Wukong::Streamer::RecordStreamer
           self.batch_record_count += 1
         end
       end
+      break if @insert_count > 20_000
     end
     after_stream
+    $stdin.each{|l| true }
   end
 
   def batch &blk
@@ -65,17 +68,17 @@ class CassandraBulkLoadStreamer < Wukong::Streamer::RecordStreamer
     self.batch_record_count = 0
     self.insert_count       = 0
     self.run_start_time     = current_time
+    @log_interval           = options.log_interval
   end
 
   def log_sometimes *stuff, &block
     options = stuff.extract_options!
-    if options[:force] || (self.insert_count % LOG_INTERVAL == 0)
+    if options[:force] || (self.insert_count % @log_interval == 0)
       dump_line = [batch_count, "%15d" % insert_count, "%7.2f"%run_elapsed_time, "sec", "%7.2f"%(insert_count.to_f / run_elapsed_time), "/sec", current_time, *stuff ].join("\t")
       $stderr.puts dump_line
       emit         dump_line
     end
     block.call(batch_count, insert_count) if block
-    # 3000.times do $stdin.readline end
   end
 
   def run_elapsed_time
