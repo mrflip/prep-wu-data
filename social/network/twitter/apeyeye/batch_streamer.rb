@@ -23,8 +23,7 @@ class BatchStreamer < Wukong::Streamer::RecordStreamer
       batch do
         self.batch_record_count = 0
         while records_remaining? && batch_not_full? do
-          record = get_record or break
-          next if record.blank?
+          record = get_record ; next if record.blank?
           process(*record) do |output_record|
             emit output_record unless output_record.blank?
           end
@@ -34,7 +33,6 @@ class BatchStreamer < Wukong::Streamer::RecordStreamer
       end
     end
     after_stream
-    $stdin.each{|l| true }
   end
 
   def get_record
