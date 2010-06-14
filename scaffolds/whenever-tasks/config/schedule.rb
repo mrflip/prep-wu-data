@@ -37,19 +37,19 @@ end
 
 # bzip all twitter and myspace data older than 1 day with extensions of xml, json, or tsv
 every 1.days, :at => '12:02am' do
-  command "find /data/ripd/com.tw/*/2010* -mtime +0 \( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \) -exec bzip2 {} \;"
-  command "find /data/ripd/com.my/*/2010* -mtime +0 \( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \) -exec bzip2 {} \;"
+  command "find /data/ripd/com.tw/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;"
+  command "find /data/ripd/com.my/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;"
 end
 
 # backs up cluster namenode metadata for the hdfs.  needs to be run on a machine in the same security group as the namenode (cluster master)
 # uncomment for running on a computer in the correct security group
 # every 1.days, :at => '3:00am' do
-#   command "/home/doncarlo/ics/infochimps-data/scaffolds/namenode_metadata_bkup.sh", :output => "/data/log/namenode-bkup.log"
+#   command "/home/doncarlo/ics/infochimps-data/scaffolds/whenever-tasks/namenode_metadata_bkup.sh", :output => "/data/log/namenode-bkup.log"
 # end
 
 # pushes twitter data to Amazon S3
 every 1.days, :at => '10:00am' do
-  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh", :output => %Q{/data/log/com.tw/s3sync-com.tw-`date "+%Y%m%d"`.log}
+  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh", :output => %Q{/data/log/com.tw/s3sync-com.tw-$(date -u '+%Y%m%d').log}
 end
 
 # record the size and number of lines of twitter data scraped that day
