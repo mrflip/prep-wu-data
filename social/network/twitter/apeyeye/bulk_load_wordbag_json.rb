@@ -8,7 +8,7 @@ require File.dirname(__FILE__)+'/cassandra_bulk_load_streamer'
 #
 # Load precomputed json data into the ApeyEye database.
 #
-#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_loader.rb --dataset=influence --rm --run /data/sn/tw/fixd/apeyeye/influence/reply_json /tmp/bulkload/influence
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_wordbag_json.rb --rm --run /data/sn/tw/fixd/apeyeye/wordbag /tmp/bulkload/wordbag
 #
 #
 class BulkLoadWordbag < CassandraBulkLoadStreamer
