@@ -12,9 +12,9 @@ class TwitterSearchRequestParser < Wukong::Streamer::CassandraStreamer
   #
 
   def initialize *args
-    self.db_seeds = "127.0.0.1:9160"
+    self.db_seeds = %w[ 10.195.9.124 10.242.81.156 10.194.186.32 10.196.202.63 10.194.186.95 10.195.162.47 10.196.186.112 ].map{|s| "#{s}:9160"}.sort_by{ rand }    
     self.column_space = "Twitter"
-    self.batch_size = 10
+    self.batch_size = 50
     super(*args)
   end
 
