@@ -1,0 +1,154 @@
+
+Relationship models:
+  
+  AFollowsB
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+    
+  AFavoritesB
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
+
+  ARepliesB
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
+  -- [:in_reply_to_tweet_id,   Integer]
+
+  AAtsignsB            
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
+
+  ARetweetsB  
+  -- [:user_a_id,              Integer]
+  -- [:user_b_id,              Integer]
+  -- [:tweet_id,               Integer]
+  -- [:please_flag,            Integer]
+
+Tweet Models:
+
+  Tweet 
+  -- [:id,                       Integer]
+  -- [:created_at,                Bignum]
+  -- [:twitter_user_id,          Integer]
+  -- [:twitter_user_screen_name,  String]
+  -- [:twitter_user_search_id,   Integer]
+  -- [:in_reply_to_user_id,      Integer]
+  -- [:in_reply_to_screen_name,   String]
+  -- [:in_reply_to_search_id,     String]
+  -- [:in_reply_to_status_id,    Integer]
+  -- [:text,                      String] 
+  -- [:source,                    String]
+  -- [:iso_language_code,         String]  
+  -- [:latitude,                   Float]
+  -- [:longitude,                  Float]  
+  -- [:was_search_tweet,         Integer]
+
+  DeleteTweet
+  -- [:id,                      Integer]
+  -- [:created_at,               Bignum]
+  -- [:twitter_user_id,         Integer]
+  -- [:twitter_user_screen_name, String]  
+      
+User Models:
+
+  TwitterUser        
+  -- [:id,                     Integer]
+  -- [:scraped_at,             Bignum]
+  -- [:screen_name,            String]
+  -- [:protected,              Integer]
+  -- [:followers_count,        Integer]
+  -- [:friends_count,          Integer]
+  -- [:statuses_count,         Integer]
+  -- [:favourites_count,       Integer]
+  -- [:created_at,             Bignum]
+  
+  TwitterUserPartial 
+  -- [:id,                     Integer]       
+  -- [:scraped_at,             Bignum]
+  -- [:screen_name,            String]
+  -- [:protected,              Integer]
+  -- [:followers_count,        Integer]
+  -- [:name,                   String]        
+  -- [:url,                    String]
+  -- [:location,               String]
+  -- [:description,            String]
+  -- [:profile_image_url,      String]         
+  
+  TwitterUserProfile 
+  -- [:id,                     Integer]
+  -- [:scraped_at,              Bignum]
+  -- [:screen_name,             String]
+  -- [:name,                    String]
+  -- [:url,                     String]
+  -- [:location,                String]
+  -- [:description,             String]
+  -- [:time_zone,               String]
+  -- [:utc_offset,              String]
+  
+  TwitterUserStyle   
+  -- [:id,                            Integer]
+  -- [:scraped_at,                     Bignum]
+  -- [:screen_name,                    String]
+  -- [:profile_background_color,       String]
+  -- [:profile_text_color,             String]
+  -- [:profile_link_color,             String]
+  -- [:profile_sidebar_border_color,   String]
+  -- [:profile_sidebar_fill_color,     String]
+  -- [:profile_background_tile,        String]
+  -- [:profile_background_image_url,   String]
+  -- [:profile_image_url,              String]
+  
+  TwitterUserId      
+  -- [:id,                     Integer]
+  -- [:scraped_at,              Bignum]
+  -- [:screen_name,             String]
+  -- [:protected,              Integer]
+  -- [:followers_count,        Integer]
+  -- [:friends_count,          Integer]
+  -- [:statuses_count,         Integer]
+  -- [:favourites_count,       Integer]
+  -- [:created_at,              Bignum]
+  -- [:sid,                    Integer]
+  -- [:is_full,                Integer]
+  -- [:health,                  String]
+  
+Token Models:
+
+  Hashtag
+  -- [ :text,            String]
+  -- [ :status_id,       Bignum]
+  -- [ :twitter_user_id, Bignum]
+  -- [ :created_at,      Bignum]
+
+  Smiley
+  -- [ :text,            String]
+  -- [ :status_id,       Bignum]
+  -- [ :twitter_user_id, Bignum]
+  -- [ :created_at,      Bignum]
+
+  TweetUrl
+  -- [ :text,            String]
+  -- [ :status_id,       Bignum]
+  -- [ :twitter_user_id, Bignum]
+  -- [ :created_at,      Bignum]
+
+  StockToken
+  -- [ :text,            String]
+  -- [ :status_id,       Bignum]
+  -- [ :twitter_user_id, Bignum]
+  -- [ :created_at,      Bignum]
+
+  WordToken
+  -- [ :text,            String]
+  -- [ :status_id,       Bignum]
+  -- [ :twitter_user_id, Bignum]
+  -- [ :created_at,      Bignum]
+  
+
+Need Location Models:
+
+geo, tweet_id, user_id, created_at, lat, lon, place (as json)
+
