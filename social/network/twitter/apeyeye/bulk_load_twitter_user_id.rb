@@ -4,7 +4,11 @@ require 'wukong'
 require 'json'
 require 'cassandra' ; include Cassandra::Constants
 require File.dirname(__FILE__)+'/batch_streamer'
+require File.dirname(__FILE__)+'/periodic_logger'
 require File.dirname(__FILE__)+'/cassandra_db'
+
+
+
 
 #
 # Load precomputed json data into the ApeyEye database.
@@ -25,6 +29,10 @@ class TwitterIdsBulkLoader < BatchStreamer
       }.compact) if user_id
     db_insert(:Usernames,     screen_name, { "user_id" => user_id, "search_id"   => search_id   }.compact) if screen_name
     db_insert(:UserSearchIds, search_id,   { "user_id" => user_id, "screen_name" => screen_name }.compact) if search_id
+    log.periodically do
+      emit         log.progress("%7d"%@batch_size, "%7d"%batch_count)
+      $stderr.puts log.progress("%7d"%@batch_size, "%7d"%batch_count)
+    end
   end
 
 end

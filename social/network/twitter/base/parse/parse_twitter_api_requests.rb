@@ -7,6 +7,7 @@ require 'wuclan/twitter/parse'  ; include Wuclan::Twitter::Scrape
 # if you're anyone but original author this next require is useless but harmless.
 require 'wuclan/twitter/scrape/old_skool_request_classes'
 require File.dirname(__FILE__)+'/last_seen_state'
+require File.dirname(__FILE__)+'/cassandra_db'
 
 #
 # Incoming objects are Wuclan::Twitter::Scrape requests.
@@ -21,7 +22,7 @@ class TwitterRequestParser < Wukong::Streamer::CassandraStreamer
   include Wukong::Streamer::StructRecordizer
 
   def initialize *args
-    self.db_seeds = %w[ 10.195.9.124 10.242.81.156 10.194.186.32 10.196.202.63 10.194.186.95 10.195.162.47 10.196.186.112 ].map{|s| "#{s}:9160"}.sort_by{ rand }
+    self.db_seeds = CASSANDRA_DB_SEEDS
     self.column_space = "Twitter"
     self.batch_size = 50
     super(*args)

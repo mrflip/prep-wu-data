@@ -11,7 +11,7 @@ OLD_CASSANDRA_DB_SEEDS = %w[10.242.214.96 10.195.113.220 10.195.115.240 10.196.2
 #
 # Load precomputed json data into the ApeyEye database.
 #
-#   ~/ics/icsdata/social/network/twitter/apeyeye//extract_wordbag_with_kludge.rb  --rm --run /data/sn/tw/fixd/objects/twitter_user_id_matched /data/sn/tw/fixd/word/extracted_user_wordbag_json
+#   ~/ics/icsdata/social/network/twitter/apeyeye//extract_wordbag_with_kludge.rb  --rm --run --log_interval=100 /data/sn/tw/fixd/objects/twitter_user_id_matched /data/sn/tw/fixd/word/extracted_user_wordbag_json
 #
 class WordbagBulkSucker < Wukong::Streamer::Base
   include CassandraDb 

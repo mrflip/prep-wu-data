@@ -16,11 +16,6 @@ class BulkLoaderReducer < Wukong::Streamer::AccumulatingReducer
   attr_accessor :user_id, :vocab, :tot_user_usages, :wordbag
   MAX_WORDBAG_SIZE = 100
 
-  def initialize *args
-    super *args
-    @iter = 0
-  end
-
   def start! user_id, vocab, tot_user_usages, *args
     self.user_id = user_id
     self.vocab   = vocab.to_i

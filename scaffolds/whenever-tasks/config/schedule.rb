@@ -20,7 +20,9 @@
 # Learn more: http://github.com/javan/whenever
 
 # adds ">> /path/to/file.log 2>&1" to all commands
-set :output, '/data/log/cron.log'
+# set :output, '/data/log/cron.log'
+
+cron_log = '/data/log/cron.log'
 
 def hostname
   hostname ||= `hostname`.chomp.gsub(".","_")
@@ -29,16 +31,16 @@ end
 
 # change permissions of twitter and myspace data
 every 1.days, :at => '12:00am' do
-  command "sudo chmod -R g+w /data/ripd/com.tw/*"
-  command "sudo chmod -R g+w /data/ripd/com.my/*"  
-  command "sudo chgrp -R admin /data/ripd/com.tw/*"
-  command "sudo chgrp -R admin /data/ripd/com.my/*"
+  command "sudo chmod -R g+w /data/ripd/com.tw/*", :output => cron_log
+  command "sudo chmod -R g+w /data/ripd/com.my/*", :output => cron_log
+  command "sudo chgrp -R admin /data/ripd/com.tw/*", :output => cron_log
+  command "sudo chgrp -R admin /data/ripd/com.my/*", :output => cron_log
 end
 
 # bzip all twitter and myspace data older than 1 day with extensions of xml, json, or tsv
 every 1.days, :at => '12:02am' do
-  command "find /data/ripd/com.tw/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;"
-  command "find /data/ripd/com.my/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;"
+  command "find /data/ripd/com.tw/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;", :output => cron_log
+  command "find /data/ripd/com.my/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;", :output => cron_log
 end
 
 # backs up cluster namenode metadata for the hdfs.  needs to be run on a machine in the same security group as the namenode (cluster master)
@@ -48,9 +50,16 @@ end
 # end
 
 # pushes twitter data to Amazon S3
+# log file defined in script rather than here (in cron)
 every 1.days, :at => '10:00am' do
-  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh", :output => %Q{/data/log/com.tw/s3sync-com.tw-$(date -u '+%Y%m%d').log}
+  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh" #, :output => %Q{/data/log/com.tw/s3sync-com.tw-$(date -u +%Y%m%d).log}
 end
+
+# pushes myspace data to Amazon S3
+# log file defined in script rather than here (in cron)
+# every 1.days, :at => '10:30am' do
+#   command "/home/doncarlo/ics/wuclan/examples/myspace/push_myspace_to_s3.sh" #, :output => %Q{/data/log/com.tw/s3sync-com.tw-$(date -u +%Y%m%d).log}
+# end
 
 # record the size and number of lines of twitter data scraped that day
 every 1.days, :at => '12:00pm' do
