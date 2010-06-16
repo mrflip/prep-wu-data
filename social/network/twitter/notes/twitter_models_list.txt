@@ -1,27 +1,28 @@
 
 Relationship models:
   
-  AFollowsB
+  AFollowsB (immutable)
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
-    
-  AFavoritesB
+
+  
+  AFavoritesB (immutable)
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
 
-  ARepliesB
+  ARepliesB (immutable)
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
   -- [:in_reply_to_tweet_id,   Integer]
 
-  AAtsignsB            
+  AAtsignsB (immutable)            
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
 
-  ARetweetsB  
+  ARetweetsB (immutable)
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
@@ -29,7 +30,7 @@ Relationship models:
 
 Tweet Models:
 
-  Tweet 
+  Tweet (immutable)
   -- [:id,                       Integer]
   -- [:created_at,                Bignum]
   -- [:twitter_user_id,          Integer]
@@ -46,7 +47,7 @@ Tweet Models:
   -- [:longitude,                  Float]  
   -- [:was_search_tweet,         Integer]
 
-  DeleteTweet
+  DeleteTweet (immutable)
   -- [:id,                      Integer]
   -- [:created_at,               Bignum]
   -- [:twitter_user_id,         Integer]
@@ -54,7 +55,7 @@ Tweet Models:
       
 User Models:
 
-  TwitterUser        
+  TwitterUser (mutable)
   -- [:id,                     Integer]
   -- [:scraped_at,             Bignum]
   -- [:screen_name,            String]
@@ -65,7 +66,7 @@ User Models:
   -- [:favourites_count,       Integer]
   -- [:created_at,             Bignum]
   
-  TwitterUserPartial 
+  TwitterUserPartial (mutable)
   -- [:id,                     Integer]       
   -- [:scraped_at,             Bignum]
   -- [:screen_name,            String]
@@ -77,7 +78,7 @@ User Models:
   -- [:description,            String]
   -- [:profile_image_url,      String]         
   
-  TwitterUserProfile 
+  TwitterUserProfile (mutable)
   -- [:id,                     Integer]
   -- [:scraped_at,              Bignum]
   -- [:screen_name,             String]
@@ -88,7 +89,7 @@ User Models:
   -- [:time_zone,               String]
   -- [:utc_offset,              String]
   
-  TwitterUserStyle   
+  TwitterUserStyle (mutable)
   -- [:id,                            Integer]
   -- [:scraped_at,                     Bignum]
   -- [:screen_name,                    String]
@@ -101,7 +102,7 @@ User Models:
   -- [:profile_background_image_url,   String]
   -- [:profile_image_url,              String]
   
-  TwitterUserId      
+  TwitterUserId (mutable)
   -- [:id,                     Integer]
   -- [:scraped_at,              Bignum]
   -- [:screen_name,             String]
@@ -123,7 +124,7 @@ Token Models:
   -- [ :twitter_user_id, Bignum]
   -- [ :created_at,      Bignum]
 
-  Smiley
+  Smiley 
   -- [ :text,            String]
   -- [ :status_id,       Bignum]
   -- [ :twitter_user_id, Bignum]
