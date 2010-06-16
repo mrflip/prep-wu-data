@@ -10,8 +10,7 @@ require File.dirname(__FILE__)+'/cassandra_db'
 #
 # Load precomputed json data into the ApeyEye database.
 #
-#   ~/ics/icsdata/social/network/twitter/utils/apeyeye/bulk_loader.rb --dataset=influence --rm --run /data/sn/tw/fixd/infl_metrics/reply_json /tmp/bulkload/influence
-#
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_conversation.rb --log_interval=1000 --run --rm /data/sn/tw/fixd/objects/a_replies_b /data/sn/tw/fixd/apeyeye/conversation/a_replies_b_json
 #
 class SimpleMapper < Wukong::Streamer::RecordStreamer
   def process rsrc, user_a_id, user_b_id, *args
@@ -20,14 +19,14 @@ class SimpleMapper < Wukong::Streamer::RecordStreamer
 end
 
 class BulkLoader < Wukong::Streamer::AccumulatingReducer
+  include CassandraDb
+  
   attr_accessor :a_replies_b
   def initialize *args
     super *args
+    Settings.deep_merge! options
     @iter = 0
-  end
-
-  def cassandra_db
-    @cassandra_db ||= Cassandra.new(Settings.keyspace, %w[ 10.194.11.47 10.194.61.123 10.194.61.124 10.194.99.239 10.195.219.63 10.212.102.208 10.212.66.132 10.218.55.220 ].map{|s| "#{s}:9160"})
+    @log = PeriodicLogger.new
   end
 
   def get_key rsrc, user_a_id, user_b_id, *_
@@ -40,7 +39,7 @@ class BulkLoader < Wukong::Streamer::AccumulatingReducer
 
   def accumulate rsrc, user_a_id, user_b_id, *info
     return if (user_a_id.to_i == 0) || (user_b_id.to_i == 0)
-    self.a_replies_b << info.map(&:to_i)
+    self.a_replies_b << info.reject(&:blank?).map(&:to_i)
   end
 
   def finalize &block
@@ -48,12 +47,11 @@ class BulkLoader < Wukong::Streamer::AccumulatingReducer
     user_a_id, user_b_id = self.key
     return if (user_a_id.to_i == 0) || (user_b_id.to_i == 0)
     self.a_replies_b.uniq!
-    value_hsh  = { :user_a_id => user_a_id.to_i, :user_b_id => user_b_id.to_i, :a_replies_b => a_replies_b }
-    # yield [user_a_id, user_b_id, value_hsh].inspect
-    dump_into_db user_a_id, user_b_id, value_hsh, &block
-
-
-    db_insert(:Index, user_a_id, { "a_replies_b_json" => { user_b_id => value_hsh.to_json }})
+    value_hsh      = { :user_a_id => user_a_id.to_i, :user_b_id => user_b_id.to_i, :a_replies_b => a_replies_b }
+    value_hsh_json = value_hsh.to_json
+    yield [user_a_id, user_b_id, value_hsh_json]
+    db_insert(:UserRelationships, user_a_id, { "a_replies_b" => { user_b_id => value_hsh_json }})
+    @log.periodically
   end
 
 end
