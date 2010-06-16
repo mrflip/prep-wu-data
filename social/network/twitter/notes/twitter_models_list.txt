@@ -31,11 +31,11 @@ Relationship models:
 Tweet Models:
 
   Tweet (immutable)
-  -- [:id,                       Integer]
+  -- [:tweet_id,                 Integer]
   -- [:created_at,                Bignum]
-  -- [:twitter_user_id,          Integer]
-  -- [:twitter_user_screen_name,  String]
-  -- [:twitter_user_search_id,   Integer]
+  -- [:user_id,                  Integer]
+  -- [:screen_name,               String]
+  -- [:search_id,                Integer]
   -- [:in_reply_to_user_id,      Integer]
   -- [:in_reply_to_screen_name,   String]
   -- [:in_reply_to_search_id,     String]
@@ -48,17 +48,17 @@ Tweet Models:
   -- [:was_search_tweet,         Integer]
 
   DeleteTweet (immutable)
-  -- [:id,                      Integer]
+  -- [:tweet_id,                Integer]
   -- [:created_at,               Bignum]
-  -- [:twitter_user_id,         Integer]
-  -- [:twitter_user_screen_name, String]  
+  -- [:user_id,                 Integer]
+  -- [:screen_name,              String]  
       
 User Models:
 
   TwitterUser (mutable)
-  -- [:id,                     Integer]
-  -- [:scraped_at,             Bignum]
-  -- [:screen_name,            String]
+  -- [:user_id,                Integer]
+  -- [:scraped_at,              Bignum]
+  -- [:screen_name,             String]
   -- [:protected,              Integer]
   -- [:followers_count,        Integer]
   -- [:friends_count,          Integer]
@@ -67,19 +67,19 @@ User Models:
   -- [:created_at,             Bignum]
   
   TwitterUserPartial (mutable)
-  -- [:id,                     Integer]       
-  -- [:scraped_at,             Bignum]
-  -- [:screen_name,            String]
+  -- [:user_id,                Integer]       
+  -- [:scraped_at,              Bignum]
+  -- [:screen_name,             String]
   -- [:protected,              Integer]
   -- [:followers_count,        Integer]
-  -- [:name,                   String]        
-  -- [:url,                    String]
-  -- [:location,               String]
-  -- [:description,            String]
-  -- [:profile_image_url,      String]         
+  -- [:name,                    String]        
+  -- [:url,                     String]
+  -- [:location,                String]
+  -- [:description,             String]
+  -- [:profile_image_url,       String]         
   
   TwitterUserProfile (mutable)
-  -- [:id,                     Integer]
+  -- [:user_id,                Integer]
   -- [:scraped_at,              Bignum]
   -- [:screen_name,             String]
   -- [:name,                    String]
@@ -90,7 +90,7 @@ User Models:
   -- [:utc_offset,              String]
   
   TwitterUserStyle (mutable)
-  -- [:id,                            Integer]
+  -- [:user_id,                       Integer]
   -- [:scraped_at,                     Bignum]
   -- [:screen_name,                    String]
   -- [:profile_background_color,       String]
@@ -103,7 +103,7 @@ User Models:
   -- [:profile_image_url,              String]
   
   TwitterUserId (mutable)
-  -- [:id,                     Integer]
+  -- [:user_id,                Integer]
   -- [:scraped_at,              Bignum]
   -- [:screen_name,             String]
   -- [:protected,              Integer]
@@ -147,9 +147,14 @@ Token Models:
   -- [ :status_id,       Bignum]
   -- [ :twitter_user_id, Bignum]
   -- [ :created_at,      Bignum]
+
+Location Models:
+
+  Geo (immutable)
+  -- [ :tweet_id,   Bignum]
+  -- [ :user_id,    Bignum]
+  -- [ :created_at, Bignum]
+  -- [ :latitude,    Float]
+  -- [ :longitude,   Float]
+  -- [ :place_id,   String]
   
-
-Need Location Models:
-
-geo, tweet_id, user_id, created_at, lat, lon, place (as json)
-
