@@ -4,6 +4,7 @@ require 'wukong'
 require 'wuclan/twitter';
 require 'wuclan/twitter/parse';
 require 'wuclan/twitter/scrape'; include Wuclan::Twitter::Scrape
+require File.dirname(__FILE__)+'/cassandra_db'
 
 class TwitterSearchRequestParser < Wukong::Streamer::CassandraStreamer
   include Wukong::Streamer::StructRecordizer
@@ -12,9 +13,9 @@ class TwitterSearchRequestParser < Wukong::Streamer::CassandraStreamer
   #
 
   def initialize *args
-    self.db_seeds = "127.0.0.1:9160"
+    self.db_seeds = CASSANDRA_DB_SEEDS
     self.column_space = "Twitter"
-    self.batch_size = 10
+    self.batch_size = 50
     super(*args)
   end
 

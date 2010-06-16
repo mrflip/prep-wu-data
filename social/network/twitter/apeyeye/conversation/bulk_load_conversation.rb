@@ -3,10 +3,9 @@ require 'rubygems'
 require 'wukong'
 require 'json'
 require 'cassandra' ; include Cassandra::Constants
-
-Settings.define :keyspace, :default => 'Twitter', :description => 'Cassandra keyspace'
-LOG_INTERVAL = 1_000 # emit a statement every LOG_INTERVAL repetition
-
+require File.dirname(__FILE__)+'/batch_streamer'
+require File.dirname(__FILE__)+'/periodic_logger'
+require File.dirname(__FILE__)+'/cassandra_db'
 
 #
 # Load precomputed json data into the ApeyEye database.
@@ -19,7 +18,6 @@ class SimpleMapper < Wukong::Streamer::RecordStreamer
     yield [rsrc, user_a_id, user_b_id, *args] unless (user_a_id.to_i == 0) || (user_b_id.to_i == 0)
   end
 end
-
 
 class BulkLoader < Wukong::Streamer::AccumulatingReducer
   attr_accessor :a_replies_b
@@ -53,22 +51,11 @@ class BulkLoader < Wukong::Streamer::AccumulatingReducer
     value_hsh  = { :user_a_id => user_a_id.to_i, :user_b_id => user_b_id.to_i, :a_replies_b => a_replies_b }
     # yield [user_a_id, user_b_id, value_hsh].inspect
     dump_into_db user_a_id, user_b_id, value_hsh, &block
+
+
+    db_insert(:Index, user_a_id, { "a_replies_b_json" => { user_b_id => value_hsh.to_json }})
   end
 
-  def dump_into_db user_a_id, user_b_id, value_hsh, &block
-    begin
-      cassandra_db.insert(:Index, user_a_id, { user_b_id => {
-          "a_replies_b_json" => value_hsh.to_json }},
-        :consistency => Cassandra::Consistency::ANY)
-    rescue StandardError => e ; warn "Insert failed: #{e}" ; @cassandra_db = nil ; sleep 2 ; end
-    log_sometimes user_a_id, user_b_id, &block
-  end
-
-  def log_sometimes *stuff
-    if (@iter+=1) % LOG_INTERVAL == 0
-      yield([@iter, *stuff]) ; $stderr.puts [@iter, *stuff].join("\t")
-    end
-  end
 end
 
 Wukong::Script.new(
