@@ -6,7 +6,7 @@ DataMapper.setup_db_connection 'imw_workstreamer'
 require './workstreamer_models'
 
 Configliere.use :define, :commandline
-Settings.define :accpeted_turks, :description => "A file with accepted Mechanical Turk results."
+Settings.define :accepted_turks, :description => "A file with accepted Mechanical Turk results."
 Settings.resolve!
 
 p Settings
@@ -21,16 +21,22 @@ warn "Invalid network name: #{net}" unless NETWORKS.include?(net)
 results = FasterCSV.open(Settings[:accepted_turks], options={:headers => true, :col_sep => "\t"})
 
 results.each do |row|
-  if Settings[:accepted_turks] =~ /obj_ids/
+  # if Settings[:accepted_turks] =~ /obj_ids/
+  #   company = JuneCompanyListing.first("object_id" => row["object_id"])
+  # else
+  #   if row["annotation"].nil?
+  #     company = JuneCompanyListing.first((net + "_hitid").to_s => row["hitid"])
+  #   else
+  #     object_id = row["annotation"].split(",")[0]
+  #     company = JuneCompanyListing.first("object_id" => object_id)
+  #   end      
+  # end
+  if row["annotation"].nil?
     company = JuneCompanyListing.first("object_id" => row["object_id"])
   else
-    if row["annotation"].nil?
-      company = JuneCompanyListing.first((net + "_hitid").to_s => row["hitid"])
-    else
-      object_id = row["annotation"].split(",")[0]
-      company = JuneCompanyListing.first("object_id" => object_id)
-    end      
-  end
+    object_id = row["annotation"].split(",")[0]
+    company = JuneCompanyListing.first("object_id" => object_id)
+  end      
   if company.nil?
     warn "No company match: #{row["hitid"]}"
     next
