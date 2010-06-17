@@ -2,6 +2,9 @@ require 'tokyo_tyrant'
 require 'tokyo_tyrant/balancer'
 # Settings.define :batch_size,   :default => 50, :type => Integer, :description => 'Thrift buffer batch size'
 
+
+# ttserver -port 12001 /data/db/ttyrant/twitter_user-uid.tch#bnum=100000000#opts=l ; ttserver -port 12002 /data/db/ttyrant/twitter_user-sn.tch#bnum=100000000#opts=l ; ttserver -port 12003 /data/db/ttyrant/twitter_user-sid.tch#bnum=100000000#opts=l
+
 class TyrantDb
   attr_reader :dataset
   DB_SERVERS = [
