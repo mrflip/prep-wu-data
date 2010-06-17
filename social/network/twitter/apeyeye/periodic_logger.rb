@@ -1,4 +1,4 @@
-Settings.define "log_interval", :default => 1000, :type => Integer, :description => 'How many iterations between log statements'
+Settings.define :log_interval, :default => 1000, :type => Integer, :description => 'How many iterations between log statements'
 
 #
 # Periodic logger
