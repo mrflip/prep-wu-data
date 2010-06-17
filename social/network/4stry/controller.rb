@@ -98,15 +98,7 @@ class Forestry
   def self.events events_dir
     puts "making event visualizations from #{events_dir.path}..."
     events_dir.contents.each do |data|
-      file = IMW.open(data)
-      case file.basename
-      when "at_mentions.tsv","mentions.tsv" then
-        mentions file
-      when "at_replies.tsv" then
-        replies file
-      when "retweets.tsv" then
-        retweets file
-      end
+      R_timeseries data
     end
   end
 
@@ -125,33 +117,6 @@ class Forestry
     puts "making wordcloud from #{wordbag_data.basename}..."
   end
 
-  #
-  # The following can all be simple timeseries
-  #
-  def self.replies replies_data
-    puts "making replies plot from #{replies_data.basename}..."
-    R_timeseries replies_data.path
-  end
-
-  def self.retweets retweets_data
-    puts "making retweets plot from #{retweets_data.basename}..."
-    R_timeseries retweets_data.path  
-  end
-
-
-  def self.mentions mentions_data
-    puts "making mentions plot from #{mentions_data.basename}..."
-    R_timeseries mentions_data.path  
-  end
-
 end
-
-
-
-
-
-
-
-
 
 Forestry.make_client_pics "beggars_group"
