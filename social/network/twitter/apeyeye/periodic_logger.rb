@@ -15,7 +15,7 @@ class PeriodicLogger
     @options.deep_merge!( extra_options || {} )
     @iter         = 0
     @start_time   = now
-    @interval     = (options[:interval] || Settings[:log_interval]).to_i
+    @interval     = (options[:log_interval] || Settings[:log_interval]).to_i
     @interval = 1000 unless @interval >= 1
   end
 
