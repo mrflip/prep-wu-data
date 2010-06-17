@@ -22,11 +22,14 @@ class TwitterIdsBulkLoader < BatchStreamer
     user_id     = nil if user_id.empty?
     screen_name = nil if screen_name.empty?
     search_id   = nil if search_id.empty?
-    UID_DB.insert_array(user_id,
-      [ scraped_at, screen_name, created_at, search_id,
-        followers_count, friends_count, statuses_count]) if user_id
-    SN_DB.insert(screen_name.downcase, user_id) if screen_name
-    SID_DB.insert(search_id, user_id)           if search_id
+    # UID_DB.insert_array(user_id,
+    #   [ user_id, scraped_at, screen_name, created_at, search_id,
+    #     followers_count, friends_count, statuses_count]) if user_id
+    # SN_DB.insert(screen_name.downcase, user_id) if screen_name
+    # SID_DB.insert(search_id, user_id)           if search_id
+    if user_id     then ; UID_DB[user_id]             or yield ['user_id_missing', user_id] ; end
+    if screen_name then ; SN_DB[screen_name.downcase] or yield ['screen_name_missing', screen_name] ; end
+    if search_id   then ; SID_DB[search_id]           or yield ['search_id_missing', search_id] ; end
     log.periodically do
       emit         log.progress("%7d"%@batch_size, "%7d"%batch_count)
       $stderr.puts log.progress("%7d"%@batch_size, "%7d"%batch_count)
