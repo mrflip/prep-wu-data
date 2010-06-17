@@ -42,6 +42,17 @@ module R_connection
       %x{R --slave < 'depends.r'}
       IMW.open('depends.r').rm
     end
+
+    #
+    # The contract here is to take a tab separated input file. This file should
+    # be of the form:
+    #
+    # [word, count]
+    #
+    # I'm fairly certain that R can do wordclouds as well...
+    def R_wordcloud data
+      puts "whee"
+    end
     
   end
   
@@ -115,8 +126,11 @@ class Forestry
   #
   def self.wordbag wordbag_data
     puts "making wordcloud from #{wordbag_data.basename}..."
+    R_wordcloud wordbag_data.path
   end
 
 end
 
 Forestry.make_client_pics "beggars_group"
+
+
