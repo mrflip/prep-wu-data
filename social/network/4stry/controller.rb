@@ -10,23 +10,31 @@ module R_connection
     # Please don't cry.
     #
     def R_timeseries data
+      return unless data
+      name = IMW.open(data).basename.gsub(/\.tsv/, '').gsub('_', ' ').split(' ').map{|word| word.capitalize}.join(' ')
+      return if name =~ /.*\.png/
       r_script = File.open("timeseries.r", 'wb')
       r_script << "d <- read.table('#{data}', header=T)\n"
-      r_script << "pdf(file='#{data}.pdf')\n"
-      r_script << "plot(d)"
+      r_script << "png(file='#{data}.png', width=640, height=480)\n"
+      r_script << "plot(d, col='blue', type='l', main='#{name}', axes=F)\n"
+      r_script << "axis(2, tck=0.01)\n"           # y axis
+      r_script << "axis(1, tck=0.01)\n"           # x axis
+      r_script << "axis(3, tck=0.01, labels=F)\n" # top
+      r_script << "axis(4, tck=0.01, labels=F)\n" # bottom
+      r_script << "box()"
       r_script.close
       %x{R --slave < 'timeseries.r'}
-      IMW.open('timeseries.r').rm
+      IMW.open('timeseries.r').rm 
     end
 
     def R_geo_heatmap data
       r_script = File.open("geo_heatmap.r", 'wb')
       r_script << "library('maps')\n"
-      r_script << "pdf(file='#{data}.pdf')\n"
+      r_script << "png(file='#{data}.png', width=3200, height=1800)\n"
       r_script << "d <- read.table('#{data}', header=T)\n"
-      r_script << "map('world')\n"  
-      r_script << "points(d$latitude, d$longitude, pch=20)\n"
-      r_script << "box()"
+      r_script << "map('world', resolution=0, bg='black', fill=F, col='grey', lwd=1)\n"
+      r_script << "map('state', resolution=0, add=T, fill=F, col='grey', lwd=1)\n"      
+      r_script << "points(d$latitude, d$longitude, pch='.', cex=4, col='yellow')\n"
       r_script.close
       %x{R --slave < 'geo_heatmap.r'}
       IMW.open('geo_heatmap.r').rm
@@ -37,7 +45,8 @@ module R_connection
     #
     def install_R_depends
       r_script = File.open("depends.r", 'wb')
-      r_script << "install.packages('maps', repos = 'http://cran.r-project.org')"
+      r_script << "install.packages('maps', repos = 'http://cran.r-project.org')\n"
+      r_script << "install.packages('mapproj', repos = 'http://cran.r-project.org')\n"      
       r_script.close
       %x{R --slave < 'depends.r'}
       IMW.open('depends.r').rm
@@ -132,5 +141,3 @@ class Forestry
 end
 
 Forestry.make_client_pics "beggars_group"
-
-
