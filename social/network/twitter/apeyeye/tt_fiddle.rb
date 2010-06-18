@@ -15,10 +15,10 @@ Settings.resolve!
 #
 #   ttserver -port 12001 /data/db/ttyrant/twitter_user-ids.tch
 #
-# 
+#
 
 # http://github.com/actsasflinn/ruby-tokyotyrant/blob/master/spec/tokyo_tyrant_balancer_db_spec.rb
-      
+
 #
 # FIXME -- use
 #
@@ -31,12 +31,12 @@ iter=0;
 UID_DB = TyrantDb.new(:uid)
 SN_DB  = TyrantDb.new(:sn)
 SID_DB = TyrantDb.new(:sid)
-TEST_DB = TyrantDb.new(:test)
+# TEST_DB = TyrantDb.new(:test)
 
 $stdin.each do |line|
   _r, id, scat, sn, pr, fo, fr, st, fv, crat, sid, full = line.chomp.split("\t");
   id = id.to_i ; sid = sid.to_i
-  
+
   iter+=1 ;
   # break if iter > 500_000
   if (iter % 10_000 == 0)
@@ -47,13 +47,13 @@ $stdin.each do |line|
   if Settings[:read]
     # id = SN_DB.get(sn.downcase) ;
     # info =  UID_DB.get(id) ;
-    info = TEST_DB[id]
+    info = SN_DB[sn.downcase]
     puts [iter, id, info].inspect if info.nil?
   else
     # UID_DB.insert_array(id, [sn,sid,crat,scat]) unless id == 0
     # SN_DB.insert(sn.downcase, id)                   unless sn.empty?
     # SID_DB.insert(sid, id)                          unless sid == 0
-    TEST_DB.insert(id, sn.downcase) unless sn.empty? || id == 0
+    SN_DB.insert(sn.downcase, id) unless sn.empty? || id == 0
   end
 end
 UID_DB.close

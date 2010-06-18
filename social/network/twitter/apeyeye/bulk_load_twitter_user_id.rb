@@ -23,7 +23,7 @@ class TwitterIdsBulkLoader < BatchStreamer
     screen_name = nil if screen_name.empty?
     search_id   = nil if search_id.empty?
     # UID_DB.insert_array(user_id,
-    #   [ user_id, scraped_at, screen_name, created_at, search_id,
+    #   [ scraped_at, screen_name, protected, created_at, search_id,
     #     followers_count, friends_count, statuses_count]) if user_id
     # SN_DB.insert(screen_name.downcase, user_id) if screen_name
     # SID_DB.insert(search_id, user_id)           if search_id
