@@ -31,30 +31,34 @@ iter=0;
 UID_DB = TyrantDb.new(:uid)
 SN_DB  = TyrantDb.new(:sn)
 SID_DB = TyrantDb.new(:sid)
+TEST_DB = TyrantDb.new(:test)
 
 $stdin.each do |line|
   _r, id, scat, sn, pr, fo, fr, st, fv, crat, sid, full = line.chomp.split("\t");
-  # id = id.to_i ; sid = sid.to_i
+  id = id.to_i ; sid = sid.to_i
   
   iter+=1 ;
-  # break if iter > 200_000
+  # break if iter > 500_000
   if (iter % 10_000 == 0)
     elapsed = (Time.now.utc.to_f - start_time)
     puts "%-20s\t%7d\t%7d\t%7.2f\t%7.2f\t%s" % [sn, fo.to_i, iter.to_i, elapsed.to_i, (iter.to_f/elapsed.to_f), (Settings[:read] ? '[READ]' : '[WRITE]')]
   end
 
-  # if Settings[:read]
-  #   id = SN_DB.get(sn.downcase) ;
-  # info =  UID_DB.get(id) ;
-  # puts [iter, id, info] if (rand(1000) > 998)
-  # else
-    UID_DB.insert_array(id, [sn,sid,crat,scat]) unless id == 0
-    SN_DB.insert(sn.downcase, id)                   unless sn.empty?
-    SID_DB.insert(sid, id)                          unless sid == 0
-  # end
+  if Settings[:read]
+    # id = SN_DB.get(sn.downcase) ;
+    # info =  UID_DB.get(id) ;
+    info = TEST_DB[id]
+    puts [iter, id, info].inspect if info.nil?
+  else
+    # UID_DB.insert_array(id, [sn,sid,crat,scat]) unless id == 0
+    # SN_DB.insert(sn.downcase, id)                   unless sn.empty?
+    # SID_DB.insert(sid, id)                          unless sid == 0
+    TEST_DB.insert(id, sn.downcase) unless sn.empty? || id == 0
+  end
 end
 UID_DB.close
 SN_DB.close
 SID_DB.close
+TEST_DB.close
 
 # require 'rubygems' ; require 'tokyo_tyrant'; UID_DB = TokyoTyrant::DB.new('ip-10-218-71-212', 12001) ; DB_SN  = TokyoTyrant::DB.new('ip-10-218-71-212', 12002) ; DB_SID = TokyoTyrant::DB.new('ip-10-218-71-212', 12003)
