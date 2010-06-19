@@ -27,7 +27,7 @@ class TwitterRequestParser < Wukong::Streamer::RecordStreamer
 
   def process request, *args, &block
     request.parse(*args) do |obj|
-      next if obj.is_a? BadRecord
+      # next if obj.is_a? BadRecord
       yield obj
     end
   end
