@@ -20,6 +20,7 @@ class TwitterIdsBulkLoader < Wukong::Streamer::RecordStreamer
   def process rsrc, user_id, scraped_at, screen_name, is_protected, followers_count, friends_count, statuses_count, favourites_count, created_at, search_id, is_full, *_, &block
     user_id     = (user_id.blank?     ? nil : user_id )
     screen_name = (screen_name.blank? ? nil : screen_name.downcase)
+    $stderr.puts "screwy screen_name: #{screen_name}" if screen_name =~ /[^\w]/
     search_id   = (search_id.blank?   ? nil : search_id )
 
     if Settings[:read]
