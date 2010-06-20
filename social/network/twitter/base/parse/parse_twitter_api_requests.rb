@@ -39,6 +39,7 @@ if $0 == __FILE__
     nil,
     :partition_fields => 2,
     :sort_fields      => 3,
-    :reuse_jvms       => true
+    :reuse_jvms       => true,
+    :map_speculative => "false"
     ).run
 end
