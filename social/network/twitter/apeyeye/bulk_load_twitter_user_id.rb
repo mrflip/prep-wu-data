@@ -2,38 +2,44 @@
 require 'rubygems'
 require 'wukong'
 require 'json'
-require 'cassandra' ; include Cassandra::Constants
-require File.dirname(__FILE__)+'/batch_streamer'
+require 'configliere' ; require 'configliere/commandline'
+require 'wukong/keystore/tyrant_db' ; include TokyoDbConnection
 require File.dirname(__FILE__)+'/periodic_logger'
-require File.dirname(__FILE__)+'/cassandra_db'
 
+Settings.log_interval = 10_000
 
+class TwitterIdsBulkLoader < Wukong::Streamer::RecordStreamer
+  UID_DB = TyrantDb.new(:user_ids)
+  SN_DB  = TyrantDb.new(:screen_names)
+  SID_DB = TyrantDb.new(:search_ids)
 
-
-#
-# Load precomputed json data into the ApeyEye database.
-#
-#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_twitter_user_id.rb --rm --run --batch_size=200 /data/sn/tw/fixd/objects/twitter_user_id_matched /tmp/bulkload/twitter_user_ids
-#
-class TwitterIdsBulkLoader < BatchStreamer
-  include CassandraDb
+  def initialize *args
+    super(*args)
+    @iter = 0
+    @log = PeriodicLogger.new(options)
+  end
 
   def process rsrc, user_id, scraped_at, screen_name, is_protected, followers_count, friends_count, statuses_count, favourites_count, created_at, search_id, is_full, *_, &block
-    user_id     = nil if user_id.blank?
-    screen_name = nil if screen_name.blank?
-    search_id   = nil if search_id.blank?
-    db_insert(:Users, user_id, {
-        "scraped_at" => scraped_at, "screen_name" => screen_name, "created_at" => created_at, "search_id" => search_id,
-        "followers_count" => followers_count, "friends_count" => friends_count, "statuses_count" => statuses_count, "favourites_count" => favourites_count,
-        # "is_full" => is_full
-      }.compact) if user_id
-    db_insert(:Usernames,     screen_name, { "user_id" => user_id, "search_id"   => search_id   }.compact) if screen_name
-    db_insert(:UserSearchIds, search_id,   { "user_id" => user_id, "screen_name" => screen_name }.compact) if search_id
-    log.periodically do
-      emit         log.progress("%7d"%@batch_size, "%7d"%batch_count)
-      $stderr.puts log.progress("%7d"%@batch_size, "%7d"%batch_count)
+    user_id     = (user_id.blank?     ? nil : user_id )
+    screen_name = (screen_name.blank? ? nil : screen_name.downcase)
+    search_id   = (search_id.blank?   ? nil : search_id )
+
+    if Settings[:read]
+      if user_id     then ; UID_DB[user_id]    or yield ['user_id_missing', user_id]         ; end
+      if screen_name then ; SN_DB[screen_name] or yield ['screen_name_missing', screen_name] ; end
+      if search_id   then ; SID_DB[search_id]  or yield ['search_id_missing', search_id]     ; end
+    else
+      UID_DB.insert(user_id,     screen_name)  if user_id     && screen_name
+      SN_DB.insert( screen_name, user_id)      if screen_name && user_id
+      SID_DB.insert(search_id,   screen_name)  if search_id   && screen_name
+    end
+
+    @log.periodically do
+      $stderr.puts @log.progress('user_id', "%10d"%user_id, 'screen_name', screen_name)
+      yield        [user_id, screen_name]
     end
   end
 
 end
-Wukong::Script.new( TwitterIdsBulkLoader, nil ).run
+
+Wukong::Script.new( TwitterIdsBulkLoader, nil, :map_speculative => false ).run

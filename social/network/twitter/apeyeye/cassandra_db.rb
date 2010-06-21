@@ -1,5 +1,4 @@
 Settings.define :keyspace,     :default => 'Twitter',            :description => 'Cassandra keyspace'
-Settings.define :batch_size,   :default => 50, :type => Integer, :description => 'Thrift buffer batch size'
 
 module CassandraDb
   CASSANDRA_DB_SEEDS = %w[ 10.195.77.171 10.218.71.212 10.244.142.192 10.194.93.123 10.218.1.178 ].map{|s| "#{s}:9160"}.sort_by{ rand }

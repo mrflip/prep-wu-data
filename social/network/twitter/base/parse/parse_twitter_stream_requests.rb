@@ -4,7 +4,6 @@ require 'wukong'
 require 'wuclan/twitter';
 require 'wuclan/twitter/parse';
 require 'wuclan/twitter/scrape'; include Wuclan::Twitter::Scrape
-require File.dirname(__FILE__)+'/cassandra_db'
 
 #
 # Twitter stream requests
@@ -20,22 +19,15 @@ require File.dirname(__FILE__)+'/cassandra_db'
 #   curl -s -u $twpass http://stream.twitter.com/1/statuses/sample.json > /tmp/sample.json
 #   cat /tmp/sample.json | parse_twitter_stream_requests.rb --map
 #
-class TwitterRequestParser < Wukong::Streamer::CassandraStreamer
-
-  def initialize *args
-    self.db_seeds = CASSANDRA_DB_SEEDS
-    self.column_space = "Twitter"
-    self.batch_size = 50
-    super(*args)
-  end
+class TwitterRequestParser < Wukong::Streamer::RecordStreamer
 
   def recordize *args
     [ TwitterStreamRequest.new(super(*args).first) ]
   end
 
   def process request, *args, &block
-    request.parse(args, cassandra_db) do |obj|
-      next if obj.is_a? BadRecord
+    request.parse(*args) do |obj|
+      # next if obj.is_a? BadRecord
       yield obj
     end
   end

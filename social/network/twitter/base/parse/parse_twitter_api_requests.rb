@@ -7,7 +7,6 @@ require 'wuclan/twitter/parse'  ; include Wuclan::Twitter::Scrape
 # if you're anyone but original author this next require is useless but harmless.
 require 'wuclan/twitter/scrape/old_skool_request_classes'
 require File.dirname(__FILE__)+'/last_seen_state'
-require File.dirname(__FILE__)+'/cassandra_db'
 
 #
 # Incoming objects are Wuclan::Twitter::Scrape requests.
@@ -18,25 +17,17 @@ require File.dirname(__FILE__)+'/cassandra_db'
 # user hasn't ever tweeted) and might not have profile or style info (if the
 # user is protected).
 #
-class TwitterRequestParser < Wukong::Streamer::CassandraStreamer
-  include Wukong::Streamer::StructRecordizer
-
-  def initialize *args
-    self.db_seeds = CASSANDRA_DB_SEEDS
-    self.column_space = "Twitter"
-    self.batch_size = 50
-    super(*args)
-  end
+class TwitterRequestParser < Wukong::Streamer::StructStreamer
 
   def process request, *args, &block
     # return unless request.healthy?
-    begin
-      request.parse(args, cassandra_db) do |obj|
+    # begin
+      request.parse(*args) do |obj|
         yield obj
       end
-    rescue StandardError => e
-      $stderr.puts ["Bad request:", e.to_s, e.backtrace, request.to_flat].join("\t")[0..3000]
-    end
+    # rescue StandardError => e
+    #   $stderr.puts ["Bad request:", e.to_s, e.backtrace, request.to_flat].join("\t")[0..3000]
+    # end
   end
 end
 
@@ -48,6 +39,7 @@ if $0 == __FILE__
     nil,
     :partition_fields => 2,
     :sort_fields      => 3,
-    :reuse_jvms       => true
+    :reuse_jvms       => true,
+    :map_speculative => "false"
     ).run
 end

@@ -1,3 +1,5 @@
+Settings.define :batch_size,   :default => 50, :type => Integer, :description => 'Thrift buffer batch size'
+
 # Note: this is not at all tidy; probably only works in conjunction with other
 # modules in this directory; may be harmful to small children ; do not taunt
 # happy fun ball.
@@ -10,7 +12,7 @@ class BatchStreamer < Wukong::Streamer::RecordStreamer
   def initialize *args
     super *args
     @batch_size = options.batch_size
-    @log = PeriodicLogger.new
+    @log = PeriodicLogger.new(options)
   end
 
   #
