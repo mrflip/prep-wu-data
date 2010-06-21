@@ -34,4 +34,9 @@ class TwitterRequestParser < Wukong::Streamer::RecordStreamer
 end
 
 # This makes the script go.
-Wukong::Script.new(TwitterRequestParser, nil).run
+Wukong::Script.new(
+  TwitterRequestParser,
+  nil,
+  :reuse_jvms       => true,
+  :map_speculative => "false"
+  ).run
