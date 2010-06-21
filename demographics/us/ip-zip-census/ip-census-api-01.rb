@@ -26,7 +26,7 @@ module IPCensusGenPop
       # persons under 18 years old, percent
       under_18 = (line[40..57].inject(0){|sum,male_age_n| sum + male_age_n.to_i} + line[79..96].inject(0){|sum,female_age_n| sum + female_age_n.to_i}).to_f/tot_pop.to_f
       # persons 65 years and older, percent
-      65_over = (line[72..77].inject(0){|sum,male_age_n| sum + male_age_n.to_i} + line[111..116].inject(0){|sum,female_age_n| sum + female_age_n.to_i}).to_f/tot_pop.to_f
+      sixfive_over = (line[72..77].inject(0){|sum,male_age_n| sum + male_age_n.to_i} + line[111..116].inject(0){|sum,female_age_n| sum + female_age_n.to_i}).to_f/tot_pop.to_f
       # female persons, percent
       female = line[78].to_f/tot_pop.to_f
       # white persons, percent
@@ -49,7 +49,7 @@ module IPCensusGenPop
       # persons per household
       pphousehold = line[118].to_f/households.to_f
       
-      yield [zip_code,log_rec_num,under_5,under_18,65_over,female,white,black,amin_aknat,asian,nathaw_pacisl,two_races,hispanic,households,pphousehold]
+      yield [zip_code,log_rec_num,tot_pop,under_5,under_18,sixfive_over,female,white,black,amin_aknat,asian,nathaw_pacisl,two_races,hispanic,households,pphousehold]
     end
     
   end
