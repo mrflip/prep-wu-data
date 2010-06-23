@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+input_file=${1} 		; shift
+output_file=${1} 		; shift
+
+if [ "$output_file" == "" ] ; then echo "$0 input_file output_file [mapper=/bin/cat] [reducer=/usr/bin/uniq] [partfields=2] [sortfields=2] [extra_args]" ; exit ; fi
+
+HADOOP_HOME=${HADOOP_HOME-/usr/lib/hadoop}
+
+cmd="${HADOOP_HOME}/bin/hadoop \
+     jar         ${HADOOP_HOME}/contrib/streaming/hadoop-*-streaming.jar		
+    -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner 			
+    -D           num.key.fields.for.partition=\"2\"				
+    -D  	 stream.num.map.output.key.fields=\"3\"
+    -D           stream.map.output.field.separator=\"'/t'\"
+    -D           mapred.text.key.partitioner.options=\"-k1,2\"			
+    -mapper  	 org.apache.hadoop.mapred.lib.IdentityMapper
+    -reducer	 \"/usr/bin/uniq\"							
+    -input       \"$input_file\"							
+    -output  	 \"$output_file\"							
+    $@
+    "
+
+echo "$cmd"
+
+$cmd
