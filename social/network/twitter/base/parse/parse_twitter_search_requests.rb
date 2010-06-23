@@ -21,5 +21,7 @@ end
 # Go, script, go!
 Wukong::Script.new(
   TwitterSearchRequestParser,
-  nil
+  nil,
+  :reuse_jvms       => true,
+  :map_speculative => "false"
   ).run
