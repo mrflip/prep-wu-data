@@ -2,11 +2,11 @@
 REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- default paths
-%default TW   '/data/sn/tw/fixd/objects/tweet' 
-%default ST   '/data/sn/tw/fixd/objects/search_tweet';
+%default TW     '/data/sn/tw/fixd/objects/tweet' 
+%default ST     '/data/sn/tw/fixd/objects/search_tweet';
 %default USERID '93171197'
 %default USERSN 'iamjonsi'
-%default OUTPUT '/data/anal/4stry/beggars/iamjonsi/replies
+%default OUT    '/data/anal/4stry/beggars/iamjonsi/replies'
 
 -- load data
 -- !!!NOTE!!! we are loading created_at as a CHARARRAY so that we can use substring to take the month.
@@ -19,7 +19,9 @@ cut_search_tweet      = FOREACH search_tweet GENERATE org.apache.pig.piggybank.e
 matching_tweet        = FILTER cut_tweet        BY repl_user_id     == '$USERID';
 matching_search_tweet = FILTER cut_search_tweet BY repl_screen_name == '$USERSN';
 matching_user_tweet   = UNION matching_tweet, matching_search_tweet;
-group_user_tweet      = GROUP matching_user_tweet BY crat;
-final_tweet           = FOREACH group_user_tweet GENERATE crat, COUNT(matching_user_tweet);
+cut                   = FOREACH matching_user_tweet GENERATE crat;
+group_user_tweet      = GROUP cut BY crat;
+final_tweet           = FOREACH group_user_tweet GENERATE crat, COUNT(cut);
+
 rmf $OUTPUT
 STORE final_tweet INTO '$OUTPUT';
