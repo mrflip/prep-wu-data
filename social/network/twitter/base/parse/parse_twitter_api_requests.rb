@@ -2,6 +2,7 @@
 require 'rubygems'
 require 'wukong'
 require 'monkeyshines'
+NO_DB = true  # needs to be initialized before wuclan model
 require 'wuclan/twitter'        ; include Wuclan::Twitter::Model
 require 'wuclan/twitter/parse'  ; include Wuclan::Twitter::Scrape
 # if you're anyone but original author this next require is useless but harmless.
@@ -17,9 +18,13 @@ require File.dirname(__FILE__)+'/last_seen_state'
 # user hasn't ever tweeted) and might not have profile or style info (if the
 # user is protected).
 #
+
+
+
 class TwitterRequestParser < Wukong::Streamer::StructStreamer
 
   def process request, *args, &block
+
     # return unless request.healthy?
     # begin
       request.parse(*args) do |obj|
