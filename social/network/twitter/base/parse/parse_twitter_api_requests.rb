@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'wukong'
 require 'monkeyshines'
-NO_DB = true  # needs to be initialized before wuclan model
+NO_DB = false  # needs to be initialized before wuclan model
 require 'wuclan/twitter'        ; include Wuclan::Twitter::Model
 require 'wuclan/twitter/parse'  ; include Wuclan::Twitter::Scrape
 # if you're anyone but original author this next require is useless but harmless.

@@ -3,8 +3,8 @@ REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
 
 -- default paths
 %default TW     '/data/sn/tw/fixd/objects/tweet' 
-%default ST     '/data/sn/tw/fixd/objects/search_tweet';
-%default USERID '93171197'
+%default ST     '/data/sn/tw/fixd/objects/search_tweet'
+%default USERID  93171197
 %default USERSN 'iamjonsi'
 %default OUT    '/data/anal/4stry/beggars/iamjonsi/replies'
 
@@ -16,12 +16,13 @@ search_tweet = LOAD '$ST' AS (rsrc:chararray, twid:long, crat:chararray, user_id
 -- find matching users' tweets
 cut_tweet             = FOREACH tweet        GENERATE org.apache.pig.piggybank.evaluation.string.SUBSTRING(crat,0,8) AS crat, repl_user_id;
 cut_search_tweet      = FOREACH search_tweet GENERATE org.apache.pig.piggybank.evaluation.string.SUBSTRING(crat,0,8) AS crat, repl_screen_name;
-matching_tweet        = FILTER cut_tweet        BY repl_user_id     == '$USERID';
-matching_search_tweet = FILTER cut_search_tweet BY repl_screen_name == '$USERSN';
-matching_user_tweet   = UNION matching_tweet, matching_search_tweet;
-cut                   = FOREACH matching_user_tweet GENERATE crat;
-group_user_tweet      = GROUP cut BY crat;
-final_tweet           = FOREACH group_user_tweet GENERATE crat, COUNT(cut);
+matching_tweet        = FILTER cut_tweet        BY repl_user_id == $USERID;
+matching_search_tweet = FILTER cut_search_tweet BY repl_screen_name MATCHES '$USERSN';
+cut_matching_tweet    = FOREACH matching_tweet GENERATE crat;
+cut_matching_stweet   = FOREACH matching_search_tweet GENERATE crat;
+matching_user_tweet   = UNION cut_matching_tweet, cut_matching_stweet;
+group_user_tweet      = GROUP matching_user_tweet BY crat;
+final_tweet           = FOREACH group_user_tweet GENERATE group AS timestamp, COUNT(matching_user_tweet) AS num_twts;
 
-rmf $OUTPUT
-STORE final_tweet INTO '$OUTPUT';
+rmf $OUT;
+STORE final_tweet INTO '$OUT';
