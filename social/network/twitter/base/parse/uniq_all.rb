@@ -15,7 +15,7 @@ objects   = ARGV[1]
   system %Q{echo ./last_seen_state.rb --rm --run #{inputdir} #{outputdir} }
 end
 
-%w[ a_follows_b geo tweet delete_tweet tweet-noid twitter_user_search_id ].each do |object|
+%w[ a_follows_b a_favorites_b geo tweet delete_tweet tweet-noid twitter_user_search_id ].each do |object|
   inputdir  = File.join(unspliced, object)
   outputdir = File.join(objects, object)
   system %Q{echo hdp-stream #{inputdir} #{outputdir} `which cat` `which uniq` 2 3 -jobconf mapred.map.tasks.speculative.execution=false}
