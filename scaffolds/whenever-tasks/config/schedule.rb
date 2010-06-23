@@ -63,6 +63,6 @@ end
 
 # record the size and number of lines of twitter data scraped that day
 every 1.days, :at => '12:00pm' do
-  command "/home/git/repos/wuclan/examples/twitter/scraper_stats.sh", :output => "/data/log/com.tw/#{hostname}-twitter-scraper-stats.log"
+  command "/home/git/repos/wuclan/examples/twitter/scraper_stats.rb", :output => "/data/log/com.tw/#{hostname}-twitter-scraper-stats.tsv"
 end
 
