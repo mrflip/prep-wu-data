@@ -10,11 +10,11 @@ HADOOP_HOME=${HADOOP_HOME-/usr/lib/hadoop}
 cmd="${HADOOP_HOME}/bin/hadoop \
      jar         ${HADOOP_HOME}/contrib/streaming/hadoop-*-streaming.jar		
     -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner 			
-    -D           num.key.fields.for.partition=\"2\"				
-    -D  	 stream.num.map.output.key.fields=\"3\"
-    -D           stream.map.output.field.separator=\"'/t'\"
-    -D           mapred.text.key.partitioner.options=\"-k1,2\"			
-    -mapper  	 org.apache.hadoop.mapred.lib.IdentityMapper
+    -jobconf     num.key.fields.for.partition=\"2\"				
+    -jobconf  	 stream.num.map.output.key.fields=\"3\"
+    -jobconf     stream.map.output.field.separator=\"'/t'\"
+    -jobconf     mapred.text.key.partitioner.options=\"-k1,2\"			
+    -mapper  	 \"/bin/cat\"
     -reducer	 \"/usr/bin/uniq\"							
     -input       \"$input_file\"							
     -output  	 \"$output_file\"							
