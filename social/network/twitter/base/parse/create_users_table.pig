@@ -1,3 +1,8 @@
+--
+-- Gives us a table that maps between user id, screen name, and search id.
+-- Use this for rectification of ids in the 'tweet-noid' models, screen names
+-- in the tweet models, and ids in the geo models
+--
 %default SID   '/data/sn/tw/fixd/objects/twitter_user_search_id'
 %default USER  '/data/sn/tw/fixd/objects/twitter_user_id'
 %default TABLE '/data/sn/tw/fixd/users_table'
