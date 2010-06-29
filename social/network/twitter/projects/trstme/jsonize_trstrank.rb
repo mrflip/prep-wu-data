@@ -6,7 +6,7 @@ require 'json'
 class Mapper < Wukong::Streamer::RecordStreamer
   
   def process screen_name, user_id, raw, scaled, &blk
-    yield [screen_name, user_id, jsonize(scaled)]
+    yield [screen_name, user_id, jsonize(scaled), Time.now.strftime("%Y%m%d")]
   end
 
   def jsonize scaled
