@@ -37,7 +37,15 @@ every 1.days, :at => '12:00am' do
   command "sudo chgrp -R admin /data/ripd/com.my/*", :output => cron_log
 end
 
+# Parse scraped data from the previous day and bzip it.
+# This should be run after noon since the stream scraper rotates files every 12 hours and we want to parse yesterday's data.
+# The resulting file will be uploaded with the raw data in the script that pushes everything to Amazon S3 below.
+every 1.days, :at => '1:00pm' do
+  command "/home/doncarlo/ics/infochimp-data/scaffolds/whenever-tasks/parse_scraped_data.sh"
+end
+
 # bzip all twitter and myspace data older than 1 day with extensions of xml, json, or tsv
+# The raw Twitter data from more than 1 day ago should have been parsed already so it can be bzipped and later sent to S3.
 every 1.days, :at => '12:02am' do
   command "find /data/ripd/com.tw/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;", :output => cron_log
   command "find /data/ripd/com.my/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;", :output => cron_log
@@ -52,13 +60,13 @@ end
 # pushes twitter data to Amazon S3
 # log file defined in script rather than here (in cron)
 every 1.days, :at => '10:00am' do
-  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh" #, :output => %Q{/data/log/com.tw/s3sync-com.tw-$(date -u +%Y%m%d).log}
+  command "/home/doncarlo/ics/wuclan/examples/twitter/push_twitter_to_s3.sh" 
 end
 
 # pushes myspace data to Amazon S3
 # log file defined in script rather than here (in cron)
 # every 1.days, :at => '10:30am' do
-#   command "/home/doncarlo/ics/wuclan/examples/myspace/push_myspace_to_s3.sh" #, :output => %Q{/data/log/com.tw/s3sync-com.tw-$(date -u +%Y%m%d).log}
+#   command "/home/doncarlo/ics/wuclan/examples/myspace/push_myspace_to_s3.sh"
 # end
 
 # record the size and number of lines of twitter data scraped that day
