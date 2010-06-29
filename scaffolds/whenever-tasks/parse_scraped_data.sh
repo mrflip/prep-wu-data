@@ -7,7 +7,7 @@
 
 
 ripddir='/data/ripd/com.tw'
-rawddir='/data/rawd/soc/net/tw'
+rawddir='/data/soc/net/tw/rawd/parsed'
 logdir='/data/log/com.tw/'
 yesterday=`date --date="yesterday" "+%Y%m%d"`
 hostname=`hostname`
@@ -17,15 +17,20 @@ do
   case $foo
   in
     $ripddir/com.twitter/$yesterday) echo Running API parse on $foo 
-                                     mkdir -p $rawddir/com.twitter/$yesterday
-                                     cat $foo/* | /home/doncarlo/ics/infochimps-data/social/network/twitter/base/parse/parse_twitter_api_requests.rb --map > $rawddir/com.twitter/$yesterday/$hostname-comtwitter-parsed-$yesterday.tsv ;;
+                                     mkdir -p $rawddir/$yesterday
+                                     cat $foo/* | /home/doncarlo/ics/infochimps-data/social/network/twitter/base/parse/parse_twitter_api_requests.rb --map >> $rawddir/$yesterday/$hostname-comtwitter-parsed-$yesterday.tsv ;;
     $ripddir/com.twitter.search/$yesterday) echo Running search parse on $foo
-                                            mkdir -p $rawddir/com.twitter.search/$yesterday
-                                            cat $foo/* | /home/doncarlo/ics/infochimps-data/social/network/twitter/base/parse/parse_twitter_search_requests.rb --map > $rawddir/com.twitter.search/$yesterday/$hostname-comtwittersearch-parsed-$yesterday.tsv ;;
+                                            mkdir -p $rawddir/$yesterday
+                                            cat $foo/* | /home/doncarlo/ics/infochimps-data/social/network/twitter/base/parse/parse_twitter_search_requests.rb --map >> $rawddir/$yesterday/$hostname-comtwittersearch-parsed-$yesterday.tsv ;;
     $ripddir/com.twitter.stream/$yesterday) echo Running stream parse on $foo
-                                            mkdir -p $rawddir/com.twitter.stream/$yesterday
-                                            cat $foo/* | /home/doncarlo/ics/infochimps-data/social/network/twitter/base/parse/parse_twitter_stream_requests.rb --map > $rawddir/com.twitter.stream/$yesterday/$hostname-comtwitterstream-parsed-$yesterday.tsv ;;
+                                            mkdir -p $rawddir/$yesterday
+                                            cat $foo/* | /home/doncarlo/ics/infochimps-data/social/network/twitter/base/parse/parse_twitter_stream_requests.rb --map >> $rawddir/$yesterday/$hostname-comtwitterstream-parsed-$yesterday.tsv ;;
   esac
-done # 2> $logdir/parse-stderr.log
+done 2> $logdir/parse-stderr.log
   
-find $rawddir/*/$yesterday \( -name '*.tsv' \) -exec bzip2 {} \;
+# Bzip the resulting parsed data so it will be uploaded to Amazon S3 later
+find $rawddir/$yesterday/* \( -name '*.tsv' \) -exec bzip2 {} \;
+
+# Change group and permissions so people can read the resulting data
+chgrp -R admin $rawddir
+chmod -R g+w $rawddir
