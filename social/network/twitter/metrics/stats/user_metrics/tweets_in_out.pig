@@ -9,7 +9,7 @@ users   = LOAD '$USER'   AS (rsrc:chararray, uid:long, scrat:long, sn:chararray,
 follows = LOAD '$FOLLOW' AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 
 -- generate distribution of tweets coming in
-cut_users = FOREACH users GENERATE uid, statuses, crat;
+cut_users = FOREACH users GENERATE uid, sn, statuses, crat;
 joined    = JOIN cut_users BY uid, follows BY user_b_id;
 tw_in     = FOREACH joined GENERATE
                 follows::user_a_id  AS user_id,
@@ -23,6 +23,7 @@ tw_in_dist = FOREACH grouped GENERATE group AS user_id, SUM(tw_in.tweets_in) AS 
 joined_again = JOIN tw_in_dist BY user_id, cut_users BY uid;
 tw_outin     = FOREACH joined_again GENERATE
                         tw_in_dist::user_id   AS user_id,
+                        cut_users::sn         AS sn,
                         tw_in_dist::tweets_in AS tweets_in,
                         cut_users::statuses   AS tweets_out,
                         cut_users::crat       AS crat

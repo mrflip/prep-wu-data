@@ -3,11 +3,12 @@
 %default METRICS '/data/sn/tw/fixd/graph/raw_user_metrics'
         
 deg_dist = LOAD '$DEGDIST' AS (uid:long, rep_out:long, rep_in:long, ats_out:long, ats_in:long, ret_out:long, ret_in:long, fav_out:long, fav_in:long);
-tw_dist  = LOAD '$TWOUTIN' AS (uid:long, tw_in:long, tw_out:long, crat:long);
+tw_dist  = LOAD '$TWOUTIN' AS (uid:long, sn:chararray, tw_in:long, tw_out:long, crat:long);
 
 joined   = JOIN tw_dist BY uid, deg_dist BY uid;
 out      = FOREACH joined GENERATE
                 tw_dist::uid      AS uid,
+                tw_dist::sn       AS sn,
                 tw_dist::crat     AS crat,
                 tw_dist::tw_out   AS tw_out,
                 tw_dist::tw_in    AS tw_in,
