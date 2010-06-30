@@ -46,8 +46,9 @@ end
 
 # bzip all twitter and myspace data older than 1 day with extensions of xml, json, or tsv
 # The raw Twitter data from more than 1 day ago should have been parsed already so it can be bzipped and later sent to S3.
+# Added in the parsed twitter data folders just to make sure all the parsed data has been bzipped.
 every 1.days, :at => '12:02am' do
-  command "find /data/ripd/com.tw/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;", :output => cron_log
+  command "find /data/ripd/com.tw/*/2010* /data/soc/net/tw/rawd/parsed/* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;", :output => cron_log
   command "find /data/ripd/com.my/*/2010* -mtime +0 \\( -name '*.xml' -o -name '*.json' -o -name '*.tsv' \\) -exec bzip2 {} \\;", :output => cron_log
 end
 
