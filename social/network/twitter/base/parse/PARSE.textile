@@ -6,7 +6,7 @@ h2. Uniq parsed data
 
 <pre><code>
     hdp-stream /data/sn/tw/fixd/current-20100622/\*,/data/sn/tw/rawd/unspliced/\*,/data/sn/tw/rawd/parsed/\*/\* /data/sn/tw/rawd/uniqd `which cat` `which uniq` 2 3 -jobconf mapred.map.tasks.speculative.execution=false
-</code><pre>
+</code></pre>
 
 h2. Unsplice uniqed data.
 
