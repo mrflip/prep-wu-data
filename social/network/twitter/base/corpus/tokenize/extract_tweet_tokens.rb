@@ -8,7 +8,7 @@ require 'wuclan/twitter/model/token'
 module ExtractTweetTokens
   class Mapper < Wukong::Streamer::StructStreamer
     #
-    # Extract semantic info from each object: (well, right now just from tweets):
+    # Extract semantic info from tweets. NOT tweet-noids!!
     #  re-tweets,
     #  replies and atsigns,
     #  hashtags,
@@ -18,9 +18,6 @@ module ExtractTweetTokens
     #  word_tokens
     #
     def process tweet, *_, &block
-      case tweet
-      when Tweet, SearchTweet
-        tweet.twitter_user_id = tweet.twitter_user_id.to_i
         tweet.retweets     &block
         tweet.replies      &block
         tweet.atsigns      &block
@@ -29,8 +26,6 @@ module ExtractTweetTokens
         tweet.tweet_urls   &block
         tweet.stock_tokens &block
         tweet.word_tokens  &block
-      else return
-      end
     end
   end
 
@@ -42,7 +37,7 @@ end
 Wukong::Script.new(
   ExtractTweetTokens::Mapper,
   nil,
-  :partition_fields => 2, # rsrc, token
+  :partition_fields => 2,  # rsrc, token
   :sort_fields      => 3,  # rsrc, token, tweet_id
   :reuse_jvms       => true
   ).run
