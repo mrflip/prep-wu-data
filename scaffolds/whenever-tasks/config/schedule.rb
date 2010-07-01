@@ -41,7 +41,7 @@ end
 # This should be run after noon since the stream scraper rotates files every 12 hours and we want to parse yesterday's data.
 # The resulting file will be uploaded with the raw data in the script that pushes everything to Amazon S3 below.
 every 1.days, :at => '1:00pm' do
-  command "/home/doncarlo/ics/infochimp-data/scaffolds/whenever-tasks/parse_scraped_data.sh"
+  command "/home/doncarlo/ics/infochimps-data/scaffolds/whenever-tasks/parse_scraped_data.sh"
 end
 
 # bzip all twitter and myspace data older than 1 day with extensions of xml, json, or tsv
@@ -66,9 +66,9 @@ end
 
 # pushes myspace data to Amazon S3
 # log file defined in script rather than here (in cron)
-# every 1.days, :at => '10:30am' do
-#   command "/home/doncarlo/ics/wuclan/examples/myspace/push_myspace_to_s3.sh"
-# end
+every 1.days, :at => '10:30am' do
+  command "/home/doncarlo/ics/wuclan/examples/myspace/push_myspace_to_s3.sh"
+end
 
 # record the size and number of lines of twitter data scraped that day
 every 1.days, :at => '12:00pm' do
