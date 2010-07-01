@@ -13,6 +13,9 @@ h2. Unsplice uniqed data.
 <pre><code>
     hdp-rm -r -skipTrash /data/sn/tw/rawd/unspliced
     ./unsplice /data/sn/tw/rawd/uniqd /data/sn/tw/rawd/unspliced
+    for object in tweet tweet-noid a_follows_b a_favorites_b geo; do
+        hdp-mv /data/sn/tw/rawd/unspliced/${object} /data/sn/tw/fixd/objects/${object}
+    done
 </code></pre>
 
 h2. Uniq mutable objects.
@@ -21,6 +24,7 @@ h2. Uniq mutable objects.
     for object in twitter_user twitter_user_partial twitter_user_profile twitter_user_location twitter_user_style; do
         ./last_seen_state.rb --rm --run /data/sn/tw/rawd/unspliced/${object} /data/sn/tw/fixd/objects/${object}
     done
+    hdp-rm -r -skipTrash /data/sn/tw/rawd/unspliced
 </code></pre>
 
 h2. Create users table.
@@ -52,7 +56,12 @@ h2. Uniq new tweet objects with existing
 h2. Extract tweet tokens
 
 <pre><code>
-    ./extract_tweet_tokens.rb --rm --run /data/sn/tw/fixd/objects/tweet
+    ./extract_tweet_tokens.rb --rm --run /data/sn/tw/fixd/objects/tweet /data/sn/tw/rawd/tokens
+    ./unsplice /data/sn/tw/rawd/tokens /data/sn/tw/rawd/unspliced
+    for object in a_retweets_b_name a_atsigns_b_name a_replies_b tweet_url stock_token hashtag word_token smiley; do
+        hdp-mv /data/sn/tw/rawd/unspliced/${object} /data/sn/tw/fixd/objects/${object}
+    done
+    hdp-rm -r -skipTrash /data/sn/tw/rawd/unspliced
 </code></pre>
 
 h2. Rectify user_id fields in new relationship models

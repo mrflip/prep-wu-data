@@ -7,8 +7,8 @@
 %default USER  '/data/sn/tw/fixd/objects/twitter_user_id'
 %default TABLE '/data/sn/tw/fixd/users_table'
 
-search_id = LOAD '$SID'  AS (sid:long, sn:chararray);
-user      = LOAD '$USER' AS (uid:long, scrat:long, sn:chararray, prot:int, followers:int, friends:int, statuses:int, favs:int, crat:long);
+search_id = LOAD '$SID'  AS (rsrc:chararray, sid:long, sn:chararray);
+user      = LOAD '$USER' AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:int, friends:int, statuses:int, favs:int, crat:long);
 cut_user  = FOREACH user GENERATE uid, sn;
 joined    = JOIN cut_user BY FULL OUTER sn, search_id BY sn;
 mapping   = FOREACH joined GENERATE
