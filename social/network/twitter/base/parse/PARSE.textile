@@ -1,0 +1,66 @@
+h1. Parse Steps
+
+h2. Parse raw data from s3. (deprecated)
+
+h2. Uniq parsed data
+
+<pre><code>
+    hdp-stream /data/sn/tw/fixd/current-20100622/\*,/data/sn/tw/rawd/unspliced/\*,/data/sn/tw/rawd/parsed/\*/\* /data/sn/tw/rawd/uniqd `which cat` `which uniq` 2 3 -jobconf mapred.map.tasks.speculative.execution=false
+</code><pre>
+
+h2. Unsplice uniqed data.
+
+<pre><code>
+    hdp-rm -r -skipTrash /data/sn/tw/rawd/unspliced
+    ./unsplice /data/sn/tw/rawd/uniqd /data/sn/tw/rawd/unspliced
+</code></pre>
+
+h2. Uniq mutable objects.
+
+<pre><code>
+    for object in twitter_user twitter_user_partial twitter_user_profile twitter_user_location twitter_user_style; do
+        ./last_seen_state.rb --rm --run /data/sn/tw/rawd/unspliced/${object} /data/sn/tw/fixd/objects/${object}
+    done
+</code></pre>
+
+h2. Create users table.
+
+Use the user objects from step 4. This is used for (screen_name, search_id, user_id) lookup as well as later for api call.
+
+<pre><code>
+    pig users_table.pig
+</code></pre>
+   
+h2. Rectify the user_id fields in tweet-noid and geo objects
+
+Tweet-noids whose screen names cannot be found in the users table are written back to disk as tweet-noids. Later, the screen names here will be fed back to the scrapers thus increasing the quality of the id lookup api call with every parse.
+
+<pre><code>
+    pig rectify_tweet_noids.pig
+    hdp-rm -r -skipTrash /data/sn/tw/fixd/objects/tweet-noid
+    pig rectify_geo.pig
+</code></pre>
+
+h2. Uniq new tweet objects with existing
+
+<pre><code>
+    hdp-mv /data/sn/tw/fixd/objects/tweet /data/sn/tw/fixd/objects/tweet_tmp
+    hdp-stream /data/sn/tw/fixd/objects/tweet-rectified,/data/sn/tw/fixd/objects/tweet_tmp /data/sn/tw/fixd/objects/tweet `which cat` `which uniq` 2 3 -jobconf mapred.map.tasks.speculative.execution=false
+    hdp-rm -r -skipTrash /data/sn/tw/fixd/objects/tweet_tmp
+</code></pre>
+
+h2. Extract tweet tokens
+
+<pre><code>
+    ./extract_tweet_tokens.rb --rm --run /data/sn/tw/fixd/objects/tweet
+</code></pre>
+
+h2. Rectify user_id fields in new relationship models
+
+<pre><code>
+    pig rectify_relationships.pig
+    hdp-rm -r -skipTrash /data/sn/tw/fixd/objects/a_atsigns_b_name
+    hdp-rm -r -skipTrash /data/sn/tw/fixd/objects/a_retweets_b_name    
+</code></pre>
+
+h2. Be happy.
