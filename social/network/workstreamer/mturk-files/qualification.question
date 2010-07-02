@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+    <Overview>
+        <Title>Social Media Test</Title>
+    </Overview>
+    <Question>
+        <QuestionIdentifier>question1</QuestionIdentifier>
+        <QuestionContent>
+            <Text>Pick the correct URL for the YouTube Channel of the following company:</Text>
+			<Text>Jimmy Johns - http://www.jimmyjohns.com/</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>1a</SelectionIdentifier>
+                  <Text>http://www.youtube.com/watch?v=sVUXomsutdc</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>1b</SelectionIdentifier>
+                  <Text>http://www.youtube.com/user/jimmyjohns</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>1c</SelectionIdentifier>
+                  <Text>http://www.youtube.com/user/RickyRiddy2</Text>
+                </Selection>
+				<Selection>
+					<SelectionIdentifier>1d</SelectionIdentifier>
+					<Text>None, company has no YouTube Channel</Text>
+				</Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question2</QuestionIdentifier>
+        <QuestionContent>
+            <Text>Pick the correct URL for the YouTube Channel of the following company:</Text>
+			<Text>Jigsaw Data Corporation - http://www.jigsaw.com/</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>2a</SelectionIdentifier>
+                  <Text>http://www.youtube.com/user/jigsawvideo</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>2b</SelectionIdentifier>
+                  <Text>http://www.youtube.com/watch?v=sKFpFmQSeGs</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>2c</SelectionIdentifier>
+                  <Text>http://www.youtube.com/user/DammitJigsaw</Text>
+                </Selection>
+				<Selection>
+					<SelectionIdentifier>2d</SelectionIdentifier>
+					<Text>None, company has no YouTube Channel</Text>
+				</Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question3</QuestionIdentifier>
+       	<QuestionContent>
+            <Text>Pick the correct URL for the YouTube Channel of the following company:</Text>
+			<Text>Insideview, Inc. - http://www.insideview.com/</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>3a</SelectionIdentifier>
+                  <Text>http://www.youtube.com/user/insideview</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>3b</SelectionIdentifier>
+                  <Text>http://www.youtube.com/watch?v=np12FknPHCY</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>3c</SelectionIdentifier>
+                  <Text>http://www.youtube.com/watch?v=38ru-vjRLBk</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>3d</SelectionIdentifier>
+                  <Text>None, company has no YouTube Channel</Text>
+                </Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question4</QuestionIdentifier>
+       	<QuestionContent>
+            <Text>Pick the correct URL for the Twitter Account of the following company:</Text>
+			<Text>University of Colorado System - http://www.cusys.edu/</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>4a</SelectionIdentifier>
+                  <Text>http://www.twitter.com/cusystem</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>4b</SelectionIdentifier>
+                  <Text>http://twitter.com/mycuboulder</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>4c</SelectionIdentifier>
+                  <Text>http://twitter.com/colorado</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>4d</SelectionIdentifier>
+                  <Text>None, company has no Twitter Account</Text>
+                </Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question5</QuestionIdentifier>
+       	<QuestionContent>
+            <Text>Pick the correct URL for the Twitter Account of the following company:</Text>
+			<Text>Seattle Children's Hospital - http://www.seattlechildrens.org</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>5a</SelectionIdentifier>
+                  <Text>http://twitter.com/therealmariners</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>5b</SelectionIdentifier>
+                  <Text>http://twitter.com/seattletimes/opinion</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>5c</SelectionIdentifier>
+                  <Text>http://www.twitter.com/seattlechildren</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>5d</SelectionIdentifier>
+                  <Text>None, company has no Twitter Account</Text>
+                </Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question6</QuestionIdentifier>
+       	<QuestionContent>
+            <Text>Pick the correct URL for the Twitter Account of the following company:</Text>
+			<Text>Halliburton - http://www.halliburton.com/</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>6a</SelectionIdentifier>
+                  <Text>http://twitter.com/suzhalliburton</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>6b</SelectionIdentifier>
+                  <Text>http://twitter.com/trhalliburton</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>6c</SelectionIdentifier>
+                  <Text>http://twitter.com/bhalliburton</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>6d</SelectionIdentifier>
+                  <Text>None, company has no Twitter Account</Text>
+                </Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+	<Question>
+        <QuestionIdentifier>question7</QuestionIdentifier>
+       	<QuestionContent>
+            <Text>Pick the correct URL for the Facebook Page of the following company:</Text>
+			<Text>Fresenius Medical Care - http://www.fmcna.com</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>7a</SelectionIdentifier>
+                  <Text>http://www.facebook.com/profile.php?id=100000145132132</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>7b</SelectionIdentifier>
+                  <Text>http://www.facebook.com/pages/Fresenius-Kabi/105022806204954?ref=ts</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>7c</SelectionIdentifier>
+                  <Text>http://www.facebook.com/pages/Fresenius-Medical-Care/65605087000</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>7d</SelectionIdentifier>
+                  <Text>None, company has no Facebook Page</Text>
+                </Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+	<Question>
+        <QuestionIdentifier>question8</QuestionIdentifier>
+       	<QuestionContent>
+            <Text>Pick the correct URL for the Facebook Page of the following company:</Text>
+			<Text>McDonald's Corporation - http://www.mcdonalds.com</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+              <StyleSuggestion>radiobutton</StyleSuggestion>
+              <Selections>
+                <Selection>
+                  <SelectionIdentifier>8a</SelectionIdentifier>
+                  <Text>http://www.facebook.com/McDonaldsArgentina</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>8b</SelectionIdentifier>
+                  <Text>http://www.facebook.com/McDonalds</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>8c</SelectionIdentifier>
+                  <Text>http://www.facebook.com/pages/McDonald-Mariga/46607184505</Text>
+                </Selection>
+                <Selection>
+                  <SelectionIdentifier>8d</SelectionIdentifier>
+                  <Text>None, company has no Facebook Page</Text>
+                </Selection>
+              </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+</QuestionForm>
+
