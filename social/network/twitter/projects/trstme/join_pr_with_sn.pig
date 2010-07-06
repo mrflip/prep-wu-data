@@ -7,8 +7,8 @@
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
 
 %default IDS    '/data/sn/tw/fixd/users_table'
-%default RANK   '/data/sn/tw/pagerank/a_follows_b_pagerank/pagerank_only'
-%default TRSTME '/data/sn/tw/pagerank/a_follows_b_pagerank/pagerank_with_sn'
+%default RANK   '/data/sn/tw/pagerank/a_follows_b'
+%default TRSTME '/data/sn/tw/pagerank/a_follows_b_with_sn'
 
 mapping = LOAD '$IDS' AS (sn:chararray, uid:long, sid:long);
 rank    = LOAD '$PAGERANK' AS (uid:long, pr:float);
