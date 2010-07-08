@@ -6,21 +6,20 @@ geo_objects  = LOAD '$GEO' AS (rsrc:chararray, twid:long, uid:long, sn:chararray
 mapping      = LOAD '$TABLE'  AS (sn:chararray, uid:long, sid:long);
 
 -- immediately separate good objects and bad objects
-good_objects = FILTER geo_objects BY uid IS NOT NULL;
-bad_objects  = FILTER geo_objects BY uid IS NULL;
+SPLIT geo_objects INTO good_objects IF uid IS NOT NULL, bad_objects IF uid IS NULL;
 
 -- rectify bad objects
-joined      = JOIN geo_objects BY sn, mapping BY sn;
-filtered    = FILTER joined BY mapping::uid IS NOT NULL;
+joined      = JOIN bad_objects BY sn, mapping BY sn;
+filtered    = FILTER joined BY mapping::uid IS NOT NULL; --throwing away what didn't rectify
 rectified   = FOREACH filtered GENERATE
-                  geo_objects::rsrc     AS rsrc,
-                  geo_objects::twid     AS twid,
+                  bad_objects::rsrc     AS rsrc,
+                  bad_objects::twid     AS twid,
                   mapping::uid          AS uid,
-                  geo_objects::sn       AS sn,
-                  geo_objects::crat     AS crat,
-                  geo_objects::lat      AS lat,
-                  geo_objects::lon      AS lon,
-                  geo_objects::place_id AS place_id
+                  bad_objects::sn       AS sn,
+                  bad_objects::crat     AS crat,
+                  bad_objects::lat      AS lat,
+                  bad_objects::lon      AS lon,
+                  bad_objects::place_id AS place_id
               ;
 out         = UNION good_objects, rectified;
 
