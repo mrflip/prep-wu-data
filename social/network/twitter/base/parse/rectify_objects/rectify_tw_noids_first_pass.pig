@@ -30,12 +30,10 @@ fixed_ids = FOREACH joined
                 ;
             };
 
--- dump those that are not rectified
-noids = FILTER fixed_ids BY rsrc == 'tweet-noid';
+SPLIT fixd_ids INTO noids IF rsrc == 'tweet-noid', rectified IF rsrc == 'tweet';
+
 rmf $FAIL;
 STORE noids INTO '$FAIL';
 
--- dump rectified ones, these will have to be rectified once again by replies
-rectified = FILTER fixed_ids BY rsrc == 'tweet';
 rmf $TWFIXD;
 STORE rectified INTO '$TWFIXD';
