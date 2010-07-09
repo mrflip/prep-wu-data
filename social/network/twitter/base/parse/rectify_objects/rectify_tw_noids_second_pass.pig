@@ -22,21 +22,21 @@ STORE not_replies INTO '$TWGOOD';
 replies     = FILTER tw_rect BY in_reply_to_sn IS NOT NULL;
 joined      = JOIN replies BY in_reply_to_sn, mapping BY sn;
 rectified   = FOREACH joined GENERATE
-                  tw_rect::rsrc            AS rsrc,
-                  tw_rect::twid            AS twid,
-                  tw_rect::crat            AS crat,
-                  tw_rect::uid             AS uid,
-                  tw_rect::sn              AS sn,
-                  tw_rect::sid             AS sid,
+                  replies::rsrc            AS rsrc,
+                  replies::twid            AS twid,
+                  replies::crat            AS crat,
+                  replies::uid             AS uid,
+                  replies::sn              AS sn,
+                  replies::sid             AS sid,
                   mapping::uid             AS in_reply_to_uid,
-                  tw_rect::in_reply_to_sn  AS in_reply_to_sn,
-                  tw_rect::in_reply_to_sid AS in_reply_to_sid,
-                  tw_rect::text            AS text,
-                  tw_rect::src             AS src,
-                  tw_rect::iso             AS iso,
-                  tw_rect::lat             AS lat,
-                  tw_rect::lon             AS lon,
-                  tw_rect::was_stw         AS was_stw
+                  replies::in_reply_to_sn  AS in_reply_to_sn,
+                  replies::in_reply_to_sid AS in_reply_to_sid,
+                  replies::text            AS text,
+                  replies::src             AS src,
+                  replies::iso             AS iso,
+                  replies::lat             AS lat,
+                  replies::lon             AS lon,
+                  replies::was_stw         AS was_stw
               ;
 
 SPLIT rectified INTO no_reply_id IF in_reply_to_uid IS NULL, with_reply_id IF in_reply_to_uid IS NOT NULL;

@@ -25,7 +25,7 @@ module ExtractTweetTokens
         tweet.smileys      &block
         tweet.tweet_urls   &block
         tweet.stock_tokens &block
-        tweet.word_tokens  &block
+        #tweet.word_tokens  &block
     end
   end
 
