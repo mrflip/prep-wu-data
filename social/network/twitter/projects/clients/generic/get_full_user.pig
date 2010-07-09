@@ -13,20 +13,20 @@ cut_style   = FOREACH style   GENERATE uid, bg_col, txt_col, link_col, sidebar_b
 
 joined_profile = JOIN cut_user BY uid, cut_profile BY uid;
 user_profile = FOREACH joined_profile GENERATE
-                   user::uid                AS uid,
-                   user::sn                 AS sn,
-                   user::crat               AS crat,
+                   cut_user::uid                AS uid,
+                   cut_user::sn                 AS sn,
+                   cut_user::crat               AS crat,
                    cut_profile::name        AS name,
                    cut_profile::description AS description,
                    cut_profile::url         AS url,
                    cut_profile::location    AS location,
                    cut_profile::time_zone   AS time_zone,
                    cut_profile::utc         AS utc,
-                   user::followers          AS followers,
-                   user::friends            AS friends,
-                   user::statuses           AS statuses,
-                   user::favorites          AS favorites,
-                   user::prot               AS prot
+                   cut_user::followers          AS followers,
+                   cut_user::friends            AS friends,
+                   cut_user::statuses           AS statuses,
+                   cut_user::favs          AS favorites,
+                   cut_user::prot               AS prot
                ;
 joined_all = JOIN user_profile BY uid, cut_style BY uid;
 whole_user = FOREACH joined_all GENERATE
