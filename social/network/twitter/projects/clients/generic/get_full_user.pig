@@ -12,22 +12,22 @@ cut_profile = FOREACH profile GENERATE uid, name, url, location, description, ti
 cut_style   = FOREACH style   GENERATE uid, bg_col, txt_col, link_col, sidebar_border_col, sidebar_fill_col, bg_tile, bg_img_url, img_url;
 
 joined_profile = JOIN cut_user BY uid, cut_profile BY uid;
-user_profile = FOREACH joined_profile GENERATE
-                   cut_user::uid                AS uid,
-                   cut_user::sn                 AS sn,
-                   cut_user::crat               AS crat,
-                   cut_profile::name        AS name,
-                   cut_profile::description AS description,
-                   cut_profile::url         AS url,
-                   cut_profile::location    AS location,
-                   cut_profile::time_zone   AS time_zone,
-                   cut_profile::utc         AS utc,
-                   cut_user::followers          AS followers,
-                   cut_user::friends            AS friends,
-                   cut_user::statuses           AS statuses,
-                   cut_user::favs          AS favorites,
-                   cut_user::prot               AS prot
-               ;
+user_profile   = FOREACH joined_profile GENERATE
+                     cut_user::uid                AS uid,
+                     cut_user::sn                 AS sn,
+                     cut_user::crat               AS crat,
+                     cut_profile::name        AS name,
+                     cut_profile::description AS description,
+                     cut_profile::url         AS url,
+                     cut_profile::location    AS location,
+                     cut_profile::time_zone   AS time_zone,
+                     cut_profile::utc         AS utc,
+                     cut_user::followers          AS followers,
+                     cut_user::friends            AS friends,
+                     cut_user::statuses           AS statuses,
+                     cut_user::favs          AS favorites,
+                     cut_user::prot               AS prot
+                 ;
 joined_all = JOIN user_profile BY uid, cut_style BY uid;
 whole_user = FOREACH joined_all GENERATE
                  user_profile::uid             AS uid,
@@ -52,6 +52,7 @@ whole_user = FOREACH joined_all GENERATE
                  cut_style::img_url            AS img_url,
                  user_profile::prot            AS prot
              ;
-
+ordered = ORDER whole_user BY favorites DESC;
 rmf $OBJ;
-STORE whole_user INTO '$OBJ';
+
+STORE ordered INTO '$OBJ';
