@@ -16,16 +16,14 @@ module TokyoDbConnection
     ].freeze
 
     DB_PORTS = {
-      :user_ids        => 12001,
       :screen_names    => 12002,
       :search_ids      => 12003,
-      :tweets_parsed   => 12004,
-      :users_parsed    => 12005,
       #
-      :tw_wordbag      => 14001,
-      :tw_influence    => 14002,
-      :tw_trstrank     => 14003,
-      :tw_conversation => 14004,
+      :tw_user_info    => 14000,
+      :tw_wordbag      => 14101,
+      :tw_influence    => 14102,
+      :tw_trstrank     => 14103,
+      :tw_conversation => 14104,
     }
 
   end
@@ -39,12 +37,6 @@ require 'wukong/keystore/tyrant_db'
 #
 #
 class BulkLoadStreamer < Wukong::Streamer::RecordStreamer
-  def initialize *args
-    super *args
-    @db = TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
-    $stderr.puts @db
-  end
-
   # Track progress regularly
   def log
     @log ||= PeriodicMonitor.new(options)
@@ -52,7 +44,7 @@ class BulkLoadStreamer < Wukong::Streamer::RecordStreamer
 
   # notes each iteration
   def print_progress
-    $stderr.puts log.progress(@db.size)
+    $stderr.puts log.progress
   end
 
   # track progress --
