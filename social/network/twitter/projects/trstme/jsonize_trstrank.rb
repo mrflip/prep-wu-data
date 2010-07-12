@@ -5,8 +5,9 @@ require 'json'
 
 class Mapper < Wukong::Streamer::RecordStreamer
 
-  def process screen_name, user_id, raw, scaled, &blk
-    yield [screen_name, user_id, jsonize(user_id, screen_name, scaled)]
+  def process *args, &blk
+    return unless args.length == 4
+    yield [args[1], jsonize(args[1], args[0], args[3])]
   end
 
   def jsonize user_id, screen_name, scaled

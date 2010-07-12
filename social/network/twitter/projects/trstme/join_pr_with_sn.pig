@@ -4,15 +4,15 @@
 --   RANK             = path to pagerank and id
 --   TRSTME           = path to final output date for trst me app
 
-REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
 %default IDS    '/data/sn/tw/fixd/users_table'
-%default RANK   '/data/sn/tw/pagerank/a_follows_b'
-%default TRSTME '/data/sn/tw/pagerank/a_follows_b_with_sn'
+%default RANK   '/data/sn/tw/fixd/pagerank/a_follows_b'
+%default TRSTME '/data/sn/tw/fixd/pagerank/a_follows_b_with_sn'
 
 mapping = LOAD '$IDS' AS (sn:chararray, uid:long, sid:long);
-rank    = LOAD '$PAGERANK' AS (uid:long, pr:float);
-joined  = JOIN rank BY uid, mapping BY id;
+rank    = LOAD '$RANK' AS (uid:long, pr:float);
+joined  = JOIN rank BY uid, mapping BY uid;
 flat    = FOREACH joined GENERATE
                 mapping::sn AS sn,
                 rank::uid   AS uid,
@@ -21,7 +21,7 @@ flat    = FOREACH joined GENERATE
 
 grouped  = GROUP flat ALL;
 intermed = FOREACH grouped GENERATE flatten(flat), MAX(flat.pr) AS max_pr;
-out      = FOREACH intermed GENERATE flat::sn AS sn, flat::uid AS uid, flat::pr AS pr, 10.0*( (float)org.apache.pig.piggybank.evaluation.math.LOG(flat::pr) / (float)org.apache.pig.piggybank.evaluation.math.LOG(max_pr) ) AS scaled; 
+out      = FOREACH intermed GENERATE flat::sn AS sn, flat::uid AS uid, flat::pr AS pr, 10.0*( (float)org.apache.pig.piggybank.evaluation.math.LOG(flat::pr + 1.0) / (float)org.apache.pig.piggybank.evaluation.math.LOG(max_pr + 1.0) ) AS scaled; 
 
 rmf $TRSTME;
 STORE out INTO '$TRSTME';
