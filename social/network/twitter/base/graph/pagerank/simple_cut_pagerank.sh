@@ -13,7 +13,7 @@ INPUT_PATH=$2
 script_dir=$(readlink -f `dirname $0`)
 
 hdp-rm -r $OUTPUT_PATH
-/usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*-streaming.jar       \
+/usr/lib/hadoop/bin/hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-*streaming*.jar       \
   -D           stream.num.map.output.key.fields="2"                                          \
   -mapper      "/usr/bin/cut -f1,2"                                                      \
   -reducer     "/usr/bin/uniq"                                                               \
