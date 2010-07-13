@@ -9,7 +9,7 @@
         
 follows   = LOAD '$FOLLOW'   AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 favorites = LOAD '$FAVORITE' AS (rsrc:chararray, user_a_id:long, user_b_id:long, tweet_id:long);
-replies   = LOAD '$REPLY'    AS (rsrc:chararray, user_a_id:long, user_b_id:long, tweet_id:long, in_reply_to_tweet_id:long);
+replies   = LOAD '$REPLY'    AS (rsrc:chararray, user_a_id:long, user_b_id:long, tweet_id:long, in_reply_to_tweet_id:long, crat:long);
 atsigns   = LOAD '$ATSIGN'   AS (rsrc:chararray, user_a_id:long, user_b_id:long, tweet_id:long);
 retweets  = LOAD '$RETWEET'  AS (rsrc:chararray, user_a_id:long, user_b_id:long, tweet_id:long, please_flag:int);
 
