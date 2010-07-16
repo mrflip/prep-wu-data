@@ -18,8 +18,8 @@ tq:          Trust quotient. Percentile ranking of a twitter users trstrank with
 
 h4. Parse
 Script(s): See parse documentation for scripts and steps involved.
-- input:  raw data from Twitter API
-- output: a_follows_b, a_atsigns_b 
+ - input:  raw data from Twitter API
+ - output: a_follows_b, a_atsigns_b 
 
 h4. Pagerank Initialize
 Script(s): pagerank_initialize.pig
