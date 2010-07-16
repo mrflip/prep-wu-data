@@ -7,8 +7,8 @@ class Mapper < Wukong::Streamer::RecordStreamer
   def process *args
     return unless args.length == 3
     uid, followers, scaled = args
-    scaled = (scaled.to_f*10.0).round.to_f/10.0
-    yield [uid, TRSTRANK_TABLE[followers][scaled]]
+    rank = (scaled.to_f*10.0).round.to_f/10.0
+    yield [uid, scaled, TRSTRANK_TABLE[followers][rank]]
   end
 end
 
