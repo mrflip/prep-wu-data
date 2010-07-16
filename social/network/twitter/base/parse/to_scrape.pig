@@ -6,7 +6,7 @@ id_table = LOAD '$TABLE'  AS (rsrc:chararray, uid:long, scrat:long, sn:chararray
 rawd_id  = LOAD '$RAWID'  AS (uid:long);
 
 just_ids = FOREACH id_table GENERATE uid;
-joined   = JOIN rawd_id BY uid, FULL OUTER, just_ids BY uid;
+joined   = JOIN rawd_id BY uid FULL OUTER, just_ids BY uid;
 
 rmf $TOSCRAPE;
 STORE joined INTO '$TOSCRAPE';

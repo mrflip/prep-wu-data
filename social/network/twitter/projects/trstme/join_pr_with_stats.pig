@@ -8,7 +8,7 @@ user_id  = LOAD '$IDS'  AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, 
 fullrank = LOAD '$RANK' AS (uid:long, pr:float, list:chararray); -- load everything
 rank     = FOREACH fullrank GENERATE uid, pr;                    -- trim list off
 mapping  = FOREACH user_id  GENERATE uid, sn, followers;         -- keep followers around for %-ile ranking
-joined   = JOIN rank BY uid, mapping BY uid INNER;               -- doing this as an inner join removes the dummy (no screen name matches it!) 
+joined   = JOIN rank BY uid, mapping BY uid;                     -- doing this as an inner join removes the dummy (no screen name matches it!) 
 flat     = FOREACH joined GENERATE
                mapping::sn        AS sn,
                rank::uid          AS uid,
