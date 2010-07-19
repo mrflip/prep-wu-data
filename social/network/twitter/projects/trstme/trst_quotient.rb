@@ -2,7 +2,7 @@
 
 require 'rubygems'
 require 'wukong'
-require 'trstrank_table'
+load './trstrank_table.rb'
 
 Float.class_eval do def round_to(x) ((10**x)*self).round end ; end
 
