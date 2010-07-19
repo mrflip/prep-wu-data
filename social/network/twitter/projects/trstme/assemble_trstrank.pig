@@ -21,9 +21,12 @@ mapping  = FOREACH user_id  GENERATE uid, sn;
 together = JOIN atsign BY uid RIGHT OUTER, follow BY uid;
 intermed = FOREACH together
            {
-               trstrank = (atsign::rank  + follow::rank )/2.0;
-               tq       = (atsign::prcnt + follow::prcnt)/2.0;
-               uid      = (atsign::uid IS NOT NULL ? atsign::uid : follow::uid);
+               -- the follow records will always exist, don't bother checking those too
+               atrank   = (atsign::rank  IS NOT NULL ? atsign::rank  : follow::rank); -- use follow rank if no atsign rank exists
+               at_tq    = (atsign::prcnt IS NOT NULL ? atsign::prcnt : follow::prcnt);
+               uid      = (atsign::uid   IS NOT NULL ? atsign::uid   : follow::uid);
+               trstrank = (atrank  + follow::rank )/2.0;
+               tq       = (at_tq   + follow::prcnt)/2.0;               
                GENERATE
                    uid      AS uid,
                    trstrank AS trstrank,
