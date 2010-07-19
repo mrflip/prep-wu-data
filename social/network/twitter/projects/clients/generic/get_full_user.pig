@@ -7,32 +7,35 @@ user    = LOAD '$USER'    AS (rsrc:chararray, uid:long, scrat:long, sn:chararray
 profile = LOAD '$PROFILE' AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, name:chararray,   url:chararray,     location:chararray, description:chararray,        time_zone:chararray,        utc:chararray);                                                                           
 style   = LOAD '$STYLE'   AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, bg_col:chararray, txt_col:chararray, link_col:chararray, sidebar_border_col:chararray, sidebar_fill_col:chararray, bg_tile:chararray, bg_img_url:chararray, img_url:chararray);                    
 
-cut_user    = FOREACH user    GENERATE uid, sn, prot, followers, friends, statuses, favs, crat;
+cut_user    = FOREACH user    GENERATE uid, scrat, sn, prot, followers, friends, statuses, favs, crat;
 cut_profile = FOREACH profile GENERATE uid, name, url, location, description, time_zone, utc;
 cut_style   = FOREACH style   GENERATE uid, bg_col, txt_col, link_col, sidebar_border_col, sidebar_fill_col, bg_tile, bg_img_url, img_url;
 
 joined_profile = JOIN cut_user BY uid, cut_profile BY uid;
 user_profile   = FOREACH joined_profile GENERATE
-                     cut_user::uid                AS uid,
-                     cut_user::sn                 AS sn,
-                     cut_user::crat               AS crat,
+                     cut_user::uid            AS uid,
+                     cut_user::sn             AS sn,
+                     cut_user::crat           AS crat,
+                     cut_user::scrat          AS scrat,     
                      cut_profile::name        AS name,
                      cut_profile::description AS description,
                      cut_profile::url         AS url,
                      cut_profile::location    AS location,
                      cut_profile::time_zone   AS time_zone,
                      cut_profile::utc         AS utc,
-                     cut_user::followers          AS followers,
-                     cut_user::friends            AS friends,
-                     cut_user::statuses           AS statuses,
-                     cut_user::favs          AS favorites,
-                     cut_user::prot               AS prot
+                     cut_user::followers      AS followers,
+                     cut_user::friends        AS friends,
+                     cut_user::statuses       AS statuses,
+                     cut_user::favs           AS favorites,
+                     cut_user::prot           AS prot
                  ;
+
 joined_all = JOIN user_profile BY uid, cut_style BY uid;
 whole_user = FOREACH joined_all GENERATE
                  user_profile::uid             AS uid,
                  user_profile::sn              AS sn,
                  user_profile::crat            AS crat,
+                 user_profile::scrat           AS scrat,
                  user_profile::name            AS name,
                  user_profile::description     AS description,
                  user_profile::url             AS url,
@@ -52,6 +55,7 @@ whole_user = FOREACH joined_all GENERATE
                  cut_style::img_url            AS img_url,
                  user_profile::prot            AS prot
              ;
+
 ordered = ORDER whole_user BY favorites DESC;
 rmf $OBJ;
 
