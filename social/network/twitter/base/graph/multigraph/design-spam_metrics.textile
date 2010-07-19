@@ -1,0 +1,441 @@
+
+@spam @safety @twitspamorg @stopthespam
+#twitspam #twitterspam #twitterbomb
+
+http://twitspam.org/?p=2055
+http://www.stoptwitterspam.com/blog/about/
+http://support.twitter.com/entries/64986-how-to-report-spam-on-twitter
+http://www.twitblock.org/scan_user.php?u=deedeefayuuay&b=1
+
+tips@stoptwitterspam.com
+
+
+===========================================================================
+
+clients / partners
+
+http://blog.hypem.com/2009/07/twitter-music-chart/
+  round(( 1/3 * (twitter_followers / 10) ^ 0.5 ) * (twitter_followers / twitter_friends) * 10))
+http://www.backtype.com/
+
+
+* http://www.paterva.com/web5/
+* WEKA
+* Mahout
+* RapidMiner
+
+===========================================================================
+
+
+h3. Correlations from Gayo
+
+fo_i                    3203.8          1338              82.36
+fo_o                    3156            1245              82
+tw_o  / scage             41.3 (80)       12.9 (34)        5.6
+url_o / tw_o              90.4  %         32.9  %         18.2  %          
+rt_o  / tw_o               2.97 %          6.5  %          2.87 %  
+(at_o - rt_o) / tw_o       6.86 %         21.48 %         19.26 %
+#_o   / tw_o              11.5  %          8.83 %          7.98 %
+
+
+h3. Strong links
+
+Strength of tie as a linear combination 
+       o F = Frequency of Contact 
+       o E = Emotional intensity 
+       o I = Intimacy (mutual confiding) 
+       o R = Reciprocal services 
+
+       o l_ij = w1*F + w2*E+ w3*I+ w4*R 
+
+h3. Simple metrics
+
+* uses facebook|linked_in|... as profile URL
+** what is the distribution of domains in profile_url's?
+
+h3. Multigraph
+
+* retweets by people who don't follow me
+* replies from people who don't follow me and I don't follow
+* extra weight if fo_sy and at_sy
+
+
+* Name gender is female and has a pic
+
+* users with fo_o >> 2000 have been inspected.
+* centrality from verified users,
+* centrality from long-tenured users
+* centrality from eg crunchbase
+* centrality *to* verified spammers. following a spammer means (?something?)
+
+* "Probability you appear in my stream"
+
+** fo_o(a>b)
+** fo_o(a>b) * tw_o_r(b)  vs tw_i(a) (or tw_i(AVG) )
+** if a @ b, b appears in all of a's followers' streams.
+** if a RT b, b and b's content appear in all of a's followers' streams
+** If I RT you repeatedly, that's not very interesting.
+
+** use n_at_o as a prior on n_fo_o to discount follow links
+ 
+* No shared interests:
+** Train on the corpus of users' fo_o:
+  - should be background,
+  - should minimally intersect user's own corpus
+** Clustering coefficient
+
+* hashtag spam
+
+* duplicate content
+  * duplicate about me -- do a hash table on about text; look at account age and other signals
+  * rabin fingerprints, but may be overkill
+* Among common words, take most selective words, use as feature vector
+** LSA on a large sample?
+** use spamminess score
+** use social markers (smh, lol, etc)
+
+* Spammers use a CSRF script to harvest followers
+  - very high followers/day and high fo_i/fo_i low account age
+
+  http://twitter.com/Johng77536
+  http://twitter.com/FanBase
+  http://twitter.com/MalEmery
+  http://twitter.com/PrivateMessages
+
+* lists
+** *use HITS but fix _twitter lists_ as hubs*
+** use lists to do similarity matching
+** use topic washing to get similar words
+
+* symmetric users should look similar (?)
+** so if we classified users by their feature vectors, look at distribution of feature vectors
+
+* clustering
+** k-core: every node in the subset is connected to k other nodes in the subset
+
+* tweet similarity (cosine sim. for allpairs of tw.) --
+  - poor man's version: high ratio of #usages to tw_o in wordbag
+* bigrams
+
+* do a SVM on locations
+
+* "spamming activity is at its peak around 2pm and from 10pm to 1am, and it is at its 10 lowest levels between 4am and 9am."
+
+Rank Prestige algs:
+* PageRank
+* HITS
+* NodeRanking
+* TunkRank      X.followers.sum{|u| (1 + (p * u.trst)) / u.fo_o } -- p = P(RT) = 2.87%
+* TwitterRank
+
+===========================================================================
+
+Daniel Gayo -- http://arxiv.org/abs/1004.0816 Nepotistic Relationships in Twitter and their Impact on Rank Prestige Algorithms Authors: Daniel Gayo-Avello (Submitted on 6 Apr 2010)
+
+discounted_ff_ratio  --
+  if fo_i > fo_o  then fo_i / fo_o
+  else                 ((fo_i - symm) / (fo_o - symm))  end
+
+* Used as extra weight in pagerank, and to prune graph before pagerank
+
+"Detecting Spam in a Twitter Network"
+
+HITS: Hyperlink-Induced Topic Search – HITS [15] is another algorithm to estimate the relevance of a document. The method assumes the existence of two different kinds of documents in the Web: authorities and hubs. An authority is a heavily linked document because each inbound link is a ―vote‖ cast by the user linking that document. Conversely, a hub is a document comprising links to several authorities; therefore, hubs are valuable resources in the Web’s ecosystem because they ease users the task of finding relevant information.
+
+* use in-links from hubs to get authorities; use out-links from authorities to get hubs
+
+
+* marketing
+* internet
+* marketer
+* online
+* business
+* money
+* social
+* internet marketer
+* internet marketing
+* social media
+* entrepreneur
+* affiliate
+* network
+* media
+* seo
+* free
+* help
+* deals
+* make money
+* real estate
+* forex
+* coach
+* home
+* real
+* news
+* money online
+* helping
+* tips
+* affiliate marketing
+* web
+* expert
+* investor
+* people
+* network marketing
+* mlm
+* blog
+* traffic
+* success
+* online marketing
+* network marketer
+* affiliate marketer
+* making money
+* online business
+* estate investor
+* small business
+* online marketer
+* weight loss
+* trump network
+* helping others
+* media marketing
+* marketing coach
+* money making
+* help people
+* forex trading
+* helping people
+* home based
+* home business
+* internet entrepreneur
+* forex trader
+* business coach
+
+* entrepreneur
+* marketing
+* internet
+* real
+* estate
+* estate
+* real
+* marketer
+* online
+* business
+* internet marketing
+* helping
+* internet
+* marketer
+* seo
+* money
+* online marketing
+* consultant
+* social
+* people
+* helping people
+* media
+* social
+* media
+* affiliate
+* marketing consultant
+* web
+* small
+* business
+* coach
+* help
+* network
+* free
+* investor
+* small
+* others
+* helping others
+* success
+* media
+* marketing
+* help
+* people
+* entreprenuer (sic)
+* broker
+* realtor
+* estate
+* investor
+* network marketing
+* estate agent
+* agent
+* make money
+* expert
+* owner
+* home
+* affiliate marketing
+* online marketer
+* follow
+* business owner
+* speaker
+* guru
+* estate broker
+* search
+* sem
+* ppc
+* successful
+* blogger
+* network marketer
+
+Virtually every tweet published by a spammer contains a URL (90%); marketers use URLs in one in three tweets, while average users tend to use URLs in about one in five tweets. Both marketers and spammers employ hashtags more than average users but the differences, although substantial, are not as pronounced as with other features. Surprisingly, the number of hashtags include by these different groups is mostly the same on average. Lastly, one feature that again highlights the robot nature of most spammers is the much lower level of retweeting, in particular, and conversations they get involved, in general. As it was expected, marketers are much more prone to retweet than average users (two times) and also get much more involved in conversations than them.
+
+
+Avg
+
+fo_i                    3203.8          1338              82.36
+fo_o                    3156            1245              82
+tw_o  / scage             41.3 (80)       12.9 (34)        5.6
+url_o / tw_o              90.4  %         32.9  %         18.2  %          
+rt_o  / tw_o               2.97 %          6.5  %          2.87 %  
+(at_o - rt_o) / tw_o       6.86 %         21.48 %         19.26 %
+#_o   / tw_o              11.5  %          8.83 %          7.98 %
+in tweets with urls,     abg urls          1.018           1.015           1.014
+in tweets with hashtags, avg #hastags
+in tweets with @ (but not RT), avg @'s
+
+
+Table:
+
+n_users                   1.8M            41.7M             0.088 M
+n_edges                 136  M          1047  M             0.829 M
+fo_o(AVG)                74.55            25.11            18.86
+Indegree Slope          - 1.33          -  2.276        -   2.4
+Outdegree Slope         - 1.516            -            -   2.4
+Degree correlation        0.490            -                0.59
+Diameter                  6                4.8(eff)         6
+Largest WCC size          1.800 M          -                0.082 M
+Largest SCC size          1.688 M          -                0.043 M
+clustering coefficient    0.151            -                0.106
+reciprocity               0.48             -                0.58
+
+
+The name and biography fields were in turn employed to infer some demographic features about the sampled users, namely gender and age. To determine the gender we parted from the “Frequently Occurring First Names and Surnames From the 1990 Census”18; those data files provide 88,799 surnames, 4,275 female first names and 1,219 male first names. We assumed that any user name starting with a first name and ending with a last name from the census was a valid personal name. Certainly, many people provide aliases, just their first name, or their names and/or surnames are not frequent enough to appear in the U.S. Census data; however, we think that this approach is the best for the sake of higher precision.
+* http://www.census.gov/genealogy/names/
+
+To support that claim some anecdotal evidence can be provided. First, there exists an almost perfect positive correlation between the last name distribution in the U.S. 1990 Census and within the Twitter users (0.9701). The correlation regarding first name lists is smaller but still positive (0.6355 for female names and 0.6356 for male names). Arguably, this can be due to a major presence of young users among twitterers. As it can be seen in Table A-3 just one female name appear in both top-10 lists (Jennifer) while three are common for male names (James, John and Michael). Both situations seem consistent with the fact that given names have relatively fast turnovers (well under a decade), in particular, female names
+-- estimates age
+
+In addition to this, we computed the most distinctive terms in both male and female biographies by means of a likelihood-ratio test in a way analog to that of [14]. Among the top-10 words for females were mom, girl, wife and mother, while husband, guy, father, dad and man appeared at the top of the list for male users; Table A-4 provides a more exhaustive list.
+
+
+===========================================================================
+
+h3. Twitalyzer
+
+Clout			at_i / TOT_tw_o	as defined by Twitalyzer, is the relative likelihood that an individual's Twitter username will appear when searched for in Twitter.
+Generosity		rt_o / tw_o	as defined by Twitalyzer, is the percentage of updates in which a user retweets other people.
+Engagement		nat_o / nat_i	provides a measure of the type of interaction the user has in Twitter by examining the ratio of people referenced by the user to the number of people referencing them.
+Followers		fo_i		are the number of followers reported by Twitter for the user the last time an analysis was conducted. If the number of followers looks wrong to you, update the user's profile.
+Following		fo_o		is the number of people the user is following as reported by Twitter for the user the last time an analysis was conducted. If the number of people being followed looks wrong to you, update the user's profile.
+
+Influence		(at_i+rt_i)	is the likelihood that a Twitter user will either A) retweet something the user has written or B) reference the user. While this definition is similar to clout, influence takes both retweets and references into account, whereas clout only looks at references.
+Lists					reports the number of Twitter lists the user was a member of when the last analysis was conducted. If the number of lists looks wrong to you, update the user's profile.
+Referenced		at_i		reports the number of times the user had been referenced or cited by other people in the seven days prior to the last analysis based on the presence of a “@” proceeding their Twitter username.
+Referencing Others	at_o		reports the number of times the user wrote or responded directly to other people as indicated by the presence of an @username at the beginning of the update.
+Retweeted		rt_i		reports the number of times the user had been retweeted by other people as indicated by the use of "rt @", "rt@", "rt:@", "rt: @" , "retweet @", "via @", "retweet :@", or "r/t" in the seven days prior to the last analysis. We are also now tracking Twitter-specific retweets.
+Retweeting Others	rt_o		reports the number of times the user had retweeted other people as indicated by their use of "rt @", "rt@", "rt:@", "rt: @" , "retweet @", "via @", "retweet :@", or "r/t" in the seven days prior to the last analysis. We are also now tracking Twitter-specific retweets.
+
+Twitter Ratio		fo_i / fo_o	is the ratio of followers to people the user is following. The Twitter Ratio has been characterized as a way to determine how much heat a Twitter user is packing.
+Unique Referrers	n_at_i		is the number of unique people who referenced the user in the seven days prior to the last analysis.
+Unique References to	n_at_o		Others indicates the number of unique individuals the user wrote or responded directly to in the seven days prior to the last analysis as indicated by the presence of an @username at the beginning of the update.
+Unique Retweeters	n_rt_i		is the number of unique people who retweeted the user in the seven days prior to the last analysis. We are also now tracking Twitter-specific retweets.
+Unique Retweeted	n_rt_o		(or, more succinctly, "Unique Retweets of Others") is the number of unique people the user retweeted in the seven days prior to the last analysis. We are also now tracking Twitter-specific retweets.
+Updates			tw_o		is the number updates published in Twitter in the seven days prior to the last analysis. If the number of updates looks wrong to you, update the user's profile.
+
+URLs Cited		url_o		is the number of updates that included at least one URL (evidenced by the presence of "http://") published in the seven days prior to the last analysis.
+Hashtags Cited		h_o / tw_o	are the number of updates that included at least one hashtag (evidenced by the presence of "#") published in the seven days prior to the last analysis.
+
+Retweets per 1k Fo	rt_o/fo_o	normalizes the number of retweets of the user relative to their follower base.
+References per 1k Fo	at_o/fo_o	normalizes the number of references to the user relative to their follower base.
+Retweet Ratio		rt_o/rt_i	reports the relationship between retweets of the user to retweets of others by the user.
+Reference Ratio		at_o/at_i	reports the relationship between references of the user to references to others by the user.
+Klout's K Score		trst		is a measure of the impact of opinions, links and recommendations across an individual's social graph. This score is calculated and provided by our friends at Klout.
+
+Signal					also referred to as "Signal to Noise Ratio", indicates that one of the following is present in measured updates:
+
+    * A hyperlink containing "http://"
+    * A reference to another person as evidenced by the "@" symbol
+    * A hashag as indicated by the "#" symbol
+    * Some type of indicator that the update is retweeting someone else
+    
+Impact					as defined by Twitalyzer, is a combination of the following factors:
+    * The number of followers a user has
+    * The number of unique references and citations of the user in Twitter
+    * The frequency at which the user is uniquely retweeted
+    * The frequency at which the user is uniquely retweeting other people
+    * The relative frequency at which the user posts updates
+
+===========================================================================
+
+From _K. Lee, J. Caverlee, and S. Webb. Uncovering Social Spammers: Social Honeypots + Machine Learning. 33rd Annual ACM SIGIR Conference (SIGIR), Geneva, July 2010_ and _S. Webb, J. Caverlee, and C. Pu. Social Honeypots: Making Friends with a Spammer Near You. 5th Conference on Email and Anti-Spam (CEAS). Mountain View, August 2008_ -- "Texas A&M Social Honeypots project":http://infolab.tamu.edu/projects/social_honeypots/
+
+(1) The spamming behaviors of spam profiles follow distinct temporal patterns.
+(2) The most popular spamming targets are Midwestern states, and the most popular location for spam profiles is California.
+(3) 57.2% of the spam profiles copy their “About Me” content from another profile.
+(4) Many of the spam profiles exhibit distinct demographic characteristics (e.g., age, relationship statu
+(5) Spam profiles use thousands of URLs and various redirection techniques to funnel users to a handful of destination Web pages.
+
+Archetypes:
+• Click Traps: Each profile contains a background image that is also a link to another Web page. If users click anywhere on the profile, they are directed to the link’s corresponding Web site.
+• FriendInfiltrators:Thesenominallylegitimateprofilesbefriend as many users as possible so that they can infiltrate the users’ circles of friends and bypass any communication restrictions imposed on non-friends. Once a user accepts a friend request from one of these profiles, the profile begins spamming the user through existing communication systems (e.g., message spam, comment spam, etc.).
+• PornographicStorytellers:Eachoftheseprofileshasan“About Me” section that consists of randomized pornographic stories, which are book-ended by links that lead to pornographic Web pages. The anchor text used in these profiles is extremely simi- lar, even though the rest of the “About Me” text is almost com- pletely randomized.
+• Japanese Pill Pushers: These profiles contain a sales pitch for male enhancement pills in their “About Me” sections. Accord- ing to the pitch, the attractive woman pictured in the profile has a boyfriend who purchased these pills at an incredible discount.
+• Winnies: All of these profiles have the same headline: “Hey its winnie.” However, despite this headline, none of the profiles are actually named “Winnie.” In addition to a shared headline, each of the profiles also includes a link to a Web page where users can see the pictured female’s pornographic pictures.
+
+Also:
+
+* *Legitimate*
+* *Promoter*
+
+h3. Methodology
+
+It is common to use *10-fold cross-validation* to achieve statistically precise results. In 10-fold cross-validation, the original sample is randomly divided into 10 equally-sized sub- samples. 9 sub-samples are used as a training set and the remaining one is used as a testing set; the classifier is evaluated, then the pro- cess is repeated for a total of 10 times. Each sub-sample is used as a testing set once in each evaluation. The final evaluation re- sult is generated by averaging the results of the 10 evaluations. In practice, we evaluated over 60 different classifiers in the Weka [24] machine learning toolkit using 10-fold cross-validation with default values for all parameters. Classification results are presented in the form of a confusion matrix as in Table 1.
+
+*Receiver Operating Characteristics* plot
+
+Classifier: *Decorate*
+
+*Rabin Fingerprint*: Then, for every profile, we created a fingerprint for each of its n words using a Rabin fingerprinting function [20] (with a degree 64 primitive polynomial pA). Once we had the n word fingerprints, we combined them into 5- word phrases. The collection of word fingerprints was treated like a circle (i.e., the first fingerprint follows the last fingerprint) so that every fingerprint started a phrase, and as a result, we obtained n 5-word phrases. Next, we generated n phrase fingerprints for the n 5- word phrases using a Rabin fingerprinting function (with a degree 64 primitive polynomial pB). After we obtained the n phrase fingerprints, we applied 84 unique Rabin fingerprinting functions (with degree 64 primitive polynomials p1, ..., p84) to each of the n phrase fingerprints. For every one of the 84 functions, we stored the smallest of the n fingerprints, and once this process was complete, each spam profile was re- duced to 84 fingerprints, which are referred to as that
+** http://gsoc.cat-v.org/people/mjl/blog/2007/08/06/1_Rabin_fingerprints/
+
+
+h3. Their metrics
+
+* fo / fr ratio
+* at_o / tw_o
+* url_o / tw_o
+* tw_o/day
+* acct_age
+* n_at_o (unique people replied to)
+* # symmetric links
+* tweet similarity (cosine sim. for allpairs of tw.) --
+  - poor man's version: high ratio of #usages to tw_o in wordbag
+* bigrams
+
+* "spamming activity is at its peak around 2pm and from 10pm to 1am, and it is at its 10 lowest levels between 4am and 9am."
+
+
+===========================================================================
+
+Ideas from twitblock.org
+
+  Account has 4 missing profile fields                    Most normal users fill in at least 2 of these fields.
+  Tweets via API                                          This account's last tweet was from an unregistered app. This can happen if you enter your password directly into a bad app. Only use apps that authenticate you via Twitter.com
+
+
+===========================================================================
+
+Quality Component of Trust: The first component of SocialTrust is the quality component Trq(i,t) which provides a snapshot of the trustworthi- ness of the user based on the current state of the social network. Developing a high-quality core trust metric is very important, and so we shall study this component in great detail in the following section. R
+History Component of Trust: The second component considers the evolution of a user’s trust rating. This history component is important for (i) providing an incentive to all users in the network to behave well over time; and (ii) limiting the ability of ma- licious participants to whitewash their trust ratings by repeatedly leaving and re-entering the network.
+Adaptation to Change Component of Trust: The final SocialTrust component tracks shifts in a user’s behavior. This change component can mitigate the impact of malicious participants who build up a good trust rating over time (through the other two compo- nents) and suddenly “defect.”
+
+
+===========================================================================
+
+# Strength of Weak Ties (Granovetter)
+# What is a weak tie?
+
+    * Strength of tie as a linear combination 
+          o F = Frequency of Contact 
+          o E = Emotional intensity 
+          o I = Intimacy (mutual confiding) 
+          o R = Reciprocal services 
+
+          o l_ij = w1*F + w2*E+ w3*I+ w4*R 

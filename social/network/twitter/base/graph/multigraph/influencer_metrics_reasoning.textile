@@ -1,0 +1,119 @@
+Basic dimensions:
+
+Follow graph
+Mention graph
+Retweet graph
+Topic graph
+
+Overt humanity          bio features
+Content
+
+o F = Frequency of Contact 
+o E = Emotional intensity 
+o I = Intimacy (mutual confiding) 
+o R = Reciprocal services 
+
+Influence               [synthesized]
+Organicness
+
+===========================================================================
+
+Outflux                 tw_o/day
+Account age             cr_age in days since Mar 1 2007
+Digits at end of sn     sn_spamminess
+Acct Created time       cr_tod                                  "spamming activity is at its peak around 2pm and from 10pm to 1am, and it is at its 10 lowest levels between 4am and 9am."
+Acct cr_tod vs tz       cr_tod vs tz                            
+Gender                  gender                                  See http://www.census.gov/genealogy/names/
+
+Has picture             has_avatar
+Has bio                 has_bio
+Has url                 has_url
+Has location            has_location
+About URL score         facebook|linkedin|...
+Bio Douchiness          bio_douche
+Bio Spamminess          bio_spam
+Time Zone               tz
+
+Follower ratio          fo / fr
+Follower Quotient       (fo>fr)?((fo-fr)/fo):((fo-fr)/fr)       How balanced is the user's neighborhood?
+discounted_ff_ratio 	[(fo/fr),(fo_i-fo_sy)/(fo_o-fo_sy)].min	
+
+Followers count         fo_i
+Following count         fo_o
+Symmetric Follows       fo_sy
+Mentions in count       at_i
+Mentions out count      at_o
+Symmetric Mentions      at_sy
+Replies in count        re_i
+Replies out count       re_o
+Symmetric Replies       re_sy
+Retweets in count       rt_i
+Retweets out count      rt_o
+Symmetric Retweets      rt_sy
+
+Unique Mentions of	n_at_i		
+Unique Mentioners	n_at_o
+Unique Symm. Mentioners	n_at_s
+Unique Retweeters	n_rt_i		                        If I RT you repeatedly, that's not very interesting.
+Unique Retweeted	n_rt_o
+Unique Symm. RTers      n_rt_s
+Follow & Reply Symm     n_af_s                          	How many users are symmetric followers and symmetric repliers?
+Follower & Mentioner    n_af_i
+Follows & Mentions      n_af_o
+
+Tweets w/ URLs          url_o
+Tweets w/ Hashtags      h_o
+Tweets w/ Smilies       smi_o
+Tweets w/ ex. 140 chars tw140_o
+Unique Hashtags         n_hash  
+Unique Domains Tweeted  n_tw_domain
+Unique Sources          n_src
+Src is 'web'            n_src_is_web
+Src is normal           n_src_is_normal
+URL to non-shortener    tinyurl_o / tw_o                        Some urls should be non-shortened; some should be shortened
+Used /cc or .@          conv_o / tw_o                           The /cc and .@public_reply such are expert conventions
+Geo                     geo
+Tweet Douchiness        tw_douche                               MARKETER_RE = %r{\b((?:affiliate|network|online|internet)\s*(?:marketer|marketing)?|agent|blog(?:ger)?|broker|business\s*(?:owner)?|coach|consultant|entrepren[eu]+r|estate\s*(?:agent|broker)?|expert|follow|free|guru|help(?:ing)?\s*(?:others|people)?|home|investor|make money|market(?:er|ing)\s*(?:consultant)?|media|money|network|others|owner|people|ppc|real(?:tor)?|search|sem|seo|small|social|speaker|success(?:ful)?|web)\b}
+Tweet Spamminess        tw_spam                                 SPAMMER_RE  = %r{\b((?:affiliate|network|online|internet|media)\s*(?:marketer|marketing|business)?|blog|broker|business\s*(?:owner|coach)?|coach|deals|entrepren[eu]+r|estate\s*(?:agent|broker|investor)?|expert|forex\s*(?:trader|trading)?|free|guru|help(?:ing)?\s*(?:others|people)?|home\s*(?:based|business)?|internet\s*entrepreneur|investor|mak(?:e|ing)\s+money|market(?:er|ing)\s*(?:consultant|coach)?|mlm|money\s*(?:make|making|online)?|network|news|people|real(?:tor)?|search|sem|seo|small|social\s*(?:media)?|speaker|success(?:ful)?|tips|traffic|trump\s*network|web|weight\s*(?:loss)?|fast|lose)\b}
+Tweet time of day       twt_utc
+Tweet local time of day twt_loc                                 3 hour chunks
+
+Influx                  tw_i/day                                How many tweets per day does this user see?
+Fo Avg Acct Age         μ<acctage|fo>
+Fo Stdev Acct Age       σ<acctage|fo>
+Fo peak Acct Age                     
+Followers avg acctage   u.followers.sum{|f| f.crage } / u.followers.length
+Tenured Followers       u.followers.count{|f| f.crage > 1 year }  # or maybe instead created before March 2009
+
+===========================================================================
+
+tweet rate vs tr_at     (tw_o/day) vs tr_at
+#repliers vs #folowers  n_at_i / n_fo_o
+Follow rate             fo_o / day
+Follow churn            obs_fo_o / followers_count              Shows them following/unfollowing people
+Reach                   (tw_o/day)*fo_i + (avg_reach)*rt_i                                         
+
+Interesting             at_i    / tw_o                          When this user tweets, how often others reply?
+Sway                    rt_i    / tw_o                          When this user tweets, how often is is retweeted?
+Chattiness              at_o    / tw_o                          What fraction of tweets mention others?
+Enthusiasm              rt_o    / tw_o                          What fraction of tweets rebroadcast anothers'?
+Responsiveness          at_o    / at_i                          How many replies does this user send vs. receive
+Feedness                url_o   / tw_o
+Hashness                h_o     / tw_o
+Twooshbagginess         tw140_o / tw_o
+smilie ratio            smi_o   / tw_o
+Distinct src            n_src   / tw_o
+Engagement              n_at_o / n_at_i
+Aloofness               n_at_o / n_at_i
+Haughtiness             n_rt_o / n_rt_i
+Topicality              tr_fo  / tr_at
+Retweets per 1k Fo	rt_i   / fo_i	
+References per 1k Fo	at_i   / fo_i	
+Retweet Ratio		rt_i   / rt_o	
+Reference Ratio		at_i   / at_o
+
+Dates:
+  SxSW 2008             March 8, 2008 - March 12, 2008
+  SxSW 2007             Mon Mar 19 21:08:24 +0000 2007
+  Tweet #34             Tue Mar 21 21:08:09 +0000 2006
+  Oprah Show            April 17 2009

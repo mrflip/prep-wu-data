@@ -18,14 +18,14 @@ module ExtractTweetTokens
     #  word_tokens
     #
     def process tweet, *_, &block
-        tweet.retweets     &block
-        tweet.replies      &block
-        tweet.atsigns      &block
-        tweet.hashtags     &block
-        tweet.smileys      &block
-        tweet.tweet_urls   &block
-        tweet.stock_tokens &block
-        #tweet.word_tokens  &block
+        # tweet.retweets     &block
+        # tweet.replies      &block
+        # tweet.atsigns      &block
+        # tweet.hashtags     &block
+        # tweet.smileys      &block
+        # tweet.tweet_urls   &block
+        # tweet.stock_tokens &block
+        tweet.word_tokens  &block
     end
   end
 
@@ -39,5 +39,6 @@ Wukong::Script.new(
   nil,
   :partition_fields => 2,  # rsrc, token
   :sort_fields      => 3,  # rsrc, token, tweet_id
-  :reuse_jvms       => true
+  :reuse_jvms       => true,
+  :io_record_percent => 0.4
   ).run
