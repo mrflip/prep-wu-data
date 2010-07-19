@@ -44,7 +44,7 @@ h4. Percentile Rank
 
 Script(s): trst_quotient.rb
 - input:  table with followers versus scaled rank, a ruby hash lookup table that gives percentile rank (made with binning_percentile_estimator.rb)
-- output: table mapping users to trstquotient
+- output: table mapping users to trstquotient and scaled rank
 
 h4. Assemble Flat Table
 
