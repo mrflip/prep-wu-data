@@ -58,8 +58,8 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
   # Write the final table to disk as a ruby hash
   #
   def after_stream
-    table = File.open("trstrank_table.rb", 'w')
-    table << "TRSTRANK_TABLE = " << count_bin.inspect
+    table = File.open("atrank_table.rb", 'w')
+    table << "ATRANK_TABLE = " << count_bin.inspect
     table.close
   end
 
