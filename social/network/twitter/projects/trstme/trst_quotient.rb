@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 
+$: << File.dirname(__FILE__)
+
 require 'rubygems'
 require 'wukong'
-load './trstrank_table.rb'
+require 'trstrank_table'
 
 Float.class_eval do def round_to(x) ((10**x)*self).round end ; end
 
