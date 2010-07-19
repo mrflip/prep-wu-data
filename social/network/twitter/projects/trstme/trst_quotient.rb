@@ -5,6 +5,7 @@ $: << File.dirname(__FILE__)
 require 'rubygems'
 require 'wukong'
 require 'trstrank_table'
+require 'atrank_table'
 
 Float.class_eval do def round_to(x) ((10**x)*self).round end ; end
 
@@ -13,7 +14,8 @@ class Mapper < Wukong::Streamer::RecordStreamer
     return unless args.length == 3
     uid, followers, scaled = args
     rank = (scaled.to_f*10.0).round.to_f/10.0
-    bin  = TRSTRANK_TABLE["#{logbin(followers)}"]
+    # bin  = TRSTRANK_TABLE["#{logbin(followers)}"]
+    bin = ATRANK_TABLE["#{logbin(followers)}"]
     return if bin.blank?
     tq = bin[rank].round
     yield [uid, scaled, tq]
