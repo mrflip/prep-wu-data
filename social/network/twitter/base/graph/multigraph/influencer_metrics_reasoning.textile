@@ -1,3 +1,19 @@
+API Calls
+
+* trstrank              Actionable measure of this person's reputation
+* influence             Detailed information on this person's engagement with the rest of the twitter community
+* conversation          What are the relationship and interactions between these two users?
+* strong links          Who are the people closest to this user?
+* word_users            Who are the people with the strongest ties to this term?
+* user_wordbag          What are this user's interests?
+* comm_wordbag          What are this user's interests, as revealed by what their community talks about?
+
+* utility calls:
+** user_metrics         Given user id, get immutable or advanced info
+** delete events:       :hour => [deletes from that hour]
+
+===========================================================================
+
 Basic dimensions:
 
 Follow graph
