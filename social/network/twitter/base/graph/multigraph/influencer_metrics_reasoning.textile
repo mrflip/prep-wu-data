@@ -4,33 +4,14 @@ API Calls
 * influence             Detailed information on this person's engagement with the rest of the twitter community
 * conversation          What are the relationship and interactions between these two users?
 * strong links          Who are the people closest to this user?
-* word_users            Who are the people with the strongest ties to this term?
 * user_wordbag          What are this user's interests?
-* comm_wordbag          What are this user's interests, as revealed by what their community talks about?
+
+* (word_users)          Who are the people with the strongest ties to this term?
+* (comm_wordbag)        What are this user's interests, as revealed by what their community talks about?
 
 * utility calls:
-** user_metrics         Given user id, get immutable or advanced info
+** user_metrics         Given user id/screen_name/search_id, get id,screen_name,search_id (+...?)
 ** delete events:       :hour => [deletes from that hour]
-
-===========================================================================
-
-Basic dimensions:
-
-Follow graph
-Mention graph
-Retweet graph
-Topic graph
-
-Overt humanity          bio features
-Content
-
-o F = Frequency of Contact 
-o E = Emotional intensity 
-o I = Intimacy (mutual confiding) 
-o R = Reciprocal services 
-
-Influence               [synthesized]
-Organicness
 
 ===========================================================================
 
@@ -45,14 +26,15 @@ Has picture             has_avatar
 Has bio                 has_bio
 Has url                 has_url
 Has location            has_location
-About URL score         facebook|linkedin|...
-Bio Douchiness          bio_douche
-Bio Spamminess          bio_spam
+(About URL score)       facebook|linkedin|...
+Bio Douchiness          bio_douche                              (use regex, below)
+Bio Spamminess          bio_spam                                (use regex, below)
 Time Zone               tz
 
 Follower ratio          fo / fr
 Follower Quotient       (fo>fr)?((fo-fr)/fo):((fo-fr)/fr)       How balanced is the user's neighborhood?
-discounted_ff_ratio 	[(fo/fr),(fo_i-fo_sy)/(fo_o-fo_sy)].min	
+discounted_ff_ratio 	[(fo/fr),(fo_i-fo_sy)/(fo_o-fo_sy)].min
+Follower ratio %ile     %ile[ fo_i / fo_o ]
 
 Followers count         fo_i
 Following count         fo_o
@@ -84,8 +66,8 @@ Tweets w/ ex. 140 chars tw140_o
 Unique Hashtags         n_hash  
 Unique Domains Tweeted  n_tw_domain
 Unique Sources          n_src
-Src is 'web'            n_src_is_web
-Src is normal           n_src_is_normal
+Tweets w/src = 'web'    n_src_is_web /tw_o 
+Tweets w/src is normal  n_src_is_normal / tw_o                  Using the top-N clients, omitting api, bot and 'web' srcs (**before a certain date src is unreliable**)
 URL to non-shortener    tinyurl_o / tw_o                        Some urls should be non-shortened; some should be shortened
 Used /cc or .@          conv_o / tw_o                           The /cc and .@public_reply such are expert conventions
 Geo                     geo
@@ -95,8 +77,8 @@ Tweet time of day       twt_utc
 Tweet local time of day twt_loc                                 3 hour chunks
 
 Influx                  tw_i/day                                How many tweets per day does this user see?
-Fo Avg Acct Age         μ<acctage|fo>
-Fo Stdev Acct Age       σ<acctage|fo>
+Fo Avg Acct Age         mean<acctage|fo>
+Fo Stdev Acct Age       stdev<acctage|fo>
 Fo peak Acct Age                     
 Followers avg acctage   u.followers.sum{|f| f.crage } / u.followers.length
 Tenured Followers       u.followers.count{|f| f.crage > 1 year }  # or maybe instead created before March 2009
@@ -106,7 +88,7 @@ Tenured Followers       u.followers.count{|f| f.crage > 1 year }  # or maybe ins
 tweet rate vs tr_at     (tw_o/day) vs tr_at
 #repliers vs #folowers  n_at_i / n_fo_o
 Follow rate             fo_o / day
-Follow churn            obs_fo_o / followers_count              Shows them following/unfollowing people
+Follow churn            obs_fo_o / followers_count              Shows them following/unfollowing people (douchiness)
 Reach                   (tw_o/day)*fo_i + (avg_reach)*rt_i                                         
 
 Interesting             at_i    / tw_o                          When this user tweets, how often others reply?
@@ -120,9 +102,10 @@ Twooshbagginess         tw140_o / tw_o
 smilie ratio            smi_o   / tw_o
 Distinct src            n_src   / tw_o
 Engagement              n_at_o / n_at_i
-Aloofness               n_at_o / n_at_i
+Aloofness               n_at_o / n_at_i                         (bieber quotient)
 Haughtiness             n_rt_o / n_rt_i
-Topicality              tr_fo  / tr_at
+Rel Reciprocity         st_i    / fo_o                          How many of the people I follow have *strong* links back? (Note: strength of link should prob. be slightly diff for now than for actual strong link call)
+.                       tr_at  / tr_fo
 Retweets per 1k Fo	rt_i   / fo_i	
 References per 1k Fo	at_i   / fo_i	
 Retweet Ratio		rt_i   / rt_o	
@@ -133,3 +116,23 @@ Dates:
   SxSW 2007             Mon Mar 19 21:08:24 +0000 2007
   Tweet #34             Tue Mar 21 21:08:09 +0000 2006
   Oprah Show            April 17 2009
+
+===========================================================================
+
+Basic dimensions:
+
+Follow graph
+Mention graph
+Retweet graph
+Topic graph
+
+Overt humanity          bio features
+Content
+
+o F = Frequency of Contact 
+o E = Emotional intensity 
+o I = Intimacy (mutual confiding) 
+o R = Reciprocal services 
+
+Influence               [synthesized]
+Organicness
