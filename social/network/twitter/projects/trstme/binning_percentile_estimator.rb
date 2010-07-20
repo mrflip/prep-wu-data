@@ -12,7 +12,8 @@ Float.class_eval do def round_to(x) ((10**x)*self).round end ; end
 # Do nothing more than bin users here, arbitrary and probably bad
 #
 class Mapper < Wukong::Streamer::RecordStreamer
-  def process rank, followers
+  def process *args
+    rank, followers = args
     yield [logbin(followers), rank]
   end
 
@@ -23,7 +24,7 @@ class Mapper < Wukong::Streamer::RecordStreamer
       return 0.01
     end
   end
-  
+
 end
 
 
@@ -34,39 +35,41 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
   attr_accessor :count_bin
   def start! *args
     return unless args.length == 2
-    self.count_bin            ||= {}
-    self.count_bin[args[0]]       ||= {}
+    self.count_bin          ||= {}
+    self.count_bin[args[0]] ||= {}
   end
 
   def accumulate *args
     return unless args.length == 2
     bin, rank = args
     rank = (rank.to_f*10.0).round.to_f/10.0
+    self.count_bin ||= {}
+    self.count_bin[bin] ||= {}
     self.count_bin[bin][rank] ||= 0
     self.count_bin[bin][rank] += 1
   end
 
   def finalize
     count_bin[key] = generate_all_pairs(key).inject({}){|h,pair| h[pair.first] = pair.last; h}
-    yield [key, count_bin[key].values.sort.join(",")]
+    # yield [key, count_bin[key].values.sort.join(",")]
   end
 
   #
   # Write the final table to disk as a ruby hash
   #
   def after_stream
-    table = File.open("trstrank_table.rb", 'w')
-    table << "TRSTRANK_TABLE = " << count_bin.inspect
+    table = File.open("atrank_table.rb", 'w')
+    table << "ATRANK_TABLE = " << count_bin.inspect
     table.close
   end
-  
+
   #
-  # Return percentile of a given trstrank for a given follower bracket 
+  # Return percentile of a given trstrank for a given follower bracket
   #
   def percentile bin, rank
-    ((count_less_than(bin,rank) + 0.5*frequency_of(bin,rank))/ total_num(bin) )*100.0 
+    ((count_less_than(bin,rank) + 0.5*frequency_of(bin,rank))/ total_num(bin) )*100.0
   end
-  
+
   #
   # Return the count of values less than rank
   #
@@ -108,7 +111,7 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
     big_list.uniq.sort{|x,y| x.first <=> y.first}
   end
 
-  
+
   #
   # Nothing to see here, move along
   #
@@ -121,11 +124,11 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
     num.times do |i|
       x = pair1.first + (i+1).to_f*dx
       y = m*x + b
-      points << [x,y] 
+      points << [x,y]
     end
     points                                                       # return an array of pairs
   end
-  
+
 end
 
 Wukong::Script.new(Mapper,Reducer).run
