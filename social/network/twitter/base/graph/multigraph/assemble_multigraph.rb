@@ -145,7 +145,7 @@ class MultigraphReducer < Wukong::Streamer::EdgeGroupReducer
   def finalize_inner
     # yield json_for_conversation
     yield edge_weights
-    yield edge.combined_edge_weight
+    # yield edge.combined_edge_weight
   end
 end
 
