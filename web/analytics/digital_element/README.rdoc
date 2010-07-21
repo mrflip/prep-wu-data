@@ -35,3 +35,7 @@ code.  +dump_db+ seems to be the most useful.
 
 It'll write to STDOUT.
 
+More information available at
+
+  http://developers-zone.digitalenvoy.net/
+
