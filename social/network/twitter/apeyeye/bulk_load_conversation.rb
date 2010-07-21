@@ -14,17 +14,22 @@ class BulkLoadConversation < BulkLoadStreamer
 
   def process  user_a_id, user_b_id, conversation_json
     return if conversation_json.blank? || user_a_id.blank? || user_b_id.blank?
-    @db.insert("#{user_a_id}:#{user_b_id}", conversation_json)
+    db.insert("#{user_a_id}:#{user_b_id}", conversation_json)
     log.periodically{ print_progress }
   end
+
+  def db
+    @db ||= TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
+  end
+
 
   # track progress --
   #
   # NOTE: emits to stdout, since other output is going to DB
   #
   def print_progress
-    emit         log.progress(@db.size)
-    $stderr.puts log.progress(@db.size)
+    emit         log.progress(db.size)
+    $stderr.puts log.progress(db.size)
   end
 end
 Wukong::Script.new( BulkLoadConversation, nil ).run

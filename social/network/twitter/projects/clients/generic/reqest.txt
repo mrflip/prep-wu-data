@@ -1,0 +1,59 @@
+user_id
+screen_name
+created_at
+scraped_at
+name
+description
+url
+location
+time_zone
+utc_offset
+followers
+friends
+statuses
+favorites
+profile_background_color
+profile_text_color
+profile_link_color
+profile_sidebar_border_color
+profile_sidebar_fill_color
+profile_background_tile
+profile_background_image_url
+profile_image_url
+protected
+
+  TwitterUser:
+  -- [:user_id,                Integer]
+  -- [:scraped_at,              Bignum]
+  -- [:screen_name,             String]
+  -- [:protected,              Integer]
+  -- [:followers_count,        Integer]
+  -- [:friends_count,          Integer]
+  -- [:statuses_count,         Integer]
+  -- [:favourites_count,       Integer]
+  -- [:created_at,             Bignum]
+
+  TwitterUserStyle (mutable)
+  -- [:user_id,                       Integer]
+  -- [:scraped_at,                     Bignum]
+  -- [:screen_name,                    String]
+  -- [:profile_background_color,       String]
+  -- [:profile_text_color,             String]
+  -- [:profile_link_color,             String]
+  -- [:profile_sidebar_border_color,   String]
+  -- [:profile_sidebar_fill_color,     String]
+  -- [:profile_background_tile,        String]
+  -- [:profile_background_image_url,   String]
+  -- [:profile_image_url,              String]
+
+  TwitterUserProfile (mutable)
+  -- [:user_id,                Integer]
+  -- [:scraped_at,              Bignum]
+  -- [:screen_name,             String]
+  -- [:name,                    String]
+  -- [:url,                     String]
+  -- [:location,                String]
+  -- [:description,             String]
+  -- [:time_zone,               String]
+  -- [:utc_offset,              String]
+

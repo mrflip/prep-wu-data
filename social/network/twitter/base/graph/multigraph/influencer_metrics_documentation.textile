@@ -1,0 +1,102 @@
+
+Feedness                url_o   / tw_o
+
+Interesting             sample_corr * obs_at_i / tw_o           When this user tweets, how often others reply?
+Sway                    sample_corr * obs_rt_i / tw_o           When this user tweets, how often is is retweeted?
+Chattiness              obs_at_o / obs_tw_o                     What fraction of tweets mention others?
+Enthusiasm              obs_rt_o / obs_tw_o                     What fraction of tweets rebroadcast anothers'?
+
+Mention TR              tr_at                                   
+Follower TR             tr_fo                                   
+
+Outflux est             tw_o / day
+Influx est              tw_i / day
+
+Follow churn            obs_fo_o / followers_count              Shows them following/unfollowing people (douchiness)
+Follow rate             fo_o / day
+
+Reach                   (constant) * [ (tw_o/day)*fo_i + (avg_dir_reach)*(sample_corr_factor * rt_i / tw_o) ]
+
+Rel Reciprocity         st_i / fo_o                             How many of the people I follow have *strong* links back? (Note: strength of link should prob. be slightly diff for now than for actual strong link call)
+
+-------------------     ----------------------------            -------------------------
+
+Celebrity(?)            n_at_i / n_at_o                         (bieber quotient)
+Cohesiveness
+
+n_at_o
+at_o
+n_at_i
+at_i
+
+@zappos @'s a lot of people, a very few times
+@zappos is @ by a lot of people, each a very few times
+
+@mrflip @'s a lot of people, each several times
+
+                n_at_o  at_o/n_at_o     n_at_i  at_i/n_at_i
+@zappos         lots    ~1              lots    ~1
+@spamkid63425   lots    ~1              ~0      --
+@mrflip         few     many            few     many
+@justinbieber   few     many            lots    many
+@THE_REAL_SHAQ  medium  lots to some    lots    medium    
+
+
+?? should at_o/n_at_o, or "number replied to more than once"/n_at_o?
+?? how shoud n_at_o be adjusted
+
+
+   n_at_o_more_than_once  / n_at_o
+   at_o / n_at_o
+   n_at_i  <<- nbhd adj?
+   n_at_i / n_at_o      
+   
+   
+   
+
+===========================================================================
+
+h3. Influence Heuristics
+
+* How many people see what you say?
+  - lots of followers
+  - reach
+
+* How many people care / react to what you say?
+  - 
+
+* Are you organic?
+  - healthy neighborhood
+
+
+
+
+h3. Spam Heuristics
+
+
+
+
+===========================================================================
+
+h3. More about Reach
+
+
+say avg_tw_i            500/day
+
+If A has                100 fo_i
+and A tweets            5/day
+then each follower has  1% chance of seeing it
+Thus direct reach is    1.0
+
+If B has                10_000 fo_i
+and B tweets            1/day
+then each has           0.2% chance of seeing it
+Thus direct reach is    20.0
+
+If A is RT'ed           10_000 ppm  rt_i / tw_o
+And avg dir. reach is   2.0
+Then RT reach is        0.01
+
+If B is RT'ed           100 ppm  rt_i / tw_o
+And avg dir. reach is   2.0
+Then RT reach is        0.0001

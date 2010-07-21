@@ -11,8 +11,12 @@ class BulkLoadJsonAttribute < BulkLoadStreamer
 
   def process  screen_name, user_id, json
     next if json.blank? || user_id.blank?
-    @db.insert(user_id, json)
+    db.insert(user_id, json)
     log.periodically{ print_progress }
+  end
+
+  def db
+    @db ||= TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
   end
 
   # track progress --
@@ -20,9 +24,8 @@ class BulkLoadJsonAttribute < BulkLoadStreamer
   # NOTE: emits to stdout, since other output is going to DB
   #
   def print_progress
-    emit         log.progress(@db.size)
-    $stderr.puts log.progress(@db.size)
+    emit         log.progress(db.size)
+    $stderr.puts log.progress(db.size)
   end
-
 end
-Wukong::Script.new( BulkLoadJsonAttribute, nil ).run
+Wukong::Script.new( BulkLoadJsonAttribute, nil, :map_speculative => "false" ).run

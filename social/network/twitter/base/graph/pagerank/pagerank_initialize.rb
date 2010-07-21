@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 require 'wukong'
 
 module PageRank
@@ -26,8 +25,9 @@ module PageRank
   # edge's multiplicity.
   #
   class Reducer < Wukong::Streamer::ListReducer
-    def accumulate src, dest
-      self.values << dest
+    def accumulate *args
+      return unless args.length >= 2
+      self.values << args[1]
     end
 
     # Emit src, initial pagerank, and flattened dests list

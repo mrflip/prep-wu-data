@@ -1,0 +1,59 @@
+h2. TrstRank
+
+Fields:
+
+user_id:     Twitter user api id
+screen_name: Twitter user screen name
+trstrank:    A robust measure of trustworthiness and importance that varies from 0 to 10. Similar to Google's "PageRank" algorithm.
+tq:          Trust quotient. Percentile ranking of a twitter users trstrank with others having a similar follower count, ranges from 0 to 100. A low tq is a strong indication of spam.
+
+<pre><code>
+    {
+        "user_id"     : "34381760",    
+        "screen_name" : "infochimps",
+        "trstrank"    : "3.7",
+        "tq"          : "85"
+    }
+</code></pre>
+
+h4. Parse
+
+Script(s): See parse documentation for scripts and steps involved.
+- input:  raw data from Twitter API
+- output: a_follows_b, a_atsigns_b 
+
+h4. Pagerank Initialize
+
+Script(s): pagerank_initialize.pig
+- input:  relationship object
+- output: initial graph
+
+h4. Pagerank Iterate
+
+Script(s): pagerank_iteration_runner.sh
+- input:  pagerank work directory, num iterations, start iteration
+- output: final graph
+
+h4. Join Pagerank With Followers
+
+Script(s): join_pr_with_followers.pig
+- input:  final pagerank graph, users table
+- output: a flat table with user id and followers versus scaled pagerank
+
+h4. Percentile Rank
+
+Script(s): trst_quotient.rb
+- input:  table with followers versus scaled rank, a ruby hash lookup table that gives percentile rank (made with binning_percentile_estimator.rb)
+- output: table mapping users to trstquotient and scaled rank
+
+h4. Assemble Flat Table
+
+Script(s): assemble_trstrank.pig
+- input: final pagerank graph, users table, trstquotient table
+- ouput: flat table with all fields for trstrank
+
+h4. Jsonize
+
+Script(s): jsonize_trstrank.rb
+- input:  final flat table
+- output: jsonized trstrank ready for api loading

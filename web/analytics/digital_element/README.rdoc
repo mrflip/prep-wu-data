@@ -1,0 +1,41 @@
+{Digital Element}[www.digi-element.com/] provides several databases
+that we want to sell for them.
+
+The databases are in an encrypted, binary format and DE has two tools,
++decrypt_db+ and +dump_db+, which read a license file and raw database
+files (both supplied by DE) and output plain text CSV versions of the
+databases.
+
+DE labels their databases with integer codes.  Their IP => Geo dataset
+is #3.  The license file they provide only authorizes its user for
+certain of these integer-coded datasets.
+
+To extract a dataset, say #3, for which you possess a license file,
+license_key.file, put the license file, the data files for the
+dataset, and the tools in the same directory:
+
+  na_03_db/
+  |-- decrypt_db
+  |-- decrypt_db.log
+  |-- dump_db
+  |-- license_key.file
+  |-- na_03_01.db
+  |-- na_03_01.db.cksum
+  |-- na_03_01.key
+  |-- na_03_01.usum
+  |-- na_03_02.db
+  |-- na_03_02.db.cksum
+  |-- na_03_02.key
+  `-- na_03_02.usum
+
+Navigate to this directory and run the tool, feeding in the dataset's
+code.  +dump_db+ seems to be the most useful.
+
+  $ ./dump_db 03
+
+It'll write to STDOUT.
+
+More information available at
+
+  http://developers-zone.digitalenvoy.net/
+
