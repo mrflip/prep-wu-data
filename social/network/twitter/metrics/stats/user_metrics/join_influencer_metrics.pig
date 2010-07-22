@@ -1,13 +1,15 @@
-%default USER    '/data/sn/tw/fixd/twitter_user_id'
 %default TWOUTIN '/data/sn/tw/fixd/graph/tweet_flux'
 %default DEGDIST '/data/sn/tw/fixd/graph/degree_distribution'
 %default BREAK   '/data/sn/tw/fixd/graph/tweet_flux_breakdown'
-        
-deg_dist = LOAD '$DEGDIST' AS (uid:long, rep_out:long, rep_in:long, ats_out:long, ats_in:long, ret_out:long, ret_in:long, fav_out:long, fav_in:long);
-tw_dist  = LOAD '$TWOUTIN' AS (uid:long, sn:chararray, tw_in:long, tw_out:long, crat:long);
+%default IDS      '/data/sn/tw/fixd/objects/twitter_user_id'
 
-joined   = JOIN tw_dist BY uid, deg_dist BY uid;
+user_id  = LOAD '$IDS'      AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:int, friends:int, statuses:int, favs:int, crat:long, sid:long, isfull:int, health:chararray);        
+deg_dist = LOAD '$DEGDIST'  AS (uid:long, fo_o:long, fo_i:long, at_o:long, at_i:long, re_o:long, re_i:long, rt_o:long, rt_i:long);
+tw_dist  = LOAD '$TWOUTIN'  AS (uid:long, tw_o:long, tw_in:long, tw_out:long);
+
+joined   = JOIN user_id BY uid, deg_dist BY uid, tw_dist BY uid;
 out      = FOREACH joined GENERATE
+                user_id::sn       AS sn,
                 tw_dist::uid      AS uid,
                 tw_dist::sn       AS sn,
                 tw_dist::crat     AS crat,
