@@ -1,6 +1,7 @@
-%default TWOUTIN '/data/sn/tw/fixd/graph/tweets_out_in'
+%default USER    '/data/sn/tw/fixd/twitter_user_id'
+%default TWOUTIN '/data/sn/tw/fixd/graph/tweet_flux'
 %default DEGDIST '/data/sn/tw/fixd/graph/degree_distribution'
-%default METRICS '/data/sn/tw/fixd/graph/raw_user_metrics'
+%default BREAK   '/data/sn/tw/fixd/graph/tweet_flux_breakdown'
         
 deg_dist = LOAD '$DEGDIST' AS (uid:long, rep_out:long, rep_in:long, ats_out:long, ats_in:long, ret_out:long, ret_in:long, fav_out:long, fav_in:long);
 tw_dist  = LOAD '$TWOUTIN' AS (uid:long, sn:chararray, tw_in:long, tw_out:long, crat:long);
