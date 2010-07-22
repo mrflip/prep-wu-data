@@ -34,10 +34,10 @@
 follows       = LOAD '$FOLLOWS'       AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 favorites     = LOAD '$FAVORITES'     AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
 replies       = LOAD '$REPLIES'       AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    in_reply_to_twid:long);
-atsigns       = LOAD '$ATSIGNS'       AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
-retweets      = LOAD '$RETWEETS'      AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    plz_flag:int);
-retweets_name = LOAD '$RETWEETS_NAME' AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    plz_flag:int);
-atsigns_name  = LOAD '$ATSIGNS_NAME'  AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long);
+atsigns       = LOAD '$ATSIGNS'       AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    crat:long);
+retweets      = LOAD '$RETWEETS'      AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    crat:long, plz_flag:int);
+retweets_name = LOAD '$RETWEETS_NAME' AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    crat:long, plz_flag:int);
+atsigns_name  = LOAD '$ATSIGNS_NAME'  AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    crat:long);
 tweet         = LOAD '$TWEET'         AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray,            sid:long,          in_reply_to_uid:long, in_reply_to_sn:chararray,     in_reply_to_sid:long,       text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
 dtweet        = LOAD '$DTWEET'        AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray);                                                                                                                                                                                                          
 search_id     = LOAD '$SID'           AS (rsrc:chararray, sid:long,       sn:chararray);                                                                                                                                                                                                                                           
