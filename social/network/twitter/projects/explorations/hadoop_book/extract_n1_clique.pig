@@ -5,6 +5,13 @@
 %default CLD_ID    '16134540L' -- @cloudera
 REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
+
+-- SCHEMAS
+a_follows_b            = LOAD '$TW_OBJ_PATH/a_follows_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long);
+a_atsigns_b            = LOAD '$TW_OBJ_PATH/a_atsigns_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
+tweet                  = LOAD '$TW_OBJ_PATH/tweet'                 	AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray,            sid:long,          in_re_uid:long, in_re_sn:chararray,     in_re_sid:long,       in_re_twid:long, text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
+twitter_user           = LOAD '$TW_OBJ_PATH/twitter_user'          	AS (rsrc:chararray, uid:long,       scrat:long,            sn:chararray, prot:int,                followers:int,     friends:int,          statuses:int,                 favs:int,                   crat:long);                                                                             
+
 a_follows_b_s          = LOAD '$NBRHOOD_PATH/a_follows_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 a_atsigns_b_s          = LOAD '$NBRHOOD_PATH/a_atsigns_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
 tweet_s                = LOAD '$NBRHOOD_PATH/tweet'                 	AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray,            sid:long,          in_re_uid:long, in_re_sn:chararray,     in_re_sid:long,       text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
@@ -16,7 +23,7 @@ twitter_user_s         = LOAD '$NBRHOOD_PATH/twitter_user'          	AS (rsrc:ch
 --
 
 -- Find all edges that originate in n1
-edges_from_n1_j = JOIN a_follows_b_s BY user_a_id, n1 BY user_id using 'replicated';
+edges_from_n1_j = JOIN a_follows_b BY user_a_id, n1 BY user_id using 'replicated';
 edges_from_n1   = FOREACH edges_from_n1_j GENERATE a_follows_b_s::user_a_id AS user_a_id, a_follows_b_s::user_b_id AS user_b_id;
 
 -- Among those edges, find those that terminate in n1 as well
