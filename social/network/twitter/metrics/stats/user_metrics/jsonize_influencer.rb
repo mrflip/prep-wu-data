@@ -4,7 +4,8 @@
 # Rel Reciprocity         st_i / fo_o                             How many of the people I follow have *strong* links back? (Note: strength of link should prob. be slightly diff for now than for actual strong link call)
 
 require 'rubygems'
-require 'wukong'
+require 'wukong' ; include Wukong
+require 'wuclan/twitter' ; include Wuclan::Twitter::Model
 require 'json'
 
 SAMPLE_CORR_FACTOR = 5.0
@@ -32,13 +33,7 @@ class Influencer < TypedStruct.new(
     [:fo_tr,       Float  ]
     )
 
-  def days_since_created
-    right_now.to_i - created_at.to_i
-  end
-
-  def right_now
-    Time.now.strftime("%Y%m%d%H%M%S")
-  end
+  include ModelCommon
   
   def feedness
     return if (url_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
@@ -67,12 +62,12 @@ class Influencer < TypedStruct.new(
 
   def influx
     return unless tw_i
-    tw_i.to_f / days_since_created.to_f
+    tw_i.to_i / days_since_created
   end
 
   def outflux
     return unless tw_o
-    tw_o.to_f / days_since_created.to_f
+    tw_o.to_i / days_since_created
   end
 
   def follow_churn
@@ -82,7 +77,7 @@ class Influencer < TypedStruct.new(
 
   def follow_rate
     return unless followers
-    followers.to_f / days_since_created.to_f
+    followers.to_i / days_since_created
   end
 
   def reach
