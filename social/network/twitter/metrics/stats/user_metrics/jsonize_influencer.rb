@@ -1,10 +1,5 @@
 #!/usr/bin/env ruby
 
-# Feedness                url_o   / tw_o
-# Interesting             sample_corr * obs_at_i / tw_o           When this user tweets, how often others reply?
-# Sway                    sample_corr * obs_rt_i / tw_o           When this user tweets, how often is is retweeted?
-# Chattiness              obs_at_o / obs_tw_o                     What fraction of tweets mention others?
-# Enthusiasm              obs_rt_o / obs_tw_o                     What fraction of tweets rebroadcast anothers'?
 # Mention TR              tr_at                                   
 # Follower TR             tr_fo                                   
 # Outflux est             tw_o / day
@@ -18,24 +13,88 @@ require 'rubygems'
 require 'wukong'
 require 'json'
 
+SAMPLE_CORR_FACTOR = 5.0
 
 class Influencer < TypedStruct.new(
     [:screen_name, String],
     [:user_id,     Integer],
-    [:feedness,    Float],
-    [:interesting, Float],
-    [:sway,        Float],
-    [:chattiness,  Float],
-    
-class Mapper < Wukong::Streamer::RecordStreamer
-
-  def process sn, uid, fo_o, fo_i, at_o, at_i, re_o, re_i, rt_o, rt_i, tw_o, tw_i, ms_tw_o, hsh_o, sm_o, url_o
-    yield [ screen_name, user_id, hsh.to_json ]
+    [:fo_o,        Integer],
+    [:fo_i,        Integer],
+    [:at_o,        Integer],
+    [:at_i,        Integer],
+    [:re_o,        Integer],
+    [:re_i,        Integer],
+    [:rt_o,        Integer],
+    [:rt_i,        Integer],
+    [:tw_o,        Integer],
+    [:tw_i,        Integer],
+    [:ms_tw_o,     Integer],
+    [:hsh_o,       Integer],
+    [:sm_o,        Integer],
+    [:url_o,       Integer]
+    )
+  
+  def feedness
+    return if (url_o.blank? || tw_o.blank?)
+    url_o.to_f / tw_o.to_f
   end
 
+  def interesting
+    return if (at_i.blank? || tw_o.blank?)
+    (SAMPLE_CORR_FACTOR*at_i.to_f / tw_o.fo_f)
+  end
+
+  def sway
+    return if (rt_i.blank? || tw_o.blank?)
+    (SAMPLE_CORR_FACTOR*rt_i.to_f / tw_o.fo_f)
+  end
+
+  def chattiness
+    return if (at_o.blank? || tw_o.blank?)
+    at_o.to_f / tw_o.to_f
+  end
+
+  def enthusiasm
+    return if (rt_o.blank? || tw_o.blank?)
+    rt_o.to_f / tw_o.to_f
+  end
+
+  def mention_trstrank
+  end
+
+  def follow_trstrank
+  end
+
+  def influx
+  end
+
+  def outflux
+  end
+
+  def follow_churn
+  end
+
+  def follow_rate
+  end
+
+  def reach
+  end
+
+  def reciprocity
+  end
+        
   def right_now
     Time.now.strftime("%Y%m%d")
   end
+end
+
+class Mapper < Wukong::Streamer::StructStreamer
+
+  def process user, *_
+    yield [ screen_name, user_id, hsh.to_json ]
+  end
+
+  
 
 end
 
