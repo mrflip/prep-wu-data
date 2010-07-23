@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-# Outflux est             tw_o / day
-# Influx est              tw_i / day
 # Follow churn            obs_fo_o / followers_count              Shows them following/unfollowing people (douchiness)
 # Follow rate             fo_o / day
 # Reach                   (constant) * [ (tw_o/day)*fo_i + (avg_dir_reach)*(sample_corr_factor * rt_i / tw_o) ]
@@ -16,6 +14,7 @@ SAMPLE_CORR_FACTOR = 5.0
 class Influencer < TypedStruct.new(
     [:screen_name, String ],
     [:user_id,     Integer],
+    [:created_at,  Bignum ],
     [:fo_o,        Integer],
     [:fo_i,        Integer],
     [:at_o,        Integer],
@@ -35,11 +34,11 @@ class Influencer < TypedStruct.new(
     )
 
   def days_since_created
-    right_now - 
+    right_now - created_at
   end
 
   def right_now
-    Time.now.strftime("%Y%m%d")
+    Time.now.strftime("%Y%m%d%h%s")
   end
   
   def feedness
@@ -68,9 +67,13 @@ class Influencer < TypedStruct.new(
   end
 
   def influx
+    return unless tw_i
+    tw_i.to_f / days_since_created.to_f
   end
 
   def outflux
+    return unless tw_o
+    tw_o.to_f / days_since_created.to_f
   end
 
   def follow_churn
