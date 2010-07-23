@@ -43,12 +43,12 @@ class Influencer < TypedStruct.new(
 
   def interesting
     return if (at_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    (SAMPLE_CORR_FACTOR*at_i.to_f / tw_o.to_f)
+    ((SAMPLE_CORR_FACTOR*at_i.to_f) / tw_o.to_f)
   end
 
   def sway
     return if (rt_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    (SAMPLE_CORR_FACTOR*rt_i.to_f / tw_o.to_f)
+    ((SAMPLE_CORR_FACTOR*rt_i.to_f) / tw_o.to_f)
   end
 
   def chattiness
@@ -63,12 +63,16 @@ class Influencer < TypedStruct.new(
 
   def influx
     return unless tw_i
-    tw_i.to_i / days_since_created
+    days = days_since_created
+    return if (days.blank? || days == 0)
+    tw_i.to_i / days
   end
 
   def outflux
     return unless tw_o
-    tw_o.to_i / days_since_created
+    days = days_since_created
+    return if (days.blank? || days == 0)
+    tw_o.to_i / days
   end
 
   def follow_churn
@@ -78,7 +82,9 @@ class Influencer < TypedStruct.new(
 
   def follow_rate
     return unless followers
-    followers.to_i / days_since_created
+    days = days_since_created
+    return if (days.blank? || days == 0)
+    followers.to_i / days
   end
 
   def reach
