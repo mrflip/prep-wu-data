@@ -34,7 +34,12 @@ class Influencer < TypedStruct.new(
     )
 
   include ModelCommon
-  
+
+  def days_since_created *args
+    self.created_at = created_at.to_i
+    super
+  end
+
   def feedness
     return if (url_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     url_o.to_f / tw_o.to_f
