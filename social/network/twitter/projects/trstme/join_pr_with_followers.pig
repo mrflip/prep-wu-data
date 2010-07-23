@@ -2,7 +2,8 @@
 -- Here we join against mapping table to pull out follower counts. Generate
 -- a flat table consisting of followers vs scaled rank.
 --
-REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
+-- REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
+REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar; -- stupid dell_chunk configuration
 
 %default IDS    '/data/sn/tw/fixd/objects/twitter_user_id'
 %default RANK   '/data/sn/tw/fixd/pagerank/a_follows_b'

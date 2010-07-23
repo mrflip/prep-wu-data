@@ -4,7 +4,7 @@
 %default ATRANK  '/data/sn/tw/fixd/pagerank/a_atsigns_b_with_fo'
 %default FORANK  '/data/sn/tw/fixd/pagerank/a_follows_b_with_fo'        
 %default IDS     '/data/sn/tw/fixd/objects/twitter_user_id'
-%default METRICS '/data/sn/tw/fixd/influencer_metrics'        
+%default METRICS '/data/sn/tw/fixd/influencer_metrics'            
 
 ids      = LOAD '$IDS'      AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:int, friends:int, statuses:int, favs:int, crat:long, sid:long, isfull:int, health:chararray);        
 deg_dist = LOAD '$DEGDIST'  AS (uid:long, fo_o:long, fo_i:long, at_o:long, at_i:long, re_o:long, re_i:long, rt_o:long, rt_i:long);

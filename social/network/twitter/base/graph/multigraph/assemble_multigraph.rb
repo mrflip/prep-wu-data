@@ -6,6 +6,8 @@ require 'wuclan/twitter'
 require 'wuclan/twitter/model'               ; include Wuclan::Twitter::Model
 require 'json'
 
+Settings.define :emit_type,   :default => "edge_weights", :type => String, :description => 'Type of thing to emit'
+
 class MultigraphMapper < Wukong::Streamer::StructStreamer
   def process thing, *_
     case thing
@@ -143,9 +145,14 @@ class MultigraphReducer < Wukong::Streamer::EdgeGroupReducer
   end
 
   def finalize_inner
-    # yield json_for_conversation
-    yield edge_weights
-    # yield edge.combined_edge_weight
+    case Settings.emit_type
+    when "edge_weights" then
+      yield edge_weights
+    when "conversations" then
+      yield json_for_conversation
+    when "combined_weights" then
+      yield edge.combined_edge_weight
+    end
   end
 end
 
