@@ -12,6 +12,7 @@ break_dn = LOAD '$BREAK'    AS (uid:long, ms_tw_o:long, hsh_o:long, sm_o:long, u
 user_id  = FOREACH ids GENERATE uid, sn;        
 joined   = JOIN user_id BY uid, deg_dist BY uid, tw_dist BY uid, break_dn BY uid;
 out      = FOREACH joined GENERATE
+                'influencer'      AS rsrc,
                 user_id::sn       AS sn,
                 user_id::uid      AS uid,
                 deg_dist::fo_o    AS fo_o,
@@ -27,7 +28,7 @@ out      = FOREACH joined GENERATE
                 break_dn::ms_tw_o AS ms_tw_o,
                 break_dn::hsh_o   AS hsh_o,
                 break_dn::sm_o    AS sm_o,
-                break_dn::url_o   AS url_o
+                break_dn::url_o   AS url_o      
            ;
 
 rmf $METRICS;
