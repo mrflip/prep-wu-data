@@ -37,7 +37,7 @@ class Influencer < TypedStruct.new(
   end
 
   def right_now
-    Time.now.strftime("%Y%m%d%h%s")
+    Time.now.strftime("%Y%m%d%H%M%S")
   end
   
   def feedness
