@@ -5,11 +5,13 @@ Objects for rectification:
   -- [:user_a_id,    Integer]
   -- [:user_b_name,   String] -- join with users table using this as key
   -- [:tweet_id,     Integer]
+  -- [:created_at,    Bignum]
 
   ARetweetsBName (immutable) -- needs to rectified into ARetweetsB
   -- [:user_a_id,   Integer]
   -- [:user_b_name,  String] -- join with users table using this as key
   -- [:tweet_id,    Integer]
+  -- [:created_at,  Integer],  
   -- [:please_flag, Integer]
       
   tweet-Noid (immutable)
@@ -56,16 +58,19 @@ Relationship models:
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
   -- [:in_reply_to_tweet_id,   Integer]
+  -- [:created_at,             Integer]
 
   AAtsignsB (immutable)
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
+  -- [:created_at,             Integer]
 
   ARetweetsB (immutable)
   -- [:user_a_id,              Integer]
   -- [:user_b_id,              Integer]
   -- [:tweet_id,               Integer]
+  -- [:created_at,             Integer]
   -- [:please_flag,            Integer]
 
 Tweet Models:

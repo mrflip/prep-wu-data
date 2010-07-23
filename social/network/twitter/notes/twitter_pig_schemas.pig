@@ -6,13 +6,14 @@
 %default TW_OBJ_PATH '/data/sn/tw/fixd/objects'                   
         
 -- SCHEMAS
+
 follows                = LOAD '$TW_OBJ_PATH/a_follows_b'            	AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 favorites              = LOAD '$TW_OBJ_PATH/a_favorites_b'          	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
 replies                = LOAD '$TW_OBJ_PATH/a_replies_b'            	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    in_reply_to_twid:long);
-atsigns                = LOAD '$TW_OBJ_PATH/a_atsigns_b'            	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
-retweets               = LOAD '$TW_OBJ_PATH/a_retweets_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    plz_flag:int);
-retweets_name          = LOAD '$TW_OBJ_PATH/a_retweets_b_name'      	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    plz_flag:int);
-atsigns_name           = LOAD '$TW_OBJ_PATH/a_atsigns_b_name'       	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long);
+atsigns                = LOAD '$TW_OBJ_PATH/a_atsigns_b'            	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    crat:long);
+retweets               = LOAD '$TW_OBJ_PATH/a_retweets_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    crat:long,    plz_flag:int);
+retweets_name          = LOAD '$TW_OBJ_PATH/a_retweets_b_name'      	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    crat:long,    plz_flag:int);
+atsigns_name           = LOAD '$TW_OBJ_PATH/a_atsigns_b_name'       	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    crat:long);
 tweet                  = LOAD '$TW_OBJ_PATH/tweet'                  	AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray,            sid:long,          in_reply_to_uid:long, in_reply_to_sn:chararray,     in_reply_to_sid:long,       in_re_twid:long, text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
 dtweet                 = LOAD '$TW_OBJ_PATH/delete_tweet'           	AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray);                                                                                                                                                                                                          
 search_id              = LOAD '$TW_OBJ_PATH/twitter_user_search_id' 	AS (rsrc:chararray, sid:long,       sn:chararray);                                                                                                                                                                                                                                           
@@ -30,15 +31,14 @@ word_token             = LOAD '$TW_OBJ_PATH/word_token'             	AS (rsrc:ch
 geo                    = LOAD '$TW_OBJ_PATH/geo'                    	AS (rsrc:chararray, twid:long,      uid:long,              sn:chararray, crat:long,               lat:float,         lon:float,            place_id:chararray);
 mapping                = LOAD '/data/sn/tw/fixd/users_table'        	AS (sn:chararray,   uid:long,       sid:long);
 
-
 -- -- SCHEMAS
 -- a_follows_b            = LOAD '$TW_OBJ_PATH/a_follows_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 -- a_favorites_b          = LOAD '$TW_OBJ_PATH/a_favorites_b'         	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
 -- a_replies_b            = LOAD '$TW_OBJ_PATH/a_replies_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    in_re_twid:long);
--- a_atsigns_b            = LOAD '$TW_OBJ_PATH/a_atsigns_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long);
--- a_retweets_b           = LOAD '$TW_OBJ_PATH/a_retweets_b'          	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    plz_flag:int);
--- a_retweets_b_name      = LOAD '$TW_OBJ_PATH/a_retweets_b_name'     	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    plz_flag:int);
--- a_atsigns_b_name       = LOAD '$TW_OBJ_PATH/a_atsigns_b_name'      	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long);
+-- a_atsigns_b            = LOAD '$TW_OBJ_PATH/a_atsigns_b'           	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    crat:long);
+-- a_retweets_b           = LOAD '$TW_OBJ_PATH/a_retweets_b'          	AS (rsrc:chararray, user_a_id:long, user_b_id:long,        twid:long,    crat:long,    plz_flag:int);
+-- a_retweets_b_name      = LOAD '$TW_OBJ_PATH/a_retweets_b_name'     	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    crat:long,    plz_flag:int);
+-- a_atsigns_b_name       = LOAD '$TW_OBJ_PATH/a_atsigns_b_name'      	AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long,    crat:long);
 -- tweet                  = LOAD '$TW_OBJ_PATH/tweet'                 	AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray,            sid:long,          in_re_uid:long, in_re_sn:chararray,     in_re_sid:long,       in_re_twid:long, text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
 -- delete_tweet           = LOAD '$TW_OBJ_PATH/delete_tweet'          	AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray);                                                                                                                                                                                                          
 -- twitter_user_search_id = LOAD '$TW_OBJ_PATH/twitter_user_search_id'	AS (rsrc:chararray, sid:long,       sn:chararray);                                                                                                                                                                                                                                           
@@ -55,27 +55,3 @@ mapping                = LOAD '/data/sn/tw/fixd/users_table'        	AS (sn:char
 -- word_token             = LOAD '$TW_OBJ_PATH/word_token'            	AS (rsrc:chararray, text:chararray, uid:long,              twid:long,    crat:long);                                                          
 -- geo                    = LOAD '$TW_OBJ_PATH/geo'                   	AS (rsrc:chararray, twid:long,      uid:long,              sn:chararray, crat:long,               lat:float,         lon:float,            place_id:chararray);
 -- ixd/users_table        = LOAD '/data/sn/tw/fixd/users_table'       	AS (sn:chararray,   uid:long,       sid:long);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
