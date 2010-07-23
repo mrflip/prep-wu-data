@@ -15,12 +15,13 @@ fo_rank  = LOAD '$FORANK'   AS (uid:long, followers:long, rank:float);
 
 cut_at   = FOREACH at_rank GENERATE uid, rank;
 cut_fo   = FOREACH fo_rank GENERATE uid, rank;
-user_id  = FOREACH ids GENERATE uid, sn;        
+user_id  = FOREACH ids GENERATE uid, sn, crat;        
 joined   = JOIN user_id BY uid, deg_dist BY uid, tw_dist BY uid, break_dn BY uid, cut_at BY uid, cut_fo BY uid;
 out      = FOREACH joined GENERATE
                 'influencer'      AS rsrc,
                 user_id::sn       AS sn,
                 user_id::uid      AS uid,
+                user_id::crat     AS crat,
                 deg_dist::fo_o    AS fo_o,
                 deg_dist::fo_i    AS fo_i,
                 deg_dist::at_o    AS at_o,

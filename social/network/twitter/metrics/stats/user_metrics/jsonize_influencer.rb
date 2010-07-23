@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-# Mention TR              tr_at                                   
-# Follower TR             tr_fo                                   
 # Outflux est             tw_o / day
 # Influx est              tw_i / day
 # Follow churn            obs_fo_o / followers_count              Shows them following/unfollowing people (douchiness)
@@ -16,7 +14,7 @@ require 'json'
 SAMPLE_CORR_FACTOR = 5.0
 
 class Influencer < TypedStruct.new(
-    [:screen_name, String],
+    [:screen_name, String ],
     [:user_id,     Integer],
     [:fo_o,        Integer],
     [:fo_i,        Integer],
@@ -31,8 +29,18 @@ class Influencer < TypedStruct.new(
     [:ms_tw_o,     Integer],
     [:hsh_o,       Integer],
     [:sm_o,        Integer],
-    [:url_o,       Integer]
+    [:url_o,       Integer],
+    [:at_tr,       Float  ],
+    [:fo_tr,       Float  ]
     )
+
+  def days_since_created
+    right_now - 
+  end
+
+  def right_now
+    Time.now.strftime("%Y%m%d")
+  end
   
   def feedness
     return if (url_o.blank? || tw_o.blank?)
@@ -59,12 +67,6 @@ class Influencer < TypedStruct.new(
     rt_o.to_f / tw_o.to_f
   end
 
-  def mention_trstrank
-  end
-
-  def follow_trstrank
-  end
-
   def influx
   end
 
@@ -83,9 +85,7 @@ class Influencer < TypedStruct.new(
   def reciprocity
   end
         
-  def right_now
-    Time.now.strftime("%Y%m%d")
-  end
+  
 end
 
 class Mapper < Wukong::Streamer::StructStreamer
