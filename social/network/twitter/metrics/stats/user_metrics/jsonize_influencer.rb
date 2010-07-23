@@ -47,12 +47,12 @@ class Influencer < TypedStruct.new(
 
   def interesting
     return if (at_i.blank? || tw_o.blank?)
-    (SAMPLE_CORR_FACTOR*at_i.to_f / tw_o.fo_f)
+    (SAMPLE_CORR_FACTOR*at_i.to_f / tw_o.to_f)
   end
 
   def sway
     return if (rt_i.blank? || tw_o.blank?)
-    (SAMPLE_CORR_FACTOR*rt_i.to_f / tw_o.fo_f)
+    (SAMPLE_CORR_FACTOR*rt_i.to_f / tw_o.to_f)
   end
 
   def chattiness
@@ -77,7 +77,7 @@ class Influencer < TypedStruct.new(
 
   def follow_churn
     return if (fo_o.blank? || followers.blank?)
-    fo_o.fo_f / followers.to_f
+    fo_o.to_f / followers.to_f
   end
 
   def follow_rate
