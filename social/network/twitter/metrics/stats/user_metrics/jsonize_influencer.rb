@@ -41,27 +41,27 @@ class Influencer < TypedStruct.new(
   end
   
   def feedness
-    return if (url_o.blank? || tw_o.blank?)
+    return if (url_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     url_o.to_f / tw_o.to_f
   end
 
   def interesting
-    return if (at_i.blank? || tw_o.blank?)
+    return if (at_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     (SAMPLE_CORR_FACTOR*at_i.to_f / tw_o.to_f)
   end
 
   def sway
-    return if (rt_i.blank? || tw_o.blank?)
+    return if (rt_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     (SAMPLE_CORR_FACTOR*rt_i.to_f / tw_o.to_f)
   end
 
   def chattiness
-    return if (at_o.blank? || tw_o.blank?)
+    return if (at_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     at_o.to_f / tw_o.to_f
   end
 
   def enthusiasm
-    return if (rt_o.blank? || tw_o.blank?)
+    return if (rt_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     rt_o.to_f / tw_o.to_f
   end
 
@@ -107,7 +107,7 @@ class Influencer < TypedStruct.new(
       :reach        => reach,
       :reciprocity  => reciprocity,
       :at_trstrank  => at_tr,
-      :fo_frstrank  => fo_tr
+      :fo_trstrank  => fo_tr
     }
   end
 
