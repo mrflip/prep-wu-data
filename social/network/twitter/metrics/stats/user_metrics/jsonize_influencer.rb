@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-# Follow churn            obs_fo_o / followers_count              Shows them following/unfollowing people (douchiness)
-# Follow rate             fo_o / day
 # Reach                   (constant) * [ (tw_o/day)*fo_i + (avg_dir_reach)*(sample_corr_factor * rt_i / tw_o) ]
 # Rel Reciprocity         st_i / fo_o                             How many of the people I follow have *strong* links back? (Note: strength of link should prob. be slightly diff for now than for actual strong link call)
 
@@ -15,6 +13,7 @@ class Influencer < TypedStruct.new(
     [:screen_name, String ],
     [:user_id,     Integer],
     [:created_at,  Bignum ],
+    [:followers,   Integer],
     [:fo_o,        Integer],
     [:fo_i,        Integer],
     [:at_o,        Integer],
@@ -77,9 +76,13 @@ class Influencer < TypedStruct.new(
   end
 
   def follow_churn
+    return if (fo_o.blank? || followers.blank?)
+    fo_o.fo_f / followers.to_f
   end
 
   def follow_rate
+    return unless followers
+    followers.to_f / days_since_created.to_f
   end
 
   def reach
@@ -87,18 +90,39 @@ class Influencer < TypedStruct.new(
 
   def reciprocity
   end
-        
+
+  def to_hash
+    {
+      :user_id      => user_id,
+      :screen_name  => screen_name,
+      :feedness     => feedness,
+      :interesting  => interesting,
+      :sway         => sway,
+      :chattiness   => chattiness,
+      :enthusiasm   => enthusiasm,
+      :influx       => influx,
+      :outflux      => outflux,
+      :follow_churn => follow_churn,
+      :follow_rate  => follow_rate,
+      :reach        => reach,
+      :reciprocity  => reciprocity,
+      :at_trstrank  => at_tr,
+      :fo_frstrank  => fo_tr
+    }
+  end
+
+  def to_json
+    self.to_hash.to_json
+  end
   
 end
 
 class Mapper < Wukong::Streamer::StructStreamer
 
   def process user, *_
-    yield [ screen_name, user_id, hsh.to_json ]
+    yield [user.user_id, user.to_json]
   end
-
   
-
 end
 
 
