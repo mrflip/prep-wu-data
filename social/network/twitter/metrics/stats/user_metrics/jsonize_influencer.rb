@@ -33,7 +33,7 @@ class Influencer < TypedStruct.new(
     )
 
   def days_since_created
-    right_now - created_at
+    right_now.to_i - created_at.to_i
   end
 
   def right_now
