@@ -2,7 +2,7 @@
 
 # Run this with 2 mappers and 2 reducers on m1.large
 #   (you can force this with something like -Dmapred.max.reduces.per.node=2 -Dmapred.max.maps.per.node=2)
-export PIG_OPTS='-Dio.sort.record.percent=0.43 -Dio.sort.mb=530 -Dio.sort.factor=32 -Dio.sort.spill.percent=0.88 -Dmapred.job.reuse.jvm.num.tasks=-1'
+# export PIG_OPTS='-Dio.sort.record.percent=0.43 -Dio.sort.mb=530 -Dio.sort.factor=32 -Dio.sort.spill.percent=0.88 -Dmapred.job.reuse.jvm.num.tasks=-1'
 
 # Directory to pagerank on.
 work_dir=$1     ; shift
@@ -24,5 +24,5 @@ for (( iter=0 ; "$iter" < "$n_iters" ; iter++ )) ; do
   echo -e "Iteration $(( $iter + 1 )) / $n_iters:\t `basename $curr_iter_file` => `basename $next_iter_file`"
   echo -e "\n****************************"
   # pig -param CURR_ITER_FILE=$curr_iter_file -param NEXT_ITER_FILE=$next_iter_file $script_dir/pagerank_cogroup.pig
-  pig -x local -param CURR_ITER_FILE=$curr_iter_file -param NEXT_ITER_FILE=$next_iter_file $script_dir/pagerank_cogroup.pig
+  pig -param CURR_ITER_FILE=$curr_iter_file -param NEXT_ITER_FILE=$next_iter_file $script_dir/pagerank_cogroup.pig
 done

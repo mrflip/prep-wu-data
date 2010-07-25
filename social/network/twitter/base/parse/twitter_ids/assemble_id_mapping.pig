@@ -48,7 +48,7 @@ all_user_info_f3     = FOREACH all_user_info_j3
                            sid         = (all_user_info_f2::sid        IS NOT NULL ? all_user_info_f2::sid        : twitter_user_id_with_sn::sid);
                            is_full     = (all_user_info_f2::is_full    IS NOT NULL ? all_user_info_f2::is_full    : twitter_user_id_with_sn::is_full);
                            health      = (all_user_info_f2::health     IS NOT NULL ? all_user_info_f2::health     : twitter_user_id_with_sn::health);   
-                           GENERATE 'twitter_user_id' AS rsrc:chararray, user_id AS uid, scraped_at AS scrat, sn AS sn, protected AS prot, followers AS followers, friends AS friends, statuses AS statuses, favourites AS favourites, crat AS crat, sid AS sid, is_full AS is_full, health AS health;
+                           GENERATE 'twitter_user_id' AS rsrc:chararray, user_id AS uid, scraped_at AS scrat, screen_name AS sn, protected AS prot, followers AS followers, friends AS friends, statuses AS statuses, favourites AS favourites, crat AS crat, sid AS sid, is_full AS is_full, health AS health;
                        };
 
 all_user_info        = ORDER all_user_info_f3 BY scrat ASC, sn ASC, uid ASC;
