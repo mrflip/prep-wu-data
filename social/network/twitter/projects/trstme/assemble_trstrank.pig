@@ -3,8 +3,7 @@
 -- and smash them together.
 --
 
--- REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
-REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
 %default IDS      '/data/sn/tw/fixd/objects/twitter_user_id'
 %default FO_PRCNT '/data/sn/tw/fixd/pagerank/a_follows_b_percentile'
