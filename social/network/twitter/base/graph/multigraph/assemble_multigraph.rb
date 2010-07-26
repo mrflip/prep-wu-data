@@ -145,7 +145,7 @@ class MultigraphReducer < Wukong::Streamer::EdgeGroupReducer
   end
 
   def finalize_inner
-    case Settings.emit_type
+    case options.emit_type
     when "edge_weights" then
       yield edge_weights
     when "conversations" then

@@ -15,9 +15,9 @@ fo_rank  = LOAD '$FORANK'   AS (uid:long, followers:long, rank:float);
 
 cut_at   = FOREACH at_rank GENERATE uid, rank;
 cut_fo   = FOREACH fo_rank GENERATE uid, rank;
-user_id  = FOREACH ids GENERATE uid, sn, followers, crat;        
+user_id  = FOREACH ids GENERATE uid, sn, followers, crat;
 joined   = JOIN user_id BY uid, deg_dist BY uid, tw_dist BY uid, break_dn BY uid, cut_at BY uid, cut_fo BY uid;
-out      = FOREACH joined GENERATE
+flat     = FOREACH joined GENERATE
                 'influencer'       AS rsrc,
                 user_id::sn        AS sn,
                 user_id::uid       AS uid,
@@ -41,5 +41,6 @@ out      = FOREACH joined GENERATE
                 cut_fo::rank       AS fo_tr
            ;
 
+out = FILTER flat BY sn != '0';
 rmf $METRICS;
 STORE out INTO '$METRICS';
