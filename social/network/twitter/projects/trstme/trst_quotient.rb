@@ -11,12 +11,13 @@ Settings.define :rank_type,   :default => "a_follows_b", :type => String, :descr
 
 Float.class_eval do def round_to(x) ((10**x)*self).round end ; end
 
+# FIXME: dont check options every f*ing iteration
 class Mapper < Wukong::Streamer::RecordStreamer
   def process *args
     return unless args.length == 3
     uid, followers, scaled = args
     rank = (scaled.to_f*10.0).round.to_f/10.0
-    case Settings.rank_type
+    case options.rank_type
     when "a_follows_b" then
       bin  = TRSTRANK_TABLE["#{logbin(followers)}"]
     when "a_atsigns_b" then

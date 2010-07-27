@@ -8,6 +8,7 @@ require 'wukong'
 require 'json'
 
 SAMPLE_CORR_FACTOR = 5.0
+Float.class_eval do def round_to(x) ((10**x)*self).round.to_f / (10**x) end ; end
 
 class Influencer < TypedStruct.new(
     [:screen_name, String ],
@@ -33,58 +34,59 @@ class Influencer < TypedStruct.new(
     )
 
   def days_since_created
+    return if created_at.blank?
     (DateTime.now - DateTime.parse(created_at)).to_f
   end
 
   def feedness
     return if (url_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    url_o.to_f / tw_o.to_f
+    (url_o.to_f / tw_o.to_f).round_to(2)
   end
 
   def interesting
     return if (at_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    ((SAMPLE_CORR_FACTOR*at_i.to_f) / tw_o.to_f)
+    ((SAMPLE_CORR_FACTOR*at_i.to_f) / tw_o.to_f).round_to(2)
   end
 
   def sway
     return if (rt_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    ((SAMPLE_CORR_FACTOR*rt_i.to_f) / tw_o.to_f)
+    ((SAMPLE_CORR_FACTOR*rt_i.to_f) / tw_o.to_f).round_to(2)
   end
 
   def chattiness
     return if (at_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    at_o.to_f / tw_o.to_f
+    (at_o.to_f / tw_o.to_f).round_to(2)
   end
 
   def enthusiasm
     return if (rt_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    rt_o.to_f / tw_o.to_f
+    (rt_o.to_f / tw_o.to_f).round_to(2)
   end
 
   def influx
     return unless tw_i
     days = days_since_created
     return if (days.blank? || days == 0)
-    tw_i.to_i / days
+    (tw_i.to_i / days).round_to(2)
   end
 
   def outflux
     return unless tw_o
     days = days_since_created
     return if (days.blank? || days == 0)
-    tw_o.to_i / days
+    (tw_o.to_i / days).round_to(2)
   end
 
   def follow_churn
-    return if (fo_o.blank? || followers.blank?)
-    fo_o.to_f / followers.to_f
+    return if (fo_o.blank? || followers.blank? || followers.to_f == 0.0 )
+    (fo_o.to_f / followers.to_f).round_to(2)
   end
 
   def follow_rate
     return unless followers
     days = days_since_created
     return if (days.blank? || days == 0)
-    followers.to_i / days
+    (followers.to_i / days).round_to(2)
   end
 
   def reach
@@ -108,9 +110,19 @@ class Influencer < TypedStruct.new(
       :follow_rate  => follow_rate,
       :reach        => reach,
       :reciprocity  => reciprocity,
-      :at_trstrank  => at_tr,
-      :fo_trstrank  => fo_tr
-    }
+      :at_trstrank  => at_trstrank,
+      :fo_trstrank  => fo_trstrank
+    }.compact_blank!
+  end
+
+  def at_trstrank
+    return if at_tr.blank?
+    at_tr.to_f.round_to(2)
+  end
+
+  def fo_trstrank
+    return if fo_tr.blank?
+    fo_tr.to_f.round_to(2)
   end
 
   def to_json

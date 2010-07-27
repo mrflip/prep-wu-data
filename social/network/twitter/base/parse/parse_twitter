@@ -5,20 +5,21 @@
 # heaps we have. Feel free to pass in a glob, just remember to escape
 # it properly.
 #
-whichapi=${1}   ; shift # the type of twitter data heap to parse {api|stream|search}
-parse_time=${1} ; shift # the date to parse, ie. 201005\* or 20091202
+whichapi=$1   ; shift # the type of twitter data heap to parse {api|stream|search}
+parse_time=$1 ; shift # the date to parse, ie. 201005\* or 20091202
+hdfsdir=$1    ; shift # ouput location on hdfs
 
 # s3 path to input data
 s3bucket=s3n://monkeyshines.infochimps.org/data/ripd/com.tw
-# path to parsed data on hdfs
-hdfsdir=/data/sn/tw/rawd/parsed
 
-if [ "$whichapi" == "" ] ; then echo -e "\nUsage: $0 parse_type date_to_parse\n\n\texample: $0 api 20100502\n" ; exit ; fi 
+
+if [ "$whichapi" == "" ] ; then echo -e "\nUsage: $0 parse_type date_to_parse\n\n\texample: $0 api 20100502 /data/sn/tw/rawd/parsed\n" ; exit ; fi 
 if [ "$whichapi" != "api" ] ; then
   input=${s3bucket}/com.twitter.${whichapi}/${parse_time}
 else
   input=${s3bucket}/com.twitter/${parse_time}
 fi
+
 pattern="\*" # to remove glob if there is one
 output=${hdfsdir}/${whichapi}/${parse_time%$pattern}
 
@@ -28,4 +29,4 @@ output=${hdfsdir}/${whichapi}/${parse_time%$pattern}
 # exec hdp-du ${input} 1>/dev/null
 #
 echo parse_twitter_${whichapi}_requests.rb --rm --run ${input} ${output} "$@"
-exec ./parse_twitter_${whichapi}_requests.rb --rm --run ${input} ${output} "$@"
+#exec ./parse_twitter_${whichapi}_requests.rb --rm --run ${input} ${output} "$@"

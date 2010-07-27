@@ -2,9 +2,7 @@
 -- Take users table, output of pagerank, and result of percentile ranking
 -- and smash them together.
 --
-
--- REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
-REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
 %default IDS      '/data/sn/tw/fixd/objects/twitter_user_id'
 %default FO_PRCNT '/data/sn/tw/fixd/pagerank/a_follows_b_percentile'
@@ -37,11 +35,13 @@ intermed = FOREACH together
 
 joined   = JOIN intermed BY uid, mapping BY uid;
 flat     = FOREACH joined GENERATE
-                   mapping::sn        AS sn,
-                   mapping::uid       AS uid,
-                   intermed::trstrank AS trstrank,
-                   (int)intermed::tq       AS tq:int
+                   mapping::sn  AS sn,
+                   mapping::uid AS uid,
+                   intermed::trstrank    AS trstrank,
+                   (int)intermed::tq     AS tq:int
            ;
 
+out      = FILTER flat BY sn != '0';
+
 rmf $FINAL;
-STORE flat INTO '$FINAL'; -- [screen_name, user_id, trstrank, tq] 
+STORE out INTO '$FINAL'; -- [screen_name, user_id, trstrank, tq] 
