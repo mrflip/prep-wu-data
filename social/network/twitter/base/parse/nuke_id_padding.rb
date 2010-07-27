@@ -11,6 +11,11 @@ class ZeroPaddingDeath < Wukong::Streamer::StructStreamer
     when AFollowsB then
       thing.user_a_id = thing.user_a_id.to_i
       thing.user_b_id = thing.user_b_id.to_i
+    when Tweet then
+      thing.user_id               = thing.user_id.to_i
+      thing.tweet_id              = thing.tweet_id.to_i
+      thing.in_reply_to_user_id   = thing.in_reply_to_user_id.to_i
+      thing.in_reply_to_status_id = thing.in_reply_to_status_id.to_i
     else
       thing.user_id = thing.user_id.to_i
     end
