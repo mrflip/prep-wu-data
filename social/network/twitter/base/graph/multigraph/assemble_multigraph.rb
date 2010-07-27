@@ -66,18 +66,23 @@ class MultigraphEdge < Struct.new(:user_a, :user_b, :fo_i, :fo_o, :at_i, :at_o, 
     ]
   end
 
+  #
+  # Arbitrary
+  #
   def combined_edge_weight
-    [
+    a = [
       ( (a_follows_b? ? EDGE_WEIGHT_FO : 0)       +
         (EDGE_WEIGHT_AT * Math.sqrt(at_o.length)) +
         (EDGE_WEIGHT_RT * Math.sqrt(rt_o.length))
-      ),
+        ),
       ( (b_follows_a? ? EDGE_WEIGHT_FO : 0)       +
         (EDGE_WEIGHT_AT * Math.sqrt(at_i.length)) +
         (EDGE_WEIGHT_RT * Math.sqrt(rt_i.length))
-      )
+        )
     ]
+    a.inject(0.0){|avg,x| avg += x; avg / a.size.to_f}
   end
+
 end
 
 #
@@ -145,13 +150,13 @@ class MultigraphReducer < Wukong::Streamer::EdgeGroupReducer
   end
 
   def finalize_inner
-    case Settings.emit_type
+    case options.emit_type
     when "edge_weights" then
       yield edge_weights
     when "conversations" then
       yield json_for_conversation
     when "combined_weights" then
-      yield edge.combined_edge_weight
+      yield [ edge.user_a, edge.user_b, edge.combined_edge_weight ]
     end
   end
 end
