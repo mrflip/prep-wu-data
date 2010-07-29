@@ -166,5 +166,6 @@ Wukong::Script.new(
   MultigraphReducer,
   :partition_fields => 1,
   :sort_fields      => 2,
-  :io_record_percent => 0.3
+  :io_record_percent => 0.3,
+  :map_speculative => "false"
   ).run

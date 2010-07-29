@@ -21,16 +21,15 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
   end
   
   def start! ip_key, *args
-    @record = {}
-    @record[:census_data] = []
+    @record = []
   end
 
   def accumulate ip_key, *args
-    @record[:census_data] << [args.first.to_i, RawIPCensus.new(*args[1..-1]).to_hash.reject{|k,v| HOLD_FIELDS.include?(k) }.compact_blank]
+    @record << [args.first.to_i, RawIPCensus.new(*args[1..-1]).to_hash.reject{|k,v| HOLD_FIELDS.include?(k) }.compact_blank.to_json]
   end
 
   def finalize
-    yield [key, record.to_json]
+    yield [key, record.sort{|x,y| x <=> y }.map{|t| t.join(",")}]
   end
   
 end
