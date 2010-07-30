@@ -12,7 +12,7 @@ require File.dirname(__FILE__)+'/bulk_load_streamer'
 class BulkLoadJsonAttribute < BulkLoadStreamer
   def process user_id, json
     return if json.blank? || user_id.blank?
-    db.insert(user_id.to_i, fix_json(json))
+    db.insert(user_id, fix_json(json))
     log.periodically{ print_progress }
   end
 
