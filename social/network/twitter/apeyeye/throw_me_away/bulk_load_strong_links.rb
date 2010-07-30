@@ -2,7 +2,7 @@
 
 require 'rubygems'
 require 'json'
-require File.dirname(__FILE__)+'./bulk_load_streamer'
+require File.dirname(__FILE__)+'/bulk_load_streamer'
 
 #
 # to_i's on user ids
