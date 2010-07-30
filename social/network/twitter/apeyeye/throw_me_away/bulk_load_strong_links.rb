@@ -23,7 +23,7 @@ class BulkLoadJsonAttribute < BulkLoadStreamer
   def fix_json json_string
     hsh = JSON.parse(json_string)
     hsh["user_id"] = hsh["user_id"].to_i
-    hsh["strong_links"].map!{|pair| pair = [pair["user_id"].to_i, pair["weight"].to_f]; pair[1] = 0.05 if pair.last == 0.0; pair }
+    hsh["strong_links"].map!{|pair| pair = [pair["user_id"].to_i, pair["weight"].to_f]; pair[1] = 0.05 if pair.last == 0.0; pair }.reject{|x| x.first == hsh["user_id"]} unless hsh["strong_links"].blank?
     hsh.to_json
   end
   
