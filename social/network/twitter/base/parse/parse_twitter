@@ -12,6 +12,7 @@ hdfsdir=$1    ; shift # ouput location on hdfs
 # s3 path to input data
 s3bucket=s3n://monkeyshines.infochimps.org/data/ripd/com.tw
 
+here=`dirname "$0"`
 
 if [ "$whichapi" == "" ] ; then echo -e "\nUsage: $0 parse_type date_to_parse\n\n\texample: $0 api 20100502 /data/sn/tw/rawd/parsed\n" ; exit ; fi 
 if [ "$whichapi" != "api" ] ; then
@@ -29,4 +30,4 @@ output=${hdfsdir}/${whichapi}/${parse_time%$pattern}
 # exec hdp-du ${input} 1>/dev/null
 #
 echo parse_twitter_${whichapi}_requests.rb --rm --run ${input} ${output} "$@"
-#exec ./parse_twitter_${whichapi}_requests.rb --rm --run ${input} ${output} "$@"
+exec ruby $here/parse_twitter_${whichapi}_requests.rb --rm --run ${input} ${output} "$@"
