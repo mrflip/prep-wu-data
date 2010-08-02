@@ -1,0 +1,95 @@
+from https://developers-zone.digitalenvoy.net/downloads/database-descriptions.html
+
+Field Names for each Database -- Feature codes in parenthesis:
+
+          o   Following each field name is the parameter type (in parenthesis).
+
+                  Geo database (Feature 3):
+
+             Field 1:   country              (text)
+             Field 2:   region               (text)
+             Field 3:   city                 (text)
+             Field 4:   conn-speed           (text)
+             Field 5:   country-conf         (integer)
+             Field 6:   region-conf          (integer)
+             Field 7:   city-conf            (integer)
+             Field 8:   metro-code           (integer)
+             Field 9:   latitude             (float)
+             Field 10:  longitude            (float)
+             Field 11:  country-code         (integer)
+             Field 12:  region-code          (integer)
+             Field 13:  city-code            (integer)
+             Field 14:  continent-code       (integer)
+             Field 15:  two-letter-country   (text)
+
+                  Edge database (Feature 4):
+
+             Field 1:   edge-country              (text)
+             Field 2:   edge-region               (text)
+             Field 3:   edge-city                 (text)
+             Field 4:   edge-conn-speed           (text)
+             Field 5:   edge-metro-code           (integer)
+             Field 6:   edge-latitude             (float)
+             Field 7:   edge-longitude            (float)
+             Field 8:   edge-postal-code          (text)
+             Field 9:   edge-country-code         (integer)
+             Field 10:  edge-region-code          (integer)
+             Field 11:  edge-city-code            (integer)
+             Field 12:  edge-continent-code       (integer)
+             Field 13:  edge-two-letter-country   (text)
+             Field 14:  edge-internal-code        (integer)
+
+         SIC database (Feature 5):
+             Field 1:   sic-code             (integer)
+
+         Domain database Feature 6):
+             Field 1:   domain-name          (text)
+
+         Zip Code / Area Code / Timezone database (Feature 7):
+             Field 1:   area-code            (integer)
+             Field 2:   zip-code             (integer) 
+             Field 3:   gmt-offset           (integer) <Current GMT/UTC offset - format: +hhmm>   
+             Field 4:   in-dst               (text)    <Are they currently observering DST?>
+             Field 5:   zip-code-text        (text)     
+             Field 6:   zip-country          (text)     
+
+         ISP database (Feature 8):
+             Field 1:   isp-name             (text)
+
+         Home / Business database (Feature 9):
+             Field 1:   homebiz-type         (text)
+
+         Language database (Feature 11):
+              Field 1:  primary-lang         (text)
+              Field 2:  secondary-lang       (text)
+ 
+         Proxy database (Feature 12):
+             Field 1: proxy-type             (text)
+   
+         Company Name database (Feature 15):  
+             Field 1: company-name           (text)
+
+         Demographics database (Feature 17): 
+             Field 1:  rank                  (integer)
+             Field 2:  households            (integer) <in thousands>
+             Field 3:  women                 (integer) <in thousands>
+             Field 4:  w18-34                (integer) <in thousands>
+             Field 5:  w35-49                (integer) <in thousands>
+             Field 6:  men                   (integer) <in thousands>
+             Field 7:  m18-34                (integer) <in thousands>
+             Field 8:  m35-49                (integer) <in thousands>
+             Field 9:  teens                 (integer) <in thousands>
+             Field 10: kids                  (integer) <in thousands>
+
+        NAICS database (Feature 18): 
+             Field 1:  naics-code            (integer)
+
+        CBSA database (Feature 19): 
+             Field 1:  cbsa-code             (integer)
+             Field 2:  cbsa-title            (text)
+             Field 3:  cbsa-type             (text)
+             Field 4:  csa-code              (integer)
+             Field 5:  csa-title             (text)
+             Field 6:  md-code               (integer)
+             Field 7:  md-title              (text)
+
