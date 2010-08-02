@@ -1,0 +1,101 @@
+h2. TrstRank
+
+Fields:
+
+user_id:     Twitter user api id
+screen_name: Twitter user screen name
+trstrank:    A robust measure of trustworthiness and importance that varies from 0 to 10. Similar to Google's "PageRank" algorithm.
+tq:          Trust quotient. Percentile ranking of a twitter users trstrank with others having a similar follower count, ranges from 0 to 100. A low tq is a strong indication of spam.
+
+<pre><code>
+    {
+        "user_id"     :  34381760,    
+        "screen_name" : "infochimps",
+        "trstrank"    :  3.7,
+        "tq"          :  85
+    }
+</code></pre>
+
+h2. Influencer Metrics
+
+Fields:
+
+user_id:      Twitter user api id
+screen_name:  Twitter user screen name
+feedness:     Fraction of users tweets that contain urls  
+interesting:  Ratio of times this user has been mentioned to their number of tweets out
+sway:         Ratio of times this user has been retweetd to their number of tweets out
+chattiness:   Ratio of times this user mentions other users to their number of tweets out
+enthusiasm:   Ratio of times this user retweets other users to their number of tweets out
+influx:       Estimate of the number of tweets this user sees per day    
+outflux:      Number of tweets out per day by this user   
+follow_churn: Ratio of observed friends to Twitter supplied count of friends
+follow_rate:  Number of followers per day this user receives
+at_trstrank:  Measure of how important user is based on the mention (atsigns) graph. Retweets and replies soon to follow! 
+fo_trstrank:  Measure of how important user is based on the follow/friend graph
+
+<pre><code>
+    {
+        "user_id"      :  34381760,    
+        "screen_name"  : "infochimps",
+        "feedness"     :  1.0,
+        "interesting"  :  15.0,
+        "sway"         :  19.1,
+        "chattiness"   :  2.4,
+        "enthusiasm"   :  1.3,
+        "influx"       :  932.0,
+        "outflux"      :  2.9,
+        "follow_churn" :  13.7,
+        "follow_rate"  :  1.4,
+        "at_trstrank"  :  2.5,
+        "fo_trstrank"  :  4.2
+    }
+</code></pre>
+
+h2. Strong Links
+
+user_id:      Twitter user api id
+screen_name:  Twitter user screen name
+strong_links: A list of users 100 strongest links as a nested array of pairs (user_id, weight).
+
+<pre><code>
+    {
+        "user_id"      :  34381760,    
+        "screen_name"  : "infochimps",
+        "Strong Links" :  [[1893211,0.5], [218668,0.5], [2888850,0.2]]
+    }
+</code></pre>
+
+h2. WordStats
+
+token:              String, the actual token itelf
+tot_usages:         Total number of times token has been used in our sample
+user_freq_avg:      Average frequency at which users use the token (NOT including those who've never used it)
+user_freq_stdev:    Standard deviation of the individual user frequencies
+global_freq_avg:    Average frequency at which users use the token (including those who've never used it)
+global_freq_stdev:  Standard deviation of the individual user frequencies
+rel_freq_ppb:       Ratio total times this token has been used to the total number of usages in our sample expressed in parts-per-billion
+range:              Count of unique users in our sample who've used token one or more times
+dispersion:         Julliand's Dispersion of the token
+
+<pre><code>
+    {
+        "token"             : "ruby",
+        "total_usages"      :  339260,        
+        "user_freq_avg"     :  0.006890878,
+        "user_freq_stdev"   :  0.028179897,
+        "global_freq_avg"   :  1.8999612E-5,
+        "global_freq_stdev" :  0.0015231818,        
+        "rel_freq_ppb"      :  22805.03,
+        "range"             :  147149,
+        "dispersion"        :  0.989026
+    }
+</code></pre>
+
+h2. Conversations
+
+Who knows?
+
+h2. WordBag
+
+You already know.
