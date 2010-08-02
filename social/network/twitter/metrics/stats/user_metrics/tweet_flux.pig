@@ -2,14 +2,14 @@
 -- Get raw estimate of tweets in for every user. Needs to be divided by a users account age
 --
 %default FOLLOW  '/data/sn/tw/fixd/objects/a_follows_b'
-%default USER    '/data/sn/tw/fixd/objects/twitter_user'
 %default TWFLUX  '/data/sn/tw/fixd/graph/tweet_flux'
-        
-users   = LOAD '$USER'   AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:long, friends:long, statuses:long, favs:long, crat:long);
-follows = LOAD '$FOLLOW' AS (rsrc:chararray, user_a_id:long, user_b_id:long);
+%default IDS     '/data/sn/tw/fixd/objects/twitter_user_id'
+
+user_id  = LOAD '$IDS'    AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:int, friends:int, statuses:int, favs:int, crat:long, sid:long, isfull:int, health:chararray);        
+follows  = LOAD '$FOLLOW' AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 
 -- generate distribution of tweets coming in
-cut_users = FOREACH users GENERATE uid, statuses;
+cut_users = FOREACH user_id GENERATE uid, statuses;
 receivers = COGROUP cut_users BY uid, follows BY user_b_id; -- need to get a list of people to send statuses to
 tw_in     = FOREACH receivers GENERATE
                 FLATTEN(follows.user_a_id)  AS uid,

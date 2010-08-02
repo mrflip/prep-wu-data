@@ -1,16 +1,18 @@
 #!/usr/bin/env ruby
+
+require 'rubygems'
+require 'json'
 require File.dirname(__FILE__)+'/bulk_load_streamer'
 
 #
-# Load precomputed json data into the ApeyEye database.
+# to_i's on user ids
+# make sure I'm not my own best friend
 #
-#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_loader.rb --dataset=influence --rm --run --batch_size=200 /data/sn/tw/fixd/apeyeye/influence/reply_json /tmp/bulkload/influence
-#
-#
+
 class BulkLoadJsonAttribute < BulkLoadStreamer
   def process user_id, json
     return if json.blank? || user_id.blank?
-    db.insert(user_id, json)
+    db.insert(user_id, fix_json(json))
     log.periodically{ print_progress }
   end
 
@@ -18,10 +20,13 @@ class BulkLoadJsonAttribute < BulkLoadStreamer
     @db ||= TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
   end
 
-  # track progress --
-  #
-  # NOTE: emits to stdout, since other output is going to DB
-  #
+  def fix_json json_string
+    hsh = JSON.parse(json_string)
+    hsh["user_id"] = hsh["user_id"].to_i
+    hsh["strong_links"].map!{|pair| pair = [pair["user_id"].to_i, pair["weight"].to_f]; pair[1] = 0.05 if pair.last == 0.0; pair }.reject{|x| x.first == hsh["user_id"]} unless hsh["strong_links"].blank?
+    hsh.to_json
+  end
+  
   def print_progress
     emit         log.progress(db.size)
     $stderr.puts log.progress(db.size)

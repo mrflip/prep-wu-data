@@ -13,18 +13,17 @@ module TweetSampler
 
   class Reducer < Wukong::Streamer::AccumulatingReducer
 
-    attr_accessor :sampling_rate, :tweets, :sampling_rate
+    attr_accessor :sampling_rate, :tweets
 
     alias_method :key, :date
 
     def initialize options
       super(options)
-      self.sampling_rate = options[:sampling_rate] || 0.0001 # ~ 23K tweets
+      self.sampling_rate = options[:sampling_rate] || 0.00001 # ~23K tweets
     end
     
     def start! *args
       self.tweets = []
-      self.sampling_rate = SAMPLING_RATES[date]
     end
 
     def accumulate *args, &block

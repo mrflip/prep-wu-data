@@ -2,7 +2,7 @@
 %default ATS    '/data/sn/tw/fixd/objects/a_atsigns_b_name'
 %default RTS    '/data/sn/tw/fixd/objects/a_retweets_b_name'
 %default AATSB  '/data/sn/tw/fixd/objects/a_atsigns_b'
-%default ARTB   '/data/sn/tw/fixd/objects/a_retweets_b'
+%default ARTB   '/data/sn/tw/fixd/objects/a_retweets_b'        
         
 id_table = LOAD '$TABLE'  AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:int, friends:int, statuses:int, favs:int, crat:long, sid:long, isfull:int, health:chararray);
 atsigns  = LOAD '$ATS'    AS (rsrc:chararray, user_a_id:long, user_b_name:chararray, twid:long, crat:long);

@@ -10,9 +10,8 @@ class GrepMapper < Wukong::Streamer::StructStreamer
   KEYWORDS = %r{(rapportive)}
 
   def process tweet, *_, &block
-    return unless tweet.text =~ KEYWORDS
-    keys = tweet.text.downcase.scan(KEYWORDS).flatten.uniq.join(",")
-    yield [tweet.to_flat, keys]
+    return unless keys = tweet.text.downcase.scan(KEYWORDS)
+    yield [tweet.to_flat, keys.flatten.uniq.join(",")]
   end
 
 end

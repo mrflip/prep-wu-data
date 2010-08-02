@@ -4,10 +4,10 @@
 %default URL           '/data/sn/tw/fixd/objects/tweet_url'
 %default FLUX          '/data/sn/tw/fixd/tweet_flux_breakdown'
         
-tweet         = LOAD '$TWEET'         AS (rsrc:chararray, twid:long,      crat:long,             uid:long,     sn:chararray,            sid:long,          in_reply_to_uid:long, in_reply_to_sn:chararray,     in_reply_to_sid:long,       text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
-hashtag       = LOAD '$HASHTAG'       AS (rsrc:chararray, text:chararray, uid:long,              twid:long,    crat:long);                                                           
-smiley        = LOAD '$SMILEY'        AS (rsrc:chararray, text:chararray, uid:long,              twid:long,    crat:long);                                                           
-tweet_url     = LOAD '$URL'           AS (rsrc:chararray, text:chararray, uid:long,              twid:long,    crat:long);                                                           
+tweet         = LOAD '$TWEET'         AS (rsrc:chararray, twid:long,      crat:long,              uid:long,    sn:chararray,            sid:long,          in_reply_to_uid:long, in_reply_to_sn:chararray,     in_reply_to_sid:long,       text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
+hashtag       = LOAD '$HASHTAG'       AS (rsrc:chararray, text:chararray, twid:long,              uid:long,    crat:long);                                                           
+smiley        = LOAD '$SMILEY'        AS (rsrc:chararray, text:chararray, twid:long,              uid:long,    crat:long);                                                           
+tweet_url     = LOAD '$URL'           AS (rsrc:chararray, text:chararray, twid:long,              uid:long,    crat:long);                                                           
 
 cut_tweet  = FOREACH tweet     GENERATE uid;
 cut_hash   = FOREACH hashtag   GENERATE uid;

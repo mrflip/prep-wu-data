@@ -42,10 +42,10 @@ module GenUserIds
         yield TwitterUserId.new(thing.user_a_id)
         yield TwitterUserId.new(thing.user_b_id)
       when Tweet
-        thing.twitter_user_id     = thing.twitter_user_id.to_i
+        thing.user_id     = thing.user_id.to_i
         thing.in_reply_to_user_id = thing.in_reply_to_user_id.to_i
-        return if thing.twitter_user_id == 0
-        yield TwitterUserId.new(thing.twitter_user_id)
+        return if thing.user_id == 0
+        yield TwitterUserId.new(thing.user_id)
         yield TwitterUserId.new(thing.in_reply_to_user_id) unless (thing.in_reply_to_user_id == 0)
       end
     end
