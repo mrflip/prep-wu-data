@@ -38,11 +38,11 @@ class BulkLoadConversation < BulkLoadStreamer
     CONV_TYPES.each do |conv_type, conv_code|
       convs = oldhsh[conv_type] or next
       convs.each do |tw_id, in_re_tw_id|
-        convs_by_id[tw_id] = [tw_id.to_i, conv_code, in_re_tw_id.to_i].compact
+        convs_by_id[tw_id] = [tw_id.to_i, conv_code, in_re_tw_id.to_i].reject{|x| x == 0}.compact
       end
     end
     conv_hsh = { "user_a_id" => user_a_id.to_i, "user_b_id" => user_b_id.to_i, "conversations" => convs_by_id.values.sort }
-    conv_hsh.to_json
+    conv_hsh.to_json unless convs_by_id.blank?
   end
 
   def db
