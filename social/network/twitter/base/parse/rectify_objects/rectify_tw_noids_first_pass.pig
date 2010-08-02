@@ -3,7 +3,7 @@
 %default TWFIXD  '/data/sn/tw/fixd/objects/tweet-rectified'
 %default FAIL    '/data/sn/tw/rawd/to_scrape/tweet-noid'
         
-tw_noid         = LOAD '$TWNOID' AS (rsrc:chararray, twid:long, crat:long, uid:long, sn:chararray, sid:long, in_reply_to_uid:long, in_reply_to_sn:chararray, in_reply_to_sid:long, text:chararray, src:chararray, iso:chararray, lat:float, lon:float, was_stw:int);
+tw_noid         = LOAD '$TWNOID' AS (rsrc:chararray, twid:long, crat:long, uid:long, sn:chararray, sid:long, in_reply_to_uid:long, in_reply_to_sn:chararray, in_reply_to_sid:long, in_reply_to_twid:long, text:chararray, src:chararray, iso:chararray, lat:float, lon:float, was_stw:int);
 twitter_user_id = LOAD '$TABLE'  AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:long, friends:long, statuses:long, favourites:long, crat:long, sid:long, is_full:int, health:chararray);
 
 -- first join against user id table using screen name as key
