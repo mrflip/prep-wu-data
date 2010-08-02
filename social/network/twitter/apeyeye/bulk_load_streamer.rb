@@ -52,9 +52,13 @@ class BulkLoadStreamer < Wukong::Streamer::RecordStreamer
     @log ||= PeriodicMonitor.new(options)
   end
 
-  # notes each iteration
+  # track progress --
+  #
+  # NOTE: emits to stdout, since other output is going to DB
+  #
   def print_progress
-    $stderr.puts log.progress
+    emit         log.progress(db.size)
+    $stderr.puts log.progress(db.size)
   end
 
   # track progress --
