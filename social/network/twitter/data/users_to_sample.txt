@@ -10,9 +10,12 @@ silona
 
 # celebrity     person  
 THE_REAL_SHAQ
+conanobrien
 
 # celebrity     pro  
 barackobama
+eikebatista
+RealSheriffJoe
 
 # celebrity     orgs    feeds
 cnnbrk
@@ -24,17 +27,22 @@ wholefoods
 zappos
 cheaptweets
 
-# extrema
-RealSheriffJoe
-xBieberPassion
-adamtrussell
-
 # normal people
+adamtrussell
+# lol
+xBieberPassion
 
+# conan's one friend
+LovelyButton
 
-
-
+# douches
 Emarketingguru
+blakeholloway
+
+# big data
+hadoop
+cloudera
+hackingdata
 
 client = Grackle::Client.new(:auth=>{:type=>:basic,:username=>'mrflip',:password=>ENV['TWPASS']})
 
