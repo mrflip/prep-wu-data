@@ -1,39 +1,37 @@
 #!/usr/bin/env ruby
-
-require 'rubygems'
-require 'json'
 require File.dirname(__FILE__)+'/bulk_load_streamer'
 
+Settings.dataset = 'strong_links2'
+
 #
-# to_i's on user ids
-# make sure I'm not my own best friend
+# Load precomputed json data into the ApeyEye database.
 #
-
-class BulkLoadJsonAttribute < BulkLoadStreamer
-  def process user_id, json
-    return if json.blank? || user_id.blank?
-    db.insert(user_id, fix_json(json))
-    log.periodically{ print_progress }
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_strong_links.rb  --rm --run --log_interval=10000 s3n://infochimps-data/data/soc/net/tw/pkgd/strong_links_json_20100729 /tmp/bulkload/strong_links
+#
+class BulkLoadStrongLinks < BulkLoadStreamer
+  def process  user_id, old_json
+    return if [user_id, old_json].any?(&:blank?)
+    json_str = repair_json_str(user_id, old_json) or return
+    db.insert(user_id.to_s, json_str)
+    log.periodically{ print_progress(user_id, json_str) }
   end
 
-  def db
-    @db ||= TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
+  def repair_json_str user_id, old_json
+    oldhsh = safely_parse_json(old_json)
+    return unless oldhsh && oldhsh["strong_links"]
+    oldhsh["user_id"] = user_id.to_i
+    oldhsh["strong_links"].map! do |pair|
+      nbr_id, nbr_tw = [pair["user_id"].to_i, pair["weight"].to_f];
+      next if nbr_id == user_id.to_i
+      nbr_tw = 0.05 if nbr_tw <= 0.05
+      [nbr_id, nbr_tw]
+    end
+    oldhsh.to_json
   end
 
-  def fix_json json_string
-    hsh = JSON.parse(json_string)
-    hsh["user_id"] = hsh["user_id"].to_i
-    hsh["strong_links"].map!{|pair| pair = [pair["user_id"].to_i, pair["weight"].to_f]; pair[1] = 0.05 if pair.last == 0.0; pair }.reject{|x| x.first == hsh["user_id"]} unless hsh["strong_links"].blank?
-    hsh.to_json
-  end
-  
-  def print_progress
-    emit         log.progress(db.size)
-    $stderr.puts log.progress(db.size)
-  end
 end
 Wukong::Script.new(
-  BulkLoadJsonAttribute,
+  BulkLoadStrongLinks,
   nil,
   :map_speculative => "false",
   :max_maps_per_node => 2

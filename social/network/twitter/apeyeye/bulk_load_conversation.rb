@@ -1,23 +1,20 @@
 #!/usr/bin/env ruby
 require File.dirname(__FILE__)+'/bulk_load_streamer'
-require 'json'
 
 Settings.dataset = 'conversation2'
 
 #
 # Load precomputed json data into the ApeyEye database.
 #
-#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_conversation_json.rb --rm --run --log_interval=20000  /data/sn/tw/fixd/apeyeye/conversation/a_replies_b_json /tmp/bulkload/conversation
-# or
-#   hdp-catd /data/sn/tw/fixd/apeyeye/conversation/a_replies_b_json | ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_conversation.rb --map --log_interval=100000 > /mnt/tmp/bulkload_conversation.log
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_conversation.rb --rm --run --log_interval=10000  s3n://infochimps-data/data/soc/net/tw/pkgd/conversation_json_20100729   /tmp/bulkload/conversation
 #
 class BulkLoadConversation < BulkLoadStreamer
 
   def process  user_a_id, user_b_id, conversation_json
-    return if conversation_json.blank? || user_a_id.blank? || user_b_id.blank?
+    return if [conversation_json, user_a_id, user_b_id].any?(&:blank?)
     conversation_json = repair_conversation_json(user_a_id, user_b_id, conversation_json) or return
     db.insert("#{user_a_id}:#{user_b_id}", conversation_json)
-    log.periodically{ print_progress }
+    log.periodically{ print_progress(user_a_id, user_b_id, conversation_json) }
   end
 
   # !! IMPORTANT !!
@@ -25,15 +22,13 @@ class BulkLoadConversation < BulkLoadStreamer
   # An RE should never also be an RT but we'll just let the RT win, it's more interesting.
   CONV_TYPES = [ ['a_mentions_b', 'me'], ['a_replies_b', 're'], ['a_retweets_b', 'rt'], ]
 
+  # marge different types of @mention
+  #
+  # @example
+  #    1234  2345 {"b_retweets_a":[[7814238660]],"b_mentions_a":[[7814238660]]}
+  #
   def repair_conversation_json user_a_id, user_b_id, old_json
-    begin
-      oldhsh = JSON.load(old_json)
-    rescue StandardError => e
-      puts [old_json, e, e.backtrace].join("\t")
-      warn [old_json, e, e.backtrace].join("\t")
-      return
-    end
-    # {"b_retweets_a":[[7814238660]],"b_mentions_a":[[7814238660]]}
+    oldhsh = safely_parse_json(old_json)
     convs_by_id = {}
     CONV_TYPES.each do |conv_type, conv_code|
       convs = oldhsh[conv_type] or next
@@ -45,6 +40,7 @@ class BulkLoadConversation < BulkLoadStreamer
     conv_hsh.to_json unless convs_by_id.blank?
   end
 end
+
 Wukong::Script.new(
   BulkLoadConversation,
   nil,

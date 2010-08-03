@@ -1,31 +1,19 @@
 #!/usr/bin/env ruby
 require File.dirname(__FILE__)+'/bulk_load_streamer'
 
+Settings.dataset = 'screen_names2'
 
-Settings.dataset = 'user_info2'
-
+#
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_sn_id_mapping.rb --run --rm --log_interval=10000  s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/objects/twitter_user_id /tmp/bulkload/twitter_user_id
+#
 class BulkLoadJsonAttribute < BulkLoadStreamer
-  
-  def process *args
-    uid, sn = [args[1],args[3]]
-    return if sn.blank? || uid.blank?
+
+  def process rsrc, uid, scat, sn, *args
+    return if [sn, uid].any?(&:blank?)
     db.insert(sn.downcase, uid)
-    log.periodically{ print_progress }
+    log.periodically{ print_progress(sn, uid) }
   end
 
-  def db
-    @db ||= TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
-  end
-
-  # track progress --
-  #
-  # NOTE: emits to stdout, since other output is going to DB
-  #
-  def print_progress
-    emit         log.progress(db.size)
-    $stderr.puts log.progress(db.size)
-  end
-  
 end
 
 Wukong::Script.new(
