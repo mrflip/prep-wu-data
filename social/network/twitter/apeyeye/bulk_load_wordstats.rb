@@ -13,19 +13,29 @@ class BulkLoadWordStats < BulkLoadStreamer
   def process  word, old_json
     return if [word, old_json].any?(&:blank?)
     json_str = repair_json_str(word, old_json) or return
-    db.insert(word.to_s, json_str)
-    log.periodically{ print_progress(word, json_str) }
+    puts json_str
+    # db.insert(word.to_s, json_str)
+    # log.periodically{ print_progress(word, json_str) }
   end
-  
+
   # Numeric-ify fields
   def repair_json_str word, old_json
     oldhsh = safely_parse_json(old_json)
-    # 1088	{"user_freq_avg":"0.003907669","rel_freq_ppb":"171.67966","token":"1088","global_freq_avg":"1.12319704E-7","user_freq_stdev":"0.012098187","range":"1534","dispersion":"0.9169312","total_usages":"2554","global_freq_stdev":"6.816125E-5"}
-    %w[user_freq_avg rel_freq_ppb global_freq_avg global_freq_stdev user_freq_stdev dispersion
-        ].each{|attr| oldhsh[attr] = oldhsh[attr].to_f }
-    %w[range total_usages
-        ].each{|attr| oldhsh[attr] = oldhsh[attr].to_i }
-    oldhsh.to_json
+    newhsh = {}
+    # 1088      {"user_freq_avg":"0.003907669","rel_freq_ppb":"171.67966","token":"1088","global_freq_avg":"1.12319704E-7","user_freq_stdev":"0.012098187","range":"1534","dispersion":"0.9169312","total_usages":"2554","global_freq_stdev":"6.816125E-5"}
+    oldhsh.keys.each do |key|
+      case key
+      when "rel_freq_ppb" then
+        newhsh[:global_freq_ppb] = oldhsh[key].to_f
+      when "global_freq_stdev" then
+        newhsh[:global_stdev_ppb] = oldhsh[key].to_f*1_000_000_000.0
+      when "range" then
+        newhsh[:range] = oldhsh[key].to_f / 53_368_769.0
+      when "token" then
+        newhsh[:tok] = oldhsh[key]
+      end
+    end
+    newhsh.to_json
   end
 end
 
