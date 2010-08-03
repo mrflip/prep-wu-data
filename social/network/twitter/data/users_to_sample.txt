@@ -1,0 +1,43 @@
+mrflip
+jessecrouch
+doncarlo
+dhruvbansal
+josephkelly
+
+# people from our community
+infochimps
+silona
+
+# celebrity     person  
+THE_REAL_SHAQ
+
+# celebrity     pro  
+barackobama
+
+# celebrity     orgs    feeds
+cnnbrk
+theonion
+rww
+
+# businesses
+wholefoods
+zappos
+cheaptweets
+
+# extrema
+RealSheriffJoe
+xBieberPassion
+adamtrussell
+
+# normal people
+
+
+
+
+Emarketingguru
+
+client = Grackle::Client.new(:auth=>{:type=>:basic,:username=>'mrflip',:password=>ENV['TWPASS']})
+
+Strong links: I can be my own best friend.
+Influencer: user_ids are strings
+Trstrank: lots of things are strings.

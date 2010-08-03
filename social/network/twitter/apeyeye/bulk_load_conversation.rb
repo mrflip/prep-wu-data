@@ -44,10 +44,6 @@ class BulkLoadConversation < BulkLoadStreamer
     conv_hsh = { "user_a_id" => user_a_id.to_i, "user_b_id" => user_b_id.to_i, "conversations" => convs_by_id.values.sort }
     conv_hsh.to_json unless convs_by_id.blank?
   end
-
-  def db
-    @db ||= TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
-  end
 end
 Wukong::Script.new(
   BulkLoadConversation,

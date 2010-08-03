@@ -34,6 +34,9 @@ module TokyoDbConnection
       :tw_trstrank2     => 14203,
       :tw_conversation2 => 14204,
       :tw_strong_links2 => 14205,
+      :tw_word_stats2   => 14206,
+      #
+      :ip_geo_census    => 14400,
     }
 
   end
@@ -64,5 +67,9 @@ class BulkLoadStreamer < Wukong::Streamer::RecordStreamer
   # track progress --
   def after_stream
     print_progress
+  end
+
+  def db
+    @db ||= TokyoDbConnection::TyrantDb.new(('tw_'+options.dataset).to_sym)
   end
 end
