@@ -7,7 +7,7 @@ Settings.dataset = 'user_info'
 #
 # Load user data into the Apeyeye database
 #
-#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_twitter_user_id.rb --run --rm --log_interval=10000  /data/sn/tw/fixd/objects/twitter_user_id_matched  /tmp/bulk_load_twitter_user_id
+#   ~/ics/icsdata/social/network/twitter/apeyeye/bulk_load_twitter_user_id.rb --run --rm --log_interval=10000  s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/objects/twitter_user_id /tmp/bulkload/twitter_user_id
 #
 class BulkLoadTwitterUserIds < BulkLoadStreamer
   USER_DB = TokyoDbConnection::TyrantDb.new(:tw_user_info)

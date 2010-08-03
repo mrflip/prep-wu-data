@@ -8,9 +8,8 @@ require File.dirname(__FILE__)+'/bulk_load_streamer'
 #
 #
 class BulkLoadJsonAttribute < BulkLoadStreamer
-
-  def process  screen_name, user_id, json
-    next if json.blank? || user_id.blank?
+  def process user_id, json
+    return if json.blank? || user_id.blank?
     db.insert(user_id, json)
     log.periodically{ print_progress }
   end
@@ -28,4 +27,9 @@ class BulkLoadJsonAttribute < BulkLoadStreamer
     $stderr.puts log.progress(db.size)
   end
 end
-Wukong::Script.new( BulkLoadJsonAttribute, nil, :map_speculative => "false" ).run
+Wukong::Script.new(
+  BulkLoadJsonAttribute,
+  nil,
+  :map_speculative => "false",
+  :max_maps_per_node => 2
+  ).run

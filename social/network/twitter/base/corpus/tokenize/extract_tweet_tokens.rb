@@ -5,6 +5,8 @@ require 'wukong'                       ; include Wukong
 require 'wuclan/twitter'               ; include Wuclan::Twitter::Model
 require 'wuclan/twitter/model/token'
 
+Settings.define :emit_type,   :default => "all_but_word", :type => String, :description => 'Type of thing to emit'
+
 module ExtractTweetTokens
   class Mapper < Wukong::Streamer::StructStreamer
     #
@@ -18,14 +20,27 @@ module ExtractTweetTokens
     #  word_tokens
     #
     def process tweet, *_, &block
-        # tweet.retweets     &block
-        # tweet.replies      &block
-        # tweet.atsigns      &block
-        # tweet.hashtags     &block
-        # tweet.smileys      &block
-        # tweet.tweet_urls   &block
-        # tweet.stock_tokens &block
+      case Settings.emit_type
+      when "all_but_word" then
+        tweet.retweets     &block
+        tweet.replies      &block
+        tweet.atsigns      &block
+        tweet.hashtags     &block
+        tweet.smileys      &block
+        tweet.tweet_urls   &block
+        tweet.stock_tokens &block
+      when "all" then
+        tweet.retweets     &block
+        tweet.replies      &block
+        tweet.atsigns      &block
+        tweet.hashtags     &block
+        tweet.smileys      &block
+        tweet.tweet_urls   &block
+        tweet.stock_tokens &block
         tweet.word_tokens  &block
+      when "word_only" then
+        tweet.word_tokens  &block
+      end
     end
   end
 

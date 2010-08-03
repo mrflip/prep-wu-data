@@ -7,15 +7,22 @@ require 'wukong'
 require 'trstrank_table'
 require 'atrank_table'
 
+Settings.define :rank_type,   :default => "a_follows_b", :type => String, :description => 'Type of binning to use'
+
 Float.class_eval do def round_to(x) ((10**x)*self).round end ; end
 
+# FIXME: dont check options every f*ing iteration
 class Mapper < Wukong::Streamer::RecordStreamer
   def process *args
     return unless args.length == 3
     uid, followers, scaled = args
     rank = (scaled.to_f*10.0).round.to_f/10.0
-    # bin  = TRSTRANK_TABLE["#{logbin(followers)}"]
-    bin = ATRANK_TABLE["#{logbin(followers)}"]
+    case options.rank_type
+    when "a_follows_b" then
+      bin  = TRSTRANK_TABLE["#{logbin(followers)}"]
+    when "a_atsigns_b" then
+      bin = ATRANK_TABLE["#{logbin(followers)}"]
+    end
     return if bin.blank?
     tq = bin[rank].round
     yield [uid, scaled, tq]

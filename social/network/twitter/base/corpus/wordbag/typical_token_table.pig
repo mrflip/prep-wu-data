@@ -11,8 +11,8 @@ token_table = FOREACH grouped
               {
                   n_measure = SUM(cut_stats.tot_user_usages);
                   s_success = SUM(cut_stats.num_user_tok_usages);
-                  c_post    = $C_PRIOR + n_measure;
-                  u_post    = ($C_PRIOR*$U_PRIOR + s_success)/($C_PRIOR + n_measure);
+                  c_post    = (double)$C_PRIOR + (double)n_measure;
+                  u_post    = (double)($C_PRIOR*(double)$U_PRIOR + (double)s_success)/((double)$C_PRIOR + (double)n_measure);
                   GENERATE
                       group  AS tok,
                       c_post AS c_post,
