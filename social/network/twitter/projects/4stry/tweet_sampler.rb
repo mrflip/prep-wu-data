@@ -1,12 +1,16 @@
+#!/usr/bin/env ruby
 require 'rubygems'
 require 'wukong'
 
-module TweetSampler
+require 'wukong'                       ; include Wukong
+require 'wuclan/twitter'               ; include Wuclan::Twitter::Model
 
+module TweetSampler
+  
   class Mapper < Wukong::Streamer::StructStreamer
 
     def process tweet, *args
-      yield [tweet.created_at.to_i / 1_000_000, tweet.text] # by day
+      yield [tweet.created_at, tweet.text] if tweet.id
     end
 
   end
@@ -15,11 +19,11 @@ module TweetSampler
 
     attr_accessor :sampling_rate, :tweets
 
-    alias_method :key, :date
+    alias_method :date, :key
 
     def initialize options
       super(options)
-      self.sampling_rate = options[:sampling_rate] || 0.00001 # ~23K tweets
+      self.sampling_rate = (options[:sampling_rate] && options[:sampling_rate].to_f) || 0.00001 # ~230K tweets
     end
     
     def start! *args
@@ -32,7 +36,7 @@ module TweetSampler
 
     def finalize
       tweets.each do |tweet|
-        yield tweet if rand > sampling_rate
+        yield tweet if rand < sampling_rate
       end
     end
   end

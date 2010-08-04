@@ -26,7 +26,7 @@ class TweetBagMapper < Wukong::Streamer::StructStreamer
   def process tweet, *_, &block
     return unless tweet.created_at >= begin_date && tweet.created_at < end_date
     return unless match_data = regexp.match(text.upcase)
-    yield [tweet.to_flat, match_data.to_a[1..-1]]
+    yield [tweet.to_flat, match_data.to_a[1..-1].join(",")]
   end
 
 end
