@@ -7,7 +7,7 @@ require 'wuclan/twitter/model' ; include Wuclan::Twitter::Model
 class Mapper < Wukong::Streamer::StructStreamer
   def process shitty_tweet, *_
     tweet = shitty_tweet.to_flat
-    yield shitty_tweet.to_flat[0..14]
+    yield tweet[0..13]
   end
 end
 
