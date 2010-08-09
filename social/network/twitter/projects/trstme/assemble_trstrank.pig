@@ -18,9 +18,9 @@ together = JOIN atsign BY uid FULL OUTER, follow BY uid;
 intermed = FOREACH together
            {
                atrank   = (atsign::rank  IS NOT NULL ? atsign::rank  : follow::rank);
-               forank   = (follow::rank  IS NOT NULL ? follow::rank  : atrank );
+               forank   = (follow::rank  IS NOT NULL ? follow::rank  : atsign::rank );
                at_tq    = (atsign::prcnt IS NOT NULL ? atsign::prcnt : follow::prcnt);
-               fo_tq    = (follow::prcnt IS NOT NULL ? follow::prcnt : at_tq );
+               fo_tq    = (follow::prcnt IS NOT NULL ? follow::prcnt : atsign::prcnt );
                uid      = (atsign::uid   IS NOT NULL ? atsign::uid   : follow::uid);
                trstrank = (atrank  + forank )/2.0;
                tq       = (at_tq   + fo_tq  )/2.0;               
@@ -31,19 +31,18 @@ intermed = FOREACH together
                ;
            };
 
-joined   = JOIN intermed BY uid FULL OUTER, mapping BY uid;
+joined   = JOIN mapping BY uid RIGHT OUTER, intermed BY uid;
 flat     = FOREACH joined
            {
                uid = (mapping::uid IS NOT NULL ? mapping::uid : intermed::uid);
                GENERATE
                    mapping::sn        AS sn,
-                   mapping::uid       AS uid,
+                   uid                AS uid,
                    intermed::trstrank AS trstrank,
                    (int)intermed::tq  AS tq:int
                ;
-           }
+           };
 
-out      = FILTER flat BY sn != '0';
 
 rmf $FINAL;
-STORE out INTO '$FINAL'; -- [screen_name, user_id, trstrank, tq] 
+STORE flat INTO '$FINAL'; -- [screen_name, user_id, trstrank, tq] 
