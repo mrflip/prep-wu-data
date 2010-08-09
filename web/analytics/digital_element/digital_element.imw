@@ -1,0 +1,72 @@
+IMW.dataset :digital_element do
+
+  add_path(:bin , :root, 'bin')
+  add_path(:meta, :root, 'meta')
+
+  USER_PASS = 'kelly.josephc@infochimps.org:#rdsf8se'
+
+  CODES = {
+    :geo           => 3,
+    :edge          => 4,
+    :sic           => 5,
+    :domain        => 6,
+    :zip_area_time => 7,
+    :isp           => 8,
+    :home_business => 9,
+    :asn           => 10,
+    :language      => 11,
+    :proxy         => 12,
+    :org_name      => 13,
+    :is_an_isp     => 14,
+    :company       => 15,
+    :demographics  => 17,
+    :naics         => 18,
+    :cbsa          => 19
+  }
+
+  def digital_element_url feature
+    code = CODES[feature] or raise "Invalid feature: #{feature}"
+    %Q{https://developers-zone.digitalenvoy.net/downloads/db/na_#{"%02d" % code}_db.tar.gz}
+  end
+
+  def features
+    f = CODES.keys
+    if ENV['FEATURE']
+      f.delete_if { |feature| feature.to_s !~ Regexp.new(ENV['FEATURE']) }
+    else
+      f
+    end
+  end
+
+  rip do
+    features.each do |feature|
+      IMW.system('curl', '--location-trusted', '-o', path_to(:ripd, "#{feature}.tar.gz"), '--basic', '--user', USER_PASS, digital_element_url(feature))
+    end
+  end
+
+  parse do
+    features.each do |feature|
+      feature_dir = path_to(:rawd, feature.to_s)
+      FileUtils.mkdir_p(feature_dir)
+      FileUtils.cd(feature_dir) do
+        IMW.open(path_to(:ripd, "#{feature}.tar.gz")).extract
+        FileUtils.ln_sf(path_to(:bin, 'dump_db'), 'dump_db')
+        FileUtils.ln_sf(path_to(:meta, 'license_key.file'), 'license_key.file')
+        begin
+          IMW.system("./dump_db #{CODES[feature]} > #{feature}.dat")
+        rescue IMW::SystemCallError => e
+          puts e
+        end
+      end
+    end
+  end
+
+  fix do
+    
+  end
+  
+  package do
+  end
+  
+end
+  

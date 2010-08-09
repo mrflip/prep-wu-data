@@ -1,0 +1,83 @@
+---
+
+# These were the databases we are authorized for.
+:authorized:
+  - :feature: proxy
+    :version: 974
+    :created_at: Fri Jul 23 08:08:18 2010
+    :ip_blocks: 197850
+    :records: 197850
+    :parse_time: 0
+    
+  - :feature: zip_area_time
+    :version: 419
+    :created_at: Thu Jul 22 15:36:12 2010
+    :ip_blocks: 3691292
+    :records: 3691292
+    :parse_time: 9
+
+  - :feature: isp
+    :version: 380
+    :created_at: Tue Jul 20 08:15:21 2010
+    :ip_blocks: 147789
+    :records: 147789
+    :parse_time: 0
+
+  - :feature: domain
+    :version: 171
+    :created_at: Wed Jun 30 14:19:09 2010
+    :ip_blocks: 11896263
+    :records: 11896263
+    :parse_time: 18
+
+  - :feature: company
+    :version: 301
+    :created_at: Wed Jul 21 17:11:43 2010
+    :ip_blocks: 567622
+    :records: 567622
+    :parse_time: 1
+
+  - :feature: demographics
+    :version: 315
+    :created_at: Thu Jul 22 15:46:34 2010
+    :ip_blocks: 2752812
+    :records: 2752812
+    :parse_time: 8
+
+  - :feature: geo
+    :version: 510
+    :created_at: Thu Jul 22 09:26:57 2010
+    :ip_blocks: 5740797
+    :records: 5740797
+    :parse_time: 26
+
+  - :feature: asn
+    :version: 375
+    :created_at: Tue Jul 20 08:16:07 2010
+    :ip_blocks: 365721
+    :records: 365721
+    :parse_time: 0
+
+  - :feature: naics
+    :version: 94
+    :created_at: Wed Jun 30 16:51:41 2010
+    :ip_blocks: 2514308
+    :records: 2514308
+    :parse_time: 4
+
+  - :feature: language
+    :version: 407
+    :created_at: Thu Jul 22 15:56:30 2010
+    :ip_blocks: 164489
+    :records: 164489
+    :parse_time: 1
+
+# These are the databases we are not authorized for.
+:unauthorized:
+  - edge
+  - org_name
+  - is_an_isp
+  - cbsa
+  - sic
+  - home_business
+...
