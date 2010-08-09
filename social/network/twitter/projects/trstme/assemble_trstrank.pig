@@ -14,18 +14,16 @@ follow   = LOAD '$FO_PRCNT' AS (uid:long, rank:float, prcnt:float);
 atsign   = LOAD '$AT_PRCNT' AS (uid:long, rank:float, prcnt:float);         
 mapping  = FOREACH user_id  GENERATE uid, sn;
 
---
--- Need a separate right outer join here since the atsign graph is way smaller
---
-together = JOIN atsign BY uid RIGHT OUTER, follow BY uid;
+together = JOIN atsign BY uid FULL OUTER, follow BY uid;
 intermed = FOREACH together
            {
-               -- the follow records will always exist, don't bother checking those too
-               atrank   = (atsign::rank  IS NOT NULL ? atsign::rank  : follow::rank); -- use follow rank if no atsign rank exists
+               atrank   = (atsign::rank  IS NOT NULL ? atsign::rank  : follow::rank);
+               forank   = (follow::rank  IS NOT NULL ? follow::rank  : atrank );
                at_tq    = (atsign::prcnt IS NOT NULL ? atsign::prcnt : follow::prcnt);
+               fo_tq    = (follow::prcnt IS NOT NULL ? follow::prcnt : at_tq );
                uid      = (atsign::uid   IS NOT NULL ? atsign::uid   : follow::uid);
-               trstrank = (atrank  + follow::rank )/2.0;
-               tq       = (at_tq   + follow::prcnt)/2.0;               
+               trstrank = (atrank  + forank )/2.0;
+               tq       = (at_tq   + fo_tq  )/2.0;               
                GENERATE
                    uid      AS uid,
                    trstrank AS trstrank,
@@ -33,13 +31,17 @@ intermed = FOREACH together
                ;
            };
 
-joined   = JOIN intermed BY uid, mapping BY uid;
-flat     = FOREACH joined GENERATE
-                   mapping::sn  AS sn,
-                   mapping::uid AS uid,
-                   intermed::trstrank    AS trstrank,
-                   (int)intermed::tq     AS tq:int
-           ;
+joined   = JOIN intermed BY uid FULL OUTER, mapping BY uid;
+flat     = FOREACH joined
+           {
+               uid = (mapping::uid IS NOT NULL ? mapping::uid : intermed::uid);
+               GENERATE
+                   mapping::sn        AS sn,
+                   mapping::uid       AS uid,
+                   intermed::trstrank AS trstrank,
+                   (int)intermed::tq  AS tq:int
+               ;
+           }
 
 out      = FILTER flat BY sn != '0';
 
