@@ -2,7 +2,9 @@
 %default ATS  '/data/sn/tw/rawd/pagerank/a_atsigns_b/pig/pagerank_graph_010'
 %default FOS  '/data/sn/tw/rawd/pagerank/a_follows_b/pig/pagerank_graph_010'        
 %default OUT  '/data/sn/tw/fixd/pagerank/trstrank_20100809_fixd'
-        
+
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
+
 follow    = LOAD '$FOS'  AS (uid:long, rank:float, list:chararray);
 atsign    = LOAD '$ATS'  AS (uid:long, rank:float, list:chararray);         
 trst      = LOAD '$TRST' AS (sn:chararray, uid:long, scaled:float, tq:int);
