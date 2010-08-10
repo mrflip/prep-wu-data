@@ -20,7 +20,7 @@ module ExtractTweetTokens
     #  word_tokens
     #
     def process tweet, *_, &block
-      case Settings.emit_type
+      case options.emit_type
       when "all_but_word" then
         tweet.retweets     &block
         tweet.replies      &block
