@@ -1,8 +1,7 @@
 -- map input records to first mr job    = tot usages
 -- reduce input groups in second mr job = tot users
 
--- REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
-REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
 %default WORDBAG                 '/data/sn/tw/fixd/word/user_word_bag';     --input location
 %default WORDSTATS               '/data/sn/tw/fixd/word/global_word_stats'; --output location
@@ -13,21 +12,21 @@ REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
 user_stats = LOAD '$WORDBAG' AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
 -- get num users and tot usages
-cut_users  = FOREACH user_stats GENERATE tok, tot_user_usages;
-all_group  = GROUP cut_users ALL;
--- this will result in a ONE TUPLE databag
-counts     = FOREACH all_group
-             {
-                 -- yes, I KNOW these can be obtained from the counters, try automating that simply and then we'll talk
-                 n_users      = (double)COUNT(cut_users);
-                 sqrt_n_users = org.apache.pig.piggybank.evaluation.math.SQRT(n_users);
-                 tot_usages   = (double)SUM(cut_users.tot_user_usages);
-                 GENERATE
-                     n_users                 AS n_users,
-                     sqrt_n_users            AS sqrt_n_users,
-                     tot_usages              AS tot_usages
-                 ;
-             };
+cut_users    = FOREACH user_stats GENERATE uid, tot_user_usages;
+unique_users = DISTINCT cut_users;
+all_group    = GROUP unique_users ALL;
+counts       = FOREACH all_group
+               {
+                   -- yes, I KNOW these can be obtained from the counters, try automating that simply and then we'll talk
+                   n_users      = (double)COUNT(unique_users);
+                   sqrt_n_users = org.apache.pig.piggybank.evaluation.math.SQRT(n_users);
+                   tot_usages   = (double)SUM(unique_users.tot_user_usages);
+                   GENERATE
+                       n_users                 AS n_users,
+                       sqrt_n_users            AS sqrt_n_users,
+                       tot_usages              AS tot_usages
+                   ;
+               };
 
 cart       = CROSS counts, user_stats; -- basically, append the one line of numbers to every tuple
 grouped    = GROUP cart BY tok;
