@@ -46,7 +46,7 @@ tok_stats  = FOREACH grouped -- for every token, generate...
                  global_freq_sum    = (double)SUM(cart.user_tok_freq);
                  global_freq_avg    = (double)(global_freq_sum / (double)n_users);
                  global_freq_avg_sq = (double)(global_freq_sum / (double)n_users) * (double)(global_freq_sum / (double)n_users);
-                 global_freq_var    = ((double)SUM(cart.user_tok_freq_sq) / (double)) - (double)global_freq_avg_sq;
+                 global_freq_var    = ((double)SUM(cart.user_tok_freq_sq) / (double)n_users) - (double)global_freq_avg_sq;
                  global_freq_stdev  = org.apache.pig.piggybank.evaluation.math.SQRT((double)global_freq_var);
                 
                  tot_tok_usages     = SUM(cart.num_user_tok_usages);
