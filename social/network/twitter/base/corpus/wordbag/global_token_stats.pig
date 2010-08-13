@@ -37,11 +37,6 @@ tok_stats  = FOREACH grouped -- for every token, generate...
                  sqrt_n_users = MAX(cart.sqrt_n_users) - (double)1.0; -- even ickier
                  tot_usages   = MAX(cart.tot_usages);                 -- icky
                          
-                 -- user token frequency stats (taken over participating users only)
-                 user_freq_avg     = AVG(cart.user_tok_freq);
-                 user_freq_var     = (double)AVG(cart.user_tok_freq_sq) - (double)AVG(cart.user_tok_freq)*(double)AVG(cart.user_tok_freq);
-                 user_freq_stdev   = org.apache.pig.piggybank.evaluation.math.SQRT((double)user_freq_var);
-                
                  -- global token frequency stats (taken over ALL users)
                  global_freq_sum    = (double)SUM(cart.user_tok_freq);
                  global_freq_avg    = (double)(global_freq_sum / (double)n_users);
@@ -57,8 +52,6 @@ tok_stats  = FOREACH grouped -- for every token, generate...
                      group                     AS tok,
                      tot_tok_usages            AS tot_tok_usages,           -- total times THIS tok has been spoken
                      COUNT(cart)               AS range:             long,  -- total number of people who spoke this tok at least once
-                     (double)user_freq_avg     AS user_freq_avg:     double, -- usage frequency of this token for participating pop.
-                     (double)user_freq_stdev   AS user_freq_stdev:   double, -- usage stdev for this token for participating pop.
                      (double)global_freq_avg   AS global_freq_avg:   double, -- average of the frequencies at which this tok is spoken
                      (double)global_freq_stdev AS global_freq_stdev: double, -- standard deviation of the frequencies at which this tok is spoken
                      (double)dispersion        AS dispersion:        double, -- dispersion (see below)
