@@ -12,10 +12,11 @@ superhist2pdf <- function(x, filename = "super_histograms.pdf", dev = "pdf", tit
     xr <- range(junk)
     histL <- tapply(junk, grouping, hist, breaks=nbreaks, plot = FALSE)
     maxC <- max(sapply(lapply(histL, "[[", "counts"), max))
-    if(dev == "pdf") { pdf(filename, version = "1.4") } else{}
+    if(dev == "pdf") { pdf(filename, version = "1.4", height=900, width=1600) } else{}
     if((TC <- transparent.cols <- .Device %in% c("pdf", "png")))
     {
-        cols <- hcl(h = seq(30, by=360 / n.gr, length = n.gr), l = 65, alpha = 0.5)
+        # cols <- hcl(h = seq(30, by=360 / n.gr, length = n.gr), l = 65, alpha = 0.5)
+        cols <- hcl(h = c(0, 120, 240), l = 65, alpha = 0.5)
     }
     else
     {
@@ -25,7 +26,8 @@ superhist2pdf <- function(x, filename = "super_histograms.pdf", dev = "pdf", tit
     if(TC)
     {
         histL[[1]]$counts <- histL[[1]]$counts / max(histL[[1]]$counts)
-        plot(histL[[1]], xlim = xr, ylim= c(0, 1), col = cols[1], xlab = "x", main = title)
+        # plot(histL[[1]], xlim = xr, ylim= c(0, 1), col = cols[1], xlab = "x", main = title)
+        plot(histL[[1]], xlim = xr, ylim= c(0, 1), col = cols[1], axes=F)
     }
     else
     {
