@@ -1,4 +1,13 @@
 --
+--
+-- This script depends on 
+-- 
+--  num_toks,   sum_freq_ppb,           sum_freq_ppb_sq,        avg_freq_ppb,           avg_freq_ppb_sq,        std_freq_ppb,           u_tok,                  c_tok
+--  65524511	9.999999999910016E8	1.8154320245688398E15	15.261464522657812	2.7706151436503507E7	5263.641184978715	15.261464522657812	549.8376947117983
+--
+--
+-- ** Explanation of output variables **
+--
 -- Range is how many people used the word
 --
 -- Dispersion is Julliand's D
@@ -15,8 +24,7 @@
 -- * s is the standard deviation of the subfrequencies
 -- * x is the average of the subfrequencies
 --
--- map input records to first mr job    = tot usages
--- reduce input groups in second mr job = tot users
+
 
 -- PIG_OPTS='-Dmapred.min.split.size=402653184 -Dio.sort.mb=620 -Dio.sort.record.percent=0.2' pig -p WORDBAG_ROOT=/tmp/wordbag ~/ics/icsdata/social/network/twitter/base/corpus/wordbag/wordbag-3-tok_stats.pig
 
@@ -48,13 +56,12 @@ tok_stats           = FOREACH tok_stats_g   -- for every token, generate...
 
   GENERATE
     group                       AS tok,
-    (double)tok_freq_ppb        AS tok_freq_ppb:      double,  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
-    -- tot_tok_usages              AS tot_tok_usages,            -- total times THIS tok has been spoken
-    COUNT(user_tok_user_stats)  AS range:             long,   -- total number of people who spoke this tok at least once
-    -- (double)tok_freq_avg        AS tok_freq_avg:      double, -- average of the frequencies at which this tok is spoken
-    (double)tok_freq_stdev      AS tok_freq_stdev:    double, -- standard deviation of the frequencies at which this tok is spoken
-    (double)dispersion          AS dispersion:        double, -- dispersion (see above)
-    
+    (double)tok_freq_ppb        AS tok_freq_ppb:   double,  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+    COUNT(user_tok_user_stats)  AS range:          long,    -- total number of people who spoke this tok at least once
+    (double)tok_freq_stdev      AS tok_freq_stdev: double,  -- standard deviation of the frequencies at which this tok is spoken
+    (double)dispersion          AS dispersion:     double,  -- dispersion (see above)
+    (double)u_tok_ppb           AS u_tok_ppb:      double,  -- bayesian-adjusted token frequency, ppb
+    (double)c_tok_ppb           AS c_tok_ppb:      double
     ;
   };
 

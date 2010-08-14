@@ -16,17 +16,22 @@
 %default TOT_USAGES       '1.6501474834E10';   -- total non-distinct usages **AS A DOUBLE**
 
 tok_stats     = LOAD '$WORDBAG_ROOT/tok_stats' AS (tok:chararray, tot_tok_usages:long, range:long, tok_freq_avg:double, tok_freq_stdev:double, dispersion:double, tok_freq_ppb:double);
+
+-- Perform a bayesian estimate of the frequency (u_tok_ppb) and spread (c_tok_ppb)
+
 tok_stats_fg  = FOREACH tok_stats GENERATE tok, tot_tok_usages;
 tok_stats_rg  = FOREACH tok_stats_fg
-                {
-                  c_tok = (double)$C_PRIOR + (double)$TOT_USAGES;
-                  u_tok = ((double)$C_PRIOR*(double)$U_PRIOR + (double)tot_tok_usages)/((double)$C_PRIOR + (double)$TOT_USAGES);
-                  GENERATE
-                    tok   AS tok,
-                    c_tok AS c_tok,
-                    u_tok AS u_tok
-                  ;
-                };
+  {
+  c_tok = (double)$C_PRIOR + (double)$TOT_USAGES;
+  u_tok = (
+    ((double)$C_PRIOR * (double)$U_PRIOR + (double)tot_tok_usages) /
+    ((double)$C_PRIOR                    + (double)$TOT_USAGES) );
+  GENERATE
+    tok   AS tok,
+    c_tok AS c_tok,
+    u_tok AS u_tok
+    ;
+};
 
 rmf                     $WORDBAG_ROOT/typical_token_stats
 STORE tok_stats_rg INTO '$WORDBAG_ROOT/token_stats_regressed';
