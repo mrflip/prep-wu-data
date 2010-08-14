@@ -18,20 +18,20 @@ REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar ;
 
 %default TOKENS  '/data/sn/tw/fixd/objects/word_token'; --input location
 %default WORDBAG '/data/sn/tw/fixd/word/user_word_bag'; --output location
-toks        = LOAD '$TOKENS' AS (rsrc:chararray, text:chararray, twid:long, uid:long, crat:long);
+usages      = LOAD '$TOKENS' AS (rsrc:chararray, text:chararray, twid:long, uid:long, crat:long);
 
--- generate flat user word usage counts
-user_toks   = FOREACH toks GENERATE uid AS uid, text AS tok;
-grouped     = GROUP user_toks BY (uid, tok);
-user_counts = FOREACH grouped GENERATE FLATTEN(group) AS (uid, tok), COUNT(user_toks) AS num_user_tok_usages;
+-- Count usages for each token by each user
+user_toks_0 = FOREACH usages GENERATE uid AS uid, text AS tok;
+user_toks_g = GROUP   user_toks_0 BY (uid, tok);
+user_toks   = FOREACH user_toks_g GENERATE FLATTEN(group) AS (uid, tok), COUNT(user_toks_0) AS num_usages;
 
 -- generate unique list of num token usages, unique usages overall, and total usages of all words by user
-user_usages = GROUP user_counts BY uid;
+user_usages = GROUP user_toks BY uid;
 usage_stats = FOREACH user_usages GENERATE
-                  group                                           AS uid,
-                  FLATTEN(user_counts.(tok, num_user_tok_usages)) AS (tok, num_user_tok_usages), 
-                  COUNT(user_counts)                              AS vocab, 
-                  SUM(user_counts.num_user_tok_usages)            AS tot_user_usages            
+                  group                              AS uid,
+                  FLATTEN(user_toks.(tok, usages))   AS (tok, usages), 
+                  COUNT(user_counts)                 AS vocab, 
+                  SUM(user_counts.usages)            AS user_usages_tot
               ;
 
 -- generate final user usage statistics for use in global statistics
