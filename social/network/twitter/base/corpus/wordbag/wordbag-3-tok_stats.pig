@@ -30,30 +30,30 @@ REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
 -- 3.8002003E7,6163.576465581395,1.6501474834E10
   
-user_tok_user_stats     = LOAD '$WORDBAG_ROOT/user_tok_user_stats' AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
+user_tok_user_stats = LOAD '$WORDBAG_ROOT/user_tok_user_stats' AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
-tok_stats_g      = GROUP user_tok_user_stats BY tok;
-tok_stats        = FOREACH tok_stats_g   -- for every token, generate...
+tok_stats_g         = GROUP user_tok_user_stats BY tok;
+tok_stats           = FOREACH tok_stats_g   -- for every token, generate...
   {
   -- global token frequency stats (taken over ALL users)
-  tok_freq_sum    = (double)SUM(user_tok_user_stats.user_tok_freq);
-  tok_freq_avg    = (double)(tok_freq_sum / $N_USERS);
-  tok_freq_avg_sq = (double)(tok_freq_sum / $N_USERS) * (double)(tok_freq_sum / $N_USERS);
-  tok_freq_var    = ((double)SUM(user_tok_user_stats.user_tok_freq_sq) / $N_USERS) - tok_freq_avg_sq;
-  tok_freq_stdev  = org.apache.pig.piggybank.evaluation.math.SQRT(tok_freq_var);
+  tok_freq_sum      = (double)SUM(user_tok_user_stats.user_tok_freq);
+  tok_freq_avg      = (double)(tok_freq_sum / $N_USERS);
+  tok_freq_avg_sq   = (double)(tok_freq_sum / $N_USERS) * (double)(tok_freq_sum / $N_USERS);
+  tok_freq_var      = ((double)SUM(user_tok_user_stats.user_tok_freq_sq) / $N_USERS) - tok_freq_avg_sq;
+  tok_freq_stdev    = org.apache.pig.piggybank.evaluation.math.SQRT(tok_freq_var)*(double)1000000000.0;
 
-  tot_tok_usages     = SUM(user_tok_user_stats.num_user_tok_usages);
-  dispersion         = (double)1.0 - ((double)tok_freq_stdev / ( (double)tok_freq_avg * $SQRT_N_USERS_M1 ));
-  tok_freq_ppb       = ((double)tot_tok_usages / $TOT_USAGES)*(double)1000000000.0;
+  tot_tok_usages    = SUM(user_tok_user_stats.num_user_tok_usages);
+  dispersion        = (double)1.0 - ((double)tok_freq_stdev / ( (double)tok_freq_avg * $SQRT_N_USERS_M1 ));
+  tok_freq_ppb      = ((double)tot_tok_usages / $TOT_USAGES)*(double)1000000000.0;
 
   GENERATE
     group                       AS tok,
-    tot_tok_usages              AS tot_tok_usages,            -- total times THIS tok has been spoken
+    (double)tok_freq_ppb        AS tok_freq_ppb:      double  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+    -- tot_tok_usages              AS tot_tok_usages,            -- total times THIS tok has been spoken
     COUNT(user_tok_user_stats)  AS range:             long,   -- total number of people who spoke this tok at least once
-    (double)tok_freq_avg        AS tok_freq_avg:      double, -- average of the frequencies at which this tok is spoken
+    -- (double)tok_freq_avg        AS tok_freq_avg:      double, -- average of the frequencies at which this tok is spoken
     (double)tok_freq_stdev      AS tok_freq_stdev:    double, -- standard deviation of the frequencies at which this tok is spoken
     (double)dispersion          AS dispersion:        double, -- dispersion (see above)
-    (double)tok_freq_ppb        AS tok_freq_ppb:      double  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
     ;
   };
 
