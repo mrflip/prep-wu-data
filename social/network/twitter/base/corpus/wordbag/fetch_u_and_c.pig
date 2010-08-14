@@ -3,10 +3,9 @@ word_stats_fg = FOREACH word_stats GENERATE tok_freq_ppb, tok_freq_ppb*tok_freq_
 word_stats_g  = GROUP word_stats_fg ALL;
 u_and_c       = FOREACH word_stats_g
                 {
-                  n   = SIZE(word_stats_fg);
                   u   = AVG(word_stats_fg.tok_freq_ppb);
                   -- var(tok_freq_ppb) = AVG(tok_freq_ppb^2) - AVG(tok_freq_ppb)^2
-                  var = (double)SUM(word_stats_fg.tok_freq_ppb_sq)/(double)n - (double)u*u;
+                  var = (double)SUM(word_stats_fg.tok_freq_ppb_sq)/(double)SIZE(word_stats_fg) - (double)u*u;
                   c   = u*(1.0 - u)/var - 1.0;
                   GENERATE
                     u AS u_prior,
