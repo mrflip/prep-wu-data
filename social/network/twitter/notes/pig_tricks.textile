@@ -1,0 +1,14 @@
+
+h3. Cheap 
+
+
+h3. Cheap consistent sample
+
+If you're 
+
+  users_some   = FILTER users BY (uid % 1000L == 720);
+
+If you later subsample, do (uid / 1000L) % whatever
+
+h3. Robust sampling
+
