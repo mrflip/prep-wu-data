@@ -15,23 +15,19 @@
 %default SQRT_N_USERS_M1  '6163.576465581395';
 %default TOT_USAGES       '1.6501474834E10';   -- total non-distinct usages **AS A DOUBLE**
 
-tok_stats              = LOAD '$WORDBAG_ROOT/tok_stats' AS (tok:chararray, tot_tok_usages:long, range:long, tok_freq_avg:double, tok_freq_stdev:double, dispersion:double, tok_freq_ppb:double);
-
-typical_token_stats_0  = FOREACH user_tok_user_stats GENERATE tok, num_user_tok_usages, tot_user_usages;
-typical_token_stats_g  = GROUP   typical_token_stats_0 BY tok;
-typical_token_stats    = FOREACH typical_token_stats_g
-  {
-  n_measure = SUM(typical_token_stats_0.tot_user_usages);
-  s_success = SUM(typical_token_stats_0.num_user_tok_usages);
-  c_tok     = (double)$C_PRIOR + (double)n_measure;
-  u_tok     = (double)($C_PRIOR*(double)$U_PRIOR + (double)s_success)/((double)$C_PRIOR + (double)n_measure);
-  GENERATE
-    group  AS tok,
-    c_tok AS c_tok,
-    u_tok AS u_tok
-    ;
-};
+tok_stats     = LOAD '$WORDBAG_ROOT/tok_stats' AS (tok:chararray, tot_tok_usages:long, range:long, tok_freq_avg:double, tok_freq_stdev:double, dispersion:double, tok_freq_ppb:double);
+tok_stats_fg  = FOREACH tok_stats GENERATE tok, tot_tok_usages;
+tok_stats_rg  = FOREACH tok_stats_fg
+                {
+                  c_tok = (double)$C_PRIOR + (double)$TOT_USAGES;
+                  u_tok = ((double)$C_PRIOR*(double)$U_PRIOR + (double)tot_tok_usages)/((double)$C_PRIOR + (double)$TOT_USAGES);
+                  GENERATE
+                    tok   AS tok,
+                    c_tok AS c_tok,
+                    u_tok AS u_tok
+                  ;
+                };
 
 rmf                     $WORDBAG_ROOT/typical_token_stats
-STORE typical_token_stats INTO '$WORDBAG_ROOT/typical_token_stats';
-typical_token_stats     = LOAD '$WORDBAG_ROOT/typical_token_stats' AS (tok:chararray, c_tok:double, u_tok:double);
+STORE tok_stats_rg INTO '$WORDBAG_ROOT/token_stats_regressed';
+tok_stats_rg     = LOAD '$WORDBAG_ROOT/token_stats_regressed' AS (tok:chararray, c_tok:double, u_tok:double);
