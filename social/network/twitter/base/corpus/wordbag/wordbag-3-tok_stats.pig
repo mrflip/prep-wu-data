@@ -48,12 +48,13 @@ tok_stats           = FOREACH tok_stats_g   -- for every token, generate...
 
   GENERATE
     group                       AS tok,
-    (double)tok_freq_ppb        AS tok_freq_ppb:      double  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+    (double)tok_freq_ppb        AS tok_freq_ppb:      double,  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
     -- tot_tok_usages              AS tot_tok_usages,            -- total times THIS tok has been spoken
     COUNT(user_tok_user_stats)  AS range:             long,   -- total number of people who spoke this tok at least once
     -- (double)tok_freq_avg        AS tok_freq_avg:      double, -- average of the frequencies at which this tok is spoken
     (double)tok_freq_stdev      AS tok_freq_stdev:    double, -- standard deviation of the frequencies at which this tok is spoken
     (double)dispersion          AS dispersion:        double, -- dispersion (see above)
+    
     ;
   };
 
