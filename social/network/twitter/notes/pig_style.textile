@@ -1,0 +1,61 @@
+h3. File Naming
+
+
+   {workflow}-{step_num}-{relations}.pig
+
+h3. Variable Naming
+
+
+* use 'num_{grouping_dims}_{variable}' for counts
+* use 'tot_{grouping_dims}_{variable}' for sums:
+
+  transactions = LOAD 'transactions' AS (donor_id:long, org_id:long, donation_id:long, amt:double);
+  donor_stats  = GROUP transactions BY donor_id, org_id;
+  donor_orgs   = FOREACH transactions GENERATE COUNT(transactions) AS num_donor_org_transactions, SUM(amt) AS tot_donor_org_amt;
+
+* when several steps are required to produce the same variable, give each
+  the final variable name plus a short suffix:  
+
+    avg_male_heights_ft  = FILTER heights BY gender == 'M' ;
+    avg_male_heights_g   = GROUP avg_male_heights_ft BY school_id ;
+    avg_male_heights     = FOREACH avg_male_heights_g GENERATE this, that, ...;
+
+  (this logically groups the steps in the same way a subroutine would in
+  procedural languages. It says 'these intermediate relations are only
+  interesting in service of the base-named relation).
+
+* Use descriptive names. "user_replies" not "grouped"
+  
+
+  
+h3. A
+
+* 
+
+    total_user_stats       = FOREACH all_group {
+      -- yes, I KNOW these can be obtained from the counters, try automating that simply and then we'll talk
+      n_users      = (double)COUNT(unique_users);
+      sqrt_n_users = org.apache.pig.piggybank.evaluation.math.SQRT(n_users);
+      tot_usages   = (double)SUM(unique_users.tot_user_usages);
+      GENERATE
+        n_users                 AS n_users,
+        (sqrt_n_users - 1.0)    AS sqrt_n_users_m1,
+        tot_usages              AS tot_usages
+        ;
+      };
+
+
+h3. Storing output
+
+    rmf                          $WORDBAG_ROOT/global_tok_stats;
+    STORE global_tok_stats INTO '$WORDBAG_ROOT/global_tok_stats';
+    global_tok_stats     = LOAD '$WORDBAG_ROOT/global_tok_stats' AS (tok:chararray, ...);
+
+* the default file name and the variable name should match.
+
+* it's optional but appreciated to include the LOAD line following the
+  STORE. This makes it easy to concatenate scripts, and to cut and paste for a
+  dependent script.
+
+
+  
