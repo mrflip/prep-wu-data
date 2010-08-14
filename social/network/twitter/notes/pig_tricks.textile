@@ -1,6 +1,7 @@
 
 h3. Cheap 
 
+user_toks_target_users  = FILTER user_tok_user_stats BY ((chararray)uid MATCHES '(82363|428333|813286|1554031|4641021|7040932|9721652|14075928|14400690|15094396|15131310|15748351|16061930|16134540|17461978|18359437|19038529|19041500|21230911|44951059|87197143|115485051|116485573|119064111|120845920|138317592)');
 
 h3. Cheap consistent sample
 
@@ -12,3 +13,24 @@ If you later subsample, do (uid / 1000L) % whatever
 
 h3. Robust sampling
 
+
+h2. Pig anti-tricks
+
+(things it doesn't do, but should)
+
+h3. Map-side SPLIT
+
+Does a case statement; each record is assigned to the first-matching (thus, exactly one) of the alternatives.
+If ELSE is omitted, some records may fall through.
+
+h3. Double Group
+
+
+  transactions = LOAD 'transactions' AS (donor_id:long, org_id:long, donation_id:long, amt:double);
+  donor_stats  = GROUP transactions BY donor_id, org_id;
+  donor_orgs   = FOREACH transactions {
+    donors = SUBGROUP transactions BY donor_id;
+    GENERATE group AS COUNT(transactions) AS num_donor_org_transactions, SUM(amt) AS tot_donor_org_amt;
+
+In this   
+ 

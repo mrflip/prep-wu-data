@@ -11,6 +11,8 @@
 --   output:      1000 toks        <1M    64 files   m2.xlarge   < 1 min      
 
 %default WORDBAG_ROOT     '/data/sn/tw/fixd/wordbag';
+%default TARGET_WORDS     '(smh|the|lol|mrflip|infochimps|texas|austin|thedatachef|hapax|legomenon|hapax.*legomenon|hadoop|data|your|mom|pinged|cahoots|los|salut|ri{0,5}ght|urinating|archivist|lawsuit|tort|socage|pig|twitter|blog|church|cogroup|tcot|underpants|pajamas|pyjamas|syzygy|zeugma|mook|welder)';
+%default TARGET_IDS       '(82363|428333|813286|1554031|4641021|7040932|9721652|14075928|14400690|15094396|15131310|15748351|16061930|16134540|17461978|18359437|19038529|19041500|21230911|44951059|87197143|115485051|116485573|119064111|120845920|138317592)';
 
 REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
@@ -24,7 +26,7 @@ tok_stats_many          = LOAD     '$WORDBAG_ROOT-sampled/tok_stats-many' AS (to
 tok_stats_some          = FILTER tok_stats BY ((tot_tok_usages >= 40000L) OR (tot_tok_usages % 1000 == 59));
 tok_stats_many          = FILTER tok_stats BY ((tot_tok_usages >= 200L)   AND (dispersion > 0.5));
 tok_stats_lo_disp       = FILTER tok_stats BY ((dispersion      < 0.9)    AND (tot_tok_usages >= 5000L));
-tok_stats_target_words  = FILTER tok_stats BY tok MATCHES '(smh|the|lol|mrflip|infochimps|texas|austin|thedatachef|hapax|legomenon|hapax.*legomenon|hadoop|data|your|mom|pinged|cahoots|los|salut|ri{,5}ght|urinating|archivist|lawsuit|tort|socage|pig|twitter|blog|church|cogroup|tcot|underpants|pajamas|pyjamas|syzygy|zeugma|mook|welder)';
+tok_stats_target_words  = FILTER tok_stats BY tok MATCHES '$TARGET_WORDS';
 
 -- rmf                                $WORDBAG_ROOT-sampled/tok_stats-some
 -- STORE tok_stats_some      INTO    '$WORDBAG_ROOT-sampled/tok_stats-some';
@@ -36,8 +38,8 @@ tok_stats_target_words  = FILTER tok_stats BY tok MATCHES '(smh|the|lol|mrflip|i
 -- STORE tok_stats_target_words INTO '$WORDBAG_ROOT-sampled/tok_stats-target_words';
 
 user_toks_many  = FILTER user_tok_user_stats
-  BY (tok            MATCHES '(smh|the|lol|mrflip|infochimps|texas|austin|thedatachef|hapax|legomenon|hapax.*legomenon|hadoop|data|your|mom|pinged|cahoots|los|salut|ri{,5}ght|urinating|archivist|lawsuit|tort|socage|pig|twitter|blog|church|cogroup|tcot|underpants|pajamas|pyjamas|syzygy|zeugma|mook|welder)')
-  OR ((chararray)uid MATCHES '(82363|428333|813286|1554031|4641021|7040932|9721652|14075928|14400690|15094396|15131310|15748351|16061930|16134540|17461978|18359437|19038529|19041500|21230911|44951059|87197143|115485051|116485573|119064111|120845920|138317592)')
+  BY (tok            MATCHES '')
+  OR ((chararray)uid MATCHES '$TARGET_IDS')
   OR (uid % 100L == 31)
   ;
 
@@ -45,10 +47,13 @@ user_toks_many  = FILTER user_tok_user_stats
 
 rmf                                $WORDBAG_ROOT-sampled/user_toks-many
 STORE user_toks_many      INTO    '$WORDBAG_ROOT-sampled/user_toks-many';
+user_toks_many          = LOAD    '$WORDBAG_ROOT-sampled/user_toks-many'    AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
--- user_toks_target_words  = FILTER user_tok_user_stats BY (tok            MATCHES '(smh|the|lol|mrflip|infochimps|texas|austin|thedatachef|hapax|legomenon|hapax.*legomenon|hadoop|data|your|mom|pinged|cahoots|los|salut|ri{,5}ght|urinating|archivist|lawsuit|tort|socage|pig|twitter|blog|church|cogroup|tcot|underpants|pajamas|pyjamas|syzygy|zeugma|mook|welder)');
--- user_toks_target_users  = FILTER user_tok_user_stats BY ((chararray)uid MATCHES '(82363|428333|813286|1554031|4641021|7040932|9721652|14075928|14400690|15094396|15131310|15748351|16061930|16134540|17461978|18359437|19038529|19041500|21230911|44951059|87197143|115485051|116485573|119064111|120845920|138317592)');
--- user_toks_some          = FILTER user_tok_user_stats BY (uid % 10000L == 4031);
+SPLIT user_toks_many INTO
+  user_toks_target_words  IF (tok            MATCHES '$TARGET_WORDS'),
+  user_toks_target_users  IF ((chararray)uid MATCHES '$TARGET_IDS'),
+  user_toks_some          IF (uid % 10000L == 4031)
+  ;
 
 -- rmf                                $WORDBAG_ROOT-sampled/user_toks-target_words
 -- STORE user_toks_target_words INTO '$WORDBAG_ROOT-sampled/user_toks-target_words';
