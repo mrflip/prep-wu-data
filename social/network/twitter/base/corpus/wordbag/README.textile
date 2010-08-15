@@ -12,8 +12,8 @@ First input is the word_tokens -- which for this project we'll actually call 'us
 * *usages*:    16,501,474,834   16.5b words observed.           902GB
 * *user_toks*:  6,232,179,598    6.2b user-token pairings       403GB
 * *users*:
-* *tokens*:
-
+* *tokens*:	   65,524,511
+ 
 %default N_USERS                 '38,002,003';       -- total users in the sample **AS A DOUBLE**
 %default SQRT_N_USERS_M1           '6163.576';
 %default TOT_USAGES         '16,501,474,834';   -- total non-distinct usages **AS A DOUBLE**

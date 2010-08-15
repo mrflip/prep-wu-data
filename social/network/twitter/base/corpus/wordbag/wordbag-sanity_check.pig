@@ -37,15 +37,15 @@ REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 --   ;
 -- rmf                                $WORDBAG_ROOT-sampled/user_toks-many
 -- STORE user_toks_many      INTO    '$WORDBAG_ROOT-sampled/user_toks-many';
-
-SPLIT user_toks_many INTO
-  user_toks_target_words  IF (tok            MATCHES '$TARGET_WORDS'),
-  user_toks_target_users  IF ((chararray)uid MATCHES '$TARGET_IDS'),
-  user_toks_some          IF (uid % 10000L == 4031)
-  ;
--- re/uncomment the above and below for first time vs. repeated use
+-- -- re/uncomment the above and below for first time vs. repeated use
 user_toks_many          = LOAD    '$WORDBAG_ROOT-sampled/user_toks-many'    AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
+
+-- SPLIT user_toks_many INTO
+--   user_toks_target_words  IF (tok            MATCHES '$TARGET_WORDS'),
+--   user_toks_target_users  IF ((chararray)uid MATCHES '$TARGET_IDS'),
+--   user_toks_some          IF (uid % 10000L == 4031)
+--   ;
 -- rmf                                $WORDBAG_ROOT-sampled/user_toks-target_words
 -- STORE user_toks_target_words INTO '$WORDBAG_ROOT-sampled/user_toks-target_words';
 -- rmf                                $WORDBAG_ROOT-sampled/user_toks-target_users
@@ -56,15 +56,18 @@ user_toks_target_words     = LOAD '$WORDBAG_ROOT-sampled/user_toks-target_words'
 user_toks_target_users     = LOAD '$WORDBAG_ROOT-sampled/user_toks-target_users'    AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 user_toks_some             = LOAD '$WORDBAG_ROOT-sampled/user_toks-some'            AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
-user_words_g = GROUP user_toks_target_users BY uid;
-user_words_0 = FOREACH user_words_g GENERATE
-  group AS uid, 
-  MAX(num_user_tok_usages), MAX(tot_user_usages),
-  MAX(user_tok_freq),       MAX(user_tok_freq_sq), MAX(vocab),
-  user_toks_target_users.tok AS toks
+user_words_g = GROUP user_toks_target_users BY uid PARALLEL 1;
+user_words_0 = FOREACH user_words_g {
+  ordered_user_toks = ORDER user_toks_target_users BY user_tok_freq DESC;
+  GENERATE
+    group AS uid, 
+    MAX(user_toks_target_users.num_user_tok_usages), MAX(user_toks_target_users.tot_user_usages),
+    MAX(user_toks_target_users.user_tok_freq),       MAX(user_toks_target_users.user_tok_freq_sq), MAX(user_toks_target_users.vocab),
+    ordered_user_toks.(tok, num_user_tok_usages, user_tok_freq)
   ;
-rmf                                $WORDBAG_ROOT-sampled/user_words
-STORE user_toks_some         INTO '$WORDBAG_ROOT-sampled/user_words';
+  };
+rmf                                $WORDBAG_ROOT-sampled/user_words2
+STORE user_words_0           INTO '$WORDBAG_ROOT-sampled/user_words2';
 
 -- ===========================================================================
 -- 
