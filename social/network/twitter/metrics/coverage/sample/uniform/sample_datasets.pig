@@ -15,35 +15,27 @@ geo                    = LOAD '$TW_DIR/geo'                   	AS (rsrc:chararra
 -- strong_links           = LOAD '$TW_GRAPH/strong_links'          AS (uid:long, sn:chararray, list:chararray);
 
 tweet_s = JOIN tweet BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/tweet
 STORE tweet_s INTO '$SAMPLE_DIR/tweet';
 
 twitter_user_profile_s = JOIN twitter_user_profile BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/twitter_user_profile
 STORE twitter_user_profile_s INTO '$SAMPLE_DIR/twitter_user_profile';
 
 twitter_user_style_s = JOIN twitter_user_style BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/twitter_user_style
 STORE twitter_user_style_s INTO '$SAMPLE_DIR/twitter_user_style';
 
 twitter_user_location_s = JOIN twitter_user_location BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/twitter_user_location
 STORE twitter_user_location_s INTO '$SAMPLE_DIR/twitter_user_location';
 
 hashtag_s = JOIN hashtag BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/hashtag
 STORE hashtag_s INTO '$SAMPLE_DIR/hashtag';
 
 smiley_s = JOIN smiley BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/smiley
 STORE smiley_s INTO '$SAMPLE_DIR/smiley';
 
 tweet_url_s = JOIN tweet_url BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/tweet_url
 STORE tweet_url_s INTO '$SAMPLE_DIR/tweet_url';
 
 stock_token_s = JOIN stock_token BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/stock_token
 STORE stock_token_s INTO '$SAMPLE_DIR/stock_token';
 
 -- word_token_s = JOIN word_token BY uid, sampled_ids BY uid USING 'replicated';
@@ -51,7 +43,6 @@ STORE stock_token_s INTO '$SAMPLE_DIR/stock_token';
 -- STORE word_token_s INTO '$SAMPLE_DIR/word_token';
 
 geo_s = JOIN geo BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/geo
 STORE geo_s INTO '$SAMPLE_DIR/geo';
 
 -- trstrank_s = JOIN trstrank BY uid, sampled_ids BY uid USING 'replicated';
