@@ -10,9 +10,9 @@ tweet_url              = LOAD '$TW_DIR/tweet_url'             	AS (rsrc:chararra
 stock_token            = LOAD '$TW_DIR/stock_token'           	AS (rsrc:chararray, text:chararray, twid:long,             uid:long,     crat:long);                                                         
 word_token             = LOAD '$TW_DIR/word_token'            	AS (rsrc:chararray, text:chararray, twid:long,             uid:long,     crat:long);                                                          
 geo                    = LOAD '$TW_DIR/geo'                   	AS (rsrc:chararray, twid:long,      uid:long,              sn:chararray, crat:long,               lat:float,         lon:float,            place_id:chararray);
-trstrank               = LOAD '$TW_GRAPH/trstrank'              AS (sn:chararray,   uid:long,       rank:float,            tq:int);
-influencer             = LOAD '$TW_GRAPH/influencer_metrics'    AS (rsrc:chararray, uid:long,       crat:long,             followers:int, fo_o:int, fo_i:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int, tw_o:int, tw_i:int, ms_tw_o:int, hsh_o:int, sm_o:int, url_o:int, at_tr:int, fo_tr:int);
-strong_links           = LOAD '$TW_GRAPH/strong_links'          AS (uid:long, sn:chararray, list:chararray);
+-- trstrank               = LOAD '$TW_GRAPH/trstrank'              AS (sn:chararray,   uid:long,       rank:float,            tq:int);
+-- influencer             = LOAD '$TW_GRAPH/influencer_metrics'    AS (rsrc:chararray, uid:long,       crat:long,             followers:int, fo_o:int, fo_i:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int, tw_o:int, tw_i:int, ms_tw_o:int, hsh_o:int, sm_o:int, url_o:int, at_tr:int, fo_tr:int);
+-- strong_links           = LOAD '$TW_GRAPH/strong_links'          AS (uid:long, sn:chararray, list:chararray);
 
 tweet_s = JOIN tweet BY uid, sampled_ids BY uid USING 'replicated';
 rmf                 $SAMPLE_DIR/tweet
@@ -46,22 +46,22 @@ stock_token_s = JOIN stock_token BY uid, sampled_ids BY uid USING 'replicated';
 rmf                 $SAMPLE_DIR/stock_token
 STORE stock_token_s INTO '$SAMPLE_DIR/stock_token';
 
-word_token_s = JOIN word_token BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/word_token
-STORE word_token_s INTO '$SAMPLE_DIR/word_token';
+-- word_token_s = JOIN word_token BY uid, sampled_ids BY uid USING 'replicated';
+-- rmf                 $SAMPLE_DIR/word_token
+-- STORE word_token_s INTO '$SAMPLE_DIR/word_token';
 
 geo_s = JOIN geo BY uid, sampled_ids BY uid USING 'replicated';
 rmf                 $SAMPLE_DIR/geo
 STORE geo_s INTO '$SAMPLE_DIR/geo';
 
-trstrank_s = JOIN trstrank BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/trstrank
-STORE trstrank_s INTO '$SAMPLE_DIR/trstrank';
-
-influencer_s = JOIN influencer BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/influencer
-STORE influencer_s INTO '$SAMPLE_DIR/influencer';
-
-strong_links_s = JOIN strong_links BY uid, sampled_ids BY uid USING 'replicated';
-rmf                 $SAMPLE_DIR/strong_links
-STORE strong_links_s INTO '$SAMPLE_DIR/strong_links';
+-- trstrank_s = JOIN trstrank BY uid, sampled_ids BY uid USING 'replicated';
+-- rmf                 $SAMPLE_DIR/trstrank
+-- STORE trstrank_s INTO '$SAMPLE_DIR/trstrank';
+-- 
+-- influencer_s = JOIN influencer BY uid, sampled_ids BY uid USING 'replicated';
+-- rmf                 $SAMPLE_DIR/influencer
+-- STORE influencer_s INTO '$SAMPLE_DIR/influencer';
+-- 
+-- strong_links_s = JOIN strong_links BY uid, sampled_ids BY uid USING 'replicated';
+-- rmf                 $SAMPLE_DIR/strong_links
+-- STORE strong_links_s INTO '$SAMPLE_DIR/strong_links';
