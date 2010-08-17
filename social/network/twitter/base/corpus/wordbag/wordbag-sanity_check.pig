@@ -56,18 +56,19 @@ user_toks_target_words     = LOAD '$WORDBAG_ROOT-sampled/user_toks-target_words'
 user_toks_target_users     = LOAD '$WORDBAG_ROOT-sampled/user_toks-target_users'    AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 user_toks_some             = LOAD '$WORDBAG_ROOT-sampled/user_toks-some'            AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
-user_words_g = GROUP user_toks_target_users BY uid PARALLEL 1;
-user_words_0 = FOREACH user_words_g {
-  ordered_user_toks = ORDER user_toks_target_users BY user_tok_freq DESC;
-  GENERATE
-    group AS uid, 
-    MAX(user_toks_target_users.num_user_tok_usages), MAX(user_toks_target_users.tot_user_usages),
-    MAX(user_toks_target_users.user_tok_freq),       MAX(user_toks_target_users.user_tok_freq_sq), MAX(user_toks_target_users.vocab),
-    ordered_user_toks.(tok, num_user_tok_usages, user_tok_freq)
-  ;
-  };
-rmf                                $WORDBAG_ROOT-sampled/user_words2
-STORE user_words_0           INTO '$WORDBAG_ROOT-sampled/user_words2';
+-- user_words_g = GROUP user_toks_target_users BY uid PARALLEL 1;
+-- user_words_0 = FOREACH user_words_g {
+--   ordered_user_toks = ORDER user_toks_target_users BY (num_user_tok_usages, user_tok_freq) DESC;
+--   GENERATE
+--     'toks' AS tok_dummy,
+--     group AS uid, 
+--     MAX(user_toks_target_users.num_user_tok_usages), MAX(user_toks_target_users.tot_user_usages),
+--     MAX(user_toks_target_users.user_tok_freq),       MAX(user_toks_target_users.user_tok_freq_sq), MAX(user_toks_target_users.vocab),
+--     ordered_user_toks.(tok, num_user_tok_usages, user_tok_freq)
+--   ;
+--   };
+-- rmf                                $WORDBAG_ROOT-sampled/user_words
+-- STORE user_words_0           INTO '$WORDBAG_ROOT-sampled/user_words';
 
 -- ===========================================================================
 -- 
@@ -94,3 +95,20 @@ STORE user_words_0           INTO '$WORDBAG_ROOT-sampled/user_words2';
 
 
 
+-- -- !!!!!!!!!!!!!!!!!!!!!!
+-- --
+-- -- Run this one separate. it needs lots of memory.
+-- -- 
+word_users_g = GROUP user_toks_target_words BY tok PARALLEL 10;
+word_users_0 = FOREACH word_users_g {
+  ordered_users = ORDER user_toks_target_words BY num_user_tok_usages DESC, user_tok_freq DESC;
+  GENERATE
+    group AS tok,
+    MIN(user_toks_target_words.uid) AS uid_dummy,
+    SUM(user_toks_target_words.num_user_tok_usages), MAX(user_toks_target_words.tot_user_usages),
+    AVG(user_toks_target_words.user_tok_freq),       AVG(user_toks_target_words.user_tok_freq_sq), AVG(user_toks_target_words.vocab),
+    ordered_users.(uid, num_user_tok_usages, user_tok_freq, vocab)
+  ;
+  };
+rmf                                $WORDBAG_ROOT-sampled/word_users2
+STORE word_users_0           INTO '$WORDBAG_ROOT-sampled/word_users2';
