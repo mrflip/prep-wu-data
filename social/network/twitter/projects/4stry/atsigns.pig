@@ -1,23 +1,19 @@
--- params
-%default BEGIN         20060101000000 -- Jan 1st, 2006
-%default END           30000101000000 -- In the year 3000...
+-- usage: pig -p BEGIN=20060101000000L -p END=30000101000000L -p ATS=/data/sn/tw/fixd/objects/a_atsigns_b -p USERID=14598992L -p OUTPUT_DIR=/tmp atsigns.pig
+%default BEGIN 20060101000000 -- Jan 1st, 2006
+%default END   30000101000000 -- In the year 3000...
+%default ATS   's3:s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/objects/a_atsigns_b'
 
--- load	
-%default ATSIGNS       '/data/sn/tw/fixd/objects/a_replies_b'
-atsigns = LOAD '$ATSIGNS'       AS (rsrc:chararray, user_a_id:long, user_b_id:long, twid:long, crat:long);
+-- pull out mentions of USERID in specifiend time window
+a_atsigns_b    = LOAD '$ATS' AS (rsrc:chararray, user_a_id:long, user_b_id:long, twid:long, crat:long);
+a_atsigns_b_f  = FILTER a_atsigns_b BY user_b_id == $USERID AND crat >= $BEGIN AND crat < $END;
+a_atsigns_b_fg = FOREACH a_atsigns_b_f GENERATE crat / 10000 AS hour, user_a_id AS user_id;
 
--- find user ids and hours for atsigns of $USER_B_ID
-matching_atsign           = FILTER atsign BY user_b_id == (long) '$USER_B_ID' AND crat >= (long) $BEGIN AND crat < (long) $END;
-matching_hour_and_user_id = FOREACH matching_atsign GENERATE crat / 10000 AS hour, user_a_id AS user_id;
+-- get mention counts as a function of hour
+mentions_by_hr   = GROUP a_atsigns_b_fg BY hour;
+mentions_by_hr_c = FOREACH mentions_by_hr GENERATE group AS hour, COUNT(a_atsigns_b_fg) AS num;
+STORE mentions_by_hr_c INTO '$OUTPUT_DIR/atsigns_by_hour';
 
--- grouped by hour
-grouped_by_hour = GROUP matching_hour_and_user_id BY hour;
-count_by_hour   = FOREACH grouped_by_hour GENERATE group AS hour, COUNT(matching_hour_and_user_id) AS num;
-rmf                       $OUTPUT_DIR/atsigns_by_hour
-STORE count_by_hour INTO '$OUTPUT_DIR/atsigns_by_hour';
-
--- grouped by user
-grouped_by_user = GROUP matching_hour_and_user_id BY user_id;
-count_by_user   = FOREACH grouped_by_user GENERATE group AS user_id, COUNT(matching_hour_and_user_id) AS num;
-rmf                       $OUTPUT_DIR/atsigns_by_user
-STORE count_by_user INTO '$OUTPUT_DIR/atsigns_by_user';
+-- get mentions counts as a function of user_id
+mentions_by_usr   = GROUP a_atsigns_b_fg BY user_id;
+mentions_by_usr_c = FOREACH mentions_by_usr GENERATE group AS user_id, COUNT(a_atsigns_b_fg) AS num;
+STORE mentions_by_usr_c INTO '$OUTPUT_DIR/atsigns_by_user';
