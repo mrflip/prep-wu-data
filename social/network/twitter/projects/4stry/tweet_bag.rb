@@ -17,8 +17,8 @@ class TweetBagMapper < Wukong::Streamer::StructStreamer
 
   def regexp
     # /(BEL+E? *(&(amp;)?|A?ND?|\+)? *S(E|A)BAS+(T|CH)[IEA]+N|ST(U|EW)(ART)? *M(U|E)RDOC(H|K))/i
-    # /SHARE[-_\s]*POINT/i
-    /(NIS+AN.*LEAF|LEAF.*NIS+AN|ELECTRIC *(VEHICLE|CAR)|LEAF.*CAR|CAR.*LEAF)/i
+    /SHARE[-_\s]*POINT/i
+    # /(NIS+AN.*LEAF|LEAF.*NIS+AN|ELECTRIC *(VEHICLE|CAR)|LEAF.*CAR|CAR.*LEAF)/i
   end
 
   def begin_date
