@@ -7,4 +7,4 @@ a_retweets_b   = LOAD '$RT' AS (rsrc:chararray, user_a_id:long, user_b_id:long, 
 a_retweets_b_f = FILTER a_retweets_b BY user_b_id == $USER_ID AND crat >= $BEGIN_DATE AND crat < $END_DATE;
 a_retweets_b_c = FOREACH a_retweets_b_f GENERATE crat, user_a_id AS user_id;
 
-STORE matching_crat_and_user_id	INTO '$MATCHING_RETWEETS';
+STORE a_retweets_b_c INTO '$MATCHING_RETWEETS';

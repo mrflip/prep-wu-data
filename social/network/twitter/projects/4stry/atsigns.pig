@@ -7,4 +7,4 @@ a_atsigns_b   = LOAD '$AT' AS (rsrc:chararray, user_a_id:long, user_b_id:long, t
 a_atsigns_b_f = FILTER a_atsigns_b BY user_b_id == $USER_ID AND crat >= $BEGIN_DATE AND crat < $END_DATE;
 a_atsigns_b_c = FOREACH a_atsigns_b_f GENERATE crat, user_a_id AS user_id;
 
-STORE matching_crat_and_user_id	INTO '$MATCHING_ATSIGNS';
+STORE a_atsigns_b_c INTO '$MATCHING_ATSIGNS';
