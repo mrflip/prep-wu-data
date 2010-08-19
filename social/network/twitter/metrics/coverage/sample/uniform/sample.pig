@@ -1,4 +1,4 @@
--- Generates a consistent sample
+]-- Generates a consistent sample
 %default INV_SAMPLE_FRACTION '100L'
 
 twitter_user_id   = LOAD '$TW_DIR/twitter_user_id' AS (rsrc:chararray, user_id:long, scraped_at:long, screen_name:chararray, protected:int, followers_count:long, friends_count:long, statuses_count:long, favourites_count:long, created_at:long, sid:long, is_full:long, health:chararray);
