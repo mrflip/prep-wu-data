@@ -1,0 +1,59 @@
+%default TW_OBJ_PATH   <%= pig_options[:ics_tw_obj] %>
+%default NBRHOOD_PATH  <%= pig_options[:nbrhood_path] %>
+        
+REGISTER <%= pig_options[:pig_home] %>/contrib/piggybank/java/piggybank.jar;
+
+a_follows_b            = LOAD '$TW_OBJ_PATH/a_follows_b'           	AS (rsrc:chararray, <%= AFollowsB.to_pig %>);
+a_favorites_b          = LOAD '$TW_OBJ_PATH/a_favorites_b'         	AS (rsrc:chararray, <%= AFavoritesB.to_pig %>);
+a_replies_b            = LOAD '$TW_OBJ_PATH/a_replies_b'           	AS (rsrc:chararray, <%= ARepliesB.to_pig %>);
+a_atsigns_b            = LOAD '$TW_OBJ_PATH/a_atsigns_b'           	AS (rsrc:chararray, <%= AAtsignsB.to_pig %>);
+a_retweets_b           = LOAD '$TW_OBJ_PATH/a_retweets_b'          	AS (rsrc:chararray, <%= ARetweetsB.to_pig %>);
+tweet                  = LOAD '$TW_OBJ_PATH/tweet'                 	AS (rsrc:chararray, <%= Tweet.to_pig %>);
+twitter_user_search_id = LOAD '$TW_OBJ_PATH/twitter_user_search_id'	AS (rsrc:chararray, <%= TwitterUserSearchId.to_pig %>);                                                                                                                                                                                                                                           
+twitter_user           = LOAD '$TW_OBJ_PATH/twitter_user'          	AS (rsrc:chararray, <%= TwitterUser.to_pig %>);
+twitter_user_partial   = LOAD '$TW_OBJ_PATH/twitter_user_partial'  	AS (rsrc:chararray, <%= TwitterUserPartial.to_pig %>);                                       
+twitter_user_profile   = LOAD '$TW_OBJ_PATH/twitter_user_profile'  	AS (rsrc:chararray, <%= TwitterUserProfile.to_pig %>);
+twitter_user_style     = LOAD '$TW_OBJ_PATH/twitter_user_style'    	AS (rsrc:chararray, <%= TwitterUserStyle.to_pig %>);
+twitter_user_id        = LOAD '$TW_OBJ_PATH/twitter_user_id'       	AS (rsrc:chararray, <%= TwitterUserId.to_pig %>);
+twitter_user_location  = LOAD '$TW_OBJ_PATH/twitter_user_location' 	AS (rsrc:chararray, <%= TwitterUserLocation.to_pig %>);
+hashtag                = LOAD '$TW_OBJ_PATH/hashtag'               	AS (rsrc:chararray, <%= Hashtag.to_pig %>);
+smiley                 = LOAD '$TW_OBJ_PATH/smiley'                	AS (rsrc:chararray, <%= Smiley.to_pig %>);
+tweet_url              = LOAD '$TW_OBJ_PATH/tweet_url'             	AS (rsrc:chararray, <%= TweetUrl.to_pig %>);
+stock_token            = LOAD '$TW_OBJ_PATH/stock_token'           	AS (rsrc:chararray, <%= StockToken.to_pig %>);
+word_token             = LOAD '$TW_OBJ_PATH/word_token'            	AS (rsrc:chararray, <%= WordToken.to_pig %>);
+geo                    = LOAD '$TW_OBJ_PATH/geo'                   	AS (rsrc:chararray, <%= Geo.to_pig %>);
+
+-- Extract all atsign edges that originate or terminate on the seed (n1)
+a_atsigns_b_s  = FILTER a_atsigns_b BY <%= pig_options[:pig_filter_query} %>;
+STORE a_atsigns_b_s INTO '$NBRHOOD_PATH/a_atsigns_b';  
+ 
+-- Extract all follow edges that originate or terminate on the seed (n1)
+a_follows_b_s  = FILTER a_follows_b BY <%= pig_options[:pig_filter_query] %>
+STORE a_follows_b_s      INTO '$NBRHOOD_PATH/a_follows_b';  
+
+at_u_a     = FOREACH a_atsigns_b_s GENERATE user_a_id AS user_id;
+at_u_b     = FOREACH a_atsigns_b_s GENERATE user_b_id AS user_id;
+fo_u_a     = FOREACH a_follows_b_s GENERATE user_a_id AS user_id;
+fo_u_b     = FOREACH a_follows_b_s GENERATE user_b_id AS user_id;
+user_ids_u = UNION at_u_a, at_u_b, fo_u_a, fo_u_b;
+user_ids   = DISTINCT user_ids_u;
+
+STORE user_ids INTO '$NBRHOOD_PATH/n1';
+user_ids = LOAD '$NBRHOOD_PATH/n1' AS (user_id:long);
+
+twitter_user_j  = JOIN twitter_user BY uid, user_ids BY user_id USING "replicated";
+twitter_user_s  = FOREACH twitter_user_j GENERATE
+                    twitter_user::user_id,
+                    twitter_user::scraped_at,
+                    twitter_user::screen_name,
+                    twitter_user::protected,
+                    twitter_user::followers_count,
+                    twitter_user::friends_count,
+                    twitter_user::statuses_count,
+                    twitter_user::favourites_count,
+                    twitter_user::created_at,
+                    twitter_user::sid,
+                    twitter_user::is_full,
+                    twitter_user::health
+                  ;
+STORE twitter_user_s     INTO '$NBRHOOD_PATH/twitter_user';
