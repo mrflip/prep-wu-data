@@ -39,7 +39,7 @@ user_ids   = DISTINCT user_ids_u;
 STORE user_ids INTO '$NBRHOOD_PATH/n1';
 user_ids = LOAD '$NBRHOOD_PATH/n1' AS (user_id:long);
 
-twitter_user_j  = JOIN twitter_user_id BY user_id, user_ids BY user_id USING "replicated";
+twitter_user_j  = JOIN twitter_user_id BY user_id, user_ids BY user_id USING 'replicated';
 twitter_user_s  = FOREACH twitter_user_j GENERATE
                     twitter_user_id::user_id,
                     twitter_user_id::scraped_at,
