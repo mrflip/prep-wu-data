@@ -1,0 +1,62 @@
+-- Join our newly created "sampled_ids" list with all other objects
+%default TW_OBJ_PATH '<%= ics_tw_obj %>'
+%default SAMPLE_DIR  '<%= sample_dir %>'        
+        
+sampled_ids            = LOAD '$SAMPLE_DIR/sampled_ids'                 AS (user_id:long);
+tweet                  = LOAD '$TW_OBJ_PATH/tweet'                      AS (rsrc:chararray, <%= Tweet.to_pig %>);
+twitter_user_profile   = LOAD '$TW_OBJ_PATH/twitter_user_profile'  	AS (rsrc:chararray, <%= TwitterUserProfile.to_pig %>);
+twitter_user_style     = LOAD '$TW_OBJ_PATH/twitter_user_style'    	AS (rsrc:chararray, <%= TwitterUserStyle.to_pig %>);
+twitter_user_location  = LOAD '$TW_OBJ_PATH/twitter_user_location' 	AS (rsrc:chararray, <%= TwitterUserLocation.to_pig %>);
+hashtag                = LOAD '$TW_OBJ_PATH/hashtag'               	AS (rsrc:chararray, <%= Hashtag.to_pig %>);
+smiley                 = LOAD '$TW_OBJ_PATH/smiley'                	AS (rsrc:chararray, <%= Smiley.to_pig %>);
+tweet_url              = LOAD '$TW_OBJ_PATH/tweet_url'             	AS (rsrc:chararray, <%= TweetUrl.to_pig %>);
+stock_token            = LOAD '$TW_OBJ_PATH/stock_token'           	AS (rsrc:chararray, <%= StockToken.to_pig %>);
+word_token             = LOAD '$TW_OBJ_PATH/word_token'            	AS (rsrc:chararray, <%= WordToken.to_pig %>);
+geo                    = LOAD '$TW_OBJ_PATH/geo'                   	AS (rsrc:chararray, <%= Geo.to_pig %>);
+
+-- trstrank               = LOAD '$TW_GRAPH/trstrank'              AS (sn:chararray,   user_id:long,       rank:float,            tq:int);
+-- influencer             = LOAD '$TW_GRAPH/influencer_metrics'    AS (rsrc:chararray, user_id:long,       crat:long,             followers:int, fo_o:int, fo_i:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int, tw_o:int, tw_i:int, ms_tw_o:int, hsh_o:int, sm_o:int, url_o:int, at_tr:int, fo_tr:int);
+-- strong_links           = LOAD '$TW_GRAPH/strong_links'          AS (user_id:long, sn:chararray, list:chararray);
+
+tweet_s = JOIN tweet BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE tweet_s INTO '$SAMPLE_DIR/tweet';
+
+twitter_user_profile_s = JOIN twitter_user_profile BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE twitter_user_profile_s INTO '$SAMPLE_DIR/twitter_user_profile';
+
+twitter_user_style_s = JOIN twitter_user_style BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE twitter_user_style_s INTO '$SAMPLE_DIR/twitter_user_style';
+
+twitter_user_location_s = JOIN twitter_user_location BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE twitter_user_location_s INTO '$SAMPLE_DIR/twitter_user_location';
+
+hashtag_s = JOIN hashtag BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE hashtag_s INTO '$SAMPLE_DIR/hashtag';
+
+smiley_s = JOIN smiley BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE smiley_s INTO '$SAMPLE_DIR/smiley';
+
+tweet_url_s = JOIN tweet_url BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE tweet_url_s INTO '$SAMPLE_DIR/tweet_url';
+
+stock_token_s = JOIN stock_token BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE stock_token_s INTO '$SAMPLE_DIR/stock_token';
+
+-- word_token_s = JOIN word_token BY user_id, sampled_ids BY user_id USING 'replicated';
+-- rmf                 $SAMPLE_DIR/word_token
+-- STORE word_token_s INTO '$SAMPLE_DIR/word_token';
+
+geo_s = JOIN geo BY user_id, sampled_ids BY user_id USING 'replicated';
+STORE geo_s INTO '$SAMPLE_DIR/geo';
+
+-- trstrank_s = JOIN trstrank BY user_id, sampled_ids BY user_id USING 'replicated';
+-- rmf                 $SAMPLE_DIR/trstrank
+-- STORE trstrank_s INTO '$SAMPLE_DIR/trstrank';
+-- 
+-- influencer_s = JOIN influencer BY user_id, sampled_ids BY user_id USING 'replicated';
+-- rmf                 $SAMPLE_DIR/influencer
+-- STORE influencer_s INTO '$SAMPLE_DIR/influencer';
+-- 
+-- strong_links_s = JOIN strong_links BY user_id, sampled_ids BY user_id USING 'replicated';
+-- rmf                 $SAMPLE_DIR/strong_links
+-- STORE strong_links_s INTO '$SAMPLE_DIR/strong_links';
