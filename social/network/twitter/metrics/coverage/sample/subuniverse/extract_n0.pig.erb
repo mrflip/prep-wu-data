@@ -1,7 +1,7 @@
-%default TW_OBJ_PATH   <%= pig_options[:ics_tw_obj] %>
-%default NBRHOOD_PATH  <%= pig_options[:nbrhood_path] %>
+%default TW_OBJ_PATH   <%= ics_tw_obj %>
+%default NBRHOOD_PATH  <%= nbrhood_path %>
         
-REGISTER <%= pig_options[:pig_home] %>/contrib/piggybank/java/piggybank.jar;
+REGISTER <%= pig_home %>/contrib/piggybank/java/piggybank.jar;
 
 a_follows_b            = LOAD '$TW_OBJ_PATH/a_follows_b'           	AS (rsrc:chararray, <%= AFollowsB.to_pig %>);
 a_favorites_b          = LOAD '$TW_OBJ_PATH/a_favorites_b'         	AS (rsrc:chararray, <%= AFavoritesB.to_pig %>);
@@ -23,12 +23,10 @@ stock_token            = LOAD '$TW_OBJ_PATH/stock_token'           	AS (rsrc:cha
 word_token             = LOAD '$TW_OBJ_PATH/word_token'            	AS (rsrc:chararray, <%= WordToken.to_pig %>);
 geo                    = LOAD '$TW_OBJ_PATH/geo'                   	AS (rsrc:chararray, <%= Geo.to_pig %>);
 
--- Extract all atsign edges that originate or terminate on the seed (n1)
-a_atsigns_b_s  = FILTER a_atsigns_b BY <%= pig_options[:pig_filter_query} %>;
+a_atsigns_b_s  = FILTER a_atsigns_b BY <%= pig_filter_query %>;
 STORE a_atsigns_b_s INTO '$NBRHOOD_PATH/a_atsigns_b';  
  
--- Extract all follow edges that originate or terminate on the seed (n1)
-a_follows_b_s  = FILTER a_follows_b BY <%= pig_options[:pig_filter_query] %>
+a_follows_b_s  = FILTER a_follows_b BY <%= pig_filter_query %>;
 STORE a_follows_b_s      INTO '$NBRHOOD_PATH/a_follows_b';  
 
 at_u_a     = FOREACH a_atsigns_b_s GENERATE user_a_id AS user_id;
@@ -41,19 +39,20 @@ user_ids   = DISTINCT user_ids_u;
 STORE user_ids INTO '$NBRHOOD_PATH/n1';
 user_ids = LOAD '$NBRHOOD_PATH/n1' AS (user_id:long);
 
-twitter_user_j  = JOIN twitter_user BY uid, user_ids BY user_id USING "replicated";
+twitter_user_j  = JOIN twitter_user_id BY user_id, user_ids BY user_id USING "replicated";
 twitter_user_s  = FOREACH twitter_user_j GENERATE
-                    twitter_user::user_id,
-                    twitter_user::scraped_at,
-                    twitter_user::screen_name,
-                    twitter_user::protected,
-                    twitter_user::followers_count,
-                    twitter_user::friends_count,
-                    twitter_user::statuses_count,
-                    twitter_user::favourites_count,
-                    twitter_user::created_at,
-                    twitter_user::sid,
-                    twitter_user::is_full,
-                    twitter_user::health
+                    twitter_user_id::user_id,
+                    twitter_user_id::scraped_at,
+                    twitter_user_id::screen_name,
+                    twitter_user_id::protected,
+                    twitter_user_id::followers_count,
+                    twitter_user_id::friends_count,
+                    twitter_user_id::statuses_count,
+                    twitter_user_id::favourites_count,
+                    twitter_user_id::created_at,
+                    twitter_user_id::sid,
+                    twitter_user_id::is_full,
+                    twitter_user_id::health
                   ;
-STORE twitter_user_s     INTO '$NBRHOOD_PATH/twitter_user';
+
+STORE twitter_user_s     INTO '$NBRHOOD_PATH/twitter_user_id';
