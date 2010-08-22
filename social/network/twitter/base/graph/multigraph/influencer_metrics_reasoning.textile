@@ -111,6 +111,8 @@ References per 1k Fo	at_i   / fo_i
 Retweet Ratio		rt_i   / rt_o	
 Reference Ratio		at_i   / at_o
 
+Deduct for ellipses at end of tweet (twoosh should be closest without going over
+
 Dates:
   SxSW 2008             March 8, 2008 - March 12, 2008
   SxSW 2007             Mon Mar 19 21:08:24 +0000 2007
