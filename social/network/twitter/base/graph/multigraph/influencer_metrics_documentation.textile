@@ -29,6 +29,8 @@ at_o
 n_at_i
 at_i
 
+"Likelihood that it will be amplified"
+
 @zappos @'s a lot of people, a very few times
 @zappos is @ by a lot of people, each a very few times
 
@@ -77,6 +79,7 @@ h3. Spam Heuristics
 
 
 ===========================================================================
+
 
 h3. More about Reach
 

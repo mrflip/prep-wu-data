@@ -11,7 +11,7 @@ h3. Variable Naming
 
   transactions = LOAD 'transactions' AS (donor_id:long, org_id:long, donation_id:long, amt:double);
   donor_stats  = GROUP transactions BY donor_id, org_id;
-  donor_orgs   = FOREACH transactions GENERATE COUNT(transactions) AS num_donor_org_transactions, SUM(amt) AS tot_donor_org_amt;
+  donor_orgs   = FOREACH transactions GENERATE group.donor_id, group.org_id AS COUNT(transactions) AS num_donor_org_transactions, SUM(amt) AS tot_donor_org_amt;
 
 * when several steps are required to produce the same variable, give each
   the final variable name plus a short suffix:  

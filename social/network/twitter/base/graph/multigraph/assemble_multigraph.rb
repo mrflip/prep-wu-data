@@ -89,7 +89,8 @@ end
 Wukong::Script.new(
   MultigraphMapper,
   MultigraphReducer,
-  :partition_fields  => 3,
-  :sort_fields       => 2,
-  :io_record_percent => 0.3
+  :partition_fields => 1,
+  :sort_fields      => 4,
+  :io_record_percent => 0.3,
+  :map_speculative => "true"
   ).run
