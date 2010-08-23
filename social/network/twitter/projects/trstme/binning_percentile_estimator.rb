@@ -86,80 +86,76 @@ class Mapper < Wukong::Streamer::RecordStreamer
 
 end
 
-
 #
 # Calculate percentile rank for every pr value in a given follower bracket
 #
 class Reducer < Wukong::Streamer::AccumulatingReducer
-  attr_accessor :rank_hist, :r
+  attr_accessor :binned_percentiles, :single_bin, :r
 
   def initialize *args
     super(*args)
     self.r ||= RSRuby.instance
+    self.binned_percentiles ||= {}
   end
   
   def start! bin, rank, *_
-    self.rank_hist      ||= {}
-    self.rank_hist[bin] ||= []
+    self.single_bin = []
   end
 
   def accumulate bin, rank, *_
     rank = rank.to_f.round_to(1)
-    self.rank_hist[bin] << rank
+    self.single_bin << rank
   end
 
   def finalize
-    # self.rank_hist[key] = generate_all_pairs(key).inject({}){|h,pair| h[pair.first] = pair.last; h}
-    # yield [key, rank_hist[key].join(",")]
-    # yield [key, rank_hist[key].percentiles.join(',')]
-    p generate_all_pairs(key)
+    self.binned_percentiles[key.to_i] = generate_all_pairs
   end
 
-  def percentiles bin
-    q = rank_hist[bin].r_percentiles(r)
+  #
+  # Shell out to r where appropriate
+  #
+  def percentiles
+    q = single_bin.r_percentiles(r)
     q[0.0]  ||= 0.0
     q[10.0] ||= 100.0
     q.to_a.sort!{|x,y| x.first <=> y.first}
   end
   
-  # #
-  # # Write the final table to disk as a ruby hash
-  # #
-  # def after_stream
-  #   table = File.open("trstrank_table.rb", 'w')
-  #   table << "TRSTRANK_TABLE = " << rank_hist.inspect
-  #   table.close
-  # end
-  # 
   #
-  # Generate a list of all pairs {trstrank => percentile}, interpolate when necessary
+  # Write the final table to disk as a ruby hash
   #
-  
-  def generate_all_pairs bin
-    percentiles(bin).pairs
-    # list.each do |pairs|
-    #   interpolate(pairs.first, pairs.last, 0.1).each{|pair| big_list << pair}
-    # end
-    # big_list.uniq.sort{|x,y| x.first <=> y.first}
+  def after_stream
+    table = File.open("trstrank_table.rb", 'w')
+    table << "TRSTRANK_TABLE = " << binned_percentiles.inspect
+    table.close
   end
-  # 
-  # 
-  # #
-  # # Nothing to see here, move along
-  # #
-  # def interpolate pair1, pair2, dx
-  #   return [pair1] if pair2.blank?
-  #   m   = (pair2.last - pair1.last)/(pair2.first - pair1.first) # slope
-  #   b   = pair2.last - m*pair2.first                            # y intercept
-  #   num = ((pair2.first - pair1.first)/dx).abs.round            # number of points to interpolate
-  #   points = []
-  #   num.times do |i|
-  #     x = pair1.first + (i+1).to_f*dx
-  #     y = m*x + b
-  #     points << [x,y]
-  #   end
-  #   points                                                       # return an array of pairs
-  # end
+  
+  #
+  # Generate a hash of all pairs {trstrank => percentile, ...}, interpolate when necessary
+  #
+  def generate_all_pairs
+    h = {}
+    percentiles.pairs.each do |pairs|
+      interpolate(pairs.first, pairs.last, 0.1).each{|point| h[point.first] = point.last}
+    end
+    h
+  end
+  
+  #
+  # Nothing to see here, move along
+  #
+  def interpolate pair1, pair2, dx
+    m   = (pair2.last - pair1.last)/(pair2.first - pair1.first) # slope
+    b   = pair2.last - m*pair2.first                            # y intercept
+    num = ((pair2.first - pair1.first)/dx).abs.round            # number of points to interpolate
+    points = []
+    num.times do |i|
+      x = pair1.first + (i+1).to_f*dx
+      y = m*x + b
+      points << [x,y]
+    end
+    points                                                       # return an array of pairs
+  end
 
 end
 
