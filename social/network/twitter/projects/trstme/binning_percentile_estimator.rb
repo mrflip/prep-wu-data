@@ -60,7 +60,7 @@ end
 #
 class Mapper < Wukong::Streamer::RecordStreamer
   def process *args
-    rank, followers = args
+    uid, rank, followers = args
     yield [logbin(followers), rank]
     # yield [casebin(followers), rank]
   end
