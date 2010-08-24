@@ -7,7 +7,6 @@ require File.dirname(__FILE__)+'/geo_ip_census' ; include GeoIPCensus
 
 Settings.define :dataset,    :required => true, :default => 'ip_geo_census'
 
-
 module TokyoDbConnection
   class TyrantDb
     DB_SERVERS = [

@@ -1,41 +1,62 @@
+require 'json'
+require 'imw/formats/delimited'
+require 'erubis'
+
 IMW.dataset :digital_element do
 
   add_path(:bin , :root, 'bin')
   add_path(:meta, :root, 'meta')
 
+  metadata path_to(:meta, 'metadata.yml'), :base => path_to(:rawd)
+
   USER_PASS = 'kelly.josephc@infochimps.org:#rdsf8se'
 
-  CODES = {
+  FEATURES = {
     :geo           => 3,
-    :edge          => 4,
-    :sic           => 5,
+#    :edge          => 4,
+#    :sic           => 5,
     :domain        => 6,
     :zip_area_time => 7,
     :isp           => 8,
-    :home_business => 9,
-    :asn           => 10,
+#    :home_business => 9,
+#    :asn           => 10,
     :language      => 11,
     :proxy         => 12,
-    :org_name      => 13,
-    :is_an_isp     => 14,
+#    :org_name      => 13,
+#    :is_an_isp     => 14,
     :company       => 15,
     :demographics  => 17,
-    :naics         => 18,
-    :cbsa          => 19
+    :naics         => 18
+#    :cbsa          => 19
   }
 
+  NAMES = {
+    :geo           => "Geographical Locations",
+    :domain        => "Web Domains",
+    :zip_area_time => "ZIP codes, area codes, and time zones",
+    :isp           => "Internet Service Providers (ISPs)",
+    :language      => "Primary &amp; secondary languages spoken",
+    :proxy         => "Proxy servers",
+    :company       => "Companies",
+    :demographics  => "Demographics",
+    :naics         => "NAICS Industry Codes"
+  }
+  
   def digital_element_url feature
-    code = CODES[feature] or raise "Invalid feature: #{feature}"
+    code = FEATURES[feature] or raise "Invalid feature: #{feature}"
     %Q{https://developers-zone.digitalenvoy.net/downloads/db/na_#{"%02d" % code}_db.tar.gz}
   end
 
   def features
-    f = CODES.keys
     if ENV['FEATURE']
-      f.delete_if { |feature| feature.to_s !~ Regexp.new(ENV['FEATURE']) }
+      FEATURES.keys.find_all { |feature| feature.to_s =~ Regexp.new(ENV['FEATURE']) }
     else
-      f
+      FEATURES.keys
     end
+  end
+
+  def ipv4_splitter
+    File.dirname(__FILE__) + "/../split_ipv4.rb"
   end
 
   rip do
@@ -53,7 +74,7 @@ IMW.dataset :digital_element do
         FileUtils.ln_sf(path_to(:bin, 'dump_db'), 'dump_db')
         FileUtils.ln_sf(path_to(:meta, 'license_key.file'), 'license_key.file')
         begin
-          IMW.system("./dump_db #{CODES[feature]} > #{feature}.dat")
+          IMW.system("./dump_db #{FEATURES[feature]} > #{feature}.dat")
         rescue IMW::SystemCallError => e
           puts e
         end
@@ -61,12 +82,66 @@ IMW.dataset :digital_element do
     end
   end
 
-  fix do
-    
+  task :jsonize do
+    features.each do |feature|
+      open!(path_to(:rawd, feature.to_s, "#{feature}.jsonized.tsv")) do |jsonized|
+        delimited = open(path_to(:rawd, feature.to_s, "#{feature}.dat"), :as => [IMW::Formats::Tsv], :col_sep => ';')
+        converters  = []
+        field_names = []
+        schema = delimited.schema
+        unless schema
+          IMW.log.warn "Skipping #{feature} at #{delimited} -- no schema!"
+          next
+        end
+        delimited.schema[2..-1].each do |field|
+          next if field['ignored']
+          field_names << field['name']
+          case field['datatype']
+          when 'integer' then converters << :to_i
+          when 'float'   then converters << :to_f
+          else                converters << nil
+          end
+        end
+        delimited.each do |row|
+          next if row['start_ip'] ==  'start_ip' # skip headers
+          data = {}
+          field_names.each_with_index do |name, index|
+            value = converters[index] ? row[name].send(converters[index]) : row[name]
+            data[name] = value
+          end
+          block = [row['start_ip'], row['end_ip'], data.to_json].map(&:to_s).join("\t")
+          jsonized.puts(block)
+        end
+        puts "Converted #{delimited} to #{jsonized}"
+      end
+    end
+  end
+
+  task :blockify => [:jsonize] do
+    features.each do |feature|
+      IMW.system ipv4_splitter, "--run=local", path_to(:rawd, feature.to_s, "#{feature}.jsonized.tsv"), path_to(:fixd, "#{feature}.tsv")
+    end
+  end
+
+  task :fix => [:jsonize, :blockify]
+
+  task :doc do
+    template = Erubis::Eruby.new(File.read(path_to(:meta, 'doc_template.textile.erb')))
+    FileUtils.mkdir_p(path_to(:meta, 'doc'))
+    features.each do |feature|
+      delimited = open(path_to(:rawd, feature.to_s, "#{feature}.dat"), :as => [IMW::Formats::Tsv], :col_sep => ';')
+      jsonized  = open(path_to(:rawd, feature.to_s, "#{feature}.jsonized.tsv"))
+
+      # grab the 101st
+      100.times { jsonized.readline }
+      ip_start, ip_end, json = jsonized.readline.split("\t")
+      context = { :schema => delimited.schema, :name => NAMES[feature], :feature => feature, :ip => ip_start, :response => JSON.pretty_generate(JSON.parse(json))}
+      open!(path_to(:meta, 'doc', "#{feature}.textile")) { |f| f.puts template.evaluate(context) }
+    end
   end
   
   package do
   end
-  
+
 end
   

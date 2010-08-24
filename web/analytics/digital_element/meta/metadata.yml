@@ -1,0 +1,274 @@
+---
+
+# We're authorized for the following databases.
+
+proxy/proxy.dat:
+  - start_ip
+  - end_ip
+  - name: proxy_type
+    datatype: string
+    description: |-
+      The type of "proxy server":http://en.wikipedia.org/wiki/Proxy_server running at the IP.  Possible values are
+      ** @?@ - not determined to a proxy
+      ** @anonymous@ - Actual IP address of client is not available
+      ** @transparent@ - Actual IP address of client is available via HTTP headers
+      ** @aol@ - AOL proxy
+      ** @corporate@ - Multiple users proxied from a corporate network and clients "share" one  apparent address
+      ** @public@ - Multiple users proxied from a location that allows public access to the Internet
+      ** @edu@ - Proxied users from an educational institution
+
+zip_area_time/zip_area_time.dat:
+  - start_ip
+  - end_ip
+  - name: area_code
+    datatype: integer
+    description: 3-digit US telephone area code.
+  - name: zip_code_ignored
+    datatype: integer
+    ignored: true
+    description: ~
+  - name: gmt_offset
+    datatype: integer
+    description: "Time zone GMT/UTC offset (+hhmm)"
+  - name: in_dst
+    datatype: string
+    description: Are they currently observering DST?
+  - name: zip
+    datatype: string
+    description: ZIP code, where available.
+  - name: zip_country
+    datatype: string
+    description: 3-letter country code.
+
+isp/isp.dat:
+  - start_ip
+  - end_ip
+  - name: isp
+    datatype: string
+    description: ISP owning IP address.
+
+domain/domain.dat:
+  - start_ip
+  - end_ip
+  - name: domain
+    datatype: string
+    description: Domain served from IP address.
+
+company/company.dat:
+  - start_ip
+  - end_ip
+  - name: company
+    datatype: string
+    description: Company registered for IP address.
+
+demographics/demographics.dat:
+  - start_ip
+  - end_ip
+  - name: rank
+    datatype: integer
+    description: ~
+  - name: households
+    datatype: integer
+    description: Households (in thousands)
+  - name: women
+    datatype: integer
+    description: Women (in thousands)
+  - name: w18_34
+    datatype: integer
+    description: Women, ages 18 - 34 (in thousands)
+  - name: w35_49
+    datatype: integer
+    description: Women, ages 35 - 49 (in thousands)
+  - name: men
+    datatype: integer
+    description: Men (in thousands)
+  - name: m18_34
+    datatype: integer
+    description: Men, ages 18 - 34 (in thousands)
+  - name: m35_49
+    datatype: integer
+    description: Men, ages 35 - 49 (in thousands)
+  - name: teens
+    datatype: integer
+    description: Children, ages 13-17 (in thousands)
+  - name: kids
+    datatype: integer
+    description: Children 12 and under (in thousands)
+    
+geo/geo.dat:
+  - start_ip
+  - end_ip
+  - name: country
+    datatype: string
+    description: 3-letter country name
+  - name: region
+    datatype: string
+    description: Region name ("@no region@" when country lacks regions)
+  - name: city
+    datatype: string
+    description: City name
+  - name: conn_speed
+    datatype: string
+    description: |-
+      The connection speed of the IP.  Possible values include
+      ** @?@
+      ** @dialup@
+      ** @broadband@
+      ** @cable@
+      ** @xdsl@
+      ** @mobile@
+      ** @t1@
+      ** @t3@
+      ** @oc3@
+      ** @oc12@
+      ** @satellite@
+      ** @wireless@
+  - name: country_conf
+    datatype: integer
+    description: Confidence in assignment of country
+  - name: region_conf
+    datatype: integer
+    description: Confidence in assignment of region
+  - name: city_conf
+    datatype: integer
+    description: Confidence in assignment of city
+  - name: metro_code
+    datatype: integer
+    description: |-
+      Digital Envoy metro code.   Metros are regions larger than cities that may cross state lines.  In the US, metro codes are based on "Designated Market Areas":http://en.wikipedia.org/wiki/Media_market (DMAs).  In the UK, metro codes are based on "ITV regions":http://en.wikipedia.org/wiki/ITV. Cities not in any particular metro are a "@0@".  Cities that have not yet had an appropriate metroization standard applied are a "@-1@".
+  - name: lat
+    datatype: float
+    description: Latitude
+  - name: longitude
+    datatype: float
+    description: Longitude
+  - name: country_code
+    datatype: integer
+    description: Digital Envoy country code
+  - name: region_code
+    datatype: integer
+    description: Digital Envoy region code
+  - name: city_code
+    datatype: integer
+    description: Digital Envoy city code
+  - name: continent_code
+    datatype: integer
+    description: |-
+      Digital Envoy continent code.  Possible values are
+      ** 0 - No continent
+      ** 1 - Africa
+      ** 2 - Antarctica
+      ** 3 - Australia
+      ** 4 - Asia
+      ** 5 - Europe
+      ** 6 - North America
+      ** 7 - South America
+      
+  - name: two_letter_country
+    datatype: string
+    description: 2-letter country name
+
+naics/naics.dat:
+  - start_ip
+  - end_ip
+  - name: naics_code
+    datatype: integer
+    description: |-
+      "NAICS":http://www.census.gov/naics industry code for company operating at IP
+
+language/language.dat:
+  - start_ip
+  - end_ip
+  - name: lang
+    datatype: string
+    description: Primary language spoken at IP
+  - name: second_langs
+    datatype: string
+    description: Comma-separated list of secondary languages spoken at IP
+
+# We are NOT authorized for the following databases.
+
+edge/edge.dat:
+  - start_ip
+  - end_ip
+  - name: edge_country
+    datatype: string
+    description: ~
+  - name: edge_region
+    datatype: string
+    description: ~
+  - name: edge_city
+    datatype: string
+    description: ~
+  - name: edge_conn_speed
+    datatype: string
+    description: ~
+  - name: edge_metro_code
+    datatype: integer
+    description: ~
+  - name: edge_latitude
+    datatype: float
+    description: ~
+  - name: edge_longitude
+    datatype: float
+    description: ~
+  - name: edge_postal_code
+    datatype: string
+    description: ~
+  - name: edge_country_code
+    datatype: integer
+    description: ~
+  - name: edge_region_code
+    datatype: integer
+    description: ~
+  - name: edge_city_code
+    datatype: integer
+    description: ~
+  - name: edge_continent_code
+    datatype: integer
+    description: ~
+  - name: edge_two_letter_country
+    datatype: string
+    description: ~
+  - name: edge_internal_code
+    datatype: integer
+    description: ~
+
+sic/sic.dat:
+  - start_ip
+  - end_ip
+  - name: sic_code
+    datatype: integer
+    description: ~
+
+home_business/home_business.dat:
+  - start_ip
+  - end_ip
+  - name: homebiz_type
+    datatype: string
+    description: ~
+
+cbsa/cbsa.dat:
+  - start_ip
+  - end_ip
+  - name: cbsa_code
+    datatype: integer
+    description: ~
+  - name: cbsa_title
+    datatype: string
+    description: ~
+  - name: cbsa_type
+    datatype: string
+    description: ~
+  - name: csa_code
+    datatype: integer
+    description: ~
+  - name: csa_title
+    datatype: string
+    description: ~
+  - name: md_code
+    datatype: integer
+    description: ~
+  - name: md_title
+    datatype: string
+    description: ~
