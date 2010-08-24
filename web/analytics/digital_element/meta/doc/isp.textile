@@ -1,0 +1,30 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. Internet Service Providers (ISPs)
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/isp.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+* @isp@ - ISP owning IP address.
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=8.2.130.0&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  {
+  "isp": "level 3 communications llc"
+}

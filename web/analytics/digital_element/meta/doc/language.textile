@@ -1,0 +1,32 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. Primary &amp; secondary languages spoken
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/language.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+* @lang@ - Primary language spoken at IP
+* @second_langs@ - Comma-separated list of secondary languages spoken at IP
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=4.42.209.240&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  {
+  "lang": "english",
+  "second_langs": "?"
+}

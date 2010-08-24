@@ -1,0 +1,78 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. Geographical Locations
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/geo.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+* @country@ - 3-letter country name
+* @region@ - Region name ("@no region@" when country lacks regions)
+* @city@ - City name
+* @conn_speed@ - The connection speed of the IP.  Possible values include
+** @?@
+** @dialup@
+** @broadband@
+** @cable@
+** @xdsl@
+** @mobile@
+** @t1@
+** @t3@
+** @oc3@
+** @oc12@
+** @satellite@
+** @wireless@
+* @country_conf@ - Confidence in assignment of country
+* @region_conf@ - Confidence in assignment of region
+* @city_conf@ - Confidence in assignment of city
+* @metro_code@ - Digital Envoy metro code.   Metros are regions larger than cities that may cross state lines.  In the US, metro codes are based on "Designated Market Areas":http://en.wikipedia.org/wiki/Media_market (DMAs).  In the UK, metro codes are based on "ITV regions":http://en.wikipedia.org/wiki/ITV. Cities not in any particular metro are a "@0@".  Cities that have not yet had an appropriate metroization standard applied are a "@-1@".
+* @lat@ - Latitude
+* @longitude@ - Longitude
+* @country_code@ - Digital Envoy country code
+* @region_code@ - Digital Envoy region code
+* @city_code@ - Digital Envoy city code
+* @continent_code@ - Digital Envoy continent code.  Possible values are
+** 0 - No continent
+** 1 - Africa
+** 2 - Antarctica
+** 3 - Australia
+** 4 - Asia
+** 5 - Europe
+** 6 - North America
+** 7 - South America
+* @two_letter_country@ - 2-letter country name
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=2.104.160.0&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  {
+  "region": "070",
+  "city": "tranebjerg",
+  "country": "dnk",
+  "country_code": 208,
+  "city_code": 12771,
+  "country_conf": 5,
+  "city_conf": 3,
+  "region_code": 11705,
+  "continent_code": 5,
+  "region_conf": 4,
+  "conn_speed": "xdsl",
+  "two_letter_country": "dk",
+  "metro_code": -1,
+  "longitude": 10.589,
+  "lat": 55.832
+}

@@ -1,0 +1,19 @@
+---
+layout: infochimps
+title: Digital Element
+---
+
+h1. Digital Element API calls
+
+Each of these calls accepts an IP address and returns a variety of interesting information.
+
+* "Companies":/describe/web/an/digital_element/company - Find out which companies own which IPs
+* "Demographics":/describe/web/an/digital_element/demographics - Find out the demographics of users with given IPs
+* "Domains":/describe/web/an/digital_element/domain - Find out which domains are served from which IPs
+* "Geographic Locations":/describe/web/an/digital_element/geo - Find out all about the geolocale of an IP
+* "Internet Service Providers (ISPs)":/describe/web/an/digital_element/isp - Find out which ISPs serve which IPs
+* "Languages":/describe/web/an/digital_element/language - Find out which languages are spoken in an IP
+* "NAICS Industry Codes":/describe/web/an/digital_element/naics - Find out the NAICS industry code for the company operating an IP
+* "Proxy Servers":/describe/web/an/digital_element/proxy - Find out what kind of proxy server is behind an IP
+* "ZIP codes, area codes and time zones":/describe/web/an/digital_element/zip_area_time - Find out about the ZIP code, area code, and local time zone of an IP
+

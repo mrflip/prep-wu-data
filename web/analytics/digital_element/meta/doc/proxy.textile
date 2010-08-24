@@ -1,0 +1,37 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. Proxy servers
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/proxy.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+* @proxy_type@ - The type of "proxy server":http://en.wikipedia.org/wiki/Proxy_server running at the IP.  Possible values are
+** @?@ - not determined to a proxy
+** @anonymous@ - Actual IP address of client is not available
+** @transparent@ - Actual IP address of client is available via HTTP headers
+** @aol@ - AOL proxy
+** @corporate@ - Multiple users proxied from a corporate network and clients "share" one  apparent address
+** @public@ - Multiple users proxied from a location that allows public access to the Internet
+** @edu@ - Proxied users from an educational institution
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=12.2.196.14&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  {
+  "proxy_type": "corporate"
+}

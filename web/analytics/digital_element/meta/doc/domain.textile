@@ -1,0 +1,30 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. Web Domains
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/domain.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+* @domain@ - Domain served from IP address.
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=4.0.1.191&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  {
+  "domain": "level3.net"
+}

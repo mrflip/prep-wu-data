@@ -1,0 +1,31 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. <%= @name %>
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/<%= @feature %>.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+<% @schema.each do |field| %>
+<% next if field['ignored'] || field['name'] == 'start_ip' || field['name'] == 'end_ip' %>
+* @<%= field['name']%>@ - <%= field['description'] %>
+<% end %>
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=<%= @ip %>&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  <%= @response %>

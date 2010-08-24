@@ -1,0 +1,30 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. NAICS Industry Codes
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/naics.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+* @naics_code@ - "NAICS":http://www.census.gov/naics industry code for company operating at IP
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=4.0.2.47&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  {
+  "naics_code": 518210
+}

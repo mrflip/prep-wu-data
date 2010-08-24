@@ -1,0 +1,48 @@
+---
+layout: infochimps
+title: IP Census
+---
+
+h1. Digital Element IP Intelligence
+
+h2. Demographics
+
+This data originally comes from "Digital Element":http://www.digital-element.com
+
+h2. API Call
+
+h3. Parameters
+
+%(method)GET% %(endpoint)http://api.infochimps.com/web/an/digital_element/demographics.json?ip=[ipaddress]%
+
+* @ip@ - an IP address (just like you think: 192.168.0.1)
+
+h3. Returns
+
+* @rank@ - 
+* @households@ - Households (in thousands)
+* @women@ - Women (in thousands)
+* @w18_34@ - Women, ages 18 - 34 (in thousands)
+* @w35_49@ - Women, ages 35 - 49 (in thousands)
+* @men@ - Men (in thousands)
+* @m18_34@ - Men, ages 18 - 34 (in thousands)
+* @m35_49@ - Men, ages 35 - 49 (in thousands)
+* @teens@ - Children, ages 13-17 (in thousands)
+* @kids@ - Children 12 and under (in thousands)
+
+h3. Example
+
+bc.. GET http://api.infochimps.com/web/an/ip_census/combined.json?ip=4.0.6.0&apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  {
+  "men": 3452,
+  "women": 3675,
+  "w35_49": 1071,
+  "m35_49": 1049,
+  "w18_34": 1109,
+  "kids": 1393,
+  "rank": 3,
+  "m18_34": 1134,
+  "teens": 826,
+  "households": 3493
+}

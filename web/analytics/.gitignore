@@ -3,4 +3,5 @@ bin/*
 bkup/*
 rawd/*
 ripd/*fixd
-ripd
+OUTPUT
+fixd
