@@ -1,0 +1,6 @@
+twitter_user_id   = LOAD '<%= twitter_user_id %>' AS (rsrc:chararray, <%= TwitterUserId.to_pig %>);
+twitter_user_id_s = FILTER twitter_user_id BY ((long)user_id % (long)<%= ics_tw_sample_inv %> == 20L); -- should pull out ~1%        
+STORE twitter_user_id_s INTO '<%= sampled_twitter_user_id %>';
+
+twitter_user_id_cut = FOREACH twitter_user_id_s GENERATE user_id;
+STORE twitter_user_id_cut INTO '<%= sampled_ids %>';

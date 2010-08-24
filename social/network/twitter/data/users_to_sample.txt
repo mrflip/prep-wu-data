@@ -1,3 +1,37 @@
+users = {}
+
+screen_names = %w[ Emarketingguru LovelyButton RealSheriffJoe THE_REAL_SHAQ adamtrussell barackobama blakeholloway cheaptweets cloudera cnnbrk conanobrien dhruvbansal doncarlo eikebatista hackingdata hadoop infochimps jessecrouch josephkelly mrflip rww silona theonion wholefoods xBieberPassion zappos ]
+require 'grackle' ; client = Grackle::Client.new(:auth=>{:type=>:basic,:username=>'mrflip',:password=>ENV['TWPASS']})
+screen_names.map{|sn| users[sn] ||= client.users.show?( :screen_name => sn ) }.map{|u| puts [u.id, u.screen_name].join("\t") }
+
+    82363	Silona
+   428333	cnnbrk
+   813286  	BarackObama
+  1554031	mrflip
+  4641021	rww
+  7040932	zappos
+  9721652	jessecrouch
+ 14075928	TheOnion
+ 14400690	josephkelly
+ 15094396	doncarlo
+ 15131310	WholeFoods
+ 15748351	infochimps
+ 16061930	hackingdata
+ 16134540	cloudera
+ 17461978	THE_REAL_SHAQ
+ 18359437	cheaptweets
+ 19038529	dhruvbansal
+ 19041500	hadoop
+ 21230911	BlakeHolloway
+ 44951059	RealSheriffJoe
+ 87197143	EmarketingGuru
+115485051	ConanOBrien
+116485573	LovelyButton
+119064111	eikebatista
+120845920	xBieberPassion
+138317592	adamtrussell
+
+
 mrflip
 jessecrouch
 doncarlo
@@ -49,3 +83,33 @@ client = Grackle::Client.new(:auth=>{:type=>:basic,:username=>'mrflip',:password
 Strong links: I can be my own best friend.
 Influencer: user_ids are strings
 Trstrank: lots of things are strings.
+
+
+
+
+363             3       11      11
+333
+286
+031             31
+021
+932             
+652
+928
+690
+396
+310
+351             3^3     13
+930
+540
+978
+437
+529
+500
+911
+059
+143
+051             3       17
+573
+111
+920
+592

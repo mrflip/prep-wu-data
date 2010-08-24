@@ -1,0 +1,12 @@
+%default FSTRY_DIR '<%= fstry_output_dir %>'
+        
+a_atsigns_b   = LOAD '<%= a_atsigns_b %>' AS (rsrc:chararray, <%= AAtsignsB.to_pig %>);
+a_atsigns_b_f = FILTER a_atsigns_b BY user_b_id == (long)<%= user_id %> AND created_at >= (long)<%= begin_date %> AND created_at < (long)<%= end_date %>;
+a_atsigns_b_c = FOREACH a_atsigns_b_f GENERATE created_at, user_a_id AS user_id;
+STORE a_atsigns_b_c INTO '$FSTRY_DIR/matching_atsigns';
+
+a_retweets_b   = LOAD '<%= a_retweets_b %>' AS (rsrc:chararray, <%= ARetweetsB.to_pig %>);
+a_retweets_b_f = FILTER a_retweets_b BY user_b_id == (long)<%= user_id %> AND created_at >= (long)<%= begin_date %> AND created_at < (long)<%= end_date %>;
+a_retweets_b_c = FOREACH a_retweets_b_f GENERATE created_at, user_a_id AS user_id;
+
+STORE a_retweets_b_c INTO '$FSTRY_DIR/matching_retweets';

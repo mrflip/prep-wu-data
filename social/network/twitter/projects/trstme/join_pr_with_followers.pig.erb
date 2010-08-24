@@ -1,0 +1,27 @@
+REGISTER <%= pig_home %>/contrib/piggybank/java/piggybank.jar;
+                    
+degrees = LOAD '<%= multi_edge_degrees %>' AS (user_id:int, fo_o:int, fo_i:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int);
+rank    = LOAD '<%= pagerank %>'           AS (user_id:long, pr:float, list:chararray); -- load everything
+
+rank_c   = FOREACH rank GENERATE user_id, pr;                         -- trim list off
+mapping  = FOREACH degrees GENERATE user_id AS user_id, fo_i AS followers_count; -- get list of followers observed
+joined   = JOIN rank BY user_id, mapping BY user_id; 
+rank_fol = FOREACH joined GENERATE
+             rank::user_id      AS user_id,
+             mapping::followers_count AS followers_count,
+             rank::pr           AS pr
+           ;
+
+rank_g   = GROUP rank_fol ALL;
+rank_m   = FOREACH rank_g GENERATE FLATTEN(rank_fol), MAX(rank_fol.pr) AS max_pr;
+rank_out = FOREACH rank_m {
+             -- scale rank to range from [0..10]
+             scaled = 10.0f*( (float)org.apache.pig.piggybank.evaluation.math.LOG(rank_fol::pr + 1.0f) / (float)org.apache.pig.piggybank.evaluation.math.LOG(max_pr + 1.0f) );
+             GENERATE
+               rank_fol::user_id   AS user_id,
+               scaled              AS scaled,                     
+               rank_fol::followers_count AS followers_count
+             ;
+           };
+
+STORE rank_out INTO '<%= outputs.first %>';

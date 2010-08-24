@@ -1,0 +1,14 @@
+-- Create trstrank dataset via a join
+twitter_user_id  = LOAD '<%= twitter_user_id %>'  AS (rsrc:chararray, <%= TwitterUserId.to_pig %>);
+pagerank_with_tq = LOAD '<%= pagerank_with_tq %>' AS (user_id:long, rank:float, tq:float);
+
+mapping          = FOREACH twitter_user_id  GENERATE user_id, screen_name;
+trstrank_j       = JOIN mapping BY user_id RIGHT OUTER, pagerank_with_tq BY user_id; -- return every pagerank record with or without screen_name
+trstrank         = FOREACH trstrank_j GENERATE
+                     mapping::screen_name       AS screen_name,
+                     pagerank_with_tq::user_id  AS user_id,
+                     pagerank_with_tq::trstrank AS trstrank,
+                     (int)pagerank_with_tq::tq  AS tq:int -- cast to an integer here
+                   ;
+
+STORE trstrank INTO '<%= outputs.first %>'; -- [screen_name, user_id, trstrank, tq] 

@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'wukong'
-NO_DB = false  # needs to be initialized before wuclan model
 require 'wuclan/twitter';
 require 'wuclan/twitter/parse';
 require 'wuclan/twitter/scrape'; include Wuclan::Twitter::Scrape

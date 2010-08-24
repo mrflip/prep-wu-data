@@ -1,0 +1,15 @@
+graph   = LOAD '<%= multi_edge %>' AS (rsrc:chararray, <%= MultiEdge.to_pig %>); 
+grouped = GROUP graph BY user_a_id;
+degrees = FOREACH grouped GENERATE
+            group                  AS uid,
+            SUM(graph.a_follows_b) AS fo_o,
+            SUM(graph.b_follows_a) AS fo_i,
+            SUM(graph.at_o)        AS at_o,
+            SUM(graph.at_i)        AS at_i,
+            SUM(graph.re_o)        AS re_o,
+            SUM(graph.re_i)        AS re_i,
+            SUM(graph.rt_o)        AS rt_o,
+            SUM(graph.rt_i)        AS rt_i
+          ;
+
+STORE degrees INTO '<%= outputs.first %>';
