@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'wukong'
-require 'wuclan/twitter';
+require 'wuclan/twitter';       ; include Wuclan::Twitter::Model
 require 'wuclan/twitter/parse';
 require 'wuclan/twitter/scrape'; include Wuclan::Twitter::Scrape
 
