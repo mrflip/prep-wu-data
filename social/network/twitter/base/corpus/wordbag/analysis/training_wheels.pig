@@ -10,14 +10,13 @@ terms_g  = GROUP terms_c BY term;
 terms_fg = FOREACH terms_g {
              terms_f = FILTER terms_c BY d_u >= 50; -- throw out observations with too few trials
              terms_l = LIMIT terms_f 10000;         -- keep distribution a reasonable size
-             S_t = SUM(terms_l.s_t);                -- total usages of term t
              GENERATE
                group AS term,
-               S_t   AS S_t,
                terms_l.(s_t, d_u) AS terms_l
              ;
            };
-terms_f = FILTER terms_fg BY (S_t > 2) AND COUNT(terms_l) > 5; -- throw out all terms observed less than twice, not words
+
+terms_f = FILTER terms_fg BY COUNT(terms_l) > 2; -- throw out all terms observed less than twice, not words
         
 rmf $TRAIN
 STORE terms_f INTO '$TRAIN';        

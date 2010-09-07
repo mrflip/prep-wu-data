@@ -14,8 +14,8 @@ class TrainMapper < Wukong::Streamer::RecordStreamer
     @r ||= RSRuby.instance
     r.eval_R('library(VGAM)')
   end
-  
-  def process term, count, dist, *_, &blk
+
+  def process term, dist, *_, &blk
     return if dist.blank?
     data = dist.from_pig_bag.map{|trial| trial.map{|x| x.to_i}}
     return if data.size < 5
@@ -39,11 +39,11 @@ class TrainMapper < Wukong::Streamer::RecordStreamer
     u = expectation(a,b)
     u*(1 - u)/(a + b + 1.0)
   end
-  
+
 end
 
 class ClassifierScript < Wukong::Script
-  
+
   def hadoop_recycle_env *args
     env_args = super(*args)
     env_args << %Q{-cmdenv 'R_HOME=/usr/lib/R'}
