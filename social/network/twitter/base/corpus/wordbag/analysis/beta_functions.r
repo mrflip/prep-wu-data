@@ -40,17 +40,10 @@ bootstrap_beta_fitting <- expression({
   # Plot your fit so you're convinced, it will probably not be that good
   lines(x, dbeta(x, Coef(fit)["shape1"], Coef(fit)["shape2"]), col="red")
   # Get shape parameters for distribution
-  shape1 <- as.numeric(Coef(fit)["shape1"]);
-  shape2 <- as.numeric(Coef(fit)["shape2"]);
-  # There is an algebraic expression from shapes to expectation and variance
-  expectation = shapes_to_params[0]; # This may not work like this...
-  variance    = shapes_to_params[1];
+  beta_a <- as.numeric(Coef(fit)["shape1"]);
+  beta_b <- as.numeric(Coef(fit)["shape2"]);
+
+  expectation = beta_a/(beta_a + beta_b);
+  variance    = expectation*(1.0 - expectation)/(beta_a + beta_b + 1.0);
   # Hurray
 })
-
-#
-# Fill this out from documentation of "beta.ab" in the vgam package
-#
-shapes_to_params <- function (shape1, shape2) {
-  return (c(1,2));
-}

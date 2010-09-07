@@ -14,10 +14,10 @@ terms_fg = FOREACH terms_g {
              GENERATE
                group AS term,
                S_t   AS S_t,
-               terms_l.(s_t, d_u)
+               terms_l.(s_t, d_u) AS terms_l
              ;
            };
-terms_f = FILTER terms_fg BY S_t > 2; -- throw out all terms observed less than twice, not words
+terms_f = FILTER terms_fg BY (S_t > 2) AND COUNT(terms_l) > 5; -- throw out all terms observed less than twice, not words
         
 rmf $TRAIN
 STORE terms_f INTO '$TRAIN';        
