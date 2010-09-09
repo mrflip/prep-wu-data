@@ -137,7 +137,7 @@ flat    = FOREACH with_fo
                   fourth::sm_o      AS sm_o,          
                   fourth::url_o     AS url_o,
                   fourth::at_tr     AS at_tr,
-                  cut_fo::rank      AS fo_tr
+                  cut_fo::rank      AS fo_tr          
               ;
           };
           

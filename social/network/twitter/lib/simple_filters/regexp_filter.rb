@@ -2,22 +2,20 @@
 # -*- coding: utf-8 -*-
 require 'rubygems'
 require 'wukong'                       ; include Wukong
-require 'wuclan/twitter'               ; include Wuclan::Twitter::Model
+require 'wuclan/twitter'               ; include Wuclan::Twitter
 
-class GrepMapper < Wukong::Streamer::StructStreamer
+class TweetBagMapper < Wukong::Streamer::RecordStreamer
 
-  # KEYWORDS = %r{\b(sigur\sros|sigur\sr[^s\s]+s|j[^n\s]+nsi|jonsi|iamjonsi|thenewpornos|neko\scase|destroyer|new\spornographers)}
-  KEYWORDS = %r{(rapportive)}
+  def process *args
+    text = (args[10] || return)
+    return unless regexp.match(text || '')
+    yield args
+  end
 
-  def process tweet, *_, &block
-    return unless keys = tweet.text.downcase.scan(KEYWORDS)
-    yield [tweet.to_flat, keys.flatten.uniq.join(",")]
+  def regexp
+    /(LADY.*GAGA)/i
   end
 
 end
 
-# Execute the script
-Wukong::Script.new(
-  GrepMapper,
-  nil
-  ).run
+Wukong::Script.new(TweetBagMapper, nil).run
