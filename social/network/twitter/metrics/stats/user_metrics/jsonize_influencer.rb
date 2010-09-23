@@ -15,6 +15,7 @@ class Influencer < TypedStruct.new(
     [:user_id,     Integer],
     [:created_at,  Bignum ],
     [:followers,   Integer],
+    [:friends,     Integer],
     [:fo_o,        Integer],
     [:fo_i,        Integer],
     [:at_o,        Integer],
@@ -25,7 +26,7 @@ class Influencer < TypedStruct.new(
     [:rt_i,        Integer],
     [:tw_o,        Integer],
     [:tw_i,        Integer],
-    [:ms_tw_o,     Integer],
+    [:obs_tw_o,     Integer],
     [:hsh_o,       Integer],
     [:sm_o,        Integer],
     [:url_o,       Integer],
@@ -38,31 +39,61 @@ class Influencer < TypedStruct.new(
     (DateTime.now - DateTime.parse(created_at)).to_f
   end
 
+  #
+  # How likely is a tweet by this user to contain a url? Should be strictly in
+  # (0,1) since both numerator and denominator are measured quantities.
+  #
   def feedness
-    return if (url_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    (url_o.to_f / tw_o.to_f).round_to(2)
+    return if (url_o.blank? || obs_tw_o.blank? || obs_tw_o.to_f == 0.0)
+    # We fucked up last time
+    # (url_o.to_f / tw_o.to_f).round_to(2)
+    (url_o.to_f / obs_tw_o.to_f).round_to(2)
   end
 
+  #
+  # How many atsigns does this user recieve for every tweet they send out? This
+  # value is strictly positive but not bounded.
+  #
   def interesting
     return if (at_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     ((SAMPLE_CORR_FACTOR*at_i.to_f) / tw_o.to_f).round_to(2)
   end
 
+  #
+  # How many retweets does this user get per tweet they send out? Strictly
+  # positive but not bounded.
+  #
   def sway
     return if (rt_i.blank? || tw_o.blank? || tw_o.to_f == 0.0)
     ((SAMPLE_CORR_FACTOR*rt_i.to_f) / tw_o.to_f).round_to(2)
   end
 
+  #
+  # How likely is it that a tweet by this user contains an atsign of another
+  # twitter user? This value should be strictly in (0,1) since it uses measured quantities.
+  #
   def chattiness
-    return if (at_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    (at_o.to_f / tw_o.to_f).round_to(2)
+    return if (at_o.blank? || obs_tw_o.blank? || obs_tw_o.to_f == 0.0)
+    # We fucked up last time
+    # (at_o.to_f / tw_o.to_f).round_to(2)
+    (at_o.to_f / obs_tw_o.to_f).round_to(2)
   end
 
+  #
+  # How likely is it that a tweet by this user is a retweet of another twitter
+  # user's tweet? This value should be strictly in (0,1) since it uses measured quantities.
+  #
   def enthusiasm
-    return if (rt_o.blank? || tw_o.blank? || tw_o.to_f == 0.0)
-    (rt_o.to_f / tw_o.to_f).round_to(2)
+    return if (rt_o.blank? || obs_tw_o.blank? || obs_tw_o.to_f == 0.0)
+    # We fucked up last time
+    # (rt_o.to_f / tw_o.to_f).round_to(2)
+    (rt_o.to_f / obs_tw_o.to_f).round_to(2)
   end
 
+  #
+  # Approximately how many tweets does this user see per day? This is not
+  # directly measured, makes use of API quantities, and is not bounded.
+  #
   def influx
     return unless tw_i
     days = days_since_created
@@ -70,6 +101,10 @@ class Influencer < TypedStruct.new(
     (tw_i.to_i / days).round_to(2)
   end
 
+  #
+  # Approximately how many tweets does this user send out per day? This is not
+  # directly measured, makes use of API quantities, and is not bounded.
+  #
   def outflux
     return unless tw_o
     days = days_since_created
@@ -77,16 +112,29 @@ class Influencer < TypedStruct.new(
     (tw_o.to_i / days).round_to(2)
   end
 
+  #
+  # To what extent does this user follow others in the hopes of receiving a
+  # 'follow back'? A high value (> 1) gives some indication that the user is
+  # following other users then immediately unfollowing them. Uses API quantities
+  # and is not bounded.
+  #
   def follow_churn
-    return if (fo_o.blank? || followers.blank? || followers.to_f == 0.0 )
-    (fo_o.to_f / followers.to_f).round_to(2)
+    return if (fo_o.blank? || friends.blank? || friends.to_f == 0.0 )
+    # We fucked up last time
+    # (fo_o.to_f / followers.to_f).round_to(2)
+    (fo_o.to_f / friends.to_f).round_to(2)
   end
 
+  #
+  # Approximately how many people does this person follow per day?
+  #
   def follow_rate
-    return unless followers
+    return unless friends
     days = days_since_created
     return if (days.blank? || days == 0)
-    (followers.to_i / days).round_to(2)
+    # We fucked up last time
+    # (followers.to_i / days).round_to(2)
+    (friends.to_i / days).round_to(2)
   end
 
   def reach
@@ -94,6 +142,17 @@ class Influencer < TypedStruct.new(
 
   def reciprocity
   end
+
+  def at_trstrank
+    return if at_tr.blank?
+    at_tr.to_f.round_to(2)
+  end
+
+  def fo_trstrank
+    return if fo_tr.blank?
+    fo_tr.to_f.round_to(2)
+  end
+
 
   def to_hash
     {
@@ -115,20 +174,10 @@ class Influencer < TypedStruct.new(
     }.compact_blank!
   end
 
-  def at_trstrank
-    return if at_tr.blank?
-    at_tr.to_f.round_to(2)
-  end
-
-  def fo_trstrank
-    return if fo_tr.blank?
-    fo_tr.to_f.round_to(2)
-  end
-
   def to_json
     self.to_hash.to_json
   end
-  
+
 end
 
 class Mapper < Wukong::Streamer::StructStreamer
@@ -136,7 +185,7 @@ class Mapper < Wukong::Streamer::StructStreamer
   def process user, *_
     yield [user.user_id, user.to_json]
   end
-  
+
 end
 
 

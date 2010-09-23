@@ -15,7 +15,7 @@ fo_rank  = LOAD '$FORANK'   AS (uid:long, followers:long, rank:float);
 
 cut_at   = FOREACH at_rank GENERATE uid, rank;
 cut_fo   = FOREACH fo_rank GENERATE uid, rank;
-user_id  = FOREACH ids GENERATE uid, sn, followers, crat;
+user_id  = FOREACH ids GENERATE uid, sn, followers, friends, crat;
 
 with_deg = JOIN user_id BY uid FULL OUTER, deg_dist BY uid;
 first    = FOREACH with_deg
@@ -26,6 +26,7 @@ first    = FOREACH with_deg
                    uid                AS uid,
                    user_id::crat      AS crat,
                    user_id::followers AS followers,
+                   user_id::friends   AS friends,
                    deg_dist::fo_o     AS fo_o,
                    deg_dist::fo_i     AS fo_i,
                    deg_dist::at_o     AS at_o,
@@ -46,6 +47,7 @@ second      = FOREACH with_twdist
                       uid              AS uid,
                       first::crat      AS crat,
                       first::followers AS followers,
+                      first::friends   AS friends,
                       first::fo_o      AS fo_o,
                       first::fo_i      AS fo_i,
                       first::at_o      AS at_o,
@@ -54,8 +56,8 @@ second      = FOREACH with_twdist
                       first::re_i      AS re_i,
                       first::rt_o      AS rt_o,
                       first::rt_i      AS rt_i,
-                      tw_dist::tw_o    AS tw_o,
-                      tw_dist::tw_i    AS tw_i           
+                      tw_dist::tw_o    AS tw_o, --API quantity
+                      tw_dist::tw_i    AS tw_i  --API quantity         
                   ;
               };
 
@@ -67,7 +69,8 @@ third    = FOREACH with_brk
                    second::sn        AS sn,            
                    uid               AS uid,           
                    second::crat      AS crat,          
-                   second::followers AS followers,     
+                   second::followers AS followers,
+                   second::friends   AS friends,
                    second::fo_o      AS fo_o,          
                    second::fo_i      AS fo_i,          
                    second::at_o      AS at_o,          
@@ -78,7 +81,7 @@ third    = FOREACH with_brk
                    second::rt_i      AS rt_i,          
                    second::tw_o      AS tw_o,          
                    second::tw_i      AS tw_i,
-                   break_dn::ms_tw_o AS ms_tw_o,
+                   break_dn::ms_tw_o AS ms_tw_o, --observed quantity
                    break_dn::hsh_o   AS hsh_o,
                    break_dn::sm_o    AS sm_o,
                    break_dn::url_o   AS url_o          
@@ -93,7 +96,8 @@ fourth  = FOREACH with_at
                   third::sn        AS sn,            
                   uid              AS uid,           
                   third::crat      AS crat,          
-                  third::followers AS followers,     
+                  third::followers AS followers,
+                  third::friends   AS friends,
                   third::fo_o      AS fo_o,          
                   third::fo_i      AS fo_i,          
                   third::at_o      AS at_o,          
@@ -104,7 +108,7 @@ fourth  = FOREACH with_at
                   third::rt_i      AS rt_i,          
                   third::tw_o      AS tw_o,          
                   third::tw_i      AS tw_i,          
-                  third::ms_tw_o   AS ms_tw_o,       
+                  third::ms_tw_o   AS ms_tw_o, --oberved quantity       
                   third::hsh_o     AS hsh_o,         
                   third::sm_o      AS sm_o,          
                   third::url_o     AS url_o,
@@ -121,7 +125,8 @@ flat    = FOREACH with_fo
                   fourth::sn        AS sn,            
                   uid               AS uid,           
                   fourth::crat      AS crat,          
-                  fourth::followers AS followers,     
+                  fourth::followers AS followers,
+                  fourth::friends   AS friends,
                   fourth::fo_o      AS fo_o,          
                   fourth::fo_i      AS fo_i,          
                   fourth::at_o      AS at_o,          
@@ -132,7 +137,7 @@ flat    = FOREACH with_fo
                   fourth::rt_i      AS rt_i,          
                   fourth::tw_o      AS tw_o,          
                   fourth::tw_i      AS tw_i,          
-                  fourth::ms_tw_o   AS ms_tw_o,       
+                  fourth::ms_tw_o   AS ms_tw_o, --observed quantity
                   fourth::hsh_o     AS hsh_o,         
                   fourth::sm_o      AS sm_o,          
                   fourth::url_o     AS url_o,
