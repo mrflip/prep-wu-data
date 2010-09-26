@@ -22,7 +22,7 @@ class TwitterRequestParser < Wukong::Streamer::StructStreamer
   def process request, *args, &block
     # begin
     request.parse(*args) do |obj|
-      yield obj
+      obj.streaming_save if obj.is_a?(TwitterUser)
     end
     # rescue StandardError => e
     #   $stderr.puts ["Bad request:", e.to_s, e.backtrace, request.to_flat].join("\t")[0..3000]
