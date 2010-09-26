@@ -18,11 +18,8 @@ require File.dirname(__FILE__)+'/last_seen_state'
 # user is protected).
 #
 
-
-
 class TwitterRequestParser < Wukong::Streamer::StructStreamer
   def process request, *args, &block
-    # return unless request.healthy?
     # begin
     request.parse(*args) do |obj|
       yield obj
@@ -35,13 +32,11 @@ end
 
 
 if $0 == __FILE__
-  # Go script go!
   Wukong::Script.new(
     TwitterRequestParser,
     nil,
-    :partition_fields => 2,
+    :partition_fields => 3,
     :sort_fields      => 3,
-    :reuse_jvms       => true,
-    :map_speculative => "false"
+    :reuse_jvms       => true
     ).run
 end
