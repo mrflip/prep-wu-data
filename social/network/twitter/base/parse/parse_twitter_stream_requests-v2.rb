@@ -26,7 +26,12 @@ class TwitterRequestParser < Wukong::Streamer::RecordStreamer
 
   def process request, *args, &block
     request.parse(*args) do |obj|
-      # next if obj.is_a? BadRecord
+      case obj
+      when Tweet
+        [Hashtag, Smiley, TweetUrl, StockToken ].each do |token_klass|
+          token_klass.extract_from_tweet(obj).each{|tok| yield tok}
+        end
+      end
       yield obj
     end
   end
@@ -37,5 +42,6 @@ Wukong::Script.new(
   TwitterRequestParser,
   nil,
   :reuse_jvms       => true,
-  :map_speculative => "false"
+  :partition_fields => 3,
+  :sort_fields      => 3
   ).run

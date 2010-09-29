@@ -18,14 +18,11 @@ require File.dirname(__FILE__)+'/last_seen_state'
 # user is protected).
 #
 
-
-
 class TwitterRequestParser < Wukong::Streamer::StructStreamer
   def process request, *args, &block
-    # return unless request.healthy?
     # begin
     request.parse(*args) do |obj|
-      yield obj
+      obj.streaming_save if obj.is_a?(TwitterUser)
     end
     # rescue StandardError => e
     #   $stderr.puts ["Bad request:", e.to_s, e.backtrace, request.to_flat].join("\t")[0..3000]
@@ -35,13 +32,11 @@ end
 
 
 if $0 == __FILE__
-  # Go script go!
   Wukong::Script.new(
     TwitterRequestParser,
     nil,
-    :partition_fields => 2,
+    :partition_fields => 3,
     :sort_fields      => 3,
-    :reuse_jvms       => true,
-    :map_speculative => "false"
+    :reuse_jvms       => true
     ).run
 end
