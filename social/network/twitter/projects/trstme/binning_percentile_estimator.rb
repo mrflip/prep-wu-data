@@ -12,7 +12,7 @@ Array.class_eval do
   # Count number of elements in self less than x
   #
   def num_less_than x
-    self.inject(0){|count,y| count += 1 if y < x; count}    
+    self.inject(0){|count,y| count += 1 if y < x; count}
   end
 
   #
@@ -21,7 +21,7 @@ Array.class_eval do
   def frequency_of x
     self.inject(0){|count,y| count += 1 if x == y; count}
   end
-  
+
   #
   # Return percentile with interpolation
   #
@@ -52,7 +52,7 @@ Array.class_eval do
   def pairs
     self.zip(self[1..-1]).reject{|x| x.blank? || x.include?(nil)}
   end
-  
+
 end
 
 #
@@ -61,8 +61,7 @@ end
 class Mapper < Wukong::Streamer::RecordStreamer
   def process *args
     uid, rank, followers = args
-    yield [logbin(followers), rank]
-    # yield [casebin(followers), rank]
+    yield [casebin(logbin(followers)), rank]
   end
 
   def logbin(x)
@@ -73,15 +72,15 @@ class Mapper < Wukong::Streamer::RecordStreamer
     end
   end
 
+  #
+  # Voodoo
+  #
   def casebin x
     x = x.to_f
-    return 0 if x < 1
-    return 1 if x < 2
-    return 2 if x < 3
-    return 3 if x < 4
-    return 4
-    # and so on
-    #return 'foofuckingbar'
+    return x if x < 20.0
+    return 25.0 if x < 25.0
+    return 30.0 if x < 30.0
+    return 31.0
   end
 
 end
@@ -97,7 +96,7 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
     self.r ||= RSRuby.instance
     self.binned_percentiles ||= {}
   end
-  
+
   def start! bin, rank, *_
     self.single_bin = []
   end
@@ -120,7 +119,7 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
     q[10.0] ||= 100.0
     q.to_a.sort!{|x,y| x.first <=> y.first}
   end
-  
+
   #
   # Write the final table to disk as a ruby hash
   #
@@ -129,7 +128,7 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
     table << "TRSTRANK_TABLE = " << binned_percentiles.inspect
     table.close
   end
-  
+
   #
   # Generate a hash of all pairs {trstrank => percentile, ...}, interpolate when necessary
   #
@@ -140,7 +139,7 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
     end
     h
   end
-  
+
   #
   # Nothing to see here, move along
   #

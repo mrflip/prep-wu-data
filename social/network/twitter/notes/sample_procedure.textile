@@ -1,0 +1,9 @@
+h1. What should a sample look like?
+
+0. n0 (big data people)
+1. Generate/ acquire local graph / sample = n1
+2. Get tweets, fo_x (for n1), at_x (for n1), worth doing re_x and rt_x?
+3. n2 = distinct union of ids in fo_x, at_x on left and right
+4. prune
+5. get twitter_user_xx, trstrank_xx, multigraph_xx, etc, for pruned n2
+
