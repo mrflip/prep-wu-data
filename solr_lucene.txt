@@ -1,0 +1,191 @@
+Notes:
+
+machine:                     m1.xlarge
+data location:               local file system
+
+
+- You must define a schema in conf/schema.xml for the data you wish to index
+- Solr can index csv from local disk just fine (you have to enable remote streaming in conf/solrconfig.xml)
+- Command:
+     curl 'http://localhost:8983/solr/update/csv?stream.file=exampledocs/books.csv&stream.contentType=text/plain;charset=utf-8&fieldnames=id,cat,name,,inStock,author_t,series_t,,genre_s&commit=true'
+- Command to index tweets (these fields MUST be defined in the schema.xml file):
+     curl 'http://localhost:8983/solr/update/csv?commit=true&separator=%09&escape=\&stream.file=exampledocs/tweet.tsv&stream.contentType=text/plain;charset=utf-8&fieldnames=,id,created_at,user_id,screen_name,,,in_reply_to_screen_name,,in_reply_to_status_id,text,source,,latitude,longitude,,'
+
+
+- Set the <dataDir> in solrconfig.xml to reasonable place     
+
+
+Runs:
+
+---------10-------------
+
+data:           100 tweets
+data_size:      25k
+index_before:   40k
+index_after:    168k (accidentally ran twice) -- looks like it re-indexes by default
+time:           0.172
+merge_factor:   10
+min_merge_docs: 10
+
+data:           1000 tweets
+data_size:      253k
+index_before:   232k
+index_after:    564k
+time:           0.658
+merge_factor:   10
+min_merge_docs: 10
+
+data:           10000 tweets
+data_size:      2523k
+index_before:   564k
+index_after:    3308k
+time:           2.085
+merge_factor:   10
+min_merge_docs: 10
+
+data:           100000 tweets
+data_size:      25421k
+index_before:   3308k
+index_after:    30160k
+time:           14.197
+merge_factor:   10
+min_merge_docs: 10
+
+data:           1000000 tweets
+data_size:      200610k
+index_before:   30160k
+index_after:    219884k
+time:           1:57.57
+merge_factor:   10
+min_merge_docs: 10
+
+data:           5000000 tweets
+data_size:      999544k
+index_before:   219884k
+index_after:    1067600k
+time:           9:53.18
+merge_factor:   10
+min_merge_docs: 10
+
+
+---------100------------
+
+
+data:           100 tweets
+data_size:      25k
+index_before:   1067600k
+index_after:    1067660k
+time:           0.593
+merge_factor:   100
+min_merge_docs: 100
+
+data:           1000 tweets
+data_size:      253k
+index_before:   1067600k
+index_after:    1067992k
+time:           1.089
+merge_factor:   100
+min_merge_docs: 100
+
+data:           10000 tweets
+data_size:      2523k
+index_before:   1067992k
+index_after:    1070992k
+time:           2.165
+merge_factor:   100
+min_merge_docs: 100
+
+data:           100000 tweets
+data_size:      25421k
+index_before:   1070992k
+index_after:    1093204k
+time:           15.448
+merge_factor:   100
+min_merge_docs: 100
+
+data:           1000000 tweets
+data_size:      200610k
+index_before:   1093204k
+index_after:    1255248k
+time:           2:18.69
+merge_factor:   100
+min_merge_docs: 100
+
+data:           5000000 tweets
+data_size:      999544k
+index_before:   1255248k
+index_after:    2103520k
+time:           10:12.07
+merge_factor:   100
+min_merge_docs: 100
+
+
+---------1000------------
+
+data:           100 tweets
+data_size:      25k
+index_before:   2103520k
+index_after:    2103580k
+time:           0.782
+merge_factor:   1000
+min_merge_docs: 1000
+
+data:           1000 tweets
+data_size:      253k
+index_before:   2103580k
+index_after:    2103912k
+time:           1.169
+merge_factor:   1000
+min_merge_docs: 1000
+
+data:           10000 tweets
+data_size:      2523k
+index_before:   2103912k
+index_after:    2106904k
+time:           2.207
+merge_factor:   1000
+min_merge_docs: 1000
+
+data:           100000 tweets
+data_size:      25421k
+index_before:   2106904k
+index_after:    2128824k
+time:           16.344
+merge_factor:   1000
+min_merge_docs: 1000
+
+data:           1000000 tweets
+data_size:      200610k
+index_before:   2128824k
+index_after:    2290480k
+time:           2:24.73
+merge_factor:   1000
+min_merge_docs: 1000
+
+data:           5000000 tweets
+data_size:      999544k
+index_before:   2290480k
+index_after:    3138752k
+time:           10:31.08
+merge_factor:   1000
+min_merge_docs: 1000
+
+---------1 000 000------------
+
+data:           5000000 tweets
+data_size:      999544k
+index_before:   3138752k
+index_after:    4144076k
+time:           11:03.65
+merge_factor:   1000000
+min_merge_docs: 1000000
+
+---------1 000 000, no existing index------------
+
+data:           5000000 tweets
+data_size:      999544k
+index_before:   8k
+index_after:    1048468k
+time:           9:56.24
+merge_factor:   1000000
+min_merge_docs: 1000000
