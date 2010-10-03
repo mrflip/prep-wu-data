@@ -17,4 +17,4 @@ flat    = FOREACH grouped {
           };
 
 rmf $OUT;
-STORE flat INTO '$OUT';
+STORE flat INTO '<%= outputs.first %>';
