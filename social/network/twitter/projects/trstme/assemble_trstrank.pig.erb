@@ -1,5 +1,5 @@
 -- Create trstrank dataset via a join
-twitter_user_id  = LOAD '<%= twitter_user_id %>'  AS (rsrc:chararray, <%= TwitterUserId.to_pig %>);
+twitter_user_id  = LOAD '<%= twitter_user_id %>'  AS (rsrc:chararray, <%= TwitterUserId.to_pig %>); -- may need to read from cassandra
 pagerank_with_tq = LOAD '<%= pagerank_with_tq %>' AS (user_id:long, rank:float, tq:float);
 
 mapping          = FOREACH twitter_user_id  GENERATE user_id, screen_name;

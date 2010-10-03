@@ -1,0 +1,10 @@
+--
+-- Take output of the multigraph assembler and initialize both the
+-- follow and atsign graphs for pagerank calculation at the same time.
+--
+edges     = LOAD '<%= multigraph %>' AS (multi_edge:chararray, user_a:int, user_b:int, a_fo_b:int, b_fo_a:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int);
+edges_cut = FOREACH edges GENERATE user_a, user_b, a_fo_b, at_o;
+edges_g   = GROUP edges_cut BY user_a;
+adj_list  = FOREACH edges_g GENERATE group, <%= init_fo_rank %>f AS init_fo_rank, <%= init_at_rank %>f AS init_at_rank, edges_cut.(user_b, a_fo_b, at_o);
+
+STORE adj_list INTO '<%= outputs.first %>';

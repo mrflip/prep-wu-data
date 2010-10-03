@@ -1,0 +1,20 @@
+--
+-- Use precomputed weighted edges data set to generate strong links table
+--
+weighted_multi_edge = LOAD '<%= weighted_edges %>'  AS (user_a_id:long, user_b_id:long, fo_sy:int, at_sy:int, weight:float);
+twitter_user_id     = LOAD '<%= twitter_user_id %>' AS (rsrc:chararray, <%= TwitterUserId.to_pig %>); -- may need to read from cassandra
+
+mapping = FOREACH twitter_user_id GENERATE user_id, screen_name;
+grouped = COGROUP weighted_multi_edge BY user_a_id, mapping BY user_id;
+flat    = FOREACH grouped {
+            ordered = ORDER weighted_multi_edge BY weight DESC;
+            top_100 = LIMIT ordered 100;
+            GENERATE
+              group                        AS user_id,
+              FLATTEN(mapping.screen_name) AS screen_name, --flatten is funny here since there should only be one match on the cogroup
+              top_100.(user_b_id, weight)  AS top_100
+            ;
+          };
+
+rmf $OUT;
+STORE flat INTO '$OUT';
