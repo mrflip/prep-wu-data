@@ -2,17 +2,29 @@
 
 require 'rubygems'
 require 'wukong'
-require 'wukong/and_pig'
 
 class Mapper < Wukong::Streamer::RecordStreamer
-  def process term, size, pbag, *_
-    yield [term, freqs(pbag).join(",")] if size.to_i > 20
+  def process term, freq
+    yield [term, freq]
+  end
+end
+
+class Reducer < Wukong::Streamer::AccumulatingReducer
+  attr_accessor :dist
+  def start! term, freq
+    @dist = []
   end
 
-  def freqs pbag
-    pbag.from_pig_bag.map{|s, n| s.to_f / n.to_f}
+  def accumulate term, freq
+    dist << freq
+  end
+
+  # yield up to 1000 points, are they ordered or?
+  def finalize
+    dist.sort_by{ rand }[0..1000].each{|f| yield [key, f]}
   end
   
 end
+
 
 Wukong::Script.new(Mapper, nil).run
