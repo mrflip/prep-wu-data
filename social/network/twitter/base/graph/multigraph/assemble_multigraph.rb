@@ -2,13 +2,12 @@
 require 'rubygems'
 require 'extlib/class'
 require 'wukong'
-require 'wuclan/twitter'
-require 'wuclan/twitter/model'               ; include Wuclan::Twitter::Model
+require 'wuclan/twitter' ; include Wuclan::Twitter
 
 #
 # Defines an edge in the twitter multigraph
 #
-class MultigraphEdge < Struct.new(:user_a, :user_b, :fo_i, :fo_o, :at_i, :at_o, :re_i, :re_o, :rt_i, :rt_o)
+class MultigraphEdge < Struct.new(:user_a, :user_b, :fo_i, :fo_o, :me_i, :me_o, :re_i, :re_o, :rt_i, :rt_o)
 
   def initialize *args
     super *args
@@ -25,7 +24,7 @@ class MultigraphEdge < Struct.new(:user_a, :user_b, :fo_i, :fo_o, :at_i, :at_o, 
 
   def edge_weights
     [ a_follows_b? ? 1 : 0, b_follows_a? ? 1 : 0,
-      at_o.length, at_i.length,
+      me_o.length, me_i.length,
       re_o.length, re_i.length,
       rt_o.length, rt_i.length,
     ]
@@ -33,21 +32,17 @@ class MultigraphEdge < Struct.new(:user_a, :user_b, :fo_i, :fo_o, :at_i, :at_o, 
 
 end
 
+#
+# Implicitly expects [a_follows_b, a_atsigns_b]
+#
 class MultigraphMapper < Wukong::Streamer::StructStreamer
   def process rel, *_
-    case rel
-    when AFollowsB
-      yield [rel.user_b_id, rel.user_a_id, 'fo_i', 1]
-      yield [rel.user_a_id, rel.user_b_id, 'fo_o', 1]
-    when AAtsignsB
-      yield [rel.user_b_id, rel.user_a_id, 'at_i', rel.tweet_id]
-      yield [rel.user_a_id, rel.user_b_id, 'at_o', rel.tweet_id]
-    when ARepliesB
-      yield [rel.user_b_id, rel.user_a_id, 're_i', rel.tweet_id, rel.in_reply_to_tweet_id]
-      yield [rel.user_a_id, rel.user_b_id, 're_o', rel.tweet_id, rel.in_reply_to_tweet_id]
-    when ARetweetsB
-      yield [rel.user_b_id, rel.user_a_id, 'rt_i', rel.tweet_id]
-      yield [rel.user_a_id, rel.user_b_id, 'rt_o', rel.tweet_id]
+    if rel.is_a?(AFollowsB)
+      yield [rel.user_b_id, rel.user_a_id, "fo_i", 1]
+      yield [rel.user_a_id, rel.user_b_id, "fo_o", 1]
+    else
+      yield [rel.user_b_id, rel.user_a_id, "#{rel.rel_type}_i", rel.tweet_id]
+      yield [rel.user_a_id, rel.user_b_id, "#{rel.rel_type}_o", rel.tweet_id]
     end
   end
 end
