@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'wukong'
-require 'wuclan/twitter'; include Wuclan::Twitter::Model
+require 'wuclan/twitter' ; include Wuclan::Twitter
+require 'wuclan/twitter/twitter_user'
 
 class LastSeenStateUniqer < Wukong::Streamer::UniqByLastReducer
   include Wukong::Streamer::StructRecordizer
@@ -33,6 +34,7 @@ if $0 == __FILE__
     LastSeenStateUniqer,
     :map_command      => '/bin/cat',
     :partition_fields => 2,
-    :sort_fields      => 3
+    :sort_fields      => 3,
+    :reduce_tasks     => 62
     ).run
 end
