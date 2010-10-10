@@ -3,6 +3,7 @@ require 'rubygems'
 require 'extlib/class'
 require 'wukong'
 require 'wuclan/twitter' ; include Wuclan::Twitter
+require 'wuclan/twitter/a_relationships_b'
 
 #
 # Defines an edge in the twitter multigraph
@@ -84,8 +85,9 @@ end
 Wukong::Script.new(
   MultigraphMapper,
   MultigraphReducer,
-  :partition_fields => 1,
-  :sort_fields      => 4,
+  :partition_fields  => 2,
+  :sort_fields       => 2,
   :io_record_percent => 0.3,
-  :map_speculative => "true"
+  :map_speculative   => "true",
+  :reduce_tasks      => 120
   ).run
