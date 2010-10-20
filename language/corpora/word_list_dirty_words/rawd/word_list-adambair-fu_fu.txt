@@ -1,7 +1,7 @@
 # from http://github.com/adambair/fu-fu/raw/master/config/dictionary.yml
 
 # the filter currently checks for words that are 3 or more characters.
----
+
 ass: "*ss"
 asses: "*ss*s"
 asshole: "*ssh*l*"

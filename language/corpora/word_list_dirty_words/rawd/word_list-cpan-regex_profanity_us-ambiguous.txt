@@ -1,6 +1,5 @@
 # From http://github.com/gitpan/Regexp-Profanity-US/raw/master/profane-ambiguous.txt 
 
-
 arse
 arsing
 ass-hole

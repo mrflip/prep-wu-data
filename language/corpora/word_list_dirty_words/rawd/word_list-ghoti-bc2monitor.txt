@@ -1,6 +1,5 @@
 # From http://github.com/ghoti/BC2Monitor/raw/master/badwords.txt 
 
-
 anal
 ballsack
 bastard
@@ -95,8 +94,6 @@ motherfuckers
 motherfucker
 motherfker
 motherfkers
-
-
 
 cunt
 coon

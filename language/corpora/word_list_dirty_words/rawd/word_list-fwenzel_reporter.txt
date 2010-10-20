@@ -1,6 +1,5 @@
 # From http://github.com/fwenzel/reporter/raw/master/lib/swearwords/badwords.txt 
 
-
 ahole
 anus
 ash0le*

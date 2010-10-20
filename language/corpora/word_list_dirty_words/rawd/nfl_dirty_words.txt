@@ -1,15 +1,15 @@
-http://outsports.com/nfl/2005/0301nflshopnaughtywords.htm
-
- NFL's 1,159 Naughty Words
-
-This is the list of  "naughty" words not allowed on personalized jerseys at the NFL Shop. They were extracted by a reader from a java script list found on the NFL Shop site.
-
-Update: Since our original article appeared in 2005, "Gay" is off the list and four more (Bin Laden," "Binladen," "Gay Nazi" and "gaynazi") have been added. Also, you can't buy a "Ron Mexico" jersey.
-
-Related: Read the story "Gay a Naughty Word to the NFL"
- 
-	After our story appeared, a Tampa Bay fan from Palm Springs, Calif., was able to order this "GAY USA" jersey from the NFL Shop with no problem. Click image for larger view.
- 
+# NFL's 1,159 Naughty Words
+# 
+# http://outsports.com/nfl/2005/0301nflshopnaughtywords.htm
+# 
+# This is the list of  "naughty" words not allowed on personalized jerseys at the NFL Shop. They were extracted by a reader from a java script list found on the NFL Shop site.
+# 
+# Update: Since our original article appeared in 2005, "Gay" is off the list and four more (Bin Laden," "Binladen," "Gay Nazi" and "gaynazi") have been added. Also, you can't buy a "Ron Mexico" jersey.
+# 
+# Related: Read the story "Gay a Naughty Word to the NFL"
+#  
+# After our story appeared, a Tampa Bay fan from Palm Springs, Calif., was able to order this "GAY USA" jersey from the NFL Shop with no problem. Click image for larger view.
+# 
 
 420
 666
@@ -19,7 +19,6 @@ Related: Read the story "Gay a Naughty Word to the NFL"
 3RDEYE
 3RDLEG
 3SOME
- 
 
 4 TWENTY
 4TWENTY
@@ -1135,7 +1134,7 @@ UPSKIRT
 UPTHEASS
 UPTHEBUTT
 
-The ones we originally missed:
+# The ones we originally missed:
 
 URINATE
 URINE
