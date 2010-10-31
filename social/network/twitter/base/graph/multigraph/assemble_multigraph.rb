@@ -89,5 +89,5 @@ Wukong::Script.new(
   :sort_fields       => 2,
   :io_record_percent => 0.3,
   :map_speculative   => "true",
-  :reduce_tasks      => 120
+  :reduce_tasks      => 60
   ).run
