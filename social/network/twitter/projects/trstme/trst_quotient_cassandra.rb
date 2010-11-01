@@ -1,10 +1,12 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env jruby
 
+$: << '/home/jacob/Programming/xanthos/lib'
+
+require 'java'
 require 'rubygems'
 require 'wukong'
-
-require File.dirname(__FILE__)+'/atrank_table'
-require File.dirname(__FILE__)+'/forank_table'
+require 'json'
+require 'xanthos'
 
 Float.class_eval do def round_to(x) ((10**x)*self).round.to_f/(10**x) end ; end
 #
@@ -13,14 +15,23 @@ Float.class_eval do def round_to(x) ((10**x)*self).round.to_f/(10**x) end ; end
 #
 class Mapper < Wukong::Streamer::RecordStreamer
 
+  #
+  # Make use of local cassandra db where table is stored
+  #
+  def initialize *args
+    super(*args)
+    @db = Xanthos::Cassandra.new("Trstrank", "localhost:9160")
+  end
+    
   def process *args
+    # return unless args.length == 3
     uid, fo_rank, at_rank, obs_followers = args
     fo_rank = fo_rank.to_f.round_to(1)
     at_rank = at_rank.to_f.round_to(1)
 
-    # Fetch rows for each of follow percentiles and atsign percentiles from table
-    fo_bin  = FORANK_TABLE[casebin(logbin(obs_followers.to_f))]
-    at_bin  = ATRANK_TABLE[casebin(logbin(obs_followers.to_f))]
+    # Fetch rows for each of follow percentiles and atsign percentiles from db
+    fo_bin  = JSON.parse(@db.get(:FollowPercentiles, casebin(logbin(obs_followers)).to_s, "percentiles"))
+    at_bin  = JSON.parse(@db.get(:AtsignPercentiles, casebin(logbin(obs_followers)).to_s, "percentiles"))
 
     return if fo_bin.blank?
     return if at_bin.blank?
@@ -29,7 +40,7 @@ class Mapper < Wukong::Streamer::RecordStreamer
     # FIXME: this is obviously NOT the right linear combination
     #
     rank = 0.5*fo_rank      + 0.5*at_rank
-    tq   = 0.5*fo_bin[fo_rank] + 0.5*at_bin[at_rank]
+    tq   = 0.5*fo_bin[fo_rank.to_s] + 0.5*at_bin[at_rank.to_s]
     #
     #
     #
