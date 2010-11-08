@@ -1,2 +1,0 @@
-#!/bin/bash
-zcat $@ | egrep '   D   ' | sed -r -e 's!^.* (edgar/data/.*.txt).*$!\1!g'
