@@ -38,7 +38,8 @@ module ReIndex
       end
     end
     def finalize
-      yield [key, aggregate_scores].flatten
+      query = key.map { |entry| entry.gsub(/\s/, '_').gsub(/\W/, '') }.join(":").downcase
+      yield [query, key, aggregate_scores].flatten
     end
   end
 end
