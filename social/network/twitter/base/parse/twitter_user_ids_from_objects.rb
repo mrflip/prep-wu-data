@@ -25,7 +25,7 @@ class Mapper < Wukong::Streamer::StructStreamer
       return if thing.user_id == 0
       yield TwitterUserId.new(
         thing.user_id, thing.scraped_at, thing.screen_name, thing.protected,
-        thing.followers_count, thing.friends_count, thing.statuses_count, thing.favorites_count,
+        thing.followers_count, thing.friends_count, thing.statuses_count, thing.favourites_count,
         thing.created_at, nil, 1)
       # when TwitterUserSearchId
       #   return if thing.sid.to_i == 0
@@ -97,5 +97,5 @@ Wukong::Script.new(
   Reducer,
   :sort_fields => 2,
   :partition_fields => 2,
-  :reduce_tasks => 62
+  :reduce_tasks => 148
   ).run

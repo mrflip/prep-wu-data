@@ -1,7 +1,14 @@
-REGISTER <%= pig_home %>/contrib/piggybank/java/piggybank.jar;
-                    
-degrees = LOAD '<%= multi_edge_degrees %>' AS (user_id:int, fo_o:int, fo_i:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int);
-rank    = LOAD '<%= pagerank %>'           AS (user_id:long, raw_fo_rank:float, raw_at_rank:float, list:chararray); -- load everything
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
+
+--
+-- Combine the followers field (fo_i) from the multigraph degree distribution
+-- with the multigraph pagerank dataset
+--
+
+%default OUT '/tmp/graph/pagerank_with_fo'
+
+degrees = LOAD '$DIST'    AS (user_id:int, fo_o:int, fo_i:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int);
+rank    = LOAD '$PRGRAPH' AS (user_id:long, raw_fo_rank:float, raw_at_rank:float, list:chararray); -- load everything
 
 rank_c   = FOREACH rank GENERATE user_id, raw_fo_rank, raw_at_rank;
 mapping  = FOREACH degrees GENERATE user_id AS user_id, fo_i AS followers_count; -- get list of followers observed
@@ -27,4 +34,4 @@ rank_out = FOREACH rank_m {
              ;
            };
 
-STORE rank_out INTO '<%= outputs.first %>';
+STORE rank_out INTO '$OUT';

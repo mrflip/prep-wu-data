@@ -24,8 +24,9 @@ class LastSeenStateUniqer < Wukong::Streamer::UniqByLastReducer
   # Emit the last-seen value
   #
   def finalize
-    yield final_value.to_flat(false) if final_value
+    yield final_value.to_flat if final_value
   end
+
 end
 
 if $0 == __FILE__
@@ -35,6 +36,6 @@ if $0 == __FILE__
     :map_command      => '/bin/cat',
     :partition_fields => 2,
     :sort_fields      => 3,
-    :reduce_tasks     => 62
+    :reduce_tasks     => 120
     ).run
 end
