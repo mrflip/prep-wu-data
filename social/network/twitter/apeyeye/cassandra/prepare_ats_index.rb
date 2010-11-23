@@ -27,4 +27,4 @@ class Reducer < Wukong::Streamer::AccumulatingReducer
   
 end
 
-Wukong::Script.new(Mapper, Reducer).run
+Wukong::Script.new(Mapper, Reducer, :reduce_tasks => '60').run
