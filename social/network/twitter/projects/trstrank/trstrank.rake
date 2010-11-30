@@ -109,7 +109,8 @@ task :join_pagerank_with_followers => [:multigraph_degrees] do
 end
 
 task :multigraph_degrees => [:assemble_multigraph] do
-  puts "Calculating multigraph degree distribution, workflow = #{options.flow_id}"
+  output = File.join(multigraph_options[:output_dir], 'degree_distribution')
+  system "pig -p DEGREE=#{output} -p GRAPH=#{multigraph_options[:output_dir]}/multi_edge} #{multigraph_options[:degree_dist]}" unless Hfile.exist?(output)
 end
 
 task :percentile_binning => [:join_pagerank_with_followers] do
