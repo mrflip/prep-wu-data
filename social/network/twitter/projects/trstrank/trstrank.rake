@@ -16,6 +16,7 @@ multigraph_dir  = File.expand_path(here+"/../../base/graph/multigraph")
 pagerank_dir    = File.expand_path(here+"/../../base/graph/pagerank/dual_valued")
 mumakil         = "#{options.mumakil_home}/bin/mumakil"
 
+# Options, options, options!
 mumakil_options = {
     :generic         => "--longnames --host=#{options.host} --ks=#{options.ks}",
     :a_follows_b     => "--dumpcolumns --cf=AFollowsB",
@@ -45,17 +46,14 @@ pagerank_options = {
   :output_dir  => "/tmp/pagerank/#{options.flow_id}"
 }
 
-join_options = {
-  :joiner         => "#{here}/join_pr_with_followers.pig",
-  :degree_dist    => "#{mutligraph_options[:output_dir]}/degree_distribution",
-  :pagerank_graph => "#{pagerank_options[:output_dir]}/pagerank_graph_#{options.iterations + 1}"
-  :output_dir     => "/tmp/trstrank/#{options.flow_id}"
-}
-
-tq_options = {
-  :tq_script    => "#{here}/trst_quotient.rb --run",
-  :rank_with_fo => "#{join_options[:output_dir]}/scaled_pagerank_with_fo"
-  :output_dir   => join_options[:output_dir] 
+assembly_options = {
+  :joiner          => "#{here}/join_pr_with_followers.pig",
+  :tq_script       => "#{here}/trst_quotient.rb --run",
+  :assembler       => "#{here}/trstrank_assembler.pig",
+  :degree_dist     => "#{mutligraph_options[:output_dir]}/degree_distribution",
+  :twitter_user_id => "#{mumakil_options[:output_dir]}/twitter_user_id",
+  :pagerank_graph  => "#{pagerank_options[:output_dir]}/pagerank_graph_#{options.iterations + 1}"
+  :output_dir      => "/tmp/trstrank/#{options.flow_id}"
 }
 
 def one_pagerank_iteration pagerank_options, curr_iter
@@ -65,7 +63,6 @@ def one_pagerank_iteration pagerank_options, curr_iter
 end
 
 # Tasks
-
 task :dump_a_follows_b do
   output = File.join(mumakil_options[:output_dir], 'a_follows_b')
   system "#{mumakil} #{mumakil_options[:generic]} #{mumakil_options[:a_follows_b]} #{output}" unless Hfile.exist?(output)
@@ -110,8 +107,8 @@ task :pagerank_iterate => [:pagerank_initialize] do
 end
 
 task :join_pagerank_with_followers => [:multigraph_degrees] do
-  output = File.join(join_options[:output_dir], 'scaled_pagerank_with_fo')
-  system "pig -p DIST=#{join_options[:degree_dist]} -p PRGRAPH=#{join_options[:pagerank_graph]} -p OUT=#{output} #{join_options[:joiner]}" unless Hfile.exist?(output)
+  output = File.join(assembly_options[:output_dir], 'scaled_pagerank_with_fo')
+  system "pig -p DIST=#{assembly_options[:degree_dist]} -p PRGRAPH=#{assembly_options[:pagerank_graph]} -p OUT=#{output} #{assembly_options[:joiner]}" unless Hfile.exist?(output)
 end
 
 task :multigraph_degrees => [:assemble_multigraph] do
@@ -120,11 +117,12 @@ task :multigraph_degrees => [:assemble_multigraph] do
 end
 
 task :trstquotient => [:join_pagerank_with_followers] do
-  output = File.join(tq_options[:output_dir], 'scaled_pagerank_with_tq')
-  system "#{tq_options[:tq_script]} #{tq_options[:rank_with_fo]} #{output}" unless Hfile.exist?(output)
+  output = File.join(assembly_options[:output_dir], 'scaled_pagerank_with_tq')
+  system "#{assembly_options[:tq_script]} #{assembly_options[:output_dir]}/scaled_pagerank_with_fo #{output}" unless Hfile.exist?(output)
 end
 
-task :assemble_trstrank => [:trstquotient] do
-  puts "Assembling final trstrank table, workflow = #{options.flow_id}"
+task :assemble_trstrank => [:trstquotient, :dump_twitter_user_id] do
+  output = File.join(assembly_options[:output_dir], 'trstrank_table')
+  system "pig -p TW_UID=#{assembly_options[:twitter_user_id]} -p RANK_WITH_TQ=#{assembly_options[:output_dir]}/scaled_rank_with_tq -p OUT=#{output} #{assembly_options[:assembler]}" unless Hfile.exist?(output)
 end
 
