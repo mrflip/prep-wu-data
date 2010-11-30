@@ -31,9 +31,10 @@ rearrange_options = {
 }
 
 multigraph_options = {
-  :assembler  => "#{multigraph_dir}/assemble_multigraph.rb --run",
-  :inputs     => "#{rearrange_options[:output_dir]}/a_follows_b,#{rearrange_options[:output_dir]}/a_atsigns_b",
-  :output_dir => "/tmp/objects/#{options.flow_id}"
+  :assembler    => "#{multigraph_dir}/assemble_multigraph.rb --run",
+  :degree_dist  => "#{multigraph_dir}/multigraph_degrees.pig",
+  :inputs       => "#{rearrange_options[:output_dir]}/a_follows_b,#{rearrange_options[:output_dir]}/a_atsigns_b",
+  :output_dir   => "/tmp/objects/#{options.flow_id}"
 }
 
 pagerank_options = {
@@ -42,6 +43,13 @@ pagerank_options = {
   :pig_opts    => options.pig_opts,
   :multigraph  => "#{multigraph_options[:output_dir]}/multi_edge",
   :output_dir  => "/tmp/pagerank/#{options.flow_id}"
+}
+
+join_options = {
+  :joiner         => "#{here}/join_pr_with_followers.pig",
+  :degree_dist    => "#{mutligraph_options[:output_dir]}/degree_distribution",
+  :pagerank_graph => "#{pagerank_options[:output_dir]}/pagerank_graph_#{options.iterations + 1}"
+  :output_dir     => "/tmp/trstrank/#{options.flow_id}"
 }
 
 def one_pagerank_iteration pagerank_options, curr_iter
@@ -96,7 +104,8 @@ task :pagerank_iterate => [:pagerank_initialize] do
 end
 
 task :join_pagerank_with_followers => [:multigraph_degrees] do
-  puts "Joining pagerank with followers, workflow = #{options.flow_id}"
+  output = File.join(join_options[:output_dir], 'scaled_pagerank_with_fo')
+  system "pig -p DIST=#{join_options[:degree_dist]} -p PRGRAPH=#{join_options[:pagerank_graph]} -p OUT=#{output} #{join_options[:joiner]}" unless Hfile.exist?(output)
 end
 
 task :multigraph_degrees => [:assemble_multigraph] do
