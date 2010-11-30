@@ -52,6 +52,12 @@ join_options = {
   :output_dir     => "/tmp/trstrank/#{options.flow_id}"
 }
 
+tq_options = {
+  :tq_script    => "#{here}/trst_quotient.rb --run",
+  :rank_with_fo => "#{join_options[:output_dir]}/scaled_pagerank_with_fo"
+  :output_dir   => join_options[:output_dir] 
+}
+
 def one_pagerank_iteration pagerank_options, curr_iter
   input  = File.join(pagerank_options[:output_dir], "pagerank_graph_#{curr_iter}")
   output = File.join(pagerank_options[:output_dir], "pagerank_graph_#{curr_iter+1}")
@@ -113,11 +119,12 @@ task :multigraph_degrees => [:assemble_multigraph] do
   system "pig -p DEGREE=#{output} -p GRAPH=#{multigraph_options[:output_dir]}/multi_edge} #{multigraph_options[:degree_dist]}" unless Hfile.exist?(output)
 end
 
-task :percentile_binning => [:join_pagerank_with_followers] do
-  puts "Percentile binning, workflow = #{options.flow_id}"
+task :trstquotient => [:join_pagerank_with_followers] do
+  output = File.join(tq_options[:output_dir], 'scaled_pagerank_with_tq')
+  system "#{tq_options[:tq_script]} #{tq_options[:rank_with_fo]} #{output}" unless Hfile.exist?(output)
 end
 
-task :assemble_trstrank => [:percentile_binning] do
+task :assemble_trstrank => [:trstquotient] do
   puts "Assembling final trstrank table, workflow = #{options.flow_id}"
 end
 
