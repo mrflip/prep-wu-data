@@ -50,9 +50,9 @@ assembly_options = {
   :joiner          => "#{here}/join_pr_with_followers.pig",
   :tq_script       => "#{here}/trst_quotient.rb --run",
   :assembler       => "#{here}/trstrank_assembler.pig",
-  :degree_dist     => "#{mutligraph_options[:output_dir]}/degree_distribution",
+  :degree_dist     => "#{multigraph_options[:output_dir]}/degree_distribution",
   :twitter_user_id => "#{mumakil_options[:output_dir]}/twitter_user_id",
-  :pagerank_graph  => "#{pagerank_options[:output_dir]}/pagerank_graph_#{options.iterations + 1}"
+  :pagerank_graph  => "#{pagerank_options[:output_dir]}/pagerank_graph_#{options.iterations}",
   :output_dir      => "/tmp/trstrank/#{options.flow_id}"
 }
 
@@ -113,7 +113,7 @@ end
 
 task :multigraph_degrees => [:assemble_multigraph] do
   output = File.join(multigraph_options[:output_dir], 'degree_distribution')
-  system "pig -p DEGREE=#{output} -p GRAPH=#{multigraph_options[:output_dir]}/multi_edge} #{multigraph_options[:degree_dist]}" unless Hfile.exist?(output)
+  system "pig -p DEGREE=#{output} -p GRAPH=#{multigraph_options[:output_dir]}/multi_edge #{multigraph_options[:degree_dist]}" unless Hfile.exist?(output)
 end
 
 task :trstquotient => [:join_pagerank_with_followers] do
@@ -123,6 +123,6 @@ end
 
 task :assemble_trstrank => [:trstquotient, :dump_twitter_user_id] do
   output = File.join(assembly_options[:output_dir], 'trstrank_table')
-  system "pig -p TW_UID=#{assembly_options[:twitter_user_id]} -p RANK_WITH_TQ=#{assembly_options[:output_dir]}/scaled_rank_with_tq -p OUT=#{output} #{assembly_options[:assembler]}" unless Hfile.exist?(output)
+  system "pig -p TW_UID=#{assembly_options[:twitter_user_id]} -p RANK_WITH_TQ=#{assembly_options[:output_dir]}/scaled_pagerank_with_tq -p OUT=#{output} #{assembly_options[:assembler]}" unless Hfile.exist?(output)
 end
 
