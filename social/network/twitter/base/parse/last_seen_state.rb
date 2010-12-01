@@ -36,6 +36,6 @@ if $0 == __FILE__
     :map_command      => '/bin/cat',
     :partition_fields => 2,
     :sort_fields      => 3,
-    :reduce_tasks     => 120
+    :reduce_tasks     => 20
     ).run
 end
