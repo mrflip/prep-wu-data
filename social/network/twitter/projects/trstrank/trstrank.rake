@@ -59,7 +59,7 @@ assembly_options = {
 def one_pagerank_iteration pagerank_options, curr_iter
   input  = File.join(pagerank_options[:output_dir], "pagerank_graph_#{curr_iter}")
   output = File.join(pagerank_options[:output_dir], "pagerank_graph_#{curr_iter+1}")
-  system "PIG_OPTS=#{pagerank_options[:pig_opts]} pig -p CURR_ITER_FILE=#{input} -p NEXT_ITER_FILE=#{output} #{pagerank_options[:runner]}" unless Hfile.exist?(output)
+  system %Q{PIG_OPTS='#{pagerank_options[:pig_opts]}' pig -p CURR_ITER_FILE=#{input} -p NEXT_ITER_FILE=#{output} #{pagerank_options[:runner]}} unless Hfile.exist?(output)
 end
 
 # Tasks
@@ -97,7 +97,7 @@ end
 
 task :pagerank_initialize => [:assemble_multigraph] do
   output = File.join(pagerank_options[:output_dir], 'pagerank_graph_0')
-  system "PIG_OPTS=#{options.pig_opts} pig -p MULTI=#{pagerank_options[:multigraph]} -p OUT=#{output} #{pagerank_options[:initializer]}" unless Hfile.exist?(output)
+  system %Q{PIG_OPTS='#{options.pig_opts}' pig -p MULTI=#{pagerank_options[:multigraph]} -p OUT=#{output} #{pagerank_options[:initializer]}} unless Hfile.exist?(output)
 end
 
 task :pagerank_iterate => [:pagerank_initialize] do
@@ -106,14 +106,14 @@ task :pagerank_iterate => [:pagerank_initialize] do
   end
 end
 
-task :join_pagerank_with_followers => [:multigraph_degrees] do
+task :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
   output = File.join(assembly_options[:output_dir], 'scaled_pagerank_with_fo')
-  system "pig -p DIST=#{assembly_options[:degree_dist]} -p PRGRAPH=#{assembly_options[:pagerank_graph]} -p OUT=#{output} #{assembly_options[:joiner]}" unless Hfile.exist?(output)
+  system %Q{PIG_OPTS='-Dmapred.reduce.tasks=124' pig -p DIST=#{assembly_options[:degree_dist]} -p PRGRAPH=#{assembly_options[:pagerank_graph]} -p OUT=#{output} #{assembly_options[:joiner]}} unless Hfile.exist?(output)
 end
 
 task :multigraph_degrees => [:assemble_multigraph] do
   output = File.join(multigraph_options[:output_dir], 'degree_distribution')
-  system "pig -p DEGREE=#{output} -p GRAPH=#{multigraph_options[:output_dir]}/multi_edge #{multigraph_options[:degree_dist]}" unless Hfile.exist?(output)
+  system %Q{PIG_OPTS='-Dmapred.reduce.tasks=124' pig -p DEGREE=#{output} -p GRAPH=#{multigraph_options[:output_dir]}/multi_edge #{multigraph_options[:degree_dist]}} unless Hfile.exist?(output)
 end
 
 task :trstquotient => [:join_pagerank_with_followers] do
@@ -123,6 +123,5 @@ end
 
 task :assemble_trstrank => [:trstquotient, :dump_twitter_user_id] do
   output = File.join(assembly_options[:output_dir], 'trstrank_table')
-  system "pig -p TW_UID=#{assembly_options[:twitter_user_id]} -p RANK_WITH_TQ=#{assembly_options[:output_dir]}/scaled_pagerank_with_tq -p OUT=#{output} #{assembly_options[:assembler]}" unless Hfile.exist?(output)
+  system %Q{PIG_OPTS='-Dmapred.reduce.tasks=124' pig -p TW_UID=#{assembly_options[:twitter_user_id]} -p RANK_WITH_TQ=#{assembly_options[:output_dir]}/scaled_pagerank_with_tq -p OUT=#{output} #{assembly_options[:assembler]}} unless Hfile.exist?(output)
 end
-
