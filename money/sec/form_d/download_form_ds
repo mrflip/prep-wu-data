@@ -1,0 +1,13 @@
+#!/bin/bash
+NOW=`date +"%Y-%m-%d-%H-%M-%S"`
+BASE_URL="ftp://ftp.sec.gov"
+USERNAME=anonymous
+PASSWORD='coders@infochimps.com'
+INPUT=$1;
+COMMAND="wget --background --output-file=wget-${NOW}.log --random-wait --no-host-directories --cut-dirs=2 --directory-prefix=rawd --base=${BASE_URL} --input=${INPUT}"
+echo $COMMAND
+$COMMAND
+
+
+
+
