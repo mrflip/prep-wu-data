@@ -2,9 +2,14 @@
 
 require 'rubygems'
 require 'wukong'
+require 'configliere' ; Configliere.use(:commandline, :env_var, :define)
 
-require File.dirname(__FILE__)+'/atrank_table'
-require File.dirname(__FILE__)+'/forank_table'
+Settings.define :atrank_table
+Settings.define :forank_table
+Settings.resolve!
+
+require Settings.atrank_table
+require Settings.forank_table
 
 Float.class_eval do def round_to(x) ((10**x)*self).round.to_f/(10**x) end ; end
 #
@@ -54,7 +59,7 @@ class Mapper < Wukong::Streamer::RecordStreamer
     return 30.0 if x < 30.0
     return 31.0
   end
-  
+
 end
 
 Wukong::Script.new(Mapper, nil).run

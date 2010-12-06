@@ -4,6 +4,9 @@ require 'rubygems'
 require 'wukong'
 require 'json'
 
+#
+# Yields (row_key, super_col_name, col_name, col_vale)
+#
 class Mapper < Wukong::Streamer::RecordStreamer
   def process *args
     rsrc, user_a_id, user_b_id, rel_type, twid, crat, user_b_sn, in_reply_to_twid = args
@@ -21,25 +24,27 @@ class Mapper < Wukong::Streamer::RecordStreamer
 
 end
 
+#
+# Groups (row_key, super_col_name, col_name, col_vale) by row_key and creates a
+# big json hash for mumakil:
+#
+# {'super_col_name' => {'col_name' => 'col_value', ...}, ...}
+#
 class Reducer < Wukong::Streamer::AccumulatingReducer
   attr_accessor :convs
 
-  def get_key rel_user_a_id, user_b_id, *_
-    [rel_user_a_id, user_b_id]
-  end
-  
-  def start! rel_user_a_id, user_b_id, *_
-    @convs = []
+  def start! row_key, super_col_name, col_name, col_value
+    @convs = Hash.new{|h,k| h[k] = {}}
   end
 
-  def accumulate rel_user_a_id, user_b_id, *rest
-    @convs << rest.flatten
+  def accumulate row_key, super_col_name, col_name, col_value
+    @convs[super_col_name][col_name] = col_value
   end
 
   def finalize
-    yield [key, convs]
+    yield [key, convs.to_json]
   end
-  
+
 end
 
 Wukong::Script.new(
