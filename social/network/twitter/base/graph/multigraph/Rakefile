@@ -1,0 +1,24 @@
+require 'swineherd' ; include Swineherd
+
+#
+# Creates the multigraph in an idempotent way. Assumes sane default
+# input and output dirs
+#
+#   rake assemble_multigraph
+#
+# Otherwise:
+#
+#   rake assemble_multigraph -- --assembler=/path/to/multigraph_assembler --edges_dir=/path/to/edges_dir --outdir=/path/to/output_dir
+#
+
+Settings.define :edges_dir, :default => "/tmp/edges", :description => "Full hdfs (or S3) path to directory where edge objects live"
+Settings.define :outdir,    :default => "/tmp/graph", :description => "Full hdfs (or S3) path to directory where output will go"
+Settings.define :assembler, :default => "assemble_multigraph.rb", :description => "Script that does the assembling"
+Settings.resolve!
+options = Settings.dup
+
+WukongTask.new_wukong_task(:assemble_multigraph, options.assembler) do |task_options|
+  edges = %w[a_atsigns_b a_follows_b]
+  task_options[:inputs] = edges.map{|edge| File.join(options.edges_dir, edge)}
+  task_options[:output] = File.join(options.outdir, "multi_edge")
+end

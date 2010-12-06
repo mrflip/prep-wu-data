@@ -33,10 +33,12 @@ end
 class MultigraphMapper < Wukong::Streamer::RecordStreamer
   def process *args
     if args.first == 'a_follows_b'
+      return unless args.length == 3
       rsrc, user_a, user_b = args
       yield [user_b, user_a, "fo_i"]
       yield [user_a, user_b, "fo_o"]
     else
+      return unless args.length == 7
       rsrc, user_a, user_b, rel = args
       yield [user_b, user_a, "#{rel}_i"]
       yield [user_a, user_b, "#{rel}_o"]
@@ -50,7 +52,7 @@ class MultigraphReducer < Wukong::Streamer::AccumulatingReducer
   def get_key user_a, user_b, *_
     [user_a, user_b]
   end
-  
+
   def start! user_a, user_b, *_
     self.edge = MultigraphEdge.new(user_a, user_b)
   end
@@ -71,6 +73,5 @@ Wukong::Script.new(
   :partition_fields  => 2,
   :sort_fields       => 2,
   :io_record_percent => 0.3,
-  :map_speculative   => "true",
-  :reduce_tasks      => 124
+  :map_speculative   => "true"
   ).run

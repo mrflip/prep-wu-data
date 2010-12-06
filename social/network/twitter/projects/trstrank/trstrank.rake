@@ -40,7 +40,7 @@ task :pagerank_iterate => [:pagerank_initialize] do
   end
 end
 
-task :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
+multitask :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
   script = PigScript.new("#{Settings.ics_tw_scripts}/projects/trstrank/join_pr_with_followers.pig")
   script.options = {:dist => "/tmp/objects/degree_distribution", :out => "/tmp/trstrank/scaled_pagerank_with_fo", :prgraph => "/tmp/pagerank/pagerank_iteration_#{Settings.iterations}"}
   script.output << script.options[:out]
