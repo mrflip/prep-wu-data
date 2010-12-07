@@ -1,6 +1,11 @@
 --
 -- Get raw estimate of tweets in and out for every user (these are estimated from the statuses reported by twitter, NOT observed by us)
 --
+
+--
+-- PIG_OPTS='-Dmapred.reduce.tasks=X' pig -p TWUID=/path/to/twitter_user_id -p AFB=/path/to/a_follows_b -p TWFLUX=/path/to/output tweet_flux.pig
+--
+
 user_id  = LOAD '$TWUID' AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:int, friends:int, statuses:int, favs:int, crat:long, sid:long, isfull:int, health:chararray);        
 follows  = LOAD '$AFB'   AS (rsrc:chararray, user_a_id:long, user_b_id:long);
 
