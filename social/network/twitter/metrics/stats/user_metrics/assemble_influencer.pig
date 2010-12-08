@@ -106,4 +106,4 @@ fourth    = FOREACH with_rank {
 out = FILTER fourth BY sn != '0';
 STORE out INTO '$METRICS';
 
--- infl = LOAD '$METRICS' AS (sn:chararray, uid:long, crat:long, followers:long, friends:);
+-- infl = LOAD '$METRICS' AS (sn:chararray, uid:long, crat:long, followers:long, friends:long, fo_o:long, fo_i:long, at_o:long, at_i:long, re_o:long, re_i:long, rt_o:long, rt_i:long, tw_o:long, tw_i:long, ms_tw_o:long, hsh_o:long, sm_o:long, url_o:long, at_tr:float, fo_tr:float);
