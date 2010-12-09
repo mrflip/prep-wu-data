@@ -4,7 +4,7 @@ tweet_flux          = LOAD '$FLUX'    AS (uid:long, tw_o:long, tw_i:long);
 break_down          = LOAD '$BREAK'   AS (uid:long, ms_tw_o:long, hsh_o:long, sm_o:long, url_o:long); -- measured tw_o
 pagerank            = LOAD '$RANK'    AS (uid:long, fo_rank:float, at_rank:float, fo_i:long);
 
-cut_rank = FOREACH rank GENERATE uid, fo_rank, at_rank;
+cut_rank = FOREACH pagerank GENERATE uid, fo_rank, at_rank;
 cut_id   = FOREACH twitter_user_id GENERATE uid, sn, followers, friends, crat;
 
 with_deg = JOIN cut_id BY uid FULL OUTER, degree_distribution BY uid;

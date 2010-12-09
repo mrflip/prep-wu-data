@@ -2,7 +2,7 @@
 
 require 'rubygems'
 require 'wukong'
-require 'wuclan/twitter/model' ; include Wuclan::Twitter::Model
+require File.dirname(__FILE__)+'/multiedge.rb'
 
 class EdgeWeightMapper < Wukong::Streamer::StructStreamer
   def process edge, *_

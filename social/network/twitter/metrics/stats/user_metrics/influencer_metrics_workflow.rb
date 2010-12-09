@@ -41,14 +41,16 @@ flow = Workflow.new(Settings.flow_id) do
     tweet_flux_breakdown.run
   end
 
-  multitask :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
+  # multitask :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
+  task :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
     assemble_influencer.output  << next_output(:assemble_influencer)
-    assemble_inlfuencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
+    assemble_influencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
     assemble_influencer.options  = {
       :flux    => latest_output(:tweet_flux),
       :break   => latest_output(:tweet_flux_breakdown),
+      :twuid   => "#{Settings.data_input_dir}/twitter_user_id",
       :degdist => "#{Settings.data_input_dir}/degree_distribution",
-      :rank    => "#{Settings.data_input_dir}/pagerank_with_fo",
+      :rank    => "#{Settings.data_input_dir}/scaled_pagerank_with_fo",
       :metrics => latest_output(:assemble_influencer)
     }
     assemble_influencer.run
@@ -71,4 +73,3 @@ end
 flow.workdir = "/tmp/influencer_metrics"
 flow.describe
 flow.run(Settings.rest.first)
-# flow.clean!
