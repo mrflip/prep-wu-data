@@ -17,6 +17,6 @@ flux_types = FOREACH cogrpd GENERATE
                  COUNT(cut_url)   AS url_o
              ;
 
-STORE flux_types INTO '$FLUX';
+STORE flux_types INTO '$BREAK';
 
--- flux_breakdown = LOAD '$FLUX' AS (user_id:long, measured_tweets_out:long, hashtags_out:long, smileys_out:long, urls_out:long);
+-- flux_breakdown = LOAD '$BREAK' AS (user_id:long, measured_tweets_out:long, hashtags_out:long, smileys_out:long, urls_out:long);
