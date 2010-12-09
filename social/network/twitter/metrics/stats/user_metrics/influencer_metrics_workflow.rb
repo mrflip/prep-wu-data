@@ -15,6 +15,7 @@ flow = Workflow.new(Settings.flow_id) do
   tweet_flux_breakdown  = PigScript.new("#{Settings.influencer_script_path}/tweet_flux_breakdown.pig")
   assemble_influencer   = PigScript.new("#{Settings.influencer_script_path}/assemble_influencer.pig")
   final_influencer      = PigScript.new("#{Settings.influencer_script_path}/final_influencer_table.pig")
+  fix_inconsistencies   = WukongScript.new("#{Settings.influencer_script_path}/fix_inconsistencies.rb")
 
   task :tweet_flux do
     tweet_flux.output  << next_output(:tweet_flux)
@@ -40,21 +41,21 @@ flow = Workflow.new(Settings.flow_id) do
     tweet_flux_breakdown.run
   end
 
-  multitask :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
+  task :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
     assemble_influencer.output  << next_output(:assemble_influencer)
-    assemble_inlfuencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
+    assemble_influencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
     assemble_influencer.options  = {
       :flux    => latest_output(:tweet_flux),
       :break   => latest_output(:tweet_flux_breakdown),
       :degdist => "#{Settings.data_input_dir}/degree_distribution",
-      :rank    => "#{Settings.data_input_dir}/pagerank_with_fo",
+      :rank    => "#{Settings.data_input_dir}/scaled_pagerank_with_fo",
       :metrics => latest_output(:assemble_influencer)
     }
     assemble_influencer.run
   end
 
   task :final_influencer => [:assemble_influencer] do
-    today = `wu-date`
+    today = (`wu-date`).strip
     final_influencer.output << next_output(:final_influencer)
     final_influencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
     final_influencer.options = {
@@ -63,6 +64,11 @@ flow = Workflow.new(Settings.flow_id) do
       :metrics_table => latest_output(:final_influencer)
     }
     final_influencer.run
+  end
+
+  task :fix_inconsistencies => [:final_influencer] do
+    fix_inconsistencies.input  << latest_output(:final_influencer)
+    fix_inconsistencies.output << next_output(:fix_inconsistencies)
   end
 
 end
