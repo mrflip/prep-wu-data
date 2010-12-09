@@ -57,7 +57,7 @@ flow = Workflow.new(Settings.flow_id) do
   end
 
   task :final_influencer => [:assemble_influencer] do
-    today = `wu-date`
+    today = (`wu-date`).strip
     final_influencer.output << next_output(:final_influencer)
     final_influencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
     final_influencer.options = {
