@@ -1,13 +1,12 @@
 #!/usr/bin/env ruby
 
-
 require 'swineherd' ; include Swineherd
 require 'swineherd/script/pig_script' ; include Swineherd::Script
 
-Settings.define :flow_id,                 :required => true
-Settings.define :influencer_script_path,  :default  => "/home/travis/infochimps-data/social/network/twitter/metrics/stats/user_metrics"
+Settings.define :flow_id,                 :required => true, :description => "Workflow needs a unique numeric id"
 Settings.define :data_input_dir,          :required => true, :description => "Path to necessary twitter data"
-Settings.define :reduce_tasks,            :default  => 96
+Settings.define :reduce_tasks,            :default  => 96,   :description => "Change to reduce task capacity on cluster"
+Settings.define :influencer_script_path,  :default  => "/home/travis/infochimps-data/social/network/twitter/metrics/stats/user_metrics"
 Settings.resolve!
 
 flow = Workflow.new(Settings.flow_id) do
@@ -41,16 +40,14 @@ flow = Workflow.new(Settings.flow_id) do
     tweet_flux_breakdown.run
   end
 
-  # multitask :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
-  task :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
+  multitask :assemble_influencer => [:tweet_flux, :tweet_flux_breakdown] do
     assemble_influencer.output  << next_output(:assemble_influencer)
-    assemble_influencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
+    assemble_inlfuencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
     assemble_influencer.options  = {
       :flux    => latest_output(:tweet_flux),
       :break   => latest_output(:tweet_flux_breakdown),
-      :twuid   => "#{Settings.data_input_dir}/twitter_user_id",
       :degdist => "#{Settings.data_input_dir}/degree_distribution",
-      :rank    => "#{Settings.data_input_dir}/scaled_pagerank_with_fo",
+      :rank    => "#{Settings.data_input_dir}/pagerank_with_fo",
       :metrics => latest_output(:assemble_influencer)
     }
     assemble_influencer.run
@@ -73,3 +70,4 @@ end
 flow.workdir = "/tmp/influencer_metrics"
 flow.describe
 flow.run(Settings.rest.first)
+# flow.clean!
