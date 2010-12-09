@@ -6,7 +6,7 @@ require 'wukong'
 class Reducer < Wukong::Streamer::UniqByLastReducer
   
   def get_key *args
-    yield args[0..2]
+    args[0..2]
   end
 
   def accumulate *args
