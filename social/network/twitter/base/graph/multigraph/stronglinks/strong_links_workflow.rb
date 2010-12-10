@@ -8,7 +8,7 @@ Settings.define :flow_id,                 :required => true, :description => "Wo
 Settings.define :data_input_dir,          :required => true, :description => "Path to necessary twitter data"
 Settings.define :reduce_tasks,            :default  => 96,   :description => "Change to reduce task capacity on cluster"
 Settings.define :stronglinks_scripts,     :default  => "/home/travis/infochimps-data/social/network/twitter/base/graph/multigraph/stronglinks"
-Setting.resolve!
+Settings.resolve!
 
 flow = Workflow.new(Settings.flow_id) do
 
@@ -16,6 +16,7 @@ flow = Workflow.new(Settings.flow_id) do
   assemble_strong_links = PigScript.new("#{Settings.stronglinks_scripts}/assemble_strong_links.pig")
 
   task :weighted_edges do
+    weighted_edges.options = {:multiedge_definition => "#{Settings.stronglinks_scripts}/multiedge.rb"}
     weighted_edges.input  << "#{Settings.data_input_dir}/multi_edge"
     weighted_edges.output << next_output(:weighted_edges)
     weighted_edges.run
@@ -25,8 +26,8 @@ flow = Workflow.new(Settings.flow_id) do
     assemble_strong_links.output      << next_output(:assemble_strong_links)
     assemble_strong_links.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
     assemble_strong_links.options     = {
-      :wedges  => latest_output(:weighted_edges)
-      :twuid   => "#{Settings.data_input_dir}/twitter_user_id"
+      :wedges  => latest_output(:weighted_edges),
+      :twuid   => "#{Settings.data_input_dir}/twitter_user_id",
       :strlnks => latest_output(:assemble_strong_links)
     }
     assemble_strong_links.run
