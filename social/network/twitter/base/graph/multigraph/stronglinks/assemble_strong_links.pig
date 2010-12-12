@@ -8,7 +8,7 @@ flat    = FOREACH grouped {
             top_100 = LIMIT ordered 100;
             GENERATE
               group                        AS user_id,
-              FLATTEN(mapping.screen_name) AS screen_name, --flatten is funny here since there should only be one match on the cogroup
+              FLATTEN(mapping.sn)          AS screen_name, --flatten is funny here since there should only be one match on the cogroup
               top_100.(user_b_id, weight)  AS top_100
             ;
           };
