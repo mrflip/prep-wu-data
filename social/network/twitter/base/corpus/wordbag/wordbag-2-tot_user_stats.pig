@@ -1,32 +1,25 @@
--- map input records to first mr job    = tot usages
--- reduce input groups in second mr job = tot users
+-- Params:
+--   USAGE_FREQS,  input data
+--   USAGE_TOTALS, output data
 
 -- PIG_OPTS='-Dmapred.min.split.size=536870912 -Dio.sort.mb=640' pig -p WORDBAG_ROOT=/tmp/wordbag ~/ics/icsdata/social/network/twitter/base/corpus/wordbag/global_token_stats.pig
 
-%default WORDBAG_ROOT            '/data/sn/tw/fixd/wordbag';
+user_usage_freqs = LOAD '$USAGE_FREQS' AS (token_text:chararray, user_id:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
-REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
-user_tok_user_stats     = LOAD '$WORDBAG_ROOT/user_tok_user_stats' AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
+-- Generate total tokens usages and number of unique users
+global_user_usages    = FOREACH  user_usage_freqs GENERATE user_id, tot_user_usages;
+global_user_usages_uq = DISTINCT global_user_usages;
+global_user_usages_g  = GROUP global_user_usages_uq ALL;
+totals                = FOREACH global_user_usages_g {
+                          n_users      = (double)COUNT(global_user_usages_uq);
+                          sqrt_n_users = org.apache.pig.piggybank.evaluation.math.SQRT(n_users);
+                          tot_usages   = (double)SUM(tot_user_stats_uq.tot_user_usages);
+                          GENERATE
+                            n_users              AS n_users,                 -- unique users
+                            (sqrt_n_users - 1.0) AS sqrt_n_users_minus_one,
+                            tot_usages           AS tot_usages               -- total usages count
+                          ;
+                        };
+-- returns a single record (n_users, sqrt_n_users_minus_one, tot_usages)
 
--- get num users and tot usages. The tot_user_usages is denormalized across all
--- of each user's rows, so 
-tot_user_stats_0  = FOREACH  user_tok_user_stats GENERATE uid, tot_user_usages;
-tot_user_stats_uq = DISTINCT tot_user_stats_0   PARALLEL 5;
-tot_user_stats_g  = GROUP tot_user_stats_uq ALL PARALLEL 1;
-tot_user_stats    = FOREACH tot_user_stats_g {
-  -- yes, I KNOW these can be obtained from the counters in step 1, try automating that simply and then we'll talk
-  n_users      = (double)COUNT(tot_user_stats_uq);
-  sqrt_n_users = org.apache.pig.piggybank.evaluation.math.SQRT(n_users);
-  tot_usages   = (double)SUM(tot_user_stats_uq.tot_user_usages);
-  GENERATE
-    n_users                 AS n_users,
-    (sqrt_n_users - 1.0)    AS sqrt_n_users_m1,
-    tot_usages              AS tot_usages
-    ;
-  };
-
-rmf                        $WORDBAG_ROOT/tot_user_stats
-STORE tot_user_stats INTO '$WORDBAG_ROOT/tot_user_stats';
-tot_user_stats     = LOAD '$WORDBAG_ROOT/tot_user_stats' AS (n_users:double, sqrt_n_users_m1:double, tot_usages:double);
-
-DUMP tot_user_stats;
+STORE totals INTO '$USAGE_TOTALS';
