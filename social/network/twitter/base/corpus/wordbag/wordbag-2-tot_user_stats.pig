@@ -3,7 +3,7 @@
 --   USAGE_TOTALS, output data
 
 -- PIG_OPTS='-Dmapred.min.split.size=536870912 -Dio.sort.mb=640' pig -p WORDBAG_ROOT=/tmp/wordbag ~/ics/icsdata/social/network/twitter/base/corpus/wordbag/global_token_stats.pig
-
+REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 user_usage_freqs = LOAD '$USAGE_FREQS' AS (token_text:chararray, user_id:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
 
 -- Generate total tokens usages and number of unique users

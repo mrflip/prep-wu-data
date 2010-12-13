@@ -1,10 +1,6 @@
---
---
--- This script depends on 
--- 
---  num_toks,   sum_freq_ppb,           sum_freq_ppb_sq,        avg_freq_ppb,           avg_freq_ppb_sq,        std_freq_ppb,           u_tok,                  c_tok
---  65524511	9.999999999910016E8	1.8154320245688398E15	15.261464522657812	2.7706151436503507E7	5263.641184978715	15.261464522657812	549.8376947117983
---
+-- Params:
+--   USAGE_FREQS, input data
+--   TOKEN_STATS, output data
 --
 -- ** Explanation of output variables **
 --
@@ -30,41 +26,29 @@
 
 REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
 
-%default WORDBAG_ROOT     '/data/sn/tw/fixd/wordbag';
+user_usage_freqs = LOAD '$USAGE_FREQS' AS (token_text:chararray, user_id:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);  
 
-%default N_USERS          '3.8002003E7';       -- total users in the sample **AS A DOUBLE**
-%default SQRT_N_USERS_M1  '6163.576465581395';
-%default TOT_USAGES       '1.6501474834E10';   -- total non-distinct usages **AS A DOUBLE**
+global_token_stats_g = GROUP user_usage_freqs BY token_text;
+global_token_stats   = FOREACH global_token_stats_g {
+                         tok_freq_sum    = (double)SUM(user_tok_user_stats.user_tok_freq);
+                         tok_freq_avg    = (double)(tok_freq_sum / $N_USERS);
+                         tok_freq_avg_sq = (double)(tok_freq_sum / $N_USERS) * (double)(tok_freq_sum / $N_USERS);
+                         tok_freq_var    = ((double)SUM(user_tok_user_stats.user_tok_freq_sq) / $N_USERS) - tok_freq_avg_sq;
+                         tok_freq_stdev  = org.apache.pig.piggybank.evaluation.math.SQRT(tok_freq_var);
+                         tot_tok_usages  = SUM(user_tok_user_stats.num_user_tok_usages);
+                         dispersion      = (double)1.0 - ((double)tok_freq_stdev / ( (double)tok_freq_avg * $SQRT_N_USERS_M1 ));
+                         tok_freq_ppb    = ((double)tot_tok_usages / $TOT_USAGES)*(double)1000000000.0;
 
--- 3.8002003E7,6163.576465581395,1.6501474834E10
-  
-user_tok_user_stats = LOAD '$WORDBAG_ROOT/user_tok_user_stats' AS (tok:chararray, uid:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
+                         GENERATE
+                           group                       AS token_text,
+                           tot_tok_usages              AS tot_tok_usages: double, -- total times THIS tok has been spoken
+                           (double)tok_freq_ppb        AS tok_freq_ppb:   double,  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
+                           COUNT(user_usage_freqs)     AS range:          long,    -- total number of people who spoke this tok at least once
+                           (double)tok_freq_stdev      AS tok_freq_stdev: double,  -- standard deviation of the frequencies at which this tok is spoken
+                           (double)dispersion          AS dispersion:     double,  -- dispersion (see above)
+                         ;
+                       };
 
-tok_stats_g         = GROUP user_tok_user_stats BY tok;
-tok_stats           = FOREACH tok_stats_g   -- for every token, generate...
-  {
-  -- global token frequency stats (taken over ALL users)
-  tok_freq_sum      = (double)SUM(user_tok_user_stats.user_tok_freq);
-  tok_freq_avg      = (double)(tok_freq_sum / $N_USERS);
-  tok_freq_avg_sq   = (double)(tok_freq_sum / $N_USERS) * (double)(tok_freq_sum / $N_USERS);
-  tok_freq_var      = ((double)SUM(user_tok_user_stats.user_tok_freq_sq) / $N_USERS) - tok_freq_avg_sq;
-  tok_freq_stdev    = org.apache.pig.piggybank.evaluation.math.SQRT(tok_freq_var)*(double)1000000000.0;
+--returns (token_text, tot_tok_usages, tok_freq_ppb, range, tok_freq_stdev, dispersion)
 
-  tot_tok_usages    = SUM(user_tok_user_stats.num_user_tok_usages);
-  dispersion        = (double)1.0 - ((double)tok_freq_stdev / ( (double)tok_freq_avg * $SQRT_N_USERS_M1 ));
-  tok_freq_ppb      = ((double)tot_tok_usages / $TOT_USAGES)*(double)1000000000.0;
-
-  GENERATE
-    group                       AS tok,
-    (double)tok_freq_ppb        AS tok_freq_ppb:   double,  -- total times THIS tok has been spoken out of the total toks that have EVER been spoken
-    COUNT(user_tok_user_stats)  AS range:          long,    -- total number of people who spoke this tok at least once
-    (double)tok_freq_stdev      AS tok_freq_stdev: double,  -- standard deviation of the frequencies at which this tok is spoken
-    (double)dispersion          AS dispersion:     double,  -- dispersion (see above)
-    (double)u_tok_ppb           AS u_tok_ppb:      double,  -- bayesian-adjusted token frequency, ppb
-    (double)c_tok_ppb           AS c_tok_ppb:      double
-    ;
-  };
-
-rmf                   $WORDBAG_ROOT/tok_stats
-STORE tok_stats INTO '$WORDBAG_ROOT/tok_stats';
-tok_stats     = LOAD '$WORDBAG_ROOT/tok_stats' AS (tok:chararray, tot_tok_usages:long, range:long, tok_freq_avg:double, tok_freq_stdev:double, dispersion:double, tok_freq_ppb:double);
+STORE global_token_stats INTO '$TOKEN_STATS';
