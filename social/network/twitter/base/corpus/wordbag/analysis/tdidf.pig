@@ -1,29 +1,23 @@
---
--- Produce a weighted bipartite graph of (user,term,weight)tuples
---
--- word_token	quot	10086755811	87300544	20100306193853
-%default TOKS    '/data/terms/tdidf/word_token'
-%default BIGRPH  '/data/terms/tdidf/bip_graph'
-%default N_USERS 344858l        
-
 REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
--- DEFINE LOG 'org.apache.pig.piggybank.evaluation.math.LOG';
 
-word_token = LOAD '$TOKS' AS (rsrc:chararray, term:chararray, tweet_id:long, user_id:long, created_at:long);
-terms      = FOREACH word_token GENERATE term, user_id; -- not unique yet
-u_terms    = GROUP terms BY (user_id, term);
-u_terms_c  = FOREACH u_terms GENERATE FLATTEN(group) AS (user_id, term), COUNT(terms) AS term_freq;
-u_terms_f  = FILTER u_terms_c BY term_freq > 1;
-terms_g    = GROUP u_terms_f BY term;
-terms_fg   = FOREACH terms_g GENERATE FLATTEN(u_terms_f) AS (user_id, term, term_freq), COUNT(u_terms_f) AS doc_freq;
-weighted   = FOREACH terms_fg {
-               log_term_freq    = org.apache.pig.piggybank.evaluation.math.LOG((float)term_freq);
-               log_inv_doc_freq = org.apache.pig.piggybank.evaluation.math.LOG((float)$N_USERS/(float)doc_freq);
-               weight           = log_term_freq*log_inv_doc_freq;
-               GENERATE user_id, term, weight;
-             };
+%default N_USERS 62399l
+        
+user_usage_freqs = LOAD '$USAGE_FREQS' AS (token_text:chararray, user_id:long, num_user_tok_usages:long, tot_user_usages:long, user_tok_freq:double, user_tok_freq_sq:double, vocab:long);
+user_freqs       = FOREACH user_usage_freqs GENERATE user_id, token_text, user_tok_freq;
+token_usage_bag  = GROUP user_freqs BY token_text;
+token_usages     = FOREACH token_usage_bag GENERATE
+                     FLATTEN(user_freqs) AS (user_id, token_text, user_tok_freq),
+                     COUNT(user_freqs)   AS num_token_users
+                   ;
 
-rmf $BIGRPH;
-STORE weighted INTO '$BIGRPH';
+bipartite_graph  = FOREACH token_usages {
+                     idf    = org.apache.pig.piggybank.evaluation.math.LOG((double)$N_USERS/(double)num_token_users);
+                     tf_idf = (double)user_tok_freq*idf;
+                     GENERATE
+                       user_id    AS user_id,
+                       token_text AS token_text,
+                       tf_idf     AS tf_idf
+                     ;
+                   };
 
--- LOAD '$BIGRPH' AS (user_id:long, term:chararray, weight:float);
+STORE bipartite_graph INTO '$USER_TOKEN_GRAPH';

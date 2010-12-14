@@ -7,7 +7,7 @@ usages = LOAD '$USAGES' AS (rsrc:chararray, token_text:chararray, tweet_id:long,
 -- Count (user,token) pairs, number of times user has used a given token ever
 user_tokens       = FOREACH usages GENERATE user_id AS user_id, token_text AS token_text;
 user_tokens_grpd  = GROUP user_tokens BY (user_id, token_text);
-user_token_counts = FOREACH user_toks_grpd GENERATE FLATTEN(group) AS (user_id, token_text), COUNT(user_tokens) AS num_user_tok_usages;
+user_token_counts = FOREACH user_tokens_grpd GENERATE FLATTEN(group) AS (user_id, token_text), COUNT(user_tokens) AS num_user_tok_usages;
 -- returns (user_id, token_text, num_user_tok_usages)
 
 -- Generate basic counts for a given user
