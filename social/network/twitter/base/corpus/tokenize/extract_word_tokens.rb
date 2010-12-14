@@ -73,7 +73,10 @@ want wanted wanting wants was way ways we well wells went were what when where
 whether which while who whole whose why will with within without work worked
 working works would
 
-year years yet you young younger youngest your yours quot
+year years yet you young younger youngest your yours
+
+quot apos nbsp
+
 ].to_set
 
 class TweetTermTokenizer < Wukong::Streamer::StructStreamer
