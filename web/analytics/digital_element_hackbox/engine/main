@@ -54,7 +54,6 @@ task :jsonize => [:parse] do
         data[field_name] = field_value
         data
       end
-      block = [record[0], record[1], data.to_json].join("\t")
       jsonized.write([record[0], record[1], data.to_json].join("\t") + "\n")
     end
     jsonized.close
