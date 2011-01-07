@@ -1,0 +1,133 @@
+require 'yaml'
+require 'rake/clean'
+require 'rubygems'
+require 'json'
+require 'configliere'
+
+Settings.use :commandline, :config_file
+Settings.define :indir,  :required => true, :description => "Path to input directory containing both config and data"
+Settings.define :outdir, :required => true, :description => "Path to output directory"
+Settings.resolve!
+
+#
+# Merge all of the valid yaml files in "path"  with the "config" hash
+#
+def read_config_dir path
+  Dir.entries(path).sort.each do |filename|  # We want a well defined merge order
+    begin
+      Settings.read(File.join(path,filename)) if filename.downcase.end_with? ".yaml"
+    rescue
+      puts "Bad config file #{path}/#{filename}. Skipping."
+    end
+  end
+end
+
+# Our standard input locations and config (input data specific config)
+input = {
+  :rootdir    => Settings.indir,
+  :datadir    => File.join(Settings.indir, "data"),
+  :ripd       => File.join(Settings.indir, "data", "ripd"),
+  :rawd       => File.join(Settings.indir, "data", "rawd"),
+  :config_dir => File.join(Settings.indir, "config")
+}
+
+# Hackbox location and config
+hackbox = {
+  :rootdir     => File.dirname(__FILE__),
+  :config_dir  => File.join(File.dirname(__FILE__), "config"), # <-- required config for the hackbox
+  :engine      => File.join(File.dirname(__FILE__), "engine"),
+  :main        => File.join(File.dirname(__FILE__), "engine", "main")
+}
+
+# Our output locations
+output = {
+  :rootdir     => Settings.outdir,
+  :config_dir  => File.join(Settings.outdir, "config"),
+  :datadir     => File.join(Settings.outdir, "data"),
+  :outd        => File.join(Settings.outdir, "outd"),
+  :tmp         => File.join(Settings.outdir, "tmp"),
+  :log         => File.join(Settings.outdir, "log"),
+  :config_file => File.join(Settings.outdir, "config", "working_config.yaml"),
+  :schema_file => File.join(Settings.outdir, "schema.yaml")
+}
+
+# Output directories
+directory output[:outd]
+directory output[:tmp]
+directory output[:log]
+directory output[:config_dir]
+
+# Read hackbox config (in order of precedence) into working_config
+read_config_dir hackbox[:config_dir]
+read_config_dir input[:config_dir] # <-- input config may override default hackbox config
+
+#
+# Create working config for use with the engine/main executable
+#
+file output[:config_file] => [ output[:rootdir], output[:config_dir], output[:outd] ] do
+  # Write out the working configuration as both json and yaml
+  puts "SAVE\n";
+  Settings.save! output[:config_file]
+  File.open(output[:config_file].sub('.yaml','.json'),'w') { |f| f.write(Settings.to_json) }  
+end
+
+task :main => [output[:config_file]] do
+  sh "#{hackbox[:main]} #{input[:rootdir]} #{output[:rootdir]}" do | ok,res |
+    if ! ok
+      puts "Processing script failed with #{res}"
+    end
+  end
+end 
+
+
+### End generic stuff
+
+### Start dataset specific stuff
+
+directory input[:ripd]
+directory input[:rawd]
+
+#
+# Pull down the datasets. FIXME: Use imw.
+#
+desc "Fetching input data..."
+task :get_data => [input[:ripd]] do
+  Settings[:features].values.each do |feature|
+    ripd_data = File.join(input[:ripd], "na_#{"%02d" % feature}.tar.gz")
+    cmd       = "curl --location-trusted -o #{ripd_data} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/db/na_#{"%02d" % feature}_db.tar.gz\"" 
+    sh cmd unless File.exist? ripd_data
+  end  
+end
+
+#
+# Fetch the dump_db and decrypt_db tools. FIXME: Use imw.
+#
+desc "Fetching prerequisite tools for extracting data..."
+task :get_prerequisites do
+  dump_db          = File.join(hackbox[:engine], "dump_db")
+  decrypt_db       = File.join(hackbox[:engine], "decrypt_db")
+  fetch_dump_db    = "curl --location-trusted -o #{dump_db} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/tools/dump_db\""
+  fetch_decrypt_db = "curl --location-trusted -o #{decrypt_db} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/tools/decrypt_db\""
+  sh fetch_dump_db    unless File.exist?(dump_db)
+  sh fetch_decrypt_db unless File.exist?(decrypt_db)
+end
+
+#
+# Unarchive the datasets
+#
+desc "Unpacking input data..."
+task :unpack_data => [input[:rawd]] do
+  Settings[:features].values.each do |feature|
+    ripd_data = File.join(input[:ripd], "na_#{"%02d" % feature}.tar.gz")
+    rawd_data = File.join(input[:rawd], "na_#{"%02d" % feature}")
+    mkdir_p     rawd_data
+    cd          rawd_data
+    ln_sf       File.join(hackbox[:engine], "license_key.file"), "license_key.file"
+    ln_sf       File.join(hackbox[:engine], "dump_db"), "dump_db"
+    ln_sf       File.join(hackbox[:engine], "decrypt_db"), "decrypt_db"
+    cmd = "tar zxvf #{ripd_data}"
+    sh cmd if Dir["#{rawd_data}/*.db"].empty?
+  end
+end
+
+task :default => [:get_data, :get_prerequisites, :unpack_data, :main]

@@ -1,0 +1,80 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'rake'
+require 'configliere'
+require 'json'
+
+Settings.use :config_file
+
+inputdir  = ARGV[0]
+outputdir = ARGV[1]
+
+Settings.read(File.join(outputdir, "config", "working_config.yaml"))
+Settings.resolve!
+
+fixd_data = File.join(outputdir, "data", "outd")
+rawd_data = File.join(inputdir, "data", "rawd")
+data_dirs = Dir.entries(rawd_data)
+
+#
+# Dump out the contents of only those databases for which we are licensed
+#
+task :parse do
+  data_dirs.each do |feature|
+    next unless feature =~ /na_(\d+)/
+    next if Settings[:not_licensed_for].include?($1.to_i)
+    puts "Processing #{feature}..."
+    cd File.join(rawd_data, feature)
+    File.chmod(755, "dump_db")
+    sh "./dump_db #{$1} > #{feature}.dat" unless File.exist?("#{feature}.dat")
+  end
+end
+
+task :jsonize => [:parse] do
+  data_dirs.each do |feature|
+    next unless feature =~ /na_(\d+)/
+    next if Settings[:not_licensed_for].include?($1.to_i)
+    puts "jsonizing #{feature}..."
+    raw_feature_data = File.join(rawd_data, feature, "#{feature}.dat")
+    schema           = Settings[feature]
+    output_json      = File.join(rawd_data, feature, "#{feature}.jsonized.tsv")
+    next if File.exist?(output_json)
+    jsonized         = File.open(output_json, 'wb')
+    File.open(raw_feature_data).each do |record|
+      record       = record.strip.split(";")
+      next if record[0] == 'start_ip'
+      data = schema[2..-1].zip(record[2..-1]).inject({}) do |data, part|
+        field_name  = part.first['name']
+        field_value = part.last
+        case part.first['datatype']
+        when 'integer' then field_value = field_value.to_i
+        when 'float' then field_value = field_value.to_f
+        end
+        data[field_name] = field_value
+        data
+      end
+      block = [record[0], record[1], data.to_json].join("\t")
+      jsonized.write([record[0], record[1], data.to_json].join("\t") + "\n")
+    end
+    jsonized.close
+  end
+end
+
+#
+# This is not a good way to do this. What is?
+#
+task :blockify => [:jsonize] do
+  splitter = File.dirname(__FILE__) + "/../../split_ipv4.rb"
+  data_dirs.each do |feature|
+    next unless feature =~ /na_(\d+)/
+    next if Settings[:not_licensed_for].include?($1.to_i)
+    puts "blockifying #{feature}..."
+    jsonized = File.join(rawd_data, feature, "#{feature}.jsonized.tsv")
+    fixd_tsv = File.join(fixd_data, "#{feature}.tsv")
+    cmd      = "cat #{jsonized} | #{splitter} --map | cat | #{splitter} --reduce > #{fixd_tsv}"
+    sh cmd unless File.exist?(fixd_tsv)
+  end
+end
+
+Rake::Task[:blockify].invoke
