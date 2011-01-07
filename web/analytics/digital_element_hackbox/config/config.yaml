@@ -18,27 +18,29 @@
   :demographics: 17
   :naics: 18
 
-# We ARE licensed for (4,6,7,8,10,11,12,15,17,18), just set 'not_licensed_for' for any you don't want to process
+# We ARE licensed for (4,6,7,8,10,11,12,15,17,18)
 :not_licensed_for:
-  - 6
-  - 7
-  - 8
-  - 10
-  - 11
-  - 12
-  - 15
-  - 17
-  - 18
-  - 14
-  - 13
-  - 9
-  - 5
-  - 3
+  - na_14
+  - na_13
+  - na_09
+  - na_05
+  - na_03
   
+:skip_features:
+  - na_04
+  - na_06
+  - na_07
+  - na_08
+  - na_10
+  - na_11
+  - na_15
+  - na_17
+  - na_18
+
 :feature_keys:
   na_03: geo
   na_06: domain
-  na_06: zip_area_time
+  na_07: zip_area_time
   na_08: isp
   na_11: language
   na_12: proxy

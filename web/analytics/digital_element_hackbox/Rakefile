@@ -44,7 +44,6 @@ output = {
   :rootdir     => Settings.outdir,
   :config_dir  => File.join(Settings.outdir, "config"),
   :datadir     => File.join(Settings.outdir, "data"),
-  :outd        => File.join(Settings.outdir, "data", "outd"),
   :tmp         => File.join(Settings.outdir, "tmp"),
   :log         => File.join(Settings.outdir, "log"),
   :config_file => File.join(Settings.outdir, "config", "working_config.yaml"),
@@ -52,26 +51,27 @@ output = {
 }
 
 # Output directories
-directory output[:outd]
 directory output[:tmp]
 directory output[:log]
 directory output[:config_dir]
+directory output[:datadir]
 
 # Read hackbox config (in order of precedence) into working_config
 read_config_dir hackbox[:config_dir]
 read_config_dir input[:config_dir] # <-- input config may override default hackbox config
 
 #
-# Create working config for use with the engine/main executable
+# Create working config for use with the engine/main executable. This should ALWAYS run.
 #
-file output[:config_file] => [ output[:rootdir], output[:config_dir], output[:outd] ] do
+task :create_working_config => [ output[:rootdir], output[:config_dir] ] do
   # Write out the working configuration as both json and yaml
-  puts "SAVE\n";
+  puts "Creating latest working config...\n";
   Settings.save! output[:config_file]
-  File.open(output[:config_file].sub('.yaml','.json'),'w') { |f| f.write(Settings.to_json) }  
+  File.open(output[:config_file].sub('.yaml','.json'),'w') { |f| f.write(Settings.to_json) }
+  # puts JSON.pretty_generate(JSON.parse(Settings.to_json))
 end
 
-task :main => [output[:config_file]] do
+task :main => [:create_working_config] do
   sh "#{hackbox[:main]} #{input[:rootdir]} #{output[:rootdir]}" do | ok,res |
     if ! ok
       puts "Processing script failed with #{res}"
@@ -86,47 +86,60 @@ end
 
 directory input[:ripd]
 directory input[:rawd]
+rawd_directories = Settings[:feature_keys].keys.map{|feature| File.join(input[:rawd], feature)}
+rawd_directories.each{|rawd_dir| directory rawd_dir}
 
 #
 # Pull down the datasets. FIXME: Use imw.
 #
-desc "Fetching input data..."
+desc "Fetch input data"
 task :get_data => [input[:ripd]] do
-  Settings[:features].values.each do |feature|
-    ripd_data = File.join(input[:ripd], "na_#{"%02d" % feature}.tar.gz")
-    cmd       = "curl --location-trusted -o #{ripd_data} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/db/na_#{"%02d" % feature}_db.tar.gz\"" 
-    sh cmd unless File.exist? ripd_data
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    ripd_data = File.join(input[:ripd], "#{feature}.tar.gz")
+    next if File.exist? ripd_data
+    puts "Fetching remote file #{ripd_data} from https://developers-zone.digitalenvoy.net/downloads/db/#{feature}_db.tar.gz..."
+    cmd  = "curl --location-trusted -o #{ripd_data} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/db/#{feature}_db.tar.gz\""
+    sh cmd
   end  
 end
 
 #
 # Fetch the dump_db and decrypt_db tools. FIXME: Use imw.
 #
-desc "Fetching prerequisite tools for extracting data..."
+desc "Fetch prerequisite tools for extracting data"
 task :get_prerequisites do
   dump_db          = File.join(hackbox[:engine], "dump_db")
   decrypt_db       = File.join(hackbox[:engine], "decrypt_db")
-  fetch_dump_db    = "curl --location-trusted -o #{dump_db} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/tools/dump_db\""
-  fetch_decrypt_db = "curl --location-trusted -o #{decrypt_db} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/tools/decrypt_db\""
-  sh fetch_dump_db    unless File.exist?(dump_db)
-  sh fetch_decrypt_db unless File.exist?(decrypt_db)
+  unless File.exist? dump_db
+    puts "Fetching remote file #{dump_db} from https://developers-zone.digitalenvoy.net/downloads/tools/dump_db..."
+    fetch_dump_db    = "curl --location-trusted -o #{dump_db} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/tools/dump_db\""
+    sh fetch_dump_db
+  end
+  unless File.exist? decrypt_db
+    puts "Fetching remote file #{decrypt_db} from https://developers-zone.digitalenvoy.net/downloads/tools/decrypt_db..."
+    fetch_decrypt_db = "curl --location-trusted -o #{decrypt_db} --basic --user #{Settings[:user_pass]} \"https://developers-zone.digitalenvoy.net/downloads/tools/decrypt_db\""
+    sh fetch_decrypt_db
+  end
 end
 
 #
 # Unarchive the datasets
 #
-desc "Unpacking input data..."
-task :unpack_data => [input[:rawd]] do
-  Settings[:features].values.each do |feature|
-    ripd_data = File.join(input[:ripd], "na_#{"%02d" % feature}.tar.gz")
-    rawd_data = File.join(input[:rawd], "na_#{"%02d" % feature}")
-    mkdir_p     rawd_data
+desc "Unpack input data"
+task :unpack_data => [input[:rawd], rawd_directories].flatten do
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    ripd_data = File.join(input[:ripd], "#{feature}.tar.gz")
+    rawd_data = File.join(input[:rawd], "#{feature}")
+    next unless Dir["#{rawd_data}/*.db"].empty?
+    puts "Setting up #{rawd_data} for extraction..."
     cd          rawd_data
     ln_sf       File.join(hackbox[:engine], "license_key.file"), "license_key.file"
     ln_sf       File.join(hackbox[:engine], "dump_db"), "dump_db"
     ln_sf       File.join(hackbox[:engine], "decrypt_db"), "decrypt_db"
     cmd = "tar zxvf #{ripd_data}"
-    sh cmd if Dir["#{rawd_data}/*.db"].empty?
+    sh cmd
   end
 end
 

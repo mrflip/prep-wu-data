@@ -14,33 +14,43 @@ outputdir = ARGV[1]
 Settings.read(File.join(outputdir, "config", "working_config.yaml"))
 Settings.resolve!
 
-fixd_data = File.join(outputdir, "data", "outd")
-rawd_data = File.join(inputdir, "data", "rawd")
-data_dirs = Dir.entries(rawd_data)
+# Path to raw input data
+rawd_data      = File.join(inputdir, "data", "rawd")
+# Names of feature directories eg. na_04
+data_dirs      = Dir.entries(rawd_data)
+# Names of output data directories, one for each feature
+fixd_data_dirs = data_dirs.map{|feature| File.join(outputdir, "data", feature)}
+# Make sure these are created
+fixd_data_dirs.each{|output| directory output}
+doc_dir  = File.join(outputdir, "doc") 
+directory doc_dir
 
 #
 # Dump out the contents of only those databases for which we are licensed
 #
 task :parse do
-  data_dirs.each do |feature|
-    next unless feature =~ /na_(\d+)/
-    next if Settings[:not_licensed_for].include?($1.to_i)
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    dumped_feature = File.join(rawd_data, feature, "#{feature}.dat")
+    next if File.exist?(dumped_feature)
     puts "Processing #{feature}..."
     cd File.join(rawd_data, feature)
     File.chmod(755, "dump_db")
-    sh "./dump_db #{$1} > #{feature}.dat" unless File.exist?("#{feature}.dat")
+    sh "./dump_db #{$1} > #{feature}.dat"
   end
 end
 
+#
+# Take unpacked, delimited records and write them out as a reasonable tsv format. [start_ip, end_ip, json_data]
+#
 task :jsonize => [:parse] do
-  data_dirs.each do |feature|
-    next unless feature =~ /na_(\d+)/
-    next if Settings[:not_licensed_for].include?($1.to_i)
-    puts "jsonizing #{feature}..."
-    raw_feature_data = File.join(rawd_data, feature, "#{feature}.dat")
-    schema           = Settings[feature]
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
     output_json      = File.join(rawd_data, feature, "#{feature}.jsonized.tsv")
     next if File.exist?(output_json)
+    puts "jsonizing #{feature}..."
+    schema           = Settings[feature]
+    raw_feature_data = File.join(rawd_data, feature, "#{feature}.dat")
     jsonized         = File.open(output_json, 'wb')
     File.open(raw_feature_data).each do |record|
       record       = record.strip.split(";")
@@ -62,30 +72,41 @@ task :jsonize => [:parse] do
 end
 
 #
-# This is not a good way to do this. What is?
+# Take tsv formatted data [start_ip, end_ip, json_data] and convert to that needed
+# for the api handler. [start_ip_block, "end_ip_block,json_data"]
 #
-task :blockify => [:jsonize] do
+task :blockify => [:jsonize, fixd_data_dirs].flatten do
   splitter = File.dirname(__FILE__) + "/../../split_ipv4.rb"
-  data_dirs.each do |feature|
-    next unless feature =~ /na_(\d+)/
-    next if Settings[:not_licensed_for].include?($1.to_i)
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    fixd_tsv  = File.join(outputdir, "data", feature, "#{feature}.tsv")
+    next if File.exist?(fixd_tsv)
     puts "blockifying #{feature}..."
-    jsonized = File.join(rawd_data, feature, "#{feature}.jsonized.tsv")
-    fixd_tsv = File.join(fixd_data, "#{feature}.tsv")
-    cmd      = "cat #{jsonized} | #{splitter} --map | cat | #{splitter} --reduce > #{fixd_tsv}"
-    sh cmd unless File.exist?(fixd_tsv)
+    jsonized  = File.join(rawd_data, feature, "#{feature}.jsonized.tsv")
+    cmd       = "cat #{jsonized} | #{splitter} --map | cat | #{splitter} --reduce > #{fixd_tsv}"
+    sh cmd
   end
 end
 
-task :doc => [:blockify] do
-  template = Erubis::Eruby.new(File.read(File.dirname(__FILE__)+'/doc_template.textile.erb'))
-  doc_dir  = File.join(outputdir, "doc") 
-  mkdir_p doc_dir
+task :avro_schema do
   data_dirs.each do |feature|
     next unless feature =~ /na_(\d+)/
     next if Settings[:not_licensed_for].include?($1.to_i)
+    puts "Generating avro schema..."
+    
+  end
+end
+
+task :doc => [:blockify, doc_dir] do
+  template = Erubis::Eruby.new(File.read(File.dirname(__FILE__)+'/doc_template.textile.erb'))
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    doc_file = File.join(doc_dir, "#{Settings[:feature_keys][feature]}.textile")
+    next if File.exist?(doc_file)
+    puts "Generating textile documentation..."
     # Grab the 101st line for example
-    fixd_tsv = File.open(File.join(fixd_data, "#{feature}.tsv"))
+    fixd_data = File.join(outputdir, "data", feature, "#{feature}.tsv")
+    fixd_tsv  = File.open(fixd_data)
     100.times{ fixd_tsv.readline }
     ip_start, thing = fixd_tsv.readline.split("\t")
     ip_end, json    = thing.split(",", 2) 
@@ -97,8 +118,7 @@ task :doc => [:blockify] do
       :ip       => ip_start,
       :response => JSON.pretty_generate(JSON.parse(json))
     }
-    doc_file = File.join(doc_dir, "#{Settings[:feature_keys][feature]}.textile") 
-    File.open(doc_file, 'wb'){|f| f.puts template.evaluate(context)} unless File.exists?(doc_file)
+    File.open(doc_file, 'wb'){|f| f.puts template.evaluate(context)}
   end
 end
 
