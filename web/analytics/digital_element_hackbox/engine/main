@@ -25,6 +25,9 @@ fixd_data_dirs.each{|output| directory output}
 doc_dir  = File.join(outputdir, "doc") 
 directory doc_dir
 
+# Stores how many records are in each processed file
+record_counts = Hash.new(|h,k| h[k] = 0)
+
 #
 # Dump out the contents of only those databases for which we are licensed
 #
@@ -55,6 +58,7 @@ task :jsonize => [:parse] do
     File.open(raw_feature_data).each do |record|
       record       = record.strip.split(";")
       next if record[0] == 'start_ip'
+      record_counts[feature] += 1
       data = schema[2..-1].zip(record[2..-1]).inject({}) do |data, part|
         field_name  = part.first['name']
         field_value = part.last
@@ -88,12 +92,34 @@ task :blockify => [:jsonize, fixd_data_dirs].flatten do
   end
 end
 
-task :avro_schema do
-  data_dirs.each do |feature|
-    next unless feature =~ /na_(\d+)/
-    next if Settings[:not_licensed_for].include?($1.to_i)
+#
+# Can't possibly work at the moment, but it's here
+#
+task :troop_schema do
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
     puts "Generating avro schema..."
-    
+    schema = Settings[feature]
+    title  = Settings[:feature_names][feature]
+    troop_schema_hash = {
+      :company_name => "Digital Element",
+      :phone        => "",
+      :email        => "",
+      :uuid         => "",
+      :description  => "",
+      :title        => title,
+      :contact_name => "",
+      :dataset      => [],
+    }
+    # These datasets are malformed and can't be processed by troop as is, need a special importer
+    dataset = {
+      "type"         => "record",
+      "indexes"      => [],
+      "record_count" => record_counts[feature],
+      "fields"       => []
+    }
+    troop_schema_hash[:dataset] << dataset
+    # Save to output file as (.json)
   end
 end
 
