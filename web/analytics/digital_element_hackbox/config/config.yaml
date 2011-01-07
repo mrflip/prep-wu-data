@@ -35,16 +35,29 @@
   - 5
   - 3
   
-:names:
-  :geo: Geographical Locations
-  :domain: Web Domains
-  :zip_area_time: ZIP codes, area codes, and time zones
-  :isp: Internet Service Providers (ISPs)
-  :language: Primary &amp; secondary languages spoken
-  :proxy: Proxy servers
-  :company: Companies
-  :demographics: Demographics
-  :naics: NAICS Industry Codes
+:feature_keys:
+  na_03: geo
+  na_06: domain
+  na_06: zip_area_time
+  na_08: isp
+  na_11: language
+  na_12: proxy
+  na_15: company
+  na_17: demographics
+  na_18: naics
+  na_04: edge
+  
+:feature_names:
+  na_03: Geographical Locations
+  na_06: Web Domains
+  na_07: ZIP codes, area codes, and time zones
+  na_08: Internet Service Providers (ISPs)
+  na_11: Primary &amp; secondary languages spoken
+  na_12: Proxy servers
+  na_15: Companies
+  na_17: Demographics
+  na_18: NAICS Industry Codes
+  na_04: Accurate Geographical Locations  
 
 na_12:
   - start_ip

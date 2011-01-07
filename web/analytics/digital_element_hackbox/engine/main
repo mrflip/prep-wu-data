@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'rake'
 require 'configliere'
+require 'erubis'
 require 'json'
 
 Settings.use :config_file
@@ -76,4 +77,29 @@ task :blockify => [:jsonize] do
   end
 end
 
-Rake::Task[:blockify].invoke
+task :doc => [:blockify] do
+  template = Erubis::Eruby.new(File.read(File.dirname(__FILE__)+'/doc_template.textile.erb'))
+  doc_dir  = File.join(outputdir, "doc") 
+  mkdir_p doc_dir
+  data_dirs.each do |feature|
+    next unless feature =~ /na_(\d+)/
+    next if Settings[:not_licensed_for].include?($1.to_i)
+    # Grab the 101st line for example
+    fixd_tsv = File.open(File.join(fixd_data, "#{feature}.tsv"))
+    100.times{ fixd_tsv.readline }
+    ip_start, thing = fixd_tsv.readline.split("\t")
+    ip_end, json    = thing.split(",", 2) 
+    #
+    context = {
+      :schema   => Settings[feature],
+      :name     => Settings[:feature_names][feature],
+      :feature  => Settings[:feature_keys][feature],
+      :ip       => ip_start,
+      :response => JSON.pretty_generate(JSON.parse(json))
+    }
+    doc_file = File.join(doc_dir, "#{Settings[:feature_keys][feature]}.textile") 
+    File.open(doc_file, 'wb'){|f| f.puts template.evaluate(context)} unless File.exists?(doc_file)
+  end
+end
+
+Rake::Task[:doc].invoke
