@@ -1,4 +1,0 @@
-d <- read.table('<%= distribution %>', header=FALSE, sep='\t');
-png('<%= plot_name %>.png', height=900, width=1600);
-hist(d$V1, freq=FALSE, xlab='<%= xlab %>', main='<%= title %>', border='white');
-lines(density(d$V1), col='purple');

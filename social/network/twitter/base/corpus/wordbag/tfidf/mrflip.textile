@@ -1,0 +1,60 @@
+mrflip, tfidf, filtering stopwords, not subbing out users
+
+{
+  (infochimps,0.07028742),(hadoop,0.06729498),(doncarlo,0.03244035),(alkalineearth,0.03166796),
+  (data,0.030584574),(habcous,0.025488846),(zieglerfe,0.019309731),(austin,0.017916791),
+  (jonthegeek,0.017764954),(lfeeney,0.016992563),(peteskomoroch,0.01592581),(amp,0.015600967),
+  (sxsw,0.014016034),(wukong,0.013903007),(flip,0.013348767),(samohtsivraj,0.013130617),
+  (jdeeringdavis,0.013030209),(hayesdavis,0.013030209),(nbsp,0.012697558),
+  (gilliss,0.012358229),(hadoopsummit,0.011585839),(graph,0.011357211),(thiskat,0.010858507),
+  (bigdata,0.010433045),(api,0.010418188),(sinned,0.010278976),(mrflip,0.010041061),
+  (mathlete79,0.010041061),(kromerma,0.010041061),(thesauceisboss,0.010041061),(awesome,0.010028235),
+  (it&amp;apos;s,0.0099220285),(flowingdata,0.009898935),(joshuabaer,0.009455764),(defrag,0.009237225),
+  (status,0.009195692),(talk,0.009171877),(pig,0.008963103),(mperham,0.008496282),
+  (ruby,0.00812899),(demo09,0.007962905),(damon,0.007885222),(thx,0.007833126),
+  (time,0.0077758506),(cloudera,0.007764571),(splatnik,0.0077238926),(jeromatron,0.0077238926),
+  (datajunkie,0.0077238926),(kevinweil,0.0076509),(dataspora,0.0076509),(datasets,0.0074295285),
+  (austinonrails,0.0072390046),(thanks,0.007210955),(via,0.0069775763),(bradfordcross,0.006955364),
+  (mndoci,0.0069515035),(beyondlamp,0.0069515035),(thedatachef,0.0069515035),(using,0.006884389),
+  (kentbrew,0.0065151043),(twitter,0.0064191776),(don&amp;apos;t,0.006265037),(lusciouspear,0.0062598274),
+  (nicktj,0.0061791143),(dhruvbansal,0.0061791143),(chirp,0.0060547013),(nealrichter,0.005791204),
+  (joshdilworth,0.005791204),(tlipcon,0.005791204),(baldman,0.005791204),(hdfs,0.005791204),
+  (hack,0.0057269763),(dataset,0.005726376),(game,0.0056190887),(skud,0.005564291),
+  (wattsteve,0.0054067248),(yehaskel,0.0054067248),(jcsalterego,0.0054067248),(fbase,0.0054067248),
+  (dhuyler,0.0054067248),(code,0.005365854),(aws,0.005321663),(algorithms,0.005321663),
+  (cassandra,0.0052994536),(esp,0.0052546808),(list,0.005197137),(nosql,0.0051677385),
+  (mccain,0.005144722),(silona,0.0050673033),(pengwynn,0.0050673033),(mapreduce,0.0050153835),
+  (love,0.004969577),(yeah,0.00489019),(paulmiller,0.0048687547),(wow,0.004861),
+  (yay,0.0047836727),(that&amp;apos;s,0.0047537494),(mathematica,0.004727882),(meeting,0.0047098505),
+  (please,0.0046796403)
+}
+
+mrflip, tfidf, filtering stopwords, subbing out users
+
+{
+  (hadoop,0.07340043),(data,0.034207534),(infochimps,0.025052642),(austin,0.020049693),
+  (amp,0.017449012),(wukong,0.015549917),(sxsw,0.015254004),(flip,0.014930022),
+  (nbsp,0.014201674),(hadoopsummit,0.012958264),(graph,0.012702553),(bigdata,0.011668913),
+  (api,0.0116522955),(awesome,0.011216151),(it&amp;apos;s,0.011097363),(status,0.010284987),
+  (talk,0.0102583505),(pig,0.0100248465),(ruby,0.009091927),(demo09,0.008906168),
+  (defrag,0.00885552),(thx,0.008761015),(time,0.00870704),(datasets,0.008309609),
+  (thanks,0.008065144),(via,0.0078041195),(beyondlamp,0.0077749584),(using,0.007699894),
+  (twitter,0.0071857246),(don&amp;apos;t,0.0070071756),(chirp,0.0068136593),(hdfs,0.006477213),
+  (hack,0.006405377),(dataset,0.0064047063),(game,0.006284709),(code,0.0060014776),
+  (aws,0.005952052),(algorithms,0.005952052),(cassandra,0.005927211),(esp,0.005878905),
+  (list,0.005813583),(nosql,0.0057798936),(mccain,0.0057541505),(mapreduce,0.005609491),
+  (love,0.005558851),(yeah,0.0054694675),(wow,0.00543682),(yay,0.0053503322),
+  (that&amp;apos;s,0.0053168647),(meeting,0.005267766),(please,0.0052339765),(yes,0.0052188626),
+  (congrats,0.005176344),(hear,0.0051164683),(metadata,0.005101906),(meetup,0.005051512),
+  (run,0.0050257007),(chef,0.0049723363),(viz,0.004948477),(web,0.004937653),
+  (freebase,0.0049083047),(corpus,0.0048717363),(machine,0.004864185),(_why,0.00485791),
+  (bowling,0.0048068785),(google,0.004751288),(scripts,0.00471618),(smokes,0.0046892655),
+  (1st,0.004640806),(read,0.0046195583),(cloudera,0.004532514),(help,0.004523066),
+  (muxtape,0.00442776),(github,0.0044064634),(stuff,0.0043835137),(sox,0.004377253),
+  (party,0.004361217),(git,0.0043208096),(ms_c,0.004319421),(mrflip,0.004319421),
+  (the_javelina,0.004319421),(user,0.004271088),(build,0.0042640716),(hell,0.0042123524),
+  (startup,0.004192424),(ftw,0.0041838796),(holy,0.004164484),(scale,0.0041207676),
+  (tho,0.0040791654),(parlor,0.004069533),(30for30,0.004048258),(headed,0.0040469007),
+  (pitch,0.0040466376),(world,0.0040450497),(san,0.0040386156),(word,0.0040355893),
+  (emacs,0.004016774),(opendata,0.004016774),(panel,0.00401205),(users,0.00399576)
+}

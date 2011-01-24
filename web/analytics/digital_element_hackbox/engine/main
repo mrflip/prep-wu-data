@@ -1,0 +1,151 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'rake'
+require 'configliere'
+require 'erubis'
+require 'json'
+
+Settings.use :config_file
+
+inputdir  = ARGV[0]
+outputdir = ARGV[1]
+
+Settings.read(File.join(outputdir, "config", "working_config.yaml"))
+Settings.resolve!
+
+# Path to raw input data
+rawd_data      = File.join(inputdir, "data", "rawd")
+# Names of feature directories eg. na_04
+data_dirs      = Dir.entries(rawd_data)
+# Names of output data directories, one for each feature
+fixd_data_dirs = data_dirs.map{|feature| File.join(outputdir, "data", feature)}
+# Make sure these are created
+fixd_data_dirs.each{|output| directory output}
+doc_dir  = File.join(outputdir, "doc") 
+directory doc_dir
+
+# Stores how many records are in each processed file
+record_counts = Hash.new(|h,k| h[k] = 0)
+
+#
+# Dump out the contents of only those databases for which we are licensed
+#
+task :parse do
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    dumped_feature = File.join(rawd_data, feature, "#{feature}.dat")
+    next if File.exist?(dumped_feature)
+    puts "Processing #{feature}..."
+    cd File.join(rawd_data, feature)
+    File.chmod(755, "dump_db")
+    sh "./dump_db #{$1} > #{feature}.dat"
+  end
+end
+
+#
+# Take unpacked, delimited records and write them out as a reasonable tsv format. [start_ip, end_ip, json_data]
+#
+task :jsonize => [:parse] do
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    output_json      = File.join(rawd_data, feature, "#{feature}.jsonized.tsv")
+    next if File.exist?(output_json)
+    puts "jsonizing #{feature}..."
+    schema           = Settings[feature]
+    raw_feature_data = File.join(rawd_data, feature, "#{feature}.dat")
+    jsonized         = File.open(output_json, 'wb')
+    File.open(raw_feature_data).each do |record|
+      record       = record.strip.split(";")
+      next if record[0] == 'start_ip'
+      record_counts[feature] += 1
+      data = schema[2..-1].zip(record[2..-1]).inject({}) do |data, part|
+        field_name  = part.first['name']
+        field_value = part.last
+        case part.first['datatype']
+        when 'integer' then field_value = field_value.to_i
+        when 'float' then field_value = field_value.to_f
+        end
+        data[field_name] = field_value
+        data
+      end
+      jsonized.write([record[0], record[1], data.to_json].join("\t") + "\n")
+    end
+    jsonized.close
+  end
+end
+
+#
+# Take tsv formatted data [start_ip, end_ip, json_data] and convert to that needed
+# for the api handler. [start_ip_block, "end_ip_block,json_data"]
+#
+task :blockify => [:jsonize, fixd_data_dirs].flatten do
+  splitter = File.dirname(__FILE__) + "/../../split_ipv4.rb"
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    fixd_tsv  = File.join(outputdir, "data", feature, "#{feature}.tsv")
+    next if File.exist?(fixd_tsv)
+    puts "blockifying #{feature}..."
+    jsonized  = File.join(rawd_data, feature, "#{feature}.jsonized.tsv")
+    cmd       = "cat #{jsonized} | #{splitter} --map | cat | #{splitter} --reduce > #{fixd_tsv}"
+    sh cmd
+  end
+end
+
+#
+# Can't possibly work at the moment, but it's here
+#
+task :troop_schema do
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    puts "Generating avro schema..."
+    schema = Settings[feature]
+    title  = Settings[:feature_names][feature]
+    troop_schema_hash = {
+      :company_name => "Digital Element",
+      :phone        => "",
+      :email        => "",
+      :uuid         => "",
+      :description  => "",
+      :title        => title,
+      :contact_name => "",
+      :dataset      => [],
+    }
+    # These datasets are malformed and can't be processed by troop as is, need a special importer
+    dataset = {
+      "type"         => "record",
+      "indexes"      => [],
+      "record_count" => record_counts[feature],
+      "fields"       => []
+    }
+    troop_schema_hash[:dataset] << dataset
+    # Save to output file as (.json)
+  end
+end
+
+task :doc => [:blockify, doc_dir] do
+  template = Erubis::Eruby.new(File.read(File.dirname(__FILE__)+'/doc_template.textile.erb'))
+  Settings[:feature_keys].keys.each do |feature|
+    next if Settings[:not_licensed_for].include?(feature) || Settings[:skip_features].include?(feature)
+    doc_file = File.join(doc_dir, "#{Settings[:feature_keys][feature]}.textile")
+    next if File.exist?(doc_file)
+    puts "Generating textile documentation..."
+    # Grab the 101st line for example
+    fixd_data = File.join(outputdir, "data", feature, "#{feature}.tsv")
+    fixd_tsv  = File.open(fixd_data)
+    100.times{ fixd_tsv.readline }
+    ip_start, thing = fixd_tsv.readline.split("\t")
+    ip_end, json    = thing.split(",", 2) 
+    #
+    context = {
+      :schema   => Settings[feature],
+      :name     => Settings[:feature_names][feature],
+      :feature  => Settings[:feature_keys][feature],
+      :ip       => ip_start,
+      :response => JSON.pretty_generate(JSON.parse(json))
+    }
+    File.open(doc_file, 'wb'){|f| f.puts template.evaluate(context)}
+  end
+end
+
+Rake::Task[:doc].invoke

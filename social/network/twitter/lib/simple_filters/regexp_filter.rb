@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 require 'rubygems'
 require 'wukong'                       ; include Wukong
-require 'wuclan/twitter'               ; include Wuclan::Twitter
+#require 'wuclan/twitter'               ; include Wuclan::Twitter
 
 # field 10 is tweet text, field 11 is tweet source
 SEARCH_FIELD  = 10
-SEARCH_REGEXP = /(@skimble|cyclemeter)/i
+SEARCH_REGEXP = /(wikileaks?|cablegate|assange)/i
 
 class TweetBagMapper < Wukong::Streamer::RecordStreamer
 

@@ -1,9 +1,3 @@
-%default TWEET         '/data/sn/tw/fixd/objects/tweet'
-%default HASHTAG       '/data/sn/tw/fixd/objects/hashtag'
-%default SMILEY        '/data/sn/tw/fixd/objects/smiley'
-%default URL           '/data/sn/tw/fixd/objects/tweet_url'
-%default FLUX          '/data/sn/tw/fixd/tweet_flux_breakdown'
-        
 tweet         = LOAD '$TWEET'         AS (rsrc:chararray, twid:long,      crat:long,              uid:long,    sn:chararray,            sid:long,          in_reply_to_uid:long, in_reply_to_sn:chararray,     in_reply_to_sid:long,       text:chararray,        src:chararray,              iso:chararray,      lat:float, lon:float, was_stw:int);
 hashtag       = LOAD '$HASHTAG'       AS (rsrc:chararray, text:chararray, twid:long,              uid:long,    crat:long);                                                           
 smiley        = LOAD '$SMILEY'        AS (rsrc:chararray, text:chararray, twid:long,              uid:long,    crat:long);                                                           
@@ -23,5 +17,6 @@ flux_types = FOREACH cogrpd GENERATE
                  COUNT(cut_url)   AS url_o
              ;
 
-rmf $FLUX;
-STORE flux_types INTO '$FLUX';
+STORE flux_types INTO '$BREAK';
+
+-- flux_breakdown = LOAD '$BREAK' AS (user_id:long, measured_tweets_out:long, hashtags_out:long, smileys_out:long, urls_out:long);
