@@ -1,12 +1,8 @@
-%default RAW_ID_SNS_FILE  '/tmp/all_seen_users/raw_id_sns'
-%default RAW_REL_IDS_FILE '/tmp/all_seen_users/raw_rel_ids'
-%default MAPPING          '/tmp/all_seen_users/all_user_info'
-        
-twitter_user_id      = LOAD '$TW_UID'        AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:long, friends:long, statuses:long, favourites:long, crat:long, sid:long, is_full:long, health:chararray);
-twitter_user_sid     = LOAD '$TW_SID' AS (rsrc:chararray, sid:long, sn:chararray);
+twitter_user_id      = LOAD '$TW_UID'  AS (rsrc:chararray, uid:long, scrat:long, sn:chararray, prot:int, followers:long, friends:long, statuses:long, favourites:long, crat:long, sid:long, is_full:long, health:chararray);
+twitter_user_sid     = LOAD '$TW_SID'  AS (rsrc:chararray, sid:long, sn:chararray);
  
-uniq_id_sns          = LOAD '$RAW_ID_SNS_FILE'  AS (uid:long, sn:chararray);
-uniq_ids             = LOAD '$RAW_REL_IDS_FILE' AS (uid:long);
+uniq_id_sns          = LOAD '$ID_SN'   AS (uid:long, sn:chararray);
+uniq_ids             = LOAD '$REL_IDS' AS (uid:long);
 
 all_user_info_j0     = JOIN twitter_user_sid BY sn FULL OUTER, uniq_id_sns BY sn;
 all_user_info_f0     = FOREACH all_user_info_j0 GENERATE uid AS uid, twitter_user_sid::sn AS sn, sid AS sid;
@@ -52,5 +48,4 @@ all_user_info_f3     = FOREACH all_user_info_j3
 
 all_user_info        = ORDER all_user_info_f3 BY scrat ASC, sn ASC, uid ASC;
      
-rmf $MAPPING;
-STORE all_user_info  INTO '$MAPPING';
+STORE all_user_info  INTO '$OUT';

@@ -1,5 +1,9 @@
+#!/usr/bin/env ruby
+
 require 'rubygems'
 require 'swineherd' ; include Swineherd
+require 'swineherd/script/pig_script' ; include Swineherd::Script
+require 'swineherd/script/wukong_script'
 
 Settings.define :flow_id,    :required => true,                 :description => "Flow id required to make run of workflow unique"
 Settings.define :input_dir,  :required => true,                 :description => "HDFS directory where input data lives (a_follows_b and a_atsigns_b)"
@@ -119,7 +123,7 @@ flow = Workflow.new(Settings.flow_id) do
   #
   task :assemble_trstrank => [:trstquotient] do
     trstrank_assembler.pig_options = Settings.pig_opts
-    trstrank_assembler.ouput << next_output(:assemble_trstrank)
+    trstrank_assembler.output << next_output(:assemble_trstrank)
     trstrank_assembler.options = {
       :tw_uid       => "#{Settings.input_dir}/twitter_user_id",
       :rank_with_tq => latest_output(:trstquotient),

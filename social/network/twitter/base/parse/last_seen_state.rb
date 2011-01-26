@@ -30,11 +30,10 @@ class LastSeenStateUniqer < Wukong::Streamer::UniqByLastReducer
 end
 
 Wukong::Script.new(
-    nil,
-    LastSeenStateUniqer,
-    :map_command      => '/bin/cat',
-    :partition_fields => 2,
-    :sort_fields      => 3,
-    :reduce_tasks     => 96
-    ).run
-end
+  nil,
+  LastSeenStateUniqer,
+  :map_command      => '/bin/cat',
+  :partition_fields => 2,
+  :sort_fields      => 3
+  ).run
+

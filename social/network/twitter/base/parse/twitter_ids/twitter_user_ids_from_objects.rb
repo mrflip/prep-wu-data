@@ -95,7 +95,7 @@ end
 Wukong::Script.new(
   Mapper,
   Reducer,
-  :sort_fields => 2,
+  :sort_fields      => 3,
   :partition_fields => 2,
-  :reduce_tasks => 148
+  :reduce_tasks     => 124
   ).run

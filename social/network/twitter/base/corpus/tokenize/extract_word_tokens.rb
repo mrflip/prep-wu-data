@@ -96,5 +96,6 @@ Wukong::Script.new(
   :partition_fields => 2,  # rsrc, token
   :sort_fields      => 3,  # rsrc, token, tweet_id
   :reuse_jvms       => true,
-  :io_record_percent => 0.4
+  :io_record_percent => 0.4,
+  :min_split_size    => 5000000000
   ).run

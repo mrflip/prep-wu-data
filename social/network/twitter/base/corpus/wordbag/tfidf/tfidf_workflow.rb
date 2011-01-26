@@ -2,12 +2,13 @@
 
 require 'swineherd'                   ; include Swineherd
 require 'swineherd/script/pig_script' ; include Swineherd::Script
+require 'swineherd/script/wukong_script' ; include Swineherd::Script
 
 Settings.define :flow_id,      :required => true, :description => "Workflow needs a unique numeric id"
 Settings.define :input_dir,    :required => true, :description => "Path to necessary data"
 Settings.define :n_users,                         :description => "Number of users who've used tokens, see warning"
 Settings.define :reduce_tasks, :default  => 96,   :description => "Change to reduce task capacity on cluster"
-Settings.define :script_path,  :default  => "/home/jacob/infochimps-data/social/network/twitter/base/corpus"
+Settings.define :script_path,  :default  => "/home/jacob/Programming/infochimps-data/social/network/twitter/base/corpus"
 Settings.define :n_toks,       :default  => "100", :description => "Number of tokens to include in wordbag"
 Settings.resolve!
 
@@ -25,13 +26,13 @@ flow = Workflow.new(Settings.flow_id) do
   top_n_bag   = PigScript.new("#{Settings.script_path}/wordbag/tfidf/top_n_bag.pig")
 
   task :tokenize do
-    tokenizer.input  << "#{Settings.input_dir}/word_token"
+    tokenizer.input  << "#{Settings.input_dir}/tweet"
     tokenizer.output << next_output(:tokenize)
     tokenizer.run
   end
 
   task :user_frequencies => [:tokenize] do
-    frequencies.ouput << next_output(:user_frequencies)
+    frequencies.output << next_output(:user_frequencies)
     frequencies.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
     frequencies.options     = {
       :usages      => latest_output(:tokenize),
