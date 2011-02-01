@@ -10,7 +10,7 @@ register '/usr/lib/hbase/lib/guava-r05.jar';
 %default CF    'profile'
 
 data     = LOAD '$DATA' AS (rsrc:chararray, uid:long, scraped_at:long, screen_name:chararray, name:chararray, url:chararray, location:chararray, description:chararray, time_zone:chararray, utc_offset:chararray, lang:chararray, geo_enabled:chararray, verified:chararray, contributors_enabled:chararray);
-cut_data = FOREACH data GENERATE uid AS key, uid AS user_id, scraped_at, screen_name, name, url, location, description, time_zone, utc_offset, lang, geo_enabled, verified, contributors_enabled);
+cut_data = FOREACH data GENERATE uid AS key, uid AS user_id, scraped_at, screen_name, name, url, location, description, time_zone, utc_offset, lang, geo_enabled, verified, contributors_enabled;
 STORE cut_data INTO '$TABLE' USING com.infochimps.hbase.pig.HBaseStorage('$CF:user_id $CF:scraped_at $CF:screen_name $CF:name $CF:url $CF:location $CF:description $CF:time_zone $CF:utc_offset $CF:lang $CF:geo_enabled $CF:verified $CF:contributors_enabled');
 
 
