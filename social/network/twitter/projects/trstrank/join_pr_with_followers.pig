@@ -1,4 +1,4 @@
-REGISTER /usr/local/share/pig/contrib/piggybank/java/piggybank.jar;
+REGISTER /usr/lib/pig/contrib/piggybank/java/piggybank.jar;
 
 --
 -- Combine the followers field (fo_i) from the multigraph degree distribution
