@@ -2,10 +2,13 @@ register /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
 register /usr/lib/hbase/lib/jline-0.9.94.jar
 register /usr/lib/hbase/lib/guava-r05.jar
 
+
+%default HDFS 'hdfs://ip-10-113-50-207.ec2.internal' -- THIS IS SERIOUSLY BROKEN
+        
 -- export PIG_CLASSPATH=/usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig-0.8.0-core.jar
 -- pig -p TABLE=a_rel_b_20110128 -p OUT=/tmp/pagerank/201102/assemble-multigraph-0 assemble_multigraph_hbase.pig
 
-data = LOAD '$TABLE' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab follow:ba reply: retweet: mention: ', '-limit 10000000 -loadKey') AS (
+data = LOAD '$TABLE' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey') AS (
         row_key:chararray,
         a_follows_b:int,
         b_follows_a:int,
@@ -31,6 +34,7 @@ multigraph_out = FOREACH data {
                      me_o         AS me_o
                    ;
                  };
+
 
 multigraph_in = FOREACH multigraph_out GENERATE
                   user_b_id   AS user_a_id,
@@ -66,4 +70,4 @@ multigraph   = FOREACH grouped {
                };
 
 
-STORE multigraph INTO '$OUT';
+STORE multigraph INTO '$HDFS/$OUT';
