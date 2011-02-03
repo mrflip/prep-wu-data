@@ -33,8 +33,31 @@ fixed_ids = FOREACH joined
 
 SPLIT fixed_ids INTO noids IF rsrc == 'tweet-noid', rectified IF rsrc == 'tweet';
 
-rmf $FAIL;
-STORE noids INTO '$FAIL';
 
-rmf $TWFIXD;
-STORE rectified INTO '$TWFIXD';
+not_replies = FILTER rectified BY in_reply_to_sn IS NULL;
+-- store into elasticsearch
+
+
+
+replies     = FILTER rectified BY in_reply_to_sn IS NOT NULL;
+joined      = JOIN replies BY in_reply_to_sn, mapping BY sn;
+rectified   = FOREACH joined GENERATE
+                  replies::rsrc            AS rsrc,
+                  replies::twid            AS twid,
+                  replies::crat            AS crat,
+                  replies::uid             AS uid,
+                  replies::sn              AS sn,
+                  replies::sid             AS sid,
+                  mapping::uid             AS in_reply_to_uid,
+                  replies::in_reply_to_sn  AS in_reply_to_sn,
+                  replies::in_reply_to_sid AS in_reply_to_sid,
+                  replies::text            AS text,
+                  replies::src             AS src,
+                  replies::iso             AS iso,
+                  replies::lat             AS lat,
+                  replies::lon             AS lon,
+                  replies::was_stw         AS was_stw
+              ;
+
+SPLIT rectified INTO no_reply_id IF in_reply_to_uid IS NULL, with_reply_id IF in_reply_to_uid IS NOT NULL;
+
