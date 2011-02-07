@@ -9,10 +9,13 @@ Settings.resolve!
 
 flow = Workflow.new(Settings['flow_id']) do
   
-  api_parser    = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_api_requests-v2.rb'))
-  stream_parser = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_stream_requests-v2.rb'))
-  search_parser = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_search_request.rb'))
-  unsplicer     = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_objects.pig.erb'))
+  api_parser      = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_api_requests-v2.rb'))
+  stream_parser   = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_stream_requests-v2.rb'))
+  search_parser   = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_search_request.rb'))
+  unsplicer       = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_objects.pig.erb'))
+  tweet_rectifier = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_twnoids_into_elasticsearch.pig'))
+  rels_rectifier  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_ats_into_hbase.pig.erb')) 
+  es_indexer      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/indexer.pig.erb'))
   
   task :parse_twitter_api do
     api_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter', Settings['api_parse_regexp'])
@@ -46,6 +49,41 @@ flow = Workflow.new(Settings['flow_id']) do
     unsplicer.output << latest_output(:unsplice)
     unsplicer.run
   end
+
+  #
+  # Can't possibly work until we can talk to hbase with chimpark and other clusters
+  #
+  task :rectify_rels => [:unsplice] do
+    rels_rectifier.pig_classpath     = Settings['pig_classpath']
+    rels_rectifier.options = {
+      :ats_table   => Settings['hbase_relationships_table'],
+      :twuid_table => Settings['hbase_twitter_users_table'],
+      :ats         => File.join(latest_output(:unsplice), "a_atsigns_bn")
+    }
+    rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
+    rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
+    rels_rectifier.run
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:rectify_rels)}" # so it doesn't run again
+  end
+
+  #
+  # Can't possibly work until we can talk to hbase with chimpark and other clusters
+  #
+  task :rectify_twnoids => [:unsplice] do
+    tweet_rectifier.pig_classpath     = Settings['pig_classpath']
+    tweet_rectifier.options = {
+      :es_index    => Settings['elasticsearch_index'],
+      :es_obj      => 'tweet',
+      :twuid_table => Settings['hbase_twitter_users_table'],
+    }
+    tweet_rectifier.attributes = {:registers => Settings['hbase_registers']}
+    tweet_rectifier.output << next_output(:rectify_twnoids) # This has no hdfs output, actually
+    tweet_rectifier.run
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:rectify_twnoids)}" # so it doesn't run again
+  end
+
 
 end
 
