@@ -1,0 +1,18 @@
+---
+flow_id: 20110201
+ripd_s3_url: s3n://monkeyshines.infochimps.org/data/ripd/com.tw
+last_search_date: 20100601
+last_api_date: 20101229
+last_stream_date: 20101219
+ics_data_twitter_scripts: /home/jacob/Programming/infochimps-data/social/network/twitter
+wuclan_parse_scripts: /home/jacob/Programming/wuclan/lib/wuclan/twitter/parse
+parse_script_path: /home/jacob/Programming/infochimps-data/social/network/twitter/base/parse
+hdfs_work_dir: /tmp/parse
+
+# api_parse_regexp: "{201012{29..31},201101{01..30}}"
+# stream_parse_regexp: "{20101219,201101{01..31}}"
+# search_parse_regexp: "{201006{01..31},201007{01..31},{201008{01..31},201009{01..31},201010{01..31},201011{01..31},201012{01..31},201101{01..31}}"
+
+api_parse_regexp: "20101229/com.twitter-20101229231709-ip-10-202-197-204.ec2.internal-8832.tsv.bz2"
+stream_parse_regexp: "20101219"
+search_parse_regexp: "20101229/comtwittersearch+20101229234857-22977.tsv.bz2"
