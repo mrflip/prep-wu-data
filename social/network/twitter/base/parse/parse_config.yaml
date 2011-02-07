@@ -1,4 +1,5 @@
 ---
+pig_home: /usr/local/share/pig
 flow_id: 20110201
 ripd_s3_url: s3n://monkeyshines.infochimps.org/data/ripd/com.tw
 last_search_date: 20100601

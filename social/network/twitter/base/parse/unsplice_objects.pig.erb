@@ -1,0 +1,8 @@
+register <%= piggybank_jar %>;
+
+api_objects    = LOAD '$API';
+stream_objects = LOAD '$STREAM';
+search_objects = LOAD '$SEARCH';
+
+objects_to_unsplice = UNION api_objects, stream_objects, search_objects;
+STORE objects_to_unsplice INTO '$OUT' USING org.apache.pig.piggybank.storage.MultiStorage('$OUT','0', 'none', '\\t');
