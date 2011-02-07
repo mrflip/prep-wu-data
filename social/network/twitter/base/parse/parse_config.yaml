@@ -23,6 +23,10 @@ hbase_registers:
 
 hbase_relationships_table: soc_net_tw_a_rel_b
 hbase_twitter_users_table: soc_net_tw_twitter_user
+twitter_tokens:
+  - hashtag
+  - smiley
+  - stock_token
 
 flow_id: 20110201
 ripd_s3_url: s3n://monkeyshines.infochimps.org/data/ripd/com.tw

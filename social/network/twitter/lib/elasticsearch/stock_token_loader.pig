@@ -1,4 +1,4 @@
-register build/wonderdog.jar
+register /home/jacob/Programming/wonderdog/build/wonderdog.jar
 register /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
 register /usr/local/share/elasticsearch/lib/jline-0.9.94.jar
 register /usr/local/share/elasticsearch/lib/jna-3.2.7.jar
@@ -10,7 +10,7 @@ register /usr/local/share/elasticsearch/lib/lucene-highlighter-3.0.3.jar
 register /usr/local/share/elasticsearch/lib/lucene-memory-3.0.3.jar
 register /usr/local/share/elasticsearch/lib/lucene-queries-3.0.3.jar        
 
-%default DATA  's3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/current/stock_token'
+%default DATA  's3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/current/stock_token/part-00000'
 %default INDEX 'token'
 %default OBJ   'stock_token'        
 
