@@ -17,6 +17,7 @@ flow = Workflow.new(Settings['flow_id']) do
   rels_rectifier  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_ats_into_hbase.pig.erb'))
   token_indexer   = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/token_indexer.pig.erb'))
   tweet_indexer   = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/tweet_indexer.pig.erb'))
+  a_ats_b_loader  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/a_atsigns_b_loader.pig.erb'))
   
   task :parse_twitter_api do
     api_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter', Settings['api_parse_regexp'])
@@ -59,7 +60,7 @@ flow = Workflow.new(Settings['flow_id']) do
     rels_rectifier.options = {
       :ats_table   => Settings['hbase_relationships_table'],
       :twuid_table => Settings['hbase_twitter_users_table'],
-      :ats         => File.join(latest_output(:unsplice), "a_atsigns_bn")
+      :ats         => File.join(latest_output(:unsplice), "a_atsigns_b-n")
     }
     rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
     rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
@@ -117,6 +118,21 @@ flow = Workflow.new(Settings['flow_id']) do
     # HACK!
     sh "hadoop fs -mkdir #{latest_output(:index_tweets)}" # so it doesn't run again    
   end
+
+  task :load_a_atsigns_b => [:unsplice] do
+    a_ats_b_loader.pig_classpath = Settings['pig_classpath']
+    a_ats_b_loadeer.attributes = {
+      :registers  => Settings['hbase_registers'],
+      :data       => File.join(latest_output(:unsplicer), 'a_atsigns_b'),
+      :table      => Settings['hbase_relationships_table']
+    }
+    a_ats_b_loader.output << next_output(:load_a_atsigns_b)
+    a_ats_b_loader.run
+
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:load_a_atsigns_b)}" # so it doesn't run again    
+  end  
+  
 
 end
 

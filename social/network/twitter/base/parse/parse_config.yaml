@@ -2,7 +2,7 @@
 pig_home: /usr/local/share/pig
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
 elasticsearch_home: /usr/local/share/elasticsearch
-elasticsearch_index: tweet-201101
+elasticsearch_tweet_index: tweet-201101
 elasticsearch_registers:
   - /home/jacob/Programming/wonderdog/build/wonderdog.jar
   - /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
@@ -20,6 +20,8 @@ hbase_registers:
   - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
   - /usr/lib/hbase/lib/jline-0.9.94.jar
   - /usr/lib/hbase/lib/guava-r05.jar
+  - /usr/lib/hbase/hbase.jar
+  - /usr/lib/hbase/lib/zookeeper.jar
 
 hbase_relationships_table: soc_net_tw_a_rel_b
 hbase_twitter_users_table: soc_net_tw_twitter_user
