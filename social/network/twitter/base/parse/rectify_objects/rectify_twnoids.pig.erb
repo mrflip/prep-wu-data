@@ -2,12 +2,12 @@
 register <%= jar %>;
 <% end %>
 
-data       = LOAD '$TWUID_TABLE' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
-tweet_noid = LOAD '$TWT' AS (rsrc:chararray,tweet_id:long,created_at:long,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
+data       = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name', '-limit 10000 -loadKey') AS (user_id:int, screen_name:chararray);
+tweet_noid = LOAD '<%= data %>' AS (rsrc:chararray,tweet_id:long,created_at:long,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
 
-first_pass = JOIN tweet_noid BY screen_name, data BY screen_name USING 'replicated';
-fixed_ids  = FOREACH joined GENERATE
-               (data::uid IS NULL ? 'tweet-noid' : 'tweet') AS rsrc,
+first_pass = JOIN data BY screen_name, tweet_noid BY screen_name;
+fixed_ids  = FOREACH first_pass GENERATE
+               (data::user_id IS NULL ? 'tweet-noid' : 'tweet') AS rsrc,
                tweet_noid::tweet_id                AS tweet_id,
                tweet_noid::created_at              AS created_at,
                data::user_id                       AS user_id,
@@ -25,17 +25,16 @@ fixed_ids  = FOREACH joined GENERATE
                tweet_noid::rt_of_user_id           AS rt_of_user_id,
                tweet_noid::rt_of_screen_name       AS rt_of_screen_name,
                tweet_noid::rt_of_tweet_id          AS rt_of_tweet_id,
-               tweet_noid:::contributors           AS contributors        
+               tweet_noid::contributors            AS contributors        
              ;
 
 SPLIT fixed_ids INTO noids IF rsrc == 'tweet-noid', rectified IF rsrc == 'tweet';
 
-not_replies = FILTER rectified BY in_reply_to_sn IS NULL;
-STORE not_replies INTO 'es://$ES_INDEX/$ES_OBJ' USING com.infochimps.elasticsearch.pig.ElasticSearchIndex('1', '4096');
--- store the not_replies into elasticsearch
+not_replies = FILTER rectified BY in_reply_to_screen_name IS NULL; -- these are good to go
 
-replies     = FILTER rectified BY in_reply_to_sn IS NOT NULL;
-joined      = JOIN replies BY in_reply_to_sn, data BY screen_name USING 'replicated';
+
+replies     = FILTER rectified BY in_reply_to_screen_name IS NOT NULL;
+joined      = JOIN data BY screen_name, replies BY in_reply_to_screen_name;
 rectified   = FOREACH joined GENERATE
                 replies::rsrc                    AS rsrc,
                 replies::tweet_id                AS tweet_id,
@@ -55,9 +54,10 @@ rectified   = FOREACH joined GENERATE
                 replies::rt_of_user_id           AS rt_of_user_id,
                 replies::rt_of_screen_name       AS rt_of_screen_name,
                 replies::rt_of_tweet_id          AS rt_of_tweet_id,
-                replies:::contributors           AS contributors        
+                replies::contributors           AS contributors        
               ;
 
 SPLIT rectified INTO no_reply_id IF in_reply_to_user_id IS NULL, with_reply_id IF in_reply_to_user_id IS NOT NULL;
--- store with_reply_id into elasticsearch
-STORE with_reply_id INTO 'es://$ES_INDEX/$ES_OBJ' USING com.infochimps.elasticsearch.pig.ElasticSearchIndex('1', '4096');
+
+good_tweets = UNION not_replies, with_reply_id;
+STORE good_tweets INTO '<%= hdfs %>/<%= out %>';

@@ -13,7 +13,8 @@ flow = Workflow.new(Settings['flow_id']) do
   stream_parser   = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_stream_requests-v2.rb'))
   search_parser   = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_search_request.rb'))
   unsplicer       = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_objects.pig.erb'))
-  tweet_rectifier = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_twnoids_into_elasticsearch.pig'))
+  tweet_unsplicer = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_tweets.pig.erb'))
+  tweet_rectifier = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_twnoids.pig.erb'))
   rels_rectifier  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_ats_into_hbase.pig.erb'))
   token_indexer   = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/token_indexer.pig.erb'))
   tweet_indexer   = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/tweet_indexer.pig.erb'))
@@ -70,21 +71,33 @@ flow = Workflow.new(Settings['flow_id']) do
   end
 
   #
-  # Can't possibly work until we can talk to hbase with chimpark and other clusters
+  # Rectify onto disk
   #
   task :rectify_twnoids => [:unsplice] do
     tweet_rectifier.pig_classpath = Settings['pig_classpath']
-    tweet_rectifier.options = {
-      :es_index    => Settings['elasticsearch_index'],
-      :es_obj      => 'tweet',
+    tweet_rectifier.attributes = {
+      :registers   => Settings['hbase_registers'],
       :twuid_table => Settings['hbase_twitter_users_table'],
+      :data        => File.join(latest_output(:unsplice), 'tweet-noid'),
+      :hdfs        => "hdfs://#{Settings['hdfs']}",
+      :out         => next_output(:rectify_twnoids)
     }
-    tweet_rectifier.attributes = {:registers => [Settings['hbase_registers'], Settings['elasticsearch_registers']].flatten}
-    tweet_rectifier.output << next_output(:rectify_twnoids) # This has no hdfs output, actually
+    tweet_rectifier.output << latest_output(:rectify_twnoids)
     tweet_rectifier.run
-    # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:rectify_twnoids)}" # so it doesn't run again
   end
+
+  task :unsplice_tweets => [:unsplice, :rectify_twnoids] do
+    tweet_unsplicer.pig_classpath = Settings['pig_classpath']
+    tweet_unsplicer.attributes    = {
+      :piggybank_jar => File.join(Settings['pig_home'], 'contrib/piggybank/java/piggybank.jar'),
+      :data          => [File.join(latest_output(:unsplice), 'tweet'), latest_output(:rectify_twnoids)].join(","),
+      :hdfs          => "hdfs://#{Settings['hdfs']}",
+      :out           => next_output(:unsplice_tweets)
+    }
+    tweet_unsplicer.output << latest_output(:unsplice_tweets)
+    tweet_unsplicer.run
+  end
+  
 
   task :index_tokens => [:unsplice] do
     token_indexer.pig_classpath = Settings['pig_classpath']

@@ -1,0 +1,30 @@
+register <%= piggybank_jar %>
+
+tweet        = LOAD '<%= tweet %>' AS (rsrc:chararray,tweet_id:long,created_at:chararray,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
+with_indices = FOREACH tweet {
+                 index = CONCAT('tweet-', SUBSTRING(created_at, 0, 6));
+                 GENERATE
+                   index                   AS index,
+                   tweet_id                AS tweet_id,
+                   created_at              AS created_at,
+                   user_id                 AS user_id,
+                   screen_name             AS screen_name,
+                   search_id               AS search_id,
+                   in_reply_to_user_id     AS in_reply_to_user_id,
+                   in_reply_to_screen_name AS in_reply_to_screen_name,
+                   in_reply_to_search_id   AS in_reply_to_search_id,
+                   in_reply_to_status_id   AS in_reply_to_status_id,
+                   text                    AS text,
+                   source                  AS source,
+                   lang                    AS lang,
+                   lat                     AS lat,
+                   lng                     AS lng,
+                   retweeted_count         AS retweeted_count,
+                   rt_of_user_id           AS rt_of_user_id,
+                   rt_of_screen_name       AS rt_of_screen_name,
+                   rt_of_tweet_id          AS rt_of_tweet_id,
+                   contributors            AS contributors
+                 ;                         
+               };
+
+STORE with_indices INTO '<%= hdfs %>/<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');

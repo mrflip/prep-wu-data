@@ -1,4 +1,5 @@
 ---
+hdfs: ip-10-117-77-123.ec2.internal
 pig_home: /usr/local/share/pig
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
 elasticsearch_home: /usr/local/share/elasticsearch
