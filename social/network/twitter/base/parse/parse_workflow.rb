@@ -31,6 +31,9 @@ flow = Workflow.new(Settings['flow_id']) do
   screen_name_loader  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/screen_name_loader.pig.erb'))
   search_id_loader    = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/search_id_loader.pig.erb'))
   tweet_url_loader    = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/tweet_url_loader.pig.erb'))
+  user_id_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_id_loader.pig.erb'))
+  profile_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_profile_loader.pig.erb'))
+  style_loader        = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_style_loader.pig.erb'))
   
   task :parse_twitter_api do
     api_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter', Settings['api_parse_regexp'])
@@ -270,7 +273,55 @@ flow = Workflow.new(Settings['flow_id']) do
 
     # HACK!
     sh "hadoop fs -mkdir #{latest_output(:load_tweet_urls)}"
-  end  
+  end
+
+  task :load_user_ids => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'twitter_user')
+    next unless HDFS.exist? expected_input
+    user_id_loader.pig_classpath = Settings['pig_classpath']
+    user_id_loader.attributes = {
+      :registers  => Settings['hbase_registers'],
+      :data       => expected_input,
+      :table      => Settings['hbase_twitter_users_table']
+    }
+    user_id_loader.output << next_output(:load_user_ids)
+    user_id_loader.run
+
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:load_user_ids)}"
+  end
+
+  task :load_profiles => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'twitter_user_profile')
+    next unless HDFS.exist? expected_input
+    profile_loader.pig_classpath = Settings['pig_classpath']
+    profile_loader.attributes = {
+      :registers  => Settings['hbase_registers'],
+      :data       => expected_input,
+      :table      => Settings['hbase_twitter_users_table']
+    }
+    profile_loader.output << next_output(:load_profiles)
+    profile_loader.run
+
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:load_profiles)}"
+  end
+
+  task :load_styles => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'twitter_user_style')
+    next unless HDFS.exist? expected_input
+    style_loader.pig_classpath = Settings['pig_classpath']
+    style_loader.attributes = {
+      :registers  => Settings['hbase_registers'],
+      :data       => expected_input,
+      :table      => Settings['hbase_twitter_users_table']
+    }
+    style_loader.output << next_output(:load_styles)
+    style_loader.run
+
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:load_styles)}"
+  end
    
 end
 
