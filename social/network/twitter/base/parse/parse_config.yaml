@@ -81,6 +81,7 @@ hbase_relationships_table: soc_net_tw_a_rel_b
 hbase_twitter_users_table: soc_net_tw_twitter_user
 hbase_delete_tweet_table: soc_net_tw_delete_tweet
 hbase_geo_table: soc_net_tw_geo
+hbase_tweet_url_table: soc_net_tw_tweet_url
 twitter_tokens:
   - hashtag
   - smiley
