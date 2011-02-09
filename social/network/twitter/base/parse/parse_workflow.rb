@@ -7,6 +7,12 @@ require 'swineherd/script/wukong_script'
 Settings.read('./parse_config.yaml')
 Settings.resolve!
 
+def get_esindex month
+  index = Settings['elasticsearch_indices_mapping'][month.to_i]
+  return index if index
+  "tweet-#{month}"
+end
+
 flow = Workflow.new(Settings['flow_id']) do
   
   api_parser      = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_api_requests-v2.rb'))
@@ -97,6 +103,25 @@ flow = Workflow.new(Settings['flow_id']) do
     tweet_unsplicer.output << latest_output(:unsplice_tweets)
     tweet_unsplicer.run
   end
+
+  task :index_tweets => [:unsplice_tweets] do
+    tweet_indexer.pig_classpath = Settings['pig_classpath']    
+    HDFS.dir_entries(latest_output(:unsplice_tweets)).each do |unspliced|
+      next if unspliced =~ /_log/
+      tweet_indexer.attributes = {
+        :registers  => Settings['elasticsearch_registers'],
+        :data       => unspliced,
+        :index_name => get_esindex(File.basename(unspliced)),
+        :obj_type   => 'tweet',
+        :bulk_size  => 500
+      }
+      tweet_indexer.output << next_output(:index_tweets)
+      tweet_indexer.run
+      # HACK!
+      sh "hadoop fs -mkdir #{latest_output(:index_tweets)}" # so it doesn't run again
+      tweet_indexer.refresh!
+    end
+  end
   
 
   task :index_tokens => [:unsplice] do
@@ -117,20 +142,7 @@ flow = Workflow.new(Settings['flow_id']) do
     end
   end
 
-  task :index_tweets => [:unsplice] do
-    es_indexer.pig_classpath = Settings['pig_classpath']
-    es_indexer.attributes = {
-      :registers  => Settings['elasticsearch_registers'],
-      :data       => File.join(latest_output(:unsplicer), 'tweet'),
-      :index_name => Settings['elasticsearch_tweet_index'],
-      :obj_type   => 'tweet',
-      :bulk_size  => 1000
-    }
-    es_indexer.output << next_output(:index_tweets)
-    es_indexer.run
-    # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:index_tweets)}" # so it doesn't run again    
-  end
+  
 
   task :load_a_atsigns_b => [:unsplice] do
     a_ats_b_loader.pig_classpath = Settings['pig_classpath']

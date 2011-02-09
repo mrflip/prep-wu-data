@@ -1,8 +1,8 @@
 register <%= piggybank_jar %>
 
-tweet        = LOAD '<%= tweet %>' AS (rsrc:chararray,tweet_id:long,created_at:chararray,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
+tweet        = LOAD '<%= data %>' AS (rsrc:chararray,tweet_id:long,created_at:chararray,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
 with_indices = FOREACH tweet {
-                 index = CONCAT('tweet-', SUBSTRING(created_at, 0, 6));
+                 index = SUBSTRING(created_at, 0, 6);
                  GENERATE
                    index                   AS index,
                    tweet_id                AS tweet_id,
