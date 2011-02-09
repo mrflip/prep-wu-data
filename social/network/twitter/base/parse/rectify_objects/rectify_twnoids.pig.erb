@@ -2,7 +2,7 @@
 register <%= jar %>;
 <% end %>
 
-data       = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name', '-limit 10000 -loadKey') AS (user_id:int, screen_name:chararray);
+data       = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
 tweet_noid = LOAD '<%= data %>' AS (rsrc:chararray,tweet_id:long,created_at:long,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
 
 first_pass = JOIN data BY screen_name, tweet_noid BY screen_name;

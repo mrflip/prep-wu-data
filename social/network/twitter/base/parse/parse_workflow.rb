@@ -132,7 +132,7 @@ flow = Workflow.new(Settings['flow_id']) do
         :data       => File.join(latest_output(:unsplicer), token),
         :index_name => 'token',
         :obj_type   => token,
-        :bulk_size  => 1000
+        :bulk_size  => 500
       }
       token_indexer.output << next_output(:index_tokens)
       token_indexer.run
@@ -143,7 +143,6 @@ flow = Workflow.new(Settings['flow_id']) do
   end
 
   
-
   task :load_a_atsigns_b => [:unsplice] do
     a_ats_b_loader.pig_classpath = Settings['pig_classpath']
     a_ats_b_loadeer.attributes = {
