@@ -1,8 +1,8 @@
 register <%= piggybank_jar %>;
 
-api_objects    = LOAD '$API';
-stream_objects = LOAD '$STREAM';
-search_objects = LOAD '$SEARCH';
+api_objects    = LOAD '<%= api %>';
+stream_objects = LOAD '<%= stream %>';
+search_objects = LOAD '<%= search %>';
 
 objects_to_unsplice = UNION api_objects, stream_objects, search_objects;
-STORE objects_to_unsplice INTO '$OUT' USING org.apache.pig.piggybank.storage.MultiStorage('$OUT','0', 'none', '\\t');
+STORE objects_to_unsplice INTO '<%= hdfs %>/<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');

@@ -57,12 +57,13 @@ flow = Workflow.new(Settings['flow_id']) do
   end
 
   task :unsplice => [:parse_all] do
-    unsplicer.attributes = {:piggybank_jar => File.join(Settings['pig_home'], 'contrib/piggybank/java/piggybank.jar')}
-    unsplicer.options    = {
-      :api    => latest_output(:parse_twitter_api),
-      :search => latest_output(:parse_twitter_search),
-      :stream => latest_output(:parse_twitter_stream),
-      :out    => next_output(:unsplice)
+    unsplicer.attributes = {
+      :piggybank_jar => File.join(Settings['pig_home'], 'contrib/piggybank/java/piggybank.jar'),
+      :hdfs          => "hdfs://#{Settings['hdfs']}",
+      :api           => latest_output(:parse_twitter_api),
+      :search        => latest_output(:parse_twitter_search),
+      :stream        => latest_output(:parse_twitter_stream),
+      :out           => next_output(:unsplice)
     }
     unsplicer.output << latest_output(:unsplice)
     unsplicer.run
@@ -83,8 +84,9 @@ flow = Workflow.new(Settings['flow_id']) do
     rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
     rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
     rels_rectifier.run
-    # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:rectify_rels)}" # so it doesn't run again
+    
+    # HACK! It doesn't have hdfs output, put some fake output there
+    HDFS.mkdir_p latest_output(:rectify_rels) # so it doesn't run again
   end
 
   #
@@ -137,7 +139,7 @@ flow = Workflow.new(Settings['flow_id']) do
       tweet_indexer.output << next_output(:index_tweets)
       tweet_indexer.run
       # HACK!
-      sh "hadoop fs -mkdir #{latest_output(:index_tweets)}" # so it doesn't run again
+      HDFS.mkdir_p latest_output(:index_tweets)
       tweet_indexer.refresh!
     end
   end
@@ -145,7 +147,7 @@ flow = Workflow.new(Settings['flow_id']) do
   task :index_tokens => [:unsplice] do
     token_indexer.pig_classpath = Settings['pig_classpath']
     Settings['twitter_tokens'].each do |token|
-      expected_input = File.join(latest_output(:unsplicer), token)
+      expected_input = File.join(latest_output(:unsplice), token)
       next unless HDFS.exist? expected_input
       token_indexer.attributes = {
         :registers  => Settings['elasticsearch_registers'],
@@ -157,7 +159,7 @@ flow = Workflow.new(Settings['flow_id']) do
       token_indexer.output << next_output(:index_tokens)
       token_indexer.run
       # HACK!
-      sh "hadoop fs -mkdir #{latest_output(:index_tokens)}" # so it doesn't run again
+      HDFS.mkdir_p latest_output(:index_tokens)
       token_indexer.refresh!
     end
   end
@@ -176,7 +178,7 @@ flow = Workflow.new(Settings['flow_id']) do
     a_ats_b_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_a_atsigns_b)}" # so it doesn't run again    
+    HDFS.mkdir_p latest_output(:load_a_atsigns_b)
   end
 
   task :load_a_follows_b => [:unsplice] do
@@ -192,7 +194,7 @@ flow = Workflow.new(Settings['flow_id']) do
     a_fos_b_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_a_follows_b)}" # so it doesn't run again    
+    HDFS.mkdir_p latest_output(:load_a_follows_b)
   end
 
   task :load_delete_tweets => [:unsplice] do
@@ -208,7 +210,7 @@ flow = Workflow.new(Settings['flow_id']) do
     delete_tweet_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_delete_tweets)}"
+    HDFS.mkdir_p latest_output(:load_delete_tweets)
   end
 
   task :load_geo => [:unsplice] do
@@ -224,7 +226,7 @@ flow = Workflow.new(Settings['flow_id']) do
     geo_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_geo)}"
+    HDFS.mkdir_p latest_output(:load_geo)
   end
 
   task :load_screen_names => [:unsplice] do
@@ -240,7 +242,7 @@ flow = Workflow.new(Settings['flow_id']) do
     screen_name_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_screen_names)}"
+    HDFS.mkdir_p latest_output(:load_screen_names)
   end
 
   task :load_search_ids => [:unsplice] do
@@ -256,7 +258,7 @@ flow = Workflow.new(Settings['flow_id']) do
     search_id_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_search_ids)}"
+    HDFS.mkdir_p latest_output(:load_search_ids)
   end
 
   task :load_tweet_urls => [:unsplice] do
@@ -272,7 +274,7 @@ flow = Workflow.new(Settings['flow_id']) do
     tweet_url_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_tweet_urls)}"
+    HDFS.mkdir_p latest_output(:load_tweet_urls)
   end
 
   task :load_user_ids => [:unsplice] do
@@ -288,7 +290,7 @@ flow = Workflow.new(Settings['flow_id']) do
     user_id_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_user_ids)}"
+    HDFS.mkdir_p latest_output(:load_user_ids)
   end
 
   task :load_profiles => [:unsplice] do
@@ -304,7 +306,7 @@ flow = Workflow.new(Settings['flow_id']) do
     profile_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_profiles)}"
+    HDFS.mkdir_p latest_output(:load_profiles)
   end
 
   task :load_styles => [:unsplice] do
@@ -320,9 +322,25 @@ flow = Workflow.new(Settings['flow_id']) do
     style_loader.run
 
     # HACK!
-    sh "hadoop fs -mkdir #{latest_output(:load_styles)}"
+    HDFS.mkdir_p latest_output(:load_styles)
   end
-   
+
+  task :process_latest => [
+    :rectify_rels,
+    :index_tweets,
+    :index_tokens,
+    :load_a_atsigns_b,
+    :load_a_follows_b,
+    :load_delete_tweets,
+    :load_geo,
+    :load_screen_names,
+    :load_search_ids,
+    :load_tweet_urls,
+    :load_user_ids,
+    :load_profiles,
+    :load_styles
+  ]
+  
 end
 
 flow.workdir = Settings['hdfs_work_dir']
