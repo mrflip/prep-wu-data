@@ -1,0 +1,28 @@
+<% registers.each do |jar| %>
+register <%= jar %>;
+<% end %>
+        
+data = LOAD '<%= data %>' AS (rsrc:chararray, user_a_id:chararray, user_b_id:chararray);
+
+a_follows_b = FOREACH data {
+                row_key   = CONCAT(CONCAT(user_a_id, ':'), user_b_id);
+                GENERATE
+                  row_key  AS row_key,
+                  'follow' AS col_fam,
+                  'ab'     AS col_name,
+                  '1'      AS col_val
+                ;
+              };
+
+b_follows_a = FOREACH data {
+                row_key   = CONCAT(CONCAT(user_b_id, ':'), user_a_id);
+                GENERATE
+                  row_key  AS row_key,
+                  'follow' AS col_fam,
+                  'ba'     AS col_name,
+                  '1'      AS col_val
+                ;
+              };
+
+generated = UNION a_follows_b, b_follows_a;
+STORE generated INTO '<%= table %>' USING com.infochimps.hbase.pig.DynamicFamilyStorage();

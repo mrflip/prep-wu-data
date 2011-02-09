@@ -15,16 +15,19 @@ end
 
 flow = Workflow.new(Settings['flow_id']) do
   
-  api_parser      = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_api_requests-v2.rb'))
-  stream_parser   = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_stream_requests-v2.rb'))
-  search_parser   = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_search_request.rb'))
-  unsplicer       = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_objects.pig.erb'))
-  tweet_unsplicer = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_tweets.pig.erb'))
-  tweet_rectifier = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_twnoids.pig.erb'))
-  rels_rectifier  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_ats_into_hbase.pig.erb'))
-  token_indexer   = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/token_indexer.pig.erb'))
-  tweet_indexer   = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/tweet_indexer.pig.erb'))
-  a_ats_b_loader  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/a_atsigns_b_loader.pig.erb'))
+  api_parser          = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_api_requests-v2.rb'))
+  stream_parser       = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_stream_requests-v2.rb'))
+  search_parser       = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_search_request.rb'))
+  unsplicer           = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_objects.pig.erb'))
+  tweet_unsplicer     = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/unsplice_tweets.pig.erb'))
+  tweet_rectifier     = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_twnoids.pig.erb'))
+  rels_rectifier      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_ats_into_hbase.pig.erb'))
+  token_indexer       = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/token_indexer.pig.erb'))
+  tweet_indexer       = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/tweet_indexer.pig.erb'))
+  a_ats_b_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/a_atsigns_b_loader.pig.erb'))
+  a_fos_b_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/a_follows_b_loader.pig.erb'))
+  delete_tweet_loader = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/delete_tweet_loader.pig.erb'))
+  geo_loader          = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/geo_loader.pig.erb'))
   
   task :parse_twitter_api do
     api_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter', Settings['api_parse_regexp'])
@@ -63,11 +66,13 @@ flow = Workflow.new(Settings['flow_id']) do
   # Can't possibly work until we can talk to hbase with chimpark and other clusters
   #
   task :rectify_rels => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), "a_atsigns_b-n")
+    next unless HDFS.exist? expected_input
     rels_rectifier.pig_classpath     = Settings['pig_classpath']
     rels_rectifier.options = {
       :ats_table   => Settings['hbase_relationships_table'],
       :twuid_table => Settings['hbase_twitter_users_table'],
-      :ats         => File.join(latest_output(:unsplice), "a_atsigns_b-n")
+      :ats         => expected_input
     }
     rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
     rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
@@ -80,11 +85,13 @@ flow = Workflow.new(Settings['flow_id']) do
   # Rectify onto disk
   #
   task :rectify_twnoids => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'tweet-noid')
+    next unless HDFS.exist? expected_input
     tweet_rectifier.pig_classpath = Settings['pig_classpath']
     tweet_rectifier.attributes = {
       :registers   => Settings['hbase_registers'],
       :twuid_table => Settings['hbase_twitter_users_table'],
-      :data        => File.join(latest_output(:unsplice), 'tweet-noid'),
+      :data        => expected_input,
       :hdfs        => "hdfs://#{Settings['hdfs']}",
       :out         => next_output(:rectify_twnoids)
     }
@@ -93,20 +100,26 @@ flow = Workflow.new(Settings['flow_id']) do
   end
 
   task :unsplice_tweets => [:unsplice, :rectify_twnoids] do
-    tweet_unsplicer.pig_classpath = Settings['pig_classpath']
-    tweet_unsplicer.attributes    = {
-      :piggybank_jar => File.join(Settings['pig_home'], 'contrib/piggybank/java/piggybank.jar'),
-      :data          => [File.join(latest_output(:unsplice), 'tweet'), latest_output(:rectify_twnoids)].join(","),
-      :hdfs          => "hdfs://#{Settings['hdfs']}",
-      :out           => next_output(:unsplice_tweets)
-    }
-    tweet_unsplicer.output << latest_output(:unsplice_tweets)
-    tweet_unsplicer.run
+    expected_tweet_input     = File.join(latest_output(:unsplice), 'tweet')
+    expected_rectified_input = latest_output(:rectify_twnoids)
+    if (HDFS.exist?(expected_tweet_input) || HDFS.exist?(expected_rectified_input)) 
+      tweet_unsplicer.pig_classpath = Settings['pig_classpath']
+      tweet_unsplicer.attributes    = {
+        :piggybank_jar => File.join(Settings['pig_home'], 'contrib/piggybank/java/piggybank.jar'),
+        :data          => [expected_tweet_input, expected_rectified_input].join(","),
+        :hdfs          => "hdfs://#{Settings['hdfs']}",
+        :out           => next_output(:unsplice_tweets)
+      }
+      tweet_unsplicer.output << latest_output(:unsplice_tweets)
+      tweet_unsplicer.run
+    end    
   end
 
   task :index_tweets => [:unsplice_tweets] do
-    tweet_indexer.pig_classpath = Settings['pig_classpath']    
-    HDFS.dir_entries(latest_output(:unsplice_tweets)).each do |unspliced|
+    tweet_indexer.pig_classpath = Settings['pig_classpath']
+    input_dir = latest_output(:unsplice_tweets)
+    next unless HDFS.exist? input_dir
+    HDFS.dir_entries(input_dir).each do |unspliced|
       next if unspliced =~ /_log/
       tweet_indexer.attributes = {
         :registers  => Settings['elasticsearch_registers'],
@@ -123,13 +136,14 @@ flow = Workflow.new(Settings['flow_id']) do
     end
   end
   
-
   task :index_tokens => [:unsplice] do
     token_indexer.pig_classpath = Settings['pig_classpath']
     Settings['twitter_tokens'].each do |token|
+      expected_input = File.join(latest_output(:unsplicer), token)
+      next unless HDFS.exist? expected_input
       token_indexer.attributes = {
         :registers  => Settings['elasticsearch_registers'],
-        :data       => File.join(latest_output(:unsplicer), token),
+        :data       => expected_input,
         :index_name => 'token',
         :obj_type   => token,
         :bulk_size  => 500
@@ -144,10 +158,12 @@ flow = Workflow.new(Settings['flow_id']) do
 
   
   task :load_a_atsigns_b => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'a_atsigns_b')
+    next unless HDFS.exist? expected_input
     a_ats_b_loader.pig_classpath = Settings['pig_classpath']
-    a_ats_b_loadeer.attributes = {
+    a_ats_b_loader.attributes = {
       :registers  => Settings['hbase_registers'],
-      :data       => File.join(latest_output(:unsplicer), 'a_atsigns_b'),
+      :data       => expected_input,
       :table      => Settings['hbase_relationships_table']
     }
     a_ats_b_loader.output << next_output(:load_a_atsigns_b)
@@ -155,9 +171,56 @@ flow = Workflow.new(Settings['flow_id']) do
 
     # HACK!
     sh "hadoop fs -mkdir #{latest_output(:load_a_atsigns_b)}" # so it doesn't run again    
-  end  
-  
+  end
 
+  task :load_a_follows_b => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'a_follows_b')
+    next unless HDFS.exist? expected_input
+    a_fos_b_loader.pig_classpath = Settings['pig_classpath']
+    a_fos_b_loader.attributes = {
+      :registers  => Settings['hbase_registers'],
+      :data       => expected_input,
+      :table      => Settings['hbase_relationships_table']
+    }
+    a_fos_b_loader.output << next_output(:load_a_follows_b)
+    a_fos_b_loader.run
+
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:load_a_follows_b)}" # so it doesn't run again    
+  end
+
+  task :load_delete_tweets => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'delete_tweet')
+    next unless HDFS.exist? expected_input
+    delete_tweet_loader.pig_classpath = Settings['pig_classpath']
+    delete_tweet_loader.attributes = {
+      :registers  => Settings['hbase_registers'],
+      :data       => expected_input,
+      :table      => Settings['hbase_delete_tweet_table']
+    }
+    delete_tweet_loader.output << next_output(:load_delete_tweets)
+    delete_tweet_loader.run
+
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:load_delete_tweets)}"
+  end
+
+  task :load_geo => [:unsplice] do
+    expected_input = File.join(latest_output(:unsplice), 'geo')
+    next unless HDFS.exist? expected_input
+    geo_loader.pig_classpath = Settings['pig_classpath']
+    geo_loader.attributes = {
+      :registers  => Settings['hbase_registers'],
+      :data       => expected_input,
+      :table      => Settings['hbase_geo_table']
+    }
+    geo_loader.output << next_output(:load_geo)
+    geo_loader.run
+
+    # HACK!
+    sh "hadoop fs -mkdir #{latest_output(:load_geo)}"
+  end  
+   
 end
 
 flow.workdir = Settings['hdfs_work_dir']

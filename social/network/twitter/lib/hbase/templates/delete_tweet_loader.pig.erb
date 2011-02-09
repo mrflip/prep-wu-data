@@ -1,0 +1,8 @@
+<% registers.each do |jar| %>
+register <%= jar %>;
+<% end %>
+
+%default CF    'base'
+data     = LOAD '<%= data %>' AS (rsrc:chararray, twid:long, created_at:long, user_id:long, screen_name:chararray);
+cut_data = FOREACH data GENERATE twid AS key, twid AS tweet_id, created_at, user_id, screen_name;
+STORE cut_data INTO '<%= table %>' USING com.infochimps.hbase.pig.HBaseStorage('$CF:tweet_id $CF:created_at $CF:user_id $CF:screen_name');
