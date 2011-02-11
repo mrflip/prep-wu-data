@@ -1,4 +1,4 @@
-register build/wonderdog.jar
+register /home/travis/dev/wonderdog/build/wonderdog.jar
 register /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
 register /usr/local/share/elasticsearch/lib/jline-0.9.94.jar
 register /usr/local/share/elasticsearch/lib/jna-3.2.7.jar

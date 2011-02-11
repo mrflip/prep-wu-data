@@ -7,6 +7,6 @@ register '/usr/lib/hbase/lib/guava-r05.jar';
 
 %default TABLE 'soc_net_tw_trstrank'
 
-data       = LOAD '$DATA' AS (screen_name:chararray, uid:long, rank:float, tq:int);
-cut_fields = FOREACH data GENERATE uid AS key, uid AS user_id, screen_name, rank, tq;
-STORE cut_fields INTO '$TABLE' USING com.infochimps.hbase.pig.HBaseStorage('$TODAY:user_id $TODAY:screen_name $TODAY:rank $TODAY:tq');
+data       = LOAD '$DATA' AS (screen_name:chararray, uid:long, trstrank:float, tq:int);
+cut_fields = FOREACH data GENERATE uid AS key, uid AS user_id, screen_name, trstrank, tq;
+STORE cut_fields INTO '$TABLE' USING com.infochimps.hbase.pig.HBaseStorage('$TODAY:user_id $TODAY:screen_name $TODAY:trstrank $TODAY:tq');
