@@ -1,7 +1,9 @@
 ---
+flow_id: 20110215
 namespace: /soc/net/tw
 protocol: people_search
 filesystem_scheme: hdfs
+pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
 es_jars:
   - /home/jacob/Programming/wonderdog/build/wonderdog.jar
   - /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
@@ -22,4 +24,33 @@ hbase_jars:
   - /usr/lib/hbase/lib/zookeeper.jar
 hbase_table: soc_net_tw_twitter_user
 hbase_column_family: profile
-flow_id: 20110215
+es_index: soc_net_tw_twitter_user
+es_obj_type: profile
+bulk_size: 500
+twitter_user_profile:
+  - name: user_id
+    pig_type: int
+  - name: scraped_at
+    pig_type: long
+  - name: screen_name
+    pig_type: chararray
+  - name: name
+    pig_type: chararray
+  - name: url
+    pig_type: chararray
+  - name: location
+    pig_type: chararray
+  - name: description
+    pig_type: chararray
+  - name: time_zone
+    pig_type: chararray
+  - name: utc_offset
+    pig_type: chararray
+  - name: lang
+    pig_type: chararray
+  - name: geo_enabled
+    pig_type: chararray
+  - name: verified
+    pig_type: chararray
+  - name: contributors_enabled
+    pig_type: chararray

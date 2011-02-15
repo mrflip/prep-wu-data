@@ -25,7 +25,20 @@ flow = Swineherd::Workflow.new(options['flow_id']) do
   profile_indexer = PigScript.new('templates/profile_loader.pig.erb')
 
   task :index_profiles do
-    puts "Up in yur hdfs, indexin' your profilez"
+    profile_indexer.pig_classpath = options['pig_classpath']
+    profile_indexer.attributes = {
+      :jars                 => options['es_jars'] + options['hbase_jars'],
+      :hbase_table          => options['hbase_table'],
+      :hbase_column_family  => options['hbase_column_family'],
+      :twitter_user_profile => options['twitter_user_profile'],
+      :es_index             => options['es_index'],
+      :es_obj_type          => options['es_obj_type'],
+      :bulk_size            => 500
+    }
+    profile_indexer.output << next_output(:index_profiles)
+    profile_indexer.run
+
+    hdfs.mkpath(latest_output(:index_profiles)) # so it doesn't run again
   end
 
 end
