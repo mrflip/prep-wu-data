@@ -1,13 +1,10 @@
-<% jars.each |jar| %>
+<% jars.each do |jar| %>
 register <%= jar %>;
 <% end %>
         
-data     = LOAD '<%= hbase_table %>' USING com.infochimps.hbase.pig.HBaseStorage(
-             <% twitter_user_profile.each |field| %>
-             '<%= hbase_column_family %>:<%= field["name"] %>'
-             <% end %>) AS (
-             <% twitter_user_profile.each |field| %>
+data     = LOAD '<%= hbase_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<% twitter_user_profile.each{|field| %><%= hbase_column_family %>:<%= field["name"] %> <% } %>') AS (
+             <% twitter_user_profile.each do |field| %>
              <%= field['name'] %>:<%= field['pig_type'] %><% if field != twitter_user_profile.last %>,<% end %>
-             <% end %>, '-limit 1000');
+             <% end %>);
 
 STORE data INTO 'es://<%= es_index %>/<%= es_obj_type %>' USING com.infochimps.elasticsearch.pig.ElasticSearchIndex('0', '<%= bulk_size %>');
