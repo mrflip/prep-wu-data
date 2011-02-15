@@ -1,0 +1,39 @@
+#!/usr/bin/env jruby
+
+require 'rubygems'
+require 'swineherd' ; include Swineherd
+require 'swineherd/script/pig_script' ; include Swineherd::Script
+require 'json'
+
+inputdir  = ARGV[0]
+outputdir = ARGV[1]
+
+#
+# Get new hadoop file system
+#
+hdfs = Swineherd::FileSystem.get(:hdfs)
+
+#
+# Read in working config file
+#
+options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
+
+#
+# Define workflow
+#
+flow = Swineherd::Workflow.new(options['flow_id']) do
+  profile_indexer = PigScript.new('templates/profile_loader.pig.erb')
+
+  task :index_profiles do
+    puts "Up in yur hdfs, indexin' your profilez"
+  end
+
+end
+
+flow.workdir = File.join(inputdir, "rawd")
+flow.describe
+
+#
+# Run workflow
+#
+flow.run :index_profiles
