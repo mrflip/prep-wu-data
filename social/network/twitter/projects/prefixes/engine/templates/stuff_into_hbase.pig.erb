@@ -1,0 +1,6 @@
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
+
+data = LOAD '<%= data %>' AS (prefix:chararray, completions:chararray);
+STORE data INTO '<%= output_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= output_column_family %>:completions');

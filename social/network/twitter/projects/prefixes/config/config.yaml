@@ -1,0 +1,36 @@
+---
+
+
+
+# IT IS EXREMELY IMPORTANT THAT YOU UPDATE THIS VALUE TO REFLECT THE CORRECT HDFS INTERNAL IP
+hdfs: ip-10-117-77-123.ec2.internal
+# DO IT NOW
+
+
+
+flow_id: 20110209
+namespace: /soc/net/tw
+protocol: sn_autocomplete
+filesystem_scheme: hdfs
+pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+jars:
+  - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
+  - /usr/lib/hbase/lib/jline-0.9.94.jar
+  - /usr/lib/hbase/lib/guava-r05.jar
+  - /usr/lib/hbase/hbase.jar
+  - /usr/lib/hbase/lib/zookeeper.jar
+hbase_table: soc_net_tw_trstrank
+hbase_column_family: 20110210
+output_table: soc_net_tw_sn_autocomplete
+output_column_family: 20110216
+trstrank:
+  - name: screen_name
+    pig_type: chararray
+  - name: trstrank
+    pig_type: float
+    
+max_length: 15
+min_length: 3
+num_results: 100
+text_field: screen_name
+weight_field: trstrank

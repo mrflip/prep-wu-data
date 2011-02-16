@@ -1,0 +1,74 @@
+#!/usr/bin/env jruby
+
+require 'swineherd' ; include Swineherd
+require 'swineherd/script/pig_script' ; include Swineherd::Script
+require 'swineherd/script/wukong_script'
+
+inputdir  = ARGV[0]
+outputdir = ARGV[1]
+
+#
+# Get new hadoop file system
+#
+hdfs = Swineherd::FileSystem.get(:hdfs)
+
+#
+# Read in working config file
+#
+options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
+
+flow = Workflow.new(options['flow_id']) do
+
+  prefixer   = PigScript.new(File.dirname(__FILE__)+'/templates/prefixes.pig.erb')
+  jsonizer   = WukongScript.new(File.dirname(__FILE__)+'/templates/jsonize_results.rb')
+  hbaseifier = PigScript.new(File.dirname(__FILE__)+'/templates/stuff_into_hbase.pig.erb')
+
+  task :generate_prefixes do    
+    max_length  = options['max_length'].to_i
+    min_length  = options['min_length'].to_i
+    prefix_rels = []
+    (max_length-min_length).times{|n| prefix_rels << "prefixes_#{n}"}
+
+    prefixer.pig_classpath = options['pig_classpath']
+    prefixer.output << next_output(:generate_prefixes)
+    prefixer.attributes = {
+      :jars                => options['jars'],
+      :trstrank            => options['trstrank'],
+      :hbase_table         => options['hbase_table'],
+      :hbase_column_family => options['hbase_column_family'],
+      :max_length          => max_length,
+      :min_length          => min_length,
+      :text_field          => options['text_field'],
+      :weight_field        => options['weight_field'],
+      :hdfs                => options['hdfs'],
+      :out                 => latest_output(:generate_prefixes),
+      :prefix_rels         => prefix_rels.join(",")
+    }
+    prefixer.run(:hadoop)
+  end
+
+  task :jsonize_results => [:generate_prefixes] do
+    jsonizer.input  << latest_output(:generate_prefixes)
+    jsonizer.output << next_output(:jsonize_results)
+    jsonizer.options = {:num_elements => options['num_results']}
+    jsonizer.run(:hadoop)
+  end
+
+  task :hbaseify_results => [:jsonize_results] do
+    hbaseifier.pig_classpath = options['pig_classpath']
+    hbaseifier.output << next_output(:hbaseify_results)
+    hbaseifier.attributes = {
+      :jars                 => options['jars'],
+      :data                 => latest_output(:jsonize_results),
+      :output_table         => options['output_table'],
+      :output_column_family => options['output_column_family']
+    }
+    hbaseifier.run(:hadoop)
+    hdfs.mkpath(latest_output(:hbaseify_results)) # Hack, don't run if we've already ran
+  end
+
+end
+
+flow.workdir = File.join(inputdir, "rawd")
+flow.describe
+flow.run(:hbaseify_results)

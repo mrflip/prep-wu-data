@@ -1,0 +1,7 @@
+require 'rubygems'
+require 'hackboxen'
+require 'swineherd' ; include Swineherd
+
+HACKBOX_DIR = File.dirname(__FILE__)
+
+task :default => ['hb:init']

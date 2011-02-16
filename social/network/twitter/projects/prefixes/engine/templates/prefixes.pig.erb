@@ -1,0 +1,16 @@
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
+
+data = LOAD '<%= hbase_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<% trstrank.each{|field| %><%= hbase_column_family %>:<%= field["name"] %> <% } %>') AS (
+         <% trstrank.each do |field| %>
+         <%= field['name'] %>:<%= field['pig_type'] %><% unless field == trstrank.last %>,<% end %> 
+         <% end %>);
+filtered = FILTER data BY <%= text_field %> IS NOT NULL;
+<% (max_length-min_length).times do |n| %>
+prefixes_<%= n %> = FOREACH filtered GENERATE LOWER(SUBSTRING(<%= text_field %>,0,<%= n+min_length %>)) AS prefix, <%= text_field %> AS text, <%= weight_field %> AS weight;
+<% end %>
+together = UNION <%= prefix_rels %>;
+grouped  = GROUP together BY prefix;
+outdata  = FOREACH grouped GENERATE group AS prefix, together.(text, weight) AS possible_completions;
+STORE outdata INTO 'hdfs://<%= hdfs %>/<%= out %>';
