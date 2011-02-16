@@ -22,7 +22,7 @@ options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.y
 # Define workflow
 #
 flow = Swineherd::Workflow.new(options['flow_id']) do
-  profile_indexer = PigScript.new('templates/profile_loader.pig.erb')
+  profile_indexer = PigScript.new(File.dirname(__FILE__)+'/templates/profile_loader.pig.erb')
 
   task :index_profiles do
     profile_indexer.pig_classpath = options['pig_classpath']
@@ -37,7 +37,6 @@ flow = Swineherd::Workflow.new(options['flow_id']) do
     }
     profile_indexer.output << next_output(:index_profiles)
     profile_indexer.run
-
     hdfs.mkpath(latest_output(:index_profiles)) # so it doesn't run again
   end
 
