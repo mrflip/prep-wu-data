@@ -3,7 +3,7 @@
 
 
 # IT IS EXREMELY IMPORTANT THAT YOU UPDATE THIS VALUE TO REFLECT THE CORRECT HDFS INTERNAL IP
-hdfs: ip-10-117-77-123.ec2.internal
+hdfs: ip-10-113-50-207.ec2.internal
 # DO IT NOW
 
 
@@ -12,6 +12,7 @@ flow_id: 20110209
 namespace: /soc/net/tw
 protocol: sn_autocomplete
 filesystem_scheme: hdfs
+reduce_tasks: 54
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
 jars:
   - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar

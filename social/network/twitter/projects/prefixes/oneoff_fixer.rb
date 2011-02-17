@@ -11,8 +11,9 @@ class Jsonizer < Wukong::Streamer::RecordStreamer
   end
 
   def jsonize pig_bag
-    list  = pig_bag.from_pig_bag # will be an array of arrays
-    {:completions => list.flatten}.to_json
+    list  = pig_bag.from_pig_bag.sort{|x,y| y.last <=> x.last}.uniq[0...100] # [['bob', 0.2],['sally', 0.1],...]
+    list.map!{|x| x.first}                  # [['bob'], ['sally'], ...]
+    {:completions => list.flatten}.to_json  # {"completions":["bob", "sally"]}
   end
 
 end

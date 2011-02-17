@@ -30,6 +30,7 @@ flow = Workflow.new(options['flow_id']) do
     (max_length-min_length).times{|n| prefix_rels << "prefixes_#{n}"}
 
     prefixer.pig_classpath = options['pig_classpath']
+    prefixer.pig_options   = options['pig_options']
     prefixer.output << next_output(:generate_prefixes)
     prefixer.attributes = {
       :jars                => options['jars'],

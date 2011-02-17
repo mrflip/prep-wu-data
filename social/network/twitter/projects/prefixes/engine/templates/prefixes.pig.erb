@@ -11,6 +11,12 @@ filtered = FILTER data BY <%= text_field %> IS NOT NULL;
 prefixes_<%= n %> = FOREACH filtered GENERATE LOWER(SUBSTRING(<%= text_field %>,0,<%= n+min_length %>)) AS prefix, <%= text_field %> AS text, <%= weight_field %> AS weight;
 <% end %>
 together = UNION <%= prefix_rels %>;
-grouped  = GROUP together BY prefix;
-outdata  = FOREACH grouped GENERATE group AS prefix, together.(text, weight) AS possible_completions;
+grouped  = GROUP together BY prefix PARALLEL <%= reduce_tasks %>;
+outdata  = FOREACH grouped {
+             top_n_completions = TOP(<%= num_results %>, 1, together.(text, weight));
+             GENERATE
+               group             AS prefix,
+               top_n_completions.($0) AS possible_completions
+             ;
+           }
 STORE outdata INTO 'hdfs://<%= hdfs %>/<%= out %>';
