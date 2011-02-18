@@ -1,5 +1,6 @@
 --
 -- Load Twitter User by Screen Name(lowercase) using pig and HBase TableOutputFormat
+-- 
 --
 register '/home/travis/dev/HbaseBulkloader/build/hbase_bulkloader.jar';
 register '/usr/lib/hbase/lib/jline-0.9.94.jar';
