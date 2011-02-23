@@ -1,10 +1,19 @@
 ---
+
+# hadoop stuff
+hdfs: ip-10-117-77-123.ec2.internal
+hadoop_reduce_tasks: 4
+#
+
+# generic workflow stuff
 flow_id: 20110301
 namespace: /soc/net/tw
 protocol: trstrank
 filesystem_scheme: hdfs
+#
 
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+pig_home: /usr/local/share/pig
 hbase_jars:
   - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
   - /usr/lib/hbase/lib/jline-0.9.94.jar
@@ -19,8 +28,8 @@ twitter_rel_table: soc_net_tw_a_rel_b
 trstrank_table: soc_net_tw_trstrank
 #
 
-# Pagerank specific config
-pagerank_iterations: 10
+# Pagerank specific stuff
+pagerank_iterations: 5
 pagerank_damping: 0.85f
 #
 
@@ -179,9 +188,6 @@ types:
       Stored in the 'soc_net_tw_twitter_user' table of Hbase under the 'info' column family.
     type: record
     fields:
-      - name: rsrc
-        type: string
-        doc: Snake-ized class name (twitter_user_id)
       - name: user_id
         type: int
       - name: scraped_at
