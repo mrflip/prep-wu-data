@@ -2,7 +2,7 @@
 register <%= jar %>;
 <% end %>
 
-data = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey -limit 100') AS (
+data = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey') AS (
         row_key:chararray,
         a_follows_b:int,
         b_follows_a:int,
