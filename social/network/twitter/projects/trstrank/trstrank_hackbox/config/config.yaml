@@ -1,0 +1,215 @@
+---
+flow_id: 20110301
+namespace: /soc/net/tw
+protocol: trstrank
+filesystem_scheme: hdfs
+
+pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+hbase_jars:
+  - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
+  - /usr/lib/hbase/lib/jline-0.9.94.jar
+  - /usr/lib/hbase/lib/guava-r05.jar
+  - /usr/lib/hbase/hbase.jar
+  - /usr/lib/hbase/lib/zookeeper.jar
+twitter_users_table: soc_net_tw_twitter_user
+twitter_users_cf: info
+twitter_rel_table: soc_net_tw_a_rel_b
+
+# Column family, at the moment, is simply the flow_id
+trstrank_table: soc_net_tw_trstrank
+#
+
+# Pagerank specific config
+pagerank_iterations: 10
+pagerank_damping: 0.85f
+#
+
+# Multigraph, Degree Distribution, and Trstrank Table will go here, scoped by flow_id
+s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
+#
+
+types:
+
+  - name: trstrank_table
+    doc: |-
+      Final output of the trstrank calculation.
+    fields:
+      - name: screen_name
+        type: string
+      - name: user_id
+        type: int
+      - name: trstrank
+        type: float
+      - name: tq
+        type: int
+      
+  - name: trstquotient
+    doc: |-
+      Intermediate output that contains binned trstrank values.
+    type: record
+    fields:
+      - name: user_id
+        type: int
+      - name: rank
+        type: float
+        doc: Scaled trstrank value.
+      - name: tq
+        type: float
+        doc: Percentile ranking based on number of observed followers.
+        
+  - name: scaled_pagerank_with_fo
+    doc: |-
+      Scaled raw output of the pagerank iterations to rank from 0 to 10 and joined with followers observed.
+    type: record
+    fields:
+      - name: user_id
+        type: int
+      - name: fo_rank
+        type: float
+        doc: A scaling of the raw follow pagerank such that it ranges from 0 to 10
+      - name: at_rank
+        type: float
+        doc: A scaling of the raw atsign pagerank such that it ranges from 0 to 10
+      - name: followers_observed
+        type: int
+        doc: Followers observed as given from the degree distribution
+      
+  - name: degree_distribution
+    doc: |-
+      The degree distribution over the multigraph.
+    type: record
+    fields:
+      - name: user_id
+        type: int
+      - name: fo_o
+        type: int
+        doc: Number of twitter users we have observed user_id follow
+      - name: fo_i
+        type: int
+        doc: Number of twitter users we have observed follow user_id
+      - name: me_o
+        type: int
+        doc: Number of mentions user_id has sent out
+      - name: me_i
+        type: int
+        doc: Number of mentions from the rest of the twitter community to user_id
+      - name: re_o
+        type: int
+        doc: Number of replies user_id has sent out
+      - name: re_i
+        type: int
+        doc: Number of replies from the rest of the twitter community to user_id
+      - name: rt_o
+        type: int
+        doc: Number of retweets user_id has sent out
+      - name: rt_i
+        type: int
+        doc: Number of retweets from the rest of the twitter comminity to user_id
+
+  - name: intermediate_pagerank
+    doc: |-
+      Intermediate output. Little more than a rearranging of the multigraph for pagerank iteration.
+    type: record
+    fields:
+      - name: vertex
+        type: int
+      - name: fo_rank
+        type: float
+        doc: Initial follow pagerank
+      - name: at_rank
+        type: float
+        doc: Initial atsign pagerank
+      - name: edge_list
+        type: record
+        doc: A Pig bag representation of the adjacency list
+        
+  - name: edge_list
+    doc: |-
+      A pig bag representation of the edge list for pagerank.
+    fields:
+      - name: vertex_out
+        type: int
+        doc: One vertex among many given some of the pagerank shares by vertex
+      - name: a_follows_b
+        type: float
+        doc: A floating point 0.0 or 1.0 depending on whether vertex is following vertex out
+      - name: at_o
+        type: float
+        doc: The sum of mentions, replies, and retweets from vertex to vertex out
+      
+  - name: multigraph
+    doc: |-
+      Encapsulates all we know about two twitter users interactions. Very expensive to compute
+      thus we store it in s3 since we use it later for influencer metrics and stronglinks
+    type: record
+    fields:
+      - name: user_a_id
+        type: int
+      - name: user_b_id
+        type: int
+      - name: a_follows_b
+        type: int
+        doc: 1 if user_a follows user_b, 0 otherwise
+      - name: b_follows_a
+        type: int
+        doc: 1 if user_b follows user_a, 0 otherwise
+      - name: me_i
+        type: int
+        doc: Number of mentions from user_b to user_a
+      - name: me_o
+        type: int
+        doc: Number of mentions from user_a to user_b
+      - name: re_i
+        type: int
+        doc: Number of replies from user_b to user_a
+      - name: re_o
+        type: int
+        doc: Number of replies from user_a to user_b
+      - name: rt_i
+        type: int
+        doc: Number of retweets from user_b to user_a
+      - name: rt_o
+        type: int
+        doc: Number of retweets from user_a to user_b
+
+  
+  - name: twitter_user_id
+    doc: |-
+      Encapsulates the most useful (internal to infochimps) information about a twitter user.
+      Stored in the 'soc_net_tw_twitter_user' table of Hbase under the 'info' column family.
+    type: record
+    fields:
+      - name: rsrc
+        type: string
+        doc: Snake-ized class name (twitter_user_id)
+      - name: user_id
+        type: int
+      - name: scraped_at
+        type: long
+        doc: A string formatted (YYYYMMddhhmmss) date representing when the user was added to the datastore
+      - name: screen_name
+        type: string
+      - name: protected
+        type: int
+        doc: Is this twitter user protected or not
+      - name: followers_count
+        type: int
+      - name: friends_count
+        type: int
+      - name: statuses_count
+        type: int
+        doc: Number of tweets as reported by the twitter api
+      - name: favourites_count
+        type: int
+      - name: created_at
+        type: long
+        doc: A string formatted (YYYYMMddhhmmss) date representing whenn the user created their account with twitter
+      - name: sid
+        type: int
+        doc: user search id as reported by the twitter search api. yes it is different than the user_id
+      - name: is_full
+        type: int
+        doc: are the fields of this record complete?
+      - name: health
+        type: string
+        doc: wtf
