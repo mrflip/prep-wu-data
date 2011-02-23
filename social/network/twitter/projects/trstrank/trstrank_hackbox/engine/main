@@ -93,7 +93,27 @@ flow = Workflow.new(options['flow_id']) do
     }
     degrees_calculator.run unless hdfs.exists? latest_output(:multigraph_degrees)
   end
+
+  #
+  #
+  #
   
+  #
+  # FIXME!!!! we need an s3 filesystem interface
+  #
+  def hackety_exists? target
+    system %Q{hadoop fs -test -e #{target}}
+  end
+  
+  task :store_valuable_graph_data => [:multigraph_degrees] do
+    deg_dist_out   = File.join(options['s3_graph_dir'], options['flow_id'].to_s, 'degree_distribution')
+    multigraph_out = File.join(options['s3_graph_dir'], options['flow_id'].to_s, 'multigraph')
+    hdfs.stream(latest_output(:multigraph_degrees), deg_dist_out) unless hackety_exists? deg_dist_out
+    hdfs.stream(latest_output(:assemble_multigraph), multigraph_out) unless hackety_exists? multigraph_out
+  end
+  #
+  #
+  #
   
   #
   # Scales final pagerank values to (0-10) and joins it with the followers
@@ -102,7 +122,7 @@ flow = Workflow.new(options['flow_id']) do
   # FIXME: why doesn't multitask work here?
   #
   # multitask :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
-  task :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
+  task :join_pagerank_with_followers => [:store_valuable_graph_data, :pagerank_iterate] do
     followers_joiner.attributes = {
       :hdfs                => "hdfs://#{options['hdfs']}",
       :reduce_tasks        => options['hadoop_reduce_tasks'],      
@@ -141,7 +161,8 @@ flow = Workflow.new(options['flow_id']) do
       :trstrank_table => options['trstrank_table'],
       :trstrank_cf    => 'base'
     }
-    trstrank_assembler.run
+    trstrank_assembler.run unless hdfs.exists? next_output(:assemble_trstrank)
+    hdfs.mkpath latest_output(:assemble_trstrank) # hack so it wont run again
   end
   
 end
