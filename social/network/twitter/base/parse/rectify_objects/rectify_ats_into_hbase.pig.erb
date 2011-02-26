@@ -6,7 +6,7 @@ data         = LOAD '$TWUID_TABLE' USING com.infochimps.hbase.pig.HBaseStorage('
 a_atsigns_bn = LOAD '$ATS' AS (rsrc:chararray, user_a_id:long, user_b_id:long, rel_type:chararray, twid:long, crat:long, user_b_sn:chararray, rel_tw_id:long);
 
 filtered     = FILTER a_atsigns_bn BY user_b_sn IS NOT NULL;
-ats_joined   = JOIN data BY screen_name, filtered BY user_b_sn;
+ats_joined   = JOIN data BY screen_name, filtered BY user_b_sn PARALLEL <%= reduce_tasks %>;
 ats_filtered = FILTER ats_joined BY data::user_id IS NOT NULL; -- naughty naughty
 a_atsigns_b  = FOREACH ats_filtered GENERATE
                     filtered::user_a_id AS user_a_id,

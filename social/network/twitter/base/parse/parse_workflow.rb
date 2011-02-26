@@ -80,7 +80,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :twuid_table => Settings['hbase_twitter_users_table'],
       :ats         => expected_input
     }
-    rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
+    rels_rectifier.attributes = {:registers => Settings['hbase_registers'], :reduce_tasks => Settings['hadoop_reduce_tasks']}
     rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
     rels_rectifier.run unless hdfs.exists? latest_output(:rectify_rels)
 
@@ -96,6 +96,7 @@ flow = Workflow.new(Settings['flow_id']) do
     next unless HDFS.exist? expected_input
     tweet_rectifier.pig_classpath = Settings['pig_classpath']
     tweet_rectifier.attributes = {
+      :reduce_tasks => Settings['hadoop_reduce_tasks'],
       :registers   => Settings['hbase_registers'],
       :twuid_table => Settings['hbase_twitter_users_table'],
       :data        => expected_input,

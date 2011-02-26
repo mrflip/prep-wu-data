@@ -5,7 +5,7 @@ register <%= jar %>;
 data       = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
 tweet_noid = LOAD '<%= data %>' AS (rsrc:chararray,tweet_id:long,created_at:long,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
 
-first_pass = JOIN data BY screen_name, tweet_noid BY screen_name;
+first_pass = JOIN data BY screen_name, tweet_noid BY screen_name PARALLEL <%= reduce_tasks %>;
 fixed_ids  = FOREACH first_pass GENERATE
                (data::user_id IS NULL ? 'tweet-noid' : 'tweet') AS rsrc,
                tweet_noid::tweet_id                AS tweet_id,
@@ -34,7 +34,7 @@ not_replies = FILTER rectified BY in_reply_to_screen_name IS NULL; -- these are 
 
 
 replies     = FILTER rectified BY in_reply_to_screen_name IS NOT NULL;
-joined      = JOIN data BY screen_name, replies BY in_reply_to_screen_name;
+joined      = JOIN data BY screen_name, replies BY in_reply_to_screen_name PARALLEL <%= reduce_tasks %>;
 rectified   = FOREACH joined GENERATE
                 replies::rsrc                    AS rsrc,
                 replies::tweet_id                AS tweet_id,
