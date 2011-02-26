@@ -14,7 +14,7 @@ def get_esindex month
 end
 
 flow = Workflow.new(Settings['flow_id']) do
-  
+
   api_parser          = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_api_requests-v2.rb'))
   stream_parser       = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_stream_requests-v2.rb'))
   search_parser       = WukongScript.new(File.join(Settings['wuclan_parse_scripts'], 'parse_twitter_search_request.rb'))
@@ -34,23 +34,23 @@ flow = Workflow.new(Settings['flow_id']) do
   user_id_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_id_loader.pig.erb'))
   profile_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_profile_loader.pig.erb'))
   style_loader        = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_style_loader.pig.erb'))
-  
+
   task :parse_twitter_api do
     api_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter', Settings['api_parse_regexp'])
     api_parser.output << next_output(:parse_twitter_api)
-    api_parser.run
+    api_parser.run unless hdfs.exists? latest_output(:parse_twitter_api)
   end
 
   task :parse_twitter_search do
     search_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter.search', Settings['search_parse_regexp'])
     search_parser.output << next_output(:parse_twitter_search)
-    search_parser.run
+    search_parser.run unless hdfs.exists? latest_output(:parse_twitter_search)
   end
 
   task :parse_twitter_stream do
     stream_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter.stream', Settings['stream_parse_regexp'])
     stream_parser.output << next_output(:parse_twitter_stream)
-    stream_parser.run
+    stream_parser.run unless hdfs.exists? latest_output(:parse_twitter_stream)
   end
 
   task :parse_all => ["#{Settings['flow_id']}:parse_twitter_api", "#{Settings['flow_id']}:parse_twitter_search", "#{Settings['flow_id']}:parse_twitter_stream"] do
@@ -65,8 +65,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :stream        => latest_output(:parse_twitter_stream),
       :out           => next_output(:unsplice)
     }
-    unsplicer.output << latest_output(:unsplice)
-    unsplicer.run
+    unsplicer.run unless hdfs.exists? latest_output(:unsplice)
   end
 
   #
@@ -83,8 +82,8 @@ flow = Workflow.new(Settings['flow_id']) do
     }
     rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
     rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
-    rels_rectifier.run
-    
+    rels_rectifier.run unless hdfs.exists? latest_output(:rectify_rels)
+
     # HACK! It doesn't have hdfs output, put some fake output there
     HDFS.mkdir_p latest_output(:rectify_rels) # so it doesn't run again
   end
@@ -103,14 +102,13 @@ flow = Workflow.new(Settings['flow_id']) do
       :hdfs        => "hdfs://#{Settings['hdfs']}",
       :out         => next_output(:rectify_twnoids)
     }
-    tweet_rectifier.output << latest_output(:rectify_twnoids)
-    tweet_rectifier.run
+    tweet_rectifier.run unless hdfs.exists? latest_output(:rectify_twnoids)
   end
 
   task :unsplice_tweets => [:unsplice, :rectify_twnoids] do
     expected_tweet_input     = File.join(latest_output(:unsplice), 'tweet')
     expected_rectified_input = latest_output(:rectify_twnoids)
-    if (HDFS.exist?(expected_tweet_input) || HDFS.exist?(expected_rectified_input)) 
+    if (HDFS.exist?(expected_tweet_input) || HDFS.exist?(expected_rectified_input))
       tweet_unsplicer.pig_classpath = Settings['pig_classpath']
       tweet_unsplicer.attributes    = {
         :piggybank_jar => File.join(Settings['pig_home'], 'contrib/piggybank/java/piggybank.jar'),
@@ -118,9 +116,8 @@ flow = Workflow.new(Settings['flow_id']) do
         :hdfs          => "hdfs://#{Settings['hdfs']}",
         :out           => next_output(:unsplice_tweets)
       }
-      tweet_unsplicer.output << latest_output(:unsplice_tweets)
-      tweet_unsplicer.run
-    end    
+      tweet_unsplicer.run unless hdfs.exists? latest_output(:unsplice_tweets)
+    end
   end
 
   task :index_tweets => [:unsplice_tweets] do
@@ -137,13 +134,13 @@ flow = Workflow.new(Settings['flow_id']) do
         :bulk_size  => 500
       }
       tweet_indexer.output << next_output(:index_tweets)
-      tweet_indexer.run
+      tweet_indexer.run unless hdfs.exists? latest_output(:index_tweets)
       # HACK!
       HDFS.mkdir_p latest_output(:index_tweets)
       tweet_indexer.refresh!
     end
   end
-  
+
   task :index_tokens => [:unsplice] do
     token_indexer.pig_classpath = Settings['pig_classpath']
     Settings['twitter_tokens'].each do |token|
@@ -157,14 +154,14 @@ flow = Workflow.new(Settings['flow_id']) do
         :bulk_size  => 500
       }
       token_indexer.output << next_output(:index_tokens)
-      token_indexer.run
+      token_indexer.run unless hdfs.exists? latest_output(:index_tokens)
       # HACK!
       HDFS.mkdir_p latest_output(:index_tokens)
       token_indexer.refresh!
     end
   end
 
-  
+
   task :load_a_atsigns_b => [:unsplice] do
     expected_input = File.join(latest_output(:unsplice), 'a_atsigns_b')
     next unless HDFS.exist? expected_input
@@ -191,7 +188,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_relationships_table']
     }
     a_fos_b_loader.output << next_output(:load_a_follows_b)
-    a_fos_b_loader.run
+    a_fos_b_loader.run unless hdfs.exists? latest_output(:load_a_follows_b)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_a_follows_b)
@@ -207,7 +204,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_delete_tweet_table']
     }
     delete_tweet_loader.output << next_output(:load_delete_tweets)
-    delete_tweet_loader.run
+    delete_tweet_loader.run unless hdfs.exists? latest_output(:load_delete_tweets)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_delete_tweets)
@@ -223,7 +220,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_geo_table']
     }
     geo_loader.output << next_output(:load_geo)
-    geo_loader.run
+    geo_loader.run unless hdfs.exists? latest_output(:load_geo)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_geo)
@@ -239,7 +236,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_twitter_users_table']
     }
     screen_name_loader.output << next_output(:load_screen_names)
-    screen_name_loader.run
+    screen_name_loader.run unless hdfs.exists? latest_output(:load_screen_names)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_screen_names)
@@ -255,7 +252,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_twitter_users_table']
     }
     search_id_loader.output << next_output(:load_search_ids)
-    search_id_loader.run
+    search_id_loader.run unless hdfs.exists? latest_output(:load_search_ids)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_search_ids)
@@ -271,7 +268,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_tweet_url_table']
     }
     tweet_url_loader.output << next_output(:load_tweet_urls)
-    tweet_url_loader.run
+    tweet_url_loader.run unless hdfs.exists? latest_output(:load_tweet_urls)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_tweet_urls)
@@ -287,7 +284,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_twitter_users_table']
     }
     user_id_loader.output << next_output(:load_user_ids)
-    user_id_loader.run
+    user_id_loader.run unless hdfs.exists? latest_output(:load_user_ids)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_user_ids)
@@ -303,7 +300,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_twitter_users_table']
     }
     profile_loader.output << next_output(:load_profiles)
-    profile_loader.run
+    profile_loader.run unless hdfs.exists? latest_output(:load_profiles)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_profiles)
@@ -319,7 +316,7 @@ flow = Workflow.new(Settings['flow_id']) do
       :table      => Settings['hbase_twitter_users_table']
     }
     style_loader.output << next_output(:load_styles)
-    style_loader.run
+    style_loader.run unless hdfs.exists? latest_output(:load_styles)
 
     # HACK!
     HDFS.mkdir_p latest_output(:load_styles)
@@ -340,7 +337,7 @@ flow = Workflow.new(Settings['flow_id']) do
     :load_profiles,
     :load_styles
   ]
-  
+
 end
 
 flow.workdir = Settings['hdfs_work_dir']
