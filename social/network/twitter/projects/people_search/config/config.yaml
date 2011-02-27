@@ -1,9 +1,19 @@
 ---
+
+# hadoop stuff
+hdfs: ip-10-117-77-123.ec2.internal
+hadoop_reduce_tasks: 15
+#
+
+# generic workflow stuff
 flow_id: 20110215
 namespace: /soc/net/tw
 protocol: people_search
 filesystem_scheme: hdfs
+#
+
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+pig_options: '-Dmapred.min.split.size=5000000000 -Dmapred.task.timeout=1800000'
 es_jars:
   - /home/jacob/Programming/wonderdog/build/wonderdog.jar
   - /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
