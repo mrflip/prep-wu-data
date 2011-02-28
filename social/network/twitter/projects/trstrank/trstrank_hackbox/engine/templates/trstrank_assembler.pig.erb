@@ -3,7 +3,7 @@
 twitter_user_id  = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
 pagerank_with_tq = LOAD '<%= rank_with_tq %>' AS (uid:long, rank:float, tq:float);
 
-trstrank_j       = JOIN twitter_user_id BY uid RIGHT OUTER, pagerank_with_tq BY uid; -- return every pagerank record with or without screen_name
+trstrank_j       = JOIN twitter_user_id BY uid RIGHT OUTER, pagerank_with_tq BY uid PARALLEL <%= reduce_tasks %>; -- return every pagerank record with or without screen_name
 trstrank         = FOREACH trstrank_j GENERATE
                      twitter_user_id::sn        AS sn,
                      pagerank_with_tq::uid      AS uid,
