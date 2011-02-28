@@ -1,0 +1,10 @@
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
+        
+data     = LOAD '<%= hbase_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<% twitter_user_profile.each{|field| %><%= hbase_column_family %>:<%= field["name"] %> <% } %>') AS (
+             <% twitter_user_profile.each do |field| %>
+             <%= field['name'] %>:<%= field['pig_type'] %><% if field != twitter_user_profile.last %>,<% end %>
+             <% end %>);
+uniqd = DISTINCT data PARALLEL <%= reduce_tasks %>;
+STORE uniqd INTO '<%= hdfs %>/<%= out %>';
