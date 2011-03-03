@@ -1,18 +1,20 @@
 ---
 
 
-
-# IT IS EXREMELY IMPORTANT THAT YOU UPDATE THIS VALUE TO REFLECT THE CORRECT HDFS INTERNAL IP
+#
+# If you don't update the hdfs value to what it currently is (private internal ip of the master node)
+# the the jobtracker will hang and you will be a sad infochimp.
+#
 hdfs: ip-10-113-50-207.ec2.internal
-# DO IT NOW
-
-
+hadoop_reduce_tasks: 54
+#
+#
 
 flow_id: 20110209
 namespace: /soc/net/tw
 protocol: sn_autocomplete
 filesystem_scheme: hdfs
-reduce_tasks: 54
+
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
 jars:
   - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
@@ -20,15 +22,31 @@ jars:
   - /usr/lib/hbase/lib/guava-r05.jar
   - /usr/lib/hbase/hbase.jar
   - /usr/lib/hbase/lib/zookeeper.jar
+  
 hbase_table: soc_net_tw_trstrank
+# This is likely going to change
 hbase_column_family: 20110210
 output_table: soc_net_tw_sn_autocomplete
+# Also going to change
 output_column_family: 20110216
-trstrank:
-  - name: screen_name
-    pig_type: chararray
+
+types:
   - name: trstrank
-    pig_type: float
+    type: record
+    fields:
+      - name: screen_name
+        type: string
+      - name: trstrank
+        type: float
+
+  - name: prefixes_json
+    type: record
+    doc: intermediate data for stuffing into hbase
+    fields:
+      - name: prefix
+        type: string
+      - name: completions
+        type: string
     
 max_length: 15
 min_length: 3

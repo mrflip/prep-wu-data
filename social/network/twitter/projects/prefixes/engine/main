@@ -23,49 +23,64 @@ flow = Workflow.new(options['flow_id']) do
   jsonizer   = WukongScript.new(File.dirname(__FILE__)+'/templates/jsonize_results.rb')
   hbaseifier = PigScript.new(File.dirname(__FILE__)+'/templates/stuff_into_hbase.pig.erb')
 
-  task :generate_prefixes do    
+  #
+  # Here we use the trstrank table to compute screen name prefixes
+  # and order the results by trstrank.
+  #
+  task :generate_prefixes do
+
     max_length  = options['max_length'].to_i
     min_length  = options['min_length'].to_i
     prefix_rels = []
     (max_length-min_length).times{|n| prefix_rels << "prefixes_#{n}"}
 
-    prefixer.pig_classpath = options['pig_classpath']
-    prefixer.pig_options   = options['pig_options']
-    prefixer.output << next_output(:generate_prefixes)
+    trstrank_avro_fields = options['types'].find{|type| type['name'] == 'trstrank'}['fields']
+    trstrank             = trstrank_avro_fields.inject({}){|hsh,field| hsh[field['name']] = PigScript.avro_to_pig(field['type']); hsh}
+
+    prefixer.env['PIG_CLASSPATH'] = options['pig_classpath']
+    prefixer.env['PIG_OPTS']      = options['pig_options']
     prefixer.attributes = {
       :jars                => options['jars'],
-      :trstrank            => options['trstrank'],
+      :trstrank            => trstrank,
       :hbase_table         => options['hbase_table'],
       :hbase_column_family => options['hbase_column_family'],
       :max_length          => max_length,
       :min_length          => min_length,
       :text_field          => options['text_field'],
       :weight_field        => options['weight_field'],
-      :hdfs                => options['hdfs'],
-      :out                 => latest_output(:generate_prefixes),
+      :hdfs                => "hdfs://#{options['hdfs']}",
+      :out                 => next_output(:generate_prefixes),
       :prefix_rels         => prefix_rels.join(",")
     }
-    prefixer.run(:hadoop)
+    prefixer.run(:hadoop) unless hdfs.exists? latest_output(:generate_prefixes)
   end
 
+  #
+  # Take the output 'pig bag' objects from the previous steps and
+  # generate records, eg:
+  #
+  # bieb  {"completions":[bieberbeliever, ...]}
+  #
   task :jsonize_results => [:generate_prefixes] do
-    jsonizer.input  << latest_output(:generate_prefixes)
-    jsonizer.output << next_output(:jsonize_results)
-    jsonizer.options = {:num_elements => options['num_results']}
-    jsonizer.run(:hadoop)
+    # jsonizer.input  << latest_output(:generate_prefixes)
+    # jsonizer.output << next_output(:jsonize_results)
+    # jsonizer.options = {:num_elements => options['num_results']}
+    # jsonizer.run(:hadoop) unless hdfs.exists? latest_output(:jsonize_results)
   end
 
+  #
+  # Take the results and stuff into hbase
+  #
   task :hbaseify_results => [:jsonize_results] do
-    hbaseifier.pig_classpath = options['pig_classpath']
-    hbaseifier.output << next_output(:hbaseify_results)
-    hbaseifier.attributes = {
-      :jars                 => options['jars'],
-      :data                 => latest_output(:jsonize_results),
-      :output_table         => options['output_table'],
-      :output_column_family => options['output_column_family']
-    }
-    hbaseifier.run(:hadoop)
-    hdfs.mkpath(latest_output(:hbaseify_results)) # Hack, don't run if we've already ran
+    # hbaseifier.pig_classpath = options['pig_classpath']
+    # hbaseifier.attributes = {
+    #   :jars                 => options['jars'],
+    #   :data                 => next_output(:hbaseify_results),
+    #   :output_table         => options['output_table'],
+    #   :output_column_family => options['output_column_family']
+    # }
+    # hbaseifier.run(:hadoop) unless hdfs.exists? latest_output(:hbaseify_results)
+    # hdfs.mkpath(latest_output(:hbaseify_results)) # Hack, don't run if we've already ran
   end
 
 end

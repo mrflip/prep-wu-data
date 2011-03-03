@@ -4,11 +4,12 @@ register /usr/lib/hbase/lib/guava-r05.jar
 
 
 %default HDFS 'hdfs://ip-10-113-50-207.ec2.internal' -- THIS IS SERIOUSLY BROKEN
+%default REDUCERS '14'
         
 -- export PIG_CLASSPATH=/usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig-0.8.0-core.jar
 -- pig -p TABLE=a_rel_b_20110128 -p OUT=/tmp/pagerank/201102/assemble-multigraph-0 assemble_multigraph_hbase.pig
 
-data = LOAD '$TABLE' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey') AS (
+data = LOAD '$TABLE' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey -limit 1000000 -caching 10000') AS (
         row_key:chararray,
         a_follows_b:int,
         b_follows_a:int,
@@ -46,7 +47,7 @@ multigraph_in = FOREACH multigraph_out GENERATE
                   me_o        AS me_i
                 ;
 
-grouped      = COGROUP multigraph_out BY (user_a_id, user_b_id) OUTER, multigraph_in BY (user_a_id, user_b_id) OUTER;
+grouped      = COGROUP multigraph_out BY (user_a_id, user_b_id) OUTER, multigraph_in BY (user_a_id, user_b_id) OUTER PARALLEL $REDUCERS;
 multigraph   = FOREACH grouped {
                  a_f_b  = (IsEmpty(multigraph_out) ? 0l : SUM(multigraph_out.a_follows_b)) + (IsEmpty(multigraph_in) ? 0l : SUM(multigraph_in.a_follows_b));
                  b_f_a  = (IsEmpty(multigraph_out) ? 0l : SUM(multigraph_out.b_follows_a)) + (IsEmpty(multigraph_in) ? 0l : SUM(multigraph_in.b_follows_a));

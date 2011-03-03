@@ -2,9 +2,9 @@
 register <%= jar %>;
 <% end %>
 
-data = LOAD '<%= hbase_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<% trstrank.each{|field| %><%= hbase_column_family %>:<%= field["name"] %> <% } %>') AS (
-         <% trstrank.each do |field| %>
-         <%= field['name'] %>:<%= field['pig_type'] %><% unless field == trstrank.last %>,<% end %> 
+data = LOAD '<%= hbase_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<% trstrank.each_with_index{|field, idx| %><%= hbase_column_family %>:<%= field.first %> <% } %>') AS (
+         <% trstrank.each_with_index.each do |field, idx| %>
+         <%= field.first %>:<%= field.last %><% unless idx == trstrank.size - 1 %>,<% end %> 
          <% end %>);
 filtered = FILTER data BY <%= text_field %> IS NOT NULL;
 <% (max_length-min_length).times do |n| %>
@@ -19,4 +19,4 @@ outdata  = FOREACH grouped {
                top_n_completions.($0) AS possible_completions
              ;
            }
-STORE outdata INTO 'hdfs://<%= hdfs %>/<%= out %>';
+STORE outdata INTO '<%= hdfs %>/<%= out %>';

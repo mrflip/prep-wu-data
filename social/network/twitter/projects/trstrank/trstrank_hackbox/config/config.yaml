@@ -2,7 +2,7 @@
 
 # hadoop stuff
 hdfs: ip-10-117-77-123.ec2.internal
-hadoop_reduce_tasks: 4
+hadoop_reduce_tasks: 232
 #
 
 # generic workflow stuff
@@ -13,6 +13,7 @@ filesystem_scheme: hdfs
 #
 
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+pig_options: "-Dmapred.min.split.size=50000000  -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100 -Dmapred.map.tasks.speculative.execution=false"
 pig_home: /usr/local/share/pig
 hbase_jars:
   - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
@@ -29,7 +30,7 @@ trstrank_table: soc_net_tw_trstrank
 #
 
 # Pagerank specific stuff
-pagerank_iterations: 5
+pagerank_iterations: 10
 pagerank_damping: 0.85f
 #
 

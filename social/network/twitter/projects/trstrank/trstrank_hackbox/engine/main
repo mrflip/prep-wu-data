@@ -38,6 +38,7 @@ flow = Workflow.new(options['flow_id']) do
   # Take a_follows_b and a_atsigns_b and assemble multigraph
   #
   task :assemble_multigraph do
+    graph_assembler.env['PIG_OPTS'] = options['pig_options']
     graph_assembler.attributes = {
       :hdfs              => "hdfs://#{options['hdfs']}",
       :jars              => options['hbase_jars'],
@@ -52,6 +53,7 @@ flow = Workflow.new(options['flow_id']) do
   # Use the multigraph to create initial input for pagerank
   #
   task :pagerank_initialize => [:assemble_multigraph] do
+    pagerank_initializer.env['PIG_OPTS'] = options['pig_options']
     pagerank_initializer.attributes = {
       :hdfs         => "hdfs://#{options['hdfs']}",
       :multigraph   => latest_output(:assemble_multigraph),
@@ -66,6 +68,7 @@ flow = Workflow.new(options['flow_id']) do
   # Iterate pagerank multiple times over the multigraph
   #
   task :pagerank_iterate => [:pagerank_initialize] do
+    pagerank_iterator.env['PIG_OPTS'] = options['pig_options']
     pagerank_iterator.attributes = {
       :hdfs              => "hdfs://#{options['hdfs']}",
       :reduce_tasks      => options['hadoop_reduce_tasks'],
@@ -85,6 +88,7 @@ flow = Workflow.new(options['flow_id']) do
   # Calculate the degree distribution of the multigraph
   #
   task :multigraph_degrees => [:assemble_multigraph] do
+    degrees_calculator.env['PIG_OPTIONS'] = options['pig_options']
     degrees_calculator.attributes = {
       :hdfs                => "hdfs://#{options['hdfs']}",
       :reduce_tasks        => options['hadoop_reduce_tasks'],
@@ -123,6 +127,7 @@ flow = Workflow.new(options['flow_id']) do
   #
   # multitask :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
   task :join_pagerank_with_followers => [:store_valuable_graph_data, :pagerank_iterate] do
+    followers_joiner.env['PIG_OPTIONS'] = options['pig_options']
     followers_joiner.attributes = {
       :hdfs                => "hdfs://#{options['hdfs']}",
       :reduce_tasks        => options['hadoop_reduce_tasks'],      
@@ -153,15 +158,21 @@ flow = Workflow.new(options['flow_id']) do
   # Assemble all the components to form final trstrank table
   #
   task :assemble_trstrank => [:trstquotient] do
+    trstrank_assembler.env['PIG_OPTIONS'] = options['pig_options']
+    trstrank_assembler.env['PIG_CLASSPATH'] = options['pig_classpath']
     trstrank_assembler.attributes = {
+      :jars           => options['hbase_jars'],
       :twuid_table    => options['twitter_users_table'],
+      :reduce_tasks   => options['hadoop_reduce_tasks'],
       :twuid_cf       => options['twitter_users_cf'],
       :rank_with_tq   => latest_output(:trstquotient),
-      :s3_out         => File.join(options['s3_graph_dir'], options['flow_id'], 'trstrank_table'),
+      :s3_out         => File.join(options['s3_graph_dir'], "#{options['flow_id']}", 'trstrank_table'),
       :trstrank_table => options['trstrank_table'],
       :trstrank_cf    => 'base'
     }
-    trstrank_assembler.run unless hdfs.exists? next_output(:assemble_trstrank)
+    mock_output = next_output(:assemble_trstrank)
+    trstrank_assembler.run unless hdfs.exists? latest_output(:assemble_trstrank)
+
     hdfs.mkpath latest_output(:assemble_trstrank) # hack so it wont run again
   end
   
@@ -169,4 +180,4 @@ end
 
 flow.workdir = File.join(inputdir, "rawd")
 flow.describe
-flow.run(:trstquotient)
+flow.run(:assemble_trstrank)

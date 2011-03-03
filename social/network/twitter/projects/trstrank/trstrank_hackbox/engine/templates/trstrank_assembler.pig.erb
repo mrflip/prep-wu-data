@@ -1,16 +1,19 @@
 -- Create trstrank dataset via a join
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
 
 twitter_user_id  = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
-pagerank_with_tq = LOAD '<%= rank_with_tq %>' AS (uid:long, rank:float, tq:float);
+pagerank_with_tq = LOAD '<%= rank_with_tq %>' AS (user_id:long, rank:float, tq:float);
 
-trstrank_j       = JOIN twitter_user_id BY uid RIGHT OUTER, pagerank_with_tq BY uid; -- return every pagerank record with or without screen_name
+trstrank_j       = JOIN twitter_user_id BY user_id RIGHT OUTER, pagerank_with_tq BY user_id PARALLEL <%= reduce_tasks %>; -- return every pagerank record with or without screen_name
 trstrank         = FOREACH trstrank_j GENERATE
-                     twitter_user_id::sn        AS sn,
-                     pagerank_with_tq::uid      AS uid,
+                     twitter_user_id::screen_name        AS screen_name,
+                     pagerank_with_tq::user_id      AS user_id,
                      pagerank_with_tq::rank     AS rank,
                      (int)pagerank_with_tq::tq  AS tq:int -- cast to an integer here
                    ;
-trstrank_hbase  = FOREACH trstrank GENERATE uid AS row_key, sn, uid, rank, tq;
+trstrank_hbase  = FOREACH trstrank GENERATE user_id AS row_key, screen_name, user_id, rank, tq;
 
 STORE trstrank INTO '<%= s3_out %>';
 STORE trstrank_hbase INTO '<%= trstrank_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= trstrank_cf %>:screen_name <%= trstrank_cf %>:user_id <%= trstrank_cf %>:trstrank <%= trstrank_cf %>:tq');
