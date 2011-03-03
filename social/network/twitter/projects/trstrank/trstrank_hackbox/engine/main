@@ -43,7 +43,7 @@ flow = Workflow.new(options['flow_id']) do
       :hdfs              => "hdfs://#{options['hdfs']}",
       :jars              => options['hbase_jars'],
       :twitter_rel_table => options['twitter_rel_table'],
-      :recuce_tasks      => options['hadoop_reduce_tasks'],
+      :reduce_tasks      => options['hadoop_reduce_tasks'],
       :out               => next_output(:assemble_multigraph)
     }
     graph_assembler.run unless hdfs.exists? latest_output(:assemble_multigraph)
@@ -127,7 +127,11 @@ flow = Workflow.new(options['flow_id']) do
   #
   # multitask :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
   task :join_pagerank_with_followers => [:store_valuable_graph_data, :pagerank_iterate] do
+<<<<<<< HEAD
     followers_joiner.env['PIG_OPTIONS'] = options['pig_options']
+=======
+    followers_joiner.env['PIG_OPTS'] = options['pig_options']
+>>>>>>> b5718597ab923206d3b7bd77e4dfbc3eaf65a1d7
     followers_joiner.attributes = {
       :hdfs                => "hdfs://#{options['hdfs']}",
       :reduce_tasks        => options['hadoop_reduce_tasks'],      
