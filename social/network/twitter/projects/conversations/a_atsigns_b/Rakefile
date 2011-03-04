@@ -1,0 +1,6 @@
+require 'rubygems'
+require 'hackboxen'
+
+HACKBOX_DIR = File.dirname(__FILE__)
+
+task :default => ['hb:init']

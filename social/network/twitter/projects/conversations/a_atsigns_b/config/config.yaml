@@ -1,0 +1,91 @@
+---
+
+filesystem_scheme: file
+
+namespace: soc.net
+protocol: tw
+
+messages:
+  a_atsigns_b:
+    request:
+      - name: conversations_request
+        type: conversations_request
+    response:
+      - conversations
+
+targets:
+  catalog:
+    - name: a_atsigns_b_catalog_entry
+      messages:
+        - a_atsigns_b        
+      title: "Twitter Conversations: AAtsignsB"
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+      description: >-
+        Given two twitter users, get back all their conversations.
+        
+types:
+
+  - name: conversations_request
+    type: record
+    fields:
+      - name: user_a_identifier
+        type:
+          - screen_name
+          - user_id
+      - name: user_b_identifier
+        type:
+          - screen_name
+          - user_id
+
+  - name: screen_name
+    type: record
+    fields:
+      - name: screen_name
+        type: string
+        default: infochimps
+        
+  - name: user_id
+    type: record
+    fields:
+      - name: user_id
+        type: int
+        default: 15748351
+        
+  - name: conversations
+    fields:
+      - name: user_a_id
+        type: int
+      - name: user_b_id
+        type: int
+      - name: conversations_list
+        type: array
+        items: conversation
+        
+  - name: conversation
+    type: record
+    fields:
+      - name: created_at
+        type: string
+        doc: When the mention, reply or retweet took place. YYYYMMddHHmmss
+      - name: tweet_id
+        type: long
+        doc: Which tweet did this conversation occur in?
+      - name: rel_type
+        type: string
+        doc: |-
+          Any of [re, rt, me] where re is a twitter sanctioned reply from user a to user b. rt is a retweet,
+          from user a to user b and mention is an @userb from user a in any fashion that is NOT already a reply
+          or retweet.
