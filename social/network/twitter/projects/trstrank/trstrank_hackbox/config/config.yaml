@@ -7,8 +7,6 @@ hadoop_reduce_tasks: 232
 
 # generic workflow stuff
 flow_id: 20110301
-namespace: /soc/net/tw
-protocol: trstrank
 filesystem_scheme: hdfs
 #
 
@@ -38,9 +36,156 @@ pagerank_damping: 0.85f
 s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
 #
 
+
+
+
+
+
+
+#
+# We can NOT change the endpoint for existing api calls.
+#
+
+namespace: soc.net
+protocol: tw
+
+messages:
+  trstrank:
+    request:
+      - name: trstrank_request
+        type: trstrank_request
+    response:
+      - trstrank_table
+
+data_assets:
+  - name: trstrank_bzip
+    location: data/trstrank_bzip
+    type: base
+  - name: trstrank_table
+    location: data/trstrank
+    type: base
+
+targets:
+  catalog:
+    - name: trstrank      
+      messages:
+        - trstrank        
+      packages:
+        - data_assets:
+            - trstrank_bzip            
+      title: Twitter Census: Trst Rank
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+      description: >-
+        <header>
+        <h1>Overview</h1>
+
+        </header>
+        <h3>Trstrank</h3>
+        <p>The Infochimps Trstrank measures how important a Twitter user is. It&#8217;s a <a href="http://trst.me/about">sophisticated network measure of centrality</a>, not just a count of the number of followers a user has. It ranges between 0 and 10 and is <a href="http://en.wikipedia.org/wiki/Logarithm#Logarithmic_scale">logarithmically distributed</a> so a <a href="http://trst.me/t/BarackObama">@BarackObama</a>'s 9.9 makes him many times more important than <a href="http://trst.me/t/ShashiTharoor">@ShashiTharoor</a>'s 8.9.</p>
+        <h3>TrstQuotient</h3>
+
+        <p>A metric to help differentiate between users of similar Trstrank.</p>
+        <p>The TrstQuotient is an integer between 0 and 100 that quantifies the relationship between a user&#8217;s Trstrank and their follower count.  It indicates how &#8220;normal&#8221; a user&#8217;s Trstrank is, given his number of followers.  A very-low TrstQuotient can be a sign of a spammy or abusive Twitter account.</p>
+        <p>More followers usually means a higher Trstrank, but it&#8217;s possible for two Twitter users to have a similar Trstrank but vastly different numbers of followers.  Vastly fewer followers for a comparable Trstrank says a user&#8217;s followers are themselves pretty trustworthy which reflects back well upon the user.</p>
+        <p>As an example, consider NY Times columnist and two-time Pulitzer Prize winner <a href="http://trst.me/t/NickKristof">@NickKristof</a>, who&#8217;s able to score a impressive Trstrank of 7.29 with a meager 1 million followers.  His TrstQuotient is 80.  Compare him with in-again-out-again pop diva <a href="http://trst.me/t/BritneySpears">@BritneySpears</a> whose horde of over 5 million followers grants her a Trstrank score of 8.07, only a little bit higher than @NickKristof.  Britney&#8217;s TrstQuotient is a meager 20.  (Conclusions about the general trustworthiness of NY Times readers and Britney Spears fans left to the reader.)</p>
+
+        <p>Check out <a href="http://trst.me/">trst.me</a> to get combined Trstrank and <a href="/describe/soc/net/tw/influence">Influence</a> metrics for a Twitter user!</p>
+        <h3>Use Cases:</h3>
+        <ul>
+        <li>Filter influencers/non-influencers
+        <ul>
+        <li>A high trstQuotient (&gt; 70) is an indication of an important person.</li>
+
+        </ul></li>
+        <li>Spam Filtering
+        <ul>
+        <li>A low trstQuotient (&lt; 30) is an indication of a spammy account.</li>
+        </ul></li>
+        </ul>
+        <h2><span>API</span> call</h2>
+
+        <h3>Parameters</h3>
+        <p><span><span>GET</span></span> <span>http://api.infochimps.com/soc/net/tw/trstrank.json?screen_name=[screen_name]</span><br />
+        <span><span>GET</span></span> <span>http://api.infochimps.com/soc/net/tw/trstrank.json?user_id=[user_id]</span></p>
+        <ul>
+        <li><code>screen_name</code> &#8211; a Twitter screen name</li>
+
+        <li><code>user_id</code> &#8211; a <a href="http://apiwiki.twitter.com/Twitter-API-Documentation">Twitter user ID</a></li>
+        </ul>
+        <h3>Returns</h3>
+        <ul>
+        <li><code>user_id</code> &#8211; the Twitter user ID</li>
+
+        <li><code>screen_name</code> &#8211; the user&#8217;s screen name</li>
+        <li><code>trstrank</code> &#8211; the Trstrank of the user (0.0 &#8211; 10.0)</li>
+        <li><code>tq</code> &#8211; the TrstQuotient (0 &#8211; 100)</li>
+
+        </ul>
+        <h3>Example</h3>
+        <p><span>GET</span> <a href="http://api.infochimps.com/soc/net/tw/trstrank.json?screen_name=infochimps&amp;apikey=api_test-W1cipwpcdu9Cbd9pmm8D4Cjc469">http://api.infochimps.com/soc/net/tw/trstrank.json?screen_name=infochimps&amp;apikey=api_test-W1cipwpcdu9Cbd9pmm8D4Cjc469</a></p>
+        <pre><code>{
+        "user_id"         : "34381760",
+        "screen_name"     : "infochimps",
+        "trstrank" 	      : 3.21
+        "tq"              : 94
+        }</code>
+
+        <code>__Note that this apikey is rate-limited__</code></pre>
+        <h3><span>NOTES</span></h3>
+        <p>Previously, we offered versioning for this <span>API</span> call.  Versioning will be deprecated in future releases.  If you are using version 0.2 of this <span>API</span>, you should change it to remove the reference to the version in your query.  Example:</p>
+
+        <p>http://api.infochimps.com/soc/net/tw/trstrank.json?v=0.2&amp;screen_name=infochimps</p>
+        <p>Change to:</p>
+        <p>http://api.infochimps.com/soc/net/tw/trstrank.json?screen_name=infochimps</p>
+        </section>
+
+  hbase:
+    - table_name: soc_net_tw_trstrank
+      loader: tsv_loader
+      data_assets:
+        - trstrank_asset
+
 types:
 
-  - name: trstrank_table
+  - name: trstrank_request
+    type: record
+    doc: "http://www.infoq.com/articles/ApacheAvro"
+    fields:
+      - name: identifier
+        type:
+          - screen_name
+          - user_id
+
+  - name: screen_name
+    type: record
+    fields:
+      - name: screen_name
+        type: string
+        default: infochimps
+        
+  - name: user_id
+    type: record
+    fields:
+      - name: user_id
+        type: int
+        default: 15748351
+        
+  - name: base
+    aliases:
+      - trstrank_table
     doc: |-
       Final output of the trstrank calculation.
     fields:
