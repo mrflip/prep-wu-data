@@ -16,7 +16,8 @@ hdfs = Swineherd::FileSystem.get(:hdfs)
 #
 # Read in working config file
 #
-options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
+options     = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
+fixd_output = File.join(outputdir, "data", "twitter_user_profile")
 
 #
 # Define workflow
@@ -24,7 +25,9 @@ options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.y
 flow = Swineherd::Workflow.new(options['flow_id']) do
   profile_dumper  = PigScript.new(File.dirname(__FILE__)+'/templates/profile_dumper.pig.erb')
   profile_indexer = PigScript.new(File.dirname(__FILE__)+'/templates/profile_loader.pig.erb')
-
+  fields          = options['types'].find{|type| type['name'] == 'profile'}
+  pig_fields      = fields.map{|field| field['pig_type'] = PigScript.avro_to_pig(field['type']); field}
+  
   task :dump_profiles do
     profile_dumper.env['PIG_CLASSPATH'] = options['pig_classpath']
     profile_dumper.env['PIG_OPTS']      = options['pig_options']
@@ -33,29 +36,12 @@ flow = Swineherd::Workflow.new(options['flow_id']) do
       :hbase_table          => options['hbase_table'],
       :hbase_column_family  => options['hbase_column_family'],
       :reduce_tasks         => options['hadoop_reduce_tasks'],
-      :twitter_user_profile => options['twitter_user_profile'],
+      :twitter_user_profile => pig_fields,
       :hdfs                 => "hdfs://#{options['hdfs']}",
-      :out                  => next_output(:dump_profiles)
+      :out                  => fixd_output
     }
-    profile_dumper.run unless hdfs.exists? latest_output(:dump_profiles)
+    profile_dumper.run unless hdfs.exists? fixd_output
   end
-
-  task :index_profiles => [:dump_profiles] do
-    profile_indexer.env['PIG_CLASSPATH'] = options['pig_classpath']
-    profile_indexer.env['PIG_OPTS']      = options['pig_options']
-    profile_indexer.attributes = {
-      :jars                 => options['es_jars'],
-      :data                 => latest_output(:dump_profiles),
-      :twitter_user_profile => options['twitter_user_profile'],
-      :es_index             => options['es_index'],
-      :es_obj_type          => options['es_obj_type'],
-      :bulk_size            => 500
-    }
-    fake_hdfs_output = next_output(:index_profiles)
-    profile_indexer.run unless hdfs.exists? fake_hdfs_output
-    hdfs.mkpath fake_hdfs_output
-  end
-
 
 end
 
@@ -65,4 +51,4 @@ flow.describe
 #
 # Run workflow
 #
-flow.run :index_profiles
+flow.run :dump_profiles

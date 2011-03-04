@@ -7,25 +7,11 @@ hadoop_reduce_tasks: 15
 
 # generic workflow stuff
 flow_id: 20110215
-namespace: /soc/net/tw
-protocol: people_search
 filesystem_scheme: hdfs
 #
 
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
 pig_options: '-Dmapred.min.split.size=5000000000 -Dmapred.task.timeout=1800000'
-es_jars:
-  - /home/jacob/Programming/wonderdog/build/wonderdog.jar
-  - /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
-  - /usr/local/share/elasticsearch/lib/jline-0.9.94.jar
-  - /usr/local/share/elasticsearch/lib/jna-3.2.7.jar
-  - /usr/local/share/elasticsearch/lib/log4j-1.2.15.jar
-  - /usr/local/share/elasticsearch/lib/lucene-analyzers-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-core-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-fast-vector-highlighter-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-highlighter-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-memory-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-queries-3.0.3.jar
 hbase_jars:
   - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
   - /usr/lib/hbase/lib/jline-0.9.94.jar
@@ -34,33 +20,111 @@ hbase_jars:
   - /usr/lib/hbase/lib/zookeeper.jar
 hbase_table: soc_net_tw_twitter_user
 hbase_column_family: profile
+
 es_index: soc_net_tw_twitter_user
 es_obj_type: profile
-bulk_size: 500
-twitter_user_profile:
-  - name: user_id
-    pig_type: int
-  - name: scraped_at
-    pig_type: long
-  - name: screen_name
-    pig_type: chararray
-  - name: name
-    pig_type: chararray
-  - name: url
-    pig_type: chararray
-  - name: location
-    pig_type: chararray
-  - name: description
-    pig_type: chararray
-  - name: time_zone
-    pig_type: chararray
-  - name: utc_offset
-    pig_type: chararray
-  - name: lang
-    pig_type: chararray
-  - name: geo_enabled
-    pig_type: chararray
-  - name: verified
-    pig_type: chararray
-  - name: contributors_enabled
-    pig_type: chararray
+
+
+
+namespace: soc.net
+protocol: tw
+
+data_assets:
+  - name: people_search_data_asset
+    location: data/twitter_user_profile
+    type: profile
+      
+messages:
+  people_search:
+    response:
+      - people_search_response
+    request:
+      - name: people_search_params
+        type: people_search_params
+        
+targets:
+  elastic_search:
+    - index_name: soc_net_tw_twitter_user
+      id_field: user_id
+      data_assets:
+        - people_search_data_asset
+        
+  catalog:
+    - name: people_search_catalog_entry
+      title: TwPeopleSearch
+      description: Full text search, on any or all fields, of twitter user profiles.
+      tags:
+        - twitter
+        - text
+        - huge
+        - search
+        - profile
+        - social-network
+        - social
+        - network
+      messages:
+        - people_search
+  
+types:
+
+  - name: people_search_params
+    type: record
+    doc: Parameters for querying twitter people search
+    fields:
+      - name: query
+        type: string
+        doc: A standard, url encoded, lucene style query string
+        
+  - name: people_search_response
+    type: record
+    doc: A json object containing an array of matching profiles as well as the total number of matching profiles.
+    fields:
+      - name: total
+        type: int
+        doc: Total number of matching profiles
+      - name: hits
+        type: array
+        items: profile
+        doc: A json array of matching profile objects
+
+  - name: profile
+    type: record
+    doc: A twitter user's profile.
+    fields:
+      - name: user_id
+        type: int
+        doc: twitter id of the user
+      - name: scraped_at
+        type: long
+        doc: When the the infochimps flying monkeys scraped the user's profile from the twitter api. (YYYYMMddhhmmss)
+      - name: screen_name
+        type: string
+        doc: Twitter users' screen name
+      - name: name
+        type: string
+        doc: User's hand entered, raw text,  actual name
+      - name: url
+        type: string
+        doc: User's web site
+      - name: location
+        type: string
+        doc: User's hand entered, raw text, location
+      - name: description
+        type: User's hand entered, raw text, description
+      - name: time_zone
+        type: string
+        doc: Time zone as tzinfo compatible string
+      - name: utc_offset
+        type: string
+      - name: lang
+        type: string
+        doc: two letter language code, eg. 'en'
+      - name: geo_enabled
+        type: string
+        doc: The string 'true' if the user has enabled geo location, 'false' otherwise
+      - name: verified
+        type: string
+        doc: Is this a twitter verified account? 'true' or 'false'
+      - name: contributors_enabled
+        type: chararray
+        doc: If the twitter account is a pro account allowing multiple users to control visit dev.twitter.com for details
