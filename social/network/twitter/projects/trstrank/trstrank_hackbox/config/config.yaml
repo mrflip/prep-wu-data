@@ -45,7 +45,7 @@ s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
 #
 # We can NOT change the endpoint for existing api calls.
 #
-
+dataroot: /data/hb
 namespace: soc.net
 protocol: tw
 
@@ -73,7 +73,7 @@ targets:
       packages:
         - data_assets:
             - trstrank_bzip            
-      title: Twitter Census: Trst Rank
+      title: "Twitter Census: Trst Rank"
       tags:
         - network
         - social
@@ -124,7 +124,7 @@ targets:
     - table_name: soc_net_tw_trstrank
       loader: tsv_loader
       data_assets:
-        - trstrank_asset
+        - trstrank_table
 
 types:
 
