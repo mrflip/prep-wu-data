@@ -21,9 +21,10 @@ hdfs = Swineherd::FileSystem.get(:hdfs)
 #
 # Read in working config file
 #
-options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
-icss    = File.join(outputdir, 'trstrank.icss.json')
-
+options      = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
+icss         = File.join(outputdir, 'trstrank.icss.json')
+fixd_output  = File.join(outputdir, "data", "trstrank")
+bzipd_output = File.join(outputdir, "data", "trstrank_bzip")
 #
 # Create icss before anything else happens
 #
@@ -113,10 +114,6 @@ flow = Workflow.new(options['flow_id']) do
   end
 
   #
-  #
-  #
-
-  #
   # FIXME!!!! we need an s3 filesystem interface
   #
   def hackety_exists? target
@@ -170,32 +167,27 @@ flow = Workflow.new(options['flow_id']) do
 
   #
   # Assemble all the components to form final trstrank table.
-  # FIXME:
-  # Should NOT put output into hbase. Troop is responsible.
-  #
   #
   task :assemble_trstrank => [:trstquotient] do
-    raise "FIXME: I can't write to hbase, Troop should do that!"
     trstrank_assembler.env['PIG_OPTS']      = options['pig_options']
     trstrank_assembler.env['PIG_CLASSPATH'] = options['pig_classpath']
     trstrank_assembler.attributes = {
       :jars           => options['hbase_jars'],
+      :hdfs           => "hdfs://#{options['hdfs']}",
       :twuid_table    => options['twitter_users_table'],
       :reduce_tasks   => options['hadoop_reduce_tasks'],
       :twuid_cf       => options['twitter_users_cf'],
       :rank_with_tq   => latest_output(:trstquotient),
-      :s3_out         => File.join(options['s3_graph_dir'], "#{options['flow_id']}", 'trstrank_table'),
-      :trstrank_table => options['trstrank_table'],
-      :trstrank_cf    => 'base'
-    }
-    mock_output = next_output(:assemble_trstrank)
-    trstrank_assembler.run unless hdfs.exists? latest_output(:assemble_trstrank)
+      :out            => fixd_output
+    }    
+    trstrank_assembler.run unless hdfs.exists? fixd_output
+  end  
 
-    hdfs.mkpath latest_output(:assemble_trstrank) # hack so it wont run again
+  task :package_trstrank => [:assemble_trstrank] do
+    hdfs.bzip(fixd_output, bzipd_output) unless hdfs.exists? bzipd_output
   end
-
 end
 
 flow.workdir = File.join(inputdir, "rawd")
 flow.describe
-flow.run(:assemble_trstrank)
+flow.run(:package_trstrank)
