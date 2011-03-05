@@ -1,0 +1,75 @@
+---
+
+filesystem_scheme: file
+
+namespace: soc.net
+protocol: tw
+
+messages:
+  atsigns_from:
+    request:
+      - name: atsigns_from_params
+        type: atsigns_from_params
+    response:
+      - atsigns_from_response
+
+targets:
+  catalog:
+    - name: atsigns_from_catalog_entry
+      messages:
+        - atsigns_from
+      title: "Twitter Conversations: AtsignsFrom"
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+      description: >-
+        Given a twitter user id or screen name, get back all the tweets from the user that are replies, or retweets of other tweets or mentions of another user.
+        
+types:
+
+  - name: atsigns_from_params
+    type: record
+    fields:
+      - name: identifier
+        type:
+          - screen_name
+          - user_id
+
+  - name: screen_name
+    type: record
+    fields:
+      - name: screen_name
+        type: string
+        default: infochimps
+        
+  - name: user_id
+    type: record
+    fields:
+      - name: user_id
+        type: int
+        default: 15748351
+        
+  - name: atsigns_from_response
+    fields:
+      - name: total
+        type: int
+        doc: total number of tweets from the queried user that are replies or retweets of another tweet or mentions of another user
+      - name: user_id
+        type: int
+        doc: the user id of the user queried
+      - name: atsigns_from
+        type: array
+        items: long
+        doc: An array of tweet ids from the queried user
+        
