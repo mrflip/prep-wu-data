@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'swineherd' ; include Swineherd
+require 'swineherd/script/pig_script' ; include Swineherd::Script
+require 'swineherd/script/wukong_script'
+require 'json'
+
+inputdir  = ARGV[0]
+outputdir = ARGV[1]
+
+fs      = Swineherd::FileSystem.get(:file)
+options = YAML.load(fs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
+icss    = File.join(outputdir, 'atsigns_for_tweet.icss.json')
+
+task :icss do
+  valid_keys = %w[namespace protocol data_assets code_assets types messages targets]
+  schema     = options.reject{|k,v| !valid_keys.include?(k)}.to_json
+  fs.open(icss, 'w'){|f| f.puts(schema)}
+end
+Rake::Task[:icss].invoke
