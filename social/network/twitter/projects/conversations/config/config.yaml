@@ -1,0 +1,176 @@
+---
+
+filesystem_scheme: file
+
+namespace: social.network.tw
+protocol: conversation
+
+messages:
+  
+  a_atsigns_b:
+    request:
+      - name: a_atsigns_b_params
+        type: a_atsigns_b_params
+    response: a_atsigns_b_response
+    
+  atsigns_from:
+    request:
+      - name: atsigns_from_request
+        type: atsigns_from_request
+    response: atsigns_from_response
+
+  atsigns_for_tweet:
+    request:
+      - name: atsigns_for_tweet_request
+        type: atsigns_for_tweet_request
+    response: atsigns_for_tweet_response
+      
+targets:
+
+  catalog:
+    - name: atsigns_for_tweet_catalog_entry
+      messages:
+        - atsigns_for_tweet
+      title: "Twitter Conversations: AtsignsForTweet"
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+      description: >-
+        Given a tweet id, get back all the tweets that are retweets or replies of it.
+        
+    - name: atsigns_from_catalog_entry
+      messages:
+        - atsigns_from
+      title: "Twitter Conversations: AtsignsFrom"
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+      description: >-
+        Given a twitter user id or screen name, get back all the tweets from the user that are replies, or retweets of other tweets or mentions of another user.
+        
+    - name: a_atsigns_b_catalog_entry
+      messages:
+        - a_atsigns_b        
+      title: "Twitter Conversations: AAtsignsB"
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+      description: >-
+        Given two twitter users, get back all their conversations.
+
+types:
+
+  - name: atsigns_for_tweet_request
+    type: record
+    doc: One tweet id
+    fields:
+      - name: tweet_id
+        type: long
+        
+  - name: atsigns_from_request
+    type: record
+    doc: One of (user_id, screen_name)
+    fields:
+      - name: user_id
+        type: int
+      - name: screen_name
+        type: string
+        
+  - name: a_atsigns_b_params
+    type: record
+    doc: One of (user_a_id, user_a_sn) and one of (user_b_id, user_b_sn) must be present.
+    fields:
+      - name: user_a_id
+        type: int
+      - name: user_a_sn
+        type: string
+      - name: user_b_id
+        type: int
+      - name: user_b_sn
+        type: string
+
+  - name: a_atsigns_b_response
+    fields:
+      - name: user_a_id
+        type: int
+      - name: user_b_id
+        type: int
+      - name: conversations
+        type: array
+        items: conversation_obj
+        
+  - name: conversation_obj
+    type: record
+    fields:
+      - name: created_at
+        type: string
+        doc: When the mention, reply or retweet took place. YYYYMMddHHmmss
+      - name: tweet_id
+        type: long
+        doc: Which tweet did this conversation occur in?
+      - name: rel_type
+        type: string
+        doc: |-
+          Any of [re, rt, me] where re is a twitter sanctioned reply from user a to user b. rt is a retweet,
+          from user a to user b and mention is an @userb from user a in any fashion that is NOT already a reply
+          or retweet.
+          
+  - name: atsigns_from_response
+    fields:
+      - name: total
+        type: int
+        doc: total number of tweets from the queried user that are replies or retweets of another tweet or mentions of another user
+      - name: user_id
+        type: int
+        doc: the user id of the user queried
+      - name: atsigns_from
+        type: array
+        items: long
+        doc: An array of tweet ids from the queried user
+
+  - name: atsigns_for_tweet_response
+    fields:
+      - name: total
+        type: int
+        doc: total number of tweets that are replies or retweets of the tweet id queried
+      - name: tweet_id
+        type: int
+        doc: the tweet id used as the query
+      - name: tweet_ids
+        type: array
+        items: long
+        doc: An array of tweet ids        
+
