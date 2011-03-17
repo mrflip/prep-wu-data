@@ -24,10 +24,8 @@ hbase_column_family: profile
 es_index: soc_net_tw_twitter_user
 es_obj_type: profile
 
-
-
-namespace: soc.net
-protocol: tw
+namespace: social.network.tw
+protocol: search
 
 data_assets:
   - name: people_search_data_asset
@@ -36,8 +34,7 @@ data_assets:
       
 messages:
   people_search:
-    response:
-      - people_search_response
+    response: people_search_response
     request:
       - name: people_search_params
         type: people_search_params
@@ -83,8 +80,9 @@ types:
         type: int
         doc: Total number of matching profiles
       - name: hits
-        type: array
-        items: profile
+        type:
+          type: array
+          items: profile
         doc: A json array of matching profile objects
 
   - name: profile

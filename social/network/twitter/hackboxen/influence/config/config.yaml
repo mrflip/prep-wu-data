@@ -42,10 +42,7 @@ s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
 
 
 
-#
-# We can NOT change the endpoint for existing api calls.
-#
-dataroot: /data/hb
+
 namespace: soc.net
 protocol: tw
 
