@@ -8,22 +8,38 @@ protocol: conversation
 messages:
   
   a_atsigns_b:
+    doc: Returns all conversations (replies, retweets, and mentions) along with metadata between two twitter users.
     request:
       - name: a_atsigns_b_params
         type: a_atsigns_b_params
     response: a_atsigns_b_response
+    samples:
+      - request:
+          - user_a_sn:  wattsteve
+            user_b_sn:  mrflip
+        response: {"user_a_id": 16120736, "user_b_id": 1554031, "conversations": [{"created_at": 20100628205118, "rel_type": "me", "tweet_id": 17279154782}, { "created_at": 20100605174919, "rel_type": "re", "tweet_id": 15502077502}, {"created_at": 20101102034406, "rel_type": "re", "tweet_id": 29437016262}, {"created_at": 20100520173013, "rel_type": "rt", "tweet_id": 14375285991}, {"created_at": 20100729213116, "rel_type": "rt", "tweet_id": 19856448848 } ] }
     
   atsigns_from:
+    doc: Returns all replies, retweets, and mentions from a given user to any other user.
     request:
-      - name: atsigns_from_request
-        type: atsigns_from_request
+      - name: atsigns_from_params
+        type: atsigns_from_params
     response: atsigns_from_response
+    samples:
+      - request:
+          - user_id: 16120736
+        response: { "total": 45, "atsigns_from": [18860468741,15285823338,16231727560,16861710669,16393034549,16857727448,18531362606,19933976963,18480538759,13211804004,16520565634,17522322410,18480538759,19216885223,15346576128,18531362606,19938509756,17455359257,19585941988,19702244244,19106920783,16434069252,19856448848,15346576128,17279154782,15502077502,29437016262,14375285991,19856448848,16520565634,14375285991,19856448848,10683240060,19660805669,17530312387,29483841875,18860468741,18169753801,12169593043,17455749262,17739333602,18169753801,12118217243,12733817846,16231727560], "user_id": 16120736 }
 
   atsigns_for_tweet:
+    doc: Returns all replies and retweets of a given tweet.    
     request:
-      - name: atsigns_for_tweet_request
-        type: atsigns_for_tweet_request
+      - name: atsigns_for_tweet_params
+        type: atsigns_for_tweet_params
     response: atsigns_for_tweet_response
+    samples:
+      - request:
+          - tweet_id: 16861710669
+        response:       { "tweet_id": 16861710669, "tweet_ids": [16861710669], "total": 1 }
       
 targets:
 
@@ -33,6 +49,7 @@ targets:
         - atsigns_for_tweet
       title: "Twitter Conversations: AtsignsForTweet"
       tags:
+        - awesomeapi
         - network
         - social
         - twitter
@@ -54,6 +71,7 @@ targets:
         - atsigns_from
       title: "Twitter Conversations: AtsignsFrom"
       tags:
+        - awesomeapi
         - network
         - social
         - twitter
@@ -75,6 +93,7 @@ targets:
         - a_atsigns_b        
       title: "Twitter Conversations: AAtsignsB"
       tags:
+        - awesomeapi
         - network
         - social
         - twitter
@@ -93,44 +112,67 @@ targets:
 
 types:
 
-  - name: atsigns_for_tweet_request
+  - name: atsigns_for_tweet_params
     type: record
     doc: One tweet id
     fields:
       - name: tweet_id
+        doc: A tweet id from twitter
         type: long
+        default: "16360461594"
         
-  - name: atsigns_from_request
+  - name: atsigns_from_params
     type: record
     doc: One of (user_id, screen_name)
     fields:
       - name: user_id
+        doc: A Twitter user's user_id
         type: int
       - name: screen_name
+        doc: A Twitter user's screen_name
         type: string
+        default: infochimps
         
   - name: a_atsigns_b_params
     type: record
-    doc: One of (user_a_id, user_a_sn) and one of (user_b_id, user_b_sn) must be present.
+    doc: >-
+      The two users to query
+
+      Exactly one of (user_a_id, user_a_sn) and exactly one of (user_b_id, user_b_sn) must be present.
+      
     fields:
       - name: user_a_id
         type: int
+        doc: User a's Twitter user id
       - name: user_a_sn
         type: string
+        default: wattsteve
+        doc: User a's Twitter screen name
       - name: user_b_id
         type: int
+        doc: User b's Twitter user id
       - name: user_b_sn
         type: string
+        default: mrflip
+        doc: User b's Twitter user id
+      - name: _from
+        type: int
+        default: "0"
+        doc: Offset to page results from. Must be a multiple of 100.
 
   - name: a_atsigns_b_response
     fields:
       - name: user_a_id
         type: int
+        doc: User a's Twitter user id
       - name: user_b_id
         type: int
+        doc: User b's Twitter user id
       - name: conversations
-        type: array
-        items: conversation_obj
+        doc: An array of conversation objects. Each object includes meta data about the conversation
+        type:
+          type: array
+          items: conversation_obj
         
   - name: conversation_obj
     type: record
@@ -143,12 +185,13 @@ types:
         doc: Which tweet did this conversation occur in?
       - name: rel_type
         type: string
-        doc: |-
+        doc: >-
           Any of [re, rt, me] where re is a twitter sanctioned reply from user a to user b. rt is a retweet,
           from user a to user b and mention is an @userb from user a in any fashion that is NOT already a reply
           or retweet.
           
   - name: atsigns_from_response
+    doc: All atsigns from a given user
     fields:
       - name: total
         type: int
@@ -157,8 +200,9 @@ types:
         type: int
         doc: the user id of the user queried
       - name: atsigns_from
-        type: array
-        items: long
+        type:
+          type: array
+          items: long
         doc: An array of tweet ids from the queried user
 
   - name: atsigns_for_tweet_response
@@ -170,7 +214,8 @@ types:
         type: int
         doc: the tweet id used as the query
       - name: tweet_ids
-        type: array
-        items: long
+        type:
+          type: array
+          items: long
         doc: An array of tweet ids        
 
