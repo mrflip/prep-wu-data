@@ -15,4 +15,5 @@ trstrank         = FOREACH trstrank_j GENERATE
                    ;
 trstrank_hbase  = FOREACH trstrank GENERATE user_id AS row_key, screen_name, user_id, rank, tq;
 
-STORE trstrank INTO '<%= hdfs %>/<%= out %>';
+STORE trstrank INTO '<%= hdfs %>/<%= tsv_version %>';
+STORE trsrank_hbase INTO '<%= hdfs %>/<%= hbase_version %>';
