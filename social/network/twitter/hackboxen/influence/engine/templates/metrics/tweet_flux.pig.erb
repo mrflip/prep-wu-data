@@ -1,0 +1,33 @@
+--
+-- Get raw estimate of tweets in and out for every user (these are estimated from the statuses reported by twitter, NOT observed by us)
+--
+
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
+
+
+senders    = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:statuses_count', '-loadKey -limit 100000') AS (user_id:int, statuses:int);
+
+follows_hb = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab', '-loadKey -limit 100000') AS (row_key:chararray, a_follows_b:int);
+follows_fg = FOREACH follows_hb {
+               ids   = STRSPLIT(row_key, ':', 2);
+               a_f_b = (a_follows_b IS NOT NULL ? 1 : 0);
+               GENERATE
+                 FLATTEN(ids) AS (user_a_id:int, user_b_id:int),
+                 a_f_b        AS a_follows_b
+               ;
+             };
+follows    = FILTER follows_fg BY (a_follows_b == 1);
+
+
+senders_friends = COGROUP senders BY user_id INNER, follows BY user_b_id INNER PARALLEL <%= reduce_tasks %>; -- need to get a list of people to send statuses to
+receivers       = FOREACH senders_friends GENERATE
+                    FLATTEN(follows.user_a_id)  AS receiver_uid,            -- user receiving tweets
+                    FLATTEN(senders.statuses)   AS some_tweets_in           -- the tweets received by following user b (needs normalized by time)
+                  ;
+
+receivers_tweets_out = COGROUP receivers BY receiver_uid, senders BY user_id PARALLEL <%= reduce_tasks %>;
+tweet_flux           = FOREACH receivers_tweets_out GENERATE group AS user_id, FLATTEN(senders.statuses) AS tweets_out, SUM(receivers.some_tweets_in) AS tweets_in;
+
+STORE tweet_flux INTO '<%= hdfs %>/<%= out %>';

@@ -13,7 +13,8 @@ trstrank         = FOREACH trstrank_j GENERATE
                      pagerank_with_tq::rank       AS rank,
                      (int)pagerank_with_tq::tq    AS tq:int -- cast to an integer here
                    ;
-trstrank_hbase  = FOREACH trstrank GENERATE user_id AS row_key, screen_name, user_id, rank, tq;
+ordrd            = ORDER trstrank BY rank DESC PARALLEL <%= reduce_tasks %>;
+trstrank_hbase   = FOREACH trstrank GENERATE user_id AS row_key, screen_name, user_id, rank, tq;
 
-STORE trstrank INTO '<%= hdfs %>/<%= tsv_version %>';
+STORE ordrd INTO '<%= hdfs %>/<%= tsv_version %>';
 STORE trsrank_hbase INTO '<%= hdfs %>/<%= hbase_version %>';

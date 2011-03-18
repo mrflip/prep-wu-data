@@ -7,11 +7,11 @@ inputdir  = ARGV[0]
 outputdir = ARGV[1]
 
 task :trstrank do
-  sh "./trstrank_workflow.rb #{inputdir} #{outputdir}"
+  # sh "./trstrank_workflow.rb #{inputdir} #{outputdir}"
 end
 
 task :metrics do
-  sh "./metrics_workflow.rb #{inputdir} #{outputdir}"
+  sh "#{File.dirname(__FILE__)}/metrics_workflow.rb #{inputdir} #{outputdir}"
 end
 
 task :run => [:trstrank, :metrics]

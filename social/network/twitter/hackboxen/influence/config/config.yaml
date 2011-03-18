@@ -2,7 +2,7 @@
 
 hadoop:
   hdfs: ip-10-116-226-88.ec2.internal
-  reduce_tasks: 232
+  reduce_tasks: 4
   pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
   pig_options: "-Dmapred.min.split.size=50000000  -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100 -Dmapred.map.tasks.speculative.execution=false"
   pig_home: /usr/local/share/pig
@@ -24,7 +24,7 @@ trstrank:
   final_resting_place_in_the_cloud: s3n://infochimps-data/data/sn/tw/fixd/graph/trstrank
   
 workflow:
-  id: 20110301
+  id: 20110318
   s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
 
   

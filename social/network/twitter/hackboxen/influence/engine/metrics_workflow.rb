@@ -23,26 +23,32 @@ metrics = Workflow.new(options['workflow']['id']) do
   #
   templates = File.dirname(__FILE__)+'/templates/metrics'
   
-  tweet_flux            = PigScript.new(File.join(templates, "tweet_flux.pig"))
+  tweet_flux            = PigScript.new(File.join(templates, "tweet_flux.pig.erb"))
   tweet_flux_breakdown  = PigScript.new(File.join(templates, "tweet_flux_breakdown.pig"))
   assemble_influencer   = PigScript.new(File.join(templates, "assemble_influencer.pig"))
   final_influencer      = PigScript.new(File.join(templates, "final_influencer_table.pig"))
   fix_inconsistencies   = WukongScript.new(File.join(templates, "fix_inconsistencies.rb"))
 
   task :tweet_flux do
-    # FIXME, needs to pull users table from hbase
-
-    
-    # tweet_flux.env['PIG_OPTS'] = options['hadoop']['pig_options']
-    # tweet_flux.options  = {
-    #   :twuid   => "#{Settings.data_input_dir}/twitter_user_id",
-    #   :afb     => "#{Settings.data_input_dir}/a_follows_b",
-    #   :twflux  => latest_output(:tweet_flux)
-    # }
-    # tweet_flux.run
+    tweet_flux.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    tweet_flux.attributes  = {
+      :jars              => options['hbase']['jars'],
+      :twuid_table       => options['hbase']['twitter_users_table'],
+      :twuid_cf          => options['hbase']['twitter_users_cf'],
+      :twitter_rel_table => options['hbase']['twitter_rel_table'],
+      :reduce_tasks      => options['hadoop']['reduce_tasks'],
+      :hdfs              => "hdfs://#{options['hadoop']['hdfs']}",
+      :out               => next_output(:tweet_flux)
+    }
+    tweet_flux.run unless hdfs.exists? latest_output(:tweet_flux)
   end
 
   task :tweet_flux_breakdown do
+
+    #
+    # user_id => {tweet=>{122421 => 0}}, timestamp is the created_at field, converted to unix epoch time
+    #
+    
     # tweet_flux_breakdown.options = {
     #   :tweet   => "#{Settings.data_input_dir}/tweet",
     #   :hashtag => "#{Settings.data_input_dir}/hashtag",
@@ -86,4 +92,4 @@ metrics = Workflow.new(options['workflow']['id']) do
 end
 
 metrics.workdir = File.join(inputdir, "rawd")
-metrics.run(:fix_inconsistencies)
+metrics.run(:tweet_flux)
