@@ -1,0 +1,26 @@
+h1. Twitter Influence
+
+This hackbox runs both the trstrank caclulation and the influence metrics calculation. It also produces the full icss descibing the data assets and api calls produced.
+
+h3. Prerequisites
+
+Things you need to run this hackbox:
+
+* A hadoop cluster ~30 machines, m1.xlarge. These machines should be configured such that they have 6 hadoop map tasks per node and 4 hadoop reduce tasks per node.
+* The ability to connect to the @ham@ hbase cluster.
+* The ability to connect to the 's3://s3hdfs.infinitemonkeys.info' s3 block storage bucket.
+* The lastest version of jruby. (1.5.6 at the time of this writing)
+* The following ruby libraries:
+** swineherd
+** wukong
+** any other gems needed can be installed with @sudo jruby -S gem install <gem>@
+* Apache Pig version >= 0.8
+* The HBaseBulkloader java library (it contains classes for talking to Hbase via pig)
+
+h2. Trstrank
+
+TODO
+
+h2. Influence Metrics
+
+TODO
