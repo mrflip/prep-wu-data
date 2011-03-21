@@ -7,7 +7,7 @@ require 'json'
 class Mapper < Wukong::Streamer::RecordStreamer
   def process *args, &blk
     uid, sn, bag_of_links = args
-    yield [uid, jsonize(uid, sn, bag_of_links)]
+    yield [uid, 'base', 'strong_links_json', jsonize(uid, sn, bag_of_links)]
   end
 
   def jsonize uid, sn, bag_of_links

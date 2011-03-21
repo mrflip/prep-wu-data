@@ -1,0 +1,66 @@
+#!/usr/bin/env jruby
+
+require 'rubygems'
+require 'swineherd' ; include Swineherd
+require 'swineherd/script/pig_script' ; include Swineherd::Script
+require 'swineherd/script/wukong_script'
+require 'json'
+
+inputdir  = ARGV[0]
+outputdir = ARGV[1]
+
+hdfs = Swineherd::FileSystem.get(:hdfs)
+
+#
+# Read in working config file
+#
+options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
+
+icss    = File.join(outputdir, 'graph.icss.json')
+outd    = File.join(outputdir, "data", "strong_links_json")
+
+#
+# Create icss before anything else happens
+#
+valid_keys = %w[namespace protocol data_assets code_assets types messages targets]
+schema     = options.reject{|k,v| !valid_keys.include?(k)}.to_json
+hdfs.open(icss, 'w'){|f| f.puts(schema)}
+
+flow = Workflow.new(options['workflow']['id']) do
+
+  templates      = File.dirname(__FILE__)+'/templates'
+  weighted_edges = WukongScript.new(File.join(templates, "weighted_edge.rb"))
+  assembler      = PigScript.new(File.join(templates, "assemble_strong_links.pig.erb"))
+  jsonizer       = WukongScript.new(File.join(templates, 'jsonize_strong_links.rb'))
+
+  task :weighted_edges do
+    input = File.join(options['workflow']['s3_graph_dir'], options['workflow']['latest_influence_id'], 'multigraph')
+    weighted_edges.input  << input
+    weighted_edges.output << next_output(:weighted_edges)
+    weighted_edges.run unless hdfs.exists? latest_output(:weighted_edges)
+  end
+
+  task :assemble_strong_links => [:weighted_edges] do
+    assembler.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    assembler.attributes = {
+      :jars           => options['hbase']['jars'],
+      :weighted_edges => latest_output(:weighted_edges),
+      :twuid_table    => options['hbase']['twitter_users_table'],
+      :twuid_cf       => options['hbase']['twitter_users_cf'],
+      :n_links        => 100,
+      :hdfs           => options['hadoop']['hdfs'],
+      :out            => next_output(:assemble_strong_links)
+    }
+    assembler.run unless hdfs.exists? latest_output(:assemble_strong_links)
+  end
+
+  task :jsonize_strong_links => [:assemble_strong_links] do
+    jsonizer.input  << latest_output(:assemble_strong_links)
+    jsonizer.output << outd
+    jsonizer.run unless hdfs.exists? outd
+  end  
+
+end
+
+flow.workdir = File.join(inputdir, "rawd")
+flow.run(:jsonize_strong_links)

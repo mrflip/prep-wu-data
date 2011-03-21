@@ -1,0 +1,130 @@
+---
+
+hadoop:
+  hdfs: ip-10-116-226-88.ec2.internal
+  reduce_tasks: 4
+  pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+  pig_options: "-Dmapred.min.split.size=50000000  -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100 -Dmapred.map.tasks.speculative.execution=false"
+  pig_home: /usr/local/share/pig
+
+hbase:
+  twitter_users_table: soc_net_tw_twitter_user
+  twitter_users_cf: info
+  jars:
+    - /home/travis/dev/HbaseBulkloader/build/hbase_bulkloader.jar
+    - /usr/lib/hbase/lib/jline-0.9.94.jar
+    - /usr/lib/hbase/lib/guava-r05.jar
+    - /usr/lib/hbase/hbase.jar
+    - /usr/lib/hbase/lib/zookeeper.jar
+    
+workflow:
+  # LAST WORKFLOW ID OF THE INFLUENCE WORKFLOW
+  latest_influence_id: 20110318
+  #
+  id: 20110318
+  s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
+
+filesystem_scheme: hdfs
+
+namespace: social.network.tw
+protocol: graph
+  
+messages:
+  strong_links:
+    request:
+      - name: user_request
+        type: user_request
+    response: stronglinks
+    doc: |-
+      Given a user identifier (one of user_id or screen_name) returns up to 100 of
+      their closest connections on Twitter
+
+data_assets:
+  - name: strong_links_json_data_asset
+    type: strong_links_json
+    location: data/strong_links_json
+    
+targets:
+  
+  hbase:
+    - table_name: soc_net_tw_stronglinks
+      column_family: base
+      loader: fourple_loader
+      data_assets:
+        - strong_links_json_data_asset
+        
+  catalog:
+    - name: twitter_graph_metrics_entry
+      title: "Twitter Graph Metrics: StrongLinks"
+      messages:
+        - strong_links
+      description: |-
+        Given a single twitter user identifier returns an array of up to 100 of their strongest connections.
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+        - awesomeapi        
+types:
+  
+  - name: user_request
+    type: record
+    doc: One of a twitter user's screen_name or user_id
+    fields:
+      - name: screen_name
+        type: string
+        doc: A Twitter user's screen_name
+        default: infochimps
+      - name: user_id
+        type: int
+        doc: A Twitter user's user_id
+
+  - name: weighted_link
+    type: record
+    doc: A single weighted link
+    fields:
+      - name: user_id
+        type: int
+        doc: Twitter user id
+      - name: weight
+        type: float
+        doc: Weight of the link between the user queried and this user.
+          
+  - name: stronglinks
+    type: record
+    doc: An array of up to 100 of a Twitter user's strongest connections
+    fields:
+      - name: user_id
+        doc:  Twitter user id of the user queried
+        type: int
+      - name: screen_name
+        doc: Twitter screen name of the user queried
+        type: string
+      - name: strong_links
+        doc:  An array of weighted link (@user_id@, @weight@) pairs.
+        type:
+          type: array
+          items: weighted_link
+
+  - name: strong_links_json
+    type: record
+    doc: An intermediate form of the strong links data, prepared for loading into the data store
+    fields:
+      - name: row_key
+        type: string
+      - name: column_family
+        type: string
+      - name: column_name
+        type: string
+      - name: column_value
+        type: string
