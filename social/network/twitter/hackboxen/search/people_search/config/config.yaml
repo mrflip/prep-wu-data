@@ -48,8 +48,8 @@ targets:
         
   catalog:
     - name: people_search_catalog_entry
-      title: TwPeopleSearch
-      description: Full text search, on any or all fields, of twitter user profiles.
+      title: Twitter People Search
+      description: Full text search, on any or all fields, of Twitter user profiles.
       tags:
         - twitter
         - text
