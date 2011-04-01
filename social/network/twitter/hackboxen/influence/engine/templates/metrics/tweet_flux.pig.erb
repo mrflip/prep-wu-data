@@ -7,19 +7,19 @@ register <%= jar %>;
 <% end %>
 
 
-senders    = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:statuses_count', '-loadKey -limit 100000') AS (user_id:int, statuses:int);
+senders    = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:statuses_count', '-loadKey -limit 100') AS (user_id:chararray, statuses:int);
+follows_hb = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab', '-loadKey -limit 100') AS (row_key:chararray, a_follows_b:int);
 
-follows_hb = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab', '-loadKey -limit 100000') AS (row_key:chararray, a_follows_b:int);
 follows_fg = FOREACH follows_hb {
                ids   = STRSPLIT(row_key, ':', 2);
                a_f_b = (a_follows_b IS NOT NULL ? 1 : 0);
                GENERATE
-                 FLATTEN(ids) AS (user_a_id:int, user_b_id:int),
+                 FLATTEN(ids) AS (user_a_id:chararray, user_b_id:chararray),
                  a_f_b        AS a_follows_b
                ;
              };
-follows    = FILTER follows_fg BY (a_follows_b == 1);
 
+follows      = FILTER follows_fg BY (a_follows_b == 1);
 
 senders_friends = COGROUP senders BY user_id INNER, follows BY user_b_id INNER PARALLEL <%= reduce_tasks %>; -- need to get a list of people to send statuses to
 receivers       = FOREACH senders_friends GENERATE

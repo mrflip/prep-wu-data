@@ -117,8 +117,10 @@ trstrank = Workflow.new(options['workflow']['id']) do
   task :store_valuable_graph_data => [:multigraph_degrees] do
     deg_dist_out   = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'degree_distribution')
     multigraph_out = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'multigraph')
+    last_pagerank  = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'last_pagerank')
     hdfs.stream(latest_output(:multigraph_degrees), deg_dist_out)    unless hackety_exists? deg_dist_out
     hdfs.stream(latest_output(:assemble_multigraph), multigraph_out) unless hackety_exists? multigraph_out
+    hdfs.stream(latest_output(:pagerank_iterate), last_pagerank)     unless hackety_exists? last_pagerank
   end
   #
   #

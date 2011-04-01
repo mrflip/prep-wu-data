@@ -1,0 +1,110 @@
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
+
+twitter_user_id     = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name info:followers info:friends info:created_at', '-loadKey -limit 100') AS (user_id:chararray, screen_name:chararray, followers:int, friends:int, created_at:long);        
+degree_distribution = LOAD '<%= degree_distribution %>' AS (user_id:long, fo_o:long, fo_i:long, at_o:long, at_i:long, re_o:long, re_i:long, rt_o:long, rt_i:long);
+tweet_flux          = LOAD '<%= tweet_flux %>'  AS (user_id:long, tw_o:long, tw_i:long);
+break_down          = LOAD '<%= break_down %>'  AS (user_id:long, ms_tw_o:long, hsh_o:long, sm_o:long, url_o:long); -- measured tw_o
+pagerank            = LOAD '<%= latest_rank %>' AS (user_id:long, fo_rank:float, at_rank:float);
+
+with_deg = JOIN twitter_user_id BY user_id FULL OUTER, degree_distribution BY user_id PARALLEL <%= reduce_tasks %>;
+first    = FOREACH with_deg {
+             user_id = ( twitter_user_id::user_id IS NOT NULL ? twitter_user_id::user_id : degree_distribution::user_id );
+             GENERATE
+               twitter_user_id::sn           AS sn,        -- twitter user screen name
+               user_id                       AS user_id,       -- twitter user id
+               twitter_user_id::created_at   AS created_at,      -- twitter reported user profile created at date
+               twitter_user_id::followers    AS followers, -- twitter reported follows in
+               twitter_user_id::friends      AS friends,   -- twitter reported follows out
+               degree_distribution::fo_o     AS fo_o,      -- observed follows out
+               degree_distribution::fo_i     AS fo_i,      -- observed follows in
+               degree_distribution::at_o     AS at_o,      -- observed mentions out
+               degree_distribution::at_i     AS at_i,      -- observed mentions in
+               degree_distribution::re_o     AS re_o,      -- observed replies out
+               degree_distribution::re_i     AS re_i,      -- observed replies in
+               degree_distribution::rt_o     AS rt_o,      -- observed retweets out
+               degree_distribution::rt_i     AS rt_i       -- observed retweets in
+             ;
+           };
+
+with_twdist = JOIN first BY user_id FULL OUTER, tweet_flux BY user_id PARALLEL <%= reduce_tasks %>;
+second      = FOREACH with_twdist {
+                user_id = ( first::user_id IS NOT NULL ? first::user_id : tweet_flux::user_id );
+                GENERATE
+                  first::sn         AS sn,
+                  user_id           AS user_id,
+                  first::created_at AS created_at,
+                  first::followers  AS followers,
+                  first::friends    AS friends,
+                  first::fo_o       AS fo_o,
+                  first::fo_i       AS fo_i,
+                  first::at_o       AS at_o,
+                  first::at_i       AS at_i,
+                  first::re_o       AS re_o,
+                  first::re_i       AS re_i,
+                  first::rt_o       AS rt_o,
+                  first::rt_i       AS rt_i,
+                  tweet_flux::tw_o  AS tw_o, -- twitter reported tweets out
+                  tweet_flux::tw_i  AS tw_i  -- (basically) twitter reported tweets in (joined with a_follows_b to get)
+                ;
+              };
+
+with_brk = JOIN second BY user_id FULL OUTER, break_down BY user_id PARALLEL <%= reduce_tasks %>;
+third    = FOREACH with_brk {
+             user_id = ( second::user_id IS NOT NULL ? second::user_id : break_down::user_id );
+             GENERATE
+               second::sn          AS sn,            
+               user_id             AS user_id,           
+               second::created_at  AS created_at,          
+               second::followers   AS followers,
+               second::friends     AS friends,
+               second::fo_o        AS fo_o,          
+               second::fo_i        AS fo_i,          
+               second::at_o        AS at_o,          
+               second::at_i        AS at_i,          
+               second::re_o        AS re_o,          
+               second::re_i        AS re_i,          
+               second::rt_o        AS rt_o,          
+               second::rt_i        AS rt_i,          
+               second::tw_o        AS tw_o,          
+               second::tw_i        AS tw_i,
+               break_down::ms_tw_o AS ms_tw_o, -- observed tweets out
+               break_down::hsh_o   AS hsh_o,   -- observed hashtags out
+               break_down::sm_o    AS sm_o,    -- observed smileys out
+               break_down::url_o   AS url_o    -- observed urls out
+             ;
+           };
+
+with_rank = JOIN third BY user_id FULL OUTER, cut_rank BY user_id PARALLEL <%= reduce_tasks %>;
+fourth    = FOREACH with_rank {
+              user_id = ( third::user_id IS NOT NULL ? third::user_id : cut_rank::user_id );
+              GENERATE
+                third::sn         AS sn,            
+                user_id           AS user_id,           
+                third::created_at AS created_at,          
+                third::followers  AS followers,
+                third::friends    AS friends,
+                third::fo_o       AS fo_o,          
+                third::fo_i       AS fo_i,          
+                third::at_o       AS at_o,          
+                third::at_i       AS at_i,          
+                third::re_o       AS re_o,          
+                third::re_i       AS re_i,          
+                third::rt_o       AS rt_o,          
+                third::rt_i       AS rt_i,          
+                third::tw_o       AS tw_o,          
+                third::tw_i       AS tw_i,          
+                third::ms_tw_o    AS ms_tw_o,
+                third::hsh_o      AS hsh_o,         
+                third::sm_o       AS sm_o,          
+                third::url_o      AS url_o,
+                cut_rank::at_rank AS at_tr, -- calculated at rank based on retweets, mentions, and replies
+                cut_rank::fo_rank AS fo_tr  -- calculated fo rank based on followers and friends
+              ;
+          };
+
+out = FILTER fourth BY sn != '0';
+STORE out INTO '<%= hdfs %>/<%= out %>';
+
+-- infl = LOAD '$METRICS' AS (sn:chararray, user_id:long, created_at:long, followers:long, friends:long, fo_o:long, fo_i:long, at_o:long, at_i:long, re_o:long, re_i:long, rt_o:long, rt_i:long, tw_o:long, tw_i:long, ms_tw_o:long, hsh_o:long, sm_o:long, url_o:long, at_tr:float, fo_tr:float);

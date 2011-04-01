@@ -1,0 +1,28 @@
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
+
+tweet = LOAD '<%= tweet_table %>' USING com.infochimps.hbase.pig.HBaseStorage('tweet_ids: ', '-loadKey -limit 10000') AS (
+          user_id:chararray, tweet_ids:bag { tweet_tuple:tuple ( tweet_id:long, garbage:int ) }
+        );
+
+token = LOAD '<%= token_table %>' USING com.infochimps.hbase.pig.HBaseStorage('hashtag: smiley: url: ', '-loadKey -limit 10000') AS (
+          user_id:chararray,
+          hastag_ids:bag { tweet_tuple:tuple (tweet_id:long, garbage:int)},
+          smiley_ids:bag { tweet_tuple:tuple (tweet_id:long, garbage:int)},
+          url_ids:   bag { tweet_tuple:tuple (tweet_id:long, garbage:int)}
+        );
+
+tweet_counts = FOREACH tweet GENERATE user_id AS user_id, COUNT(tweet_ids)  AS tw_o;
+token_counts = FOREACH token GENERATE user_id AS user_id, COUNT(hastag_ids) AS hsh_o, COUNT(smiley_ids) AS sm_o, COUNT(url_ids) AS url_o;
+
+joined     = JOIN tweet_counts BY user_id, token_counts BY user_id PARALLEL <%= reduce_tasks %>;
+flux_types = FOREACH joined GENERATE
+               tweet_counts::user_id AS user_id,
+               tweet_counts::tw_o    AS tw_o,
+               token_counts::hsh_o   AS hsh_o,
+               token_counts::sm_o    AS sm_o,
+               token_counts::url_o   AS url_o
+             ;
+         
+STORE flux_types INTO '<%= hdfs %>/<%= out %>';
