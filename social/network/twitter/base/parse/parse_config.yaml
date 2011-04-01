@@ -1,11 +1,11 @@
 ---
-hdfs: ip-10-117-77-123.ec2.internal
-hadoop_reduce_tasks: 76
+hdfs: ip-10-204-246-6.ec2.internal
+hadoop_reduce_tasks: 120
 pig_home: /usr/local/share/pig
 pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
-pig_options: "-Dmapred.min.split.size=5000000000 -Dmapred.map.max.attempts=100 -Dmapred.max.tracker.failures=100"
+pig_options: "-Dmapred.min.split.size=5000000000 -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100"
 elasticsearch_home: /usr/local/share/elasticsearch
-elasticsearch_tweet_index: tweet-201102
+elasticsearch_tweet_index: tweet-201103
 elasticsearch_registers:
   - /home/travis/dev/wonderdog/build/wonderdog.jar
   - /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
@@ -90,8 +90,8 @@ twitter_tokens:
   - smiley
   - stock_token
 
-flow_id: 20110226
-ripd_s3_url: s3n://monkeyshines.infochimps.org/data/ripd/com.tw
+flow_id: 20110401
+ripd_s3_url: s3n://monkeyshines2.infochimps.org/data/ripd/com.tw
 last_search_date: 20100601
 last_api_date: 20101229
 last_stream_date: 20101219
@@ -108,5 +108,5 @@ hdfs_work_dir: /tmp/parse
 # stream_parse_regexp: "20101219"
 # search_parse_regexp: "20101229/comtwittersearch+20101229234857-22977.tsv.bz2"
 
-api_parse_regexp: "20110201,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110202,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110203,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110204,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110205,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110206,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110207,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110208,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110209,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110210,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110211,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110212,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110213,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110214,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110215,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110216,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110217,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110218,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110219,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110220,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110221,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110222,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110223,s3n://monkeyshines.infochimps.org/data/ripd/com.tw/com.twitter/20110224"
-stream_parse_regexp: "201102\*"
+api_parse_regexp: "\*"
+stream_parse_regexp: "201103\*"
