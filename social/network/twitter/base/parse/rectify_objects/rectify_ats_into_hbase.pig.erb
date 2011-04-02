@@ -2,8 +2,8 @@
 register <%= jar %>;
 <% end %>
         
-data         = LOAD '$TWUID_TABLE' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
-a_atsigns_bn = LOAD '$ATS' AS (rsrc:chararray, user_a_id:long, user_b_id:long, rel_type:chararray, twid:long, crat:long, user_b_sn:chararray, rel_tw_id:long);
+data         = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
+a_atsigns_bn = LOAD '<%= ats %>' AS (rsrc:chararray, user_a_id:long, user_b_id:long, rel_type:chararray, twid:long, crat:long, user_b_sn:chararray, rel_tw_id:long);
 
 filtered     = FILTER a_atsigns_bn BY user_b_sn IS NOT NULL;
 ats_joined   = JOIN data BY screen_name, filtered BY user_b_sn PARALLEL <%= reduce_tasks %>;
@@ -30,5 +30,5 @@ generated = FOREACH a_atsigns_b {
               ;
             };
 
-STORE generated INTO '$ATS_TABLE' USING com.infochimps.hbase.pig.DynamicFamilyStorage();
+STORE generated INTO '<%= ats_table %>' USING com.infochimps.hbase.pig.DynamicFamilyStorage();
 

@@ -8,8 +8,8 @@ require 'swineherd/script/wukong_script'
 Settings.define :flow_id,    :required => true,                 :description => "Flow id required to make run of workflow unique"
 Settings.define :input_dir,  :required => true,                 :description => "HDFS directory where input data lives (a_follows_b and a_atsigns_b)"
 Settings.define :iterations,     :default => 10, :type => Integer, :description => "Number of pagerank iterations to run"
-Settings.define :ics_tw_scripts, :default => "/home/jacob/Programming/infochimps-data/social/network/twitter"
-Settings.define :pig_opts,       :env_var => 'PIG_OPTS'
+Settings.define :ics_tw_scripts, :default => "/home/travis/dev/infochimps-data/social/network/twitter"
+Settings.define :pig_opts, :required => true, :description => "Any pig Mapred options desired"
 Settings.resolve!
 
 #
@@ -57,7 +57,7 @@ flow = Workflow.new(Settings.flow_id) do
   task :pagerank_initialize => [:assemble_multigraph] do 
     pagerank_initializer.output << next_output(:pagerank_initialize)
     pagerank_initializer.options     = {:multi => latest_output(:assemble_multigraph), :out => latest_output(:pagerank_initialize)}
-    pagerank_initializer.pig_options = Settings.pig_opts
+    pagerank_initializer.env['PIG_OPTS'] = Settings.pig_opts
     pagerank_initializer.run
   end
 
@@ -66,7 +66,7 @@ flow = Workflow.new(Settings.flow_id) do
   #
   task :pagerank_iterate => [:pagerank_initialize] do
     pagerank_iterator.options[:damp]           = '0.85f'
-    pagerank_iterator.pig_options              = Settings.pig_opts
+    pagerank_iterator.env['PIG_OPTS']              = Settings.pig_opts
     pagerank_iterator.options[:curr_iter_file] = latest_output(:pagerank_initialize)
     Settings.iterations.times do
       pagerank_iterator.output                   << next_output(:pagerank_iterate)
@@ -81,7 +81,7 @@ flow = Workflow.new(Settings.flow_id) do
   # Calculate the degree distribution of the multigraph
   #
   task :multigraph_degrees => [:assemble_multigraph] do
-    degrees_calculator.pig_options = Settings.pig_opts
+    degrees_calculator.env['PIG_OPTS'] = Settings.pig_opts
     degrees_calculator.output << next_output(:multigraph_degrees)
     degrees_calculator.options = {:degree => latest_output(:multigraph_degrees), :graph => latest_output(:assemble_multigraph)}
     degrees_calculator.run
@@ -95,7 +95,7 @@ flow = Workflow.new(Settings.flow_id) do
   #
   # multitask :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
   task :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
-    followers_joiner.pig_options = Settings.pig_opts
+    followers_joiner.env['PIG_OPTS'] = Settings.pig_opts
     followers_joiner.output << next_output(:join_pagerank_with_followers)
     followers_joiner.options = {
       :dist    => latest_output(:multigraph_degrees),
@@ -122,7 +122,7 @@ flow = Workflow.new(Settings.flow_id) do
   # Assemble all the components to form final trstrank table
   #
   task :assemble_trstrank => [:trstquotient] do
-    trstrank_assembler.pig_options = Settings.pig_opts
+    trstrank_assembler.env['PIG_OPTS'] = Settings.pig_opts
     trstrank_assembler.output << next_output(:assemble_trstrank)
     trstrank_assembler.options = {
       :tw_uid       => "#{Settings.input_dir}/twitter_user_id",

@@ -75,12 +75,12 @@ flow = Workflow.new(Settings['flow_id']) do
     next unless hdfs.exists? expected_input
     rels_rectifier.env['PIG_CLASSPATH'] = Settings['pig_classpath']
     rels_rectifier.attributes = {
+      :registers    => Settings['hbase_registers'],
       :ats_table    => Settings['hbase_relationships_table'],
       :twuid_table  => Settings['hbase_twitter_users_table'],
       :reduce_tasks => Settings['hadoop_reduce_tasks'],
       :ats          => expected_input
     }
-    rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
     rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
     rels_rectifier.run unless hdfs.exists? latest_output(:rectify_rels)
 
