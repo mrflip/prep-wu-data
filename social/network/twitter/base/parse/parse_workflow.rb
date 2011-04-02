@@ -74,10 +74,11 @@ flow = Workflow.new(Settings['flow_id']) do
     expected_input = File.join(latest_output(:unsplice), "a_atsigns_b-n")
     next unless hdfs.exists? expected_input
     rels_rectifier.env['PIG_CLASSPATH'] = Settings['pig_classpath']
-    rels_rectifier.options = {
-      :ats_table   => Settings['hbase_relationships_table'],
-      :twuid_table => Settings['hbase_twitter_users_table'],
-      :ats         => expected_input
+    rels_rectifier.attributes = {
+      :ats_table    => Settings['hbase_relationships_table'],
+      :twuid_table  => Settings['hbase_twitter_users_table'],
+      :reduce_tasks => Settings['hadoop_reduce_tasks'],
+      :ats          => expected_input
     }
     rels_rectifier.attributes = {:registers => Settings['hbase_registers']}
     rels_rectifier.output << next_output(:rectify_rels) # This has no hdfs output, actually
@@ -95,11 +96,12 @@ flow = Workflow.new(Settings['flow_id']) do
     next unless hdfs.exists? expected_input
     tweet_rectifier.env['PIG_CLASSPATH'] = Settings['pig_classpath']
     tweet_rectifier.attributes = {
-      :registers   => Settings['hbase_registers'],
-      :twuid_table => Settings['hbase_twitter_users_table'],
-      :data        => expected_input,
-      :hdfs        => "hdfs://#{Settings['hdfs']}",
-      :out         => next_output(:rectify_twnoids)
+      :registers    => Settings['hbase_registers'],
+      :twuid_table  => Settings['hbase_twitter_users_table'],
+      :data         => expected_input,
+      :hdfs         => "hdfs://#{Settings['hdfs']}",
+      :reduce_tasks => Settings['hadoop_reduce_tasks'],
+      :out          => next_output(:rectify_twnoids)
     }
     tweet_rectifier.output << latest_output(:rectify_twnoids)
     tweet_rectifier.run
