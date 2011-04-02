@@ -55,10 +55,7 @@ flow = Workflow.new(Settings['flow_id']) do
     stream_parser.run unless hdfs.exists? latest_output(:parse_twitter_stream)
   end
 
-  task :parse_all => [:parse_twitter_api, :parse_twitter_stream] do
-  end
-
-  task :unsplice => [:parse_all] do
+  task :unsplice => [:parse_twitter_api, :parse_twitter_stream] do
     unsplicer.attributes = {
       :piggybank_jar => File.join(Settings['pig_home'], 'contrib/piggybank/java/piggybank.jar'),
       :hdfs          => "hdfs://#{Settings['hdfs']}",
