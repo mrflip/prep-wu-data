@@ -6,7 +6,8 @@ register /usr/lib/hbase/lib/guava-r05.jar
 %default AATSB 's3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/current/a_atsigns_b'
         
 data = LOAD 'AATSB' AS (rsrc:chararray, user_a_id:chararray, user_b_id:chararray, rel_type:chararray, tweet_id:long, created_at:long, user_b_sn:chararray, rel_tw_id:long);
-generated = FOREACH data {
+filtered  = FILTER data BY rel_type IS NOT NULL;
+generated = FOREACH filtered {
               row_key   = CONCAT(CONCAT(user_a_id, ':'), user_b_id);
               col_fam   = (rel_type == 're' ? 'reply' : (rel_type == 'me' ? 'mention' : (rel_type == 'rt' ? 'retweet' : 'unknown')));
               json_meta = com.infochimps.hadoop.pig.TupleToJson(created_at, user_b_sn, rel_tw_id, 'created_at,user_b_sn,rel_tw_id');
