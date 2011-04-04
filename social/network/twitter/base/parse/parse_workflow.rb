@@ -32,7 +32,6 @@ flow = Workflow.new(Settings['flow_id']) do
   geo_loader          = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/geo_loader.pig.erb'))
   screen_name_loader  = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/screen_name_loader.pig.erb'))
   search_id_loader    = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/search_id_loader.pig.erb'))
-  tweet_url_loader    = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/tweet_url_loader.pig.erb'))
   user_id_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_id_loader.pig.erb'))
   profile_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_profile_loader.pig.erb'))
   style_loader        = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/twitter_user_style_loader.pig.erb'))
@@ -265,22 +264,6 @@ flow = Workflow.new(Settings['flow_id']) do
     hdfs.mkpath(latest_output(:load_search_ids))
   end
 
-  task :load_tweet_urls => [:unsplice] do
-    expected_input = File.join(latest_output(:unsplice), 'tweet_url')
-    next unless hdfs.exists? expected_input
-    tweet_url_loader.env['PIG_CLASSPATH'] = Settings['pig_classpath']
-    tweet_url_loader.attributes = {
-      :registers  => Settings['hbase_registers'],
-      :data       => expected_input,
-      :table      => Settings['hbase_tweet_url_table']
-    }
-    tweet_url_loader.output << next_output(:load_tweet_urls)
-    tweet_url_loader.run unless hdfs.exists? latest_output(:load_tweet_urls)
-
-    # HACK!
-    hdfs.mkpath(latest_output(:load_tweet_urls))
-  end
-
   task :load_user_ids => [:unsplice] do
     expected_input = File.join(latest_output(:unsplice), 'twitter_user')
     next unless hdfs.exists? expected_input
@@ -339,7 +322,6 @@ flow = Workflow.new(Settings['flow_id']) do
     :load_geo,
     :load_screen_names,
     :load_search_ids,
-    :load_tweet_urls,
     :load_user_ids,
     :load_profiles,
     :load_styles
