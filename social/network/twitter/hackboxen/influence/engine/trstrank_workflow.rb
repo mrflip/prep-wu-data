@@ -16,11 +16,10 @@ hdfs = Swineherd::FileSystem.get(:hdfs)
 #
 options       = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
 
-icss          = File.join(outputdir, 'influence.icss.json')
-trstrank_tsv  = File.join(outputdir, "data", "trstrank")
-trstrak_hbase = File.join(outputdir, "data", "trstrank_hbase")
-bzipd_out     = File.join(outputdir, "data", "trstrank_bzip")
-metrics_out   = File.join(outputdir, "data", "metrics")
+icss           = File.join(outputdir, 'influence.icss.json')
+trstrank_tsv   = File.join(outputdir, "data", "trstrank")
+bzipd_out      = File.join(outputdir, "data", "trstrank_bzip")
+metrics_out    = File.join(outputdir, "data", "metrics")
 
 #
 # Create icss before anything else happens
@@ -88,7 +87,7 @@ trstrank = Workflow.new(options['workflow']['id']) do
       pagerank_iterator.attributes[:next_iteration]     = next_output(:pagerank_iterate)
       pagerank_iterator.run unless hdfs.exists? latest_output(:pagerank_iterate)
       pagerank_iterator.refresh!
-      pagerank_iterator.attributes[:currrent_iteration] = latest_output(:pagerank_iterate)
+      pagerank_iterator.attributes[:current_iteration] = latest_output(:pagerank_iterate)
     end
   end
 
@@ -114,7 +113,7 @@ trstrank = Workflow.new(options['workflow']['id']) do
     system %Q{hadoop fs -test -e #{target}}
   end
 
-  task :store_valuable_graph_data => [:multigraph_degrees] do
+  task :store_valuable_graph_data => [:multigraph_degrees, :pagerank_iterate] do
     deg_dist_out   = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'degree_distribution')
     multigraph_out = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'multigraph')
     last_pagerank  = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'last_pagerank')
@@ -133,7 +132,7 @@ trstrank = Workflow.new(options['workflow']['id']) do
   # FIXME: why doesn't multitask work here?
   #
   # multitask :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
-  task :join_pagerank_with_followers => [:store_valuable_graph_data, :pagerank_iterate] do
+  task :join_pagerank_with_followers => [:store_valuable_graph_data] do
     followers_joiner.env['PIG_OPTS'] = options['hadoop']['pig_options']
     followers_joiner.attributes = {
       :hdfs                => "hdfs://#{options['hadoop']['hdfs']}",
@@ -174,24 +173,23 @@ trstrank = Workflow.new(options['workflow']['id']) do
       :reduce_tasks   => options['hadoop']['reduce_tasks'],
       :twuid_cf       => options['hbase']['twitter_users_cf'],
       :rank_with_tq   => latest_output(:trstquotient),
-      :tsv_version    => trstrank_tsv,
-      :hbase_version  => trstrank_hbase
-    }    
-    trstrank_assembler.run unless hdfs.exists? fixd_output
-  end  
+      :tsv_version    => trstrank_tsv
+    }
+    trstrank_assembler.run unless hdfs.exists? trstrank_tsv
+  end
 
   task :package_trstrank => [:assemble_trstrank] do
-    hdfs.bzip(fixd_output, bzipd_output) unless hdfs.exists? bzipd_output
+    hdfs.bzip(trstrank_tsv, bzipd_out) unless hdfs.exists? bzipd_out
   end
 
   task :send_trstrank_to_its_final_resting_place_in_the_cloud => [:package_trstrank] do
     adorned = "trstrank_#{options['workflow']['id']}.tsv.bz2"
     output  = File.join(options['trstrank']['final_resting_place_in_the_cloud'], adorned)
-    input   = File.join(bzipd_output, "part-00000.bz2")
+    input   = File.join(bzipd_out, "part-00000.bz2")
     cmd     = "hadoop fs -cp #{input} #{output}"
     sh cmd unless hackety_exists?(output)
   end
-  
+
 end
 
 trstrank.workdir = File.join(inputdir, "rawd")

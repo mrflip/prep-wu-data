@@ -1,12 +1,28 @@
 ---
 
+#
+# Please update the id to reflect the month and day this is being ran
+#
+workflow:
+  id: 20110404
+  s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
+
+#
+# Please update the hdfs (to point at current one) and the reduce_tasks to be the max
+# for the number of machines you have
+#
 hadoop:
-  hdfs: ip-10-242-83-160.ec2.internal
-  reduce_tasks: 20
+  hdfs: ip-10-204-246-6.ec2.internal
+  reduce_tasks: 120
   pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
-  pig_options: "-Dmapred.min.split.size=50000000  -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100 -Dmapred.map.tasks.speculative.execution=false"
+  pig_options: "-Dmapred.min.split.size=5000000000  -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100 -Dmapred.map.tasks.speculative.execution=false"
   pig_home: /usr/local/share/pig
-  
+
+
+
+#
+# This remains pretty static, you shouldn't have to change this
+#  
 hbase:
   twitter_users_table: soc_net_tw_twitter_user
   twitter_users_cf: info
@@ -20,19 +36,259 @@ hbase:
     - /usr/lib/hbase/hbase.jar
     - /usr/lib/hbase/lib/zookeeper.jar
 
+#
+# This remains pretty static, you shouldn't have to change this
+#
 trstrank:
   iterations: 10
   damping: 0.85f
   final_resting_place_in_the_cloud: s3n://infochimps-data/data/sn/tw/fixd/graph/trstrank
-  
-workflow:
-  id: 20110318
-  s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
 
-  
+
 filesystem_scheme: hdfs
 
+
+#
+# icss portion
+#
 namespace: social.network.tw
 protocol: influence
 
+messages:
+  trstrank:
+    request:
+      - name: user_request
+        type: user_request
+    response: trstrank_table
+    
+  metrics:
+    request:
+      - name: user_request
+        type: user_request
+    response: metrics_table
+
+data_assets:
+  - name:       trstrank_bzip
+    location:   data/trstrank_bzip
+    type:       trstrank_table
+  - name:       trstrank_table
+    location:   data/trstrank
+    type:       trstrank_table
+
+targets:
+  hbase:
+    - table_name: soc_net_tw_trstrank
+      loader: tsv_loader
+      data_assets:
+        - trstrank_table
+      column_family: base
+      id_field: user_id
+        
+  catalog:
+    - name: influencer_metrics_catalog_entry
+      messages:
+        - metrics
+      title: "Twitter Census: Influence Metrics"
+      description: >-
+
+        h3. Twitter User Influence Metrics
+
+
+        This call provides the most powerful analytics available on almost any Twitter user. Determine a user’s value, reputation, and
+        influence or filter spam. See who who holds the most ReTweeting cachet and who is most likely to respond to an @mention. See trst.me
+        for an example.
+
+        Some example use cases could be:
+
+          * For community managers, target who amongst your community is most active on Twitter.
+          * For marketers/advertisers, identify who the main influencers are within a community that is the ideal market for your product/service.
+            See who is most likely to respond to a random @mention because they might have high Chattiness rating, or who would have the highest
+            value tweet because they have high Sway.
+
+        If you have questions about how any of this data was computed or need any more information, please email info@infochimps.com or visit
+        our help page
+
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+        - awesomeapi
+        
+    - name: trstrank      
+      messages:
+        - trstrank        
+      title: "Twitter Census: Trst Rank"
+      tags:
+        - network
+        - social
+        - twitter
+        - pagerank
+        - socialnetwork
+        - ranking
+        - networking
+        - bigdata
+        - twitter-com
+        - trstrank
+        - reputation
+        - usergraph
+        - infochimps-api
+        - awesomeapi
+      description: >-
+
+        
+        h3. Trstrank
+
+
+        The Infochimps Trstrank measures how important a Twitter user is. It's a "sophisticated network measure of centrality":http://trst.me/about, not just a
+        count of the number of followers a user has. It ranges between 0 and 10 and is "logarithmically distributed":http://en.wikipedia.org/wiki/Logarithm#Logarithmic_scale
+        so "@BarackObama"http://trst.me/t/BarackObama 's 9.9 makes him many times more important than "@ShashiTharoor":http://trst.me/t/ShashiTharoor 's 8.9.
+          
+        h3. TrstQuotient
+
+        
+        A metric to help differentiate between users of similar Trstrank.
+        The TrstQuotient is an integer between 0 and 100 that quantifies the relationship between a user's Trstrank and their follower count.  It indicates how
+        _normal_ a user's Trstrank is, given his number of followers.  A very-low TrstQuotient can be a sign of a spammy or abusive Twitter account. More followers usually means
+        a higher Trstrank, but it's possible for two Twitter users to have a similar Trstrank but vastly different numbers of followers.  Vastly fewer followers for a comparable
+        Trstrank says a user's followers are themselves pretty trustworthy which reflects back well upon the user. As an example, consider NY Times columnist and two-time Pulitzer
+        Prize winner "@NickKristof":http://trst.me/t/NickKristof, who's able to score a impressive Trstrank of 7.29 with a meager 1 million followers.  His TrstQuotient is 80.
+        Compare him with in-again-out-again pop diva "@BritneySpears":http://trst.me/t/BritneySpears whose horde of over 5 million followers grants her a Trstrank score of 8.07,
+        only a little bit higher than @NickKristof.  Britney's TrstQuotient is a meager 20.  (Conclusions about the general trustworthiness of NY Times readers and Britney Spears
+        fans left to the reader.)
+
+        Check out "trst.me":http://trst.me/ to get combined Trstrank and "Influence":/describe/soc/net/tw/influence metrics for a Twitter user!
+        
+        h3. Use Cases:
+
+          
+        * Filter influencers/non-influencers
+        ** A high trstQuotient (> 70) is an indication of an important person.
+
+        * Spam Filtering
+        ** A low trstQuotient (< 30) is an indication of a spammy account.
+        
 types:
+  
+  - name: user_request
+    type: record
+    doc: One of (user_id, screen_name)
+    fields:
+      - name: user_id
+        type: int
+        doc: A Twitter user's user_id
+      - name: screen_name
+        type: string
+        doc: A Twitter user's screen_name
+        default: infochimps
+
+  - name: metrics_table
+    type: record
+    doc: Influencer Metrics
+    fields:
+      - name: user_id
+        type: int
+      - name: screen_name
+        type: string
+        doc: a Twitter screen name
+      - name: created_at
+        type: long
+      - name: followers
+        type: int
+      - name: influx
+        type: float
+        doc: Estimate of the number of tweets this user sees per day
+      - name: outflux
+        type: float
+        doc: Average number of tweets out per day by this user
+      - name: enthusiasm
+        type: float
+        doc: >-
+          (retweets_out / tweets_out) – Retweets (RT) per tweet
+
+          The enthusiasm score typically ranges from 0.0 to 1.0 and signifies the fraction of times a user’s
+          tweet is a retweet (RT) of another Twitter user.
+
+      - name: interesting
+        type: float
+        doc: >-
+          (@mentions_in / tweets_out).
+
+          Mentions are not directly linked to a user’s tweets out, but they do give an idea of the influence of a user.
+          An interesting score of greater than 1.0 signifies the user is interesting to the Twitter community, in that
+          the community reacts to the things that user tweets about and often shares things with them.
+          
+      - name: feedness
+        type: float
+        doc: (total_links_seen / tweets_out) – Links per tweet.
+      - name: chattiness
+        type: float
+        doc: >-
+          (@mentions_out / tweets_out) – @sign mentions per tweet.
+
+          Users with high chattiness are more likely to reference other members of the Twitter community.
+          A chattiness score near 1.0 signifies that, on average, each tweet contains a mention.
+
+      - name: sway
+        type: float
+        doc: >-
+          (retweets_in / tweets_out) – Retweets (RT) per tweet
+
+          The Twitter community follows a user with high sway closely and is likely to react to the things that they tweet about.
+          A sway near 1.0 signifies that, on average, each tweet by the user is retweeted by another person in the Twitter community.
+
+      - name: follow_rate
+        type: float
+        doc: Average number of followers per day this user receives
+        
+      - name: follow_churn
+        type: float
+        doc: >-
+          <code>(observed_num_friends/twitter_supplied_num_friends)</code> – The rate at which you unfollow other Twitter users.
+
+          
+          Some Twitter users will follow many people indiscriminately, wait until the person follows them back, and then unfollow them.
+          In doing so, they hope that having 300 followers and only following 25 will get people to notice them by inflating their
+          follower-to-following ratio. Twitter works hard to discourage this “aggressive churning”, as it is considered a form of spamming.
+
+          
+          As an example, if we have historically observed you following a total of 300 people, but your current friends count is only 50,
+          then you have a follow churn of 6.0 = 300 / 50. A follow churn of greater than 1.0 is a sign of a shady character, as there is a
+          large discrepancy between their current following number and their historic activity. A follow churn of significantly less than
+          should 1.0 can be ignored, as it implies that we have an incomplete picture of the user’s friend graph. A normal Twitter user has
+          a follow churn of 1.0, or within a small margin of it.
+          
+      - name: at_trstrank
+        type: float
+        doc: Measure of how important a user is based on the mention (atsigns) graph.
+      - name: fo_trstrank
+        type: float
+        doc: Measure of how important a user is based on the follower/friend graph        
+
+  - name: trstrank_table
+    type: record
+    doc: >-
+      Trstrank Influence Measure. How important is this user to Twitter as a whole?
+    fields:
+      - name: screen_name
+        type: string
+        doc: Twitter screen name of the queried user
+      - name: user_id
+        type: int
+        doc: Twitter user id of the queried user
+      - name: trstrank
+        type: float
+        doc: TrstRank influence measure
+      - name: tq
+        type: int
+        doc: TrstQuotient        
+
