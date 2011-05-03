@@ -1,5 +1,4 @@
 ---
-
 #
 # Please update the id to reflect the month and day this is being ran
 #
@@ -13,12 +12,10 @@ workflow:
 #
 hadoop:
   hdfs: ip-10-204-246-6.ec2.internal
-  reduce_tasks: 120
-  pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+  reduce_tasks: 104
+  pig_classpath: /usr/lib/hbase/lib/guava-r06.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase-0.90.1-cdh3u0.jar:/usr/lib/hbase/hbase-0.90.1-cdh3u0-tests.jar:/usr/local/share/pig/pig-0.8.0-cdh3u0-core.jar
   pig_options: "-Dmapred.min.split.size=5000000000  -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100 -Dmapred.map.tasks.speculative.execution=false"
-  pig_home: /usr/local/share/pig
-
-
+  pig_home: /usr/bin/pig
 
 #
 # This remains pretty static, you shouldn't have to change this
@@ -31,9 +28,8 @@ hbase:
   twitter_token_table: soc_net_tw_token
   jars:
     - /home/travis/dev/HbaseBulkloader/build/hbase_bulkloader.jar
-    - /usr/lib/hbase/lib/jline-0.9.94.jar
-    - /usr/lib/hbase/lib/guava-r05.jar
-    - /usr/lib/hbase/hbase.jar
+    - /usr/lib/hbase/lib/guava-r06.jar
+    - /usr/lib/hbase/hbase-0.90.1-cdh3u0.jar
     - /usr/lib/hbase/lib/zookeeper.jar
 
 #
