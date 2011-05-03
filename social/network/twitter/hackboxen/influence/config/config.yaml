@@ -4,7 +4,7 @@
 # Please update the id to reflect the month and day this is being ran
 #
 workflow:
-  id: 20110404
+  id: 20110503
   s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
 
 #
