@@ -1,7 +1,7 @@
 ---
 
 # hadoop stuff
-hdfs: ip-10-117-77-123.ec2.internal
+hdfs: ip-10-85-47-210.ec2.internal
 hadoop_reduce_tasks: 15
 #
 
@@ -10,12 +10,11 @@ flow_id: 20110215
 filesystem_scheme: hdfs
 #
 
-pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+pig_classpath: /usr/lib/hbase/lib/guava-r06.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/lib/pig/pig.jar
 pig_options: '-Dmapred.min.split.size=5000000000 -Dmapred.task.timeout=1800000'
 hbase_jars:
   - /home/jacob/Programming/hbase_bulkloader/build/hbase_bulkloader.jar
-  - /usr/lib/hbase/lib/jline-0.9.94.jar
-  - /usr/lib/hbase/lib/guava-r05.jar
+  - /usr/lib/hbase/lib/guava-r06.jar
   - /usr/lib/hbase/hbase.jar
   - /usr/lib/hbase/lib/zookeeper.jar
 hbase_table: soc_net_tw_twitter_user
@@ -108,7 +107,8 @@ types:
         type: string
         doc: User's hand entered, raw text, location
       - name: description
-        type: User's hand entered, raw text, description
+        type: string
+        doc: User's hand entered, raw text, description
       - name: time_zone
         type: string
         doc: Time zone as tzinfo compatible string
@@ -124,5 +124,5 @@ types:
         type: string
         doc: Is this a twitter verified account? 'true' or 'false'
       - name: contributors_enabled
-        type: chararray
+        type: string
         doc: If the twitter account is a pro account allowing multiple users to control visit dev.twitter.com for details

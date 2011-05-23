@@ -22,24 +22,25 @@ fixd_output = File.join(outputdir, "data", "twitter_user_profile")
 #
 # Define workflow
 #
-flow = Swineherd::Workflow.new(options['flow_id']) do
+flow = Swineherd::Workflow.new(options[:flow_id]) do
   profile_dumper  = PigScript.new(File.dirname(__FILE__)+'/templates/profile_dumper.pig.erb')
   profile_indexer = PigScript.new(File.dirname(__FILE__)+'/templates/profile_loader.pig.erb')
-  fields          = options['types'].find{|type| type['name'] == 'profile'}
+  fields          = options[:types].find{|type| type['name'] == 'profile'}['fields']
   pig_fields      = fields.map{|field| field['pig_type'] = PigScript.avro_to_pig(field['type']); field}
   
   task :dump_profiles do
-    profile_dumper.env['PIG_CLASSPATH'] = options['pig_classpath']
-    profile_dumper.env['PIG_OPTS']      = options['pig_options']
+    profile_dumper.env['PIG_CLASSPATH'] = options[:pig_classpath]
+    profile_dumper.env['PIG_OPTS']      = options[:pig_options]
     profile_dumper.attributes = {
-      :jars                 => options['hbase_jars'],
-      :hbase_table          => options['hbase_table'],
-      :hbase_column_family  => options['hbase_column_family'],
-      :reduce_tasks         => options['hadoop_reduce_tasks'],
+      :jars                 => options[:hbase_jars],
+      :hbase_table          => options[:hbase_table],
+      :hbase_column_family  => options[:hbase_column_family],
+      :reduce_tasks         => options[:hadoop_reduce_tasks],
       :twitter_user_profile => pig_fields,
-      :hdfs                 => "hdfs://#{options['hdfs']}",
+      :hdfs                 => "hdfs://#{options[:hdfs]}",
       :out                  => fixd_output
     }
+    puts File.read(profile_dumper.script)
     profile_dumper.run unless hdfs.exists? fixd_output
   end
 
