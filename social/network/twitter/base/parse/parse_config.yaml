@@ -108,6 +108,6 @@ hdfs_work_dir: /tmp/parse
 # search_parse_regexp: "20101229/comtwittersearch+20101229234857-22977.tsv.bz2"
 
 
-# api_parse_regexp: "201105\*
-api_parse_regexp: "20110223,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110224,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110225,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110226,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110227,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110228,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110301,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110302,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110303,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110306,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110307,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110308,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110309"
-stream_parse_regexp: "201103\*"
+api_parse_regexp: "201105\*"
+stream_parse_regexp: "201105\*"
+search_parse_regexp: all?

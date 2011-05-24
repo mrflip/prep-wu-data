@@ -66,9 +66,6 @@ flow = Workflow.new(Settings['flow_id']) do
     unsplicer.run unless hdfs.exists? latest_output(:unsplice)
   end
 
-  #
-  # Can't possibly work until we can talk to hbase with chimpark and other clusters
-  #
   task :rectify_rels => [:unsplice] do
     expected_input = File.join(latest_output(:unsplice), "a_atsigns_b-n")
     next unless hdfs.exists? expected_input
