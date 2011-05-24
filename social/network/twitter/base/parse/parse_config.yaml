@@ -1,13 +1,13 @@
 ---
-hdfs: ip-10-204-246-6.ec2.internal
+hdfs: ip-10-99-33-208.ec2.internal
 hadoop_reduce_tasks: 120
-pig_home: /usr/local/share/pig
-pig_classpath: /usr/lib/hbase/lib/jline-0.9.94.jar:/usr/lib/hbase/lib/guava-r05.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase.jar:/usr/lib/hbase/hbase-tests.jar:/usr/local/share/pig/pig.jar
+pig_home: /usr/lib/pig
+pig_classpath: /usr/lib/hbase/lib/guava-r06.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase-0.90.1-cdh3u0.jar:/usr/lib/hbase/hbase-0.90.1-cdh3u0-tests.jar:/usr/lib/pig/pig-0.8.0-cdh3u0-core.jar
 pig_options: "-Dmapred.min.split.size=5000000000 -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100"
 elasticsearch_home: /usr/local/share/elasticsearch
-elasticsearch_tweet_index: tweet-201103
+elasticsearch_tweet_index: tweet-201105
 elasticsearch_registers:
-  - /home/travis/dev/wonderdog/build/wonderdog.jar
+  - /home/travis/dev/wonderdog/target/wonderdog-1.0-SNAPSHOT.jar
   - /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
   - /usr/local/share/elasticsearch/lib/jline-0.9.94.jar
   - /usr/local/share/elasticsearch/lib/jna-3.2.7.jar
@@ -74,11 +74,10 @@ elasticsearch_indices_mapping:
   
 hbase_registers:
   - /home/travis/dev/HbaseBulkloader/build/hbase_bulkloader.jar
-  - /usr/lib/hbase/lib/jline-0.9.94.jar
-  - /usr/lib/hbase/lib/guava-r05.jar
-  - /usr/lib/hbase/hbase.jar
+  - /home/travis/dev/HbaseBulkloader/lib/joda-time-1.6.2.jar  
+  - /usr/lib/hbase/lib/guava-r06.jar
+  - /usr/lib/hbase/hbase-0.90.1-cdh3u0.jar
   - /usr/lib/hbase/lib/zookeeper.jar
-  - /home/travis/dev/HbaseBulkloader/lib/joda-time-1.6.2.jar
 
 hbase_relationships_table: soc_net_tw_a_rel_b
 hbase_twitter_users_table: soc_net_tw_twitter_user
@@ -90,10 +89,10 @@ twitter_tokens:
   - smiley
   - stock_token
 
-flow_id: 20110401
-ripd_s3_url: s3n://monkeyshines2.infochimps.org/data/ripd/com.tw
+flow_id: 20110501
+ripd_s3_url: s3n://monkeyshines1.infochimps.org/data/ripd/com.tw
 last_search_date: 20100601
-last_api_date: 20101229
+last_api_date: 20110524
 last_stream_date: 20101219
 ics_data_twitter_scripts: /home/travis/dev/infochimps-data/social/network/twitter
 wuclan_parse_scripts: /home/travis/dev/wuclan/lib/wuclan/twitter/parse
@@ -108,5 +107,7 @@ hdfs_work_dir: /tmp/parse
 # stream_parse_regexp: "20101219"
 # search_parse_regexp: "20101229/comtwittersearch+20101229234857-22977.tsv.bz2"
 
+
+# api_parse_regexp: "201105\*
 api_parse_regexp: "20110223,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110224,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110225,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110226,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110227,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110228,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110301,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110302,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110303,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110306,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110307,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110308,s3n://monkeyshines2.infochimps.org/data/ripd/com.tw/com.twitter/20110309"
 stream_parse_regexp: "201103\*"
