@@ -3,7 +3,7 @@
 register <%= jar %>;
 <% end %>
 
-twitter_user_id  = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
+twitter_user_id  = LOAD '<%= twuid_table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('<%= twuid_cf %>:screen_name', '-loadKey - config <%= hbase_config %>') AS (user_id:int, screen_name:chararray);
 pagerank_with_tq = LOAD '<%= rank_with_tq %>' AS (user_id:long, rank:float, tq:float);
 
 trstrank_j       = JOIN twitter_user_id BY user_id RIGHT OUTER, pagerank_with_tq BY user_id PARALLEL <%= reduce_tasks %>; -- return every pagerank record with or without screen_name
@@ -15,4 +15,4 @@ trstrank         = FOREACH trstrank_j GENERATE
                    ;
 ordrd            = ORDER trstrank BY rank DESC PARALLEL <%= reduce_tasks %>;
 
-STORE ordrd INTO '<%= hdfs %>/<%= tsv_version %>';
+STORE ordrd INTO '<%= tsv_version %>';

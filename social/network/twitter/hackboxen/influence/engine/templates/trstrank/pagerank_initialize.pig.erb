@@ -8,4 +8,4 @@ edges_f   = FILTER edges_cut BY (a_fo_b != 0) OR (at_o != 0);
 edges_g   = GROUP edges_f BY user_a PARALLEL <%= reduce_tasks %>;
 adj_list  = FOREACH edges_g GENERATE group, 1.0f AS init_fo_rank, 1.0f AS init_me_rank, edges_f.(user_b, a_fo_b, at_o);
 
-STORE adj_list INTO '<%= hdfs %>/<%= out %>';
+STORE adj_list INTO '<%= out %>';

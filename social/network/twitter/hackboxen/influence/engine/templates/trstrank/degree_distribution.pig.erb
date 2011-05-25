@@ -12,4 +12,4 @@ degrees = FOREACH grouped GENERATE
               SUM(graph.rt_i)   AS rt_i
           ;
 
-STORE degrees INTO '<%= hdfs %>/<%= degree_distribution %>';
+STORE degrees INTO '<%= degree_distribution %>';

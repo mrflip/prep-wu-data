@@ -2,7 +2,7 @@
 register <%= jar %>;
 <% end %>
 
-data = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey') AS (
+data = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey -config <%= hbase_config %>') AS (
         row_key:chararray,
         a_follows_b:int,
         b_follows_a:int,
@@ -64,4 +64,4 @@ multigraph   = FOREACH grouped {
                };
 
 
-STORE multigraph INTO '<%= hdfs %>/<%= out %>';
+STORE multigraph INTO '<%= out %>';

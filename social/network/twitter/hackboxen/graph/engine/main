@@ -22,7 +22,7 @@ outd    = File.join(outputdir, "data", "strong_links_json")
 #
 # Create icss before anything else happens
 #
-valid_keys = %w[namespace protocol data_assets code_assets types messages targets]
+valid_keys = [:namespace, :protocol, :data_assets, :code_assets, :types, :messages, :targets]
 schema     = options.reject{|k,v| !valid_keys.include?(k)}.to_json
 hdfs.open(icss, 'w'){|f| f.puts(schema)}
 

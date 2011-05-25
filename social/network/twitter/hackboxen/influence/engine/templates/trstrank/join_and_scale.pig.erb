@@ -1,5 +1,3 @@
-REGISTER <%= pig_home %>/contrib/piggybank/java/piggybank.jar;
-
 degrees = LOAD '<%= degree_distribution %>' AS (user_id:int, fo_o:int, fo_i:int, at_o:int, at_i:int, re_o:int, re_i:int, rt_o:int, rt_i:int);
 rank    = LOAD '<%= pagerank_output %>'     AS (user_id:long, raw_fo_rank:float, raw_at_rank:float, list:chararray); -- load everything
 
@@ -17,8 +15,8 @@ rank_g   = GROUP rank_fol ALL PARALLEL <%= reduce_tasks %>;
 rank_m   = FOREACH rank_g GENERATE FLATTEN(rank_fol), MAX(rank_fol.raw_fo_rank) AS max_fo_rank, MAX(rank_fol.raw_at_rank) AS max_at_rank;
 rank_out = FOREACH rank_m {
              -- scale rank to range from [0..10]
-             scaled_fo = 10.0f*( (float)org.apache.pig.piggybank.evaluation.math.LOG(rank_fol::raw_fo_rank + 1.0f) / (float)org.apache.pig.piggybank.evaluation.math.LOG(max_fo_rank + 1.0f) );
-             scaled_at = 10.0f*( (float)org.apache.pig.piggybank.evaluation.math.LOG(rank_fol::raw_at_rank + 1.0f) / (float)org.apache.pig.piggybank.evaluation.math.LOG(max_at_rank + 1.0f) );
+             scaled_fo = 10.0f*( (float)LOG10(rank_fol::raw_fo_rank + 1.0f) / (float)LOG10(max_fo_rank + 1.0f) );
+             scaled_at = 10.0f*( (float)LOG10(rank_fol::raw_at_rank + 1.0f) / (float)LOG10(max_at_rank + 1.0f) );
              GENERATE
                rank_fol::user_id         AS user_id,
                scaled_fo                 AS fo_rank,
@@ -27,4 +25,4 @@ rank_out = FOREACH rank_m {
              ;
            };
 
-STORE rank_out INTO '<%= hdfs %>/<%= out %>';
+STORE rank_out INTO '<%= out %>';

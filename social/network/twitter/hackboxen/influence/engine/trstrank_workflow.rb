@@ -24,7 +24,7 @@ metrics_out    = File.join(outputdir, "data", "metrics")
 #
 # Create icss before anything else happens
 #
-valid_keys = %w[namespace protocol data_assets code_assets types messages targets]
+valid_keys = [:namespace, :protocol, :data_assets, :code_assets, :types, :messages, :targets]
 schema     = options.reject{|k,v| !valid_keys.include?(k)}.to_json
 hdfs.open(icss, 'w'){|f| f.puts(schema)}
 
@@ -48,10 +48,10 @@ trstrank = Workflow.new(options['workflow']['id']) do
   task :assemble_multigraph do
     graph_assembler.env['PIG_OPTS'] = options['hadoop']['pig_options']
     graph_assembler.attributes = {
-      :hdfs              => "hdfs://#{options['hadoop']['hdfs']}",
       :jars              => options['hbase']['jars'],
       :twitter_rel_table => options['hbase']['twitter_rel_table'],
       :reduce_tasks      => options['hadoop']['reduce_tasks'],
+      :hbase_config      => options['hbase']['config'],
       :out               => next_output(:assemble_multigraph)
     }
     graph_assembler.run unless hdfs.exists? latest_output(:assemble_multigraph)
@@ -63,7 +63,6 @@ trstrank = Workflow.new(options['workflow']['id']) do
   task :pagerank_initialize => [:assemble_multigraph] do
     pagerank_initializer.env['PIG_OPTS'] = options['hadoop']['pig_options']
     pagerank_initializer.attributes = {
-      :hdfs         => "hdfs://#{options['hadoop']['hdfs']}",
       :multigraph   => latest_output(:assemble_multigraph),
       :reduce_tasks => options['hadoop']['reduce_tasks'],
       :out          => next_output(:pagerank_initialize)
@@ -78,7 +77,6 @@ trstrank = Workflow.new(options['workflow']['id']) do
   task :pagerank_iterate => [:pagerank_initialize] do
     pagerank_iterator.env['PIG_OPTS'] = options['hadoop']['pig_options']
     pagerank_iterator.attributes = {
-      :hdfs              => "hdfs://#{options['hadoop']['hdfs']}",
       :reduce_tasks      => options['hadoop']['reduce_tasks'],
       :pagerank_damping  => options['trstrank']['damping'],
       :current_iteration => latest_output(:pagerank_initialize)
@@ -98,7 +96,6 @@ trstrank = Workflow.new(options['workflow']['id']) do
   task :multigraph_degrees => [:assemble_multigraph] do
     degrees_calculator.env['PIG_OPTS'] = options['hadoop']['pig_options']
     degrees_calculator.attributes = {
-      :hdfs                => "hdfs://#{options['hadoop']['hdfs']}",
       :reduce_tasks        => options['hadoop']['reduce_tasks'],
       :multigraph          => latest_output(:assemble_multigraph),
       :degree_distribution => next_output(:multigraph_degrees)
@@ -135,9 +132,7 @@ trstrank = Workflow.new(options['workflow']['id']) do
   task :join_pagerank_with_followers => [:store_valuable_graph_data] do
     followers_joiner.env['PIG_OPTS'] = options['hadoop']['pig_options']
     followers_joiner.attributes = {
-      :hdfs                => "hdfs://#{options['hadoop']['hdfs']}",
       :reduce_tasks        => options['hadoop']['reduce_tasks'],
-      :pig_home            => options['hadoop']['pig_home'],
       :degree_distribution => latest_output(:multigraph_degrees),
       :pagerank_output     => latest_output(:pagerank_iterate),
       :out                 => next_output(:join_pagerank_with_followers)
@@ -168,7 +163,7 @@ trstrank = Workflow.new(options['workflow']['id']) do
     trstrank_assembler.env['PIG_CLASSPATH'] = options['hadoop']['pig_classpath']
     trstrank_assembler.attributes = {
       :jars           => options['hbase']['jars'],
-      :hdfs           => "hdfs://#{options['hadoop']['hdfs']}",
+      :hbase_config   => options['hbase']['config'],      
       :twuid_table    => options['hbase']['twitter_users_table'],
       :reduce_tasks   => options['hadoop']['reduce_tasks'],
       :twuid_cf       => options['hbase']['twitter_users_cf'],
