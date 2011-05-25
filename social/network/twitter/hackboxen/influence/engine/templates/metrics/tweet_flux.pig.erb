@@ -7,8 +7,8 @@ register <%= jar %>;
 <% end %>
 
 
-senders    = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:statuses_count', '-loadKey') AS (user_id:chararray, statuses:int);
-follows_hb = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hbase.pig.HBaseStorage('follow:ab', '-loadKey') AS (row_key:chararray, a_follows_b:int);
+senders    = LOAD '<%= twuid_table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('<%= twuid_cf %>:statuses_count', '-loadKey -config <%= hbase_config %>') AS (user_id:chararray, statuses:int);
+follows_hb = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('follow:ab', '-loadKey -config <%= hbase_config %>') AS (row_key:chararray, a_follows_b:int);
 
 follows_fg = FOREACH follows_hb {
                ids   = STRSPLIT(row_key, ':', 2);
@@ -30,4 +30,4 @@ receivers       = FOREACH senders_friends GENERATE
 receivers_tweets_out = COGROUP receivers BY receiver_uid, senders BY user_id PARALLEL <%= reduce_tasks %>;
 tweet_flux           = FOREACH receivers_tweets_out GENERATE group AS user_id, FLATTEN(senders.statuses) AS tweets_out, SUM(receivers.some_tweets_in) AS tweets_in;
 
-STORE tweet_flux INTO '<%= hdfs %>/<%= out %>';
+STORE tweet_flux INTO '<%= out %>';

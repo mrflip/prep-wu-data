@@ -19,7 +19,6 @@ options       = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environ
 icss           = File.join(outputdir, 'influence.icss.json')
 trstrank_tsv   = File.join(outputdir, "data", "trstrank")
 bzipd_out      = File.join(outputdir, "data", "trstrank_bzip")
-metrics_out    = File.join(outputdir, "data", "metrics")
 
 #
 # Create icss before anything else happens

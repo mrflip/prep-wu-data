@@ -35,4 +35,4 @@ metrics_fg = FOREACH metrics {
 metrics_filtered = FILTER metrics_fg BY user_id IS NOT NULL;
 metrics_distinct = DISTINCT metrics_filtered PARALLEL <%= reduce_tasks %>;
 
-STORE metrics_distinct INTO '<%= hdfs %>/<%= out %>';
+STORE metrics_distinct INTO '<%= out %>';

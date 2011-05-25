@@ -70,6 +70,9 @@ data_assets:
   - name:       trstrank_table
     location:   data/trstrank
     type:       trstrank_table
+  - name:       metrics_table
+    location:   data/metrics
+    type:       metrics_table
 
 targets:
   hbase:
@@ -79,6 +82,13 @@ targets:
         - trstrank_table
       column_family: base
       id_field: user_id
+      
+    - table_name: soc_net_tw_influencer_metrics
+      loader: tsv_loader
+      data_assets:
+        - metrics_table
+      column_family: base
+      id_field: user_id      
         
   catalog:
     - name: influencer_metrics_catalog_entry

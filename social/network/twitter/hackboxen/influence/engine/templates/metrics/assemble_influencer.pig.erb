@@ -2,7 +2,7 @@
 register <%= jar %>;
 <% end %>
 
-twitter_user_id     = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('info:screen_name info:followers info:friends info:created_at', '-loadKey -limit 100') AS (user_id:chararray, screen_name:chararray, followers:int, friends:int, created_at:long);        
+twitter_user_id     = LOAD '<%= twuid_table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('info:screen_name info:followers info:friends info:created_at', '-loadKey -config <%= hbase_config %>') AS (user_id:chararray, screen_name:chararray, followers:int, friends:int, created_at:long);        
 degree_distribution = LOAD '<%= degree_distribution %>' AS (user_id:long, fo_o:long, fo_i:long, at_o:long, at_i:long, re_o:long, re_i:long, rt_o:long, rt_i:long);
 tweet_flux          = LOAD '<%= tweet_flux %>'  AS (user_id:long, tw_o:long, tw_i:long);
 break_down          = LOAD '<%= break_down %>'  AS (user_id:long, ms_tw_o:long, hsh_o:long, sm_o:long, url_o:long); -- measured tw_o
@@ -105,6 +105,6 @@ fourth    = FOREACH with_rank {
           };
 
 out = FILTER fourth BY sn != '0';
-STORE out INTO '<%= hdfs %>/<%= out %>';
+STORE out INTO '<%= out %>';
 
 -- infl = LOAD '$METRICS' AS (sn:chararray, user_id:long, created_at:long, followers:long, friends:long, fo_o:long, fo_i:long, at_o:long, at_i:long, re_o:long, re_i:long, rt_o:long, rt_i:long, tw_o:long, tw_i:long, ms_tw_o:long, hsh_o:long, sm_o:long, url_o:long, at_tr:float, fo_tr:float);

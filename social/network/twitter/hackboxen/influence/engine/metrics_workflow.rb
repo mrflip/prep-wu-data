@@ -16,6 +16,8 @@ hdfs = Swineherd::FileSystem.get(:hdfs)
 #
 options = YAML.load(hdfs.open(File.join(outputdir, "env", "working_environment.yaml")).read)
 
+metrics_tsv = File.join(outputdir, "data", "metrics")
+
 metrics = Workflow.new(options['workflow']['id']) do
 
   #
@@ -37,7 +39,7 @@ metrics = Workflow.new(options['workflow']['id']) do
       :twuid_cf          => options['hbase']['twitter_users_cf'],
       :twitter_rel_table => options['hbase']['twitter_rel_table'],
       :reduce_tasks      => options['hadoop']['reduce_tasks'],
-      :hdfs              => "hdfs://#{options['hadoop']['hdfs']}",
+      :hbase_config      => options['hbase']['config'],
       :out               => next_output(:tweet_flux)
     }
     tweet_flux.run unless hdfs.exists? latest_output(:tweet_flux)
@@ -47,8 +49,8 @@ metrics = Workflow.new(options['workflow']['id']) do
     tweet_flux_breakdown.env['PIG_OPTS'] = options['hadoop']['pig_options']
     tweet_flux_breakdown.attributes = {
       :jars         => options['hbase']['jars'],
-      :hdfs         => "hdfs://#{options['hadoop']['hdfs']}",
       :out          => next_output(:tweet_flux_breakdown),
+      :hbase_config => options['hbase']['config'],
       :tweet_table  => options['hbase']['twitter_tweet_table'],
       :token_table  => options['hbase']['twitter_token_table'],
       :reduce_tasks => options['hadoop']['reduce_tasks']
@@ -78,7 +80,7 @@ metrics = Workflow.new(options['workflow']['id']) do
     assemble_influencer.env['PIG_OPTS'] = options['hadoop']['pig_options']
     assemble_influencer.attributes = {
       :jars                => options['hbase']['jars'],
-      :hdfs                => "hdfs://#{options['hadoop']['hdfs']}",
+      :hbase_config        => options['hbase']['config'],      
       :out                 => next_output(:assemble_influencer),
       :twuid_table         => options['hbase']['twitter_users_table'],
       :degree_distribution => latest_output(:multigraph_degrees),
@@ -91,23 +93,18 @@ metrics = Workflow.new(options['workflow']['id']) do
   end
 
   task :final_influencer => [:assemble_influencer] do
-    # today = (`wu-date`).strip
-    # final_influencer.output << next_output(:final_influencer)
-    # final_influencer.pig_options = "-Dmapred.reduce.tasks=#{Settings.reduce_tasks}"
-    # final_influencer.options = {
-    #   :today         => "#{today}l",
-    #   :metrics       => latest_output(:assemble_influencer),
-    #   :metrics_table => latest_output(:final_influencer)
-    # }
-    # final_influencer.run
-  end
-
-  task :fix_inconsistencies => [:final_influencer] do
-    # fix_inconsistencies.input  << latest_output(:final_influencer)
-    # fix_inconsistencies.output << next_output(:fix_inconsistencies)
+    today = `date +"%Y%m%d"`.strip
+    final_influencer.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    final_influencer.options = {
+      :today         => today,
+      :metrics       => latest_output(:assemble_influencer),
+      :metrics_table => latest_output(:final_influencer),
+      :out           => metrics_tsv      
+    }
+    final_influencer.run unless hdfs.exists? metrics_tsv
   end
 
 end
 
 metrics.workdir = File.join(inputdir, "rawd")
-metrics.run(:tweet_flux)
+metrics.run(:final_influencer)
