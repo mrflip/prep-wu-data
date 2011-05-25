@@ -90,7 +90,7 @@ twitter_tokens:
   - stock_token
 
 flow_id: 20110501
-ripd_s3_url: s3n://monkeyshines1.infochimps.org/data/ripd/com.tw
+ripd_s3_url: s3n://monkeyshines.infochimps.org/data/ripd/com.tw
 last_search_date: 20100601
 last_api_date: 20110524
 last_stream_date: 20101219
