@@ -22,6 +22,7 @@ workflow:
   #
   id: 20110318
   s3_graph_dir: s3://s3hdfs.infinitemonkeys.info/data/sn/tw/fixd/graph
+  num_links: 1000
 
 filesystem_scheme: hdfs
 
