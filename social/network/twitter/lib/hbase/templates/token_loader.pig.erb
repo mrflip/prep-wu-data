@@ -11,4 +11,4 @@ for_hbase  = FOREACH cut_tokens {
                col_val  = '0';
                GENERATE row_key, col_fam, col_name, col_val, timestamp;
              };
-STORE for_hbase INTO '<%= table %>' USING com.infochimps.hadoop.pig.hbase.DynamicFamilyStorage();
+STORE for_hbase INTO '<%= table %>' USING com.infochimps.hadoop.pig.hbase.DynamicFamilyStorage('<%= hbase_config %>');

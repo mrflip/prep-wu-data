@@ -1,4 +1,4 @@
-<% registers.each do |jar| %>
+<% jars.each do |jar| %>
 register <%= jar %>;
 <% end %>
         
@@ -25,4 +25,4 @@ b_follows_a = FOREACH data {
               };
 
 generated = UNION a_follows_b, b_follows_a;
-STORE generated INTO '<%= table %>' USING com.infochimps.hbase.pig.DynamicFamilyStorage();
+STORE generated INTO '<%= table %>' USING com.infochimps.hadoop.pig.hbase.DynamicFamilyStorage('<%= hbase_config %>');

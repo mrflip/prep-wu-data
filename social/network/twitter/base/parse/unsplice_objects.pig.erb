@@ -1,7 +1,12 @@
+--
+-- Here we have to register the jar since MultiStorage is only part of the piggybank.
+--
+-- FIXME: Once MultiStorage is pushed into pig trunk (go and check now) then the register should be removed.
+--
 register <%= piggybank_jar %>;
 
 api_objects    = LOAD '<%= api %>';
 stream_objects = LOAD '<%= stream %>';
 
 objects_to_unsplice = UNION api_objects, stream_objects;
-STORE objects_to_unsplice INTO '<%= hdfs %>/<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');
+STORE objects_to_unsplice INTO '<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');

@@ -1,4 +1,4 @@
-register <%= piggybank_jar %>
+register <%= piggybank_jar %>;
 
 tweet        = LOAD '<%= data %>' AS (rsrc:chararray,tweet_id:long,created_at:chararray,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
 with_indices = FOREACH tweet {
@@ -27,4 +27,4 @@ with_indices = FOREACH tweet {
                  ;                         
                };
 
-STORE with_indices INTO '<%= hdfs %>/<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');
+STORE with_indices INTO '<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');

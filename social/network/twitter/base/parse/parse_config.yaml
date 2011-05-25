@@ -1,103 +1,112 @@
 ---
-hdfs: ip-10-99-33-208.ec2.internal
-hadoop_reduce_tasks: 120
-pig_home: /usr/lib/pig
-pig_classpath: /usr/lib/hbase/lib/guava-r06.jar:/usr/lib/hbase/lib/commons-lang-2.5.jar:/usr/lib/hbase/hbase-0.90.1-cdh3u0.jar:/usr/lib/hbase/hbase-0.90.1-cdh3u0-tests.jar:/usr/lib/pig/pig-0.8.0-cdh3u0-core.jar
-pig_options: "-Dmapred.min.split.size=5000000000 -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100"
-elasticsearch_home: /usr/local/share/elasticsearch
-elasticsearch_tweet_index: tweet-201105
-elasticsearch_registers:
-  - /home/travis/dev/wonderdog/target/wonderdog-1.0-SNAPSHOT.jar
-  - /usr/local/share/elasticsearch/lib/elasticsearch-0.14.2.jar
-  - /usr/local/share/elasticsearch/lib/jline-0.9.94.jar
-  - /usr/local/share/elasticsearch/lib/jna-3.2.7.jar
-  - /usr/local/share/elasticsearch/lib/log4j-1.2.15.jar
-  - /usr/local/share/elasticsearch/lib/lucene-analyzers-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-core-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-fast-vector-highlighter-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-highlighter-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-memory-3.0.3.jar
-  - /usr/local/share/elasticsearch/lib/lucene-queries-3.0.3.jar
-elasticsearch_indices_mapping:
-  200601: "tweet-2009q3pre"
-  200602: "tweet-2009q3pre"
-  200603: "tweet-2009q3pre"
-  200604: "tweet-2009q3pre"
-  200605: "tweet-2009q3pre"
-  200606: "tweet-2009q3pre"
-  200607: "tweet-2009q3pre"
-  200608: "tweet-2009q3pre"
-  200609: "tweet-2009q3pre"
-  200610: "tweet-2009q3pre"
-  200611: "tweet-2009q3pre"
-  200612: "tweet-2009q3pre"
-  200701: "tweet-2009q3pre"
-  200702: "tweet-2009q3pre"
-  200703: "tweet-2009q3pre"
-  200704: "tweet-2009q3pre"
-  200705: "tweet-2009q3pre"
-  200706: "tweet-2009q3pre"
-  200707: "tweet-2009q3pre"
-  200708: "tweet-2009q3pre"
-  200709: "tweet-2009q3pre"
-  200710: "tweet-2009q3pre"
-  200711: "tweet-2009q3pre"
-  200712: "tweet-2009q3pre"  
-  200801: "tweet-2009q3pre"
-  200802: "tweet-2009q3pre"
-  200803: "tweet-2009q3pre"
-  200804: "tweet-2009q3pre"
-  200805: "tweet-2009q3pre"
-  200806: "tweet-2009q3pre"
-  200807: "tweet-2009q3pre"
-  200808: "tweet-2009q3pre"
-  200809: "tweet-2009q3pre"
-  200810: "tweet-2009q3pre"
-  200811: "tweet-2009q3pre"
-  200812: "tweet-2009q3pre"
-  200901: "tweet-2009q3pre"
-  200902: "tweet-2009q3pre"
-  200903: "tweet-2009q3pre"
-  200904: "tweet-2009q3pre"
-  200905: "tweet-2009q3pre"
-  200906: "tweet-2009q3pre"
-  200907: "tweet-2009q3pre"
-  200908: "tweet-2009q3pre"
-  200909: "tweet-2009q3pre"
-  200910: "tweet-2009q4"
-  200911: "tweet-2009q4"
-  200912: "tweet-2009q4"    
-  201001: "tweet-2010q1"
-  201002: "tweet-2010q1"
-  201003: "tweet-2010q1"
-# everything else goes into the index corresponding to it's month: eg. 201004 goes into tweet-201004
-  
-hbase_registers:
-  - /home/travis/dev/HbaseBulkloader/build/hbase_bulkloader.jar
-  - /home/travis/dev/HbaseBulkloader/lib/joda-time-1.6.2.jar  
-  - /usr/lib/hbase/lib/guava-r06.jar
-  - /usr/lib/hbase/hbase-0.90.1-cdh3u0.jar
-  - /usr/lib/hbase/lib/zookeeper.jar
 
-hbase_relationships_table: soc_net_tw_a_rel_b
-hbase_twitter_users_table: soc_net_tw_twitter_user
-hbase_delete_tweet_table: soc_net_tw_delete_tweet
-hbase_geo_table: soc_net_tw_geo
-hbase_tweet_url_table: soc_net_tw_tweet_url
+hadoop:
+  reduce_tasks: 120
+  pig_home: /usr/lib/pig
+  pig_options: "-Dmapred.min.split.size=5000000000 -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100"
+
+elasticsearch:
+  home: /usr/local/share/elasticsearch
+  tweet_index: tweet-201105
+  jars:
+    - /home/jacob/Programming/troop/vendor/jars/wonderdog-1.0-SNAPSHOT.jar
+    - /home/jacob/Programming/troop/vendor/jars/elasticsearch-0.14.2.jar
+    - /home/jacob/Programming/troop/vendor/jars/jline-0.9.94.jar
+    - /home/jacob/Programming/troop/vendor/jars/jna-3.2.7.jar
+    - /home/jacob/Programming/troop/vendor/jars/log4j-1.2.15.jar
+    - /home/jacob/Programming/troop/vendor/jars/lucene-analyzers-3.0.3.jar
+    - /home/jacob/Programming/troop/vendor/jars/lucene-core-3.0.3.jar
+    - /home/jacob/Programming/troop/vendor/jars/lucene-fast-vector-highlighter-3.0.3.jar
+    - /home/jacob/Programming/troop/vendor/jars/lucene-highlighter-3.0.3.jar
+    - /home/jacob/Programming/troop/vendor/jars/lucene-memory-3.0.3.jar
+    - /home/jacob/Programming/troop/vendor/jars/lucene-queries-3.0.3.jar
+  indices_mapping:
+    200601: "tweet-2009q3pre"
+    200602: "tweet-2009q3pre"
+    200603: "tweet-2009q3pre"
+    200604: "tweet-2009q3pre"
+    200605: "tweet-2009q3pre"
+    200606: "tweet-2009q3pre"
+    200607: "tweet-2009q3pre"
+    200608: "tweet-2009q3pre"
+    200609: "tweet-2009q3pre"
+    200610: "tweet-2009q3pre"
+    200611: "tweet-2009q3pre"
+    200612: "tweet-2009q3pre"
+    200701: "tweet-2009q3pre"
+    200702: "tweet-2009q3pre"
+    200703: "tweet-2009q3pre"
+    200704: "tweet-2009q3pre"
+    200705: "tweet-2009q3pre"
+    200706: "tweet-2009q3pre"
+    200707: "tweet-2009q3pre"
+    200708: "tweet-2009q3pre"
+    200709: "tweet-2009q3pre"
+    200710: "tweet-2009q3pre"
+    200711: "tweet-2009q3pre"
+    200712: "tweet-2009q3pre"  
+    200801: "tweet-2009q3pre"
+    200802: "tweet-2009q3pre"
+    200803: "tweet-2009q3pre"
+    200804: "tweet-2009q3pre"
+    200805: "tweet-2009q3pre"
+    200806: "tweet-2009q3pre"
+    200807: "tweet-2009q3pre"
+    200808: "tweet-2009q3pre"
+    200809: "tweet-2009q3pre"
+    200810: "tweet-2009q3pre"
+    200811: "tweet-2009q3pre"
+    200812: "tweet-2009q3pre"
+    200901: "tweet-2009q3pre"
+    200902: "tweet-2009q3pre"
+    200903: "tweet-2009q3pre"
+    200904: "tweet-2009q3pre"
+    200905: "tweet-2009q3pre"
+    200906: "tweet-2009q3pre"
+    200907: "tweet-2009q3pre"
+    200908: "tweet-2009q3pre"
+    200909: "tweet-2009q3pre"
+    200910: "tweet-2009q4"
+    200911: "tweet-2009q4"
+    200912: "tweet-2009q4"    
+    201001: "tweet-2010q1"
+    201002: "tweet-2010q1"
+    201003: "tweet-2010q1"
+    
+# everything else goes into the index corresponding to it's month: eg. 201004 goes into tweet-201004
+
+hbase:
+  config: /etc/hbase/conf/hbase-site.xml
+  tweet_table: soc_net_tw_tweet
+  token_table: soc_net_tw_token
+  relationship_table: soc_net_tw_a_rel_b
+  users_table: soc_net_tw_twitter_user
+  delete_tweet_table: soc_net_tw_delete_tweet
+  geo_table: soc_net_tw_geo
+  jars:
+    - /home/jacob/Programming/troop/vendor/jars/infochimps-piggybank-1.0-SNAPSHOT.jar
+    - /home/jacob/Programming/troop/vendor/jars/jline-0.9.94.jar
+    - /home/jacob/Programming/troop/vendor/jars/guava-r06.jar
+    - /home/jacob/Programming/troop/vendor/jars/hbase-0.90.1-cdh3u0.jar
+    - /home/jacob/Programming/troop/vendor/jars/zookeeper-3.3.1+10.jar  
+
 twitter_tokens:
   - hashtag
   - smiley
   - stock_token
 
-flow_id: 20110501
+workflow:
+  id: 20110501
+  work_dir: /tmp/parse
+  
 ripd_s3_url: s3n://monkeyshines.infochimps.org/data/ripd/com.tw
 last_search_date: 20100601
-last_api_date: 20110524
+last_api_date: 20110524 
 last_stream_date: 20101219
 ics_data_twitter_scripts: /home/travis/dev/infochimps-data/social/network/twitter
 wuclan_parse_scripts: /home/travis/dev/wuclan/lib/wuclan/twitter/parse
 parse_script_path: /home/travis/dev/infochimps-data/social/network/twitter/base/parse
-hdfs_work_dir: /tmp/parse
+
 
 # api_parse_regexp: "{201012{29..31},201101{01..30}}"
 # stream_parse_regexp: "{20101219,201101{01..31}}"

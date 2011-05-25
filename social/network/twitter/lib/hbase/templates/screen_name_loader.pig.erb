@@ -1,4 +1,4 @@
-<% registers.each do |jar| %>
+<% jars.each do |jar| %>
 register <%= jar %>;
 <% end %>
 
@@ -7,4 +7,4 @@ register <%= jar %>;
 data       = LOAD '<%= data %>' AS (rsrc:chararray, user_id:long, scraped_at:long, sn:chararray, protected:int, followers_count:int, friends_count:int, statuses_count:int, favourites_count:int, created_at:long, sid:long, is_full:int, health:chararray);
 record     = FILTER data BY sn is not null;
 cut_record = FOREACH record GENERATE LOWER(sn) AS key, sn AS screen_name, sid, user_id;
-STORE cut_record INTO '<%= table %>' USING com.infochimps.hbase.pig.HBaseStorage('$CF:screen_name $CF:sid $CF:user_id');
+STORE cut_record INTO '<%= table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('$CF:screen_name $CF:sid $CF:user_id', '-config <%= hbase_config %>');
