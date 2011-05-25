@@ -9,17 +9,16 @@ elasticsearch:
   home: /usr/local/share/elasticsearch
   tweet_index: tweet-201105
   jars:
-    - /home/jacob/Programming/troop/vendor/jars/wonderdog-1.0-SNAPSHOT.jar
-    - /home/jacob/Programming/troop/vendor/jars/elasticsearch-0.14.2.jar
-    - /home/jacob/Programming/troop/vendor/jars/jline-0.9.94.jar
-    - /home/jacob/Programming/troop/vendor/jars/jna-3.2.7.jar
-    - /home/jacob/Programming/troop/vendor/jars/log4j-1.2.15.jar
-    - /home/jacob/Programming/troop/vendor/jars/lucene-analyzers-3.0.3.jar
-    - /home/jacob/Programming/troop/vendor/jars/lucene-core-3.0.3.jar
-    - /home/jacob/Programming/troop/vendor/jars/lucene-fast-vector-highlighter-3.0.3.jar
-    - /home/jacob/Programming/troop/vendor/jars/lucene-highlighter-3.0.3.jar
-    - /home/jacob/Programming/troop/vendor/jars/lucene-memory-3.0.3.jar
-    - /home/jacob/Programming/troop/vendor/jars/lucene-queries-3.0.3.jar
+    - /home/travis/dev/troop/vendor/jars/wonderdog-1.0-SNAPSHOT.jar
+    - /home/travis/dev/troop/vendor/jars/elasticsearch-0.16.0.jar
+    - /home/travis/dev/troop/vendor/jars/jline-0.9.94.jar
+    - /home/travis/dev/troop/vendor/jars/jna-3.2.7.jar
+    - /home/travis/dev/troop/vendor/jars/log4j-1.2.15.jar
+    - /home/travis/dev/troop/vendor/jars/lucene-analyzers-3.1.0.jar
+    - /home/travis/dev/troop/vendor/jars/lucene-core-3.1.0.jar
+    - /home/travis/dev/troop/vendor/jars/lucene-highlighter-3.1.0.jar
+    - /home/travis/dev/troop/vendor/jars/lucene-memory-3.1.0.jar
+    - /home/travis/dev/troop/vendor/jars/lucene-queries-3.1.0.jar
   indices_mapping:
     200601: "tweet-2009q3pre"
     200602: "tweet-2009q3pre"
@@ -84,11 +83,11 @@ hbase:
   delete_tweet_table: soc_net_tw_delete_tweet
   geo_table: soc_net_tw_geo
   jars:
-    - /home/jacob/Programming/troop/vendor/jars/infochimps-piggybank-1.0-SNAPSHOT.jar
-    - /home/jacob/Programming/troop/vendor/jars/jline-0.9.94.jar
-    - /home/jacob/Programming/troop/vendor/jars/guava-r06.jar
-    - /home/jacob/Programming/troop/vendor/jars/hbase-0.90.1-cdh3u0.jar
-    - /home/jacob/Programming/troop/vendor/jars/zookeeper-3.3.1+10.jar  
+    - /home/travis/dev/troop/vendor/jars/infochimps-piggybank-1.0-SNAPSHOT.jar
+    - /home/travis/dev/troop/vendor/jars/jline-0.9.94.jar
+    - /home/travis/dev/troop/vendor/jars/guava-r06.jar
+    - /home/travis/dev/troop/vendor/jars/hbase-0.90.1-cdh3u0.jar
+    - /home/travis/dev/troop/vendor/jars/zookeeper-3.3.1+10.jar  
 
 twitter_tokens:
   - hashtag
