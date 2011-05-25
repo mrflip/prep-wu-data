@@ -49,7 +49,8 @@ flow = Workflow.new(options['workflow']['id']) do
       :twuid_cf       => options['hbase']['twitter_users_cf'],
       :n_links        => 100,
       :hdfs           => options['hadoop']['hdfs'],
-      :out            => next_output(:assemble_strong_links)
+      :out            => next_output(:assemble_strong_links),
+      :hbase_config   => options['hbase']['config']
     }
     assembler.run unless hdfs.exists? latest_output(:assemble_strong_links)
   end

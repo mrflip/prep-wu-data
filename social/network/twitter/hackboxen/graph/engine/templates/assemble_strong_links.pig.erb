@@ -3,7 +3,7 @@ register <%= jar %>;
 <% end %>
         
 weighted_multi_edge = LOAD '<%= weighted_edges %>' AS (user_a_id:long, user_b_id:long, fo_sy:int, at_sy:int, weight:float);
-twitter_user_id     = LOAD '<%= twuid_table %>' USING com.infochimps.hbase.pig.HBaseStorage('<%= twuid_cf %>:screen_name', '-loadKey') AS (user_id:int, screen_name:chararray);
+twitter_user_id     = LOAD '<%= twuid_table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('<%= twuid_cf %>:screen_name', '-loadKey -config <%= hbase_config %>') AS (user_id:int, screen_name:chararray);
 
 grouped = COGROUP weighted_multi_edge BY user_a_id, twitter_user_id BY user_id PARALLEL <%= reduce_tasks %>;
 flat    = FOREACH grouped {
@@ -16,4 +16,4 @@ flat    = FOREACH grouped {
             ;
           };
 
-STORE flat INTO '<%= hdfs %>/<%= out %>';
+STORE flat INTO '<%= out %>';
