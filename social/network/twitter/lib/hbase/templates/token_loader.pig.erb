@@ -1,0 +1,14 @@
+<% jars.each do |jar| %>
+register <%= jar %>;
+<% end %>
+
+tokens     = LOAD '<%= token %>' AS (rsrc:chararray, text:chararray, tweet_id:long, user_id:int, created_at:chararray, moreinfo:chararray);
+cut_tokens = FOREACH tokens GENERATE rsrc AS rsrc, user_id AS user_id, tweet_id AS tweet_id, com.infochimps.hadoop.pig.datetime.StringFormatToUnix(created_at) AS timestamp; 
+for_hbase  = FOREACH cut_tokens {
+               row_key  = user_id;
+               col_fam  = (rsrc=='tweet_url' ? 'url' : rsrc);
+               col_name = tweet_id;
+               col_val  = '0';
+               GENERATE row_key, col_fam, col_name, col_val, timestamp;
+             };
+STORE for_hbase INTO '<%= table %>' USING com.infochimps.hadoop.pig.hbase.DynamicFamilyStorage();
