@@ -41,7 +41,7 @@ flow = Workflow.new(Settings['workflow']['id']) do
   # Uses a wukong script to parse data from the normal twitter api.
   #
   task :parse_twitter_api do
-    api_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter', Settings['api_parse_regexp'])
+    api_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter.api', Settings['api_parse_regexp'])
     api_parser.output << next_output(:parse_twitter_api)
     api_parser.run unless hdfs.exists? latest_output(:parse_twitter_api)
   end
