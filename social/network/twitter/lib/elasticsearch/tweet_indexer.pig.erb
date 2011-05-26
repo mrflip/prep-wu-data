@@ -4,4 +4,4 @@ register <%= jar %>;
 
 data     = LOAD '<%= data %>' AS (es_index:chararray,tweet_id:long,created_at:long,user_id:long,screen_name:chararray,search_id:long,in_reply_to_user_id:long,in_reply_to_screen_name:chararray,in_reply_to_search_id:long,in_reply_to_status_id:long,text:chararray,source:chararray,lang:chararray,lat:float,lng:float,retweeted_count:int,rt_of_user_id:long,rt_of_screen_name:chararray,rt_of_tweet_id:long,contributors:chararray);
 cut_data = FOREACH data GENERATE tweet_id, created_at, user_id, screen_name, search_id, in_reply_to_user_id, in_reply_to_screen_name, in_reply_to_search_id, in_reply_to_status_id, text, source, lang, lat, lng, retweeted_count, rt_of_user_id, rt_of_screen_name, rt_of_tweet_id, contributors; 
-STORE cut_data INTO 'es://<%= index_name %>/<%= obj_type %>' USING com.infochimps.elasticsearch.pig.ElasticSearchIndex('0', '<%= bulk_size %>');
+STORE cut_data INTO 'es://<%= index_name %>/<%= obj_type %>' USING com.infochimps.elasticsearch.pig.ElasticSearchIndex('0', '<%= bulk_size %>', '<%= config_path %>', '<%= plugin_path %>');

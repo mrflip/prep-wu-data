@@ -147,11 +147,13 @@ flow = Workflow.new(Settings['workflow']['id']) do
     hdfs.entries(input_dir).each do |unspliced|
       next if unspliced =~ /_log/
       tweet_indexer.attributes = {
-        :jars       => Settings['elasticsearch']['jars'],
-        :data       => unspliced,
-        :index_name => get_esindex(File.basename(unspliced)),
-        :obj_type   => 'tweet',
-        :bulk_size  => 500
+        :jars        => Settings['elasticsearch']['jars'],
+        :data        => unspliced,
+        :index_name  => get_esindex(File.basename(unspliced)),
+        :obj_type    => 'tweet',
+        :bulk_size   => 500,
+        :config_path => Settings['elasticsearch']['config_path'],
+        :plugin_path => Settings['elasticsearch']['plugin_path']
       }
 
       #

@@ -7,6 +7,8 @@ hadoop:
 
 elasticsearch:
   home: /usr/local/share/elasticsearch
+  config_path: /etc/elasticsearch/elasticsearch.yml
+  plugin_path: /usr/local/share/elasticsearch/plugins
   tweet_index: tweet-201105
   jars:
     - /home/travis/dev/troop/vendor/jars/wonderdog-1.0-SNAPSHOT.jar

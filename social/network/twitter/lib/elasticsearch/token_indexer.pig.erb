@@ -4,4 +4,4 @@ register <%= jar %>;
 
 data     = LOAD '<%= data %>' AS (rsrc:chararray, text:chararray, tweet_id:long, user_id:long, created_at:long);
 cut_data = FOREACH data GENERATE text, tweet_id, user_id, created_at; 
-STORE cut_data INTO 'es://<%= index_name %>/<%= obj_type %>' USING com.infochimps.elasticsearch.pig.ElasticSearchIndex('1', '<%= bulk_size %>');
+STORE cut_data INTO 'es://<%= index_name %>/<%= obj_type %>' USING com.infochimps.elasticsearch.pig.ElasticSearchIndex('1', '<%= bulk_size %>', '<%= config_path %>', '<%= plugin_path %>');
