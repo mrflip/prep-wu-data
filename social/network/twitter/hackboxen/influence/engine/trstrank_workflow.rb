@@ -27,7 +27,7 @@ valid_keys = [:namespace, :protocol, :data_assets, :code_assets, :types, :messag
 schema     = options.reject{|k,v| !valid_keys.include?(k)}.to_json
 hdfs.open(icss, 'w'){|f| f.puts(schema)}
 
-trstrank = Workflow.new(options['workflow']['id']) do
+trstrank = Workflow.new(options[:workflow][:id]) do
 
   #
   # Scripts needed to run trstrank workflow
@@ -45,25 +45,26 @@ trstrank = Workflow.new(options['workflow']['id']) do
   # Take a_follows_b and a_atsigns_b and assemble multigraph
   #
   task :assemble_multigraph do
-    graph_assembler.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    graph_assembler.env['PIG_OPTS'] = options[:hadoop][:pig_options]
     graph_assembler.attributes = {
-      :jars              => options['hbase']['jars'],
-      :twitter_rel_table => options['hbase']['twitter_rel_table'],
-      :reduce_tasks      => options['hadoop']['reduce_tasks'],
-      :hbase_config      => options['hbase']['config'],
+      :jars              => options[:hbase][:jars],
+      :twitter_rel_table => options[:hbase][:twitter_rel_table],
+      :reduce_tasks      => options[:hadoop][:reduce_tasks],
+      :hbase_config      => options[:hbase][:config],
       :out               => next_output(:assemble_multigraph)
     }
-    graph_assembler.run unless hdfs.exists? latest_output(:assemble_multigraph)
+    puts latest_output(:assemble_multigraph)
+    #graph_assembler.run unless hdfs.exists? latest_output(:assemble_multigraph)
   end
 
   #
   # Use the multigraph to create initial input for pagerank
   #
   task :pagerank_initialize => [:assemble_multigraph] do
-    pagerank_initializer.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    pagerank_initializer.env['PIG_OPTS'] = options[:hadoop][:pig_options]
     pagerank_initializer.attributes = {
       :multigraph   => latest_output(:assemble_multigraph),
-      :reduce_tasks => options['hadoop']['reduce_tasks'],
+      :reduce_tasks => options[:hadoop][:reduce_tasks],
       :out          => next_output(:pagerank_initialize)
     }
     pagerank_initializer.run unless hdfs.exists? latest_output(:pagerank_initialize)
@@ -74,13 +75,13 @@ trstrank = Workflow.new(options['workflow']['id']) do
   # Iterate pagerank multiple times over the multigraph
   #
   task :pagerank_iterate => [:pagerank_initialize] do
-    pagerank_iterator.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    pagerank_iterator.env['PIG_OPTS'] = options[:hadoop][:pig_options]
     pagerank_iterator.attributes = {
-      :reduce_tasks      => options['hadoop']['reduce_tasks'],
-      :pagerank_damping  => options['trstrank']['damping'],
+      :reduce_tasks      => options[:hadoop][:reduce_tasks],
+      :pagerank_damping  => options[:trstrank][:damping],
       :current_iteration => latest_output(:pagerank_initialize)
     }
-    options['trstrank']['iterations'].to_i.times do
+    options[:trstrank][:iterations].to_i.times do
       pagerank_iterator.attributes[:next_iteration]     = next_output(:pagerank_iterate)
       pagerank_iterator.run unless hdfs.exists? latest_output(:pagerank_iterate)
       pagerank_iterator.refresh!
@@ -93,9 +94,9 @@ trstrank = Workflow.new(options['workflow']['id']) do
   # Calculate the degree distribution of the multigraph
   #
   task :multigraph_degrees => [:assemble_multigraph] do
-    degrees_calculator.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    degrees_calculator.env['PIG_OPTS'] = options[:hadoop][:pig_options]
     degrees_calculator.attributes = {
-      :reduce_tasks        => options['hadoop']['reduce_tasks'],
+      :reduce_tasks        => options[:hadoop][:reduce_tasks],
       :multigraph          => latest_output(:assemble_multigraph),
       :degree_distribution => next_output(:multigraph_degrees)
     }
@@ -110,9 +111,9 @@ trstrank = Workflow.new(options['workflow']['id']) do
   end
 
   task :store_valuable_graph_data => [:multigraph_degrees, :pagerank_iterate] do
-    deg_dist_out   = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'degree_distribution')
-    multigraph_out = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'multigraph')
-    last_pagerank  = File.join(options['workflow']['s3_graph_dir'], options['workflow']['id'].to_s, 'last_pagerank')
+    deg_dist_out   = File.join(options[:workflow][:s3_graph_dir], options[:workflow][:id].to_s, 'degree_distribution')
+    multigraph_out = File.join(options[:workflow][:s3_graph_dir], options[:workflow][:id].to_s, 'multigraph')
+    last_pagerank  = File.join(options[:workflow][:s3_graph_dir], options[:workflow][:id].to_s, 'last_pagerank')
     hdfs.stream(latest_output(:multigraph_degrees), deg_dist_out)    unless hackety_exists? deg_dist_out
     hdfs.stream(latest_output(:assemble_multigraph), multigraph_out) unless hackety_exists? multigraph_out
     hdfs.stream(latest_output(:pagerank_iterate), last_pagerank)     unless hackety_exists? last_pagerank
@@ -129,9 +130,9 @@ trstrank = Workflow.new(options['workflow']['id']) do
   #
   # multitask :join_pagerank_with_followers => [:multigraph_degrees, :pagerank_iterate] do
   task :join_pagerank_with_followers => [:store_valuable_graph_data] do
-    followers_joiner.env['PIG_OPTS'] = options['hadoop']['pig_options']
+    followers_joiner.env['PIG_OPTS'] = options[:hadoop][:pig_options]
     followers_joiner.attributes = {
-      :reduce_tasks        => options['hadoop']['reduce_tasks'],
+      :reduce_tasks        => options[:hadoop][:reduce_tasks],
       :degree_distribution => latest_output(:multigraph_degrees),
       :pagerank_output     => latest_output(:pagerank_iterate),
       :out                 => next_output(:join_pagerank_with_followers)
@@ -158,14 +159,14 @@ trstrank = Workflow.new(options['workflow']['id']) do
   # Assemble all the components to form final trstrank table.
   #
   task :assemble_trstrank => [:trstquotient] do
-    trstrank_assembler.env['PIG_OPTS']      = options['hadoop']['pig_options']
-    trstrank_assembler.env['PIG_CLASSPATH'] = options['hadoop']['pig_classpath']
+    trstrank_assembler.env['PIG_OPTS']      = options[:hadoop][:pig_options]
+    trstrank_assembler.env['PIG_CLASSPATH'] = options[:hadoop][:pig_classpath]
     trstrank_assembler.attributes = {
-      :jars           => options['hbase']['jars'],
-      :hbase_config   => options['hbase']['config'],      
-      :twuid_table    => options['hbase']['twitter_users_table'],
-      :reduce_tasks   => options['hadoop']['reduce_tasks'],
-      :twuid_cf       => options['hbase']['twitter_users_cf'],
+      :jars           => options[:hbase][:jars],
+      :hbase_config   => options[:hbase][:config],      
+      :twuid_table    => options[:hbase][:twitter_users_table],
+      :reduce_tasks   => options[:hadoop][:reduce_tasks],
+      :twuid_cf       => options[:hbase][:twitter_users_cf],
       :rank_with_tq   => latest_output(:trstquotient),
       :tsv_version    => trstrank_tsv
     }
@@ -177,8 +178,8 @@ trstrank = Workflow.new(options['workflow']['id']) do
   end
 
   task :send_trstrank_to_its_final_resting_place_in_the_cloud => [:package_trstrank] do
-    adorned = "trstrank_#{options['workflow']['id']}.tsv.bz2"
-    output  = File.join(options['trstrank']['final_resting_place_in_the_cloud'], adorned)
+    adorned = "trstrank_#{options[:workflow][:id]}.tsv.bz2"
+    output  = File.join(options[:trstrank][:final_resting_place_in_the_cloud], adorned)
     input   = File.join(bzipd_out, "part-00000.bz2")
     cmd     = "hadoop fs -cp #{input} #{output}"
     sh cmd unless hackety_exists?(output)

@@ -11,7 +11,7 @@ workflow:
 # for the number of machines you have
 #
 hadoop:
-  reduce_tasks: 116
+  reduce_tasks: 112
   pig_options: "-Dmapred.min.split.size=5000000000  -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100 -Dmapred.map.tasks.speculative.execution=false"
   pig_home: /usr/lib/pig
 

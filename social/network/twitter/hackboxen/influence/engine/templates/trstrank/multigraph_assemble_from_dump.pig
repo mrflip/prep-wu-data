@@ -1,8 +1,5 @@
-<% jars.each do |jar| %>
-register <%= jar %>;
-<% end %>
 
-data = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hadoop.pig.hbase.StaticFamilyStorage('follow:ab follow:ba reply: retweet: mention: ', '-loadKey -config <%= hbase_config %>') AS (
+data = LOAD '/tmp/a_rel_b' AS (
         row_key:chararray,
         a_follows_b:int,
         b_follows_a:int,
@@ -11,7 +8,6 @@ data = LOAD '<%= twitter_rel_table %>' USING com.infochimps.hadoop.pig.hbase.Sta
         mentions:bag { pair:tuple (tweet_id:long, tweet_meta:chararray) }
         );
 
--- our data only summarizes out relationships between two users
 multigraph_out = FOREACH data {
                    ids   = STRSPLIT(row_key, ':', 2);
                    a_f_b = (a_follows_b IS NOT NULL ? 1 : 0);
@@ -40,7 +36,7 @@ multigraph_in = FOREACH multigraph_out GENERATE
                   me_o        AS me_i
                 ;
 
-grouped      = COGROUP multigraph_out BY (user_a_id, user_b_id) OUTER, multigraph_in BY (user_a_id, user_b_id) OUTER PARALLEL <%= reduce_tasks %>;
+grouped      = COGROUP multigraph_out BY (user_a_id, user_b_id) OUTER, multigraph_in BY (user_a_id, user_b_id) OUTER PARALLEL 120;
 multigraph   = FOREACH grouped {
                  a_f_b  = (IsEmpty(multigraph_out) ? 0l : SUM(multigraph_out.a_follows_b)) + (IsEmpty(multigraph_in) ? 0l : SUM(multigraph_in.a_follows_b));
                  b_f_a  = (IsEmpty(multigraph_out) ? 0l : SUM(multigraph_out.b_follows_a)) + (IsEmpty(multigraph_in) ? 0l : SUM(multigraph_in.b_follows_a));
@@ -64,4 +60,4 @@ multigraph   = FOREACH grouped {
                };
 
 
-STORE multigraph INTO '<%= out %>';
+STORE multigraph INTO '/mnt/tmp/data/hb/social/network/tw/influence/rawd/20110531/assemble_multigraph-0';
