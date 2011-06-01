@@ -1,7 +1,7 @@
 ---
 
 hadoop:
-  reduce_tasks: 120
+  reduce_tasks: 116
   pig_home: /usr/lib/pig
   pig_options: "-Dmapred.min.split.size=5000000000 -Dmapred.map.max.attempts=100 -Dmapred.reduce.max.attempts=100 -Dmapred.max.tracker.failures=100"
 
@@ -90,20 +90,22 @@ hbase:
     - /home/travis/dev/troop/vendor/jars/guava-r06.jar
     - /home/travis/dev/troop/vendor/jars/hbase-0.90.1-cdh3u0.jar
     - /home/travis/dev/troop/vendor/jars/zookeeper-3.3.1+10.jar  
+    - /home/travis/dev/troop/vendor/jars/joda-time-1.6.jar
 
 twitter_tokens:
   - hashtag
   - smiley
   - stock_token
+  - tweet_url
 
 workflow:
-  id: 20110501
+  id: 20110531
   work_dir: /tmp/parse
   
 ripd_s3_url: s3n://monkeyshines.infochimps.org/data/ripd/com.tw
 last_search_date: 20100601
 last_api_date: 20110524 
-last_stream_date: 20101219
+last_stream_date: 20110519
 ics_data_twitter_scripts: /home/travis/dev/infochimps-data/social/network/twitter
 wuclan_parse_scripts: /home/travis/dev/wuclan/lib/wuclan/twitter/parse
 parse_script_path: /home/travis/dev/infochimps-data/social/network/twitter/base/parse
@@ -120,4 +122,4 @@ parse_script_path: /home/travis/dev/infochimps-data/social/network/twitter/base/
 
 api_parse_regexp: "201105\*"
 stream_parse_regexp: "201105\*"
-search_parse_regexp: all?
+search_parse_regexp: "2011\*"

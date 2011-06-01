@@ -25,8 +25,8 @@ flow = Workflow.new(Settings['workflow']['id']) do
   tweet_rectifier     = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_twnoids.pig.erb'))
   rels_rectifier      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'base/parse/rectify_objects/rectify_ats_into_hbase.pig.erb'))
   tweet_indexer       = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/elasticsearch/tweet_indexer.pig.erb'))
-  token_loader        = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/token_loader.pig.erb'))
-  tweet_loader        = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/tweet_loader.pig.erb'))
+  token_loader        = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/token_loader.pig.erb'))
+  tweet_loader        = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/tweet_loader.pig.erb'))
   a_ats_b_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/a_atsigns_b_loader.pig.erb'))
   a_fos_b_loader      = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/a_follows_b_loader.pig.erb'))
   delete_tweet_loader = PigScript.new(File.join(Settings['ics_data_twitter_scripts'], 'lib/hbase/templates/delete_tweet_loader.pig.erb'))
@@ -52,7 +52,7 @@ flow = Workflow.new(Settings['workflow']['id']) do
   task :parse_twitter_search do
     search_parser.input << File.join(Settings['ripd_s3_url'], 'com.twitter.search', Settings['search_parse_regexp'])
     search_parser.output << next_output(:parse_twitter_search)
-    search_parser.run unless hdfs.exists? latest_output(:parse_twitter_search)
+    # search_parser.run unless hdfs.exists? latest_output(:parse_twitter_search)
   end
 
   #
@@ -68,12 +68,13 @@ flow = Workflow.new(Settings['workflow']['id']) do
   # Uses the pig contrib UDF called 'MultiStorage' to unsplice the twitter objects into individual
   # directories keyed by object type.
   #
-  task :unsplice => [:parse_twitter_api, :parse_twitter_stream] do
+  task :unsplice => [:parse_twitter_search] do
     unsplicer.env['PIG_OPTS'] = Settings['hadoop']['pig_options']
     unsplicer.attributes = {
       :piggybank_jar => File.join(Settings['hadoop']['pig_home'], 'contrib/piggybank/java/piggybank.jar'),
       :api           => latest_output(:parse_twitter_api),
       :stream        => latest_output(:parse_twitter_stream),
+      :search        => latest_output(:parse_twitter_search),
       :out           => next_output(:unsplice)
     }
     unsplicer.run unless hdfs.exists? latest_output(:unsplice)
@@ -121,6 +122,7 @@ flow = Workflow.new(Settings['workflow']['id']) do
       :out          => next_output(:rectify_twnoids)
     }
     tweet_rectifier.run unless hdfs.exists? latest_output(:rectify_twnoids)
+    hdfs.mkpath(latest_output(:rectify_twnoids))
   end
 
   task :unsplice_tweets => [:unsplice, :rectify_twnoids] do
@@ -141,7 +143,7 @@ flow = Workflow.new(Settings['workflow']['id']) do
   end
 
   task :index_tweets => [:unsplice_tweets] do
-    token_indexer.env['PIG_OPTS'] = Settings['hadoop']['pig_options']
+    tweet_indexer.env['PIG_OPTS'] = Settings['hadoop']['pig_options']
     input_dir = latest_output(:unsplice_tweets)
     next unless hdfs.exists? input_dir
     hdfs.entries(input_dir).each do |unspliced|
@@ -224,7 +226,7 @@ flow = Workflow.new(Settings['workflow']['id']) do
     a_ats_b_loader.attributes = {
       :jars         => Settings['hbase']['jars'],
       :data         => expected_input,
-      :table        => Settings['hbase']['relationship_table'],
+      :ats_table    => Settings['hbase']['relationship_table'],
       :hbase_config => Settings['hbase']['config']      
     }
 
@@ -391,7 +393,7 @@ flow = Workflow.new(Settings['workflow']['id']) do
     next unless hdfs.exists? expected_input
     style_loader.env['PIG_OPTS'] = Settings['hadoop']['pig_options']
     style_loader.attributes = {
-      :jars         => Settings['hbase']['jars'],
+      :registers    => Settings['hbase']['jars'],
       :data         => expected_input,
       :table        => Settings['hbase']['users_table'],
       :hbase_config => Settings['hbase']['config']                                          
@@ -409,8 +411,9 @@ flow = Workflow.new(Settings['workflow']['id']) do
 
   task :process_latest => [
     :rectify_rels,
-    :index_tweets,
-    :index_tokens,
+    # :index_tweets,
+    :load_tweets,
+    :load_tokens,
     :load_a_atsigns_b,
     :load_a_follows_b,
     :load_delete_tweets,

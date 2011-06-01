@@ -5,8 +5,10 @@
 --
 register <%= piggybank_jar %>;
 
-api_objects    = LOAD '<%= api %>';
-stream_objects = LOAD '<%= stream %>';
+-- api_objects    = LOAD '<%= api %>';
+-- stream_objects = LOAD '<%= stream %>';
+objects_to_unsplice = LOAD '<%= search %>';
 
-objects_to_unsplice = UNION api_objects, stream_objects;
-STORE objects_to_unsplice INTO '<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');
+-- objects_to_unsplice = UNION api_objects, stream_objects, search_objects;
+filtered = FILTER objects_to_unsplice BY (NOT ($0 == 'Bad request:'));
+STORE filtered INTO '<%= out %>' USING org.apache.pig.piggybank.storage.MultiStorage('<%= out %>','0', 'none', '\\t');
