@@ -10,11 +10,11 @@ data = LOAD '/tmp/a_rel_b' AS (
 
 multigraph_out = FOREACH data {
                    ids   = STRSPLIT(row_key, ':', 2);
-                   a_f_b = (a_follows_b IS NOT NULL ? 1 : 0);
-                   b_f_a = (b_follows_a IS NOT NULL ? 1 : 0);
-                   re_o  = (replies IS NOT NULL ? COUNT(replies) : 0);
-                   rt_o  = (retweets IS NOT NULL ? COUNT(retweets) : 0);
-                   me_o  = (mentions IS NOT NULL ? COUNT(mentions) : 0);
+                   a_f_b = (a_follows_b IS NOT NULL ? 1l : 0l);
+                   b_f_a = (b_follows_a IS NOT NULL ? 1l : 0l);
+                   re_o  = (replies  IS NOT NULL ? COUNT(replies)  : 0l);
+                   rt_o  = (retweets IS NOT NULL ? COUNT(retweets) : 0l);
+                   me_o  = (mentions IS NOT NULL ? COUNT(mentions) : 0l);
                    GENERATE
                      FLATTEN(ids) AS (user_a_id:chararray, user_b_id:chararray),
                      a_f_b        AS a_follows_b,
@@ -24,7 +24,6 @@ multigraph_out = FOREACH data {
                      me_o         AS me_o
                    ;
                  };
-
 
 multigraph_in = FOREACH multigraph_out GENERATE
                   user_b_id   AS user_a_id,
@@ -58,6 +57,5 @@ multigraph   = FOREACH grouped {
                    rt_o                AS rt_o
                  ;
                };
-
 
 STORE multigraph INTO '/mnt/tmp/data/hb/social/network/tw/influence/rawd/20110531/assemble_multigraph-0';
