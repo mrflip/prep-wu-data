@@ -1,0 +1,87 @@
+---
+
+#
+# replace:
+# * util.meta.template with your namespace
+# * simple             with your protocol name
+# * my_msg             with your message name
+#
+# In the _endpoint.rb, replace:
+#   
+
+namespace: util.meta.template
+protocol: simple
+
+doc: >-
+  DOC FOR PROTOCOL AS A WHOLE
+
+data_assets: []
+      
+code_assets:
+  - location:   code/wildcard_endpoint.rb
+    type:       apeyeye_endpoint
+      
+types:
+    - name:     wildcard_my_msg_params
+      type:     record
+      doc:
+        DOC FOR REQUEST PARAMS TYPE
+      fields:
+        - name: time_str
+          type: string
+          doc: >-
+            Dummy field to replace
+        
+    - name: wildcard_my_msg_response
+      type: record
+      doc: |-
+        DOC FOR RESPONSE TYPE
+      fields:
+        - name: time_str
+          doc:  >-
+            The UTC parsed time, as a "ISO 8601 combined date time":http://en.wikipedia.org/wiki/ISO_8601 string.
+          type: string
+        - name: params
+          doc:  >-
+            Your params, right back atcha
+          type: string
+        - name: debug
+          doc:  >-
+            a debug bucket
+          type: string
+
+messages:
+  my_msg:
+    request:
+      - name: params
+        type: wildcard_my_msg_params
+    response: wildcard_my_msg_response
+    doc: |-
+      DOC FOR API CALL 
+
+
+# targets:
+#   mysql:
+#     # Name of the data asset, mysql table name will derived from this
+#     - table_name: word_freq_bnc
+#       database: lang_corp_word_freq_bnc
+#       data_assets:
+#         - word_freq_bnc_data_asset
+#         
+#   apidocs:
+#     - dest_path: /language/corpora/word_freq_bnc/token_frequency
+#       
+#   bulkdownload:
+#     - package_name: word_freq_bnc
+#       data_assets:
+#         - word_freq_bnc_data_asset
+#       
+#   catalog:
+#     # Name of the catalogue entry
+#     - name: word_freq_bnc
+#       title: Word Frequencies From the British National Corpus
+#       messages:
+#         - token_frequency
+#       packages:
+#         - word_freq_bnc
+

@@ -1,0 +1,54 @@
+---
+namespace:      meta
+protocol:       http
+
+code_assets:
+  - location:   code/http_endpoint.rb
+    type:       apey_eye_endpoint
+      
+types:
+    - name:             request_info_params
+      type:             record
+      doc:              Arbitrary params
+      fields:
+        - name:         paragraphs
+          type:         int
+          doc: >-
+            Number of paragraphs to return
+            
+    - name:             http_request_info
+      type:             record
+      doc: >-
+        Information about the http request
+      fields:
+        - name: path_info
+          doc:  >-
+            The path requested
+          type: string
+        - name: accept_media_types
+          doc:  >-
+            HTTP accepted media types given by the requester sorted according to
+            their "quality" (preference level).
+            
+            This shows how the apey_eye will reply -- it is the list _after_
+            cleanup and sorting, rather than the raw HTTP Content-Type header.
+            
+          type:
+            type:  array
+            items: string
+        - name: prefered_media_type
+          doc:  Prefered media type
+          type: string
+
+        - name: env
+          doc:  env
+          type: string
+
+messages:
+  request_info:
+    request:
+      - name: request_info_params
+        type: request_info_params
+    response: http_request_info
+    doc: >-
+      Returns info about the HTTP request as the infochimp apey_eye understands it.

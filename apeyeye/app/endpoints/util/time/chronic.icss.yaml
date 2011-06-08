@@ -1,0 +1,309 @@
+---
+namespace: util.time
+protocol: chronic
+
+code_assets:
+  - location:   code/chronic_endpoint.rb
+    type:       apeyeye_endpoint
+
+targets:
+  catalog:
+    - name: util_time_chronic_parse
+      title: Utils - Parse Times
+      description: An API call to parse human-readable date / time strings
+      messages:
+        - parse
+      tags:
+        - apiawesome
+        - ruby
+        - gems
+        - chronic
+        - time
+        - date
+        - util
+        - parse
+      
+types:
+    - name:     chronic_parse_params
+      type:     record
+      doc: Query API parameters for the /util/time/chronic/parse call
+      fields:
+        - name: time_str
+          type: string
+          doc: >-
+            The string to parse.
+            
+        - name: context
+          type: symbol
+          doc: >-
+              <tt>past</tt> or <tt>future</tt> (defaults to <tt>future</tt>)
+              
+              If your string represents a birthday, you can set
+              <tt>context</tt> to <tt>past</tt> and if an ambiguous string is
+              given, it will assume it is in the past. Specify <tt>future</tt>
+              or omit to set a future context.
+              
+        - name: now
+          type: time
+          doc: >-
+            Time (defaults to Time.now)
+            
+            By setting <tt>:now</tt> to a Time, all computations will be based off
+            of that time instead of Time.now. If set to nil, Chronic will use
+            the current time in UTC. You must supply a date that unambiguously
+            parses with the much-less-generous ruby Time.parse()
+
+        - name: ambiguous_time_range
+          type: int
+          doc: >-
+            Integer or <tt>:none</tt> (defaults to <tt>6</tt> (6am-6pm))
+
+            If an Integer is given, ambiguous times (like 5:00) will be
+            assumed to be within the range of that time in the AM to that time
+            in the PM. For example, if you set it to <tt>7</tt>, then the parser will
+            look for the time between 7am and 7pm. In the case of 5:00, it would
+            assume that means 5:00pm. If <tt>:none</tt> is given, no assumption
+            will be made, and the first matching instance of that time will
+            be used.
+            
+    - name: chronic_parse_response
+      type: record
+      doc: |-
+        Query API response for the /util/time/chronic/parse call
+      fields:
+        - name: time
+          doc:  >-
+            The UTC parsed time, as a "ISO 8601 combined date time":http://en.wikipedia.org/wiki/ISO_8601 string.
+          type: string
+        - name: epoch_seconds
+          doc:  >-
+            The UTC parsed time, as "epoch seconds":http://en.wikipedia.org/wiki/Epoch_seconds integer.
+          type: int
+
+messages:
+  parse:
+    request:
+      - name: chronic_parse_params
+        type: chronic_parse_params
+    response: chronic_parse_response
+    samples:
+      - request: 
+        - time_str: one hour ago
+          now: "2007-03-16T12:09:08Z"
+        response: 
+          epoch_seconds: 1174043348
+          time: "2007-03-16T11:09:08Z"
+        url: ?now=2007-03-16T12%3A09%3A08Z&time_str=one%20hour%20ago
+      - request: 
+        - time_str: Yesterday
+          now: 5:06:07T2010-08-08Z
+        response: 
+          epoch_seconds: 1281182400
+          time: "2010-08-07T12:00:00Z"
+        url: ?now=5%3A06%3A07%202010-08-08&time_str=Yesterday
+      - url:            "?time_str=5pm+on+November+4th&context=past"
+      # - request:
+      #     - time_str:   2 hours
+      #   error:          Apeyeye::MethodFailedError
+          
+    doc: |-
+
+        Chronic is a natural language date/time parser written in pure Ruby. See below
+        for the wide variety of formats Chronic will parse.
+
+        <pre>
+            Time.now   #=> Sun Aug 27 23:18:25 PDT 2006
+
+            #---
+
+            Chronic.parse('tomorrow')
+              #=> Mon Aug 28 12:00:00 PDT 2006
+
+            Chronic.parse('monday', :context => :past)
+              #=> Mon Aug 21 12:00:00 PDT 2006
+
+            Chronic.parse('this tuesday 5:00')
+              #=> Tue Aug 29 17:00:00 PDT 2006
+
+            Chronic.parse('this tuesday 5:00', :ambiguous_time_range => :none)
+              #=> Tue Aug 29 05:00:00 PDT 2006
+
+            Chronic.parse('may 27th', :now => Time.local(2000, 1, 1))
+              #=> Sat May 27 12:00:00 PDT 2000
+
+            Chronic.parse('may 27th', :guess => false)
+              #=> Sun May 27 00:00:00 PDT 2007..Mon May 28 00:00:00 PDT 2007
+        </pre>
+        
+        h4. DETAILED USAGE
+
+        Parses a string containing a natural language date or time. If the parser
+        can find a date or time, either a Time or Chronic::Span will be returned
+        (depending on the value of <tt>:guess</tt>). If no date or time can be found,
+        +nil+ will be returned.
+
+        Options are:
+
+        <pre>
+              default_options = {
+                :context              => :future,
+                :now                  => Chronic.time_class.now,
+                :guess                => true,
+                :ambiguous_time_range => 6
+                }
+        </pre>
+
+        * <tt>context</tt>: <tt>past</tt> or <tt>future</tt> (defaults to <tt>future</tt>).
+          If your string represents a birthday, you can set <tt>:context</tt> to <tt>:past</tt>
+          and if an ambiguous string is given, it will assume it is in the
+          past. Specify <tt>:future</tt> or omit to set a future context.
+
+        * <tt>now</tt>: Time (defaults to Time.now).
+          By setting <tt>:now</tt> to a Time, all computations will be based off
+          of that time instead of Time.now. If set to nil, Chronic will use Time.now.
+
+        * <tt>guess</tt>: @true@ or @false@ (defaults to @true@)
+          By default, the parser will guess a single point in time for the
+          given date or time. If you'd rather have the entire time span returned,
+          set <tt>:guess</tt> to @false@ and a Chronic::Span will be returned.
+
+        * <tt>ambiguous_time_range</tt>: Integer or <tt>none</tt> (defaults to <tt>6</tt> (6am-6pm))
+          If an Integer is given, ambiguous times (like 5:00) will be
+          assumed to be within the range of that time in the AM to that time
+          in the PM. For example, if you set it to <tt>7</tt>, then the parser will
+          look for the time between 7am and 7pm. In the case of 5:00, it would
+          assume that means 5:00pm. If <tt>:none</tt> is given, no assumption
+          will be made, and the first matching instance of that time will
+          be used.
+
+          
+        h4. EXAMPLES
+
+        Chronic can parse a huge variety of date and time formats. Following is a
+        small sample of strings that will be properly parsed. Parsing is case
+        insensitive and will handle common abbreviations and misspellings.
+
+        _Simple_
+
+        * thursday
+        * november
+        * summer
+        * friday 13:00
+        * mon 2:35
+        * 4pm
+        * 6 in the morning
+        * friday 1pm
+        * sat 7 in the evening
+        * yesterday
+        * today
+        * tomorrow
+        * this tuesday
+        * next month
+        * last winter
+        * this morning
+        * last night
+        * this second
+        * yesterday at 4:00
+        * last friday at 20:00
+        * last week tuesday
+        * tomorrow at 6:45pm
+        * afternoon yesterday
+        * thursday last week
+
+        _Complex_
+
+        * 3 years ago
+        * 5 months before now
+        * 7 hours ago
+        * 7 days from now
+        * 1 week hence
+        * in 3 hours
+        * 1 year ago tomorrow
+        * 3 months ago saturday at 5:00 pm
+        * 7 hours before tomorrow at noon
+        * 3rd wednesday in november
+        * 3rd month next year
+        * 3rd thursday this september
+        * 4th day last week
+
+        _Specific Dates_
+
+        * January 5
+        * dec 25
+        * may 27th
+        * October 2006
+        * oct 06
+        * jan 3 2010
+        * february 14, 2004
+        * 3 jan 2000
+        * 17 april 85
+        * 5/27/1979
+        * 27/5/1979
+        * 05/06
+        * 1979-05-27
+        * Friday
+        * 5
+        * 4:00
+        * 17:00
+        * 0800
+
+        _Specific Times_ (many of the above with an added time)
+
+        * January 5 at 7pm
+        * 1979-05-27 05:00:00
+        * etc
+
+        
+        h4. Time Zones
+
+        Chronic allows you to set which Time class to use when constructing times. By
+        default, the built in Ruby time class creates times in your system's local
+        time zone. You can set this to something like ActiveSupport's TimeZone class
+        to get full time zone support.
+
+        <pre>
+            >> Time.zone = "UTC"
+            >> Chronic.time_class = Time.zone
+            >> Chronic.parse("June 15 2006 at 5:45 AM")
+            => Thu, 15 Jun 2006 05:45:00 UTC +00:00
+        </pre>
+
+        h4. Limitations
+
+        Chronic uses Ruby's built in Time class for all time storage and computation.
+        Because of this, only times that the Time class can handle will be properly
+        parsed. Parsing for times outside of this range will simply return nil.
+        Support for a wider range of times is planned for a future release.
+
+        h4. Credits
+
+        This call is an HTTP facade for @mojombo's chronic:
+
+        http://github.com/github/chronic
+
+# 
+# targets:
+#   mysql:
+#     # Name of the data asset, mysql table name will derived from this
+#     - table_name: word_freq_bnc
+#       database: lang_corp_word_freq_bnc
+#       data_assets:
+#         - word_freq_bnc_data_asset
+#         
+#   apidocs:
+#     - dest_path: /language/corpora/word_freq_bnc/token_frequency
+#       
+#   bulkdownload:
+#     - package_name: word_freq_bnc
+#       data_assets:
+#         - word_freq_bnc_data_asset
+#       
+#   catalog:
+#     # Name of the catalogue entry
+#     - name: word_freq_bnc
+#       title: Word Frequencies From the British National Corpus
+#       messages:
+#         - token_frequency
+#       packages:
+#         - word_freq_bnc
+

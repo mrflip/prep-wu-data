@@ -1,0 +1,150 @@
+---
+namespace: util.meta.debugging
+protocol: complicated_types
+
+doc: >-
+  A test endpoint that demonstrates complex nested types.
+
+data_assets: []
+      
+code_assets:
+  - location:   code/complicated_types_endpoint.rb
+    type:       apeyeye_endpoint
+      
+types:
+    - name:     chronic_parse_params
+      type:     record
+      doc:
+        Query API parameters for the /util/time/chronic/parse call
+      fields:
+        - name:         time_str
+          type:         string
+          required:     true
+          doc: >-
+            The string to parse.
+              
+        - name:         context
+          type:         string
+          doc: >-
+              <tt>past</tt> or <tt>future</tt> (defaults to <tt>future</tt>)
+              
+        - name:         now
+          type:         time
+          doc: >-
+            Time (defaults to Time.now)
+
+        - name:         ambiguous_time_range
+          type:         int
+          doc: >-
+            Integer or <tt>:none</tt> (defaults to <tt>6</tt> (6am-6pm))
+
+        - name:         field_with_default
+          type:         int
+          default:      15
+        
+    - name: record_defined_elsewhere
+      type: record
+      doc: |-
+        I am a record defined previously in the ICSS
+      fields:
+        - name:         rec_in_rde
+          type:
+            name:       sub_record_in_rde
+            type:       record
+            fields: 
+              - {"name": "label",    "type": "string"}
+              - {"name": "children", "type": "chronic_parse_params"}
+        
+            
+    - name: chronic_parse_response
+      type: record
+      doc: |-
+        Query API response for the /util/time/chronic/parse call
+      fields:
+        - name: time
+          doc:  >-
+            The UTC parsed time, as a "ISO 8601 combined date time":http://en.wikipedia.org/wiki/ISO_8601 string.
+          type: string
+          
+        - name:         epoch_seconds
+          type:         int
+          doc:  >-
+            The UTC parsed time, as "epoch seconds":http://en.wikipedia.org/wiki/Epoch_seconds integer.
+          
+        - name:         my_array_of_string
+          doc:          An array of strings - [":hi","there","friend","3"]
+          type:
+            type:       array
+            items:      string
+            
+        - name:         my_array_of_ints
+          doc:          An array of ints - [1, 2, 3, 3, 0]
+          default:      [1, 2, 3, 3, 0]
+          type:
+            type:       array
+            items:      int
+
+        - name:         params
+          type:
+            type:       map
+            values:     string
+                          
+        - name:         my_map_of_records
+          doc:          a map of records
+          type:
+            type:       map
+            values:
+              name:     Foo
+              type:     record
+              doc:      an record with embedded definition in a map
+              fields:   [{"name": "label", "type": "string"}]
+        
+        # - name:         unionField
+        #   type:         ["boolean", "double", {"type": "array", "items": "bytes"}]
+          
+        # - name:         my_enum_field 
+        #   type:
+        #     name:       Kind
+        #     type:       enum
+        #     symbols:
+        #       - A
+        #       - B
+        #       - C
+        - name:         my_fixed_field
+          type:         {"name": "MD5", "type": "fixed", "size": 16}
+          example:      1863993055d7dbec910ff800c5b809fc
+            
+        - name: my_embedded_record
+          doc:  an embedded record
+          type:
+            name:       embedded_record_def
+            type:       record
+            doc:        I am an inline record definition eg {"name":"bob"}
+            fields:
+            - name:     name
+              type:     string
+              doc:      I am a field in a inline record - eg 'bob'
+          
+        - name:         my_complex_record
+          type:
+            name:       Node
+            type:       record
+            fields: 
+              - {"name": "label", "type": "string"}
+              # !! we can't do recursive types yet
+              # - {"name": "children", "type": {"type": "array", "items": "Node"}}
+              # - {"name": "children", "type": "Node"}
+        - name:         ref_rec
+          type:         record_defined_elsewhere
+          doc:          I am a field containing a record_defined_elsewhere type
+
+messages:
+  parse:
+    request:
+      - name: params
+        type: chronic_parse_params
+    response: chronic_parse_response
+    doc: |-
+
+        Chronic is a natural language date/time parser written in pure Ruby. See below
+        for the wide variety of formats Chronic will parse.

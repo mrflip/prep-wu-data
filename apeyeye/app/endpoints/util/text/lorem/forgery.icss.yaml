@@ -1,0 +1,83 @@
+---
+namespace:      util.text.lorem
+protocol:       forgery
+
+code_assets:
+  - location:   code/forgery_endpoint.rb
+    type:       apeyeye_endpoint
+
+targets:
+  catalog:
+    - name:             util_text_lorem_forgery
+      title:            Utils - Generate Test Data 
+      description:      >-
+        The Problem: Making meaningful development data for your application.
+
+        The Solution: A fake data generator that does more than just lorem ipsum and random text (well, it does those too, but also does much more).
+
+        Forgery generates fake data from dictionaries, formats, and recipes. The plugin includes a generator providing directories to make your own forgeries.
+
+      messages:
+        - paragraph
+      tags:
+        - awesomeapi
+        - ruby
+        - gems
+        - forgery
+        - test
+        - testing
+        - lorem
+        - ipsum
+        - text
+        - generation
+        #
+        - paragraph
+        - sentences
+        - greeking
+        - dev
+      
+types:
+    - name:             paragraph_params
+      type:             record
+      doc:              Query API parameters for the /util/text/forgery/lorem/paragraph set of calls
+      fields:
+        - name:         paragraphs
+          type:         int
+          doc: >-
+            Number of paragraphs to return
+        - name:         sentences
+          type:         int
+          doc: >-
+            How many sentences per paragraph
+        - name:         beg_wrap
+          type:         string
+          doc: >-
+            A string to prepend to the return text -- for instance, an html open tag. Be sure to properly URL encode this field
+        - name:         end_wrap
+          type:         string
+          doc: >-
+            A string to append to the return text -- for instance, an html open tag. Be sure to properly URL encode this field
+            
+    - name:             lorem_text
+      type:             record
+      doc: >-
+        Response hash for a Lorem Ipsum call
+      fields:
+        - name: text
+          doc:  >-
+            The placeholder text requested
+          type: string
+
+messages:
+  paragraph:
+    request:
+      - name: paragraph_params
+        type: paragraph_params
+    response: lorem_text
+    doc: >-
+      The Problem: Making meaningful development data for your application.
+
+      The Solution: A fake data generator that does more than just lorem ipsum and random text (well, it does those too, but also does much more).
+
+      Forgery generates fake data from dictionaries, formats, and recipes. The plugin includes a generator providing directories to make your own forgeries.
+

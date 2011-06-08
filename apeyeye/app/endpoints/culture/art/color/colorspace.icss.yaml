@@ -1,0 +1,86 @@
+---
+namespace:      culture.art.color
+protocol:       colorspace
+
+code_assets:
+  - location:   code/colorspace_endpoint.rb
+    type:       apeyeye_endpoint
+
+targets:
+  catalog:
+    - name:     culture-art-color-colorspace
+      title:    Color Utilities: Colorspace conversion
+      description: >-
+        A collection of API calls to convert among representations of colors: RGB, HSL, CSS, and more.
+
+      messages:
+        - from_
+      tags:
+        - awesomeapi
+        - ruby
+        - gems
+        - color
+        - hsl
+        - rgb
+        - yiq
+        - css
+        - html
+        - webdev
+        
+      
+types:
+    - name:     from_rgb_params
+      fields:
+        - { name: "red",   type: "float", required: true }
+        - { name: "green", type: "float", required: true }
+        - { name: "blue",  type: "float", required: true }
+        - { name: "alpha", type: "float", required: false }
+        - { name: "base",  type: "float", default: 1.0, doc: "The range of values for the request: typically 1.0 (the default, for red/green/blue as fractions between 0 and 1); 100 (if red/green/blue as percents), or 255 (if red/green/blue as bytes)." }
+        
+    - name:     colorspace
+      type:     record
+      doc: >-
+        Multiple representations of a color
+        
+      fields:
+        
+        - { name: "rgb_red",        type: "float" }
+        - { name: "rgb_green",      type: "float" }
+        - { name: "rgb_blue",       type: "float" }
+        #
+        - { name: "hsl_hue",        type: "float" }
+        - { name: "hsl_saturation", type: "float" }
+        - { name: "hsl_lightness",  type: "float" }
+        #
+        - { name: "cmyk_cyan",      type: "float" }
+        - { name: "cmyk_yellow",    type: "float" }
+        - { name: "cmyk_magenta",   type: "float" }
+        - { name: "cmyk_black",     type: "float" }
+        #
+        - { name: "yiq_y",          type: "float" }
+        - { name: "yiq_i",          type: "float" }
+        - { name: "yiq_q",          type: "float" }
+        #
+        - { name: "grayscale_gray", type: "float" }
+        # 
+        - { name: "brightness",     type: "float" }
+        #
+        - { name: "html_str",       type: "float" }
+        - { name: "rgb_str",        type: "float" }
+        - { name: "rgb_hex",        type: "float" }
+        - { name: "hsl_str",        type: "float" }
+        - { name: "hsl_hex",        type: "float" }
+        # 
+        - { name: "closest_name",   type: "float" }
+
+        
+messages:
+  from_css:
+    request:
+      - name: from_css_params
+        type: from_css_params
+    response: color
+    samples:
+        url: ?now=2007-03-16T12%3A09%3A08Z&time_str=one%20hour%20ago
+    doc: >-
+      
