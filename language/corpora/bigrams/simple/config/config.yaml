@@ -1,0 +1,71 @@
+---
+namespace:      language.corpora.bigrams
+protocol:       simple
+
+messages:
+  funny_word:
+    request:
+      - name:   funny_word_request
+        type:   funny_word_request
+    response:   list_of_words
+    doc:        Get a list of non-sensical but plausible words
+
+data_assets:
+  - name:       bnc_bigrams_simple
+    location:   data/bnc_bigrams_simple.tsv
+    type:       bigram_statistics_record
+      
+code_assets:
+  - location:   code/bigrams_endpoint.rb
+    name:       bigrams_endpoint
+
+targets:
+        
+  catalog:
+    - name:     Bigram frequencies
+      title:    Adjacent Character Frequencies
+      description: >-
+        Get a list of non-sensical but plausible words.
+
+        Using a list of adjacent-character frequencies calculated from 
+      tags:
+        - bnc
+        - british-national-corpus
+        - apidoodad
+        - token
+        - corpus
+        - language
+        - bigram
+        - character
+        - characters
+        - character-frequency
+      messages:
+        -       funny_word
+
+types:
+  
+  - name:       funny_word
+    type:       record
+    doc:        Parameters for the funny_word API call
+    fields:
+      - name:   num_words
+        type:   int
+        sample: 1
+        default: 1
+            
+  - name: list_of_words
+    doc: >-
+
+    type: record
+    fields:
+      - name:   words
+        doc:    An array of plausible but (typically) nonsensical words.
+        type:
+          type:  array
+          items: string
+
+
+# not included in the output icss
+filesystem_scheme: file
+non_avro:
+  download_url: http://ucrel.lancs.ac.uk/bncfreq/lists/1_1_all_fullalpha.txt.Z
