@@ -9,7 +9,6 @@ require 'YAML'
 src_files = %w[
   dirty_words-adambair-fu_fu.yaml
   dirty_words-alternative_dictionaries-english.yaml
-  dirty_words-alternative_dictionaries-multilingual.yaml
   dirty_words-aol_chat_rooms.yaml
   dirty_words-carlin_seven_words_cant_say.yaml
   dirty_words-cpan-regex_profanity_us.yaml
@@ -27,11 +26,18 @@ def get_payload(icss)
   icss.first['dataset']['payload']
 end
 
+NONTEXT_CHARS = /[^a-zA-Z0-9\'\s\-\@\$]+/
+
 def tok(elt)
-  elt['word'].gsub(/\W+/,'').downcase
+  word = elt['word']
+  if (word.chars.count{|ch| ch =~ NONTEXT_CHARS } > 2) then p word ; return nil ; end
+  word.
+    gsub(NONTEXT_CHARS,'').
+    downcase
 end
 
-wordlists    = { }; tok_lists = { }
+wordlists    = { };
+tok_lists    = { }
 words_census = Hash.new{|hsh,key| hsh[key] = 0 }
 
 src_files.each do |filename|
@@ -44,12 +50,13 @@ src_files.each do |filename|
     tag = src_tag + '_' + i.to_s
     wl.reject!{|wd| ['cult', 'occult', 'drug', 'hate'].include? wd['category']}
     wordlists[tag] = wl if wl
-    tok_lists[tag] = wl.map{|elt| tok(elt) }.uniq
+    tok_lists[tag] = wl.map{|elt| tok(elt) }.flatten.compact.uniq
   end
 end
 
-p tok_lists
-
+#
+# Count occurrences across lists
+#
 tok_lists.each do |tag, tl|
   tl.each do |word|
     words_census[word] += 1
@@ -57,23 +64,17 @@ tok_lists.each do |tag, tl|
 end
 
 
-whitelist = %w[
-arvo baltic bob brown buddy chief eddress fish have quad
-] + ['chicken hawk', ]
+whitelist = [
+  'arvo', 'baltic', 'bob', 'brown', 'buddy', 'chief', 'eddress', 'fish', 'have',
+  'quad', 'chicken hawk', ]
 
-#words_census.reject!{ |wd, count| tok_lists['scrabble_0'].include?(wd) }
 words_census.reject! do |wd, count|
-    whitelist.include?(wd) # ||
-    # (wd.length > 4) ||
-    # tok_lists['scrabble_0'].include?(wd) ||
-    # false
+  whitelist.include?(wd) || (wd.length <= 2)
 end
 
-dump = { 'payload' => {
-    'word_list' => words_census.sort_by{ |k,v| -v }.map do |k,v| { :word => k, :dirt => v } end
+dump = {
+  'payload' => {
+    'word_list' => words_census.sort_by{|wd, count| [-count, wd] }.map{|wd,count| { "word" => wd, "weight" => count, } }
   }
 }
 YAML.dump(dump, File.open('./fixd/dirty_words_combined.yaml','w'))
-
-# puts words_census.sort_by{ |k,v| k }.map{|k,v| k }.to_json
-# puts words_hook3.sort_by{  |k,v| v.length }.to_json

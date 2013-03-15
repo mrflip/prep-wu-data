@@ -1013,7 +1013,7 @@
         - { word: "fotze",       pattern: "fotze"       }
         - { word: "fuk",         pattern: "fuk*"        }
         - { word: "futkretzn",   pattern: "futkretzn"   }
-        - { word: "f u c k",     pattern: "*f u c k*"   }
+        - { word: "fuck",        pattern: "*f u c k*"   }
         - { word: "fag",         pattern: "fag*"        }
         - { word: "faig",        pattern: "faig*"       }
         - { word: "fart",        pattern: "fart"        }
@@ -1315,1488 +1315,1359 @@
       desc:       "from http://github.com/lcuk/liqbase-playground/raw/master/sub_published/onedotzero/media/swear_list.txt"
       url:        "http://github.com/lcuk/liqbase-playground/raw/master/sub_published/onedotzero/media/swear_list.txt"
       blacklist:
-        - { word: "$cum"                           }
-        - { word: "$HIT"                           }
-        - { word: "$hittie"                        }
-        - { word: "(ock"                           }
-        - { word: "****head"                       }
-        - { word: "*C*U*N*T*"                      }
-        - { word: "*unt"                           }
-        - { word: ".f uc k"                        }
-        - { word: "@r$e"                           }
-        - { word: "@r$e."                          }
-        - { word: "@rse"                           }
-        - { word: "@rsehol"                        }
-        - { word: "@rsehole"                       }
-        - { word: "@rses"                          }
-        - { word: "@unt"                           }
-        - { word: "@unt!"                          }
-        - { word: "[UNT"                           }
-        - { word: "[UNTs"                          }
-        - { word: "{UNT"                           }
-        - { word: "< unt"                          }
-        - { word: "<***s"                          }
-        - { word: "<**t"                           }
-        - { word: "<**ts"                          }
-        - { word: "<**t's"                         }
-        - { word: "<*nt"                           }
-        - { word: "<.unt"                          }
-        - { word: "<loth head"                     }
-        - { word: "<lothhead"                      }
-        - { word: "<nuts"                          }
-        - { word: "<o(k"                           }
-        - { word: "<o<&nbsp;k"                     }
-        - { word: "<o<ksu<ka"                      }
-        - { word: "<o<ksu<ker"                     }
-        - { word: "<oon"                           }
-        - { word: "<u&nbsp;nt"                     }
-        - { word: "<u&nbsp;nts"                    }
-        - { word: "<u*t"                           }
-        - { word: "<unt"                           }
-        - { word: "<unting"                        }
-        - { word: "<unts"                          }
-        - { word: "<unt's"                         }
-        - { word: "<vnt"                           }
-        - { word: "<vnts"                          }
-        - { word: "3rse"                           }
-        - { word: "5h1te"                          }
-        - { word: "81tch"                          }
-        - { word: "8itch"                          }
-        - { word: "a$$"                            }
-        - { word: "A$$hole"                        }
-        - { word: "A$$hole$"                       }
-        - { word: "A$$holes"                       }
-        - { word: "a***"                           }
-        - { word: "A**e"                           }
-        - { word: "A**es"                          }
-        - { word: "a.rse"                          }
-        - { word: "a?sehole"                       }
-        - { word: "A+*hole"                        }
-        - { word: "alcoholic"                      }
-        - { word: "Alky"                           }
-        - { word: "allegations"                    }
-        - { word: "anus"                           }
-        - { word: "ar se"                          }
-        - { word: "ar$e"                           }
-        - { word: "ar$ehole"                       }
-        - { word: "Ar$hole"                        }
-        - { word: "Ar$holes"                       }
-        - { word: "ar.se"                          }
-        - { word: "ar5e"                           }
-        - { word: "ar5e."                          }
-        - { word: "ar5ewipe"                       }
-        - { word: "ar5h0le"                        }
-        - { word: "ar5h0les"                       }
-        - { word: "arrested"                       }
-        - { word: "ars3"                           }
-        - { word: "arse"                           }
-        - { word: "arse bandit"                    }
-        - { word: "arse hole"                      }
-        - { word: "arsebandits"                    }
-        - { word: "arsebandits."                   }
-        - { word: "arseh0le"                       }
-        - { word: "arseh0les"                      }
-        - { word: "Arseho"                         }
-        - { word: "arsehol"                        }
-        - { word: "arsehole"                       }
-        - { word: "arseholes"                      }
-        - { word: "arse-holes"                     }
-        - { word: "arsewipe"                       }
-        - { word: "arsh0le"                        }
-        - { word: "arshole"                        }
-        - { word: "arsholes"                       }
-        - { word: "ASBOs"                          }
-        - { word: "ashole"                         }
-        - { word: "asre"                           }
-        - { word: "ass h0le"                       }
-        - { word: "ass hole"                       }
-        - { word: "assault"                        }
-        - { word: "assaulted"                      }
-        - { word: "assaults"                       }
-        - { word: "assh0le"                        }
-        - { word: "assh0les"                       }
-        - { word: "asshole"                        }
-        - { word: "assholes"                       }
-        - { word: "assult"                         }
-        - { word: "assulted"                       }
-        - { word: "b a s t a r d"                  }
-        - { word: "b a s t a rds"                  }
-        - { word: "B!g Jock"                       }
-        - { word: "b*ll*cks"                       }
-        - { word: "B*ll*ck's"                      }
-        - { word: "b*st*&rd"                       }
-        - { word: "b*st*&rds"                      }
-        - { word: "b*stards"                       }
-        - { word: "b.astard"                       }
-        - { word: "B.J.K"                          }
-        - { word: "B.J.K."                         }
-        - { word: "b.ollocks"                      }
-        - { word: "b.ugger"                        }
-        - { word: "b@ll@cks"                       }
-        - { word: "b@st@rd"                        }
-        - { word: "b@st@rds"                       }
-        - { word: "b0//0cks"                       }
-        - { word: "b00tha"                         }
-        - { word: "b00thas"                        }
-        - { word: "b0110ck"                        }
-        - { word: "b0110cks"                       }
-        - { word: "b0ll0cks"                       }
-        - { word: "B0llocks"                       }
-        - { word: "b1tch"                          }
-        - { word: "b3llend"                        }
-        - { word: "Backdoor bandits"               }
-        - { word: "Balls Deep"                     }
-        - { word: "Balls Deep!"                    }
-        - { word: "ballsack"                       }
-        - { word: "banned me"                      }
-        - { word: "bar steward"                    }
-        - { word: "bas tards"                      }
-        - { word: "Bas*ards"                       }
-        - { word: "bastard"                        }
-        - { word: "bastards"                       }
-        - { word: "basterd"                        }
-        - { word: "Bastrds"                        }
-        - { word: "batty boy?"                     }
-        - { word: "batty&nbsp;boi"                 }
-        - { word: "batty&nbsp;boy"                 }
-        - { word: "baw bag"                        }
-        - { word: "bawbag"                         }
-        - { word: "Beef curtains"                  }
-        - { word: "belend"                         }
-        - { word: "bell end"                       }
-        - { word: "bell.end"                       }
-        - { word: "bellend"                        }
-        - { word: "bell-end"                       }
-        - { word: "Big J0ck"                       }
-        - { word: "BIG JOCK"                       }
-        - { word: "Big Jock did know"              }
-        - { word: "BIG JOCK knew"                  }
-        - { word: "Bin Dip pers"                   }
-        - { word: "bin dippers"                    }
-        - { word: "bin dipping"                    }
-        - { word: "bin-dippers"                    }
-        - { word: "BJ"                             }
-        - { word: "BJK"                            }
-        - { word: "BJK?"                           }
-        - { word: "black mail"                     }
-        - { word: "blackmail"                      }
-        - { word: "blackmailer"                    }
-        - { word: "bo****ks"                       }
-        - { word: "bo11ocks"                       }
-        - { word: "Boll0cks"                       }
-        - { word: "bollocks"                       }
-        - { word: "bollox"                         }
-        - { word: "bolocks"                        }
-        - { word: "bolox"                          }
-        - { word: "Bomb"                           }
-        - { word: "Bombing"                        }
-        - { word: "boning"                         }
-        - { word: "bootha"                         }
-        - { word: "boothas"                        }
-        - { word: "bribe"                          }
-        - { word: "bribed"                         }
-        - { word: "bribes"                         }
-        - { word: "brothel"                        }
-        - { word: "bu min"                         }
-        - { word: "bugger"                         }
-        - { word: "Bukkake"                        }
-        - { word: "Bulger"                         }
-        - { word: "bull5h1tt1ng"                   }
-        - { word: "Bullsh!t"                       }
-        - { word: "bum bandit"                     }
-        - { word: "bum bandits"                    }
-        - { word: "bum hole"                       }
-        - { word: "bumbandit"                      }
-        - { word: "bum-bandit"                     }
-        - { word: "bumh0l3"                        }
-        - { word: "bumh0le"                        }
-        - { word: "bumhol3"                        }
-        - { word: "bumhole"                        }
-        - { word: "bummers"                        }
-        - { word: "bun"                            }
-        - { word: "bun."                           }
-        - { word: "bung"                           }
-        - { word: "bungs"                          }
-        - { word: "buns"                           }
-        - { word: "Buying coke"                    }
-        - { word: "c nuts"                         }
-        - { word: "c o k"                          }
-        - { word: "c u n t"                        }
-        - { word: "C U N T."                       }
-        - { word: "c unt"                          }
-        - { word: "c unt."                         }
-        - { word: "c#nt"                           }
-        - { word: "C&nbsp;u&nbsp;n&nbsp;t"         }
-        - { word: "C*&TS"                          }
-        - { word: "c***"                           }
-        - { word: "c***s"                          }
-        - { word: "C***Ts"                         }
-        - { word: "c**k"                           }
-        - { word: "C**t"                           }
-        - { word: "C**ts"                          }
-        - { word: "C**t's"                         }
-        - { word: "c*nt"                           }
-        - { word: "c.u.n.t"                        }
-        - { word: "c.unt"                          }
-        - { word: "c.untyb.ollocks"                }
-        - { word: "c@#t"                           }
-        - { word: "c@Nts"                          }
-        - { word: "C_u_n_t"                        }
-        - { word: "c00n"                           }
-        - { word: "c0ck"                           }
-        - { word: "C0cksucka"                      }
-        - { word: "C0cksucker"                     }
-        - { word: "c9nt"                           }
-        - { word: "cahnt"                          }
-        - { word: "cahnts"                         }
-        - { word: "cannabis"                       }
-        - { word: "cannabis."                      }
-        - { word: "Cannibis"                       }
-        - { word: "cant's"                         }
-        - { word: "CASH PRIZE"                     }
-        - { word: "cash prizes"                    }
-        - { word: "ceej"                           }
-        - { word: "Chaventry"                      }
-        - { word: "cheat"                          }
-        - { word: "cheated"                        }
-        - { word: "cheater"                        }
-        - { word: "cheating"                       }
-        - { word: "Cheating."                      }
-        - { word: "cheats"                         }
-        - { word: "CHELSCUM"                       }
-        - { word: "child abuse"                    }
-        - { word: "Chinkies"                       }
-        - { word: "Chinky"                         }
-        - { word: "clit"                           }
-        - { word: "closet"                         }
-        - { word: "Cloth head"                     }
-        - { word: "Clothhead"                      }
-        - { word: "clucking funt"                  }
-        - { word: "cnut"                           }
-        - { word: "cnuts"                          }
-        - { word: "Co(k"                           }
-        - { word: "coc&nbsp;k"                     }
-        - { word: "Cocaine"                        }
-        - { word: "cock"                           }
-        - { word: "cockfaced"                      }
-        - { word: "cockh3ad"                       }
-        - { word: "cockhead"                       }
-        - { word: "Cocksucka"                      }
-        - { word: "Cocksucker"                     }
-        - { word: "Cocksuckers"                    }
-        - { word: "Cocksuckers."                   }
-        - { word: "Cok"                            }
-        - { word: "coke"                           }
-        - { word: "Colombian stuff"                }
-        - { word: "communities@bbc.co.uk"          }
-        - { word: "conspiring"                     }
-        - { word: "coon"                           }
-        - { word: "corrupt"                        }
-        - { word: "corruption"                     }
-        - { word: "cr*p"                           }
-        - { word: "cr3tin"                         }
-        - { word: "creatin"                        }
-        - { word: "cretin"                         }
-        - { word: "cretins"                        }
-        - { word: "cripple"                        }
-        - { word: "cu&nbsp;nt"                     }
-        - { word: "cu&nbsp;nts"                    }
-        - { word: "cu*t"                           }
-        - { word: "culé"                           }
-        - { word: "cum"                            }
-        - { word: "Cunt"                           }
-        - { word: "c-u-n-t"                        }
-        - { word: "cunting"                        }
-        - { word: "Cunts"                          }
-        - { word: "Cunt's"                         }
-        - { word: "Currant Buns"                   }
-        - { word: "Current Bun"                    }
-        - { word: "Current Buns"                   }
-        - { word: "cvnt"                           }
-        - { word: "cvnts"                          }
-        - { word: "d&ugs"                          }
-        - { word: "D**khead"                       }
-        - { word: "d*c"                            }
-        - { word: "d*ckhead"                       }
-        - { word: "d*ckheads"                      }
-        - { word: "d1ck"                           }
-        - { word: "D1ck!"                          }
-        - { word: "d1ckH@ed"                       }
-        - { word: "darkie"                         }
-        - { word: "darky"                          }
-        - { word: "death camp"                     }
-        - { word: "defraud"                        }
-        - { word: "deserve to die"                 }
-        - { word: "deserve to die."                }
-        - { word: "dhick"                          }
-        - { word: "dick"                           }
-        - { word: "dick&nbsp;head"                 }
-        - { word: "dickhead"                       }
-        - { word: "dicks"                          }
-        - { word: "died"                           }
-        - { word: "diklik"                         }
-        - { word: "dippers"                        }
-        - { word: "Dogshit"                        }
-        - { word: "DOLE MONKEYS"                   }
-        - { word: "dope"                           }
-        - { word: "drug"                           }
-        - { word: "druggie"                        }
-        - { word: "druggy"                         }
-        - { word: "drugs"                          }
-        - { word: "Duke of Edinburgh"              }
-        - { word: "dumba$$"                        }
-        - { word: "dumbfuck"                       }
-        - { word: "dumbfucker"                     }
-        - { word: "Dxxkhead"                       }
-        - { word: "effin"                          }
-        - { word: "efkin"                          }
-        - { word: "ejaculate"                      }
-        - { word: "ejaculating"                    }
-        - { word: "enter free at"                  }
-        - { word: "ENTRIES CLOSE AT"               }
-        - { word: "envelope"                       }
-        - { word: "er3e"                           }
-        - { word: "erse"                           }
-        - { word: "ethnics"                        }
-        - { word: "f ***"                          }
-        - { word: "f **k"                          }
-        - { word: "F A G!"                         }
-        - { word: "F all"                          }
-        - { word: "f c u k off."                   }
-        - { word: "f ck"                           }
-        - { word: "f cker"                         }
-        - { word: "f cking"                        }
-        - { word: "F o a d"                        }
-        - { word: "F off"                          }
-        - { word: "F OFFBBC"                       }
-        - { word: "f right off"                    }
-        - { word: "F U - C K"                      }
-        - { word: "f u c k"                        }
-        - { word: "f u c ked"                      }
-        - { word: "f uc k"                         }
-        - { word: "f uc king"                      }
-        - { word: "f uck"                          }
-        - { word: "F- u-c-k"                       }
-        - { word: "f ucking"                       }
-        - { word: "f!ck"                           }
-        - { word: "f###"                           }
-        - { word: "F###ing"                        }
-        - { word: "f##k"                           }
-        - { word: "f##king"                        }
-        - { word: "f#ck"                           }
-        - { word: "f#cked"                         }
-        - { word: "F$cks"                          }
-        - { word: "F%$K"                           }
-        - { word: "f%$king"                        }
-        - { word: "f&nbsp;cked"                    }
-        - { word: "f&nbsp;u&nbsp;c&nbsp;k"         }
-        - { word: "f&nbsp;uck"                     }
-        - { word: "f&nbsp;ucker"                   }
-        - { word: "f&nbsp;ucking"                  }
-        - { word: "f()()k"                         }
-        - { word: "f()()ker"                       }
-        - { word: "f()()king"                      }
-        - { word: "F()ck you"                      }
-        - { word: "f()ckers"                       }
-        - { word: "f()ckers."                      }
-        - { word: "f()ckin"                        }
-        - { word: "F* *K"                          }
-        - { word: "f* ck"                          }
-        - { word: "f*#kin' "                       }
-        - { word: "f*&k"                           }
-        - { word: "f*&k!ng"                        }
-        - { word: "f*()"                           }
-        - { word: "f***"                           }
-        - { word: "F*****"                         }
-        - { word: "F******"                        }
-        - { word: "f*****g"                        }
-        - { word: "f****d"                         }
-        - { word: "f***ed"                         }
-        - { word: "f***in"                         }
-        - { word: "f***ing"                        }
-        - { word: "f**ing"                         }
-        - { word: "f**k"                           }
-        - { word: "f**ked"                         }
-        - { word: "f**ker"                         }
-        - { word: "f**kin"                         }
-        - { word: "f**king"                        }
-        - { word: "f**ks"                          }
-        - { word: "f*c*"                           }
-        - { word: "f*c*in"                         }
-        - { word: "f*ck"                           }
-        - { word: "f*ckin"                         }
-        - { word: "F*CKING"                        }
-        - { word: "F*k"                            }
-        - { word: "f*ked"                          }
-        - { word: "f*ker"                          }
-        - { word: "f*ks"                           }
-        - { word: "f*uck"                          }
-        - { word: "F*uk"                           }
-        - { word: "F.O.A.D"                        }
-        - { word: "F.O.A.D."                       }
-        - { word: "f.u.c.k."                       }
-        - { word: "f.uck"                          }
-        - { word: "f@&*ing"                        }
-        - { word: "F@@@IN"                         }
-        - { word: "F@@@ING"                        }
-        - { word: "f@@k "                          }
-        - { word: "f@ck"                           }
-        - { word: "f@ckin"                         }
-        - { word: "f@g"                            }
-        - { word: "f@gs"                           }
-        - { word: "f@uk "                          }
-        - { word: "f[_]cker"                       }
-        - { word: "f[_]cking"                      }
-        - { word: "f^(k"                           }
-        - { word: "f^^k"                           }
-        - { word: "f^^ked"                         }
-        - { word: "f^^ker"                         }
-        - { word: "f^^king"                        }
-        - { word: "f^ck"                           }
-        - { word: "f^cker"                         }
-        - { word: "f^cking"                        }
-        - { word: "f__kin"                         }
-        - { word: "f__king"                        }
-        - { word: "f<uk"                           }
-        - { word: "F>>K"                           }
-        - { word: "fÜck"                           }
-        - { word: "f00ck"                          }
-        - { word: "f00cking"                       }
-        - { word: "f00k"                           }
-        - { word: "f00ked"                         }
-        - { word: "f0oked"                         }
-        - { word: "F0YS"                           }
-        - { word: "f3ck"                           }
-        - { word: "f3cking"                        }
-        - { word: "fa g"                           }
-        - { word: "fa g."                          }
-        - { word: "Fa**ck"                         }
-        - { word: "Fack"                           }
-        - { word: "Fackin"                         }
-        - { word: "facking"                        }
-        - { word: "fackk"                          }
-        - { word: "faeces"                         }
-        - { word: "fag"                            }
-        - { word: "fag!"                           }
-        - { word: "fag."                           }
-        - { word: "fagg0t"                         }
-        - { word: "Faggits"                        }
-        - { word: "faggot"                         }
-        - { word: "faggoty"                        }
-        - { word: "fagit"                          }
-        - { word: "Fagits"                         }
-        - { word: "fags"                           }
-        - { word: "false accounting"               }
-        - { word: "fanny"                          }
-        - { word: "fark"                           }
-        - { word: "favourite album"                }
-        - { word: "favourite LP"                   }
-        - { word: "fc*king"                        }
-        - { word: "fck"                            }
-        - { word: "F'ck"                           }
-        - { word: "fck&nbsp;ing"                   }
-        - { word: "fck1ng"                         }
-        - { word: "fckeud"                         }
-        - { word: "Fckin"                          }
-        - { word: "fcking"                         }
-        - { word: "fcks"                           }
-        - { word: "fckw1t"                         }
-        - { word: "fckwit"                         }
-        - { word: "fcuk"                           }
-        - { word: "f-cuk"                          }
-        - { word: "fcuked"                         }
-        - { word: "fcuker"                         }
-        - { word: "fcukin"                         }
-        - { word: "fcuking"                        }
-        - { word: "fcuks"                          }
-        - { word: "feaces"                         }
-        - { word: "featuring the best "            }
-        - { word: "feck"                           }
-        - { word: "feckin"                         }
-        - { word: "fecking"                        }
-        - { word: "f---ed"                         }
-        - { word: "FEHCK"                          }
-        - { word: "FEHCKS"                         }
-        - { word: "fekking"                        }
-        - { word: "felch"                          }
-        - { word: "felched"                        }
-        - { word: "Felching"                       }
-        - { word: "feltch"                         }
-        - { word: "feltcher"                       }
-        - { word: "feltching"                      }
-        - { word: "fen ian"                        }
-        - { word: "f-----g"                        }
-        - { word: "FIA President"                  }
-        - { word: "f'ing"                          }
-        - { word: "F-ing"                          }
-        - { word: "f---ing"                        }
-        - { word: "fixed match"                    }
-        - { word: "fk"                             }
-        - { word: "f'k"                            }
-        - { word: "f--k"                           }
-        - { word: "fkcin"                          }
-        - { word: "fkin"                           }
-        - { word: "fking"                          }
-        - { word: "flange"                         }
-        - { word: "FLOCKING"                       }
-        - { word: "flooking"                       }
-        - { word: "Fluck"                          }
-        - { word: "Flucking"                       }
-        - { word: "fo okin"                        }
-        - { word: "fo0ked"                         }
-        - { word: "FOAD"                           }
-        - { word: "F-o-a-d"                        }
-        - { word: "F-OFF"                          }
-        - { word: "FOFFBBC"                        }
-        - { word: "Fook"                           }
-        - { word: "fookd"                          }
-        - { word: "fooked"                         }
-        - { word: "Fooker"                         }
-        - { word: "fookin"                         }
-        - { word: "FOOKIN'"                        }
-        - { word: "Fooking"                        }
-        - { word: "football for free"              }
-        - { word: "footballonsat"                  }
-        - { word: "Foxtrot oscar"                  }
-        - { word: "FOYS"                           }
-        - { word: "fraud"                          }
-        - { word: "fraudulant"                     }
-        - { word: "fraudulent"                     }
-        - { word: "free ipod"                      }
-        - { word: "Free PS3"                       }
-        - { word: "free xbox"                      }
-        - { word: "frig"                           }
-        - { word: "frigging"                       }
-        - { word: "frigin"                         }
-        - { word: "friging"                        }
-        - { word: "frogs"                          }
-        - { word: "fu <k"                          }
-        - { word: "fu c king"                      }
-        - { word: "fu cking"                       }
-        - { word: "FU KKED"                        }
-        - { word: "FU&KIN"                         }
-        - { word: "FU&KING"                        }
-        - { word: "fu&nbsp;ck"                     }
-        - { word: "fu&nbsp;cked"                   }
-        - { word: "fu&nbsp;cker"                   }
-        - { word: "fu&nbsp;cking"                  }
-        - { word: "fu(k"                           }
-        - { word: "FU(KER"                         }
-        - { word: "FU(KERs"                        }
-        - { word: "fu**ed"                         }
-        - { word: "fu*k"                           }
-        - { word: "fu.ck"                          }
-        - { word: "fu@k"                           }
-        - { word: "fu@ker"                         }
-        - { word: "FU[IN"                          }
-        - { word: "fu^k"                           }
-        - { word: "fu^ker"                         }
-        - { word: "fu^king"                        }
-        - { word: "fu{in"                          }
-        - { word: "Fu~*king"                       }
-        - { word: "fu< kin"                        }
-        - { word: "fu<k"                           }
-        - { word: "F-u-<-k"                        }
-        - { word: "fu<ked"                         }
-        - { word: "fu<ker"                         }
-        - { word: "fu<kin"                         }
-        - { word: "fu<king"                        }
-        - { word: "fu<kker"                        }
-        - { word: "fu<kr"                          }
-        - { word: "fu<ks"                          }
-        - { word: "fuc"                            }
-        - { word: "fuc&nbsp;ked"                   }
-        - { word: "fuc&nbsp;ker"                   }
-        - { word: "fuc&nbsp;king"                  }
-        - { word: "fucck"                          }
-        - { word: "fuck"                           }
-        - { word: "F'uck"                          }
-        - { word: "f-uck"                          }
-        - { word: "f-u-ck"                         }
-        - { word: "fück"                           }
-        - { word: "Fü¢k"                           }
-        - { word: "Fùck"                           }
-        - { word: "Fúck"                           }
-        - { word: "Fûck"                           }
-        - { word: "ƒuck"                           }
-        - { word: "fuck&nbsp;ed"                   }
-        - { word: "fuck&nbsp;ing"                  }
-        - { word: "fucke&nbsp;d"                   }
-        - { word: "fucked"                         }
-        - { word: "fucker"                         }
-        - { word: "fuckers"                        }
-        - { word: "fucki&nbsp;ng"                  }
-        - { word: "fuckin"                         }
-        - { word: "fucking"                        }
-        - { word: "fücking"                        }
-        - { word: "fuckinghell"                    }
-        - { word: "fuckk"                          }
-        - { word: "fucks"                          }
-        - { word: "Fuckup"                         }
-        - { word: "fuckw1t"                        }
-        - { word: "fuckwit"                        }
-        - { word: "fuck-wit"                       }
-        - { word: "fucw1t"                         }
-        - { word: "fucwit"                         }
-        - { word: "fud"                            }
-        - { word: "Fudge p@cker"                   }
-        - { word: "fudge packer"                   }
-        - { word: "fudge_packer"                   }
-        - { word: "fudge_packers"                  }
-        - { word: "fudgep@cker"                    }
-        - { word: "Fudge-p@cker"                   }
-        - { word: "fudgepacker"                    }
-        - { word: "Fudge-packer"                   }
-        - { word: "fudge-packers"                  }
-        - { word: "Fudgpacker"                     }
-        - { word: "fuds"                           }
-        - { word: "fu--ing"                        }
-        - { word: "fuk"                            }
-        - { word: "fukced"                         }
-        - { word: "fuked"                          }
-        - { word: "fuker"                          }
-        - { word: "fukin"                          }
-        - { word: "fuking"                         }
-        - { word: "fukk"                           }
-        - { word: "fukked"                         }
-        - { word: "fukker"                         }
-        - { word: "fukkin"                         }
-        - { word: "fukking"                        }
-        - { word: "fuks"                           }
-        - { word: "fukwit"                         }
-        - { word: "fuukn"                          }
-        - { word: "fvck"                           }
-        - { word: "Fvckup"                         }
-        - { word: "Fvck-up"                        }
-        - { word: "fvckw1t"                        }
-        - { word: "fvckwit"                        }
-        - { word: "fvk"                            }
-        - { word: "gang bang"                      }
-        - { word: "gangbang"                       }
-        - { word: "gang-bang"                      }
-        - { word: "gash"                           }
-        - { word: "gay"                            }
-        - { word: "gayboys"                        }
-        - { word: "gayhole"                        }
-        - { word: "genitalia"                      }
-        - { word: "gimp"                           }
-        - { word: "girlie-gardening"               }
-        - { word: "giro"                           }
-        - { word: "giros"                          }
-        - { word: "gob4h1te"                       }
-        - { word: "Gobshite"                       }
-        - { word: "golden shower"                  }
-        - { word: "got me banned"                  }
-        - { word: "Gypo"                           }
-        - { word: "Gypos"                          }
-        - { word: "Gyppo"                          }
-        - { word: "Gyppos"                         }
-        - { word: "gypsies"                        }
-        - { word: "gypsy"                          }
-        - { word: "H O M O"                        }
-        - { word: "H un"                           }
-        - { word: "h0m0"                           }
-        - { word: "h0mo"                           }
-        - { word: "ham shank"                      }
-        - { word: "hash"                           }
-        - { word: "having it off with"             }
-        - { word: "hitler"                         }
-        - { word: "homo"                           }
-        - { word: "homosexual"                     }
-        - { word: "hooker"                         }
-        - { word: "hookers"                        }
-        - { word: "hotbud-hotspot"                 }
-        - { word: "hun"                            }
-        - { word: "HUN."                           }
-        - { word: "huns"                           }
-        - { word: "hvn"                            }
-        - { word: "hvns"                           }
-        - { word: "I was banned"                   }
-        - { word: "illicit"                        }
-        - { word: "Inbrëd"                         }
-        - { word: "Inbrëds"                        }
-        - { word: "inbr3d"                         }
-        - { word: "inbr3ds"                        }
-        - { word: "inbred"                         }
-        - { word: "inbred!!"                       }
-        - { word: "inbred!!!"                      }
-        - { word: "inbred."                        }
-        - { word: "inbreded"                       }
-        - { word: "inbreds"                        }
-        - { word: "inbreds!"                       }
-        - { word: "inbreds!!"                      }
-        - { word: "inbreds."                       }
-        - { word: "IRA"                            }
-        - { word: "IRA. "                          }
-        - { word: "IRA's"                          }
-        - { word: "ITies"                          }
-        - { word: "J Stein"                        }
-        - { word: "jizz"                           }
-        - { word: "Jock knew."                     }
-        - { word: "Jock Stein"                     }
-        - { word: "join FFE"                       }
-        - { word: "juanker"                        }
-        - { word: "juanker."                       }
-        - { word: "juankers"                       }
-        - { word: "juankers."                      }
-        - { word: "jungle bunny"                   }
-        - { word: "JUNKIE"                         }
-        - { word: "K**t"                           }
-        - { word: "k@ffir"                         }
-        - { word: "k@ffirs"                        }
-        - { word: "k@fir"                          }
-        - { word: "k@firs"                         }
-        - { word: "k0k"                            }
-        - { word: "Kaf1r"                          }
-        - { word: "Kaff1r"                         }
-        - { word: "Kaffir"                         }
-        - { word: "Kaffirs"                        }
-        - { word: "Kafir"                          }
-        - { word: "Kafirs"                         }
-        - { word: "kafr"                           }
-        - { word: "kant"                           }
-        - { word: "kants"                          }
-        - { word: "Khunt"                          }
-        - { word: "kiddie fiddler"                 }
-        - { word: "kiddie fiddling"                }
-        - { word: "kiddie-fiddler"                 }
-        - { word: "kiddie-fiddling"                }
-        - { word: "'kiddyfiddler' "                }
-        - { word: "kike"                           }
-        - { word: "kn* b"                          }
-        - { word: "kn0b"                           }
-        - { word: "kn0bhead"                       }
-        - { word: "knob"                           }
-        - { word: "knob&nbsp;head"                 }
-        - { word: "Knobber"                        }
-        - { word: "knobhead"                       }
-        - { word: "knobhound"                      }
-        - { word: "kraut"                          }
-        - { word: "Kunt"                           }
-        - { word: "kyke"                           }
-        - { word: "L m f a o"                      }
-        - { word: "L.m.f.a.o"                      }
-        - { word: "L.m.f.a.o."                     }
-        - { word: "Large Jock"                     }
-        - { word: "Liar"                           }
-        - { word: "Lie"                            }
-        - { word: "Lied"                           }
-        - { word: "live streaming"                 }
-        - { word: "live streams"                   }
-        - { word: "livefooty"                      }
-        - { word: "LiveFooty-"                     }
-        - { word: "LiveFooty- 9"                   }
-        - { word: "livefooty9"                     }
-        - { word: "LiveFooty-9"                    }
-        - { word: "Lmfa0"                          }
-        - { word: "Lmfao"                          }
-        - { word: "Lying"                          }
-        - { word: "m.inge"                         }
-        - { word: "M.otherf.ucker"                 }
-        - { word: "m0r0n"                          }
-        - { word: "m0r0ns"                         }
-        - { word: "m0ron"                          }
-        - { word: "m0rons"                         }
-        - { word: "M1nge"                          }
-        - { word: "maggot"                         }
-        - { word: "maggots"                        }
-        - { word: "manure"                         }
-        - { word: "manures"                        }
-        - { word: "marajuana"                      }
-        - { word: "marching powder"                }
-        - { word: "match fixing"                   }
-        - { word: "match-fixing"                   }
-        - { word: "maw"                            }
-        - { word: "maws"                           }
-        - { word: "Max"                            }
-        - { word: "maxine carr"                    }
-        - { word: "McNumpty"                       }
-        - { word: "Minge"                          }
-        - { word: "mod"                            }
-        - { word: "moderat0rs"                     }
-        - { word: "moderator"                      }
-        - { word: "moderators"                     }
-        - { word: "mods"                           }
-        - { word: "mof**ker"                       }
-        - { word: "mof**kers"                      }
-        - { word: "mofo"                           }
-        - { word: "mofuccer"                       }
-        - { word: "mofucker"                       }
-        - { word: "mofuckers"                      }
-        - { word: "mofucking"                      }
-        - { word: "mofukcer"                       }
-        - { word: "mohterf**ker"                   }
-        - { word: "mohterf**kers"                  }
-        - { word: "mohterf*kcer"                   }
-        - { word: "mohterfuccer"                   }
-        - { word: "mohterfuccers"                  }
-        - { word: "mohterfuck"                     }
-        - { word: "mohterfucker"                   }
-        - { word: "mohterfuckers"                  }
-        - { word: "mohterfucking"                  }
-        - { word: "mohterfucks"                    }
-        - { word: "mohterfuk"                      }
-        - { word: "mohterfukcer"                   }
-        - { word: "mohterfukcers"                  }
-        - { word: "mohterfuking"                   }
-        - { word: "mohterfuks"                     }
-        - { word: "mor0n"                          }
-        - { word: "mor0ns"                         }
-        - { word: "moron"                          }
-        - { word: "morons"                         }
-        - { word: "Mosley"                         }
-        - { word: "moterf**ker"                    }
-        - { word: "moterfuccer"                    }
-        - { word: "moterfuck"                      }
-        - { word: "moterfucker"                    }
-        - { word: "moterfuckers"                   }
-        - { word: "moterfucking"                   }
-        - { word: "moterfucks"                     }
-        - { word: "mothaf**k"                      }
-        - { word: "mothaf**ker"                    }
-        - { word: "mothaf**kers"                   }
-        - { word: "mothaf**king"                   }
-        - { word: "mothaf**ks"                     }
-        - { word: "mothafuccer"                    }
-        - { word: "mothafuck"                      }
-        - { word: "Mothafucka"                     }
-        - { word: "motha-fucka"                    }
-        - { word: "mothafucker"                    }
-        - { word: "mothafuckers"                   }
-        - { word: "mothafucking"                   }
-        - { word: "mothafucks"                     }
-        - { word: "mother f---ers"                 }
-        - { word: "motherf**ked"                   }
-        - { word: "Motherf**ker"                   }
-        - { word: "Motherf**kers"                  }
-        - { word: "Motherfuccer"                   }
-        - { word: "Motherfuccers"                  }
-        - { word: "Motherfuck"                     }
-        - { word: "motherfucked"                   }
-        - { word: "Motherfucker"                   }
-        - { word: "Motherfuckers"                  }
-        - { word: "Motherfucking"                  }
-        - { word: "Motherfucks"                    }
-        - { word: "motherfukkker"                  }
-        - { word: "mthaf**ka"                      }
-        - { word: "mthafucca"                      }
-        - { word: "mthafuccas"                     }
-        - { word: "mthafucka"                      }
-        - { word: "mthafuckas"                     }
-        - { word: "mthafukca"                      }
-        - { word: "mthafukcas"                     }
-        - { word: "muff"                           }
-        - { word: "muff-diver"                     }
-        - { word: "muff-diving"                    }
-        - { word: "muffs"                          }
-        - { word: "murder"                         }
-        - { word: "murdered"                       }
-        - { word: "murdering"                      }
-        - { word: "muth@fucker"                    }
-        - { word: "muthaf**k"                      }
-        - { word: "muthaf**ker"                    }
-        - { word: "muthaf**kers"                   }
-        - { word: "muthaf**king"                   }
-        - { word: "muthaf**ks"                     }
-        - { word: "muthafuccer"                    }
-        - { word: "muthafuck"                      }
-        - { word: "muthafuck@"                     }
-        - { word: "Muthafucka"                     }
-        - { word: "muthafucker"                    }
-        - { word: "muthafuckers"                   }
-        - { word: "muthafucking"                   }
-        - { word: "muthafucks"                     }
-        - { word: "Muthafukas"                     }
-        - { word: "n0b"                            }
-        - { word: "N1gger"                         }
-        - { word: "N1ggers"                        }
-        - { word: "narcotics"                      }
-        - { word: "nazi"                           }
-        - { word: "nazis"                          }
-        - { word: "nazist"                         }
-        - { word: "neds"                           }
-        - { word: "nig nog"                        }
-        - { word: "niga"                           }
-        - { word: "nigga"                          }
-        - { word: "niggaz"                         }
-        - { word: "Nigger"                         }
-        - { word: "niggers"                        }
-        - { word: "nignog"                         }
-        - { word: "nig-nog"                        }
-        - { word: "nob"                            }
-        - { word: "nob&nbsp;head"                  }
-        - { word: "Nobhead"                        }
-        - { word: "nonce"                          }
-        - { word: "nonce."                         }
-        - { word: "Ntini"                          }
-        - { word: "Ntini77"                        }
-        - { word: "orgy"                           }
-        - { word: "p!ss"                           }
-        - { word: "P*$$"                           }
-        - { word: "p***es"                         }
-        - { word: "p**i"                           }
-        - { word: "p*ki"                           }
-        - { word: "P*ss"                           }
-        - { word: "p.iss-flaps"                    }
-        - { word: "p@ki"                           }
-        - { word: "p@kis"                          }
-        - { word: "p00f"                           }
-        - { word: "p00fs"                          }
-        - { word: "p00fter"                        }
-        - { word: "p00fters"                       }
-        - { word: "p0of"                           }
-        - { word: "p155"                           }
-        - { word: "p88f"                           }
-        - { word: "p88f!"                          }
-        - { word: "paddy"                          }
-        - { word: "paedos"                         }
-        - { word: "pak1"                           }
-        - { word: "paki"                           }
-        - { word: "pakis"                          }
-        - { word: "Pat Lampards"                   }
-        - { word: "Pat Lampard's"                  }
-        - { word: "peado"                          }
-        - { word: "pearl necklace"                 }
-        - { word: "pedo"                           }
-        - { word: "pench0d"                        }
-        - { word: "pench0ds"                       }
-        - { word: "penchod"                        }
-        - { word: "penchods"                       }
-        - { word: "Perryman"                       }
-        - { word: "perv"                           }
-        - { word: "perv."                          }
-        - { word: "pervert"                        }
-        - { word: "perverts"                       }
-        - { word: "pervs"                          }
-        - { word: "phanny"                         }
-        - { word: "phanny."                        }
-        - { word: "pheck"                          }
-        - { word: "phecking"                       }
-        - { word: "phelching"                      }
-        - { word: "pheque"                         }
-        - { word: "phequing"                       }
-        - { word: "Philip the greek"               }
-        - { word: "Phillip the greek"              }
-        - { word: "phookin"                        }
-        - { word: "Phuck"                          }
-        - { word: "Phucker"                        }
-        - { word: "phuckin"                        }
-        - { word: "Phucking"                       }
-        - { word: "Phucks"                         }
-        - { word: "Phuk"                           }
-        - { word: "phuque"                         }
-        - { word: "pi$$ed"                         }
-        - { word: "pikey"                          }
-        - { word: "pillow biter"                   }
-        - { word: "pillowbiter"                    }
-        - { word: "pillow-biter"                   }
-        - { word: "pills"                          }
-        - { word: "pimp"                           }
-        - { word: "pis5"                           }
-        - { word: "piss head"                      }
-        - { word: "Piss off"                       }
-        - { word: "Pissflaps"                      }
-        - { word: "pl$$"                           }
-        - { word: "Plastic"                        }
-        - { word: "plastic fan"                    }
-        - { word: "plastic fan!"                   }
-        - { word: "Play PES 2008"                  }
-        - { word: "po0f"                           }
-        - { word: "poff"                           }
-        - { word: "ponce"                          }
-        - { word: "ponces!"                        }
-        - { word: "Poo stabber"                    }
-        - { word: "Poo stabbers"                   }
-        - { word: "poof"                           }
-        - { word: "poofs"                          }
-        - { word: "poofter"                        }
-        - { word: "porn"                           }
-        - { word: "pr ick"                         }
-        - { word: "pr!ck "                         }
-        - { word: "pr!ck."                         }
-        - { word: "pr*(k"                          }
-        - { word: "pr*(k."                         }
-        - { word: "pr*ck"                          }
-        - { word: "pr*ck."                         }
-        - { word: "pr*ck?"                         }
-        - { word: "prïck"                          }
-        - { word: "pr1ck"                          }
-        - { word: "Pr1ck!"                         }
-        - { word: "Pr1cks"                         }
-        - { word: "Pr1cks!"                        }
-        - { word: "pr1k"                           }
-        - { word: "pr1ks"                          }
-        - { word: "prick"                          }
-        - { word: "Prik"                           }
-        - { word: "Prince Philip"                  }
-        - { word: "Prince Phillip"                 }
-        - { word: "proboards83"                    }
-        - { word: "proboards83.com"                }
-        - { word: "prossies"                       }
-        - { word: "prostitute"                     }
-        - { word: "prostitutes"                    }
-        - { word: "prozzies"                       }
-        - { word: "pu$$y"                          }
-        - { word: "PUFF"                           }
-        - { word: "puffs"                          }
-        - { word: "puffs."                         }
-        - { word: "pussy"                          }
-        - { word: "pwick "                         }
-        - { word: "Pwick."                         }
-        - { word: "queen"                          }
-        - { word: "queer"                          }
-        - { word: "queers"                         }
-        - { word: "Quim"                           }
-        - { word: "Quim."                          }
-        - { word: "r3tard"                         }
-        - { word: "r3tarded"                       }
-        - { word: "raghead"                        }
-        - { word: "ragheads"                       }
-        - { word: "rape"                           }
-        - { word: "raped"                          }
-        - { word: "rapist"                         }
-        - { word: "rapists"                        }
-        - { word: "REGISTER TODAY"                 }
-        - { word: "re-register"                    }
-        - { word: "ret@rd"                         }
-        - { word: "retard"                         }
-        - { word: "retarded"                       }
-        - { word: "retarded."                      }
-        - { word: "rim job"                        }
-        - { word: "rimming"                        }
-        - { word: "s- c-v-m"                       }
-        - { word: "S&M"                            }
-        - { word: "s&um"                           }
-        - { word: "S(um"                           }
-        - { word: "s****."                         }
-        - { word: "s**m"                           }
-        - { word: "s**te"                          }
-        - { word: "S*um"                           }
-        - { word: "s.hit"                          }
-        - { word: "S1ut"                           }
-        - { word: "sadomasochistic"                }
-        - { word: "sado-masochistic"               }
-        - { word: "sausage jockey"                 }
-        - { word: "sc u m!"                        }
-        - { word: "sc um"                          }
-        - { word: "sc*m"                           }
-        - { word: "Scat"                           }
-        - { word: "scu/\\/\\"                      }
-        - { word: "scum"                           }
-        - { word: "scüm"                           }
-        - { word: "scumbags"                       }
-        - { word: "Scumchester "                   }
-        - { word: "scumm"                          }
-        - { word: "scumm!"                         }
-        - { word: "Selling Coke"                   }
-        - { word: "sexual"                         }
-        - { word: "sh hit"                         }
-        - { word: "Sh!t"                           }
-        - { word: "sh!te"                          }
-        - { word: "sh!tes"                         }
-        - { word: "sh&te"                          }
-        - { word: "sh* te"                         }
-        - { word: "Sh***ng"                        }
-        - { word: "sh*t"                           }
-        - { word: "sh*thead"                       }
-        - { word: "sh*theads"                      }
-        - { word: "sh1t"                           }
-        - { word: "sh1't"                          }
-        - { word: "sh1te"                          }
-        - { word: "sh1thead"                       }
-        - { word: "sh1theads"                      }
-        - { word: "shady backroom dealings"        }
-        - { word: "shady dealings"                 }
-        - { word: "shag"                           }
-        - { word: "SHAGGERS"                       }
-        - { word: "shat"                           }
-        - { word: "SHEEP"                          }
-        - { word: "sheep l0ver"                    }
-        - { word: "sheep l0vers"                   }
-        - { word: "Sheep lover"                    }
-        - { word: "Sheep lovers"                   }
-        - { word: "SHEEP SHAGGERS"                 }
-        - { word: "sheepl0ver"                     }
-        - { word: "sheep-l0ver"                    }
-        - { word: "sheepl0vers"                    }
-        - { word: "sheep-l0vers"                   }
-        - { word: "Sheeplover"                     }
-        - { word: "Sheep-lover"                    }
-        - { word: "sheep-lovers"                   }
-        - { word: "SHEEPSHAGGERS"                  }
-        - { word: "SHEEP-SHAGGERS"                 }
-        - { word: "sheet head"                     }
-        - { word: "sheet heads"                    }
-        - { word: "sheethead"                      }
-        - { word: "sheetheads"                     }
-        - { word: "shirtlifter"                    }
-        - { word: "shirt-lifter"                   }
-        - { word: "shirtlifters"                   }
-        - { word: "shirt-lifters"                  }
-        - { word: "shit"                           }
-        - { word: "Shit stabber"                   }
-        - { word: "Shit stabbers"                  }
-        - { word: "shitstabber"                    }
-        - { word: "shitstabbers"                   }
-        - { word: "shut the F up"                  }
-        - { word: "shyte"                          }
-        - { word: "Sinn Fein"                      }
-        - { word: "Sinn Fein's"                    }
-        - { word: "skank"                          }
-        - { word: "skum"                           }
-        - { word: "skunk"                          }
-        - { word: "sl uts"                         }
-        - { word: "slag"                           }
-        - { word: "slapper"                        }
-        - { word: "slut"                           }
-        - { word: "smack"                          }
-        - { word: "Snorting coke"                  }
-        - { word: "Soccer Live2"                   }
-        - { word: "spastic"                        }
-        - { word: "spaz"                           }
-        - { word: "spaz."                          }
-        - { word: "sphincter"                      }
-        - { word: "spic"                           }
-        - { word: "spit roasting"                  }
-        - { word: "spitroast"                      }
-        - { word: "spit-roast"                     }
-        - { word: "spit-roasting"                  }
-        - { word: "spit-roasts"                    }
-        - { word: "spliff"                         }
-        - { word: "spunk"                          }
-        - { word: "spunking"                       }
-        - { word: "Steal"                          }
-        - { word: "Stealing"                       }
-        - { word: "Stole"                          }
-        - { word: "Stolen"                         }
-        - { word: "suck my balls"                  }
-        - { word: "suck my balls!"                 }
-        - { word: "suck my balls!!"                }
-        - { word: "suing"                          }
-        - { word: "t w a t"                        }
-        - { word: "t wat"                          }
-        - { word: "t!ts"                           }
-        - { word: "t&nbsp;w&nbsp;a&nbsp;t"         }
-        - { word: "t&nbsp;w&nbsp;a&nbsp;t&nbsp;s " }
-        - { word: "t**t"                           }
-        - { word: "t*sser"                         }
-        - { word: "t*w*a*t"                        }
-        - { word: "t.wat"                          }
-        - { word: "t0$$er"                         }
-        - { word: "t055er"                         }
-        - { word: "T0ss3r"                         }
-        - { word: "T0ss3rs"                        }
-        - { word: "t0sser"                         }
-        - { word: "t0ssers"                        }
-        - { word: "ta rt"                          }
-        - { word: "taigs"                          }
-        - { word: "taigs."                         }
-        - { word: "take it up the"                 }
-        - { word: "takes it up the"                }
-        - { word: "taking coke"                    }
-        - { word: "teabag"                         }
-        - { word: "teabagging"                     }
-        - { word: "tea-bagging"                    }
-        - { word: "Temper0"                        }
-        - { word: "Tempero"                        }
-        - { word: "throw a game"                   }
-        - { word: "tims"                           }
-        - { word: "to$$ers"                        }
-        - { word: "to**er"                         }
-        - { word: "to55er"                         }
-        - { word: "to55ers"                        }
-        - { word: "tosser"                         }
-        - { word: "tosser, "                       }
-        - { word: "tossers"                        }
-        - { word: "tossurs "                       }
-        - { word: "towel head"                     }
-        - { word: "towelhead"                      }
-        - { word: "Trophy Centre"                  }
-        - { word: "Trophy Centre."                 }
-        - { word: "turd"                           }
-        - { word: "TVANTS dot com"                 }
-        - { word: "TVANTS.com"                     }
-        - { word: "tvvat"                          }
-        - { word: "tvvats"                         }
-        - { word: "tw a t"                         }
-        - { word: "tw a t."                        }
-        - { word: "tw at"                          }
-        - { word: "tw#t"                           }
-        - { word: "tw&nbsp;at"                     }
-        - { word: "tw&t"                           }
-        - { word: "tw*t"                           }
-        - { word: "tw@"                            }
-        - { word: "tw@t"                           }
-        - { word: "tw@ts"                          }
-        - { word: "tw_t"                           }
-        - { word: "tw~t"                           }
-        - { word: "Tw>t"                           }
-        - { word: "Tw4t"                           }
-        - { word: "tw8t"                           }
-        - { word: "tw8ts"                          }
-        - { word: "twa t"                          }
-        - { word: "twat"                           }
-        - { word: "t-wat"                          }
-        - { word: "t-w-a-t."                       }
-        - { word: "twats"                          }
-        - { word: "twatt"                          }
-        - { word: "twattish"                       }
-        - { word: "Twunt"                          }
-        - { word: "twunts"                         }
-        - { word: "Unionist"                       }
-        - { word: "up the Gary"                    }
-        - { word: "vous"                           }
-        - { word: "Wanka"             }
-        - { word: "WANKER"            }
-        - { word: "WANKERCUNTS"       }
-        - { word: "w anker"           }
-        - { word: "w ankers"          }
-        - { word: "w##kers"           }
-        - { word: "W#*K"              }
-        - { word: "W#nker"            }
-        - { word: "W#nkers"           }
-        - { word: "w******"           }
-        - { word: "w***er"            }
-        - { word: "w**kers"           }
-        - { word: "w*nker"            }
-        - { word: "w*nkers"           }
-        - { word: "w.ank"             }
-        - { word: "w@@@ers"           }
-        - { word: "w@nk"              }
-        - { word: "w@nker"            }
-        - { word: "w@nkers"           }
-        - { word: "w@nking"           }
-        - { word: "w@nks"             }
-        - { word: "w@nkstain"         }
-        - { word: "w0g"               }
-        - { word: "w0gs"              }
-        - { word: "W4nker!"           }
-        - { word: "W4nkers!"          }
-        - { word: "wa nker"           }
-        - { word: "Wan k er"          }
-        - { word: "Wan k ers"         }
-        - { word: "wan ker"           }
-        - { word: "Wan**r"            }
-        - { word: "wan--ers"          }
-        - { word: "wank"              }
-        - { word: "Wanka"             }
-        - { word: "wankas"            }
-        - { word: "wanke r"           }
-        - { word: "wanked"            }
-        - { word: "wanker"            }
-        - { word: "wankers"           }
-        - { word: "wan-kers"          }
-        - { word: "wanking"           }
-        - { word: "wanks"             }
-        - { word: "wank's"            }
-        - { word: "wet spam"          }
-        - { word: "Wh0re"             }
-        - { word: "whanker"           }
-        - { word: "whankers"          }
-        - { word: "whanking"          }
-        - { word: "Whatthefuck"       }
-        - { word: "white powder "     }
-        - { word: "white stuff"       }
-        - { word: "whore"             }
-        - { word: "whores"            }
-        - { word: "win cash prizes"   }
-        - { word: "wog"               }
-        - { word: "wop"               }
-        - { word: "Xpert Eleven"      }
-        - { word: "Xrse"              }
-        - { word: "Xrseh"             }
-        - { word: "Xrsehol"           }
-        - { word: "Xrsehole"          }
-        - { word: "Xxxhole"           }
-        - { word: "Y!ddo!"            }
-        - { word: "Y!ddo!!"           }
-        - { word: "Y*d"               }
-        - { word: "y1dd"              }
-        - { word: "ya prick"          }
-        - { word: "yid"               }
-        - { word: "yidd"              }
-        - { word: "yidds"             }
-        - { word: "yido"              }
-        - { word: "yids"              }
-        - { word: "You are a retard"  }
-        - { word: "You are a retard!" }
-        - { word: "You are a retard." }
-        - { word: "you prick"         }
-        - { word: "you prick!"        }
-        - { word: "your mam"          }
-        - { word: "Your Mum"          }
-        - { word: "You're a retard"   }
-        - { word: "You're a retard!"  }
-        - { word: "You're a retard."  }
-        - { word: "arse"              }
-        - { word: "assbag"            }
-        - { word: "assbandit"         }
-        - { word: "assbanger"         }
-        - { word: "assclown"          }
-        - { word: "asscock"           }
-        - { word: "assface"           }
-        - { word: "assfuck"           }
-        - { word: "asshead"           }
-        - { word: "asshole"           }
-        - { word: "asshopper"         }
-        - { word: "assjacker"         }
-        - { word: "asslicker"         }
-        - { word: "assmunch"          }
-        - { word: "asswipe"           }
-        - { word: "bampot"            }
-        - { word: "bastard"           }
-        - { word: "beaner"            }
-        - { word: "bitch"             }
-        - { word: "blow job"          }
-        - { word: "blowjob"           }
-        - { word: "boner"             }
-        - { word: "brotherfucker"     }
-        - { word: "bullshit"          }
-        - { word: "butt plug"         }
-        - { word: "butt-pirate"       }
-        - { word: "buttfucka"         }
-        - { word: "buttfucker"        }
-        - { word: "camel toe"         }
-        - { word: "chinc"             }
-        - { word: "chink"             }
-        - { word: "chode"             }
-        - { word: "clit"              }
-        - { word: "cock"              }
-        - { word: "cockface"          }
-        - { word: "cockfucker"        }
-        - { word: "cockmaster"        }
-        - { word: "cockmuncher"       }
-        - { word: "cocksucker"        }
-        - { word: "coon"              }
-        - { word: "cooter"            }
-        - { word: "cracker"           }
-        - { word: "cum"               }
-        - { word: "cunnilingus"       }
-        - { word: "cunt"              }
-        - { word: "damn"              }
-        - { word: "deggo"             }
-        - { word: "dick"              }
-        - { word: "dickhead"          }
-        - { word: "dickhole"          }
-        - { word: "dicks"             }
-        - { word: "dickweed"          }
-        - { word: "dickwod"           }
-        - { word: "dildo"             }
-        - { word: "dipshit"           }
-        - { word: "dookie"            }
-        - { word: "douche"            }
-        - { word: "douchebag"         }
-        - { word: "dumass"            }
-        - { word: "dumb ass"          }
-        - { word: "dumbass"           }
-        - { word: "dumbfuck"          }
-        - { word: "dumbshit"          }
-        - { word: "dyke"              }
-        - { word: "fag"               }
-        - { word: "fagbag"            }
-        - { word: "faggit"            }
-        - { word: "faggot"            }
-        - { word: "fagtard"           }
-        - { word: "fatass"            }
-        - { word: "fellatio"          }
-        - { word: "fuck"              }
-        - { word: "fuckass"           }
-        - { word: "fucked"            }
-        - { word: "fucker"            }
-        - { word: "fuckface"          }
-        - { word: "fuckhead"          }
-        - { word: "fuckhole"          }
-        - { word: "fuckin"            }
-        - { word: "fucking"           }
-        - { word: "fuckstick"         }
-        - { word: "fucktard"          }
-        - { word: "fuckup"            }
-        - { word: "fuckwad"           }
-        - { word: "fuckwit"           }
-        - { word: "fudgepacker"       }
-        - { word: "gay"               }
-        - { word: "gaytard"           }
-        - { word: "gaywad"            }
-        - { word: "goddamn"           }
-        - { word: "goddamnit"         }
-        - { word: "gooch"             }
-        - { word: "gook"              }
-        - { word: "gringo"            }
-        - { word: "guido"             }
-        - { word: "hard on"           }
-        - { word: "homo"              }
-        - { word: "honkey"            }
-        - { word: "humping"           }
-        - { word: "jackass"           }
-        - { word: "jap"               }
-        - { word: "jerk off"          }
-        - { word: "jizz"              }
-        - { word: "jungle bunny"      }
-        - { word: "kike"              }
-        - { word: "kooch"             }
-        - { word: "kootch"            }
-        - { word: "kyke"              }
-        - { word: "lesbo"             }
-        - { word: "lezzie"            }
-        - { word: "mick"              }
-        - { word: "minge"             }
-        - { word: "mothafucka"        }
-        - { word: "motherfucker"      }
-        - { word: "motherfucking"     }
-        - { word: "negro"             }
-        - { word: "nigga"             }
-        - { word: "nigger"            }
-        - { word: "niglet"            }
-        - { word: "nut sack"          }
-        - { word: "panooch"           }
-        - { word: "pecker"            }
-        - { word: "peckerhead"        }
-        - { word: "piss"              }
-        - { word: "pissed"            }
-        - { word: "pissed off"        }
-        - { word: "pollock"           }
-        - { word: "poon"              }
-        - { word: "poonany"           }
-        - { word: "porch monkey"      }
-        - { word: "porchmonkey"       }
-        - { word: "prick"             }
-        - { word: "punta"             }
-        - { word: "pussy"             }
-        - { word: "puto"              }
-        - { word: "queef"             }
-        - { word: "queer"             }
-        - { word: "queerbait"         }
-        - { word: "renob"             }
-        - { word: "rimjob"            }
-        - { word: "sand nigger"       }
-        - { word: "sandnigger"        }
-        - { word: "scrote"            }
-        - { word: "shit"              }
-        - { word: "shitface"          }
-        - { word: "shitfaced"         }
-        - { word: "shithead"          }
-        - { word: "shitter"           }
-        - { word: "shittiest"         }
-        - { word: "shitting"          }
-        - { word: "shitty"            }
-        - { word: "skank"             }
-        - { word: "skeet"             }
-        - { word: "slut"              }
-        - { word: "slutbag"           }
-        - { word: "snatch"            }
-        - { word: "spic"              }
-        - { word: "spick"             }
-        - { word: "testicle"          }
-        - { word: "thundercunt"       }
-        - { word: "tit"               }
-        - { word: "titfuck"           }
-        - { word: "tits"              }
-        - { word: "twat"              }
-        - { word: "twats"             }
-        - { word: "va-j-j"            }
-        - { word: "vag"               }
-        - { word: "vjayjay"           }
-        - { word: "wank"              }
-        - { word: "wetback"           }
-        - { word: "whore"             }
-        - { word: "wop"               }
+        - { word: "$cum"                    }
+        - { word: "$HIT"                    }
+        - { word: "$hittie"                 }
+        - { word: "(ock"                    }
+        - { word: "@r$e"                    }
+        - { word: "@r$e"                    }
+        - { word: "@rse"                    }
+        - { word: "@rsehol"                 }
+        - { word: "@rsehole"                }
+        - { word: "@rses"                   }
+        - { word: "@unt"                    }
+        - { word: "@unt"                    }
+        - { word: "[UNT"                    }
+        - { word: "[UNTs"                   }
+        - { word: "{UNT"                    }
+        - { word: "< unt"                   }
+        - { word: "<loth head"              }
+        - { word: "<lothhead"               }
+        - { word: "<nuts"                   }
+        - { word: "<o(k"                    }
+        - { word: "<o<k"                    }
+        - { word: "<o<ksu<ka"               }
+        - { word: "<o<ksu<ker"              }
+        - { word: "<oon"                    }
+        - { word: "<unt"                    }
+        - { word: "<unts"                   }
+        - { word: "<u*t"                    }
+        - { word: "<unt"                    }
+        - { word: "<unting"                 }
+        - { word: "<unts"                   }
+        - { word: "<unt's"                  }
+        - { word: "<vnt"                    }
+        - { word: "<vnts"                   }
+        - { word: "3rse"                    }
+        - { word: "5h1te"                   }
+        - { word: "81tch"                   }
+        - { word: "8itch"                   }
+        - { word: "a$$"                     }
+        - { word: "A$$hole"                 }
+        - { word: "A$$hole$"                }
+        - { word: "A$$holes"                }
+        - { word: "a.rse"                   }
+        - { word: "a?sehole"                }
+        - { word: "A+*hole"                 }
+        - { word: "Alky"                    }
+        - { word: "allegations"             }
+        - { word: "anus"                    }
+        - { word: "ar se"                   }
+        - { word: "ar$e"                    }
+        - { word: "ar$ehole"                }
+        - { word: "Ar$hole"                 }
+        - { word: "Ar$holes"                }
+        - { word: "ar.se"                   }
+        - { word: "ar5e"                    }
+        - { word: "ar5ewipe"                }
+        - { word: "ar5h0le"                 }
+        - { word: "ar5h0les"                }
+        - { word: "arrested"                }
+        - { word: "ars3"                    }
+        - { word: "arse"                    }
+        - { word: "arse bandit"             }
+        - { word: "arse hole"               }
+        - { word: "arsebandits"             }
+        - { word: "arseh0le"                }
+        - { word: "arseh0les"               }
+        - { word: "Arseho"                  }
+        - { word: "arsehol"                 }
+        - { word: "arsehole"                }
+        - { word: "arseholes"               }
+        - { word: "arse-holes"              }
+        - { word: "arsewipe"                }
+        - { word: "arsh0le"                 }
+        - { word: "arshole"                 }
+        - { word: "arsholes"                }
+        - { word: "ASBOs"                   }
+        - { word: "ashole"                  }
+        - { word: "asre"                    }
+        - { word: "ass h0le"                }
+        - { word: "ass hole"                }
+        - { word: "assault"                 }
+        - { word: "assaulted"               }
+        - { word: "assaults"                }
+        - { word: "assh0le"                 }
+        - { word: "assh0les"                }
+        - { word: "asshole"                 }
+        - { word: "assholes"                }
+        - { word: "assult"                  }
+        - { word: "assulted"                }
+        - { word: "bastard"                 }
+        - { word: "bastards"                }
+        - { word: "B!g Jock"                }
+        - { word: "b*ll*cks"                }
+        - { word: "B*ll*ck's"               }
+        - { word: "b*st*&rd"                }
+        - { word: "b*st*&rds"               }
+        - { word: "b*stards"                }
+        - { word: "b.astard"                }
+        - { word: "B.J.K"                   }
+        - { word: "b.ollocks"               }
+        - { word: "b.ugger"                 }
+        - { word: "b@ll@cks"                }
+        - { word: "b@st@rd"                 }
+        - { word: "b@st@rds"                }
+        - { word: "b0//0cks"                }
+        - { word: "b00tha"                  }
+        - { word: "b00thas"                 }
+        - { word: "b0110ck"                 }
+        - { word: "b0110cks"                }
+        - { word: "b0ll0cks"                }
+        - { word: "B0llocks"                }
+        - { word: "b1tch"                   }
+        - { word: "b3llend"                 }
+        - { word: "Backdoor bandits"        }
+        - { word: "Balls Deep"              }
+        - { word: "ballsack"                }
+        - { word: "banned me"               }
+        - { word: "bar steward"             }
+        - { word: "bas tards"               }
+        - { word: "Bas*ards"                }
+        - { word: "bastard"                 }
+        - { word: "bastards"                }
+        - { word: "basterd"                 }
+        - { word: "Bastrds"                 }
+        - { word: "batty boy"               }
+        - { word: "battyboi"                }
+        - { word: "battyboy"                }
+        - { word: "baw bag"                 }
+        - { word: "bawbag"                  }
+        - { word: "Beef curtains"           }
+        - { word: "belend"                  }
+        - { word: "bell end"                }
+        - { word: "bell.end"                }
+        - { word: "bellend"                 }
+        - { word: "bell-end"                }
+        - { word: "Big J0ck"                }
+        - { word: "BIG JOCK"                }
+        - { word: "Big Jock did know"       }
+        - { word: "BIG JOCK knew"           }
+        - { word: "Bin Dip pers"            }
+        - { word: "bin dippers"             }
+        - { word: "bin dipping"             }
+        - { word: "bin-dippers"             }
+        - { word: "BJ"                      }
+        - { word: "BJK"                     }
+        - { word: "black mail"              }
+        - { word: "blackmail"               }
+        - { word: "blackmailer"             }
+        - { word: "bo11ocks"                }
+        - { word: "Boll0cks"                }
+        - { word: "bollocks"                }
+        - { word: "bollox"                  }
+        - { word: "bolocks"                 }
+        - { word: "bolox"                   }
+        - { word: "Bomb"                    }
+        - { word: "Bombing"                 }
+        - { word: "boning"                  }
+        - { word: "bootha"                  }
+        - { word: "boothas"                 }
+        - { word: "bribe"                   }
+        - { word: "bribed"                  }
+        - { word: "bribes"                  }
+        - { word: "brothel"                 }
+        - { word: "bu min"                  }
+        - { word: "bugger"                  }
+        - { word: "Bukkake"                 }
+        - { word: "Bulger"                  }
+        - { word: "bull5h1tt1ng"            }
+        - { word: "Bullsh!t"                }
+        - { word: "bum bandit"              }
+        - { word: "bum bandits"             }
+        - { word: "bum hole"                }
+        - { word: "bumbandit"               }
+        - { word: "bum-bandit"              }
+        - { word: "bumh0l3"                 }
+        - { word: "bumh0le"                 }
+        - { word: "bumhol3"                 }
+        - { word: "bumhole"                 }
+        - { word: "bummers"                 }
+        - { word: "bun"                     }
+        - { word: "bung"                    }
+        - { word: "bungs"                   }
+        - { word: "buns"                    }
+        - { word: "Buying coke"             }
+        - { word: "cnuts"                   }
+        - { word: "cok"                     }
+        - { word: "c#nt"                    }
+        - { word: "Cunt"                    }
+        - { word: "C*&TS"                   }
+        - { word: "c*nt"                    }
+        - { word: "c.u.n.t"                 }
+        - { word: "c.unt"                   }
+        - { word: "c.untyb.ollocks"         }
+        - { word: "c@#t"                    }
+        - { word: "c@Nts"                   }
+        - { word: "C_u_n_t"                 }
+        - { word: "c00n"                    }
+        - { word: "c0ck"                    }
+        - { word: "C0cksucka"               }
+        - { word: "C0cksucker"              }
+        - { word: "c9nt"                    }
+        - { word: "cahnt"                   }
+        - { word: "cahnts"                  }
+        - { word: "cannabis"                }
+        - { word: "cant's"                  }
+        - { word: "CASH PRIZE"              }
+        - { word: "cash prizes"             }
+        - { word: "ceej"                    }
+        - { word: "Chaventry"               }
+        - { word: "cheat"                   }
+        - { word: "cheated"                 }
+        - { word: "cheater"                 }
+        - { word: "cheating"                }
+        - { word: "Cheating."               }
+        - { word: "cheats"                  }
+        - { word: "CHELSCUM"                }
+        - { word: "child abuse"             }
+        - { word: "Chinkies"                }
+        - { word: "Chinky"                  }
+        - { word: "clit"                    }
+        - { word: "closet"                  }
+        - { word: "Cloth head"              }
+        - { word: "Clothhead"               }
+        - { word: "clucking funt"           }
+        - { word: "cnut"                    }
+        - { word: "cnuts"                   }
+        - { word: "Co(k"                    }
+        - { word: "cock"                    }
+        - { word: "Cocaine"                 }
+        - { word: "cock"                    }
+        - { word: "cockfaced"               }
+        - { word: "cockh3ad"                }
+        - { word: "cockhead"                }
+        - { word: "Cocksucka"               }
+        - { word: "Cocksucker"              }
+        - { word: "Cocksuckers"             }
+        - { word: "Cok"                     }
+        - { word: "coke"                    }
+        - { word: "Colombian stuff"         }
+        - { word: "communities@bbc.co.uk"   }
+        - { word: "conspiring"              }
+        - { word: "coon"                    }
+        - { word: "corrupt"                 }
+        - { word: "corruption"              }
+        - { word: "cr*p"                    }
+        - { word: "cr3tin"                  }
+        - { word: "creatin"                 }
+        - { word: "cretin"                  }
+        - { word: "cretins"                 }
+        - { word: "cripple"                 }
+        - { word: "cunt"                    }
+        - { word: "cunts"                   }
+        - { word: "cu*t"                    }
+        - { word: "culé"                    }
+        - { word: "cum"                     }
+        - { word: "Cunt"                    }
+        - { word: "c-u-n-t"                 }
+        - { word: "cunting"                 }
+        - { word: "Cunts"                   }
+        - { word: "Cunt's"                  }
+        - { word: "Currant Buns"            }
+        - { word: "Current Bun"             }
+        - { word: "Current Buns"            }
+        - { word: "cvnt"                    }
+        - { word: "cvnts"                   }
+        - { word: "d&ugs"                   }
+        - { word: "d*c"                     }
+        - { word: "d*ckhead"                }
+        - { word: "d*ckheads"               }
+        - { word: "d1ck"                    }
+        - { word: "D1ck"                    }
+        - { word: "d1ckH@ed"                }
+        - { word: "darkie"                  }
+        - { word: "darky"                   }
+        - { word: "death camp"              }
+        - { word: "defraud"                 }
+        - { word: "deserve to die"          }
+        - { word: "dhick"                   }
+        - { word: "dick"                    }
+        - { word: "dickhead"                }
+        - { word: "dickhead"                }
+        - { word: "dicks"                   }
+        - { word: "died"                    }
+        - { word: "diklik"                  }
+        - { word: "dippers"                 }
+        - { word: "Dogshit"                 }
+        - { word: "DOLE MONKEYS"            }
+        - { word: "dope"                    }
+        - { word: "drug"                    }
+        - { word: "druggie"                 }
+        - { word: "druggy"                  }
+        - { word: "drugs"                   }
+        - { word: "Duke of Edinburgh"       }
+        - { word: "dumba$$"                 }
+        - { word: "dumbfuck"                }
+        - { word: "dumbfucker"              }
+        - { word: "Dxxkhead"                }
+        - { word: "effin"                   }
+        - { word: "efkin"                   }
+        - { word: "ejaculate"               }
+        - { word: "ejaculating"             }
+        - { word: "enter free at"           }
+        - { word: "ENTRIES CLOSE AT"        }
+        - { word: "envelope"                }
+        - { word: "er3e"                    }
+        - { word: "erse"                    }
+        - { word: "ethnics"                 }
+        - { word: "fcuk off"                }
+        - { word: "fck"                     }
+        - { word: "fcker"                   }
+        - { word: "fcking"                  }
+        - { word: "Foad"                    }
+        - { word: "F off"                   }
+        - { word: "F OFFBBC"                }
+        - { word: "f right off"             }
+        - { word: "fuck"                    }
+        - { word: "fucked"                  }
+        - { word: "fuck"                    }
+        - { word: "fucking"                 }
+        - { word: "fuck"                    }
+        - { word: "Fuck"                    }
+        - { word: "f ucking"                }
+        - { word: "f!ck"                    }
+        - { word: "f#ck"                    }
+        - { word: "f#cked"                  }
+        - { word: "F$cks"                   }
+        - { word: "F%$K"                    }
+        - { word: "f%$king"                 }
+        - { word: "fcked"                   }
+        - { word: "fuck"                    }
+        - { word: "fuck"                    }
+        - { word: "fucker"                  }
+        - { word: "fucking"                 }
+        - { word: "f()()k"                  }
+        - { word: "f()()ker"                }
+        - { word: "f()()king"               }
+        - { word: "F()ck you"               }
+        - { word: "f()ckers"                }
+        - { word: "f()ckers"                }
+        - { word: "f()ckin"                 }
+        - { word: "F* *K"                   }
+        - { word: "f* ck"                   }
+        - { word: "f*#kin'"                 }
+        - { word: "f*&k"                    }
+        - { word: "f*&k!ng"                 }
+        - { word: "f*()"                    }
+        - { word: "f*cked"                  }
+        - { word: "f*cker"                  }
+        - { word: "f*ckin"                  }
+        - { word: "f*cking"                 }
+        - { word: "f*cks"                   }
+        - { word: "f*c*"                    }
+        - { word: "f*c*in"                  }
+        - { word: "f*ck"                    }
+        - { word: "f*ckin"                  }
+        - { word: "F*CKING"                 }
+        - { word: "F*k"                     }
+        - { word: "f*ked"                   }
+        - { word: "f*ker"                   }
+        - { word: "f*ks"                    }
+        - { word: "f*uck"                   }
+        - { word: "F*uk"                    }
+        - { word: "FOAD"                    }
+        - { word: "fuck"                    }
+        - { word: "f@&*ing"                 }
+        - { word: "F@@@IN"                  }
+        - { word: "F@@@ING"                 }
+        - { word: "f@@k"                    }
+        - { word: "f@ck"                    }
+        - { word: "f@ckin"                  }
+        - { word: "f@g"                     }
+        - { word: "f@gs"                    }
+        - { word: "f@uk"                    }
+        - { word: "f[_]cker"                }
+        - { word: "f[_]cking"               }
+        - { word: "f^(k"                    }
+        - { word: "f^^k"                    }
+        - { word: "f^^ked"                  }
+        - { word: "f^^ker"                  }
+        - { word: "f^^king"                 }
+        - { word: "f^ck"                    }
+        - { word: "f^cker"                  }
+        - { word: "f^cking"                 }
+        - { word: "f__kin"                  }
+        - { word: "f__king"                 }
+        - { word: "f<uk"                    }
+        - { word: "F>>K"                    }
+        - { word: "fÜck"                    }
+        - { word: "f00ck"                   }
+        - { word: "f00cking"                }
+        - { word: "f00k"                    }
+        - { word: "f00ked"                  }
+        - { word: "f0oked"                  }
+        - { word: "F0YS"                    }
+        - { word: "f3ck"                    }
+        - { word: "f3cking"                 }
+        - { word: "fa g"                    }
+        - { word: "fa g"                    }
+        - { word: "Fack"                    }
+        - { word: "Fackin"                  }
+        - { word: "facking"                 }
+        - { word: "fackk"                   }
+        - { word: "faeces"                  }
+        - { word: "fag"                     }
+        - { word: "fag"                     }
+        - { word: "fag"                     }
+        - { word: "fagg0t"                  }
+        - { word: "Faggits"                 }
+        - { word: "faggot"                  }
+        - { word: "faggoty"                 }
+        - { word: "fagit"                   }
+        - { word: "Fagits"                  }
+        - { word: "fags"                    }
+        - { word: "false accounting"        }
+        - { word: "fanny"                   }
+        - { word: "fark"                    }
+        - { word: "favourite album"         }
+        - { word: "favourite LP"            }
+        - { word: "fc*king"                 }
+        - { word: "fck"                     }
+        - { word: "F'ck"                    }
+        - { word: "fcking"                  }
+        - { word: "fck1ng"                  }
+        - { word: "fckeud"                  }
+        - { word: "Fckin"                   }
+        - { word: "fcking"                  }
+        - { word: "fcks"                    }
+        - { word: "fckw1t"                  }
+        - { word: "fckwit"                  }
+        - { word: "fcuk"                    }
+        - { word: "f-cuk"                   }
+        - { word: "fcuked"                  }
+        - { word: "fcuker"                  }
+        - { word: "fcukin"                  }
+        - { word: "fcuking"                 }
+        - { word: "fcuks"                   }
+        - { word: "feaces"                  }
+        - { word: "featuring the best"      }
+        - { word: "feck"                    }
+        - { word: "feckin"                  }
+        - { word: "fecking"                 }
+        - { word: "f---ed"                  }
+        - { word: "FEHCK"                   }
+        - { word: "FEHCKS"                  }
+        - { word: "fekking"                 }
+        - { word: "felch"                   }
+        - { word: "felched"                 }
+        - { word: "Felching"                }
+        - { word: "feltch"                  }
+        - { word: "feltcher"                }
+        - { word: "feltching"               }
+        - { word: "fen ian"                 }
+        - { word: "f-----g"                 }
+        - { word: "FIA President"           }
+        - { word: "f'ing"                   }
+        - { word: "F-ing"                   }
+        - { word: "f---ing"                 }
+        - { word: "fixed match"             }
+        - { word: "fk"                      }
+        - { word: "f'k"                     }
+        - { word: "f--k"                    }
+        - { word: "fkcin"                   }
+        - { word: "fkin"                    }
+        - { word: "fking"                   }
+        - { word: "flange"                  }
+        - { word: "FLOCKING"                }
+        - { word: "flooking"                }
+        - { word: "Fluck"                   }
+        - { word: "Flucking"                }
+        - { word: "fo okin"                 }
+        - { word: "fo0ked"                  }
+        - { word: "FOAD"                    }
+        - { word: "F-o-a-d"                 }
+        - { word: "F-OFF"                   }
+        - { word: "FOFFBBC"                 }
+        - { word: "Fook"                    }
+        - { word: "fookd"                   }
+        - { word: "fooked"                  }
+        - { word: "Fooker"                  }
+        - { word: "fookin"                  }
+        - { word: "FOOKIN'"                 }
+        - { word: "Fooking"                 }
+        - { word: "football for free"       }
+        - { word: "footballonsat"           }
+        - { word: "Foxtrot oscar"           }
+        - { word: "FOYS"                    }
+        - { word: "fraud"                   }
+        - { word: "fraudulant"              }
+        - { word: "fraudulent"              }
+        - { word: "free ipod"               }
+        - { word: "Free PS3"                }
+        - { word: "free xbox"               }
+        - { word: "frig"                    }
+        - { word: "frigging"                }
+        - { word: "frigin"                  }
+        - { word: "friging"                 }
+        - { word: "frogs"                   }
+        - { word: "fu <k"                   }
+        - { word: "fu c king"               }
+        - { word: "fu cking"                }
+        - { word: "FU KKED"                 }
+        - { word: "FU&KIN"                  }
+        - { word: "FU&KING"                 }
+        - { word: "fuck"                    }
+        - { word: "fucked"                  }
+        - { word: "fucker"                  }
+        - { word: "fucking"                 }
+        - { word: "fu(k"                    }
+        - { word: "FU(KER"                  }
+        - { word: "FU(KERs"                 }
+        - { word: "fu*k"                    }
+        - { word: "fu.ck"                   }
+        - { word: "fu@k"                    }
+        - { word: "fu@ker"                  }
+        - { word: "FU[IN"                   }
+        - { word: "fu^k"                    }
+        - { word: "fu^ker"                  }
+        - { word: "fu^king"                 }
+        - { word: "fu{in"                   }
+        - { word: "Fu~*king"                }
+        - { word: "fu< kin"                 }
+        - { word: "fu<k"                    }
+        - { word: "F-u-<-k"                 }
+        - { word: "fu<ked"                  }
+        - { word: "fu<ker"                  }
+        - { word: "fu<kin"                  }
+        - { word: "fu<king"                 }
+        - { word: "fu<kker"                 }
+        - { word: "fu<kr"                   }
+        - { word: "fu<ks"                   }
+        - { word: "fuc"                     }
+        - { word: "fucked"                  }
+        - { word: "fucker"                  }
+        - { word: "fucking"                 }
+        - { word: "fucck"                   }
+        - { word: "fuck"                    }
+        - { word: "F'uck"                   }
+        - { word: "f-uck"                   }
+        - { word: "f-u-ck"                  }
+        - { word: "fück"                    }
+        - { word: "Fü¢k"                    }
+        - { word: "Fùck"                    }
+        - { word: "Fúck"                    }
+        - { word: "Fûck"                    }
+        - { word: "ƒuck"                    }
+        - { word: "fucked"                  }
+        - { word: "fucking"                 }
+        - { word: "fucked"                  }
+        - { word: "fucked"                  }
+        - { word: "fucker"                  }
+        - { word: "fuckers"                 }
+        - { word: "fucking"                 }
+        - { word: "fuckin"                  }
+        - { word: "fucking"                 }
+        - { word: "fücking"                 }
+        - { word: "fuckinghell"             }
+        - { word: "fuckk"                   }
+        - { word: "fucks"                   }
+        - { word: "Fuckup"                  }
+        - { word: "fuckw1t"                 }
+        - { word: "fuckwit"                 }
+        - { word: "fuck-wit"                }
+        - { word: "fucw1t"                  }
+        - { word: "fucwit"                  }
+        - { word: "fud"                     }
+        - { word: "Fudge p@cker"            }
+        - { word: "fudge packer"            }
+        - { word: "fudge_packer"            }
+        - { word: "fudge_packers"           }
+        - { word: "fudgep@cker"             }
+        - { word: "Fudge-p@cker"            }
+        - { word: "fudgepacker"             }
+        - { word: "Fudge-packer"            }
+        - { word: "fudge-packers"           }
+        - { word: "Fudgpacker"              }
+        - { word: "fuds"                    }
+        - { word: "fu--ing"                 }
+        - { word: "fuk"                     }
+        - { word: "fukced"                  }
+        - { word: "fuked"                   }
+        - { word: "fuker"                   }
+        - { word: "fukin"                   }
+        - { word: "fuking"                  }
+        - { word: "fukk"                    }
+        - { word: "fukked"                  }
+        - { word: "fukker"                  }
+        - { word: "fukkin"                  }
+        - { word: "fukking"                 }
+        - { word: "fuks"                    }
+        - { word: "fukwit"                  }
+        - { word: "fuukn"                   }
+        - { word: "fvck"                    }
+        - { word: "Fvckup"                  }
+        - { word: "Fvck-up"                 }
+        - { word: "fvckw1t"                 }
+        - { word: "fvckwit"                 }
+        - { word: "fvk"                     }
+        - { word: "gang bang"               }
+        - { word: "gangbang"                }
+        - { word: "gang-bang"               }
+        - { word: "gash"                    }
+        - { word: "gay"                     }
+        - { word: "gayboys"                 }
+        - { word: "gayhole"                 }
+        - { word: "genitalia"               }
+        - { word: "gimp"                    }
+        - { word: "girlie-gardening"        }
+        - { word: "giro"                    }
+        - { word: "giros"                   }
+        - { word: "gob4h1te"                }
+        - { word: "Gobshite"                }
+        - { word: "golden shower"           }
+        - { word: "got me banned"           }
+        - { word: "Gypo"                    }
+        - { word: "Gypos"                   }
+        - { word: "Gyppo"                   }
+        - { word: "Gyppos"                  }
+        - { word: "gypsies"                 }
+        - { word: "gypsy"                   }
+        - { word: "H O M O"                 }
+        - { word: "H un"                    }
+        - { word: "h0m0"                    }
+        - { word: "h0mo"                    }
+        - { word: "ham shank"               }
+        - { word: "hash"                    }
+        - { word: "having it off with"      }
+        - { word: "hitler"                  }
+        - { word: "homo"                    }
+        - { word: "homosexual"              }
+        - { word: "hooker"                  }
+        - { word: "hookers"                 }
+        - { word: "hotbud-hotspot"          }
+        - { word: "hun"                     }
+        - { word: "HUN"                     }
+        - { word: "huns"                    }
+        - { word: "hvn"                     }
+        - { word: "hvns"                    }
+        - { word: "I was banned"            }
+        - { word: "illicit"                 }
+        - { word: "Inbrëd"                  }
+        - { word: "Inbrëds"                 }
+        - { word: "inbr3d"                  }
+        - { word: "inbr3ds"                 }
+        - { word: "inbred"                  }
+        - { word: "inbred"                  }
+        - { word: "inbreded"                }
+        - { word: "inbreds"                 }
+        - { word: "IRA"                     }
+        - { word: "IRA's"                   }
+        - { word: "ITies"                   }
+        - { word: "J Stein"                 }
+        - { word: "jizz"                    }
+        - { word: "Jock knew"               }
+        - { word: "Jock Stein"              }
+        - { word: "join FFE"                }
+        - { word: "juanker"                 }
+        - { word: "juankers"                }
+        - { word: "jungle bunny"            }
+        - { word: "JUNKIE"                  }
+        - { word: "k@ffir"                  }
+        - { word: "k@ffirs"                 }
+        - { word: "k@fir"                   }
+        - { word: "k@firs"                  }
+        - { word: "k0k"                     }
+        - { word: "Kaf1r"                   }
+        - { word: "Kaff1r"                  }
+        - { word: "Kaffir"                  }
+        - { word: "Kaffirs"                 }
+        - { word: "Kafir"                   }
+        - { word: "Kafirs"                  }
+        - { word: "kafr"                    }
+        - { word: "kant"                    }
+        - { word: "kants"                   }
+        - { word: "Khunt"                   }
+        - { word: "kiddie fiddler"          }
+        - { word: "kiddie fiddling"         }
+        - { word: "kiddie-fiddler"          }
+        - { word: "kiddie-fiddling"         }
+        - { word: "kiddyfiddler"            }
+        - { word: "kike"                    }
+        - { word: "kn* b"                   }
+        - { word: "kn0b"                    }
+        - { word: "kn0bhead"                }
+        - { word: "knob"                    }
+        - { word: "knobhead"                }
+        - { word: "Knobber"                 }
+        - { word: "knobhead"                }
+        - { word: "knobhound"               }
+        - { word: "kraut"                   }
+        - { word: "Kunt"                    }
+        - { word: "kyke"                    }
+        - { word: "Large Jock"              }
+        - { word: "Liar"                    }
+        - { word: "Lie"                     }
+        - { word: "Lied"                    }
+        - { word: "live streaming"          }
+        - { word: "live streams"            }
+        - { word: "livefooty"               }
+        - { word: "LiveFooty-"              }
+        - { word: "LiveFooty- 9"            }
+        - { word: "livefooty9"              }
+        - { word: "LiveFooty-9"             }
+        - { word: "Lmfa0"                   }
+        - { word: "Lmfao"                   }
+        - { word: "Lying"                   }
+        - { word: "m.inge"                  }
+        - { word: "M.otherf.ucker"          }
+        - { word: "m0r0n"                   }
+        - { word: "m0r0ns"                  }
+        - { word: "m0ron"                   }
+        - { word: "m0rons"                  }
+        - { word: "M1nge"                   }
+        - { word: "maggot"                  }
+        - { word: "maggots"                 }
+        - { word: "manure"                  }
+        - { word: "manures"                 }
+        - { word: "marajuana"               }
+        - { word: "marching powder"         }
+        - { word: "match fixing"            }
+        - { word: "match-fixing"            }
+        - { word: "maw"                     }
+        - { word: "maws"                    }
+        - { word: "Max"                     }
+        - { word: "maxine carr"             }
+        - { word: "McNumpty"                }
+        - { word: "Minge"                   }
+        - { word: "mod"                     }
+        - { word: "moderat0rs"              }
+        - { word: "moderator"               }
+        - { word: "moderators"              }
+        - { word: "mods"                    }
+        - { word: "mofo"                    }
+        - { word: "mofuccer"                }
+        - { word: "mofucker"                }
+        - { word: "mofuckers"               }
+        - { word: "mofucking"               }
+        - { word: "mofukcer"                }
+        - { word: "mohterf*cker"            }
+        - { word: "mohterf*ckers"           }
+        - { word: "mohterf*kcer"            }
+        - { word: "mohterfuccer"            }
+        - { word: "mohterfuccers"           }
+        - { word: "mohterfuck"              }
+        - { word: "mohterfucker"            }
+        - { word: "mohterfuckers"           }
+        - { word: "mohterfucking"           }
+        - { word: "mohterfucks"             }
+        - { word: "mohterfuk"               }
+        - { word: "mohterfukcer"            }
+        - { word: "mohterfukcers"           }
+        - { word: "mohterfuking"            }
+        - { word: "mohterfuks"              }
+        - { word: "mor0n"                   }
+        - { word: "mor0ns"                  }
+        - { word: "moron"                   }
+        - { word: "morons"                  }
+        - { word: "Mosley"                  }
+        - { word: "moterf*cker"             }
+        - { word: "moterfuccer"             }
+        - { word: "moterfuck"               }
+        - { word: "moterfucker"             }
+        - { word: "moterfuckers"            }
+        - { word: "moterfucking"            }
+        - { word: "moterfucks"              }
+        - { word: "mothaf*ck"               }
+        - { word: "mothaf*cker"             }
+        - { word: "mothaf*ckers"            }
+        - { word: "mothaf*cking"            }
+        - { word: "mothaf*cks"              }
+        - { word: "mothafuccer"             }
+        - { word: "mothafuck"               }
+        - { word: "Mothafucka"              }
+        - { word: "motha-fucka"             }
+        - { word: "mothafucker"             }
+        - { word: "mothafuckers"            }
+        - { word: "mothafucking"            }
+        - { word: "mothafucks"              }
+        - { word: "mother f---ers"          }
+        - { word: "motherf*cked"            }
+        - { word: "Motherf*cker"            }
+        - { word: "Motherf*ckers"           }
+        - { word: "Motherfuccer"            }
+        - { word: "Motherfuccers"           }
+        - { word: "Motherfuck"              }
+        - { word: "motherfucked"            }
+        - { word: "Motherfucker"            }
+        - { word: "Motherfuckers"           }
+        - { word: "Motherfucking"           }
+        - { word: "Motherfucks"             }
+        - { word: "motherfukkker"           }
+        - { word: "mthaf*cka"               }
+        - { word: "mthafucca"               }
+        - { word: "mthafuccas"              }
+        - { word: "mthafucka"               }
+        - { word: "mthafuckas"              }
+        - { word: "mthafukca"               }
+        - { word: "mthafukcas"              }
+        - { word: "muff"                    }
+        - { word: "muff-diver"              }
+        - { word: "muff-diving"             }
+        - { word: "muffs"                   }
+        - { word: "murder"                  }
+        - { word: "murdered"                }
+        - { word: "murdering"               }
+        - { word: "muth@fucker"             }
+        - { word: "muthaf*ck"               }
+        - { word: "muthaf*cker"             }
+        - { word: "muthaf*ckers"            }
+        - { word: "muthaf*cking"            }
+        - { word: "muthaf*cks"              }
+        - { word: "muthafuccer"             }
+        - { word: "muthafuck"               }
+        - { word: "muthafuck@"              }
+        - { word: "Muthafucka"              }
+        - { word: "muthafucker"             }
+        - { word: "muthafuckers"            }
+        - { word: "muthafucking"            }
+        - { word: "muthafucks"              }
+        - { word: "Muthafukas"              }
+        - { word: "n0b"                     }
+        - { word: "N1gger"                  }
+        - { word: "N1ggers"                 }
+        - { word: "narcotics"               }
+        - { word: "nazi"                    }
+        - { word: "nazis"                   }
+        - { word: "nazist"                  }
+        - { word: "neds"                    }
+        - { word: "nig nog"                 }
+        - { word: "niga"                    }
+        - { word: "nigga"                   }
+        - { word: "niggaz"                  }
+        - { word: "Nigger"                  }
+        - { word: "niggers"                 }
+        - { word: "nignog"                  }
+        - { word: "nig-nog"                 }
+        - { word: "nob"                     }
+        - { word: "nobhead"                 }
+        - { word: "Nobhead"                 }
+        - { word: "nonce"                   }
+        - { word: "Ntini"                   }
+        - { word: "Ntini77"                 }
+        - { word: "orgy"                    }
+        - { word: "p!ss"                    }
+        - { word: "P*$$"                    }
+        - { word: "p*ki"                    }
+        - { word: "P*ss"                    }
+        - { word: "p.iss-flaps"             }
+        - { word: "p@ki"                    }
+        - { word: "p@kis"                   }
+        - { word: "p00f"                    }
+        - { word: "p00fs"                   }
+        - { word: "p00fter"                 }
+        - { word: "p00fters"                }
+        - { word: "p0of"                    }
+        - { word: "p155"                    }
+        - { word: "p88f"                    }
+        - { word: "paddy"                   }
+        - { word: "paedos"                  }
+        - { word: "pak1"                    }
+        - { word: "paki"                    }
+        - { word: "pakis"                   }
+        - { word: "Pat Lampards"            }
+        - { word: "Pat Lampard's"           }
+        - { word: "peado"                   }
+        - { word: "pearl necklace"          }
+        - { word: "pedo"                    }
+        - { word: "pench0d"                 }
+        - { word: "pench0ds"                }
+        - { word: "penchod"                 }
+        - { word: "penchods"                }
+        - { word: "Perryman"                }
+        - { word: "perv"                    }
+        - { word: "pervert"                 }
+        - { word: "perverts"                }
+        - { word: "pervs"                   }
+        - { word: "phanny"                  }
+        - { word: "pheck"                   }
+        - { word: "phecking"                }
+        - { word: "phelching"               }
+        - { word: "pheque"                  }
+        - { word: "phequing"                }
+        - { word: "Philip the greek"        }
+        - { word: "Phillip the greek"       }
+        - { word: "phookin"                 }
+        - { word: "Phuck"                   }
+        - { word: "Phucker"                 }
+        - { word: "phuckin"                 }
+        - { word: "Phucking"                }
+        - { word: "Phucks"                  }
+        - { word: "Phuk"                    }
+        - { word: "phuque"                  }
+        - { word: "pi$$ed"                  }
+        - { word: "pikey"                   }
+        - { word: "pillow biter"            }
+        - { word: "pillowbiter"             }
+        - { word: "pillow-biter"            }
+        - { word: "pills"                   }
+        - { word: "pimp"                    }
+        - { word: "pis5"                    }
+        - { word: "piss head"               }
+        - { word: "Piss off"                }
+        - { word: "Pissflaps"               }
+        - { word: "pl$$"                    }
+        - { word: "Plastic"                 }
+        - { word: "plastic fan"             }
+        - { word: "Play PES 2008"           }
+        - { word: "po0f"                    }
+        - { word: "poff"                    }
+        - { word: "ponce"                   }
+        - { word: "poo stabber"             }
+        - { word: "poo stabbers"            }
+        - { word: "poof"                    }
+        - { word: "poofs"                   }
+        - { word: "poofter"                 }
+        - { word: "porn"                    }
+        - { word: "pr ick"                  }
+        - { word: "pr!ck"                   }
+        - { word: "pr*(k"                   }
+        - { word: "pr*(k."                  }
+        - { word: "pr*ck"                   }
+        - { word: "prïck"                   }
+        - { word: "pr1ck"                   }
+        - { word: "Pr1cks"                  }
+        - { word: "pr1k"                    }
+        - { word: "pr1ks"                   }
+        - { word: "prick"                   }
+        - { word: "Prik"                    }
+        - { word: "Prince Philip"           }
+        - { word: "Prince Phillip"          }
+        - { word: "proboards83"             }
+        - { word: "proboards83.com"         }
+        - { word: "prossies"                }
+        - { word: "prostitute"              }
+        - { word: "prostitutes"             }
+        - { word: "prozzies"                }
+        - { word: "pu$$y"                   }
+        - { word: "PUFF"                    }
+        - { word: "puffs"                   }
+        - { word: "pussy"                   }
+        - { word: "pwick"                   }
+        - { word: "queen"                   }
+        - { word: "queer"                   }
+        - { word: "queers"                  }
+        - { word: "Quim"                    }
+        - { word: "r3tard"                  }
+        - { word: "r3tarded"                }
+        - { word: "raghead"                 }
+        - { word: "ragheads"                }
+        - { word: "rape"                    }
+        - { word: "raped"                   }
+        - { word: "rapist"                  }
+        - { word: "rapists"                 }
+        - { word: "ret@rd"                  }
+        - { word: "retard"                  }
+        - { word: "retarded"                }
+        - { word: "rim job"                 }
+        - { word: "rimming"                 }
+        - { word: "S&M"                     }
+        - { word: "s&um"                    }
+        - { word: "S(um"                    }
+        - { word: "S*um"                    }
+        - { word: "s.hit"                   }
+        - { word: "S1ut"                    }
+        - { word: "sadomasochistic"         }
+        - { word: "sado-masochistic"        }
+        - { word: "sausage jockey"          }
+        - { word: "scum!"                   }
+        - { word: "scum"                    }
+        - { word: "sc*m"                    }
+        - { word: "Scat"                    }
+        - { word: "scu/\\/\\"               }
+        - { word: "scum"                    }
+        - { word: "scüm"                    }
+        - { word: "scumbags"                }
+        - { word: "Scumchester"             }
+        - { word: "scumm"                   }
+        - { word: "Selling Coke"            }
+        - { word: "sexual"                  }
+        - { word: "sh hit"                  }
+        - { word: "Sh!t"                    }
+        - { word: "sh!te"                   }
+        - { word: "sh!tes"                  }
+        - { word: "sh&te"                   }
+        - { word: "sh*te"                   }
+        - { word: "sh*t"                    }
+        - { word: "sh*thead"                }
+        - { word: "sh*theads"               }
+        - { word: "sh1t"                    }
+        - { word: "sh1't"                   }
+        - { word: "sh1te"                   }
+        - { word: "sh1thead"                }
+        - { word: "sh1theads"               }
+        - { word: "shady backroom dealings" }
+        - { word: "shady dealings"          }
+        - { word: "shag"                    }
+        - { word: "SHAGGERS"                }
+        - { word: "shat"                    }
+        - { word: "SHEEP"                   }
+        - { word: "sheep l0ver"             }
+        - { word: "sheep l0vers"            }
+        - { word: "Sheep lover"             }
+        - { word: "Sheep lovers"            }
+        - { word: "SHEEP SHAGGERS"          }
+        - { word: "sheepl0ver"              }
+        - { word: "sheep-l0ver"             }
+        - { word: "sheepl0vers"             }
+        - { word: "sheep-l0vers"            }
+        - { word: "Sheeplover"              }
+        - { word: "Sheep-lover"             }
+        - { word: "sheep-lovers"            }
+        - { word: "SHEEPSHAGGERS"           }
+        - { word: "SHEEP-SHAGGERS"          }
+        - { word: "sheet head"              }
+        - { word: "sheet heads"             }
+        - { word: "sheethead"               }
+        - { word: "sheetheads"              }
+        - { word: "shirtlifter"             }
+        - { word: "shirt-lifter"            }
+        - { word: "shirtlifters"            }
+        - { word: "shirt-lifters"           }
+        - { word: "shit"                    }
+        - { word: "Shit stabber"            }
+        - { word: "Shit stabbers"           }
+        - { word: "shitstabber"             }
+        - { word: "shitstabbers"            }
+        - { word: "shut the F up"           }
+        - { word: "shyte"                   }
+        - { word: "Sinn Fein"               }
+        - { word: "Sinn Fein's"             }
+        - { word: "skank"                   }
+        - { word: "skum"                    }
+        - { word: "skunk"                   }
+        - { word: "sl uts"                  }
+        - { word: "slag"                    }
+        - { word: "slapper"                 }
+        - { word: "slut"                    }
+        - { word: "smack"                   }
+        - { word: "Snorting coke"           }
+        - { word: "Soccer Live2"            }
+        - { word: "spastic"                 }
+        - { word: "spaz"                    }
+        - { word: "sphincter"               }
+        - { word: "spic"                    }
+        - { word: "spit roasting"           }
+        - { word: "spitroast"               }
+        - { word: "spit-roast"              }
+        - { word: "spit-roasting"           }
+        - { word: "spit-roasts"             }
+        - { word: "spliff"                  }
+        - { word: "spunk"                   }
+        - { word: "spunking"                }
+        - { word: "Steal"                   }
+        - { word: "Stealing"                }
+        - { word: "Stole"                   }
+        - { word: "Stolen"                  }
+        - { word: "suck my balls"           }
+        - { word: "suing"                   }
+        - { word: "twat"                    }
+        - { word: "t!ts"                    }
+        - { word: "t*sser"                  }
+        - { word: "t*w*a*t"                 }
+        - { word: "t.wat"                   }
+        - { word: "t0$$er"                  }
+        - { word: "t055er"                  }
+        - { word: "T0ss3r"                  }
+        - { word: "T0ss3rs"                 }
+        - { word: "t0sser"                  }
+        - { word: "t0ssers"                 }
+        - { word: "ta rt"                   }
+        - { word: "taigs"                   }
+        - { word: "take it up the"          }
+        - { word: "takes it up the"         }
+        - { word: "taking coke"             }
+        - { word: "teabag"                  }
+        - { word: "teabagging"              }
+        - { word: "tea-bagging"             }
+        - { word: "Temper0"                 }
+        - { word: "Tempero"                 }
+        - { word: "tims"                    }
+        - { word: "to$$ers"                 }
+        - { word: "to55er"                  }
+        - { word: "to55ers"                 }
+        - { word: "tosser"                  }
+        - { word: "tossers"                 }
+        - { word: "tossurs"                 }
+        - { word: "towel head"              }
+        - { word: "towelhead"               }
+        - { word: "Trophy Centre"           }
+        - { word: "turd"                    }
+        - { word: "tvvat"                   }
+        - { word: "tvvats"                  }
+        - { word: "twat"                    }
+        - { word: "tw#t"                    }
+        - { word: "twat"                    }
+        - { word: "tw&t"                    }
+        - { word: "tw*t"                    }
+        - { word: "tw@"                     }
+        - { word: "tw@t"                    }
+        - { word: "tw@ts"                   }
+        - { word: "tw_t"                    }
+        - { word: "tw~t"                    }
+        - { word: "Tw>t"                    }
+        - { word: "Tw4t"                    }
+        - { word: "tw8t"                    }
+        - { word: "tw8ts"                   }
+        - { word: "twa t"                   }
+        - { word: "twat"                    }
+        - { word: "twat"                    }
+        - { word: "twats"                   }
+        - { word: "twatt"                   }
+        - { word: "twattish"                }
+        - { word: "Twunt"                   }
+        - { word: "twunts"                  }
+        - { word: "Unionist"                }
+        - { word: "up the Gary"             }
+        - { word: "vous"                    }
+        - { word: "Wanka"                   }
+        - { word: "WANKER"                  }
+        - { word: "WANKERCUNTS"             }
+        - { word: "wanker"                  }
+        - { word: "wankers"                 }
+        - { word: "w##kers"                 }
+        - { word: "W#*K"                    }
+        - { word: "W#nker"                  }
+        - { word: "W#nkers"                 }
+        - { word: "w*nker"                  }
+        - { word: "w*nkers"                 }
+        - { word: "w.ank"                   }
+        - { word: "w@@@ers"                 }
+        - { word: "w@nk"                    }
+        - { word: "w@nker"                  }
+        - { word: "w@nkers"                 }
+        - { word: "w@nking"                 }
+        - { word: "w@nks"                   }
+        - { word: "w@nkstain"               }
+        - { word: "w0g"                     }
+        - { word: "w0gs"                    }
+        - { word: "W4nker!"                 }
+        - { word: "W4nkers!"                }
+        - { word: "wankers"                 }
+        - { word: "wanker"                  }
+        - { word: "wank"                    }
+        - { word: "Wanka"                   }
+        - { word: "wankas"                  }
+        - { word: "wanke r"                 }
+        - { word: "wanked"                  }
+        - { word: "wanker"                  }
+        - { word: "wankers"                 }
+        - { word: "wan-kers"                }
+        - { word: "wanking"                 }
+        - { word: "wanks"                   }
+        - { word: "wank's"                  }
+        - { word: "wet spam"                }
+        - { word: "Wh0re"                   }
+        - { word: "whanker"                 }
+        - { word: "whankers"                }
+        - { word: "whanking"                }
+        - { word: "Whatthefuck"             }
+        - { word: "white powder"            }
+        - { word: "white stuff"             }
+        - { word: "whore"                   }
+        - { word: "whores"                  }
+        - { word: "win cash prizes"         }
+        - { word: "wog"                     }
+        - { word: "wop"                     }
+        - { word: "Xpert Eleven"            }
+        - { word: "Xrse"                    }
+        - { word: "Xrseh"                   }
+        - { word: "Xrsehol"                 }
+        - { word: "Xrsehole"                }
+        - { word: "Xxxhole"                 }
+        - { word: "Y!ddo!"                  }
+        - { word: "Y!ddo!!"                 }
+        - { word: "Y*d"                     }
+        - { word: "y1dd"                    }
+        - { word: "ya prick"                }
+        - { word: "yid"                     }
+        - { word: "yidd"                    }
+        - { word: "yidds"                   }
+        - { word: "yido"                    }
+        - { word: "yids"                    }
+        - { word: "you prick"               }
+        - { word: "your mam"                }
+        - { word: "Your Mum"                }
+        
+        - { word: "arse"                    }
+        - { word: "assbag"                  }
+        - { word: "assbandit"               }
+        - { word: "assbanger"               }
+        - { word: "assclown"                }
+        - { word: "asscock"                 }
+        - { word: "assface"                 }
+        - { word: "assfuck"                 }
+        - { word: "asshead"                 }
+        - { word: "asshole"                 }
+        - { word: "asshopper"               }
+        - { word: "assjacker"               }
+        - { word: "asslicker"               }
+        - { word: "assmunch"                }
+        - { word: "asswipe"                 }
+        - { word: "bampot"                  }
+        - { word: "bastard"                 }
+        - { word: "beaner"                  }
+        - { word: "bitch"                   }
+        - { word: "blow job"                }
+        - { word: "blowjob"                 }
+        - { word: "boner"                   }
+        - { word: "brotherfucker"           }
+        - { word: "bullshit"                }
+        - { word: "butt plug"               }
+        - { word: "butt-pirate"             }
+        - { word: "buttfucka"               }
+        - { word: "buttfucker"              }
+        - { word: "camel toe"               }
+        - { word: "chinc"                   }
+        - { word: "chink"                   }
+        - { word: "chode"                   }
+        - { word: "clit"                    }
+        - { word: "cock"                    }
+        - { word: "cockface"                }
+        - { word: "cockfucker"              }
+        - { word: "cockmaster"              }
+        - { word: "cockmuncher"             }
+        - { word: "cocksucker"              }
+        - { word: "coon"                    }
+        - { word: "cooter"                  }
+        - { word: "cracker"                 }
+        - { word: "cum"                     }
+        - { word: "cunnilingus"             }
+        - { word: "cunt"                    }
+        - { word: "damn"                    }
+        - { word: "deggo"                   }
+        - { word: "dick"                    }
+        - { word: "dickhead"                }
+        - { word: "dickhole"                }
+        - { word: "dicks"                   }
+        - { word: "dickweed"                }
+        - { word: "dickwod"                 }
+        - { word: "dildo"                   }
+        - { word: "dipshit"                 }
+        - { word: "dookie"                  }
+        - { word: "douche"                  }
+        - { word: "douchebag"               }
+        - { word: "dumass"                  }
+        - { word: "dumb ass"                }
+        - { word: "dumbass"                 }
+        - { word: "dumbfuck"                }
+        - { word: "dumbshit"                }
+        - { word: "dyke"                    }
+        - { word: "fag"                     }
+        - { word: "fagbag"                  }
+        - { word: "faggit"                  }
+        - { word: "faggot"                  }
+        - { word: "fagtard"                 }
+        - { word: "fatass"                  }
+        - { word: "fellatio"                }
+        - { word: "fuck"                    }
+        - { word: "fuckass"                 }
+        - { word: "fucked"                  }
+        - { word: "fucker"                  }
+        - { word: "fuckface"                }
+        - { word: "fuckhead"                }
+        - { word: "fuckhole"                }
+        - { word: "fuckin"                  }
+        - { word: "fucking"                 }
+        - { word: "fuckstick"               }
+        - { word: "fucktard"                }
+        - { word: "fuckup"                  }
+        - { word: "fuckwad"                 }
+        - { word: "fuckwit"                 }
+        - { word: "fudgepacker"             }
+        - { word: "gay"                     }
+        - { word: "gaytard"                 }
+        - { word: "gaywad"                  }
+        - { word: "goddamn"                 }
+        - { word: "goddamnit"               }
+        - { word: "gooch"                   }
+        - { word: "gook"                    }
+        - { word: "gringo"                  }
+        - { word: "guido"                   }
+        - { word: "hard on"                 }
+        - { word: "homo"                    }
+        - { word: "honkey"                  }
+        - { word: "humping"                 }
+        - { word: "jackass"                 }
+        - { word: "jap"                     }
+        - { word: "jerk off"                }
+        - { word: "jizz"                    }
+        - { word: "jungle bunny"            }
+        - { word: "kike"                    }
+        - { word: "kooch"                   }
+        - { word: "kootch"                  }
+        - { word: "kyke"                    }
+        - { word: "lesbo"                   }
+        - { word: "lezzie"                  }
+        - { word: "mick"                    }
+        - { word: "minge"                   }
+        - { word: "mothafucka"              }
+        - { word: "motherfucker"            }
+        - { word: "motherfucking"           }
+        - { word: "negro"                   }
+        - { word: "nigga"                   }
+        - { word: "nigger"                  }
+        - { word: "niglet"                  }
+        - { word: "nut sack"                }
+        - { word: "panooch"                 }
+        - { word: "pecker"                  }
+        - { word: "peckerhead"              }
+        - { word: "piss"                    }
+        - { word: "pissed off"              }
+        - { word: "pissed"                  }
+        - { word: "pollock"                 }
+        - { word: "poon"                    }
+        - { word: "poonany"                 }
+        - { word: "porch monkey"            }
+        - { word: "porchmonkey"             }
+        - { word: "prick"                   }
+        - { word: "punta"                   }
+        - { word: "pussy"                   }
+        - { word: "puto"                    }
+        - { word: "queef"                   }
+        - { word: "queer"                   }
+        - { word: "queerbait"               }
+        - { word: "renob"                   }
+        - { word: "rimjob"                  }
+        - { word: "sand nigger"             }
+        - { word: "sandnigger"              }
+        - { word: "scrote"                  }
+        - { word: "shit"                    }
+        - { word: "shitface"                }
+        - { word: "shitfaced"               }
+        - { word: "shithead"                }
+        - { word: "shitter"                 }
+        - { word: "shittiest"               }
+        - { word: "shitting"                }
+        - { word: "shitty"                  }
+        - { word: "skank"                   }
+        - { word: "skeet"                   }
+        - { word: "slut"                    }
+        - { word: "slutbag"                 }
+        - { word: "snatch"                  }
+        - { word: "spic"                    }
+        - { word: "spick"                   }
+        - { word: "testicle"                }
+        - { word: "thundercunt"             }
+        - { word: "tit"                     }
+        - { word: "titfuck"                 }
+        - { word: "tits"                    }
+        - { word: "twat"                    }
+        - { word: "twats"                   }
+        - { word: "va-j-j"                  }
+        - { word: "vag"                     }
+        - { word: "vjayjay"                 }
+        - { word: "wank"                    }
+        - { word: "wetback"                 }
+        - { word: "whore"                   }
+        - { word: "wop"                     }
