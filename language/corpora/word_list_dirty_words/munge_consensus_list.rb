@@ -1,29 +1,30 @@
 #!/usr/bin/env ruby
-# -*- coding: mule-utf-8 -*-
-require 'iconv'
+# -*- coding: utf-8 -*-
+
 # require "encoding/character/utf-8"
 require 'rubygems'
 require 'JSON'
 require 'YAML'
-require 'oniguruma'
-# require 'UniversalDetector'
-# $KCODE = 'UTF8'
-# require 'ya2yaml'
-include Oniguruma
-
 
 src_files = %w[
-  aol_banned_words.yaml
-  carlin_seven_words_cant_say.yaml
-  gareth_moehr_censored_words.yaml
-  more.yaml
-  reveal_questionable_words.yaml
-  scrabble_ospd2_obscene.yaml
-  alternative_dictionaries_english_indecent_word_list.yaml
+  dirty_words-adambair-fu_fu.yaml
+  dirty_words-alternative_dictionaries-english.yaml
+  dirty_words-alternative_dictionaries-multilingual.yaml
+  dirty_words-aol_chat_rooms.yaml
+  dirty_words-carlin_seven_words_cant_say.yaml
+  dirty_words-cpan-regex_profanity_us.yaml
+  dirty_words-from_all_over.yaml
+  dirty_words-gareth_moehr_censored_words.yaml
+  dirty_words-joshbuddy-swearjar.yaml
+  dirty_words-nfl_jerseys.yaml
+  dirty_words-reveal.yaml
+  dirty_words-scrabble_ospd2.yaml
+  dirty_words-tjhanley_profanalyzer.yaml
+  dirty_words-whomwah-language-timothy.yaml
 ]
 
 def get_payload(icss)
-  icss['infochimps_dataset']['payload']
+  icss.first['dataset']['payload']
 end
 
 def tok(elt)
@@ -31,38 +32,34 @@ def tok(elt)
 end
 
 wordlists    = { }; tok_lists = { }
-words_census = { }
-words_hook3  = { }
-src_files.each do |src_file|
-  src_tag = src_file.gsub(/_.*$/,'')
-  wls = get_payload( YAML.load(File.open(src_file)) ).map{ |wl| wl['word_list'] }.compact
+words_census = Hash.new{|hsh,key| hsh[key] = 0 }
+
+src_files.each do |filename|
+  $stderr.puts(filename)
+  src_tag  = filename.gsub(/\..*$/, '')
+  raw_yaml = YAML.load(File.open(File.join('rawd', filename)))
+  wls = get_payload(raw_yaml).map{|wl| wl['blacklist'] }.compact
+
   wls.each_with_index do |wl, i|
     tag = src_tag + '_' + i.to_s
-    wl.reject!{ |wd| ['cult', 'occult', 'drug', 'hate'].include? wd['category']}
+    wl.reject!{|wd| ['cult', 'occult', 'drug', 'hate'].include? wd['category']}
     wordlists[tag] = wl if wl
-    tok_lists[tag] = wl.map{ |elt| tok(elt) }
+    tok_lists[tag] = wl.map{|elt| tok(elt) }.uniq
   end
 end
 
+p tok_lists
+
 tok_lists.each do |tag, tl|
   tl.each do |word|
-    words_census[word]  ||= 0; words_census[word] += 1
-    hook3 = word[0..3]
-    words_hook3[hook3] ||= []; words_hook3[hook3] << word
+    words_census[word] += 1
   end
-  #puts [ src_file, wl.length , wl[0..10].map{ |elt| elt['word'] } ].to_json.to_s
 end
 
 
 whitelist = %w[
 arvo baltic bob brown buddy chief eddress fish have quad
 ] + ['chicken hawk', ]
-
-
-
-# wordlists['scrabble_0'].each do |elt|
-#   words_census.delete tok(elt)
-# end
 
 #words_census.reject!{ |wd, count| tok_lists['scrabble_0'].include?(wd) }
 words_census.reject! do |wd, count|
@@ -72,7 +69,10 @@ words_census.reject! do |wd, count|
     # false
 end
 
-dump = { 'payload' => { 'word_list' => words_census.sort_by{ |k,v| -v }.map do |k,v| { :word => k, :dirt => v } end } }
+dump = { 'payload' => {
+    'word_list' => words_census.sort_by{ |k,v| -v }.map do |k,v| { :word => k, :dirt => v } end
+  }
+}
 YAML.dump(dump, File.open('./fixd/dirty_words_combined.yaml','w'))
 
 # puts words_census.sort_by{ |k,v| k }.map{|k,v| k }.to_json

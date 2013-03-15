@@ -1,0 +1,1717 @@
+---
+- dataset:
+    schema:
+      name:         "Dirty words from whomwah's 'language-timothy' program"
+      url:          http://github.com/whomwah/language-timothy/raw/master/profanity-list.txt
+
+      credits:
+        - url:      http://github.com/whomwah/language-timothy/raw/master/profanity-list.txt
+
+      notes:
+        desc:         >-
+          from http://github.com/whomwah/language-timothy/raw/master/profanity-list.txt
+
+    payload:
+      - whitelist:
+          - { word: "arsenal",            whitelist_for: "arse"      }
+          - { word: "arsenals",           whitelist_for: "arse"      }
+          - { word: "arsenate",           whitelist_for: "arse"      }
+          - { word: "arsenates",          whitelist_for: "arse"      }
+          - { word: "arsenic",            whitelist_for: "arse"      }
+          - { word: "arsenical",          whitelist_for: "arse"      }
+          - { word: "arsenicalism",       whitelist_for: "arse"      }
+          - { word: "arsenics",           whitelist_for: "arse"      }
+          - { word: "arsenide",           whitelist_for: "arse"      }
+          - { word: "arsenides",          whitelist_for: "arse"      }
+          - { word: "arsenious",          whitelist_for: "arse"      }
+          - { word: "arsenite",           whitelist_for: "arse"      }
+          - { word: "arsenites",          whitelist_for: "arse"      }
+          - { word: "arsenium",           whitelist_for: "arse"      }
+          - { word: "arseniuret",         whitelist_for: "arse"      }
+          - { word: "arseniuretted",      whitelist_for: "arse"      }
+          - { word: "arsenopyrite",       whitelist_for: "arse"      }
+          - { word: "arsenotherapies",    whitelist_for: "arse"      }
+          - { word: "arsenotherapy",      whitelist_for: "arse"      }
+          - { word: "arsenous",           whitelist_for: "arse"      }
+          - { word: "arsenoxide",         whitelist_for: "arse"      }
+          - { word: "carse",              whitelist_for: "arse"      }
+          - { word: "catharses",          whitelist_for: "arse"      }
+          - { word: "charset",            whitelist_for: "arse"      }
+          - { word: "coarse",             whitelist_for: "arse"      }
+          - { word: "coarsely",           whitelist_for: "arse"      }
+          - { word: "coarsen",            whitelist_for: "arse"      }
+          - { word: "coarsened",          whitelist_for: "arse"      }
+          - { word: "coarseness",         whitelist_for: "arse"      }
+          - { word: "coarsening",         whitelist_for: "arse"      }
+          - { word: "coarsens",           whitelist_for: "arse"      }
+          - { word: "coarser",            whitelist_for: "arse"      }
+          - { word: "coarsest",           whitelist_for: "arse"      }
+          - { word: "farsee",             whitelist_for: "arse"      }
+          - { word: "farseeing",          whitelist_for: "arse"      }
+          - { word: "farseing",           whitelist_for: "arse"      }
+          - { word: "hearse",             whitelist_for: "arse"      }
+          - { word: "hearsed",            whitelist_for: "arse"      }
+          - { word: "hearses",            whitelist_for: "arse"      }
+          - { word: "hoarse",             whitelist_for: "arse"      }
+          - { word: "hoarsely",           whitelist_for: "arse"      }
+          - { word: "hoarsen",            whitelist_for: "arse"      }
+          - { word: "hoarsened",          whitelist_for: "arse"      }
+          - { word: "hoarseness",         whitelist_for: "arse"      }
+          - { word: "hoarsening",         whitelist_for: "arse"      }
+          - { word: "hoarsens",           whitelist_for: "arse"      }
+          - { word: "hoarser",            whitelist_for: "arse"      }
+          - { word: "hoarsest",           whitelist_for: "arse"      }
+          - { word: "katharses",          whitelist_for: "arse"      }
+          - { word: "larsen",             whitelist_for: "arse"      }
+          - { word: "marse",              whitelist_for: "arse"      }
+          - { word: "marseillaise",       whitelist_for: "arse"      }
+          - { word: "marseille",          whitelist_for: "arse"      }
+          - { word: "marseilles",         whitelist_for: "arse"      }
+          - { word: "marses",             whitelist_for: "arse"      }
+          - { word: "parse",              whitelist_for: "arse"      }
+          - { word: "parsec",             whitelist_for: "arse"      }
+          - { word: "parsecs",            whitelist_for: "arse"      }
+          - { word: "parsed",             whitelist_for: "arse"      }
+          - { word: "parsee",             whitelist_for: "arse"      }
+          - { word: "parser",             whitelist_for: "arse"      }
+          - { word: "parsers",            whitelist_for: "arse"      }
+          - { word: "parses",             whitelist_for: "arse"      }
+          - { word: "psychocatharses",    whitelist_for: "arse"      }
+          - { word: "rehearse",           whitelist_for: "arse"      }
+          - { word: "rehearsed",          whitelist_for: "arse"      }
+          - { word: "rehearser",          whitelist_for: "arse"      }
+          - { word: "rehearsers",         whitelist_for: "arse"      }
+          - { word: "rehearses",          whitelist_for: "arse"      }
+          - { word: "sarsen",             whitelist_for: "arse"      }
+          - { word: "sarsenet",           whitelist_for: "arse"      }
+          - { word: "sarsent",            whitelist_for: "arse"      }
+          - { word: "sparse",             whitelist_for: "arse"      }
+          - { word: "sparsely",           whitelist_for: "arse"      }
+          - { word: "sparseness",         whitelist_for: "arse"      }
+          - { word: "sparser",            whitelist_for: "arse"      }
+          - { word: "sparsest",           whitelist_for: "arse"      }
+          - { word: "tarsectomies",       whitelist_for: "arse"      }
+          - { word: "tarsectomy",         whitelist_for: "arse"      }
+          - { word: "unrehearse",         whitelist_for: "arse"      }
+          - { word: "unrehearsed",        whitelist_for: "arse"      }
+          - { word: "deboner",            whitelist_for: "boner"     }
+          - { word: "bonkers",            whitelist_for: "bonk"      }
+          - { word: "debugger",           whitelist_for: "bugger"    }
+          - { word: "debuggers",          whitelist_for: "bugger"    }
+          - { word: "humbugger",          whitelist_for: "bugger"    }
+          - { word: "humbuggers",         whitelist_for: "bugger"    }
+          - { word: "jitterbugger",       whitelist_for: "bugger"    }
+          - { word: "anaclitic",          whitelist_for: "clit"      }
+          - { word: "asynclitism",        whitelist_for: "clit"      }
+          - { word: "choroidocyclitis",   whitelist_for: "clit"      }
+          - { word: "clitellum",          whitelist_for: "clit"      }
+          - { word: "clitia",             whitelist_for: "clit"      }
+          - { word: "clitic",             whitelist_for: "clit"      }
+          - { word: "clition",            whitelist_for: "clit"      }
+          - { word: "clitoral",           whitelist_for: "clit"      }
+          - { word: "clitoric",           whitelist_for: "clit"      }
+          - { word: "clitoridean",        whitelist_for: "clit"      }
+          - { word: "clitoridectomies",   whitelist_for: "clit"      }
+          - { word: "clitoridectomy",     whitelist_for: "clit"      }
+          - { word: "clitoridis",         whitelist_for: "clit"      }
+          - { word: "clitoriditis",       whitelist_for: "clit"      }
+          - { word: "clitoris",           whitelist_for: "clit"      }
+          - { word: "clitorises",         whitelist_for: "clit"      }
+          - { word: "clitoritis",         whitelist_for: "clit"      }
+          - { word: "cyclitis",           whitelist_for: "clit"      }
+          - { word: "cyclitol",           whitelist_for: "clit"      }
+          - { word: "enclitic",           whitelist_for: "clit"      }
+          - { word: "enclitically",       whitelist_for: "clit"      }
+          - { word: "glaucomatocyclitic", whitelist_for: "clit"      }
+          - { word: "heraclitus",         whitelist_for: "clit"      }
+          - { word: "heteroclite",        whitelist_for: "clit"      }
+          - { word: "iridocyclitis",      whitelist_for: "clit"      }
+          - { word: "polyclitus",         whitelist_for: "clit"      }
+          - { word: "proclitic",          whitelist_for: "clit"      }
+          - { word: "synclitic",          whitelist_for: "clit"      }
+          - { word: "alcock",             whitelist_for: "cock"      }
+          - { word: "babcock",            whitelist_for: "cock"      }
+          - { word: "ballcock",           whitelist_for: "cock"      }
+          - { word: "bawcock",            whitelist_for: "cock"      }
+          - { word: "bibcock",            whitelist_for: "cock"      }
+          - { word: "billycock",          whitelist_for: "cock"      }
+          - { word: "blackcock",          whitelist_for: "cock"      }
+          - { word: "cock-a-doodle-doo",  whitelist_for: "cock"      }
+          - { word: "cock-a-hoop",        whitelist_for: "cock"      }
+          - { word: "cock-a-leekie",      whitelist_for: "cock"      }
+          - { word: "cock-eyed",          whitelist_for: "cock"      }
+          - { word: "cock-of-the-rock",   whitelist_for: "cock"      }
+          - { word: "cock-sparrow",       whitelist_for: "cock"      }
+          - { word: "cockade",            whitelist_for: "cock"      }
+          - { word: "cockaded",           whitelist_for: "cock"      }
+          - { word: "cockades",           whitelist_for: "cock"      }
+          - { word: "cockaigne",          whitelist_for: "cock"      }
+          - { word: "cockalorum",         whitelist_for: "cock"      }
+          - { word: "cockamamie",         whitelist_for: "cock"      }
+          - { word: "cockarouse",         whitelist_for: "cock"      }
+          - { word: "cockateel",          whitelist_for: "cock"      }
+          - { word: "cockateels",         whitelist_for: "cock"      }
+          - { word: "cockatiel",          whitelist_for: "cock"      }
+          - { word: "cockatoo",           whitelist_for: "cock"      }
+          - { word: "cockatoos",          whitelist_for: "cock"      }
+          - { word: "cockatrice",         whitelist_for: "cock"      }
+          - { word: "cockatrices",        whitelist_for: "cock"      }
+          - { word: "cockayne",           whitelist_for: "cock"      }
+          - { word: "cockbilled",         whitelist_for: "cock"      }
+          - { word: "cockboat",           whitelist_for: "cock"      }
+          - { word: "cockchafer",         whitelist_for: "cock"      }
+          - { word: "cockcroft",          whitelist_for: "cock"      }
+          - { word: "cockcrow",           whitelist_for: "cock"      }
+          - { word: "cockcrows",          whitelist_for: "cock"      }
+          - { word: "cocked",             whitelist_for: "cock"      }
+          - { word: "cocker",             whitelist_for: "cock"      }
+          - { word: "cockerel",           whitelist_for: "cock"      }
+          - { word: "cockerels",          whitelist_for: "cock"      }
+          - { word: "cockers",            whitelist_for: "cock"      }
+          - { word: "cockeye",            whitelist_for: "cock"      }
+          - { word: "cockeyed",           whitelist_for: "cock"      }
+          - { word: "cockeyes",           whitelist_for: "cock"      }
+          - { word: "cockfight",          whitelist_for: "cock"      }
+          - { word: "cockfighting",       whitelist_for: "cock"      }
+          - { word: "cockfights",         whitelist_for: "cock"      }
+          - { word: "cockhorse",          whitelist_for: "cock"      }
+          - { word: "cockhorses",         whitelist_for: "cock"      }
+          - { word: "cockier",            whitelist_for: "cock"      }
+          - { word: "cockiest",           whitelist_for: "cock"      }
+          - { word: "cockily",            whitelist_for: "cock"      }
+          - { word: "cockiness",          whitelist_for: "cock"      }
+          - { word: "cocking",            whitelist_for: "cock"      }
+          - { word: "cockish",            whitelist_for: "cock"      }
+          - { word: "cockle",             whitelist_for: "cock"      }
+          - { word: "cockleboat",         whitelist_for: "cock"      }
+          - { word: "cocklebur",          whitelist_for: "cock"      }
+          - { word: "cockled",            whitelist_for: "cock"      }
+          - { word: "cockles",            whitelist_for: "cock"      }
+          - { word: "cockleshell",        whitelist_for: "cock"      }
+          - { word: "cockleshells",       whitelist_for: "cock"      }
+          - { word: "cockloft",           whitelist_for: "cock"      }
+          - { word: "cockness",           whitelist_for: "cock"      }
+          - { word: "cockney",            whitelist_for: "cock"      }
+          - { word: "cockneyfy",          whitelist_for: "cock"      }
+          - { word: "cockneyism",         whitelist_for: "cock"      }
+          - { word: "cockneys",           whitelist_for: "cock"      }
+          - { word: "cockoldries",        whitelist_for: "cock"      }
+          - { word: "cockpit",            whitelist_for: "cock"      }
+          - { word: "cockpits",           whitelist_for: "cock"      }
+          - { word: "cockroach",          whitelist_for: "cock"      }
+          - { word: "cockroaches",        whitelist_for: "cock"      }
+          - { word: "cocks",              whitelist_for: "cock"      }
+          - { word: "cockscomb",          whitelist_for: "cock"      }
+          - { word: "cockscombs",         whitelist_for: "cock"      }
+          - { word: "cocksfoot",          whitelist_for: "cock"      }
+          - { word: "cockshy",            whitelist_for: "cock"      }
+          - { word: "cockspur",           whitelist_for: "cock"      }
+          - { word: "cockspurs",          whitelist_for: "cock"      }
+          - { word: "cocksure",           whitelist_for: "cock"      }
+          - { word: "cockswain",          whitelist_for: "cock"      }
+          - { word: "cocktail",           whitelist_for: "cock"      }
+          - { word: "cocktailed",         whitelist_for: "cock"      }
+          - { word: "cocktails",          whitelist_for: "cock"      }
+          - { word: "cockup",             whitelist_for: "cock"      }
+          - { word: "cockups",            whitelist_for: "cock"      }
+          - { word: "cocky",              whitelist_for: "cock"      }
+          - { word: "corncockle",         whitelist_for: "cock"      }
+          - { word: "gamecock",           whitelist_for: "cock"      }
+          - { word: "gamecocking",        whitelist_for: "cock"      }
+          - { word: "gamecocks",          whitelist_for: "cock"      }
+          - { word: "gorcock",            whitelist_for: "cock"      }
+          - { word: "half-cock",          whitelist_for: "cock"      }
+          - { word: "half-cocked",        whitelist_for: "cock"      }
+          - { word: "hancock",            whitelist_for: "cock"      }
+          - { word: "haycock",            whitelist_for: "cock"      }
+          - { word: "haycocks",           whitelist_for: "cock"      }
+          - { word: "hitchcock",          whitelist_for: "cock"      }
+          - { word: "leacock",            whitelist_for: "cock"      }
+          - { word: "moorcock",           whitelist_for: "cock"      }
+          - { word: "peacock",            whitelist_for: "cock"      }
+          - { word: "peacocked",          whitelist_for: "cock"      }
+          - { word: "peacockier",         whitelist_for: "cock"      }
+          - { word: "peacocking",         whitelist_for: "cock"      }
+          - { word: "peacocks",           whitelist_for: "cock"      }
+          - { word: "petcock",            whitelist_for: "cock"      }
+          - { word: "petcocks",           whitelist_for: "cock"      }
+          - { word: "pinchcock",          whitelist_for: "cock"      }
+          - { word: "poppycock",          whitelist_for: "cock"      }
+          - { word: "seacock",            whitelist_for: "cock"      }
+          - { word: "shuttlecock",        whitelist_for: "cock"      }
+          - { word: "shuttlecocks",       whitelist_for: "cock"      }
+          - { word: "spatchcock",         whitelist_for: "cock"      }
+          - { word: "spatchcocked",       whitelist_for: "cock"      }
+          - { word: "spatchcocking",      whitelist_for: "cock"      }
+          - { word: "spitchcock",         whitelist_for: "cock"      }
+          - { word: "stopcock",           whitelist_for: "cock"      }
+          - { word: "stopcocks",          whitelist_for: "cock"      }
+          - { word: "storm-cock",         whitelist_for: "cock"      }
+          - { word: "turncock",           whitelist_for: "cock"      }
+          - { word: "uncock",             whitelist_for: "cock"      }
+          - { word: "weathercock",        whitelist_for: "cock"      }
+          - { word: "weathercocks",       whitelist_for: "cock"      }
+          - { word: "woodcock",           whitelist_for: "cock"      }
+          - { word: "woodcocking",        whitelist_for: "cock"      }
+          - { word: "woodcocks",          whitelist_for: "cock"      }
+          - { word: "barracoon",          whitelist_for: "coon"      }
+          - { word: "cocoon",             whitelist_for: "coon"      }
+          - { word: "cocooned",           whitelist_for: "coon"      }
+          - { word: "cocooning",          whitelist_for: "coon"      }
+          - { word: "cocoons",            whitelist_for: "coon"      }
+          - { word: "cooncan",            whitelist_for: "coon"      }
+          - { word: "coonhound",          whitelist_for: "coon"      }
+          - { word: "coonhounds",         whitelist_for: "coon"      }
+          - { word: "coons",              whitelist_for: "coon"      }
+          - { word: "coonskin",           whitelist_for: "coon"      }
+          - { word: "coonskins",          whitelist_for: "coon"      }
+          - { word: "coontie",            whitelist_for: "coon"      }
+          - { word: "laocoon",            whitelist_for: "coon"      }
+          - { word: "puccoon",            whitelist_for: "coon"      }
+          - { word: "raccoon",            whitelist_for: "coon"      }
+          - { word: "raccoons",           whitelist_for: "coon"      }
+          - { word: "racoon",             whitelist_for: "coon"      }
+          - { word: "racoons",            whitelist_for: "coon"      }
+          - { word: "tycoon",             whitelist_for: "coon"      }
+          - { word: "tycoons",            whitelist_for: "coon"      }
+          - { word: "accumbent",          whitelist_for: "cum"       }
+          - { word: "accumulable",        whitelist_for: "cum"       }
+          - { word: "accumulate",         whitelist_for: "cum"       }
+          - { word: "accumulated",        whitelist_for: "cum"       }
+          - { word: "accumulates",        whitelist_for: "cum"       }
+          - { word: "accumulating",       whitelist_for: "cum"       }
+          - { word: "accumulation",       whitelist_for: "cum"       }
+          - { word: "accumulations",      whitelist_for: "cum"       }
+          - { word: "accumulative",       whitelist_for: "cum"       }
+          - { word: "accumulatively",     whitelist_for: "cum"       }
+          - { word: "accumulativeness",   whitelist_for: "cum"       }
+          - { word: "accumulator",        whitelist_for: "cum"       }
+          - { word: "accumulators",       whitelist_for: "cum"       }
+          - { word: "acumen",             whitelist_for: "cum"       }
+          - { word: "acumens",            whitelist_for: "cum"       }
+          - { word: "acuminata",          whitelist_for: "cum"       }
+          - { word: "acuminate",          whitelist_for: "cum"       }
+          - { word: "acuminated",         whitelist_for: "cum"       }
+          - { word: "acuminating",        whitelist_for: "cum"       }
+          - { word: "acumination",        whitelist_for: "cum"       }
+          - { word: "altocumulus",        whitelist_for: "cum"       }
+          - { word: "cacuminal",          whitelist_for: "cum"       }
+          - { word: "caecum",             whitelist_for: "cum"       }
+          - { word: "canonicum",          whitelist_for: "cum"       }
+          - { word: "capsicum",           whitelist_for: "cum"       }
+          - { word: "capsicums",          whitelist_for: "cum"       }
+          - { word: "caroticum",          whitelist_for: "cum"       }
+          - { word: "cecum",              whitelist_for: "cum"       }
+          - { word: "circum",             whitelist_for: "cum"       }
+          - { word: "circum-",            whitelist_for: "cum"       }
+          - { word: "circumambience",     whitelist_for: "cum"       }
+          - { word: "circumambient",      whitelist_for: "cum"       }
+          - { word: "circumambulate",     whitelist_for: "cum"       }
+          - { word: "circumambulated",    whitelist_for: "cum"       }
+          - { word: "circumambulates",    whitelist_for: "cum"       }
+          - { word: "circumambulating",   whitelist_for: "cum"       }
+          - { word: "circumambulation",   whitelist_for: "cum"       }
+          - { word: "circumambulations",  whitelist_for: "cum"       }
+          - { word: "circumanal",         whitelist_for: "cum"       }
+          - { word: "circumarticular",    whitelist_for: "cum"       }
+          - { word: "circumbendibus",     whitelist_for: "cum"       }
+          - { word: "circumcircle",       whitelist_for: "cum"       }
+          - { word: "circumcise",         whitelist_for: "cum"       }
+          - { word: "circumcised",        whitelist_for: "cum"       }
+          - { word: "circumcises",        whitelist_for: "cum"       }
+          - { word: "circumcising",       whitelist_for: "cum"       }
+          - { word: "circumcision",       whitelist_for: "cum"       }
+          - { word: "circumcisions",      whitelist_for: "cum"       }
+          - { word: "circumcorneal",      whitelist_for: "cum"       }
+          - { word: "circumduction",      whitelist_for: "cum"       }
+          - { word: "circumductions",     whitelist_for: "cum"       }
+          - { word: "circumference",      whitelist_for: "cum"       }
+          - { word: "circumferences",     whitelist_for: "cum"       }
+          - { word: "circumferential",    whitelist_for: "cum"       }
+          - { word: "circumflex",         whitelist_for: "cum"       }
+          - { word: "circumflexes",       whitelist_for: "cum"       }
+          - { word: "circumfluent",       whitelist_for: "cum"       }
+          - { word: "circumfluous",       whitelist_for: "cum"       }
+          - { word: "circumforaneous",    whitelist_for: "cum"       }
+          - { word: "circumfuse",         whitelist_for: "cum"       }
+          - { word: "circumfusion",       whitelist_for: "cum"       }
+          - { word: "circumgyration",     whitelist_for: "cum"       }
+          - { word: "circuminsular",      whitelist_for: "cum"       }
+          - { word: "circumjacence",      whitelist_for: "cum"       }
+          - { word: "circumjacent",       whitelist_for: "cum"       }
+          - { word: "circumlental",       whitelist_for: "cum"       }
+          - { word: "circumlocution",     whitelist_for: "cum"       }
+          - { word: "circumlocutions",    whitelist_for: "cum"       }
+          - { word: "circumlocutory",     whitelist_for: "cum"       }
+          - { word: "circumlunar",        whitelist_for: "cum"       }
+          - { word: "circumnavigate",     whitelist_for: "cum"       }
+          - { word: "circumnavigated",    whitelist_for: "cum"       }
+          - { word: "circumnavigates",    whitelist_for: "cum"       }
+          - { word: "circumnavigating",   whitelist_for: "cum"       }
+          - { word: "circumnavigation",   whitelist_for: "cum"       }
+          - { word: "circumnavigations",  whitelist_for: "cum"       }
+          - { word: "circumnavigator",    whitelist_for: "cum"       }
+          - { word: "circumnutate",       whitelist_for: "cum"       }
+          - { word: "circumoral",         whitelist_for: "cum"       }
+          - { word: "circumpolar",        whitelist_for: "cum"       }
+          - { word: "circumrotation",     whitelist_for: "cum"       }
+          - { word: "circumscissile",     whitelist_for: "cum"       }
+          - { word: "circumscribe",       whitelist_for: "cum"       }
+          - { word: "circumscribed",      whitelist_for: "cum"       }
+          - { word: "circumscribes",      whitelist_for: "cum"       }
+          - { word: "circumscribing",     whitelist_for: "cum"       }
+          - { word: "circumscription",    whitelist_for: "cum"       }
+          - { word: "circumscriptions",   whitelist_for: "cum"       }
+          - { word: "circumsolar",        whitelist_for: "cum"       }
+          - { word: "circumspect",        whitelist_for: "cum"       }
+          - { word: "circumspection",     whitelist_for: "cum"       }
+          - { word: "circumspectly",      whitelist_for: "cum"       }
+          - { word: "circumspectness",    whitelist_for: "cum"       }
+          - { word: "circumsphere",       whitelist_for: "cum"       }
+          - { word: "circumstance",       whitelist_for: "cum"       }
+          - { word: "circumstanced",      whitelist_for: "cum"       }
+          - { word: "circumstances",      whitelist_for: "cum"       }
+          - { word: "circumstantial",     whitelist_for: "cum"       }
+          - { word: "circumstantiality",  whitelist_for: "cum"       }
+          - { word: "circumstantially",   whitelist_for: "cum"       }
+          - { word: "circumstantiate",    whitelist_for: "cum"       }
+          - { word: "circumstantiated",   whitelist_for: "cum"       }
+          - { word: "circumstantiates",   whitelist_for: "cum"       }
+          - { word: "circumstantiating",  whitelist_for: "cum"       }
+          - { word: "circumstantiation",  whitelist_for: "cum"       }
+          - { word: "circumstantiations", whitelist_for: "cum"       }
+          - { word: "circumstantibus",    whitelist_for: "cum"       }
+          - { word: "circumvallate",      whitelist_for: "cum"       }
+          - { word: "circumvallation",    whitelist_for: "cum"       }
+          - { word: "circumvascular",     whitelist_for: "cum"       }
+          - { word: "circumvent",         whitelist_for: "cum"       }
+          - { word: "circumventable",     whitelist_for: "cum"       }
+          - { word: "circumvented",       whitelist_for: "cum"       }
+          - { word: "circumventing",      whitelist_for: "cum"       }
+          - { word: "circumvention",      whitelist_for: "cum"       }
+          - { word: "circumventions",     whitelist_for: "cum"       }
+          - { word: "circumvents",        whitelist_for: "cum"       }
+          - { word: "circumvolution",     whitelist_for: "cum"       }
+          - { word: "circumvolve",        whitelist_for: "cum"       }
+          - { word: "cirrocumulus",       whitelist_for: "cum"       }
+          - { word: "colchicum",          whitelist_for: "cum"       }
+          - { word: "cucumber",           whitelist_for: "cum"       }
+          - { word: "cucumbers",          whitelist_for: "cum"       }
+          - { word: "cumae",              whitelist_for: "cum"       }
+          - { word: "cuman",              whitelist_for: "cum"       }
+          - { word: "cumarin",            whitelist_for: "cum"       }
+          - { word: "cumber",             whitelist_for: "cum"       }
+          - { word: "cumbered",           whitelist_for: "cum"       }
+          - { word: "cumberer",           whitelist_for: "cum"       }
+          - { word: "cumberers",          whitelist_for: "cum"       }
+          - { word: "cumbering",          whitelist_for: "cum"       }
+          - { word: "cumberland",         whitelist_for: "cum"       }
+          - { word: "cumberlandrian",     whitelist_for: "cum"       }
+          - { word: "cumbernauld",        whitelist_for: "cum"       }
+          - { word: "cumbers",            whitelist_for: "cum"       }
+          - { word: "cumbersome",         whitelist_for: "cum"       }
+          - { word: "cumbersomeness",     whitelist_for: "cum"       }
+          - { word: "cumbrance",          whitelist_for: "cum"       }
+          - { word: "cumbria",            whitelist_for: "cum"       }
+          - { word: "cumbrous",           whitelist_for: "cum"       }
+          - { word: "cumbrously",         whitelist_for: "cum"       }
+          - { word: "cumbrousness",       whitelist_for: "cum"       }
+          - { word: "cumin",              whitelist_for: "cum"       }
+          - { word: "cumins",             whitelist_for: "cum"       }
+          - { word: "cummerbund",         whitelist_for: "cum"       }
+          - { word: "cummerbunds",        whitelist_for: "cum"       }
+          - { word: "cummers",            whitelist_for: "cum"       }
+          - { word: "cummin",             whitelist_for: "cum"       }
+          - { word: "cummings",           whitelist_for: "cum"       }
+          - { word: "cummins",            whitelist_for: "cum"       }
+          - { word: "cumquat",            whitelist_for: "cum"       }
+          - { word: "cumquats",           whitelist_for: "cum"       }
+          - { word: "cumshaw",            whitelist_for: "cum"       }
+          - { word: "cumshaws",           whitelist_for: "cum"       }
+          - { word: "cumulate",           whitelist_for: "cum"       }
+          - { word: "cumulated",          whitelist_for: "cum"       }
+          - { word: "cumulates",          whitelist_for: "cum"       }
+          - { word: "cumulating",         whitelist_for: "cum"       }
+          - { word: "cumulation",         whitelist_for: "cum"       }
+          - { word: "cumulative",         whitelist_for: "cum"       }
+          - { word: "cumulatively",       whitelist_for: "cum"       }
+          - { word: "cumulet",            whitelist_for: "cum"       }
+          - { word: "cumuli",             whitelist_for: "cum"       }
+          - { word: "cumuliform",         whitelist_for: "cum"       }
+          - { word: "cumulonimbus",       whitelist_for: "cum"       }
+          - { word: "cumulostratus",      whitelist_for: "cum"       }
+          - { word: "cumulous",           whitelist_for: "cum"       }
+          - { word: "cumulus",            whitelist_for: "cum"       }
+          - { word: "curcuma",            whitelist_for: "cum"       }
+          - { word: "decumbence",         whitelist_for: "cum"       }
+          - { word: "decumbency",         whitelist_for: "cum"       }
+          - { word: "decumbent",          whitelist_for: "cum"       }
+          - { word: "disencumber",        whitelist_for: "cum"       }
+          - { word: "disencumbered",      whitelist_for: "cum"       }
+          - { word: "disencumbering",     whitelist_for: "cum"       }
+          - { word: "disencumbers",       whitelist_for: "cum"       }
+          - { word: "document",           whitelist_for: "cum"       }
+          - { word: "documentable",       whitelist_for: "cum"       }
+          - { word: "documental",         whitelist_for: "cum"       }
+          - { word: "documentaries",      whitelist_for: "cum"       }
+          - { word: "documentarily",      whitelist_for: "cum"       }
+          - { word: "documentary",        whitelist_for: "cum"       }
+          - { word: "documentation",      whitelist_for: "cum"       }
+          - { word: "documented",         whitelist_for: "cum"       }
+          - { word: "documenter",         whitelist_for: "cum"       }
+          - { word: "documenters",        whitelist_for: "cum"       }
+          - { word: "documenting",        whitelist_for: "cum"       }
+          - { word: "documents",          whitelist_for: "cum"       }
+          - { word: "doronicum",          whitelist_for: "cum"       }
+          - { word: "eboracum",           whitelist_for: "cum"       }
+          - { word: "ecclesiasticum",     whitelist_for: "cum"       }
+          - { word: "ecumenic",           whitelist_for: "cum"       }
+          - { word: "ecumenical",         whitelist_for: "cum"       }
+          - { word: "ecumenicalism",      whitelist_for: "cum"       }
+          - { word: "ecumenically",       whitelist_for: "cum"       }
+          - { word: "ecumenicism",        whitelist_for: "cum"       }
+          - { word: "ecumenicity",        whitelist_for: "cum"       }
+          - { word: "ecumenism",          whitelist_for: "cum"       }
+          - { word: "ecumenist",          whitelist_for: "cum"       }
+          - { word: "elasticum",          whitelist_for: "cum"       }
+          - { word: "encumber",           whitelist_for: "cum"       }
+          - { word: "encumbered",         whitelist_for: "cum"       }
+          - { word: "encumbering",        whitelist_for: "cum"       }
+          - { word: "encumbers",          whitelist_for: "cum"       }
+          - { word: "encumbrance",        whitelist_for: "cum"       }
+          - { word: "encumbrancer",       whitelist_for: "cum"       }
+          - { word: "encumbrances",       whitelist_for: "cum"       }
+          - { word: "fractocumulus",      whitelist_for: "cum"       }
+          - { word: "guaiacum",           whitelist_for: "cum"       }
+          - { word: "hypericum",          whitelist_for: "cum"       }
+          - { word: "ileocecum",          whitelist_for: "cum"       }
+          - { word: "illyricum",          whitelist_for: "cum"       }
+          - { word: "incumbencies",       whitelist_for: "cum"       }
+          - { word: "incumbency",         whitelist_for: "cum"       }
+          - { word: "incumbent",          whitelist_for: "cum"       }
+          - { word: "incumbently",        whitelist_for: "cum"       }
+          - { word: "incumbents",         whitelist_for: "cum"       }
+          - { word: "incumber",           whitelist_for: "cum"       }
+          - { word: "incumbered",         whitelist_for: "cum"       }
+          - { word: "incumbering",        whitelist_for: "cum"       }
+          - { word: "incumbers",          whitelist_for: "cum"       }
+          - { word: "incumbrance",        whitelist_for: "cum"       }
+          - { word: "incumbrancer",       whitelist_for: "cum"       }
+          - { word: "locum",              whitelist_for: "cum"       }
+          - { word: "locumtenencies",     whitelist_for: "cum"       }
+          - { word: "locumtenency",       whitelist_for: "cum"       }
+          - { word: "macumba",            whitelist_for: "cum"       }
+          - { word: "mecum",              whitelist_for: "cum"       }
+          - { word: "mecums",             whitelist_for: "cum"       }
+          - { word: "mesocecum",          whitelist_for: "cum"       }
+          - { word: "modicum",            whitelist_for: "cum"       }
+          - { word: "modicums",           whitelist_for: "cum"       }
+          - { word: "molluscum",          whitelist_for: "cum"       }
+          - { word: "nocumetum",          whitelist_for: "cum"       }
+          - { word: "noncumulative",      whitelist_for: "cum"       }
+          - { word: "noricum",            whitelist_for: "cum"       }
+          - { word: "oecumenical",        whitelist_for: "cum"       }
+          - { word: "procumbent",         whitelist_for: "cum"       }
+          - { word: "publicum",           whitelist_for: "cum"       }
+          - { word: "pyogenicum",         whitelist_for: "cum"       }
+          - { word: "recumbencies",       whitelist_for: "cum"       }
+          - { word: "recumbency",         whitelist_for: "cum"       }
+          - { word: "recumbent",          whitelist_for: "cum"       }
+          - { word: "rusticum",           whitelist_for: "cum"       }
+          - { word: "scum",               whitelist_for: "cum"       }
+          - { word: "scumbag",            whitelist_for: "cum"       }
+          - { word: "scumble",            whitelist_for: "cum"       }
+          - { word: "scumbled",           whitelist_for: "cum"       }
+          - { word: "scumbling",          whitelist_for: "cum"       }
+          - { word: "scummed",            whitelist_for: "cum"       }
+          - { word: "scummers",           whitelist_for: "cum"       }
+          - { word: "scummier",           whitelist_for: "cum"       }
+          - { word: "scummiest",          whitelist_for: "cum"       }
+          - { word: "scumming",           whitelist_for: "cum"       }
+          - { word: "scummy",             whitelist_for: "cum"       }
+          - { word: "scums",              whitelist_for: "cum"       }
+          - { word: "slocum",             whitelist_for: "cum"       }
+          - { word: "stratocumuli",       whitelist_for: "cum"       }
+          - { word: "stratocumulus",      whitelist_for: "cum"       }
+          - { word: "succumb",            whitelist_for: "cum"       }
+          - { word: "succumbed",          whitelist_for: "cum"       }
+          - { word: "succumber",          whitelist_for: "cum"       }
+          - { word: "succumbers",         whitelist_for: "cum"       }
+          - { word: "succumbing",         whitelist_for: "cum"       }
+          - { word: "succumbs",           whitelist_for: "cum"       }
+          - { word: "superincumbent",     whitelist_for: "cum"       }
+          - { word: "talcum",             whitelist_for: "cum"       }
+          - { word: "talcums",            whitelist_for: "cum"       }
+          - { word: "taraxacum",          whitelist_for: "cum"       }
+          - { word: "tecum",              whitelist_for: "cum"       }
+          - { word: "tecumseh",           whitelist_for: "cum"       }
+          - { word: "tillicum",           whitelist_for: "cum"       }
+          - { word: "triticum",           whitelist_for: "cum"       }
+          - { word: "tucum",              whitelist_for: "cum"       }
+          - { word: "uncircumcise",       whitelist_for: "cum"       }
+          - { word: "uncircumcised",      whitelist_for: "cum"       }
+          - { word: "uncircumcision",     whitelist_for: "cum"       }
+          - { word: "uncircumstantial",   whitelist_for: "cum"       }
+          - { word: "uncircumstantialy",  whitelist_for: "cum"       }
+          - { word: "uncumber",           whitelist_for: "cum"       }
+          - { word: "uncumbered",         whitelist_for: "cum"       }
+          - { word: "undocument",         whitelist_for: "cum"       }
+          - { word: "undocumented",       whitelist_for: "cum"       }
+          - { word: "unencumber",         whitelist_for: "cum"       }
+          - { word: "unencumbered",       whitelist_for: "cum"       }
+          - { word: "unincumber",         whitelist_for: "cum"       }
+          - { word: "unincumbered",       whitelist_for: "cum"       }
+          - { word: "vademecum",          whitelist_for: "cum"       }
+          - { word: "viaticum",           whitelist_for: "cum"       }
+          - { word: "viaticums",          whitelist_for: "cum"       }
+          - { word: "scunthorpe",         whitelist_for: "cunt"      }
+          - { word: "crapaud",            whitelist_for: "crap"      }
+          - { word: "crape",              whitelist_for: "crap"      }
+          - { word: "craped",             whitelist_for: "crap"      }
+          - { word: "crapes",             whitelist_for: "crap"      }
+          - { word: "craping",            whitelist_for: "crap"      }
+          - { word: "crapper",            whitelist_for: "crap"      }
+          - { word: "crappers",           whitelist_for: "crap"      }
+          - { word: "crappie",            whitelist_for: "crap"      }
+          - { word: "crappieness",        whitelist_for: "crap"      }
+          - { word: "crappier",           whitelist_for: "crap"      }
+          - { word: "crappies",           whitelist_for: "crap"      }
+          - { word: "crappiest",          whitelist_for: "crap"      }
+          - { word: "crappiness",         whitelist_for: "crap"      }
+          - { word: "crapping",           whitelist_for: "crap"      }
+          - { word: "crappy",             whitelist_for: "crap"      }
+          - { word: "craps",              whitelist_for: "crap"      }
+          - { word: "crapshooter",        whitelist_for: "crap"      }
+          - { word: "crapshooters",       whitelist_for: "crap"      }
+          - { word: "crapulence",         whitelist_for: "crap"      }
+          - { word: "crapulent",          whitelist_for: "crap"      }
+          - { word: "crapulous",          whitelist_for: "crap"      }
+          - { word: "scrap",              whitelist_for: "crap"      }
+          - { word: "scrapbook",          whitelist_for: "crap"      }
+          - { word: "scrapbooks",         whitelist_for: "crap"      }
+          - { word: "scrape",             whitelist_for: "crap"      }
+          - { word: "scraped",            whitelist_for: "crap"      }
+          - { word: "scraper",            whitelist_for: "crap"      }
+          - { word: "scraperboard",       whitelist_for: "crap"      }
+          - { word: "scrapers",           whitelist_for: "crap"      }
+          - { word: "scrapes",            whitelist_for: "crap"      }
+          - { word: "scrapheap",          whitelist_for: "crap"      }
+          - { word: "scrapie",            whitelist_for: "crap"      }
+          - { word: "scraping",           whitelist_for: "crap"      }
+          - { word: "scrapings",          whitelist_for: "crap"      }
+          - { word: "scrappage",          whitelist_for: "crap"      }
+          - { word: "scrapped",           whitelist_for: "crap"      }
+          - { word: "scrapper",           whitelist_for: "crap"      }
+          - { word: "scrappers",          whitelist_for: "crap"      }
+          - { word: "scrappier",          whitelist_for: "crap"      }
+          - { word: "scrappiest",         whitelist_for: "crap"      }
+          - { word: "scrappily",          whitelist_for: "crap"      }
+          - { word: "scrappiness",        whitelist_for: "crap"      }
+          - { word: "scrapping",          whitelist_for: "crap"      }
+          - { word: "scrapple",           whitelist_for: "crap"      }
+          - { word: "scrapples",          whitelist_for: "crap"      }
+          - { word: "scrappy",            whitelist_for: "crap"      }
+          - { word: "scraps",             whitelist_for: "crap"      }
+          - { word: "skyscrape",          whitelist_for: "crap"      }
+          - { word: "skyscraper",         whitelist_for: "crap"      }
+          - { word: "skyscrapers",        whitelist_for: "crap"      }
+          - { word: "skyscraping",        whitelist_for: "crap"      }
+          - { word: "dagoba",             whitelist_for: "dago"      }
+          - { word: "dagobas",            whitelist_for: "dago"      }
+          - { word: "dagoes",             whitelist_for: "dago"      }
+          - { word: "dagon",              whitelist_for: "dago"      }
+          - { word: "pedagog",            whitelist_for: "dago"      }
+          - { word: "pedagogic",          whitelist_for: "dago"      }
+          - { word: "pedagogical",        whitelist_for: "dago"      }
+          - { word: "pedagogically",      whitelist_for: "dago"      }
+          - { word: "pedagogics",         whitelist_for: "dago"      }
+          - { word: "pedagogies",         whitelist_for: "dago"      }
+          - { word: "pedagogs",           whitelist_for: "dago"      }
+          - { word: "pedagogue",          whitelist_for: "dago"      }
+          - { word: "pedagogues",         whitelist_for: "dago"      }
+          - { word: "pedagogy",           whitelist_for: "dago"      }
+          - { word: "solidago",           whitelist_for: "dago"      }
+          - { word: "solidagos",          whitelist_for: "dago"      }
+          - { word: "ding-dong",          whitelist_for: "dong"      }
+          - { word: "dingdong",           whitelist_for: "dong"      }
+          - { word: "dingdonged",         whitelist_for: "dong"      }
+          - { word: "dingdongs",          whitelist_for: "dong"      }
+          - { word: "donga",              whitelist_for: "dong"      }
+          - { word: "dongola",            whitelist_for: "dong"      }
+          - { word: "dongs",              whitelist_for: "dong"      }
+          - { word: "quandong",           whitelist_for: "dong"      }
+          - { word: "dorking",            whitelist_for: "dork"      }
+          - { word: "fecalith",           whitelist_for: "fecal"     }
+          - { word: "fecaloid",           whitelist_for: "fecal"     }
+          - { word: "blesbok",            whitelist_for: "lesbo"     }
+          - { word: "middlesboro",        whitelist_for: "lesbo"     }
+          - { word: "middlesborough",     whitelist_for: "lesbo"     }
+          - { word: "snigger",            whitelist_for: "nigger"    }
+          - { word: "sniggered",          whitelist_for: "nigger"    }
+          - { word: "sniggering",         whitelist_for: "nigger"    }
+          - { word: "sniggeringly",       whitelist_for: "nigger"    }
+          - { word: "sniggers",           whitelist_for: "nigger"    }
+          - { word: "nympholepsies",      whitelist_for: "nympho"    }
+          - { word: "nympholepsy",        whitelist_for: "nympho"    }
+          - { word: "nympholept",         whitelist_for: "nympho"    }
+          - { word: "nympholeptic",       whitelist_for: "nympho"    }
+          - { word: "nymphomania",        whitelist_for: "nympho"    }
+          - { word: "nymphomaniac",       whitelist_for: "nympho"    }
+          - { word: "nymphomaniacal",     whitelist_for: "nympho"    }
+          - { word: "nymphomaniacs",      whitelist_for: "nympho"    }
+          - { word: "inspissate",         whitelist_for: "piss"      }
+          - { word: "inspissated",        whitelist_for: "piss"      }
+          - { word: "inspissating",       whitelist_for: "piss"      }
+          - { word: "inspissation",       whitelist_for: "piss"      }
+          - { word: "inspissator",        whitelist_for: "piss"      }
+          - { word: "nipissing",          whitelist_for: "piss"      }
+          - { word: "pissant",            whitelist_for: "piss"      }
+          - { word: "pissants",           whitelist_for: "piss"      }
+          - { word: "pissarro",           whitelist_for: "piss"      }
+          - { word: "pissoir",            whitelist_for: "piss"      }
+          - { word: "pissoirs",           whitelist_for: "piss"      }
+          - { word: "spissitude",         whitelist_for: "piss"      }
+          - { word: "pinprick",           whitelist_for: "prick"     }
+          - { word: "pinpricked",         whitelist_for: "prick"     }
+          - { word: "pinpricks",          whitelist_for: "prick"     }
+          - { word: "pricked",            whitelist_for: "prick"     }
+          - { word: "pricket",            whitelist_for: "prick"     }
+          - { word: "prickier",           whitelist_for: "prick"     }
+          - { word: "prickiest",          whitelist_for: "prick"     }
+          - { word: "pricking",           whitelist_for: "prick"     }
+          - { word: "prickle",            whitelist_for: "prick"     }
+          - { word: "prickled",           whitelist_for: "prick"     }
+          - { word: "prickles",           whitelist_for: "prick"     }
+          - { word: "pricklier",          whitelist_for: "prick"     }
+          - { word: "prickliest",         whitelist_for: "prick"     }
+          - { word: "prickliness",        whitelist_for: "prick"     }
+          - { word: "prickling",          whitelist_for: "prick"     }
+          - { word: "prickly",            whitelist_for: "prick"     }
+          - { word: "pricks",             whitelist_for: "prick"     }
+          - { word: "pricky",             whitelist_for: "prick"     }
+          - { word: "pussycat",           whitelist_for: "pussy"     }
+          - { word: "pussycats",          whitelist_for: "pussy"     }
+          - { word: "pussyfoot",          whitelist_for: "pussy"     }
+          - { word: "pussyfooted",        whitelist_for: "pussy"     }
+          - { word: "pussyfooting",       whitelist_for: "pussy"     }
+          - { word: "pussyfoots",         whitelist_for: "pussy"     }
+          - { word: "amputate",           whitelist_for: "puta"      }
+          - { word: "amputated",          whitelist_for: "puta"      }
+          - { word: "amputates",          whitelist_for: "puta"      }
+          - { word: "amputating",         whitelist_for: "puta"      }
+          - { word: "amputation",         whitelist_for: "puta"      }
+          - { word: "amputations",        whitelist_for: "puta"      }
+          - { word: "amputator",          whitelist_for: "puta"      }
+          - { word: "computability",      whitelist_for: "puta"      }
+          - { word: "computable",         whitelist_for: "puta"      }
+          - { word: "computation",        whitelist_for: "puta"      }
+          - { word: "computational",      whitelist_for: "puta"      }
+          - { word: "computations",       whitelist_for: "puta"      }
+          - { word: "computative",        whitelist_for: "puta"      }
+          - { word: "deputation",         whitelist_for: "puta"      }
+          - { word: "deputational",       whitelist_for: "puta"      }
+          - { word: "deputations",        whitelist_for: "puta"      }
+          - { word: "deputative",         whitelist_for: "puta"      }
+          - { word: "disputability",      whitelist_for: "puta"      }
+          - { word: "disputable",         whitelist_for: "puta"      }
+          - { word: "disputably",         whitelist_for: "puta"      }
+          - { word: "disputant",          whitelist_for: "puta"      }
+          - { word: "disputants",         whitelist_for: "puta"      }
+          - { word: "disputation",        whitelist_for: "puta"      }
+          - { word: "disputations",       whitelist_for: "puta"      }
+          - { word: "disputatious",       whitelist_for: "puta"      }
+          - { word: "disputatiously",     whitelist_for: "puta"      }
+          - { word: "disputatiousness",   whitelist_for: "puta"      }
+          - { word: "disreputability",    whitelist_for: "puta"      }
+          - { word: "disreputable",       whitelist_for: "puta"      }
+          - { word: "disreputably",       whitelist_for: "puta"      }
+          - { word: "imputable",          whitelist_for: "puta"      }
+          - { word: "imputation",         whitelist_for: "puta"      }
+          - { word: "imputations",        whitelist_for: "puta"      }
+          - { word: "imputative",         whitelist_for: "puta"      }
+          - { word: "incomputable",       whitelist_for: "puta"      }
+          - { word: "incomputably",       whitelist_for: "puta"      }
+          - { word: "indisputable",       whitelist_for: "puta"      }
+          - { word: "indisputableness",   whitelist_for: "puta"      }
+          - { word: "indisputably",       whitelist_for: "puta"      }
+          - { word: "laputa",             whitelist_for: "puta"      }
+          - { word: "laputan",            whitelist_for: "puta"      }
+          - { word: "miscomputation",     whitelist_for: "puta"      }
+          - { word: "nonimputability",    whitelist_for: "puta"      }
+          - { word: "nonimputable",       whitelist_for: "puta"      }
+          - { word: "putamen",            whitelist_for: "puta"      }
+          - { word: "putamina",           whitelist_for: "puta"      }
+          - { word: "putative",           whitelist_for: "puta"      }
+          - { word: "putatively",         whitelist_for: "puta"      }
+          - { word: "rajputana",          whitelist_for: "puta"      }
+          - { word: "reamputation",       whitelist_for: "puta"      }
+          - { word: "reputability",       whitelist_for: "puta"      }
+          - { word: "reputable",          whitelist_for: "puta"      }
+          - { word: "reputableness",      whitelist_for: "puta"      }
+          - { word: "reputably",          whitelist_for: "puta"      }
+          - { word: "reputation",         whitelist_for: "puta"      }
+          - { word: "reputations",        whitelist_for: "puta"      }
+          - { word: "sputa",              whitelist_for: "puta"      }
+          - { word: "supputation",        whitelist_for: "puta"      }
+          - { word: "undisputable",       whitelist_for: "puta"      }
+          - { word: "equimolecular",      whitelist_for: "quim"      }
+          - { word: "esquimau",           whitelist_for: "quim"      }
+          - { word: "quimper",            whitelist_for: "quim"      }
+          - { word: "primadonna",         whitelist_for: "rimadonna" }
+          - { word: "primadonnas",        whitelist_for: "rimadonna" }
+          - { word: "brimming",           whitelist_for: "rimming"   }
+          - { word: "primming",           whitelist_for: "rimming"   }
+          - { word: "trimming",           whitelist_for: "rimming"   }
+          - { word: "trimmings",          whitelist_for: "rimming"   }
+          - { word: "untrimming",         whitelist_for: "rimming"   }
+          - { word: "rootless",           whitelist_for: "rootle"    }
+          - { word: "rootlessness",       whitelist_for: "rootle"    }
+          - { word: "rootlet",            whitelist_for: "rootle"    }
+          - { word: "rootlets",           whitelist_for: "rootle"    }
+          - { word: "shagbark",           whitelist_for: "shag"      }
+          - { word: "shagbarks",          whitelist_for: "shag"      }
+          - { word: "shagreen",           whitelist_for: "shag"      }
+          - { word: "brushite",           whitelist_for: "shit"      }
+          - { word: "cushitic",           whitelist_for: "shit"      }
+          - { word: "peshitta",           whitelist_for: "shit"      }
+          - { word: "shittah",            whitelist_for: "shit"      }
+          - { word: "shittim",            whitelist_for: "shit"      }
+          - { word: "yamashita",          whitelist_for: "shit"      }
+          - { word: "allspice",           whitelist_for: "spic"      }
+          - { word: "allspices",          whitelist_for: "spic"      }
+          - { word: "aspic",              whitelist_for: "spic"      }
+          - { word: "aspics",             whitelist_for: "spic"      }
+          - { word: "auspicate",          whitelist_for: "spic"      }
+          - { word: "auspice",            whitelist_for: "spic"      }
+          - { word: "auspices",           whitelist_for: "spic"      }
+          - { word: "auspicial",          whitelist_for: "spic"      }
+          - { word: "auspicious",         whitelist_for: "spic"      }
+          - { word: "auspiciously",       whitelist_for: "spic"      }
+          - { word: "auspiciousness",     whitelist_for: "spic"      }
+          - { word: "conspicuity",        whitelist_for: "spic"      }
+          - { word: "conspicuous",        whitelist_for: "spic"      }
+          - { word: "conspicuously",      whitelist_for: "spic"      }
+          - { word: "conspicuousness",    whitelist_for: "spic"      }
+          - { word: "despicable",         whitelist_for: "spic"      }
+          - { word: "despicably",         whitelist_for: "spic"      }
+          - { word: "extispicious",       whitelist_for: "spic"      }
+          - { word: "haruspical",         whitelist_for: "spic"      }
+          - { word: "hospice",            whitelist_for: "spic"      }
+          - { word: "hospices",           whitelist_for: "spic"      }
+          - { word: "imperspicuity",      whitelist_for: "spic"      }
+          - { word: "inauspicious",       whitelist_for: "spic"      }
+          - { word: "inauspiciously",     whitelist_for: "spic"      }
+          - { word: "inauspiciousness",   whitelist_for: "spic"      }
+          - { word: "inconspicuous",      whitelist_for: "spic"      }
+          - { word: "inconspicuously",    whitelist_for: "spic"      }
+          - { word: "inconspicuousness",  whitelist_for: "spic"      }
+          - { word: "mispickel",          whitelist_for: "spic"      }
+          - { word: "oversuspicious",     whitelist_for: "spic"      }
+          - { word: "perspicacious",      whitelist_for: "spic"      }
+          - { word: "perspicaciously",    whitelist_for: "spic"      }
+          - { word: "perspicaciousness",  whitelist_for: "spic"      }
+          - { word: "perspicacity",       whitelist_for: "spic"      }
+          - { word: "perspicuity",        whitelist_for: "spic"      }
+          - { word: "perspicuous",        whitelist_for: "spic"      }
+          - { word: "perspicuously",      whitelist_for: "spic"      }
+          - { word: "perspicuousness",    whitelist_for: "spic"      }
+          - { word: "spica",              whitelist_for: "spic"      }
+          - { word: "spicaes",            whitelist_for: "spic"      }
+          - { word: "spicas",             whitelist_for: "spic"      }
+          - { word: "spicate",            whitelist_for: "spic"      }
+          - { word: "spiccato",           whitelist_for: "spic"      }
+          - { word: "spice",              whitelist_for: "spic"      }
+          - { word: "spiceberry",         whitelist_for: "spic"      }
+          - { word: "spicebush",          whitelist_for: "spic"      }
+          - { word: "spiced",             whitelist_for: "spic"      }
+          - { word: "spicer",             whitelist_for: "spic"      }
+          - { word: "spicers",            whitelist_for: "spic"      }
+          - { word: "spicery",            whitelist_for: "spic"      }
+          - { word: "spices",             whitelist_for: "spic"      }
+          - { word: "spicey",             whitelist_for: "spic"      }
+          - { word: "spicier",            whitelist_for: "spic"      }
+          - { word: "spiciest",           whitelist_for: "spic"      }
+          - { word: "spicily",            whitelist_for: "spic"      }
+          - { word: "spiciness",          whitelist_for: "spic"      }
+          - { word: "spicing",            whitelist_for: "spic"      }
+          - { word: "spick",              whitelist_for: "spic"      }
+          - { word: "spick-and-span",     whitelist_for: "spic"      }
+          - { word: "spics",              whitelist_for: "spic"      }
+          - { word: "spicula",            whitelist_for: "spic"      }
+          - { word: "spicular",           whitelist_for: "spic"      }
+          - { word: "spiculate",          whitelist_for: "spic"      }
+          - { word: "spiculated",         whitelist_for: "spic"      }
+          - { word: "spiculation",        whitelist_for: "spic"      }
+          - { word: "spicule",            whitelist_for: "spic"      }
+          - { word: "spicules",           whitelist_for: "spic"      }
+          - { word: "spiculum",           whitelist_for: "spic"      }
+          - { word: "spicy",              whitelist_for: "spic"      }
+          - { word: "suspicion",          whitelist_for: "spic"      }
+          - { word: "suspicions",         whitelist_for: "spic"      }
+          - { word: "suspicious",         whitelist_for: "spic"      }
+          - { word: "suspiciously",       whitelist_for: "spic"      }
+          - { word: "suspiciousness",     whitelist_for: "spic"      }
+          - { word: "transpicuous",       whitelist_for: "spic"      }
+          - { word: "unauspicious",       whitelist_for: "spic"      }
+          - { word: "unconspicuous",      whitelist_for: "spic"      }
+          - { word: "unsuspicious",       whitelist_for: "spic"      }
+          - { word: "unsuspiciously",     whitelist_for: "spic"      }
+          - { word: "saturday",           whitelist_for: "turd"      }
+          - { word: "saturdayish",        whitelist_for: "turd"      }
+          - { word: "saturdays",          whitelist_for: "turd"      }
+          - { word: "sturdier",           whitelist_for: "turd"      }
+          - { word: "sturdies",           whitelist_for: "turd"      }
+          - { word: "sturdiest",          whitelist_for: "turd"      }
+          - { word: "sturdily",           whitelist_for: "turd"      }
+          - { word: "sturdiness",         whitelist_for: "turd"      }
+          - { word: "sturdy",             whitelist_for: "turd"      }
+          - { word: "turdiform",          whitelist_for: "turd"      }
+          - { word: "turdine",            whitelist_for: "turd"      }
+          - { word: "atwater",            whitelist_for: "twat"      }
+          - { word: "cutwater",           whitelist_for: "twat"      }
+          - { word: "derwentwater",       whitelist_for: "twat"      }
+          - { word: "heartwater",         whitelist_for: "twat"      }
+          - { word: "meltwater",          whitelist_for: "twat"      }
+          - { word: "saltwater",          whitelist_for: "twat"      }
+          - { word: "twattle",            whitelist_for: "twat"      }
+          - { word: "witwatersrand",      whitelist_for: "twat"      }
+          - { word: "wristwatch",         whitelist_for: "twat"      }
+          - { word: "wristwatches",       whitelist_for: "twat"      }
+          - { word: "swank",              whitelist_for: "wank"      }
+          - { word: "swanked",            whitelist_for: "wank"      }
+          - { word: "swanker",            whitelist_for: "wank"      }
+          - { word: "swankers",           whitelist_for: "wank"      }
+          - { word: "swankest",           whitelist_for: "wank"      }
+          - { word: "swankier",           whitelist_for: "wank"      }
+          - { word: "swankiest",          whitelist_for: "wank"      }
+          - { word: "swankily",           whitelist_for: "wank"      }
+          - { word: "swanking",           whitelist_for: "wank"      }
+          - { word: "swanks",             whitelist_for: "wank"      }
+          - { word: "swanky",             whitelist_for: "wank"      }
+          - { word: "twankay",            whitelist_for: "wank"      }
+          - { word: "golliwog",           whitelist_for: "wog"       }
+          - { word: "golliwogs",          whitelist_for: "wog"       }
+          - { word: "hornswoggle",        whitelist_for: "wog"       }
+          - { word: "hornswoggled",       whitelist_for: "wog"       }
+          - { word: "hornswoggling",      whitelist_for: "wog"       }
+          - { word: "polliwog",           whitelist_for: "wog"       }
+          - { word: "polliwogs",          whitelist_for: "wog"       }
+          - { word: "pollywog",           whitelist_for: "wog"       }
+          - { word: "pollywogs",          whitelist_for: "wog"       }
+          - { word: "woggle",             whitelist_for: "wog"       }
+
+      - blacklist:
+        - { word: "(ock"                          }
+        - { word: "[ock"                          }
+        - { word: ".f uc k"                       }
+        - { word: "@rse"                          }
+        - { word: "@rsehol"                       }
+        - { word: "@unt"                          }
+        - { word: "[unt"                          }
+        - { word: "< unt"                         }
+        - { word: "<***s"                         }
+        - { word: "<**t"                          }
+        - { word: "<**ts"                         }
+        - { word: "<**t's"                        }
+        - { word: "<*nt"                          }
+        - { word: "<.unt"                         }
+        - { word: "<loth head"                    }
+        - { word: "<lothhead"                     }
+        - { word: "<nuts"                         }
+        - { word: "<o(k"                          }
+        - { word: "<o<&nbsp;k"                    }
+        - { word: "<o<ksu<ka"                     }
+        - { word: "<o<ksu<ker"                    }
+        - { word: "<oon"                          }
+        - { word: "<u&nbsp;nt"                    }
+        - { word: "<u&nbsp;nts"                   }
+        - { word: "<u*t"                          }
+        - { word: "<unt"                          }
+        - { word: "<unt's"                        }
+        - { word: "<vnt"                          }
+        - { word: "<vnts"                         }
+        - { word: "a$$hole"                       }
+        - { word: "a$$hole$"                      }
+        - { word: "a$$holes"                      }
+        - { word: "a.rse"                         }
+        - { word: "a+*hole"                       }
+        - { word: "ar$ehole"                      }
+        - { word: "ar$hole"                       }
+        - { word: "ar$holes"                      }
+        - { word: "ar5h0le"                       }
+        - { word: "ar5h0les"                      }
+        - { word: "ars3"                          }
+        - { word: "arse hole"                     }
+        - { word: "arseh0le"                      }
+        - { word: "arseh0les"                     }
+        - { word: "arseho"                        }
+        - { word: "arsehol"                       }
+        - { word: "arsehole"                      }
+        - { word: "arseholes"                     }
+        - { word: "arsewipe"                      }
+        - { word: "arsh0le"                       }
+        - { word: "arshole"                       }
+        - { word: "arsholes"                      }
+        - { word: "ashole"                        }
+        - { word: "ass h0le"                      }
+        - { word: "ass hole"                      }
+        - { word: "assh0le"                       }
+        - { word: "assh0les"                      }
+        - { word: "asshole"                       }
+        - { word: "assholes"                      }
+        - { word: "b***ocks"                      }
+        - { word: "b***ocks."                     }
+        - { word: "b*ll*cks"                      }
+        - { word: "b.astard"                      }
+        - { word: "b.ollocks"                     }
+        - { word: "b.ugger"                       }
+        - { word: "b@st@rd"                       }
+        - { word: "b@st@rds"                      }
+        - { word: "b00tha"                        }
+        - { word: "b00thas"                       }
+        - { word: "b0ll0cks"                      }
+        - { word: "b0llocks"                      }
+        - { word: "b1tch"                         }
+        - { word: "b3llend"                       }
+        - { word: "bastard"                       }
+        - { word: "bastards"                      }
+        - { word: "basterd"                       }
+        - { word: "basyard"                       }
+        - { word: "basyards"                      }
+        - { word: "batty boy"                     }
+        - { word: "batty&nbsp;boi"                }
+        - { word: "batty&nbsp;boy"                }
+        - { word: "beef curtains"                 }
+        - { word: "belend"                        }
+        - { word: "bell end"                      }
+        - { word: "bell.end"                      }
+        - { word: "bellend"                       }
+        - { word: "bell-end"                      }
+        - { word: "bin dippers"                   }
+        - { word: "bin-dippers"                   }
+        - { word: "bo****ks"                      }
+        - { word: "bo11ocks"                      }
+        - { word: "boabie sooking"                }
+        - { word: "boaby sooking"                 }
+        - { word: "boll0cks"                      }
+        - { word: "bollocks"                      }
+        - { word: "bollox"                        }
+        - { word: "bolocks"                       }
+        - { word: "bolox"                         }
+        - { word: "boner"                         }
+        - { word: "boners"                        }
+        - { word: "bootha"                        }
+        - { word: "boothas"                       }
+        - { word: "bugger"                        }
+        - { word: "bukkake"                       }
+        - { word: "bum bandit"                    }
+        - { word: "bum hole"                      }
+        - { word: "bumbandit"                     }
+        - { word: "bum-bandit"                    }
+        - { word: "bumh0l3"                       }
+        - { word: "bumh0le"                       }
+        - { word: "bumhol3"                       }
+        - { word: "bumhole"                       }
+        - { word: "c *nt!"                        }
+        - { word: "c *nts!"                       }
+        - { word: "c u n t"                       }
+        - { word: "c u n t."                      }
+        - { word: "c#nt"                          }
+        - { word: "c&nbsp;u&nbsp;n&nbsp;t"        }
+        - { word: "c* nt"                         }
+        - { word: "c***s"                         }
+        - { word: "c**k"                          }
+        - { word: "c**t"                          }
+        - { word: "c**ts"                         }
+        - { word: "c**t's"                        }
+        - { word: "c*nt"                          }
+        - { word: "c.u.n.t"                       }
+        - { word: "c.unt"                         }
+        - { word: "c.untyb.ollocks"               }
+        - { word: "c_u_n_t"                       }
+        - { word: "c00n"                          }
+        - { word: "c0ck"                          }
+        - { word: "c0cksucka"                     }
+        - { word: "c0cksucker"                    }
+        - { word: "cahnt"                         }
+        - { word: "cahnts"                        }
+        - { word: "clit"                          }
+        - { word: "clunge"                        }
+        - { word: "cnut"                          }
+        - { word: "cnuts"                         }
+        - { word: "co(k"                          }
+        - { word: "coc&nbsp;k"                    }
+        - { word: "cock"                          }
+        - { word: "cocksucka"                     }
+        - { word: "cocksucker"                    }
+        - { word: "cocksuckers"                   }
+        - { word: "cocksuckers."                  }
+        - { word: "coon"                          }
+        - { word: "cossor ali"                    }
+        - { word: "cretin"                        }
+        - { word: "cripple"                       }
+        - { word: "critest"                       }
+        - { word: "cu&nbsp;nt"                    }
+        - { word: "cu&nbsp;nts"                   }
+        - { word: "cu*t"                          }
+        - { word: "cunt"                          }
+        - { word: "c-u-n-t"                       }
+        - { word: "cunting"                       }
+        - { word: "cunts"                         }
+        - { word: "cunt's"                        }
+        - { word: "cvnt"                          }
+        - { word: "cvnts"                         }
+        - { word: "d**khead"                      }
+        - { word: "d1ck"                          }
+        - { word: "d1ck!"                         }
+        - { word: "d1ckh@ed"                      }
+        - { word: "darkie"                        }
+        - { word: "darky"                         }
+        - { word: "dick"                          }
+        - { word: "dick&nbsp;head"                }
+        - { word: "dickhead"                      }
+        - { word: "dumbfuck"                      }
+        - { word: "dumbfucker"                    }
+        - { word: "dxxkhead"                      }
+        - { word: "ethnics"                       }
+        - { word: "f ck"                          }
+        - { word: "f o a d"                       }
+        - { word: "f off"                         }
+        - { word: "f u c k"                       }
+        - { word: "f u c ked"                     }
+        - { word: "f uc k"                        }
+        - { word: "f uc king"                     }
+        - { word: "f uck"                         }
+        - { word: "f###"                          }
+        - { word: "f##k"                          }
+        - { word: "f##king"                       }
+        - { word: "f#cked"                        }
+        - { word: "f$cks"                         }
+        - { word: "f&nbsp;cked"                   }
+        - { word: "f&nbsp;u&nbsp;c&nbsp;k"        }
+        - { word: "f&nbsp;uck"                    }
+        - { word: "f&nbsp;ucker"                  }
+        - { word: "f&nbsp;ucking"                 }
+        - { word: "f()()k"                        }
+        - { word: "f()()ker"                      }
+        - { word: "f()()king"                     }
+        - { word: "f*#kin'"                       }
+        - { word: "f*&k"                          }
+        - { word: "f*&k!ng"                       }
+        - { word: "f***"                          }
+        - { word: "f*****"                        }
+        - { word: "f******"                       }
+        - { word: "f*****g"                       }
+        - { word: "f****d"                        }
+        - { word: "f***ed"                        }
+        - { word: "f***in"                        }
+        - { word: "f***ing"                       }
+        - { word: "f**k"                          }
+        - { word: "f**ked"                        }
+        - { word: "f**ker"                        }
+        - { word: "f**kin"                        }
+        - { word: "f**king"                       }
+        - { word: "f**ks"                         }
+        - { word: "f*c*"                          }
+        - { word: "f*ck"                          }
+        - { word: "f*ckin"                        }
+        - { word: "f*ked"                         }
+        - { word: "f*ker"                         }
+        - { word: "f*ks"                          }
+        - { word: "f*uck"                         }
+        - { word: "f*uk"                          }
+        - { word: "f.o.a.d"                       }
+        - { word: "f.o.a.d."                      }
+        - { word: "f.u.c.k."                      }
+        - { word: "f.uck"                         }
+        - { word: "f@@@in"                        }
+        - { word: "f@@@ing"                       }
+        - { word: "f@ck"                          }
+        - { word: "f@g"                           }
+        - { word: "f@gs"                          }
+        - { word: "f[_]cker"                      }
+        - { word: "f[_]cking"                     }
+        - { word: "f^^k"                          }
+        - { word: "f^^ked"                        }
+        - { word: "f^^ker"                        }
+        - { word: "f^^king"                       }
+        - { word: "f^ck"                          }
+        - { word: "f^cker"                        }
+        - { word: "f^cking"                       }
+        - { word: "f__kin"                        }
+        - { word: "f__king"                       }
+        - { word: "f<uk"                          }
+        - { word: "f>>k"                          }
+        - { word: "f00k"                          }
+        - { word: "f00ked"                        }
+        - { word: "f0oked"                        }
+        - { word: "fack"                          }
+        - { word: "fackin"                        }
+        - { word: "facking"                       }
+        - { word: "fag"                           }
+        - { word: "fagg0t"                        }
+        - { word: "faggits"                       }
+        - { word: "faggot"                        }
+        - { word: "fagits"                        }
+        - { word: "fags"                          }
+        - { word: "fanny"                         }
+        - { word: "fc*king"                       }
+        - { word: "fck"                           }
+        - { word: "f'ck"                          }
+        - { word: "fck&nbsp;ing"                  }
+        - { word: "fck1ng"                        }
+        - { word: "fckeud"                        }
+        - { word: "fckin"                         }
+        - { word: "fcking"                        }
+        - { word: "fcks"                          }
+        - { word: "fckw1t"                        }
+        - { word: "fckwit"                        }
+        - { word: "fcuk"                          }
+        - { word: "fcuked"                        }
+        - { word: "fcuker"                        }
+        - { word: "fcukin"                        }
+        - { word: "fcuking"                       }
+        - { word: "fcuks"                         }
+        - { word: "feck"                          }
+        - { word: "feckin"                        }
+        - { word: "fecking"                       }
+        - { word: "f---ed"                        }
+        - { word: "fekking"                       }
+        - { word: "felch"                         }
+        - { word: "felched"                       }
+        - { word: "felching"                      }
+        - { word: "feltch"                        }
+        - { word: "feltcher"                      }
+        - { word: "feltching"                     }
+        - { word: "f-----g"                       }
+        - { word: "f---ing"                       }
+        - { word: "f--k"                          }
+        - { word: "fkin"                          }
+        - { word: "fking"                         }
+        - { word: "flange"                        }
+        - { word: "flucknuts"                     }
+        - { word: "fo0ked"                        }
+        - { word: "foad"                          }
+        - { word: "f-o-a-d"                       }
+        - { word: "fook"                          }
+        - { word: "fookd"                         }
+        - { word: "fooked"                        }
+        - { word: "fooker"                        }
+        - { word: "fookin"                        }
+        - { word: "fookin'"                       }
+        - { word: "fooking"                       }
+        - { word: "frig"                          }
+        - { word: "frigging"                      }
+        - { word: "frigin"                        }
+        - { word: "friging"                       }
+        - { word: "fu <k"                         }
+        - { word: "fu&kin"                        }
+        - { word: "fu&king"                       }
+        - { word: "fu&nbsp;ck"                    }
+        - { word: "fu&nbsp;cked"                  }
+        - { word: "fu&nbsp;cker"                  }
+        - { word: "fu&nbsp;cking"                 }
+        - { word: "fu(k"                          }
+        - { word: "fu(ker"                        }
+        - { word: "fu(kers"                       }
+        - { word: "fu*k"                          }
+        - { word: "fu.ck"                         }
+        - { word: "fu@k"                          }
+        - { word: "fu@ker"                        }
+        - { word: "fu^k"                          }
+        - { word: "fu^ker"                        }
+        - { word: "fu^king"                       }
+        - { word: "fu< kin"                       }
+        - { word: "fu<k"                          }
+        - { word: "f-u-<-k"                       }
+        - { word: "fu<ked"                        }
+        - { word: "fu<ker"                        }
+        - { word: "fu<kin"                        }
+        - { word: "fu<king"                       }
+        - { word: "fu<kker"                       }
+        - { word: "fu<kr"                         }
+        - { word: "fu<ks"                         }
+        - { word: "fuc&nbsp;ked"                  }
+        - { word: "fuc&nbsp;ker"                  }
+        - { word: "fuc&nbsp;king"                 }
+        - { word: "fuck"                          }
+        - { word: "f-uck"                         }
+        - { word: "fúck"                          }
+        - { word: "fúçk"                          }
+        - { word: "fùck"                          }
+        - { word: "fûck"                          }
+        - { word: "fück"                          }
+        - { word: "fuck&nbsp;ed"                  }
+        - { word: "fuck&nbsp;ing"                 }
+        - { word: "fucke&nbsp;d"                  }
+        - { word: "fucked"                        }
+        - { word: "fucker"                        }
+        - { word: "fuckers"                       }
+        - { word: "fucki&nbsp;ng"                 }
+        - { word: "fuckin"                        }
+        - { word: "fucking"                       }
+        - { word: "fúcking"                       }
+        - { word: "fuckinghell"                   }
+        - { word: "fuckk"                         }
+        - { word: "fucks"                         }
+        - { word: "fuckup"                        }
+        - { word: "fuckw1t"                       }
+        - { word: "fuckwit"                       }
+        - { word: "fuck-wit"                      }
+        - { word: "fuckwits"                      }
+        - { word: "fucw1t"                        }
+        - { word: "fucwit"                        }
+        - { word: "fudge p@cker"                  }
+        - { word: "fudge packer"                  }
+        - { word: "fudgep@cker"                   }
+        - { word: "fudge-p@cker"                  }
+        - { word: "fudgepacker"                   }
+        - { word: "fudge-packer"                  }
+        - { word: "fudgpacker"                    }
+        - { word: "fuk"                           }
+        - { word: "fukced"                        }
+        - { word: "fuked"                         }
+        - { word: "fuker"                         }
+        - { word: "fukin"                         }
+        - { word: "fuking"                        }
+        - { word: "fukk"                          }
+        - { word: "fukked"                        }
+        - { word: "fukker"                        }
+        - { word: "fukkin"                        }
+        - { word: "fukking"                       }
+        - { word: "fuks"                          }
+        - { word: "fuukn"                         }
+        - { word: "fvck"                          }
+        - { word: "fvckup"                        }
+        - { word: "fvck-up"                       }
+        - { word: "fvckw1t"                       }
+        - { word: "fvckwit"                       }
+        - { word: "gang bang"                     }
+        - { word: "gangbang"                      }
+        - { word: "gang-bang"                     }
+        - { word: "gash"                          }
+        - { word: "gayhole"                       }
+        - { word: "gimp"                          }
+        - { word: "girlie-gardening"              }
+        - { word: "goris"                         }
+        - { word: "gypo"                          }
+        - { word: "gypos"                         }
+        - { word: "gyppo"                         }
+        - { word: "gyppos"                        }
+        - { word: "h0m0"                          }
+        - { word: "h0mo"                          }
+        - { word: "homo"                          }
+        - { word: "hvns"                          }
+        - { word: "israelians"                    }
+        - { word: "ities"                         }
+        - { word: "jungle bunny"                  }
+        - { word: "k**t"                          }
+        - { word: "k@ffir"                        }
+        - { word: "k@ffirs"                       }
+        - { word: "k@fir"                         }
+        - { word: "k@firs"                        }
+        - { word: "kaf1r"                         }
+        - { word: "kaff1r"                        }
+        - { word: "kaffir"                        }
+        - { word: "kaffirs"                       }
+        - { word: "kafir"                         }
+        - { word: "kafirs"                        }
+        - { word: "kafr"                          }
+        - { word: "kants"                         }
+        - { word: "khunt"                         }
+        - { word: "kiddie fiddler"                }
+        - { word: "kiddie fiddling"               }
+        - { word: "kiddie-fiddler"                }
+        - { word: "kiddie-fiddling"               }
+        - { word: "kiddy fiddler"                 }
+        - { word: "kiddyfiddler"                  }
+        - { word: "kiddy-fiddler"                 }
+        - { word: "kike"                          }
+        - { word: "kn0b"                          }
+        - { word: "knob"                          }
+        - { word: "knob&nbsp;head"                }
+        - { word: "knobber"                       }
+        - { word: "knobhead"                      }
+        - { word: "kraut"                         }
+        - { word: "kuffar"                        }
+        - { word: "kunt"                          }
+        - { word: "kyke"                          }
+        - { word: "l m f a o"                     }
+        - { word: "l.m.f.a.o"                     }
+        - { word: "l.m.f.a.o."                    }
+        - { word: "lmfa0"                         }
+        - { word: "lmfao"                         }
+        - { word: "m.inge"                        }
+        - { word: "m.otherf.ucker"                }
+        - { word: "m1nge"                         }
+        - { word: "minge"                         }
+        - { word: "mof**ker"                      }
+        - { word: "mof**kers"                     }
+        - { word: "mofuccer"                      }
+        - { word: "mofucker"                      }
+        - { word: "mofuckers"                     }
+        - { word: "mofucking"                     }
+        - { word: "mofukcer"                      }
+        - { word: "mohterf**ker"                  }
+        - { word: "mohterf**kers"                 }
+        - { word: "mohterf*kcer"                  }
+        - { word: "mohterfuccer"                  }
+        - { word: "mohterfuccers"                 }
+        - { word: "mohterfuck"                    }
+        - { word: "mohterfucker"                  }
+        - { word: "mohterfuckers"                 }
+        - { word: "mohterfucking"                 }
+        - { word: "mohterfucks"                   }
+        - { word: "mohterfuk"                     }
+        - { word: "mohterfukcer"                  }
+        - { word: "mohterfukcers"                 }
+        - { word: "mohterfuking"                  }
+        - { word: "mohterfuks"                    }
+        - { word: "moterf**ker"                   }
+        - { word: "moterfuccer"                   }
+        - { word: "moterfuck"                     }
+        - { word: "moterfucker"                   }
+        - { word: "moterfuckers"                  }
+        - { word: "moterfucking"                  }
+        - { word: "moterfucks"                    }
+        - { word: "mothaf**k"                     }
+        - { word: "mothaf**ker"                   }
+        - { word: "mothaf**kers"                  }
+        - { word: "mothaf**king"                  }
+        - { word: "mothaf**ks"                    }
+        - { word: "mothafuccer"                   }
+        - { word: "mothafuck"                     }
+        - { word: "mothafucka"                    }
+        - { word: "motha-fucka"                   }
+        - { word: "mothafucker"                   }
+        - { word: "mothafuckers"                  }
+        - { word: "mothafucking"                  }
+        - { word: "mothafucks"                    }
+        - { word: "mother f---ers"                }
+        - { word: "motherf**ked"                  }
+        - { word: "motherf**ker"                  }
+        - { word: "motherf**kers"                 }
+        - { word: "motherfuccer"                  }
+        - { word: "motherfuccers"                 }
+        - { word: "motherfuck"                    }
+        - { word: "motherfucked"                  }
+        - { word: "motherfucker"                  }
+        - { word: "motherfuckers"                 }
+        - { word: "motherfucking"                 }
+        - { word: "motherfucks"                   }
+        - { word: "motherfukkker"                 }
+        - { word: "mthaf**ka"                     }
+        - { word: "mthafucca"                     }
+        - { word: "mthafuccas"                    }
+        - { word: "mthafucka"                     }
+        - { word: "mthafuckas"                    }
+        - { word: "mthafukca"                     }
+        - { word: "mthafukcas"                    }
+        - { word: "muff"                          }
+        - { word: "muff-diver"                    }
+        - { word: "muff-diving"                   }
+        - { word: "muffs"                         }
+        - { word: "muth@fucker"                   }
+        - { word: "muthaf**k"                     }
+        - { word: "muthaf**ker"                   }
+        - { word: "muthaf**kers"                  }
+        - { word: "muthaf**king"                  }
+        - { word: "muthaf**ks"                    }
+        - { word: "muthafuccer"                   }
+        - { word: "muthafuck"                     }
+        - { word: "muthafuck@"                    }
+        - { word: "muthafucka"                    }
+        - { word: "muthafucker"                   }
+        - { word: "muthafuckers"                  }
+        - { word: "muthafucking"                  }
+        - { word: "muthafucks"                    }
+        - { word: "muthafukas"                    }
+        - { word: "nig nog"                       }
+        - { word: "niga"                          }
+        - { word: "nigga"                         }
+        - { word: "niggaz"                        }
+        - { word: "nigger"                        }
+        - { word: "niggers"                       }
+        - { word: "nignog"                        }
+        - { word: "nig-nog"                       }
+        - { word: "nob&nbsp;head"                 }
+        - { word: "nobhead"                       }
+        - { word: "nonce"                         }
+        - { word: "p**i"                          }
+        - { word: "p*ki"                          }
+        - { word: "p.iss-flaps"                   }
+        - { word: "p@ki"                          }
+        - { word: "p@kis"                         }
+        - { word: "p00f"                          }
+        - { word: "p00fs"                         }
+        - { word: "p00fter"                       }
+        - { word: "p00fters"                      }
+        - { word: "p0of"                          }
+        - { word: "paedo"                         }
+        - { word: "paedophile"                    }
+        - { word: "paedophiles"                   }
+        - { word: "pak1"                          }
+        - { word: "paki"                          }
+        - { word: "pakis"                         }
+        - { word: "peado"                         }
+        - { word: "peadofile"                     }
+        - { word: "peadofiles"                    }
+        - { word: "peedo"                         }
+        - { word: "peedofile"                     }
+        - { word: "peedofiles"                    }
+        - { word: "peedophile"                    }
+        - { word: "peedophiles"                   }
+        - { word: "peedos"                        }
+        - { word: "pench0d"                       }
+        - { word: "pench0ds"                      }
+        - { word: "penchod"                       }
+        - { word: "penchods"                      }
+        - { word: "phanny"                        }
+        - { word: "phanny."                       }
+        - { word: "pheck"                         }
+        - { word: "phecking"                      }
+        - { word: "phelching"                     }
+        - { word: "pheque"                        }
+        - { word: "phequing"                      }
+        - { word: "phuck"                         }
+        - { word: "phucker"                       }
+        - { word: "phuckin"                       }
+        - { word: "phucking"                      }
+        - { word: "phucks"                        }
+        - { word: "phuk"                          }
+        - { word: "pikey"                         }
+        - { word: "pillow biter"                  }
+        - { word: "pillowbiter"                   }
+        - { word: "pillow-biter"                  }
+        - { word: "piss off"                      }
+        - { word: "pissflaps"                     }
+        - { word: "po0f"                          }
+        - { word: "poff"                          }
+        - { word: "ponce"                         }
+        - { word: "poo stabber"                   }
+        - { word: "poo stabbers"                  }
+        - { word: "poof"                          }
+        - { word: "poofs"                         }
+        - { word: "poofter"                       }
+        - { word: "pr!ck"                         }
+        - { word: "pr!ck."                        }
+        - { word: "pr1ck"                         }
+        - { word: "pr1ck!"                        }
+        - { word: "pr1cks"                        }
+        - { word: "pr1cks!"                       }
+        - { word: "prick"                         }
+        - { word: "prik"                          }
+        - { word: "pu$$y"                         }
+        - { word: "pussy"                         }
+        - { word: "queer"                         }
+        - { word: "raghead"                       }
+        - { word: "ragheads"                      }
+        - { word: "ret@rd"                        }
+        - { word: "retard"                        }
+        - { word: "rim job"                       }
+        - { word: "rimming"                       }
+        - { word: "s.hit"                         }
+        - { word: "s1ut"                          }
+        - { word: "sc u m!"                       }
+        - { word: "sc um"                         }
+        - { word: "sh hit"                        }
+        - { word: "sh!t"                          }
+        - { word: "sh!te"                         }
+        - { word: "sh!tes"                        }
+        - { word: "sh1t"                          }
+        - { word: "sh1te"                         }
+        - { word: "shirtlifter"                   }
+        - { word: "shirtlifters"                  }
+        - { word: "shit stabber"                  }
+        - { word: "shit stabbers"                 }
+        - { word: "shitstabber"                   }
+        - { word: "shitstabbers"                  }
+        - { word: "spastic"                       }
+        - { word: "spaz"                          }
+        - { word: "spaz."                         }
+        - { word: "spic"                          }
+        - { word: "spit roasting"                 }
+        - { word: "spitroast"                     }
+        - { word: "spit-roast"                    }
+        - { word: "spit-roasting"                 }
+        - { word: "spunk"                         }
+        - { word: "spunking"                      }
+        - { word: "ß0ll0çk5"                      }
+        - { word: "t w a t"                       }
+        - { word: "t wat"                         }
+        - { word: "t&nbsp;w&nbsp;a&nbsp;t"        }
+        - { word: "t&nbsp;w&nbsp;a&nbsp;t&nbsp;s" }
+        - { word: "t*w*a*t"                       }
+        - { word: "t.wat"                         }
+        - { word: "t0$$er"                        }
+        - { word: "t0sser"                        }
+        - { word: "t0ssers"                       }
+        - { word: "teabagging"                    }
+        - { word: "tea-bagging"                   }
+        - { word: "to55er"                        }
+        - { word: "to55ers"                       }
+        - { word: "tosser"                        }
+        - { word: "tossers"                       }
+        - { word: "tossurs"                       }
+        - { word: "towel head"                    }
+        - { word: "towelhead"                     }
+        - { word: "turd"                          }
+        - { word: "tvvat"                         }
+        - { word: "tvvats"                        }
+        - { word: "tw at"                         }
+        - { word: "tw&nbsp;at"                    }
+        - { word: "tw@"                           }
+        - { word: "tw@t"                          }
+        - { word: "tw@ts"                         }
+        - { word: "tw_t"                          }
+        - { word: "tw4t"                          }
+        - { word: "twa t"                         }
+        - { word: "twat"                          }
+        - { word: "twats"                         }
+        - { word: "twatt"                         }
+        - { word: "twattish"                      }
+        - { word: "twunt"                         }
+        - { word: "twunts"                        }
+        - { word: "up the gary"                   }
+        - { word: "w anker"                       }
+        - { word: "w ankers"                      }
+        - { word: "w#nker"                        }
+        - { word: "w#nkers"                       }
+        - { word: "w***er"                        }
+        - { word: "w.ank"                         }
+        - { word: "w@nk"                          }
+        - { word: "w@nker"                        }
+        - { word: "w@nkers"                       }
+        - { word: "w@nks"                         }
+        - { word: "w0g"                           }
+        - { word: "w0gs"                          }
+        - { word: "w4nker!"                       }
+        - { word: "w4nkers!"                      }
+        - { word: "wa nker"                       }
+        - { word: "wan k er"                      }
+        - { word: "wan k ers"                     }
+        - { word: "wan ker"                       }
+        - { word: "wank"                          }
+        - { word: "wanka"                         }
+        - { word: "wanke r"                       }
+        - { word: "wanked"                        }
+        - { word: "wanker"                        }
+        - { word: "wankers"                       }
+        - { word: "wanking"                       }
+        - { word: "wanks"                         }
+        - { word: "wank's"                        }
+        - { word: "wet spam"                      }
+        - { word: "whanker"                       }
+        - { word: "whankers"                      }
+        - { word: "whore"                         }
+        - { word: "wog"                           }
+        - { word: "wop"                           }
+        - { word: "xrse"                          }
+        - { word: "xrseh"                         }
+        - { word: "xrsehol"                       }
+        - { word: "xrsehole"                      }
+        - { word: "xxxhole"                       }
+        - { word: "y!ddo!"                        }
+        - { word: "y!ddo!!"                       }
+        - { word: "y*d"                           }
+        - { word: "yid"                           }
+        - { word: "yido"                          }
+        - { word: "zachariah bishop"              }
+        - { word: "arse"                          }
+        - { word: "asshole"                       }
+        - { word: "asswipe"                       }
+        - { word: "blowjob"                       }
+        - { word: "blow-job"                      }
+        - { word: "bollock"                       }
+        - { word: "boner"                         }
+        - { word: "bonk"                          }
+        - { word: "bullshit"                      }
+        - { word: "bugger"                        }
+        - { word: "bunghole"                      }
+        - { word: "candy-ass"                     }
+        - { word: "chuffnuts"                     }
+        - { word: "clit"                          }
+        - { word: "clitty"                        }
+        - { word: "cock"                          }
+        - { word: "cojones"                       }
+        - { word: "coon"                          }
+        - { word: "cum"                           }
+        - { word: "cunny"                         }
+        - { word: "cunt"                          }
+        - { word: "crap"                          }
+        - { word: "dago"                          }
+        - { word: "darkie"                        }
+        - { word: "dickhead"                      }
+        - { word: "dipstick"                      }
+        - { word: "dong"                          }
+        - { word: "dork"                          }
+        - { word: "fanny"                         }
+        - { word: "feak"                          }
+        - { word: "fecal"                         }
+        - { word: "felch"                         }
+        - { word: "fellate"                       }
+        - { word: "feltch"                        }
+        - { word: "fuck"                          }
+        - { word: "furbox"                        }
+        - { word: "furburger"                     }
+        - { word: "gayboy"                        }
+        - { word: "ginch"                         }
+        - { word: "gnikcuf"                       }
+        - { word: "hardon"                        }
+        - { word: "honkers"                       }
+        - { word: "hussy"                         }
+        - { word: "kcid"                          }
+        - { word: "kcuf"                          }
+        - { word: "lactoids"                      }
+        - { word: "lesbo"                         }
+        - { word: "lesbyterian"                   }
+        - { word: "lezzie"                        }
+        - { word: "lezzo"                         }
+        - { word: "man-root"                      }
+        - { word: "nestlecock"                    }
+        - { word: "nigger"                        }
+        - { word: "nympho"                        }
+        - { word: "onanism"                       }
+        - { word: "piss"                          }
+        - { word: "pissoff"                       }
+        - { word: "prick"                         }
+        - { word: "pussies"                       }
+        - { word: "pussy"                         }
+        - { word: "pusy"                          }
+        - { word: "puta"                          }
+        - { word: "queef"                         }
+        - { word: "queve"                         }
+        - { word: "quim"                          }
+        - { word: "quimsteak"                     }
+        - { word: "qveer"                         }
+        - { word: "rimadonna"                     }
+        - { word: "rimming"                       }
+        - { word: "rootle"                        }
+        - { word: "sappho"                        }
+        - { word: "scumbag"                       }
+        - { word: "scumber"                       }
+        - { word: "sexpot"                        }
+        - { word: "shag"                          }
+        - { word: "shagbucket"                    }
+        - { word: "shagstress"                    }
+        - { word: "shirtlifter"                   }
+        - { word: "shit"                          }
+        - { word: "snarf"                         }
+        - { word: "sodomite"                      }
+        - { word: "sodomy"                        }
+        - { word: "spic"                          }
+        - { word: "strollop"                      }
+        - { word: "suckster"                      }
+        - { word: "titties"                       }
+        - { word: "tnuc"                          }
+        - { word: "toggaf"                        }
+        - { word: "tosser"                        }
+        - { word: "tribadist"                     }
+        - { word: "turd"                          }
+        - { word: "twank"                         }
+        - { word: "twat"                          }
+        - { word: "wank"                          }
+        - { word: "whore"                         }
+        - { word: "wiseass"                       }
+        - { word: "wizzer"                        }
+        - { word: "wog"                           }

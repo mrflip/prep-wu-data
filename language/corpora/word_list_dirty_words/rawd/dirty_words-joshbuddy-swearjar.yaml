@@ -1,15 +1,18 @@
 ---
-# From http://github.com/joshbuddy/swearjar/raw/master/config/en.yml
 - dataset:
+    schema:
+      name:         "Dirty words from joshbuddy's 'swearjar' program"
+      url:          http://github.com/joshbuddy/swearjar/raw/master/config/en.yml
+      
+      credits:
+        - url:      http://github.com/joshbuddy/swearjar/raw/master/config/en.yml
+    
+      notes:
+        desc:         >-
+          from http://github.com/joshbuddy/swearjar/raw/master/config/en.yml
+  
     payload:
-      - type:       regex
-        word_list:
-          - { word: "hard on",        category: "sexual" }
-          - { word: "jerk off",       category: "sexual" }
-          - { word: "pissed off",     category: "inappropriate" }
-          - { word: "sand nigger",    category: "discriminatory" }
-      - type:       simple
-        word_list:
+      - blacklist:
           - { word: "anus",           category: "sexual" }
           - { word: "arse",           category: "insult" }
           - { word: "arsehole",       category: "insult" }
@@ -284,6 +287,7 @@
           - { word: "gringo",         category: "discriminatory" }
           - { word: "guido",          category: "discriminatory" }
           - { word: "handjob",        category: "sexual" }
+          - { word: "hard on",        category: "sexual" }
           - { word: "hardcoresex",    category: "sexual" }
           - { word: "heeb",           category: "discriminatory" }
           - { word: "hell",           category: "inappropriate" }
@@ -299,6 +303,7 @@
           - { word: "humping",        category: "sexual" }
           - { word: "jackass",        category: "insult" }
           - { word: "jap",            category: "discriminatory" }
+          - { word: "jerk off",       category: "sexual" }
           - { word: "jigaboo",        category: "discriminatory" }
           - { word: "jism",           category: "sexual" }
           - { word: "jiz",            category: "sexual" }
@@ -329,8 +334,8 @@
           - { word: "mick",           category: "discriminatory" }
           - { word: "minge",          category: "sexual" }
           - { word: "mothafuck",      category: "sexual" }
-          - { word: "mothafucka",     category: "sexual" }
           - { word: "mothafucka",     category: "insult" }
+          - { word: "mothafucka",     category: "sexual" }
           - { word: "mothafuckas",    category: "sexual" }
           - { word: "mothafuckaz",    category: "sexual" }
           - { word: "mothafucked",    category: "sexual" }
@@ -383,6 +388,7 @@
           - { word: "pising",         category: "sexual" }
           - { word: "pisof",          category: "sexual" }
           - { word: "piss",           category: "inappropriate" }
+          - { word: "pissed off",     category: "inappropriate" }
           - { word: "pissed",         category: "inappropriate" }
           - { word: "pisser",         category: "sexual" }
           - { word: "pissers",        category: "sexual" }
@@ -423,6 +429,7 @@
           - { word: "renob",          category: "sexual" }
           - { word: "rimjob",         category: "sexual" }
           - { word: "ruski",          category: "discriminatory" }
+          - { word: "sand nigger",    category: "discriminatory" }
           - { word: "sandnigger",     category: "discriminatory" }
           - { word: "schlong",        category: "sexual" }
           - { word: "scrote",         category: "sexual" }
@@ -459,8 +466,8 @@
           - { word: "skank",          category: "insult" }
           - { word: "skeet",          category: "sexual" }
           - { word: "skullfuck",      category: "sexual" }
-          - { word: "slut",           category: "sexual" }
           - { word: "slut",           category: "discriminatory" }
+          - { word: "slut",           category: "sexual" }
           - { word: "slutbag",        category: "discriminatory" }
           - { word: "sluts",          category: "sexual" }
           - { word: "smeg",           category: "inappropriate" }

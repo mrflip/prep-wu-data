@@ -1,0 +1,1184 @@
+---
+- dataset:
+    schema:
+      name:         "NFL's 1,159 Naughty Words"
+      url:          http://outsports.com/nfl/2005/0301nflshopnaughtywords.htm
+
+      credits:
+        - url:      http://outsports.com/nfl/2005/0301nflshopnaughtywords.htm
+          name:     Outsports.com
+
+      notes:
+        desc:         >-
+          [NFL's 1,159 Naughty Words](http://outsports.com/nfl/2005/0301nflshopnaughtywords.htm)
+
+          This is the list of "naughty" words not allowed on personalized
+          jerseys at the NFL Shop. They were extracted by a reader from a java
+          script list found on the NFL Shop site.
+
+          Update: Since our original article appeared in 2005, "Gay" is off the
+          list and four more (Bin Laden," "Binladen," "Gay Nazi" and "gaynazi")
+          have been added. Also, you can't buy a "Ron Mexico" jersey. After our
+          story appeared, a Tampa Bay fan from Palm Springs, Calif., was able to
+          order this "GAY USA" jersey from the NFL Shop with no problem.
+
+        usage_note: >-
+
+    payload:
+      - blacklist:
+        - { word: "420"                    }
+        - { word: "666"                    }
+        - { word: "2 on 1"                 }
+        - { word: "3rd eye"                }
+        - { word: "3rd leg"                }
+        - { word: "3rdeye"                 }
+        - { word: "3rdleg"                 }
+        - { word: "3some"                  }
+        - { word: "4 twenty"               }
+        - { word: "4twenty"                }
+        - { word: "60 nine"                }
+        - { word: "60nine"                 }
+        - { word: "a.s.s."                 }
+        - { word: "anal"                   }
+        - { word: "anal annie"             }
+        - { word: "anal sex"               }
+        - { word: "analannie"              }
+        - { word: "analsex"                }
+        - { word: "anus"                   }
+        - { word: "arse"                   }
+        - { word: "ass"                    }
+        - { word: "ass bagger"             }
+        - { word: "ass blaster"            }
+        - { word: "ass clown"              }
+        - { word: "ass cowboy"             }
+        - { word: "ass fuck"               }
+        - { word: "ass fucker"             }
+        - { word: "ass hole"               }
+        - { word: "ass holes"              }
+        - { word: "ass hore"               }
+        - { word: "ass jockey"             }
+        - { word: "ass kiss"               }
+        - { word: "ass kisser"             }
+        - { word: "ass klown"              }
+        - { word: "ass lick"               }
+        - { word: "ass licker"             }
+        - { word: "ass lover"              }
+        - { word: "ass man"                }
+        - { word: "ass monkey"             }
+        - { word: "ass munch"              }
+        - { word: "ass muncher"            }
+        - { word: "ass packer"             }
+        - { word: "ass pirate"             }
+        - { word: "ass puppies"            }
+        - { word: "ass ranger"             }
+        - { word: "ass whore"              }
+        - { word: "ass wipe"               }
+        - { word: "assbagger"              }
+        - { word: "assblaster"             }
+        - { word: "assclown"               }
+        - { word: "asscowboy"              }
+        - { word: "assfuck"                }
+        - { word: "assfucker"              }
+        - { word: "asshole"                }
+        - { word: "assholes"               }
+        - { word: "asshore"                }
+        - { word: "assjockey"              }
+        - { word: "asskiss"                }
+        - { word: "asskisser"              }
+        - { word: "assklown"               }
+        - { word: "asslick"                }
+        - { word: "asslicker"              }
+        - { word: "asslover"               }
+        - { word: "assman"                 }
+        - { word: "assmonkey"              }
+        - { word: "assmunch"               }
+        - { word: "assmuncher"             }
+        - { word: "asspacker"              }
+        - { word: "asspirate"              }
+        - { word: "asspuppies"             }
+        - { word: "assranger"              }
+        - { word: "asswhore"               }
+        - { word: "asswipe"                }
+        - { word: "athletes foot"          }
+        - { word: "athletesfoot"           }
+        - { word: "axing the weasel"       }
+        - { word: "b hard"                 }
+        - { word: "back door"              }
+        - { word: "back door man"          }
+        - { word: "backdoor"               }
+        - { word: "backdoorman"            }
+        - { word: "backseat"               }
+        - { word: "bad ass"                }
+        - { word: "bad fuck"               }
+        - { word: "badfuck"                }
+        - { word: "ball licker"            }
+        - { word: "ball sack"              }
+        - { word: "balllicker"             }
+        - { word: "balls"                  }
+        - { word: "ballsack"               }
+        - { word: "banging"                }
+        - { word: "barely legal"           }
+        - { word: "barelylegal"            }
+        - { word: "barf"                   }
+        - { word: "barf face"              }
+        - { word: "barface"                }
+        - { word: "barfface"               }
+        - { word: "bastard"                }
+        - { word: "bazongas"               }
+        - { word: "bazooms"                }
+        - { word: "beastality"             }
+        - { word: "beastiality"            }
+        - { word: "beat off"               }
+        - { word: "beat your meat"         }
+        - { word: "beatoff"                }
+        - { word: "beat-off"               }
+        - { word: "beatyourmeat"           }
+        - { word: "bi"                     }
+        - { word: "bi sexual"              }
+        - { word: "biatch"                 }
+        - { word: "big ass"                }
+        - { word: "big bitch"              }
+        - { word: "big bitch"              }
+        - { word: "big butt"               }
+        - { word: "bigass"                 }
+        - { word: "bigbastard"             }
+        - { word: "bigbutt"                }
+        - { word: "bisexual"               }
+        - { word: "bi-sexual"              }
+        - { word: "bitch"                  }
+        - { word: "bitches"                }
+        - { word: "bitchin"                }
+        - { word: "bitchy"                 }
+        - { word: "bite me"                }
+        - { word: "biteme"                 }
+        - { word: "black out"              }
+        - { word: "blackout"               }
+        - { word: "blow job"               }
+        - { word: "blowjob"                }
+        - { word: "bm"                     }
+        - { word: "boner"                  }
+        - { word: "bong"                   }
+        - { word: "boobies"                }
+        - { word: "boobs"                  }
+        - { word: "boody"                  }
+        - { word: "breast"                 }
+        - { word: "breast job"             }
+        - { word: "breast lover"           }
+        - { word: "breast man"             }
+        - { word: "breastjob"              }
+        - { word: "breastlover"            }
+        - { word: "breastman"              }
+        - { word: "budweiser"              }
+        - { word: "bull crap"              }
+        - { word: "bull dike"              }
+        - { word: "bull dyke"              }
+        - { word: "bull shit"              }
+        - { word: "bullcrap"               }
+        - { word: "bulldike"               }
+        - { word: "bulldyke"               }
+        - { word: "bullshit"               }
+        - { word: "bumble fuck"            }
+        - { word: "bumblefuck"             }
+        - { word: "bumfuck"                }
+        - { word: "bunghole"               }
+        - { word: "butch babes"            }
+        - { word: "butch dike"             }
+        - { word: "butch dyke"             }
+        - { word: "butchbabes"             }
+        - { word: "butchdike"              }
+        - { word: "butchdyke"              }
+        - { word: "butt bang"              }
+        - { word: "butt fuck"              }
+        - { word: "butt fucker"            }
+        - { word: "butt fuckers"           }
+        - { word: "butt head"              }
+        - { word: "butt man"               }
+        - { word: "butt plug"              }
+        - { word: "butt stain"             }
+        - { word: "buttbang"               }
+        - { word: "butt-bang"              }
+        - { word: "buttface"               }
+        - { word: "buttfuck"               }
+        - { word: "butt-fuck"              }
+        - { word: "buttfucker"             }
+        - { word: "butt-fucker"            }
+        - { word: "buttfuckers"            }
+        - { word: "butt-fuckers"           }
+        - { word: "butthead"               }
+        - { word: "buttman"                }
+        - { word: "buttpirate"             }
+        - { word: "buttplug"               }
+        - { word: "buttstain"              }
+        - { word: "camel toe"              }
+        - { word: "cameltoe"               }
+        - { word: "carpet muncher"         }
+        - { word: "carpetmuncher"          }
+        - { word: "carruth"                }
+        - { word: "cherry popper"          }
+        - { word: "cherrypopper"           }
+        - { word: "chick slick"            }
+        - { word: "chickslick"             }
+        - { word: "clam digger"            }
+        - { word: "clam diver"             }
+        - { word: "clamdigger"             }
+        - { word: "clamdiver"              }
+        - { word: "clit"                   }
+        - { word: "clitoris"               }
+        - { word: "cock"                   }
+        - { word: "cock block"             }
+        - { word: "cock blocker"           }
+        - { word: "cock cowboy"            }
+        - { word: "cock fight"             }
+        - { word: "cock knob"              }
+        - { word: "cock licker"            }
+        - { word: "cock lover"             }
+        - { word: "cock nob"               }
+        - { word: "cock queen"             }
+        - { word: "cock rider"             }
+        - { word: "cock smith"             }
+        - { word: "cock sucker"            }
+        - { word: "cock tail"              }
+        - { word: "cock tease"             }
+        - { word: "cockblock"              }
+        - { word: "cockblocker"            }
+        - { word: "cockcowboy"             }
+        - { word: "cockfight"              }
+        - { word: "cockhead"               }
+        - { word: "cockknob"               }
+        - { word: "cocklicker"             }
+        - { word: "cocklover"              }
+        - { word: "cocknob"                }
+        - { word: "cockqueen"              }
+        - { word: "cockrider"              }
+        - { word: "cocks man"              }
+        - { word: "cocksman"               }
+        - { word: "cocksmith"              }
+        - { word: "cocksucer"              }
+        - { word: "cocksucker"             }
+        - { word: "cocktail"               }
+        - { word: "cocktease"              }
+        - { word: "cocky"                  }
+        - { word: "condom"                 }
+        - { word: "copulate"               }
+        - { word: "corn hole"              }
+        - { word: "cornhole"               }
+        - { word: "crabs"                  }
+        - { word: "crack"                  }
+        - { word: "crack pipe"             }
+        - { word: "crack whore"            }
+        - { word: "crackpipe"              }
+        - { word: "crackwhore"             }
+        - { word: "crack-whore"            }
+        - { word: "crap"                   }
+        - { word: "crappy"                 }
+        - { word: "creamy"                 }
+        - { word: "crotch"                 }
+        - { word: "crotch jockey"          }
+        - { word: "crotch monkey"          }
+        - { word: "crotch rot"             }
+        - { word: "crotchjockey"           }
+        - { word: "crotchmonkey"           }
+        - { word: "crotchrot"              }
+        - { word: "cum"                    }
+        - { word: "cum bubble"             }
+        - { word: "cum fest"               }
+        - { word: "cum jockey"             }
+        - { word: "cum quat"               }
+        - { word: "cum queen"              }
+        - { word: "cum shot"               }
+        - { word: "cumbubble"              }
+        - { word: "cumfest"                }
+        - { word: "cumjockey"              }
+        - { word: "cumm"                   }
+        - { word: "cumming"                }
+        - { word: "cumquat"                }
+        - { word: "cumqueen"               }
+        - { word: "cumshot"                }
+        - { word: "cunnilingus"            }
+        - { word: "cunt"                   }
+        - { word: "cunt fuck"              }
+        - { word: "cunt fucker"            }
+        - { word: "cunt licker"            }
+        - { word: "cuntfuck"               }
+        - { word: "cuntfucker"             }
+        - { word: "cuntlicker"             }
+        - { word: "cyber sex"              }
+        - { word: "cyber slimer"           }
+        - { word: "cybersex"               }
+        - { word: "cyberslimer"            }
+        - { word: "dahmer"                 }
+        - { word: "damn"                   }
+        - { word: "damn it"                }
+        - { word: "damnit"                 }
+        - { word: "datnigga"               }
+        - { word: "dd"                     }
+        - { word: "deap throat"            }
+        - { word: "deaper"                 }
+        - { word: "deapthroat"             }
+        - { word: "deep throat"            }
+        - { word: "deeper"                 }
+        - { word: "deepthroat"             }
+        - { word: "defecate"               }
+        - { word: "deposit"                }
+        - { word: "devil"                  }
+        - { word: "dick brain"             }
+        - { word: "dick fart"              }
+        - { word: "dick for brains"        }
+        - { word: "dick head"              }
+        - { word: "dick lick"              }
+        - { word: "dick licker"            }
+        - { word: "dick likcer"            }
+        - { word: "dick wad"               }
+        - { word: "dick weed"              }
+        - { word: "dickbrain"              }
+        - { word: "dickforbrains"          }
+        - { word: "dickhead"               }
+        - { word: "dickless"               }
+        - { word: "dicklick"               }
+        - { word: "dicklicker"             }
+        - { word: "dickman"                }
+        - { word: "dickwad"                }
+        - { word: "dickweed"               }
+        - { word: "dike"                   }
+        - { word: "dildo"                  }
+        - { word: "dip stick"              }
+        - { word: "dipstick"               }
+        - { word: "dirty ho"               }
+        - { word: "dix"                    }
+        - { word: "dixie dike"             }
+        - { word: "dixie dyke"             }
+        - { word: "dixiedike"              }
+        - { word: "dixiedyke"              }
+        - { word: "do me"                  }
+        - { word: "doggie style"           }
+        - { word: "doggiestyle"            }
+        - { word: "doggy stlye"            }
+        - { word: "doggystyle"             }
+        - { word: "dome"                   }
+        - { word: "dong"                   }
+        - { word: "dope"                   }
+        - { word: "double d"               }
+        - { word: "doubled"                }
+        - { word: "drag queen"             }
+        - { word: "dragqueen"              }
+        - { word: "dragqween"              }
+        - { word: "dre"                    }
+        - { word: "drip dick"              }
+        - { word: "dripdick"               }
+        - { word: "drunk"                  }
+        - { word: "drunken"                }
+        - { word: "dumb ass"               }
+        - { word: "dumb bitch"             }
+        - { word: "dumb fuck"              }
+        - { word: "dumbass"                }
+        - { word: "dumbbitch"              }
+        - { word: "dumbfuck"               }
+        - { word: "easy slut"              }
+        - { word: "easyslut"               }
+        - { word: "eat me"                 }
+        - { word: "eat pussy"              }
+        - { word: "eatballs"               }
+        - { word: "eatme"                  }
+        - { word: "eatpussy"               }
+        - { word: "ejaculate"              }
+        - { word: "erection"               }
+        - { word: "evl"                    }
+        - { word: "excrement"              }
+        - { word: "f toyota"               }
+        - { word: "f.i.n.e."               }
+        - { word: "f.u.c.k."               }
+        - { word: "face fucker"            }
+        - { word: "facefucker"             }
+        - { word: "faggot"                 }
+        - { word: "fagot"                  }
+        - { word: "fairy"                  }
+        - { word: "fanny fucker"           }
+        - { word: "fannyfucker"            }
+        - { word: "fart"                   }
+        - { word: "fast fuck"              }
+        - { word: "fastfuck"               }
+        - { word: "fat ass"                }
+        - { word: "fat fuck"               }
+        - { word: "fat fucker"             }
+        - { word: "fatass"                 }
+        - { word: "fatfuck"                }
+        - { word: "fatfucker"              }
+        - { word: "fatso"                  }
+        - { word: "fellatio"               }
+        - { word: "femme"                  }
+        - { word: "finger food"            }
+        - { word: "finger fuck"            }
+        - { word: "finger fucker"          }
+        - { word: "fingerfood"             }
+        - { word: "fingerfuck"             }
+        - { word: "fingerfucker"           }
+        - { word: "fist fuck"              }
+        - { word: "fist fucker"            }
+        - { word: "fistfuck"               }
+        - { word: "fistfucker"             }
+        - { word: "fisting"                }
+        - { word: "flasher"                }
+        - { word: "flatulence"             }
+        - { word: "floggin the dolphin"    }
+        - { word: "fondle"                 }
+        - { word: "foot fuck"              }
+        - { word: "foot fucker"            }
+        - { word: "foot licker"            }
+        - { word: "footaction"             }
+        - { word: "footfuck"               }
+        - { word: "footfucker"             }
+        - { word: "footlicker"             }
+        - { word: "footstar"               }
+        - { word: "fore skin"              }
+        - { word: "foreskin"               }
+        - { word: "fornicate"              }
+        - { word: "four 20"                }
+        - { word: "four twenty"            }
+        - { word: "four20"                 }
+        - { word: "fourtwenty"             }
+        - { word: "freak fuck"             }
+        - { word: "freakfuck"              }
+        - { word: "freaky fucker"          }
+        - { word: "freakyfucker"           }
+        - { word: "free 4 all"             }
+        - { word: "free for all"           }
+        - { word: "free fuck"              }
+        - { word: "free4all"               }
+        - { word: "freeforall"             }
+        - { word: "freefuck"               }
+        - { word: "fuck"                   }
+        - { word: "fuck bag"               }
+        - { word: "fuck buddy"             }
+        - { word: "fuck face"              }
+        - { word: "fuck fest"              }
+        - { word: "fuck freak"             }
+        - { word: "fuck friend"            }
+        - { word: "fuck head"              }
+        - { word: "fuck her"               }
+        - { word: "fuck it"                }
+        - { word: "fuck knob"              }
+        - { word: "fuck me"                }
+        - { word: "fuck me hard"           }
+        - { word: "fuck monkey"            }
+        - { word: "fuck off"               }
+        - { word: "fuck pig"               }
+        - { word: "fuck them"              }
+        - { word: "fuck whore"             }
+        - { word: "fuck you"               }
+        - { word: "fucka"                  }
+        - { word: "fuckable"               }
+        - { word: "fuckbag"                }
+        - { word: "fuckbuddy"              }
+        - { word: "fucked"                 }
+        - { word: "fucked up"              }
+        - { word: "fuckedup"               }
+        - { word: "fucker"                 }
+        - { word: "fuckers"                }
+        - { word: "fuckface"               }
+        - { word: "fuckfest"               }
+        - { word: "fuckfreak"              }
+        - { word: "fuckfriend"             }
+        - { word: "fuckhead"               }
+        - { word: "fuckher"                }
+        - { word: "fuckin"                 }
+        - { word: "fuckin a"               }
+        - { word: "fuckin nuts"            }
+        - { word: "fuckin right"           }
+        - { word: "fuckina"                }
+        - { word: "fucking"                }
+        - { word: "fucking a"              }
+        - { word: "fucking bitch"          }
+        - { word: "fucking nuts"           }
+        - { word: "fuckingbitch"           }
+        - { word: "fuckinnuts"             }
+        - { word: "fuckinright"            }
+        - { word: "fuckit"                 }
+        - { word: "fuckknob"               }
+        - { word: "fuckme"                 }
+        - { word: "fuckmehard"             }
+        - { word: "fuckmonkey"             }
+        - { word: "fuckoff"                }
+        - { word: "fuckpig"                }
+        - { word: "fuckwhore"              }
+        - { word: "fuckyou"                }
+        - { word: "fudge pakcers"          }
+        - { word: "fun fuck"               }
+        - { word: "funfuck"                }
+        - { word: "fuuck"                  }
+        - { word: "g unit"                 }
+        - { word: "gang bang"              }
+        - { word: "gang banger"            }
+        - { word: "gangbang"               }
+        - { word: "gangbanger"             }
+        - { word: "gay"                    }
+        - { word: "gay ass"                }
+        - { word: "gay mutha fuckin queer" }
+        - { word: "gay pride"              }
+        - { word: "gaymuthafuckinwhore"    }
+        - { word: "genital"                }
+        - { word: "get it on"              }
+        - { word: "getiton"                }
+        - { word: "giehn"                  }
+        - { word: "give head"              }
+        - { word: "givehead"               }
+        - { word: "glazed donut"           }
+        - { word: "glazeddonut"            }
+        - { word: "go me"                  }
+        - { word: "go to hell"             }
+        - { word: "god"                    }
+        - { word: "god damed mutha fucka"  }
+        - { word: "god damit"              }
+        - { word: "god damn"               }
+        - { word: "god damned"             }
+        - { word: "god manit"              }
+        - { word: "goddamit"               }
+        - { word: "goddamn"                }
+        - { word: "goddamned"              }
+        - { word: "goddamnes"              }
+        - { word: "goddamnit"              }
+        - { word: "goddamnmuthafucker"     }
+        - { word: "gonorrehea"             }
+        - { word: "gonzagas"               }
+        - { word: "gook"                   }
+        - { word: "got jesus"              }
+        - { word: "got2haveit"             }
+        - { word: "gotohell"               }
+        - { word: "g-unit"                 }
+        - { word: "hand job"               }
+        - { word: "handjob"                }
+        - { word: "hard on"                }
+        - { word: "harder"                 }
+        - { word: "hardon"                 }
+        - { word: "harem"                  }
+        - { word: "he hate me"             }
+        - { word: "head fuck"              }
+        - { word: "head lights"            }
+        - { word: "headfuck"               }
+        - { word: "headlights"             }
+        - { word: "hehateme"               }
+        - { word: "hell"                   }
+        - { word: "hell no"                }
+        - { word: "hell yes"               }
+        - { word: "hellno"                 }
+        - { word: "hellyes"                }
+        - { word: "hen house"              }
+        - { word: "henhouse"               }
+        - { word: "herpes"                 }
+        - { word: "hershey hi way"         }
+        - { word: "hersheyhighway"         }
+        - { word: "hersheyhiway"           }
+        - { word: "hershy high way"        }
+        - { word: "ho"                     }
+        - { word: "ho mo"                  }
+        - { word: "hobo"                   }
+        - { word: "hole"                   }
+        - { word: "hole stuffer"           }
+        - { word: "holestuffer"            }
+        - { word: "homo"                   }
+        - { word: "homo bangers"           }
+        - { word: "homo sexual"            }
+        - { word: "homobangers"            }
+        - { word: "homosexual"             }
+        - { word: "honkers"                }
+        - { word: "honkey"                 }
+        - { word: "hooker"                 }
+        - { word: "hookers"                }
+        - { word: "hooters"                }
+        - { word: "hore"                   }
+        - { word: "horney"                 }
+        - { word: "horny"                  }
+        - { word: "horseshit"              }
+        - { word: "hose job"               }
+        - { word: "hosejob"                }
+        - { word: "hoser"                  }
+        - { word: "hostage"                }
+        - { word: "hot damn"               }
+        - { word: "hot pussy"              }
+        - { word: "hot to trot"            }
+        - { word: "hot2trot"               }
+        - { word: "hotdamn"                }
+        - { word: "hotpussy"               }
+        - { word: "hottotrot"              }
+        - { word: "hussy"                  }
+        - { word: "hustler"                }
+        - { word: "i love beer"            }
+        - { word: "i luv beer"             }
+        - { word: "id ten t"               }
+        - { word: "id10t"                  }
+        - { word: "idiot"                  }
+        - { word: "idoit"                  }
+        - { word: "in the ass"             }
+        - { word: "in the buff"            }
+        - { word: "ingin"                  }
+        - { word: "insest"                 }
+        - { word: "inter course"           }
+        - { word: "inter racial"           }
+        - { word: "intercourse"            }
+        - { word: "interracial"            }
+        - { word: "intheass"               }
+        - { word: "inthebuff"              }
+        - { word: "jack the ripper"        }
+        - { word: "jackass"                }
+        - { word: "jackoff"                }
+        - { word: "jacktheripper"          }
+        - { word: "jap"                    }
+        - { word: "jap crap"               }
+        - { word: "japcrap"                }
+        - { word: "jerk off"               }
+        - { word: "jerkoff"                }
+        - { word: "jesus chirst"           }
+        - { word: "jesuschrist"            }
+        - { word: "jism"                   }
+        - { word: "jiz"                    }
+        - { word: "jiz juice"              }
+        - { word: "jizim"                  }
+        - { word: "jizjuice"               }
+        - { word: "jizz"                   }
+        - { word: "jizzim"                 }
+        - { word: "joint"                  }
+        - { word: "juggalo"                }
+        - { word: "jugs"                   }
+        - { word: "k mart"                 }
+        - { word: "kill"                   }
+        - { word: "killer"                 }
+        - { word: "killing"                }
+        - { word: "kiss ass"               }
+        - { word: "kissass"                }
+        - { word: "kkk"                    }
+        - { word: "kmart"                  }
+        - { word: "knockers"               }
+        - { word: "koon"                   }
+        - { word: "kotex"                  }
+        - { word: "krap"                   }
+        - { word: "krappy"                 }
+        - { word: "kum"                    }
+        - { word: "kum bubble"             }
+        - { word: "kum quat"               }
+        - { word: "kumbubble"              }
+        - { word: "kumbullbe"              }
+        - { word: "kumquat"                }
+        - { word: "kunt"                   }
+        - { word: "ky"                     }
+        - { word: "ky jelly"               }
+        - { word: "lactate"                }
+        - { word: "lady boog"              }
+        - { word: "laid"                   }
+        - { word: "lap dance"              }
+        - { word: "lapdance"               }
+        - { word: "lesbain"                }
+        - { word: "lesbayn"                }
+        - { word: "lesbian"                }
+        - { word: "lesbin"                 }
+        - { word: "lesbo"                  }
+        - { word: "lez"                    }
+        - { word: "lez be"                 }
+        - { word: "lez be friends"         }
+        - { word: "lezbe"                  }
+        - { word: "lezbefriends"           }
+        - { word: "lezbo"                  }
+        - { word: "lezz"                   }
+        - { word: "lezzo"                  }
+        - { word: "lick me"                }
+        - { word: "licker"                 }
+        - { word: "lickme"                 }
+        - { word: "limp dick"              }
+        - { word: "limpdick"               }
+        - { word: "limy"                   }
+        - { word: "live sex"               }
+        - { word: "livesex"                }
+        - { word: "ll"                     }
+        - { word: "loaded gun"             }
+        - { word: "loadedgun"              }
+        - { word: "lolita"                 }
+        - { word: "looser"                 }
+        - { word: "lotion"                 }
+        - { word: "love bone"              }
+        - { word: "love goo"               }
+        - { word: "love gun"               }
+        - { word: "love juice"             }
+        - { word: "love muscle"            }
+        - { word: "love pistol"            }
+        - { word: "love rocket"            }
+        - { word: "lovebone"               }
+        - { word: "lovegoo"                }
+        - { word: "lovegun"                }
+        - { word: "lovejuice"              }
+        - { word: "lovemuscle"             }
+        - { word: "lovepistol"             }
+        - { word: "loverocket"             }
+        - { word: "low life"               }
+        - { word: "lowlife"                }
+        - { word: "lube job"               }
+        - { word: "lubejob"                }
+        - { word: "lucky camel toe"        }
+        - { word: "luckycammeltoe"         }
+        - { word: "magic wand"             }
+        - { word: "magicwand"              }
+        - { word: "mams"                   }
+        - { word: "man hater"              }
+        - { word: "man paste"              }
+        - { word: "manhater"               }
+        - { word: "manpaste"               }
+        - { word: "mary jane"              }
+        - { word: "maryjane"               }
+        - { word: "mastabate"              }
+        - { word: "mastabater"             }
+        - { word: "master blaster"         }
+        - { word: "masterbate"             }
+        - { word: "masterblaster"          }
+        - { word: "mastrabator"            }
+        - { word: "mattress princess"      }
+        - { word: "mattressprincess"       }
+        - { word: "meat beatter"           }
+        - { word: "meatbeatter"            }
+        - { word: "molest"                 }
+        - { word: "molester"               }
+        - { word: "molestor"               }
+        - { word: "money shot"             }
+        - { word: "moneyshot"              }
+        - { word: "mother fucker"          }
+        - { word: "mother love bone"       }
+        - { word: "motherfuck"             }
+        - { word: "motherfucker"           }
+        - { word: "motherlovebone"         }
+        - { word: "muff"                   }
+        - { word: "muff dive"              }
+        - { word: "muff diver"             }
+        - { word: "muff licker"            }
+        - { word: "muffdive"               }
+        - { word: "muffdiver"              }
+        - { word: "muffin diver"           }
+        - { word: "muffindiver"            }
+        - { word: "mufflikcer"             }
+        - { word: "murder"                 }
+        - { word: "mutha fucker"           }
+        - { word: "naked"                  }
+        - { word: "nasty bitch"            }
+        - { word: "nasty ho"               }
+        - { word: "nasty slut"             }
+        - { word: "nasty whore"            }
+        - { word: "nastybitch"             }
+        - { word: "nastyho"                }
+        - { word: "nastyslut"              }
+        - { word: "nastywhore"             }
+        - { word: "neon deon"              }
+        - { word: "nig"                    }
+        - { word: "niger"                  }
+        - { word: "nigga"                  }
+        - { word: "nigger"                 }
+        - { word: "nipple"                 }
+        - { word: "nipple ring"            }
+        - { word: "nipplering"             }
+        - { word: "nit tit"                }
+        - { word: "nittit"                 }
+        - { word: "no fucking way"         }
+        - { word: "no sex"                 }
+        - { word: "nofuckingway"           }
+        - { word: "nookie"                 }
+        - { word: "nooner"                 }
+        - { word: "nude"                   }
+        - { word: "nut fucker"             }
+        - { word: "nutfucker"              }
+        - { word: "oicu812"                }
+        - { word: "on the rag"             }
+        - { word: "ontherag"               }
+        - { word: "orgasm"                 }
+        - { word: "orgy"                   }
+        - { word: "ou812"                  }
+        - { word: "oui"                    }
+        - { word: "p i m p"                }
+        - { word: "pearl necklace"         }
+        - { word: "pearlnecklace"          }
+        - { word: "pecker"                 }
+        - { word: "pee"                    }
+        - { word: "peep show"              }
+        - { word: "peepshow"               }
+        - { word: "peepshpw"               }
+        - { word: "penetration"            }
+        - { word: "penis"                  }
+        - { word: "penthouse"              }
+        - { word: "period"                 }
+        - { word: "phque"                  }
+        - { word: "pimp"                   }
+        - { word: "pimp simp"              }
+        - { word: "pimped"                 }
+        - { word: "pimper"                 }
+        - { word: "pimpjuic"               }
+        - { word: "pimpjuice"              }
+        - { word: "pimpsimp"               }
+        - { word: "piss"                   }
+        - { word: "piss head"              }
+        - { word: "pissed"                 }
+        - { word: "pisser"                 }
+        - { word: "pisshead"               }
+        - { word: "play boy"               }
+        - { word: "play girl"              }
+        - { word: "playboy"                }
+        - { word: "playgirl"               }
+        - { word: "pocket pool"            }
+        - { word: "pocketpool"             }
+        - { word: "polack"                 }
+        - { word: "poon tang"              }
+        - { word: "poontang"               }
+        - { word: "poop"                   }
+        - { word: "pooper"                 }
+        - { word: "poor white trash"       }
+        - { word: "poorwhitetrash"         }
+        - { word: "popimp"                 }
+        - { word: "porch monkey"           }
+        - { word: "porchmonkey"            }
+        - { word: "porn"                   }
+        - { word: "porn flick"             }
+        - { word: "porn king"              }
+        - { word: "porn princess"          }
+        - { word: "pornflick"              }
+        - { word: "pornking"               }
+        - { word: "porno"                  }
+        - { word: "pornprincess"           }
+        - { word: "pot"                    }
+        - { word: "premature"              }
+        - { word: "prick"                  }
+        - { word: "prick head"             }
+        - { word: "prickhead"              }
+        - { word: "primetime"              }
+        - { word: "prostitute"             }
+        - { word: "pubic"                  }
+        - { word: "pubic lice"             }
+        - { word: "pubiclice"              }
+        - { word: "pud"                    }
+        - { word: "pud boy"                }
+        - { word: "pudboy"                 }
+        - { word: "pudd"                   }
+        - { word: "pudd boy"               }
+        - { word: "puddboy"                }
+        - { word: "pun tang"               }
+        - { word: "puntang"                }
+        - { word: "purina princess"        }
+        - { word: "purinapricness"         }
+        - { word: "pussy"                  }
+        - { word: "pussy cat"              }
+        - { word: "pussy eater"            }
+        - { word: "pussy fucker"           }
+        - { word: "pussy licker"           }
+        - { word: "pussy lips"             }
+        - { word: "pussy lover"            }
+        - { word: "pussy pounder"          }
+        - { word: "pussycat"               }
+        - { word: "pussyeater"             }
+        - { word: "pussyfucker"            }
+        - { word: "pussylicker"            }
+        - { word: "pussylips"              }
+        - { word: "pussylover"             }
+        - { word: "pussypounder"           }
+        - { word: "putt pirate"            }
+        - { word: "pwt"                    }
+        - { word: "queef"                  }
+        - { word: "queer"                  }
+        - { word: "quickie"                }
+        - { word: "rae carruth"            }
+        - { word: "rape"                   }
+        - { word: "rapist"                 }
+        - { word: "rear end"               }
+        - { word: "rear entry"             }
+        - { word: "rearend"                }
+        - { word: "rearentry"              }
+        - { word: "rectum"                 }
+        - { word: "red light"              }
+        - { word: "redlight"               }
+        - { word: "reefer"                 }
+        - { word: "rent a fuck"            }
+        - { word: "rentafuck"              }
+        - { word: "retard"                 }
+        - { word: "retarded"               }
+        - { word: "ribbed"                 }
+        - { word: "rim job"                }
+        - { word: "rimjob"                 }
+        - { word: "roach"                  }
+        - { word: "robber"                 }
+        - { word: "s and m"                }
+        - { word: "s&m"                    }
+        - { word: "samckdaddy"             }
+        - { word: "sandm"                  }
+        - { word: "satan"                  }
+        - { word: "schlong"                }
+        - { word: "screw"                  }
+        - { word: "screw you"              }
+        - { word: "screwyou"               }
+        - { word: "scrotum"                }
+        - { word: "semen"                  }
+        - { word: "sex"                    }
+        - { word: "sex farm"               }
+        - { word: "sex hound"              }
+        - { word: "sex house"              }
+        - { word: "sex kitten"             }
+        - { word: "sex pot"                }
+        - { word: "sex slave"              }
+        - { word: "sex to go"              }
+        - { word: "sex toy"                }
+        - { word: "sex toys"               }
+        - { word: "sex whore"              }
+        - { word: "sexfarm"                }
+        - { word: "sexhound"               }
+        - { word: "sexhouse"               }
+        - { word: "sexkitten"              }
+        - { word: "sexpot"                 }
+        - { word: "sexslave"               }
+        - { word: "sextogo"                }
+        - { word: "sextoy"                 }
+        - { word: "sextoys"                }
+        - { word: "sexual"                 }
+        - { word: "sexwhore"               }
+        - { word: "sexy"                   }
+        - { word: "sexy biatch"            }
+        - { word: "sexy bitch"             }
+        - { word: "sexy moma"              }
+        - { word: "sexy slim"              }
+        - { word: "sexymoma"               }
+        - { word: "sexy-slim"              }
+        - { word: "shag"                   }
+        - { word: "shaggin"                }
+        - { word: "shagging"               }
+        - { word: "shawtypimp"             }
+        - { word: "shit"                   }
+        - { word: "shit dick"              }
+        - { word: "shit eater"             }
+        - { word: "shit face"              }
+        - { word: "shit for brains"        }
+        - { word: "shit fuck"              }
+        - { word: "shit fucker"            }
+        - { word: "shit happens"           }
+        - { word: "shit head"              }
+        - { word: "shit out of luck"       }
+        - { word: "shit stain"             }
+        - { word: "shit4brains"            }
+        - { word: "shitdick"               }
+        - { word: "shiteater"              }
+        - { word: "shitface"               }
+        - { word: "shitforbrains"          }
+        - { word: "shitfuck"               }
+        - { word: "shitfucker"             }
+        - { word: "shithapens"             }
+        - { word: "shithappens"            }
+        - { word: "shithead"               }
+        - { word: "shitoutofluck"          }
+        - { word: "shits"                  }
+        - { word: "shitstain"              }
+        - { word: "shitter"                }
+        - { word: "shitting"               }
+        - { word: "shitty"                 }
+        - { word: "short fuck"             }
+        - { word: "shortfuck"              }
+        - { word: "showtime"               }
+        - { word: "six six six"            }
+        - { word: "sixsixsix"              }
+        - { word: "sixty 9"                }
+        - { word: "sixty nine"             }
+        - { word: "sixty9"                 }
+        - { word: "sixtynine"              }
+        - { word: "skank"                  }
+        - { word: "skank bitch"            }
+        - { word: "skank fuck"             }
+        - { word: "skank whore"            }
+        - { word: "skankbitch"             }
+        - { word: "skankfuck"              }
+        - { word: "skankwhore"             }
+        - { word: "skanky bitch"           }
+        - { word: "skanky whore"           }
+        - { word: "skankybitch"            }
+        - { word: "skankywhore"            }
+        - { word: "skin flute"             }
+        - { word: "skinflute"              }
+        - { word: "skum"                   }
+        - { word: "skum bag"               }
+        - { word: "skumbag"                }
+        - { word: "slant"                  }
+        - { word: "slant eye"              }
+        - { word: "slanteye"               }
+        - { word: "slave"                  }
+        - { word: "slave driver"           }
+        - { word: "slavedriver"            }
+        - { word: "sleeze bag"             }
+        - { word: "sleeze ball"            }
+        - { word: "sleezebag"              }
+        - { word: "sleezeball"             }
+        - { word: "slide it in"            }
+        - { word: "slideitin"              }
+        - { word: "slime"                  }
+        - { word: "slime ball"             }
+        - { word: "slime bucket"           }
+        - { word: "slimeball"              }
+        - { word: "slimebucket"            }
+        - { word: "slut"                   }
+        - { word: "slut wear"              }
+        - { word: "slut whore"             }
+        - { word: "sluts"                  }
+        - { word: "slutt"                  }
+        - { word: "slutting"               }
+        - { word: "slutty"                 }
+        - { word: "slutwear"               }
+        - { word: "slutwhore"              }
+        - { word: "smack daddy"            }
+        - { word: "smack the monkey"       }
+        - { word: "smackthemonkey"         }
+        - { word: "smagma"                 }
+        - { word: "smart ass"              }
+        - { word: "snatch"                 }
+        - { word: "snatch patch"           }
+        - { word: "snatchpatch"            }
+        - { word: "sniper"                 }
+        - { word: "snot"                   }
+        - { word: "sob"                    }
+        - { word: "sodomite"               }
+        - { word: "sodomy"                 }
+        - { word: "son of a bitch"         }
+        - { word: "sonofabitch"            }
+        - { word: "sonofbitch"             }
+        - { word: "spank the monkey"       }
+        - { word: "spankthemonkey"         }
+        - { word: "sperm"                  }
+        - { word: "sperm bag"              }
+        - { word: "sperm hearder"          }
+        - { word: "sperm herder"           }
+        - { word: "spermacide"             }
+        - { word: "spermbag"               }
+        - { word: "spermhearder"           }
+        - { word: "spermherder"            }
+        - { word: "spic"                   }
+        - { word: "spick"                  }
+        - { word: "spit"                   }
+        - { word: "spitter"                }
+        - { word: "split tail"             }
+        - { word: "split tial"             }
+        - { word: "splittail"              }
+        - { word: "stagg"                  }
+        - { word: "strap on"               }
+        - { word: "strapon"                }
+        - { word: "stringer"               }
+        - { word: "strip club"             }
+        - { word: "stripclub"              }
+        - { word: "stroke"                 }
+        - { word: "stroking"               }
+        - { word: "stupid"                 }
+        - { word: "stupid fuck"            }
+        - { word: "stupid fucker"          }
+        - { word: "stupidfuck"             }
+        - { word: "stupidfucker"           }
+        - { word: "suck"                   }
+        - { word: "suck dick"              }
+        - { word: "suck me"                }
+        - { word: "suck my ass"            }
+        - { word: "suck my dick"           }
+        - { word: "suck my tit"            }
+        - { word: "suck off"               }
+        - { word: "suckdick"               }
+        - { word: "sucker"                 }
+        - { word: "suckme"                 }
+        - { word: "suckmyass"              }
+        - { word: "suckmydick"             }
+        - { word: "suckmytit"              }
+        - { word: "suckoff"                }
+        - { word: "suicide"                }
+        - { word: "swallow"                }
+        - { word: "swallower"              }
+        - { word: "swalow"                 }
+        - { word: "sweetness"              }
+        - { word: "swign dixx"             }
+        - { word: "swing dixx"             }
+        - { word: "swingin dixx"           }
+        - { word: "swinging dicks"         }
+        - { word: "syphilis"               }
+        - { word: "tampon"                 }
+        - { word: "tang"                   }
+        - { word: "testicle"               }
+        - { word: "testicles"              }
+        - { word: "third eye"              }
+        - { word: "third leg"              }
+        - { word: "thirdeye"               }
+        - { word: "thirdleg"               }
+        - { word: "three some"             }
+        - { word: "threesome"              }
+        - { word: "tit"                    }
+        - { word: "tit bit nipply"         }
+        - { word: "tit fuck"               }
+        - { word: "tit fucker"             }
+        - { word: "tit fuckin"             }
+        - { word: "tit job"                }
+        - { word: "tit licker"             }
+        - { word: "tit lover"              }
+        - { word: "titbitnipply"           }
+        - { word: "titfuck"                }
+        - { word: "titfucker"              }
+        - { word: "titfuckin"              }
+        - { word: "titjob"                 }
+        - { word: "titlicker"              }
+        - { word: "titlover"               }
+        - { word: "tits"                   }
+        - { word: "titties"                }
+        - { word: "titty"                  }
+        - { word: "toilet"                 }
+        - { word: "toilet bowl"            }
+        - { word: "tongethruster"          }
+        - { word: "tongue"                 }
+        - { word: "tongue thruster"        }
+        - { word: "tongue tramp"           }
+        - { word: "tonguethrust"           }
+        - { word: "tonguetramp"            }
+        - { word: "toung thruster"         }
+        - { word: "tounge baller"          }
+        - { word: "tounge thrust"          }
+        - { word: "trailer trash"          }
+        - { word: "trailertrash"           }
+        - { word: "tramp"                  }
+        - { word: "tri sexual"             }
+        - { word: "triple x"               }
+        - { word: "triplex"                }
+        - { word: "trisexual"              }
+        - { word: "trojan"                 }
+        - { word: "trots"                  }
+        - { word: "tunnel of love"         }
+        - { word: "tunneloflove"           }
+        - { word: "turd"                   }
+        - { word: "two bit whore"          }
+        - { word: "two on one"             }
+        - { word: "twobitwhore"            }
+        - { word: "unfuckable"             }
+        - { word: "up the ass"             }
+        - { word: "up the butt"            }
+        - { word: "upskirt"                }
+        - { word: "uptheass"               }
+        - { word: "upthebutt"              }
+        - { word: "urinate"                }
+        - { word: "urine"                  }
+        - { word: "uterus"                 }
+        - { word: "vagina"                 }
+        - { word: "vaginal"                }
+        - { word: "vd"                     }
+        - { word: "vibrater"               }
+        - { word: "vibrator"               }
+        - { word: "virgin"                 }
+        - { word: "virgin breaker"         }
+        - { word: "virginbreaker"          }
+        - { word: "vulva"                  }
+        - { word: "waysted"                }
+        - { word: "weenie"                 }
+        - { word: "wet spot"               }
+        - { word: "wetspot"                }
+        - { word: "whacker"                }
+        - { word: "whiskey dick"           }
+        - { word: "whiskeydick"            }
+        - { word: "whisky dick"            }
+        - { word: "whiskydick"             }
+        - { word: "white trash"            }
+        - { word: "whitetrash"             }
+        - { word: "whore"                  }
+        - { word: "whore fucker"           }
+        - { word: "whore house"            }
+        - { word: "whorefucker"            }
+        - { word: "whorehouse"             }
+        - { word: "wigger"                 }
+        - { word: "willie wanker"          }
+        - { word: "williewanker"           }
+        - { word: "wuutang"                }
+        - { word: "xxx"                    }
+        - { word: "yellow man"             }
+        - { word: "yellowman "             }

@@ -55,7 +55,7 @@
             NONSEXUAL. But can be warned for if someone is just trying to be crude
             or disruptive.
   
-      word_list: 
+      blacklist: 
         - { word: "blowjob",       category: "Unconditionally Vulgar" }
         - { word: "clitoris",      category: "Unconditionally Vulgar" }
         - { word: "cock",          category: "Unconditionally Vulgar" }

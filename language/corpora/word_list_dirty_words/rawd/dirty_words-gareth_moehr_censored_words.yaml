@@ -1,0 +1,118 @@
+---
+- dataset:
+    schema:
+      version:      1.0
+      name:         "List of Censored Words by Gareth Moehr"
+      url:          http://www.geocities.com/gareth_moehr/censoredlist.html
+
+      tags:         >
+          dirty obscene filthy profane censored censorship sex smut drugs cult
+          racist racism "stop words" spam filter indecent
+      credits:
+        - url:      http://www.geocities.com/gareth_moehr/censoredlist.html
+          name:     Gareth Moehr
+
+      notes:
+        desc:         >-
+          __(from the "original author":http://www.geocities.com/gareth_moehr/censoredlist.html)__
+
+          Use of this text is provided for recreational use of our simmers.. Items
+          described herein are described for purposes of entertainment/academic
+          study/review. Web page text, design and layout are copyright, as
+          Intellectual Property of 1998-2002 Theendeavour.com ©. All Rights Reserved
+
+          This page assembled without much sleep, nor sense of humor, by Captain
+          Gareth Moehr and Commander D'bar 27 Aug 2002
+
+        usage_note: >-
+
+
+      fields:
+        - handle:          word
+          type_tags:        word:english
+          data_type:        str
+
+        - handle:          note
+          type_tags:        word:english
+          data_type:        str
+          desc:             word is indecent in general, or in a certain use only.
+
+        - handle:          category
+          type_tags:        word:english
+          data_type:        str
+          desc:             reason this word is considered indecent
+
+    payload:
+      - blacklist:
+        - { word: "Anal",           category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "Anus",           category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "Arse",           category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "Ass",            category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "Bum",            category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-general" }
+        - { word: "Butt",           category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-general" }
+        - { word: "Christ",         category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-general" }
+        - { word: "Crap",           category: "Class Vulgarities: Crude/Irreverent images", note: "figurative/restricted use" }
+        - { word: "Damn",           category: "Class Vulgarities: Crude/Irreverent images", note: "restricted use" }
+        - { word: "Fart",           category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "God",            category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-general" }
+        - { word: "Hell",           category: "Class Vulgarities: Crude/Irreverent images", note: "restricted use" }
+        - { word: "Hole",           category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-general" }
+        - { word: "Jesus",          category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-general" }
+        - { word: "Piss",           category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "Rectal",         category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-medical" }
+        - { word: "Rectum",         category: "Class Vulgarities: Crude/Irreverent images", note: "precise use only-medical" }
+        - { word: "Shit",           category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "Turd",           category: "Class Vulgarities: Crude/Irreverent images" }
+        - { word: "Ball/s",         category: "Obscenities: Crude images with sexual content", note: "precise use only" }
+        - { word: "Bang",           category: "Obscenities: Crude images with sexual content", note: "precise use only" }
+        - { word: "Clit",           category: "Obscenities: Crude images with sexual content" }
+        - { word: "Cock",           category: "Obscenities: Crude images with sexual content", note: "precise use only-zoological/mechanical" }
+        - { word: "Cum",            category: "Obscenities: Crude images with sexual content" }
+        - { word: "Cunt",           category: "Obscenities: Crude images with sexual content" }
+        - { word: "Dick",           category: "Obscenities: Crude images with sexual content", note: "precise use only-proper name" }
+        - { word: "Dildo",          category: "Obscenities: Crude images with sexual content" }
+        - { word: "Fist",           category: "Obscenities: Crude images with sexual content", note: "precise use only-physiological" }
+        - { word: "Fuck",           category: "Obscenities: Crude images with sexual content" }
+        - { word: "Gangbang",       category: "Obscenities: Crude images with sexual content" }
+        - { word: "Hand Job",       category: "Obscenities: Crude images with sexual content" }
+        - { word: "Hard On",        category: "Obscenities: Crude images with sexual content" }
+        - { word: "Head",           category: "Obscenities: Crude images with sexual content", note: "precise use only" }
+        - { word: "Jack off",       category: "Obscenities: Crude images with sexual content" }
+        - { word: "Jill off",       category: "Obscenities: Crude images with sexual content" }
+        - { word: "Jism",           category: "Obscenities: Crude images with sexual content" }
+        - { word: "Masturbate",     category: "Obscenities: Crude images with sexual content" }
+        - { word: "Pecker",         category: "Obscenities: Crude images with sexual content" }
+        - { word: "Prick",          category: "Obscenities: Crude images with sexual content" }
+        - { word: "Pussy",          category: "Obscenities: Crude images with sexual content", note: "precise use only-zoological" }
+        - { word: "Ram",            category: "Obscenities: Crude images with sexual content", note: "precise use only-general" }
+        - { word: "Rim",            category: "Obscenities: Crude images with sexual content", note: "precise use only-general/mechanical" }
+        - { word: "Riser",          category: "Obscenities: Crude images with sexual content", note: "precise use only-mechanical" }
+        - { word: "Snatch",         category: "Obscenities: Crude images with sexual content", note: "precise use only-general" }
+        - { word: "Stud",           category: "Obscenities: Crude images with sexual content", note: "precise use only-general" }
+        - { word: "Suck",           category: "Obscenities: Crude images with sexual content", note: "precise use only-general" }
+        - { word: "Tits",           category: "Obscenities: Crude images with sexual content" }
+        - { word: "Twat",           category: "Obscenities: Crude images with sexual content" }
+        - { word: "Vibrator",       category: "Obscenities: Crude images with sexual content" }
+        - { word: "Woody",          category: "Obscenities: Crude images with sexual content" }
+        - { word: "Asshole",        category: "Obscene/Vulgar Names" }
+        - { word: "Asswipe",        category: "Obscene/Vulgar Names" }
+        - { word: "Asslick",        category: "Obscene/Vulgar Names" }
+        - { word: "Bastard",        category: "Obscene/Vulgar Names" }
+        - { word: "Bitch",          category: "Obscene/Vulgar Names", note: "precise use only-zoological" }
+        - { word: "Bugger",         category: "Obscene/Vulgar Names" }
+        - { word: "Bumhole",        category: "Obscene/Vulgar Names" }
+        - { word: "Bumwipe",        category: "Obscene/Vulgar Names" }
+        - { word: "Bumlick",        category: "Obscene/Vulgar Names" }
+        - { word: "Cock Sucker",    category: "Obscene/Vulgar Names" }
+        - { word: "Dick Head",      category: "Obscene/Vulgar Names" }
+        - { word: "Dike",           category: "Obscene/Vulgar Names" }
+        - { word: "Faggot",         category: "Obscene/Vulgar Names" }
+        - { word: "Fucker",         category: "Obscene/Vulgar Names" }
+        - { word: "Mother Fucker",  category: "Obscene/Vulgar Names" }
+        - { word: "Sheboy",         category: "Obscene/Vulgar Names" }
+        - { word: "Shemale",        category: "Obscene/Vulgar Names" }
+        - { word: "Sheman",         category: "Obscene/Vulgar Names" }
+        - { word: "Son of a Bitch", category: "Obscene/Vulgar Names" }
+        - { word: "Sperm Burper",   category: "Obscene/Vulgar Names" }
+        - { word: "Wanker",         category: "Obscene/Vulgar Names" }
+        - { word: "Whore",          category: "Obscene/Vulgar Names" }

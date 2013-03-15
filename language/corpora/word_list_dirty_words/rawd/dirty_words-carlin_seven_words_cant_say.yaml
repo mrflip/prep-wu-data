@@ -41,17 +41,9 @@
             over and over again in a variety of colloquialisms. The transcript of
             the recording, which is appended to this opinion, indicates frequent
             laughter from the audience.
-  
-        usage_note: >-
-            
-    
-      fields:
-        - handle:          word
-          type_tags:        word:english
-          data_type:        str
           
     payload:
-    - word_list: 
+      - blacklist: 
         - { word: "shit" }
         - { word: "piss" }
         - { word: "fuck" }
